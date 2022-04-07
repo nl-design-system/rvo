@@ -1,11 +1,12 @@
 {
   "version": "1.0.0-alpha.0",
   "author": "Community for NL Design System",
-  "description": "Design system based on the NL Design System architecture",
+  "description": "RVO design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/design-system",
+  "name": "@nl-rvo/design-system",
   "keywords": [
-    "nl-design-system"
+    "nl-design-system",
+    "nl-rvo"
   ],
   "private": true,
   "engines": {
