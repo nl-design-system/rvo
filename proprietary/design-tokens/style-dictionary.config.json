@@ -29,7 +29,7 @@
           "destination": "index.css",
           "format": "css/variables",
           "options": {
-            "selector": ".example-theme",
+            "selector": ".nl-rvo-theme",
             "outputReferences": true
           }
         }

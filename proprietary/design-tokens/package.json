@@ -1,11 +1,12 @@
 {
   "version": "1.0.0-alpha.1",
   "author": "Community for NL Design System",
-  "description": "Example design tokens",
+  "description": "RVO design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
-  "name": "@example/design-tokens",
+  "name": "@nl-rvo/design-tokens",
   "keywords": [
-    "nl-design-system"
+    "nl-design-system",
+    "nl-rvo"
   ],
   "private": false,
   "publishConfig": {
@@ -13,7 +14,7 @@
   },
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git"
+    "url": "git@github.com:nl-design-system/rvo.git"
   },
   "scripts": {
     "clean": "rimraf dist/",

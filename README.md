@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Example Design System
+# RVO Design System
 
 This design system is based on the NL Design System architecture.
 

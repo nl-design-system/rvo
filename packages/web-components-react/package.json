@@ -3,14 +3,14 @@
   "author": "Community for NL Design System",
   "description": "React web components bundle based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/web-components-react",
+  "name": "@nl-rvo/web-components-react",
   "keywords": [
     "nl-design-system"
   ],
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git"
+    "url": "git@github.com:nl-design-system/rvo.git"
   },
   "sideEffects": false,
   "scripts": {
@@ -28,7 +28,7 @@
     "react-dom": "^16.7.0"
   },
   "devDependencies": {
-    "@example/web-components-stencil": "file:../web-components-stencil",
+    "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
     "@types/node": "16.11.6",
     "@types/react": "16.14.20",
     "@types/react-dom": "16.9.14",
