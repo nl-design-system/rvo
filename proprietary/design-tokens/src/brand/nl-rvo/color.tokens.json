@@ -2,9 +2,7 @@
     "nl-rvo": {
         "color": {
             "hemelblauw": {
-                "main": {
-                    "value": "#007bc7"
-                },
+                "value": "#007bc7",
                 "tint1": {
                     "value": "#b2d7ee"
                 },
@@ -13,9 +11,7 @@
                 }
             },
             "lichtblauw": {
-                "main": {
-                    "value": "#8fcae7"
-                },
+                "value": "#8fcae7",
                 "tint1": {
                     "value": "#ddeff8"
                 },
@@ -27,9 +23,7 @@
                 "value": "#01689b"
             },
             "oranje": {
-                "main": {
-                    "value": "#e17000"
-                },
+                "value": "#e17000",
                 "tint1": {
                     "value": "#f6d4b2"
                 },
@@ -38,9 +32,7 @@
                 }
             },
             "groen": {
-                "main": {
-                    "value": "#39870c"
-                },
+                "value": "#39870c",
                 "tint1": {
                     "value": "#c3dbb6"
                 },
@@ -49,9 +41,7 @@
                 }
             },
             "donkergeel": {
-                "main": {
-                    "value": "#ffb612"
-                },
+                "value": "#ffb612",
                 "tint1": {
                     "value": "#ffe9b7"
                 },
@@ -60,9 +50,7 @@
                 }
             },
             "rood": {
-                "main": {
-                    "value": "#d51b1e"
-                },
+                "value": "#d51b1e",
                 "tint1": {
                     "value": "#f2bfbb"
                 },
