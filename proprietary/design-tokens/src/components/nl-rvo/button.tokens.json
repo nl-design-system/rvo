@@ -1,8 +1,12 @@
 {
   "nl-rvo": {
     "button": {
-      "background-color": { "value": "{nl-rvo.color.blue.50}" },
-      "color": { "value": "{nl-rvo.color.grey.100}" }
+      "background-color": {
+        "value": "{nl-rvo.color.hemelblauw}"
+      },
+      "color": {
+        "value": "{nl-rvo.color.wit}"
+      }
     }
   }
 }
