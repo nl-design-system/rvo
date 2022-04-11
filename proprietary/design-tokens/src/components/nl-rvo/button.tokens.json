@@ -6,6 +6,9 @@
       },
       "color": {
         "value": "{nl-rvo.color.wit}"
+      },
+      "font": {
+        "value": "{nl-rvo.font.sans-serif.font-family}"
       }
     }
   }
