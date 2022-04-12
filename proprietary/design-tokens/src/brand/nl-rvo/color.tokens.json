@@ -1,13 +1,92 @@
 {
-  "nl-rvo": {
-    "color": {
-      "blue": {
-        "50": { "value": "cornflowerblue" }
-      },
-      "grey": {
-        "100": { "value": "white" },
-        "0": { "value": "black" }
-      }
+    "nl-rvo": {
+        "color": {
+            "hemelblauw": {
+                "value": "#007bc7",
+                "tint1": {
+                    "value": "#b2d7ee"
+                },
+                "tint2": {
+                    "value": "#d9ebf7"
+                }
+            },
+            "lichtblauw": {
+                "value": "#8fcae7",
+                "tint1": {
+                    "value": "#ddeff8"
+                },
+                "tint2": {
+                    "value": "#eef7fb"
+                }
+            },
+            "donkerblauw": {
+                "value": "#01689b"
+            },
+            "oranje": {
+                "value": "#e17000",
+                "tint1": {
+                    "value": "#f6d4b2"
+                },
+                "tint2": {
+                    "value": "#fbead9"
+                }
+            },
+            "groen": {
+                "value": "#39870c",
+                "tint1": {
+                    "value": "#c3dbb6"
+                },
+                "tint2": {
+                    "value": "#e1eddb"
+                }
+            },
+            "donkergeel": {
+                "value": "#ffb612",
+                "tint1": {
+                    "value": "#ffe9b7"
+                },
+                "tint2": {
+                    "value": "#fff4dc"
+                }
+            },
+            "rood": {
+                "value": "#d51b1e",
+                "tint1": {
+                    "value": "#f2bfbb"
+                },
+                "tint2": {
+                    "value": "#f9dfdd"
+                }
+            },
+            "grijs": {
+                "1": {
+                    "value": "#f3f3f3"
+                },
+                "2": {
+                    "value": "#e6e6e6"
+                },
+                "3": {
+                    "value": "#cccccc"
+                },
+                "4": {
+                    "value": "#b4b4b4"
+                },
+                "5": {
+                    "value": "#999999"
+                },
+                "6": {
+                    "value": "#696969"
+                },
+                "7": {
+                    "value": "#535353"
+                }
+            },
+            "zwart": {
+                "value": "#000000"
+            },
+            "wit": {
+                "value": "#ffffff"
+            }
+        }
     }
-  }
 }

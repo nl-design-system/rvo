@@ -1,7 +1,9 @@
 {
   "nl-rvo": {
     "focus": {
-      "outline-offset": { "value": "2px" }
+      "outline-offset": {
+        "value": "2px"
+      }
     }
   }
 }

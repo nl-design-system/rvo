@@ -1,3 +1,4 @@
+import '../../../proprietary/fonts/fonts.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 
 import { defineCustomElements } from '@nl-rvo/web-components-stencil';
