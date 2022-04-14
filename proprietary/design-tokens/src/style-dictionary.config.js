@@ -1,0 +1,80 @@
+const cssPropertyFormat = require('./css-property-formatter.js');
+const jsonListFormat = require('./json-list-formatter.js');
+
+const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
+const destinationSort = (a, b) => stringSort(a.destination, b.destination);
+
+module.exports = {
+  format: {
+    ...cssPropertyFormat,
+    ...jsonListFormat,
+  },
+  source: ['../../components/**/*.tokens.json', './src/**/*.tokens.json'],
+  platforms: {
+    js: {
+      transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'index.js',
+          format: 'javascript/es6',
+        },
+      ],
+    },
+    css: {
+      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'index.css',
+          format: 'css/variables',
+          options: {
+            selector: '.nl-rvo-theme',
+            outputReferences: true,
+          },
+        },
+        {
+          destination: 'property.css',
+          format: 'css/property',
+        },
+      ].sort(destinationSort),
+    },
+    json: {
+      transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'index.json',
+          format: 'json/list',
+        },
+      ].sort(destinationSort),
+    },
+
+    scss: {
+      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'index.scss',
+          format: 'scss/variables',
+          options: {
+            outputReferences: true,
+          },
+        },
+      ],
+    },
+    less: {
+      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'index.less',
+          format: 'less/variables',
+          options: {
+            outputReferences: true,
+          },
+        },
+      ],
+    },
+  },
+};
