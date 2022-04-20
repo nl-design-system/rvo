@@ -22,6 +22,7 @@
   ],
   "devDependencies": {
     "@babel/core": "7.17.9",
+    "@babel/preset-typescript": "7.16.7",
     "@etchteam/storybook-addon-status": "4.2.0",
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
