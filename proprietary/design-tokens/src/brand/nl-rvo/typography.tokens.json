@@ -53,14 +53,10 @@
         },
         "font-weight": {
             "bold": {
-                "font-weight": {
-                    "value": "bold"
-                }
+                "value": "bold"
             },
             "normal": {
-                "font-weight": {
-                    "value": "normal"
-                }
+                "value": "normal"
             }
         },
         "line-height": {
