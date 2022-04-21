@@ -9,6 +9,6 @@
   ],
   "private": true,
   "devDependencies": {
-    "@storybook/addon-docs": "6.4.21"
+    "@storybook/addon-docs": "6.4.22"
   }
 }
