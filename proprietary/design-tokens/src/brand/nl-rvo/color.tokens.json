@@ -2,84 +2,82 @@
     "nl-rvo": {
         "color": {
             "hemelblauw": {
-                "value": "#007bc7",
-                "tint1": {
-                    "value": "#b2d7ee"
-                },
-                "tint2": {
-                    "value": "#d9ebf7"
-                }
+                "value": "#007bc7"
+            },
+            "hemelblauw tint 1": {
+                "value": "#b2d7ee"
+            },
+            "hemelblauw tint 2": {
+                "value": "#d9ebf7"
             },
             "lichtblauw": {
-                "value": "#8fcae7",
-                "tint1": {
-                    "value": "#ddeff8"
-                },
-                "tint2": {
-                    "value": "#eef7fb"
-                }
+                "value": "#8fcae7"
+            },
+            "lichtblauw tint 1": {
+                "value": "#ddeff8"
+            },
+            "lichtblauw tint 2": {
+                "value": "#eef7fb"
             },
             "donkerblauw": {
                 "value": "#01689b"
             },
             "oranje": {
-                "value": "#e17000",
-                "tint1": {
-                    "value": "#f6d4b2"
-                },
-                "tint2": {
-                    "value": "#fbead9"
-                }
+                "value": "#e17000"
+            },
+            "oranje tint 1": {
+                "value": "#f6d4b2"
+            },
+            "oranje tint 2": {
+                "value": "#fbead9"
             },
             "groen": {
-                "value": "#39870c",
-                "tint1": {
-                    "value": "#c3dbb6"
-                },
-                "tint2": {
-                    "value": "#e1eddb"
-                }
+                "value": "#39870c"
+            },
+            "groen tint 1": {
+                "value": "#c3dbb6"
+            },
+            "groen tint 2": {
+                "value": "#e1eddb"
             },
             "donkergeel": {
-                "value": "#ffb612",
-                "tint1": {
-                    "value": "#ffe9b7"
-                },
-                "tint2": {
-                    "value": "#fff4dc"
-                }
+                "value": "#ffb612"
+            },
+            "donkergeel tint 1": {
+                "value": "#ffe9b7"
+            },
+            "donkergeel tint 2": {
+                "value": "#fff4dc"
             },
             "rood": {
-                "value": "#d51b1e",
-                "tint1": {
-                    "value": "#f2bfbb"
-                },
-                "tint2": {
-                    "value": "#f9dfdd"
-                }
+                "value": "#d51b1e"
             },
-            "grijs": {
-                "1": {
-                    "value": "#f3f3f3"
-                },
-                "2": {
-                    "value": "#e6e6e6"
-                },
-                "3": {
-                    "value": "#cccccc"
-                },
-                "4": {
-                    "value": "#b4b4b4"
-                },
-                "5": {
-                    "value": "#999999"
-                },
-                "6": {
-                    "value": "#696969"
-                },
-                "7": {
-                    "value": "#535353"
-                }
+            "rood tint 1": {
+                "value": "#f2bfbb"
+            },
+            "rood tint 2": {
+                "value": "#f9dfdd"
+            },
+            "grijs 1": {
+                "value": "#f3f3f3"
+            },
+            "grijs 2": {
+                "value": "#e6e6e6"
+            },
+            "grijs 3": {
+                "value": "#cccccc"
+            },
+            "grijs 4": {
+                "value": "#b4b4b4"
+            },
+            "grijs 5": {
+                "value": "#999999"
+            },
+            "grijs 6": {
+                "value": "#696969"
+            },
+            "grijs 7": {
+                "value": "#535353"
             },
             "zwart": {
                 "value": "#000000"

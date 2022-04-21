@@ -22,6 +22,7 @@
   ],
   "devDependencies": {
     "@babel/core": "7.17.9",
+    "@babel/preset-typescript": "7.16.7",
     "@etchteam/storybook-addon-status": "4.2.0",
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
@@ -34,6 +35,7 @@
     "@storybook/preset-scss": "1.0.3",
     "@storybook/theming": "6.4.21",
     "babel-loader": "8.2.4",
+    "babel-plugin-macros": "3.1.0",
     "css-loader": "5.2.7",
     "react": "16.14.0",
     "react-dom": "16.14.0",
