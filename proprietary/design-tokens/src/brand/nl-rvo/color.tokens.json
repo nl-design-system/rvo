@@ -4,19 +4,19 @@
             "hemelblauw": {
                 "value": "#007bc7"
             },
-            "hemelblauw tint 1": {
+            "hemelblauw-tint1": {
                 "value": "#b2d7ee"
             },
-            "hemelblauw tint 2": {
+            "hemelblauw-tint2": {
                 "value": "#d9ebf7"
             },
             "lichtblauw": {
                 "value": "#8fcae7"
             },
-            "lichtblauw tint 1": {
+            "lichtblauw-tint1": {
                 "value": "#ddeff8"
             },
-            "lichtblauw tint 2": {
+            "lichtblauw-tint2": {
                 "value": "#eef7fb"
             },
             "donkerblauw": {
@@ -25,58 +25,58 @@
             "oranje": {
                 "value": "#e17000"
             },
-            "oranje tint 1": {
+            "oranje-tint1": {
                 "value": "#f6d4b2"
             },
-            "oranje tint 2": {
+            "oranje-tint2": {
                 "value": "#fbead9"
             },
             "groen": {
                 "value": "#39870c"
             },
-            "groen tint 1": {
+            "groen-tint1": {
                 "value": "#c3dbb6"
             },
-            "groen tint 2": {
+            "groen-tint2": {
                 "value": "#e1eddb"
             },
             "donkergeel": {
                 "value": "#ffb612"
             },
-            "donkergeel tint 1": {
+            "donkergeel-tint1": {
                 "value": "#ffe9b7"
             },
-            "donkergeel tint 2": {
+            "donkergeel-tint2": {
                 "value": "#fff4dc"
             },
             "rood": {
                 "value": "#d51b1e"
             },
-            "rood tint 1": {
+            "rood-tint1": {
                 "value": "#f2bfbb"
             },
-            "rood tint 2": {
+            "rood-tint2": {
                 "value": "#f9dfdd"
             },
-            "grijs 1": {
+            "grijs1": {
                 "value": "#f3f3f3"
             },
-            "grijs 2": {
+            "grijs2": {
                 "value": "#e6e6e6"
             },
-            "grijs 3": {
+            "grijs3": {
                 "value": "#cccccc"
             },
-            "grijs 4": {
+            "grijs4": {
                 "value": "#b4b4b4"
             },
-            "grijs 5": {
+            "grijs5": {
                 "value": "#999999"
             },
-            "grijs 6": {
+            "grijs6": {
                 "value": "#696969"
             },
-            "grijs 7": {
+            "grijs7": {
                 "value": "#535353"
             },
             "zwart": {
