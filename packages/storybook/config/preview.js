@@ -1,7 +1,10 @@
 import '../../../proprietary/fonts/fonts.css';
 import '@nl-rvo/design-tokens/dist/index.css';
-
+import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
 import { defineCustomElements } from '@nl-rvo/web-components-stencil';
+import { DocsContainer } from '@storybook/addon-docs';
+import React from 'react';
+import theme from './theme';
 
 defineCustomElements();
 
@@ -25,4 +28,20 @@ export const parameters = {
   options: {
     panelPosition: 'right',
   },
+  docs: {
+    theme,
+    container: (props) => (
+      <div id="docsContainer" style={{ fontFamily: designTokens.nlRvoFontSansSerifFontFamily }}>
+        <DocsContainer {...props} />
+      </div>
+    ),
+  },
 };
+
+export const decorators = [
+  (Story) => (
+    <div id="story" style={{ fontFamily: designTokens.nlRvoFontSansSerifFontFamily }}>
+      <Story />
+    </div>
+  ),
+];
