@@ -1,0 +1,31 @@
+import designTokens from "@nl-rvo/design-tokens/dist/index.json";
+import { Description, Meta } from "@storybook/addon-docs";
+import FontFamilyDesignTokens from "./components/FontFamilyDesignTokens";
+import FontSizeDesignTokens from "./components/FontSizeDesignTokens";
+import FontWeightDesignTokens from "./components/FontWeightDesignTokens";
+
+export const tokens = designTokens.filter(({ filePath }) =>
+  filePath.includes("src/brand/nl-rvo/typography.tokens.json")
+);
+
+<Meta title="Algemeen/Design Tokens/Typografie" />
+
+<Description># Typografie</Description>
+
+<p>Er zijn {tokens.length} design tokens voor typografie.</p>
+<p>
+  De RVO huisstijl is een afgeleide van de Rijkshuisstijl en gebruikt daarom alleen lettertypen die beschikbaar zijn
+  binnen de Rijkshuisstlijl
+</p>
+
+## Lettertypen
+
+<FontFamilyDesignTokens tokens={tokens.filter((token) => token.attributes.type === "font")} />
+
+## Lettertype diktes
+
+<FontWeightDesignTokens tokens={tokens.filter((token) => token.attributes.type === "font-weight")} />
+
+## Lettertype groottes
+
+<FontSizeDesignTokens tokens={tokens.filter((token) => token.attributes.type === "font-size")} />
