@@ -30,6 +30,7 @@ export const SizeDesignTokens = ({ tokens }: SizeDesignTokensProps) => {
 
 // Styled components
 const Container = styled.div`
+  margin-top: 2em;
   margin-bottom: 4em;
 `;
 

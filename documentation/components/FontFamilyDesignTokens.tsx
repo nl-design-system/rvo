@@ -34,6 +34,7 @@ const FontFamilyDesignTokens = ({ tokens }: FontFamilyDesignTokensProps) => {
 export default FontFamilyDesignTokens;
 
 const Container = styled.div`
+  margin-top: 2em;
   margin-bottom: 4em;
 `;
 

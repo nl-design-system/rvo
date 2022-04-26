@@ -29,6 +29,7 @@ export const ColorDesignTokens = ({ tokens }: ColorDesignTokensProps) => {
 
 // Styled components
 const Container = styled.div`
+  margin-top: 2em;
   margin-bottom: 4em;
 `;
 

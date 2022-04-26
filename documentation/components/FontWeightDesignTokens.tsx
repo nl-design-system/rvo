@@ -24,6 +24,7 @@ const FontWeightDesignTokens = ({ tokens }: FontWeightDesignTokensProps) => {
 export default FontWeightDesignTokens;
 
 const Container = styled.div`
+  margin-top: 2em;
   margin-bottom: 4em;
 `;
 

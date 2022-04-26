@@ -29,6 +29,7 @@ const FontSizeDesignTokens = ({ tokens }: FontSizeDesignTokensProps) => {
 export default FontSizeDesignTokens;
 
 const Container = styled.div`
+  margin-top: 2em;
   margin-bottom: 4em;
 `;
 
