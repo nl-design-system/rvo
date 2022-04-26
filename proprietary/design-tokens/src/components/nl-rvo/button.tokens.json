@@ -1,14 +1,14 @@
 {
-  "nl-rvo": {
+  "rvo": {
     "button": {
       "background-color": {
-        "value": "{nl-rvo.color.hemelblauw}"
+        "value": "{rvo.color.hemelblauw}"
       },
       "color": {
-        "value": "{nl-rvo.color.wit}"
+        "value": "{rvo.color.wit}"
       },
       "font": {
-        "value": "{nl-rvo.font.sans-serif.font-family}"
+        "value": "{rvo.font.sans-serif.font-family}"
       }
     }
   }

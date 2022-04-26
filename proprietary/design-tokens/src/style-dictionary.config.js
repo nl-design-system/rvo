@@ -27,7 +27,7 @@ module.exports = {
           destination: 'index.css',
           format: 'css/variables',
           options: {
-            selector: '.nl-rvo-theme',
+            selector: '.rvo-theme',
             outputReferences: true,
           },
         },

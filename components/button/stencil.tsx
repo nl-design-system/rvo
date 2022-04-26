@@ -6,15 +6,15 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'nl-rvo-button',
+  tag: 'rvo-button',
   styleUrl: 'bem.scss',
   shadow: true,
 })
 export class Button {
   render() {
     return (
-      <button class="nl-rvo-button" type="button">
-        <span class="nl-rvo-button__text">
+      <button class="rvo-button" type="button">
+        <span class="rvo-button__text">
           <slot></slot>
         </span>
       </button>
