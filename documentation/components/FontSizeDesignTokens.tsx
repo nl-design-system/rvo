@@ -8,7 +8,7 @@ type FontSizeDesignTokensProps = {
 
 const FontSizeDesignTokens = ({ tokens }: FontSizeDesignTokensProps) => {
   return (
-    <div>
+    <Container>
       {tokens.map(({ name, path, attributes, value }) => {
         return (
           <FontSizeContainer key={name}>
@@ -18,23 +18,25 @@ const FontSizeDesignTokens = ({ tokens }: FontSizeDesignTokensProps) => {
               {`${16 * parseFloat(value)}px / ${value}`}
             </FontSizeDescription>
             <FontSizeExample fontSize={value}>Rijksdienst voor Ondernemend Nederland</FontSizeExample>
-            <div>
-              <code>{path2css(path)}</code>
-            </div>
+            <code>{path2css(path)}</code>
           </FontSizeContainer>
         );
       })}
-    </div>
+    </Container>
   );
 };
 
 export default FontSizeDesignTokens;
 
+const Container = styled.div`
+  margin-bottom: 4em;
+`;
+
 const FontSizeContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 3em;
+  gap: 2em;
   margin-bottom: 1em;
 `;
 
