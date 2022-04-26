@@ -1,7 +1,10 @@
 {
   "overrides": [
     {
-      "files": ["*.js", "*.jsx"],
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
       "options": {
         "parser": "flow",
         "printWidth": 120,
@@ -11,7 +14,9 @@
       }
     },
     {
-      "files": ["*.json"],
+      "files": [
+        "*.json"
+      ],
       "options": {
         "parser": "json",
         "printWidth": 120,
@@ -19,7 +24,9 @@
       }
     },
     {
-      "files": ["package.json"],
+      "files": [
+        "package.json"
+      ],
       "options": {
         "parser": "json-stringify",
         "tabWidth": 2,
@@ -27,7 +34,10 @@
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
       "options": {
         "parser": "typescript",
         "printWidth": 120,
@@ -37,14 +47,19 @@
       }
     },
     {
-      "files": ["*.css", "*.scss"],
+      "files": [
+        "*.css",
+        "*.scss"
+      ],
       "options": {
         "parser": "css",
         "tabWidth": 2
       }
     },
     {
-      "files": ["*.html"],
+      "files": [
+        "*.html"
+      ],
       "options": {
         "parser": "html",
         "printWidth": 120,

@@ -8,6 +8,12 @@ export const tokens = designTokens.filter(({ filePath }) => filePath.includes("s
 
 <Description># Groottes</Description>
 
-<p>Er zijn {tokens.length} design tokens voor groottes.</p>
+<p>Er zijn {tokens.length} design tokens voor groottes. </p>
+<p>
+  Ruimtes tussen onderdelen worden gedaan met stapjes van 2 pixels. <br />
+  Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals: <strong>
+    rvo-space-2xs + rvo-space-md
+  </strong>
+</p>
 
 <SizeDesignTokens tokens={tokens} />
