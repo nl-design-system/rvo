@@ -9,7 +9,7 @@ type ColorDesignTokensProps = {
 
 export const ColorDesignTokens = ({ tokens }: ColorDesignTokensProps) => {
   return (
-    <div>
+    <Container>
       {tokens.map(({ path, attributes, value, name }) => {
         const rgbCode = hexToRgb(value);
         return (
@@ -24,16 +24,20 @@ export const ColorDesignTokens = ({ tokens }: ColorDesignTokensProps) => {
           </TokenContainer>
         );
       })}
-    </div>
+    </Container>
   );
 };
 
 // Styled components
+const Container = styled.div`
+  margin-bottom: 4em;
+`;
+
 const TokenContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 3em;
+  gap: 2em;
   margin-bottom: 1em;
 `;
 
