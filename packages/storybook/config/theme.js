@@ -5,15 +5,15 @@ import { create } from '@storybook/theming/create';
 // https://storybook.js.org/docs/react/configure/theming
 export default create({
   base: 'light',
-  colorPrimary: designTokens.nlRvoColorHemelblauw,
-  colorSecondary: designTokens.nlRvoColorHemelblauwTint1,
+  colorPrimary: designTokens.rvoColorHemelblauw,
+  colorSecondary: designTokens.rvoColorHemelblauwTint1,
 
   // UI
-  appContentBg: `${designTokens.nlRvoColorWit}`,
-  textColor: `${designTokens.nlRvoColorGrijs7}`,
+  appContentBg: `${designTokens.rvoColorWit}`,
+  textColor: `${designTokens.rvoColorGrijs7}`,
 
   // Typography
-  fontBase: `${designTokens.nlRvoFontSansSerifFontFamily}, ${designTokens.nlRvoFontSansSerifFallbackFontFamily}`,
+  fontBase: `${designTokens.rvoFontSansSerifFontFamily}, ${designTokens.rvoFontSansSerifFallbackFontFamily}`,
   fontCode: 'monospace',
   fontSize: '100%',
 

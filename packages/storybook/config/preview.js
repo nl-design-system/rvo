@@ -31,7 +31,7 @@ export const parameters = {
   docs: {
     theme,
     container: (props) => (
-      <div id="docsContainer" style={{ fontFamily: designTokens.nlRvoFontSansSerifFontFamily }}>
+      <div id="docsContainer" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
         <DocsContainer {...props} />
       </div>
     ),
@@ -40,7 +40,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div id="story" style={{ fontFamily: designTokens.nlRvoFontSansSerifFontFamily }}>
+    <div id="story" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
       <Story />
     </div>
   ),

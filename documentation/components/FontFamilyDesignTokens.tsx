@@ -19,11 +19,7 @@ const FontFamilyDesignTokens = ({ tokens }: FontFamilyDesignTokensProps) => {
           <FontFamilyContainer key={name} isFallback={isFallback}>
             <FontNameTitleContainer>
               {isFallback && `Fallback: `}
-              <FontNameTitle
-                fontFamily={cssVar}
-                fontWeight={designTokens.nlRvoFontWeightNormal}
-                isFallback={isFallback}
-              >
+              <FontNameTitle fontFamily={cssVar} fontWeight={designTokens.rvoFontWeightNormal} isFallback={isFallback}>
                 {fontName}
               </FontNameTitle>
             </FontNameTitleContainer>
@@ -59,7 +55,7 @@ const FontNameTitleContainer = styled.div`
 `;
 
 const FontNameTitle = styled.span<{ fontFamily: string; fontWeight: string; isFallback: boolean }>`
-  font-size: ${({ isFallback }) => (!isFallback ? designTokens.nlRvoFontSizeXl : designTokens.nlRvoFontSizeMd)};
+  font-size: ${({ isFallback }) => (!isFallback ? designTokens.rvoFontSizeXl : designTokens.rvoFontSizeMd)};
   font-family: ${({ fontFamily }) => fontFamily};
   font-weight: ${({ fontWeight }) => fontWeight};
 `;

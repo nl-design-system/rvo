@@ -1,9 +1,9 @@
 {
-  "nl-rvo": {
+  "rvo": {
     "font": {
       "sans-serif": {
         "font-family": {
-          "value": "\"RijksoverheidSansWebText\", {nl-rvo.font.sans-serif-fallback.font-family.value}"
+          "value": "\"RijksoverheidSansWebText\", {rvo.font.sans-serif-fallback.font-family.value}"
         }
       },
       "sans-serif-fallback": {
@@ -13,7 +13,7 @@
       },
       "serif": {
         "font-family": {
-          "value": "\"RijksoverheidSerifWeb\", {nl-rvo.font.serif-fallback.font-family.value}"
+          "value": "\"RijksoverheidSerifWeb\", {rvo.font.serif-fallback.font-family.value}"
         }
       },
       "serif-fallback": {
