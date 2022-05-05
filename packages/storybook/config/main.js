@@ -1,5 +1,8 @@
 /* eslint-env node */
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
     '../../../components/**/*stories.@(js|jsx|mdx|ts|tsx)',
