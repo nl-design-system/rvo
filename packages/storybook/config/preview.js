@@ -26,7 +26,7 @@ export const parameters = {
   previewTabs,
   statuses,
   options: {
-    panelPosition: 'right',
+    panelPosition: 'bottom',
   },
   docs: {
     theme,

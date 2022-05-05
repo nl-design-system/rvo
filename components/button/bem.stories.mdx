@@ -7,11 +7,14 @@ import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import "./bem.scss";
 import README from "./README.md";
 
-export const Template = ({ content }) =>
-  `<button class="rvo-button" type="button"><span class="rvo-button__text">${content}</span></button>`;
+export const Template = ({ content }) => `
+  <button class="rvo-button" type="button">
+    <span class="rvo-button__text">${content}</span>
+  </button>
+`;
 
 <Meta
-  title="CSS Component/Button"
+  title="CSS only/Button"
   argTypes={{
     content: {
       description: "Set the text content",
