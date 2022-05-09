@@ -22,7 +22,6 @@ const previewTabs = {
 };
 
 export const parameters = {
-  controls: { expanded: false },
   previewTabs,
   statuses,
   options: {
