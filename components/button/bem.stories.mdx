@@ -4,35 +4,110 @@ Copyright (c) 2021 Community for NL Design System
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button, defaultArgs } from "./bem";
 import "./bem.scss";
 import README from "./README.md";
 
-export const Template = ({ content }) => `
-  <button class="rvo-button" type="button">
-    <span class="rvo-button__text">${content}</span>
-  </button>
-`;
-
 <Meta
-  title="CSS only/Button"
+  title="CSS Components/Button"
   argTypes={{
-    content: {
-      description: "Set the text content",
+    kind: {
+      options: ["primary", "secondary", "tertiary", "quaternary"],
+      control: { type: "radio" },
+    },
+    textContent: {
+      description: "Button text",
       control: "text",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
     },
   }}
   parameters={{
-    status: "IN DEVELOPMENT",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
     notes: { UX: README },
   }}
 />
 
-# Example Button
+# Button
+
+## Primary
 
 <Canvas>
-  <Story name="Button" args={{ content: "Press me!" }}>
-    {Template.bind({})}
+  <Story name="Overview" args={{ ...defaultArgs, kind: "primary" }}>
+    {Button.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Button" />
+Primary buttons worden gebruikt voor de belangrijkste actie op de pagina. Denk aan opslaan of versturen. In de meeste gevallen is er maar één primary button per pagina.
+
+## Secondary
+
+<Canvas>
+  <Story name="Secondary" args={{ ...defaultArgs, kind: "secondary" }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+Tertiary:
+
+<Canvas>
+  <Story name="Tertiary" args={{ ...defaultArgs, kind: "tertiary" }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+Quaternary:
+
+<Canvas>
+  <Story name="Quaternary" args={{ ...defaultArgs, kind: "quaternary" }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Sizes
+
+## States
+
+Hover:
+
+<Canvas>
+  <Story name="Default" args={{ ...defaultArgs, hover: true }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+Active:
+
+<Canvas>
+  <Story name="Active" args={{ ...defaultArgs, active: true }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+Focused:
+
+<Canvas>
+  <Story name="Focused" args={{ ...defaultArgs, focus: true }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+Disabled:
+
+<Canvas>
+  <Story name="Disabled" args={{ ...defaultArgs, disabled: true }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>

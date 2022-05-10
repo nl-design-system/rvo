@@ -4,13 +4,18 @@
  */
 
 .rvo-button {
-  background-color: var(--rvo-button-background-color);
+  background-color: var(--rvo-button-primary-background-color);
   border: 0;
-  color: var(--rvo-button-color);
-  font-family: var(--rvo-button-font);
+  color: var(--rvo-button-primary-color);
+  font-family: var(--rvo-button-primary-font);
   font-size: 1rem;
   padding-block-end: 1ex;
   padding-block-start: 1ex;
-  padding-inline-end: 1ch;
-  padding-inline-start: 1ch;
+  padding-inline-end: var(--rvo-button-primary-inline-padding);
+  padding-inline-start: var(--rvo-button-primary-inline-padding);
+}
+
+.rvo-button:hover {
+  background-color: var(--rvo-button-primary-hover-background-color);
+  cursor: pointer;
 }

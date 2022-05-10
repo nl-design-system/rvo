@@ -1,14 +1,24 @@
 {
   "rvo": {
     "button": {
-      "background-color": {
-        "value": "{rvo.color.hemelblauw}"
-      },
-      "color": {
-        "value": "{rvo.color.wit}"
-      },
-      "font": {
-        "value": "{rvo.font.sans-serif.font-family}"
+      "primary": {
+        "background-color": {
+          "value": "{rvo.color.hemelblauw}"
+        },
+        "color": {
+          "value": "{rvo.color.wit}"
+        },
+        "font": {
+          "value": "{rvo.font.sans-serif.font-family}"
+        },
+        "inline-padding": {
+          "value": "{rvo.size.md}"
+        },
+        "hover": {
+          "background-color": {
+            "value": "{rvo.color.donkerblauw}"
+          }
+        }
       }
     }
   }
