@@ -21,10 +21,6 @@ const previewTabs = {
   canvas: { title: 'Sandbox' },
 };
 
-const defaultTab = {
-  viewMode: 'docs',
-};
-
 const storySort = {
   order: [
     // TODO: Add story order
@@ -33,7 +29,7 @@ const storySort = {
 
 export const parameters = {
   previewTabs,
-  defaultTab,
+  viewMode: 'docs',
   // statuses,
   options: {
     panelPosition: 'bottom',

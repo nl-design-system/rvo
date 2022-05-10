@@ -15,6 +15,10 @@ import README from "./README.md";
       options: ["primary", "secondary", "tertiary", "quaternary"],
       control: { type: "radio" },
     },
+    kind: {
+      options: ["small", "medium", "tertiary", "quaternary"],
+      control: { type: "radio" },
+    },
     textContent: {
       description: "Button text",
       control: "text",
@@ -42,10 +46,12 @@ import README from "./README.md";
 
 # Button
 
+De omlijning van de **active** en de **focus** status wijkt af van de Rijkshuisstijl om te voldoen aan de WCAG richtlijnen.
+
 ## Primary
 
 <Canvas>
-  <Story name="Overview" args={{ ...defaultArgs, kind: "primary" }}>
+  <Story name="Primary" args={{ ...defaultArgs, kind: "primary" }}>
     {Button.bind({})}
   </Story>
 </Canvas>
@@ -60,7 +66,7 @@ Primary buttons worden gebruikt voor de belangrijkste actie op de pagina. Denk a
   </Story>
 </Canvas>
 
-Tertiary:
+## Tertiary
 
 <Canvas>
   <Story name="Tertiary" args={{ ...defaultArgs, kind: "tertiary" }}>
@@ -68,7 +74,9 @@ Tertiary:
   </Story>
 </Canvas>
 
-Quaternary:
+Tertiary buttons kunnen gebruikt worden voor pagers of paginatie. De tekst in deze buttons is bold (in tegenstelling tot de andere buttons) zodat het duidelijk is dat het gaat om een link.
+
+## Quaternary
 
 <Canvas>
   <Story name="Quaternary" args={{ ...defaultArgs, kind: "quaternary" }}>
@@ -76,9 +84,21 @@ Quaternary:
   </Story>
 </Canvas>
 
-## Sizes
+Quaternary buttons kunnen in uitzonderlijke gevallen gebruikt worden om een bepaalde actie onder de aandacht te brengen. Bijvoorbeeld het opslaan van een formulier.
 
-## States
+# Sizes
+
+## Small
+
+<Canvas>
+  <Story name="Small" args={{ ...defaultArgs, size: "sm" }}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Medium
+
+# States
 
 Hover:
 
