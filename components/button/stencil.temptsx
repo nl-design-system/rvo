@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'rvo-button',
-  styleUrl: 'bem.scss',
+  styleUrl: './bem.scss',
   shadow: true,
 })
 export class Button {
