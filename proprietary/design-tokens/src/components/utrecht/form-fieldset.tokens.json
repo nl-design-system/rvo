@@ -1,0 +1,18 @@
+{
+  "utrecht": {
+    "form-fieldset": {
+      "margin-block-end": {},
+      "margin-block-start": {},
+      "legend": {
+        "color": {},
+        "font-family": {},
+        "font-size": { "value": "{rvo.font-size.xl}" },
+        "font-weight": {},
+        "line-height": { "value": "24px" },
+        "margin-block-end": {},
+        "margin-block-start": {},
+        "text-transform": {}
+      }
+    }
+  }
+}
