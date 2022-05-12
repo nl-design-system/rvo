@@ -38,6 +38,10 @@ module.exports = {
       buildPath: 'dist/',
       files: [
         {
+          destination: 'index.tokens.json',
+          format: 'json',
+        },
+        {
           destination: 'index.json',
           format: 'json/list',
         },
