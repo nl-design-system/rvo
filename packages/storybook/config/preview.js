@@ -39,9 +39,18 @@ export const parameters = {
 };
 
 export const decorators = [
-  (Story) => (
-    <div id="story" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
-      <Story />
-    </div>
-  ),
+  (Story) => {
+    const children = Story();
+
+    // Support both React and HTML string stories
+    if (typeof children === 'string') {
+      return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${children}</div>`;
+    } else {
+      return (
+        <div id="story" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
+          {children}
+        </div>
+      );
+    }
+  },
 ];
