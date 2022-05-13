@@ -6,7 +6,7 @@
           "value": "{rvo.font.sans-serif.font-family}"
         },
         "inline-padding": {
-          "value": "{rvo.size.md}"
+          "value": "{rvo.space.md}"
         }
       },
       "primary": {
