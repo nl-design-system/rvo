@@ -1,6 +1,7 @@
 import React from 'react';
 import 'normalize.css';
 import './style.css';
+import logoUrl from './assets/img/logo.svg';
 
 export const DemoPage = () => {
   return (
@@ -9,7 +10,7 @@ export const DemoPage = () => {
         <div className="max-width-wrapper">
           <div className="logo__wrapper">
             <a href="#" className="logo__link">
-              <img src="/img/logo.svg" className="logo__img" />
+              <img src={logoUrl} className="logo__img" />
             </a>
           </div>
         </div>
