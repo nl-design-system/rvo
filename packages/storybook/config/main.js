@@ -13,11 +13,11 @@ module.exports = {
   addons: [
     '@etchteam/storybook-addon-status/register',
     '@storybook/addon-a11y/register',
-    '@storybook/addon-controls',
     {
       name: '@storybook/addon-docs',
       options: { configureJSX: true },
     },
+    '@storybook/addon-controls',
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
   ],
