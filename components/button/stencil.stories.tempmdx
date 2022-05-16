@@ -5,12 +5,12 @@ Copyright (c) 2021 Community for NL Design System
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 
-export const Template = ({ content }) => `<rvo-button>${content}</rvo-button>`;
+export const Template = ({ label }) => `<rvo-button>${label}</rvo-button>`;
 
 <Meta
-  title="Web Component/Button"
+  title="Web Components/Button"
   argTypes={{
-    content: {
+    label: {
       description: "Set the text content",
       control: "text",
     },
@@ -25,9 +25,9 @@ export const Template = ({ content }) => `<rvo-button>${content}</rvo-button>`;
 # Example Button
 
 <Canvas>
-  <Story name="Button" args={{ content: "Press me!" }}>
+  <Story name="Default" args={{ label: "Button" }}>
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Button" />
+<ArgsTable story="Default" />

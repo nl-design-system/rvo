@@ -3,14 +3,64 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+// Base
 .rvo-button {
-  background-color: var(--rvo-button-background-color);
   border: 0;
-  color: var(--rvo-button-color);
-  font-family: var(--rvo-button-font);
+  font-family: var(--rvo-button-base-font);
   font-size: 1rem;
   padding-block-end: 1ex;
   padding-block-start: 1ex;
-  padding-inline-end: 1ch;
-  padding-inline-start: 1ch;
+  padding-inline-end: var(--rvo-button-base-inline-padding);
+  padding-inline-start: var(--rvo-button-base-inline-padding);
+}
+
+.rvo-button:hover {
+  cursor: pointer;
+}
+
+// Primary
+.rvo-button--primary {
+  background-color: var(--rvo-button-primary-background-color);
+  color: var(--rvo-button-primary-color);
+}
+
+.rvo-button--primary:hover {
+  background-color: var(--rvo-button-primary-hover-background-color);
+}
+
+// Secondary
+.rvo-button--secondary {
+  background-color: var(--rvo-button-secondary-background-color);
+  border-color: var(--rvo-button-secondary-border-color);
+  border-style: solid;
+  border-width: var(--rvo-button-secondary-border-width);
+  color: var(--rvo-button-secondary-color);
+}
+
+.rvo-button--secondary:hover {
+  border-color: var(--rvo-button-secondary-hover-border-color);
+  color: var(--rvo-button-secondary-hover-color);
+}
+
+// Tertiary
+.rvo-button--tertiary {
+  background: none;
+  color: var(--rvo-button-tertiary-color);
+  font-weight: var(--rvo-button-tertiary-weight);
+}
+
+.rvo-button--tertiary:hover {
+  color: var(--rvo-button-tertiary-hover-color);
+  text-decoration: underline;
+  text-underline-offset: 30%;
+}
+
+// Quaternary
+.rvo-button--quaternary {
+  background-color: var(--rvo-button-quaternary-background-color);
+  color: var(--rvo-button-quaternary-color);
+}
+
+.rvo-button--quaternary:hover {
+  background-color: var(--rvo-button-quaternary-hover-background-color);
 }
