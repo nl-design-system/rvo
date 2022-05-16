@@ -1,10 +1,10 @@
 import '../../../proprietary/fonts/fonts.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
-import { ComponentName } from '@nl-rvo/documentation/components/ComponentName';
 import { defineCustomElements } from '@nl-rvo/web-components-stencil';
 import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import React from 'react';
+// import { ComponentName } from '../../../documentation/components/ComponentName';
 import theme from './theme';
 
 defineCustomElements();
@@ -49,7 +49,7 @@ export const parameters = {
     page: DocsPage,
     components: {
       // TODO: Add styled components
-      h1: ComponentName,
+      // h1: ComponentName,
       // h2: SectionName,
       // h3: Title,
       // li: AnchorListItem,
