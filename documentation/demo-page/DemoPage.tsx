@@ -1,5 +1,6 @@
 import React from 'react';
 import 'normalize.css';
+import './style.css';
 
 export const DemoPage = () => {
   return (
