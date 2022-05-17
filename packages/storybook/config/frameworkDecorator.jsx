@@ -12,7 +12,12 @@ const frameworkDecorator = (story, context) => {
     const node = useMemo(() => document.createElement('div'), [context.kind, context.name]);
     useEffect(() => {
       // Render the story in the node
-      ReactDOM.render(<StrictMode>{story()}</StrictMode>, node);
+      ReactDOM.render(
+        <div id="story" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
+          <StrictMode>{story()}</StrictMode>
+        </div>,
+        node,
+      );
       // Make sure to unmount the component at node when removed from screen
       return () => ReactDOM.unmountComponentAtNode(node);
     }, [node]);
