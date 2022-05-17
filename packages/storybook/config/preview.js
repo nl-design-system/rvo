@@ -70,6 +70,7 @@ export const parameters = {
   },
   html: {
     root: '#story',
+    removeEmptyComments: true,
   },
 };
 
