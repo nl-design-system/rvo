@@ -5,6 +5,7 @@ import { defineCustomElements } from '@nl-rvo/web-components-stencil';
 import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import React from 'react';
 // import { ComponentName } from '../../../documentation/components/ComponentName';
+import frameworkDecorator from './frameworkDecorator';
 import theme from './theme';
 
 defineCustomElements();
@@ -69,19 +70,4 @@ export const parameters = {
   },
 };
 
-export const decorators = [
-  (Story) => {
-    const children = Story();
-
-    // Support both React and HTML string stories
-    if (typeof children === 'string') {
-      return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${children}</div>`;
-    } else {
-      return (
-        <div id="story" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
-          {children}
-        </div>
-      );
-    }
-  },
-];
+export const decorators = [frameworkDecorator()];
