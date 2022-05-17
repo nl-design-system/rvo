@@ -10,5 +10,8 @@
   "private": true,
   "devDependencies": {
     "@storybook/addon-docs": "6.4.22"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1"
   }
 }

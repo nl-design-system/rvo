@@ -1,27 +1,27 @@
 {
-    "rvo": {
-        "space": {
-            "2xs": {
-                "value": "2px"
-            },
-            "xs": {
-                "value": "4px"
-            },
-            "sm": {
-                "value": "8px"
-            },
-            "md": {
-                "value": "16px"
-            },
-            "lg": {
-                "value": "32px"
-            },
-            "xl": {
-                "value": "64px"
-            },
-            "2xl": {
-                "value": "128px"
-            }
-        }
+  "rvo": {
+    "space": {
+      "2xs": {
+        "value": "2px"
+      },
+      "xs": {
+        "value": "4px"
+      },
+      "sm": {
+        "value": "8px"
+      },
+      "md": {
+        "value": "16px"
+      },
+      "lg": {
+        "value": "32px"
+      },
+      "xl": {
+        "value": "64px"
+      },
+      "2xl": {
+        "value": "128px"
+      }
     }
+  }
 }
