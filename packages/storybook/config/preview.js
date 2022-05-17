@@ -68,6 +68,10 @@ export const parameters = {
       // Tip,
     },
   },
+  html: {
+    root: '#story',
+    removeEmptyComments: true,
+  },
 };
 
 export const decorators = [frameworkDecorator()];
