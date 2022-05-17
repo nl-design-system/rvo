@@ -1,7 +1,7 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
 import { useEffect, useMemo } from '@storybook/client-api';
 import React, { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 const frameworkDecorator = (story, context) => {
   const children = story();
@@ -10,9 +10,13 @@ const frameworkDecorator = (story, context) => {
   } else {
     // React
     const node = useMemo(() => document.createElement('div'), [context.kind, context.name]);
-    const root = useMemo(() => createRoot(node), [node]);
-    useEffect(() => () => root.unmount(), [root]);
-    root.render(<StrictMode>{story()}</StrictMode>);
+    useEffect(() => {
+      // Render the story in the node
+      ReactDOM.render(<StrictMode>{story()}</StrictMode>, node);
+      // Make sure to unmount the component at node when removed from screen
+      return () => ReactDOM.unmountComponentAtNode(node);
+    }, [node]);
+
     return node;
   }
 };
