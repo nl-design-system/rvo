@@ -1,0 +1,157 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button, defaultArgs } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Button"
+  argTypes={{
+    textContent: {
+      description: "Button text",
+      control: "text",
+    },
+    busy: {
+      description: "Busy",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `.rvo-button` class name:
+
+<Canvas>
+  <Story
+    name="Button"
+    args={{
+      ...defaultArgs,
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button" />
+
+## States
+
+### Active
+
+Styling via the `.rvo-button--active` class name:
+
+<Canvas>
+  <Story
+    name="Button active"
+    args={{
+      active: true,
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Hover
+
+Styling via the `.rvo-button--hover` class name:
+
+<Canvas>
+  <Story
+    name="Button hover"
+    args={{
+      textContent: "Read more...",
+      hover: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Focus
+
+Styling via the `.rvo-button--focus` class name:
+
+<Canvas>
+  <Story
+    name="Button focus"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Focus visible
+
+Styling via the `.rvo-button--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Button focus visible"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+      focusVisible: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+Styling via the `.rvo-button--disabled` class name:
+
+<Canvas>
+  <Story
+    name="Button disabled"
+    args={{
+      textContent: "Read more...",
+      disabled: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Busy
+
+Styling via the `.rvo-button--busy` class name:
+
+<Canvas>
+  <Story
+    name="Button busy"
+    args={{
+      busy: true,
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

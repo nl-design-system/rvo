@@ -66,6 +66,11 @@ export const parameters = {
       // p: Paragraph,
       // Tip,
     },
+    // Show code by default.
+    // Stories without concise code snippets can hide the code at Story level.
+    source: {
+      state: 'open',
+    },
   },
 };
 
