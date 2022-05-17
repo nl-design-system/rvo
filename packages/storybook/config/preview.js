@@ -23,7 +23,16 @@ const previewTabs = {
 
 const storySort = {
   order: [
-    // TODO: Add story order
+    'Algemeen',
+    [
+      'Introductie',
+      'Toestemming voor gebruik',
+      'Open source licentie',
+      'Design tokens',
+      ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
+    ],
+    'CSS Components',
+    "Demo pagina's",
   ],
 };
 
