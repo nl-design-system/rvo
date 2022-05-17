@@ -68,6 +68,9 @@ export const parameters = {
       // Tip,
     },
   },
+  html: {
+    root: '#story',
+  },
 };
 
 export const decorators = [frameworkDecorator()];
