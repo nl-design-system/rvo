@@ -22,13 +22,13 @@ export const Button = ({
   hover = defaultArgs.hover,
   textContent = '',
 }) =>
-  `<button class="${clsx('rvo-button', {
-    'rvo-button--primary': kind === 'primary',
-    'rvo-button--secondary': kind === 'secondary',
-    'rvo-button--tertiary': kind === 'tertiary',
-    'rvo-button--quaternary': kind === 'quaternary',
-    'rvo-button--active': active,
-    'rvo-button--hover': hover,
-    'rvo-button--focus': focus,
-    'rvo-button--disabled': disabled,
+  `<button class="${clsx('rvo-old-button', {
+    'rvo-old-button--primary': kind === 'primary',
+    'rvo-old-button--secondary': kind === 'secondary',
+    'rvo-old-button--tertiary': kind === 'tertiary',
+    'rvo-old-button--quaternary': kind === 'quaternary',
+    'rvo-old-button--active': active,
+    'rvo-old-button--hover': hover,
+    'rvo-old-button--focus': focus,
+    'rvo-old-button--disabled': disabled,
   })}"${disabled ? ' aria-disabled="true"' : ''}>${textContent}</button>`;

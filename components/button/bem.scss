@@ -4,7 +4,7 @@
  */
 
 // Base
-.rvo-button {
+.rvo-old-button {
   border: 0;
   font-family: var(--rvo-button-base-font);
   font-size: 1rem;
@@ -14,22 +14,22 @@
   padding-inline-start: var(--rvo-button-base-inline-padding);
 }
 
-.rvo-button:hover {
+.rvo-old-button:hover {
   cursor: pointer;
 }
 
 // Primary
-.rvo-button--primary {
+.rvo-old-button--primary {
   background-color: var(--rvo-button-primary-background-color);
   color: var(--rvo-button-primary-color);
 }
 
-.rvo-button--primary:hover {
+.rvo-old-button--primary:hover {
   background-color: var(--rvo-button-primary-hover-background-color);
 }
 
 // Secondary
-.rvo-button--secondary {
+.rvo-old-button--secondary {
   background-color: var(--rvo-button-secondary-background-color);
   border-color: var(--rvo-button-secondary-border-color);
   border-style: solid;
@@ -37,30 +37,30 @@
   color: var(--rvo-button-secondary-color);
 }
 
-.rvo-button--secondary:hover {
+.rvo-old-button--secondary:hover {
   border-color: var(--rvo-button-secondary-hover-border-color);
   color: var(--rvo-button-secondary-hover-color);
 }
 
 // Tertiary
-.rvo-button--tertiary {
+.rvo-old-button--tertiary {
   background: none;
   color: var(--rvo-button-tertiary-color);
   font-weight: var(--rvo-button-tertiary-weight);
 }
 
-.rvo-button--tertiary:hover {
+.rvo-old-button--tertiary:hover {
   color: var(--rvo-button-tertiary-hover-color);
   text-decoration: underline;
   text-underline-offset: 30%;
 }
 
 // Quaternary
-.rvo-button--quaternary {
+.rvo-old-button--quaternary {
   background-color: var(--rvo-button-quaternary-background-color);
   color: var(--rvo-button-quaternary-color);
 }
 
-.rvo-button--quaternary:hover {
+.rvo-old-button--quaternary:hover {
   background-color: var(--rvo-button-quaternary-hover-background-color);
 }
