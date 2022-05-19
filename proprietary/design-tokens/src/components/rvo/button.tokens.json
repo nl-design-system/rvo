@@ -1,75 +1,21 @@
 {
   "rvo": {
     "button": {
-      "base": {
-        "font": {
-          "value": "{rvo.font.sans-serif.font-family}"
-        },
-        "inline-padding": {
-          "value": "{rvo.space.md}"
-        }
-      },
-      "primary": {
-        "background-color": {
-          "value": "{rvo.color.hemelblauw}"
-        },
-        "color": {
-          "value": "{rvo.color.wit}"
-        },
-        "hover": {
-          "background-color": {
-            "value": "{rvo.color.donkerblauw}"
-          }
-        }
-      },
-      "secondary": {
-        "background-color": {
-          "value": "{rvo.color.wit}"
-        },
+      "tertiary-action": {
+        "background-color": {},
         "color": {
           "value": "{rvo.color.hemelblauw}"
         },
-        "border": {
-          "width": {
-            "value": "{rvo.size.2xs}"
-          },
-          "color": {
-            "value": "{rvo.color.hemelblauw}"
-          }
-        },
-        "hover": {
-          "color": {
-            "value": "{rvo.color.donkerblauw}"
-          },
-          "border": {
-            "color": {
-              "value": "{rvo.color.donkerblauw}"
-            }
-          }
-        }
-      },
-      "tertiary": {
-        "color": {
-          "value": "{rvo.color.hemelblauw}"
-        },
-        "weight": {
+        "font-weight": {
           "value": "{rvo.font-weight.bold}"
         },
-        "border": {
-          "width": {
-            "value": "{rvo.size.2xs}"
-          },
-          "color": {
-            "value": "{rvo.color.hemelblauw}"
-          }
-        },
         "hover": {
           "color": {
             "value": "{rvo.color.donkerblauw}"
           }
         }
       },
-      "quaternary": {
+      "quaternary-action": {
         "background-color": {
           "value": "{rvo.color.groen}"
         },

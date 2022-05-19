@@ -9,7 +9,8 @@
   ],
   "private": true,
   "devDependencies": {
-    "@storybook/addon-docs": "6.4.22"
+    "@storybook/addon-docs": "6.4.22",
+    "@utrecht/component-library-css": "1.0.0-alpha.219"
   },
   "dependencies": {
     "clsx": "1.1.1"

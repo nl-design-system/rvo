@@ -7,6 +7,10 @@ import "./bem.scss";
 <Meta
   title="CSS Components/Button (utrecht)"
   argTypes={{
+    kind: {
+      options: ["primary", "secondary", "tertiary", "quaternary"],
+      control: { type: "radio" },
+    },
     textContent: {
       description: "Button text",
       control: "text",
@@ -41,7 +45,7 @@ import "./bem.scss";
 
 # Button
 
-Styling via the `.rvo-button` class name:
+Styling via the `.utrecht-button` class name:
 
 <Canvas>
   <Story
@@ -57,11 +61,77 @@ Styling via the `.rvo-button` class name:
 
 <ArgsTable story="Button" />
 
+## Kinds
+
+### Primary
+
+Styling via the `.utrecht-button--primary-action` class name:
+
+<Canvas>
+  <Story
+    name="Button primary"
+    args={{
+      kind: "primary",
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Secondary
+
+Styling via the `.utrecht-button--secondary-action` class name:
+
+<Canvas>
+  <Story
+    name="Button secondary"
+    args={{
+      kind: "secondary",
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Tertiary
+
+Styling via the `rvo-button--tertiary-action` class name:
+
+<Canvas>
+  <Story
+    name="Button tertiary"
+    args={{
+      kind: "tertiary",
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Quaternary
+
+Styling via the `rvo-button--quaternary-action` class name:
+
+<Canvas>
+  <Story
+    name="Button quaternary"
+    args={{
+      kind: "quaternary",
+      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
 ## States
 
 ### Active
 
-Styling via the `.rvo-button--active` class name:
+Styling via the `.utrecht-button--active` class name:
 
 <Canvas>
   <Story
@@ -77,7 +147,7 @@ Styling via the `.rvo-button--active` class name:
 
 ### Hover
 
-Styling via the `.rvo-button--hover` class name:
+Styling via the `.utrecht-button--hover` class name:
 
 <Canvas>
   <Story
@@ -93,7 +163,7 @@ Styling via the `.rvo-button--hover` class name:
 
 ### Focus
 
-Styling via the `.rvo-button--focus` class name:
+Styling via the `.utrecht-button--focus` class name:
 
 <Canvas>
   <Story
@@ -109,7 +179,7 @@ Styling via the `.rvo-button--focus` class name:
 
 ### Focus visible
 
-Styling via the `.rvo-button--focus-visible` class name:
+Styling via the `.utrecht-button--focus-visible` class name:
 
 <Canvas>
   <Story
@@ -126,7 +196,7 @@ Styling via the `.rvo-button--focus-visible` class name:
 
 ### Disabled
 
-Styling via the `.rvo-button--disabled` class name:
+Styling via the `.utrecht-button--disabled` class name:
 
 <Canvas>
   <Story
@@ -142,7 +212,7 @@ Styling via the `.rvo-button--disabled` class name:
 
 ### Busy
 
-Styling via the `.rvo-button--busy` class name:
+Styling via the `.utrecht-button--busy` class name:
 
 <Canvas>
   <Story

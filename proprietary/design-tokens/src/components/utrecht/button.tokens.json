@@ -3,7 +3,7 @@
     "button": {
       "background-color": {},
       "border-bottom-color": { "value": "" },
-      "border-bottom-width": { "value": "" },
+      "border-bottom-width": { "value": "0" },
       "border-color": { "value": "" },
       "border-radius": { "value": "" },
       "border-width": {},
@@ -51,6 +51,7 @@
           "color": { "value": "{rvo.color.grijs3}" }
         },
         "hover": {
+          "color": { "value": "{rvo.color.donkerblauw}" },
           "background-color": {},
           "border-color": { "value": "{rvo.color.donkerblauw}" }
         }

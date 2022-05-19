@@ -2,34 +2,41 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import '@utrecht/component-library-css';
 import clsx from 'clsx';
 
 export const defaultArgs = {
+  kind: 'primary',
   active: false,
   busy: false,
   disabled: false,
   focus: false,
   focusVisible: false,
   hover: false,
-  textContent: '',
+  textContent: 'Button',
   type: 'button',
 };
 
 export const Button = ({
-  active = false,
-  busy = false,
-  disabled = false,
-  focus = false,
-  focusVisible = false,
-  hover = false,
-  textContent = '',
-  type = 'button',
+  kind = defaultArgs.kind,
+  active = defaultArgs.active,
+  busy = defaultArgs.busy,
+  disabled = defaultArgs.disabled,
+  focus = defaultArgs.focus,
+  focusVisible = defaultArgs.focusVisible,
+  hover = defaultArgs.hover,
+  textContent = defaultArgs.textContent,
+  type = defaultArgs.type,
 }) =>
-  `<button class="${clsx('rvo-button', {
-    'rvo-button--active': active,
-    'rvo-button--busy': busy,
-    'rvo-button--hover': hover,
-    'rvo-button--focus': focus,
-    'rvo-button--focus-visible': focusVisible,
-    'rvo-button--disabled': disabled,
+  `<button class="${clsx('utrecht-button', {
+    'utrecht-button--primary-action': kind === 'primary',
+    'utrecht-button--secondary-action': kind === 'secondary',
+    'rvo-button--tertiary-action': kind === 'tertiary',
+    'rvo-button--quaternary-action': kind === 'quaternary',
+    'utrecht-button--active': active,
+    'utrecht-button--busy': busy,
+    'utrecht-button--hover': hover,
+    'utrecht-button--focus': focus,
+    'utrecht-button--focus-visible': focusVisible,
+    'utrecht-button--disabled': disabled,
   })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${textContent}</button>`;
