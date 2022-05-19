@@ -11,6 +11,10 @@ import "./bem.scss";
       options: ["primary", "secondary", "tertiary", "quaternary"],
       control: { type: "radio" },
     },
+    size: {
+      options: ["small", "medium"],
+      control: { type: "radio" },
+    },
     textContent: {
       description: "Button text",
       control: "text",
@@ -45,14 +49,13 @@ import "./bem.scss";
 
 # Button
 
-Styling via the `.utrecht-button` class name:
+Styling via the `.utrecht-button` classname:
 
 <Canvas>
   <Story
     name="Button"
     args={{
       ...defaultArgs,
-      textContent: "Read more...",
     }}
   >
     {Button.bind({})}
@@ -65,14 +68,13 @@ Styling via the `.utrecht-button` class name:
 
 ### Primary
 
-Styling via the `.utrecht-button--primary-action` class name:
+Styling via the `.utrecht-button--primary-action` classname:
 
 <Canvas>
   <Story
     name="Button primary"
     args={{
       kind: "primary",
-      textContent: "Read more...",
     }}
   >
     {Button.bind({})}
@@ -81,14 +83,13 @@ Styling via the `.utrecht-button--primary-action` class name:
 
 ### Secondary
 
-Styling via the `.utrecht-button--secondary-action` class name:
+Styling via the `.utrecht-button--secondary-action` classname:
 
 <Canvas>
   <Story
     name="Button secondary"
     args={{
       kind: "secondary",
-      textContent: "Read more...",
     }}
   >
     {Button.bind({})}
@@ -97,14 +98,13 @@ Styling via the `.utrecht-button--secondary-action` class name:
 
 ### Tertiary
 
-Styling via the `rvo-button--tertiary-action` class name:
+Styling via the `.rvo-button--tertiary-action` classname:
 
 <Canvas>
   <Story
     name="Button tertiary"
     args={{
       kind: "tertiary",
-      textContent: "Read more...",
     }}
   >
     {Button.bind({})}
@@ -113,14 +113,47 @@ Styling via the `rvo-button--tertiary-action` class name:
 
 ### Quaternary
 
-Styling via the `rvo-button--quaternary-action` class name:
+Styling via the `.rvo-button--quaternary-action` classname:
 
 <Canvas>
   <Story
     name="Button quaternary"
     args={{
       kind: "quaternary",
-      textContent: "Read more...",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Sizes
+
+### Small
+
+Styling via the `.rvo-button--small` classname:
+
+<Canvas>
+  <Story
+    name="Button small"
+    args={{
+      kind: "primary",
+      size: "small",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Medium
+
+Styling via the `.rvo-button--medium` classname:
+
+<Canvas>
+  <Story
+    name="Button medium"
+    args={{
+      kind: "primary",
+      size: "medium",
     }}
   >
     {Button.bind({})}
@@ -131,14 +164,13 @@ Styling via the `rvo-button--quaternary-action` class name:
 
 ### Active
 
-Styling via the `.utrecht-button--active` class name:
+Styling via the `.utrecht-button--active` classname:
 
 <Canvas>
   <Story
     name="Button active"
     args={{
       active: true,
-      textContent: "Read more...",
     }}
   >
     {Button.bind({})}
@@ -147,13 +179,12 @@ Styling via the `.utrecht-button--active` class name:
 
 ### Hover
 
-Styling via the `.utrecht-button--hover` class name:
+Styling via the `.utrecht-button--hover` classname:
 
 <Canvas>
   <Story
     name="Button hover"
     args={{
-      textContent: "Read more...",
       hover: true,
     }}
   >
@@ -163,13 +194,12 @@ Styling via the `.utrecht-button--hover` class name:
 
 ### Focus
 
-Styling via the `.utrecht-button--focus` class name:
+Styling via the `.utrecht-button--focus` classname:
 
 <Canvas>
   <Story
     name="Button focus"
     args={{
-      textContent: "Read more...",
       focus: true,
     }}
   >
@@ -179,13 +209,12 @@ Styling via the `.utrecht-button--focus` class name:
 
 ### Focus visible
 
-Styling via the `.utrecht-button--focus-visible` class name:
+Styling via the `.utrecht-button--focus-visible` classname:
 
 <Canvas>
   <Story
     name="Button focus visible"
     args={{
-      textContent: "Read more...",
       focus: true,
       focusVisible: true,
     }}
@@ -196,13 +225,12 @@ Styling via the `.utrecht-button--focus-visible` class name:
 
 ### Disabled
 
-Styling via the `.utrecht-button--disabled` class name:
+Styling via the `.utrecht-button--disabled` classname:
 
 <Canvas>
   <Story
     name="Button disabled"
     args={{
-      textContent: "Read more...",
       disabled: true,
     }}
   >
@@ -212,14 +240,13 @@ Styling via the `.utrecht-button--disabled` class name:
 
 ### Busy
 
-Styling via the `.utrecht-button--busy` class name:
+Styling via the `.utrecht-button--busy` classname:
 
 <Canvas>
   <Story
     name="Button busy"
     args={{
       busy: true,
-      textContent: "Read more...",
     }}
   >
     {Button.bind({})}

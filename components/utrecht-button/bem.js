@@ -7,6 +7,7 @@ import clsx from 'clsx';
 
 export const defaultArgs = {
   kind: 'primary',
+  size: 'medium',
   active: false,
   busy: false,
   disabled: false,
@@ -19,6 +20,7 @@ export const defaultArgs = {
 
 export const Button = ({
   kind = defaultArgs.kind,
+  size = defaultArgs.size,
   active = defaultArgs.active,
   busy = defaultArgs.busy,
   disabled = defaultArgs.disabled,
@@ -33,6 +35,8 @@ export const Button = ({
     'utrecht-button--secondary-action': kind === 'secondary',
     'rvo-button--tertiary-action': kind === 'tertiary',
     'rvo-button--quaternary-action': kind === 'quaternary',
+    'rvo-button--small': size === 'small',
+    'rvo-button--medium': size === 'medium',
     'utrecht-button--active': active,
     'utrecht-button--busy': busy,
     'utrecht-button--hover': hover,

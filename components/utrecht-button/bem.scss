@@ -25,3 +25,21 @@
   background-color: var(--rvo-button-quaternary-action-hover-background-color);
   color: var(--rvo-button-quaternary-action-color);
 }
+
+// Sizes
+.rvo-button--small {
+  font-size: var(--rvo-button-small-font-size);
+  min-block-size: 30px;
+  padding-block-end: var(--rvo-button-small-padding-block-end);
+  padding-block-start: var(--rvo-button-small-padding-block-start);
+  padding-inline-end: var(--rvo-button-small-padding-inline-end);
+  padding-inline-start: var(--rvo-button-small-padding-inline-start);
+}
+
+.rvo-button--medium {
+  font-size: var(--rvo-button-medium-font-size);
+  padding-block-end: var(--rvo-button-medium-padding-block-end);
+  padding-block-start: var(--rvo-button-medium-padding-block-start);
+  padding-inline-end: var(--rvo-button-medium-padding-inline-end);
+  padding-inline-start: var(--rvo-button-medium-padding-inline-start);
+}
