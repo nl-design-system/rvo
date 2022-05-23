@@ -3,64 +3,51 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-// Base
-.rvo-old-button {
-  border: 0;
-  font-family: var(--rvo-button-base-font);
-  font-size: 1rem;
-  padding-block-end: 1ex;
-  padding-block-start: 1ex;
-  padding-inline-end: var(--rvo-button-base-inline-padding);
-  padding-inline-start: var(--rvo-button-base-inline-padding);
+// Primary action extension
+.utrecht-button--primary-action.utrecht-button--active {
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
-.rvo-old-button:hover {
-  cursor: pointer;
+// Tertiary action
+.rvo-button--tertiary-action {
+  color: var(--rvo-button-tertiary-action-color);
+  font-weight: var(--rvo-button-tertiary-action-font-weight);
 }
 
-// Primary
-.rvo-old-button--primary {
-  background-color: var(--rvo-button-primary-background-color);
-  color: var(--rvo-button-primary-color);
-}
-
-.rvo-old-button--primary:hover {
-  background-color: var(--rvo-button-primary-hover-background-color);
-}
-
-// Secondary
-.rvo-old-button--secondary {
-  background-color: var(--rvo-button-secondary-background-color);
-  border-color: var(--rvo-button-secondary-border-color);
-  border-style: solid;
-  border-width: var(--rvo-button-secondary-border-width);
-  color: var(--rvo-button-secondary-color);
-}
-
-.rvo-old-button--secondary:hover {
-  border-color: var(--rvo-button-secondary-hover-border-color);
-  color: var(--rvo-button-secondary-hover-color);
-}
-
-// Tertiary
-.rvo-old-button--tertiary {
-  background: none;
-  color: var(--rvo-button-tertiary-color);
-  font-weight: var(--rvo-button-tertiary-weight);
-}
-
-.rvo-old-button--tertiary:hover {
-  color: var(--rvo-button-tertiary-hover-color);
+.rvo-button--tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-tertiary-action-hover-color);
   text-decoration: underline;
   text-underline-offset: 30%;
 }
 
-// Quaternary
-.rvo-old-button--quaternary {
-  background-color: var(--rvo-button-quaternary-background-color);
-  color: var(--rvo-button-quaternary-color);
+// Quaternary action
+.rvo-button--quaternary-action {
+  background-color: var(--rvo-button-quaternary-action-background-color);
+  color: var(--rvo-button-quaternary-action-color);
 }
 
-.rvo-old-button--quaternary:hover {
-  background-color: var(--rvo-button-quaternary-hover-background-color);
+.rvo-button--quaternary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-quaternary-action-hover-background-color);
+  color: var(--rvo-button-quaternary-action-color);
+}
+
+// Sizes
+.rvo-button--small {
+  font-size: var(--rvo-button-small-font-size);
+  min-block-size: 30px;
+  padding-block-end: var(--rvo-button-small-padding-block-end);
+  padding-block-start: var(--rvo-button-small-padding-block-start);
+  padding-inline-end: var(--rvo-button-small-padding-inline-end);
+  padding-inline-start: var(--rvo-button-small-padding-inline-start);
+}
+
+.rvo-button--medium {
+  font-size: var(--rvo-button-medium-font-size);
+  padding-block-end: var(--rvo-button-medium-padding-block-end);
+  padding-block-start: var(--rvo-button-medium-padding-block-start);
+  padding-inline-end: var(--rvo-button-medium-padding-inline-end);
+  padding-inline-start: var(--rvo-button-medium-padding-inline-start);
 }

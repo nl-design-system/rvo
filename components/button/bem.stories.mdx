@@ -1,11 +1,7 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Community for NL Design System
--->
+<!-- @license CC0-1.0 -->
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import README from "./README.md";
-import { Button, defaultArgs } from "./bem";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { AllButtonKinds, Button, defaultArgs } from "./bem";
 import "./bem.scss";
 
 <Meta
@@ -23,8 +19,16 @@ import "./bem.scss";
       description: "Button text",
       control: "text",
     },
+    busy: {
+      description: "Busy",
+      control: "boolean",
+    },
     focus: {
       description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
       control: "boolean",
     },
     hover: {
@@ -40,94 +44,211 @@ import "./bem.scss";
     status: {
       type: "WORK IN PROGRESS",
     },
-    notes: { UX: README },
   }}
 />
 
 # Button
 
-De omlijning van de **active** en de **focus** status wijkt af van de Rijkshuisstijl om te voldoen aan de WCAG richtlijnen.
-
-## Primary
+Styling via the `.utrecht-button` classname:
 
 <Canvas>
-  <Story name="Primary" args={{ ...defaultArgs, kind: "primary" }}>
+  <Story
+    name="Button"
+    args={{
+      ...defaultArgs,
+    }}
+  >
     {Button.bind({})}
   </Story>
 </Canvas>
 
-Primary buttons worden gebruikt voor de belangrijkste actie op de pagina. Denk aan opslaan of versturen. In de meeste gevallen is er maar één primary button per pagina.
+<ArgsTable story="Button" />
 
-## Secondary
+## Kinds
+
+### Primary
+
+Styling via the `.utrecht-button--primary-action` classname:
 
 <Canvas>
-  <Story name="Secondary" args={{ ...defaultArgs, kind: "secondary" }}>
+  <Story
+    name="Button primary"
+    args={{
+      kind: "primary",
+    }}
+  >
     {Button.bind({})}
   </Story>
 </Canvas>
 
-## Tertiary
+### Secondary
+
+Styling via the `.utrecht-button--secondary-action` classname:
 
 <Canvas>
-  <Story name="Tertiary" args={{ ...defaultArgs, kind: "tertiary" }}>
+  <Story
+    name="Button secondary"
+    args={{
+      kind: "secondary",
+    }}
+  >
     {Button.bind({})}
   </Story>
 </Canvas>
 
-Tertiary buttons kunnen gebruikt worden voor pagers of paginatie. De tekst in deze buttons is bold (in tegenstelling tot de andere buttons) zodat het duidelijk is dat het gaat om een link.
+### Tertiary
 
-## Quaternary
+Styling via the `.rvo-button--tertiary-action` classname:
 
 <Canvas>
-  <Story name="Quaternary" args={{ ...defaultArgs, kind: "quaternary" }}>
+  <Story
+    name="Button tertiary"
+    args={{
+      kind: "tertiary",
+    }}
+  >
     {Button.bind({})}
   </Story>
 </Canvas>
 
-Quaternary buttons kunnen in uitzonderlijke gevallen gebruikt worden om een bepaalde actie onder de aandacht te brengen. Bijvoorbeeld het opslaan van een formulier.
+### Quaternary
 
-# Sizes
-
-## Small
+Styling via the `.rvo-button--quaternary-action` classname:
 
 <Canvas>
-  <Story name="Small" args={{ ...defaultArgs, size: "sm" }}>
+  <Story
+    name="Button quaternary"
+    args={{
+      kind: "quaternary",
+    }}
+  >
     {Button.bind({})}
   </Story>
 </Canvas>
 
-## Medium
+## Sizes
 
-# States
+### Small
 
-Hover:
+Styling via the `.rvo-button--small` classname:
 
 <Canvas>
-  <Story name="Default" args={{ ...defaultArgs, hover: true }}>
-    {Button.bind({})}
+  <Story
+    name="Button small"
+    args={{
+      kind: "primary",
+      size: "small",
+    }}
+  >
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
-Active:
+### Medium
+
+Styling via the `.rvo-button--medium` classname:
 
 <Canvas>
-  <Story name="Active" args={{ ...defaultArgs, active: true }}>
-    {Button.bind({})}
+  <Story
+    name="Button medium"
+    args={{
+      kind: "primary",
+      size: "medium",
+    }}
+  >
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
-Focused:
+## States
+
+### Active
+
+Styling via the `.utrecht-button--active` classname:
 
 <Canvas>
-  <Story name="Focused" args={{ ...defaultArgs, focus: true }}>
-    {Button.bind({})}
+  <Story
+    name="Button active"
+    args={{
+      active: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
-Disabled:
+### Hover
+
+Styling via the `.utrecht-button--hover` classname:
 
 <Canvas>
-  <Story name="Disabled" args={{ ...defaultArgs, disabled: true }}>
-    {Button.bind({})}
+  <Story
+    name="Button hover"
+    args={{
+      hover: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+### Focus
+
+Styling via the `.utrecht-button--focus` classname:
+
+<Canvas>
+  <Story
+    name="Button focus"
+    args={{
+      focus: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+### Focus visible
+
+Styling via the `.utrecht-button--focus-visible` classname:
+
+<Canvas>
+  <Story
+    name="Button focus visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+Styling via the `.utrecht-button--disabled` classname:
+
+<Canvas>
+  <Story
+    name="Button disabled"
+    args={{
+      disabled: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+### Busy
+
+Styling via the `.utrecht-button--busy` classname:
+
+<Canvas>
+  <Story
+    name="Button busy"
+    args={{
+      busy: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
