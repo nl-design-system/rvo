@@ -1,0 +1,10 @@
+{
+  "utrecht": {
+    "focus": {
+      "outline-color": { "value": "{rvo.color.hemelblauw}" },
+      "outline-offset": { "value": "2px" },
+      "outline-width": { "value": "2px" },
+      "outline-style": { "value": "solid" }
+    }
+  }
+}

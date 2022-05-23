@@ -53,10 +53,10 @@
     },
     "font-weight": {
       "normal": {
-        "value": "normal"
+        "value": "400"
       },
       "bold": {
-        "value": "bold"
+        "value": "700"
       }
     },
     "line-height": {

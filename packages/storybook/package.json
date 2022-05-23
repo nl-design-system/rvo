@@ -15,7 +15,7 @@
   "scripts": {
     "build": "build-storybook --output-dir dist/ --config-dir config/",
     "clean": "rimraf dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006"
+    "storybook": "start-storybook --config-dir config/ --port 6006 --no-manager-cache"
   },
   "files": [
     "dist/"
@@ -27,15 +27,15 @@
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
     "@percy/storybook": "4.2.0",
-    "@storybook/addon-a11y": "6.4.22",
-    "@storybook/addon-controls": "6.4.22",
-    "@storybook/addon-docs": "6.4.22",
-    "@storybook/addon-viewport": "6.4.22",
-    "@storybook/builder-webpack5": "6.4.22",
-    "@storybook/html": "6.4.22",
-    "@storybook/manager-webpack5": "6.4.22",
+    "@storybook/addon-a11y": "6.5.4",
+    "@storybook/addon-controls": "6.5.4",
+    "@storybook/addon-docs": "6.5.4",
+    "@storybook/addon-viewport": "6.5.4",
+    "@storybook/builder-webpack5": "6.5.4",
+    "@storybook/html": "6.5.4",
+    "@storybook/manager-webpack5": "6.5.4",
     "@storybook/preset-scss": "1.0.3",
-    "@storybook/theming": "6.4.22",
+    "@storybook/theming": "6.5.4",
     "babel-loader": "8.2.5",
     "babel-plugin-macros": "3.1.0",
     "css-loader": "5.2.7",

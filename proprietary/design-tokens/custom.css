@@ -1,0 +1,8 @@
+.utrecht-link {
+  font-weight: var(--rvo-link-font-weight);
+}
+
+.utrecht-button--rvo-small {
+  --utrecht-button-font-size: var(--rvo-typography-font-size-md);
+  --utrecht-button-line-height: var(--rvo-typography-line-height-md);
+}

@@ -3,64 +3,113 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-// Base
-.rvo-button {
-  border: 0;
-  font-family: var(--rvo-button-base-font);
-  font-size: 1rem;
-  padding-block-end: 1ex;
-  padding-block-start: 1ex;
-  padding-inline-end: var(--rvo-button-base-inline-padding);
-  padding-inline-start: var(--rvo-button-base-inline-padding);
+// Primary action extensions
+.utrecht-button--primary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-primary-action-active-background-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
-.rvo-button:hover {
-  cursor: pointer;
+// Secondary action extensions
+.utrecht-button--secondary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-secondary-action-active-background-color);
+  border-color: var(--rvo-button-secondary-action-border-color);
+  color: var(--rvo-button-secondary-action-active-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
-// Primary
-.rvo-button--primary {
-  background-color: var(--rvo-button-primary-background-color);
-  color: var(--rvo-button-primary-color);
+.utrecht-button--secondary-action.utrecht-button--active:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-secondary-action-active-background-color);
+  border-color: var(--rvo-button-secondary-action-border-color);
+  color: var(--rvo-button-secondary-action-active-color);
 }
 
-.rvo-button--primary:hover {
-  background-color: var(--rvo-button-primary-hover-background-color);
+// Tertiary action
+.rvo-button--tertiary-action {
+  color: var(--rvo-button-tertiary-action-color);
+  font-weight: var(--rvo-button-tertiary-action-font-weight);
 }
 
-// Secondary
-.rvo-button--secondary {
-  background-color: var(--rvo-button-secondary-background-color);
-  border-color: var(--rvo-button-secondary-border-color);
-  border-style: solid;
-  border-width: var(--rvo-button-secondary-border-width);
-  color: var(--rvo-button-secondary-color);
-}
-
-.rvo-button--secondary:hover {
-  border-color: var(--rvo-button-secondary-hover-border-color);
-  color: var(--rvo-button-secondary-hover-color);
-}
-
-// Tertiary
-.rvo-button--tertiary {
-  background: none;
-  color: var(--rvo-button-tertiary-color);
-  font-weight: var(--rvo-button-tertiary-weight);
-}
-
-.rvo-button--tertiary:hover {
-  color: var(--rvo-button-tertiary-hover-color);
+.rvo-button--tertiary-action.utrecht-button--hover:not(:disabled),
+.rvo-button--tertiary-action.utrecht-button-link--hover:not(:disabled),
+.rvo-button--tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-tertiary-action-hover-color);
   text-decoration: underline;
   text-underline-offset: 30%;
 }
 
-// Quaternary
-.rvo-button--quaternary {
-  background-color: var(--rvo-button-quaternary-background-color);
-  color: var(--rvo-button-quaternary-color);
+.rvo-button--tertiary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-tertiary-action-active-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+  text-decoration: underline;
+  text-underline-offset: 30%;
 }
 
-.rvo-button--quaternary:hover {
-  background-color: var(--rvo-button-quaternary-hover-background-color);
+.rvo-button--tertiary-action.utrecht-button:disabled,
+.rvo-button--tertiary-action.utrecht-button-link:disabled,
+.rvo-button--tertiary-action.utrecht-button--disabled {
+  color: var(--rvo-button-tertiary-action-disabled-color);
+}
+
+// Quaternary action
+.rvo-button--quaternary-action {
+  background-color: var(--rvo-button-quaternary-action-background-color);
+  color: var(--rvo-button-quaternary-action-color);
+}
+
+.rvo-button--quaternary-action.utrecht-button--hover:not(:disabled),
+.rvo-button--quaternary-action.utrecht-button-link--hover:not(:disabled),
+.rvo-button--quaternary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-quaternary-action-hover-background-color);
+  color: var(--rvo-button-quaternary-action-color);
+}
+
+.rvo-button--quaternary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-quaternary-action-active-background-color);
+  border-width: var(--utrecht-button-secondary-action-border-width);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.rvo-button--quaternary-action.utrecht-button:disabled,
+.rvo-button--quaternary-action.utrecht-button-link:disabled,
+.rvo-button--quaternary-action.utrecht-button--disabled {
+  background-color: var(--rvo-button-quaternary-action-disabled-background-color);
+  border-color: var(--rvo-button-quaternary-action-disabled-border-color);
+  color: var(--rvo-button-quaternary-action-disabled-color);
+}
+
+.rvo-button--quaternary-action.utrecht-button--focus,
+.rvo-button--quaternary-action.utrecht-button-link--focus,
+.rvo-button--quaternary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.rvo-button--quaternary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  border-width: var(--utrecht-button-secondary-action-border-width);
+}
+
+// Sizes
+.rvo-button--small {
+  font-size: var(--rvo-button-small-font-size);
+  min-block-size: 30px;
+  padding-block-end: var(--rvo-button-small-padding-block-end);
+  padding-block-start: var(--rvo-button-small-padding-block-start);
+  padding-inline-end: var(--rvo-button-small-padding-inline-end);
+  padding-inline-start: var(--rvo-button-small-padding-inline-start);
+}
+
+.rvo-button--medium {
+  font-size: var(--rvo-button-medium-font-size);
+  padding-block-end: var(--rvo-button-medium-padding-block-end);
+  padding-block-start: var(--rvo-button-medium-padding-block-start);
+  padding-inline-end: var(--rvo-button-medium-padding-inline-end);
+  padding-inline-start: var(--rvo-button-medium-padding-inline-start);
 }
