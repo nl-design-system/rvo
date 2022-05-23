@@ -34,22 +34,11 @@
         "disabled": {
           "background-color": { "value": "{rvo.color.grijs2}" },
           "color": { "value": "{rvo.color.grijs3}" }
-        },
-        "active": {
-          "background-color": { "value": "{rvo.color.donkerblauw}" },
-          "color": {}
         }
       },
       "secondary-action": {
         "background-color": { "value": "{rvo.color.wit}" },
         "color": { "value": "{rvo.color.hemelblauw}" },
-        "border-color": { "value": "{rvo.color.hemelblauw}" },
-        "border-width": { "value": "1px", "comment": "TODO??" },
-        "active": {
-          "background-color": { "value": "{rvo.color.donkerblauw}", "comment": "TODO??" },
-          "border-color": {},
-          "color": { "value": "{rvo.color.wit}" }
-        },
         "disabled": {
           "border-color": { "value": "{rvo.color.grijs3}" },
           "color": { "value": "{rvo.color.grijs3}" }

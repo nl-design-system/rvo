@@ -1,6 +1,18 @@
 {
   "rvo": {
     "button": {
+      "primary-action": {
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" }
+        }
+      },
+      "secondary-action": {
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" },
+          "border-color": { "value": "" },
+          "color": { "value": "{rvo.color.wit}" }
+        }
+      },
       "tertiary-action": {
         "background-color": {},
         "color": {

@@ -3,12 +3,30 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-// Primary action extension
+// Primary action extensions
 .utrecht-button--primary-action.utrecht-button--active {
+  background-color: var(--rvo-button-primary-action-active-background-color);
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
   outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+// Secondary action extensions
+.utrecht-button--secondary-action.utrecht-button--active {
+  background-color: var(--rvo-button-secondary-action-active-background-color);
+  border-color: var(--rvo-button-secondary-action-border-color);
+  color: var(--rvo-button-secondary-action-active-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-button--secondary-action.utrecht-button--active:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-secondary-action-active-background-color);
+  border-color: var(--rvo-button-secondary-action-border-color);
+  color: var(--rvo-button-secondary-action-active-color);
 }
 
 // Tertiary action
