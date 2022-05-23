@@ -21,10 +21,11 @@
         "font-weight": {
           "value": "{rvo.font-weight.bold}"
         },
+        "active": {
+          "color": { "value": "{rvo.color.donkerblauw}" }
+        },
         "hover": {
-          "color": {
-            "value": "{rvo.color.donkerblauw}"
-          }
+          "color": { "value": "{rvo.color.donkerblauw}" }
         }
       },
       "quaternary-action": {
@@ -33,6 +34,9 @@
         },
         "color": {
           "value": "{rvo.color.wit}"
+        },
+        "active": {
+          "background-color": { "value": "{rvo.color.donkergroen}" }
         },
         "hover": {
           "background-color": {
