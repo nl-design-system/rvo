@@ -53,6 +53,12 @@
   text-underline-offset: 30%;
 }
 
+.rvo-button--tertiary-action.utrecht-button:disabled,
+.rvo-button--tertiary-action.utrecht-button-link:disabled,
+.rvo-button--tertiary-action.utrecht-button--disabled {
+  color: var(--rvo-button-tertiary-action-disabled-color);
+}
+
 // Quaternary action
 .rvo-button--quaternary-action {
   background-color: var(--rvo-button-quaternary-action-background-color);
@@ -73,6 +79,14 @@
   outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
   outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.rvo-button--quaternary-action.utrecht-button:disabled,
+.rvo-button--quaternary-action.utrecht-button-link:disabled,
+.rvo-button--quaternary-action.utrecht-button--disabled {
+  background-color: var(--rvo-button-quaternary-action-disabled-background-color);
+  border-color: var(--rvo-button-quaternary-action-disabled-border-color);
+  color: var(--rvo-button-quaternary-action-disabled-color);
 }
 
 .rvo-button--quaternary-action.utrecht-button--focus,

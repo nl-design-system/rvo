@@ -26,6 +26,9 @@
         },
         "hover": {
           "color": { "value": "{rvo.color.donkerblauw}" }
+        },
+        "disabled": {
+          "color": { "value": "{rvo.color.grijs3}" }
         }
       },
       "quaternary-action": {
@@ -42,6 +45,11 @@
           "background-color": {
             "value": "{rvo.color.donkergroen}"
           }
+        },
+        "disabled": {
+          "border-color": { "value": "{rvo.color.grijs2}" },
+          "background-color": { "value": "{rvo.color.grijs2}" },
+          "color": { "value": "{rvo.color.grijs3}" }
         }
       },
       "small": {

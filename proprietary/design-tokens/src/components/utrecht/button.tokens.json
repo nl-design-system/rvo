@@ -32,6 +32,7 @@
           "background-color": { "value": "{rvo.color.donkerblauw}" }
         },
         "disabled": {
+          "border-color": { "value": "{rvo.color.grijs2}" },
           "background-color": { "value": "{rvo.color.grijs2}" },
           "color": { "value": "{rvo.color.grijs3}" }
         }
