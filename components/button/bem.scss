@@ -35,6 +35,8 @@
   font-weight: var(--rvo-button-tertiary-action-font-weight);
 }
 
+.rvo-button--tertiary-action.utrecht-button--hover:not(:disabled),
+.rvo-button--tertiary-action.utrecht-button-link--hover:not(:disabled),
 .rvo-button--tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   color: var(--rvo-button-tertiary-action-hover-color);
   text-decoration: underline;
@@ -57,6 +59,8 @@
   color: var(--rvo-button-quaternary-action-color);
 }
 
+.rvo-button--quaternary-action.utrecht-button--hover:not(:disabled),
+.rvo-button--quaternary-action.utrecht-button-link--hover:not(:disabled),
 .rvo-button--quaternary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   background-color: var(--rvo-button-quaternary-action-hover-background-color);
   color: var(--rvo-button-quaternary-action-color);
