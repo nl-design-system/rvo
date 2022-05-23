@@ -75,6 +75,13 @@
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
+.rvo-button--quaternary-action.utrecht-button--focus,
+.rvo-button--quaternary-action.utrecht-button-link--focus,
+.rvo-button--quaternary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.rvo-button--quaternary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  border-width: var(--utrecht-button-secondary-action-border-width);
+}
+
 // Sizes
 .rvo-button--small {
   font-size: var(--rvo-button-small-font-size);
