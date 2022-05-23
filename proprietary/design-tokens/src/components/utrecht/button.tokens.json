@@ -34,6 +34,10 @@
         "disabled": {
           "background-color": { "value": "{rvo.color.grijs2}" },
           "color": { "value": "{rvo.color.grijs3}" }
+        },
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" },
+          "color": {}
         }
       },
       "secondary-action": {

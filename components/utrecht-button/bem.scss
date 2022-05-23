@@ -3,6 +3,14 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+// Primary action extension
+.utrecht-button--primary-action.utrecht-button--active {
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
 // Tertiary action
 .rvo-button--tertiary-action {
   color: var(--rvo-button-tertiary-action-color);
