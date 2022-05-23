@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Button, defaultArgs } from "./bem";
+import { Button, AllButtonKinds, defaultArgs } from "./bem";
 import "./bem.scss";
 
 <Meta
@@ -140,7 +140,7 @@ Styling via the `.rvo-button--small` classname:
       size: "small",
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -156,7 +156,7 @@ Styling via the `.rvo-button--medium` classname:
       size: "medium",
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -173,7 +173,7 @@ Styling via the `.utrecht-button--active` classname:
       active: true,
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -188,7 +188,7 @@ Styling via the `.utrecht-button--hover` classname:
       hover: true,
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -203,7 +203,7 @@ Styling via the `.utrecht-button--focus` classname:
       focus: true,
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -219,7 +219,7 @@ Styling via the `.utrecht-button--focus-visible` classname:
       focusVisible: true,
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -234,7 +234,7 @@ Styling via the `.utrecht-button--disabled` classname:
       disabled: true,
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>
 
@@ -249,6 +249,6 @@ Styling via the `.utrecht-button--busy` classname:
       busy: true,
     }}
   >
-    {Button.bind({})}
+    {AllButtonKinds.bind({})}
   </Story>
 </Canvas>

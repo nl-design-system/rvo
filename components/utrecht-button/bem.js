@@ -44,3 +44,9 @@ export const Button = ({
     'utrecht-button--focus-visible': focusVisible,
     'utrecht-button--disabled': disabled,
   })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${textContent}</button>`;
+
+export const AllButtonKinds = (buttonArgs) =>
+  `<p>${Button({ ...buttonArgs, kind: 'primary' })}</p>
+  <p>${Button({ ...buttonArgs, kind: 'secondary' })}</p>
+  <p>${Button({ ...buttonArgs, kind: 'tertiary' })}</p>
+  <p>${Button({ ...buttonArgs, kind: 'quaternary' })}</p>`;
