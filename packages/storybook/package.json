@@ -15,7 +15,7 @@
   "scripts": {
     "build": "build-storybook --output-dir dist/ --config-dir config/",
     "clean": "rimraf dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006"
+    "storybook": "start-storybook --config-dir config/ --port 6006 --no-manager-cache"
   },
   "files": [
     "dist/"
