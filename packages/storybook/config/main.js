@@ -20,5 +20,6 @@ module.exports = {
     '@storybook/addon-controls',
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
+    '@whitespace/storybook-addon-html',
   ],
 };

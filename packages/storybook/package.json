@@ -21,8 +21,8 @@
     "dist/"
   ],
   "devDependencies": {
-    "@babel/core": "7.17.10",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/core": "7.17.12",
+    "@babel/preset-typescript": "7.17.12",
     "@etchteam/storybook-addon-status": "4.2.1",
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
@@ -45,6 +45,7 @@
     "sass": "1.51.0",
     "sass-loader": "10.2.1",
     "style-loader": "2.0.0",
-    "webpack": "4.46.0"
+    "webpack": "4.46.0",
+    "@whitespace/storybook-addon-html": "5.0.0"
   }
 }
