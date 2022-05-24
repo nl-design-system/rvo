@@ -12,6 +12,15 @@
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
+.utrecht-button--primary-action.utrecht-button--focus,
+.utrecht-button--primary-action.utrecht-button-link--focus,
+.utrecht-button--primary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--primary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-primary-action-focus-background-color);
+  border-color: var(--rvo-button-primary-focus-border-color);
+  color: var(--rvo-button-primary-action-focus-color);
+}
+
 // Secondary action extensions
 .utrecht-button--secondary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   background-color: var(--rvo-button-secondary-action-active-background-color);
@@ -27,6 +36,14 @@
   background-color: var(--rvo-button-secondary-action-active-background-color);
   border-color: var(--rvo-button-secondary-action-border-color);
   color: var(--rvo-button-secondary-action-active-color);
+}
+
+.utrecht-button--secondary-action.utrecht-button--focus,
+.utrecht-button--secondary-action.utrecht-button-link--focus,
+.utrecht-button--secondary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--secondary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  border-color: var(--rvo-button-secondary-focus-border-color);
+  color: var(--rvo-button-secondary-action-focus-color);
 }
 
 // Tertiary action
@@ -57,6 +74,17 @@
 .rvo-button--tertiary-action.utrecht-button-link:disabled,
 .rvo-button--tertiary-action.utrecht-button--disabled {
   color: var(--rvo-button-tertiary-action-disabled-color);
+}
+
+.rvo-button--tertiary-action.utrecht-button--focus,
+.rvo-button--tertiary-action.utrecht-button-link--focus,
+.rvo-button--tertiary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.rvo-button--tertiary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-tertiary-action-focus-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
 // Quaternary action
@@ -93,7 +121,14 @@
 .rvo-button--quaternary-action.utrecht-button-link--focus,
 .rvo-button--quaternary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
 .rvo-button--quaternary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-quaternary-action-focus-background-color);
+  border-color: var(--rvo-button-quaternary-action-focus-border-color);
   border-width: var(--utrecht-button-secondary-action-border-width);
+  color: var(--rvo-button-quaternary-action-focus-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
 // Sizes

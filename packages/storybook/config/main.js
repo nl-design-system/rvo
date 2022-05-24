@@ -11,15 +11,15 @@ module.exports = {
     postcss: false,
   },
   addons: [
-    '@etchteam/storybook-addon-status/register',
-    '@storybook/addon-a11y/register',
+    '@etchteam/storybook-addon-status',
+    '@storybook/addon-a11y',
     {
       name: '@storybook/addon-docs',
       options: { configureJSX: true },
     },
     '@storybook/addon-controls',
-    '@storybook/addon-viewport/register',
+    '@storybook/addon-viewport',
     '@storybook/preset-scss',
-    '@whitespace/storybook-addon-html',
+    '@whitespace/storybook-addon-html/register',
   ],
 };
