@@ -1,0 +1,109 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { AllButtonKinds, Button, defaultArgs, argTypes } from "../template";
+import "../index.scss";
+
+<Meta
+  title="CSS Components/Button/States"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# States
+
+## Active
+
+Styling via the `.utrecht-button--active` classname:
+
+<Canvas>
+  <Story
+    name="Active"
+    args={{
+      active: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+## Hover
+
+Styling via the `.utrecht-button--hover` classname:
+
+<Canvas>
+  <Story
+    name="Hover"
+    args={{
+      hover: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+Styling via the `.utrecht-button--focus` classname:
+
+<Canvas>
+  <Story
+    name="Focus"
+    args={{
+      focus: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+## Focus visible
+
+Styling via the `.utrecht-button--focus-visible` classname:
+
+<Canvas>
+  <Story
+    name="Focus visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+Styling via the `.utrecht-button--disabled` classname:
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+## Busy
+
+Hover over the button to see what it does.<br/>
+Styling via the `.utrecht-button--busy` classname:
+
+<Canvas>
+  <Story
+    name="Busy"
+    args={{
+      busy: true,
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>

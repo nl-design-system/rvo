@@ -5,6 +5,41 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 
+export const argTypes = {
+  kind: {
+    options: ['primary', 'secondary', 'tertiary', 'quaternary'],
+    control: { type: 'radio' },
+  },
+  size: {
+    options: ['small', 'medium'],
+    control: { type: 'radio' },
+  },
+  textContent: {
+    description: 'Button text',
+    control: 'text',
+  },
+  busy: {
+    description: 'Busy',
+    control: 'boolean',
+  },
+  focus: {
+    description: 'Focus',
+    control: 'boolean',
+  },
+  focusVisible: {
+    description: 'Focus visible',
+    control: 'boolean',
+  },
+  hover: {
+    description: 'Hover',
+    control: 'boolean',
+  },
+  disabled: {
+    description: 'Disabled',
+    control: 'boolean',
+  },
+};
+
 export const defaultArgs = {
   kind: 'primary',
   size: 'medium',

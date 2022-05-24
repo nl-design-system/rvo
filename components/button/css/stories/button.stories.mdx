@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { AllButtonKinds, Button, defaultArgs, argTypes } from "../template";
+import "../index.scss";
+
+<Meta
+  title="CSS Components/Button"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `.utrecht-button` classname:
+
+<Canvas>
+  <Story
+    name="Button"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button" />
