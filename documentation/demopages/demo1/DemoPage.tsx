@@ -68,7 +68,7 @@ export const DemoPage = () => {
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
               <a href="startpagina.html" className="rvo-process-step-link">
-                Startpagina
+                Voor u start
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
