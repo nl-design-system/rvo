@@ -1,11 +1,11 @@
 import React from 'react';
 import 'normalize.css';
-import './style.css';
+import './style.scss';
 import logo from './assets/img/logo.svg';
 
 export const DemoPage = () => {
   return (
-    <>
+    <div className="rvo-demo-page">
       <header className="rvo-header">
         <div className="rvo-max-width-wrapper">
           <div className="rvo-logo__wrapper">
@@ -125,6 +125,6 @@ export const DemoPage = () => {
           </form>
         </div>
       </main>
-    </>
+    </div>
   );
 };
