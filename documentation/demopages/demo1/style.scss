@@ -696,76 +696,8 @@
     padding-inline-start: var(--rvo-space-md);
   }
 
-  .rvo-button {
-    align-items: center;
-    border: 1px solid rgb(0 0 0 / 0%);
-    cursor: pointer;
-    display: inline-flex;
-    padding-block-end: var(--rvo-space-sm);
-    padding-block-start: var(--rvo-space-sm);
-    padding-inline-end: var(--rvo-space-md);
-    padding-inline-start: var(--rvo-space-md);
-    text-align: start;
-  }
-
-  .rvo-button:focus {
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #007bc7;
-    outline: none;
-  }
-
-  .rvo-button-group .rvo-button:last-child {
+  .rvo-button-group :last-child {
     margin-inline-start: auto;
-  }
-
-  .rvo-button--small {
-    font-size: var(--rvo-font-size-md);
-    padding-block-end: var(--rvo-space-xs);
-    padding-block-start: var(--rvo-space-xs);
-    padding-inline-end: var(--rvo-space-md);
-    padding-inline-start: var(--rvo-space-md);
-  }
-
-  .rvo-button--medium {
-    font-size: var(--rvo-font-size-lg);
-    padding-block-end: var(--rvo-space-sm);
-    padding-block-start: var(--rvo-space-sm);
-    padding-inline-end: var(--rvo-space-md);
-    padding-inline-start: var(--rvo-space-md);
-  }
-
-  .rvo-button--primary {
-    background-color: var(--rvo-color-hemelblauw);
-    color: var(--rvo-color-wit);
-  }
-
-  .rvo-button--primary:hover,
-  .rvo-button--primary:focus {
-    background-color: var(--rvo-color-hemelblauw-hover);
-  }
-
-  .rvo-button--secondary {
-    background-color: var(--rvo-color-wit);
-    border-color: var(--rvo-color-hemelblauw);
-    color: var(--rvo-color-hemelblauw);
-  }
-
-  .rvo-button--secondary:hover,
-  .rvo-button--secondary:focus {
-    background-color: var(--rvo-color-hemelblauw-hover);
-    color: var(--rvo-color-wit);
-  }
-
-  .rvo-button--tertiary {
-    background: none;
-    border: none;
-    color: var(--rvo-color-hemelblauw);
-    font-weight: var(--rvo-font-weight-bold);
-  }
-
-  .rvo-button--tertiary:hover,
-  .rvo-button--tertiary:focus {
-    color: var(--rvo-color-donkerblauw);
-    text-decoration: underline;
   }
 
   .rvo-button--error,

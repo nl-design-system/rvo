@@ -1,0 +1,77 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Button } from "../template";
+import "../index.scss";
+
+<Meta
+  title="CSS Components/Button/Kinds"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button kinds
+
+## Primary
+
+Styling via the `.utrecht-button--primary-action` classname:
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      kind: "primary",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Secondary
+
+Styling via the `.utrecht-button--secondary-action` classname:
+
+<Canvas>
+  <Story
+    name="Secondary"
+    args={{
+      kind: "secondary",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Tertiary
+
+Styling via the `.rvo-button--tertiary-action` classname:
+
+<Canvas>
+  <Story
+    name="Tertiary"
+    args={{
+      kind: "tertiary",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Quaternary
+
+Styling via the `.rvo-button--quaternary-action` classname:
+
+<Canvas>
+  <Story
+    name="Quaternary"
+    args={{
+      kind: "quaternary",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

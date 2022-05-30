@@ -1,0 +1,49 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { AllButtonKinds, argTypes } from "../template";
+import "../index.scss";
+
+<Meta
+  title="CSS Components/Button/Sizes"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button sizes
+
+### Small
+
+Styling via the `.rvo-button--small` classname:
+
+<Canvas>
+  <Story
+    name="Small"
+    args={{
+      kind: "primary",
+      size: "small",
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+### Medium
+
+Styling via the `.rvo-button--medium` classname:
+
+<Canvas>
+  <Story
+    name="Medium"
+    args={{
+      kind: "primary",
+      size: "medium",
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
