@@ -3,7 +3,7 @@ import 'normalize.css';
 import './style.scss';
 import logo from './assets/img/logo.svg';
 
-export const DemoPage = () => {
+const VoordatUStart = () => {
   return (
     <div className="rvo-demo-page">
       <header className="rvo-header">
@@ -68,7 +68,7 @@ export const DemoPage = () => {
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
               <a href="startpagina.html" className="rvo-process-step-link">
-                Startpagina
+                Voordat u begint
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
@@ -97,7 +97,7 @@ export const DemoPage = () => {
         <div className="rvo-form">
           <form action="startpagina.html" method="get">
             <fieldset>
-              <h2>Vormvrije aanvraag</h2>
+              <h2>Voordat u start</h2>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   Wilt u een vormvrije aanvraag indienen?
@@ -132,3 +132,5 @@ export const DemoPage = () => {
     </div>
   );
 };
+
+export default VoordatUStart;

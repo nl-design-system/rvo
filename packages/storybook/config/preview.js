@@ -33,7 +33,7 @@ const storySort = {
       ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
     ],
     'CSS Components',
-    "Demo pagina's",
+    "Demo Pagina's",
   ],
 };
 
