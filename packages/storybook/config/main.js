@@ -4,8 +4,8 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
-    '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
-    '../../../components/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
+    '../../../components/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
   ],
   features: {
     postcss: false,

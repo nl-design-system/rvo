@@ -119,8 +119,12 @@ export const DemoPage = () => {
               </div>
             </fieldset>
             <div className="rvo-button-group">
-              <button className="rvo-button rvo-button--tertiary rvo-button--small rvo-button--error">Annuleren</button>
-              <button className="rvo-button rvo-button--primary rvo-button--medium">Start aanvraag</button>
+              <button className="utrecht-button rvo-button--tertiary-action rvo-button--small rvo-button--error">
+                Annuleren
+              </button>
+              <button className="utrecht-button utrecht-button--primary-action rvo-button--medium">
+                Start aanvraag
+              </button>
             </div>
           </form>
         </div>
