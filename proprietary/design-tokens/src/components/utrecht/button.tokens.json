@@ -39,6 +39,7 @@
       },
       "secondary-action": {
         "background-color": { "value": "{rvo.color.wit}" },
+        "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.hemelblauw}" },
         "disabled": {
           "border-color": { "value": "{rvo.color.grijs3}" },
