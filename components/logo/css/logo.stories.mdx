@@ -1,12 +1,10 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button, defaultArgs } from "../template";
-// import "../index.scss";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Logo } from "./template";
 
 <Meta
-  title="CSS Components/Button"
-  argTypes={argTypes}
+  title="CSS Components/Logo/Logo"
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -16,12 +14,8 @@ import { argTypes, Button, defaultArgs } from "../template";
 
 # Logo
 
-Styling via the `.rvo-logo` classname:
-
 <Canvas>
-  <Story name="Button" args={defaultArgs}>
-    {Button.bind({})}
+  <Story name="Logo">
+    <Logo />
   </Story>
 </Canvas>
-
-<ArgsTable story="Button" />

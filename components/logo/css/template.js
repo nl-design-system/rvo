@@ -2,10 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import logo from '../logo.svg';
+import React from 'react';
+import logo from '../assets/logo.svg';
 
-export const Logo = () => `
-<a href="#" className="rvo-logo__link">
-<img src="${logo}" className="rvo-logo__img" />
-</a>
-`;
+export const Logo = () => <img src={logo} className="rvo-logo" />;
