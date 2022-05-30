@@ -4,19 +4,17 @@ Copyright (c) 2021 Community for NL Design System
 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { DemoPage } from "./DemoPage";
-
-export const Page = () => <DemoPage />;
+import VoordatUStart from "./VoordatUStart";
+import VormvrijeAanvraag from "./VormvrijeAanvraag";
 
 <Meta
-  title="Demo Pagina's/Demo 1"
+  title="Demo Pagina's/WBSO"
   parameters={{
     layout: "fullscreen",
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  component={DemoPage}
 />
 
 # Demo 1
@@ -24,7 +22,15 @@ export const Page = () => <DemoPage />;
 Dit is een eerste demopagina die laat zien hoe componenten kunnen worden gebruikt om een pagina op te bouwen.
 
 <Canvas>
-  <Story name="Demo 1">{Page.bind({})}</Story>
+  <Story name="Vormvrije aanvraag">
+    <VormvrijeAanvraag />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Voordat u start">
+    <VoordatUStart />
+  </Story>
 </Canvas>
 
 De HTML code voor deze pagina is te vinden in Sandbox > HTML.
