@@ -1,0 +1,29 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.rvo-header__logo-wrapper {
+  //   margin-inline-start: calc(50% - 20px);
+}
+
+.rvo-logo {
+  max-height: 70px;
+}
+
+@media (min-width: 768px) {
+  .rvo-header__logo-wrapper {
+    // margin-inline-end: calc(50% - 200px);
+  }
+
+  .rvo-logo {
+    max-height: none;
+  }
+}
