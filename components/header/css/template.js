@@ -21,7 +21,7 @@ export const Header = ({ link = defaultArgs.link }) => (
   <header className="rvo-header">
     <div className="rvo-header__logo-wrapper">
       <a href={link} className="rvo-header__logo-link">
-        <Logo />
+        <Logo className="rvo-header__logo-img" />
       </a>
     </div>
   </header>

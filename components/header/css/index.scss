@@ -22,7 +22,7 @@
   width: 40px;
 }
 
-.rvo-logo {
+.rvo-header__logo-img {
   margin-block-start: -20px;
   max-height: 80px;
 }
@@ -38,7 +38,7 @@
     width: auto;
   }
 
-  .rvo-logo {
+  .rvo-header__logo-img {
     margin-block-start: 0;
     max-height: 90px;
   }
@@ -53,7 +53,7 @@
     margin-inline-end: -200px;
   }
 
-  .rvo-logo__img {
+  .rvo-header__logo-img {
     max-height: none;
   }
 }
