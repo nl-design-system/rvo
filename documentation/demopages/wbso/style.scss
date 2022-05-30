@@ -246,24 +246,6 @@
     z-index: 3;
   }
 
-  .rvo-logo__wrapper {
-    display: flex;
-    justify-content: center;
-    margin-block-end: 10;
-  }
-
-  .rvo-logo__link {
-    display: inline-block;
-    font-size: 0;
-    overflow: hidden;
-    width: 40;
-  }
-
-  .rvo-logo__img {
-    margin-block-start: -20;
-    max-height: 80;
-  }
-
   /* @PROGRESS TRACKER */
 
   .rvo-progress-tracker {
@@ -763,23 +745,6 @@
     margin-block-start: var(--rvo-space-sm);
   }
 
-  @media (min-width: 480) {
-    .rvo-logo__wrapper {
-      margin-block-end: 23px;
-    }
-
-    .rvo-logo__link {
-      margin-inline-end: -180;
-      overflow: visible;
-      width: auto;
-    }
-
-    .rvo-logo__img {
-      margin-block-start: 0;
-      max-height: 90;
-    }
-  }
-
   @media (min-width: 612px) {
     .rvo-data {
       display: grid;
@@ -810,18 +775,6 @@
   }
 
   @media (min-width: 768px) {
-    .rvo-logo__wrapper {
-      margin-block-end: 25px;
-    }
-
-    .rvo-logo__link {
-      margin-inline-end: -200;
-    }
-
-    .rvo-logo__img {
-      max-height: none;
-    }
-
     .rvo-menu--toggle-menu {
       display: none;
     }

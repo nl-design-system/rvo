@@ -1,20 +1,12 @@
 import React from 'react';
 import 'normalize.css';
 import './style.scss';
-import logo from './assets/img/logo.svg';
+import Header from './components/Header';
 
 const VormvrijeAanvraag = () => {
   return (
     <div className="rvo-demo-page">
-      <header className="rvo-header">
-        <div className="rvo-max-width-wrapper">
-          <div className="rvo-logo__wrapper">
-            <a href="#" className="rvo-logo__link">
-              <img src={logo} className="rvo-logo__img" />
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
       <div className="rvo-navigation rvo-navigation--hemelblauw">
         <div className="rvo-max-width-wrapper">
           <nav className="rvo-main-menu">
