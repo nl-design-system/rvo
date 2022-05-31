@@ -1,13 +1,6 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Community for NL Design System
--->
+<!-- @license CC0-1.0 -->
 
-import { Description, Meta } from "@storybook/addon-docs";
-
-<Meta title="CSS Components/Language selector" />
-
-<Description># Language selector</Description>
+# Language selector
 
 Wanneer een applicatie beschikbaar is in meerdere talen kan de bezoeker met een language selector een andere taal kiezen.
 
@@ -34,4 +27,4 @@ Deze language selector is daarom ontworpen en ontwikkeld met de gedachte dat er 
 
 ## Bronnen
 
-- [Designing A Better Language Selector - Vitaly Friedman ](https://web.archive.org/web/20220519171055/https://www.smashingmagazine.com/2022/05/designing-better-language-selector/)
+- [Designing A Better Language Selector - Vitaly Friedman](https://web.archive.org/web/20220519171055/https://www.smashingmagazine.com/2022/05/designing-better-language-selector/)
