@@ -12,6 +12,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "fonts/",
+    "icons/",
+    "images/"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git"
