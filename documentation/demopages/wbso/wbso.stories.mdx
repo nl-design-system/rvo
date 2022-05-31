@@ -6,6 +6,7 @@ Copyright (c) 2021 Community for NL Design System
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import VoordatUStart from "./VoordatUStart";
 import VormvrijeAanvraag from "./VormvrijeAanvraag";
+import Aanvrager from "./Aanvrager";
 
 <Meta
   title="Demo Pagina's/WBSO"
@@ -17,9 +18,9 @@ import VormvrijeAanvraag from "./VormvrijeAanvraag";
   }}
 />
 
-# Demo 1
+# Demo
 
-Dit is een eerste demopagina die laat zien hoe componenten kunnen worden gebruikt om een pagina op te bouwen.
+In deze demo worden de schermen vanuit de WBSO regeling nagebouwd met componenten die beschikbaar zijn in Storybook.
 
 <Canvas>
   <Story name="Vormvrije aanvraag">
@@ -30,6 +31,12 @@ Dit is een eerste demopagina die laat zien hoe componenten kunnen worden gebruik
 <Canvas>
   <Story name="Voordat u start">
     <VoordatUStart />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Aanvrager">
+    <Aanvrager />
   </Story>
 </Canvas>
 

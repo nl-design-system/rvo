@@ -119,8 +119,8 @@
     background-color: var(--rvo-color-hemelblauw);
   }
 
-  .rvo-icon--grijs-7 {
-    background-color: var(--rvo-color-grijs-7);
+  .rvo-icon--grijs7 {
+    background-color: var(--rvo-color-grijs7);
   }
 
   .rvo-icon--before {
@@ -140,7 +140,7 @@
   }
 
   .rvo-top {
-    background-color: var(--rvo-color-grijs-1);
+    background-color: var(--rvo-color-grijs1);
   }
 
   .rvo-menu {
@@ -179,7 +179,7 @@
   }
 
   .rvo-menu--top-menu .rvo-menu-link {
-    color: var(--rvo-color-grijs-7);
+    color: var(--rvo-color-grijs7);
     font-weight: var(--rvo-font-weight-regular);
   }
 
@@ -365,7 +365,7 @@
   }
 
   fieldset {
-    background-color: var(--rvo-color-grijs-1);
+    background-color: var(--rvo-color-grijs1);
     border: 0;
     display: flex;
     flex-direction: column;
@@ -455,9 +455,9 @@
   input[type="text"]:disabled,
   input[type="number"]:disabled,
   textarea:disabled {
-    background-color: var(--rvo-color-grijs-3);
-    border-color: var(--rvo-color-grijs-7);
-    color: var(--rvo-color-grijs-7);
+    background-color: var(--rvo-color-grijs3);
+    border-color: var(--rvo-color-grijs7);
+    color: var(--rvo-color-grijs7);
   }
 
   input[type="text"].rvo-input-error,
@@ -495,7 +495,7 @@
 
   input[type="radio"]:focus,
   input[type="checkbox"]:focus {
-    box-shadow: 0 0 0 3px var(--rvo-color-grijs-1), 0 0 0 5px var(--rvo-color-hemelblauw);
+    box-shadow: 0 0 0 3px var(--rvo-color-grijs1), 0 0 0 5px var(--rvo-color-hemelblauw);
     outline: none;
   }
 
@@ -701,7 +701,7 @@
   /* @DATA */
 
   .rvo-data {
-    border: 1px solid var(--rvo-color-zwart);
+    border: 1px solid var(--rvo-color-grijs4);
     margin-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
   }
 
@@ -716,7 +716,7 @@
   }
 
   .rvo-data dt {
-    border-top: 1px solid var(--rvo-color-zwart);
+    border-top: 1px solid var(--rvo-color-grijs4);
     font-weight: 700;
     padding-block-end: 0;
     padding-block-start: var(--rvo-space-sm);
@@ -760,8 +760,8 @@
     }
 
     .rvo-data dd {
-      border-left: 1px solid var(--rvo-color-zwart);
-      border-top: 1px solid var(--rvo-color-zwart);
+      border-left: 1px solid var(--rvo-color-grijs4);
+      border-top: 1px solid var(--rvo-color-grijs4);
     }
 
     .rvo-data dd:nth-of-type(1) {
