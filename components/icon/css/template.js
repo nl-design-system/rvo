@@ -4,11 +4,6 @@
  */
 import iconList from '@nl-rvo/assets/icons';
 
-// Dynamically import all icons
-Object.keys(iconList).forEach((category) => {
-  Object.keys(category).forEach((icon) => import(/* webpackMode: "eager" */ `@nl-rvo/assets/icons/${icon}`));
-});
-
 String.prototype.toProperCase = function () {
   return this.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -34,6 +29,5 @@ export const defaultArgs = {
 export const Icon = ({ icon = defaultArgs.icon }) => {
   const [categoryName, iconName] = icon.split(' > ');
   const iconUrl = iconList[categoryName.toUpperCase()][iconName.toUpperCase()];
-
   return `<img class="rvo-icon" src="proprietary/assets/icons/${iconUrl}" />`;
 };

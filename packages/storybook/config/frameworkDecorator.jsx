@@ -4,7 +4,7 @@ import * as ReactDOMServer from 'react-dom/server';
 const frameworkDecorator = (story) => {
   let storyContent = story();
   if (typeof storyContent !== 'string') {
-    storyContent = ReactDOMServer.renderToString(story());
+    storyContent = ReactDOMServer.renderToStaticMarkup(story());
   }
 
   return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${storyContent}</div>`;
