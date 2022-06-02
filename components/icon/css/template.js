@@ -4,11 +4,6 @@
  */
 import iconList from '@nl-rvo/assets/icons';
 
-// Dynamically import all icons
-Object.keys(iconList).forEach((category) => {
-  Object.keys(category).forEach((icon) => import(/* webpackMode: "eager" */ `@nl-rvo/assets/icons/${icon}`));
-});
-
 String.prototype.toProperCase = function () {
   return this.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
