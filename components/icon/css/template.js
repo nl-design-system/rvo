@@ -29,5 +29,5 @@ export const defaultArgs = {
 export const Icon = ({ icon = defaultArgs.icon }) => {
   const [categoryName, iconName] = icon.split(' > ');
   const iconUrl = iconList[categoryName.toUpperCase()][iconName.toUpperCase()];
-  return `<img class="rvo-icon" src="proprietary/assets/icons/${iconUrl}" />`;
+  return `<img class="rvo-icon" src="/icons/${iconUrl}" />`;
 };
