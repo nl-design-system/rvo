@@ -4,6 +4,5 @@
  */
 import logo from '@nl-rvo/assets/images/logo.svg';
 import clsx from 'clsx';
-import React from 'react';
 
-export const Logo = ({ className = '' }) => <img src={logo} className={clsx('rvo-logo', className)} />;
+export const Logo = ({ className = '' }) => `<img src="${logo}" class="${clsx('rvo-logo', className)}" />`;

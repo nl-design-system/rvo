@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+	 height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#39870C;}
+	.st2{fill:#D52B1E;}
+	.st3{display:none;}
+	.st4{display:none;fill:#FFFFFF;}
+</style>
+<g id="box">
+	<g>
+		<rect class="st0" width="24" height="24"/>
+	</g>
+</g>
+<g id="icon">
+	<path d="M23.1,5.7L23.1,5.7c-1-1-2.3-1.4-3.3-0.3L12,13.1L4.3,5.3c-1-1-2.3-0.7-3.3,0.3l0,0c-1,1-1.4,2.3-0.3,3.3l9.6,9.6
+		c1,1,2.6,1,3.6,0L23.4,9C24.4,8,24.1,6.7,23.1,5.7z"/>
+</g>
+</svg>
