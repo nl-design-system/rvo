@@ -28,7 +28,7 @@
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-css": "file:../web-components-css",
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
-    "@percy/storybook": "4.2.0",
+    "@percy/storybook": "4.2.1",
     "@storybook/addon-a11y": "6.5.4",
     "@storybook/addon-controls": "6.5.4",
     "@storybook/addon-docs": "6.5.4",
