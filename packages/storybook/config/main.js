@@ -20,7 +20,6 @@ module.exports = {
     '@storybook/addon-controls',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
-    '@whitespace/storybook-addon-html/register',
   ],
   staticDirs: ['../../../proprietary/assets'],
 };

@@ -47,7 +47,6 @@
     "sass": "1.52.1",
     "sass-loader": "10.2.1",
     "style-loader": "2.0.0",
-    "webpack": "4.46.0",
-    "@whitespace/storybook-addon-html": "5.0.0"
+    "webpack": "4.46.0"
   }
 }
