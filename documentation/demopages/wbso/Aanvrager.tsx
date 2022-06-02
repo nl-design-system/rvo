@@ -198,8 +198,12 @@ const Aanvrager = () => {
               </div>
             </fieldset>
             <div className="rvo-button-group">
-              <button className="rvo-button rvo-button--secondary rvo-button--medium">Opslaan en sluiten</button>
-              <button className="rvo-button rvo-button--primary rvo-button--medium">Opslaan en verder</button>
+              <button className="utrecht-button utrecht-button--secondary-action rvo-button--medium">
+                Opslaan en sluiten
+              </button>
+              <button className="utrecht-button utrecht-button--primary-action rvo-button--medium">
+                Opslaan en verder
+              </button>
             </div>
           </form>
         </div>
