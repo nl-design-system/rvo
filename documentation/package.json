@@ -9,6 +9,7 @@
   ],
   "private": true,
   "devDependencies": {
+    "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "@storybook/addon-docs": "6.5.4"
   },

@@ -22,4 +22,5 @@ module.exports = {
     '@storybook/preset-scss',
     '@whitespace/storybook-addon-html/register',
   ],
+  staticDirs: ['../../../proprietary/assets'],
 };
