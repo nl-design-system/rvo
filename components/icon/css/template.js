@@ -3,6 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import iconList from '@nl-rvo/assets/icons';
+import '@nl-rvo/assets/icons/index.css';
+import clsx from 'clsx';
 
 String.prototype.toProperCase = function () {
   return this.replace(/\w\S*/g, function (txt) {
@@ -20,14 +22,30 @@ export const argTypes = {
     control: 'select',
     options: options,
   },
+  size: {
+    options: ['small', 'medium', 'large'],
+    control: { type: 'radio' },
+  },
+  color: {
+    options: ['hemelblauw', 'wit'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs = {
-  icon: options[0],
+  icon: argTypes.icon.options[0],
+  size: argTypes.size.options[1],
+  color: argTypes.color.options[0],
 };
 
-export const Icon = ({ icon = defaultArgs.icon }) => {
-  const [categoryName, iconName] = icon.split(' > ');
-  const iconUrl = iconList[categoryName.toUpperCase()][iconName.toUpperCase()];
-  return `<img class="rvo-icon" src="/icons/${iconUrl}" />`;
+export const Icon = ({ icon = defaultArgs.icon, size = defaultArgs.size, color = defaultArgs.color }) => {
+  const [, iconName] = icon.split(' > ');
+
+  return `<span class="${clsx('rvo-icon', `rvo-icon--${iconName.toLowerCase()}`, {
+    'rvo-icon--small': size === 'small',
+    'rvo-icon--medium': size === 'medium',
+    'rvo-icon--large': size === 'large',
+    'rvo-icon--wit': color === 'wit',
+    'rvo-icon--hemelblauw': color === 'hemelblauw',
+  })}" />`;
 };

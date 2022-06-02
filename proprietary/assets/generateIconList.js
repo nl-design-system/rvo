@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// Recursive function to get all SVG icons
 const readFolder = (folderPath, icons = {}) => {
   const folderContents = fs.readdirSync(folderPath);
   folderContents.forEach((fileOrDirectory) => {
@@ -21,17 +22,15 @@ const readFolder = (folderPath, icons = {}) => {
   return icons;
 };
 
-const generateIconList = async (iconsFolderPath) => {
-  const iconList = await readFolder(iconsFolderPath);
+// JS file generator
+const generateJS = (iconList) => {
+  const jsStringArray = ['export default {'];
 
-  // Generate js file
-  const fileContents = ['export default {'];
-
-  // Categories
+  // Loop over categories
   Object.keys(iconList).forEach((iconCategoryName) => {
-    fileContents.push(`${iconCategoryName.toUpperCase()}: {`);
-    // Icons
-    fileContents.push(
+    jsStringArray.push(`${iconCategoryName.toUpperCase()}: {`);
+    // Loop over icons
+    jsStringArray.push(
       ...iconList[iconCategoryName].map(
         (iconFilename) =>
           `${iconFilename
@@ -40,17 +39,48 @@ const generateIconList = async (iconsFolderPath) => {
             .toUpperCase()}: '${iconCategoryName}/${iconFilename}',`,
       ),
     );
-    fileContents.push('},');
+    jsStringArray.push('},');
   });
 
-  fileContents.push('};');
+  jsStringArray.push('};');
 
   try {
-    fs.writeFileSync(path.join(__dirname, 'icons/index.js'), fileContents.join('\n'));
+    fs.writeFileSync(path.join(__dirname, 'icons/index.js'), jsStringArray.join('\n'));
   } catch (err) {
     console.error(err);
   }
 };
 
+// CSS file generator
+const generateCSS = (iconList) => {
+  const sass = require('sass');
+  let scssString = ``;
+
+  // Loop over categories
+  Object.keys(iconList).forEach((iconCategoryName) => {
+    // Loop over icons
+    iconList[iconCategoryName].forEach((iconFilename) => {
+      scssString += `.rvo-icon--${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
+      scssString += `  -webkit-mask-image: url("${iconCategoryName}/${iconFilename}");\n`;
+      scssString += `  mask-image: url("${iconCategoryName}/${iconFilename}");\n`;
+      scssString += `}\n\n`;
+    });
+  });
+  const compiledCSS = sass.compileString(scssString);
+
+  try {
+    fs.writeFileSync(path.join(__dirname, 'icons/index.css'), compiledCSS.css);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+const generateIconList = (iconsFolderPath) => {
+  const iconList = readFolder(iconsFolderPath);
+  generateJS(iconList);
+  generateCSS(iconList);
+};
+
+// Run
 const iconsFolderPath = path.join(__dirname, 'icons');
 generateIconList(iconsFolderPath);

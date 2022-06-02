@@ -4,6 +4,34 @@
  */
 
 .rvo-icon {
-  height: 24px;
-  width: 24px;
+  display: inline-block;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon--small {
+  height: var(--rvo-icon-small-height);
+  width: var(--rvo-icon-small-width);
+}
+
+.rvo-icon--medium {
+  height: var(--rvo-icon-medium-height);
+  width: var(--rvo-icon-medium-width);
+}
+
+.rvo-icon--large {
+  height: var(--rvo-icon-large-height);
+  width: var(--rvo-icon-large-width);
+}
+
+.rvo-icon--wit {
+  background-color: #fff;
+}
+
+.rvo-icon--hemelblauw {
+  background-color: var(--rvo-color-hemelblauw);
 }

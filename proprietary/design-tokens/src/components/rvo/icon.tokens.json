@@ -1,0 +1,18 @@
+{
+  "rvo": {
+    "icon": {
+      "small": {
+        "width": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" },
+        "height": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" }
+      },
+      "medium": {
+        "width": { "value": "{rvo.size.md}" },
+        "height": { "value": "{rvo.size.md}" }
+      },
+      "large": {
+        "width": { "value": "{rvo.size.lg}" },
+        "height": { "value": "{rvo.size.lg}" }
+      }
+    }
+  }
+}
