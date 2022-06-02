@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import iconList from '@nl-rvo/assets/icons';
-import React from 'react';
 
 String.prototype.toProperCase = function () {
   return this.replace(/\w\S*/g, function (txt) {
@@ -31,11 +30,11 @@ export const Icon = ({ icon = defaultArgs.icon }) => {
   const [categoryName, iconName] = icon.split(' > ');
   const iconUrl = iconList[categoryName.toUpperCase()][iconName.toUpperCase()];
 
-  return (
+  return `
     <header className="rvo-header">
       <div className="rvo-header__logo-wrapper">
-        <img src={`static/media/../../proprietary/assets/icons/${iconUrl}`} />
+        <img src="static/media/../../proprietary/assets/icons/${iconUrl}" />
       </div>
     </header>
-  );
+  `;
 };
