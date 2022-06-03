@@ -6,7 +6,7 @@ Korte beschrijving van het component
 
 Tekst
 
-## Anotomie van het component
+## Anatomie van het component
 
 Het component bestaat uit:
 
