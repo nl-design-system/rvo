@@ -9,6 +9,7 @@ module.exports = {
   ],
   features: {
     postcss: false,
+    previewMdx2: true,
   },
   addons: [
     '@etchteam/storybook-addon-status',
