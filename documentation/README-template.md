@@ -2,26 +2,26 @@
 
 Korte beschrijving van het component
 
-# Wanneer gebruik je component
+## Wanneer gebruik je component
 
 Tekst
 
-# Anotomie van het component
+## Anotomie van het component
 
 Het component bestaat uit:
 
 - Tekst
 - Tekst
 
-# Richtlijnen
+## Richtlijnen
 
 - Het component moet ...
 - Het component moet niet ...
 
-# Rijkshuisstijl
+## Rijkshuisstijl
 
 Verantwoording ten opzichte van de Rijkshuisstijl waar en waarom het component mogelijk afwijkt.
 
-# Bronnen
+## Bronnen
 
-- Gebruik https://archive.org/ zodat de bron altijd geraadpleegd kan worden ook als deze inmiddels niet meer beschikbaar is.
+- [Titel - auteur](https://archive.org/)
