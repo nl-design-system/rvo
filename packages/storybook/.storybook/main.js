@@ -14,10 +14,7 @@ module.exports = {
   addons: [
     '@etchteam/storybook-addon-status',
     '@storybook/addon-a11y',
-    {
-      name: '@storybook/addon-docs',
-      options: { configureJSX: true },
-    },
+    '@storybook/addon-docs',
     '@storybook/addon-controls',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
