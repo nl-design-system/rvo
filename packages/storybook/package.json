@@ -13,9 +13,9 @@
     "url": "git@github.com:nl-design-system/rvo.git"
   },
   "scripts": {
-    "build": "build-storybook --output-dir dist/ --config-dir config/",
+    "build": "build-storybook --output-dir dist/",
     "clean": "rimraf dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006 --no-manager-cache"
+    "storybook": "start-storybook --port 6006 --no-manager-cache"
   },
   "files": [
     "dist/"
@@ -36,6 +36,7 @@
     "@storybook/builder-webpack5": "6.5.6",
     "@storybook/html": "6.5.6",
     "@storybook/manager-webpack5": "6.5.6",
+    "@storybook/mdx2-csf": "0.0.3",
     "@storybook/preset-scss": "1.0.3",
     "@storybook/theming": "6.5.6",
     "babel-loader": "8.2.5",
