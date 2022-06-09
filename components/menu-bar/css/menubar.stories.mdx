@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, MenuBar, defaultArgs } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menu bar"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Menu bar
+
+<Canvas>
+  <Story name="Menu bar" args={defaultArgs}>
+    {MenuBar.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Menu bar" />
