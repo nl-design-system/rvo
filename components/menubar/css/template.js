@@ -12,6 +12,9 @@ export const argTypes = {
   useIcons: {
     control: 'boolean',
   },
+  useSpacer: {
+    control: 'boolean',
+  },
   iconAlign: {
     options: ['left', 'right'],
     control: { type: 'radio' },
@@ -21,6 +24,7 @@ export const argTypes = {
 export const defaultArgs = {
   size: 'medium',
   useIcons: false,
+  useSpacer: false,
   iconAlign: 'left',
 };
 
@@ -41,6 +45,7 @@ export const MenuBar = ({
   size = defaultArgs.size,
   useIcons = defaultArgs.useIcons,
   iconAlign = defaultArgs.iconAlign,
+  useSpacer = defaultArgs.useSpacer,
 }) => {
   return `<nav class="rvo-topnav rvo-topnav--${size}">
     <ul class="utrecht-topnav__list">
@@ -59,6 +64,7 @@ export const MenuBar = ({
           ${parseMenuItem('Ondernemen', useIcons && 'kalender', 'medium', iconAlign)}
         </a>
       </li>
+      ${useSpacer ? '<div class="rvo-topnav__spacer"></div>' : ''}
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="#">
           ${parseMenuItem('Bestuur en organisatie', useIcons && 'versleutelen', 'medium', iconAlign)}

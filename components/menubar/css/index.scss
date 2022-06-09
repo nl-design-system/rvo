@@ -16,6 +16,10 @@
   font-size: var(--rvo-topnav-medium-font-size);
 }
 
+.rvo-topnav__spacer {
+  flex: 1;
+}
+
 .utrecht-topnav__list {
   justify-content: normal;
 }
