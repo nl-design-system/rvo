@@ -4,6 +4,7 @@
  */
 
 .rvo-topnav {
+  font-family: var(--rvo-font-sans-serif-font-family);
   max-width: var(--rvo-layout-max-width);
 }
 
@@ -11,11 +12,14 @@
   justify-content: normal;
 }
 
+.utrecht-topnav__item {
+  flex: none;
+}
+
 .utrecht-topnav__link {
   align-items: center;
   column-gap: var(--rvo-space-sm);
   display: flex;
-  flex: none;
   padding-block-end: var(--rvo-topnav-item-padding-block-end);
   padding-block-start: var(--rvo-topnav-item-padding-block-start);
   padding-inline-end: var(--rvo-topnav-item-padding-inline-end);

@@ -3,7 +3,7 @@ import { argTypes, MenuBar, defaultArgs } from "./template";
 import "./index.scss";
 
 <Meta
-  title="CSS Components/Menubar"
+  title="CSS Components/Menubar/Variations"
   argTypes={argTypes}
   parameters={{
     status: {
@@ -17,7 +17,7 @@ import "./index.scss";
 Menubar containing items with icons:
 
 <Canvas>
-  <Story name="Menubar with icons (left)" args={{ ...defaultArgs, useIcons: true }}>
+  <Story name="With icons left" args={{ ...defaultArgs, useIcons: true }}>
     {MenuBar.bind()}
   </Story>
 </Canvas>
@@ -25,7 +25,7 @@ Menubar containing items with icons:
 Menubar containing items with icons aligned to the right:
 
 <Canvas>
-  <Story name="Menubar with icons (right)" args={{ ...defaultArgs, useIcons: true, iconAlign: "right" }}>
+  <Story name="With icons right" args={{ ...defaultArgs, useIcons: true, iconAlign: "right" }}>
     {MenuBar.bind()}
   </Story>
 </Canvas>
