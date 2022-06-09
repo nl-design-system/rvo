@@ -88,36 +88,19 @@ const Formulier = () => {
             </div>
           </div>
           <div className="rvo-main-steps">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
+              <span className="rvo-process-step-link rvo-process-step-link--disabled">Process step disabled</span>
+            </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Process completed</div>
           </div>
         </div>
         <div className="rvo-form">
           <div className="intro">
             <a href="startpagina.html" className="back-link">
-              <span className="rvo-icon rvo-icon--sm rvo-icon--before rvo-icon--hemelblauw rvo-icon--terug"></span>Terug
-              naar Voordat u begint
+              <span className="rvo-icon rvo-icon--sm rvo-icon--before rvo-icon--hemelblauw rvo-icon--terug"></span>Back
+              link
             </a>
-            <h1>Aanvrager</h1>
-            <h2>Bedrijfsgegevens (NHR)</h2>
-            <dl className="rvo-data">
-              <dt>KVK-nummer</dt>
-              <dd>35012085</dd>
-              <dt>Naam</dt>
-              <dd>Albert Heijn B.V.</dd>
-              <dt>Rechtsvorm</dt>
-              <dd>bv</dd>
-              <dt>RSIN</dt>
-              <dd>002230884</dd>
-            </dl>
-            <h2>Bedrijfsgegevens</h2>
-            <dl className="rvo-data">
-              <dt>Website</dt>
-              <dd className="rvo-url">https://www.streetplanet.nl</dd>
-              <dt>Maakt u deel uit van een fiscale eenheid voor de vennootschapbelasting?</dt>
-              <dd>Ja</dd>
-              <dt>RSIN-Nummer fiscale moeder</dt>
-              <dd>200000007</dd>
-            </dl>
+            <h1>Form Title</h1>
           </div>
           <form>
             <fieldset>
