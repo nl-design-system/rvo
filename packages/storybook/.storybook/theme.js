@@ -18,6 +18,6 @@ export default create({
   fontSize: '100%',
 
   brandTitle: 'NL Design System: RVO',
-  brandUrl: 'https://www.rvo.nl',
+  brandUrl: '/',
   brandImage: 'https://www.rvo.nl/assets/logos/logo-nl-nowhitespace.svg',
 });
