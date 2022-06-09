@@ -21,7 +21,7 @@
     "dist/"
   ],
   "devDependencies": {
-    "@babel/core": "7.18.0",
+    "@babel/core": "7.18.2",
     "@babel/preset-typescript": "7.17.12",
     "@etchteam/storybook-addon-status": "4.2.1",
     "@nl-rvo/assets": "file:../../proprietary/assets",
