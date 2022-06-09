@@ -30,7 +30,7 @@
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
     "@percy/storybook": "4.2.1",
     "@storybook/addon-a11y": "6.5.6",
-    "@storybook/addon-controls": "6.5.6",
+    "@storybook/addon-controls": "6.5.8",
     "@storybook/addon-docs": "6.5.6",
     "@storybook/addon-viewport": "6.5.6",
     "@storybook/builder-webpack5": "6.5.6",
