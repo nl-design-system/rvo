@@ -1,7 +1,7 @@
 import React from 'react';
 import 'normalize.css';
-import './style.scss';
-import Header from './components/Header';
+import '../common/style.scss';
+import Header from '../common/components/Header';
 
 const Aanvrager = () => {
   return (
