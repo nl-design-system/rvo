@@ -291,7 +291,7 @@
   }
 
   .rvo-process-step--small {
-    background-position: 10 center;
+    background-position: 10px center;
   }
 
   .rvo-process-step--medium.rvo-process-step--incomplete {
@@ -659,7 +659,7 @@
 
   details[open] summary::after {
     background-image: url("./assets/iconen/delta-omlaag--donkerblauw.svg");
-    background-size: 10 100%;
+    background-size: 10px 100%;
     width: 12px;
   }
 

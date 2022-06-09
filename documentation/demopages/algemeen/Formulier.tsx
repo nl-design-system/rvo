@@ -3,7 +3,7 @@ import 'normalize.css';
 import '../common/style.scss';
 import Header from '../common/components/Header';
 
-const Aanvrager = () => {
+const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -13,25 +13,18 @@ const Aanvrager = () => {
             <ul className="rvo-menu rvo-menu--main-menu">
               <li className="rvo-menu-item">
                 <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--home"></span>Mijn
-                  aanvragen
+                  Menu item
                 </a>
               </li>
               <li className="rvo-menu-item">
                 <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
-                  Nieuwe aanvraag
+                  Menu item with icon
                 </a>
               </li>
               <li className="rvo-menu-item">
                 <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--user"></span>Mijn
-                  gegevens
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  Uitloggen
+                  Last menu item
                 </a>
               </li>
             </ul>
@@ -51,39 +44,51 @@ const Aanvrager = () => {
 
       <main className="rvo-progress-tracker-active">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
-          <div className="rvo-main-steps rvo-main-steps--no-sub-steps">
-            <div className="rvo-process-step rvo-process-step--process-name">Aanvraag WBSO</div>
+          <div className="rvo-main-steps">
+            <div className="rvo-process-step rvo-process-step--process-name">Progress tracker</div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--completed">
-              <a href="vormvrije-aanvraag.html" className="rvo-process-step-link">
-                Vormijvrije aanvraag
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--completed">
-              <a href="startpagina.html" className="rvo-process-step-link">
-                Voordat u begint
+              <a href="#" className="rvo-process-step-link">
+                Step completed
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--doing">
-              <a href="aanvrager.html" className="rvo-process-step-link">
-                Aanvrager
+              <a href="#" className="rvo-process-step-link">
+                Step doing
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
-              <a href="projecten.html" className="rvo-process-step-link">
-                Projecten
+              <a href="#" className="rvo-process-step-link">
+                Step incomplete
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
-              <a href="so-uren.html" className="rvo-process-step-link">
-                S&O uren
+          </div>
+          <div className="rvo-sub-steps">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--incomplete">
+              <a href="#" className="rvo-process-step-link">
+                Process first sub-step
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
-              <a href="indienen.html" className="rvo-process-step-link">
-                Indienen
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--doing">
+              <a href="#" className="rvo-process-step-link">
+                Process sub-step doing
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--process-completed">Aanvraag ingediend</div>
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--completed">
+              <a href="#" className="rvo-process-step-link">
+                Process sub-step completed
+              </a>
+            </div>
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--incomplete">
+              <span className="rvo-process-step-link rvo-process-step-link--disabled">Process sub-step disabled</span>
+            </div>
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--incomplete">
+              <a href="#" className="rvo-process-step-link">
+                Process last sub-step
+              </a>
+            </div>
+          </div>
+          <div className="rvo-main-steps">
+            <div className="rvo-process-step rvo-process-step--process-completed">Process completed</div>
           </div>
         </div>
         <div className="rvo-form">
@@ -212,4 +217,4 @@ const Aanvrager = () => {
   );
 };
 
-export default Aanvrager;
+export default Formulier;
