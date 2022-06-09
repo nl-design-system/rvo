@@ -1,0 +1,35 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MenuBar } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Sizes"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Menubar sizes
+
+### Small
+
+Styling via the `.rvo-topnav--small` classname:
+
+<Canvas>
+  <Story name="Small" args={{ ...defaultArgs, useIcons: true, size: "small" }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
+
+### Medium
+
+Styling via the `.rvo-topnav--medium` classname:
+
+<Canvas>
+  <Story name="Medium" args={{ ...defaultArgs, useIcons: true, size: "medium" }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
