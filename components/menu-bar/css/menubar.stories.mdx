@@ -14,10 +14,20 @@ import "./index.scss";
 
 # Menu bar
 
+Menu bar containing items without icons:
+
 <Canvas>
-  <Story name="Menu bar" args={defaultArgs}>
+  <Story name="Menu bar without icons" args={defaultArgs}>
     {MenuBar.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Menu bar" />
+<ArgsTable story="Button" />
+
+Menu bar containing items with icons:
+
+<Canvas>
+  <Story name="Menu bar with icons" args={{ ...defaultArgs, useIcons: true }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>

@@ -6,3 +6,18 @@
 .rvo-topnav {
   max-width: var(--rvo-layout-max-width);
 }
+
+.utrecht-topnav__list {
+  justify-content: normal;
+}
+
+.utrecht-topnav__link {
+  align-items: center;
+  column-gap: var(--rvo-space-sm);
+  display: flex;
+  flex: 0 1 auto;
+  padding-block-end: var(--rvo-topnav-item-padding-block-end);
+  padding-block-start: var(--rvo-topnav-item-padding-block-start);
+  padding-inline-end: var(--rvo-topnav-item-padding-inline-end);
+  padding-inline-start: var(--rvo-topnav-item-padding-inline-start);
+}
