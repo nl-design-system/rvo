@@ -9,8 +9,8 @@ export const argTypes = {};
 export const defaultArgs = {};
 
 export const MenuBar = () =>
-  `<div class="utrecht-navhtml">
-  <nav class="topnav">
+  `
+  <nav class="rvo-topnav">
     <ul class="utrecht-topnav__list">
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="https://example.com/">Wonen en leven</a>
@@ -26,4 +26,4 @@ export const MenuBar = () =>
         </li>
     </ul>
   </nav>
-</div>`;
+`;

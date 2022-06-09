@@ -1,0 +1,9 @@
+{
+  "rvo": {
+    "topnav": {
+      "list": {
+        "max-width": { "value": "{rvo.layout.max-width}" }
+      }
+    }
+  }
+}
