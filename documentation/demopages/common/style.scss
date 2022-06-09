@@ -44,6 +44,7 @@
   .rvo-back-link {
     align-items: center;
     display: flex;
+    margin-block-start: var(--rvo-space-sm);
   }
 
   /* @HELPER CLASSES */
@@ -369,11 +370,11 @@
     border: 0;
     display: flex;
     flex-direction: column;
-    margin-block-end: 0;
+    margin-block-end: var(--rvo-space-lg);
     margin-block-start: 0;
     margin-inline-end: 0;
     margin-inline-start: 0;
-    padding-block-end: var(--rvo-space-sm);
+    padding-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
     padding-block-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
     padding-inline-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
     padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
@@ -409,6 +410,10 @@
 
   h2 + .rvo-form-field {
     margin-block-start: var(--rvo-space-sm);
+  }
+
+  .rvo-form-field:last-child {
+    margin-block-end: 0;
   }
 
   .rvo-form-field__required {
@@ -450,6 +455,10 @@
   select:focus {
     box-shadow: 0 0 0 3px var(--rvo-color-hemelblauw);
     outline: none;
+  }
+
+  .rvo-input-error {
+    box-shadow: 0 0 0 3px var(--rvo-color-rood);
   }
 
   input[type="text"]:disabled,
@@ -540,13 +549,13 @@
 
   .rvo-options {
     display: grid;
-    grid-gap: calc(var(--rvo-space-sm) + var(--rvo-space-md));
+    grid-gap: var(--rvo-space-md);
     list-style: none;
     margin-block-end: 0;
     margin-block-start: 0;
     margin-inline-end: 0;
     margin-inline-start: 0;
-    padding-block-end: var(--rvo-space-md);
+    padding-block-end: 0;
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: 0;
     padding-inline-start: 0;
@@ -606,7 +615,7 @@
 
   .rvo-helper-text a,
   .rvo-helper-text summary {
-    color: var(--rvo-color-donkerblauw);
+    color: var(--rvo-color-hemelblauw);
   }
 
   label .rvo-helper-text,
@@ -663,7 +672,7 @@
     width: 12px;
   }
 
-  .rvo-helper-text .rvo-text {
+  .rvo-helper-text .rvo-details-text {
     display: block;
     padding-block-end: var(--rvo-space-sm);
     padding-block-start: var(--rvo-space-xs);
@@ -673,7 +682,7 @@
     display: flex;
     grid-gap: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-md);
-    padding-block-start: var(--rvo-space-md);
+    padding-block-start: 0;
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
   }
