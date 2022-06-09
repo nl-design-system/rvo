@@ -4,8 +4,16 @@
  */
 
 .rvo-topnav {
-  font-family: var(--rvo-font-sans-serif-font-family);
-  max-width: var(--rvo-layout-max-width);
+  font-family: var(--rvo-topnav-font-family);
+  max-width: var(--rvo-topnav-max-width);
+}
+
+.rvo-topnav--small {
+  font-size: var(--rvo-topnav-small-font-size);
+}
+
+.rvo-topnav--medium {
+  font-size: var(--rvo-topnav-medium-font-size);
 }
 
 .utrecht-topnav__list {
@@ -18,10 +26,10 @@
 
 .utrecht-topnav__link {
   align-items: center;
-  column-gap: var(--rvo-space-sm);
+  column-gap: var(--rvo-topnav-link-column-gap);
   display: flex;
-  padding-block-end: var(--rvo-topnav-item-padding-block-end);
-  padding-block-start: var(--rvo-topnav-item-padding-block-start);
-  padding-inline-end: var(--rvo-topnav-item-padding-inline-end);
-  padding-inline-start: var(--rvo-topnav-item-padding-inline-start);
+  padding-block-end: var(--rvo-topnav-link-padding-block-end);
+  padding-block-start: var(--rvo-topnav-link-padding-block-start);
+  padding-inline-end: var(--rvo-topnav-link-padding-inline-end);
+  padding-inline-start: var(--rvo-topnav-link-padding-inline-start);
 }

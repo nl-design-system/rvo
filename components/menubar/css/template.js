@@ -37,8 +37,12 @@ const parseMenuItem = (label, icon, size = defaultArgs.size, iconAlign = default
   return menuItem;
 };
 
-export const MenuBar = ({ useIcons = false, iconAlign = 'left' }) => {
-  return `<nav class="rvo-topnav">
+export const MenuBar = ({
+  size = defaultArgs.size,
+  useIcons = defaultArgs.useIcons,
+  iconAlign = defaultArgs.iconAlign,
+}) => {
+  return `<nav class="rvo-topnav rvo-topnav--${size}">
     <ul class="utrecht-topnav__list">
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="#">

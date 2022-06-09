@@ -3,7 +3,7 @@ import { argTypes, MenuBar, defaultArgs } from "./template";
 import "./index.scss";
 
 <Meta
-  title="CSS Components/Menubar/Variations"
+  title="CSS Components/Menubar/Sizes"
   argTypes={argTypes}
   parameters={{
     status: {
@@ -12,20 +12,24 @@ import "./index.scss";
   }}
 />
 
-# Menubar with icons
+# Menubar sizes
 
-Menubar containing items with icons aligned to the left:
+### Small
+
+Styling via the `.rvo-topnav--small` classname:
 
 <Canvas>
-  <Story name="With icons left" args={{ ...defaultArgs, useIcons: true }}>
+  <Story name="Small" args={{ ...defaultArgs, useIcons: true, size: "small" }}>
     {MenuBar.bind()}
   </Story>
 </Canvas>
 
-Menubar containing items with icons aligned to the right:
+### Medium
+
+Styling via the `.rvo-topnav--medium` classname:
 
 <Canvas>
-  <Story name="With icons right" args={{ ...defaultArgs, useIcons: true, iconAlign: "right" }}>
+  <Story name="Medium" args={{ ...defaultArgs, useIcons: true, size: "medium" }}>
     {MenuBar.bind()}
   </Story>
 </Canvas>

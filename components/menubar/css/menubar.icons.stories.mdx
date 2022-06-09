@@ -1,0 +1,31 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, MenuBar, defaultArgs } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Icons"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Menubar with icons
+
+Menubar containing items with icons aligned to the left:
+
+<Canvas>
+  <Story name="With icons left" args={{ ...defaultArgs, useIcons: true }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
+
+Menubar containing items with icons aligned to the right:
+
+<Canvas>
+  <Story name="With icons right" args={{ ...defaultArgs, useIcons: true, iconAlign: "right" }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
