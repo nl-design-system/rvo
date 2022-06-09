@@ -3,7 +3,7 @@ import { argTypes, MenuBar, defaultArgs } from "./template";
 import "./index.scss";
 
 <Meta
-  title="CSS Components/Menu bar"
+  title="CSS Components/Menubar"
   argTypes={argTypes}
   parameters={{
     status: {
@@ -12,22 +12,12 @@ import "./index.scss";
   }}
 />
 
-# Menu bar
-
-Menu bar containing items without icons:
+# Menubar
 
 <Canvas>
-  <Story name="Menu bar without icons" args={defaultArgs}>
+  <Story name="Menubar" args={defaultArgs}>
     {MenuBar.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Button" />
-
-Menu bar containing items with icons:
-
-<Canvas>
-  <Story name="Menu bar with icons" args={{ ...defaultArgs, useIcons: true }}>
-    {MenuBar.bind()}
-  </Story>
-</Canvas>
+<ArgsTable story="Menubar" />
