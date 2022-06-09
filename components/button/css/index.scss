@@ -3,6 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+.utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):not(.utrecht-button--busy) {
+  cursor: pointer;
+}
+
 // Primary action extensions
 .utrecht-button--primary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   background-color: var(--rvo-button-primary-action-active-background-color);
