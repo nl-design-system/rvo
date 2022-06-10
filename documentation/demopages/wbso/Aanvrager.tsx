@@ -84,6 +84,10 @@ const Aanvrager = () => {
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Aanvraag ingediend</div>
+            <button className="utrecht-button rvo-button--quaternary-action rvo-button--small" type="button">
+              <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--small"></span>
+              Opslaan
+            </button>
           </div>
         </div>
         <div className="rvo-form">

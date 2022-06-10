@@ -93,6 +93,10 @@ const Formulier = () => {
             </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Process completed</div>
           </div>
+          <button className="utrecht-button rvo-button--quaternary-action rvo-button--small" type="button">
+            <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--small"></span>
+            Opslaan
+          </button>
         </div>
         <div className="rvo-form">
           <div className="intro">
