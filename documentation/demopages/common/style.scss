@@ -436,8 +436,9 @@
   select {
     appearance: none;
     background-image: url("./assets/img/select-arrow-bg.svg");
-    background-position: right 2px top 2px;
+    background-position: right 3px top 3px;
     background-repeat: no-repeat;
+    min-height: calc(var(--rvo-size-md) + var(--rvo-size-md) + var(--rvo-size-sm));
     padding-block-end: var(--rvo-space-sm);
     padding-block-start: calc(var(--rvo-space-2xs) + var(--rvo-space-sm));
     padding-inline-end: calc(var(--rvo-space-xs) + var(--rvo-space-lg));
