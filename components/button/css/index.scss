@@ -3,8 +3,68 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+.utrecht-button {
+  align-items: center;
+  column-gap: var(--rvo-button-column-gap);
+  display: flex;
+}
+
+.utrecht-button--hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):not(.utrecht-button--busy),
 .utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):not(.utrecht-button--busy) {
   cursor: pointer;
+}
+
+// Icon styling
+.rvo-button__icon--primary-action {
+  background-color: var(--rvo-color-wit);
+}
+
+.rvo-button__icon--secondary-action {
+  background-color: var(--rvo-color-hemelblauw);
+}
+
+.utrecht-button--secondary-action.utrecht-button--disabled .rvo-button__icon--secondary-action,
+.utrecht-button--secondary-action.utrecht-button:disabled .rvo-button__icon--secondary-action,
+.utrecht-button--secondary-action.utrecht-button-link:disabled .rvo-button__icon--secondary-action {
+  background-color: var(--utrecht-button-secondary-action-disabled-color);
+}
+
+.utrecht-button--secondary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--secondary-action {
+  background-color: var(--rvo-color-wit);
+}
+
+.utrecht-button--hover.utrecht-button--secondary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--secondary-action,
+.utrecht-button.utrecht-button--secondary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--secondary-action {
+  background-color: var(--rvo-color-donkerblauw);
+}
+
+.rvo-button__icon--tertiary-action {
+  background-color: var(--rvo-color-hemelblauw);
+}
+
+.rvo-button--tertiary-action.utrecht-button--disabled .rvo-button__icon--tertiary-action,
+.rvo-button--tertiary-action.utrecht-button:disabled .rvo-button__icon--tertiary-action,
+.rvo-button--tertiary-action.utrecht-button-link:disabled .rvo-button__icon--tertiary-action {
+  background-color: var(--rvo-button-tertiary-action-disabled-color);
+}
+
+.rvo-button--tertiary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action {
+  background-color: var(--rvo-color-donkerblauw);
+}
+
+.utrecht-button--hover.rvo-button--tertiary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action,
+.utrecht-button.rvo-button--tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action {
+  background-color: var(--rvo-color-donkerblauw);
+}
+
+.rvo-button__icon--quaternary-action {
+  background-color: var(--rvo-color-wit);
 }
 
 // Primary action extensions
@@ -99,6 +159,7 @@
 
 .rvo-button--quaternary-action.utrecht-button--hover:not(:disabled),
 .rvo-button--quaternary-action.utrecht-button-link--hover:not(:disabled),
+.utrecht-button:hover.rvo-button--quaternary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
 .rvo-button--quaternary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   background-color: var(--rvo-button-quaternary-action-hover-background-color);
   color: var(--rvo-button-quaternary-action-color);

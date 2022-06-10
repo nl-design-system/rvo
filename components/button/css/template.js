@@ -38,6 +38,10 @@ export const argTypes = {
     description: 'Disabled',
     control: 'boolean',
   },
+  showIcon: {
+    options: ['no', 'left', 'right'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs = {
@@ -51,6 +55,7 @@ export const defaultArgs = {
   hover: false,
   textContent: 'Button',
   type: 'button',
+  showIcon: 'no',
 };
 
 export const Button = ({
@@ -64,8 +69,10 @@ export const Button = ({
   hover = defaultArgs.hover,
   textContent = defaultArgs.textContent,
   type = defaultArgs.type,
-}) =>
-  `<button class="${clsx('utrecht-button', {
+  showIcon = defaultArgs.icon,
+}) => {
+  const icon = `<span class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--medium"></span>`;
+  return `<button class="${clsx('utrecht-button', {
     'utrecht-button--primary-action': kind === 'primary',
     'utrecht-button--secondary-action': kind === 'secondary',
     'rvo-button--tertiary-action': kind === 'tertiary',
@@ -78,7 +85,10 @@ export const Button = ({
     'utrecht-button--focus': focus,
     'utrecht-button--focus-visible': focusVisible,
     'utrecht-button--disabled': disabled,
-  })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${textContent}</button>`;
+  })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${showIcon === 'left' ? icon : ''}${textContent}${
+    showIcon === 'right' ? icon : ''
+  }</button>`;
+};
 
 export const AllButtonKinds = (buttonArgs) =>
   `<p>${Button({ ...buttonArgs, kind: 'primary' })}</p>

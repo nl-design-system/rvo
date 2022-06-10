@@ -1,6 +1,7 @@
 {
   "rvo": {
     "button": {
+      "column-gap": { "value": "{rvo.space.md}" },
       "primary-action": {
         "active": {
           "background-color": { "value": "{rvo.color.donkerblauw}" }

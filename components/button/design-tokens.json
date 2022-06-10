@@ -1,6 +1,12 @@
 {
   "rvo": {
     "button": {
+      "column-gap": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
       "primary-action": {
         "active": {
           "background-color": {

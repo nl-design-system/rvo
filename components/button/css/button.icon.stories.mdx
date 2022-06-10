@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { AllButtonKinds, argTypes } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Button/Icons"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button icons
+
+Button containing an icon aligned to the left:
+
+<Canvas>
+  <Story
+    name="With icon left"
+    args={{
+      kind: "primary",
+      showIcon: "left",
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+Button containing an icon aligned to the right:
+
+<Canvas>
+  <Story
+    name="With icon right"
+    args={{
+      kind: "primary",
+      showIcon: "right",
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
