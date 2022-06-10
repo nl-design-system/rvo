@@ -10,7 +10,7 @@ Je gebruikt een card wanneer je meerdere blokken met informatie moet tonen die g
 
 Gebruik geen cards wanneer een lijst volstaat. Cards zijn slechter te scannen en gebruikers kunnen minder goed informatie vergelijken dan wanneer het in een lijst staat.
 
-# Anotomie van het component
+# Anatomie van het component
 
 Het component bestaat minimaal uit:
 
