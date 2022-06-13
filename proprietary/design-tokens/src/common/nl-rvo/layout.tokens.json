@@ -2,7 +2,12 @@
   "rvo": {
     "layout": {
       "max-width": {
-        "value": "900px"
+        "medium": {
+          "value": "900px"
+        },
+        "large": {
+          "value": "1200px"
+        }
       }
     }
   }

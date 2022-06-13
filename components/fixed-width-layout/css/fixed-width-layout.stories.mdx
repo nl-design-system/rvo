@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, FixedWidthLayout } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Fixed Width Layout"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Logo
+
+<Canvas>
+  <Story name="Fixed Width Layout" args={defaultArgs}>
+    {FixedWidthLayout.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Fixed Width Layout" />
