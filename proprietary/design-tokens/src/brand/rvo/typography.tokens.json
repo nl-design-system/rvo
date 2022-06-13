@@ -3,22 +3,22 @@
     "font": {
       "sans-serif": {
         "font-family": {
-          "value": "\"RijksoverheidSansWebText\", {rvo.font.sans-serif-fallback.font-family.value}"
+          "value": "'RijksoverheidSansWebText', {rvo.font.sans-serif-fallback.font-family.value}"
         }
       },
       "sans-serif-fallback": {
         "font-family": {
-          "value": "\"Calibri\", \"Verdana\", \"Arial\", sans-serif"
+          "value": "'Calibri', 'Verdana', 'Arial', sans-serif"
         }
       },
       "serif": {
         "font-family": {
-          "value": "\"RijksoverheidSerifWeb\", {rvo.font.serif-fallback.font-family.value}"
+          "value": "'RijksoverheidSerifWeb', {rvo.font.serif-fallback.font-family.value}"
         }
       },
       "serif-fallback": {
         "font-family": {
-          "value": "\"Times New Roman\", serif"
+          "value": "'Times New Roman', serif"
         }
       }
     },

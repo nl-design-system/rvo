@@ -6,7 +6,8 @@ const frameworkDecorator = (story) => {
   if (typeof storyContent !== 'string') {
     storyContent = ReactDOMServer.renderToStaticMarkup(story());
   }
-  return storyContent;
+
+  return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${storyContent}</div>`;
 };
 
 export default () => frameworkDecorator;
