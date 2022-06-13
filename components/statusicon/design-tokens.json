@@ -1,0 +1,30 @@
+{
+  "rvo": {
+    "statusicon": {
+      "bevestiging": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "foutmelding": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "waarschuwing": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

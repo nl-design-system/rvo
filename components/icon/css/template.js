@@ -12,7 +12,10 @@ String.prototype.toProperCase = function () {
   });
 };
 
-const options = Object.keys(iconList).flatMap((categoryName) => {
+// eslint-disable-next-line no-unused-vars
+const { STATUS, ...iconListWithoutStatus } = iconList;
+
+const options = Object.keys(iconListWithoutStatus).flatMap((categoryName) => {
   return Object.keys(iconList[categoryName]).map((iconName) => `${categoryName} > ${iconName}`.toProperCase());
 });
 
