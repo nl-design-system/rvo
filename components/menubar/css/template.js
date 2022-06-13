@@ -51,23 +51,23 @@ export const MenuBar = ({
     <ul class="utrecht-topnav__list">
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="#">
-          ${parseMenuItem('Wonen en leven', useIcons && 'home', 'medium', iconAlign)}
+          ${parseMenuItem('Home', useIcons && 'home', 'medium', iconAlign)}
         </a>
       </li>
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="#">
-         ${parseMenuItem('Werk en inkomen', useIcons && 'kalender', 'medium', iconAlign)}
+         ${parseMenuItem('Mijn aanvragen', useIcons && 'publicatie', 'medium', iconAlign)}
         </a>
       </li>
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="#">
-          ${parseMenuItem('Ondernemen', useIcons && 'kalender', 'medium', iconAlign)}
+          ${parseMenuItem('Nieuwe aanvraag', useIcons && 'plus', 'medium', iconAlign)}
         </a>
       </li>
       ${useSpacer ? '<div class="rvo-topnav__spacer"></div>' : ''}
       <li class="utrecht-topnav__item">
         <a class="utrecht-topnav__link" href="#">
-          ${parseMenuItem('Bestuur en organisatie', useIcons && 'versleutelen', 'medium', iconAlign)}
+          ${parseMenuItem('Uitloggen', useIcons && 'versleutelen', 'medium', iconAlign)}
         </a>
       </li>
     </ul>
