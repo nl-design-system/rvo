@@ -19,5 +19,5 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
   ],
-  staticDirs: ['../../../proprietary/assets'],
+  staticDirs: [{ from: '../../../proprietary/assets', to: '/rvo' }],
 };
