@@ -41,7 +41,7 @@ export const defaultArgs = {
 export const Icon = ({ icon = defaultArgs.icon, size = defaultArgs.size, color = defaultArgs.color }) => {
   const [, iconName] = icon.split(' > ');
 
-  return `<span class="${clsx('rvo-icon', `rvo-icon--${iconName.toLowerCase()}`, {
+  return `<span class="${clsx('rvo-icon', `rvo-icon--${iconName.toLowerCase().replace(/_/g, '-')}`, {
     'rvo-icon--small': size === 'small',
     'rvo-icon--medium': size === 'medium',
     'rvo-icon--large': size === 'large',
