@@ -20,12 +20,4 @@ module.exports = {
     '@storybook/preset-scss',
   ],
   staticDirs: ['../../../proprietary/assets'],
-  managerHead: (head, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      return `
-        ${head}
-        <base href="/rvo/">
-      `;
-    }
-  },
 };
