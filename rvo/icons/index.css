@@ -23,11 +23,6 @@
   mask-image: url("functioneel/bel.svg");
 }
 
-.rvo-icon--bevestiging {
-  -webkit-mask-image: url("functioneel/bevestiging.svg");
-  mask-image: url("functioneel/bevestiging.svg");
-}
-
 .rvo-icon--bewerken {
   -webkit-mask-image: url("functioneel/bewerken.svg");
   mask-image: url("functioneel/bewerken.svg");
@@ -73,11 +68,6 @@
   mask-image: url("functioneel/delta-omlaag.svg");
 }
 
-.rvo-icon--diagonale-pijl-diapositief {
-  -webkit-mask-image: url("functioneel/diagonale-pijl-diapositief.svg");
-  mask-image: url("functioneel/diagonale-pijl-diapositief.svg");
-}
-
 .rvo-icon--diagonale-pijl {
   -webkit-mask-image: url("functioneel/diagonale-pijl.svg");
   mask-image: url("functioneel/diagonale-pijl.svg");
@@ -103,11 +93,6 @@
   mask-image: url("functioneel/foto-vergroten.svg");
 }
 
-.rvo-icon--foutmelding {
-  -webkit-mask-image: url("functioneel/foutmelding.svg");
-  mask-image: url("functioneel/foutmelding.svg");
-}
-
 .rvo-icon--gegevensuitwisseling {
   -webkit-mask-image: url("functioneel/gegevensuitwisseling.svg");
   mask-image: url("functioneel/gegevensuitwisseling.svg");
@@ -121,11 +106,6 @@
 .rvo-icon--geluid-uit {
   -webkit-mask-image: url("functioneel/geluid-uit.svg");
   mask-image: url("functioneel/geluid-uit.svg");
-}
-
-.rvo-icon--haakse-pijl-diapositief {
-  -webkit-mask-image: url("functioneel/haakse-pijl-diapositief.svg");
-  mask-image: url("functioneel/haakse-pijl-diapositief.svg");
 }
 
 .rvo-icon--haakse-pijl {
@@ -253,11 +233,6 @@
   mask-image: url("functioneel/publicatie.svg");
 }
 
-.rvo-icon--rechte-pijl-diapositief {
-  -webkit-mask-image: url("functioneel/rechte-pijl-diapositief.svg");
-  mask-image: url("functioneel/rechte-pijl-diapositief.svg");
-}
-
 .rvo-icon--rechte-pijl {
   -webkit-mask-image: url("functioneel/rechte-pijl.svg");
   mask-image: url("functioneel/rechte-pijl.svg");
@@ -286,11 +261,6 @@
 .rvo-icon--tegelweergave {
   -webkit-mask-image: url("functioneel/tegelweergave.svg");
   mask-image: url("functioneel/tegelweergave.svg");
-}
-
-.rvo-icon--telefoon-diapositief {
-  -webkit-mask-image: url("functioneel/telefoon-diapositief.svg");
-  mask-image: url("functioneel/telefoon-diapositief.svg");
 }
 
 .rvo-icon--telefoon {
@@ -358,12 +328,22 @@
   mask-image: url("functioneel/vraagteken.svg");
 }
 
-.rvo-icon--waarschuwing {
-  -webkit-mask-image: url("functioneel/waarschuwing.svg");
-  mask-image: url("functioneel/waarschuwing.svg");
-}
-
 .rvo-icon--zoek {
   -webkit-mask-image: url("functioneel/zoek.svg");
   mask-image: url("functioneel/zoek.svg");
+}
+
+.rvo-icon--bevestiging {
+  -webkit-mask-image: url("status/bevestiging.svg");
+  mask-image: url("status/bevestiging.svg");
+}
+
+.rvo-icon--foutmelding {
+  -webkit-mask-image: url("status/foutmelding.svg");
+  mask-image: url("status/foutmelding.svg");
+}
+
+.rvo-icon--waarschuwing {
+  -webkit-mask-image: url("status/waarschuwing.svg");
+  mask-image: url("status/waarschuwing.svg");
 }
