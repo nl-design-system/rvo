@@ -69,7 +69,7 @@ export const Button = ({
   hover = defaultArgs.hover,
   textContent = defaultArgs.textContent,
   type = defaultArgs.type,
-  showIcon = defaultArgs.icon,
+  showIcon = defaultArgs.showIcon,
 }) => {
   const icon = `<span class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--medium"></span>`;
   return `<button class="${clsx('utrecht-button', {
