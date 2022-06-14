@@ -1,0 +1,29 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-link {
+  align-items: center;
+  color: var(--rvo-link-color);
+  display: flex;
+  font-weight: var(--rvo-link-font-weight);
+  text-decoration: none;
+}
+
+.rvo-link:hover,
+.rvo-link:focus {
+  text-decoration: underline;
+}
+
+.rvo-link__icon {
+  background-color: var(--rvo-link-icon-background-color);
+}
+
+.rvo-link__icon--before {
+  margin-inline-end: var(--rvo-link-icon-margin-inline);
+}
+
+.rvo-link__icon--after {
+  margin-inline-start: var(--rvo-link-icon-margin-inline);
+}

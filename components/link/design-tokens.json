@@ -1,0 +1,32 @@
+{
+  "rvo": {
+    "link": {
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "icon": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "margin-inine": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

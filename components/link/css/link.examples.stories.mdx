@@ -1,0 +1,43 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Link, defaultArgs } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Link/Voorbeelden"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Terug link
+
+<Canvas>
+  <Story name="Terug link" args={{ ...defaultArgs, linkContent: "Terug", icon: "terug", showIcon: "before" }}>
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+# Verder link
+
+<Canvas>
+  <Story
+    name="Verder link"
+    args={{ ...defaultArgs, linkContent: "Verder", icon: "pijl-naar-rechts", showIcon: "after" }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+# Externe link
+
+<Canvas>
+  <Story
+    name="Externe link"
+    args={{ ...defaultArgs, linkContent: "Externe link", icon: "pijl-naar-rechtsboven", showIcon: "after" }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

@@ -1,7 +1,12 @@
 {
   "rvo": {
     "link": {
-      "font-weight": { "value": "700" }
+      "color": { "value": "{rvo.color.hemelblauw}" },
+      "font-weight": { "value": "{rvo.font-weight.bold}" },
+      "icon": {
+        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "margin-inline": { "value": "{rvo.space.sm}" }
+      }
     }
   }
 }
