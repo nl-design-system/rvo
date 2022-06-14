@@ -104,11 +104,11 @@ const Formulier = () => {
               <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--medium rvo-icon--hemelblauw rvo-icon--terug"></span>
               Terug
             </a>
-            <h1>Form Title</h1>
+            <h1 className="utrecht-heading-1 utrecht-heading-1--distanced">Heading</h1>
           </div>
           <form>
             <fieldset>
-              <h2>Keyboard inputs</h2>
+              <h2 className="utrecht-heading-2 utrecht-heading-2--distanced">Keyboard inputs</h2>
               <div className="rvo-form-field">
                 <label htmlFor="text">Text</label>
                 <input type="text" id="text"></input>
@@ -150,7 +150,7 @@ const Formulier = () => {
               </div>
             </fieldset>
             <fieldset>
-              <h2>Options</h2>
+              <h2 className="utrecht-heading-2 utrecht-heading-2--distanced">Options</h2>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>Legend</legend>
                 <div className="rvo-options">
