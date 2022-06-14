@@ -100,9 +100,9 @@ const Formulier = () => {
         </div>
         <div className="rvo-form">
           <div className="intro">
-            <a href="startpagina.html" className="rvo-back-link">
-              <span className="rvo-icon rvo-icon--sm rvo-icon--before rvo-icon--hemelblauw rvo-icon--terug"></span>Back
-              link
+            <a href="#" className="rvo-link">
+              <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--medium rvo-icon--hemelblauw rvo-icon--terug"></span>
+              Terug
             </a>
             <h1>Form Title</h1>
           </div>
