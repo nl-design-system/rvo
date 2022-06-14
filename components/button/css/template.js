@@ -39,7 +39,7 @@ export const argTypes = {
     control: 'boolean',
   },
   showIcon: {
-    options: ['no', 'left', 'right'],
+    options: ['no', 'before', 'after'],
     control: { type: 'radio' },
   },
 };
@@ -54,7 +54,6 @@ export const defaultArgs = {
   focusVisible: false,
   hover: false,
   textContent: 'Button',
-  type: 'button',
   showIcon: 'no',
 };
 
@@ -68,7 +67,6 @@ export const Button = ({
   focusVisible = defaultArgs.focusVisible,
   hover = defaultArgs.hover,
   textContent = defaultArgs.textContent,
-  type = defaultArgs.type,
   showIcon = defaultArgs.showIcon,
 }) => {
   const icon = `<span class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--medium"></span>`;
@@ -85,8 +83,8 @@ export const Button = ({
     'utrecht-button--focus': focus,
     'utrecht-button--focus-visible': focusVisible,
     'utrecht-button--disabled': disabled,
-  })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${showIcon === 'left' ? icon : ''}${textContent}${
-    showIcon === 'right' ? icon : ''
+  })}"${disabled ? ' aria-disabled="true"' : ''}>${showIcon === 'before' ? icon : ''}${textContent}${
+    showIcon === 'after' ? icon : ''
   }</button>`;
 };
 
