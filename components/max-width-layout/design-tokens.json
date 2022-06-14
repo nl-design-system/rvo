@@ -1,0 +1,20 @@
+{
+  "rvo": {
+    "layout": {
+      "max-width": {
+        "medium": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "large": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}
