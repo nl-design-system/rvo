@@ -16,7 +16,7 @@ export const defaultArgs = {
   size: 'medium',
 };
 
-export const FixedWidthLayout = ({ size = defaultArgs.size }) => {
+export const MaxWidthLayout = ({ size = defaultArgs.size }) => {
   let maxWidth;
   switch (size) {
     case 'medium':
@@ -26,5 +26,5 @@ export const FixedWidthLayout = ({ size = defaultArgs.size }) => {
       maxWidth = designTokens.rvoLayoutMaxWidthLarge;
       break;
   }
-  return `<div class="rvo-fixed-width-layout--${size}">Deze layout container heeft een maximale breedte van ${maxWidth}.</div>`;
+  return `<div class="rvo-max-width-layout--${size}">Deze layout container heeft een maximale breedte van ${maxWidth}.</div>`;
 };

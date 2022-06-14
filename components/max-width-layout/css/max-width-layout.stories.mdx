@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MaxWidthLayout } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Max width layout"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Max width layout
+
+<Canvas>
+  <Story name="Max width layout" args={defaultArgs}>
+    {MaxWidthLayout.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Max width layout" />
