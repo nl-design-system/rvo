@@ -1,6 +1,6 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Community for NL Design System
+ * Copyright (c) 2022 Community for NL Design System
  */
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
