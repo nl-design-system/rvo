@@ -1,0 +1,12 @@
+{
+  "rvo": {
+    "form-layout": {
+      "max-width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}
