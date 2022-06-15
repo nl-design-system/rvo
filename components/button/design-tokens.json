@@ -1,7 +1,7 @@
 {
   "rvo": {
     "button": {
-      "column-gap": {
+      "gap": {
         "css": {
           "syntax": "<length>",
           "inherits": true
