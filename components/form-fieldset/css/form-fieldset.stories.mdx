@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Fieldset } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Forms/Fieldset"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Fieldset
+
+<Canvas>
+  <Story name="Fieldset" args={defaultArgs}>
+    {Fieldset.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Fieldset" />
