@@ -5,8 +5,8 @@
 
 .utrecht-button {
   align-items: center;
-  column-gap: var(--rvo-button-column-gap);
   display: flex;
+  gap: var(--rvo-button-gap);
 }
 
 .utrecht-button--hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):not(.utrecht-button--busy),

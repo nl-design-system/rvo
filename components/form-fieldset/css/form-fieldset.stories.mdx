@@ -1,9 +1,9 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Link } from "./template";
+import { argTypes, defaultArgs, Fieldset } from "./template";
 import "./index.scss";
 
 <Meta
-  title="CSS Components/Link"
+  title="CSS Components/Forms/Fieldset"
   argTypes={argTypes}
   parameters={{
     status: {
@@ -12,12 +12,12 @@ import "./index.scss";
   }}
 />
 
-# Link
+# Fieldset
 
 <Canvas>
-  <Story name="Link" args={defaultArgs}>
-    {Link.bind({})}
+  <Story name="Fieldset" args={defaultArgs}>
+    {Fieldset.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Link" />
+<ArgsTable story="Fieldset" />
