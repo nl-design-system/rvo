@@ -620,9 +620,11 @@
 
   label .rvo-helper-text,
   legend .rvo-helper-text {
+    align-items: center;
     background: none;
-    display: block;
+    display: flex;
     font-weight: 400;
+    gap: var(--rvo-space-sm);
     padding-block-end: 0;
     padding-block-start: var(--rvo-space-xs);
     padding-inline-start: 0;
@@ -632,6 +634,11 @@
   label .rvo-helper-text.rvo-error,
   label .rvo-helper-text.rvo-warning {
     background-color: transparent;
+  }
+
+  label .rvo-helper-text--error {
+    color: var(--rvo-color-rood);
+    font-weight: var(--rvo-font-weight-bold);
   }
 
   select + details {
