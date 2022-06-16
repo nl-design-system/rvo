@@ -425,7 +425,7 @@
   select,
   textarea {
     background-color: var(--rvo-color-wit);
-    border: 1px solid var(--rvo-color-zwart);
+    border: 2px solid var(--rvo-color-zwart);
     padding-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-2xs));
     padding-block-start: calc(var(--rvo-space-sm) + var(--rvo-space-xs));
     padding-inline-end: calc(var(--rvo-space-sm) + var(--rvo-space-xs));
@@ -453,12 +453,11 @@
   input[type="number"]:focus,
   textarea:focus,
   select:focus {
-    box-shadow: 0 0 0 3px var(--rvo-color-hemelblauw);
-    outline: none;
+    outline: 3px solid var(--rvo-color-hemelblauw);
   }
 
   .rvo-input-error {
-    box-shadow: 0 0 0 3px var(--rvo-color-rood);
+    outline: 3px solid var(--rvo-color-rood);
   }
 
   input[type="text"]:disabled,
@@ -472,12 +471,11 @@
   input[type="text"].rvo-input-error,
   textarea.rvo-input-error {
     border-color: var(--rvo-color-rood);
-    border-width: 2px;
   }
 
   input[type="text"].rvo-input-error:focus {
-    border: 2px solid var(--rvo-color-zwart);
-    box-shadow: 0 0 0 3px var(--rvo-color-rood);
+    border-color: var(--rvo-color-zwart);
+    outline: 3px solid var(--rvo-color-rood);
   }
 
   input[type="radio"],
