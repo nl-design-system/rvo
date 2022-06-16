@@ -236,10 +236,7 @@ const Formulier = () => {
               <div className="rvo-form-field">
                 <label htmlFor="warning-error">
                   Error
-                  <span className="rvo-helper-text rvo-helper-text--error">
-                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--medium" />
-                    This is an error
-                  </span>
+                  <span className="rvo-helper-text rvo-helper-text--error">This is an error</span>
                 </label>
                 <input type="text" id="error-text" className="rvo-input-error"></input>
               </div>
