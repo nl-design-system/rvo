@@ -14,32 +14,28 @@ import "./index.scss";
 
 # States
 
-## Active
-
-Styling via the `.utrecht-button--active` classname:
-
-<Canvas>
-  <Story
-    name="Active"
-    args={{
-      active: true,
-      showIcon: "left",
-    }}
-  >
-    {AllButtonKinds.bind({})}
-  </Story>
-</Canvas>
-
 ## Hover
-
-Styling via the `.utrecht-button--hover` classname:
 
 <Canvas>
   <Story
     name="Hover"
     args={{
       hover: true,
-      showIcon: "left",
+      showIcon: "before",
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story
+    name="Active"
+    args={{
+      active: true,
+      showIcon: "before",
     }}
   >
     {AllButtonKinds.bind({})}
@@ -48,14 +44,12 @@ Styling via the `.utrecht-button--hover` classname:
 
 ## Focus
 
-Styling via the `.utrecht-button--focus` classname:
-
 <Canvas>
   <Story
     name="Focus"
     args={{
       focus: true,
-      showIcon: "left",
+      showIcon: "before",
     }}
   >
     {AllButtonKinds.bind({})}
@@ -64,15 +58,13 @@ Styling via the `.utrecht-button--focus` classname:
 
 ## Focus visible
 
-Styling via the `.utrecht-button--focus-visible` classname:
-
 <Canvas>
   <Story
     name="Focus visible"
     args={{
       focus: true,
       focusVisible: true,
-      showIcon: "left",
+      showIcon: "before",
     }}
   >
     {AllButtonKinds.bind({})}
@@ -81,14 +73,12 @@ Styling via the `.utrecht-button--focus-visible` classname:
 
 ## Disabled
 
-Styling via the `.utrecht-button--disabled` classname:
-
 <Canvas>
   <Story
     name="Disabled"
     args={{
       disabled: true,
-      showIcon: "left",
+      showIcon: "before",
     }}
   >
     {AllButtonKinds.bind({})}
@@ -97,15 +87,14 @@ Styling via the `.utrecht-button--disabled` classname:
 
 ## Busy
 
-Hover over the button to see what it does.<br/>
-Styling via the `.utrecht-button--busy` classname:
+Hover over the button to see what it does.
 
 <Canvas>
   <Story
     name="Busy"
     args={{
       busy: true,
-      showIcon: "left",
+      showIcon: "before",
     }}
   >
     {AllButtonKinds.bind({})}

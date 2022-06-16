@@ -2,29 +2,10 @@
   "rvo": {
     "button": {
       "gap": { "value": "{rvo.space.md}" },
-      "primary-action": {
-        "active": {
-          "background-color": { "value": "{rvo.color.donkerblauw}" }
-        },
-        "focus": {
-          "background-color": { "value": "{rvo.color.hemelblauw}" },
-          "border-color": { "value": "" },
-          "color": { "value": "{rvo.color.wit}" }
-        }
-      },
-      "secondary-action": {
-        "active": {
-          "background-color": { "value": "{rvo.color.donkerblauw}" },
-          "border-color": { "value": "" },
-          "color": { "value": "{rvo.color.wit}" }
-        },
-        "focus": {
-          "border-color": { "value": "{rvo.color.hemelblauw}" },
-          "color": { "value": "{rvo.color.hemelblauw}" }
-        }
-      },
       "tertiary-action": {
         "background-color": {},
+        "border-color": {},
+        "border-width": { "value": "0" },
         "color": {
           "value": "{rvo.color.hemelblauw}"
         },
@@ -48,6 +29,8 @@
         "background-color": {
           "value": "{rvo.color.groen}"
         },
+        "border-color": {},
+        "border-width": { "value": "0" },
         "color": {
           "value": "{rvo.color.wit}"
         },
@@ -55,9 +38,7 @@
           "background-color": { "value": "{rvo.color.donkergroen}" }
         },
         "hover": {
-          "background-color": {
-            "value": "{rvo.color.donkergroen}"
-          }
+          "background-color": { "value": "{rvo.color.donkergroen}" }
         },
         "disabled": {
           "border-color": { "value": "{rvo.color.grijs2}" },
@@ -66,7 +47,8 @@
         },
         "focus": {
           "background-color": { "value": "{rvo.color.groen}" },
-          "border-color": { "value": "" },
+          "border-color": {},
+          "border-width": { "value": "0" },
           "color": { "value": "{rvo.color.wit}" }
         }
       },

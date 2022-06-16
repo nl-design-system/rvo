@@ -2,11 +2,11 @@
   "utrecht": {
     "button": {
       "background-color": {},
-      "border-bottom-color": { "value": "" },
+      "border-bottom-color": {},
       "border-bottom-width": {},
-      "border-color": { "value": "" },
-      "border-radius": { "value": "" },
-      "border-width": {},
+      "border-color": {},
+      "border-radius": {},
+      "border-width": { "value": "0" },
       "color": {},
       "font-size": { "value": "{rvo.font-size.xl}" },
       "line-height": { "value": "24px" },
@@ -26,8 +26,15 @@
       "text-transform": {},
       "primary-action": {
         "background-color": { "value": "{rvo.color.hemelblauw}" },
-        "border-color": { "value": "" },
+        "border-color": {},
+        "border-width": {},
         "color": { "value": "{rvo.color.wit}" },
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" }
+        },
+        "focus": {
+          "background-color": { "value": "{rvo.color.hemelblauw}" }
+        },
         "hover": {
           "background-color": { "value": "{rvo.color.donkerblauw}" }
         },
@@ -42,13 +49,24 @@
         "border-color": { "value": "{rvo.color.hemelblauw}" },
         "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.hemelblauw}" },
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" },
+          "border-color": { "value": "{rvo.color.donkerblauw}" },
+          "color": { "value": "{rvo.color.wit}" }
+        },
+        "focus": {
+          "color": { "value": "{rvo.color.hemelblauw}" },
+          "border-color": {},
+          "border-width": {}
+        },
         "disabled": {
+          "background-color": { "value": "{rvo.color.wit}" },
           "border-color": { "value": "{rvo.color.grijs3}" },
           "color": { "value": "{rvo.color.grijs3}" }
         },
         "hover": {
           "color": { "value": "{rvo.color.donkerblauw}" },
-          "background-color": {},
+          "background-color": { "value": "{rvo.color.wit}" },
           "border-color": { "value": "{rvo.color.donkerblauw}" }
         }
       },
