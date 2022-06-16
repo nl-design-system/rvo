@@ -8,7 +8,7 @@ const Formulier = () => {
     <div className="rvo-demo-page">
       <Header />
       <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-wrapper">
+        <div className="rvo-max-width-layout--medium">
           <nav className="rvo-main-menu">
             <ul className="rvo-menu rvo-menu--main-menu">
               <li className="rvo-menu-item">
@@ -42,7 +42,7 @@ const Formulier = () => {
         </div>
       </div>
 
-      <main className="rvo-progress-tracker-active">
+      <main className="rvo-progress-tracker-active rvo-max-width-layout--medium">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps">
             <div className="rvo-process-step rvo-process-step--process-name">Progress tracker</div>
@@ -226,14 +226,20 @@ const Formulier = () => {
               <div className="rvo-form-field">
                 <label htmlFor="warning-text">
                   Warning
-                  <span className="rvo-helper-text rvo-helper-text--warning">This is a warning</span>
+                  <span className="rvo-helper-text rvo-helper-text--warning">
+                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--medium" />
+                    This is a warning
+                  </span>
                 </label>
                 <input type="text" id="warning-text"></input>
               </div>
               <div className="rvo-form-field">
                 <label htmlFor="warning-error">
                   Error
-                  <span className="rvo-helper-text rvo-helper-text--error">This is an error</span>
+                  <span className="rvo-helper-text rvo-helper-text--error">
+                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--medium" />
+                    This is an error
+                  </span>
                 </label>
                 <input type="text" id="error-text" className="rvo-input-error"></input>
               </div>
