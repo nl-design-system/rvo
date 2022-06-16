@@ -19,7 +19,11 @@ export const defaultArgs = {
 };
 
 export const Fieldset = ({ content = defaultArgs.content, legend = defaultArgs.legend }) =>
-  `<div class="utrecht-form-fieldset rvo-form-fieldset">
-  ${legend ? `<div class="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">${legend}</div>` : ''}
+  `<fieldset class="utrecht-form-fieldset">
+  ${
+    legend
+      ? `<legend class="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">${legend}</legend>`
+      : ''
+  }
   ${content}
-</div>`;
+</fieldset>`;

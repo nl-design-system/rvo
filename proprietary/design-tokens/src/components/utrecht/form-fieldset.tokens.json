@@ -9,7 +9,7 @@
         "font-size": { "value": "{rvo.font-size.xl}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
         "line-height": { "value": "{rvo.line-height.md}" },
-        "margin-block-end": {},
+        "margin-block-end": { "value": "{rvo.space.xs}" },
         "margin-block-start": {},
         "text-transform": {}
       }
