@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
@@ -122,26 +124,40 @@
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
+// Tertiary icon styling
 .rvo-button__icon--tertiary-action {
-  background-color: var(--rvo-button-quaternary-action-color);
+  background-color: var(--rvo-button-tertiary-action-color);
 }
 
+// Tertiary disabled icon
 .rvo-button--tertiary-action.utrecht-button--disabled .rvo-button__icon--tertiary-action,
 .rvo-button--tertiary-action.utrecht-button:disabled .rvo-button__icon--tertiary-action,
 .rvo-button--tertiary-action.utrecht-button-link:disabled .rvo-button__icon--tertiary-action {
   background-color: var(--rvo-button-tertiary-action-disabled-color);
 }
 
-.rvo-button--tertiary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
-  .rvo-button__icon--tertiary-action {
-  background-color: var(--rvo-button-tertiary-action-active-color);
-}
-
+// Tertiary hover icon
 .utrecht-button--hover.rvo-button--tertiary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--tertiary-action,
 .utrecht-button.rvo-button--tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--tertiary-action {
   background-color: var(--rvo-button-tertiary-action-hover-color);
+}
+
+// Tertiary active icon
+.rvo-button--tertiary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action,
+.rvo-button--tertiary-action.utrecht-button:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action {
+  background-color: var(--rvo-button-tertiary-action-active-color);
+}
+
+// Tertiary focus icon
+.utrecht-button--focus.rvo-button--tertiary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action,
+.utrecht-button.rvo-button--tertiary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--tertiary-action {
+  background-color: var(--rvo-button-tertiary-action-focus-color);
 }
 
 // Quaternary action
@@ -192,14 +208,40 @@
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
+// Quaternary icon styling
 .rvo-button__icon--quaternary-action {
   background-color: var(--rvo-button-quaternary-action-color);
 }
 
+// Quaternary disabled icon
 .rvo-button--quaternary-action.utrecht-button--disabled .rvo-button__icon--quaternary-action,
 .rvo-button--quaternary-action.utrecht-button:disabled .rvo-button__icon--quaternary-action,
 .rvo-button--quaternary-action.utrecht-button-link:disabled .rvo-button__icon--quaternary-action {
   background-color: var(--rvo-button-quaternary-action-disabled-color);
+}
+
+// Quaternary hover icon
+.utrecht-button--hover.rvo-button--quaternary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--quaternary-action,
+.utrecht-button.rvo-button--quaternary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--quaternary-action {
+  background-color: var(--rvo-button-quaternary-action-hover-color);
+}
+
+// Quaternary focus icon
+.utrecht-button--focus.rvo-button--quaternary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--quaternary-action,
+.utrecht-button.rvo-button--quaternary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--quaternary-action {
+  background-color: var(--rvo-button-quaternary-action-focus-color);
+}
+
+// Quaternary active icon
+.utrecht-button--active.rvo-button--quaternary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--quaternary-action,
+.utrecht-button.rvo-button--quaternary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--quaternary-action {
+  background-color: var(--rvo-button-quaternary-action-active-color);
 }
 
 // Cancel action
