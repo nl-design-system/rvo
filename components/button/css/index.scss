@@ -202,6 +202,73 @@
   background-color: var(--rvo-button-quaternary-action-disabled-color);
 }
 
+// Cancel action
+.rvo-button--cancel-action {
+  border-color: var(--rvo-button-cancel-action-border-color);
+  border-width: var(--rvo-button-cancel-action-border-width);
+  color: var(--rvo-button-cancel-action-color);
+  font-weight: var(--rvo-button-cancel-action-font-weight);
+}
+
+.rvo-button--cancel-action.utrecht-button--hover:not(:disabled),
+.rvo-button--cancel-action.utrecht-button-link--hover:not(:disabled),
+.rvo-button--cancel-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-cancel-action-hover-color);
+  text-decoration: underline;
+  text-underline-offset: 30%;
+}
+
+.rvo-button--cancel-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-cancel-action-active-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+  text-decoration: underline;
+  text-underline-offset: 30%;
+}
+
+.rvo-button--cancel-action.utrecht-button:disabled,
+.rvo-button--cancel-action.utrecht-button-link:disabled,
+.rvo-button--cancel-action.utrecht-button--disabled {
+  color: var(--rvo-button-cancel-action-disabled-color);
+}
+
+.rvo-button--cancel-action.utrecht-button--focus,
+.rvo-button--cancel-action.utrecht-button-link--focus,
+.rvo-button--cancel-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.rvo-button--cancel-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  box-shadow: 0 0 0 var(--rvo-button-cancel-action-focus-box-shadow-spread-radius)
+    var(--rvo-button-cancel-action-focus-box-shadow-color);
+  color: var(--rvo-button-cancel-action-focus-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.rvo-button__icon--cancel-action {
+  background-color: var(--rvo-color-hemelblauw);
+}
+
+.rvo-button--cancel-action.utrecht-button--disabled .rvo-button__icon--cancel-action,
+.rvo-button--cancel-action.utrecht-button:disabled .rvo-button__icon--cancel-action,
+.rvo-button--cancel-action.utrecht-button-link:disabled .rvo-button__icon--cancel-action {
+  background-color: var(--rvo-button-cancel-action-disabled-color);
+}
+
+.rvo-button--cancel-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--cancel-action {
+  background-color: var(--rvo-color-donkerblauw);
+}
+
+.utrecht-button--hover.rvo-button--cancel-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--cancel-action,
+.utrecht-button.rvo-button--cancel-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--cancel-action {
+  background-color: var(--rvo-color-donkerblauw);
+}
+
 // Sizes
 .rvo-button--small {
   font-size: var(--rvo-button-small-font-size);

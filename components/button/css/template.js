@@ -7,7 +7,7 @@ import clsx from 'clsx';
 
 export const argTypes = {
   kind: {
-    options: ['primary', 'secondary', 'tertiary', 'quaternary'],
+    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'cancel'],
     control: { type: 'radio' },
   },
   size: {
@@ -75,6 +75,7 @@ export const Button = ({
     'utrecht-button--secondary-action': kind === 'secondary',
     'rvo-button--tertiary-action': kind === 'tertiary',
     'rvo-button--quaternary-action': kind === 'quaternary',
+    'rvo-button--cancel-action': kind === 'cancel',
     'rvo-button--small': size === 'small',
     'rvo-button--medium': size === 'medium',
     'utrecht-button--active': active,
@@ -92,4 +93,5 @@ export const AllButtonKinds = (buttonArgs) =>
   `<p>${Button({ ...buttonArgs, kind: 'primary' })}</p>
   <p>${Button({ ...buttonArgs, kind: 'secondary' })}</p>
   <p>${Button({ ...buttonArgs, kind: 'tertiary' })}</p>
-  <p>${Button({ ...buttonArgs, kind: 'quaternary' })}</p>`;
+  <p>${Button({ ...buttonArgs, kind: 'quaternary' })}</p>
+  <p>${Button({ ...buttonArgs, kind: 'cancel' })}</p>`;

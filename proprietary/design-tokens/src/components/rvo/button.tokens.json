@@ -52,6 +52,29 @@
           "color": { "value": "{rvo.color.wit}" }
         }
       },
+      "cancel-action": {
+        "background-color": {},
+        "border-color": {},
+        "border-width": { "value": "0" },
+        "color": {
+          "value": "{rvo.color.rood}"
+        },
+        "font-weight": {
+          "value": "{rvo.font-weight.bold}"
+        },
+        "active": {
+          "color": { "value": "{rvo.color.donkerblauw}" }
+        },
+        "hover": {
+          "color": { "value": "{rvo.color.donkerblauw}" }
+        },
+        "disabled": {
+          "color": { "value": "{rvo.color.grijs3}" }
+        },
+        "focus": {
+          "color": { "value": "{rvo.color.rood}" }
+        }
+      },
       "small": {
         "font-size": { "value": "{rvo.font-size.md}" },
         "padding-block-start": { "value": "{rvo.space.xs}" },
