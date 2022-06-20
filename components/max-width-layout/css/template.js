@@ -25,5 +25,5 @@ export const MaxWidthLayout = ({ size = defaultArgs.size }) => {
       maxWidth = designTokens.rvoLayoutMaxWidthLarge;
       break;
   }
-  return `<div class="rvo-max-width-layout--${size}">Deze layout container heeft een maximale breedte van ${maxWidth}.</div>`;
+  return `<div class="rvo-max-width-layout rvo-max-width-layout--${size}">Deze gecentreerde layout container heeft een maximale breedte van ${maxWidth}.</div>`;
 };

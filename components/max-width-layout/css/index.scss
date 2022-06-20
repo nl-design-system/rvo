@@ -3,6 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+.rvo-max-width-layout {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+}
+
 .rvo-max-width-layout--medium {
   max-width: var(--rvo-layout-max-width-medium);
 }
