@@ -30,7 +30,7 @@
       "invalid": {
         "background-color": {},
         "border-color": { "value": "{rvo.color.rood}" },
-        "border-width": { "value": "2px" }
+        "border-width": { "value": "3px" }
       },
       "read-only": {
         "border-color": { "value": "{rvo.color.grijs7}" },
