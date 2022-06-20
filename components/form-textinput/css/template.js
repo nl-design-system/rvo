@@ -16,24 +16,22 @@ export const argTypes = {
     control: 'boolean',
   },
   readOnly: {
-    description: 'Read-only',
     control: 'boolean',
   },
   required: {
-    description: 'Required',
     control: 'boolean',
   },
-  type: {
-    options: ['text', 'textarea', 'number'],
+  inputType: {
+    options: ['text', 'textarea'],
     control: { type: 'radio' },
   },
   placeholder: {
     control: 'text',
   },
   value: {
-    description: 'Value',
     control: 'text',
   },
+  valueType: { options: ['text', 'number'], control: { type: 'radio' } },
 };
 
 export const defaultArgs = {
@@ -42,9 +40,10 @@ export const defaultArgs = {
   invalid: false,
   readOnly: false,
   required: false,
-  type: 'text',
+  inputType: 'text',
   placeholder: '',
   value: '',
+  valueType: 'text',
 };
 
 export const TextInput = ({
@@ -53,11 +52,12 @@ export const TextInput = ({
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
-  type = defaultArgs.type,
+  inputType = defaultArgs.inputType,
   placeholder = defaultArgs.placeholder,
   value = defaultArgs.value,
+  valueType = defaultArgs.valueType,
 }) =>
-  `<${type !== 'textarea' ? 'input' : 'textarea'} class="${clsx(
+  `<${inputType !== 'textarea' ? 'input' : 'textarea'} class="${clsx(
     'utrecht-textbox',
     'utrecht-textbox--html-input',
     disabled && 'utrecht-textbox--disabled',
@@ -67,8 +67,8 @@ export const TextInput = ({
     required && 'utrecht-textbox--required',
   )}"${disabled ? ' disabled' : ''}${invalid ? ' aria-invalid="true"' : ''}${
     placeholder ? ` placeholder="${placeholder}"` : ''
-  }${type === 'number' ? ' inputmode="numeric" pattern="[0-9]*"' : ''}${readOnly ? ' readonly' : ''}${
+  }${valueType === 'number' ? ' inputmode="numeric" pattern="[0-9]*"' : ''}${readOnly ? ' readonly' : ''}${
     required ? ' required' : ''
-  } ${type !== 'textarea' ? `value="${value}"` : ''}>${type === 'textarea' ? value : ''}</${
-    type !== 'textarea' ? 'input' : 'textarea'
+  } ${inputType !== 'textarea' ? `value="${value}"` : ''}>${inputType === 'textarea' ? value : ''}</${
+    inputType !== 'textarea' ? 'input' : 'textarea'
   }>`;
