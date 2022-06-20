@@ -9,7 +9,15 @@
   outline: none;
 }
 
-.utrecht-textbox:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-textbox--disabled),
-.utrecht-textbox--focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-textbox--disabled) {
-  outline-offset: 0;
+.utrecht-textbox:focus,
+.utrecht-textbox--focus {
+  outline-offset: var(--rvo-textbox-outline-offset);
+}
+
+.utrecht-textbox--focus.utrecht-textbox--invalid,
+.utrecht-textbox:focus.utrecht-textbox--invalid,
+.utrecht-textbox--focus.utrecht-textbox:invalid,
+.utrecht-textbox:focus.utrecht-textbox:invalid {
+  border-color: var(--rvo-textbox-invalid-focus-border-color);
+  outline-color: var(--rvo-textbox-invalid-focus-outline-color);
 }

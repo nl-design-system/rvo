@@ -1,0 +1,11 @@
+{
+  "rvo": {
+    "textbox": {
+      "outline-offset": { "value": "0" },
+      "invalid-focus": {
+        "border-color": { "value": "{rvo.color.zwart}" },
+        "outline-color": { "value": "{rvo.color.rood}" }
+      }
+    }
+  }
+}
