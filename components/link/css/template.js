@@ -34,7 +34,7 @@ export const Link = ({
     'rvo-link__icon',
     { 'rvo-link__icon--before': showIcon === 'before', 'rvo-link__icon--after': showIcon === 'after' },
     'rvo-icon',
-    'rvo-icon--medium',
+    'rvo-icon--small',
     'rvo-icon--hemelblauw',
     `rvo-icon--${icon}`,
   )}"></span>`;
