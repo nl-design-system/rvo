@@ -5,5 +5,5 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 
 export const FormLayout = () => {
-  return `<div class="rvo-form-layout">Deze container heeft een maximale breedte van ${designTokens.rvoFormLayoutMaxWidth} en dient gebruikt te worden voor formulieren.</div>`;
+  return `<div class="rvo-form-layout">Deze gecentreerde container heeft een maximale breedte van ${designTokens.rvoFormLayoutMaxWidth} en dient gebruikt te worden voor formulieren.</div>`;
 };
