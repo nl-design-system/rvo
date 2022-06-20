@@ -13,7 +13,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "node generateIconList.js"
+    "generateIconList": "node generateIconList.js"
   },
   "files": [
     "fonts/",
