@@ -1,8 +1,4 @@
-import { Description, Meta } from "@storybook/addon-docs";
-
-<Meta title="CSS Components/Table" />
-
-<Description># Table</Description>
+# Table
 
 Met tabellen toon en organiseer je data in rijen en kolommen.
 
