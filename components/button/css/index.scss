@@ -123,7 +123,7 @@
 }
 
 .rvo-button__icon--tertiary-action {
-  background-color: var(--rvo-color-hemelblauw);
+  background-color: var(--rvo-button-quaternary-action-color);
 }
 
 .rvo-button--tertiary-action.utrecht-button--disabled .rvo-button__icon--tertiary-action,
@@ -134,14 +134,14 @@
 
 .rvo-button--tertiary-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--tertiary-action {
-  background-color: var(--rvo-color-donkerblauw);
+  background-color: var(--rvo-button-tertiary-action-active-color);
 }
 
 .utrecht-button--hover.rvo-button--tertiary-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--tertiary-action,
 .utrecht-button.rvo-button--tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--tertiary-action {
-  background-color: var(--rvo-color-donkerblauw);
+  background-color: var(--rvo-button-tertiary-action-hover-color);
 }
 
 // Quaternary action
@@ -193,7 +193,7 @@
 }
 
 .rvo-button__icon--quaternary-action {
-  background-color: var(--rvo-color-wit);
+  background-color: var(--rvo-button-quaternary-action-color);
 }
 
 .rvo-button--quaternary-action.utrecht-button--disabled .rvo-button__icon--quaternary-action,
@@ -248,7 +248,7 @@
 }
 
 .rvo-button__icon--cancel-action {
-  background-color: var(--rvo-color-hemelblauw);
+  background-color: var(--rvo-button-cancel-action-color);
 }
 
 .rvo-button--cancel-action.utrecht-button--disabled .rvo-button__icon--cancel-action,
@@ -259,14 +259,14 @@
 
 .rvo-button--cancel-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--cancel-action {
-  background-color: var(--rvo-color-donkerblauw);
+  background-color: var(--rvo-button-cancel-action-active-color);
 }
 
 .utrecht-button--hover.rvo-button--cancel-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--cancel-action,
 .utrecht-button.rvo-button--cancel-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
   .rvo-button__icon--cancel-action {
-  background-color: var(--rvo-color-donkerblauw);
+  background-color: var(--rvo-button-cancel-action-hover-color);
 }
 
 // Sizes

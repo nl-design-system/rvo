@@ -31,14 +31,14 @@
         },
         "border-color": {},
         "border-width": { "value": "0" },
-        "color": {
-          "value": "{rvo.color.wit}"
-        },
+        "color": { "value": "{rvo.color.wit}" },
         "active": {
-          "background-color": { "value": "{rvo.color.donkergroen}" }
+          "background-color": { "value": "{rvo.color.donkergroen}" },
+          "color": { "value": "{rvo.color.wit}" }
         },
         "hover": {
-          "background-color": { "value": "{rvo.color.donkergroen}" }
+          "background-color": { "value": "{rvo.color.donkergroen}" },
+          "color": { "value": "{rvo.color.wit}" }
         },
         "disabled": {
           "border-color": { "value": "{rvo.color.grijs2}" },
