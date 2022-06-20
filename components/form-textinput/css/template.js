@@ -24,7 +24,7 @@ export const argTypes = {
     control: 'boolean',
   },
   type: {
-    options: ['text', 'number'],
+    options: ['text', 'textarea', 'number'],
     control: { type: 'radio' },
   },
   placeholder: {
@@ -57,7 +57,7 @@ export const TextInput = ({
   placeholder = defaultArgs.placeholder,
   value = defaultArgs.value,
 }) =>
-  `<input class="${clsx(
+  `<${type !== 'textarea' ? 'input' : 'textarea'} class="${clsx(
     'utrecht-textbox',
     'utrecht-textbox--html-input',
     disabled && 'utrecht-textbox--disabled',
@@ -69,4 +69,6 @@ export const TextInput = ({
     placeholder ? ` placeholder="${placeholder}"` : ''
   }${type === 'number' ? ' inputmode="numeric" pattern="[0-9]*"' : ''}${readOnly ? ' readonly' : ''}${
     required ? ' required' : ''
-  } value="${value}">`;
+  } ${type !== 'textarea' ? `value="${value}"` : ''}>${type === 'textarea' ? value : ''}</${
+    type !== 'textarea' ? 'input' : 'textarea'
+  }>`;
