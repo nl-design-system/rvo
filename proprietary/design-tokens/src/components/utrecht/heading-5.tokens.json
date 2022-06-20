@@ -3,7 +3,7 @@
     "heading-5": {
       "color": {},
       "font-family": {},
-      "font-size": { "value": "{rvo.font-size.sm}" },
+      "font-size": { "value": "{rvo.font-size.md}" },
       "font-weight": { "value": "{rvo.font-weight.bold}" },
       "line-height": {},
       "margin-block-end": { "value": "{rvo.space.xs}" },
