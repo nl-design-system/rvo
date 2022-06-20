@@ -1,0 +1,15 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.utrecht-textbox:disabled,
+.utrecht-textbox[aria-disabled="true"],
+.utrecht-textbox.utrecht-textbox--disabled {
+  outline: none;
+}
+
+.utrecht-textbox:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-textbox--disabled),
+.utrecht-textbox--focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-textbox--disabled) {
+  outline-offset: 0;
+}

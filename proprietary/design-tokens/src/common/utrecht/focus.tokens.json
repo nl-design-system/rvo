@@ -9,7 +9,7 @@
       "outline-color": { "value": "{rvo.color.hemelblauw}" },
       "outline-offset": { "value": "3px" },
       "outline-style": { "value": "solid" },
-      "outline-width": { "value": "2px" }
+      "outline-width": { "value": "3px" }
     }
   }
 }
