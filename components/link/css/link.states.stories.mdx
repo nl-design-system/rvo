@@ -1,4 +1,4 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, Link } from "./template";
 import "./index.scss";
 
@@ -17,13 +17,7 @@ import "./index.scss";
 ## Hover
 
 <Canvas>
-  <Story
-    name="Hover"
-    args={{
-      hover: true,
-      showIcon: "before",
-    }}
-  >
+  <Story name="Hover" args={{ ...defaultArgs, hover: true, showIcon: "before" }}>
     {Link.bind({})}
   </Story>
 </Canvas>
@@ -31,13 +25,7 @@ import "./index.scss";
 ## Active
 
 <Canvas>
-  <Story
-    name="Active"
-    args={{
-      active: true,
-      showIcon: "before",
-    }}
-  >
+  <Story name="Active" args={{ ...defaultArgs, active: true, showIcon: "before" }}>
     {Link.bind({})}
   </Story>
 </Canvas>
@@ -45,13 +33,7 @@ import "./index.scss";
 ## Focus
 
 <Canvas>
-  <Story
-    name="Focus"
-    args={{
-      focus: true,
-      showIcon: "before",
-    }}
-  >
+  <Story name="Focus" args={{ ...defaultArgs, focus: true, showIcon: "before" }}>
     {Link.bind({})}
   </Story>
 </Canvas>
