@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import './index.scss';
 
 export const argTypes = {
+  id: { control: 'text' },
   disabled: {
     control: 'boolean',
   },
@@ -35,6 +36,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  id: 'field',
   disabled: false,
   focus: false,
   invalid: false,
@@ -47,6 +49,7 @@ export const defaultArgs = {
 };
 
 export const TextInput = ({
+  id = defaultArgs.id,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
@@ -57,7 +60,7 @@ export const TextInput = ({
   value = defaultArgs.value,
   valueType = defaultArgs.valueType,
 }) =>
-  `<${inputType !== 'textarea' ? 'input' : 'textarea'} class="${clsx(
+  `<${inputType !== 'textarea' ? 'input' : 'textarea'} id="${id}" class="${clsx(
     'utrecht-textbox',
     'utrecht-textbox--html-input',
     disabled && 'utrecht-textbox--disabled',
