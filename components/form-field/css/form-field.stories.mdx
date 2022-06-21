@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Field } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Forms/Field"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Field
+
+<Canvas>
+  <Story name="Field" args={defaultArgs}>
+    {Field.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Field" />
