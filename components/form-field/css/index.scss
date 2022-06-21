@@ -3,6 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+.rvo-form-field {
+  margin-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
+}
+
 .rvo-form-field__label {
   display: block;
   margin-block-end: var(--rvo-space-sm);
@@ -15,4 +19,16 @@
 .rvo-form-field__helper-text {
   line-height: var(--rvo-line-height-md);
   padding-block-start: var(--rvo-space-xs);
+}
+
+.rvo-form-field__helper-text--error,
+.rvo-form-field__helper-text--warning {
+  align-items: center;
+  display: flex;
+  gap: var(--rvo-space-sm);
+}
+
+.rvo-form-field__helper-text--error {
+  color: var(--rvo-color-rood);
+  font-weight: var(--rvo-font-weight-bold);
 }
