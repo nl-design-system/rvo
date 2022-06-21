@@ -26,7 +26,7 @@ export const argTypes = {
     options: options,
   },
   size: {
-    options: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large', 'extra large', 'xxl'],
     control: { type: 'radio' },
   },
   color: {
@@ -45,9 +45,11 @@ export const Icon = ({ icon = defaultArgs.icon, size = defaultArgs.size, color =
   const [, iconName] = icon.split(' > ');
 
   return `<span class="${clsx('rvo-icon', `rvo-icon--${iconName.toLowerCase().replace(/_/g, '-')}`, {
-    'rvo-icon--small': size === 'small',
-    'rvo-icon--medium': size === 'medium',
-    'rvo-icon--large': size === 'large',
+    'rvo-icon--sm': size === 'small',
+    'rvo-icon--md': size === 'medium',
+    'rvo-icon--lg': size === 'large',
+    'rvo-icon--xl': size === 'extra large',
+    'rvo-icon--2xl': size === 'xxl',
     'rvo-icon--wit': color === 'wit',
     'rvo-icon--hemelblauw': color === 'hemelblauw',
   })}" />`;

@@ -3,19 +3,29 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rvo-icon--small {
-  height: var(--rvo-icon-small-height);
-  width: var(--rvo-icon-small-width);
+.rvo-icon--sm {
+  height: var(--rvo-icon-sm-height);
+  width: var(--rvo-icon-sm-width);
 }
 
-.rvo-icon--medium {
-  height: var(--rvo-icon-medium-height);
-  width: var(--rvo-icon-medium-width);
+.rvo-icon--md {
+  height: var(--rvo-icon-md-height);
+  width: var(--rvo-icon-md-width);
 }
 
-.rvo-icon--large {
-  height: var(--rvo-icon-large-height);
-  width: var(--rvo-icon-large-width);
+.rvo-icon--lg {
+  height: var(--rvo-icon-lg-height);
+  width: var(--rvo-icon-lg-width);
+}
+
+.rvo-icon--xl {
+  height: var(--rvo-icon-xl-height);
+  width: var(--rvo-icon-xl-width);
+}
+
+.rvo-icon--2xl {
+  height: var(--rvo-icon-2xl-height);
+  width: var(--rvo-icon-2xl-width);
 }
 
 .rvo-icon--wit {

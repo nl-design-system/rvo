@@ -1,17 +1,25 @@
 {
   "rvo": {
     "icon": {
-      "small": {
+      "sm": {
         "width": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" },
         "height": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" }
       },
-      "medium": {
+      "md": {
         "width": { "value": "{rvo.size.md}" },
         "height": { "value": "{rvo.size.md}" }
       },
-      "large": {
+      "lg": {
         "width": { "value": "{rvo.size.lg}" },
         "height": { "value": "{rvo.size.lg}" }
+      },
+      "xl": {
+        "width": { "value": "{rvo.size.xl}" },
+        "height": { "value": "{rvo.size.xl}" }
+      },
+      "2xl": {
+        "width": { "value": "{rvo.size.2xl}" },
+        "height": { "value": "{rvo.size.2xl}" }
       }
     }
   }
