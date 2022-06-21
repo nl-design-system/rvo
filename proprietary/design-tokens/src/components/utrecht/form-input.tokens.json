@@ -23,7 +23,7 @@
         "color": { "value": "{rvo.color.grijs7}" }
       },
       "focus": {
-        "background-color": { "value": "" },
+        "background-color": { "value": "{rvo.color.wit}" },
         "border-color": {},
         "border-width": {}
       },
