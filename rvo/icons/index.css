@@ -1,4 +1,5 @@
 .rvo-icon--activiteit {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/activiteit.svg");
   mask-image: url("functioneel/activiteit.svg");
   -webkit-mask-position: center center;
@@ -10,6 +11,7 @@
 }
 
 .rvo-icon--agile-werken {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/agile-werken.svg");
   mask-image: url("functioneel/agile-werken.svg");
   -webkit-mask-position: center center;
@@ -21,6 +23,7 @@
 }
 
 .rvo-icon--api-inrichting {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/api-inrichting.svg");
   mask-image: url("functioneel/api-inrichting.svg");
   -webkit-mask-position: center center;
@@ -32,6 +35,7 @@
 }
 
 .rvo-icon--audio {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/audio.svg");
   mask-image: url("functioneel/audio.svg");
   -webkit-mask-position: center center;
@@ -43,6 +47,7 @@
 }
 
 .rvo-icon--bel {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/bel.svg");
   mask-image: url("functioneel/bel.svg");
   -webkit-mask-position: center center;
@@ -54,6 +59,7 @@
 }
 
 .rvo-icon--bewerken {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/bewerken.svg");
   mask-image: url("functioneel/bewerken.svg");
   -webkit-mask-position: center center;
@@ -65,6 +71,7 @@
 }
 
 .rvo-icon--blog {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/blog.svg");
   mask-image: url("functioneel/blog.svg");
   -webkit-mask-position: center center;
@@ -76,6 +83,7 @@
 }
 
 .rvo-icon--comment {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/comment.svg");
   mask-image: url("functioneel/comment.svg");
   -webkit-mask-position: center center;
@@ -87,6 +95,7 @@
 }
 
 .rvo-icon--communicatie {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/communicatie.svg");
   mask-image: url("functioneel/communicatie.svg");
   -webkit-mask-position: center center;
@@ -98,6 +107,7 @@
 }
 
 .rvo-icon--delen {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/delen.svg");
   mask-image: url("functioneel/delen.svg");
   -webkit-mask-position: center center;
@@ -109,6 +119,7 @@
 }
 
 .rvo-icon--delta-naar-links {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/delta-naar-links.svg");
   mask-image: url("functioneel/delta-naar-links.svg");
   -webkit-mask-position: center center;
@@ -120,6 +131,7 @@
 }
 
 .rvo-icon--delta-naar-rechts {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/delta-naar-rechts.svg");
   mask-image: url("functioneel/delta-naar-rechts.svg");
   -webkit-mask-position: center center;
@@ -131,6 +143,7 @@
 }
 
 .rvo-icon--delta-omhoog {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/delta-omhoog.svg");
   mask-image: url("functioneel/delta-omhoog.svg");
   -webkit-mask-position: center center;
@@ -142,6 +155,7 @@
 }
 
 .rvo-icon--delta-omlaag {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/delta-omlaag.svg");
   mask-image: url("functioneel/delta-omlaag.svg");
   -webkit-mask-position: center center;
@@ -153,6 +167,7 @@
 }
 
 .rvo-icon--diagonale-pijl {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/diagonale-pijl.svg");
   mask-image: url("functioneel/diagonale-pijl.svg");
   -webkit-mask-position: center center;
@@ -164,6 +179,7 @@
 }
 
 .rvo-icon--downloaden {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/downloaden.svg");
   mask-image: url("functioneel/downloaden.svg");
   -webkit-mask-position: center center;
@@ -175,6 +191,7 @@
 }
 
 .rvo-icon--externe-link {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/externe-link.svg");
   mask-image: url("functioneel/externe-link.svg");
   -webkit-mask-position: center center;
@@ -186,6 +203,7 @@
 }
 
 .rvo-icon--favoriet {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/favoriet.svg");
   mask-image: url("functioneel/favoriet.svg");
   -webkit-mask-position: center center;
@@ -197,6 +215,7 @@
 }
 
 .rvo-icon--foto-vergroten {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/foto-vergroten.svg");
   mask-image: url("functioneel/foto-vergroten.svg");
   -webkit-mask-position: center center;
@@ -208,6 +227,7 @@
 }
 
 .rvo-icon--gegevensuitwisseling {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/gegevensuitwisseling.svg");
   mask-image: url("functioneel/gegevensuitwisseling.svg");
   -webkit-mask-position: center center;
@@ -219,6 +239,7 @@
 }
 
 .rvo-icon--geluid-aan {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/geluid-aan.svg");
   mask-image: url("functioneel/geluid-aan.svg");
   -webkit-mask-position: center center;
@@ -230,6 +251,7 @@
 }
 
 .rvo-icon--geluid-uit {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/geluid-uit.svg");
   mask-image: url("functioneel/geluid-uit.svg");
   -webkit-mask-position: center center;
@@ -241,6 +263,7 @@
 }
 
 .rvo-icon--haakse-pijl {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/haakse-pijl.svg");
   mask-image: url("functioneel/haakse-pijl.svg");
   -webkit-mask-position: center center;
@@ -252,6 +275,7 @@
 }
 
 .rvo-icon--hashtag {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/hashtag.svg");
   mask-image: url("functioneel/hashtag.svg");
   -webkit-mask-position: center center;
@@ -263,6 +287,7 @@
 }
 
 .rvo-icon--home {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/home.svg");
   mask-image: url("functioneel/home.svg");
   -webkit-mask-position: center center;
@@ -274,6 +299,7 @@
 }
 
 .rvo-icon--info {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/info.svg");
   mask-image: url("functioneel/info.svg");
   -webkit-mask-position: center center;
@@ -285,6 +311,7 @@
 }
 
 .rvo-icon--inloggen {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/inloggen.svg");
   mask-image: url("functioneel/inloggen.svg");
   -webkit-mask-position: center center;
@@ -296,6 +323,7 @@
 }
 
 .rvo-icon--instellingen {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/instellingen.svg");
   mask-image: url("functioneel/instellingen.svg");
   -webkit-mask-position: center center;
@@ -307,6 +335,7 @@
 }
 
 .rvo-icon--interne-link {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/interne-link.svg");
   mask-image: url("functioneel/interne-link.svg");
   -webkit-mask-position: center center;
@@ -318,6 +347,7 @@
 }
 
 .rvo-icon--kalender {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/kalender.svg");
   mask-image: url("functioneel/kalender.svg");
   -webkit-mask-position: center center;
@@ -329,6 +359,7 @@
 }
 
 .rvo-icon--klok {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/klok.svg");
   mask-image: url("functioneel/klok.svg");
   -webkit-mask-position: center center;
@@ -340,6 +371,7 @@
 }
 
 .rvo-icon--kruis {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/kruis.svg");
   mask-image: url("functioneel/kruis.svg");
   -webkit-mask-position: center center;
@@ -351,6 +383,7 @@
 }
 
 .rvo-icon--let-op-met-loep {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/let-op-met-loep.svg");
   mask-image: url("functioneel/let-op-met-loep.svg");
   -webkit-mask-position: center center;
@@ -362,6 +395,7 @@
 }
 
 .rvo-icon--let-op {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/let-op.svg");
   mask-image: url("functioneel/let-op.svg");
   -webkit-mask-position: center center;
@@ -373,6 +407,7 @@
 }
 
 .rvo-icon--locatiemarker {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/locatiemarker.svg");
   mask-image: url("functioneel/locatiemarker.svg");
   -webkit-mask-position: center center;
@@ -384,6 +419,7 @@
 }
 
 .rvo-icon--mail {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/mail.svg");
   mask-image: url("functioneel/mail.svg");
   -webkit-mask-position: center center;
@@ -395,6 +431,7 @@
 }
 
 .rvo-icon--meer {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/meer.svg");
   mask-image: url("functioneel/meer.svg");
   -webkit-mask-position: center center;
@@ -406,6 +443,7 @@
 }
 
 .rvo-icon--menu {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/menu.svg");
   mask-image: url("functioneel/menu.svg");
   -webkit-mask-position: center center;
@@ -417,6 +455,7 @@
 }
 
 .rvo-icon--nieuws {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/nieuws.svg");
   mask-image: url("functioneel/nieuws.svg");
   -webkit-mask-position: center center;
@@ -428,6 +467,7 @@
 }
 
 .rvo-icon--permanent-beta {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/permanent-beta.svg");
   mask-image: url("functioneel/permanent-beta.svg");
   -webkit-mask-position: center center;
@@ -439,6 +479,7 @@
 }
 
 .rvo-icon--pijl-naar-rechts {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/pijl-naar-rechts.svg");
   mask-image: url("functioneel/pijl-naar-rechts.svg");
   -webkit-mask-position: center center;
@@ -450,6 +491,7 @@
 }
 
 .rvo-icon--pijl-naar-rechtsboven {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/pijl-naar-rechtsboven.svg");
   mask-image: url("functioneel/pijl-naar-rechtsboven.svg");
   -webkit-mask-position: center center;
@@ -461,6 +503,7 @@
 }
 
 .rvo-icon--pijl-omhoog {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/pijl-omhoog.svg");
   mask-image: url("functioneel/pijl-omhoog.svg");
   -webkit-mask-position: center center;
@@ -472,6 +515,7 @@
 }
 
 .rvo-icon--pijl-omlaag {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/pijl-omlaag.svg");
   mask-image: url("functioneel/pijl-omlaag.svg");
   -webkit-mask-position: center center;
@@ -483,6 +527,7 @@
 }
 
 .rvo-icon--plus {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/plus.svg");
   mask-image: url("functioneel/plus.svg");
   -webkit-mask-position: center center;
@@ -494,6 +539,7 @@
 }
 
 .rvo-icon--printer {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/printer.svg");
   mask-image: url("functioneel/printer.svg");
   -webkit-mask-position: center center;
@@ -505,6 +551,7 @@
 }
 
 .rvo-icon--publicatie {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/publicatie.svg");
   mask-image: url("functioneel/publicatie.svg");
   -webkit-mask-position: center center;
@@ -516,6 +563,7 @@
 }
 
 .rvo-icon--rechte-pijl {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/rechte-pijl.svg");
   mask-image: url("functioneel/rechte-pijl.svg");
   -webkit-mask-position: center center;
@@ -527,6 +575,7 @@
 }
 
 .rvo-icon--refresh {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/refresh.svg");
   mask-image: url("functioneel/refresh.svg");
   -webkit-mask-position: center center;
@@ -538,6 +587,7 @@
 }
 
 .rvo-icon--rss {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/rss.svg");
   mask-image: url("functioneel/rss.svg");
   -webkit-mask-position: center center;
@@ -549,6 +599,7 @@
 }
 
 .rvo-icon--secure-link {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/secure-link.svg");
   mask-image: url("functioneel/secure-link.svg");
   -webkit-mask-position: center center;
@@ -560,6 +611,7 @@
 }
 
 .rvo-icon--smartphone {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/smartphone.svg");
   mask-image: url("functioneel/smartphone.svg");
   -webkit-mask-position: center center;
@@ -571,6 +623,7 @@
 }
 
 .rvo-icon--tegelweergave {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/tegelweergave.svg");
   mask-image: url("functioneel/tegelweergave.svg");
   -webkit-mask-position: center center;
@@ -582,6 +635,7 @@
 }
 
 .rvo-icon--telefoon {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/telefoon.svg");
   mask-image: url("functioneel/telefoon.svg");
   -webkit-mask-position: center center;
@@ -593,6 +647,7 @@
 }
 
 .rvo-icon--terug {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/terug.svg");
   mask-image: url("functioneel/terug.svg");
   -webkit-mask-position: center center;
@@ -604,6 +659,7 @@
 }
 
 .rvo-icon--toegankelijkheid {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/toegankelijkheid.svg");
   mask-image: url("functioneel/toegankelijkheid.svg");
   -webkit-mask-position: center center;
@@ -615,6 +671,7 @@
 }
 
 .rvo-icon--toelichting {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/toelichting.svg");
   mask-image: url("functioneel/toelichting.svg");
   -webkit-mask-position: center center;
@@ -626,6 +683,7 @@
 }
 
 .rvo-icon--uit-aanknop {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/uit-aanknop.svg");
   mask-image: url("functioneel/uit-aanknop.svg");
   -webkit-mask-position: center center;
@@ -637,6 +695,7 @@
 }
 
 .rvo-icon--upload {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/upload.svg");
   mask-image: url("functioneel/upload.svg");
   -webkit-mask-position: center center;
@@ -648,6 +707,7 @@
 }
 
 .rvo-icon--user {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/user.svg");
   mask-image: url("functioneel/user.svg");
   -webkit-mask-position: center center;
@@ -659,6 +719,7 @@
 }
 
 .rvo-icon--versleutelen {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/versleutelen.svg");
   mask-image: url("functioneel/versleutelen.svg");
   -webkit-mask-position: center center;
@@ -670,6 +731,7 @@
 }
 
 .rvo-icon--verwijderen {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/verwijderen.svg");
   mask-image: url("functioneel/verwijderen.svg");
   -webkit-mask-position: center center;
@@ -681,6 +743,7 @@
 }
 
 .rvo-icon--verzenden {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/verzenden.svg");
   mask-image: url("functioneel/verzenden.svg");
   -webkit-mask-position: center center;
@@ -692,6 +755,7 @@
 }
 
 .rvo-icon--video {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/video.svg");
   mask-image: url("functioneel/video.svg");
   -webkit-mask-position: center center;
@@ -703,6 +767,7 @@
 }
 
 .rvo-icon--vinkje {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/vinkje.svg");
   mask-image: url("functioneel/vinkje.svg");
   -webkit-mask-position: center center;
@@ -714,6 +779,7 @@
 }
 
 .rvo-icon--vraagteken {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/vraagteken.svg");
   mask-image: url("functioneel/vraagteken.svg");
   -webkit-mask-position: center center;
@@ -725,6 +791,7 @@
 }
 
 .rvo-icon--zoek {
+  display: inline-block;
   -webkit-mask-image: url("functioneel/zoek.svg");
   mask-image: url("functioneel/zoek.svg");
   -webkit-mask-position: center center;
@@ -736,6 +803,7 @@
 }
 
 .rvo-icon--bevestiging {
+  display: inline-block;
   -webkit-mask-image: url("status/bevestiging.svg");
   mask-image: url("status/bevestiging.svg");
   -webkit-mask-position: center center;
@@ -747,6 +815,7 @@
 }
 
 .rvo-icon--foutmelding {
+  display: inline-block;
   -webkit-mask-image: url("status/foutmelding.svg");
   mask-image: url("status/foutmelding.svg");
   -webkit-mask-position: center center;
@@ -758,6 +827,7 @@
 }
 
 .rvo-icon--waarschuwing {
+  display: inline-block;
   -webkit-mask-image: url("status/waarschuwing.svg");
   mask-image: url("status/waarschuwing.svg");
   -webkit-mask-position: center center;
