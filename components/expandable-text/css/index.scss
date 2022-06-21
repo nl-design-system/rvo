@@ -7,19 +7,19 @@
 .rvo-expandable-text {
   background: none;
   display: inline-flex;
-  padding-block-end: 0;
-  padding-block-start: var(--rvo-space-xs);
+  padding-block-end: var(--rvo-expandable-text-padding-block-end);
+  padding-block-start: var(--rvo-expandable-text-padding-block-start);
   padding-inline-start: 0;
 }
 
 .rvo-expandable-text__summary {
   align-items: center;
-  color: var(--rvo-color-hemelblauw);
+  color: var(--rvo-expandable-text-summary-color);
   cursor: pointer;
   display: inline-flex;
-  font-weight: var(--rvo-font-weight-bold);
-  gap: var(--rvo-space-sm);
-  line-height: var(--rvo-line-height-md);
+  font-weight: var(--rvo-expandable-text-summary-font-weight);
+  gap: var(--rvo-expandable-text-summary-gap);
+  line-height: var(--rvo-expendable-text-summary-line-height);
   list-style: none;
 }
 
@@ -35,7 +35,7 @@
 .rvo-expandable-text__summary::after {
   @include icons.rvo-icon-delta-naar-rechts;
 
-  background-color: var(--rvo-color-hemelblauw);
+  background-color: var(--rvo-expandable-text-summary-icon-background-color);
   content: "";
   height: 16px;
   width: 10px;
@@ -47,6 +47,6 @@
 
 .rvo-expandable-text__details {
   display: block;
-  padding-block-end: var(--rvo-space-sm);
-  padding-block-start: var(--rvo-space-xs);
+  padding-block-end: var(--rvo-expandable-text-details-padding-block-end);
+  padding-block-start: var(--rvo-expandable-text-details-padding-block-start);
 }

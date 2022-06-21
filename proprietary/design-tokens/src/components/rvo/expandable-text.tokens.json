@@ -1,0 +1,21 @@
+{
+  "rvo": {
+    "expandable-text": {
+      "padding-block-end": { "value": "0" },
+      "padding-block-start": { "value": "{rvo.space.xs}" },
+      "summary": {
+        "color": { "value": "{rvo.color.hemelblauw}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
+        "gap": { "value": "{rvo.space.sm}" },
+        "line-height": { "value": "{rvo.line-height.md}" },
+        "icon": {
+          "background-color": { "value": "{rvo.color.hemelblauw}" }
+        }
+      },
+      "details": {
+        "padding-block-end": { "value": "{rvo.space.sm}" },
+        "padding-block-start": { "value": "{rvo.space.xs}" }
+      }
+    }
+  }
+}

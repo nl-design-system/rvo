@@ -1,1 +1,66 @@
-{}
+{
+  "rvo": {
+    "expandable-text": {
+      "padding-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "summary": {
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        },
+        "gap": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "line-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "icon": {
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        }
+      },
+      "details": {
+        "padding-block-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}
