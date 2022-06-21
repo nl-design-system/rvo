@@ -3,16 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rvo-icon {
-  display: inline-block;
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
 .rvo-icon--small {
   height: var(--rvo-icon-small-height);
   width: var(--rvo-icon-small-width);
