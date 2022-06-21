@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
@@ -5,19 +7,62 @@
 
 .rvo-link {
   align-items: center;
+  background-color: var(--rvo-link-background-color);
   color: var(--rvo-link-color);
-  display: flex;
+  display: inline-flex;
   font-weight: var(--rvo-link-font-weight);
-  text-decoration: none;
-}
-
-.rvo-link:hover,
-.rvo-link:focus {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
+// Hover
+.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+  background-color: var(--rvo-link-hover-background-color);
+  color: var(--rvo-link-hover-color);
+  font-weight: var(--rvo-link-hover-font-weight);
+  text-decoration-thickness: 2px;
+}
+
+// Active
+.rvo-link:active,
+.rvo-link--active {
+  background-color: var(--rvo-link-active-background-color);
+  color: var(--rvo-link-active-color);
+  font-weight: var(--rvo-link-active-font-weight);
+  text-decoration-thickness: 2px;
+}
+
+// Focus
+.rvo-link:focus,
+.rvo-link:focus-visible,
+.rvo-link--focus {
+  background-color: var(--rvo-link-focus-background-color);
+  color: var(--rvo-link-focus-color);
+  font-weight: var(--rvo-link-focus-font-weight);
+  text-decoration-thickness: 3px;
+}
+
+// Icon
 .rvo-link__icon {
   background-color: var(--rvo-link-icon-background-color);
+}
+
+.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) .rvo-link__icon,
+.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) .rvo-link__icon {
+  background-color: var(--rvo-link-hover-icon-background-color);
+}
+
+.rvo-link:active .rvo-link__icon,
+.rvo-link--active .rvo-link__icon {
+  background-color: var(--rvo-link-active-icon-background-color);
+}
+
+.rvo-link:focus .rvo-link__icon,
+.rvo-link:focus-visible .rvo-link__icon,
+.rvo-link--focus .rvo-link__icon {
+  background-color: var(--rvo-link-focus-icon-background-color);
 }
 
 .rvo-link__icon--before {

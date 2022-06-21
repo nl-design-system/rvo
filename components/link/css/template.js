@@ -16,12 +16,24 @@ export const argTypes = {
     options: ['no', 'before', 'after'],
     control: { type: 'radio' },
   },
+  hover: {
+    control: 'boolean',
+  },
+  active: {
+    control: 'boolean',
+  },
+  focus: {
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs = {
   linkContent: 'Dit is een link',
   linkUrl: '#',
   showIcon: 'no',
+  hover: false,
+  active: false,
+  focus: false,
 };
 
 export const Link = ({
@@ -29,6 +41,9 @@ export const Link = ({
   linkUrl = defaultArgs.linkUrl,
   showIcon = defaultArgs.showIcon,
   icon = 'pijl-naar-rechtsboven',
+  hover = defaultArgs.hover,
+  active = defaultArgs.active,
+  focus = defaultArgs.focus,
 }) => {
   const iconMarkup = `<span class="${clsx(
     'rvo-link__icon',
@@ -39,7 +54,9 @@ export const Link = ({
     `rvo-icon--${icon}`,
   )}"></span>`;
 
-  return `<a href="${linkUrl}" class="rvo-link">${showIcon === 'before' ? iconMarkup : ''}${linkContent}${
-    showIcon === 'after' ? iconMarkup : ''
-  }</a>`;
+  return `<a href="${linkUrl}" class="${clsx('rvo-link', {
+    'rvo-link--active': active,
+    'rvo-link--hover': hover,
+    'rvo-link--focus': focus,
+  })}">${showIcon === 'before' ? iconMarkup : ''}${linkContent}${showIcon === 'after' ? iconMarkup : ''}</a>`;
 };
