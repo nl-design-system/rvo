@@ -1,0 +1,19 @@
+{
+  "rvo": {
+    "custom-radio-button": {
+      "label": {
+        "margin-block-start": {
+          "value": "4px"
+        },
+        "margin-inline-start": {
+          "value": "{rvo.space.sm}"
+        }
+      },
+      "hover": {
+        "border-color": {
+          "value": "{rvo.color.hemelblauw}"
+        }
+      }
+    }
+  }
+}

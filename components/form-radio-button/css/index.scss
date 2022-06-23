@@ -5,6 +5,14 @@
 
 .rvo-custom-radio-button__label {
   display: inline-block;
-  margin-block-start: 4px;
-  margin-inline-start: var(--rvo-space-sm);
+  margin-block-start: var(--rvo-custom-radio-button-label-margin-block-start);
+  margin-inline-start: var(--rvo-custom-radio-button-label-margin-inline-start);
+}
+
+.utrecht-custom-radio-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-radio-button--disabled) {
+  &.utrecht-custom-radio-button:hover,
+  &.rvo-custom-radio-button--hover,
+  + .rvo-custom-radio-button__label:hover {
+    border-color: var(--rvo-custom-radio-button-hover-border-color);
+  }
 }

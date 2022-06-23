@@ -8,27 +8,19 @@ import './index.scss';
 export const argTypes = {
   id: { control: 'text' },
   labelText: { control: 'text' },
-  checked: {
-    control: 'boolean',
-  },
-  disabled: {
-    control: 'boolean',
-  },
-  active: {
-    control: 'boolean',
-  },
-  focus: {
-    control: 'boolean',
-  },
-  invalid: {
-    control: 'boolean',
-  },
+  checked: { control: 'boolean' },
+  hover: { control: 'boolean' },
+  disabled: { control: 'boolean' },
+  active: { control: 'boolean' },
+  focus: { control: 'boolean' },
+  invalid: { control: 'boolean' },
 };
 
 export const defaultArgs = {
   id: 'field',
   labelText: 'Label',
   checked: false,
+  hover: false,
   disabled: false,
   active: false,
   focus: false,
@@ -39,6 +31,7 @@ export const RadioButton = ({
   id = defaultArgs.id,
   labelText = defaultArgs.labelText,
   checked = defaultArgs.checked,
+  hover = defaultArgs.hover,
   disabled = defaultArgs.disabled,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
@@ -48,6 +41,7 @@ export const RadioButton = ({
   ${disabled ? ' disabled' : ''} class="${clsx(
     'utrecht-custom-radio-button',
     checked && 'utrecht-custom-radio-button--checked',
+    hover && 'rvo-custom-radio-button--hover',
     disabled && 'utrecht-custom-radio-button--disabled',
     active && 'utrecht-custom-radio-button--active',
     focus && 'utrecht-custom-radio-button--focus',
