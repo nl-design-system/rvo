@@ -3,7 +3,7 @@ import 'normalize.css';
 import '../common/style.scss';
 import Header from '../common/components/Header';
 
-const Formulier = () => {
+const Content = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -57,4 +57,4 @@ const Formulier = () => {
   );
 };
 
-export default Formulier;
+export default Content;
