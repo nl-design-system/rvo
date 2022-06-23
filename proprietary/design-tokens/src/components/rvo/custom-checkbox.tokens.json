@@ -1,0 +1,25 @@
+{
+  "rvo": {
+    "custom-checkbox": {
+      "group": {
+        "gap": { "value": "{rvo.space.md}" }
+      },
+      "label": {
+        "margin-inline-start": {
+          "value": "{rvo.space.sm}"
+        },
+        "disabled": {
+          "color": { "value": "{rvo.color.grijs3}" }
+        }
+      },
+      "hover": {
+        "border-color": {
+          "value": "{rvo.color.hemelblauw}"
+        }
+      },
+      "checked": {
+        "background": { "value": "radial-gradient(circle, {rvo.color.hemelblauw} 45%, {rvo.color.wit} 50%)" }
+      }
+    }
+  }
+}

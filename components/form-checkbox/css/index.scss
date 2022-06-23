@@ -17,15 +17,49 @@
 //   flex-direction: row;
 // }
 
-// .rvo-custom-checkbox__container {
-//   display: inline-flex;
-// }
+.utrecht-custom-checkbox {
+  align-items: center;
+  display: inline-flex;
+}
 
-// .rvo-custom-checkbox__label {
-//   display: inline-block;
-//   margin-block-start: var(--rvo-custom-checkbox-label-margin-block-start);
-//   margin-inline-start: var(--rvo-custom-checkbox-label-margin-inline-start);
-// }
+.rvo-custom-checkbox__label {
+  display: inline-block;
+  margin-inline-start: var(--rvo-custom-checkbox-label-margin-inline-start);
+}
+
+.rvo-custom-checkbox__icon,
+.rvo-custom-checkbox__icon--indeterminate {
+  background-color: var(--rvo-color-wit);
+  display: none;
+}
+
+.rvo-custom-checkbox__icon--indeterminate {
+  background-color: var(--rvo-color-hemelblauw);
+  color: var(--rvo-color-wit);
+  font-weight: var(--rvo-font-weight-bold);
+}
+
+.utrecht-custom-checkbox__box {
+  display: block;
+  position: relative;
+}
+
+.utrecht-custom-checkbox__input--checked,
+.utrecht-custom-checkbox__input:checked + .utrecht-custom-checkbox__box {
+  background-color: var(--rvo-color-hemelblauw);
+
+  &:not(.utrecht-custom-checkbox__box--indeterminate) .rvo-custom-checkbox__icon {
+    display: inline-block;
+  }
+
+  &.utrecht-custom-checkbox__box--indeterminate .rvo-custom-checkbox__icon--indeterminate {
+    display: inline-block;
+  }
+
+  &.utrecht-custom-checkbox__box--disabled {
+    background-color: var(--rvo-color-wit);
+  }
+}
 
 // // Checked state overrides
 // .utrecht-custom-checkbox:checked,
@@ -34,10 +68,10 @@
 // }
 
 // // Disabled state
-// .utrecht-custom-checkbox--disabled + .rvo-custom-checkbox__label,
-// .utrecht-custom-checkbox:disabled + .rvo-custom-checkbox__label {
-//   color: var(--rvo-custom-checkbox-label-disabled-color);
-// }
+.utrecht-custom-checkbox__box--disabled + .rvo-custom-checkbox__label,
+.utrecht-custom-checkbox__input:disabled ~ .rvo-custom-checkbox__label {
+  color: var(--rvo-custom-checkbox-label-disabled-color);
+}
 
 // // Hover state
 // .utrecht-custom-checkbox:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-checkbox--disabled):not(.utrecht-custom-checkbox--invalid) {

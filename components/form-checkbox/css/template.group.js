@@ -19,9 +19,9 @@ export const defaultArgs = {
 
 export const RadioButtonGroup = ({ layout = defaultArgs.layout }) => {
   let markup = `<div class="${clsx(
-    'rvo-custom-radio-button__group',
-    layout === 'horizontal' && 'rvo-custom-radio-button__group--horizontal',
-    layout === 'vertical' && 'rvo-custom-radio-button__group--vertical',
+    'rvo-custom-checkbox__group',
+    layout === 'horizontal' && 'rvo-custom-checkbox__group--horizontal',
+    layout === 'vertical' && 'rvo-custom-checkbox__group--vertical',
   )}">`;
   markup += RadioButton({ id: 'optionA', name: 'group', labelText: 'Option A' });
   markup += RadioButton({ id: 'optionB', name: 'group', labelText: 'Option B' });
