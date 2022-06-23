@@ -35,7 +35,7 @@ export const defaultArgs = {
 
 export const StatusIcon = ({ type = defaultArgs.type, size = defaultArgs.size }) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
-  return `<span class="${clsx(
+  return `<div class="${clsx(
     'rvo-icon',
     `rvo-icon--${iconName} rvo-status-icon--${iconName}`,
     `rvo-icon--${size}`,

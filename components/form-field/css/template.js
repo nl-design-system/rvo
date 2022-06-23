@@ -49,13 +49,13 @@ export const Field = ({
   // Parse error text markup
   let errorTextMarkup = '';
   if (errorText) {
-    errorTextMarkup = `<div class="rvo-form-field__helper-text rvo-form-field__helper-text--error"><span class="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></span>${errorText}</div>`;
+    errorTextMarkup = `<div class="rvo-form-field__helper-text rvo-form-field__helper-text--error"><div class="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></div>${errorText}</div>`;
   }
 
   // Parse warning text markup
   let warningTextMarkup = '';
   if (warningText) {
-    warningTextMarkup = `<div class="rvo-form-field__helper-text rvo-form-field__helper-text--warning"><span class="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></span>${warningText}</div>`;
+    warningTextMarkup = `<div class="rvo-form-field__helper-text rvo-form-field__helper-text--warning"><div class="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></div>${warningText}</div>`;
   }
 
   return `<div class="rvo-form-field">

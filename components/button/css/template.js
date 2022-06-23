@@ -70,7 +70,7 @@ export const Button = ({
   textContent = defaultArgs.textContent,
   showIcon = defaultArgs.showIcon,
 }) => {
-  const icon = `<span class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--md"></span>`;
+  const icon = `<div class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--md"></div>`;
   return `<button class="${clsx('utrecht-button', {
     'utrecht-button--primary-action': kind === 'primary',
     'utrecht-button--secondary-action': kind === 'secondary',

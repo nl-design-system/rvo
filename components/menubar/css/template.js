@@ -29,7 +29,7 @@ export const defaultArgs = {
 const parseMenuItem = (label, icon, size = defaultArgs.size, showIcons = defaultArgs.showIcons) => {
   let menuItem = label;
   if (icon) {
-    const iconMarkup = `<span class="rvo-icon rvo-icon--${icon} rvo-icon--${size} rvo-icon--wit"></span>`;
+    const iconMarkup = `<div class="rvo-icon rvo-icon--${icon} rvo-icon--${size} rvo-icon--wit"></div>`;
     if (showIcons === 'before') {
       menuItem = `${iconMarkup} ${menuItem}`;
     } else {

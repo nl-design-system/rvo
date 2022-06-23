@@ -45,7 +45,7 @@ export const defaultArgs = {
 export const Icon = ({ icon = defaultArgs.icon, size = defaultArgs.size, color = defaultArgs.color }) => {
   const [, iconName] = icon.split(' > ');
 
-  return `<span class="${clsx(
+  return `<div class="${clsx(
     'rvo-icon',
     `rvo-icon--${iconName.toLowerCase().replace(/_/g, '-')}`,
     `rvo-icon--${size}`,
@@ -53,5 +53,5 @@ export const Icon = ({ icon = defaultArgs.icon, size = defaultArgs.size, color =
       'rvo-icon--wit': color === 'wit',
       'rvo-icon--hemelblauw': color === 'hemelblauw',
     },
-  )}" />`;
+  )}"/>`;
 };
