@@ -1,1 +1,52 @@
-{}
+{
+  "rvo": {
+    "custom-radio-button": {
+      "group": {
+        "gap": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "label": {
+        "margin-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "margin-inline-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "disabled": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        }
+      },
+      "hover": {
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "checked": {
+        "background": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}
