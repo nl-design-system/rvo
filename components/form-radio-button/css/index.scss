@@ -34,9 +34,13 @@
 }
 
 // Disabled state
-.utrecht-custom-radio-button--disabled + .rvo-custom-radio-button__label,
-.utrecht-custom-radio-button:disabled + .rvo-custom-radio-button__label {
-  color: var(--rvo-custom-radio-button-label-disabled-color);
+.utrecht-custom-radio-button--disabled,
+.utrecht-custom-radio-button:disabled {
+  background: none;
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color);
+  + .rvo-custom-radio-button__label {
+    color: var(--rvo-custom-radio-button-label-disabled-color);
+  }
 }
 
 // Hover state
