@@ -6,7 +6,7 @@
 .rvo-custom-radio-button__group {
   display: flex;
   flex-direction: column;
-  gap: var(--rvo-space-md);
+  gap: var(--rvo-custom-radio-button-group-gap);
 }
 
 .rvo-custom-radio-button__group--vertical {

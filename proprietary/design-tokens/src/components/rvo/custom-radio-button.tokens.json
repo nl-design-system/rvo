@@ -1,6 +1,9 @@
 {
   "rvo": {
     "custom-radio-button": {
+      "group": {
+        "gap": { "value": "{rvo.space.md}" }
+      },
       "label": {
         "margin-block-start": {
           "value": "3px"
