@@ -1,0 +1,46 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, TextInput } from "./template";
+
+<Meta
+  title="CSS Components/Forms/Text input/States"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# States
+
+## Invalid
+
+<Canvas>
+  <Story name="Invalid" args={{ ...defaultArgs, invalid: true }}>
+    {TextInput.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story name="Focus" args={{ ...defaultArgs, focus: true }}>
+    {TextInput.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled" args={{ ...defaultArgs, disabled: true }}>
+    {TextInput.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story name="Read-only" args={{ ...defaultArgs, readOnly: true }}>
+    {TextInput.bind({})}
+  </Story>
+</Canvas>
