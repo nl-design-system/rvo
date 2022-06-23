@@ -48,9 +48,17 @@ const Content = () => {
           <p className="rvo-paragraph">
             De overheid zet zich in voor een uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor
             uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst voor Ondernemend Nederland. Onze mensen
-            maken wereldwijd verbinding. Tussen bedrijven, kennis- en financiële instellingen, ambassades en lokale
-            overheden.
+            maken wereldwijd verbinding.{' '}
+            <a href="#" className="rvo-link">
+              Dit is een link.
+            </a>
+            Tussen bedrijven, kennis- en financiële instellingen, ambassades en lokale overheden.
           </p>
+          <ul className="rvo-list">
+            <li className="rvo-list-item">First item</li>
+            <li className="rvo-list-item">Second item</li>
+            <li className="rvo-list-item">Third item</li>
+          </ul>
         </div>
       </main>
     </div>
