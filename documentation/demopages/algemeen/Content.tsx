@@ -45,20 +45,43 @@ const Content = () => {
       <main className="rvo-max-width-layout--md">
         <div className="rvo-content">
           <h1>Heading 1</h1>
-          <p className="rvo-paragraph">
-            De overheid zet zich in voor een uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor
-            uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst voor Ondernemend Nederland. Onze mensen
-            maken wereldwijd verbinding.{' '}
+          <p className="rvo-paragraph rvo-paragraph--sm">
+            <strong>Paragraph small.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
+            ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
+            voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
             <a href="#" className="rvo-link">
               Dit is een link.
             </a>
             Tussen bedrijven, kennis- en financiële instellingen, ambassades en lokale overheden.
           </p>
-          <ul className="rvo-list">
-            <li className="rvo-list-item">First item</li>
+          <p className="rvo-paragraph rvo-paragraph--md">
+            <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
+            ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
+            voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
+            <a href="#" className="rvo-link">
+              Dit is een link.
+            </a>
+            Tussen bedrijven, kennis- en financiële instellingen, ambassades en lokale overheden.
+          </p>
+          <p className="rvo-paragraph rvo-paragraph--lg">
+            <strong>Paragraph large.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
+            ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
+            voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
+            <a href="#" className="rvo-link">
+              Dit is een link.
+            </a>
+            Tussen bedrijven, kennis- en financiële instellingen, ambassades en lokale overheden.
+          </p>
+          <ul className="rvo-list rvo-list--unordered">
+            <li className="rvo-list-item">Unordered list</li>
             <li className="rvo-list-item">Second item</li>
             <li className="rvo-list-item">Third item</li>
           </ul>
+          <ol className="rvo-list rvo-list--ordered">
+            <li className="rvo-list-item">Ordered list</li>
+            <li className="rvo-list-item">Second item</li>
+            <li className="rvo-list-item">Third item</li>
+          </ol>
         </div>
       </main>
     </div>
