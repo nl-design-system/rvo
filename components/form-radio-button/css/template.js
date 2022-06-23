@@ -44,6 +44,6 @@ export const RadioButton = ({
     hover && 'rvo-custom-radio-button--hover',
     disabled && 'utrecht-custom-radio-button--disabled',
     active && 'utrecht-custom-radio-button--active',
-    focus && 'utrecht-custom-radio-button--focus',
+    focus && 'utrecht-custom-radio-button--focus-visible',
     invalid && 'utrecht-custom-radio-button--invalid',
   )}"><label class='rvo-custom-radio-button__label' for="${id}">${labelText}</label>`;

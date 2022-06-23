@@ -9,7 +9,14 @@
   margin-inline-start: var(--rvo-custom-radio-button-label-margin-inline-start);
 }
 
-.utrecht-custom-radio-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-radio-button--disabled) {
+// Checked state overrides
+.utrecht-custom-radio-button:checked,
+.utrecht-custom-radio-button--checked {
+  background: var(--rvo-custom-radio-button-checked-background);
+}
+
+// Hover state
+.utrecht-custom-radio-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-radio-button--disabled):not(.utrecht-custom-radio-button--invalid) {
   &.utrecht-custom-radio-button:hover,
   &.rvo-custom-radio-button--hover,
   + .rvo-custom-radio-button__label:hover {
