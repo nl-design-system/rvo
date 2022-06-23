@@ -2,13 +2,13 @@
   "rvo": {
     "layout": {
       "max-width": {
-        "medium": {
+        "md": {
           "css": {
             "syntax": "<length>",
             "inherits": true
           }
         },
-        "large": {
+        "lg": {
           "css": {
             "syntax": "<length>",
             "inherits": true

@@ -23,6 +23,7 @@ export const argTypes = {
   },
   size: {
     options: ['small', 'medium', 'large'],
+    mapping: { small: 'sm', medium: 'md', large: 'lg' },
     control: { type: 'radio' },
   },
 };
@@ -34,9 +35,9 @@ export const defaultArgs = {
 
 export const StatusIcon = ({ type = defaultArgs.type, size = defaultArgs.size }) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
-  return `<span class="${clsx('rvo-icon', `rvo-icon--${iconName} rvo-status-icon--${iconName}`, {
-    'rvo-icon--small': size === 'small',
-    'rvo-icon--medium': size === 'medium',
-    'rvo-icon--large': size === 'large',
-  })}" />`;
+  return `<span class="${clsx(
+    'rvo-icon',
+    `rvo-icon--${iconName} rvo-status-icon--${iconName}`,
+    `rvo-icon--${size}`,
+  )}" />`;
 };

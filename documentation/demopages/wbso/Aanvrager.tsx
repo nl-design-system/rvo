@@ -12,25 +12,25 @@ const Aanvrager = () => {
           <nav className="rvo-main-menu">
             <ul className="rvo-menu rvo-menu--main-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--home"></span>Mijn
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--home"></span>Mijn
                   aanvragen
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
                   Nieuwe aanvraag
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--user"></span>Mijn
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--user"></span>Mijn
                   gegevens
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
                   Uitloggen
                 </a>
               </li>
@@ -39,8 +39,8 @@ const Aanvrager = () => {
           <nav className="rvo-toggle-menu">
             <ul className="rvo-menu rvo-menu--toggle-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
+                <a href="#" className="rvo-menu-link rvo-menu-link--md rvo-menu-link--toggle">
+                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
                   toggle
                 </a>
               </li>
@@ -53,39 +53,39 @@ const Aanvrager = () => {
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps rvo-main-steps--no-sub-steps">
             <div className="rvo-process-step rvo-process-step--process-name">Aanvraag WBSO</div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--completed">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--completed">
               <a href="vormvrije-aanvraag.html" className="rvo-process-step-link">
                 Vormijvrije aanvraag
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--completed">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--completed">
               <a href="startpagina.html" className="rvo-process-step-link">
                 Voordat u begint
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--doing">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--doing">
               <a href="aanvrager.html" className="rvo-process-step-link">
                 Aanvrager
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
               <a href="projecten.html" className="rvo-process-step-link">
                 Projecten
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
               <a href="so-uren.html" className="rvo-process-step-link">
                 S&O uren
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
               <a href="indienen.html" className="rvo-process-step-link">
                 Indienen
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Aanvraag ingediend</div>
-            <button className="utrecht-button rvo-button--quaternary-action rvo-button--small" type="button">
-              <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--small"></span>
+            <button className="utrecht-button rvo-button--quaternary-action rvo-button--sm" type="button">
+              <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--sm"></span>
               Opslaan
             </button>
           </div>
@@ -126,7 +126,7 @@ const Aanvrager = () => {
                 <select id="contactpersoon">
                   <option>Optie A</option>
                 </select>
-                <button className="rvo-button rvo-button--tertiary rvo-button--small rvo-button-in-form">
+                <button className="rvo-button rvo-button--tertiary rvo-button--sm rvo-button-in-form">
                   <span className="rvo-icon rvo-icon--sm rvo-icon-before rvo-icon--hemelblauw rvo-icon--bewerken"></span>
                   Contactpersoon & bedrijfsgegevens wijzigen
                 </button>
@@ -202,10 +202,10 @@ const Aanvrager = () => {
               </div>
             </fieldset>
             <div className="rvo-button-group">
-              <button className="utrecht-button utrecht-button--secondary-action rvo-button--medium">
+              <button className="utrecht-button utrecht-button--secondary-action rvo-button--md">
                 Opslaan en sluiten
               </button>
-              <button className="utrecht-button utrecht-button--primary-action rvo-button--medium">
+              <button className="utrecht-button utrecht-button--primary-action rvo-button--md">
                 Opslaan en verder
               </button>
             </div>

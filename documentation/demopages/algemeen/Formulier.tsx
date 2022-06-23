@@ -8,22 +8,22 @@ const Formulier = () => {
     <div className="rvo-demo-page">
       <Header />
       <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-layout--medium">
+        <div className="rvo-max-width-layout--md">
           <nav className="rvo-main-menu">
             <ul className="rvo-menu rvo-menu--main-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
                   Menu item
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
                   Menu item with icon
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
+                <a href="#" className="rvo-menu-link rvo-menu-link--md">
                   Last menu item
                 </a>
               </li>
@@ -32,8 +32,8 @@ const Formulier = () => {
           <nav className="rvo-toggle-menu">
             <ul className="rvo-menu rvo-menu--toggle-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--medium rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
+                <a href="#" className="rvo-menu-link rvo-menu-link--md rvo-menu-link--toggle">
+                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
                   toggle
                 </a>
               </li>
@@ -42,66 +42,66 @@ const Formulier = () => {
         </div>
       </div>
 
-      <main className="rvo-progress-tracker-active rvo-max-width-layout--medium">
+      <main className="rvo-progress-tracker-active rvo-max-width-layout--md">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps">
             <div className="rvo-process-step rvo-process-step--process-name">Progress tracker</div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--completed">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--completed">
               <a href="#" className="rvo-process-step-link">
                 Step completed
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--doing">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--doing">
               <a href="#" className="rvo-process-step-link">
                 Step doing
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
               <a href="#" className="rvo-process-step-link">
                 Step incomplete
               </a>
             </div>
           </div>
           <div className="rvo-sub-steps">
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
               <a href="#" className="rvo-process-step-link">
                 First sub-step
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--doing">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--doing">
               <a href="#" className="rvo-process-step-link">
                 Sub-step doing
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--completed">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--completed">
               <a href="#" className="rvo-process-step-link">
                 Sub-step completed
               </a>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
               <span className="rvo-process-step-link rvo-process-step-link--disabled">Sub-step disabled</span>
             </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--small rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
               <a href="#" className="rvo-process-step-link">
                 Last sub-step
               </a>
             </div>
           </div>
           <div className="rvo-main-steps">
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--medium rvo-process-step--incomplete">
+            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
               <span className="rvo-process-step-link rvo-process-step-link--disabled">Step disabled</span>
             </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Process completed</div>
           </div>
-          <button className="utrecht-button rvo-button--quaternary-action rvo-button--small" type="button">
-            <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--small"></span>
+          <button className="utrecht-button rvo-button--quaternary-action rvo-button--sm" type="button">
+            <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--sm"></span>
             Opslaan
           </button>
         </div>
         <div className="rvo-form">
           <div className="intro">
             <a href="#" className="rvo-link">
-              <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--medium rvo-icon--hemelblauw rvo-icon--terug"></span>
+              <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--md rvo-icon--hemelblauw rvo-icon--terug"></span>
               Terug
             </a>
             <h1 className="utrecht-heading-1 utrecht-heading-1--distanced">Heading</h1>
@@ -227,7 +227,7 @@ const Formulier = () => {
                 <label htmlFor="warning-text">
                   Warning
                   <span className="rvo-helper-text rvo-helper-text--warning">
-                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--medium" />
+                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md" />
                     This is a warning
                   </span>
                 </label>
@@ -237,7 +237,7 @@ const Formulier = () => {
                 <label htmlFor="warning-error">
                   Error
                   <span className="rvo-helper-text rvo-helper-text--error">
-                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--medium" />
+                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md" />
                     This is an error
                   </span>
                 </label>
@@ -245,12 +245,10 @@ const Formulier = () => {
               </div>
             </fieldset>
             <div className="rvo-button-group">
-              <button className="utrecht-button utrecht-button--secondary-action rvo-button--medium">
+              <button className="utrecht-button utrecht-button--secondary-action rvo-button--md">
                 Secondary action
               </button>
-              <button className="utrecht-button utrecht-button--primary-action rvo-button--medium">
-                Primary action
-              </button>
+              <button className="utrecht-button utrecht-button--primary-action rvo-button--md">Primary action</button>
             </div>
           </form>
         </div>

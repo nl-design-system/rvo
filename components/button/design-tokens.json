@@ -159,7 +159,7 @@
           }
         }
       },
-      "small": {
+      "sm": {
         "font-size": {
           "css": {
             "syntax": "<length>",
@@ -191,7 +191,7 @@
           }
         }
       },
-      "medium": {
+      "md": {
         "font-size": {
           "css": {
             "syntax": "<length>",

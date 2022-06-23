@@ -1,7 +1,7 @@
 {
   "rvo": {
     "icon": {
-      "small": {
+      "sm": {
         "height": {
           "css": {
             "syntax": "<length>",
@@ -13,19 +13,19 @@
             "syntax": "<length>",
             "inherits": true
           }
+        }
+      },
+      "md": {
+        "height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
         },
-        "medium": {
-          "height": {
-            "css": {
-              "syntax": "<length>",
-              "inherits": true
-            }
-          },
-          "width": {
-            "css": {
-              "syntax": "<length>",
-              "inherits": true
-            }
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
           }
         }
       }

@@ -12,6 +12,7 @@ export const argTypes = {
   },
   size: {
     options: ['small', 'medium'],
+    mapping: { small: 'sm', medium: 'md' },
     control: { type: 'radio' },
   },
   textContent: {
@@ -69,15 +70,15 @@ export const Button = ({
   textContent = defaultArgs.textContent,
   showIcon = defaultArgs.showIcon,
 }) => {
-  const icon = `<span class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--medium"></span>`;
+  const icon = `<span class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--md"></span>`;
   return `<button class="${clsx('utrecht-button', {
     'utrecht-button--primary-action': kind === 'primary',
     'utrecht-button--secondary-action': kind === 'secondary',
     'rvo-button--tertiary-action': kind === 'tertiary',
     'rvo-button--quaternary-action': kind === 'quaternary',
     'rvo-button--cancel-action': kind === 'cancel',
-    'rvo-button--small': size === 'small',
-    'rvo-button--medium': size === 'medium',
+    'rvo-button--sm': size === 'sm',
+    'rvo-button--md': size === 'md',
     'utrecht-button--active': active,
     'utrecht-button--busy': busy,
     'utrecht-button--hover': hover,

@@ -312,19 +312,19 @@
 }
 
 // Sizes
-.rvo-button--small {
-  font-size: var(--rvo-button-small-font-size);
+.rvo-button--sm {
+  font-size: var(--rvo-button-sm-font-size);
   min-block-size: 30px;
-  padding-block-end: var(--rvo-button-small-padding-block-end);
-  padding-block-start: var(--rvo-button-small-padding-block-start);
-  padding-inline-end: var(--rvo-button-small-padding-inline-end);
-  padding-inline-start: var(--rvo-button-small-padding-inline-start);
+  padding-block-end: var(--rvo-button-sm-padding-block-end);
+  padding-block-start: var(--rvo-button-sm-padding-block-start);
+  padding-inline-end: var(--rvo-button-sm-padding-inline-end);
+  padding-inline-start: var(--rvo-button-sm-padding-inline-start);
 }
 
-.rvo-button--medium {
-  font-size: var(--rvo-button-medium-font-size);
-  padding-block-end: var(--rvo-button-medium-padding-block-end);
-  padding-block-start: var(--rvo-button-medium-padding-block-start);
-  padding-inline-end: var(--rvo-button-medium-padding-inline-end);
-  padding-inline-start: var(--rvo-button-medium-padding-inline-start);
+.rvo-button--md {
+  font-size: var(--rvo-button-md-font-size);
+  padding-block-end: var(--rvo-button-md-padding-block-end);
+  padding-block-start: var(--rvo-button-md-padding-block-start);
+  padding-inline-end: var(--rvo-button-md-padding-inline-end);
+  padding-inline-start: var(--rvo-button-md-padding-inline-start);
 }

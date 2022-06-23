@@ -2,10 +2,10 @@
   "rvo": {
     "layout": {
       "max-width": {
-        "medium": {
+        "md": {
           "value": "900px"
         },
-        "large": {
+        "lg": {
           "value": "1200px"
         }
       }

@@ -2,10 +2,10 @@
   "rvo": {
     "topnav": {
       "font-family": { "value": "{rvo.font.sans-serif.font-family}" },
-      "small": {
+      "sm": {
         "font-size": { "value": "{rvo.font-size.sm}" }
       },
-      "medium": {
+      "md": {
         "font-size": { "value": "{rvo.font-size.md}" }
       },
       "link": {
