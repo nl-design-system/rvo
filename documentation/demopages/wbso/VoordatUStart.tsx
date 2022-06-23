@@ -12,25 +12,25 @@ const VoordatUStart = () => {
           <nav className="rvo-main-menu">
             <ul className="rvo-menu rvo-menu--main-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--home"></span>Mijn
                   aanvragen
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
                   Nieuwe aanvraag
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--user"></span>Mijn
                   gegevens
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   Uitloggen
                 </a>
               </li>
@@ -39,7 +39,7 @@ const VoordatUStart = () => {
           <nav className="rvo-toggle-menu">
             <ul className="rvo-menu rvo-menu--toggle-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md rvo-menu-link--toggle">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
                   <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
                   toggle
                 </a>
