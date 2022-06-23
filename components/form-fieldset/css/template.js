@@ -8,16 +8,19 @@ export const argTypes = {
   legend: {
     control: 'text',
   },
+  disabled: {
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs = {
   legend: 'Fieldset legend',
-  content: 'Fieldset content',
+  disabled: false,
 };
 
-export const Fieldset = ({ legend = defaultArgs.legend, withFields = false }) => {
+export const Fieldset = ({ legend = defaultArgs.legend, disabled = defaultArgs.disabled, withFields = false }) => {
   // Parse fieldset content
-  let fieldsetContent = 'content';
+  let fieldsetContent = 'Fields';
   if (withFields) {
     fieldsetContent = Field({ fieldId: 'fieldA', labelText: 'Field', helperText: '' });
     fieldsetContent += Field({
@@ -37,7 +40,7 @@ export const Fieldset = ({ legend = defaultArgs.legend, withFields = false }) =>
     });
   }
 
-  return `<fieldset class="utrecht-form-fieldset">
+  return `<fieldset class="utrecht-form-fieldset"${disabled ? ' disabled' : ''}>
   ${
     legend
       ? `<legend class="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">${legend}</legend>`

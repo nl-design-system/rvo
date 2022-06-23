@@ -1,0 +1,21 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Fieldset } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Forms/Fieldset/States"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+## Fieldset disabled
+
+<Canvas>
+  <Story name="Disabled" args={{ ...defaultArgs, disabled: true, withFields: true }}>
+    {Fieldset.bind({})}
+  </Story>
+</Canvas>
