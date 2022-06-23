@@ -7,6 +7,9 @@
         },
         "margin-inline-start": {
           "value": "{rvo.space.sm}"
+        },
+        "disabled": {
+          "color": { "value": "{rvo.color.grijs3}" }
         }
       },
       "hover": {

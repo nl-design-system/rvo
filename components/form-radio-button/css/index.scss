@@ -15,6 +15,12 @@
   background: var(--rvo-custom-radio-button-checked-background);
 }
 
+// Disabled state
+.utrecht-custom-radio-button--disabled + .rvo-custom-radio-button__label,
+.utrecht-custom-radio-button:disabled + .rvo-custom-radio-button__label {
+  color: var(--rvo-custom-radio-button-label-disabled-color);
+}
+
 // Hover state
 .utrecht-custom-radio-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-radio-button--disabled):not(.utrecht-custom-radio-button--invalid) {
   &.utrecht-custom-radio-button:hover,

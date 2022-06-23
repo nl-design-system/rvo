@@ -23,10 +23,10 @@
         "background-color": {}
       },
       "disabled": {
-        "border-color": { "value": "{utrecht.form-input.disabled.border-color}" },
+        "border-color": { "value": "{rvo.color.grijs3}" },
         "border-width": {},
-        "background-color": { "value": "{utrecht.form-input.disabled.background-color}" },
-        "color": { "value": "{utrecht.form-input.disabled.color}" }
+        "background-color": { "value": "{rvo.color.wit}" },
+        "color": {}
       },
       "checked": {
         "border-color": {},
