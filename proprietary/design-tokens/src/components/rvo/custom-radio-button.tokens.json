@@ -3,7 +3,7 @@
     "custom-radio-button": {
       "label": {
         "margin-block-start": {
-          "value": "4px"
+          "value": "3px"
         },
         "margin-inline-start": {
           "value": "{rvo.space.sm}"
