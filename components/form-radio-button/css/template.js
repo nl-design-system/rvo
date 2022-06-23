@@ -7,6 +7,7 @@ import './index.scss';
 
 export const argTypes = {
   id: { control: 'text' },
+  name: { control: 'text' },
   labelText: { control: 'text' },
   checked: { control: 'boolean' },
   hover: { control: 'boolean' },
@@ -18,6 +19,7 @@ export const argTypes = {
 
 export const defaultArgs = {
   id: 'field',
+  name: 'group',
   labelText: 'Label',
   checked: false,
   hover: false,
@@ -29,7 +31,7 @@ export const defaultArgs = {
 
 export const RadioButton = ({
   id = defaultArgs.id,
-  name = 'group',
+  name = defaultArgs.name,
   labelText = defaultArgs.labelText,
   checked = defaultArgs.checked,
   hover = defaultArgs.hover,
@@ -50,17 +52,3 @@ export const RadioButton = ({
     focus && 'utrecht-custom-radio-button--focus-visible',
     invalid && 'utrecht-custom-radio-button--invalid',
   )}"><label class='rvo-custom-radio-button__label' for="${id}">${labelText}</label></div>`;
-
-export const RadioButtonGroup = ({ layout = 'vertical' }) => {
-  let markup = `<div class="${clsx(
-    'rvo-custom-radio-button__group',
-    layout === 'horizontal' && 'rvo-custom-radio-button__group--horizontal',
-    layout === 'vertical' && 'rvo-custom-radio-button__group--vertical',
-  )}">`;
-  markup += RadioButton({ id: 'optionA', name: 'group', labelText: 'Option A' });
-  markup += RadioButton({ id: 'optionB', name: 'group', labelText: 'Option B' });
-  markup += RadioButton({ id: 'optionC', name: 'group', labelText: 'Option C' });
-  markup += RadioButton({ id: 'optionD', name: 'group', labelText: 'Option D' });
-  markup += '</div>';
-  return markup;
-};
