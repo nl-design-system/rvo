@@ -219,6 +219,29 @@ const Formulier = () => {
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   Legend
+                  <span className="rvo-helper-text rvo-helper-text--warning">
+                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md" />
+                    This is a warning
+                  </span>
+                </legend>
+                <div className="rvo-options">
+                  <label htmlFor="checkbox-warning-option-a" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-a" name="checkboxes-warning-options"></input>
+                    Option A
+                  </label>
+                  <label htmlFor="checkbox-warning-option-b" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-b" name="checkboxes-warning-options"></input>
+                    Option B
+                  </label>
+                  <label htmlFor="checkbox-warning-option-c" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-c" name="checkboxes-warning-options"></input>
+                    Option C
+                  </label>
+                </div>
+              </div>
+              <div className="rvo-form-field rvo-form-field--options">
+                <legend>
+                  Legend
                   <span className="rvo-helper-text">Checkboxes displayed on the same row.</span>
                 </legend>
                 <div className="rvo-options rvo-options--rows">
