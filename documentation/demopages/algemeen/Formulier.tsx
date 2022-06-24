@@ -12,18 +12,18 @@ const Formulier = () => {
           <nav className="rvo-main-menu">
             <ul className="rvo-menu rvo-menu--main-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   Menu item
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
                   Menu item with icon
                 </a>
               </li>
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
                   Last menu item
                 </a>
               </li>
@@ -32,7 +32,7 @@ const Formulier = () => {
           <nav className="rvo-toggle-menu">
             <ul className="rvo-menu rvo-menu--toggle-menu">
               <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md rvo-menu-link--toggle">
+                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
                   <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
                   toggle
                 </a>
