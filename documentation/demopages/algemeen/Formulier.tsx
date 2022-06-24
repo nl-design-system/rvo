@@ -165,6 +165,26 @@ const Formulier = () => {
                   </label>
                 </div>
               </div>
+              <div className="rvo-form-field rvo-form-field--options rvo-form-field--options-error">
+                <legend>
+                  Legend
+                  <span className="rvo-helper-text rvo-helper-text--error">
+                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md" />
+                    This is an error
+                  </span>
+                </legend>
+                <div className="rvo-options">
+                  <label htmlFor="option-error-a" className="rvo-option">
+                    <input type="radio" id="option-error-a" name="radio-options-error"></input>Option A
+                  </label>
+                  <label htmlFor="option-error-b" className="rvo-option">
+                    <input type="radio" id="option-error-b" name="radio-options-error"></input>Option B
+                  </label>
+                  <label htmlFor="option-error-c" className="rvo-option">
+                    <input type="radio" id="option-error-c" name="radio-options-error"></input>Option C
+                  </label>
+                </div>
+              </div>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   Legend

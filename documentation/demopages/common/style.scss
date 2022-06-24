@@ -520,6 +520,11 @@
     padding-inline-start: 0;
   }
 
+  .rvo-form-field--options-error {
+    border-left: 3px solid var(--rvo-color-rood);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
   .rvo-option {
     display: grid;
     gap: var(--rvo-space-sm);
@@ -595,7 +600,8 @@
     background-color: transparent;
   }
 
-  label .rvo-helper-text--error {
+  label .rvo-helper-text--error,
+  legend .rvo-helper-text--error {
     color: var(--rvo-color-rood);
     font-weight: var(--rvo-font-weight-bold);
   }
