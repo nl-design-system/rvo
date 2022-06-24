@@ -28,18 +28,56 @@
     margin-block-start: 0;
   }
 
+  /* @PARAGRAPHS */
+
+  .rvo-paragraph--sm {
+    font-size: var(--rvo-font-size-sm);
+    line-height: var(--rvo-line-height-md);
+  }
+
+  .rvo-paragraph--md {
+    font-size: var(--rvo-font-size-md);
+    line-height: var(--rvo-line-height-md);
+  }
+
+  .rvo-paragraph--lg {
+    font-size: var(--rvo-font-size-lg);
+    line-height: var(--rvo-line-height-md);
+  }
+
+  /* @LISTS */
+
+  .rvo-list {
+    line-height: var(--rvo-line-height-md);
+  }
+
+  /* @BLOCKQUOTE */
+
+  .rvo-blockquote {
+    background-color: var(--rvo-color-hemelblauw-tint2);
+    font-size: var(--rvo-font-size-md);
+    font-style: italic;
+    line-height: var(--rvo-line-height-md);
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-lg);
+    padding-inline-start: var(--rvo-space-lg);
+  }
+
   /* @LINKS */
 
-  a {
-    color: var(--rvo-color-hemelblauw);
-    font-weight: var(--rvo-font-weight-bold);
-    text-decoration: none;
-  }
+  // a {
+  //   color: var(--rvo-color-hemelblauw);
+  //   font-weight: var(--rvo-font-weight-bold);
+  //   text-decoration: none;
+  // }
 
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
+  // a:hover,
+  // a:focus {
+  //   text-decoration: underline;
+  // }
 
   // .rvo-back-link {
   //   align-items: center;
@@ -54,83 +92,6 @@
   //   margin-inline-start: auto;
   //   max-width: 900;
   // }
-
-  /* @ICON */
-
-  .rvo-icon {
-    display: inline-block;
-    -webkit-mask-position: center center;
-    mask-position: center center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100%;
-    mask-size: 100%;
-  }
-
-  .rvo-icon--sm {
-    height: calc(var(--rvo-size-xs) + var(--rvo-size-sm));
-    width: calc(var(--rvo-size-xs) + var(--rvo-size-sm));
-  }
-
-  .rvo-icon--md {
-    height: var(--rvo-size-md);
-    width: var(--rvo-size-md);
-  }
-
-  .rvo-icon--bewerken {
-    -webkit-mask-image: url("./assets/iconen/bewerken.svg");
-    mask-image: url("./assets/iconen/bewerken.svg");
-  }
-
-  .rvo-icon--home {
-    -webkit-mask-image: url("./assets/iconen/home.svg");
-    mask-image: url("./assets/iconen/home.svg");
-  }
-
-  .rvo-icon--menu {
-    -webkit-mask-image: url("./assets/iconen/menu.svg");
-    mask-image: url("./assets/iconen/menu.svg");
-  }
-
-  .rvo-icon--delta-omlaag {
-    -webkit-mask-image: url("./assets/iconen/delta-omlaag--hemelblauw.svg");
-    mask-image: url("./assets/iconen/delta-omlaag--hemelblauw.svg");
-  }
-
-  .rvo-icon--plus {
-    -webkit-mask-image: url("./assets/iconen/plus.svg");
-    mask-image: url("./assets/iconen/plus.svg");
-  }
-
-  .rvo-icon--terug {
-    -webkit-mask-image: url("./assets/iconen/terug.svg");
-    mask-image: url("./assets/iconen/terug.svg");
-  }
-
-  .rvo-icon--user {
-    -webkit-mask-image: url("./assets/iconen/user.svg");
-    mask-image: url("./assets/iconen/user.svg");
-  }
-
-  .rvo-icon--wit {
-    background-color: var(--rvo-color-wit);
-  }
-
-  .rvo-icon--hemelblauw {
-    background-color: var(--rvo-color-hemelblauw);
-  }
-
-  .rvo-icon--grijs7 {
-    background-color: var(--rvo-color-grijs7);
-  }
-
-  .rvo-icon--before {
-    margin-inline-end: var(--rvo-space-sm);
-  }
-
-  .rvo-icon--after {
-    margin-inline-start: var(--rvo-space-sm);
-  }
 
   /* @BODY */
 
