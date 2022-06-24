@@ -49,7 +49,8 @@ export const Checkbox = ({
   required = defaultArgs.required,
   value = defaultArgs.value,
 }) =>
-  `<div class="utrecht-custom-checkbox">
+  `
+  <label class='rvo-custom-checkbox__label' htmlFor="${id}">${labelText}</label>
   <input id="${id}" name="${name}" type="checkbox"${checked ? ' checked' : ''}${disabled ? ' disabled' : ''}${
     required ? ' required' : ''
   }${value ? ` value="${value}"` : ''} class="utrecht-custom-checkbox__input">
@@ -66,7 +67,11 @@ export const Checkbox = ({
   )}">
   <div class="rvo-icon rvo-icon--vinkje rvo-icon--md rvo-custom-checkbox__icon"></div>
   <div class="rvo-icon rvo-custom-checkbox__icon--indeterminate">-</div>
-  </div><label class='rvo-custom-checkbox__label' for="${id}">${labelText}</label>
+  </div>
 </div>`;
+
+<label htmlFor="checkbox-option-a" className="rvo-option">
+  <input type="checkbox" id="checkbox-option-a" name="checkboxes-options"></input>Option A
+</label>;
 
 // <span class="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--checked">✔</span>
