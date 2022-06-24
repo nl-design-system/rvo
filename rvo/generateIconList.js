@@ -61,7 +61,6 @@ const generateCSS = (iconList) => {
     // Loop over icons
     iconList[iconCategoryName].forEach((iconFilename) => {
       scssString += `.rvo-icon--${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
-      scssString += `  display: inline-block;\n`;
       scssString += `  -webkit-mask-image: url("${iconCategoryName}/${iconFilename}");\n`;
       scssString += `  mask-image: url("${iconCategoryName}/${iconFilename}");\n`;
       scssString += `  -webkit-mask-position: center center;\n`;
@@ -91,7 +90,6 @@ const generateSCSS = (iconList) => {
     // Loop over icons
     iconList[iconCategoryName].forEach((iconFilename) => {
       scssString += `@mixin rvo-icon-${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
-      scssString += `  display: inline-block;\n`;
       scssString += `  -webkit-mask-image: url("${iconCategoryName}/${iconFilename}");\n`;
       scssString += `  mask-image: url("${iconCategoryName}/${iconFilename}");\n`;
       scssString += `  -webkit-mask-position: center center;\n`;
