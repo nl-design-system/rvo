@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import './index.scss';
-import { RadioButton } from './template';
+import { Checkbox } from './template';
 
 export const argTypes = {
   layout: {
@@ -17,16 +17,16 @@ export const defaultArgs = {
   layout: 'vertical',
 };
 
-export const RadioButtonGroup = ({ layout = defaultArgs.layout }) => {
+export const CheckboxGroup = ({ layout = defaultArgs.layout }) => {
   let markup = `<div class="${clsx(
-    'rvo-custom-checkbox__group',
-    layout === 'horizontal' && 'rvo-custom-checkbox__group--horizontal',
-    layout === 'vertical' && 'rvo-custom-checkbox__group--vertical',
+    'rvo-checkbox__group',
+    layout === 'horizontal' && 'rvo-checkbox__group--horizontal',
+    layout === 'vertical' && 'rvo-checkbox__group--vertical',
   )}">`;
-  markup += RadioButton({ id: 'optionA', name: 'group', labelText: 'Option A' });
-  markup += RadioButton({ id: 'optionB', name: 'group', labelText: 'Option B' });
-  markup += RadioButton({ id: 'optionC', name: 'group', labelText: 'Option C' });
-  markup += RadioButton({ id: 'optionD', name: 'group', labelText: 'Option D' });
+  markup += Checkbox({ id: 'optionA', name: 'group', labelText: 'Option A' });
+  markup += Checkbox({ id: 'optionB', name: 'group', labelText: 'Option B' });
+  markup += Checkbox({ id: 'optionC', name: 'group', labelText: 'Option C' });
+  markup += Checkbox({ id: 'optionD', name: 'group', labelText: 'Option D' });
   markup += '</div>';
   return markup;
 };
