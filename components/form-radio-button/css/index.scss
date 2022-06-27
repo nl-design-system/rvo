@@ -17,10 +17,19 @@
   flex-direction: row;
 }
 
+.rvo-custom-radio-button__group--error {
+  border-left: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
+}
+
 .rvo-custom-radio-button__label {
   align-items: center;
   display: inline-flex;
   gap: var(--rvo-custom-radio-button-label-gap);
+}
+
+.rvo-custom-radio-button__label:last-child {
+  margin-block-end: var(--rvo-custom-radio-button-label-gap);
 }
 
 // Checked state overrides
