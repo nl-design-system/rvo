@@ -24,12 +24,13 @@ const previewTabs = {
 
 const storySort = {
   order: [
-    'CSS Components',
-    "Demo Pagina's",
+    'Introductie',
     'Huisstijl',
     ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
+    'CSS Components',
+    "Demo Pagina's",
     'Informatie',
-    ['Introductie', 'Toestemming voor gebruik', 'Open source licentie'],
+    ['Toestemming voor gebruik', 'Open source licentie'],
   ],
 };
 
