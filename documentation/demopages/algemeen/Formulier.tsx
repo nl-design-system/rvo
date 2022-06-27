@@ -7,41 +7,26 @@ const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-layout--md">
-          <nav className="rvo-main-menu">
-            <ul className="rvo-menu rvo-menu--main-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  Menu item
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
-                  Menu item with icon
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  Last menu item
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav className="rvo-toggle-menu">
-            <ul className="rvo-menu rvo-menu--toggle-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
-                  toggle
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
+      <nav className="rvo-topnav rvo-topnav--md">
+        <ul className="utrecht-topnav__list">
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              Menu item
+            </a>
+          </li>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div>Menu item w/icon before
+            </a>
+          </li>
+          <div className="rvo-topnav__spacer"></div>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              Last menu item
+            </a>
+          </li>
+        </ul>
+      </nav>
       <main className="rvo-progress-tracker-active rvo-max-width-layout--md">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps">
@@ -165,6 +150,26 @@ const Formulier = () => {
                   </label>
                 </div>
               </div>
+              <div className="rvo-form-field rvo-form-field--options rvo-form-field--options-error">
+                <legend>
+                  Legend
+                  <span className="rvo-helper-text rvo-helper-text--error">
+                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md" />
+                    This is an error
+                  </span>
+                </legend>
+                <div className="rvo-options">
+                  <label htmlFor="option-error-a" className="rvo-option">
+                    <input type="radio" id="option-error-a" name="radio-options-error"></input>Option A
+                  </label>
+                  <label htmlFor="option-error-b" className="rvo-option">
+                    <input type="radio" id="option-error-b" name="radio-options-error"></input>Option B
+                  </label>
+                  <label htmlFor="option-error-c" className="rvo-option">
+                    <input type="radio" id="option-error-c" name="radio-options-error"></input>Option C
+                  </label>
+                </div>
+              </div>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   Legend
@@ -193,6 +198,29 @@ const Formulier = () => {
                   </label>
                   <label htmlFor="checkbox-option-c" className="rvo-option">
                     <input type="checkbox" id="checkbox-option-c" name="checkboxes-options"></input>Option C
+                  </label>
+                </div>
+              </div>
+              <div className="rvo-form-field rvo-form-field--options">
+                <legend>
+                  Legend
+                  <span className="rvo-helper-text rvo-helper-text--warning">
+                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md" />
+                    This is a warning
+                  </span>
+                </legend>
+                <div className="rvo-options">
+                  <label htmlFor="checkbox-warning-option-a" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-a" name="checkboxes-warning-options"></input>
+                    Option A
+                  </label>
+                  <label htmlFor="checkbox-warning-option-b" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-b" name="checkboxes-warning-options"></input>
+                    Option B
+                  </label>
+                  <label htmlFor="checkbox-warning-option-c" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-c" name="checkboxes-warning-options"></input>
+                    Option C
                   </label>
                 </div>
               </div>
