@@ -59,7 +59,7 @@ export const Checkbox = ({
     focus && 'rvo-checkbox--focus-visible',
     invalid && 'rvo-checkbox--invalid',
     indeterminate && 'rvo-checkbox--indeterminate',
-  )}" htmlFor="${id}">
+  )}" for="${id}">
   <input id="${id}" name="${name}" class="rvo-checkbox__input" type="checkbox"${checked ? ' checked' : ''}${
     disabled ? ' disabled' : ''
   }${required ? ' required' : ''}${value ? ` value="${value}"` : ''} class="rvo-checkbox__input"/>${labelText}</label>`;

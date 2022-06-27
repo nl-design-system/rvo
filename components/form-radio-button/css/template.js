@@ -41,7 +41,7 @@ export const RadioButton = ({
   invalid = defaultArgs.invalid,
 }) =>
   `
-  <label class='rvo-custom-radio-button__label' htmlFor="${id}">
+  <label class='rvo-custom-radio-button__label' for="${id}">
   <input id="${id}" name="${name}" autofocus="true" type="radio"
   ${checked ? ' checked' : ''}
   ${disabled ? ' disabled' : ''} class="${clsx(
