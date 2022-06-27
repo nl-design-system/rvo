@@ -28,8 +28,20 @@
   gap: var(--rvo-custom-radio-button-label-gap);
 }
 
-.rvo-custom-radio-button__label:last-child {
-  margin-block-end: var(--rvo-custom-radio-button-label-gap);
+.rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:first-child {
+  margin-inline-start: var(--rvo-checkbox-gap);
+}
+
+.rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:first-child {
+  margin-block-start: var(--rvo-checkbox-gap);
+}
+
+.rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:last-child {
+  margin-inline-end: var(--rvo-checkbox-gap);
+}
+
+.rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:last-child {
+  margin-block-end: var(--rvo-checkbox-gap);
 }
 
 // Checked state overrides

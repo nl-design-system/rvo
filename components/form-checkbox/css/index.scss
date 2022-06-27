@@ -29,7 +29,19 @@
   gap: var(--rvo-checkbox-gap);
 }
 
-.rvo-checkbox:last-child {
+.rvo-checkbox__group--horizontal .rvo-checkbox:first-child {
+  margin-inline-start: var(--rvo-checkbox-gap);
+}
+
+.rvo-checkbox__group--vertical .rvo-checkbox:first-child {
+  margin-block-start: var(--rvo-checkbox-gap);
+}
+
+.rvo-checkbox__group--horizontal .rvo-checkbox:last-child {
+  margin-inline-end: var(--rvo-checkbox-gap);
+}
+
+.rvo-checkbox__group--vertical .rvo-checkbox:last-child {
   margin-block-end: var(--rvo-checkbox-gap);
 }
 
