@@ -80,6 +80,16 @@
   @include icons.rvo-icon-vinkje;
 }
 
+.rvo-checkbox--indeterminate .rvo-checkbox__input:checked::after {
+  background-color: var(--rvo-checkbox-checked-background-color);
+  color: var(--rvo-checkbox-icon-color);
+  content: "-";
+  font-weight: 900;
+  -webkit-mask-image: none;
+  mask-image: none;
+  text-align: center;
+}
+
 .rvo-checkbox__input:checked:hover::before {
   background-color: var(--rvo-checkbox-hover-background-color);
 }
