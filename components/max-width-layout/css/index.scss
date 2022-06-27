@@ -8,6 +8,10 @@
   margin-inline-start: auto;
 }
 
+.rvo-max-width-layout--sm {
+  max-width: var(--rvo-layout-max-width-sm);
+}
+
 .rvo-max-width-layout--md {
   max-width: var(--rvo-layout-max-width-md);
 }
