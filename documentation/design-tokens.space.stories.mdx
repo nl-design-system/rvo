@@ -4,15 +4,15 @@ import { SpaceDesignTokens } from "./components/SpaceDesignTokens";
 
 export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/space.tokens.json"));
 
-<Meta title="Algemeen/Design tokens/Ruimtes" />
+<Meta title="Huisstijl/Ruimtes" />
 
 <Description># Ruimtes (margin/padding)</Description>
 
-<p>Er zijn {tokens.length} design tokens voor ruimtes. </p>
-<p>
-  Ruimtes tussen onderdelen worden gedaan met stapjes van 2 pixels. <br />
-  Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals:
-  <strong>rvo-space-2xs + rvo-space-md</strong>
-</p>
+Er zijn {tokens.length} design tokens voor ruimtes.
+
+Ruimtes tussen onderdelen worden gedaan met stapjes van 2 pixels.<br/>
+Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals:
+
+<strong>rvo-space-2xs + rvo-space-md</strong>
 
 <SpaceDesignTokens tokens={tokens} />

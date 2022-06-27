@@ -25,15 +25,11 @@ const previewTabs = {
 const storySort = {
   order: [
     'Algemeen',
-    [
-      'Introductie',
-      'Toestemming voor gebruik',
-      'Open source licentie',
-      'Design tokens',
-      ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
-    ],
+    ['Introductie', 'Toestemming voor gebruik', 'Open source licentie'],
     'CSS Components',
     "Demo Pagina's",
+    'Huisstijl',
+    ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
   ],
 };
 
