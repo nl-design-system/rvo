@@ -18,10 +18,19 @@
   flex-direction: row;
 }
 
+.rvo-custom-radio-button__group--error {
+  border-left: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
+}
+
 .rvo-checkbox {
   align-items: center;
   display: inline-flex;
   gap: var(--rvo-checkbox-gap);
+}
+
+.rvo-checkbox:last-child {
+  margin-block-end: var(--rvo-checkbox-gap);
 }
 
 .rvo-checkbox__input {
