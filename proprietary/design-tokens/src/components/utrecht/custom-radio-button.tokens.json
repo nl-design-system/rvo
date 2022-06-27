@@ -39,9 +39,9 @@
         }
       },
       "invalid": {
-        "border-color": { "value": "{utrecht.form-input.invalid.border-color}" },
+        "border-color": {},
         "border-width": {},
-        "background-color": { "value": "{utrecht.form-input.invalid.background-color}" },
+        "background-color": {},
         "color": {},
         "active": {
           "border-color": {},
