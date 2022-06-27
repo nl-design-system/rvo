@@ -165,6 +165,26 @@ const Formulier = () => {
                   </label>
                 </div>
               </div>
+              <div className="rvo-form-field rvo-form-field--options rvo-form-field--options-error">
+                <legend>
+                  Legend
+                  <span className="rvo-helper-text rvo-helper-text--error">
+                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md" />
+                    This is an error
+                  </span>
+                </legend>
+                <div className="rvo-options">
+                  <label htmlFor="option-error-a" className="rvo-option">
+                    <input type="radio" id="option-error-a" name="radio-options-error"></input>Option A
+                  </label>
+                  <label htmlFor="option-error-b" className="rvo-option">
+                    <input type="radio" id="option-error-b" name="radio-options-error"></input>Option B
+                  </label>
+                  <label htmlFor="option-error-c" className="rvo-option">
+                    <input type="radio" id="option-error-c" name="radio-options-error"></input>Option C
+                  </label>
+                </div>
+              </div>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   Legend
@@ -193,6 +213,29 @@ const Formulier = () => {
                   </label>
                   <label htmlFor="checkbox-option-c" className="rvo-option">
                     <input type="checkbox" id="checkbox-option-c" name="checkboxes-options"></input>Option C
+                  </label>
+                </div>
+              </div>
+              <div className="rvo-form-field rvo-form-field--options">
+                <legend>
+                  Legend
+                  <span className="rvo-helper-text rvo-helper-text--warning">
+                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md" />
+                    This is a warning
+                  </span>
+                </legend>
+                <div className="rvo-options">
+                  <label htmlFor="checkbox-warning-option-a" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-a" name="checkboxes-warning-options"></input>
+                    Option A
+                  </label>
+                  <label htmlFor="checkbox-warning-option-b" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-b" name="checkboxes-warning-options"></input>
+                    Option B
+                  </label>
+                  <label htmlFor="checkbox-warning-option-c" className="rvo-option">
+                    <input type="checkbox" id="checkbox-warning-option-c" name="checkboxes-warning-options"></input>
+                    Option C
                   </label>
                 </div>
               </div>
