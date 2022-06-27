@@ -10,7 +10,7 @@
   "private": true,
   "devDependencies": {
     "@storybook/addon-docs": "6.5.8",
-    "@utrecht/component-library-css": "1.0.0-alpha.232"
+    "@utrecht/component-library-css": "1.0.0-alpha.235"
   },
   "dependencies": {
     "clsx": "1.1.1"
