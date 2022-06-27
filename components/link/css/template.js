@@ -52,7 +52,7 @@ export const Link = ({
     'rvo-icon--sm',
     'rvo-icon--hemelblauw',
     `rvo-icon--${icon}`,
-  )}"/>`;
+  )}"></div>`;
 
   return `<a href="${linkUrl}" class="${clsx('rvo-link', {
     'rvo-link--active': active,
