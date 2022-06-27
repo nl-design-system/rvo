@@ -39,6 +39,14 @@
   border-color: var(--rvo-checkbox-hover-border-color);
 }
 
+.rvo-checkbox__input:disabled,
+.rvo-checkbox--disabled {
+  background-color: var(--rvo-checkbox-disabled-background-color, var(--utrecht-form-input-background-color));
+  border-color: var(--rvo-checkbox-disabled-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-checkbox-disabled-border-width, var(--utrecht-form-input-border-width));
+  color: var(--rvo-checkbox-disabled-color, var(--utrecht-form-input-disabled-color));
+}
+
 .rvo-checkbox__input:focus:not(:focus-visible) {
   box-shadow: none;
   outline-style: none;
@@ -116,10 +124,10 @@
 // }
 
 // // Disabled state
-.utrecht-checkbox__box--disabled + .rvo-checkbox__label,
-.utrecht-checkbox__input:disabled ~ .rvo-checkbox__label {
-  color: var(--rvo-checkbox-label-disabled-color);
-}
+// .utrecht-checkbox__box--disabled + .rvo-checkbox__label,
+// .utrecht-checkbox__input:disabled ~ .rvo-checkbox__label {
+//   color: var(--rvo-checkbox-label-disabled-color);
+// }
 
 // // Hover state
 // .utrecht-checkbox:not(:disabled):not([aria-disabled="true"]):not(.utrecht-checkbox--disabled):not(.utrecht-checkbox--invalid) {

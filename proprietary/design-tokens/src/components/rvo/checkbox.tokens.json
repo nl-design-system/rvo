@@ -21,6 +21,12 @@
       "hover": {
         "background-color": { "value": "{rvo.color.donkerblauw}" },
         "border-color": { "value": "{rvo.color.hemelblauw}" }
+      },
+      "disabled": {
+        "border-color": { "value": "{rvo.color.grijs3}" },
+        "border-width": {},
+        "background-color": { "value": "{rvo.color.wit}" },
+        "color": { "value": "{rvo.color.grijs3}" }
       }
     }
   }
