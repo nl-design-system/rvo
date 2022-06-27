@@ -23,10 +23,10 @@ export const CheckboxGroup = ({ layout = defaultArgs.layout }) => {
     layout === 'horizontal' && 'rvo-checkbox__group--horizontal',
     layout === 'vertical' && 'rvo-checkbox__group--vertical',
   )}">`;
-  markup += Checkbox({ id: 'optionA', name: 'group', labelText: 'Option A' });
-  markup += Checkbox({ id: 'optionB', name: 'group', labelText: 'Option B' });
-  markup += Checkbox({ id: 'optionC', name: 'group', labelText: 'Option C' });
-  markup += Checkbox({ id: 'optionD', name: 'group', labelText: 'Option D' });
+  markup += Checkbox({ id: 'optionA', labelText: 'Option A' });
+  markup += Checkbox({ id: 'optionB', labelText: 'Option B' });
+  markup += Checkbox({ id: 'optionC', labelText: 'Option C' });
+  markup += Checkbox({ id: 'optionD', labelText: 'Option D' });
   markup += '</div>';
   return markup;
 };
