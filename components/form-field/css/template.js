@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { FormFeedback } from '../../form-feedback/css/template';
 
 export const argTypes = {
   fieldId: {
@@ -49,13 +50,13 @@ export const Field = ({
   // Parse error text markup
   let errorTextMarkup = '';
   if (errorText) {
-    errorTextMarkup = `<div class="rvo-form-field__helper-text rvo-form-field__helper-text--error"><div class="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></div>${errorText}</div>`;
+    errorTextMarkup = FormFeedback({ text: errorText, type: 'error' });
   }
 
   // Parse warning text markup
   let warningTextMarkup = '';
   if (warningText) {
-    warningTextMarkup = `<div class="rvo-form-field__helper-text rvo-form-field__helper-text--warning"><div class="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></div>${warningText}</div>`;
+    warningTextMarkup = FormFeedback({ text: warningText, type: 'warning' });
   }
 
   return `<div class="rvo-form-field">
