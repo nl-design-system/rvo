@@ -7,41 +7,26 @@ const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-layout--md">
-          <nav className="rvo-main-menu">
-            <ul className="rvo-menu rvo-menu--main-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  Menu item
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
-                  Menu item with icon
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  Last menu item
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav className="rvo-toggle-menu">
-            <ul className="rvo-menu rvo-menu--toggle-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
-                  toggle
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
+      <nav className="rvo-topnav rvo-topnav--md">
+        <ul className="utrecht-topnav__list">
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              Menu item
+            </a>
+          </li>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div>Menu item w/icon before
+            </a>
+          </li>
+          <div className="rvo-topnav__spacer"></div>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              Last menu item
+            </a>
+          </li>
+        </ul>
+      </nav>
       <main className="rvo-progress-tracker-active rvo-max-width-layout--md">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps">
