@@ -23,7 +23,7 @@ export const defaultArgs = {
   size: 'medium',
   useIcons: false,
   useSpacer: false,
-  showIcons: 'left',
+  showIcons: 'before',
 };
 
 const parseMenuItem = (label, icon, size = defaultArgs.size, showIcons = defaultArgs.showIcons) => {
