@@ -24,7 +24,8 @@
 }
 
 .rvo-checkbox__input:focus,
-.rvo-checkbox__input:focus-visible {
+.rvo-checkbox__input:focus-visible,
+.rvo-checkbox--focus-visible .rvo-checkbox__input {
   background-color: var(--rvo-checkbox-focus-background-color, var(--utrecht-form-input-background-color));
   border-color: var(--rvo-checkbox-focus-border-color, var(--utrecht-form-input-border-color));
   border-width: var(--rvo-checkbox-focus-border-width, var(--utrecht-form-input-border-width));
@@ -35,7 +36,8 @@
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
-.rvo-checkbox__input:hover {
+.rvo-checkbox__input:hover,
+.rvo-checkbox--hover .rvo-checkbox__input {
   border-color: var(--rvo-checkbox-hover-border-color);
 }
 
