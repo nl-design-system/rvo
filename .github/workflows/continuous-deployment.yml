@@ -44,13 +44,13 @@ jobs:
           path: packages/storybook/dist/
           retention-days: 1
 
-      # - name: Publish to Chromatic
-      #   uses: chromaui/action@v1
-      #   if: github.event.pull_request.draft == false
-      #   with:
-      #     autoAcceptChanges: main
-      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-      #     storybookBuildDir: packages/storybook/dist/
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        if: github.event.pull_request.draft == false
+        with:
+          autoAcceptChanges: main
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: packages/storybook/dist/
 
   publish-storybook:
     runs-on: ubuntu-latest
