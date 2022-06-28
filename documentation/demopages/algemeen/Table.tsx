@@ -44,7 +44,7 @@ const Table = () => {
                   Title
                 </th>
                 <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                  Text
+                  Text <div className="rvo-icon rvo-icon--delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
                 </th>
                 <th scope="col" className="rvo-table-header rvo-table-header--numeric">
                   Price ($)

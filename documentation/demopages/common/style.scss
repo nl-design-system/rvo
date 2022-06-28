@@ -747,6 +747,18 @@
     text-align: start;
   }
 
+  .rvo-table-header--sortable {
+    align-items: center;
+    display: flex;
+    gap: var(--rvo-space-sm);
+  }
+
+  .rvo-table-header--sortable:hover,
+  .rvo-table-header--sortable:focus {
+    background-color: var(--rvo-color-grijs2);
+    cursor: pointer;
+  }
+
   .rvo-table-cell {
     border-bottom: 0.05rem solid var(--rvo-color-grijs3);
     padding-block-end: var(--rvo-space-sm);
