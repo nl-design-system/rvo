@@ -724,6 +724,11 @@
 
   /* @TABLE */
 
+  .rvo-table--responsive {
+    overflow-x: auto;
+    width: 100%;
+  }
+
   .rvo-table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -747,10 +752,12 @@
     text-align: start;
   }
 
-  .rvo-table-header--sortable {
-    align-items: center;
-    display: flex;
-    gap: var(--rvo-space-sm);
+  .rvo-table-header--sortable .rvo-icon {
+    display: inline-block;
+    margin-block-start: var(--rvo-space-xs);
+    margin-inline-start: var(--rvo-space-xs);
+    position: relative;
+    top: var(--rvo-space-2xs);
   }
 
   .rvo-table-header--sortable:hover,

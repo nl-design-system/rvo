@@ -33,68 +33,70 @@ const Table = () => {
         </ul>
       </nav>
 
-      <main>
+      <main className="rvo-max-width-layout rvo-max-width-layout--md">
         <div className="rvo-content">
           <h1 className="utrecht-heading-1">Table</h1>
-          <table className="rvo-table">
-            <caption className="rvo-caption">Table description.</caption>
-            <thead className="rvo-table-head">
-              <tr className="rvo-table-row">
-                <th scope="col" className="rvo-table-header">
-                  Title
-                </th>
-                <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                  Text <div className="rvo-icon rvo-icon--delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                </th>
-                <th scope="col" className="rvo-table-header rvo-table-header--numeric">
-                  Price ($)
-                </th>
-                <th scope="col" className="rvo-table-header rvo-table-header--empty-title"></th>
-              </tr>
-            </thead>
-            <tbody className="rvo-table-body">
-              <tr className="rvo-table-row">
-                <td className="rvo-table-cell">Title value</td>
-                <td className="rvo-table-cell">Text value</td>
-                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
-                <td className="rvo-table-cell rvo-table-cell--link">
-                  <a href="#" className="rvo-link">
-                    Link
-                  </a>
-                </td>
-              </tr>
-              <tr className="rvo-table-row">
-                <td className="rvo-table-cell">Title value</td>
-                <td className="rvo-table-cell">Text value</td>
-                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
-                <td className="rvo-table-cell rvo-table-cell--link">
-                  <a href="#" className="rvo-link">
-                    Link
-                  </a>
-                </td>
-              </tr>
-              <tr className="rvo-table-row">
-                <td className="rvo-table-cell">Title value</td>
-                <td className="rvo-table-cell">Text value</td>
-                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
-                <td className="rvo-table-cell rvo-table-cell--link">
-                  <a href="#" className="rvo-link">
-                    Link
-                  </a>
-                </td>
-              </tr>
-              <tr className="rvo-table-row">
-                <td className="rvo-table-cell">Title value</td>
-                <td className="rvo-table-cell">Text value</td>
-                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
-                <td className="rvo-table-cell rvo-table-cell--link">
-                  <a href="#" className="rvo-link">
-                    Link
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="rvo-table--responsive">
+            <table className="rvo-table">
+              <caption className="rvo-caption">Table description.</caption>
+              <thead className="rvo-table-head">
+                <tr className="rvo-table-row">
+                  <th scope="col" className="rvo-table-header">
+                    Title
+                  </th>
+                  <th scope="col" className="rvo-table-header rvo-table-header--sortable">
+                    Text <div className="rvo-icon rvo-icon--delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
+                  </th>
+                  <th scope="col" className="rvo-table-header rvo-table-header--numeric">
+                    Price ($)
+                  </th>
+                  <th scope="col" className="rvo-table-header rvo-table-header--empty-title"></th>
+                </tr>
+              </thead>
+              <tbody className="rvo-table-body">
+                <tr className="rvo-table-row">
+                  <td className="rvo-table-cell">Title value</td>
+                  <td className="rvo-table-cell">Text value</td>
+                  <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                  <td className="rvo-table-cell rvo-table-cell--link">
+                    <a href="#" className="rvo-link">
+                      Link
+                    </a>
+                  </td>
+                </tr>
+                <tr className="rvo-table-row">
+                  <td className="rvo-table-cell">Title value</td>
+                  <td className="rvo-table-cell">Text value</td>
+                  <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                  <td className="rvo-table-cell rvo-table-cell--link">
+                    <a href="#" className="rvo-link">
+                      Link
+                    </a>
+                  </td>
+                </tr>
+                <tr className="rvo-table-row">
+                  <td className="rvo-table-cell">Title value</td>
+                  <td className="rvo-table-cell">Text value</td>
+                  <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                  <td className="rvo-table-cell rvo-table-cell--link">
+                    <a href="#" className="rvo-link">
+                      Link
+                    </a>
+                  </td>
+                </tr>
+                <tr className="rvo-table-row">
+                  <td className="rvo-table-cell">Title value</td>
+                  <td className="rvo-table-cell">Text value</td>
+                  <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                  <td className="rvo-table-cell rvo-table-cell--link">
+                    <a href="#" className="rvo-link">
+                      Link
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </main>
     </div>
