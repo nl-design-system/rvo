@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
-    "@types/node": "17.0.41",
-    "@types/react": "16.14.26",
+    "@types/node": "18.0.0",
+    "@types/react": "16.14.28",
     "@types/react-dom": "16.9.16",
     "react": "16.14.0",
     "react-dom": "16.14.0",
