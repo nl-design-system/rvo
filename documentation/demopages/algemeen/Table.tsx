@@ -7,40 +7,31 @@ const Table = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-layout--md">
-          <nav className="rvo-main-menu">
-            <ul className="rvo-menu rvo-menu--main-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
-                  Menu item
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
-                  Menu item with icon
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
-                  Last menu item
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav className="rvo-toggle-menu">
-            <ul className="rvo-menu rvo-menu--toggle-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
-                  toggle
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <nav className="rvo-topnav rvo-topnav--md">
+        <ul className="utrecht-topnav__list">
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
+            </a>
+          </li>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
+            </a>
+          </li>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
+            </a>
+          </li>
+          <div className="rvo-topnav__spacer"></div>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              Uitloggen
+            </a>
+          </li>
+        </ul>
+      </nav>
 
       <main>
         <div className="rvo-content">
@@ -52,12 +43,13 @@ const Table = () => {
                 <th scope="col" className="rvo-table-header">
                   Title
                 </th>
-                <th scope="col" className="rvo-table-header">
+                <th scope="col" className="rvo-table-header rvo-table-header--sortable">
                   Text
                 </th>
                 <th scope="col" className="rvo-table-header rvo-table-header--numeric">
                   Price ($)
                 </th>
+                <th scope="col" className="rvo-table-header rvo-table-header--empty-title"></th>
               </tr>
             </thead>
             <tbody className="rvo-table-body">
@@ -65,6 +57,41 @@ const Table = () => {
                 <td className="rvo-table-cell">Title value</td>
                 <td className="rvo-table-cell">Text value</td>
                 <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                <td className="rvo-table-cell rvo-table-cell--link">
+                  <a href="#" className="rvo-link">
+                    Link
+                  </a>
+                </td>
+              </tr>
+              <tr className="rvo-table-row">
+                <td className="rvo-table-cell">Title value</td>
+                <td className="rvo-table-cell">Text value</td>
+                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                <td className="rvo-table-cell rvo-table-cell--link">
+                  <a href="#" className="rvo-link">
+                    Link
+                  </a>
+                </td>
+              </tr>
+              <tr className="rvo-table-row">
+                <td className="rvo-table-cell">Title value</td>
+                <td className="rvo-table-cell">Text value</td>
+                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                <td className="rvo-table-cell rvo-table-cell--link">
+                  <a href="#" className="rvo-link">
+                    Link
+                  </a>
+                </td>
+              </tr>
+              <tr className="rvo-table-row">
+                <td className="rvo-table-cell">Title value</td>
+                <td className="rvo-table-cell">Text value</td>
+                <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
+                <td className="rvo-table-cell rvo-table-cell--link">
+                  <a href="#" className="rvo-link">
+                    Link
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
