@@ -64,7 +64,7 @@ const Formulier = () => {
               </a>
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
-              <span className="rvo-process-step-link rvo-process-step-link--disabled">Sub-step disabled</span>
+              <span className="rvo-process-step--disabled">Sub-step disabled</span>
             </div>
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
               <a href="#" className="rvo-process-step-link">
@@ -74,7 +74,7 @@ const Formulier = () => {
           </div>
           <div className="rvo-main-steps">
             <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <span className="rvo-process-step-link rvo-process-step-link--disabled">Step disabled</span>
+              <span className="rvo-process-step--disabled">Step disabled</span>
             </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Process completed</div>
           </div>

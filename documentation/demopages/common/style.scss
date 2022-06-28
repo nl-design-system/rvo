@@ -236,8 +236,26 @@
   }
 
   .rvo-process-step-link {
+    color: var(--rvo-color-hemelblauw);
     display: inline-block;
+    font-weight: var(--rvo-font-weight-bold);
     padding-block-start: var(--rvo-space-2xs);
+    text-decoration: none;
+  }
+
+  .rvo-process-step-link:hover {
+    color: var(--rvo-link-hover-color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .rvo-process-step-link:focus {
+    background-color: var(--rvo-link-focus-background-color);
+    color: var(--rvo-link-focus-color);
+    font-weight: var(--rvo-link-focus-font-weight);
+    outline: none;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
   }
 
   .rvo-process-step--process-name {
@@ -247,36 +265,36 @@
     font-weight: var(--rvo-font-weight-bold);
   }
 
-  .rvo-process-step--medium {
+  .rvo-process-step--md {
     background-position: 0 center;
     font-size: var(--rvo-font-size-lg);
   }
 
-  .rvo-process-step--small {
+  .rvo-process-step--sm {
     background-position: 10px center;
   }
 
-  .rvo-process-step--medium.rvo-process-step--incomplete {
+  .rvo-process-step--md.rvo-process-step--incomplete {
     background-image: url("./assets/img/step__indicator--medium-incomplete.svg");
   }
 
-  .rvo-process-step--medium.rvo-process-step--completed {
+  .rvo-process-step--md.rvo-process-step--completed {
     background-image: url("./assets/img/step__indicator--medium-completed.svg");
   }
 
-  .rvo-process-step--medium.rvo-process-step--doing {
+  .rvo-process-step--md.rvo-process-step--doing {
     background-image: url("./assets/img/step__indicator--medium-doing.svg");
   }
 
-  .rvo-process-step--small.rvo-process-step--incomplete {
+  .rvo-process-step--sm.rvo-process-step--incomplete {
     background-image: url("./assets/img/step__indicator--small-incomplete.svg");
   }
 
-  .rvo-process-step--small.rvo-process-step--completed {
+  .rvo-process-step--sm.rvo-process-step--completed {
     background-image: url("./assets/img/step__indicator--small-completed.svg");
   }
 
-  .rvo-process-step--small.rvo-process-step--doing {
+  .rvo-process-step--sm.rvo-process-step--doing {
     background-image: url("./assets/img/step__indicator--small-doing.svg");
   }
 
