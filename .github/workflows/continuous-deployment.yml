@@ -51,6 +51,7 @@ jobs:
           autoAcceptChanges: main
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook/dist/
+          allowConsoleErrors: true
 
   publish-storybook:
     runs-on: ubuntu-latest
