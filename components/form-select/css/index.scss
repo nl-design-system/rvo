@@ -4,11 +4,11 @@
  */
 @use "../../../proprietary/assets/icons";
 
-.utrecht-select-wrapper {
+.rvo-select-wrapper {
   position: relative;
 }
 
-.utrecht-select-wrapper::before {
+.rvo-select-wrapper::before {
   background-color: var(--rvo-select-icon-background-color);
   content: "";
   display: block;
@@ -20,7 +20,7 @@
   width: 32px;
 }
 
-.utrecht-select-wrapper::after {
+.rvo-select-wrapper::after {
   @include icons.rvo-icon-delta-omlaag;
 
   background-color: var(--rvo-select-icon-color);
@@ -41,4 +41,8 @@
   padding-inline-end: var(--rvo-select-padding-inline-end);
   padding-inline-start: var(--rvo-select-padding-inline-start);
   width: 100%;
+}
+
+.utrecht-select:disabled {
+  opacity: 100%;
 }

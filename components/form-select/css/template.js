@@ -51,7 +51,7 @@ export const Select = ({
   required = defaultArgs.required,
   options = defaultArgs.options,
 }) =>
-  `<div class="utrecht-select-wrapper"><select id="${id}"${invalid ? ' aria-invalid="true"' : ''}${
+  `<div class="rvo-select-wrapper"><select id="${id}"${invalid ? ' aria-invalid="true"' : ''}${
     disabled ? ' disabled' : ''
   }${required ? ' required' : ''} class="${clsx('utrecht-select', 'utrecht-select--html-select', {
     'utrecht-select--disabled': disabled,
