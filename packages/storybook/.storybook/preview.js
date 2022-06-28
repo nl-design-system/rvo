@@ -7,6 +7,8 @@ import React from 'react';
 // import { ComponentName } from '../../../documentation/components/ComponentName';
 import frameworkDecorator from './frameworkDecorator';
 import theme from './theme';
+import prettier from 'prettier/standalone';
+import prettierBabel from 'prettier/parser-babel';
 
 defineCustomElements();
 
@@ -68,6 +70,12 @@ export const parameters = {
     source: {
       state: 'open',
       language: 'html',
+    },
+    transformSource: (input) => {
+      return prettier.format(input, {
+        parser: 'babel',
+        plugins: [prettierBabel],
+      });
     },
   },
   html: {
