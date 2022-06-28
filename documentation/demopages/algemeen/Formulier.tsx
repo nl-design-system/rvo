@@ -133,6 +133,10 @@ const Formulier = () => {
                 <label htmlFor="textarea">Textarea</label>
                 <textarea id="textarea"></textarea>
               </div>
+              <div className="rvo-form-field">
+                <label htmlFor="file">File</label>
+                <input type="file" className="rvo-file" multiple></input>
+              </div>
             </fieldset>
             <fieldset>
               <h2 className="utrecht-heading-2 utrecht-heading-2--distanced">Options</h2>

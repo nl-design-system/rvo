@@ -387,6 +387,13 @@
     margin-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
   }
 
+  .rvo-file::file-selector-button {
+    background-color: var(--rvo-color-wit);
+    border: none;
+    color: var(--rvo-color-hemelblauw);
+    font-weight: var(--rvo-font-weight-bold);
+  }
+
   // h2 + .rvo-form-field {
   //   margin-block-start: var(--rvo-space-sm);
   // }
@@ -401,6 +408,7 @@
 
   input[type="text"],
   input[type="number"],
+  input[type="file"],
   select,
   textarea {
     background-color: var(--rvo-color-wit);
@@ -430,6 +438,7 @@
 
   input[type="text"]:focus,
   input[type="number"]:focus,
+  input[type="file"]:focus,
   textarea:focus,
   select:focus {
     outline: 3px solid var(--rvo-color-hemelblauw);
@@ -441,6 +450,7 @@
 
   input[type="text"]:disabled,
   input[type="number"]:disabled,
+  input[type="file"]:disabled,
   textarea:disabled {
     background-color: var(--rvo-color-grijs3);
     border-color: var(--rvo-color-grijs7);
