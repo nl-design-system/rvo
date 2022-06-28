@@ -9,7 +9,7 @@
 }
 
 .utrecht-select-wrapper::before {
-  background-color: var(--rvo-color-hemelblauw);
+  background-color: var(--rvo-select-icon-background-color);
   content: "";
   display: block;
   height: 32px;
@@ -23,7 +23,7 @@
 .utrecht-select-wrapper::after {
   @include icons.rvo-icon-delta-omlaag;
 
-  background-color: var(--rvo-color-wit);
+  background-color: var(--rvo-select-icon-color);
   content: "";
   display: block;
   height: 32px;
@@ -36,8 +36,9 @@
 
 .utrecht-select {
   appearance: none;
-  padding-block-end: var(--rvo-space-sm);
-  padding-block-start: calc(var(--rvo-space-2xs) + var(--rvo-space-sm));
-  padding-inline-end: calc(var(--rvo-space-xs) + var(--rvo-space-lg));
+  padding-block-end: var(--rvo-select-padding-block-end);
+  padding-block-start: var(--rvo-select-padding-block-start);
+  padding-inline-end: var(--rvo-select-padding-inline-end);
+  padding-inline-start: var(--rvo-select-padding-inline-start);
   width: 100%;
 }
