@@ -769,8 +769,9 @@
   /* @ALERTS */
 
   .rvo-alert {
+    align-items: flex-start;
     display: flex;
-    gap: var(--rvo-space-md);
+    gap: calc(var(--rvo-space-xs) + var(--rvo-space-sm));
     margin-block-end: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
