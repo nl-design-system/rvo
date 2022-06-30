@@ -779,19 +779,9 @@
   }
 
   .rvo-alert > .rvo-icon {
-    flex: var(--rvo-size-lg) 0 0;
-  }
-
-  .rvo-alert-text > .rvo-heading {
-    margin-block-start: calc(calc(var(--rvo-space-xs) + var(--rvo-space-2xs)) * -1);
-  }
-
-  .rvo-alert-text > p {
-    margin-block-start: var(--rvo-space-xs);
-  }
-
-  .rvo-alert-text .rvo-heading + p {
-    margin-block-start: 0;
+    flex: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */ 0 0;
+    height: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
+    width: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
   }
 
   .rvo-alert--info {
@@ -820,6 +810,20 @@
 
   .rvo-alert-text + .utrecht-button {
     margin-inline-start: auto;
+  }
+
+  .rvo-button--close {
+    display: block;
+    min-block-size: 0;
+    min-inline-size: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .rvo-icon--zwart {
+    background-color: var(--rvo-color-zwart);
   }
 
   // h2 + .rvo-data,

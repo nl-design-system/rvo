@@ -44,7 +44,8 @@ const Alerts = () => {
           <div className="rvo-alert rvo-alert--info">
             <div className="rvo-icon rvo-icon--info rvo-icon--lg rvo-icon--hemelblauw"></div>
             <div className="rvo-alert-text">
-              <h2 className="rvo-heading utrecht-heading-2">Info with heading</h2>
+              <strong>Info with heading</strong>
+              <br />
               <p>This is an example of an info alert with a heading.</p>
             </div>
           </div>
@@ -60,8 +61,8 @@ const Alerts = () => {
             <div className="rvo-alert-text">
               <p>This is an example of an info alert with an optional close button.</p>
             </div>
-            <button className="utrecht-button rvo-button--tertiary-action rvo-button--sm">
-              <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon--kruis rvo-icon--md"></div>
+            <button className="utrecht-button rvo-button--close">
+              <div className="rvo-icon rvo-icon--kruis rvo-icon--md rvo-icon--zwart"></div>
             </button>
           </div>
           <div className="rvo-alert rvo-alert--warning">
@@ -73,7 +74,8 @@ const Alerts = () => {
           <div className="rvo-alert rvo-alert--warning">
             <div className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--lg"></div>
             <div className="rvo-alert-text">
-              <h2 className="rvo-heading utrecht-heading-2">Warning with heading</h2>
+              <strong>Warning with heading</strong>
+              <br />
               <p>This is an example of a warning alert with a heading.</p>
             </div>
           </div>
@@ -89,8 +91,8 @@ const Alerts = () => {
             <div className="rvo-alert-text">
               <p>This is an example of a warning alert with an optional close button.</p>
             </div>
-            <button className="utrecht-button rvo-button--tertiary-action rvo-button--sm">
-              <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon--kruis rvo-icon--md"></div>
+            <button className="utrecht-button rvo-button--close">
+              <div className="rvo-icon rvo-icon--kruis rvo-icon--md rvo-icon--zwart"></div>
             </button>
           </div>
           <div className="rvo-alert rvo-alert--error">
@@ -102,7 +104,8 @@ const Alerts = () => {
           <div className="rvo-alert rvo-alert--error">
             <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--lg"></div>
             <div className="rvo-alert-text">
-              <h2 className="rvo-heading utrecht-heading-2">error with heading</h2>
+              <strong>error with heading</strong>
+              <br />
               <p>This is an example of a error alert with a heading.</p>
             </div>
           </div>
@@ -118,8 +121,8 @@ const Alerts = () => {
             <div className="rvo-alert-text">
               <p>This is an example of a error alert with an optional close button.</p>
             </div>
-            <button className="utrecht-button rvo-button--tertiary-action rvo-button--sm">
-              <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon--kruis rvo-icon--md"></div>
+            <button className="utrecht-button rvo-button--close">
+              <div className="rvo-icon rvo-icon--kruis rvo-icon--md rvo-icon--zwart"></div>
             </button>
           </div>
           <div className="rvo-alert rvo-alert--succes">
@@ -131,7 +134,8 @@ const Alerts = () => {
           <div className="rvo-alert rvo-alert--succes">
             <div className="rvo-icon rvo-icon--bevestiging rvo-status-icon--bevestiging rvo-icon--lg"></div>
             <div className="rvo-alert-text">
-              <h2 className="rvo-heading utrecht-heading-2">succes with heading</h2>
+              <strong>succes with heading</strong>
+              <br />
               <p>This is an example of a succes alert with a heading.</p>
             </div>
           </div>
@@ -147,8 +151,8 @@ const Alerts = () => {
             <div className="rvo-alert-text">
               <p>This is an example of a succes alert with an optional close button.</p>
             </div>
-            <button className="utrecht-button rvo-button--tertiary-action rvo-button--sm">
-              <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon--kruis rvo-icon--md"></div>
+            <button className="utrecht-button rvo-button--close">
+              <div className="rvo-icon rvo-icon--kruis rvo-icon--md rvo-icon--zwart"></div>
             </button>
           </div>
         </div>
