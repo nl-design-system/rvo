@@ -769,21 +769,57 @@
   /* @ALERTS */
 
   .rvo-alert {
+    display: flex;
+    gap: var(--rvo-space-md);
+    margin-block-end: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
   }
 
+  .rvo-alert > .rvo-icon {
+    flex: var(--rvo-size-lg) 0 0;
+  }
+
+  .rvo-alert-text > .rvo-heading {
+    margin-block-start: calc(calc(var(--rvo-space-xs) + var(--rvo-space-2xs)) * -1);
+  }
+
+  .rvo-alert-text > p {
+    margin-block-start: var(--rvo-space-xs);
+  }
+
+  .rvo-alert-text .rvo-heading + p {
+    margin-block-start: 0;
+  }
+
   .rvo-alert--info {
     background-color: var(--rvo-color-hemelblauw-tint2);
   }
+
+  .rvo-alert--warning {
+    background-color: var(--rvo-color-donkergeel-tint2);
+  }
+
+  .rvo-alert--error {
+    background-color: var(--rvo-color-rood-tint2);
+  }
+
+  .rvo-alert--succes {
+    background-color: var(--rvo-color-groen-tint2);
+  }
+
   .rvo-alert p {
     line-height: var(--rvo-line-height-md);
   }
 
   .rvo-alert *:last-child {
     margin-block-end: 0;
+  }
+
+  .rvo-alert-text + .utrecht-button {
+    margin-inline-start: auto;
   }
 
   // h2 + .rvo-data,
