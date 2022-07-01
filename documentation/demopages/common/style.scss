@@ -758,6 +758,11 @@
 
   /* @TABLE */
 
+  .rvo-table--responsive {
+    overflow-x: auto;
+    width: 100%;
+  }
+
   .rvo-table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -781,8 +786,22 @@
     text-align: start;
   }
 
+  .rvo-table-header--sortable .rvo-icon {
+    display: inline-block;
+    margin-block-start: var(--rvo-space-xs);
+    margin-inline-start: var(--rvo-space-xs);
+    position: relative;
+    top: var(--rvo-space-2xs);
+  }
+
+  .rvo-table-header--sortable:hover,
+  .rvo-table-header--sortable:focus {
+    background-color: var(--rvo-color-grijs2);
+    cursor: pointer;
+  }
+
   .rvo-table-cell {
-    border-bottom: 1px solid var(--rvo-color-grijs3);
+    border-bottom: 0.05rem solid var(--rvo-color-grijs3);
     padding-block-end: var(--rvo-space-sm);
     padding-block-start: var(--rvo-space-sm);
     padding-inline-end: var(--rvo-space-md);
