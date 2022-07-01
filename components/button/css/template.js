@@ -95,4 +95,4 @@ export const AllButtonKinds = (buttonArgs) =>
   <p>${Button({ ...buttonArgs, kind: 'secondary' })}</p>
   <p>${Button({ ...buttonArgs, kind: 'tertiary' })}</p>
   <p>${Button({ ...buttonArgs, kind: 'quaternary' })}</p>
-  <p>${Button({ ...buttonArgs, kind: 'cancel' })}</p><div>`;
+  <p>${Button({ ...buttonArgs, kind: 'cancel' })}</p></div>`;

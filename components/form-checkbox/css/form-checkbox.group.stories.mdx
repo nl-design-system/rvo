@@ -13,8 +13,10 @@ import { argTypes, CheckboxGroup, defaultArgs } from "./template.group";
 
 # Checkbox group
 
-<Canvas args={defaultArgs}>
-  <Story name="Checkbox group">{CheckboxGroup.bind({})}</Story>
+<Canvas>
+  <Story name="Checkbox group" args={defaultArgs}>
+    {CheckboxGroup.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Checkbox group" />

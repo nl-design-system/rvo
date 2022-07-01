@@ -17,7 +17,7 @@ import "./index.scss";
 Menubar containing items with icons aligned to the left:
 
 <Canvas>
-  <Story name="With icons left" args={{ ...defaultArgs, showIcons: "before" }}>
+  <Story name="With icons left" args={{ ...defaultArgs, iconPlacement: "before" }}>
     {MenuBar.bind()}
   </Story>
 </Canvas>
@@ -25,7 +25,7 @@ Menubar containing items with icons aligned to the left:
 Menubar containing items with icons aligned to the right:
 
 <Canvas>
-  <Story name="With icons right" args={{ ...defaultArgs, showIcons: "after" }}>
+  <Story name="With icons right" args={{ ...defaultArgs, iconPlacement: "after" }}>
     {MenuBar.bind()}
   </Story>
 </Canvas>

@@ -7,42 +7,33 @@ const Content = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-layout--md">
-          <nav className="rvo-main-menu">
-            <ul className="rvo-menu rvo-menu--main-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
-                  Menu item
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
-                  Menu item with icon
-                </a>
-              </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md">
-                  Last menu item
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav className="rvo-toggle-menu">
-            <ul className="rvo-menu rvo-menu--toggle-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--md rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
-                  toggle
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <nav className="rvo-topnav rvo-topnav--md">
+        <ul className="utrecht-topnav__list">
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
+            </a>
+          </li>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
+            </a>
+          </li>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
+            </a>
+          </li>
+          <div className="rvo-topnav__spacer"></div>
+          <li className="utrecht-topnav__item">
+            <a className="utrecht-topnav__link" href="#">
+              Uitloggen
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-      <main className="rvo-max-width-layout--md">
+      <main className="rvo-max-width-layout rvo-max-width-layout--sm">
         <div className="rvo-content">
           <h1 className="utrecht-heading-1">Heading 1</h1>
           <p className="rvo-paragraph rvo-paragraph--sm">
