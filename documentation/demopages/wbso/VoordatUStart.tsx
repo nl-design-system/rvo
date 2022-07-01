@@ -9,28 +9,26 @@ const VoordatUStart = () => {
       <Header />
       <div className="rvo-navigation rvo-navigation--hemelblauw">
         <div className="rvo-max-width-wrapper">
-          <nav className="rvo-main-menu">
-            <ul className="rvo-menu rvo-menu--main-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--home"></span>Mijn
-                  aanvragen
+          <nav className="rvo-topnav rvo-topnav--md">
+            <ul className="utrecht-topnav__list">
+              <li className="utrecht-topnav__item">
+                <a className="utrecht-topnav__link" href="#">
+                  <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
                 </a>
               </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--plus"></span>
-                  Nieuwe aanvraag
+              <li className="utrecht-topnav__item">
+                <a className="utrecht-topnav__link" href="#">
+                  <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
                 </a>
               </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--user"></span>Mijn
-                  gegevens
+              <li className="utrecht-topnav__item">
+                <a className="utrecht-topnav__link" href="#">
+                  <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
                 </a>
               </li>
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium">
+              <div className="rvo-topnav__spacer"></div>
+              <li className="utrecht-topnav__item">
+                <a className="utrecht-topnav__link" href="#">
                   Uitloggen
                 </a>
               </li>
@@ -85,7 +83,6 @@ const VoordatUStart = () => {
             </div>
             <div className="rvo-process-step rvo-process-step--process-completed">Aanvraag ingediend</div>
             <button className="utrecht-button rvo-button--quaternary-action rvo-button--sm" type="button">
-              <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--sm"></span>
               Opslaan
             </button>
           </div>
