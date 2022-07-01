@@ -13,8 +13,10 @@ import { argTypes, defaultArgs, RadioButtonGroup } from "./template.group";
 
 # Form Radio button group
 
-<Canvas args={defaultArgs}>
-  <Story name="Radio button group">{RadioButtonGroup.bind({})}</Story>
+<Canvas>
+  <Story name="Radio button group" args={defaultArgs}>
+    {RadioButtonGroup.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Radio button group" />
