@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
@@ -17,14 +19,31 @@
   flex-direction: row;
 }
 
-.rvo-custom-radio-button__container {
-  display: inline-flex;
+.rvo-custom-radio-button__group--error {
+  border-left: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
 }
 
 .rvo-custom-radio-button__label {
-  display: inline-block;
-  margin-block-start: var(--rvo-custom-radio-button-label-margin-block-start);
-  margin-inline-start: var(--rvo-custom-radio-button-label-margin-inline-start);
+  align-items: center;
+  display: inline-flex;
+  gap: var(--rvo-custom-radio-button-label-gap);
+}
+
+.rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:first-child {
+  margin-inline-start: var(--rvo-checkbox-gap);
+}
+
+.rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:first-child {
+  margin-block-start: var(--rvo-checkbox-gap);
+}
+
+.rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:last-child {
+  margin-inline-end: var(--rvo-checkbox-gap);
+}
+
+.rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:last-child {
+  margin-block-end: var(--rvo-checkbox-gap);
 }
 
 // Checked state overrides

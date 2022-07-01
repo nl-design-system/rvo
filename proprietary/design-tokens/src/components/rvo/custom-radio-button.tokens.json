@@ -5,10 +5,7 @@
         "gap": { "value": "{rvo.space.md}" }
       },
       "label": {
-        "margin-block-start": {
-          "value": "3px"
-        },
-        "margin-inline-start": {
+        "gap": {
           "value": "{rvo.space.sm}"
         },
         "disabled": {

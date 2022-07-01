@@ -2,82 +2,129 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../../proprietary/assets/icons";
 
-// .rvo-custom-checkbox__group {
-//   display: flex;
-//   flex-direction: column;
-//   gap: var(--rvo-custom-checkbox-group-gap);
-// }
+.rvo-checkbox__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rvo-custom-radio-button-group-gap);
+}
 
-// .rvo-custom-checkbox__group--vertical {
-//   flex-direction: column;
-// }
+.rvo-checkbox__group--vertical {
+  flex-direction: column;
+}
 
-// .rvo-custom-checkbox__group--horizontal {
-//   flex-direction: row;
-// }
+.rvo-checkbox__group--horizontal {
+  flex-direction: row;
+}
 
-.utrecht-custom-checkbox {
+.rvo-custom-radio-button__group--error {
+  border-left: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
+}
+
+.rvo-checkbox {
   align-items: center;
   display: inline-flex;
+  gap: var(--rvo-checkbox-gap);
 }
 
-.rvo-custom-checkbox__label {
-  display: inline-block;
-  margin-inline-start: var(--rvo-custom-checkbox-label-margin-inline-start);
+.rvo-checkbox__group--horizontal .rvo-checkbox:first-child {
+  margin-inline-start: var(--rvo-checkbox-gap);
 }
 
-.rvo-custom-checkbox__icon,
-.rvo-custom-checkbox__icon--indeterminate {
-  background-color: var(--rvo-color-wit);
-  display: none;
+.rvo-checkbox__group--vertical .rvo-checkbox:first-child {
+  margin-block-start: var(--rvo-checkbox-gap);
 }
 
-.rvo-custom-checkbox__icon--indeterminate {
-  background-color: var(--rvo-color-hemelblauw);
-  color: var(--rvo-color-wit);
-  font-weight: var(--rvo-font-weight-bold);
+.rvo-checkbox__group--horizontal .rvo-checkbox:last-child {
+  margin-inline-end: var(--rvo-checkbox-gap);
 }
 
-.utrecht-custom-checkbox__box {
-  display: block;
-  position: relative;
+.rvo-checkbox__group--vertical .rvo-checkbox:last-child {
+  margin-block-end: var(--rvo-checkbox-gap);
 }
 
-.utrecht-custom-checkbox__input--checked,
-.utrecht-custom-checkbox__input:checked + .utrecht-custom-checkbox__box {
-  background-color: var(--rvo-color-hemelblauw);
-
-  &:not(.utrecht-custom-checkbox__box--indeterminate) .rvo-custom-checkbox__icon {
-    display: inline-block;
-  }
-
-  &.utrecht-custom-checkbox__box--indeterminate .rvo-custom-checkbox__icon--indeterminate {
-    display: inline-block;
-  }
-
-  &.utrecht-custom-checkbox__box--disabled {
-    background-color: var(--rvo-color-wit);
-  }
+.rvo-checkbox__input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--rvo-checkbox-background-color, var(--utrecht-form-input-background-color));
+  border-color: var(--rvo-checkbox-border-color, var(--utrecht-form-input-border-color));
+  border-style: solid;
+  border-width: var(--rvo-checkbox-border-width, var(--utrecht-form-input-border-width));
+  display: grid;
+  height: var(--rvo-checkbox-size);
+  place-content: center;
+  width: var(--rvo-checkbox-size);
 }
 
-// // Checked state overrides
-// .utrecht-custom-checkbox:checked,
-// .utrecht-custom-checkbox--checked {
-//   background: var(--rvo-custom-checkbox-checked-background);
-// }
-
-// // Disabled state
-.utrecht-custom-checkbox__box--disabled + .rvo-custom-checkbox__label,
-.utrecht-custom-checkbox__input:disabled ~ .rvo-custom-checkbox__label {
-  color: var(--rvo-custom-checkbox-label-disabled-color);
+.rvo-checkbox__input:focus,
+.rvo-checkbox__input:focus-visible,
+.rvo-checkbox--focus-visible .rvo-checkbox__input {
+  background-color: var(--rvo-checkbox-focus-background-color, var(--utrecht-form-input-background-color));
+  border-color: var(--rvo-checkbox-focus-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-checkbox-focus-border-width, var(--utrecht-form-input-border-width));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
-// // Hover state
-// .utrecht-custom-checkbox:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-checkbox--disabled):not(.utrecht-custom-checkbox--invalid) {
-//   &.utrecht-custom-checkbox:hover,
-//   &.rvo-custom-checkbox--hover,
-//   + .rvo-custom-checkbox__label:hover {
-//     border-color: var(--rvo-custom-checkbox-hover-border-color);
-//   }
-// }
+.rvo-checkbox__input:hover,
+.rvo-checkbox--hover .rvo-checkbox__input {
+  border-color: var(--rvo-checkbox-hover-border-color);
+}
+
+.rvo-checkbox__input:disabled,
+.rvo-checkbox--disabled {
+  background-color: var(--rvo-checkbox-disabled-background-color, var(--utrecht-form-input-background-color));
+  border-color: var(--rvo-checkbox-disabled-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-checkbox-disabled-border-width, var(--utrecht-form-input-border-width));
+  color: var(--rvo-checkbox-disabled-color, var(--utrecht-form-input-disabled-color));
+}
+
+.rvo-checkbox__input:focus:not(:focus-visible) {
+  box-shadow: none;
+  outline-style: none;
+}
+
+.rvo-checkbox__input::before {
+  content: "";
+  height: var(--rvo-checkbox-icon-size);
+  width: var(--rvo-checkbox-icon-size);
+}
+
+.rvo-checkbox__input::after {
+  content: "";
+  height: var(--rvo-checkbox-icon-size);
+  margin-block-start: calc((var(--rvo-checkbox-size) - var(--rvo-checkbox-icon-size)) / 4);
+  margin-inline-start: calc((var(--rvo-checkbox-size) - var(--rvo-checkbox-icon-size)) / 4);
+  position: absolute;
+  width: var(--rvo-checkbox-icon-size);
+}
+
+.rvo-checkbox__input:checked::before {
+  background-color: var(--rvo-checkbox-checked-background-color);
+}
+
+.rvo-checkbox__input:checked::after {
+  background-color: var(--rvo-checkbox-icon-color);
+  -webkit-mask-size: 90% !important;
+  mask-size: 90% !important;
+  @include icons.rvo-icon-vinkje;
+}
+
+.rvo-checkbox--indeterminate .rvo-checkbox__input:checked::after {
+  background-color: var(--rvo-checkbox-checked-background-color);
+  color: var(--rvo-checkbox-icon-color);
+  content: "-";
+  font-weight: 900;
+  -webkit-mask-image: none;
+  mask-image: none;
+  text-align: center;
+}
+
+.rvo-checkbox__input:checked:hover::before {
+  background-color: var(--rvo-checkbox-hover-background-color);
+}

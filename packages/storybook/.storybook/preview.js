@@ -7,6 +7,8 @@ import React from 'react';
 // import { ComponentName } from '../../../documentation/components/ComponentName';
 import frameworkDecorator from './frameworkDecorator';
 import theme from './theme';
+import prettier from 'prettier/standalone';
+import prettierBabel from 'prettier/parser-babel';
 
 defineCustomElements();
 
@@ -24,16 +26,13 @@ const previewTabs = {
 
 const storySort = {
   order: [
-    'Algemeen',
-    [
-      'Introductie',
-      'Toestemming voor gebruik',
-      'Open source licentie',
-      'Design tokens',
-      ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
-    ],
+    'Introductie',
+    'Huisstijl',
+    ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
     'CSS Components',
     "Demo Pagina's",
+    'Informatie',
+    ['Toestemming voor gebruik', 'Open source licentie'],
   ],
 };
 
@@ -71,6 +70,12 @@ export const parameters = {
     source: {
       state: 'open',
       language: 'html',
+    },
+    transformSource: (input) => {
+      return prettier.format(input, {
+        parser: 'babel',
+        plugins: [prettierBabel],
+      });
     },
   },
   html: {

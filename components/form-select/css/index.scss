@@ -1,0 +1,48 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "../../../proprietary/assets/icons";
+
+.rvo-select-wrapper {
+  position: relative;
+}
+
+.rvo-select-wrapper::before {
+  background-color: var(--rvo-select-icon-background-color);
+  content: "";
+  display: block;
+  height: 32px;
+  pointer-events: none;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 32px;
+}
+
+.rvo-select-wrapper::after {
+  @include icons.rvo-icon-delta-omlaag;
+
+  background-color: var(--rvo-select-icon-color);
+  content: "";
+  display: block;
+  height: 32px;
+  pointer-events: none;
+  position: absolute;
+  right: 13px;
+  top: 4px;
+  width: 13px;
+}
+
+.utrecht-select {
+  appearance: none;
+  padding-block-end: var(--rvo-select-padding-block-end);
+  padding-block-start: var(--rvo-select-padding-block-start);
+  padding-inline-end: var(--rvo-select-padding-inline-end);
+  padding-inline-start: var(--rvo-select-padding-inline-start);
+  width: 100%;
+}
+
+.utrecht-select:disabled {
+  opacity: 100%;
+}

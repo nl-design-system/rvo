@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, CheckboxField, defaultArgs } from "./checkbox-field.template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Form/Field/Checkbox field"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox field
+
+<Canvas>
+  <Story name="Checkbox field" args={defaultArgs}>
+    {CheckboxField.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Checkbox field" />

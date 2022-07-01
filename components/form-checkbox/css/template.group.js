@@ -4,29 +4,51 @@
  */
 import clsx from 'clsx';
 import './index.scss';
-import { RadioButton } from './template';
+import { Checkbox } from './template';
+
+const defaultOptions = [
+  { id: 'optionA', labelText: 'Option A' },
+  { id: 'optionB', labelText: 'Option B', checked: true },
+  { id: 'optionC', labelText: 'Option C' },
+  { id: 'optionD', labelText: 'Option D' },
+];
 
 export const argTypes = {
   layout: {
     options: ['vertical', 'horizontal'],
     control: { type: 'radio' },
   },
+  invalid: { control: 'boolean' },
+  options: {
+    type: {
+      name: 'array',
+      required: true,
+    },
+  },
 };
 
 export const defaultArgs = {
   layout: 'vertical',
+  invalid: false,
+  options: defaultOptions,
 };
 
-export const RadioButtonGroup = ({ layout = defaultArgs.layout }) => {
+export const CheckboxGroup = ({
+  layout = defaultArgs.layout,
+  invalid = defaultArgs.invalid,
+  options = defaultArgs.options,
+}) => {
   let markup = `<div class="${clsx(
-    'rvo-custom-checkbox__group',
-    layout === 'horizontal' && 'rvo-custom-checkbox__group--horizontal',
-    layout === 'vertical' && 'rvo-custom-checkbox__group--vertical',
+    'rvo-checkbox__group',
+    layout === 'horizontal' && 'rvo-checkbox__group--horizontal',
+    layout === 'vertical' && 'rvo-checkbox__group--vertical',
+    invalid && 'rvo-custom-radio-button__group--error',
   )}">`;
-  markup += RadioButton({ id: 'optionA', name: 'group', labelText: 'Option A' });
-  markup += RadioButton({ id: 'optionB', name: 'group', labelText: 'Option B' });
-  markup += RadioButton({ id: 'optionC', name: 'group', labelText: 'Option C' });
-  markup += RadioButton({ id: 'optionD', name: 'group', labelText: 'Option D' });
+
+  options.forEach((option) => {
+    markup += Checkbox({ id: option.id, name, labelText: option.labelText, checked: option.checked });
+  });
+
   markup += '</div>';
   return markup;
 };

@@ -4,15 +4,15 @@ import { SizeDesignTokens } from "./components/SizeDesignTokens";
 
 export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/size.tokens.json"));
 
-<Meta title="Algemeen/Design tokens/Groottes" />
+<Meta title="Huisstijl/Groottes" />
 
 <Description># Groottes</Description>
 
-<p>Er zijn {tokens.length} design tokens voor groottes. </p>
-<p>
-  Ruimtes tussen onderdelen worden gedaan met stapjes van 2 pixels. <br />
-  Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals:
-  <strong>rvo-size-2xs + rvo-size-md</strong>
-</p>
+Er zijn {tokens.length} design tokens voor groottes.
+
+Ruimtes tussen onderdelen worden gedaan met stapjes van 2 pixels. <br />
+Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals:
+
+<strong>rvo-size-2xs + rvo-size-md</strong>
 
 <SizeDesignTokens tokens={tokens} />

@@ -40,9 +40,10 @@ export const RadioButton = ({
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
 }) =>
-  `<div class="rvo-custom-radio-button__container"><input id="${id}" name="${name}" autofocus="true" type="radio"${
-    checked ? ' checked' : ''
-  }
+  `
+  <label class='rvo-custom-radio-button__label' for="${id}">
+  <input id="${id}" name="${name}" autofocus="true" type="radio"
+  ${checked ? ' checked' : ''}
   ${disabled ? ' disabled' : ''} class="${clsx(
     'utrecht-custom-radio-button',
     checked && 'utrecht-custom-radio-button--checked',
@@ -51,4 +52,4 @@ export const RadioButton = ({
     active && 'utrecht-custom-radio-button--active',
     focus && 'utrecht-custom-radio-button--focus-visible',
     invalid && 'utrecht-custom-radio-button--invalid',
-  )}"><label class='rvo-custom-radio-button__label' for="${id}">${labelText}</label></div>`;
+  )}"/>${labelText}</label>`;

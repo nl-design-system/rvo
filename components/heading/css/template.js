@@ -39,5 +39,5 @@ export const Heading = ({
 }) => {
   return `<h${type} class="${clsx(`utrecht-heading-${type}`, {
     [`utrecht-heading-${type}--distanced`]: distanced,
-  })}">${textContent}</h1>`;
+  })}">${textContent}</h${type}>`;
 };

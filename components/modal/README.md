@@ -4,7 +4,7 @@ Een modal is een dialoog dat verschijnt over de hoofd content van de pagina heen
 
 ## Wanneer gebruik je component
 
-Modals zijn bedoeld voor situaties waarin de normale taakuitvoering van de gebruiker moet worden onderbroken om de aandacht op een belangrijke waarschuwing of keuze te richten.
+Modals zijn bedoeld voor situaties waarin de normale taakuitvoering van de gebruiker moet worden onderbroken om de aandacht op een belangrijke waarschuwing of keuze te richten zoals het verwijderen van belangrijke gegevens.
 
 ## Anatomie van het component
 

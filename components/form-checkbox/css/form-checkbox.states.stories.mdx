@@ -1,8 +1,8 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, RadioButton } from "./template";
+import { argTypes, Checkbox, defaultArgs } from "./template";
 
 <Meta
-  title="CSS Components/Forms/Radio button/States"
+  title="CSS Components/Form/Checkbox/States"
   argTypes={argTypes}
   parameters={{
     status: {
@@ -15,7 +15,7 @@ import { argTypes, defaultArgs, RadioButton } from "./template";
 
 <Canvas>
   <Story name="Hover" args={{ ...defaultArgs, hover: true }}>
-    {RadioButton.bind({})}
+    {Checkbox.bind({})}
   </Story>
 </Canvas>
 
@@ -23,7 +23,15 @@ import { argTypes, defaultArgs, RadioButton } from "./template";
 
 <Canvas>
   <Story name="Checked" args={{ ...defaultArgs, checked: true }}>
-    {RadioButton.bind({})}
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate
+
+<Canvas>
+  <Story name="Indeterminate" args={{ ...defaultArgs, checked: true, indeterminate: true }}>
+    {Checkbox.bind({})}
   </Story>
 </Canvas>
 
@@ -31,7 +39,7 @@ import { argTypes, defaultArgs, RadioButton } from "./template";
 
 <Canvas>
   <Story name="Disabled" args={{ ...defaultArgs, disabled: true }}>
-    {RadioButton.bind({})}
+    {Checkbox.bind({})}
   </Story>
 </Canvas>
 
@@ -39,7 +47,7 @@ import { argTypes, defaultArgs, RadioButton } from "./template";
 
 <Canvas>
   <Story name="Active" args={{ ...defaultArgs, active: true }}>
-    {RadioButton.bind({})}
+    {Checkbox.bind({})}
   </Story>
 </Canvas>
 
@@ -47,6 +55,6 @@ import { argTypes, defaultArgs, RadioButton } from "./template";
 
 <Canvas>
   <Story name="Focus" args={{ ...defaultArgs, focus: true }}>
-    {RadioButton.bind({})}
+    {Checkbox.bind({})}
   </Story>
 </Canvas>

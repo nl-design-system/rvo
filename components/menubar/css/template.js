@@ -4,33 +4,52 @@
  */
 import '@utrecht/component-library-css';
 
+const defaultItems = [
+  { label: 'Home', icon: 'home', link: '#' },
+  { label: 'Mijn aanvragen', icon: 'publicatie', link: '#' },
+  { label: 'Nieuwe aanvraag', icon: 'plus', link: '#' },
+  { label: 'Uitloggen', icon: 'versleutelen', link: '#', align: 'right' },
+];
+
 export const argTypes = {
   size: {
     options: ['small', 'medium'],
     mapping: { small: 'sm', medium: 'md' },
     control: { type: 'radio' },
   },
-  useSpacer: {
+  items: {
+    type: {
+      name: 'array',
+      required: true,
+    },
+  },
+  useIcons: {
     control: 'boolean',
   },
-  showIcons: {
-    options: ['no', 'before', 'after'],
+  iconPlacement: {
+    options: ['before', 'after'],
     control: { type: 'radio' },
   },
 };
 
 export const defaultArgs = {
   size: 'medium',
-  useIcons: false,
-  useSpacer: false,
-  showIcons: 'left',
+  items: defaultItems,
+  useIcons: true,
+  iconPlacement: 'before',
 };
 
-const parseMenuItem = (label, icon, size = defaultArgs.size, showIcons = defaultArgs.showIcons) => {
+const parseMenuItem = (
+  label,
+  icon,
+  useIcon = defaultArgs.useIcons,
+  size = defaultArgs.size,
+  iconPlacement = defaultArgs.iconPlacement,
+) => {
   let menuItem = label;
-  if (icon) {
+  if (useIcon) {
     const iconMarkup = `<div class="rvo-icon rvo-icon--${icon} rvo-icon--${size} rvo-icon--wit"></div>`;
-    if (showIcons === 'before') {
+    if (iconPlacement === 'before') {
       menuItem = `${iconMarkup} ${menuItem}`;
     } else {
       menuItem = `${menuItem} ${iconMarkup}`;
@@ -41,33 +60,31 @@ const parseMenuItem = (label, icon, size = defaultArgs.size, showIcons = default
 
 export const MenuBar = ({
   size = defaultArgs.size,
-  useSpacer = defaultArgs.useSpacer,
-  showIcons = defaultArgs.showIcons,
+  items = defaultArgs.items,
+  useIcons = defaultArgs.useIcons,
+  iconPlacement = defaultArgs.iconPlacement,
 }) => {
-  return `<nav class="rvo-topnav rvo-topnav--${size}">
-    <ul class="utrecht-topnav__list">
-      <li class="utrecht-topnav__item">
-        <a class="utrecht-topnav__link" href="#">
-          ${parseMenuItem('Home', showIcons !== 'no' && 'home', 'md', showIcons)}
-        </a>
-      </li>
-      <li class="utrecht-topnav__item">
-        <a class="utrecht-topnav__link" href="#">
-         ${parseMenuItem('Mijn aanvragen', showIcons !== 'no' && 'publicatie', 'md', showIcons)}
-        </a>
-      </li>
-      <li class="utrecht-topnav__item">
-        <a class="utrecht-topnav__link" href="#">
-          ${parseMenuItem('Nieuwe aanvraag', showIcons !== 'no' && 'plus', 'md', showIcons)}
-        </a>
-      </li>
-      ${useSpacer ? '<div class="rvo-topnav__spacer"></div>' : ''}
-      <li class="utrecht-topnav__item">
-        <a class="utrecht-topnav__link" href="#">
-          ${parseMenuItem('Uitloggen', showIcons !== 'no' && 'versleutelen', 'md', showIcons)}
-        </a>
-      </li>
-    </ul>
-  </nav>
-`;
+  let markup = `<nav class="rvo-topnav rvo-topnav--${size}"><ul class="utrecht-topnav__list">`;
+
+  const leftItems = items.filter((item) => item.align !== 'right');
+  const rightItems = items.filter((item) => item.align === 'right');
+
+  leftItems.forEach((item) => {
+    markup += `<li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="${item.link}">`;
+    markup += parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement);
+    markup += '</a></li>';
+  });
+
+  if (rightItems.length) {
+    markup += '<div class="rvo-topnav__spacer"></div>';
+    rightItems.forEach((item) => {
+      markup += `<li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="${item.link}">`;
+      markup += parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement);
+      markup += '</a></li>';
+    });
+  }
+
+  markup += '</ul></nav>';
+
+  return markup;
 };

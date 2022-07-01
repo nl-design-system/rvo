@@ -1,0 +1,22 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, CheckboxGroup, defaultArgs } from "./template.group";
+
+<Meta
+  title="CSS Components/Form/Checkbox/Checkbox group"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox group
+
+<Canvas>
+  <Story name="Checkbox group" args={defaultArgs}>
+    {CheckboxGroup.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Checkbox group" />

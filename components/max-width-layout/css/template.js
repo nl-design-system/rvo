@@ -6,8 +6,9 @@ import * as designTokens from '@nl-rvo/design-tokens/dist';
 
 export const argTypes = {
   size: {
-    options: ['medium', 'large'],
+    options: ['small', 'medium', 'large'],
     mapping: {
+      small: 'sm',
       medium: 'md',
       large: 'lg',
     },
@@ -22,6 +23,9 @@ export const defaultArgs = {
 export const MaxWidthLayout = ({ size = defaultArgs.size }) => {
   let maxWidth;
   switch (size) {
+    case 'sm':
+      maxWidth = designTokens.rvoLayoutMaxWidthSm;
+      break;
     case 'md':
       maxWidth = designTokens.rvoLayoutMaxWidthMd;
       break;
