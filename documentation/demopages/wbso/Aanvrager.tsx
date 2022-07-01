@@ -47,7 +47,7 @@ const Aanvrager = () => {
         </div>
       </div>
 
-      <main className="rvo-progress-tracker-active">
+      <main className="rvo-progress-tracker-active rvo-max-width-layout rvo-max-width-layout--lg">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps rvo-main-steps--no-sub-steps">
             <div className="rvo-process-step rvo-process-step--process-name">Aanvraag WBSO</div>
@@ -117,18 +117,16 @@ const Aanvrager = () => {
           </div>
           <form>
             <fieldset>
-              <h2>Contactpersoon</h2>
+              <h2 className="utrecht-heading-2">Contactpersoon</h2>
               <div className="rvo-form-field">
                 <label htmlFor="contactpersoon">Contactpersoon</label>
                 <select id="contactpersoon">
                   <option>Optie A</option>
                 </select>
-                <button className="rvo-button rvo-button--tertiary rvo-button--sm rvo-button-in-form">
-                  <span className="rvo-icon rvo-icon--sm rvo-icon-before rvo-icon--hemelblauw rvo-icon--bewerken"></span>
-                  Contactpersoon & bedrijfsgegevens wijzigen
-                </button>
               </div>
-              <h2>Organisatie</h2>
+            </fieldset>
+            <fieldset>
+              <h2 className="utrecht-heading-2">Organisatie</h2>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   U drijft een onderneming in de zin van de Wet IB of Wet Vpb en bent geen publieke kennisinstelling?
