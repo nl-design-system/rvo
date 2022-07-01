@@ -794,6 +794,67 @@
     text-align: end;
   }
 
+  /* @ALERTS */
+
+  .rvo-alert {
+    align-items: flex-start;
+    display: flex;
+    gap: calc(var(--rvo-space-xs) + var(--rvo-space-sm));
+    margin-block-end: var(--rvo-space-md);
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-alert > .rvo-icon {
+    flex: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */ 0 0;
+    height: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
+    width: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
+  }
+
+  .rvo-alert--info {
+    background-color: var(--rvo-color-hemelblauw-tint2);
+  }
+
+  .rvo-alert--warning {
+    background-color: var(--rvo-color-donkergeel-tint2);
+  }
+
+  .rvo-alert--error {
+    background-color: var(--rvo-color-rood-tint2);
+  }
+
+  .rvo-alert--succes {
+    background-color: var(--rvo-color-groen-tint2);
+  }
+
+  .rvo-alert p {
+    line-height: var(--rvo-line-height-md);
+  }
+
+  .rvo-alert *:last-child {
+    margin-block-end: 0;
+  }
+
+  .rvo-alert-text + .utrecht-button {
+    margin-inline-start: auto;
+  }
+
+  .rvo-button--close {
+    display: block;
+    min-block-size: 0;
+    min-inline-size: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .rvo-icon--zwart {
+    background-color: var(--rvo-color-zwart);
+  }
+
   // h2 + .rvo-data,
   // summary + .rvo-data {
   //   margin-block-start: var(--rvo-space-sm);
