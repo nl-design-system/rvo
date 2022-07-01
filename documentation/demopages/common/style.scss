@@ -890,6 +890,16 @@
     background-color: var(--rvo-color-donkerblauw);
   }
 
+  .rvo-topnav__list--submenu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .rvo-topnav__link--submenu {
+    align-items: flex-start;
+    text-align: start;
+  }
+
   // h2 + .rvo-data,
   // summary + .rvo-data {
   //   margin-block-start: var(--rvo-space-sm);
