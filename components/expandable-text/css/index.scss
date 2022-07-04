@@ -33,7 +33,7 @@
 }
 
 .rvo-expandable-text__summary::after {
-  @include icons.rvo-icon-delta-naar-rechts;
+  @include icons.rvo-icon-delta-naar-rechts-mask;
 
   background-color: var(--rvo-expandable-text-summary-icon-background-color);
   content: "";
@@ -42,7 +42,7 @@
 }
 
 .rvo-expandable-text[open] .rvo-expandable-text__summary::after {
-  @include icons.rvo-icon-delta-omlaag;
+  @include icons.rvo-icon-delta-omlaag-mask;
 }
 
 .rvo-expandable-text__details {

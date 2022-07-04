@@ -21,7 +21,7 @@
 }
 
 .rvo-select-wrapper::after {
-  @include icons.rvo-icon-delta-omlaag;
+  @include icons.rvo-icon-delta-omlaag-mask;
 
   background-color: var(--rvo-select-icon-color);
   content: "";

@@ -112,7 +112,7 @@
   background-color: var(--rvo-checkbox-icon-color);
   -webkit-mask-size: 90% !important;
   mask-size: 90% !important;
-  @include icons.rvo-icon-vinkje;
+  @include icons.rvo-icon-vinkje-mask;
 }
 
 .rvo-checkbox--indeterminate .rvo-checkbox__input:checked::after {
