@@ -1,0 +1,79 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "../../../proprietary/assets/icons";
+@use "../../../proprietary/assets/images";
+
+.rvo-progress-tracker__indicator-icon {
+  display: inline-block;
+}
+
+.rvo-progress-tracker__indicator-icon--start,
+.rvo-progress-tracker__indicator-icon--end {
+  background-color: var(--rvo-color-hemelblauw);
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+.rvo-progress-tracker__indicator-icon--incomplete,
+.rvo-progress-tracker__indicator-icon--disabled {
+  background-color: var(--rvo-color-wit);
+  border-color: var(--rvo-color-hemelblauw);
+  border-radius: 13px;
+  border-style: solid;
+  border-width: 3px;
+  box-sizing: border-box;
+  height: 26px;
+  width: 26px;
+}
+
+.rvo-progress-tracker__indicator-icon--doing {
+  background-color: var(--rvo-color-wit);
+  border-color: var(--rvo-color-hemelblauw);
+  border-radius: 13px;
+  border-style: solid;
+  border-width: 3px;
+  box-sizing: border-box;
+  height: 26px;
+  position: relative;
+  width: 26px;
+
+  &::after {
+    background-color: var(--rvo-color-hemelblauw);
+    border-radius: 8px;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 16px;
+  }
+}
+
+.rvo-progress-tracker__indicator-icon--completed {
+  background-color: var(--rvo-color-wit);
+  border-color: var(--rvo-color-hemelblauw);
+  border-radius: 13px;
+  border-style: solid;
+  border-width: 3px;
+  box-sizing: border-box;
+  height: 26px;
+  position: relative;
+  width: 26px;
+
+  &::after {
+    background-color: var(--rvo-color-hemelblauw);
+    content: "";
+    display: inline-block;
+    height: 16px;
+    left: 2px;
+    mask-size: 90% !important;
+    position: absolute;
+    top: 2px;
+    width: 16px;
+    @include icons.rvo-icon-vinkje-mask;
+  }
+}
