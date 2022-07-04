@@ -13,6 +13,6 @@
     "@utrecht/component-library-css": "1.0.0-alpha.235"
   },
   "dependencies": {
-    "clsx": "1.1.1"
+    "clsx": "1.2.0"
   }
 }
