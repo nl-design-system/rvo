@@ -89,9 +89,9 @@ const Aanvrager = () => {
         </div>
         <div className="rvo-form">
           <div className="intro">
-            <a href="startpagina.html" className="back-link">
-              <span className="rvo-icon rvo-icon--sm rvo-icon--before rvo-icon--hemelblauw rvo-icon--terug"></span>Terug
-              naar Voordat u begint
+            <a href="#" className="rvo-link">
+              <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--md rvo-icon--hemelblauw rvo-icon--terug"></span>
+              Terug
             </a>
             <h1>Aanvrager</h1>
             <h2>Bedrijfsgegevens (NHR)</h2>
