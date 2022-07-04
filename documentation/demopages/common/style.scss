@@ -213,7 +213,7 @@
   .rvo-progress-tracker {
     margin-inline-end: auto;
     margin-inline-start: auto;
-    max-width: 580;
+    max-width: 580px;
     padding-block-end: 0;
     padding-block-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
     padding-inline-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
@@ -948,7 +948,6 @@
       grid-template-columns: 1fr 2fr;
       margin-inline-end: auto;
       margin-inline-start: auto;
-      max-width: 900;
     }
 
     .rvo-form .rvo-intro {

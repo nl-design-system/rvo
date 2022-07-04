@@ -47,7 +47,7 @@ const Aanvrager = () => {
         </div>
       </div>
 
-      <main className="rvo-progress-tracker-active">
+      <main className="rvo-progress-tracker-active rvo-max-width-layout rvo-max-width-layout--lg">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps rvo-main-steps--no-sub-steps">
             <div className="rvo-process-step rvo-process-step--process-name">Aanvraag WBSO</div>
@@ -93,8 +93,8 @@ const Aanvrager = () => {
               <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--md rvo-icon--hemelblauw rvo-icon--terug"></span>
               Terug
             </a>
-            <h1>Aanvrager</h1>
-            <h2>Bedrijfsgegevens (NHR)</h2>
+            <h1 className="utrecht-heading-1">Aanvrager</h1>
+            <h2 className="utrecht-heading-2">Bedrijfsgegevens (NHR)</h2>
             <dl className="rvo-data">
               <dt>KVK-nummer</dt>
               <dd>35012085</dd>
@@ -105,7 +105,7 @@ const Aanvrager = () => {
               <dt>RSIN</dt>
               <dd>002230884</dd>
             </dl>
-            <h2>Bedrijfsgegevens</h2>
+            <h2 className="utrecht-heading-2">Bedrijfsgegevens</h2>
             <dl className="rvo-data">
               <dt>Website</dt>
               <dd className="rvo-url">https://www.streetplanet.nl</dd>
@@ -117,18 +117,16 @@ const Aanvrager = () => {
           </div>
           <form>
             <fieldset>
-              <h2>Contactpersoon</h2>
+              <h2 className="utrecht-heading-2">Contactpersoon</h2>
               <div className="rvo-form-field">
                 <label htmlFor="contactpersoon">Contactpersoon</label>
                 <select id="contactpersoon">
                   <option>Optie A</option>
                 </select>
-                <button className="rvo-button rvo-button--tertiary rvo-button--sm rvo-button-in-form">
-                  <span className="rvo-icon rvo-icon--sm rvo-icon-before rvo-icon--hemelblauw rvo-icon--bewerken"></span>
-                  Contactpersoon & bedrijfsgegevens wijzigen
-                </button>
               </div>
-              <h2>Organisatie</h2>
+            </fieldset>
+            <fieldset>
+              <h2 className="utrecht-heading-2">Organisatie</h2>
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>
                   U drijft een onderneming in de zin van de Wet IB of Wet Vpb en bent geen publieke kennisinstelling?
@@ -146,7 +144,11 @@ const Aanvrager = () => {
                     <input type="radio" id="ib-nee" name="ib"></input>Nee
                   </label>
                 </div>
-                <h2>Gegevens aanvrager in aanvraagperiode</h2>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div>
+                <h2 className="utrecht-heading-2">Gegevens aanvrager in aanvraagperiode</h2>
                 <div className="rvo-form-field">
                   <label htmlFor="aantal-werknemers">Prognose totaal aantal werknemers</label>
                   <input type="text" inputMode="numeric" pattern="[0-9]*" id="aantal-werknemers"></input>
@@ -155,7 +157,8 @@ const Aanvrager = () => {
                   <label htmlFor="eigen-werknemers">(Waarvan) eigen S&O-werknemers</label>
                   <input type="text" inputMode="numeric" pattern="[0-9]*" id="eigen-werknemers"></input>
                 </div>
-                <h2>S&O-uurloon</h2>
+
+                <h2 className="utrecht-heading-2">S&O-uurloon</h2>
                 <label htmlFor="so-verklaring">
                   Heeft u in 2020 S&O-werkzaamheden verricht waarvoor u een S&O-verklaring heeft ontvangen?
                   <div className="rvo-helper-text rvo-helper-text--warning">
@@ -170,7 +173,7 @@ const Aanvrager = () => {
                     <input type="radio" id="so-nee" name="so"></input>Nee
                   </label>
                 </div>
-                <h2>Technologiegebied</h2>
+                <h2 className="utrecht-heading-2">Technologiegebied</h2>
                 <div className="rvo-form-field">
                   <label htmlFor="technologiegebied">Technologiegebied</label>
                   <select id="technologiegebied">
@@ -184,7 +187,7 @@ const Aanvrager = () => {
                     <dd>geowetenschappen | meteorologie | klimaatonderzoek | water & ecologie onderzoek</dd>
                   </dl>
                 </details>
-                <h2>Periode aanvraag</h2>
+                <h2 className="utrecht-heading-2">Periode aanvraag</h2>
                 <div className="rvo-form-field">
                   <label htmlFor="maand-aanvang">
                     Maand aanvang
