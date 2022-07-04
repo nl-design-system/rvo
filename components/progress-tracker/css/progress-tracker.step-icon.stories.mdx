@@ -1,5 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, IndicatorIcon } from "./template.indicator-icon";
+import { argTypes, defaultArgs, StepIcon } from "./template.step-icon";
 
 <Meta
   title="CSS Components/Progress Tracker/Elements"
@@ -11,12 +11,12 @@ import { argTypes, defaultArgs, IndicatorIcon } from "./template.indicator-icon"
   }}
 />
 
-# Indicator icon
+# Step icon
 
 <Canvas>
-  <Story name="Indicator icon" args={defaultArgs}>
-    {IndicatorIcon.bind({})}
+  <Story name="Step icon" args={defaultArgs}>
+    {StepIcon.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Indicator icon" />
+<ArgsTable story="Step icon" />

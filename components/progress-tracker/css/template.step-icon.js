@@ -22,9 +22,9 @@ export const defaultArgs = {
   size: 'medium',
 };
 
-export const IndicatorIcon = ({ state = defaultArgs.state, size = defaultArgs.size }) =>
+export const StepIcon = ({ state = defaultArgs.state, size = defaultArgs.size }) =>
   `<div class="${clsx(
-    'rvo-progress-tracker__indicator-icon',
-    `rvo-progress-tracker__indicator-icon--${state}`,
-    `rvo-progress-tracker__indicator-icon--${size}`,
+    'rvo-progress-tracker__step-icon',
+    `rvo-progress-tracker__step-icon--${state}`,
+    `rvo-progress-tracker__step-icon--${size}`,
   )}"></div>`;

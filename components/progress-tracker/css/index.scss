@@ -5,20 +5,20 @@
 @use "../../../proprietary/assets/icons";
 @use "../../../proprietary/assets/images";
 
-.rvo-progress-tracker__indicator-icon {
+.rvo-progress-tracker__step-icon {
   display: inline-block;
 }
 
-.rvo-progress-tracker__indicator-icon--start,
-.rvo-progress-tracker__indicator-icon--end {
+.rvo-progress-tracker__step-icon--start,
+.rvo-progress-tracker__step-icon--end {
   background-color: var(--rvo-color-hemelblauw);
   border-radius: 5px;
   height: 10px;
   width: 10px;
 }
 
-.rvo-progress-tracker__indicator-icon--incomplete,
-.rvo-progress-tracker__indicator-icon--disabled {
+.rvo-progress-tracker__step-icon--incomplete,
+.rvo-progress-tracker__step-icon--disabled {
   background-color: var(--rvo-color-wit);
   border-color: var(--rvo-color-hemelblauw);
   border-radius: 13px;
@@ -29,7 +29,7 @@
   width: 26px;
 }
 
-.rvo-progress-tracker__indicator-icon--doing {
+.rvo-progress-tracker__step-icon--doing {
   background-color: var(--rvo-color-wit);
   border-color: var(--rvo-color-hemelblauw);
   border-radius: 13px;
@@ -53,7 +53,7 @@
   }
 }
 
-.rvo-progress-tracker__indicator-icon--completed {
+.rvo-progress-tracker__step-icon--completed {
   background-color: var(--rvo-color-wit);
   border-color: var(--rvo-color-hemelblauw);
   border-radius: 13px;
