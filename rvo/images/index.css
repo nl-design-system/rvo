@@ -1,0 +1,12 @@
+:root {
+  --rvo-image-logo: url("logo.svg");
+  --rvo-image-progress-line-indent: url("progress-tracker/progress-line-indent.svg");
+}
+
+.rvo-image-bg--logo {
+  background-image: url("logo.svg");
+}
+
+.rvo-image-bg--progress-line-indent {
+  background-image: url("progress-tracker/progress-line-indent.svg");
+}

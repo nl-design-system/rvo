@@ -1,3 +1,76 @@
+:root {
+  --rvo-icon-activiteit: url("functioneel/activiteit.svg");
+  --rvo-icon-agile-werken: url("functioneel/agile-werken.svg");
+  --rvo-icon-api-inrichting: url("functioneel/api-inrichting.svg");
+  --rvo-icon-audio: url("functioneel/audio.svg");
+  --rvo-icon-bel: url("functioneel/bel.svg");
+  --rvo-icon-bewerken: url("functioneel/bewerken.svg");
+  --rvo-icon-blog: url("functioneel/blog.svg");
+  --rvo-icon-comment: url("functioneel/comment.svg");
+  --rvo-icon-communicatie: url("functioneel/communicatie.svg");
+  --rvo-icon-delen: url("functioneel/delen.svg");
+  --rvo-icon-delta-naar-links: url("functioneel/delta-naar-links.svg");
+  --rvo-icon-delta-naar-rechts: url("functioneel/delta-naar-rechts.svg");
+  --rvo-icon-delta-omhoog: url("functioneel/delta-omhoog.svg");
+  --rvo-icon-delta-omlaag: url("functioneel/delta-omlaag.svg");
+  --rvo-icon-diagonale-pijl: url("functioneel/diagonale-pijl.svg");
+  --rvo-icon-downloaden: url("functioneel/downloaden.svg");
+  --rvo-icon-externe-link: url("functioneel/externe-link.svg");
+  --rvo-icon-favoriet: url("functioneel/favoriet.svg");
+  --rvo-icon-foto-vergroten: url("functioneel/foto-vergroten.svg");
+  --rvo-icon-gegevensuitwisseling: url("functioneel/gegevensuitwisseling.svg");
+  --rvo-icon-geluid-aan: url("functioneel/geluid-aan.svg");
+  --rvo-icon-geluid-uit: url("functioneel/geluid-uit.svg");
+  --rvo-icon-haakse-pijl: url("functioneel/haakse-pijl.svg");
+  --rvo-icon-hashtag: url("functioneel/hashtag.svg");
+  --rvo-icon-home: url("functioneel/home.svg");
+  --rvo-icon-info: url("functioneel/info.svg");
+  --rvo-icon-inloggen: url("functioneel/inloggen.svg");
+  --rvo-icon-instellingen: url("functioneel/instellingen.svg");
+  --rvo-icon-interne-link: url("functioneel/interne-link.svg");
+  --rvo-icon-kalender: url("functioneel/kalender.svg");
+  --rvo-icon-klok: url("functioneel/klok.svg");
+  --rvo-icon-kruis: url("functioneel/kruis.svg");
+  --rvo-icon-let-op-met-loep: url("functioneel/let-op-met-loep.svg");
+  --rvo-icon-let-op: url("functioneel/let-op.svg");
+  --rvo-icon-locatiemarker: url("functioneel/locatiemarker.svg");
+  --rvo-icon-mail: url("functioneel/mail.svg");
+  --rvo-icon-meer: url("functioneel/meer.svg");
+  --rvo-icon-menu: url("functioneel/menu.svg");
+  --rvo-icon-nieuws: url("functioneel/nieuws.svg");
+  --rvo-icon-permanent-beta: url("functioneel/permanent-beta.svg");
+  --rvo-icon-pijl-naar-rechts: url("functioneel/pijl-naar-rechts.svg");
+  --rvo-icon-pijl-naar-rechtsboven: url("functioneel/pijl-naar-rechtsboven.svg");
+  --rvo-icon-pijl-omhoog: url("functioneel/pijl-omhoog.svg");
+  --rvo-icon-pijl-omlaag: url("functioneel/pijl-omlaag.svg");
+  --rvo-icon-plus: url("functioneel/plus.svg");
+  --rvo-icon-printer: url("functioneel/printer.svg");
+  --rvo-icon-publicatie: url("functioneel/publicatie.svg");
+  --rvo-icon-rechte-pijl: url("functioneel/rechte-pijl.svg");
+  --rvo-icon-refresh: url("functioneel/refresh.svg");
+  --rvo-icon-rss: url("functioneel/rss.svg");
+  --rvo-icon-secure-link: url("functioneel/secure-link.svg");
+  --rvo-icon-smartphone: url("functioneel/smartphone.svg");
+  --rvo-icon-tegelweergave: url("functioneel/tegelweergave.svg");
+  --rvo-icon-telefoon: url("functioneel/telefoon.svg");
+  --rvo-icon-terug: url("functioneel/terug.svg");
+  --rvo-icon-toegankelijkheid: url("functioneel/toegankelijkheid.svg");
+  --rvo-icon-toelichting: url("functioneel/toelichting.svg");
+  --rvo-icon-uit-aanknop: url("functioneel/uit-aanknop.svg");
+  --rvo-icon-upload: url("functioneel/upload.svg");
+  --rvo-icon-user: url("functioneel/user.svg");
+  --rvo-icon-versleutelen: url("functioneel/versleutelen.svg");
+  --rvo-icon-verwijderen: url("functioneel/verwijderen.svg");
+  --rvo-icon-verzenden: url("functioneel/verzenden.svg");
+  --rvo-icon-video: url("functioneel/video.svg");
+  --rvo-icon-vinkje: url("functioneel/vinkje.svg");
+  --rvo-icon-vraagteken: url("functioneel/vraagteken.svg");
+  --rvo-icon-zoek: url("functioneel/zoek.svg");
+  --rvo-icon-bevestiging: url("status/bevestiging.svg");
+  --rvo-icon-foutmelding: url("status/foutmelding.svg");
+  --rvo-icon-waarschuwing: url("status/waarschuwing.svg");
+}
+
 .rvo-icon--activiteit {
   -webkit-mask-image: url("functioneel/activiteit.svg");
   mask-image: url("functioneel/activiteit.svg");
@@ -7,6 +80,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--activiteit {
+  background-image: url("functioneel/activiteit.svg");
 }
 
 .rvo-icon--agile-werken {
@@ -20,6 +97,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--agile-werken {
+  background-image: url("functioneel/agile-werken.svg");
+}
+
 .rvo-icon--api-inrichting {
   -webkit-mask-image: url("functioneel/api-inrichting.svg");
   mask-image: url("functioneel/api-inrichting.svg");
@@ -29,6 +110,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--api-inrichting {
+  background-image: url("functioneel/api-inrichting.svg");
 }
 
 .rvo-icon--audio {
@@ -42,6 +127,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--audio {
+  background-image: url("functioneel/audio.svg");
+}
+
 .rvo-icon--bel {
   -webkit-mask-image: url("functioneel/bel.svg");
   mask-image: url("functioneel/bel.svg");
@@ -51,6 +140,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--bel {
+  background-image: url("functioneel/bel.svg");
 }
 
 .rvo-icon--bewerken {
@@ -64,6 +157,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--bewerken {
+  background-image: url("functioneel/bewerken.svg");
+}
+
 .rvo-icon--blog {
   -webkit-mask-image: url("functioneel/blog.svg");
   mask-image: url("functioneel/blog.svg");
@@ -73,6 +170,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--blog {
+  background-image: url("functioneel/blog.svg");
 }
 
 .rvo-icon--comment {
@@ -86,6 +187,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--comment {
+  background-image: url("functioneel/comment.svg");
+}
+
 .rvo-icon--communicatie {
   -webkit-mask-image: url("functioneel/communicatie.svg");
   mask-image: url("functioneel/communicatie.svg");
@@ -95,6 +200,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--communicatie {
+  background-image: url("functioneel/communicatie.svg");
 }
 
 .rvo-icon--delen {
@@ -108,6 +217,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--delen {
+  background-image: url("functioneel/delen.svg");
+}
+
 .rvo-icon--delta-naar-links {
   -webkit-mask-image: url("functioneel/delta-naar-links.svg");
   mask-image: url("functioneel/delta-naar-links.svg");
@@ -117,6 +230,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--delta-naar-links {
+  background-image: url("functioneel/delta-naar-links.svg");
 }
 
 .rvo-icon--delta-naar-rechts {
@@ -130,6 +247,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--delta-naar-rechts {
+  background-image: url("functioneel/delta-naar-rechts.svg");
+}
+
 .rvo-icon--delta-omhoog {
   -webkit-mask-image: url("functioneel/delta-omhoog.svg");
   mask-image: url("functioneel/delta-omhoog.svg");
@@ -139,6 +260,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--delta-omhoog {
+  background-image: url("functioneel/delta-omhoog.svg");
 }
 
 .rvo-icon--delta-omlaag {
@@ -152,6 +277,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--delta-omlaag {
+  background-image: url("functioneel/delta-omlaag.svg");
+}
+
 .rvo-icon--diagonale-pijl {
   -webkit-mask-image: url("functioneel/diagonale-pijl.svg");
   mask-image: url("functioneel/diagonale-pijl.svg");
@@ -161,6 +290,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--diagonale-pijl {
+  background-image: url("functioneel/diagonale-pijl.svg");
 }
 
 .rvo-icon--downloaden {
@@ -174,6 +307,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--downloaden {
+  background-image: url("functioneel/downloaden.svg");
+}
+
 .rvo-icon--externe-link {
   -webkit-mask-image: url("functioneel/externe-link.svg");
   mask-image: url("functioneel/externe-link.svg");
@@ -183,6 +320,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--externe-link {
+  background-image: url("functioneel/externe-link.svg");
 }
 
 .rvo-icon--favoriet {
@@ -196,6 +337,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--favoriet {
+  background-image: url("functioneel/favoriet.svg");
+}
+
 .rvo-icon--foto-vergroten {
   -webkit-mask-image: url("functioneel/foto-vergroten.svg");
   mask-image: url("functioneel/foto-vergroten.svg");
@@ -205,6 +350,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--foto-vergroten {
+  background-image: url("functioneel/foto-vergroten.svg");
 }
 
 .rvo-icon--gegevensuitwisseling {
@@ -218,6 +367,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--gegevensuitwisseling {
+  background-image: url("functioneel/gegevensuitwisseling.svg");
+}
+
 .rvo-icon--geluid-aan {
   -webkit-mask-image: url("functioneel/geluid-aan.svg");
   mask-image: url("functioneel/geluid-aan.svg");
@@ -227,6 +380,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--geluid-aan {
+  background-image: url("functioneel/geluid-aan.svg");
 }
 
 .rvo-icon--geluid-uit {
@@ -240,6 +397,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--geluid-uit {
+  background-image: url("functioneel/geluid-uit.svg");
+}
+
 .rvo-icon--haakse-pijl {
   -webkit-mask-image: url("functioneel/haakse-pijl.svg");
   mask-image: url("functioneel/haakse-pijl.svg");
@@ -249,6 +410,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--haakse-pijl {
+  background-image: url("functioneel/haakse-pijl.svg");
 }
 
 .rvo-icon--hashtag {
@@ -262,6 +427,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--hashtag {
+  background-image: url("functioneel/hashtag.svg");
+}
+
 .rvo-icon--home {
   -webkit-mask-image: url("functioneel/home.svg");
   mask-image: url("functioneel/home.svg");
@@ -271,6 +440,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--home {
+  background-image: url("functioneel/home.svg");
 }
 
 .rvo-icon--info {
@@ -284,6 +457,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--info {
+  background-image: url("functioneel/info.svg");
+}
+
 .rvo-icon--inloggen {
   -webkit-mask-image: url("functioneel/inloggen.svg");
   mask-image: url("functioneel/inloggen.svg");
@@ -293,6 +470,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--inloggen {
+  background-image: url("functioneel/inloggen.svg");
 }
 
 .rvo-icon--instellingen {
@@ -306,6 +487,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--instellingen {
+  background-image: url("functioneel/instellingen.svg");
+}
+
 .rvo-icon--interne-link {
   -webkit-mask-image: url("functioneel/interne-link.svg");
   mask-image: url("functioneel/interne-link.svg");
@@ -315,6 +500,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--interne-link {
+  background-image: url("functioneel/interne-link.svg");
 }
 
 .rvo-icon--kalender {
@@ -328,6 +517,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--kalender {
+  background-image: url("functioneel/kalender.svg");
+}
+
 .rvo-icon--klok {
   -webkit-mask-image: url("functioneel/klok.svg");
   mask-image: url("functioneel/klok.svg");
@@ -337,6 +530,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--klok {
+  background-image: url("functioneel/klok.svg");
 }
 
 .rvo-icon--kruis {
@@ -350,6 +547,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--kruis {
+  background-image: url("functioneel/kruis.svg");
+}
+
 .rvo-icon--let-op-met-loep {
   -webkit-mask-image: url("functioneel/let-op-met-loep.svg");
   mask-image: url("functioneel/let-op-met-loep.svg");
@@ -359,6 +560,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--let-op-met-loep {
+  background-image: url("functioneel/let-op-met-loep.svg");
 }
 
 .rvo-icon--let-op {
@@ -372,6 +577,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--let-op {
+  background-image: url("functioneel/let-op.svg");
+}
+
 .rvo-icon--locatiemarker {
   -webkit-mask-image: url("functioneel/locatiemarker.svg");
   mask-image: url("functioneel/locatiemarker.svg");
@@ -381,6 +590,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--locatiemarker {
+  background-image: url("functioneel/locatiemarker.svg");
 }
 
 .rvo-icon--mail {
@@ -394,6 +607,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--mail {
+  background-image: url("functioneel/mail.svg");
+}
+
 .rvo-icon--meer {
   -webkit-mask-image: url("functioneel/meer.svg");
   mask-image: url("functioneel/meer.svg");
@@ -403,6 +620,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--meer {
+  background-image: url("functioneel/meer.svg");
 }
 
 .rvo-icon--menu {
@@ -416,6 +637,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--menu {
+  background-image: url("functioneel/menu.svg");
+}
+
 .rvo-icon--nieuws {
   -webkit-mask-image: url("functioneel/nieuws.svg");
   mask-image: url("functioneel/nieuws.svg");
@@ -425,6 +650,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--nieuws {
+  background-image: url("functioneel/nieuws.svg");
 }
 
 .rvo-icon--permanent-beta {
@@ -438,6 +667,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--permanent-beta {
+  background-image: url("functioneel/permanent-beta.svg");
+}
+
 .rvo-icon--pijl-naar-rechts {
   -webkit-mask-image: url("functioneel/pijl-naar-rechts.svg");
   mask-image: url("functioneel/pijl-naar-rechts.svg");
@@ -447,6 +680,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--pijl-naar-rechts {
+  background-image: url("functioneel/pijl-naar-rechts.svg");
 }
 
 .rvo-icon--pijl-naar-rechtsboven {
@@ -460,6 +697,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--pijl-naar-rechtsboven {
+  background-image: url("functioneel/pijl-naar-rechtsboven.svg");
+}
+
 .rvo-icon--pijl-omhoog {
   -webkit-mask-image: url("functioneel/pijl-omhoog.svg");
   mask-image: url("functioneel/pijl-omhoog.svg");
@@ -469,6 +710,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--pijl-omhoog {
+  background-image: url("functioneel/pijl-omhoog.svg");
 }
 
 .rvo-icon--pijl-omlaag {
@@ -482,6 +727,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--pijl-omlaag {
+  background-image: url("functioneel/pijl-omlaag.svg");
+}
+
 .rvo-icon--plus {
   -webkit-mask-image: url("functioneel/plus.svg");
   mask-image: url("functioneel/plus.svg");
@@ -491,6 +740,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--plus {
+  background-image: url("functioneel/plus.svg");
 }
 
 .rvo-icon--printer {
@@ -504,6 +757,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--printer {
+  background-image: url("functioneel/printer.svg");
+}
+
 .rvo-icon--publicatie {
   -webkit-mask-image: url("functioneel/publicatie.svg");
   mask-image: url("functioneel/publicatie.svg");
@@ -513,6 +770,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--publicatie {
+  background-image: url("functioneel/publicatie.svg");
 }
 
 .rvo-icon--rechte-pijl {
@@ -526,6 +787,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--rechte-pijl {
+  background-image: url("functioneel/rechte-pijl.svg");
+}
+
 .rvo-icon--refresh {
   -webkit-mask-image: url("functioneel/refresh.svg");
   mask-image: url("functioneel/refresh.svg");
@@ -535,6 +800,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--refresh {
+  background-image: url("functioneel/refresh.svg");
 }
 
 .rvo-icon--rss {
@@ -548,6 +817,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--rss {
+  background-image: url("functioneel/rss.svg");
+}
+
 .rvo-icon--secure-link {
   -webkit-mask-image: url("functioneel/secure-link.svg");
   mask-image: url("functioneel/secure-link.svg");
@@ -557,6 +830,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--secure-link {
+  background-image: url("functioneel/secure-link.svg");
 }
 
 .rvo-icon--smartphone {
@@ -570,6 +847,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--smartphone {
+  background-image: url("functioneel/smartphone.svg");
+}
+
 .rvo-icon--tegelweergave {
   -webkit-mask-image: url("functioneel/tegelweergave.svg");
   mask-image: url("functioneel/tegelweergave.svg");
@@ -579,6 +860,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--tegelweergave {
+  background-image: url("functioneel/tegelweergave.svg");
 }
 
 .rvo-icon--telefoon {
@@ -592,6 +877,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--telefoon {
+  background-image: url("functioneel/telefoon.svg");
+}
+
 .rvo-icon--terug {
   -webkit-mask-image: url("functioneel/terug.svg");
   mask-image: url("functioneel/terug.svg");
@@ -601,6 +890,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--terug {
+  background-image: url("functioneel/terug.svg");
 }
 
 .rvo-icon--toegankelijkheid {
@@ -614,6 +907,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--toegankelijkheid {
+  background-image: url("functioneel/toegankelijkheid.svg");
+}
+
 .rvo-icon--toelichting {
   -webkit-mask-image: url("functioneel/toelichting.svg");
   mask-image: url("functioneel/toelichting.svg");
@@ -623,6 +920,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--toelichting {
+  background-image: url("functioneel/toelichting.svg");
 }
 
 .rvo-icon--uit-aanknop {
@@ -636,6 +937,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--uit-aanknop {
+  background-image: url("functioneel/uit-aanknop.svg");
+}
+
 .rvo-icon--upload {
   -webkit-mask-image: url("functioneel/upload.svg");
   mask-image: url("functioneel/upload.svg");
@@ -645,6 +950,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--upload {
+  background-image: url("functioneel/upload.svg");
 }
 
 .rvo-icon--user {
@@ -658,6 +967,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--user {
+  background-image: url("functioneel/user.svg");
+}
+
 .rvo-icon--versleutelen {
   -webkit-mask-image: url("functioneel/versleutelen.svg");
   mask-image: url("functioneel/versleutelen.svg");
@@ -667,6 +980,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--versleutelen {
+  background-image: url("functioneel/versleutelen.svg");
 }
 
 .rvo-icon--verwijderen {
@@ -680,6 +997,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--verwijderen {
+  background-image: url("functioneel/verwijderen.svg");
+}
+
 .rvo-icon--verzenden {
   -webkit-mask-image: url("functioneel/verzenden.svg");
   mask-image: url("functioneel/verzenden.svg");
@@ -689,6 +1010,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--verzenden {
+  background-image: url("functioneel/verzenden.svg");
 }
 
 .rvo-icon--video {
@@ -702,6 +1027,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--video {
+  background-image: url("functioneel/video.svg");
+}
+
 .rvo-icon--vinkje {
   -webkit-mask-image: url("functioneel/vinkje.svg");
   mask-image: url("functioneel/vinkje.svg");
@@ -711,6 +1040,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--vinkje {
+  background-image: url("functioneel/vinkje.svg");
 }
 
 .rvo-icon--vraagteken {
@@ -724,6 +1057,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--vraagteken {
+  background-image: url("functioneel/vraagteken.svg");
+}
+
 .rvo-icon--zoek {
   -webkit-mask-image: url("functioneel/zoek.svg");
   mask-image: url("functioneel/zoek.svg");
@@ -733,6 +1070,10 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--zoek {
+  background-image: url("functioneel/zoek.svg");
 }
 
 .rvo-icon--bevestiging {
@@ -746,6 +1087,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--bevestiging {
+  background-image: url("status/bevestiging.svg");
+}
+
 .rvo-icon--foutmelding {
   -webkit-mask-image: url("status/foutmelding.svg");
   mask-image: url("status/foutmelding.svg");
@@ -757,6 +1102,10 @@
   mask-size: 100%;
 }
 
+.rvo-icon-bg--foutmelding {
+  background-image: url("status/foutmelding.svg");
+}
+
 .rvo-icon--waarschuwing {
   -webkit-mask-image: url("status/waarschuwing.svg");
   mask-image: url("status/waarschuwing.svg");
@@ -766,4 +1115,8 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+}
+
+.rvo-icon-bg--waarschuwing {
+  background-image: url("status/waarschuwing.svg");
 }

@@ -1,0 +1,29 @@
+@mixin rvo-image-logo-mask {
+  -webkit-mask-image: url("logo.svg");
+  mask-image: url("logo.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-logo-bg {
+  background-image: url("logo.svg");
+}
+
+@mixin rvo-image-progress-line-indent-mask {
+  -webkit-mask-image: url("progress-tracker/progress-line-indent.svg");
+  mask-image: url("progress-tracker/progress-line-indent.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-line-indent-bg {
+  background-image: url("progress-tracker/progress-line-indent.svg");
+}
