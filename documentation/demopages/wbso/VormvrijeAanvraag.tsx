@@ -47,7 +47,7 @@ const VormvrijeAanvraag = () => {
         </div>
       </div>
 
-      <main className="rvo-progress-tracker-active">
+      <main className="rvo-progress-tracker-active rvo-max-width-layout rvo-max-width-layout--lg">
         <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
           <div className="rvo-main-steps rvo-main-steps--no-sub-steps">
             <div className="rvo-process-step rvo-process-step--process-name">Aanvraag WBSO</div>
