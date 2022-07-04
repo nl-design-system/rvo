@@ -19,7 +19,7 @@
   // }
 
   p,
-  ul,
+  .rvo-content ul,
   ol,
   dl,
   blockquote,
@@ -882,10 +882,6 @@
     background-color: var(--rvo-color-donkerblauw);
   }
 
-  .rvo-topnav--submenu {
-    margin-block-start: calc(var(--rvo-space-md) * -1);
-  }
-
   .rvo-topnav__list--submenu {
     background-color: var(--rvo-color-donkerblauw);
   }
@@ -898,6 +894,19 @@
   .rvo-topnav__link--submenu {
     align-items: flex-start;
     text-align: start;
+  }
+
+  /* @SEARCH IN NAV */
+
+  .rvo-topnav__link--search-active {
+    background-color: var(--rvo-color-grijs1);
+    color: var(--rvo-color-grijs7);
+  }
+
+  .rvo-topnav__link--search-active:hover,
+  .rvo-topnav__link--search-active:focus {
+    background-color: var(--rvo-color-grijs2);
+    color: var(--rvo-color-grijs7);
   }
 
   // h2 + .rvo-data,
