@@ -874,6 +874,32 @@
     background-color: var(--rvo-color-zwart);
   }
 
+  /* @SUBMENU */
+
+  .rvo-topnav__link--expanded,
+  .rvo-topnav__link--expanded:hover,
+  .rvo-topnav__link--expanded:focus {
+    background-color: var(--rvo-color-donkerblauw);
+  }
+
+  .rvo-topnav--submenu {
+    margin-block-start: calc(var(--rvo-space-md) * -1);
+  }
+
+  .rvo-topnav__list--submenu {
+    background-color: var(--rvo-color-donkerblauw);
+  }
+
+  .rvo-topnav__list--submenu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .rvo-topnav__link--submenu {
+    align-items: flex-start;
+    text-align: start;
+  }
+
   // h2 + .rvo-data,
   // summary + .rvo-data {
   //   margin-block-start: var(--rvo-space-sm);
