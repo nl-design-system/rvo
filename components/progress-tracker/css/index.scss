@@ -77,3 +77,30 @@
     @include icons.rvo-icon-vinkje-mask;
   }
 }
+
+.rvo-progress-tracker__step-label {
+  display: inline-block;
+  font-size: 18px;
+  padding-block-start: var(--rvo-space-2xs);
+}
+
+a.rvo-progress-tracker__step-label {
+  color: var(--rvo-color-hemelblauw);
+  font-weight: var(--rvo-font-weight-bold);
+  text-decoration: none;
+}
+
+a.rvo-progress-tracker__step-label:hover {
+  color: var(--rvo-link-hover-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+a.rvo-progress-tracker__step-label:focus {
+  background-color: var(--rvo-link-focus-background-color);
+  color: var(--rvo-link-focus-color);
+  font-weight: var(--rvo-link-focus-font-weight);
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
