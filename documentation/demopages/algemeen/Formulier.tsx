@@ -86,52 +86,84 @@ const Formulier = () => {
         <div className="rvo-form">
           <div className="intro">
             <a href="#" className="rvo-link">
-              <span className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--md rvo-icon--hemelblauw rvo-icon--terug"></span>
+              <div className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--sm rvo-icon--hemelblauw rvo-icon--terug"></div>
               Terug
             </a>
-            <h1 className="utrecht-heading-1 utrecht-heading-1--distanced">Heading</h1>
+            <h1 className="utrecht-heading-1">Heading</h1>
           </div>
           <form>
-            <fieldset>
-              <h2 className="utrecht-heading-2 utrecht-heading-2--distanced">Keyboard inputs</h2>
+            <fieldset className="utrecht-form-fieldset">
+              <legend className="utrecht-form-fieldset__legend">Keyboard inputs</legend>
               <div className="rvo-form-field">
-                <label htmlFor="text">Text</label>
-                <input type="text" id="text"></input>
-              </div>
-              <div className="rvo-form-field">
-                <label htmlFor="text-w-helper-text">
-                  Text with helper text
-                  <div className="rvo-helper-text">This is a helper text which can be used for instructions.</div>
+                <label className="rvo-form-field__label" htmlFor="text">
+                  <span className="rvo-form-field__label-text">Text</span>
                 </label>
-                <input type="text" id="text-w-helper-text"></input>
+                <input type="text" id="text" className="utrecht-textbox utrecht-textbox--html-input"></input>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="text-w-expandable-helper-text">
-                  Text with expandable helper text
-                  <details className="rvo-helper-text">
-                    <summary>Expandable helper text</summary>
-                    <span className="rvo-details-text">
-                      When instructions run over multiple lines an expandable helper text can be used.
-                    </span>
-                  </details>
+                <label className="rvo-form-field__label" htmlFor="text-w-helper-text">
+                  <span className="rvo-form-field__label-text">Text with helper text</span>
+                  <div className="rvo-form-field__helper-text">
+                    This is a helper text which can be used for instructions.
+                  </div>
                 </label>
-                <input type="text" id="text-w-expandable-helper-text"></input>
+                <input
+                  type="text"
+                  id="text-w-helper-text"
+                  className="utrecht-textbox utrecht-textbox--html-input"
+                ></input>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="text-disabled">Text disabled</label>
-                <input type="text" id="text-disabled" disabled></input>
+                <label className="rvo-form-field__label" htmlFor="text-w-expandable-helper-text">
+                  <span className="rvo-form-field__label-text">Text with expandable helper text</span>
+                  <div className="rvo-form-field__helper-text">
+                    <details className="rvo-expandable-text">
+                      <summary>Expandable helper text</summary>
+                      <span className="rvo-expandable-text__details">
+                        When instructions run over multiple lines an expandable helper text can be used.
+                      </span>
+                    </details>
+                  </div>
+                </label>
+                <input
+                  type="text"
+                  id="text-w-expandable-helper-text"
+                  className="utrecht-textbox utrecht-textbox--html-input"
+                ></input>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="text-disabled-w-value">Text disabled with value</label>
+                <label className="rvo-form-field__label" htmlFor="text-disabled">
+                  <span className="rvo-form-field__label-text">Text disabled</span>
+                </label>
+                <input
+                  type="text"
+                  id="text-disabled"
+                  className="utrecht-textbox utrecht-textbox--html-input"
+                  disabled
+                ></input>
+              </div>
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="text-disabled-w-value">
+                  <span className="rvo-form-field__label-text">Text disabled with value</span>
+                </label>
                 <input type="text" id="text-disabled-w-value" value="Value" disabled></input>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="number">Number</label>
-                <input type="text" inputMode="numeric" pattern="[0-9]*" id="number"></input>
+                <label className="rvo-form-field__label" htmlFor="number">
+                  <span className="rvo-form-field__label-text">Number</span>
+                </label>
+                <input
+                  type="text"
+                  className="utrecht-textbox utrecht-textbox--html-input"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                ></input>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="textarea">Textarea</label>
-                <textarea id="textarea"></textarea>
+                <label className="rvo-form-field__label" htmlFor="textarea">
+                  <span className="rvo-form-field__label-text">Textarea</span>
+                </label>
+                <textarea id="textarea" className="utrecht-textbox utrecht-textbox--html-input"></textarea>
               </div>
               <div className="rvo-form-field">
                 <label htmlFor="file">File</label>

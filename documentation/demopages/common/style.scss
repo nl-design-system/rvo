@@ -359,24 +359,6 @@
     padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
   }
 
-  legend {
-    font-size: var(--rvo-font-size-xl);
-    font-weight: var(--rvo-font-weight-bold);
-    padding-block-end: 0;
-    padding-block-start: 0;
-    padding-inline-end: 0;
-    padding-inline-start: 0;
-  }
-
-  .rvo-options legend {
-    font-size: var(--rvo-font-size-md);
-  }
-
-  label {
-    font-weight: var(--rvo-font-weight-bold);
-    margin-block-end: var(--rvo-space-sm);
-  }
-
   .rvo-options label {
     font-weight: var(--rvo-font-weight-regular);
   }
