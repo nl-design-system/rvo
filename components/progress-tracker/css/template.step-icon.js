@@ -11,8 +11,8 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   size: {
-    options: ['small', 'medium', 'large'],
-    mapping: { small: 'sm', medium: 'md', large: 'lg' },
+    options: ['small', 'medium'],
+    mapping: { small: 'sm', medium: 'md' },
     control: { type: 'radio' },
   },
 };
@@ -26,5 +26,5 @@ export const StepIcon = ({ state = defaultArgs.state, size = defaultArgs.size })
   `<div class="${clsx(
     'rvo-progress-tracker__step-icon',
     `rvo-progress-tracker__step-icon--${state}`,
-    `rvo-progress-tracker__step-icon--${size}`,
+    size === 'sm' && `rvo-progress-tracker__step-icon--${size}`,
   )}"></div>`;
