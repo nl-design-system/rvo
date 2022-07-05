@@ -1,0 +1,22 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Step } from "./template.step";
+
+<Meta
+  title="CSS Components/Progress Tracker/Step"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Step
+
+<Canvas>
+  <Story name="Step" args={defaultArgs}>
+    {Step.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Step" />

@@ -30,7 +30,6 @@ export const argTypes = {
 export const defaultArgs = {
   type: 'default',
   disabled: false,
-  size: 'medium',
   textContent: 'Step label',
   link: '#',
 };
@@ -38,7 +37,6 @@ export const defaultArgs = {
 export const StepLabel = ({
   type = defaultArgs.type,
   disabled = defaultArgs.disabled,
-  size = defaultArgs.size,
   textContent = defaultArgs.textContent,
   link = defaultArgs.link,
 }) => {
@@ -46,14 +44,10 @@ export const StepLabel = ({
     return `<a href="${link}" class="${clsx(
       'rvo-progress-tracker__step-label',
       `rvo-progress-tracker__step-label--${type}`,
-      `rvo-progress-tracker__step-label--${size}`,
     )}">${textContent}</a>`;
   } else {
-    return `<span class="${clsx(
-      'rvo-progress-tracker__step-label',
-      `rvo-progress-tracker__step-label--${type}`,
-      `rvo-progress-tracker__step-label--${size}`,
-      { 'rvo-progress-tracker__step-label--disabled': disabled },
-    )}">${textContent}</span>`;
+    return `<span class="${clsx('rvo-progress-tracker__step-label', `rvo-progress-tracker__step-label--${type}`, {
+      'rvo-progress-tracker__step-label--disabled': disabled,
+    })}">${textContent}</span>`;
   }
 };
