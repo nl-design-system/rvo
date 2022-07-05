@@ -13,9 +13,9 @@
   background-image: url("logo.svg");
 }
 
-@mixin rvo-image-progress-line-indent-mask {
-  -webkit-mask-image: url("progress-tracker/progress-line-indent.svg");
-  mask-image: url("progress-tracker/progress-line-indent.svg");
+@mixin rvo-image-progress-tracker-completed-md-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-completed-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-completed-md.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -24,6 +24,111 @@
   mask-size: 100%;
 }
 
-@mixin rvo-image-progress-line-indent-bg {
-  background-image: url("progress-tracker/progress-line-indent.svg");
+@mixin rvo-image-progress-tracker-completed-md-bg {
+  background-image: url("progress-tracker/progress-tracker-completed-md.svg");
+}
+
+@mixin rvo-image-progress-tracker-completed-sm-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-completed-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-completed-sm.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-completed-sm-bg {
+  background-image: url("progress-tracker/progress-tracker-completed-sm.svg");
+}
+
+@mixin rvo-image-progress-tracker-doing-md-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-doing-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-doing-md.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-doing-md-bg {
+  background-image: url("progress-tracker/progress-tracker-doing-md.svg");
+}
+
+@mixin rvo-image-progress-tracker-doing-sm-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-doing-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-doing-sm.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-doing-sm-bg {
+  background-image: url("progress-tracker/progress-tracker-doing-sm.svg");
+}
+
+@mixin rvo-image-progress-tracker-incomplete-md-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-incomplete-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-incomplete-md.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-incomplete-md-bg {
+  background-image: url("progress-tracker/progress-tracker-incomplete-md.svg");
+}
+
+@mixin rvo-image-progress-tracker-incomplete-sm-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-incomplete-sm-bg {
+  background-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
+}
+
+@mixin rvo-image-progress-tracker-line-indent-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-indent.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-indent.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-line-indent-bg {
+  background-image: url("progress-tracker/progress-tracker-line-indent.svg");
+}
+
+@mixin rvo-image-progress-tracker-start-end-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-start-end.svg");
+  mask-image: url("progress-tracker/progress-tracker-start-end.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-start-end-bg {
+  background-image: url("progress-tracker/progress-tracker-start-end.svg");
 }
