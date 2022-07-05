@@ -34,12 +34,19 @@ const SearchInNav = () => {
       </nav>
       <div className="search-form">
         <fieldset>
-          <div className="rvo-form-field">
-            <label className="rvo-form-field__label" htmlFor="search">
-              <span className="rvo-form-field__label-text">Field label</span>
-              <div className="rvo-form-field__helper-text">Helper text</div>
-            </label>
-            <input id="search" className="utrecht-textbox utrecht-textbox--html-input" value=""></input>
+          <div className="rvo-form-layout">
+            <div className="rvo-inline-form">
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="search">
+                  <span className="rvo-form-field__label-text">Zoekterm</span>
+                </label>
+                <input id="search" className="utrecht-textbox utrecht-textbox--html-input" value=""></input>
+              </div>
+              <button className="utrecht-button utrecht-button--primary-action rvo-button--md">
+                <div className="rvo-button__icon--primary-action rvo-icon rvo-icon--zoek rvo-icon--md"></div>
+                Zoeken
+              </button>
+            </div>
           </div>
         </fieldset>
       </div>
