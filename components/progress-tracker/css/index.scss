@@ -2,137 +2,84 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "../../../proprietary/assets/icons";
 @use "../../../proprietary/assets/images";
+
+.rvo-progress-tracker {
+  max-width: 580px;
+}
 
 .rvo-progress-tracker__step {
   align-items: center;
   display: flex;
-  gap: var(--rvo-space-md);
   min-height: 36px;
-}
-
-.rvo-progress-tracker__step--sm {
-  gap: var(--rvo-space-sm);
-
-  .rvo-progress-tracker__step-icon {
-    transform: scale(0.75);
-  }
-
-  .rvo-progress-tracker__step-label--start {
-    font-size: var(--rvo-font-size-lg);
-  }
-
-  .rvo-progress-tracker__step-label--end {
-    font-size: var(--rvo-font-size-sm);
-  }
-}
-
-.rvo-progress-tracker__step--md {
-  .rvo-progress-tracker__step-label--default {
-    font-size: 18px;
-  }
-
-  .rvo-progress-tracker__step-label--start {
-    font-size: var(--rvo-font-size-xl);
-  }
-
-  .rvo-progress-tracker__step-label--end {
-    font-size: var(--rvo-font-size-sm);
-  }
-}
-
-.rvo-progress-tracker__step-icon {
-  display: inline-block;
-}
-
-.rvo-progress-tracker__step-icon--start,
-.rvo-progress-tracker__step-icon--end {
-  background-color: var(--rvo-color-hemelblauw);
-  border-radius: 5px;
-  height: 10px;
-  width: 10px;
-}
-
-.rvo-progress-tracker__step-icon--incomplete,
-.rvo-progress-tracker__step-icon--disabled {
-  background-color: var(--rvo-color-wit);
-  border-color: var(--rvo-color-hemelblauw);
-  border-radius: 14px;
-  border-style: solid;
-  border-width: 3px;
-  box-sizing: border-box;
-  height: 28px;
-  width: 28px;
-}
-
-.rvo-progress-tracker__step-icon--doing {
-  background-color: var(--rvo-color-wit);
-  border-color: var(--rvo-color-hemelblauw);
-  border-radius: 14px;
-  border-style: solid;
-  border-width: 3px;
-  box-sizing: border-box;
-  height: 28px;
+  padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-lg));
   position: relative;
-  width: 28px;
 
   &::after {
-    background-color: var(--rvo-color-hemelblauw);
-    border-radius: 8px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
     content: "";
     display: inline-block;
-    height: 16px;
-    left: 3px;
+    left: 0;
+    min-height: 36px;
     position: absolute;
-    top: 3px;
-    width: 16px;
+    top: 0;
+    width: calc(var(--rvo-space-sm) + var(--rvo-space-lg));
+  }
+
+  &::before {
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 28px;
   }
 }
 
-.rvo-progress-tracker__step-icon--completed {
-  background-color: var(--rvo-color-wit);
-  border-color: var(--rvo-color-hemelblauw);
-  border-radius: 14px;
-  border-style: solid;
-  border-width: 3px;
-  box-sizing: border-box;
-  height: 28px;
-  position: relative;
-  width: 28px;
+.rvo-progress-tracker__step--straight::before {
+  @include images.rvo-image-progress-tracker-line-straight-bg;
+}
 
-  &::after {
-    background-color: var(--rvo-color-hemelblauw);
-    content: "";
-    display: inline-block;
-    height: 16px;
-    left: 3px;
-    mask-size: 90% !important;
-    position: absolute;
-    top: 3px;
-    width: 16px;
-    @include icons.rvo-icon-vinkje-mask;
+.rvo-progress-tracker__step--substep-start {
+  padding-block-end: var(--rvo-space-sm);
+  &::before {
+    @include images.rvo-image-progress-tracker-line-indent-bg;
   }
 }
 
-.rvo-progress-tracker__step-label {
-  display: inline-block;
-  padding-block-start: var(--rvo-space-2xs);
+.rvo-progress-tracker__step--substep-end {
+  padding-block-end: var(--rvo-space-sm);
+  &::before {
+    @include images.rvo-image-progress-tracker-line-indent-bg;
+
+    transform: rotateY(180deg);
+  }
 }
 
-a.rvo-progress-tracker__step-label {
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--straight::before,
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--substep-start::before,
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--substep-end::before {
+  left: 6px;
+}
+
+.rvo-progress-tracker__step-link {
   color: var(--rvo-color-hemelblauw);
+  display: inline-block;
   font-weight: var(--rvo-font-weight-bold);
+  padding-block-start: var(--rvo-space-2xs);
   text-decoration: none;
 }
 
-a.rvo-progress-tracker__step-label:hover {
+.rvo-progress-tracker__step-link:hover {
   color: var(--rvo-link-hover-color);
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
-a.rvo-progress-tracker__step-label:focus {
+.rvo-progress-tracker__step-link:focus {
   background-color: var(--rvo-link-focus-background-color);
   color: var(--rvo-link-focus-color);
   font-weight: var(--rvo-link-focus-font-weight);
@@ -141,10 +88,64 @@ a.rvo-progress-tracker__step-label:focus {
   text-decoration-thickness: 3px;
 }
 
-.rvo-progress-tracker__step-label--start {
+.rvo-progress-tracker__step--start {
+  font-size: var(--rvo-font-size-xl);
   font-weight: var(--rvo-font-weight-bold);
 }
 
-.rvo-progress-tracker__step-label--end {
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--start::after {
+  @include images.rvo-image-progress-tracker-start-end-md-bg;
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--start::after {
+  @include images.rvo-image-progress-tracker-start-end-sm-bg;
+}
+
+.rvo-progress-tracker__step--end {
+  font-size: var(--rvo-font-size-sm);
   font-weight: var(--rvo-font-weight-bold);
+}
+
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--end::after {
+  @include images.rvo-image-progress-tracker-start-end-md-bg;
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--end::after {
+  @include images.rvo-image-progress-tracker-start-end-sm-bg;
+}
+
+.rvo-progress-tracker__step--sm::after {
+  background-position: 9px center;
+}
+
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete::after {
+  @include images.rvo-image-progress-tracker-incomplete-md-bg;
+}
+
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--disabled::after {
+  @include images.rvo-image-progress-tracker-incomplete-md-bg;
+}
+
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--completed::after {
+  @include images.rvo-image-progress-tracker-completed-md-bg;
+}
+
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--doing::after {
+  @include images.rvo-image-progress-tracker-doing-md-bg;
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--incomplete::after {
+  @include images.rvo-image-progress-tracker-incomplete-sm-bg;
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--disabled::after {
+  @include images.rvo-image-progress-tracker-incomplete-sm-bg;
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--completed::after {
+  @include images.rvo-image-progress-tracker-completed-sm-bg;
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--doing::after {
+  @include images.rvo-image-progress-tracker-doing-sm-bg;
 }

@@ -8,6 +8,8 @@ export default {
     PROGRESS_TRACKER_INCOMPLETE_MD: 'progress-tracker/progress-tracker-incomplete-md.svg',
     PROGRESS_TRACKER_INCOMPLETE_SM: 'progress-tracker/progress-tracker-incomplete-sm.svg',
     PROGRESS_TRACKER_LINE_INDENT: 'progress-tracker/progress-tracker-line-indent.svg',
-    PROGRESS_TRACKER_START_END: 'progress-tracker/progress-tracker-start-end.svg',
+    PROGRESS_TRACKER_LINE_STRAIGHT: 'progress-tracker/progress-tracker-line-straight.svg',
+    PROGRESS_TRACKER_START_END_MD: 'progress-tracker/progress-tracker-start-end-md.svg',
+    PROGRESS_TRACKER_START_END_SM: 'progress-tracker/progress-tracker-start-end-sm.svg',
   },
 };

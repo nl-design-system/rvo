@@ -118,9 +118,9 @@
   background-image: url("progress-tracker/progress-tracker-line-indent.svg");
 }
 
-@mixin rvo-image-progress-tracker-start-end-mask {
-  -webkit-mask-image: url("progress-tracker/progress-tracker-start-end.svg");
-  mask-image: url("progress-tracker/progress-tracker-start-end.svg");
+@mixin rvo-image-progress-tracker-line-straight-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-straight.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-straight.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -129,6 +129,36 @@
   mask-size: 100%;
 }
 
-@mixin rvo-image-progress-tracker-start-end-bg {
-  background-image: url("progress-tracker/progress-tracker-start-end.svg");
+@mixin rvo-image-progress-tracker-line-straight-bg {
+  background-image: url("progress-tracker/progress-tracker-line-straight.svg");
+}
+
+@mixin rvo-image-progress-tracker-start-end-md-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-start-end-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-start-end-md.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-start-end-md-bg {
+  background-image: url("progress-tracker/progress-tracker-start-end-md.svg");
+}
+
+@mixin rvo-image-progress-tracker-start-end-sm-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-start-end-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-start-end-sm.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-start-end-sm-bg {
+  background-image: url("progress-tracker/progress-tracker-start-end-sm.svg");
 }
