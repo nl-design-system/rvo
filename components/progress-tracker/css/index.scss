@@ -5,14 +5,14 @@
 @use "../../../proprietary/assets/images";
 
 .rvo-progress-tracker {
-  max-width: 580px;
+  max-width: var(--rvo-progress-tracker-max-width);
 }
 
 .rvo-progress-tracker__step {
   align-items: center;
   display: flex;
-  min-height: 36px;
-  padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-lg));
+  min-height: var(--rvo-progress-tracker-step-height);
+  padding-inline-start: var(--rvo-progress-tracker-step-label-padding);
   position: relative;
 
   &::after {
@@ -20,22 +20,22 @@
     background-repeat: no-repeat;
     content: "";
     display: inline-block;
+    height: var(--rvo-progress-tracker-step-height);
     left: 0;
-    min-height: 36px;
     position: absolute;
     top: 0;
-    width: calc(var(--rvo-space-sm) + var(--rvo-space-lg));
+    width: var(--rvo-progress-tracker-step-label-padding);
   }
 
   &::before {
     background-repeat: no-repeat;
     content: "";
     display: inline-block;
-    height: 40px;
-    left: 0;
+    height: var(--rvo-progress-tracker-step-line-height);
+    left: var(--rvo-progress-tracker-step-line-left);
     position: absolute;
-    top: 20px;
-    width: 28px;
+    top: var(--rvo-progress-tracker-step-line-top);
+    width: var(--rvo-progress-tracker-step-line-width);
   }
 }
 
@@ -44,53 +44,37 @@
 }
 
 .rvo-progress-tracker__step--substep-start {
-  padding-block-end: var(--rvo-space-sm);
+  padding-block-end: var(--rvo-progress-tracker-substep-block-padding);
   &::before {
-    @include images.rvo-image-progress-tracker-line-indent-bg;
+    @include images.rvo-image-progress-tracker-line-substep-start-bg;
   }
 }
 
 .rvo-progress-tracker__step--substep-end {
-  padding-block-end: var(--rvo-space-sm);
+  padding-block-end: var(--rvo-progress-tracker-substep-block-padding);
   &::before {
-    @include images.rvo-image-progress-tracker-line-indent-bg;
-
-    transform: rotateY(180deg);
+    @include images.rvo-image-progress-tracker-line-substep-end-bg;
   }
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--straight::before,
-.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--substep-start::before,
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--substep-end::before {
-  left: 6px;
+  height: var(--rvo-progress-tracker-step-sm-line-height, var(--rvo-progress-tracker-step-line-height));
+  left: var(--rvo-progress-tracker-step-sm-line-left, var(--rvo-progress-tracker-step-line-left));
+  top: var(--rvo-progress-tracker-step-sm-line-top, var(--rvo-progress-tracker-step-line-top));
+  width: var(--rvo-progress-tracker-step-sm-line-width, var(--rvo-progress-tracker-step-line-width));
 }
 
 .rvo-progress-tracker__step-link {
-  color: var(--rvo-color-hemelblauw);
   display: inline-block;
-  font-weight: var(--rvo-font-weight-bold);
-  padding-block-start: var(--rvo-space-2xs);
+  padding-block-end: var(--rvo-progress-tracker-step-link-padding-block-end);
+  padding-block-start: var(--rvo-progress-tracker-step-link-padding-block-start);
   text-decoration: none;
 }
 
-.rvo-progress-tracker__step-link:hover {
-  color: var(--rvo-link-hover-color);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
-.rvo-progress-tracker__step-link:focus {
-  background-color: var(--rvo-link-focus-background-color);
-  color: var(--rvo-link-focus-color);
-  font-weight: var(--rvo-link-focus-font-weight);
-  outline: none;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-}
-
 .rvo-progress-tracker__step--start {
-  font-size: var(--rvo-font-size-xl);
-  font-weight: var(--rvo-font-weight-bold);
+  font-size: var(--rvo-progress-tracker-step-start-font-size);
+  font-weight: var(--rvo-progress-tracker-step-start-font-weight);
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--start::after {
@@ -102,8 +86,8 @@
 }
 
 .rvo-progress-tracker__step--end {
-  font-size: var(--rvo-font-size-sm);
-  font-weight: var(--rvo-font-weight-bold);
+  font-size: var(--rvo-progress-tracker-step-end-font-size);
+  font-weight: var(--rvo-progress-tracker-step-end-font-weight);
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--end::after {
@@ -115,7 +99,7 @@
 }
 
 .rvo-progress-tracker__step--sm::after {
-  background-position: 9px center;
+  background-position: var(--rvo-progress-tracker-step-sm-icon-background-position);
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete::after {

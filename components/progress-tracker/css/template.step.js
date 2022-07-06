@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
+import { Link } from '../../link/css/template';
 import './index.scss';
 
 export const argTypes = {
@@ -47,13 +48,18 @@ export const Step = ({
     case 'incomplete':
     case 'doing':
     case 'completed':
-      labelMarkup = `<a href="${link}" class="rvo-progress-tracker__step-link">${label}</a>`;
+      labelMarkup = Link({
+        linkContent: label,
+        linkUrl: link,
+        showIcon: false,
+        classNames: ['rvo-progress-tracker__step-link'],
+      });
       break;
   }
 
   return `<div class="${clsx(
     'rvo-progress-tracker__step',
-    `rvo-progress-tracker__step--${size}`,
+    `rvo-progress-tracker__step--${line !== 'substep-start' ? size : 'md'}`,
     `rvo-progress-tracker__step--${state}`,
     line !== 'none' && `rvo-progress-tracker__step--${line}`,
   )}">${labelMarkup}</div>`;

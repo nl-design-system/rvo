@@ -1,5 +1,130 @@
 {
   "rvo": {
-    "progress-tracker": {}
+    "progress-tracker": {
+      "max-width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "step": {
+        "height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "label-padding": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "link": {
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "hover": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "line": {
+          "width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "height": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "top": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "left": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        },
+
+        "start": {
+          "font-size": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "font-weight": {
+            "css": {
+              "syntax": "<number>",
+              "inherits": true
+            }
+          }
+        },
+        "end": {
+          "font-size": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "font-weight": {
+            "css": {
+              "syntax": "<number>",
+              "inherits": true
+            }
+          }
+        },
+        "sm": {
+          "icon": {
+            "background-position": {
+              "css": {
+                "syntax": "*",
+                "inherits": true
+              }
+            }
+          },
+          "line": {
+            "width": {},
+            "height": {},
+            "top": {},
+            "left": {
+              "css": {
+                "syntax": "<length>",
+                "inherits": true
+              }
+            }
+          }
+        }
+      },
+      "substep": {
+        "block-padding": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
   }
 }

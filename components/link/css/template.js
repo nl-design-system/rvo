@@ -44,6 +44,7 @@ export const Link = ({
   hover = defaultArgs.hover,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
+  classNames = [],
 }) => {
   const iconMarkup = `<div class="${clsx(
     'rvo-link__icon',
@@ -54,7 +55,7 @@ export const Link = ({
     `rvo-icon--${icon}`,
   )}"></div>`;
 
-  return `<a href="${linkUrl}" class="${clsx('rvo-link', {
+  return `<a href="${linkUrl}" class="${clsx('rvo-link', classNames, {
     'rvo-link--active': active,
     'rvo-link--hover': hover,
     'rvo-link--focus': focus,

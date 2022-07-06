@@ -103,21 +103,6 @@
   background-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
 }
 
-@mixin rvo-image-progress-tracker-line-indent-mask {
-  -webkit-mask-image: url("progress-tracker/progress-tracker-line-indent.svg");
-  mask-image: url("progress-tracker/progress-tracker-line-indent.svg");
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-@mixin rvo-image-progress-tracker-line-indent-bg {
-  background-image: url("progress-tracker/progress-tracker-line-indent.svg");
-}
-
 @mixin rvo-image-progress-tracker-line-straight-mask {
   -webkit-mask-image: url("progress-tracker/progress-tracker-line-straight.svg");
   mask-image: url("progress-tracker/progress-tracker-line-straight.svg");
@@ -131,6 +116,36 @@
 
 @mixin rvo-image-progress-tracker-line-straight-bg {
   background-image: url("progress-tracker/progress-tracker-line-straight.svg");
+}
+
+@mixin rvo-image-progress-tracker-line-substep-end-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-substep-end.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-substep-end.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-line-substep-end-bg {
+  background-image: url("progress-tracker/progress-tracker-line-substep-end.svg");
+}
+
+@mixin rvo-image-progress-tracker-line-substep-start-mask {
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-substep-start.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-substep-start.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-progress-tracker-line-substep-start-bg {
+  background-image: url("progress-tracker/progress-tracker-line-substep-start.svg");
 }
 
 @mixin rvo-image-progress-tracker-start-end-md-mask {
