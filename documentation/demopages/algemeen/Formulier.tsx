@@ -118,7 +118,7 @@ const Formulier = () => {
                   <span className="rvo-form-field__label-text">Text with expandable helper text</span>
                   <div className="rvo-form-field__helper-text">
                     <details className="rvo-expandable-text">
-                      <summary>Expandable helper text</summary>
+                      <summary className="rvo-expandable-text__summary">Expandable helper text</summary>
                       <span className="rvo-expandable-text__details">
                         When instructions run over multiple lines an expandable helper text can be used.
                       </span>
@@ -166,25 +166,31 @@ const Formulier = () => {
                 <textarea id="textarea" className="utrecht-textbox utrecht-textbox--html-input"></textarea>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="file">File</label>
+                <label className="rvo-form-field__label" htmlFor="file">
+                  <span className="rvo-form-field__label-text">File</span>
+                </label>
                 <input type="file" className="rvo-file" multiple></input>
               </div>
             </fieldset>
-            <fieldset>
-              <h2 className="utrecht-heading-2 utrecht-heading-2--distanced">Options</h2>
-              <div className="rvo-form-field rvo-form-field--options">
-                <legend>Legend</legend>
-                <div className="rvo-options">
-                  <label htmlFor="option-a" className="rvo-option">
-                    <input type="radio" id="option-a" name="radio-options"></input>Option A
-                  </label>
-                  <label htmlFor="option-b" className="rvo-option">
-                    <input type="radio" id="option-b" name="radio-options"></input>Option B
-                  </label>
-                  <label htmlFor="option-c" className="rvo-option">
-                    <input type="radio" id="option-c" name="radio-options"></input>Option C
-                  </label>
-                </div>
+            <fieldset className="utrecht-form-fieldset">
+              <legend className="utrecht-form-fieldset__legend">Options</legend>
+              <div className="rvo-custom-radio-button__group rvo-custom-radio-button__group--vertical">
+                <label className="rvo-custom-radio-button__label" htmlFor="optionA">
+                  <input id="optionA" name="group" type="radio" className="utrecht-custom-radio-button" />
+                  Option A
+                </label>
+                <label className="rvo-custom-radio-button__label" htmlFor="optionB">
+                  <input id="optionB" name="group" type="radio" className="utrecht-custom-radio-button" />
+                  Option B
+                </label>
+                <label className="rvo-custom-radio-button__label" htmlFor="optionC">
+                  <input id="optionC" name="group" type="radio" className="utrecht-custom-radio-button" />
+                  Option C
+                </label>
+                <label className="rvo-custom-radio-button__label" htmlFor="optionD">
+                  <input id="optionD" name="group" type="radio" className="utrecht-custom-radio-button" />
+                  Option D
+                </label>
               </div>
               <div className="rvo-form-field rvo-form-field--options rvo-form-field--options-error">
                 <legend>

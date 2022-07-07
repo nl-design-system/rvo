@@ -338,37 +338,6 @@
     padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
   }
 
-  form {
-    margin-inline-end: auto;
-    margin-inline-start: auto;
-    max-width: 580;
-  }
-
-  fieldset {
-    background-color: var(--rvo-color-grijs1);
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    margin-block-end: var(--rvo-space-lg);
-    margin-block-start: 0;
-    margin-inline-end: 0;
-    margin-inline-start: 0;
-    padding-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
-    padding-block-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
-    padding-inline-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
-    padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-md));
-  }
-
-  .rvo-options label {
-    font-weight: var(--rvo-font-weight-regular);
-  }
-
-  .rvo-form-field {
-    display: flex;
-    flex-direction: column;
-    margin-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
-  }
-
   .rvo-file::file-selector-button {
     background-color: var(--rvo-color-wit);
     border: none;
@@ -376,23 +345,7 @@
     font-weight: var(--rvo-font-weight-bold);
   }
 
-  // h2 + .rvo-form-field {
-  //   margin-block-start: var(--rvo-space-sm);
-  // }
-
-  .rvo-form-field:last-child {
-    margin-block-end: 0;
-  }
-
-  .rvo-form-field__required {
-    color: var(--rvo-color-rood);
-  }
-
-  input[type="text"],
-  input[type="number"],
-  input[type="file"],
-  select,
-  textarea {
+  input[type="file"] {
     background-color: var(--rvo-color-wit);
     border: 2px solid var(--rvo-color-zwart);
     padding-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-2xs));
@@ -402,27 +355,8 @@
     z-index: 1;
   }
 
-  select {
-    appearance: none;
-    background-image: url("./assets/img/select-arrow-bg.svg");
-    background-position: right 2px top 2px;
-    background-repeat: no-repeat;
-    padding-block-end: var(--rvo-space-sm);
-    padding-block-start: calc(var(--rvo-space-2xs) + var(--rvo-space-sm));
-    padding-inline-end: calc(var(--rvo-space-xs) + var(--rvo-space-lg));
-    width: 100%;
-  }
-
-  textarea {
-    min-height: 76px;
-    resize: vertical;
-  }
-
-  input[type="text"]:focus,
-  input[type="number"]:focus,
   input[type="file"]:focus,
-  textarea:focus,
-  select:focus {
+  textarea:focus {
     outline: 3px solid var(--rvo-color-hemelblauw);
   }
 
@@ -430,234 +364,10 @@
     outline: 3px solid var(--rvo-color-rood);
   }
 
-  input[type="text"]:disabled,
-  input[type="number"]:disabled,
-  input[type="file"]:disabled,
-  textarea:disabled {
+  input[type="file"]:disabled {
     background-color: var(--rvo-color-grijs3);
     border-color: var(--rvo-color-grijs7);
     color: var(--rvo-color-grijs7);
-  }
-
-  input[type="text"].rvo-input-error,
-  textarea.rvo-input-error {
-    border-color: var(--rvo-color-rood);
-  }
-
-  input[type="text"].rvo-input-error:focus {
-    border-color: var(--rvo-color-zwart);
-    outline: 3px solid var(--rvo-color-rood);
-  }
-
-  input[type="radio"],
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: var(--rvo-color-wit);
-    border: 2px solid var(--rvo-color-zwart);
-    display: grid;
-    font: inherit;
-    height: 24px;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-inline-end: 0;
-    margin-inline-start: 0;
-    place-content: center;
-    transform: translateY(-4px);
-    width: 24px;
-  }
-
-  input[type="radio"] {
-    border-radius: 50%;
-  }
-
-  input[type="radio"]:focus,
-  input[type="checkbox"]:focus {
-    box-shadow: 0 0 0 3px var(--rvo-color-grijs1), 0 0 0 5px var(--rvo-color-hemelblauw);
-    outline: none;
-  }
-
-  input[type="radio"]:hover,
-  input[type="checkbox"]:hover {
-    border-color: var(--rvo-color-hemelblauw);
-  }
-
-  input[type="radio"]::before {
-    border-radius: 50%;
-    content: "";
-    height: 16px;
-    width: 16px;
-  }
-
-  input[type="checkbox"]::before {
-    content: "";
-    height: 16px;
-    width: 16px;
-  }
-
-  input[type="radio"]:checked::before {
-    background-color: var(--rvo-color-hemelblauw);
-  }
-
-  input[type="checkbox"]:checked::before {
-    background-color: var(--rvo-color-hemelblauw);
-    background-image: url("./assets/iconen/klaarzetten.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  input[type="radio"]:checked:hover::before,
-  input[type="checkbox"]:checked:hover::before {
-    background-color: var(--rvo-color-donkerblauw);
-  }
-
-  input[type="radio"]:focus:not(:focus-visible),
-  input[type="checkbox"]:focus:not(:focus-visible) {
-    box-shadow: none;
-  }
-
-  .rvo-options {
-    display: grid;
-    grid-gap: var(--rvo-space-md);
-    list-style: none;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-inline-end: 0;
-    margin-inline-start: 0;
-    padding-block-end: 0;
-    padding-block-start: var(--rvo-space-md);
-    padding-inline-end: 0;
-    padding-inline-start: 0;
-  }
-
-  .rvo-form-field--options-error {
-    border-left: 3px solid var(--rvo-color-rood);
-    padding-inline-start: var(--rvo-space-md);
-  }
-
-  .rvo-option {
-    display: grid;
-    gap: var(--rvo-space-sm);
-    grid-template-columns: 24px auto;
-  }
-
-  .rvo-form-field--options legend {
-    font-size: var(--rvo-font-size-md);
-  }
-
-  label.rvo-option {
-    margin-block-end: 0;
-  }
-
-  .rvo-options--rows {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .rvo-helper-text {
-    background-color: var(--rvo-color-hemelblauw-tint-1);
-    background-image: url("./assets/iconen/toelichting.svg");
-    background-position: calc(var(--rvo-space-sm) + var(--rvo-space-xs)) calc(var(--rvo-space-sm) + var(--rvo-space-sm));
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    font-size: var(--rvo-font-size-md);
-    line-height: var(--rvo-line-height-md);
-    padding-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-xs));
-    padding-block-start: calc(var(--rvo-space-sm) + var(--rvo-space-xs));
-    padding-inline-end: calc(var(--rvo-space-xs) + var(--rvo-space-sm) + var(--rvo-space-sm) + var(--rvo-space-md));
-    padding-inline-start: calc(var(--rvo-space-xs) + var(--rvo-space-sm) + var(--rvo-space-sm) + var(--rvo-space-md));
-  }
-
-  .rvo-helper-text.rvo-error {
-    background-color: var(--rvo-color-rood-tint-1);
-    background-image: url("./assets/iconen/foutmelding.svg");
-  }
-
-  .rvo-helper-text.rvo-warning {
-    background-color: var(--rvo-color-donkergeel-tint-1);
-    background-image: url("./assets/iconen/waarschuwing.svg");
-  }
-
-  summary {
-    align-items: center;
-    color: var(--rvo-color-hemelblauw);
-    cursor: pointer;
-    display: inline-flex;
-    font-weight: var(--rvo-font-weight-bold);
-    list-style: none;
-  }
-
-  .rvo-helper-text a,
-  .rvo-helper-text summary {
-    color: var(--rvo-color-hemelblauw);
-  }
-
-  label .rvo-helper-text,
-  legend .rvo-helper-text {
-    align-items: center;
-    background: none;
-    display: flex;
-    font-weight: 400;
-    gap: var(--rvo-space-sm);
-    padding-block-end: 0;
-    padding-block-start: var(--rvo-space-xs);
-    padding-inline-start: 0;
-  }
-
-  label .rvo-helper-text,
-  label .rvo-helper-text.rvo-error,
-  label .rvo-helper-text.rvo-warning {
-    background-color: transparent;
-  }
-
-  label .rvo-helper-text--error,
-  legend .rvo-helper-text--error {
-    color: var(--rvo-color-rood);
-    font-weight: var(--rvo-font-weight-bold);
-  }
-
-  select + details {
-    margin-block-start: var(--rvo-space-md);
-  }
-
-  summary:hover {
-    text-decoration: underline;
-  }
-
-  summary:focus {
-    box-shadow: 0 0 0 3px var(--rvo-color-hemelblauw);
-    outline: none;
-  }
-
-  summary:focus:not(:focus-visible) {
-    box-shadow: none;
-  }
-
-  summary::-webkit-details-marker {
-    display: none;
-  }
-
-  summary::after {
-    background-image: url("./assets/iconen/delta-naar-rechts--donkerblauw.svg");
-    background-repeat: no-repeat;
-    background-size: 6px 100%;
-    content: "";
-    display: block;
-    height: 16px;
-    margin-inline-start: var(--rvo-space-sm);
-    width: 8px;
-  }
-
-  details[open] summary::after {
-    background-image: url("./assets/iconen/delta-omlaag--donkerblauw.svg");
-    background-size: 10px 100%;
-    width: 12px;
-  }
-
-  .rvo-helper-text .rvo-details-text {
-    display: block;
-    padding-block-end: var(--rvo-space-sm);
-    padding-block-start: var(--rvo-space-xs);
   }
 
   .rvo-button-group {
@@ -671,22 +381,6 @@
 
   .rvo-button-group :last-child {
     margin-inline-start: auto;
-  }
-
-  .rvo-button--error,
-  .rvo-button--error:hover,
-  .rvo-button--error:focus {
-    color: var(--rvo-color-rood);
-  }
-
-  .rvo-button--error:focus {
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--rvo-color-rood);
-    outline: none;
-  }
-
-  .rvo-button--in-form {
-    margin-block-start: var(--rvo-space-sm);
-    padding-inline-start: 0;
   }
 
   /* @DATA */
