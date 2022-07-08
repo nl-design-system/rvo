@@ -146,7 +146,13 @@ const Formulier = () => {
                 <label className="rvo-form-field__label" htmlFor="text-disabled-w-value">
                   <span className="rvo-form-field__label-text">Text disabled with value</span>
                 </label>
-                <input type="text" id="text-disabled-w-value" value="Value" disabled></input>
+                <input
+                  type="text"
+                  id="text-disabled-w-value"
+                  className="utrecht-textbox utrecht-textbox--html-input"
+                  value="Value"
+                  disabled
+                ></input>
               </div>
               <div className="rvo-form-field">
                 <label className="rvo-form-field__label" htmlFor="number">
@@ -174,61 +180,82 @@ const Formulier = () => {
             </fieldset>
             <fieldset className="utrecht-form-fieldset">
               <legend className="utrecht-form-fieldset__legend">Options</legend>
-              <div className="rvo-custom-radio-button__group rvo-custom-radio-button__group--vertical">
-                <label className="rvo-custom-radio-button__label" htmlFor="optionA">
-                  <input id="optionA" name="group" type="radio" className="utrecht-custom-radio-button" />
-                  Option A
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="fieldId">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                  <div className="rvo-form-field__helper-text">Helper text</div>
                 </label>
-                <label className="rvo-custom-radio-button__label" htmlFor="optionB">
-                  <input id="optionB" name="group" type="radio" className="utrecht-custom-radio-button" />
-                  Option B
-                </label>
-                <label className="rvo-custom-radio-button__label" htmlFor="optionC">
-                  <input id="optionC" name="group" type="radio" className="utrecht-custom-radio-button" />
-                  Option C
-                </label>
-                <label className="rvo-custom-radio-button__label" htmlFor="optionD">
-                  <input id="optionD" name="group" type="radio" className="utrecht-custom-radio-button" />
-                  Option D
-                </label>
+                <div className="rvo-custom-radio-button__group rvo-custom-radio-button__group--vertical">
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionA">
+                    <input id="optionA" name="group" type="radio" className="utrecht-custom-radio-button" />
+                    Option A
+                  </label>
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionB">
+                    <input id="optionB" name="group" type="radio" className="utrecht-custom-radio-button" />
+                    Option B
+                  </label>
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionC">
+                    <input id="optionC" name="group" type="radio" className="utrecht-custom-radio-button" />
+                    Option C
+                  </label>
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionD">
+                    <input id="optionD" name="group" type="radio" className="utrecht-custom-radio-button" />
+                    Option D
+                  </label>
+                </div>
               </div>
-              <div className="rvo-form-field rvo-form-field--options rvo-form-field--options-error">
-                <legend>
-                  Legend
-                  <span className="rvo-helper-text rvo-helper-text--error">
-                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md" />
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="fieldId">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                  <div className="rvo-form-field__helper-text rvo-form-field__helper-text--error">
+                    <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></div>
                     This is an error
-                  </span>
-                </legend>
-                <div className="rvo-options">
-                  <label htmlFor="option-error-a" className="rvo-option">
-                    <input type="radio" id="option-error-a" name="radio-options-error"></input>Option A
+                  </div>
+                </label>
+                <div className="rvo-custom-radio-button__group rvo-custom-radio-button__group--vertical rvo-custom-radio-button__group--error">
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionA-error">
+                    <input id="optionA-error" name="group-error" type="radio" className="utrecht-custom-radio-button" />
+                    Option A
                   </label>
-                  <label htmlFor="option-error-b" className="rvo-option">
-                    <input type="radio" id="option-error-b" name="radio-options-error"></input>Option B
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionB-error">
+                    <input id="optionB-error" name="group-error" type="radio" className="utrecht-custom-radio-button" />
+                    Option B
                   </label>
-                  <label htmlFor="option-error-c" className="rvo-option">
-                    <input type="radio" id="option-error-c" name="radio-options-error"></input>Option C
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionC-error">
+                    <input id="optionC-error" name="group-error" type="radio" className="utrecht-custom-radio-button" />
+                    Option C
                   </label>
-                </div>
-              </div>
-              <div className="rvo-form-field rvo-form-field--options">
-                <legend>
-                  Legend
-                  <span className="rvo-helper-text">Radio buttons displayed on the same row.</span>
-                </legend>
-                <div className="rvo-options rvo-options--rows">
-                  <label htmlFor="option-row-a" className="rvo-option">
-                    <input type="radio" id="option-row-a" name="radio-options-row"></input>Option A
-                  </label>
-                  <label htmlFor="option-row-b" className="rvo-option">
-                    <input type="radio" id="option-row-b" name="radio-options-row"></input>Option B
-                  </label>
-                  <label htmlFor="option-row-c" className="rvo-option">
-                    <input type="radio" id="option-row-c" name="radio-options-row"></input>Option C
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionD-error">
+                    <input id="optionD-error" name="group-error" type="radio" className="utrecht-custom-radio-button" />
+                    Option D
                   </label>
                 </div>
               </div>
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="rb-hor">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                  <div className="rvo-form-field__helper-text">Helper text</div>
+                </label>
+                <div className="rvo-custom-radio-button__group rvo-custom-radio-button__group--horizontal">
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionA-hor">
+                    <input id="optionA-hor" name="group-hor" type="radio" className="utrecht-custom-radio-button" />
+                    Option A
+                  </label>
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionB-hor">
+                    <input id="optionB-hor" name="group-hor" type="radio" className="utrecht-custom-radio-button" />
+                    Option B
+                  </label>
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionC-hor">
+                    <input id="optionC-hor" name="group-hor" type="radio" className="utrecht-custom-radio-button" />
+                    Option C
+                  </label>
+                  <label className="rvo-custom-radio-button__label" htmlFor="optionD-hor">
+                    <input id="optionD-hor" name="group-hor" type="radio" className="utrecht-custom-radio-button" />
+                    Option D
+                  </label>
+                </div>
+              </div>
+
               <div className="rvo-form-field rvo-form-field--options">
                 <legend>Legend</legend>
                 <div className="rvo-options">
