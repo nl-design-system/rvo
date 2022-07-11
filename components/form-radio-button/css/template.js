@@ -15,6 +15,7 @@ export const argTypes = {
   active: { control: 'boolean' },
   focus: { control: 'boolean' },
   invalid: { control: 'boolean' },
+  required: { control: 'boolean' },
 };
 
 export const defaultArgs = {
@@ -27,6 +28,7 @@ export const defaultArgs = {
   active: false,
   focus: false,
   invalid: false,
+  required: false,
 };
 
 export const RadioButton = ({
@@ -39,12 +41,13 @@ export const RadioButton = ({
   active = defaultArgs.active,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
+  required = defaultArgs.required,
 }) =>
   `
   <label class='rvo-custom-radio-button__label' for="${id}">
   <input id="${id}" name="${name}" autofocus="true" type="radio"
   ${checked ? ' checked' : ''}
-  ${disabled ? ' disabled' : ''} class="${clsx(
+  ${disabled ? ' disabled' : ''} ${required ? ' required' : ''} class="${clsx(
     'utrecht-custom-radio-button',
     checked && 'utrecht-custom-radio-button--checked',
     hover && 'rvo-custom-radio-button--hover',
@@ -52,4 +55,5 @@ export const RadioButton = ({
     active && 'utrecht-custom-radio-button--active',
     focus && 'utrecht-custom-radio-button--focus-visible',
     invalid && 'utrecht-custom-radio-button--invalid',
+    required && 'utrecht-custom-radio-button--required',
   )}"/>${labelText}</label>`;
