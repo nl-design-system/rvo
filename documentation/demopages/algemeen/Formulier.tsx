@@ -255,80 +255,133 @@ const Formulier = () => {
                   </label>
                 </div>
               </div>
-
-              <div className="rvo-form-field rvo-form-field--options">
-                <legend>Legend</legend>
-                <div className="rvo-options">
-                  <label htmlFor="checkbox-option-a" className="rvo-option">
-                    <input type="checkbox" id="checkbox-option-a" name="checkboxes-options"></input>Option A
-                  </label>
-                  <label htmlFor="checkbox-option-b" className="rvo-option">
-                    <input type="checkbox" id="checkbox-option-b" name="checkboxes-options"></input>Option B
-                  </label>
-                  <label htmlFor="checkbox-option-c" className="rvo-option">
-                    <input type="checkbox" id="checkbox-option-c" name="checkboxes-options"></input>Option C
-                  </label>
-                </div>
-              </div>
-              <div className="rvo-form-field rvo-form-field--options">
-                <legend>
-                  Legend
-                  <span className="rvo-helper-text rvo-helper-text--warning">
-                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md" />
-                    This is a warning
-                  </span>
-                </legend>
-                <div className="rvo-options">
-                  <label htmlFor="checkbox-warning-option-a" className="rvo-option">
-                    <input type="checkbox" id="checkbox-warning-option-a" name="checkboxes-warning-options"></input>
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="checkboxes">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                </label>
+                <div className="rvo-checkbox__group rvo-checkbox__group--vertical">
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionA-cb">
+                    <input id="optionA-cb" name="checkboxes" className="rvo-checkbox__input" type="checkbox" />
                     Option A
                   </label>
-                  <label htmlFor="checkbox-warning-option-b" className="rvo-option">
-                    <input type="checkbox" id="checkbox-warning-option-b" name="checkboxes-warning-options"></input>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionB-cb">
+                    <input id="optionB-cb" name="checkboxes" className="rvo-checkbox__input" type="checkbox" />
                     Option B
                   </label>
-                  <label htmlFor="checkbox-warning-option-c" className="rvo-option">
-                    <input type="checkbox" id="checkbox-warning-option-c" name="checkboxes-warning-options"></input>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionC-cb">
+                    <input id="optionC-cb" name="checkboxes" className="rvo-checkbox__input" type="checkbox" />
                     Option C
                   </label>
-                </div>
-              </div>
-              <div className="rvo-form-field rvo-form-field--options">
-                <legend>
-                  Legend
-                  <span className="rvo-helper-text">Checkboxes displayed on the same row.</span>
-                </legend>
-                <div className="rvo-options rvo-options--rows">
-                  <label htmlFor="checkbox-option-row-a" className="rvo-option">
-                    <input type="checkbox" id="checkbox-option-row-a" name="checkboxes-options-row"></input>Option A
-                  </label>
-                  <label htmlFor="checkbox-option-row-b" className="rvo-option">
-                    <input type="checkbox" id="checkbox-option-row-b" name="checkboxes-options-row"></input>Option B
-                  </label>
-                  <label htmlFor="checkbox-option-row-c" className="rvo-option">
-                    <input type="checkbox" id="checkbox-option-row-c" name="checkboxes-options-row"></input>Option C
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionD-cb">
+                    <input id="optionD-cb" name="checkboxes" className="rvo-checkbox__input" type="checkbox" />
+                    Option D
                   </label>
                 </div>
               </div>
               <div className="rvo-form-field">
-                <label htmlFor="Select">Select</label>
-                <select id="select">
-                  <option>Option A</option>
-                  <option>Option B</option>
-                  <option>Option C</option>
-                </select>
+                <label className="rvo-form-field__label" htmlFor="checkboxes-warning">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                  <div className="rvo-form-field__helper-text rvo-form-field__helper-text--warning">
+                    <div className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></div>
+                    This is a warning
+                  </div>
+                </label>
+                <div className="rvo-checkbox__group rvo-checkbox__group--vertical">
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionA-cbw">
+                    <input id="optionA-cbw" name="cb-war" className="rvo-checkbox__input" type="checkbox" />
+                    Option A
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionB-cbw">
+                    <input id="optionB-cbw" name="cb-war" className="rvo-checkbox__input" type="checkbox" />
+                    Option B
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionC-cbw">
+                    <input id="optionC-cbw" name="cb-war" className="rvo-checkbox__input" type="checkbox" />
+                    Option C
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionD-cbw">
+                    <input id="optionD-cbw" name="cb-war" className="rvo-checkbox__input" type="checkbox" />
+                    Option D
+                  </label>
+                </div>
+              </div>
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="checkboxes-error">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                  <div className="rvo-form-field__helper-text rvo-form-field__helper-text--error">
+                    <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></div>
+                    This is an error
+                  </div>
+                </label>
+                <div className="rvo-checkbox__group rvo-checkbox__group--vertical rvo-custom-radio-button__group--error">
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionA-cbe">
+                    <input id="optionA-cbe" name="cb-err" className="rvo-checkbox__input" type="checkbox" />
+                    Option A
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionB-cbe">
+                    <input id="optionB-cbe" name="cb-err" className="rvo-checkbox__input" type="checkbox" />
+                    Option B
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionC-cbe">
+                    <input id="optionC-cbe" name="cb-err" className="rvo-checkbox__input" type="checkbox" />
+                    Option C
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionD-cbe">
+                    <input id="optionD-cbe" name="cb-err" className="rvo-checkbox__input" type="checkbox" />
+                    Option D
+                  </label>
+                </div>
+              </div>
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="checkboxes-hor">
+                  <span className="rvo-form-field__label-text">Field label</span>
+                  <div className="rvo-form-field__helper-text">Checkboxes displayed on the same row</div>
+                </label>
+                <div className="rvo-checkbox__group rvo-checkbox__group--horizontal">
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionA-cbhor">
+                    <input id="optionA-cbhor" name="cb-hor" className="rvo-checkbox__input" type="checkbox" />
+                    Option A
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionB-cbhor">
+                    <input id="optionB-cbhor" name="cb-hor" className="rvo-checkbox__input" type="checkbox" />
+                    Option B
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionC-cbhor">
+                    <input id="optionC-cbhor" name="cb-hor" className="rvo-checkbox__input" type="checkbox" />
+                    Option C
+                  </label>
+                  <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="optionD-cbhor">
+                    <input id="optionD-cbhor" name="cb-hor" className="rvo-checkbox__input" type="checkbox" />
+                    Option D
+                  </label>
+                </div>
+              </div>
+              <div className="rvo-form-field">
+                <label className="rvo-form-field__label" htmlFor="select">
+                  <span className="rvo-form-field__label-text">Select</span>
+                </label>
+                <div className="rvo-select-wrapper">
+                  <select id="field" className="utrecht-select utrecht-select--html-select">
+                    <option value="1">Option #1</option>
+                    <option selected value="2">
+                      Option #2
+                    </option>
+                    <option value="3">Option #3</option>
+                  </select>
+                </div>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset className="utrecht-form-fieldset">
+              <legend className="utrecht-form-fieldset__legend">Text input alert states</legend>
               <div className="rvo-form-field">
-                <label htmlFor="warning-text">
-                  Warning
-                  <span className="rvo-helper-text rvo-helper-text--warning">
-                    <span className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md" />
+                <label className="rvo-form-field__label" htmlFor="warning">
+                  <span className="rvo-form-field__label-text">Warning</span>
+                  <div className="rvo-form-field__helper-text rvo-form-field__helper-text--warning">
+                    <div className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></div>
                     This is a warning
-                  </span>
+                  </div>
                 </label>
-                <input type="text" id="warning-text"></input>
+                <input id="field" className="utrecht-textbox utrecht-textbox--html-input" value=""></input>
               </div>
               <div className="rvo-form-field">
                 <label htmlFor="warning-error">
