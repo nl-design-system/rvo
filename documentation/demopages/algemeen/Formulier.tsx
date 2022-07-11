@@ -28,60 +28,54 @@ const Formulier = () => {
         </ul>
       </nav>
       <main className="rvo-progress-tracker-active rvo-max-width-layout--md">
-        <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
-          <div className="rvo-main-steps">
-            <div className="rvo-process-step rvo-process-step--process-name">Progress tracker</div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--completed">
-              <a href="#" className="rvo-process-step-link">
-                Step completed
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--doing">
-              <a href="#" className="rvo-process-step-link">
-                Step doing
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <a href="#" className="rvo-process-step-link">
-                Step incomplete
-              </a>
-            </div>
+        <div className="rvo-progress-tracker">
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--start rvo-progress-tracker__step--straight">
+            Progress Tracker
           </div>
-          <div className="rvo-sub-steps">
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
-              <a href="#" className="rvo-process-step-link">
-                First sub-step
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--doing">
-              <a href="#" className="rvo-process-step-link">
-                Sub-step doing
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--completed">
-              <a href="#" className="rvo-process-step-link">
-                Sub-step completed
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
-              <span className="rvo-process-step--disabled">Sub-step disabled</span>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--sub rvo-process-step--sm rvo-process-step--incomplete">
-              <a href="#" className="rvo-process-step-link">
-                Last sub-step
-              </a>
-            </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-progress-tracker__step--straight">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              Step completed
+            </a>
           </div>
-          <div className="rvo-main-steps">
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <span className="rvo-process-step--disabled">Step disabled</span>
-            </div>
-            <div className="rvo-process-step rvo-process-step--process-completed">Process completed</div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-progress-tracker__step--straight">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              Step doing
+            </a>
           </div>
-          <button className="utrecht-button rvo-button--quaternary-action rvo-button--sm" type="button">
-            <span className="rvo-button__icon--quaternary-action rvo-icon rvo-icon--downloaden rvo-icon--sm"></span>
-            Opslaan
-          </button>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--incomplete rvo-progress-tracker__step--substep-start">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              Step incomplete
+            </a>
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--incomplete rvo-progress-tracker__step--straight">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              First sub-step
+            </a>
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--doing rvo-progress-tracker__step--straight">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              Sub-step doing
+            </a>
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--completed rvo-progress-tracker__step--straight">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              Sub-step completed
+            </a>
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--disabled rvo-progress-tracker__step--straight">
+            Sub-step disabled
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--incomplete rvo-progress-tracker__step--substep-end">
+            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
+              Last sub-step
+            </a>
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-progress-tracker__step--straight">
+            Step disabled
+          </div>
+          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--end">
+            Process completed
+          </div>
         </div>
         <div className="rvo-form">
           <div className="intro">
