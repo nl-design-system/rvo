@@ -1,20 +1,6 @@
 /**
  * @license EUPL-1.2
  */
-
-/* Collection of all BEM class names in the component library */
-
-/*
- * TODO: Once every component is a separate npm package, these imports should
- * be updated to use a package reference instead of a relative path.
- *
- * For example:
- *     @import "../../../components/button/css";
- *
- * Will become:
- *     @import "@nl-rvo/button/css";
- */
-
 @import "@utrecht/component-library-css/dist";
 
 @import "../../../components/button/css";
