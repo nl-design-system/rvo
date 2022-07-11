@@ -62,8 +62,8 @@
     margin-inline-start: 0;
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
-    padding-inline-end: var(--rvo-space-lg);
-    padding-inline-start: var(--rvo-space-lg);
+    padding-inline-end: var(--rvo-space-2xl);
+    padding-inline-start: var(--rvo-space-2xl);
   }
 
   /* @LINKS */
@@ -232,7 +232,7 @@
     background-repeat: no-repeat;
     display: flex;
     min-height: 36px;
-    padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-lg));
+    padding-inline-start: calc(var(--rvo-space-sm) + var(--rvo-space-4xl));
   }
 
   .rvo-process-step-link {
@@ -428,8 +428,8 @@
   /* @CONTENT */
 
   .rvo-content {
-    padding-inline-end: var(--rvo-space-lg);
-    padding-inline-start: var(--rvo-space-lg);
+    padding-inline-end: var(--rvo-space-4xl);
+    padding-inline-start: var(--rvo-space-4xl);
   }
 
   /* @TABLE */
