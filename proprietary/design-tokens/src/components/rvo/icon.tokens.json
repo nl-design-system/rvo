@@ -20,6 +20,14 @@
       "2xl": {
         "width": { "value": "{rvo.size.2xl}" },
         "height": { "value": "{rvo.size.2xl}" }
+      },
+      "3xl": {
+        "width": { "value": "{rvo.size.3xl}" },
+        "height": { "value": "{rvo.size.3xl}" }
+      },
+      "4xl": {
+        "width": { "value": "{rvo.size.4xl}" },
+        "height": { "value": "{rvo.size.4xl}" }
       }
     }
   }

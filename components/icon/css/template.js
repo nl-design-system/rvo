@@ -32,8 +32,7 @@ export const argTypes = {
     options: options,
   },
   size: {
-    options: ['small', 'medium', 'large', 'extra large', 'xxl'],
-    mapping: { small: 'sm', medium: 'md', large: 'lg', 'extra large': 'xl', xxl: '2xl' },
+    options: ['sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
   color: {
