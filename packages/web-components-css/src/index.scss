@@ -15,10 +15,11 @@
  *     @import "@nl-rvo/button/css";
  */
 
+@import "@utrecht/component-library-css/dist";
+
 @import "../../../components/button/css";
 @import "../../../components/expandable-text/css";
 @import "../../../components/form-checkbox/css";
-@import "../../../components/form-feedback/css";
 @import "../../../components/form-field/css";
 @import "../../../components/form-fieldset/css";
 @import "../../../components/form-layout/css";
@@ -26,9 +27,7 @@
 @import "../../../components/form-select/css";
 @import "../../../components/form-textinput/css";
 @import "../../../components/header/css";
-@import "../../../components/heading/css";
 @import "../../../components/icon/css";
-@import "../../../components/label/css";
 @import "../../../components/link/css";
 @import "../../../components/logo/css";
 @import "../../../components/menubar/css";
