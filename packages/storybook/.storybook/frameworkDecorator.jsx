@@ -6,7 +6,7 @@ const frameworkDecorator = (story) => {
   if (typeof storyContent !== 'string') {
     storyContent = ReactDOMServer.renderToStaticMarkup(story());
   }
-
+  storyContent.replace(/\;$/, '');
   return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${storyContent}</div>`;
 };
 

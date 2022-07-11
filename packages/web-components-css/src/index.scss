@@ -1,20 +1,21 @@
 /**
  * @license EUPL-1.2
  */
-
-/* Collection of all BEM class names in the component library */
-
-/*
- * TODO: Once every component is a separate npm package, these imports should
- * be updated to use a package reference instead of a relative path.
- *
- * For example:
- *     @import "../../../components/button/css";
- *
- * Will become:
- *     @import "@nl-rvo/button/css";
- */
+@import "@utrecht/component-library-css/dist";
 
 @import "../../../components/button/css";
+@import "../../../components/expandable-text/css";
+@import "../../../components/form-checkbox/css";
+@import "../../../components/form-field/css";
+@import "../../../components/form-fieldset/css";
+@import "../../../components/form-layout/css";
+@import "../../../components/form-radio-button/css";
+@import "../../../components/form-select/css";
+@import "../../../components/form-textinput/css";
 @import "../../../components/header/css";
+@import "../../../components/icon/css";
+@import "../../../components/link/css";
 @import "../../../components/logo/css";
+@import "../../../components/menubar/css";
+@import "../../../components/progress-tracker/css";
+@import "../../../components/status-icon/css";

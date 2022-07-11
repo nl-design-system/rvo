@@ -39,16 +39,16 @@
         "value": "1.125rem"
       },
       "xl": {
-        "value": "1.5rem"
+        "value": "1.25rem"
       },
       "2xl": {
-        "value": "2rem"
+        "value": "1.5rem"
       },
       "3xl": {
-        "value": "3rem"
+        "value": "2rem"
       },
       "4xl": {
-        "value": "4rem"
+        "value": "3rem"
       }
     },
     "font-weight": {

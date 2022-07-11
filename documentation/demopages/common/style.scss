@@ -19,7 +19,7 @@
   // }
 
   p,
-  ul,
+  .rvo-content ul,
   ol,
   dl,
   blockquote,
@@ -558,10 +558,6 @@
     background-color: var(--rvo-color-donkerblauw);
   }
 
-  .rvo-topnav--submenu {
-    margin-block-start: calc(var(--rvo-space-md) * -1);
-  }
-
   .rvo-topnav__list--submenu {
     background-color: var(--rvo-color-donkerblauw);
   }
@@ -574,6 +570,40 @@
   .rvo-topnav__link--submenu {
     align-items: flex-start;
     text-align: start;
+  }
+
+  /* @SEARCH IN NAV */
+
+  .rvo-topnav__link--search-active {
+    background-color: var(--rvo-color-grijs1);
+    color: var(--rvo-color-grijs7);
+  }
+
+  .rvo-topnav__link--search-active:hover,
+  .rvo-topnav__link--search-active:focus {
+    background-color: var(--rvo-color-grijs2);
+    color: var(--rvo-color-grijs7);
+  }
+
+  .rvo-form-layout {
+    width: 100%; /* Toevoeging om formulier even breed als max-width te tonen wanneer het formulier kleiner is dan max-width */
+  }
+
+  .rvo-inline-form {
+    display: flex;
+  }
+
+  .rvo-inline-form .utrecht-textbox {
+    padding-block-start: 0.85rem; /* Iets meer padding aan de bovenkant zodat de input uitlijnt met de button */
+  }
+
+  .rvo-inline-form .utrecht-button {
+    align-self: flex-end;
+  }
+
+  .rvo-inline-form .rvo-form-field {
+    flex: 1;
+    margin-block-end: 0;
   }
 
   // h2 + .rvo-data,

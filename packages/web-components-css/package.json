@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.54",
+  "version": "1.0.0-alpha.57",
   "author": "Community for NL Design System",
   "description": "Component library bundle for the RVO based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "sass src/:dist/ --load-path=../../node_modules/ --no-source-map",
+    "build": "sass src/:dist/ --load-path=../../node_modules/ --no-source-map --style=compressed",
     "clean": "rimraf dist/"
   },
   "main": "dist/index.css"
