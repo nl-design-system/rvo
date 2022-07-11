@@ -383,15 +383,21 @@ const Formulier = () => {
                 </label>
                 <input id="field" className="utrecht-textbox utrecht-textbox--html-input" value=""></input>
               </div>
+
               <div className="rvo-form-field">
-                <label htmlFor="warning-error">
-                  Error
-                  <span className="rvo-helper-text rvo-helper-text--error">
-                    <span className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md" />
+                <label className="rvo-form-field__label" htmlFor="error">
+                  <span className="rvo-form-field__label-text">Error</span>
+                  <div className="rvo-form-field__helper-text rvo-form-field__helper-text--error">
+                    <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></div>
                     This is an error
-                  </span>
+                  </div>
                 </label>
-                <input type="text" id="error-text" className="rvo-input-error"></input>
+                <input
+                  id="error"
+                  className="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--invalid"
+                  aria-invalid="true"
+                  value=""
+                ></input>
               </div>
             </fieldset>
             <div className="rvo-button-group">
