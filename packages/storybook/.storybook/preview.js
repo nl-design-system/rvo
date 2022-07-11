@@ -72,10 +72,12 @@ export const parameters = {
       language: 'html',
     },
     transformSource: (input) => {
-      return prettier.format(input, {
-        parser: 'babel',
-        plugins: [prettierBabel],
-      });
+      return prettier
+        .format(input, {
+          parser: 'babel',
+          plugins: [prettierBabel],
+        })
+        .replace(/;\s*$/, '');
     },
   },
   html: {
