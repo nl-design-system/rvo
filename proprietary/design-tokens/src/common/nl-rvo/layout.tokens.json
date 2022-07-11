@@ -2,15 +2,14 @@
   "rvo": {
     "layout": {
       "max-width": {
-        "sm": {
-          "value": "600px"
-        },
-        "md": {
-          "value": "900px"
-        },
-        "lg": {
-          "value": "1200px"
-        }
+        "sm": { "value": "600px" },
+        "md": { "value": "900px" },
+        "lg": { "value": "1200px" }
+      },
+      "spacer": {
+        "sm": { "value": "16px" },
+        "md": { "value": "24px" },
+        "lg": { "value": "32px" }
       }
     }
   }

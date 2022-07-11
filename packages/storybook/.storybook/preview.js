@@ -66,7 +66,6 @@ export const parameters = {
       // p: Paragraph,
       // Tip,
     },
-    // Show code by default.
     source: {
       state: 'open',
       language: 'html',
