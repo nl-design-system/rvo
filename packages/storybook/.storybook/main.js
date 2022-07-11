@@ -18,6 +18,7 @@ module.exports = {
     '@storybook/addon-controls',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
+    'storybook-anima',
   ],
   staticDirs: [{ from: '../../../proprietary/assets', to: '/rvo' }],
   webpackFinal: async (config) => {
