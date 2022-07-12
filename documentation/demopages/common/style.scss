@@ -606,10 +606,58 @@
     margin-block-end: 0;
   }
 
-  // h2 + .rvo-data,
-  // summary + .rvo-data {
-  //   margin-block-start: var(--rvo-space-sm);
-  // }
+  /* @LAYOUT @SPACER */
+
+  .rvo-layout-spacer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rvo-layout-spacer--xs {
+    gap: var(--rvo-space-xs);
+  }
+
+  .rvo-layout-spacer--sm {
+    gap: var(--rvo-space-sm);
+  }
+
+  .rvo-layout-spacer--md {
+    gap: var(--rvo-space-md);
+  }
+
+  .rvo-layout-spacer--lg {
+    gap: var(--rvo-space-lg);
+  }
+
+  /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
+  .rvo-form-field,
+  .rvo-form-field__label {
+    margin-block-end: 0;
+  }
+
+  .rvo-form-field__helper-text {
+    padding-block-start: 0;
+  }
+
+  .rvo-expandable-text__details {
+    padding-block-end: 0;
+    padding-block-start: 0;
+  }
+
+  .rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:last-child,
+  .rvo-checkbox__group--vertical .rvo-checkbox:last-child {
+    margin-block-end: 0;
+  }
+
+  .rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:first-child,
+  .rvo-checkbox__group--vertical .rvo-checkbox:first-child {
+    margin-block-start: 0;
+  }
+
+  .rvo-checkbox__group--horizontal .rvo-checkbox:first-child,
+  .rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:first-child {
+    margin-inline-start: 0;
+  }
 
   @media (min-width: 612px) {
     .rvo-data {
