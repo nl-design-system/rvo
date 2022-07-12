@@ -6,12 +6,7 @@ import * as designTokens from '@nl-rvo/design-tokens/dist';
 
 export const argTypes = {
   size: {
-    options: ['small', 'medium', 'large'],
-    mapping: {
-      small: 'sm',
-      medium: 'md',
-      large: 'lg',
-    },
+    options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
   content: {
@@ -20,7 +15,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
-  size: 'medium',
+  size: 'md',
   content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
 };
 
