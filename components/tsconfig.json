@@ -1,8 +1,17 @@
 {
-  "extends": "../packages/web-components-stencil/tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2017"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2017",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true
   },
-  "include": ["."],
   "exclude": ["**/node_modules"]
 }
