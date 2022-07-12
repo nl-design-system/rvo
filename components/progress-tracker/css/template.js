@@ -5,7 +5,7 @@
 import './index.scss';
 import { Step } from './template.step';
 
-const defaultSteps = [
+export const defaultSteps = [
   { state: 'start', label: 'Progress Tracker', link: '#', size: 'md', line: 'straight' },
   { state: 'completed', label: 'Step completed', link: '#', size: 'md', line: 'straight' },
   { state: 'doing', label: 'Step doing', link: '#', size: 'md', line: 'straight' },

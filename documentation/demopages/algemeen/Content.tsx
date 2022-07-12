@@ -2,37 +2,13 @@ import React from 'react';
 import 'normalize.css';
 import '../common/style.scss';
 import Header from '../common/components/Header';
+import MenuBar, { defaultItems } from '../common/components/MenuBar';
 
 const Content = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <nav className="rvo-topnav rvo-topnav--md">
-        <ul className="utrecht-topnav__list">
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
-            </a>
-          </li>
-          <div className="rvo-topnav__spacer"></div>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              Uitloggen
-            </a>
-          </li>
-        </ul>
-      </nav>
-
+      <MenuBar items={defaultItems} size="md" useIcons={true} iconPlacement="before" />
       <main className="rvo-max-width-layout rvo-max-width-layout--sm">
         <div className="rvo-content">
           <h1 className="utrecht-heading-1">Heading 1</h1>

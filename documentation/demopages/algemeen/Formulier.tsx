@@ -1,88 +1,22 @@
+import { Link } from '@nl-rvo/components/link/css/template';
+import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import parse from 'html-react-parser';
 import React from 'react';
 import 'normalize.css';
 import '../common/style.scss';
 import Header from '../common/components/Header';
+import MenuBar, { defaultItems } from '../common/components/MenuBar';
 
 const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <nav className="rvo-topnav rvo-topnav--md">
-        <ul className="utrecht-topnav__list">
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              Menu item
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div>Menu item w/icon before
-            </a>
-          </li>
-          <div className="rvo-topnav__spacer"></div>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="#">
-              Last menu item
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <MenuBar items={defaultItems} size="md" useIcons={true} iconPlacement="before" />
       <main className="rvo-progress-tracker-active rvo-max-width-layout--md">
-        <div className="rvo-progress-tracker">
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--start rvo-progress-tracker__step--straight">
-            Progress Tracker
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-progress-tracker__step--straight">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              Step completed
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-progress-tracker__step--straight">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              Step doing
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--incomplete rvo-progress-tracker__step--substep-start">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              Step incomplete
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--incomplete rvo-progress-tracker__step--straight">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              First sub-step
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--doing rvo-progress-tracker__step--straight">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              Sub-step doing
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--completed rvo-progress-tracker__step--straight">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              Sub-step completed
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--disabled rvo-progress-tracker__step--straight">
-            Sub-step disabled
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--incomplete rvo-progress-tracker__step--substep-end">
-            <a href="#" className="rvo-link rvo-progress-tracker__step-link">
-              Last sub-step
-            </a>
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-progress-tracker__step--straight">
-            Step disabled
-          </div>
-          <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--end">
-            Process completed
-          </div>
-        </div>
+        {parse(ProgressTracker({ steps: defaultSteps }))}
         <div className="rvo-form">
           <div className="intro">
-            <a href="#" className="rvo-link">
-              <div className="rvo-link__icon rvo-link__icon--before rvo-icon rvo-icon--sm rvo-icon--hemelblauw rvo-icon--terug"></div>
-              Terug
-            </a>
+            {parse(Link({ linkContent: 'Terug', linkUrl: '#', showIcon: 'before', icon: 'terug' }))}
             <h1 className="utrecht-heading-1">Heading</h1>
           </div>
           <form>

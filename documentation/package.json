@@ -11,10 +11,12 @@
   "devDependencies": {
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
+    "@nl-rvo/components": "file:../components",
     "@nl-rvo/design-tokens": "file:../proprietary/design-tokens",
     "@storybook/addon-docs": "6.5.9"
   },
   "dependencies": {
+    "html-react-parser": "3.0.1",
     "normalize.css": "8.0.1"
   }
 }
