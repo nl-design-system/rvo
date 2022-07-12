@@ -17,7 +17,7 @@ const Formulier = () => {
         {parse(ProgressTracker({ steps: defaultSteps }))}
         <div className="rvo-form">
           <div className="intro">
-            {parse(Link({ linkContent: 'Terug', linkUrl: '#', showIcon: 'before', icon: 'terug' }))}
+            {parse(Link({ content: 'Terug', url: '#', showIcon: 'before', icon: 'terug' }))}
             {parse(Heading({ type: 'h1', textContent: 'Heading' }))}
           </div>
           <form>

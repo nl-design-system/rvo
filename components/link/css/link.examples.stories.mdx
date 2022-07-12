@@ -15,7 +15,7 @@ import "./index.scss";
 # Terug link
 
 <Canvas>
-  <Story name="Terug link" args={{ ...defaultArgs, linkContent: "Terug", icon: "terug", showIcon: "before" }}>
+  <Story name="Terug link" args={{ ...defaultArgs, content: "Terug", icon: "terug", showIcon: "before" }}>
     {Link.bind({})}
   </Story>
 </Canvas>
@@ -23,10 +23,7 @@ import "./index.scss";
 # Verder link
 
 <Canvas>
-  <Story
-    name="Verder link"
-    args={{ ...defaultArgs, linkContent: "Verder", icon: "pijl-naar-rechts", showIcon: "after" }}
-  >
+  <Story name="Verder link" args={{ ...defaultArgs, content: "Verder", icon: "pijl-naar-rechts", showIcon: "after" }}>
     {Link.bind({})}
   </Story>
 </Canvas>
@@ -36,7 +33,7 @@ import "./index.scss";
 <Canvas>
   <Story
     name="Externe link"
-    args={{ ...defaultArgs, linkContent: "Externe link", icon: "pijl-naar-rechtsboven", showIcon: "after" }}
+    args={{ ...defaultArgs, content: "Externe link", icon: "pijl-naar-rechtsboven", showIcon: "after" }}
   >
     {Link.bind({})}
   </Story>

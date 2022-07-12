@@ -7,10 +7,10 @@ import clsx from 'clsx';
 import { iconNames } from '../../icon/css/template';
 
 export const argTypes = {
-  linkContent: {
+  content: {
     control: 'text',
   },
-  linkUrl: {
+  url: {
     control: 'text',
   },
   showIcon: {
@@ -33,8 +33,8 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
-  linkContent: 'Dit is een link',
-  linkUrl: '#',
+  content: 'Dit is een link',
+  url: '#',
   showIcon: 'no',
   hover: false,
   icon: iconNames[0],
@@ -43,8 +43,8 @@ export const defaultArgs = {
 };
 
 export const Link = ({
-  linkContent = defaultArgs.linkContent,
-  linkUrl = defaultArgs.linkUrl,
+  content = defaultArgs.content,
+  url = defaultArgs.url,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   hover = defaultArgs.hover,
@@ -61,9 +61,9 @@ export const Link = ({
     `rvo-icon--${icon}`,
   )}"></div>`;
 
-  return `<a href="${linkUrl}" class="${clsx('rvo-link', classNames, {
+  return `<a href="${url}" class="${clsx('rvo-link', classNames, {
     'rvo-link--active': active,
     'rvo-link--hover': hover,
     'rvo-link--focus': focus,
-  })}">${showIcon === 'before' ? iconMarkup : ''}${linkContent}${showIcon === 'after' ? iconMarkup : ''}</a>`;
+  })}">${showIcon === 'before' ? iconMarkup : ''}${content}${showIcon === 'after' ? iconMarkup : ''}</a>`;
 };

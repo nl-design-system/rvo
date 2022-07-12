@@ -49,8 +49,8 @@ export const Step = ({
     case 'doing':
     case 'completed':
       labelMarkup = Link({
-        linkContent: label,
-        linkUrl: link,
+        content: label,
+        url: link,
         showIcon: false,
         classNames: ['rvo-progress-tracker__step-link'],
       });
