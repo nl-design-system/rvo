@@ -1,3 +1,4 @@
+import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Link } from '@nl-rvo/components/link/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import parse from 'html-react-parser';
@@ -17,7 +18,7 @@ const Formulier = () => {
         <div className="rvo-form">
           <div className="intro">
             {parse(Link({ linkContent: 'Terug', linkUrl: '#', showIcon: 'before', icon: 'terug' }))}
-            <h1 className="utrecht-heading-1">Heading</h1>
+            {parse(Heading({ type: 'h1', textContent: 'Heading' }))}
           </div>
           <form>
             <fieldset className="utrecht-form-fieldset">
