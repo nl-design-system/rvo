@@ -15,7 +15,7 @@ String.prototype.toProperCase = function () {
 // eslint-disable-next-line no-unused-vars
 const { STATUS, ...iconListWithoutStatus } = iconList;
 
-const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {
+export const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {
   if (typeof iconList[categoryOrIconName] === 'object') {
     return Object.keys(iconList[categoryOrIconName]).map((iconName) =>
       `${categoryOrIconName} > ${iconName}`.toProperCase(),
@@ -23,6 +23,14 @@ const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) 
   } else {
     return iconList[categoryOrIconName].replace('.svg', '').toProperCase();
   }
+});
+
+export const iconNames = options.map((option) => {
+  let iconName = option;
+  if (iconName.indexOf(' > ') > -1) {
+    iconName = iconName.split(' > ')[1];
+  }
+  return iconName.toLowerCase().replace(/_/g, '-');
 });
 
 export const argTypes = {
@@ -61,5 +69,5 @@ export const Icon = ({ icon = defaultArgs.icon, size = defaultArgs.size, color =
       'rvo-icon--wit': color === 'wit',
       'rvo-icon--hemelblauw': color === 'hemelblauw',
     },
-  )}"/>`;
+  )}"></div>`;
 };

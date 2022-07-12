@@ -4,6 +4,7 @@
  */
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
+import { iconNames } from '../../icon/css/template';
 
 export const argTypes = {
   linkContent: {
@@ -15,6 +16,10 @@ export const argTypes = {
   showIcon: {
     options: ['no', 'before', 'after'],
     control: { type: 'radio' },
+  },
+  icon: {
+    control: 'select',
+    options: iconNames,
   },
   hover: {
     control: 'boolean',
@@ -32,6 +37,7 @@ export const defaultArgs = {
   linkUrl: '#',
   showIcon: 'no',
   hover: false,
+  icon: iconNames[0],
   active: false,
   focus: false,
 };
@@ -40,7 +46,7 @@ export const Link = ({
   linkContent = defaultArgs.linkContent,
   linkUrl = defaultArgs.linkUrl,
   showIcon = defaultArgs.showIcon,
-  icon = 'pijl-naar-rechtsboven',
+  icon = defaultArgs.icon,
   hover = defaultArgs.hover,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
