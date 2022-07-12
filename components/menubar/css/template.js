@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import '@utrecht/component-library-css';
+import { Icon } from '../../icon/css/template';
 
 const defaultItems = [
   { label: 'Home', icon: 'home', link: '#' },
@@ -13,8 +14,7 @@ const defaultItems = [
 
 export const argTypes = {
   size: {
-    options: ['small', 'medium'],
-    mapping: { small: 'sm', medium: 'md' },
+    options: ['sm', 'md'],
     control: { type: 'radio' },
   },
   items: {
@@ -33,7 +33,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
-  size: 'medium',
+  size: 'md',
   items: defaultItems,
   useIcons: true,
   iconPlacement: 'before',
@@ -48,7 +48,8 @@ const parseMenuItem = (
 ) => {
   let menuItem = label;
   if (useIcon) {
-    const iconMarkup = `<div class="rvo-icon rvo-icon--${icon} rvo-icon--${size} rvo-icon--wit"></div>`;
+    const iconMarkup = Icon({ icon, size, color: 'wit' });
+
     if (iconPlacement === 'before') {
       menuItem = `${iconMarkup} ${menuItem}`;
     } else {
