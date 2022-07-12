@@ -5,4 +5,7 @@
 import clsx from 'clsx';
 import '@nl-rvo/assets/images/logo.svg';
 
-export const Logo = ({ className = '' }) => `<img src="rvo/images/logo.svg" class="${clsx('rvo-logo', className)}" />`;
+export const Logo = (props) => {
+  const className = props && props.className ? props.className : '';
+  return `<img src="rvo/images/logo.svg" class="${clsx('rvo-logo', className)}" />`;
+};
