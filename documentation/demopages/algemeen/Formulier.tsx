@@ -85,10 +85,10 @@ const Formulier = () => {
           <div className="intro">
             <h1 className="utrecht-heading-1">Heading</h1>
           </div>
-          <form className="rvo-layout-spacer rvo-layout-spacer--lg">
+          <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
             <fieldset className="utrecht-form-fieldset rvo-layout-spacer rvo-layout-spacer--md">
               <legend className="utrecht-form-fieldset__legend">Keyboard inputs</legend>
-              <div className="rvo-layout-spacer rvo-layout-spacer--lg">
+              <div className="rvo-layout-spacer rvo-layout-spacer--xl">
                 <div className="rvo-form-field rvo-layout-spacer rvo-layout-spacer--xs">
                   <label className="rvo-form-field__label" htmlFor="text">
                     <span className="rvo-form-field__label-text">Text</span>
@@ -174,9 +174,9 @@ const Formulier = () => {
                 </div>
               </div>
             </fieldset>
-            <fieldset className="utrecht-form-fieldset rvo-layout-spacer--md">
+            <fieldset className="utrecht-form-fieldset rvo-layout-spacer rvo-layout-spacer--lg">
               <legend className="utrecht-form-fieldset__legend">Options</legend>
-              <div className="rvo-layout-spacer rvo-layout-spacer--lg">
+              <div className="rvo-layout-spacer rvo-layout-spacer--2xl">
                 <div className="rvo-form-field rvo-layout-spacer rvo-layout-spacer--sm">
                   <label className="rvo-form-field__label" htmlFor="fieldId">
                     <span className="rvo-form-field__label-text">Field label</span>
@@ -392,7 +392,7 @@ const Formulier = () => {
             <fieldset className="utrecht-form-fieldset rvo-layout-spacer rvo-layout-spacer--md">
               <legend className="utrecht-form-fieldset__legend">Text input alert states</legend>
               <div className="rvo-layout-spacer rvo-layout-spacer--lg">
-                <div className="rvo-form-field">
+                <div className="rvo-form-field rvo-layout-spacer rvo-layout-spacer--xs">
                   <label className="rvo-form-field__label" htmlFor="warning">
                     <span className="rvo-form-field__label-text">Warning</span>
                     <div className="rvo-form-field__helper-text rvo-form-field__helper-text--warning">
@@ -402,7 +402,7 @@ const Formulier = () => {
                   </label>
                   <input id="field" className="utrecht-textbox utrecht-textbox--html-input" value=""></input>
                 </div>
-                <div className="rvo-form-field">
+                <div className="rvo-form-field rvo-layout-spacer rvo-layout-spacer--xs">
                   <label className="rvo-form-field__label" htmlFor="error">
                     <span className="rvo-form-field__label-text">Error</span>
                     <div className="rvo-form-field__helper-text rvo-form-field__helper-text--error">

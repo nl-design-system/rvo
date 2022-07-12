@@ -613,20 +613,40 @@
     flex-direction: column;
   }
 
+  .rvo-layout-spacer--2xs {
+    gap: 2px;
+  }
+
   .rvo-layout-spacer--xs {
-    gap: var(--rvo-space-xs);
+    gap: 4px;
   }
 
   .rvo-layout-spacer--sm {
-    gap: var(--rvo-space-sm);
+    gap: 8px;
   }
 
   .rvo-layout-spacer--md {
-    gap: var(--rvo-space-md);
+    gap: 16px;
   }
 
   .rvo-layout-spacer--lg {
-    gap: var(--rvo-space-lg);
+    gap: 18px;
+  }
+
+  .rvo-layout-spacer--xl {
+    gap: 24px;
+  }
+
+  .rvo-layout-spacer--2xl {
+    gap: 32px;
+  }
+
+  .rvo-layout-spacer--3xl {
+    gap: 64px;
+  }
+
+  .rvo-layout-spacer--4xl {
+    gap: 128px;
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
