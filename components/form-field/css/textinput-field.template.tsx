@@ -12,7 +12,7 @@ import {
 import extractArgs from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, defaultArgs as fieldDefaultArgs, IFieldProps } from './template';
 
-interface ITextInputFieldProps extends IFieldProps, ITextInputProps {}
+export interface ITextInputFieldProps extends IFieldProps, ITextInputProps {}
 
 export const argTypes = { ...fieldArgTypes, ...textInputArgTypes };
 

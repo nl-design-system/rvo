@@ -15,7 +15,7 @@ export interface ITextInputProps {
   required?: boolean;
   inputType?: string;
   placeholder?: string;
-  value: string;
+  value?: string;
   valueType?: string;
 }
 

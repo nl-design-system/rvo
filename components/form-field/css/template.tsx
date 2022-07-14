@@ -7,13 +7,13 @@ import { ExpandableText } from '../../expandable-text/css/template';
 import { FormFeedback } from '../../form-feedback/css/template';
 
 export interface IFieldProps {
-  fieldId: string;
+  fieldId?: string;
   labelText: string;
-  helperText: string;
-  expandableHelperText: boolean;
-  expandableHelperTextTitle: string;
-  warningText: string;
-  errorText: string;
+  helperText?: string;
+  expandableHelperText?: boolean;
+  expandableHelperTextTitle?: string;
+  warningText?: string;
+  errorText?: string;
 }
 
 export const argTypes = {
