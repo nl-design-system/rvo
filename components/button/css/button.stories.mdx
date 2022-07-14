@@ -1,6 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, Button, defaultArgs } from "./template";
 import "./index.scss";
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 
 <Meta
   title="CSS Components/Button"
@@ -10,6 +11,7 @@ import "./index.scss";
       type: "WORK IN PROGRESS",
     },
   }}
+  decorators={[frameworkDecorator]}
 />
 
 # Button

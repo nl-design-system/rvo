@@ -70,29 +70,49 @@ export const Button = ({
   textContent = defaultArgs.textContent,
   showIcon = defaultArgs.showIcon,
 }) => {
-  const icon = `<div class="rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--md"></div>`;
-  return `<button class="${clsx('utrecht-button', {
-    'utrecht-button--primary-action': kind === 'primary',
-    'utrecht-button--secondary-action': kind === 'secondary',
-    'rvo-button--tertiary-action': kind === 'tertiary',
-    'rvo-button--quaternary-action': kind === 'quaternary',
-    'rvo-button--warning-action': kind === 'warning',
-    'rvo-button--sm': size === 'sm',
-    'rvo-button--md': size === 'md',
-    'utrecht-button--active': active,
-    'utrecht-button--busy': busy,
-    'utrecht-button--hover': hover,
-    'utrecht-button--focus': focus,
-    'utrecht-button--focus-visible': focusVisible,
-    'utrecht-button--disabled': disabled,
-  })}"${disabled ? ' aria-disabled="true"' : ''}>${showIcon === 'before' ? icon : ''}${textContent}${
-    showIcon === 'after' ? icon : ''
-  }</button>`;
+  const icon = <div className={`rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--md`}></div>;
+  return (
+    <button
+      className={clsx('utrecht-button', {
+        'utrecht-button--primary-action': kind === 'primary',
+        'utrecht-button--secondary-action': kind === 'secondary',
+        'rvo-button--tertiary-action': kind === 'tertiary',
+        'rvo-button--quaternary-action': kind === 'quaternary',
+        'rvo-button--warning-action': kind === 'warning',
+        'rvo-button--sm': size === 'sm',
+        'rvo-button--md': size === 'md',
+        'utrecht-button--active': active,
+        'utrecht-button--busy': busy,
+        'utrecht-button--hover': hover,
+        'utrecht-button--focus': focus,
+        'utrecht-button--focus-visible': focusVisible,
+        'utrecht-button--disabled': disabled,
+      })}
+      aria-disabled={disabled || null}
+    >
+      {showIcon === 'before' && icon}
+      {textContent}
+      {showIcon === 'after' && icon}
+    </button>
+  );
 };
 
-export const AllButtonKinds = (buttonArgs) =>
-  `<div><p>${Button({ ...buttonArgs, kind: 'primary' })}</p>
-  <p>${Button({ ...buttonArgs, kind: 'secondary' })}</p>
-  <p>${Button({ ...buttonArgs, kind: 'tertiary' })}</p>
-  <p>${Button({ ...buttonArgs, kind: 'quaternary' })}</p>
-  <p>${Button({ ...buttonArgs, kind: 'warning' })}</p></div>`;
+export const AllButtonKinds = (buttonArgs) => (
+  <div>
+    <p>
+      <Button {...buttonArgs} kind="primary" />
+    </p>
+    <p>
+      <Button {...buttonArgs} kind="secondary" />
+    </p>
+    <p>
+      <Button {...buttonArgs} kind="tertiary" />
+    </p>
+    <p>
+      <Button {...buttonArgs} kind="quaternary" />
+    </p>
+    <p>
+      <Button {...buttonArgs} kind="warning" />
+    </p>
+  </div>
+);
