@@ -4,6 +4,16 @@
  */
 import clsx from 'clsx';
 import './index.scss';
+import React from 'react';
+
+export interface IFileInputProps {
+  id: string;
+  disabled?: boolean;
+  focus?: boolean;
+  invalid?: boolean;
+  required?: boolean;
+  multiple?: boolean;
+}
 
 export const argTypes = {
   id: { control: 'text' },
@@ -24,7 +34,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = {
+export const defaultArgs: IFileInputProps = {
   id: 'field',
   disabled: false,
   focus: false,
@@ -33,18 +43,26 @@ export const defaultArgs = {
   multiple: true,
 };
 
-export const FileInput = ({
+export const FileInput: React.FC<IFileInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   multiple = defaultArgs.multiple,
-}) =>
-  `<input id="${id}" type="file" class="${clsx(
-    'rvo-file-input',
-    disabled && 'rvo-file-input--disabled',
-    focus && 'rvo-file-input--focus rvo-file-input--focus-visible',
-    invalid && 'rvo-file-input--invalid',
-    required && 'rvo-file-input--required',
-  )}"${disabled ? ' disabled' : ''}${invalid ? ' aria-invalid="true"' : ''} ${multiple ? 'multiple' : ''}/>`;
+}) => (
+  <input
+    id={id}
+    type="file"
+    className={clsx(
+      'rvo-file-input',
+      disabled && 'rvo-file-input--disabled',
+      focus && 'rvo-file-input--focus rvo-file-input--focus-visible',
+      invalid && 'rvo-file-input--invalid',
+      required && 'rvo-file-input--required',
+    )}
+    disabled={disabled || null}
+    aria-invalid={invalid || null}
+    multiple={multiple || null}
+  />
+);
