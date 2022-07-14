@@ -1,4 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { argTypes, defaultArgs, Step } from "./template.step";
 
 <Meta
@@ -9,6 +10,7 @@ import { argTypes, defaultArgs, Step } from "./template.step";
       type: "WORK IN PROGRESS",
     },
   }}
+  decorators={[frameworkDecorator]}
 />
 
 # Step

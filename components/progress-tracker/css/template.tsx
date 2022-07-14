@@ -3,7 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import { Step } from './template.step';
+import React from 'react';
+import { IProgressTrackerStepProps, Step } from './template.step';
+
+interface IProgressTrackerProps {
+  steps: IProgressTrackerStepProps[];
+}
 
 export const defaultSteps = [
   { state: 'start', label: 'Progress Tracker', link: '#', size: 'md', line: 'straight' },
@@ -16,7 +21,7 @@ export const defaultSteps = [
   { state: 'disabled', label: 'Sub-step disabled', link: '#', size: 'sm', line: 'straight' },
   { state: 'incomplete', label: 'Last sub-step', link: '#', size: 'sm', line: 'substep-end' },
   { state: 'disabled', label: 'Step disabled', link: '#', size: 'md', line: 'straight' },
-  { state: 'end', label: 'Process completed', link: '#', size: 'md' },
+  { state: 'end', label: 'Process completed', link: '#', size: 'md', line: 'none' },
 ];
 
 export const argTypes = {
@@ -28,14 +33,16 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = {
+export const defaultArgs: IProgressTrackerProps = {
   steps: defaultSteps,
 };
 
-export const ProgressTracker = ({ steps = defaultArgs.steps }) => {
-  let stepsMarkup = '';
-  steps.forEach((stepArgs) => {
-    stepsMarkup += Step(stepArgs);
-  });
-  return `<div class="rvo-progress-tracker">${stepsMarkup}</div>`;
+export const ProgressTracker: React.FC<IProgressTrackerProps> = ({ steps = defaultArgs.steps }) => {
+  return (
+    <div className="rvo-progress-tracker">
+      {steps.map((stepProps, index) => (
+        <Step key={index} {...stepProps} />
+      ))}
+    </div>
+  );
 };

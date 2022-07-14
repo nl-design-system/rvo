@@ -10,7 +10,7 @@ import { iconNames } from '../../icon/css/template';
 interface ILinkProps {
   content: string;
   url: string;
-  showIcon: string;
+  showIcon?: string;
   icon?: string;
   hover?: boolean;
   active?: boolean;

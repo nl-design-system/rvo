@@ -3,8 +3,17 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
+import React from 'react';
 import { Link } from '../../link/css/template';
 import './index.scss';
+
+export interface IProgressTrackerStepProps {
+  state: string;
+  line: string;
+  size: string;
+  label: string;
+  link: string;
+}
 
 export const argTypes = {
   state: {
@@ -28,7 +37,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = {
+export const defaultArgs: IProgressTrackerStepProps = {
   state: 'incomplete',
   line: 'none',
   size: 'medium',
@@ -36,31 +45,28 @@ export const defaultArgs = {
   link: '#',
 };
 
-export const Step = ({
+export const Step: React.FC<IProgressTrackerStepProps> = ({
   state = defaultArgs.state,
   line = defaultArgs.line,
   size = defaultArgs.size,
   label = defaultArgs.label,
   link = defaultArgs.link,
 }) => {
-  let labelMarkup = label;
-  switch (state) {
-    case 'incomplete':
-    case 'doing':
-    case 'completed':
-      labelMarkup = Link({
-        content: label,
-        url: link,
-        showIcon: false,
-        classNames: ['rvo-progress-tracker__step-link'],
-      });
-      break;
+  let labelMarkup: string | React.ReactNode = label;
+  if (state === 'incomplete' || state === 'doing' || state === 'completed') {
+    labelMarkup = <Link content={label} url={link} classNames={['rvo-progress-tracker__step-link']} />;
   }
 
-  return `<div class="${clsx(
-    'rvo-progress-tracker__step',
-    `rvo-progress-tracker__step--${line !== 'substep-start' ? size : 'md'}`,
-    `rvo-progress-tracker__step--${state}`,
-    line !== 'none' && `rvo-progress-tracker__step--${line}`,
-  )}">${labelMarkup}</div>`;
+  return (
+    <div
+      className={clsx(
+        'rvo-progress-tracker__step',
+        `rvo-progress-tracker__step--${line !== 'substep-start' ? size : 'md'}`,
+        `rvo-progress-tracker__step--${state}`,
+        line !== 'none' && `rvo-progress-tracker__step--${line}`,
+      )}
+    >
+      {labelMarkup}
+    </div>
+  );
 };
