@@ -7,8 +7,8 @@ import clsx from 'clsx';
 import React from 'react';
 
 interface IMaxWidthLayoutProps {
-  size: string;
-  content: string;
+  size?: string;
+  content?: string;
 }
 
 export const argTypes = {
@@ -26,12 +26,9 @@ export const defaultArgs: IMaxWidthLayoutProps = {
   content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
 };
 
-export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
-  size = defaultArgs.size,
-  content = defaultArgs.content,
-}) => {
-  let parsedContent = content;
-  if (parsedContent.indexOf('{maxWidth}') > -1) {
+export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({ size, content, children }) => {
+  let parsedContent = content || children;
+  if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
     switch (size) {
       case 'sm':

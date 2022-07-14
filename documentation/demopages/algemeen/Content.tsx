@@ -1,14 +1,14 @@
-import React from 'react';
+import { Header } from '@nl-rvo/components/header/css/template';
+import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 import 'normalize.css';
 import '../common/style.scss';
-import Header from '../common/components/Header';
-import MenuBar, { defaultItems } from '../common/components/MenuBar';
 
 const Content = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultItems} size="md" useIcons={true} iconPlacement="before" />
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
       <main className="rvo-max-width-layout rvo-max-width-layout--sm">
         <div className="rvo-content">
           <h1 className="utrecht-heading-1">Heading 1</h1>

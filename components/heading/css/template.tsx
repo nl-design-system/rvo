@@ -9,7 +9,7 @@ import React from 'react';
 interface IHeadingProps {
   type: string;
   textContent: string;
-  distanced: boolean;
+  distanced?: boolean;
 }
 
 export const argTypes = {

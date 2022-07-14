@@ -1,26 +1,25 @@
+import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Link } from '@nl-rvo/components/link/css/template';
+import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
+import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
-import parse from 'html-react-parser';
-import React from 'react';
 import 'normalize.css';
 import '../common/style.scss';
-import Header from '../common/components/Header';
-import MaxWidthLayout from '../common/components/MaxWidthLayout';
-import MenuBar, { defaultItems } from '../common/components/MenuBar';
+import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
 const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultItems} size="md" useIcons={true} iconPlacement="before" />
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
-          {parse(ProgressTracker({ steps: defaultSteps }))}
+          <ProgressTracker steps={defaultSteps} />
           <div className="rvo-form">
             <div className="intro">
-              {parse(Link({ content: 'Terug', url: '#', showIcon: 'before', icon: 'terug' }))}
-              {parse(Heading({ type: 'h1', textContent: 'Heading' }))}
+              <Link content="Terug" url="#" showIcon="before" icon="terug" />
+              <Heading type="h1" textContent="Heading" />
             </div>
             <form>
               <fieldset className="utrecht-form-fieldset">

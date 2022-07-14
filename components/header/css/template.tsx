@@ -7,7 +7,7 @@ import React from 'react';
 import { Logo } from '../../logo/css/template';
 
 interface IHeaderProps {
-  link: string;
+  link?: string;
 }
 
 export const argTypes = {
@@ -24,9 +24,13 @@ export const defaultArgs: IHeaderProps = {
 export const Header: React.FC<IHeaderProps> = ({ link = defaultArgs.link }) => (
   <header className="rvo-header">
     <div className="rvo-header__logo-wrapper">
-      <a href={link} className="rvo-header__logo-link">
+      {link ? (
+        <a href={link} className="rvo-header__logo-link">
+          <Logo className="rvo-header__logo-img" />
+        </a>
+      ) : (
         <Logo className="rvo-header__logo-img" />
-      </a>
+      )}
     </div>
   </header>
 );

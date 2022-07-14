@@ -1,7 +1,6 @@
-import React from 'react';
+import { Header } from '@nl-rvo/components/header/css/template';
 import 'normalize.css';
 import '../common/style.scss';
-import Header from '../common/components/Header';
 
 const Submenu = () => {
   return (

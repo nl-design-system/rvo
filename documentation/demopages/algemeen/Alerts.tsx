@@ -1,15 +1,15 @@
-import React from 'react';
+import { Header } from '@nl-rvo/components/header/css/template';
+import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import 'normalize.css';
 import '../common/style.scss';
-import Header from '../common/components/Header';
-import MenuBar, { defaultItems } from '../common/components/MenuBar';
+import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
 const Alerts = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultItems} size="md" useIcons={true} iconPlacement="before" />
-      <main className=" rvo-max-width-layout rvo-max-width-layout--sm">
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
+      <main className="rvo-max-width-layout rvo-max-width-layout--sm">
         <div className="rvo-alerts">
           <div className="rvo-alert rvo-alert--info">
             <div className="rvo-icon rvo-icon--info rvo-icon--lg rvo-icon--hemelblauw"></div>
