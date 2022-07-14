@@ -4,7 +4,19 @@
  */
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
+import React from 'react';
 import { iconNames } from '../../icon/css/template';
+
+interface ILinkProps {
+  content: string;
+  url: string;
+  showIcon: string;
+  icon?: string;
+  hover?: boolean;
+  active?: boolean;
+  focus?: boolean;
+  classNames?: string[];
+}
 
 export const argTypes = {
   content: {
@@ -32,7 +44,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = {
+export const defaultArgs: ILinkProps = {
   content: 'Dit is een link',
   url: '#',
   showIcon: 'no',
@@ -42,7 +54,7 @@ export const defaultArgs = {
   focus: false,
 };
 
-export const Link = ({
+export const Link: React.FC<ILinkProps> = ({
   content = defaultArgs.content,
   url = defaultArgs.url,
   showIcon = defaultArgs.showIcon,
@@ -52,18 +64,31 @@ export const Link = ({
   focus = defaultArgs.focus,
   classNames = [],
 }) => {
-  const iconMarkup = `<div class="${clsx(
-    'rvo-link__icon',
-    { 'rvo-link__icon--before': showIcon === 'before', 'rvo-link__icon--after': showIcon === 'after' },
-    'rvo-icon',
-    'rvo-icon--sm',
-    'rvo-icon--hemelblauw',
-    `rvo-icon--${icon}`,
-  )}"></div>`;
+  const iconMarkup = (
+    <div
+      className={clsx(
+        'rvo-link__icon',
+        { 'rvo-link__icon--before': showIcon === 'before', 'rvo-link__icon--after': showIcon === 'after' },
+        'rvo-icon',
+        'rvo-icon--sm',
+        'rvo-icon--hemelblauw',
+        `rvo-icon--${icon}`,
+      )}
+    ></div>
+  );
 
-  return `<a href="${url}" class="${clsx('rvo-link', classNames, {
-    'rvo-link--active': active,
-    'rvo-link--hover': hover,
-    'rvo-link--focus': focus,
-  })}">${showIcon === 'before' ? iconMarkup : ''}${content}${showIcon === 'after' ? iconMarkup : ''}</a>`;
+  return (
+    <a
+      href={url}
+      className={clsx('rvo-link', classNames, {
+        'rvo-link--active': active,
+        'rvo-link--hover': hover,
+        'rvo-link--focus': focus,
+      })}
+    >
+      {showIcon === 'before' && iconMarkup}
+      {content}
+      {showIcon === 'after' && iconMarkup}
+    </a>
+  );
 };
