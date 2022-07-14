@@ -1,5 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, FormFeedback } from "./template";
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 
 <Meta
   title="CSS Components/Form/Form feedback"
@@ -9,6 +10,7 @@ import { argTypes, defaultArgs, FormFeedback } from "./template";
       type: "WORK IN PROGRESS",
     },
   }}
+  decorators={[frameworkDecorator]}
 />
 
 # Form feedback
