@@ -4,6 +4,20 @@
  */
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
+import React from 'react';
+
+interface IButtonProps {
+  kind: string;
+  size: string;
+  textContent: string;
+  active: boolean;
+  busy: boolean;
+  focus: boolean;
+  focusVisible: boolean;
+  hover: boolean;
+  disabled: boolean;
+  showIcon: string;
+}
 
 export const argTypes = {
   kind: {
@@ -45,7 +59,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = {
+export const defaultArgs: IButtonProps = {
   kind: 'primary',
   size: 'medium',
   active: false,
@@ -58,7 +72,7 @@ export const defaultArgs = {
   showIcon: 'no',
 };
 
-export const Button = ({
+export const Button: React.FC<IButtonProps> = ({
   kind = defaultArgs.kind,
   size = defaultArgs.size,
   active = defaultArgs.active,
@@ -97,7 +111,7 @@ export const Button = ({
   );
 };
 
-export const AllButtonKinds = (buttonArgs) => (
+export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
   <div>
     <p>
       <Button {...buttonArgs} kind="primary" />

@@ -4,6 +4,22 @@
  */
 import clsx from 'clsx';
 import './index.scss';
+import React from 'react';
+
+export interface ICheckboxProps {
+  id: string;
+  name?: string;
+  labelText: string;
+  checked?: boolean;
+  hover?: boolean;
+  disabled?: boolean;
+  active?: boolean;
+  focus?: boolean;
+  indeterminate?: boolean;
+  invalid?: boolean;
+  required?: boolean;
+  value?: string;
+}
 
 export const argTypes = {
   id: { control: 'text' },
@@ -20,7 +36,7 @@ export const argTypes = {
   value: { control: 'text' },
 };
 
-export const defaultArgs = {
+export const defaultArgs: ICheckboxProps = {
   id: 'field',
   name: 'group',
   labelText: 'Label',
@@ -35,7 +51,7 @@ export const defaultArgs = {
   value: '',
 };
 
-export const Checkbox = ({
+export const Checkbox: React.FC<ICheckboxProps> = ({
   id = defaultArgs.id,
   name = defaultArgs.name,
   labelText = defaultArgs.labelText,
@@ -48,19 +64,32 @@ export const Checkbox = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   value = defaultArgs.value,
-}) =>
-  `<label class="${clsx(
-    'rvo-checkbox',
-    active && 'rvo-checkbox--active',
-    hover && 'rvo-checkbox--hover',
-    checked && 'rvo-checkbox--checked',
-    !checked && 'rvo-checkbox--not-checked',
-    disabled && 'rvo-checkbox--disabled',
-    focus && 'rvo-checkbox--focus-visible',
-    invalid && 'rvo-checkbox--invalid',
-    indeterminate && 'rvo-checkbox--indeterminate',
-    required && 'rvo-checkbox--required',
-  )}" for="${id}">
-  <input id="${id}" name="${name}" class="rvo-checkbox__input" type="checkbox"${checked ? ' checked' : ''}${
-    disabled ? ' disabled' : ''
-  }${required ? ' required' : ''}${value ? ` value="${value}"` : ''} class="rvo-checkbox__input"/>${labelText}</label>`;
+}) => (
+  <label
+    className={clsx(
+      'rvo-checkbox',
+      active && 'rvo-checkbox--active',
+      hover && 'rvo-checkbox--hover',
+      checked && 'rvo-checkbox--checked',
+      !checked && 'rvo-checkbox--not-checked',
+      disabled && 'rvo-checkbox--disabled',
+      focus && 'rvo-checkbox--focus-visible',
+      invalid && 'rvo-checkbox--invalid',
+      indeterminate && 'rvo-checkbox--indeterminate',
+      required && 'rvo-checkbox--required',
+    )}
+    htmlFor={id}
+  >
+    <input
+      id={id}
+      name={name}
+      className="rvo-checkbox__input"
+      type="checkbox"
+      defaultChecked={checked || null}
+      disabled={disabled || null}
+      required={required || null}
+      value={value || ''}
+    />
+    {labelText}
+  </label>
+);
