@@ -43,11 +43,11 @@ export const defaultArgs: IFieldProps = {
 export const Field: React.FC<IFieldProps> = ({
   fieldId = defaultArgs.fieldId,
   labelText = defaultArgs.labelText,
-  helperText = defaultArgs.helperText,
-  expandableHelperText = defaultArgs.expandableHelperText,
-  expandableHelperTextTitle = defaultArgs.expandableHelperTextTitle,
-  warningText = defaultArgs.warningText,
-  errorText = defaultArgs.errorText,
+  helperText,
+  expandableHelperText,
+  expandableHelperTextTitle,
+  warningText,
+  errorText,
   children,
 }) => {
   // Parse helper text markup

@@ -13,7 +13,7 @@ interface ISelectOption {
 }
 
 export interface ISelectProps {
-  id: string;
+  id?: string;
   disabled?: boolean;
   focus?: boolean;
   invalid?: boolean;

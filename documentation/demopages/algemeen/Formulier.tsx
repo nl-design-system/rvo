@@ -1,3 +1,6 @@
+import { FileInputField } from '@nl-rvo/components/form-field/css/fileinput-field.template';
+import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Link } from '@nl-rvo/components/link/css/template';
@@ -22,92 +25,25 @@ const Formulier = () => {
               <Heading type="h1" textContent="Heading" />
             </div>
             <form>
-              <fieldset className="utrecht-form-fieldset">
-                <legend className="utrecht-form-fieldset__legend">Keyboard inputs</legend>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="text">
-                    <span className="rvo-form-field__label-text">Text</span>
-                  </label>
-                  <input type="text" id="text" className="utrecht-textbox utrecht-textbox--html-input"></input>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="text-w-helper-text">
-                    <span className="rvo-form-field__label-text">Text with helper text</span>
-                    <div className="rvo-form-field__helper-text">
-                      This is a helper text which can be used for instructions.
-                    </div>
-                  </label>
-                  <input
-                    type="text"
-                    id="text-w-helper-text"
-                    className="utrecht-textbox utrecht-textbox--html-input"
-                  ></input>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="text-w-expandable-helper-text">
-                    <span className="rvo-form-field__label-text">Text with expandable helper text</span>
-                    <div className="rvo-form-field__helper-text">
-                      <details className="rvo-expandable-text">
-                        <summary className="rvo-expandable-text__summary">Expandable helper text</summary>
-                        <span className="rvo-expandable-text__details">
-                          When instructions run over multiple lines an expandable helper text can be used.
-                        </span>
-                      </details>
-                    </div>
-                  </label>
-                  <input
-                    type="text"
-                    id="text-w-expandable-helper-text"
-                    className="utrecht-textbox utrecht-textbox--html-input"
-                  ></input>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="text-disabled">
-                    <span className="rvo-form-field__label-text">Text disabled</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="text-disabled"
-                    className="utrecht-textbox utrecht-textbox--html-input"
-                    disabled
-                  ></input>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="text-disabled-w-value">
-                    <span className="rvo-form-field__label-text">Text disabled with value</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="text-disabled-w-value"
-                    className="utrecht-textbox utrecht-textbox--html-input"
-                    value="Value"
-                    disabled
-                  ></input>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="number">
-                    <span className="rvo-form-field__label-text">Number</span>
-                  </label>
-                  <input
-                    type="text"
-                    className="utrecht-textbox utrecht-textbox--html-input"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                  ></input>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="textarea">
-                    <span className="rvo-form-field__label-text">Textarea</span>
-                  </label>
-                  <textarea id="textarea" className="utrecht-textbox utrecht-textbox--html-input"></textarea>
-                </div>
-                <div className="rvo-form-field">
-                  <label className="rvo-form-field__label" htmlFor="file">
-                    <span className="rvo-form-field__label-text">File</span>
-                  </label>
-                  <input type="file" className="rvo-file" multiple></input>
-                </div>
-              </fieldset>
+              <Fieldset legend="Keyboard inputs">
+                <TextInputField labelText="Text" />
+                <TextInputField
+                  labelText="Text with helper text"
+                  helperText="This is a helper text which can be used for instructions."
+                />
+                <TextInputField
+                  labelText="Text with expandable helper text"
+                  helperText="This is a helper text which can be used for instructions."
+                  expandableHelperText={true}
+                  expandableHelperTextTitle="Expandable helper text"
+                />
+                <TextInputField labelText="Text disabled" disabled={true} />
+                <TextInputField labelText="Text disabled with value" disabled={true} value="Value" />
+                <TextInputField labelText="Number" valueType="number" />
+                <TextInputField labelText="Textarea" inputType="textarea" />
+                <FileInputField labelText="File" />
+              </Fieldset>
+              <hr />
               <fieldset className="utrecht-form-fieldset">
                 <legend className="utrecht-form-fieldset__legend">Options</legend>
                 <div className="rvo-form-field">
