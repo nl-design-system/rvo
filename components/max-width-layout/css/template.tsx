@@ -3,6 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import * as designTokens from '@nl-rvo/design-tokens/dist';
+import clsx from 'clsx';
+import React from 'react';
+
+interface IMaxWidthLayoutProps {
+  size: string;
+  content: string;
+}
 
 export const argTypes = {
   size: {
@@ -14,12 +21,15 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = {
+export const defaultArgs: IMaxWidthLayoutProps = {
   size: 'md',
   content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
 };
 
-export const MaxWidthLayout = ({ size = defaultArgs.size, content = defaultArgs.content }) => {
+export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
+  size = defaultArgs.size,
+  content = defaultArgs.content,
+}) => {
   let parsedContent = content;
   if (parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
@@ -37,5 +47,5 @@ export const MaxWidthLayout = ({ size = defaultArgs.size, content = defaultArgs.
     parsedContent = parsedContent.replace(/{maxWidth}/g, maxWidth);
   }
 
-  return `<div class="rvo-max-width-layout rvo-max-width-layout--${size}">${parsedContent}</div>`;
+  return <div className={clsx('rvo-max-width-layout', `rvo-max-width-layout--${size}`)}>{parsedContent}</div>;
 };
