@@ -7,7 +7,7 @@ import './index.scss';
 import React from 'react';
 import { Checkbox, ICheckboxProps } from './template';
 
-interface ICheckboxGroupProps {
+export interface ICheckboxGroupProps {
   layout: string;
   invalid: boolean;
   options: ICheckboxProps[];

@@ -57,13 +57,13 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
 }) => (
-  <label className="rvo-custom-radio-button__label" htmlFor="${id}">
+  <label className="rvo-custom-radio-button__label" htmlFor={id}>
     <input
       id={id}
       name={name}
       autoFocus={true}
       type="radio"
-      checked={checked || null}
+      defaultChecked={checked || null}
       disabled={disabled || null}
       required={required || null}
       className={clsx(

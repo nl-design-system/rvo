@@ -15,7 +15,7 @@ export interface ITextInputProps {
   required?: boolean;
   inputType?: string;
   placeholder?: string;
-  value?: string;
+  value: string;
   valueType?: string;
 }
 
@@ -90,7 +90,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
     required: required || null,
     readOnly: readOnly || null,
     placeholder: placeholder || null,
-    defaultValue: value || null,
+    defaultValue: value,
     ...(valueType === 'number' && { inputMode: 'numeric' as any, pattern: '[0-9]*' }),
   };
 

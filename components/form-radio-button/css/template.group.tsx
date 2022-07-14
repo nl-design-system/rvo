@@ -22,7 +22,7 @@ export interface IRadioButtonGroupProps {
 
 const defaultOptions: IRadioButtonOption[] = [
   { id: 'optionA', labelText: 'Option A' },
-  { id: 'optionB', labelText: 'Option B', checked: true },
+  { id: 'optionB', labelText: 'Option B' },
   { id: 'optionC', labelText: 'Option C' },
   { id: 'optionD', labelText: 'Option D' },
 ];

@@ -7,7 +7,7 @@ import React from 'react';
 interface IExpandableTextProps {
   title: string;
   text: string;
-  open: boolean;
+  open?: boolean;
 }
 
 export const argTypes = {
