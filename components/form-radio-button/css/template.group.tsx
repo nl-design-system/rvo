@@ -5,22 +5,15 @@
 import clsx from 'clsx';
 import './index.scss';
 import React from 'react';
-import { RadioButton } from './template';
-
-interface IRadioButtonOption {
-  id: string;
-  labelText: string;
-  checked?: boolean;
-}
-
+import { IRadioButtonProps, RadioButton } from './template';
 export interface IRadioButtonGroupProps {
   layout: string;
   name: string;
   invalid: boolean;
-  options: IRadioButtonOption[];
+  options: IRadioButtonProps[];
 }
 
-const defaultOptions: IRadioButtonOption[] = [
+const defaultOptions: IRadioButtonProps[] = [
   { id: 'optionA', labelText: 'Option A' },
   { id: 'optionB', labelText: 'Option B' },
   { id: 'optionC', labelText: 'Option C' },

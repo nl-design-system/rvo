@@ -7,7 +7,7 @@ import './index.scss';
 import React from 'react';
 
 export interface ICheckboxProps {
-  id: string;
+  id?: string;
   name?: string;
   labelText: string;
   checked?: boolean;

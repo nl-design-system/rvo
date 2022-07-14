@@ -8,7 +8,7 @@ import { ITextInputFieldProps, TextInputField } from '../../form-field/css/texti
 interface IFieldsetProps {
   legend: string;
   disabled?: boolean;
-  fields: ITextInputFieldProps[];
+  fields?: ITextInputFieldProps[];
 }
 
 export const argTypes = {
@@ -56,16 +56,17 @@ export const defaultArgs: IFieldsetProps = {
 export const Fieldset: React.FC<IFieldsetProps> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,
-  fields = defaultArgs.fields,
+  fields,
+  children,
 }) => {
   return (
     <fieldset className="utrecht-form-fieldset" disabled={disabled || null}>
       {legend && (
         <legend className="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">{legend}</legend>
       )}
-      {fields.map((fieldProps) => (
-        <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />
-      ))}
+      {fields &&
+        fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />)}
+      {children}
     </fieldset>
   );
 };

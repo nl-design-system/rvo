@@ -7,7 +7,7 @@ import './index.scss';
 import React from 'react';
 
 export interface IFileInputProps {
-  id: string;
+  id?: string;
   disabled?: boolean;
   focus?: boolean;
   invalid?: boolean;

@@ -7,8 +7,8 @@ import React from 'react';
 import './index.scss';
 
 export interface IRadioButtonProps {
-  id: string;
-  name: string;
+  id?: string;
+  name?: string;
   labelText: string;
   checked?: boolean;
   hover?: boolean;
