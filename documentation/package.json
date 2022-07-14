@@ -13,6 +13,7 @@
     "@emotion/styled": "11.9.3",
     "@nl-rvo/components": "file:../components",
     "@nl-rvo/design-tokens": "file:../proprietary/design-tokens",
+    "@nl-rvo/storybook": "file:../packages/storybook",
     "@storybook/addon-docs": "6.5.9"
   },
   "dependencies": {

@@ -5,7 +5,6 @@ import { defineCustomElements } from '@nl-rvo/web-components-stencil';
 import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import React from 'react';
 // import { ComponentName } from '../../../documentation/components/ComponentName';
-import frameworkDecorator from './frameworkDecorator';
 import theme from './theme';
 import prettier from 'prettier/standalone';
 import prettierBabel from 'prettier/parser-babel';
@@ -85,4 +84,8 @@ export const parameters = {
   },
 };
 
-export const decorators = [frameworkDecorator()];
+export const decorators = [
+  (story) => {
+    return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${story()}</div>`;
+  },
+];
