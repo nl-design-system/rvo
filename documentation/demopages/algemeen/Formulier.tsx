@@ -24,7 +24,7 @@ const Formulier = () => {
               <Link content="Terug" url="#" showIcon="before" icon="terug" />
               <Heading type="h1" textContent="Heading" />
             </div>
-            <form>
+            <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
               <Fieldset legend="Keyboard inputs">
                 <TextInputField labelText="Text" />
                 <TextInputField
