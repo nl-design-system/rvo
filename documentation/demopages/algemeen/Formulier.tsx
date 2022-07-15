@@ -43,9 +43,8 @@ const Formulier = () => {
                 <TextInputField labelText="Textarea" inputType="textarea" />
                 <FileInputField labelText="File" />
               </Fieldset>
-              <hr />
-              <fieldset className="utrecht-form-fieldset">
-                <legend className="utrecht-form-fieldset__legend">Options</legend>
+
+              <Fieldset legend="Options">
                 <div className="rvo-form-field">
                   <label className="rvo-form-field__label" htmlFor="fieldId">
                     <span className="rvo-form-field__label-text">Field label</span>
@@ -256,7 +255,7 @@ const Formulier = () => {
                     </select>
                   </div>
                 </div>
-              </fieldset>
+              </Fieldset>
               <fieldset className="utrecht-form-fieldset">
                 <legend className="utrecht-form-fieldset__legend">Text input alert states</legend>
                 <div className="rvo-form-field">
