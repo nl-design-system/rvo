@@ -1,4 +1,5 @@
 :root {
+  --rvo-image-icon: url("favicon/icon.svg");
   --rvo-image-logo: url("logo.svg");
   --rvo-image-progress-tracker-completed-md: url("progress-tracker/progress-tracker-completed-md.svg");
   --rvo-image-progress-tracker-completed-sm: url("progress-tracker/progress-tracker-completed-sm.svg");
@@ -11,6 +12,10 @@
   --rvo-image-progress-tracker-line-substep-start: url("progress-tracker/progress-tracker-line-substep-start.svg");
   --rvo-image-progress-tracker-start-end-md: url("progress-tracker/progress-tracker-start-end-md.svg");
   --rvo-image-progress-tracker-start-end-sm: url("progress-tracker/progress-tracker-start-end-sm.svg");
+}
+
+.rvo-image-bg--icon {
+  background-image: url("favicon/icon.svg");
 }
 
 .rvo-image-bg--logo {

@@ -1,4 +1,7 @@
 export default {
+  FAVICON: {
+    ICON: 'favicon/icon.svg',
+  },
   LOGO: 'logo.svg',
   PROGRESS_TRACKER: {
     PROGRESS_TRACKER_COMPLETED_MD: 'progress-tracker/progress-tracker-completed-md.svg',

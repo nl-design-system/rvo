@@ -1,3 +1,18 @@
+@mixin rvo-image-icon-mask {
+  -webkit-mask-image: url("favicon/icon.svg");
+  mask-image: url("favicon/icon.svg");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+@mixin rvo-image-icon-bg {
+  background-image: url("favicon/icon.svg");
+}
+
 @mixin rvo-image-logo-mask {
   -webkit-mask-image: url("logo.svg");
   mask-image: url("logo.svg");
