@@ -1,4 +1,5 @@
 import { FileInputField } from '@nl-rvo/components/form-field/css/fileinput-field.template';
+import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
 import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
@@ -45,6 +46,17 @@ const Formulier = () => {
               </Fieldset>
 
               <Fieldset legend="Options">
+                <RadioButtonField
+                  layout="vertical"
+                  name="radio-buttons"
+                  labelText="Radio buttons"
+                  options={[
+                    { id: 'optionA', labelText: 'Option A' },
+                    { id: 'optionB', labelText: 'Option B' },
+                    { id: 'optionC', labelText: 'Option C' },
+                    { id: 'optionD', labelText: 'Option D' },
+                  ]}
+                ></RadioButtonField>
                 <div className="rvo-form-field">
                   <label className="rvo-form-field__label" htmlFor="fieldId">
                     <span className="rvo-form-field__label-text">Field label</span>

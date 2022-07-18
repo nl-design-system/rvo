@@ -9,7 +9,7 @@ import { IRadioButtonProps, RadioButton } from './template';
 export interface IRadioButtonGroupProps {
   layout: string;
   name: string;
-  invalid: boolean;
+  invalid?: boolean;
   options: IRadioButtonProps[];
 }
 
