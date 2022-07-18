@@ -102,10 +102,22 @@
               "syntax": "<color>",
               "inherits": true
             }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
           }
         },
         "hover": {
           "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -159,10 +171,162 @@
           }
         }
       },
+      "warning-subtle-action": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        },
+        "active": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "hover": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "disabled": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "focus": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        }
+      },
+      "warning-action": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "active": {
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "focus": {
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "hover": {
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "disabled": {
+          "border-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        }
+      },
       "sm": {
         "font-size": {
           "css": {
-            "syntax": "<length>",
+            "syntax": "<*>",
             "inherits": true
           }
         },
@@ -194,7 +358,7 @@
       "md": {
         "font-size": {
           "css": {
-            "syntax": "<length>",
+            "syntax": "<*>",
             "inherits": true
           }
         },
