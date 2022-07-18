@@ -1,3 +1,4 @@
+import { Button } from '@nl-rvo/components/button/css/template';
 import { CheckboxField } from '@nl-rvo/components/form-field/css/checkbox-field.template';
 import { FileInputField } from '@nl-rvo/components/form-field/css/fileinput-field.template';
 import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
@@ -169,10 +170,34 @@ const Formulier = () => {
               </Fieldset>
 
               <div className="rvo-button-group">
-                <button className="utrecht-button utrecht-button--secondary-action rvo-button--md">
+                <Button
+                  kind="secondary"
+                  size="md"
+                  textContent="Secondary action"
+                  active={false}
+                  busy={false}
+                  focus={false}
+                  focusVisible={false}
+                  disabled={false}
+                  hover={false}
+                  showIcon="no"
+                >
                   Secondary action
-                </button>
-                <button className="utrecht-button utrecht-button--primary-action rvo-button--md">Primary action</button>
+                </Button>
+                <Button
+                  kind="primary"
+                  size="md"
+                  textContent="Primary action"
+                  active={false}
+                  busy={false}
+                  focus={false}
+                  focusVisible={false}
+                  disabled={false}
+                  hover={false}
+                  showIcon="no"
+                >
+                  Secondary action
+                </Button>
               </div>
             </form>
           </div>
