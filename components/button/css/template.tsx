@@ -6,17 +6,17 @@ import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
 
-interface IButtonProps {
-  kind: string;
-  size: string;
+export interface IButtonProps {
+  kind?: string;
+  size?: string;
   textContent: string;
-  active: boolean;
-  busy: boolean;
-  focus: boolean;
-  focusVisible: boolean;
-  hover: boolean;
-  disabled: boolean;
-  showIcon: string;
+  active?: boolean;
+  busy?: boolean;
+  focus?: boolean;
+  focusVisible?: boolean;
+  hover?: boolean;
+  disabled?: boolean;
+  showIcon?: string;
 }
 
 export const argTypes = {
@@ -25,8 +25,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   size: {
-    options: ['small', 'medium'],
-    mapping: { small: 'sm', medium: 'md' },
+    options: ['sm', 'md'],
     control: { type: 'radio' },
   },
   textContent: {
