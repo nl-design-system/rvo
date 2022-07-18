@@ -30,27 +30,21 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   textContent: {
-    description: 'Button text',
     control: 'text',
   },
   busy: {
-    description: 'Busy',
     control: 'boolean',
   },
   focus: {
-    description: 'Focus',
     control: 'boolean',
   },
   focusVisible: {
-    description: 'Focus visible',
     control: 'boolean',
   },
   hover: {
-    description: 'Hover',
     control: 'boolean',
   },
   disabled: {
-    description: 'Disabled',
     control: 'boolean',
   },
   showIcon: {

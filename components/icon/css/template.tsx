@@ -39,7 +39,6 @@ export const iconNames = options.map((option) => {
 
 export const argTypes = {
   icon: {
-    description: 'Icon',
     control: 'select',
     options: options,
   },

@@ -12,7 +12,6 @@ interface IHeaderProps {
 
 export const argTypes = {
   link: {
-    description: 'Logo link',
     control: 'text',
   },
 };
