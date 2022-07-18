@@ -52,7 +52,7 @@
           "color": { "value": "{rvo.color.wit}" }
         }
       },
-      "warning-action": {
+      "warning-subtle-action": {
         "background-color": {},
         "border-color": {},
         "border-width": { "value": "0" },

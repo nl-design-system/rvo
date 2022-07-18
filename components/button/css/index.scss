@@ -242,24 +242,24 @@
   background-color: var(--rvo-button-quaternary-action-active-color);
 }
 
-// Warning action
-.rvo-button--warning-action {
-  border-color: var(--rvo-button-warning-action-border-color);
-  border-width: var(--rvo-button-warning-action-border-width);
-  color: var(--rvo-button-warning-action-color);
-  font-weight: var(--rvo-button-warning-action-font-weight);
+// Warning subtle action
+.rvo-button--warning-subtle-action {
+  border-color: var(--rvo-button-warning-subtle-action-border-color);
+  border-width: var(--rvo-button-warning-subtle-action-border-width);
+  color: var(--rvo-button-warning-subtle-action-color);
+  font-weight: var(--rvo-button-warning-subtle-action-font-weight);
 }
 
-.rvo-button--warning-action.utrecht-button--hover:not(:disabled),
-.rvo-button--warning-action.utrecht-button-link--hover:not(:disabled),
-.rvo-button--warning-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  color: var(--rvo-button-warning-action-hover-color);
+.rvo-button--warning-subtle-action.utrecht-button--hover:not(:disabled),
+.rvo-button--warning-subtle-action.utrecht-button-link--hover:not(:disabled),
+.rvo-button--warning-subtle-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-warning-subtle-action-hover-color);
   text-decoration: underline;
   text-underline-offset: 30%;
 }
 
-.rvo-button--warning-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  color: var(--rvo-button-warning-action-active-color);
+.rvo-button--warning-subtle-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-warning-subtle-action-active-color);
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
@@ -268,45 +268,45 @@
   text-underline-offset: 30%;
 }
 
-.rvo-button--warning-action.utrecht-button:disabled,
-.rvo-button--warning-action.utrecht-button-link:disabled,
-.rvo-button--warning-action.utrecht-button--disabled {
-  color: var(--rvo-button-warning-action-disabled-color);
+.rvo-button--warning-subtle-action.utrecht-button:disabled,
+.rvo-button--warning-subtle-action.utrecht-button-link:disabled,
+.rvo-button--warning-subtle-action.utrecht-button--disabled {
+  color: var(--rvo-button-warning-subtle-action-disabled-color);
 }
 
-.rvo-button--warning-action.utrecht-button--focus,
-.rvo-button--warning-action.utrecht-button-link--focus,
-.rvo-button--warning-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.rvo-button--warning-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  box-shadow: 0 0 0 var(--rvo-button-warning-action-focus-box-shadow-spread-radius)
-    var(--rvo-button-warning-action-focus-box-shadow-color);
-  color: var(--rvo-button-warning-action-focus-color);
+.rvo-button--warning-subtle-action.utrecht-button--focus,
+.rvo-button--warning-subtle-action.utrecht-button-link--focus,
+.rvo-button--warning-subtle-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.rvo-button--warning-subtle-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  box-shadow: 0 0 0 var(--rvo-button-warning-subtle-action-focus-box-shadow-spread-radius)
+    var(--rvo-button-warning-subtle-action-focus-box-shadow-color);
+  color: var(--rvo-button-warning-subtle-action-focus-color);
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
 
-.rvo-button__icon--warning-action {
-  background-color: var(--rvo-button-warning-action-color);
+.rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-color);
 }
 
-.rvo-button--warning-action.utrecht-button--disabled .rvo-button__icon--warning-action,
-.rvo-button--warning-action.utrecht-button:disabled .rvo-button__icon--warning-action,
-.rvo-button--warning-action.utrecht-button-link:disabled .rvo-button__icon--warning-action {
-  background-color: var(--rvo-button-warning-action-disabled-color);
+.rvo-button--warning-subtle-action.utrecht-button--disabled .rvo-button__icon--warning-subtle-action,
+.rvo-button--warning-subtle-action.utrecht-button:disabled .rvo-button__icon--warning-subtle-action,
+.rvo-button--warning-subtle-action.utrecht-button-link:disabled .rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-disabled-color);
 }
 
-.rvo-button--warning-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
-  .rvo-button__icon--warning-action {
-  background-color: var(--rvo-button-warning-action-active-color);
+.rvo-button--warning-subtle-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-active-color);
 }
 
-.utrecht-button--hover.rvo-button--warning-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
-  .rvo-button__icon--warning-action,
-.utrecht-button.rvo-button--warning-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
-  .rvo-button__icon--warning-action {
-  background-color: var(--rvo-button-warning-action-hover-color);
+.utrecht-button--hover.rvo-button--warning-subtle-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--warning-subtle-action,
+.utrecht-button.rvo-button--warning-subtle-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-hover-color);
 }
 
 // Sizes

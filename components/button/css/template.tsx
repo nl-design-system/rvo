@@ -21,7 +21,7 @@ interface IButtonProps {
 
 export const argTypes = {
   kind: {
-    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'warning'],
+    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'warning-subtle'],
     control: { type: 'radio' },
   },
   size: {
@@ -92,7 +92,7 @@ export const Button: React.FC<IButtonProps> = ({
         'utrecht-button--secondary-action': kind === 'secondary',
         'rvo-button--tertiary-action': kind === 'tertiary',
         'rvo-button--quaternary-action': kind === 'quaternary',
-        'rvo-button--warning-action': kind === 'warning',
+        'rvo-button--warning-subtle-action': kind === 'warning-subtle',
         'rvo-button--sm': size === 'sm',
         'rvo-button--md': size === 'md',
         'utrecht-button--active': active,
@@ -126,7 +126,7 @@ export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
       <Button {...buttonArgs} kind="quaternary" />
     </p>
     <p>
-      <Button {...buttonArgs} kind="warning" />
+      <Button {...buttonArgs} kind="warning-subtle" />
     </p>
   </div>
 );
