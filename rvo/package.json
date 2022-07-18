@@ -8,7 +8,7 @@
     "nl-design-system",
     "nl-rvo"
   ],
-  "private": true,
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
