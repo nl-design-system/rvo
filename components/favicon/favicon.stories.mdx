@@ -1,0 +1,39 @@
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import markdown from "./README.md";
+import { Favicon } from "./template";
+
+<Meta
+  title="CSS Components/Favicon/Favicon"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    docs: {
+      transformSource: () =>
+        '<link rel="manifest" href="/manifest.webmanifest">\n<link rel="icon" href="/favicon.ico" sizes="any">\n<link rel="icon" href="/icon.svg" type="image/svg+xml">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
+    },
+  }}
+/>
+
+<Description>{markdown}</Description>
+
+## Favicon
+
+<Canvas>
+  <Story name="Favicon">{Favicon.bind({})}</Story>
+</Canvas>
+
+## Instructies
+
+Zorg dat de volgende bestanden in de root folder van de website of applicatie staan:
+
+- favicon.ico
+- icon.svg
+- apple-touch-icon.png
+- icon-192.png
+- icon-512.png
+- manifest.webmanifest
+
+## Dependencies
+
+@nl-rvo/assets/images/favicon
