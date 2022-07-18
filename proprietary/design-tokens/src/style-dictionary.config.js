@@ -55,6 +55,7 @@ module.exports = {
         {
           destination: 'index.scss',
           format: 'scss/variables',
+          filter: (token) => token.value.length > 0,
           options: {
             outputReferences: true,
           },
