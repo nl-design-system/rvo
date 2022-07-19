@@ -1,0 +1,41 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MenuBar } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Max width"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Menubar max width
+
+### Small
+
+<Canvas>
+  <Story name="Small" args={{ ...defaultArgs, iconPlacement: "before", menuMaxWidth: "sm" }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
+
+### Medium
+
+<Canvas>
+  <Story name="Medium" args={{ ...defaultArgs, iconPlacement: "before", menuMaxWidth: "md" }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
+
+### Large
+
+<Canvas>
+  <Story name="Large" args={{ ...defaultArgs, iconPlacement: "before", menuMaxWidth: "lg" }}>
+    {MenuBar.bind()}
+  </Story>
+</Canvas>

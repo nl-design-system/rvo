@@ -9,6 +9,7 @@ import React from 'react';
 interface IMaxWidthLayoutProps {
   size?: string;
   content?: string;
+  className?: string | string[];
 }
 
 export const argTypes = {
@@ -26,7 +27,7 @@ export const defaultArgs: IMaxWidthLayoutProps = {
   content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
 };
 
-export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({ size, content, children }) => {
+export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({ size, content, children, className = [] }) => {
   let parsedContent = content || children;
   if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
@@ -44,5 +45,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({ size, content, 
     parsedContent = parsedContent.replace(/{maxWidth}/g, maxWidth);
   }
 
-  return <div className={clsx('rvo-max-width-layout', `rvo-max-width-layout--${size}`)}>{parsedContent}</div>;
+  return (
+    <div className={clsx('rvo-max-width-layout', `rvo-max-width-layout--${size}`, className)}>{parsedContent}</div>
+  );
 };

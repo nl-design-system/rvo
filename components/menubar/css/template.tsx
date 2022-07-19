@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import '@utrecht/component-library-css';
+import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
 
@@ -18,6 +19,7 @@ interface IMenuBarProps {
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement: string;
+  menuMaxWidth: string;
 }
 
 const defaultItems = [
@@ -45,6 +47,10 @@ export const argTypes = {
     options: ['before', 'after'],
     control: { type: 'radio' },
   },
+  menuMaxWidth: {
+    options: ['none', 'sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs: IMenuBarProps = {
@@ -52,6 +58,7 @@ export const defaultArgs: IMenuBarProps = {
   items: defaultItems,
   useIcons: true,
   iconPlacement: 'before',
+  menuMaxWidth: 'none',
 };
 
 const parseMenuItem = (
@@ -88,29 +95,38 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   items = defaultArgs.items,
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
+  menuMaxWidth = defaultArgs.menuMaxWidth,
 }) => {
   const leftItems = items.filter((item) => item.align !== 'right');
   const rightItems = items.filter((item) => item.align === 'right');
   return (
-    <nav className={`rvo-topnav rvo-topnav--${size}`}>
-      <ul className="utrecht-topnav__list">
-        {leftItems.map((item, index) => (
-          <li key={index} className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
-              {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
-            </a>
-          </li>
-        ))}
-        {rightItems.length && <div className="rvo-topnav__spacer" />}
-        {rightItems.length &&
-          rightItems.map((item, index) => (
+    <div className="rvo-topnav__background">
+      <nav
+        className={clsx(
+          `rvo-topnav rvo-topnav--${size}`,
+          menuMaxWidth !== 'none' && 'rvo-max-width-layout',
+          menuMaxWidth !== 'none' && `rvo-max-width-layout--${menuMaxWidth}`,
+        )}
+      >
+        <ul className="utrecht-topnav__list">
+          {leftItems.map((item, index) => (
             <li key={index} className="utrecht-topnav__item">
               <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
                 {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
               </a>
             </li>
           ))}
-      </ul>
-    </nav>
+          {rightItems.length && <div className="rvo-topnav__spacer" />}
+          {rightItems.length &&
+            rightItems.map((item, index) => (
+              <li key={index} className="utrecht-topnav__item">
+                <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
+                  {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </nav>
+    </div>
   );
 };

@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
 .rvo-topnav {
   font-family: var(--rvo-topnav-font-family);
 }
@@ -17,6 +16,10 @@
 
 .rvo-topnav__spacer {
   flex: 1;
+}
+
+.rvo-topnav__background {
+  background-color: var(--utrecht-topnav-list-background-color);
 }
 
 .utrecht-topnav__list {
