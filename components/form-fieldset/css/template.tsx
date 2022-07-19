@@ -60,7 +60,7 @@ export const Fieldset: React.FC<IFieldsetProps> = ({
   children,
 }) => {
   return (
-    <fieldset className="utrecht-form-fieldset" disabled={disabled || null}>
+    <fieldset className="utrecht-form-fieldset rvo-layout-column rvo-layout-gap--lg" disabled={disabled || null}>
       {legend && (
         <legend className="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">{legend}</legend>
       )}
