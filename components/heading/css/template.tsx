@@ -20,24 +20,19 @@ export const argTypes = {
   textContent: {
     control: 'text',
   },
-  distanced: {
-    control: 'boolean',
-  },
 };
 
 export const defaultArgs: IHeadingProps = {
   type: 'h1',
   textContent: 'Heading',
-  distanced: false,
 };
 
 export const Heading: React.FC<IHeadingProps> = ({
   type = defaultArgs.type,
   textContent = defaultArgs.textContent,
-  distanced = defaultArgs.distanced,
 }) => {
   const props = {
-    className: clsx(`utrecht-heading-${type}`, { [`utrecht-heading-${type}--distanced`]: distanced }),
+    className: clsx(`utrecht-heading-${type}`),
   };
 
   switch (type) {
