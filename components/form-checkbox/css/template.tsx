@@ -78,7 +78,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       indeterminate && 'rvo-checkbox--indeterminate',
       required && 'rvo-checkbox--required',
       'rvo-layout-row',
-      'rvo-layout-gap-sm',
+      'rvo-layout-gap--sm',
     )}
     htmlFor={id}
   >

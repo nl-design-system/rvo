@@ -53,7 +53,7 @@ export const ButtonGroup: React.FC<IButtonGroupProps> = ({
   children,
 }) => {
   return (
-    <div className="rvo-button-group rvo-layout-row rvo-layout-gap-md">
+    <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
       {children}
       {!children && buttonsLeft.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
       {!children && buttonsRight.length > 0 && <div className="rvo-button-group__spacer" />}
