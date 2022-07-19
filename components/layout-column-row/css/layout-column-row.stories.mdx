@@ -1,11 +1,11 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Description, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, MaxWidthLayout } from "./template";
+import { argTypes, defaultArgs, LayoutColumnRow } from "./template";
 import "./index.scss";
 import markdown from "../README.md";
 
 <Meta
-  title="CSS Components/Layout/Max width layout"
+  title="CSS Components/Layout/Layout column &frasl; row"
   argTypes={argTypes}
   parameters={{
     status: {
@@ -15,12 +15,12 @@ import markdown from "../README.md";
   decorators={[frameworkDecorator]}
 />
 
+<Description>{markdown}</Description>
+
 <Canvas>
-  <Story name="Max width layout" args={defaultArgs}>
-    {MaxWidthLayout.bind({})}
+  <Story name="Layout column &frasl; row" args={defaultArgs}>
+    {LayoutColumnRow.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Max width layout" />
-
-<Description>{markdown}</Description>
+<ArgsTable story="Layout column &frasl; row" />
