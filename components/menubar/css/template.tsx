@@ -96,7 +96,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
       <ul className="utrecht-topnav__list">
         {leftItems.map((item, index) => (
           <li key={index} className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href={item.link}>
+            <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
               {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
             </a>
           </li>
@@ -105,7 +105,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         {rightItems.length &&
           rightItems.map((item, index) => (
             <li key={index} className="utrecht-topnav__item">
-              <a className="utrecht-topnav__link" href={item.link}>
+              <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
                 {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
               </a>
             </li>

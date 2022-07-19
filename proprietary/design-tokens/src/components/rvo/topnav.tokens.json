@@ -9,7 +9,6 @@
         "font-size": { "value": "{rvo.font-size.md}" }
       },
       "link": {
-        "gap": { "value": "{rvo.space.sm}" },
         "padding-block-start": { "value": "{rvo.space.md}" },
         "padding-block-end": { "value": "{rvo.space.md}" },
         "padding-inline-start": { "value": "{rvo.space.md}" },
