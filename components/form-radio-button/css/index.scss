@@ -5,45 +5,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rvo-custom-radio-button__group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--rvo-custom-radio-button-group-gap);
-}
-
-.rvo-custom-radio-button__group--vertical {
-  flex-direction: column;
-}
-
-.rvo-custom-radio-button__group--horizontal {
-  flex-direction: row;
-}
-
 .rvo-custom-radio-button__group--error {
   border-left: 3px solid var(--rvo-color-rood);
   padding-inline-start: var(--rvo-space-md);
-}
-
-.rvo-custom-radio-button__label {
-  align-items: center;
-  display: inline-flex;
-  gap: var(--rvo-custom-radio-button-label-gap);
-}
-
-.rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:first-child {
-  margin-inline-start: var(--rvo-checkbox-gap);
-}
-
-.rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:first-child {
-  margin-block-start: var(--rvo-checkbox-gap);
-}
-
-.rvo-custom-radio-button__group--horizontal .rvo-custom-radio-button__label:last-child {
-  margin-inline-end: var(--rvo-checkbox-gap);
-}
-
-.rvo-custom-radio-button__group--vertical .rvo-custom-radio-button__label:last-child {
-  margin-block-end: var(--rvo-checkbox-gap);
 }
 
 // Checked state overrides

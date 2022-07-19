@@ -1,13 +1,7 @@
 {
   "rvo": {
     "custom-radio-button": {
-      "group": {
-        "gap": { "value": "{rvo.space.md}" }
-      },
       "label": {
-        "gap": {
-          "value": "{rvo.space.sm}"
-        },
         "disabled": {
           "color": { "value": "{rvo.color.grijs3}" }
         }
