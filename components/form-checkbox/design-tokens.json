@@ -1,27 +1,7 @@
 {
   "rvo": {
     "checkbox": {
-      "group": {
-        "gap": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        }
-      },
       "label": {
-        "margin-block-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "margin-inline-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
         "disabled": {
           "color": {
             "css": {

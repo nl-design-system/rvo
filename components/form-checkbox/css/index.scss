@@ -4,45 +4,9 @@
  */
 @use "../../../proprietary/assets/icons";
 
-.rvo-checkbox__group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--rvo-custom-radio-button-group-gap);
-}
-
-.rvo-checkbox__group--vertical {
-  flex-direction: column;
-}
-
-.rvo-checkbox__group--horizontal {
-  flex-direction: row;
-}
-
 .rvo-custom-radio-button__group--error {
   border-left: 3px solid var(--rvo-color-rood);
   padding-inline-start: var(--rvo-space-md);
-}
-
-.rvo-checkbox {
-  align-items: center;
-  display: inline-flex;
-  gap: var(--rvo-checkbox-gap);
-}
-
-.rvo-checkbox__group--horizontal .rvo-checkbox:first-child {
-  margin-inline-start: var(--rvo-checkbox-gap);
-}
-
-.rvo-checkbox__group--vertical .rvo-checkbox:first-child {
-  margin-block-start: var(--rvo-checkbox-gap);
-}
-
-.rvo-checkbox__group--horizontal .rvo-checkbox:last-child {
-  margin-inline-end: var(--rvo-checkbox-gap);
-}
-
-.rvo-checkbox__group--vertical .rvo-checkbox:last-child {
-  margin-block-end: var(--rvo-checkbox-gap);
 }
 
 .rvo-checkbox__input {

@@ -6,7 +6,6 @@
         "size": { "value": "16px" },
         "color": { "value": "{rvo.color.wit}" }
       },
-      "gap": { "value": "{rvo.space.sm}" },
       "background-color": { "value": "{utrecht.form-input.background-color}" },
       "border-width": { "value": "{utrecht.form-input.border-width}" },
       "border-color": { "value": "{utrecht.form-input.border-color}" },

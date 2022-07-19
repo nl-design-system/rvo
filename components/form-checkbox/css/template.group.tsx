@@ -48,9 +48,9 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
   <div
     className={clsx(
       'rvo-checkbox__group',
-      layout === 'horizontal' && 'rvo-checkbox__group--horizontal',
-      layout === 'vertical' && 'rvo-checkbox__group--vertical',
       invalid && 'rvo-custom-radio-button__group--error',
+      layout === 'horizontal' ? 'rvo-layout-row' : 'rvo-layout-column',
+      'rvo-layout-gap-sm',
     )}
   >
     {options.map((option) => (
