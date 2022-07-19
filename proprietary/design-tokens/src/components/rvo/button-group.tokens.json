@@ -1,7 +1,6 @@
 {
   "rvo": {
     "button-group": {
-      "gap": { "value": "{rvo.space.md}" },
       "padding-block-end": { "value": "{rvo.space.md}" },
       "padding-block-start": { "value": "0" },
       "padding-inline-end": { "value": "{rvo.space.md}" },
