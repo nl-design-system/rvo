@@ -1,0 +1,17 @@
+{
+  "rvo": {
+    "form-feedback": {
+      "line-height": { "value": "{rvo.line-height.md}" },
+      "padding-block-end": { "value": "0" },
+      "padding-block-start": { "value": "{rvo.space.xs}" },
+      "warning": {
+        "color": {},
+        "font-weight": {}
+      },
+      "error": {
+        "color": { "value": "{rvo.color.rood}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" }
+      }
+    }
+  }
+}

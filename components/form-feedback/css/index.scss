@@ -1,0 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-form-feedback {
+  line-height: var(--rvo-form-feedback-line-height);
+  padding-block-end: var(--rvo-form-feedback-padding-block-end);
+  padding-block-start: var(--rvo-form-feedback-padding-block-start);
+}
+
+.rvo-form-feedback--warning {
+  color: var(--rvo-form-feedback-warning-color);
+  font-weight: var(--rvo-form-feedback-warning-font-weight);
+}
+
+.rvo-form-feedback--error {
+  color: var(--rvo-form-feedback-error-color);
+  font-weight: var(--rvo-form-feedback-error-font-weight);
+}

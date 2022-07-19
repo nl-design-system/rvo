@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import './index.scss';
 
 interface IFeedbackProps {
   text: string;
@@ -25,15 +26,15 @@ export const defaultArgs: IFeedbackProps = {
 export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text, type = defaultArgs.type }) => {
   if (type === 'warning') {
     return (
-      <div className="rvo-form-field__helper-text rvo-form-field__helper-text--warning">
+      <div className="rvo-form-feedback rvo-form-feedback--warning rvo-layout-row rvo-layout-gap--sm">
         <div className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></div>
         {text}
       </div>
     );
   } else {
     return (
-      <div className="rvo-form-field__helper-text rvo-form-field__helper-text--error">
-        <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--md"></div>
+      <div className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm">
+        <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--sm"></div>
         {text}
       </div>
     );

@@ -7,20 +7,6 @@
         "margin-block-end": { "value": "{rvo.space.sm}" },
         "margin-block-start": { "value": "0" },
         "font-weight": { "value": "{rvo.font-weight.bold}" }
-      },
-      "helper-text": {
-        "line-height": { "value": "{rvo.line-height.md}" },
-        "padding-block-end": { "value": "0" },
-        "padding-block-start": { "value": "{rvo.space.xs}" },
-        "gap": { "value": "{rvo.space.sm}" },
-        "warning": {
-          "color": {},
-          "font-weight": {}
-        },
-        "error": {
-          "color": { "value": "{rvo.color.rood}" },
-          "font-weight": { "value": "{rvo.font-weight.bold}" }
-        }
       }
     }
   }
