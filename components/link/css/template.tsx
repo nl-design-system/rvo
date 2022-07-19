@@ -80,11 +80,17 @@ export const Link: React.FC<ILinkProps> = ({
   return (
     <a
       href={url}
-      className={clsx('rvo-link', classNames, {
-        'rvo-link--active': active,
-        'rvo-link--hover': hover,
-        'rvo-link--focus': focus,
-      })}
+      className={clsx(
+        'rvo-link',
+        classNames,
+        {
+          'rvo-link--active': active,
+          'rvo-link--hover': hover,
+          'rvo-link--focus': focus,
+        },
+        'rvo-layout-row',
+        'rvo-layout-gap--sm',
+      )}
     >
       {showIcon === 'before' && iconMarkup}
       {content}
