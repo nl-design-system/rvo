@@ -1,11 +1,7 @@
 {
   "rvo": {
     "form-field": {
-      "margin-block-end": { "value": "calc({rvo.space.sm} + {rvo.space.md})" },
-      "margin-block-start": { "value": "0" },
       "label": {
-        "margin-block-end": { "value": "{rvo.space.sm}" },
-        "margin-block-start": { "value": "0" },
         "font-weight": { "value": "{rvo.font-weight.bold}" }
       }
     }
