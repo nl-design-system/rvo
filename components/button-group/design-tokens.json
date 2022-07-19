@@ -1,0 +1,36 @@
+{
+  "rvo": {
+    "button-group": {
+      "gap": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}

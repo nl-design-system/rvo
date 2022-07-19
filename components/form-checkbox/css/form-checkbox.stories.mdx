@@ -1,3 +1,4 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, Checkbox, defaultArgs } from "./template";
 
@@ -9,6 +10,7 @@ import { argTypes, Checkbox, defaultArgs } from "./template";
       type: "WORK IN PROGRESS",
     },
   }}
+  decorators={[frameworkDecorator]}
 />
 
 # Form checkbox

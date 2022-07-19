@@ -1,8 +1,10 @@
+/* stylelint-disable scss/no-global-function-names */
+@use "../../../proprietary/design-tokens/dist" as tokens;
+
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
 .utrecht-button {
   align-items: center;
   display: flex;
@@ -79,9 +81,9 @@
 
 // Tertiary action
 .rvo-button--tertiary-action {
-  border-color: var(--rvo-button-tertiary-action-border-color);
-  border-width: var(--rvo-button-tertiary-action-border-width);
-  color: var(--rvo-button-tertiary-action-color);
+  border-color: var(--rvo-button-tertiary-action-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-button-tertiary-action-border-width, var(--utrecht-form-input-border-width));
+  color: var(--rvo-button-tertiary-action-color, var(--utrecht-form-input-color));
   font-weight: var(--rvo-button-tertiary-action-font-weight);
 }
 
@@ -106,7 +108,7 @@
 .rvo-button--tertiary-action.utrecht-button:disabled,
 .rvo-button--tertiary-action.utrecht-button-link:disabled,
 .rvo-button--tertiary-action.utrecht-button--disabled {
-  color: var(--rvo-button-tertiary-action-disabled-color);
+  color: var(--rvo-button-tertiary-action-disabled-color, var(--utrecht-form-input-disabled-color));
 }
 
 .rvo-button--tertiary-action.utrecht-button--focus,
@@ -115,7 +117,7 @@
 .rvo-button--tertiary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   box-shadow: 0 0 0 var(--rvo-button-tertiary-action-focus-box-shadow-spread-radius)
     var(--rvo-button-tertiary-action-focus-box-shadow-color);
-  color: var(--rvo-button-tertiary-action-focus-color);
+  color: var(--rvo-button-tertiary-action-focus-color, var(--utrecht-form-input-focus-color));
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
@@ -160,10 +162,10 @@
 
 // Quaternary action
 .rvo-button--quaternary-action {
-  background-color: var(--rvo-button-quaternary-action-background-color);
-  border-color: var(--rvo-button-quaternary-action-border-color);
-  border-width: var(--rvo-button-quaternary-action-border-width);
-  color: var(--rvo-button-quaternary-action-color);
+  background-color: var(--rvo-button-quaternary-action-background-color, var(--utrecht-form-input-background-color));
+  border-color: var(--rvo-button-quaternary-action-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-button-quaternary-action-border-width, var(--utrecht-form-input-border-width));
+  color: var(--rvo-button-quaternary-action-color, var(--utrecht-form-input-color));
 }
 
 .rvo-button--quaternary-action.utrecht-button--hover:not(:disabled),
@@ -185,18 +187,27 @@
 .rvo-button--quaternary-action.utrecht-button:disabled,
 .rvo-button--quaternary-action.utrecht-button-link:disabled,
 .rvo-button--quaternary-action.utrecht-button--disabled {
-  background-color: var(--rvo-button-quaternary-action-disabled-background-color);
-  border-color: var(--rvo-button-quaternary-action-disabled-border-color);
-  color: var(--rvo-button-quaternary-action-disabled-color);
+  background-color: var(
+    --rvo-button-quaternary-action-disabled-background-color,
+    var(--utrecht-form-input-disabled-background-color)
+  );
+  border-color: var(
+    --rvo-button-quaternary-action-disabled-border-color,
+    var(--utrecht-form-input-disabled-border-color)
+  );
+  color: var(--rvo-button-quaternary-action-disabled-color, var(--utrecht-form-input-disabled-color));
 }
 
 .rvo-button--quaternary-action.utrecht-button--focus,
 .rvo-button--quaternary-action.utrecht-button-link--focus,
 .rvo-button--quaternary-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
 .rvo-button--quaternary-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  background-color: var(--rvo-button-quaternary-action-focus-background-color);
-  border-color: var(--rvo-button-quaternary-action-focus-border-color);
-  border-width: var(--rvo-button-quaternary-action-focus-border-width);
+  background-color: var(
+    --rvo-button-quaternary-action-focus-background-color,
+    var(--utrecht-form-input-focus-background-color)
+  );
+  border-color: var(--rvo-button-quaternary-action-focus-border-color, var(--utrecht-form-input-focus-border-color));
+  border-width: var(--rvo-button-quaternary-action-focus-border-width, var(--utrecht-form-input-focus-border-width));
   box-shadow: 0 0 0 var(--rvo-button-quaternary-action-focus-box-shadow-spread-radius)
     var(--rvo-button-quaternary-action-focus-box-shadow-color);
   color: var(--rvo-button-quaternary-action-focus-color);
@@ -242,24 +253,24 @@
   background-color: var(--rvo-button-quaternary-action-active-color);
 }
 
-// Warning action
-.rvo-button--warning-action {
-  border-color: var(--rvo-button-warning-action-border-color);
-  border-width: var(--rvo-button-warning-action-border-width);
-  color: var(--rvo-button-warning-action-color);
-  font-weight: var(--rvo-button-warning-action-font-weight);
+// Warning subtle action
+.rvo-button--warning-subtle-action {
+  border-color: var(--rvo-button-warning-subtle-action-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-button-warning-subtle-action-border-width, var(--utrecht-form-input-border-width));
+  color: var(--rvo-button-warning-subtle-action-color, var(--utrecht-form-input-color));
+  font-weight: var(--rvo-button-warning-subtle-action-font-weight);
 }
 
-.rvo-button--warning-action.utrecht-button--hover:not(:disabled),
-.rvo-button--warning-action.utrecht-button-link--hover:not(:disabled),
-.rvo-button--warning-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  color: var(--rvo-button-warning-action-hover-color);
+.rvo-button--warning-subtle-action.utrecht-button--hover:not(:disabled),
+.rvo-button--warning-subtle-action.utrecht-button-link--hover:not(:disabled),
+.rvo-button--warning-subtle-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-warning-subtle-action-hover-color);
   text-decoration: underline;
   text-underline-offset: 30%;
 }
 
-.rvo-button--warning-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  color: var(--rvo-button-warning-action-active-color);
+.rvo-button--warning-subtle-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  color: var(--rvo-button-warning-subtle-action-active-color);
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
@@ -268,18 +279,92 @@
   text-underline-offset: 30%;
 }
 
+.rvo-button--warning-subtle-action.utrecht-button:disabled,
+.rvo-button--warning-subtle-action.utrecht-button-link:disabled,
+.rvo-button--warning-subtle-action.utrecht-button--disabled {
+  color: var(--rvo-button-warning-subtle-action-disabled-color, var(--utrecht-form-input-disabled-color));
+}
+
+.rvo-button--warning-subtle-action.utrecht-button--focus,
+.rvo-button--warning-subtle-action.utrecht-button-link--focus,
+.rvo-button--warning-subtle-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.rvo-button--warning-subtle-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  box-shadow: 0 0 0 var(--rvo-button-warning-subtle-action-focus-box-shadow-spread-radius)
+    var(--rvo-button-warning-subtle-action-focus-box-shadow-color);
+  color: var(--rvo-button-warning-subtle-action-focus-color, var(--utrecht-form-input-focus-color));
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-color);
+}
+
+.rvo-button--warning-subtle-action.utrecht-button--disabled .rvo-button__icon--warning-subtle-action,
+.rvo-button--warning-subtle-action.utrecht-button:disabled .rvo-button__icon--warning-subtle-action,
+.rvo-button--warning-subtle-action.utrecht-button-link:disabled .rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-disabled-color);
+}
+
+.rvo-button--warning-subtle-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-active-color);
+}
+
+.utrecht-button--hover.rvo-button--warning-subtle-action:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--warning-subtle-action,
+.utrecht-button.rvo-button--warning-subtle-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled)
+  .rvo-button__icon--warning-subtle-action {
+  background-color: var(--rvo-button-warning-subtle-action-hover-color);
+}
+
+// Warning action
+.rvo-button--warning-action {
+  background-color: var(--rvo-button-warning-action-background-color, var(--utrecht-form-input-background-color));
+  border-color: var(--rvo-button-warning-action-border-color, var(--utrecht-form-input-border-color));
+  border-width: var(--rvo-button-warning-action-border-width, var(--utrecht-form-input-border-width));
+  color: var(--rvo-button-warning-action-color, var(--utrecht-form-input-color));
+  font-weight: var(--rvo-button-warning-action-font-weight);
+}
+
+.rvo-button--warning-action.utrecht-button--hover:not(:disabled),
+.rvo-button--warning-action.utrecht-button-link--hover:not(:disabled),
+.rvo-button--warning-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: darken(tokens.$rvo-button-warning-action-hover-background-color, 30%);
+  color: var(--rvo-button-warning-action-hover-color);
+}
+
+.rvo-button--warning-action.utrecht-button--active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  background-color: var(--rvo-button-warning-action-active-background-color);
+  color: var(--rvo-button-warning-action-active-color);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
 .rvo-button--warning-action.utrecht-button:disabled,
 .rvo-button--warning-action.utrecht-button-link:disabled,
 .rvo-button--warning-action.utrecht-button--disabled {
-  color: var(--rvo-button-warning-action-disabled-color);
+  background-color: var(
+    --rvo-button-warning-action-disabled-background-color,
+    var(--utrecht-form-input-disabled-background-color)
+  );
+  border-color: var(--rvo-button-warning-action-disabled-border-color, var(--utrecht-form-input-disabled-border-color));
+  color: var(--rvo-button-warning-action-disabled-color, var(--utrecht-form-input-disabled-color));
 }
 
 .rvo-button--warning-action.utrecht-button--focus,
 .rvo-button--warning-action.utrecht-button-link--focus,
 .rvo-button--warning-action.utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
 .rvo-button--warning-action.utrecht-button-link:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  box-shadow: 0 0 0 var(--rvo-button-warning-action-focus-box-shadow-spread-radius)
-    var(--rvo-button-warning-action-focus-box-shadow-color);
+  background-color: var(
+    --rvo-button-warning-action-focus-background-color,
+    var(--utrecht-form-input-focus-background-color)
+  );
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius) var(--utrecht-focus-box-shadow-color);
   color: var(--rvo-button-warning-action-focus-color);
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: var(--utrecht-focus-outline-offset, 0);

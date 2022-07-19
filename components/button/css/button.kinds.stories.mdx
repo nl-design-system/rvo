@@ -1,3 +1,4 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, Button } from "./template";
 import "./index.scss";
@@ -10,6 +11,7 @@ import "./index.scss";
       type: "WORK IN PROGRESS",
     },
   }}
+  decorators={[frameworkDecorator]}
 />
 
 # Button kinds
@@ -60,6 +62,19 @@ import "./index.scss";
     name="Quaternary"
     args={{
       kind: "quaternary",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Warning subtle
+
+<Canvas>
+  <Story
+    name="Warning subtle"
+    args={{
+      kind: "warning-subtle",
     }}
   >
     {Button.bind({})}

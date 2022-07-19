@@ -6,7 +6,6 @@ export const Template = ({ label }) => `<rvo-button>${label}</rvo-button>`;
   title="Web Components/Button"
   argTypes={{
     label: {
-      description: "Set the text content",
       control: "text",
     },
   }}

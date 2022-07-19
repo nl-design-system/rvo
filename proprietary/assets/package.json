@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.4",
   "author": "Community for NL Design System",
   "description": "RVO assets",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -8,7 +8,7 @@
     "nl-design-system",
     "nl-rvo"
   ],
-  "private": true,
+  "private": false,
   "publishConfig": {
     "access": "public"
   },

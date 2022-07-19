@@ -6,12 +6,8 @@
         "background-color": {},
         "border-color": {},
         "border-width": { "value": "0" },
-        "color": {
-          "value": "{rvo.color.hemelblauw}"
-        },
-        "font-weight": {
-          "value": "{rvo.font-weight.bold}"
-        },
+        "color": { "value": "{rvo.color.hemelblauw}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
         "active": {
           "color": { "value": "{rvo.color.donkerblauw}" }
         },
@@ -26,9 +22,7 @@
         }
       },
       "quaternary-action": {
-        "background-color": {
-          "value": "{rvo.color.groen}"
-        },
+        "background-color": { "value": "{rvo.color.groen}" },
         "border-color": {},
         "border-width": { "value": "0" },
         "color": { "value": "{rvo.color.wit}" },
@@ -52,16 +46,12 @@
           "color": { "value": "{rvo.color.wit}" }
         }
       },
-      "warning-action": {
+      "warning-subtle-action": {
         "background-color": {},
         "border-color": {},
         "border-width": { "value": "0" },
-        "color": {
-          "value": "{rvo.color.rood}"
-        },
-        "font-weight": {
-          "value": "{rvo.font-weight.bold}"
-        },
+        "color": { "value": "{rvo.color.rood}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
         "active": {
           "color": { "value": "{rvo.color.donkerblauw}" }
         },
@@ -73,6 +63,29 @@
         },
         "focus": {
           "color": { "value": "{rvo.color.rood}" }
+        }
+      },
+      "warning-action": {
+        "background-color": { "value": "{rvo.color.rood}" },
+        "border-color": {},
+        "border-width": { "value": "0" },
+        "color": { "value": "{rvo.color.wit}" },
+        "active": {
+          "background-color": { "value": "{rvo.color.rood}" },
+          "color": { "value": "{rvo.color.wit}" }
+        },
+        "focus": {
+          "background-color": { "value": "{rvo.color.rood}" },
+          "color": { "value": "{rvo.color.wit}" }
+        },
+        "hover": {
+          "background-color": { "value": "{rvo.color.rood}" },
+          "color": { "value": "{rvo.color.wit}" }
+        },
+        "disabled": {
+          "border-color": { "value": "{rvo.color.grijs2}" },
+          "background-color": { "value": "{rvo.color.grijs2}" },
+          "color": { "value": "{rvo.color.grijs3}" }
         }
       },
       "sm": {

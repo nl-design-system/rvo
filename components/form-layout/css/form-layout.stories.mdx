@@ -1,3 +1,4 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { FormLayout } from "./template";
 import "./index.scss";
@@ -9,6 +10,7 @@ import "./index.scss";
       type: "WORK IN PROGRESS",
     },
   }}
+  decorators={[frameworkDecorator]}
 />
 
 # Form layout
