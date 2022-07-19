@@ -64,6 +64,7 @@ export const Step: React.FC<IProgressTrackerStepProps> = ({
         `rvo-progress-tracker__step--${line !== 'substep-start' ? size : 'md'}`,
         `rvo-progress-tracker__step--${state}`,
         line !== 'none' && `rvo-progress-tracker__step--${line}`,
+        'rvo-layout-row',
       )}
     >
       {labelMarkup}

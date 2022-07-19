@@ -9,8 +9,6 @@
 }
 
 .rvo-progress-tracker__step {
-  align-items: center;
-  display: flex;
   min-height: var(--rvo-progress-tracker-step-height);
   padding-inline-start: var(--rvo-progress-tracker-step-label-padding);
   position: relative;
