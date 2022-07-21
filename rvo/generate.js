@@ -162,7 +162,6 @@ const generateSCSS = (assetList, targetFolder, classnamePrefix) => {
 const generateIconList = () => {
   const folderPath = path.join(__dirname, 'icons');
   const assetList = readFolder(folderPath);
-  console.log(assetList);
   generateJS(assetList, 'icons');
   generateCSS(assetList, 'icons', 'rvo-icon', true, true);
   generateSCSS(assetList, 'icons', 'rvo-icon');
