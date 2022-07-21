@@ -49,7 +49,7 @@ const generateJS = (assetList, targetFolder) => {
           `${iconFilename
             .replace('.svg', '')
             .replace(/-/g, '_')
-            .toUpperCase()}: '${parsedCategoryPath}${iconFilename}',`,
+            .toUpperCase()}: '${targetFolder}/${parsedCategoryPath}${iconFilename}',`,
       ),
     );
     if (iconCategoryName !== '$root') {
@@ -80,7 +80,7 @@ const generateCSS = (
 
   // Loop over categories
   Object.keys(assetList).forEach((iconCategoryName) => {
-    const parsedCategoryPath = iconCategoryName !== '$root' ? `${iconCategoryName}/` : '';
+    const parsedCategoryPath = iconCategoryName !== '$root' ? `${targetFolder}/${iconCategoryName}/` : '';
     // Loop over icons
     assetList[iconCategoryName].forEach((iconFilename) => {
       // Generate CSS variable
@@ -131,7 +131,7 @@ const generateSCSS = (assetList, targetFolder, classnamePrefix) => {
   // Loop over categories
   Object.keys(assetList).forEach((iconCategoryName) => {
     // Loop over icons
-    const parsedCategoryPath = iconCategoryName !== '$root' ? `${iconCategoryName}/` : '';
+    const parsedCategoryPath = iconCategoryName !== '$root' ? `${targetFolder}/${iconCategoryName}/` : '';
     assetList[iconCategoryName].forEach((iconFilename) => {
       // Mask
       scssString += `@mixin ${classnamePrefix}-${iconFilename.replace('.svg', '').replace(/-/g, '-')}-mask {\n`;
@@ -162,6 +162,7 @@ const generateSCSS = (assetList, targetFolder, classnamePrefix) => {
 const generateIconList = () => {
   const folderPath = path.join(__dirname, 'icons');
   const assetList = readFolder(folderPath);
+  console.log(assetList);
   generateJS(assetList, 'icons');
   generateCSS(assetList, 'icons', 'rvo-icon', true, true);
   generateSCSS(assetList, 'icons', 'rvo-icon');
