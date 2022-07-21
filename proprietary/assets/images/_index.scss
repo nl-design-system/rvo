@@ -1,6 +1,6 @@
 @mixin rvo-image-icon-mask {
-  -webkit-mask-image: url("images/favicon/icon.svg");
-  mask-image: url("images/favicon/icon.svg");
+  -webkit-mask-image: url("favicon/icon.svg");
+  mask-image: url("favicon/icon.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -10,7 +10,7 @@
 }
 
 @mixin rvo-image-icon-bg {
-  background-image: url("images/favicon/icon.svg");
+  background-image: url("favicon/icon.svg");
 }
 
 @mixin rvo-image-logo-mask {
@@ -29,8 +29,8 @@
 }
 
 @mixin rvo-image-progress-tracker-completed-md-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-completed-md.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-completed-md.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-completed-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-completed-md.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -40,12 +40,12 @@
 }
 
 @mixin rvo-image-progress-tracker-completed-md-bg {
-  background-image: url("images/progress-tracker/progress-tracker-completed-md.svg");
+  background-image: url("progress-tracker/progress-tracker-completed-md.svg");
 }
 
 @mixin rvo-image-progress-tracker-completed-sm-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-completed-sm.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-completed-sm.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-completed-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-completed-sm.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -55,12 +55,12 @@
 }
 
 @mixin rvo-image-progress-tracker-completed-sm-bg {
-  background-image: url("images/progress-tracker/progress-tracker-completed-sm.svg");
+  background-image: url("progress-tracker/progress-tracker-completed-sm.svg");
 }
 
 @mixin rvo-image-progress-tracker-doing-md-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-doing-md.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-doing-md.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-doing-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-doing-md.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -70,12 +70,12 @@
 }
 
 @mixin rvo-image-progress-tracker-doing-md-bg {
-  background-image: url("images/progress-tracker/progress-tracker-doing-md.svg");
+  background-image: url("progress-tracker/progress-tracker-doing-md.svg");
 }
 
 @mixin rvo-image-progress-tracker-doing-sm-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-doing-sm.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-doing-sm.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-doing-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-doing-sm.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -85,12 +85,12 @@
 }
 
 @mixin rvo-image-progress-tracker-doing-sm-bg {
-  background-image: url("images/progress-tracker/progress-tracker-doing-sm.svg");
+  background-image: url("progress-tracker/progress-tracker-doing-sm.svg");
 }
 
 @mixin rvo-image-progress-tracker-incomplete-md-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-incomplete-md.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-incomplete-md.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-incomplete-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-incomplete-md.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -100,12 +100,12 @@
 }
 
 @mixin rvo-image-progress-tracker-incomplete-md-bg {
-  background-image: url("images/progress-tracker/progress-tracker-incomplete-md.svg");
+  background-image: url("progress-tracker/progress-tracker-incomplete-md.svg");
 }
 
 @mixin rvo-image-progress-tracker-incomplete-sm-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-incomplete-sm.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-incomplete-sm.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -115,12 +115,12 @@
 }
 
 @mixin rvo-image-progress-tracker-incomplete-sm-bg {
-  background-image: url("images/progress-tracker/progress-tracker-incomplete-sm.svg");
+  background-image: url("progress-tracker/progress-tracker-incomplete-sm.svg");
 }
 
 @mixin rvo-image-progress-tracker-line-straight-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-line-straight.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-line-straight.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-straight.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-straight.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -130,12 +130,12 @@
 }
 
 @mixin rvo-image-progress-tracker-line-straight-bg {
-  background-image: url("images/progress-tracker/progress-tracker-line-straight.svg");
+  background-image: url("progress-tracker/progress-tracker-line-straight.svg");
 }
 
 @mixin rvo-image-progress-tracker-line-substep-end-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-line-substep-end.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-line-substep-end.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-substep-end.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-substep-end.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -145,12 +145,12 @@
 }
 
 @mixin rvo-image-progress-tracker-line-substep-end-bg {
-  background-image: url("images/progress-tracker/progress-tracker-line-substep-end.svg");
+  background-image: url("progress-tracker/progress-tracker-line-substep-end.svg");
 }
 
 @mixin rvo-image-progress-tracker-line-substep-start-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-line-substep-start.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-line-substep-start.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-line-substep-start.svg");
+  mask-image: url("progress-tracker/progress-tracker-line-substep-start.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -160,12 +160,12 @@
 }
 
 @mixin rvo-image-progress-tracker-line-substep-start-bg {
-  background-image: url("images/progress-tracker/progress-tracker-line-substep-start.svg");
+  background-image: url("progress-tracker/progress-tracker-line-substep-start.svg");
 }
 
 @mixin rvo-image-progress-tracker-start-end-md-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-start-end-md.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-start-end-md.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-start-end-md.svg");
+  mask-image: url("progress-tracker/progress-tracker-start-end-md.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -175,12 +175,12 @@
 }
 
 @mixin rvo-image-progress-tracker-start-end-md-bg {
-  background-image: url("images/progress-tracker/progress-tracker-start-end-md.svg");
+  background-image: url("progress-tracker/progress-tracker-start-end-md.svg");
 }
 
 @mixin rvo-image-progress-tracker-start-end-sm-mask {
-  -webkit-mask-image: url("images/progress-tracker/progress-tracker-start-end-sm.svg");
-  mask-image: url("images/progress-tracker/progress-tracker-start-end-sm.svg");
+  -webkit-mask-image: url("progress-tracker/progress-tracker-start-end-sm.svg");
+  mask-image: url("progress-tracker/progress-tracker-start-end-sm.svg");
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -190,5 +190,5 @@
 }
 
 @mixin rvo-image-progress-tracker-start-end-sm-bg {
-  background-image: url("images/progress-tracker/progress-tracker-start-end-sm.svg");
+  background-image: url("progress-tracker/progress-tracker-start-end-sm.svg");
 }
