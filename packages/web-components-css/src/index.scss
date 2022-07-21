@@ -1,9 +1,10 @@
+/* stylelint-disable font-weight-notation */
+
 /**
  * @license EUPL-1.2
  */
 @import "css-reset-and-normalize/scss/reset-and-normalize";
 @import "@utrecht/component-library-css/dist";
-
 @import "../../../components/button/css";
 @import "../../../components/expandable-text/css";
 @import "../../../components/form-checkbox/css";
@@ -20,3 +21,7 @@
 @import "../../../components/menubar/css";
 @import "../../../components/progress-tracker/css";
 @import "../../../components/status-icon/css";
+
+* {
+  font: revert;
+}
