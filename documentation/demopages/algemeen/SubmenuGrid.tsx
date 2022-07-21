@@ -1,5 +1,4 @@
 import { Header } from '@nl-rvo/components/header/css/template';
-import 'normalize.css';
 import '../common/style.scss';
 
 const SubmenuGrid = () => {

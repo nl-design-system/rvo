@@ -1,7 +1,6 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
-import 'normalize.css';
 import '../common/style.scss';
 
 const Content = () => {

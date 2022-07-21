@@ -1,6 +1,5 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import 'normalize.css';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 

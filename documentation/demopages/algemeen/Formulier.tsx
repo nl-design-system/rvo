@@ -12,7 +12,6 @@ import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import React from 'react';
-import 'normalize.css';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 

@@ -19,7 +19,7 @@ interface IMenuBarProps {
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement: string;
-  menuMaxWidth: string;
+  menuMaxWidth?: string;
 }
 
 const defaultItems = [
@@ -104,8 +104,8 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
       <nav
         className={clsx(
           `rvo-topnav rvo-topnav--${size}`,
-          menuMaxWidth !== 'none' && 'rvo-max-width-layout',
-          menuMaxWidth !== 'none' && `rvo-max-width-layout--${menuMaxWidth}`,
+          menuMaxWidth && menuMaxWidth !== 'none' && 'rvo-max-width-layout',
+          menuMaxWidth && menuMaxWidth !== 'none' && `rvo-max-width-layout--${menuMaxWidth}`,
         )}
       >
         <ul className="utrecht-topnav__list">
