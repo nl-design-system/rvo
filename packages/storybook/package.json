@@ -13,7 +13,7 @@
     "url": "git@github.com:nl-design-system/rvo.git"
   },
   "scripts": {
-    "build": "build-storybook --output-dir dist/",
+    "build": "build-storybook --output-dir dist/ --loglevel verbose",
     "clean": "rimraf dist/",
     "storybook": "start-storybook --port 6006 --no-manager-cache"
   },
