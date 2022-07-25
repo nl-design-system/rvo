@@ -100,8 +100,11 @@
   background-position: var(--rvo-progress-tracker-step-sm-icon-background-position);
 }
 
-.rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete::after {
-  @include images.rvo-image-progress-tracker-incomplete-md-bg;
+// .rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete::after {
+.rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete {
+  &::after {
+    @include images.rvo-image-progress-tracker-incomplete-md-bg;
+  }
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--disabled::after {
