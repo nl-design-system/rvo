@@ -6,8 +6,10 @@
 @import "css-reset-and-normalize/scss/reset-and-normalize";
 @import "@utrecht/component-library-css/dist";
 @import "../../../components/button/css";
+@import "../../../components/button-group/css";
 @import "../../../components/expandable-text/css";
 @import "../../../components/form-checkbox/css";
+@import "../../../components/form-feedback/css";
 @import "../../../components/form-field/css";
 @import "../../../components/form-fieldset/css";
 @import "../../../components/form-layout/css";
@@ -15,13 +17,97 @@
 @import "../../../components/form-select/css";
 @import "../../../components/form-textinput/css";
 @import "../../../components/header/css";
+@import "../../../components/heading/css";
 @import "../../../components/icon/css";
+@import "../../../components/layout-column-row/css";
 @import "../../../components/link/css";
 @import "../../../components/logo/css";
+@import "../../../components/max-width-layout/css";
 @import "../../../components/menubar/css";
 @import "../../../components/progress-tracker/css";
 @import "../../../components/status-icon/css";
 
-* {
-  font: revert;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+main {
+  font: revert !important;
 }
