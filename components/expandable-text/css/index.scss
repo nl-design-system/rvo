@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "../../../proprietary/assets/icons";
+@use "../../../proprietary/assets/icons/index.css";
 
 .rvo-expandable-text {
   background: none;
@@ -33,7 +33,7 @@
 }
 
 .rvo-expandable-text__summary::after {
-  @include icons.rvo-icon-delta-naar-rechts-mask;
+  @extend .rvo-icon--delta-naar-rechts;
 
   background-color: var(--rvo-expandable-text-summary-icon-background-color);
   content: "";
@@ -42,7 +42,7 @@
 }
 
 .rvo-expandable-text[open] .rvo-expandable-text__summary::after {
-  @include icons.rvo-icon-delta-omlaag-mask;
+  @extend .rvo-icon--delta-omlaag;
 }
 
 .rvo-expandable-text__details {

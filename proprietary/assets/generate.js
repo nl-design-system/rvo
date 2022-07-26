@@ -124,55 +124,18 @@ const generateCSS = (
   }
 };
 
-// SCSS file generator
-const generateSCSS = (assetList, targetFolder, classnamePrefix) => {
-  let scssString = ``;
-
-  // Loop over categories
-  Object.keys(assetList).forEach((iconCategoryName) => {
-    // Loop over icons
-    const parsedCategoryPath = iconCategoryName !== '$root' ? `${iconCategoryName}/` : '';
-    assetList[iconCategoryName].forEach((iconFilename) => {
-      // Mask
-      scssString += `@mixin ${classnamePrefix}-${iconFilename.replace('.svg', '').replace(/-/g, '-')}-mask {\n`;
-      scssString += `  -webkit-mask-image: url("${parsedCategoryPath}${iconFilename}");\n`;
-      scssString += `  mask-image: url("${parsedCategoryPath}${iconFilename}");\n`;
-      scssString += `  -webkit-mask-position: center center;\n`;
-      scssString += `  mask-position: center center;\n`;
-      scssString += `  -webkit-mask-repeat: no-repeat;\n`;
-      scssString += `  mask-repeat: no-repeat;\n`;
-      scssString += `  -webkit-mask-size: 100%;\n`;
-      scssString += `  mask-size: 100%;\n`;
-      scssString += `}\n\n`;
-
-      // Background
-      scssString += `@mixin ${classnamePrefix}-${iconFilename.replace('.svg', '').replace(/-/g, '-')}-bg {\n`;
-      scssString += `  background-image: url("${parsedCategoryPath}${iconFilename}");\n`;
-      scssString += `}\n\n`;
-    });
-  });
-
-  try {
-    fs.writeFileSync(path.join(__dirname, `${targetFolder}/_index.scss`), scssString);
-  } catch (err) {
-    console.error(err);
-  }
-};
-
 const generateIconList = () => {
   const folderPath = path.join(__dirname, 'icons');
   const assetList = readFolder(folderPath);
   generateJS(assetList, 'icons');
   generateCSS(assetList, 'icons', 'rvo-icon', true, true);
-  generateSCSS(assetList, 'icons', 'rvo-icon');
 };
 
 const generateImageList = () => {
   const folderPath = path.join(__dirname, 'images');
   const assetList = readFolder(folderPath);
   generateJS(assetList, 'images');
-  generateCSS(assetList, 'images', 'rvo-image', false, true);
-  generateSCSS(assetList, 'images', 'rvo-image');
+  generateCSS(assetList, 'images', 'rvo-image', true, true);
 };
 
 // Run
