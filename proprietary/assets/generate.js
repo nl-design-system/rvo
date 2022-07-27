@@ -114,7 +114,7 @@ const generateCSS = (
   });
 
   // Add CSS vars
-  scssString = `:root {\n${cssVars.join('\n')}}\n\n${scssString}`;
+  scssString = `.rvo-theme {\n${cssVars.join('\n')}}\n\n${scssString}`;
   const compiledCSS = sass.compileString(scssString);
 
   try {
