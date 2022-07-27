@@ -76,11 +76,11 @@
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--start::after {
-  background-image: var(--rvo-image-progress-tracker-start-end);
+  background-image: var(--rvo-image-progress-tracker-start-end-md);
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--start::after {
-  background-image: var(--rvo-image-progress-tracker-start-end);
+  background-image: var(--rvo-image-progress-tracker-start-end-sm);
 }
 
 .rvo-progress-tracker__step--end {
@@ -89,18 +89,17 @@
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--end::after {
-  background-image: var(--rvo-image-progress-tracker-start-end);
+  background-image: var(--rvo-image-progress-tracker-start-end-md);
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--end::after {
-  background-image: var(--rvo-image-progress-tracker-start-end);
+  background-image: var(--rvo-image-progress-tracker-start-end-sm);
 }
 
 .rvo-progress-tracker__step--sm::after {
   background-position: var(--rvo-progress-tracker-step-sm-icon-background-position);
 }
 
-// .rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete::after {
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete {
   &::after {
     background-image: var(--rvo-image-progress-tracker-incomplete-md);
