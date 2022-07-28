@@ -4,6 +4,9 @@
  */
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import React from 'react';
+// Remove these
+import '@nl-rvo/assets/icons/index.css';
+import '@nl-rvo/assets/images/index.css';
 
 export const FormLayout: React.FC = () => {
   return (
