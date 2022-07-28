@@ -90,7 +90,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       defaultChecked={checked || null}
       disabled={disabled || null}
       required={required || null}
-      value={value || ''}
+      defaultValue={value || ''}
     />
     {labelText}
   </label>
