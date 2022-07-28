@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
+import '@nl-rvo/assets/images/index.css';
 import './index.scss';
 import React from 'react';
 
