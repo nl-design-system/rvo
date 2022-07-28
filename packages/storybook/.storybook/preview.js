@@ -83,9 +83,3 @@ export const parameters = {
     removeEmptyComments: true,
   },
 };
-
-export const decorators = [
-  (story) => {
-    return `<div id="story" style="font-family: ${designTokens.rvoFontSansSerifFontFamily}">${story()}</div>`;
-  },
-];
