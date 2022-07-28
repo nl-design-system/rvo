@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "../../../proprietary/assets/icons/index.css";
 
 .rvo-select-wrapper {
   position: relative;
@@ -21,12 +20,18 @@
 }
 
 .rvo-select-wrapper::after {
-  @extend .rvo-icon-delta-omlaag;
-
   background-color: var(--rvo-select-icon-color);
   content: "";
   display: block;
   height: 32px;
+  -webkit-mask-image: var(--rvo-icon-delta-omlaag);
+  mask-image: var(--rvo-icon-delta-omlaag);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
   pointer-events: none;
   position: absolute;
   right: 13px;

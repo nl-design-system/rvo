@@ -2,8 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "../../../proprietary/assets/icons/index.css";
-
 .rvo-expandable-text {
   background: none;
   display: inline-flex;
@@ -36,12 +34,26 @@
   background-color: var(--rvo-expandable-text-summary-icon-background-color);
   content: "";
   height: 16px;
+  -webkit-mask-image: var(--rvo-icon-delta-naar-rechts);
+  mask-image: var(--rvo-icon-delta-naar-rechts);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
   width: 10px;
-  @extend .rvo-icon-delta-naar-rechts;
 }
 
 .rvo-expandable-text[open] .rvo-expandable-text__summary::after {
-  @extend .rvo-icon-delta-omlaag;
+  -webkit-mask-image: var(--rvo-icon-delta-omlaag);
+  mask-image: var(--rvo-icon-delta-omlaag);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
 }
 
 .rvo-expandable-text__details {
