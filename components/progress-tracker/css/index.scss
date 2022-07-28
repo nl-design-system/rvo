@@ -78,7 +78,7 @@
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--start::after {
-  @extend .rvo-image-bg-progress-tracker-start-end-sm;
+  background-image: var(--rvo-image-progress-tracker-start-end-sm);
 }
 
 .rvo-progress-tracker__step--end {
