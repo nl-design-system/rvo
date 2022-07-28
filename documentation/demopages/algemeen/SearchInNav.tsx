@@ -38,7 +38,7 @@ const SearchInNav = () => {
                 <label className="rvo-form-field__label" htmlFor="search">
                   <span className="rvo-form-field__label-text">Zoekterm</span>
                 </label>
-                <input id="search" className="utrecht-textbox utrecht-textbox--html-input" value=""></input>
+                <input id="search" className="utrecht-textbox utrecht-textbox--html-input" defaultValue=""></input>
               </div>
               <button className="utrecht-button utrecht-button--primary-action rvo-button--md">
                 <div className="rvo-button__icon--primary-action rvo-icon rvo-icon--zoek rvo-icon--md"></div>
