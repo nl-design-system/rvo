@@ -27,14 +27,14 @@ export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text
   if (type === 'warning') {
     return (
       <div className="rvo-form-feedback rvo-form-feedback--warning rvo-layout-row rvo-layout-gap--sm">
-        <div className="rvo-icon rvo-icon--waarschuwing rvo-status-icon--waarschuwing rvo-icon--md"></div>
+        <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--md"></div>
         {text}
       </div>
     );
   } else {
     return (
       <div className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm">
-        <div className="rvo-icon rvo-icon--foutmelding rvo-status-icon--foutmelding rvo-icon--sm"></div>
+        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--sm"></div>
         {text}
       </div>
     );

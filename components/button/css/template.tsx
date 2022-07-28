@@ -77,7 +77,7 @@ export const Button: React.FC<IButtonProps> = ({
   textContent = defaultArgs.textContent,
   showIcon = defaultArgs.showIcon,
 }) => {
-  const icon = <div className={`rvo-button__icon--${kind}-action rvo-icon rvo-icon--plus rvo-icon--md`}></div>;
+  const icon = <div className={`rvo-button__icon--${kind}-action rvo-icon rvo-icon-plus rvo-icon--md`}></div>;
   return (
     <button
       className={clsx('utrecht-button', {

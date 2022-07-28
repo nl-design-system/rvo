@@ -72,7 +72,7 @@ export const Link: React.FC<ILinkProps> = ({
         'rvo-icon',
         'rvo-icon--sm',
         'rvo-icon--hemelblauw',
-        `rvo-icon--${icon}`,
+        `rvo-icon-${icon}`,
       )}
     ></div>
   );

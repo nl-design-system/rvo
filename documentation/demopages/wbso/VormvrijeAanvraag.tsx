@@ -11,17 +11,17 @@ const VormvrijeAanvraag = () => {
             <ul className="utrecht-topnav__list">
               <li className="utrecht-topnav__item">
                 <a className="utrecht-topnav__link" href="#">
-                  <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
+                  <div className="rvo-icon rvo-icon-home rvo-icon--md rvo-icon--wit"></div> Home
                 </a>
               </li>
               <li className="utrecht-topnav__item">
                 <a className="utrecht-topnav__link" href="#">
-                  <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
+                  <div className="rvo-icon rvo-icon-publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
                 </a>
               </li>
               <li className="utrecht-topnav__item">
                 <a className="utrecht-topnav__link" href="#">
-                  <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
+                  <div className="rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
                 </a>
               </li>
               <div className="rvo-topnav__spacer"></div>
@@ -36,7 +36,7 @@ const VormvrijeAanvraag = () => {
             <ul className="rvo-menu rvo-menu--toggle-menu">
               <li className="rvo-menu-item">
                 <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon--md rvo-icon--before rvo-icon--wit rvo-icon--menu"></span>Menu
+                  <span className="rvo-icon rvo-icon-menu rvo-icon--md rvo-icon--before rvo-icon--wit"></span>Menu
                   toggle
                 </a>
               </li>

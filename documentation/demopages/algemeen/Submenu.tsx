@@ -9,12 +9,12 @@ const Submenu = () => {
         <ul className="utrecht-topnav__list">
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
+              <div className="rvo-icon rvo-icon-home rvo-icon--md rvo-icon--wit"></div> Home
             </a>
           </li>
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link rvo-topnav__link--expanded" href="#">
-              Expanded menu item <div className="rvo-icon rvo-icon--delta-omlaag rvo-icon--md rvo-icon--wit"></div>
+              Expanded menu item <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--wit"></div>
             </a>
           </li>
           <li className="utrecht-topnav__item">
@@ -28,7 +28,7 @@ const Submenu = () => {
         <ul className="utrecht-topnav__list rvo-topnav__list--submenu">
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Start
+              <div className="rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--wit"></div> Start
             </a>
           </li>
           <li className="utrecht-topnav__item">

@@ -9,17 +9,17 @@ const Table = () => {
         <ul className="utrecht-topnav__list">
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
+              <div className="rvo-icon rvo-icon-home rvo-icon--md rvo-icon--wit"></div> Home
             </a>
           </li>
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
+              <div className="rvo-icon rvo-icon-publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
             </a>
           </li>
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
+              <div className="rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
             </a>
           </li>
           <div className="rvo-topnav__spacer"></div>
@@ -43,7 +43,7 @@ const Table = () => {
                     Title
                   </th>
                   <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                    Text <div className="rvo-icon rvo-icon--delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
+                    Text <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
                   </th>
                   <th scope="col" className="rvo-table-header rvo-table-header--numeric">
                     Price ($)

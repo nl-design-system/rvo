@@ -9,23 +9,23 @@ const SearchInNav = () => {
         <ul className="utrecht-topnav__list">
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--home rvo-icon--md rvo-icon--wit"></div> Home
+              <div className="rvo-icon rvo-icon-home rvo-icon--md rvo-icon--wit"></div> Home
             </a>
           </li>
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
+              <div className="rvo-icon rvo-icon-publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
             </a>
           </li>
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link" href="#">
-              <div className="rvo-icon rvo-icon--plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
+              <div className="rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
             </a>
           </li>
           <div className="rvo-topnav__spacer"></div>
           <li className="utrecht-topnav__item">
             <a className="utrecht-topnav__link rvo-topnav__link--search-active" href="#">
-              <div className="rvo-icon rvo-icon--zoek rvo-icon--md rvo-icon--hemelblauw"></div> Zoeken
+              <div className="rvo-icon rvo-icon-zoek rvo-icon--md rvo-icon--hemelblauw"></div> Zoeken
             </a>
           </li>
         </ul>
@@ -41,7 +41,7 @@ const SearchInNav = () => {
                 <input id="search" className="utrecht-textbox utrecht-textbox--html-input" defaultValue=""></input>
               </div>
               <button className="utrecht-button utrecht-button--primary-action rvo-button--md">
-                <div className="rvo-button__icon--primary-action rvo-icon rvo-icon--zoek rvo-icon--md"></div>
+                <div className="rvo-button__icon--primary-action rvo-icon rvo-icon-zoek rvo-icon--md"></div>
                 Zoeken
               </button>
             </div>
