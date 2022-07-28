@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import './index.scss';
-import '@nl-rvo/assets/images/index.css';
 import React from 'react';
 
 export interface ICheckboxProps {

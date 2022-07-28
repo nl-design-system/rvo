@@ -2,6 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../../proprietary/assets/icons/index.css";
+
 .rvo-custom-radio-button__group--error {
   border-left: 3px solid var(--rvo-color-rood);
   padding-inline-start: var(--rvo-space-md);
@@ -71,10 +73,11 @@
 }
 
 .rvo-checkbox__input:checked::after {
+  @extend .rvo-icon-vinkje;
+
   background-color: var(--rvo-checkbox-icon-color);
-  background-image: var(--rvo-icon-vinkje);
-  -webkit-mask-size: 90% !important;
-  mask-size: 90% !important;
+  -webkit-mask-size: 85% !important;
+  mask-size: 85% !important;
 }
 
 .rvo-checkbox--indeterminate .rvo-checkbox__input:checked::after {

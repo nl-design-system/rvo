@@ -90,11 +90,13 @@ const generateCSS = (
           .replace(/-/g, '-')}: url("${parsedCategoryPath}${iconFilename}");`,
       );
 
+      const className = `${classnamePrefix}-${iconFilename.replace('.svg', '').replace(/-/g, '-')}`;
+
       // Add mask class
       if (generateMaskClasses) {
-        scssString += `.${classnamePrefix}--${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
-        scssString += `  -webkit-mask-image: url("${parsedCategoryPath}${iconFilename}");\n`;
-        scssString += `  mask-image: url("${parsedCategoryPath}${iconFilename}");\n`;
+        scssString += `.${className} {\n`;
+        scssString += `  -webkit-mask-image: var(--${className});\n`;
+        scssString += `  mask-image: var(--${className});\n`;
         scssString += `  -webkit-mask-position: center center;\n`;
         scssString += `  mask-position: center center;\n`;
         scssString += `  -webkit-mask-repeat: no-repeat;\n`;
@@ -106,15 +108,15 @@ const generateCSS = (
 
       // Add background image class
       if (generateBackgroundClasses) {
-        scssString += `.${classnamePrefix}-bg--${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
-        scssString += `  background-image: url("${parsedCategoryPath}${iconFilename}");\n`;
+        scssString += `.${classnamePrefix}-bg-${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
+        scssString += `  background-image: var(--${className});\n`;
         scssString += `}\n\n`;
       }
     });
   });
 
   // Add CSS vars
-  scssString = `.rvo-theme {\n${cssVars.join('\n')}}\n\n${scssString}`;
+  scssString = `.rvo-theme, .rvo-theme ::before, .rvo-theme ::after {\n${cssVars.join('\n')}}\n\n${scssString}`;
   const compiledCSS = sass.compileString(scssString);
 
   try {

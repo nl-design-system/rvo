@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import '@nl-rvo/assets/images/index.css';
 
 interface IExpandableTextProps {
   title: string;

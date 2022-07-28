@@ -2,6 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../../proprietary/assets/images/index.css";
+
 .rvo-progress-tracker {
   max-width: var(--rvo-progress-tracker-max-width);
 }
@@ -36,20 +38,20 @@
 }
 
 .rvo-progress-tracker__step--straight::before {
-  background-image: var(--rvo-image-progress-tracker-line-straight);
+  @extend .rvo-image-bg-progress-tracker-line-straight;
 }
 
 .rvo-progress-tracker__step--substep-start {
   padding-block-end: var(--rvo-progress-tracker-substep-block-padding);
   &::before {
-    background-image: var(--rvo-image-progress-tracker-line-substep-start);
+    @extend .rvo-image-bg-progress-tracker-line-substep-start;
   }
 }
 
 .rvo-progress-tracker__step--substep-end {
   padding-block-end: var(--rvo-progress-tracker-substep-block-padding);
   &::before {
-    background-image: var(--rvo-image-progress-tracker-line-substep-end);
+    @extend .rvo-image-bg-progress-tracker-line-substep-end;
   }
 }
 
@@ -74,11 +76,11 @@
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--start::after {
-  background-image: var(--rvo-image-progress-tracker-start-end-md);
+  @extend .rvo-image-bg-progress-tracker-start-end-md;
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--start::after {
-  background-image: var(--rvo-image-progress-tracker-start-end-sm);
+  @extend .rvo-image-bg-progress-tracker-start-end-sm;
 }
 
 .rvo-progress-tracker__step--end {
@@ -87,11 +89,11 @@
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--end::after {
-  background-image: var(--rvo-image-progress-tracker-start-end-md);
+  @extend .rvo-image-bg-progress-tracker-start-end-md;
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--end::after {
-  background-image: var(--rvo-image-progress-tracker-start-end-sm);
+  @extend .rvo-image-bg-progress-tracker-start-end-sm;
 }
 
 .rvo-progress-tracker__step--sm::after {
@@ -100,34 +102,34 @@
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--incomplete {
   &::after {
-    background-image: var(--rvo-image-progress-tracker-incomplete-md);
+    @extend .rvo-image-bg-progress-tracker-incomplete-md;
   }
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--disabled::after {
-  background-image: var(--rvo-image-progress-tracker-incomplete-md);
+  @extend .rvo-image-bg-progress-tracker-incomplete-md;
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--completed::after {
-  background-image: var(--rvo-image-progress-tracker-completed-md);
+  @extend .rvo-image-bg-progress-tracker-completed-md;
 }
 
 .rvo-progress-tracker__step--md.rvo-progress-tracker__step--doing::after {
-  background-image: var(--rvo-image-progress-tracker-doing-md);
+  @extend .rvo-image-bg-progress-tracker-doing-md;
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--incomplete::after {
-  background-image: var(--rvo-image-progress-tracker-incomplete-sm);
+  @extend .rvo-image-bg-progress-tracker-incomplete-sm;
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--disabled::after {
-  background-image: var(--rvo-image-progress-tracker-incomplete-sm);
+  @extend .rvo-image-bg-progress-tracker-incomplete-sm;
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--completed::after {
-  background-image: var(--rvo-image-progress-tracker-completed-sm);
+  @extend .rvo-image-bg-progress-tracker-completed-sm;
 }
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--doing::after {
-  background-image: var(--rvo-image-progress-tracker-doing-sm);
+  @extend .rvo-image-bg-progress-tracker-doing-sm;
 }

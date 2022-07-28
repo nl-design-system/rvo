@@ -6,8 +6,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { Link } from '../../link/css/template';
 import './index.scss';
-import '@nl-rvo/assets/images/index.css';
-
 export interface IProgressTrackerStepProps {
   state: string;
   line: string;
