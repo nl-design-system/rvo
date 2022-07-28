@@ -4,6 +4,7 @@
   "description": "RVO assets",
   "license": "SEE LICENSE IN LICENSE.md",
   "name": "@nl-rvo/assets",
+  "main": "index.css",
   "keywords": [
     "nl-design-system",
     "nl-rvo"
