@@ -72,7 +72,7 @@
 
 .rvo-checkbox__input:checked::after {
   background-color: var(--rvo-checkbox-icon-color);
-  background-image: var(--rvo-icon--vinkje);
+  background-image: var(--rvo-icon-vinkje);
   -webkit-mask-size: 90% !important;
   mask-size: 90% !important;
 }

@@ -32,14 +32,14 @@
 
 .rvo-expandable-text__summary::after {
   background-color: var(--rvo-expandable-text-summary-icon-background-color);
-  background-image: var(--rvo-icon--delta-naar-rechts);
+  background-image: var(--rvo-icon-delta-naar-rechts);
   content: "";
   height: 16px;
   width: 10px;
 }
 
 .rvo-expandable-text[open] .rvo-expandable-text__summary::after {
-  background-image: var(--rvo-icon--delta-omlaag);
+  background-image: var(--rvo-icon-delta-omlaag);
 }
 
 .rvo-expandable-text__details {
