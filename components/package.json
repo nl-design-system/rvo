@@ -10,7 +10,7 @@
   "private": true,
   "devDependencies": {
     "@storybook/addon-docs": "6.5.9",
-    "@utrecht/component-library-css": "1.0.0-alpha.249",
+    "@utrecht/component-library-css": "1.0.0-alpha.281",
     "@nl-rvo/storybook": "file:../packages/storybook"
   },
   "dependencies": {
