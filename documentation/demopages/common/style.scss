@@ -389,7 +389,7 @@
 
   .rvo-data {
     border: 1px solid var(--rvo-color-grijs4);
-    margin-block-end: calc(var(--rvo-space-sm) + var(--rvo-space-md));
+    margin-block-end: 0;
   }
 
   .rvo-data + .rvo-button--in-form {
