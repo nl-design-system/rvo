@@ -429,11 +429,6 @@
 
   /* @CONTENT */
 
-  .rvo-content {
-    padding-inline-end: var(--rvo-space-4xl);
-    padding-inline-start: var(--rvo-space-4xl);
-  }
-
   /* @TABLE */
 
   .rvo-table--responsive {
@@ -649,6 +644,26 @@
 
   .rvo-layout-spacer--4xl {
     gap: var(--rvo-space-4xl);
+  }
+
+  /* @BREADCRUMBS */
+
+  ol.rvo-breadcrumbs__list {
+    display: flex;
+    gap: var(--rvo-space-sm);
+    list-style: none;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .rvo-breadcrumbs__list-item .rvo-link {
+    text-decoration: none;
+  }
+
+  .rvo-breadcrumbs__list-item .rvo-link:hover,
+  .rvo-breadcrumbs__list-item .rvo-link:focus,
+  .rvo-breadcrumbs__list-item .rvo-link:active {
+    text-decoration: underline;
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
