@@ -28,7 +28,7 @@ const Aanvraag1 = () => {
           <ProgressTracker
             steps={[
               { state: 'start', label: 'Jonge Vissers 2020', link: '#', size: 'md', line: 'straight' },
-              { state: 'incomplete', label: 'Aanvraag', link: '#', size: 'md', line: 'straight' },
+              { state: 'doing', label: 'Aanvraag', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Kosten', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
