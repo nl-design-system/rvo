@@ -23,8 +23,8 @@ const Aanvrager = () => {
           <ProgressTracker
             steps={[
               { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
-              { state: 'completed', label: 'Vormvrije aanvraag', link: '#', size: 'md', line: 'straight' },
               { state: 'completed', label: 'Voordat u start', link: '#', size: 'md', line: 'straight' },
+              { state: 'completed', label: 'Vormvrije aanvraag', link: '#', size: 'md', line: 'straight' },
               { state: 'doing', label: 'Aanvrager', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
