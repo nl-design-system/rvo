@@ -588,10 +588,12 @@
 
   .rvo-inline-form {
     display: flex;
+    width: 100%;
   }
 
   .rvo-inline-form .utrecht-textbox {
-    padding-block-start: 0.85rem; /* Iets meer padding aan de bovenkant zodat de input uitlijnt met de button */
+    padding-block-end: 0.6rem;
+    padding-block-start: 0.75rem; /* Iets meer padding aan de bovenkant zodat de input uitlijnt met de button */
   }
 
   .rvo-inline-form .utrecht-button {
