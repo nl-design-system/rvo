@@ -1,123 +1,110 @@
+import { Button } from '@nl-rvo/components/button/css/template';
+import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
+import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
+import { Heading } from '@nl-rvo/components/heading/css/template';
+import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
+import { Link } from '@nl-rvo/components/link/css/template';
+import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
+import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
+import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
 const VormvrijeAanvraag = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <div className="rvo-navigation rvo-navigation--hemelblauw">
-        <div className="rvo-max-width-wrapper">
-          <nav className="rvo-topnav rvo-topnav--md">
-            <ul className="utrecht-topnav__list">
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="#">
-                  <div className="rvo-icon rvo-icon-home rvo-icon--md rvo-icon--wit"></div> Home
-                </a>
-              </li>
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="#">
-                  <div className="rvo-icon rvo-icon-publicatie rvo-icon--md rvo-icon--wit"></div> Mijn aanvragen
-                </a>
-              </li>
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="#">
-                  <div className="rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--wit"></div> Nieuwe aanvraag
-                </a>
-              </li>
-              <div className="rvo-topnav__spacer"></div>
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="#">
-                  Uitloggen
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav className="rvo-toggle-menu">
-            <ul className="rvo-menu rvo-menu--toggle-menu">
-              <li className="rvo-menu-item">
-                <a href="#" className="rvo-menu-link rvo-menu-link--medium rvo-menu-link--toggle">
-                  <span className="rvo-icon rvo-icon-menu rvo-icon--md rvo-icon--before rvo-icon--wit"></span>Menu
-                  toggle
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <main className="rvo-progress-tracker-active rvo-max-width-layout rvo-max-width-layout--lg">
-        <div className="rvo-progress-tracker rvo-progress-tracker--vertical">
-          <div className="rvo-main-steps rvo-main-steps--no-sub-steps">
-            <div className="rvo-process-step rvo-process-step--process-name">Aanvraag WBSO</div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--doing">
-              <a href="vormvrije-aanvraag.html" className="rvo-process-step-link">
-                Vormvrije aanvraag
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <a href="startpagina.html" className="rvo-process-step-link">
-                Voordat u start
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <a href="aanvrager.html" className="rvo-process-step-link">
-                Aanvrager
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <a href="projecten.html" className="rvo-process-step-link">
-                Projecten
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <a href="so-uren.html" className="rvo-process-step-link">
-                S&O uren
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--default rvo-process-step--md rvo-process-step--incomplete">
-              <a href="indienen.html" className="rvo-process-step-link">
-                Indienen
-              </a>
-            </div>
-            <div className="rvo-process-step rvo-process-step--process-completed">Aanvraag ingediend</div>
-            <button className="utrecht-button rvo-button--quaternary-action rvo-button--sm" type="button">
-              Opslaan
-            </button>
-          </div>
-        </div>
-        <div className="rvo-form">
-          <form action="startpagina.html" method="get">
-            <fieldset>
-              <h2>Vormvrije aanvraag</h2>
-              <div className="rvo-form-field rvo-form-field--options">
-                <legend>
-                  Wilt u een vormvrije aanvraag indienen?
-                  <span className="rvo-helper-text">
-                    Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U
-                    vult een paar basisgegevens in en vult uw aanvraag later aan.
-                  </span>
-                </legend>
-                <div className="rvo-options rvo-options--rows">
-                  <label htmlFor="radio-a" className="rvo-option">
-                    <input type="radio" id="radio-a" name="radios" />
-                    Ja
-                  </label>
-                  <label htmlFor="radio-b" className="rvo-option">
-                    <input type="radio" id="radio-b" name="radios" />
-                    Nee
-                  </label>
-                </div>
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
+      <MaxWidthLayout size="md">
+        <main className="rvo-progress-tracker-active">
+          <ProgressTracker
+            steps={[
+              { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'completed',
+                label: 'Voordat u start',
+                link: '/iframe.html?args=&id=demo-pagina-s-wbso--01-voordat-u-start&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'doing',
+                label: 'Vormvrije aanvraag',
+                link: '/iframe.html?args=&id=demo-pagina-s-wbso--02-vormvrije-aanvraag&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'incomplete',
+                label: 'Aanvrager',
+                link: '/iframe.html?args=&id=demo-pagina-s-wbso--03-aanvrager&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
+              { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
+              { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
+              { state: 'end', label: 'Aanvraag ingediend', link: '#', size: 'md', line: 'none' },
+            ]}
+          />
+          <div className="rvo-form">
+            <LayoutColumnRow size="md">
+              <div className="intro">
+                <Link content="Terug" url="#" showIcon="before" icon="terug" />
+                <Heading type="h1" textContent="Vormvrije aanvraag" />
               </div>
-            </fieldset>
-            <div className="rvo-button-group">
-              <button className="utrecht-button rvo-button--tertiary-action rvo-button--sm rvo-button--error">
-                Annuleren
-              </button>
-              <button className="utrecht-button utrecht-button--primary-action rvo-button--md">Start aanvraag</button>
-            </div>
-          </form>
-        </div>
-      </main>
+              <form>
+                <LayoutColumnRow row={false} size="md">
+                  <LayoutColumnRow row={false} size="md">
+                    <Fieldset legend="">
+                      <RadioButtonField
+                        layout="horizontal"
+                        name="radio-buttons"
+                        labelText="Wilt u een vormvrije aanvraag indienen?"
+                        helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."
+                        options={[
+                          { id: 'vva', labelText: 'Ja' },
+                          { id: 'vva', labelText: 'Nee' },
+                        ]}
+                      ></RadioButtonField>
+                    </Fieldset>
+                  </LayoutColumnRow>
+                  <div className="rvo-button-group">
+                    <Button
+                      kind="secondary"
+                      size="md"
+                      textContent="Opslaan en sluiten"
+                      active={false}
+                      busy={false}
+                      focus={false}
+                      focusVisible={false}
+                      disabled={false}
+                      hover={false}
+                      showIcon="no"
+                    >
+                      Secondary action
+                    </Button>
+                    <Button
+                      kind="primary"
+                      size="md"
+                      textContent="Opslaan en verder"
+                      active={false}
+                      busy={false}
+                      focus={false}
+                      focusVisible={false}
+                      disabled={false}
+                      hover={false}
+                      showIcon="no"
+                    >
+                      Secondary action
+                    </Button>
+                  </div>
+                </LayoutColumnRow>
+              </form>
+            </LayoutColumnRow>
+          </div>
+        </main>
+      </MaxWidthLayout>
     </div>
   );
 };
