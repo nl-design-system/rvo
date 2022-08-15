@@ -427,13 +427,6 @@
     word-break: break-all;
   }
 
-  /* @CONTENT */
-
-  .rvo-content {
-    padding-inline-end: var(--rvo-space-4xl);
-    padding-inline-start: var(--rvo-space-4xl);
-  }
-
   /* @TABLE */
 
   .rvo-table--responsive {
@@ -497,7 +490,6 @@
     align-items: flex-start;
     display: flex;
     gap: calc(var(--rvo-space-xs) + var(--rvo-space-sm));
-    margin-block-end: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
@@ -602,10 +594,12 @@
 
   .rvo-inline-form {
     display: flex;
+    width: 100%;
   }
 
   .rvo-inline-form .utrecht-textbox {
-    padding-block-start: 0.85rem; /* Iets meer padding aan de bovenkant zodat de input uitlijnt met de button */
+    padding-block-end: 0.6rem;
+    padding-block-start: 0.75rem; /* Iets meer padding aan de bovenkant zodat de input uitlijnt met de button */
   }
 
   .rvo-inline-form .utrecht-button {
@@ -659,6 +653,7 @@
   .rvo-layout-spacer--4xl {
     gap: var(--rvo-space-4xl);
   }
+
 
   /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
   .utrecht-custom-radio-button {
@@ -714,6 +709,25 @@
     outline-offset: var(--utrecht-focus-outline-offset, 0);
     outline-style: none;
     outline-width: var(--utrecht-focus-outline-width, 0);
+
+  /* @BREADCRUMBS */
+
+  ol.rvo-breadcrumbs__list {
+    display: flex;
+    gap: var(--rvo-space-sm);
+    list-style: none;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .rvo-breadcrumbs__list-item .rvo-link {
+    text-decoration: none;
+  }
+
+  .rvo-breadcrumbs__list-item .rvo-link:hover,
+  .rvo-breadcrumbs__list-item .rvo-link:focus,
+  .rvo-breadcrumbs__list-item .rvo-link:active {
+    text-decoration: underline;
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
