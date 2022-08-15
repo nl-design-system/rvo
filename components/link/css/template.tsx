@@ -70,7 +70,7 @@ export const Link: React.FC<ILinkProps> = ({
         'rvo-link__icon',
         { 'rvo-link__icon--before': showIcon === 'before', 'rvo-link__icon--after': showIcon === 'after' },
         'rvo-icon',
-        'rvo-icon--sm',
+        'rvo-icon--md',
         'rvo-icon--hemelblauw',
         `rvo-icon-${icon}`,
       )}
