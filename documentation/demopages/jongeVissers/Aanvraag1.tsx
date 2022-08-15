@@ -22,6 +22,7 @@ const Aanvraag1 = () => {
         size="md"
         useIcons={true}
         iconPlacement="before"
+        menuMaxWidth="md"
       />
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
@@ -63,7 +64,6 @@ const Aanvraag1 = () => {
                       layout="vertical"
                       name="radio-buttons"
                       labelText="Hoe wilt u correspondentie ontvangen?"
-                      warningText="U heeft aangegeven dat u de correspondentie digitaal wil ontvangen. Hiermee geeft u akkoord dat RVO berichten plaatst over uw aanvraag in Mijn Dossier en u een e-mail stuurt over statuswijzigingen van uw aanvraag."
                       options={[
                         {
                           id: 'cor',
@@ -73,6 +73,16 @@ const Aanvraag1 = () => {
                         { id: 'cor', labelText: 'Ik ontvang berichten liever op papier.' },
                       ]}
                     ></RadioButtonField>
+                    <div className="rvo-alert rvo-alert--warning">
+                      <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--lg"></div>
+                      <div className="rvo-alert-text">
+                        <p>
+                          U heeft aangegeven dat u de correspondentie digitaal wil ontvangen. Hiermee geeft u akkoord
+                          dat RVO berichten plaatst over uw aanvraag in Mijn Dossier en u een e-mail stuurt over
+                          statuswijzigingen van uw aanvraag.
+                        </p>
+                      </div>
+                    </div>
                   </Fieldset>
                   <Fieldset legend="Contactpersoon">
                     <RadioButtonField
