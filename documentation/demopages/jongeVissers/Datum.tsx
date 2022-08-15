@@ -1,5 +1,4 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -9,7 +8,7 @@ import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
 
-const Correspondentie = () => {
+const Datum = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -36,14 +35,14 @@ const Correspondentie = () => {
                 line: 'straight',
               },
               {
-                state: 'doing',
+                state: 'completed',
                 label: 'Correspondentie',
                 link: '/iframe.html?args=&id=demo-pagina-s-jonge-vissers--correspondentie&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },
               {
-                state: 'incomplete',
+                state: 'doing',
                 label: 'Datum verleningsverzoek',
                 link: '/iframe.html?args=&id=demo-pagina-s-jonge-vissers--datum&viewMode=story',
                 size: 'md',
@@ -59,46 +58,15 @@ const Correspondentie = () => {
           <div className="rvo-form">
             <LayoutColumnRow size="xl">
               <div className="intro">
-                <Heading type="h1" textContent="Correspondentie"></Heading>
+                <Heading type="h1" textContent="Datum verleningsverzoek"></Heading>
               </div>
               <form>
                 <LayoutColumnRow size="md">
                   <Fieldset legend="">
-                    <RadioButtonField
-                      layout="vertical"
-                      name="radio-buttons"
-                      labelText="Hoe wilt u correspondentie ontvangen?"
-                      options={[
-                        {
-                          id: 'cora',
-                          labelText:
-                            'Ik ontvang berichten digitaal in Mijn Dossier.Ik verklaar dat ik voldoende bereikbaar ben via e-mail en Mijn Dossier',
-                        },
-                        { id: 'corb', labelText: 'Ik ontvang berichten liever op papier.' },
-                      ]}
-                    ></RadioButtonField>
-                    <div className="rvo-alert rvo-alert--warning">
-                      <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--lg"></div>
-                      <div className="rvo-alert-text">
-                        <p>
-                          U heeft aangegeven dat u de correspondentie digitaal wil ontvangen. Hiermee geeft u akkoord
-                          dat RVO berichten plaatst over uw aanvraag in Mijn Dossier en u een e-mail stuurt over
-                          statuswijzigingen van uw aanvraag.
-                        </p>
-                      </div>
-                    </div>
+                    <label>Wat is de datum op de poststempel van het verleningsverzoek?</label>
+                    <input type="date" className="rvo-date"></input>
                   </Fieldset>
-                  <Fieldset legend="Contactpersoon">
-                    <RadioButtonField
-                      layout="horizontal"
-                      name="radio-buttons"
-                      labelText="Is de contactpersoon iemand anders dan de indiener?"
-                      options={[
-                        { id: 'cpa', labelText: 'Ja' },
-                        { id: 'cpb', labelText: 'Nee' },
-                      ]}
-                    ></RadioButtonField>
-                  </Fieldset>
+
                   <div className="rvo-button-group">
                     <Button
                       kind="secondary"
@@ -139,4 +107,4 @@ const Correspondentie = () => {
   );
 };
 
-export default Correspondentie;
+export default Datum;

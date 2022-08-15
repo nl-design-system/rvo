@@ -41,6 +41,13 @@ const ControleerGegevens = () => {
                 size: 'md',
                 line: 'straight',
               },
+              {
+                state: 'incomplete',
+                label: 'Datum verleningsverzoek',
+                link: '/iframe.html?args=&id=demo-pagina-s-jonge-vissers--datum&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
               { state: 'incomplete', label: 'Kosten', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
