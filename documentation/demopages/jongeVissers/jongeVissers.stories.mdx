@@ -1,6 +1,7 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import Aanvraag1 from "./Aanvraag1";
+import ControleerGegevens from "./ControleerGegevens";
+import Correspondentie from "./Correspondentie";
 
 <Meta
   title="Demo Pagina's/Jonge Vissers"
@@ -18,7 +19,13 @@ import Aanvraag1 from "./Aanvraag1";
 In deze demo worden de schermen vanuit de Jonge Vissers regeling nagebouwd met componenten die beschikbaar zijn in Storybook.
 
 <Canvas>
-  <Story name="Aanvraag 1">
-    <Aanvraag1 />
+  <Story name="Controleer uw gegevens">
+    <ControleerGegevens />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Correspondentie">
+    <Correspondentie />
   </Story>
 </Canvas>

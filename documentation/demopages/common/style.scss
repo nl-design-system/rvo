@@ -1,6 +1,6 @@
 @import "normalize.css/normalize";
 
-/* @TYPOGRAYPHY */
+/* @TYPOGRAPHY */
 .rvo-demo-page {
   // h1,
   // h2,
@@ -507,6 +507,10 @@
   .utrecht-form-fieldset .rvo-alert {
     margin-inline-end: -24px;
     margin-inline-start: -24px;
+  }
+
+  .utrecht-form-fieldset .rvo-alert:last-child {
+    margin-block-end: -24px;
   }
 
   .rvo-alert > .rvo-icon {
