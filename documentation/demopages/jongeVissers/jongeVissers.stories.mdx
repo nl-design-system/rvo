@@ -1,0 +1,38 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import ControleerGegevens from "./ControleerGegevens";
+import Correspondentie from "./Correspondentie";
+import Datum from "./Datum";
+
+<Meta
+  title="Demo Pagina's/Jonge Vissers"
+  parameters={{
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Jonge Vissers
+
+In deze demo worden de schermen vanuit de Jonge Vissers regeling nagebouwd met componenten die beschikbaar zijn in Storybook.
+
+<Canvas>
+  <Story name="Controleer uw gegevens">
+    <ControleerGegevens />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Correspondentie">
+    <Correspondentie />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Datum">
+    <Datum />
+  </Story>
+</Canvas>

@@ -1,6 +1,6 @@
 @import "normalize.css/normalize";
 
-/* @TYPOGRAYPHY */
+/* @TYPOGRAPHY */
 .rvo-demo-page {
   // h1,
   // h2,
@@ -496,6 +496,15 @@
     padding-inline-start: var(--rvo-space-md);
   }
 
+  .utrecht-form-fieldset .rvo-alert {
+    margin-inline-end: -24px;
+    margin-inline-start: -24px;
+  }
+
+  .utrecht-form-fieldset .rvo-alert:last-child {
+    margin-block-end: -24px;
+  }
+
   .rvo-alert > .rvo-icon {
     flex: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */ 0 0;
     height: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
@@ -645,6 +654,62 @@
     gap: var(--rvo-space-4xl);
   }
 
+  /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
+  .utrecht-custom-radio-button {
+    align-self: flex-start;
+    flex: 24px 0 0;
+  }
+
+  /* @DATE INPUT */
+
+  .rvo-date {
+    background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));
+    border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width));
+    border-bottom-width: var(
+      --utrecht-textbox-border-bottom-width,
+      var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))
+    );
+    border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color));
+    border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-input-border-radius, 0));
+    border-style: solid;
+    box-sizing: border-box;
+    color: var(--utrecht-textbox-color, var(--utrecht-form-input-color));
+    font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-input-font-family));
+    font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-input-font-size, 1em));
+    max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-input-max-inline-size));
+    padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-input-padding-block-end));
+    padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-input-padding-block-start));
+    padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
+    padding-inline-start: var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+    width: 100%;
+  }
+
+  .rvo-date:focus {
+    background-color: var(
+      --utrecht-textbox-focus-background-color,
+      var(
+        --utrecht-form-input-focus-background-color,
+        var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))
+      )
+    );
+    border-color: var(
+      --utrecht-textbox-focus-border-color,
+      var(
+        --utrecht-form-input-focus-border-color,
+        var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))
+      )
+    );
+    box-shadow: none;
+    color: var(
+      --utrecht-textbox-focus-color,
+      var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
+    );
+    outline-color: var(--utrecht-focus-outline-color, transparent);
+    outline-offset: var(--utrecht-focus-outline-offset, 0);
+    outline-style: none;
+    outline-width: var(--utrecht-focus-outline-width, 0);
+  }
+
   /* @BREADCRUMBS */
 
   ol.rvo-breadcrumbs__list {
@@ -665,7 +730,7 @@
     text-decoration: underline;
   }
 
-  /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
+  /* VERWIJDERD R ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
   .rvo-form-field,
   .rvo-form-field__label {
     margin-block-end: 0;
