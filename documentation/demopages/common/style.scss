@@ -654,7 +654,6 @@
     gap: var(--rvo-space-4xl);
   }
 
-
   /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
   .utrecht-custom-radio-button {
     align-self: flex-start;
@@ -709,7 +708,8 @@
     outline-offset: var(--utrecht-focus-outline-offset, 0);
     outline-style: none;
     outline-width: var(--utrecht-focus-outline-width, 0);
-}
+  }
+
   /* @BREADCRUMBS */
 
   ol.rvo-breadcrumbs__list {
