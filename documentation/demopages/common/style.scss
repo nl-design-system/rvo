@@ -504,6 +504,11 @@
     padding-inline-start: var(--rvo-space-md);
   }
 
+  .utrecht-form-fieldset .rvo-alert {
+    margin-inline-end: -24px;
+    margin-inline-start: -24px;
+  }
+
   .rvo-alert > .rvo-icon {
     flex: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */ 0 0;
     height: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
@@ -649,6 +654,12 @@
 
   .rvo-layout-spacer--4xl {
     gap: var(--rvo-space-4xl);
+  }
+
+  /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
+  .utrecht-custom-radio-button {
+    align-self: flex-start;
+    flex: 24px 0 0;
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
