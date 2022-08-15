@@ -17,15 +17,33 @@ const Aanvrager = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
           <ProgressTracker
             steps={[
               { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
-              { state: 'completed', label: 'Voordat u start', link: '#', size: 'md', line: 'straight' },
-              { state: 'completed', label: 'Vormvrije aanvraag', link: '#', size: 'md', line: 'straight' },
-              { state: 'doing', label: 'Aanvrager', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'completed',
+                label: 'Voordat u start',
+                link: '/iframe.html?args=&id=demo-pagina-s-wbso--01-voordat-u-start&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'completed',
+                label: 'Vormvrije aanvraag',
+                link: '/iframe.html?args=&id=demo-pagina-s-wbso--02-vormvrije-aanvraag&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'doing',
+                label: 'Aanvrager',
+                link: '/iframe.html?args=&id=demo-pagina-s-wbso--03-aanvrager&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
               { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
               { state: 'end', label: 'Aanvraag ingediend', link: '#', size: 'md', line: 'none' },
