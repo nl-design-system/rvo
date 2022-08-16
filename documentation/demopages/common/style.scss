@@ -721,6 +721,7 @@
   }
 
   .rvo-breadcrumbs__list-item .rvo-link {
+    font-size: var(--rvo-font-size-sm);
     text-decoration: none;
   }
 
@@ -728,6 +729,10 @@
   .rvo-breadcrumbs__list-item .rvo-link:focus,
   .rvo-breadcrumbs__list-item .rvo-link:active {
     text-decoration: underline;
+  }
+
+  .rvo-breadcrumb-current-page {
+    font-size: var(--rvo-font-size-sm);
   }
 
   /* @BUTTON XS TOEVOEGING */
