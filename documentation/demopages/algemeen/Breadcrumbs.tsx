@@ -1,7 +1,6 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import '../common/style.scss';
@@ -18,13 +17,27 @@ const Breadcrumbs = () => {
             <div className="rvo-breadcrumbs">
               <ol className="rvo-breadcrumbs__list">
                 <li className="rvo-breadcrumbs__list-item">
-                  <Link content="First step" url="#" />
+                  <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
+                    First step
+                  </a>
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
-                  <Link content="Second step" showIcon="before" icon="delta-naar-rechts" url="#" />
+                  <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
+                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw"></div>Second
+                    step
+                  </a>
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
-                  <Link content="Third step" showIcon="before" icon="delta-naar-rechts" url="#" />
+                  <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
+                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw"></div>Third
+                    step
+                  </a>
+                </li>
+                <li className="rvo-breadcrumbs__list-item">
+                  <span className="rvo-layout-row rvo-layout-gap--sm rvo-breadcrumb-current-page">
+                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw"></div>Current
+                    page
+                  </span>
                 </li>
               </ol>
             </div>
