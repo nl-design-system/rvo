@@ -3,6 +3,9 @@ import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { Link } from '@nl-rvo/components/link/css/template';
+import { Header } from '@nl-rvo/components/header/css/template';
+import { Heading } from '@nl-rvo/components/heading/css/template';
+import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
@@ -106,6 +109,12 @@ const Kosten = () => {
                             Wijzigen
                           </button>
                         </form>
+                        <a href="#" className="rvo-link">
+                          Wijzigen
+                        </a>{' '}
+                        <a href="#" className="rvo-link">
+                          Verwijderen
+                        </a>
                       </td>
                     </tr>
                     <tr className="rvo-table-row">
@@ -123,12 +132,17 @@ const Kosten = () => {
                             Wijzigen
                           </button>
                         </form>
+                        <a href="#" className="rvo-link">
+                          Wijzigen
+                        </a>{' '}
+                        <a href="#" className="rvo-link">
+                          Verwijderen
+                        </a>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-
               <div className="rvo-table--responsive">
                 <LayoutColumnRow size="sm">
                   <table className="rvo-table">
@@ -220,6 +234,44 @@ const Kosten = () => {
                 >
                   Secondary action
                 </Button>
+              <div className="rvo-table--responsive">
+                <table className="rvo-table">
+                  <caption className="rvo-caption">Andere subsidies</caption>
+                  <thead className="rvo-table-head">
+                    <tr className="rvo-table-row">
+                      <th scope="col" className="rvo-table-header">
+                        Naam subsidieregeling
+                      </th>
+
+                      <th scope="col" className="rvo-table-header">
+                        Subsidieverstreker
+                      </th>
+                      <th scope="col" className="rvo-table-header">
+                        Status
+                      </th>
+                      <th scope="col" className="rvo-table-header rvo-table-header--numeric">
+                        Subsidiebedrag (€)
+                      </th>
+                      <th scope="col" className="rvo-table-header rvo-table-header--empty-title"></th>
+                    </tr>
+                  </thead>
+                  <tbody className="rvo-table-body">
+                    <tr className="rvo-table-row">
+                      <td className="rvo-table-cell">Naam regeling</td>
+                      <td className="rvo-table-cell">Gemeente</td>
+                      <td className="rvo-table-cell">Verleend</td>
+                      <td className="rvo-table-cell rvo-table-cell--numeric">25.000,00</td>
+                      <td className="rvo-table-cell rvo-table-cell--link">
+                        <a href="#" className="rvo-link">
+                          Wijzigen
+                        </a>{' '}
+                        <a href="#" className="rvo-link">
+                          Verwijderen
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </LayoutColumnRow>
           </div>
