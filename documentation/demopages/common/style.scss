@@ -730,7 +730,18 @@
     text-decoration: underline;
   }
 
-  /* VERWIJDERD R ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
+  /* @BUTTON XS TOEVOEGING */
+
+  .rvo-button--xs {
+    font-size: var(--rvo-font-size-sm);
+    font-weight: var(--rvo-font-weight-regular);
+    gap: var(--rvo-space-xs);
+    min-block-size: auto;
+    padding-block-end: var(--rvo-space-xs);
+    padding-block-start: var(--rvo-space-xs);
+  }
+
+  /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
   .rvo-form-field,
   .rvo-form-field__label {
     margin-block-end: 0;
