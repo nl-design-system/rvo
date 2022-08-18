@@ -69,6 +69,14 @@ const ControleerGegevens = () => {
                 size: 'md',
                 line: 'straight',
               },
+              { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'incomplete',
+                label: 'Ondertekenen',
+                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-ondertekening&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
               {
                 state: 'incomplete',
                 label: 'Samenvatting',

@@ -1,6 +1,5 @@
 import { Button } from '@nl-rvo/components/button/css/template';
 import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -10,7 +9,7 @@ import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
 
-const KostenOpvoeren = () => {
+const Ondertekening = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -58,80 +57,70 @@ const KostenOpvoeren = () => {
                 line: 'straight',
               },
               {
-                state: 'doing',
+                state: 'completed',
                 label: 'Kosten',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten',
                 size: 'md',
-                line: 'substep-start',
+                line: 'straight',
               },
+              {
+                state: 'completed',
+                label: 'Bijlagen',
+                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--bijlagen',
+                size: 'md',
+                line: 'straight',
+              },
+              { state: 'completed', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
               {
                 state: 'doing',
-                label: 'Kosten opvoeren',
-                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren&viewMode=story',
-                size: 'sm',
-                line: 'substep-end',
-              },
-              { state: 'incomplete', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
-              { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
-              {
-                state: 'incomplete',
                 label: 'Ondertekenen',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-ondertekening&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },
-              {
-                state: 'incomplete',
-                label: 'Samenvatting',
-                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--samenvatting',
-                size: 'md',
-                line: 'straight',
-              },
-              { state: 'incomplete', label: 'Ondertekenen', link: '#', size: 'md', line: 'straight' },
               { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
             ]}
           />
           <div className="rvo-form">
             <LayoutColumnRow size="xl">
               <div className="intro">
-                <Heading type="h1" textContent="Kosten opvoeren"></Heading>
-                <dl className="rvo-data">
-                  <dt>Omschrijving van de investering</dt>
-                  <dd>Aanschaf voertuig</dd>
-                </dl>
+                <Heading type="h1" textContent="Ondertekening"></Heading>
               </div>
               <form>
                 <LayoutColumnRow size="md">
-                  <Fieldset legend="">
-                    <TextInputField
-                      labelText="Hoeveel kost het vissersvaartuig (exclusief btw)?"
-                      valueType="number"
-                    ></TextInputField>
-                  </Fieldset>
-                  <Fieldset legend="">
+                  <Fieldset legend="Overtreding en fraude">
                     <RadioButtonField
-                      layout="vertical"
-                      name="vv-eigenaar"
-                      labelText="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?"
+                      layout="horizontal"
+                      name="radio-buttons"
+                      helperText="Uitgebreide informatie over overtredingen."
+                      labelText="Zijn er één of meerdere overtredingen bij u vastgesteld?"
+                      expandableHelperText={true}
+                      expandableHelperTextTitle="Meer informatie"
                       options={[
-                        {
-                          id: 'vveiga',
-                          labelText: 'Volledig eigenaar',
-                        },
-                        { id: 'vveigb', labelText: 'Mede eigenaar' },
+                        { id: 'overa', labelText: 'Ja' },
+                        { id: 'overb', labelText: 'Nee' },
+                      ]}
+                    ></RadioButtonField>
+                    <RadioButtonField
+                      layout="horizontal"
+                      name="radio-buttons"
+                      helperText="Uitgebreide informatie over fraude."
+                      labelText="Is er fraude bij u vastgesteld?"
+                      expandableHelperText={true}
+                      expandableHelperTextTitle="Meer informatie"
+                      options={[
+                        { id: 'fraua', labelText: 'Ja' },
+                        { id: 'fraub', labelText: 'Nee' },
                       ]}
                     ></RadioButtonField>
                   </Fieldset>
-                  <Fieldset legend="">
-                    <TextInputField
-                      labelText="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
-                      helperText="Uitgebreide uitleg over de subsidie."
-                      expandableHelperText={true}
-                      expandableHelperTextTitle="Meer informatie"
-                      valueType="number"
-                    ></TextInputField>
-                  </Fieldset>
-
+                  <Heading type="h2" textContent="Verklaring"></Heading>
+                  <p>
+                    Ik verklaar dat ik voldoe aan de voorwaarden en dat dit formulier en de bijlagen naar waarheid zijn
+                    ingevuld.
+                  </p>
+                  <Heading type="h2" textContent="Ondertekening"></Heading>
+                  <p>Ondertekening m.b.v. TAN is alleen noodzakelijker voor klanten.</p>
                   <div className="rvo-button-group">
                     <Button
                       kind="secondary"
@@ -172,4 +161,4 @@ const KostenOpvoeren = () => {
   );
 };
 
-export default KostenOpvoeren;
+export default Ondertekening;
