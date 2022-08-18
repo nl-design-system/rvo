@@ -66,7 +66,7 @@ export const Field: React.FC<IFieldProps> = ({
 
   return (
     <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-      <label className="rvo-form-field__label rvo-layout-column rvo-layout-gap--sm" htmlFor={fieldId}>
+      <label className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs" htmlFor={fieldId}>
         <span className="rvo-form-field__label-text">{labelText}</span>
         {helperTextMarkup}
         {errorText && <FormFeedback text={errorText} type="error" />}

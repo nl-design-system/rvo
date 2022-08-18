@@ -1,15 +1,18 @@
 import { Button } from '@nl-rvo/components/button/css/template';
+import { CheckboxField } from '@nl-rvo/components/form-field/css/checkbox-field.template';
+import { FileInputField } from '@nl-rvo/components/form-field/css/fileinput-field.template';
 import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
+import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
 
-const Correspondentie = () => {
+const Bijlagen = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -36,40 +39,34 @@ const Correspondentie = () => {
                 line: 'straight',
               },
               {
-                state: 'doing',
+                state: 'completed',
                 label: 'Correspondentie',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--correspondentie&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },
               {
-                state: 'incomplete',
+                state: 'completed',
                 label: 'Datum verleningsverzoek',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--datum&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },
               {
-                state: 'incomplete',
+                state: 'completed',
                 label: 'Project vragen',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--project&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },
               {
-                state: 'incomplete',
+                state: 'completed',
                 label: 'Kosten',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten',
                 size: 'md',
                 line: 'straight',
               },
-              {
-                state: 'incomplete',
-                label: 'Bijlagen',
-                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--bijlagen',
-                size: 'md',
-                line: 'straight',
-              },
+              { state: 'doing', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
               { state: 'incomplete', label: 'Ondertekenen', link: '#', size: 'md', line: 'straight' },
               { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
@@ -78,46 +75,93 @@ const Correspondentie = () => {
           <div className="rvo-form">
             <LayoutColumnRow size="xl">
               <div className="intro">
-                <Heading type="h1" textContent="Correspondentie"></Heading>
+                <Heading type="h1" textContent="Bijlagen"></Heading>
+                <ul>
+                  <li>
+                    U kunt alleen bijlagen versturen in PDF-formaat. Als u een ander type document wil versturen maakt u
+                    hier eerst een PDF van waarvoor u eventueel de gratis <Link content="PDF Creator" url="#"></Link>{' '}
+                    kan gebruiken.
+                  </li>
+                  <li>
+                    Iedere bijlage mag <strong>maximaal 25MB</strong> groot zijn.
+                  </li>
+                  <li>Voeg eventueel gelijksoortige bijlagen samen in een PDF, bijvoorbeeld alle offertes.</li>
+                  <li>Geef het PDF-bestand een logische naam.</li>
+                </ul>
               </div>
+
               <form>
                 <LayoutColumnRow size="md">
-                  <Fieldset legend="">
-                    <RadioButtonField
+                  <Fieldset legend="Financiële capaciteit">
+                    <CheckboxField
+                      invalid={false}
                       layout="vertical"
-                      name="radio-buttons"
-                      labelText="Hoe wilt u correspondentie ontvangen?"
+                      labelText="Wat stuurt u mee om uw financiële capaciteit aan te tonen?"
                       options={[
                         {
-                          id: 'cora',
-                          labelText:
-                            'Ik ontvang berichten digitaal in Mijn Dossier.Ik verklaar dat ik voldoende bereikbaar ben via e-mail en Mijn Dossier',
+                          id: 'fca',
+                          labelText: 'Bewijs van het eigen vermogen',
                         },
-                        { id: 'corb', labelText: 'Ik ontvang berichten liever op papier.' },
+                        { id: 'fcb', labelText: 'Bewijs van de lening die is toegezegd' },
                       ]}
-                    ></RadioButtonField>
-                    <div className="rvo-alert rvo-alert--warning">
-                      <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--lg"></div>
-                      <div className="rvo-alert-text">
-                        <p>
-                          U heeft aangegeven dat u de correspondentie digitaal wil ontvangen. Hiermee geeft u akkoord
-                          dat RVO berichten plaatst over uw aanvraag in Mijn Dossier en u een e-mail stuurt over
-                          statuswijzigingen van uw aanvraag.
-                        </p>
-                      </div>
-                    </div>
+                    ></CheckboxField>
+                    <FileInputField
+                      labelText="Bewijs van het eigen vermogen"
+                      helperText="Het is mogelijk meerdere bestanden te selecteren"
+                    ></FileInputField>
                   </Fieldset>
-                  <Fieldset legend="Contactpersoon">
-                    <RadioButtonField
-                      layout="horizontal"
-                      name="radio-buttons"
-                      labelText="Is de contactpersoon iemand anders dan de indiener?"
+                  <Fieldset legend="Opleiding of werkervaring">
+                    <CheckboxField
+                      invalid={false}
+                      layout="vertical"
+                      labelText="Wat stuurt u mee om uw opleiding of werkervaring aan te tonen?"
                       options={[
-                        { id: 'cpa', labelText: 'Ja' },
-                        { id: 'cpb', labelText: 'Nee' },
+                        {
+                          id: 'wea',
+                          labelText: 'Bewijs van de opleiding',
+                        },
+                        { id: 'web', labelText: 'Bewijs dat u vijf jaar werkervaring heeft' },
+                      ]}
+                    ></CheckboxField>
+                    <FileInputField
+                      labelText="Bewijs dat u vijf jaar werkervaring heeft"
+                      helperText="Het is mogelijk meerdere bestanden te selecteren"
+                    ></FileInputField>
+                  </Fieldset>
+                  <Fieldset legend="">
+                    <FileInputField
+                      labelText="Offerte vaartuig"
+                      helperText="Het is mogelijk meerdere bestanden te selecteren"
+                    ></FileInputField>
+                  </Fieldset>
+                  <Fieldset legend="Marktwaarde vissersvaartuig">
+                    <RadioButtonField
+                      layout="vertical"
+                      name="vv"
+                      labelText="Wat stuurt u mee om de marktwaarde van het visservaartuig aan te tonen?"
+                      options={[
+                        {
+                          id: 'mwa',
+                          labelText: 'Taxatierapport',
+                        },
+                        { id: 'mwb', labelText: 'Twee andere offertes van vergelijkbare voertuigen' },
                       ]}
                     ></RadioButtonField>
+                    <FileInputField labelText="Taxatierapport"></FileInputField>
                   </Fieldset>
+                  <Fieldset legend="Bewijs andere subsidies">
+                    <FileInputField
+                      labelText="U stuurt de beslissing mee van deze andere subsidies"
+                      helperText="Heeft u nog geen beslissing ontvangen? Stuur dan een kopie van de aanvraag mee. Het is mogelijk meerdere bestanden te selecteren."
+                    ></FileInputField>
+                  </Fieldset>
+                  <Fieldset legend="Niet verplichte bijlagen">
+                    <FileInputField
+                      labelText="Voeg hier de overige (niet verplichte) bijlagen toe"
+                      helperText="Het is mogelijk meerdere bestanden te selecteren"
+                    ></FileInputField>
+                  </Fieldset>
+
                   <div className="rvo-button-group">
                     <Button
                       kind="secondary"
@@ -158,4 +202,4 @@ const Correspondentie = () => {
   );
 };
 
-export default Correspondentie;
+export default Bijlagen;
