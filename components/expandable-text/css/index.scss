@@ -34,8 +34,8 @@
   background-color: var(--rvo-expandable-text-summary-icon-background-color);
   content: "";
   height: 16px;
-  -webkit-mask-image: var(--rvo-icon-delta-naar-rechts);
-  mask-image: var(--rvo-icon-delta-naar-rechts);
+  -webkit-mask-image: var(--rvo-icon-delta-omlaag);
+  mask-image: var(--rvo-icon-delta-omlaag);
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -46,8 +46,8 @@
 }
 
 .rvo-expandable-text[open] .rvo-expandable-text__summary::after {
-  -webkit-mask-image: var(--rvo-icon-delta-omlaag);
-  mask-image: var(--rvo-icon-delta-omlaag);
+  -webkit-mask-image: var(--rvo-icon-delta-omhoog);
+  mask-image: var(--rvo-icon-delta-omhoog);
   -webkit-mask-position: center center;
   mask-position: center center;
   -webkit-mask-repeat: no-repeat;

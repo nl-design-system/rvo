@@ -34,7 +34,10 @@ export const ExpandableText: React.FC<IExpandableTextProps> = ({
   open = defaultArgs.open,
 }) => (
   <details className="rvo-expandable-text" open={open || null}>
-    <summary className="rvo-expandable-text__summary">{title}</summary>
+    <summary className="rvo-expandable-text__summary">
+      <div className="rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"></div>
+      {title}
+    </summary>
     <span className="rvo-expandable-text__details">{text}</span>
   </details>
 );
