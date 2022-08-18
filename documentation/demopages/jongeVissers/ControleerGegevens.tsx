@@ -69,7 +69,13 @@ const ControleerGegevens = () => {
                 size: 'md',
                 line: 'straight',
               },
-              { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'incomplete',
+                label: 'Samenvatting',
+                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--samenvatting',
+                size: 'md',
+                line: 'straight',
+              },
               { state: 'incomplete', label: 'Ondertekenen', link: '#', size: 'md', line: 'straight' },
               { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
             ]}
