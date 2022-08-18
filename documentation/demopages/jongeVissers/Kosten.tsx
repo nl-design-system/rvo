@@ -74,59 +74,67 @@ const Kosten = () => {
                 <Heading type="h1" textContent="Kosten en subsidies"></Heading>
               </div>
               <div className="rvo-table--responsive">
-                <table className="rvo-table">
-                  <caption className="rvo-caption">Aanschafkosten</caption>
-                  <thead className="rvo-table-head">
-                    <tr className="rvo-table-row">
-                      <th scope="col" className="rvo-table-header rvo-table-header--numeric">
-                        Aanschafkosten (€)
-                      </th>
-                      <th scope="col" className="rvo-table-header rvo-table-header--numeric">
-                        Eigen aandeel financiering (€)
-                      </th>
-                      <th scope="col" className="rvo-table-header rvo-table-header--numeric">
-                        Subsidiabel bedrag (€)
-                      </th>
-                      <th scope="col" className="rvo-table-header rvo-table-header--empty-title"></th>
-                    </tr>
-                  </thead>
-                  <tbody className="rvo-table-body">
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell rvo-table-cell--numeric">235.000,00</td>
-                      <td className="rvo-table-cell rvo-table-cell--numeric">235.000,00</td>
-                      <td className="rvo-table-cell rvo-table-cell--numeric">200.000,00</td>
-                      <td className="rvo-table-cell rvo-table-cell--link">
-                        <form>
-                          <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
-                            <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
-                            Verwijderen
-                          </button>
-                          <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
-                            <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
-                            Wijzigen
-                          </button>
-                        </form>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell rvo-table-cell--numeric">135.000,00</td>
-                      <td className="rvo-table-cell rvo-table-cell--numeric">135.000,00</td>
-                      <td className="rvo-table-cell rvo-table-cell--numeric">100.000,00</td>
-                      <td className="rvo-table-cell rvo-table-cell--link">
-                        <form>
-                          <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
-                            <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
-                            Verwijderen
-                          </button>
-                          <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
-                            <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
-                            Wijzigen
-                          </button>
-                        </form>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <LayoutColumnRow size="sm">
+                  <table className="rvo-table">
+                    <caption className="rvo-caption">Aanschafkosten</caption>
+                    <thead className="rvo-table-head">
+                      <tr className="rvo-table-row">
+                        <th scope="col" className="rvo-table-header rvo-table-header--numeric">
+                          Aanschafkosten (€)
+                        </th>
+                        <th scope="col" className="rvo-table-header rvo-table-header--numeric">
+                          Eigen aandeel financiering (€)
+                        </th>
+                        <th scope="col" className="rvo-table-header rvo-table-header--numeric">
+                          Subsidiabel bedrag (€)
+                        </th>
+                        <th scope="col" className="rvo-table-header rvo-table-header--empty-title"></th>
+                      </tr>
+                    </thead>
+                    <tbody className="rvo-table-body">
+                      <tr className="rvo-table-row">
+                        <td className="rvo-table-cell rvo-table-cell--numeric">235.000,00</td>
+                        <td className="rvo-table-cell rvo-table-cell--numeric">235.000,00</td>
+                        <td className="rvo-table-cell rvo-table-cell--numeric">200.000,00</td>
+                        <td className="rvo-table-cell rvo-table-cell--link">
+                          <form>
+                            <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
+                              <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
+                              Verwijderen
+                            </button>
+                            <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
+                              <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
+                              Wijzigen
+                            </button>
+                          </form>
+                        </td>
+                      </tr>
+                      <tr className="rvo-table-row">
+                        <td className="rvo-table-cell rvo-table-cell--numeric">135.000,00</td>
+                        <td className="rvo-table-cell rvo-table-cell--numeric">135.000,00</td>
+                        <td className="rvo-table-cell rvo-table-cell--numeric">100.000,00</td>
+                        <td className="rvo-table-cell rvo-table-cell--link">
+                          <form>
+                            <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
+                              <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
+                              Verwijderen
+                            </button>
+                            <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
+                              <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
+                              Wijzigen
+                            </button>
+                          </form>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <Link
+                    content="Kosten toevoegen"
+                    icon="plus"
+                    showIcon="before"
+                    url="/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren"
+                  ></Link>
+                </LayoutColumnRow>
               </div>
 
               <div className="rvo-table--responsive">
