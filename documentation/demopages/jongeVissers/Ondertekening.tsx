@@ -1,18 +1,15 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { CheckboxField } from '@nl-rvo/components/form-field/css/checkbox-field.template';
-import { FileInputField } from '@nl-rvo/components/form-field/css/fileinput-field.template';
 import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
 
-const Bijlagen = () => {
+const Ondertekening = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -66,10 +63,16 @@ const Bijlagen = () => {
                 size: 'md',
                 line: 'straight',
               },
-              { state: 'doing', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
-              { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
               {
-                state: 'incomplete',
+                state: 'completed',
+                label: 'Bijlagen',
+                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--bijlagen',
+                size: 'md',
+                line: 'straight',
+              },
+              { state: 'completed', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'doing',
                 label: 'Ondertekenen',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-ondertekening&viewMode=story',
                 size: 'md',
@@ -81,93 +84,43 @@ const Bijlagen = () => {
           <div className="rvo-form">
             <LayoutColumnRow size="xl">
               <div className="intro">
-                <Heading type="h1" textContent="Bijlagen"></Heading>
-                <ul>
-                  <li>
-                    U kunt alleen bijlagen versturen in PDF-formaat. Als u een ander type document wil versturen maakt u
-                    hier eerst een PDF van waarvoor u eventueel de gratis <Link content="PDF Creator" url="#"></Link>{' '}
-                    kan gebruiken.
-                  </li>
-                  <li>
-                    Iedere bijlage mag <strong>maximaal 25MB</strong> groot zijn.
-                  </li>
-                  <li>Voeg eventueel gelijksoortige bijlagen samen in een PDF, bijvoorbeeld alle offertes.</li>
-                  <li>Geef het PDF-bestand een logische naam.</li>
-                </ul>
+                <Heading type="h1" textContent="Ondertekening"></Heading>
               </div>
-
               <form>
                 <LayoutColumnRow size="md">
-                  <Fieldset legend="Financiële capaciteit">
-                    <CheckboxField
-                      invalid={false}
-                      layout="vertical"
-                      labelText="Wat stuurt u mee om uw financiële capaciteit aan te tonen?"
-                      options={[
-                        {
-                          id: 'fca',
-                          labelText: 'Bewijs van het eigen vermogen',
-                        },
-                        { id: 'fcb', labelText: 'Bewijs van de lening die is toegezegd' },
-                      ]}
-                    ></CheckboxField>
-                    <FileInputField
-                      labelText="Bewijs van het eigen vermogen"
-                      helperText="Het is mogelijk meerdere bestanden te selecteren"
-                    ></FileInputField>
-                  </Fieldset>
-                  <Fieldset legend="Opleiding of werkervaring">
-                    <CheckboxField
-                      invalid={false}
-                      layout="vertical"
-                      labelText="Wat stuurt u mee om uw opleiding of werkervaring aan te tonen?"
-                      options={[
-                        {
-                          id: 'wea',
-                          labelText: 'Bewijs van de opleiding',
-                        },
-                        { id: 'web', labelText: 'Bewijs dat u vijf jaar werkervaring heeft' },
-                      ]}
-                    ></CheckboxField>
-                    <FileInputField
-                      labelText="Bewijs dat u vijf jaar werkervaring heeft"
-                      helperText="Het is mogelijk meerdere bestanden te selecteren"
-                    ></FileInputField>
-                  </Fieldset>
-                  <Fieldset legend="">
-                    <FileInputField
-                      labelText="Offerte vaartuig"
-                      helperText="Het is mogelijk meerdere bestanden te selecteren"
-                    ></FileInputField>
-                  </Fieldset>
-                  <Fieldset legend="Marktwaarde vissersvaartuig">
+                  <Fieldset legend="Overtreding en fraude">
                     <RadioButtonField
-                      layout="vertical"
-                      name="vv"
-                      labelText="Wat stuurt u mee om de marktwaarde van het visservaartuig aan te tonen?"
+                      layout="horizontal"
+                      name="radio-buttons"
+                      helperText="Uitgebreide informatie over overtredingen."
+                      labelText="Zijn er één of meerdere overtredingen bij u vastgesteld?"
+                      expandableHelperText={true}
+                      expandableHelperTextTitle="Meer informatie"
                       options={[
-                        {
-                          id: 'mwa',
-                          labelText: 'Taxatierapport',
-                        },
-                        { id: 'mwb', labelText: 'Twee andere offertes van vergelijkbare voertuigen' },
+                        { id: 'overa', labelText: 'Ja' },
+                        { id: 'overb', labelText: 'Nee' },
                       ]}
                     ></RadioButtonField>
-                    <FileInputField labelText="Taxatierapport"></FileInputField>
+                    <RadioButtonField
+                      layout="horizontal"
+                      name="radio-buttons"
+                      helperText="Uitgebreide informatie over fraude."
+                      labelText="Is er fraude bij u vastgesteld?"
+                      expandableHelperText={true}
+                      expandableHelperTextTitle="Meer informatie"
+                      options={[
+                        { id: 'fraua', labelText: 'Ja' },
+                        { id: 'fraub', labelText: 'Nee' },
+                      ]}
+                    ></RadioButtonField>
                   </Fieldset>
-                  <Fieldset legend="Bewijs andere subsidies">
-                    <FileInputField
-                      labelText="U stuurt de beslissing mee van deze andere subsidies"
-                      helperText="Heeft u nog geen beslissing ontvangen? Stuur dan een kopie van de aanvraag mee. Het is mogelijk meerdere bestanden te selecteren."
-                    ></FileInputField>
-                  </Fieldset>
-                  <Fieldset legend="Niet verplichte bijlagen">
-                    <FileInputField
-                      labelText="Voeg hier de overige (niet verplichte) bijlagen toe"
-                      helperText="Het is mogelijk meerdere bestanden te selecteren"
-                    ></FileInputField>
-                  </Fieldset>
-
+                  <Heading type="h2" textContent="Verklaring"></Heading>
+                  <p>
+                    Ik verklaar dat ik voldoe aan de voorwaarden en dat dit formulier en de bijlagen naar waarheid zijn
+                    ingevuld.
+                  </p>
+                  <Heading type="h2" textContent="Ondertekening"></Heading>
+                  <p>Ondertekening m.b.v. TAN is alleen noodzakelijker voor klanten.</p>
                   <div className="rvo-button-group">
                     <Button
                       kind="secondary"
@@ -208,4 +161,4 @@ const Bijlagen = () => {
   );
 };
 
-export default Bijlagen;
+export default Ondertekening;
