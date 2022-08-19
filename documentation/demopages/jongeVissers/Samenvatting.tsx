@@ -25,7 +25,7 @@ const Samenvatting = () => {
         <main className="rvo-progress-tracker-active">
           <ProgressTracker
             steps={[
-              { state: 'start', label: 'Jonge Vissers 2020', link: '#', size: 'md', line: 'straight' },
+              { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
               {
                 state: 'completed',
                 label: 'Controleer uw gegevens',
@@ -69,13 +69,19 @@ const Samenvatting = () => {
                 line: 'straight',
               },
               {
+                state: 'completed',
+                label: 'Ondertekening',
+                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--ondertekening&viewMode=story',
+                size: 'md',
+                line: 'straight',
+              },
+              {
                 state: 'doing',
                 label: 'Samenvatting',
                 link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--samenvatting',
                 size: 'md',
                 line: 'straight',
               },
-              { state: 'incomplete', label: 'Ondertekenen', link: '#', size: 'md', line: 'straight' },
               { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
             ]}
           />

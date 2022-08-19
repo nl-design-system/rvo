@@ -28,7 +28,7 @@ const KostenOpvoeren = () => {
         <main className="rvo-progress-tracker-active">
           <ProgressTracker
             steps={[
-              { state: 'start', label: 'Jonge Vissers 2020', link: '#', size: 'md', line: 'straight' },
+              { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
               {
                 state: 'completed',
                 label: 'Controleer uw gegevens',
@@ -72,11 +72,11 @@ const KostenOpvoeren = () => {
                 line: 'substep-end',
               },
               { state: 'incomplete', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
-              { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
+
               {
                 state: 'incomplete',
-                label: 'Ondertekenen',
-                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-ondertekening&viewMode=story',
+                label: 'Ondertekening',
+                link: '/rvo/iframe.html?args=&id=demo-pagina-s-jonge-vissers--ondertekening&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },
@@ -87,7 +87,7 @@ const KostenOpvoeren = () => {
                 size: 'md',
                 line: 'straight',
               },
-              { state: 'incomplete', label: 'Ondertekenen', link: '#', size: 'md', line: 'straight' },
+
               { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
             ]}
           />
