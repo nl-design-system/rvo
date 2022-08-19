@@ -1,8 +1,10 @@
+import { Button } from '@nl-rvo/components/button/css/template';
 import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
+import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
@@ -230,25 +232,72 @@ const Filters = () => {
                   </MaxWidthLayout>
                 </Fieldset>
               </div>
-              <div className="rvo-active-filters">
+              <LayoutColumnRow size="2xl">
+                <div className="rvo-active-filters">
+                  <MaxWidthLayout size="sm">
+                    <LayoutColumnRow row={true} size="sm">
+                      <strong className="rvo-active-filters-title">Actieve filters</strong>
+                      <span className="rvo-tag rvo-tag--default">
+                        Agro en visserij
+                        <a href="#">
+                          <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
+                        </a>
+                      </span>
+                      <span className="rvo-tag rvo-tag--default">
+                        Milieusector
+                        <a href="#">
+                          <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
+                        </a>
+                      </span>
+                      <Button kind="warning-subtle" size="sm" textContent="Verwijder filters"></Button>
+                    </LayoutColumnRow>
+                  </MaxWidthLayout>
+                </div>
                 <MaxWidthLayout size="sm">
-                  <LayoutColumnRow row={true} size="sm">
-                    <strong className="rvo-active-filters-title">Actieve filters</strong>
-                    <span className="rvo-tag rvo-tag--default">
-                      Agro en visserij
-                      <a href="#">
-                        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
-                      </a>
-                    </span>
-                    <span className="rvo-tag rvo-tag--default">
-                      Milieusector
-                      <a href="#">
-                        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
-                      </a>
-                    </span>
-                  </LayoutColumnRow>
+                  <div className="rvo-results">
+                    <LayoutColumnRow size="2xl">
+                      <div className="rvo-result">
+                        <LayoutColumnRow size="sm">
+                          <Link url="#" content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"></Link>
+
+                          <span className="rvo-result-description">
+                            Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald volgens een
+                            energie-indexberekening, zoals vastgelegd in ISSO 75.1 methode 2014 (Handleiding
+                            Energieprestatie Advies Utiliteitsgebouwen, Energielabel + Algemeen deel)...
+                          </span>
+                          <span className="rvo-result-meta-data">
+                            <span className="rvo-result-meta-data-item">
+                              Regeling: <strong>EIA</strong>
+                            </span>
+                            <span className="rvo-result-meta-data-item">
+                              Code: <strong>210206</strong>
+                            </span>
+                          </span>
+                        </LayoutColumnRow>
+                      </div>
+                      <div className="rvo-result">
+                        <LayoutColumnRow size="sm">
+                          <Link url="#" content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"></Link>
+
+                          <span className="rvo-result-description">
+                            Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald volgens een
+                            energie-indexberekening, zoals vastgelegd in ISSO 75.1 methode 2014 (Handleiding
+                            Energieprestatie Advies Utiliteitsgebouwen, Energielabel + Algemeen deel)...
+                          </span>
+                          <span className="rvo-result-meta-data">
+                            <span className="rvo-result-meta-data-item">
+                              Regeling: <strong>EIA</strong>
+                            </span>
+                            <span className="rvo-result-meta-data-item">
+                              Code: <strong>210206</strong>
+                            </span>
+                          </span>
+                        </LayoutColumnRow>
+                      </div>
+                    </LayoutColumnRow>
+                  </div>
                 </MaxWidthLayout>
-              </div>
+              </LayoutColumnRow>
             </LayoutColumnRow>
           </div>
         </main>

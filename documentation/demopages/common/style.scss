@@ -798,7 +798,7 @@
     align-items: flex-start;
   }
 
-  /* TAGS EN ACTIEVE FILTERS */
+  /* @TAGS EN @ACTIEVE FILTERS */
 
   .rvo-tag {
     align-items: center;
@@ -810,6 +810,24 @@
     padding-block-start: var(--rvo-space-2xs);
     padding-inline-end: var(--rvo-space-sm);
     padding-inline-start: var(--rvo-space-sm);
+  }
+
+  /* @RESULTS */
+
+  .rvo-result .rvo-link {
+    font-size: var(--rvo-font-size-lg);
+  }
+
+  .rvo-result .rvo-result-meta-data {
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    gap: var(--rvo-space-md);
+  }
+
+  .rvo-result .rvo-result-meta-data-item {
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    gap: var(--rvo-space-xs);
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
