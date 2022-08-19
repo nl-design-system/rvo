@@ -798,6 +798,20 @@
     align-items: flex-start;
   }
 
+  /* TAGS EN ACTIEVE FILTERS */
+
+  .rvo-tag {
+    align-items: center;
+    background-color: var(--rvo-color-hemelblauw-tint2);
+    border-radius: 3px;
+    display: inline-flex;
+    gap: var(--rvo-space-sm);
+    padding-block-end: var(--rvo-space-2xs);
+    padding-block-start: var(--rvo-space-2xs);
+    padding-inline-end: var(--rvo-space-sm);
+    padding-inline-start: var(--rvo-space-sm);
+  }
+
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
   .rvo-form-field,
   .rvo-form-field__label {
