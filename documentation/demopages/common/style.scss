@@ -753,6 +753,83 @@
     padding-block-start: var(--rvo-space-xs);
   }
 
+  /* @FILTERS */
+
+  .rvo-tmp-filter {
+    position: relative;
+  }
+
+  .rvo-tmp-filter summary::-webkit-details-marker,
+  .rvo-tmp-filter summary::marker {
+    content: "";
+    display: none;
+  }
+
+  .rvo-tmp-filter .utrecht-select {
+    padding-block-end: 6px;
+    padding-block-start: 6px;
+    width: 148px;
+  }
+
+  .rvo-tmp-filter[open] .utrecht-select {
+    background-color: var(--rvo-color-hemelblauw-tint2);
+    padding-block-end: 8px;
+  }
+
+  .rvo-tmp-filter .rvo-checkbox__group {
+    background-color: var(--rvo-color-wit);
+    border: 2px solid var(--rvo-color-zwart);
+    border-top: 0;
+    padding-block-end: var(--rvo-space-sm);
+    padding-block-start: var(--rvo-space-sm);
+    padding-inline-end: var(--rvo-space-sm);
+    padding-inline-start: var(--rvo-space-sm);
+    position: relative;
+    top: -2px;
+    width: 180px;
+  }
+
+  .rvo-tmp-filters .utrecht-textbox {
+    padding-block-end: 8px;
+    padding-block-start: 10px;
+  }
+
+  .rvo-tmp-filters .rvo-layout-row {
+    align-items: flex-start;
+  }
+
+  /* @TAGS EN @ACTIEVE FILTERS */
+
+  .rvo-tag {
+    align-items: center;
+    background-color: var(--rvo-color-hemelblauw-tint2);
+    border-radius: 3px;
+    display: inline-flex;
+    gap: var(--rvo-space-sm);
+    padding-block-end: var(--rvo-space-2xs);
+    padding-block-start: var(--rvo-space-2xs);
+    padding-inline-end: var(--rvo-space-sm);
+    padding-inline-start: var(--rvo-space-sm);
+  }
+
+  /* @RESULTS */
+
+  .rvo-result .rvo-link {
+    font-size: var(--rvo-font-size-lg);
+  }
+
+  .rvo-result .rvo-result-meta-data {
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    gap: var(--rvo-space-md);
+  }
+
+  .rvo-result .rvo-result-meta-data-item {
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    gap: var(--rvo-space-xs);
+  }
+
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
   .rvo-form-field,
   .rvo-form-field__label {
