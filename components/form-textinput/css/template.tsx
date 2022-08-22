@@ -95,7 +95,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   };
 
   if (inputType !== 'textarea') {
-    return <input {...props} />;
+    return <input type="text" {...props} />;
   } else {
     return <textarea {...props} />;
   }
