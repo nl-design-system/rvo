@@ -5,6 +5,7 @@
 import React from 'react';
 import { ExpandableText } from '../../expandable-text/css/template';
 import { FormFeedback } from '../../form-feedback/css/template';
+import validateHTML from '../../utils/validateHTML';
 
 export interface IFieldProps {
   fieldId?: string;
@@ -54,7 +55,12 @@ export const Field: React.FC<IFieldProps> = ({
   let helperTextMarkup;
   if (helperText && helperText.length) {
     if (!expandableHelperText) {
-      helperTextMarkup = <div className="rvo-form-field__helper-text">{helperText}</div>;
+      const isValidHTML = validateHTML(helperText);
+      helperTextMarkup = isValidHTML ? (
+        <div className="rvo-form-field__helper-text" dangerouslySetInnerHTML={{ __html: helperText }}></div>
+      ) : (
+        <div className="rvo-form-field__helper-text">{helperText}</div>
+      );
     } else {
       helperTextMarkup = (
         <div className="rvo-form-field__helper-text">

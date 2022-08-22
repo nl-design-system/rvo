@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import validateHTML from '../../utils/validateHTML';
 
 interface IExpandableTextProps {
   title: string;
@@ -32,12 +33,19 @@ export const ExpandableText: React.FC<IExpandableTextProps> = ({
   title = defaultArgs.title,
   text = defaultArgs.text,
   open = defaultArgs.open,
-}) => (
-  <details className="rvo-expandable-text" open={open || null}>
-    <summary className="rvo-expandable-text__summary">
-      <div className="rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"></div>
-      {title}
-    </summary>
-    <span className="rvo-expandable-text__details">{text}</span>
-  </details>
-);
+}) => {
+  const isValidHTML = validateHTML(text);
+  return (
+    <details className="rvo-expandable-text" open={open || null}>
+      <summary className="rvo-expandable-text__summary">
+        <div className="rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"></div>
+        {title}
+      </summary>
+      {isValidHTML ? (
+        <span className="rvo-expandable-text__details" dangerouslySetInnerHTML={{ __html: text }}></span>
+      ) : (
+        <span className="rvo-expandable-text__details">{text}</span>
+      )}
+    </details>
+  );
+};
