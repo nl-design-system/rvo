@@ -4,13 +4,17 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
 .rvo-custom-radio-button__group--error {
   border-left: 3px solid var(--rvo-color-rood);
   padding-inline-start: var(--rvo-space-md);
 }
 
-// Checked state overrides
+// Overrides
+.utrecht-custom-radio-button {
+  align-self: flex-start;
+  flex: 24px 0 0;
+}
+
 .utrecht-custom-radio-button:checked,
 .utrecht-custom-radio-button--checked {
   background: var(--rvo-custom-radio-button-checked-background);
