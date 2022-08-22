@@ -46,7 +46,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   color: {
-    options: ['hemelblauw', 'wit'],
+    options: ['hemelblauw', 'wit', 'zwart'],
     control: { type: 'radio' },
   },
 };
@@ -72,6 +72,7 @@ export const Icon: React.FC<IIconProps> = ({
       className={clsx('rvo-icon', `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`, `rvo-icon--${size}`, {
         'rvo-icon--wit': !color || color === 'wit',
         'rvo-icon--hemelblauw': color === 'hemelblauw',
+        'rvo-icon--zwart': color === 'zwart',
       })}
     ></div>
   );

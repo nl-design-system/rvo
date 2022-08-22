@@ -39,9 +39,13 @@
 }
 
 .rvo-icon--wit {
-  background-color: #fff;
+  background-color: var(--rvo-color-wit);
 }
 
 .rvo-icon--hemelblauw {
   background-color: var(--rvo-color-hemelblauw);
+}
+
+.rvo-icon--zwart {
+  background-color: var(--rvo-color-zwart);
 }
