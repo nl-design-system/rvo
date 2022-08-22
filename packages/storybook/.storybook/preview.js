@@ -29,7 +29,7 @@ const storySort = {
     'Huisstijl',
     ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
     'CSS Components',
-    "Demo Pagina's",
+    "Pagina's",
     'Informatie',
     ['Toestemming voor gebruik', 'Open source licentie'],
   ],
