@@ -234,9 +234,12 @@ const Filters = () => {
               </div>
               <LayoutColumnRow size="2xl">
                 <div className="rvo-active-filters">
-                  <MaxWidthLayout size="sm">
+                  <MaxWidthLayout size="md">
                     <LayoutColumnRow row={true} size="sm">
-                      <strong className="rvo-active-filters-title">Actieve filters</strong>
+                      <span className="rvo-results-count">
+                        <strong>54</strong> resultaten
+                      </span>
+                      <strong className="rvo-active-filters-title">met deze filters</strong>
                       <span className="rvo-tag rvo-tag--default">
                         Agro en visserij
                         <a href="#">
@@ -253,43 +256,58 @@ const Filters = () => {
                     </LayoutColumnRow>
                   </MaxWidthLayout>
                 </div>
+
                 <MaxWidthLayout size="sm">
                   <div className="rvo-results">
                     <LayoutColumnRow size="2xl">
-                      <div className="rvo-result">
-                        <LayoutColumnRow size="sm">
-                          <Link url="#" content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"></Link>
+                      <div className="rvo-result rvo-result--w-image">
+                        <LayoutColumnRow row={true} size="lg">
+                          <div className="rvo-result-text">
+                            <LayoutColumnRow size="sm">
+                              <Link
+                                url="#"
+                                content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"
+                              ></Link>
 
-                          <span className="rvo-result-description">
-                            Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald volgens een
-                            energie-indexberekening, zoals vastgelegd in ISSO 75.1 methode 2014 (Handleiding
-                            Energieprestatie Advies Utiliteitsgebouwen, Energielabel + Algemeen deel)...
-                          </span>
-                          <span className="rvo-result-meta-data">
-                            <span className="rvo-result-meta-data-item">
-                              Regeling: <strong>EIA</strong>
-                            </span>
-                            <span className="rvo-result-meta-data-item">
-                              Code: <strong>210206</strong>
-                            </span>
-                          </span>
+                              <span className="rvo-result-description">
+                                Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald volgens
+                                een energie-indexberekening, zoals vastgelegd in ISSO 75.1 methode 2014 (Handleiding
+                                Energieprestatie Advies Utiliteitsgebouwen, Energielabel + Algemeen deel)...
+                              </span>
+                              <span className="rvo-result-meta-data">
+                                <span className="rvo-result-meta-data-item">
+                                  Regeling: <strong>EIA</strong>
+                                </span>
+                                <span className="rvo-result-meta-data-item">
+                                  Code: <strong>210206</strong>
+                                </span>
+                              </span>
+                            </LayoutColumnRow>
+                          </div>
+                          <a href="#">
+                            <img
+                              className="rvo-result-image"
+                              src="https://www.rvo.nl/files/file/styles/content/public/2022-07/8-Augustus%202022%20JPJ%20JIC%20Schiphol30.jpg"
+                            ></img>
+                          </a>
                         </LayoutColumnRow>
                       </div>
                       <div className="rvo-result">
                         <LayoutColumnRow size="sm">
-                          <Link url="#" content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"></Link>
+                          <Link url="#" content="HR-luchtverwarmer [W]"></Link>
 
                           <span className="rvo-result-description">
-                            Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald volgens een
-                            energie-indexberekening, zoals vastgelegd in ISSO 75.1 methode 2014 (Handleiding
-                            Energieprestatie Advies Utiliteitsgebouwen, Energielabel + Algemeen deel)...
+                            direct gasgestookte luchtverwarmer, al dan niet voorzien van een tussenmedium, samengebouwd
+                            tot één geheel, beoordeeld conform NEN-EN 17082:2019 met een rendement van minimaal 90% op d
+                            ebovenwaarde van het toegepaste gas(soort), verbrandingsgasafvoersysteem, (eventueel)
+                            luchttoevoersysteem...
                           </span>
                           <span className="rvo-result-meta-data">
                             <span className="rvo-result-meta-data-item">
                               Regeling: <strong>EIA</strong>
                             </span>
                             <span className="rvo-result-meta-data-item">
-                              Code: <strong>210206</strong>
+                              Code: <strong>210102</strong>
                             </span>
                           </span>
                         </LayoutColumnRow>
@@ -302,6 +320,17 @@ const Filters = () => {
           </div>
         </main>
       </LayoutColumnRow>
+      <footer className="rvo-footer">
+        <ul className="rvo-footer-menu">
+          <li className="rvo-footer-menu-title">
+            <Heading type="h3" textContent="Footer menu title"></Heading>
+          </li>
+          <li className="rvo-footer-menu-item">
+            <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+            <Link url="#" content="Menu item"></Link>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 };
