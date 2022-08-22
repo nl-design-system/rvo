@@ -75,7 +75,8 @@ export const parameters = {
           parser: 'babel',
           plugins: [prettierBabel],
         })
-        .replace(/;\s*$/, '');
+        .replace(/;\s*$/, '')
+        .replace('=""', '');
     },
   },
   html: {
