@@ -8,6 +8,7 @@ import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import React from 'react';
 // import { ComponentName } from '../../../documentation/components/ComponentName';
 import theme from './theme';
+import './preview.css';
 import prettier from 'prettier/standalone';
 import prettierBabel from 'prettier/parser-babel';
 
