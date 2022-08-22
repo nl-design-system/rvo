@@ -1,6 +1,10 @@
 {
   "rvo": {
     "icon": {
+      "xs": {
+        "width": { "value": "{rvo.size.sm}" },
+        "height": { "value": "{rvo.size.sm}" }
+      },
       "sm": {
         "width": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" },
         "height": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" }

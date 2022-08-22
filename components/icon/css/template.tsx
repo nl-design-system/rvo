@@ -42,7 +42,7 @@ export const argTypes = {
     options: options,
   },
   size: {
-    options: ['sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
+    options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
   color: {
@@ -53,7 +53,7 @@ export const argTypes = {
 
 export const defaultArgs: IIconProps = {
   icon: argTypes.icon.options[0],
-  size: argTypes.size.options[1],
+  size: argTypes.size.options[2],
   color: argTypes.color.options[0],
 };
 
