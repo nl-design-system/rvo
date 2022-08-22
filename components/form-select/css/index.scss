@@ -39,6 +39,7 @@
   width: 13px;
 }
 
+// Overrides
 .utrecht-select {
   appearance: none;
   padding-block-end: var(--rvo-select-padding-block-end);
@@ -50,4 +51,8 @@
 
 .utrecht-select:disabled {
   opacity: 100%;
+}
+
+.utrecht-select:focus {
+  outline-offset: var(--rvo-select-outline-offset);
 }
