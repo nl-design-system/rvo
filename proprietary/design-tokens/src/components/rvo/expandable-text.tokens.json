@@ -6,7 +6,7 @@
       "summary": {
         "color": { "value": "{rvo.color.hemelblauw}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
-        "gap": { "value": "{rvo.space.sm}" },
+        "gap": { "value": "{rvo.space.xs}" },
         "line-height": { "value": "{rvo.line-height.md}" },
         "icon": {
           "background-color": { "value": "{rvo.color.hemelblauw}" }
