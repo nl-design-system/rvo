@@ -15,6 +15,7 @@ interface ILinkProps {
   hover?: boolean;
   active?: boolean;
   focus?: boolean;
+  noUnderline?: boolean;
   classNames?: string[];
 }
 
@@ -42,6 +43,9 @@ export const argTypes = {
   focus: {
     control: 'boolean',
   },
+  noUnderline: {
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs: ILinkProps = {
@@ -52,6 +56,7 @@ export const defaultArgs: ILinkProps = {
   icon: iconNames[0],
   active: false,
   focus: false,
+  noUnderline: false,
 };
 
 export const Link: React.FC<ILinkProps> = ({
@@ -62,6 +67,7 @@ export const Link: React.FC<ILinkProps> = ({
   hover = defaultArgs.hover,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
+  noUnderline = defaultArgs.noUnderline,
   classNames = [],
 }) => {
   const iconMarkup = (
@@ -90,6 +96,7 @@ export const Link: React.FC<ILinkProps> = ({
         },
         'rvo-layout-row',
         'rvo-layout-gap--sm',
+        noUnderline && 'rvo-link--no-underline',
       )}
     >
       {showIcon === 'before' && iconMarkup}

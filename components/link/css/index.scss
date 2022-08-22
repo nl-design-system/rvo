@@ -13,6 +13,10 @@
   text-underline-offset: 2px;
 }
 
+.rvo-link--no-underline {
+  text-decoration: none;
+}
+
 // Hover
 .rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
 .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
