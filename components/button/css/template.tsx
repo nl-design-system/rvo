@@ -5,6 +5,7 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
+import { iconNames } from '../../icon/css/template';
 
 export interface IButtonProps {
   kind?: string;
@@ -17,6 +18,7 @@ export interface IButtonProps {
   hover?: boolean;
   disabled?: boolean;
   showIcon?: string;
+  icon?: string;
 }
 
 export const argTypes = {
@@ -50,6 +52,10 @@ export const argTypes = {
     options: ['no', 'before', 'after'],
     control: { type: 'radio' },
   },
+  icon: {
+    control: 'select',
+    options: iconNames,
+  },
 };
 
 export const defaultArgs: IButtonProps = {
@@ -63,6 +69,7 @@ export const defaultArgs: IButtonProps = {
   hover: false,
   textContent: 'Button',
   showIcon: 'no',
+  icon: iconNames[0],
 };
 
 export const Button: React.FC<IButtonProps> = ({
@@ -76,8 +83,11 @@ export const Button: React.FC<IButtonProps> = ({
   hover = defaultArgs.hover,
   textContent = defaultArgs.textContent,
   showIcon = defaultArgs.showIcon,
+  icon = defaultArgs.icon,
 }) => {
-  const icon = <div className={`rvo-button__icon--${kind}-action rvo-icon rvo-icon-plus rvo-icon--md`}></div>;
+  const iconMarkup = (
+    <div className={clsx(`rvo-button__icon--${kind}-action`, 'rvo-icon', `rvo-icon-${icon}`, 'rvo-icon--md')}></div>
+  );
   return (
     <button
       className={clsx('utrecht-button', {
@@ -98,9 +108,9 @@ export const Button: React.FC<IButtonProps> = ({
       })}
       aria-disabled={disabled || null}
     >
-      {showIcon === 'before' && icon}
+      {showIcon === 'before' && iconMarkup}
       {textContent}
-      {showIcon === 'after' && icon}
+      {showIcon === 'after' && iconMarkup}
     </button>
   );
 };
