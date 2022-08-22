@@ -61,7 +61,6 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
     <input
       id={id}
       name={name}
-      autoFocus={true}
       type="radio"
       defaultChecked={checked || null}
       disabled={disabled || null}
