@@ -11,8 +11,8 @@ import '@nl-rvo/assets/images/index.css';
 export const FormLayout: React.FC = () => {
   return (
     <div className="rvo-form-layout">
-      Deze gecentreerde container heeft een maximale breedte van {designTokens.rvoFormLayoutMaxWidth} en dient gebruikt
-      te worden voor formulieren.
+      Deze gecentreerde container heeft een maximale breedte van {designTokens.rvoLayoutMaxWidthSm} en dient gebruikt te
+      worden voor formulieren.
     </div>
   );
 };
