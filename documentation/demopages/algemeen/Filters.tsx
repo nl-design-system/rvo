@@ -14,7 +14,7 @@ const Filters = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="md">
+      <LayoutColumnRow size="2xl">
         <MenuBar items={defaultMenuBarItems} size="md" menuMaxWidth="md" useIcons={true} iconPlacement="before" />
         <main>
           <div className="rvo-filter">
@@ -240,13 +240,13 @@ const Filters = () => {
                         <strong>54</strong> resultaten
                       </span>
                       <strong className="rvo-active-filters-title">met deze filters</strong>
-                      <span className="rvo-tag rvo-tag--default">
+                      <span className="rvo-tag rvo-tag--default rvo-tag--sm">
                         Agro en visserij
                         <a href="#">
                           <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
                         </a>
                       </span>
-                      <span className="rvo-tag rvo-tag--default">
+                      <span className="rvo-tag rvo-tag--default rvo-tag--sm">
                         Milieusector
                         <a href="#">
                           <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
@@ -319,18 +319,96 @@ const Filters = () => {
             </LayoutColumnRow>
           </div>
         </main>
+
+        <footer className="rvo-footer">
+          <MaxWidthLayout size="lg">
+            <ul className="rvo-footer-menu">
+              <li className="rvo-footer-menu-title">
+                <Heading type="h3" textContent="Footer menu title"></Heading>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+            </ul>
+            <ul className="rvo-footer-menu">
+              <li className="rvo-footer-menu-title">
+                <Heading type="h3" textContent="Footer menu title"></Heading>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+            </ul>
+            <ul className="rvo-footer-menu">
+              <li className="rvo-footer-menu-title">
+                <Heading type="h3" textContent="Footer menu title"></Heading>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+            </ul>
+            <ul className="rvo-footer-menu">
+              <li className="rvo-footer-menu-title">
+                <Heading type="h3" textContent="Footer menu title"></Heading>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+              <li className="rvo-footer-menu-item">
+                <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                <Link url="#" content="Menu item"></Link>
+              </li>
+            </ul>
+          </MaxWidthLayout>
+        </footer>
       </LayoutColumnRow>
-      <footer className="rvo-footer">
-        <ul className="rvo-footer-menu">
-          <li className="rvo-footer-menu-title">
-            <Heading type="h3" textContent="Footer menu title"></Heading>
-          </li>
-          <li className="rvo-footer-menu-item">
-            <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-            <Link url="#" content="Menu item"></Link>
-          </li>
-        </ul>
-      </footer>
     </div>
   );
 };
