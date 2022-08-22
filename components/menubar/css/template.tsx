@@ -68,7 +68,7 @@ const parseMenuItem = (
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
 ) => {
-  if (useIcon) {
+  if (useIcon && icon) {
     const iconMarkup = <Icon icon={icon} size={size} color="wit" />;
 
     if (iconPlacement === 'before') {
