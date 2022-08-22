@@ -12,6 +12,7 @@ interface ILinkProps {
   url: string;
   showIcon?: string;
   icon?: string;
+  iconSize?: string;
   hover?: boolean;
   active?: boolean;
   focus?: boolean;
@@ -34,6 +35,10 @@ export const argTypes = {
     control: 'select',
     options: iconNames,
   },
+  iconSize: {
+    options: ['sm', 'md'],
+    control: { type: 'radio' },
+  },
   hover: {
     control: 'boolean',
   },
@@ -54,6 +59,7 @@ export const defaultArgs: ILinkProps = {
   showIcon: 'no',
   hover: false,
   icon: iconNames[0],
+  iconSize: 'md',
   active: false,
   focus: false,
   noUnderline: false,
@@ -64,6 +70,7 @@ export const Link: React.FC<ILinkProps> = ({
   url = defaultArgs.url,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
+  iconSize = defaultArgs.iconSize,
   hover = defaultArgs.hover,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
@@ -76,7 +83,7 @@ export const Link: React.FC<ILinkProps> = ({
         'rvo-link__icon',
         { 'rvo-link__icon--before': showIcon === 'before', 'rvo-link__icon--after': showIcon === 'after' },
         'rvo-icon',
-        'rvo-icon--md',
+        `rvo-icon--${iconSize}`,
         'rvo-icon--hemelblauw',
         `rvo-icon-${icon}`,
       )}
