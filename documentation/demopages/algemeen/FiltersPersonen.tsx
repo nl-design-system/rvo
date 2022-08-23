@@ -1,5 +1,4 @@
 // import { Button } from '@nl-rvo/components/button/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -10,7 +9,7 @@ import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 import '../common/style.scss';
 
-const Filters = () => {
+const FiltersPersonen = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -20,12 +19,11 @@ const Filters = () => {
           <div className="rvo-filter">
             <MaxWidthLayout size="sm">
               <LayoutColumnRow size="md">
-                <Heading type="h1" textContent="Milieu- en Energielijst 2022"></Heading>
+                <Heading type="h1" textContent="Vind uw adviseur"></Heading>
                 <p>
-                  De Energielijst van de regeling Energie-investeringsaftrek (EIA) wordt ieder jaar geactualiseerd. Er
-                  komen bedrijfsmiddelen bij, er gaan er enkele vanaf. En soms worden technische eisen aangescherpt. De
-                  nieuwe Energielijst wordt meestal eind december in de Staatscourant gepubliceerd. De lijst is
-                  gebaseerd op de wettelijke uitvoeringsregeling.
+                  Werkt u bij een innovatief technologisch bedrijf of kennisinstelling met internationale ambities? Onze
+                  ervaren adviseurs kennen de mogelijkheden van internationale innovatieprogramma’s en vergroten uw
+                  kansen op een succesvolle deelname. Zoek de juiste adviseur voor uw vraag.
                 </p>
               </LayoutColumnRow>
             </MaxWidthLayout>
@@ -34,7 +32,6 @@ const Filters = () => {
                 <Fieldset legend="">
                   <MaxWidthLayout size="lg">
                     <LayoutColumnRow size="xl" row={true}>
-                      <TextInputField labelText="Zoek op trefwoord/code"></TextInputField>
                       <details className="rvo-tmp-filter">
                         <summary>
                           <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
@@ -42,7 +39,7 @@ const Filters = () => {
                               className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
                               htmlFor="fieldId"
                             >
-                              <span className="rvo-form-field__label-text">Ik wil duurzaam investeren in</span>
+                              <span className="rvo-form-field__label-text">Thema</span>
                             </label>
                             <div className="rvo-select-wrapper">
                               <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
@@ -64,21 +61,21 @@ const Filters = () => {
                             htmlFor="optionB"
                           >
                             <input type="checkbox" id="optionB" name="group" className="rvo-checkbox__input" value="" />
-                            Bouw en infrastructuur
+                            Energie
                           </label>
                           <label
                             className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
                             htmlFor="optionC"
                           >
                             <input type="checkbox" id="optionC" name="group" className="rvo-checkbox__input" value="" />
-                            Groot- en detailhandel
+                            ICT
                           </label>
                           <label
                             className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
                             htmlFor="optionD"
                           >
                             <input type="checkbox" id="optionD" name="group" className="rvo-checkbox__input" value="" />
-                            Milieusector
+                            Transport
                           </label>
                         </div>
                       </details>
@@ -89,7 +86,7 @@ const Filters = () => {
                               className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
                               htmlFor="fieldId"
                             >
-                              <span className="rvo-form-field__label-text">Mijn milieudoel is</span>
+                              <span className="rvo-form-field__label-text">Fase activiteit</span>
                             </label>
                             <div className="rvo-select-wrapper">
                               <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
@@ -110,7 +107,7 @@ const Filters = () => {
                               className="rvo-checkbox__input"
                               value=""
                             />
-                            Afval(water) verwerken
+                            Fundamenteel onderzoek
                           </label>
                           <label
                             className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
@@ -123,7 +120,7 @@ const Filters = () => {
                               className="rvo-checkbox__input"
                               value=""
                             />
-                            Bodem beschermen
+                            Industrieel onderzoek
                           </label>
                           <label
                             className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
@@ -136,7 +133,7 @@ const Filters = () => {
                               className="rvo-checkbox__input"
                               value=""
                             />
-                            Broeikasgassen reduceren
+                            Ontwikkeling
                           </label>
                           <label
                             className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
@@ -149,7 +146,7 @@ const Filters = () => {
                               className="rvo-checkbox__input"
                               value=""
                             />
-                            Circular ondernemen
+                            Toepassing
                           </label>
                         </div>
                       </details>
@@ -160,7 +157,7 @@ const Filters = () => {
                               className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
                               htmlFor="fieldId"
                             >
-                              <span className="rvo-form-field__label-text">Jaar</span>
+                              <span className="rvo-form-field__label-text">Subsidie/onderwerp</span>
                             </label>
                             <div className="rvo-select-wrapper">
                               <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
@@ -181,52 +178,20 @@ const Filters = () => {
                               className="rvo-checkbox__input"
                               value=""
                             />
-                            2022
+                            EU (Horizon, Digital Europe, EDF)
                           </label>
-                        </div>
-                      </details>
-                      <details className="rvo-tmp-filter">
-                        <summary>
-                          <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                            <label
-                              className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                              htmlFor="fieldId"
-                            >
-                              <span className="rvo-form-field__label-text">Regeling</span>
-                            </label>
-                            <div className="rvo-select-wrapper">
-                              <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
-                                Maak een keuze
-                              </div>
-                            </div>
-                          </div>
-                        </summary>
-                        <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
                           <label
                             className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                            htmlFor="optionA3"
+                            htmlFor="optionB2"
                           >
                             <input
                               type="checkbox"
-                              id="optionA3"
+                              id="optionB2"
                               name="group"
                               className="rvo-checkbox__input"
                               value=""
                             />
-                            MIA\Vamil
-                          </label>
-                          <label
-                            className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
-                            htmlFor="optionB3"
-                          >
-                            <input
-                              type="checkbox"
-                              id="optionB3"
-                              name="group"
-                              className="rvo-checkbox__input"
-                              value=""
-                            />
-                            EIA
+                            Eureka/Eurostars
                           </label>
                         </div>
                       </details>
@@ -239,7 +204,7 @@ const Filters = () => {
                   <MaxWidthLayout size="sm">
                     <LayoutColumnRow row={true} size="sm">
                       <span className="rvo-results-count">
-                        <strong>54</strong> resultaten voor
+                        <strong>12</strong> resultaten voor
                       </span>
                       {/* <strong className="rvo-active-filters-title">met deze filters</strong> */}
                       <span className="rvo-tag rvo-tag--default rvo-tag--sm">
@@ -249,7 +214,7 @@ const Filters = () => {
                         </a>
                       </span>
                       <span className="rvo-tag rvo-tag--default rvo-tag--sm">
-                        Milieusector
+                        Ontwikkeling
                         <a href="#">
                           <div className="rvo-icon rvo-icon-kruis rvo-icon--sm rvo-icon--zwart"></div>
                         </a>
@@ -272,105 +237,90 @@ const Filters = () => {
                         <LayoutColumnRow row={true} size="lg">
                           <div className="rvo-result-text">
                             <LayoutColumnRow size="sm">
-                              <Link
-                                url="#"
-                                content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"
-                              ></Link>
+                              <Link url="#" content="Jelle Knop"></Link>
 
                               <span className="rvo-result-description">
-                                Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald volgens
-                                een energie-indexberekening, zoals vastgelegd in ISSO 75.1 methode 2014 (Handleiding
-                                Energieprestatie Advies Utiliteitsgebouwen, Energielabel + Algemeen deel)...
+                                Ik ben adviseur innovatieprogramma’s health bij RVO, waar ik me vooral focus op de
+                                subsidieprogramma’s van het Eureka-netwerk zoals Eurostars en Globalstars. Ik help
+                                startende ondernemers in de life sciences & health bij het aanvragen van subsidies om
+                                internationale samenwerking te stimuleren.
                               </span>
-                              <span className="rvo-result-meta-data">
+                              <span className="rvo-result-meta-data rvo-result-meta--column">
                                 <span className="rvo-result-meta-data-item">
-                                  Regeling: <strong>EIA</strong>
+                                  <strong>Thema:</strong> Life Sciences & Health
                                 </span>
                                 <span className="rvo-result-meta-data-item">
-                                  Code: <strong>210206</strong>
+                                  <strong>Fase activiteit:</strong> Industrieel onderzoek; Ontwikkeling
+                                </span>
+                                <span className="rvo-result-meta-data-item">
+                                  <strong>Subsidie/onderwerp:</strong> Eureka/Eurostars
                                 </span>
                               </span>
                             </LayoutColumnRow>
                           </div>
                           <a href="#">
                             <img
-                              className="rvo-result-image"
-                              src="https://www.rvo.nl/files/file/styles/content/public/2022-07/8-Augustus%202022%20JPJ%20JIC%20Schiphol30.jpg"
+                              className="rvo-result-profile-pic"
+                              src="https://media-exp1.licdn.com/dms/image/C4E03AQEirwEyMyg2pQ/profile-displayphoto-shrink_200_200/0/1657908152116?e=2147483647&v=beta&t=McXjZqk3FV1ud7n4sE7MzYloKoPc7ZpNoJTtzkHKc4k"
+                            ></img>
+                          </a>
+                        </LayoutColumnRow>
+                      </div>
+                      <div className="rvo-result rvo-result--w-image">
+                        <LayoutColumnRow row={true} size="lg">
+                          <div className="rvo-result-text">
+                            <LayoutColumnRow size="sm">
+                              <Link url="#" content="Bert van der Heide"></Link>
+
+                              <span className="rvo-result-description">
+                                Als adviseur internationale innovatie binnen RVO werk ik op het agri-food domein. Dit
+                                omvat onder andere land- en tuinbouw, veehouderij en foodtech. Daarbij help ik bedrijven
+                                en onderzoekers om samenwerkingen te verkennen en aan te gaan met internationale
+                                partners.
+                              </span>
+                              <span className="rvo-result-meta-data rvo-result-meta--column">
+                                <span className="rvo-result-meta-data-item">
+                                  <strong>Thema:</strong> Agriculture, Food Technology, Water
+                                </span>
+                                <span className="rvo-result-meta-data-item">
+                                  <strong>Fase activiteit:</strong> Ontwikkeling; Toepassing
+                                </span>
+                              </span>
+                            </LayoutColumnRow>
+                          </div>
+                          <a href="#">
+                            <img
+                              className="rvo-result-profile-pic"
+                              src="https://pbs.twimg.com/profile_images/1275762454895738881/laNLU5lV_400x400.jpg"
                             ></img>
                           </a>
                         </LayoutColumnRow>
                       </div>
                       <div className="rvo-result">
-                        <LayoutColumnRow size="sm">
-                          <Link url="#" content="HR-luchtverwarmer [W]"></Link>
+                        <LayoutColumnRow row={true} size="lg">
+                          <div className="rvo-result-text">
+                            <LayoutColumnRow size="sm">
+                              <Link url="#" content="Roy Paulissen"></Link>
 
-                          <span className="rvo-result-description">
-                            direct gasgestookte luchtverwarmer, al dan niet voorzien van een tussenmedium, samengebouwd
-                            tot één geheel, beoordeeld conform NEN-EN 17082:2019 met een rendement van minimaal 90% op d
-                            ebovenwaarde van het toegepaste gas(soort), verbrandingsgasafvoersysteem, (eventueel)
-                            luchttoevoersysteem...
-                          </span>
-                          <span className="rvo-result-meta-data">
-                            <span className="rvo-result-meta-data-item">
-                              Regeling: <strong>EIA</strong>
-                            </span>
-                            <span className="rvo-result-meta-data-item">
-                              Code: <strong>210102</strong>
-                            </span>
-                          </span>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-result">
-                        <LayoutColumnRow size="sm">
-                          <Link url="#" content="Direct gasgestookt stralingspaneel [W]"></Link>
-
-                          <span className="rvo-result-description">
-                            het verwarmen van gesloten binnenruimten in bedrijfsgebouwen met een gemiddelde hoogtevan
-                            meer dan 4 meter, niet zijnde tuinbouwkassen,
-                          </span>
-                          <span className="rvo-result-meta-data">
-                            <span className="rvo-result-meta-data-item">
-                              Regeling: <strong>EIA</strong>
-                            </span>
-                            <span className="rvo-result-meta-data-item">
-                              Code: <strong>210106</strong>
-                            </span>
-                          </span>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-result">
-                        <LayoutColumnRow size="sm">
-                          <Link url="#" content="Warmteterugwinningsysteem uit luchtwassers"></Link>
-
-                          <span className="rvo-result-description">
-                            het verwarmen van veestallen door het benutten van de warmte uit de luchtwasser,
-                          </span>
-                          <span className="rvo-result-meta-data">
-                            <span className="rvo-result-meta-data-item">
-                              Regeling: <strong>EIA</strong>
-                            </span>
-                            <span className="rvo-result-meta-data-item">
-                              Code: <strong>210109</strong>
-                            </span>
-                          </span>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-result">
-                        <LayoutColumnRow size="sm">
-                          <Link url="#" content="Verwarmingssysteem voor bestaande pluimveestallen [W]"></Link>
-
-                          <span className="rvo-result-description">
-                            het verwarmen van bestaande pluimveestallen waarbij warme lucht van boven uit de stal wordt
-                            gerecirculeerd,
-                          </span>
-                          <span className="rvo-result-meta-data">
-                            <span className="rvo-result-meta-data-item">
-                              Regeling: <strong>EIA</strong>
-                            </span>
-                            <span className="rvo-result-meta-data-item">
-                              Code: <strong>210109</strong>
-                            </span>
-                          </span>
+                              <span className="rvo-result-description">
+                                Samen met de topsector HTSM vorm ik de nieuwe internationale strategie. Ik zit in het
+                                kernteam samen met ministeries Economische Zaken en Klimaat en Buitenlandse Zaken. Voor
+                                de helft van mijn tijd werk ik namens het ministerie van Economische Zaken en Klimaat
+                                voor het innovatieteam (IRIS) van RVO.
+                              </span>
+                              <span className="rvo-result-meta-data rvo-result-meta--column">
+                                <span className="rvo-result-meta-data-item">
+                                  <strong>Thema:</strong> Materials, Manufacturing, Chemistry; Transport
+                                </span>
+                                <span className="rvo-result-meta-data-item">
+                                  <strong>Fase activiteit:</strong> Ontwikkeling; Toepassing
+                                </span>
+                                <span className="rvo-result-meta-data-item">
+                                  <strong>Subsidie/onderwerp:</strong> Innovatiepartner Search
+                                </span>
+                              </span>
+                            </LayoutColumnRow>
+                          </div>
                         </LayoutColumnRow>
                       </div>
                     </LayoutColumnRow>
@@ -474,4 +424,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default FiltersPersonen;

@@ -662,7 +662,8 @@
   }
 
   /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
-  .utrecht-custom-radio-button {
+  .utrecht-custom-radio-button,
+  .rvo-checkbox__input {
     align-self: flex-start;
     flex: 24px 0 0;
   }
@@ -801,10 +802,6 @@
 
   /* @TAGS EN @ACTIEVE FILTERS */
 
-  .rvo-active-filters .rvo-layout-row {
-    justify-content: center;
-  }
-
   .rvo-tag {
     align-items: center;
     background-color: var(--rvo-color-hemelblauw-tint2);
@@ -827,13 +824,18 @@
     font-size: var(--rvo-font-size-lg);
   }
 
-  .rvo-result .rvo-result-meta-data {
+  .rvo-result-meta-data {
     display: flex;
     font-size: var(--rvo-font-size-sm);
     gap: var(--rvo-space-md);
   }
 
-  .rvo-result .rvo-result-meta-data-item {
+  .rvo-result-meta--column {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rvo-result-meta-data-item {
     display: flex;
     font-size: var(--rvo-font-size-sm);
     gap: var(--rvo-space-xs);
@@ -846,6 +848,12 @@
 
   .rvo-result-image {
     max-width: 200px;
+    padding-block-start: var(--rvo-space-sm);
+  }
+
+  .rvo-result-profile-pic {
+    border-radius: 50%;
+    max-width: 125px;
     padding-block-start: var(--rvo-space-sm);
   }
 
