@@ -8,6 +8,7 @@ import React from 'react';
 interface ILayoutColumnRowProps {
   size?: string;
   row?: boolean;
+  wrap?: boolean;
 }
 
 export const argTypes = {
@@ -18,16 +19,26 @@ export const argTypes = {
   row: {
     control: 'boolean',
   },
+  wrap: {
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs: ILayoutColumnRowProps = {
   size: 'md',
   row: false,
+  wrap: false,
 };
 
-export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({ size, row, children }) => {
+export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({ size, row, wrap, children }) => {
   return (
-    <div className={clsx(row ? 'rvo-layout-row' : 'rvo-layout-column', `rvo-layout-gap--${size}`)}>
+    <div
+      className={clsx(
+        row ? 'rvo-layout-row' : 'rvo-layout-column',
+        `rvo-layout-gap--${size}`,
+        wrap && 'rvo-layout--wrap',
+      )}
+    >
       {children || (
         <>
           <div>Element A</div>
