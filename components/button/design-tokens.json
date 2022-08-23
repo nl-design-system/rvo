@@ -1,12 +1,6 @@
 {
   "rvo": {
     "button": {
-      "gap": {
-        "css": {
-          "syntax": "<length>",
-          "inherits": true
-        }
-      },
       "tertiary-action": {
         "background-color": {
           "css": {
@@ -320,6 +314,38 @@
               "syntax": "<color>",
               "inherits": true
             }
+          }
+        }
+      },
+      "xs": {
+        "font-size": {
+          "css": {
+            "syntax": "*",
+            "inherits": true
+          }
+        },
+        "font-weight": {
+          "css": {
+            "syntax": "*",
+            "inherits": true
+          }
+        },
+        "padding-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-block-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "min-block-size": {
+          "css": {
+            "syntax": "*",
+            "inherits": true
           }
         }
       },
