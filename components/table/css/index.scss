@@ -14,37 +14,39 @@
 }
 
 .rvo-caption {
-  font-size: var(--rvo-font-size-lg);
-  padding-block-end: var(--rvo-space-md);
+  font-size: var(--rvo-caption-font-size);
+  padding-block-end: var(--rvo-caption-padding-block-end);
   text-align: start;
 }
 
 .rvo-table-header {
-  background-color: var(--rvo-color-grijs1);
-  color: var(--rvo-color-grijs7);
-  font-weight: var(--rvo-font-weight-regular);
-  padding-block-end: var(--rvo-space-sm);
-  padding-block-start: var(--rvo-space-sm);
-  padding-inline-end: var(--rvo-space-md);
-  padding-inline-start: var(--rvo-space-md);
+  background-color: var(--rvo-table-header-background-color);
+  color: var(--rvo-table-header-color);
+  font-weight: var(--rvo-table-header-font-weight);
+  padding-block-end: var(--rvo-table-header-padding-block-end);
+  padding-block-start: var(--rvo-table-header-padding-block-start);
+  padding-inline-end: var(--rvo-table-header-padding-inline-end);
+  padding-inline-start: var(--rvo-table-header-padding-inline-start);
   text-align: start;
 }
 
 .rvo-table-header--sortable:hover {
-  background-color: var(--rvo-color-grijs2);
+  background-color: var(--rvo-table-header-sortable-hover-background-color);
   cursor: pointer;
 }
 
 .rvo-table-header--sortable:focus {
-  background-color: var(--rvo-color-grijs2);
+  background-color: var(--rvo-table-header-sortable-focus-background-color);
 }
 
 .rvo-table-cell {
-  border-bottom: 0.05rem solid var(--rvo-color-grijs3);
-  padding-block-end: var(--rvo-space-sm);
-  padding-block-start: var(--rvo-space-sm);
-  padding-inline-end: var(--rvo-space-md);
-  padding-inline-start: var(--rvo-space-md);
+  border-bottom-color: var(--rvo-table-cell-border-bottom-color);
+  border-bottom-style: var(--rvo-table-cell-border-bottom-style);
+  border-bottom-width: var(--rvo-table-cell-border-bottom-width);
+  padding-block-end: var(--rvo-table-cell-padding-block-end);
+  padding-block-start: var(--rvo-table-cell-padding-block-start);
+  padding-inline-end: var(--rvo-table-cell-padding-inline-end);
+  padding-inline-start: var(--rvo-table-cell-padding-inline-start);
 }
 
 .rvo-table-cell--numeric,
