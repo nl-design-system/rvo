@@ -67,18 +67,18 @@ const Bijlagen = () => {
                 line: 'straight',
               },
               { state: 'doing', label: 'Bijlagen', link: '#', size: 'md', line: 'straight' },
-              { state: 'incomplete', label: 'Samenvatting', link: '#', size: 'md', line: 'straight' },
+
               {
                 state: 'incomplete',
-                label: 'Ondertekening',
-                link: '/rvo/iframe.html?args=&id=pagina-s-jonge-vissers--ondertekening&viewMode=story',
+                label: 'Samenvatting',
+                link: '/rvo/iframe.html?args=&id=pagina-s-jonge-vissers--samenvatting',
                 size: 'md',
                 line: 'straight',
               },
               {
                 state: 'incomplete',
-                label: 'Samenvatting',
-                link: '/rvo/iframe.html?args=&id=pagina-s-jonge-vissers--samenvatting',
+                label: 'Ondertekening',
+                link: '/rvo/iframe.html?args=&id=pagina-s-jonge-vissers--ondertekening&viewMode=story',
                 size: 'md',
                 line: 'straight',
               },

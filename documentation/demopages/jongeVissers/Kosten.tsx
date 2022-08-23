@@ -69,6 +69,13 @@ const Kosten = () => {
                 size: 'md',
                 line: 'straight',
               },
+              {
+                state: 'incomplete',
+                label: 'Samenvatting',
+                link: '/rvo/iframe.html?args=&id=pagina-s-jonge-vissers--samenvatting',
+                size: 'md',
+                line: 'straight',
+              },
 
               {
                 state: 'incomplete',
@@ -77,13 +84,7 @@ const Kosten = () => {
                 size: 'md',
                 line: 'straight',
               },
-              {
-                state: 'incomplete',
-                label: 'Samenvatting',
-                link: '/rvo/iframe.html?args=&id=pagina-s-jonge-vissers--samenvatting',
-                size: 'md',
-                line: 'straight',
-              },
+
               { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
             ]}
           />
