@@ -2,11 +2,7 @@ import '@nl-rvo/assets/fonts/index.css';
 import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
-import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
 import { defineCustomElements } from '@nl-rvo/web-components-stencil';
-import { DocsContainer, DocsPage } from '@storybook/addon-docs';
-import React from 'react';
-// import { ComponentName } from '../../../documentation/components/ComponentName';
 import theme from './theme';
 import './preview.css';
 import prettier from 'prettier/standalone';
@@ -52,14 +48,8 @@ export const parameters = {
   },
   docs: {
     theme,
-    container: (props) => (
-      <div id="docsContainer" style={{ fontFamily: designTokens.rvoFontSansSerifFontFamily }}>
-        <DocsContainer {...props} />
-      </div>
-    ),
-    page: DocsPage,
     components: {
-      // TODO: Add styled components
+      // TODO: Add styled components to style docs template
       // h1: ComponentName,
       // h2: SectionName,
       // h3: Title,
