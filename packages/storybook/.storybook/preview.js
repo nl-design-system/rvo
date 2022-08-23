@@ -4,7 +4,7 @@ import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import { defineCustomElements } from '@nl-rvo/web-components-stencil';
 import theme from './theme';
-import './preview.css';
+import './preview.scss';
 import prettier from 'prettier/standalone';
 import prettierBabel from 'prettier/parser-babel';
 

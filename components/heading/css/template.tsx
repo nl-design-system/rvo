@@ -32,7 +32,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   textContent = defaultArgs.textContent,
 }) => {
   const props = {
-    className: clsx(`utrecht-heading-${type}`),
+    className: clsx(`utrecht-heading-${type.replace('h', '')}`),
   };
 
   switch (type) {
