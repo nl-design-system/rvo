@@ -1,0 +1,53 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rvo-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.rvo-table--responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.rvo-caption {
+  font-size: var(--rvo-font-size-lg);
+  padding-block-end: var(--rvo-space-md);
+  text-align: start;
+}
+
+.rvo-table-header {
+  background-color: var(--rvo-color-grijs1);
+  color: var(--rvo-color-grijs7);
+  font-weight: var(--rvo-font-weight-regular);
+  padding-block-end: var(--rvo-space-sm);
+  padding-block-start: var(--rvo-space-sm);
+  padding-inline-end: var(--rvo-space-md);
+  padding-inline-start: var(--rvo-space-md);
+  text-align: start;
+}
+
+.rvo-table-header--sortable:hover {
+  background-color: var(--rvo-color-grijs2);
+  cursor: pointer;
+}
+
+.rvo-table-header--sortable:focus {
+  background-color: var(--rvo-color-grijs2);
+}
+
+.rvo-table-cell {
+  border-bottom: 0.05rem solid var(--rvo-color-grijs3);
+  padding-block-end: var(--rvo-space-sm);
+  padding-block-start: var(--rvo-space-sm);
+  padding-inline-end: var(--rvo-space-md);
+  padding-inline-start: var(--rvo-space-md);
+}
+
+.rvo-table-cell--numeric,
+.rvo-table-header--numeric {
+  text-align: end;
+}

@@ -1,0 +1,54 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Table } from "./template";
+
+<Meta
+  title="CSS Components/Table/Column types"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      description: "Table with default column types.",
+      columns: [{ label: "Title" }, { label: "Text" }],
+      rows: [
+        ["Title value 1", "Text value 1"],
+        ["Title value 2", "Text value 2"],
+        ["Title value 3", "Text value 3"],
+        ["Title value 4", "Text value 4"],
+      ],
+    }}
+  >
+    {Table.bind({})}
+  </Story>
+</Canvas>
+
+# Numeric
+
+<Canvas>
+  <Story
+    name="Numeric"
+    args={{
+      description: "Table with a numeric price column",
+      columns: [{ label: "Title" }, { label: "Price", type: "numeric" }],
+      rows: [
+        ["Title value 1", "1.50"],
+        ["Title value 2", "2.75"],
+        ["Title value 3", "3.25"],
+        ["Title value 4", "4.80"],
+      ],
+    }}
+  >
+    {Table.bind({})}
+  </Story>
+</Canvas>
