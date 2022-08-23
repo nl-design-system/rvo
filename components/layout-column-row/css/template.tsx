@@ -9,6 +9,7 @@ interface ILayoutColumnRowProps {
   size?: string;
   row?: boolean;
   wrap?: boolean;
+  children?: React.ReactNode;
 }
 
 export const argTypes = {
