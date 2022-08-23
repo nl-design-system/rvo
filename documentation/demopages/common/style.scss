@@ -796,6 +796,7 @@
 
   .rvo-tmp-filters .rvo-layout-row {
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   /* @TAGS EN @ACTIEVE FILTERS */
@@ -809,7 +810,7 @@
     background-color: var(--rvo-color-hemelblauw-tint2);
     border-radius: 3px;
     display: inline-flex;
-    gap: var(--rvo-space-sm);
+    gap: var(--rvo-space-xs);
     padding-block-end: var(--rvo-space-2xs);
     padding-block-start: var(--rvo-space-2xs);
     padding-inline-end: var(--rvo-space-sm);
@@ -840,6 +841,7 @@
 
   .rvo-result--w-image > .rvo-layout-row {
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   .rvo-result-image {
@@ -904,6 +906,18 @@
   .rvo-footer-menu-item .rvo-link--focus {
     background-color: var(--rvo-color-donkerblauw);
     text-decoration: underline;
+  }
+
+  /* TEMP HEADING FIX */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-end: 0;
+    margin-block-start: 0;
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */

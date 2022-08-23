@@ -19,15 +19,17 @@ const Filters = () => {
         <main>
           <div className="rvo-filter">
             <MaxWidthLayout size="sm">
-              <Heading type="h1" textContent="Filters"></Heading>
-              <p>
-                De Energielijst van de regeling Energie-investeringsaftrek (EIA) wordt ieder jaar geactualiseerd. Er
-                komen bedrijfsmiddelen bij, er gaan er enkele vanaf. En soms worden technische eisen aangescherpt. De
-                nieuwe Energielijst wordt meestal eind december in de Staatscourant gepubliceerd. De lijst is gebaseerd
-                op de wettelijke uitvoeringsregeling.
-              </p>
+              <LayoutColumnRow size="sm">
+                <Heading type="h1" textContent="Milieu- en Energielijst 2022"></Heading>
+                <p>
+                  De Energielijst van de regeling Energie-investeringsaftrek (EIA) wordt ieder jaar geactualiseerd. Er
+                  komen bedrijfsmiddelen bij, er gaan er enkele vanaf. En soms worden technische eisen aangescherpt. De
+                  nieuwe Energielijst wordt meestal eind december in de Staatscourant gepubliceerd. De lijst is
+                  gebaseerd op de wettelijke uitvoeringsregeling.
+                </p>
+              </LayoutColumnRow>
             </MaxWidthLayout>
-            <LayoutColumnRow size="lg">
+            <LayoutColumnRow size="md">
               <div className="rvo-tmp-filters">
                 <Fieldset legend="">
                   <MaxWidthLayout size="lg">
@@ -237,22 +239,28 @@ const Filters = () => {
                   <MaxWidthLayout size="md">
                     <LayoutColumnRow row={true} size="sm">
                       <span className="rvo-results-count">
-                        <strong>54</strong> resultaten
+                        <strong>54</strong> resultaten voor
                       </span>
-                      <strong className="rvo-active-filters-title">met deze filters</strong>
+                      {/* <strong className="rvo-active-filters-title">met deze filters</strong> */}
                       <span className="rvo-tag rvo-tag--default rvo-tag--sm">
                         Agro en visserij
                         <a href="#">
-                          <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
+                          <div className="rvo-icon rvo-icon-kruis rvo-icon--sm rvo-icon--zwart"></div>
                         </a>
                       </span>
                       <span className="rvo-tag rvo-tag--default rvo-tag--sm">
                         Milieusector
                         <a href="#">
-                          <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
+                          <div className="rvo-icon rvo-icon-kruis rvo-icon--sm rvo-icon--zwart"></div>
                         </a>
                       </span>
-                      <Button kind="warning-subtle" size="sm" textContent="Verwijder filters"></Button>
+                      <Button
+                        kind="warning-subtle"
+                        size="sm"
+                        textContent="Verwijder filters"
+                        showIcon="before"
+                        icon="verwijderen"
+                      ></Button>
                     </LayoutColumnRow>
                   </MaxWidthLayout>
                 </div>
@@ -308,6 +316,59 @@ const Filters = () => {
                             </span>
                             <span className="rvo-result-meta-data-item">
                               Code: <strong>210102</strong>
+                            </span>
+                          </span>
+                        </LayoutColumnRow>
+                      </div>
+                      <div className="rvo-result">
+                        <LayoutColumnRow size="sm">
+                          <Link url="#" content="Direct gasgestookt stralingspaneel [W]"></Link>
+
+                          <span className="rvo-result-description">
+                            het verwarmen van gesloten binnenruimten in bedrijfsgebouwen met een gemiddelde hoogtevan
+                            meer dan 4 meter, niet zijnde tuinbouwkassen,
+                          </span>
+                          <span className="rvo-result-meta-data">
+                            <span className="rvo-result-meta-data-item">
+                              Regeling: <strong>EIA</strong>
+                            </span>
+                            <span className="rvo-result-meta-data-item">
+                              Code: <strong>210106</strong>
+                            </span>
+                          </span>
+                        </LayoutColumnRow>
+                      </div>
+                      <div className="rvo-result">
+                        <LayoutColumnRow size="sm">
+                          <Link url="#" content="Warmteterugwinningsysteem uit luchtwassers"></Link>
+
+                          <span className="rvo-result-description">
+                            het verwarmen van veestallen door het benutten van de warmte uit de luchtwasser,
+                          </span>
+                          <span className="rvo-result-meta-data">
+                            <span className="rvo-result-meta-data-item">
+                              Regeling: <strong>EIA</strong>
+                            </span>
+                            <span className="rvo-result-meta-data-item">
+                              Code: <strong>210109</strong>
+                            </span>
+                          </span>
+                        </LayoutColumnRow>
+                      </div>
+                      <div className="rvo-result">
+                        <LayoutColumnRow size="sm">
+                          <Link url="#" content="Verwarmingssysteem voor bestaande pluimveestallen [W]"></Link>
+
+                          <span className="rvo-result-description">
+                            het verwarmen van bestaande pluimveestallen waarbij warme lucht van boven uit de stal wordt
+                            gerecirculeerd,
+                          </span>
+                          <span className="rvo-result-meta-data">
+                            <span className="rvo-result-meta-data-item">
+                              Regeling: <strong>EIA</strong>
+                            </span>
+                            <span className="rvo-result-meta-data-item">
+                              Code: <strong>210109</strong>
                             </span>
                           </span>
                         </LayoutColumnRow>
