@@ -97,8 +97,24 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   iconPlacement = defaultArgs.iconPlacement,
   menuMaxWidth = defaultArgs.menuMaxWidth,
 }) => {
-  const leftItems = items.filter((item) => item.align !== 'right');
-  const rightItems = items.filter((item) => item.align === 'right');
+  const leftItemsMarkup = items
+    .filter((item) => item.align !== 'right')
+    .map((item, index) => (
+      <li key={index} className="utrecht-topnav__item">
+        <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
+          {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
+        </a>
+      </li>
+    ));
+  const rightItemsMarkup = items
+    .filter((item) => item.align === 'right')
+    .map((item, index) => (
+      <li key={index} className="utrecht-topnav__item">
+        <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
+          {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
+        </a>
+      </li>
+    ));
   return (
     <div className="rvo-topnav__background">
       <nav
@@ -109,22 +125,8 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         )}
       >
         <ul className="utrecht-topnav__list">
-          {leftItems.map((item, index) => (
-            <li key={index} className="utrecht-topnav__item">
-              <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
-                {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
-              </a>
-            </li>
-          ))}
-          {rightItems.length && <div className="rvo-topnav__spacer" />}
-          {rightItems.length &&
-            rightItems.map((item, index) => (
-              <li key={index} className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
-                  {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
-                </a>
-              </li>
-            ))}
+          {leftItemsMarkup}
+          {rightItemsMarkup}
         </ul>
       </nav>
     </div>
