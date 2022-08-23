@@ -27,7 +27,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   size: {
-    options: ['sm', 'md'],
+    options: ['xs', 'sm', 'md'],
     control: { type: 'radio' },
   },
   textContent: {
@@ -60,7 +60,7 @@ export const argTypes = {
 
 export const defaultArgs: IButtonProps = {
   kind: 'primary',
-  size: 'medium',
+  size: 'md',
   active: false,
   busy: false,
   disabled: false,
@@ -90,22 +90,28 @@ export const Button: React.FC<IButtonProps> = ({
   );
   return (
     <button
-      className={clsx('utrecht-button', {
-        'utrecht-button--primary-action': kind === 'primary',
-        'utrecht-button--secondary-action': kind === 'secondary',
-        'rvo-button--tertiary-action': kind === 'tertiary',
-        'rvo-button--quaternary-action': kind === 'quaternary',
-        'rvo-button--warning-subtle-action': kind === 'warning-subtle',
-        'rvo-button--warning-action': kind === 'warning',
-        'rvo-button--sm': size === 'sm',
-        'rvo-button--md': size === 'md',
-        'utrecht-button--active': active,
-        'utrecht-button--busy': busy,
-        'utrecht-button--hover': hover,
-        'utrecht-button--focus': focus,
-        'utrecht-button--focus-visible': focusVisible,
-        'utrecht-button--disabled': disabled,
-      })}
+      className={clsx(
+        'utrecht-button',
+        kind === 'primary' && 'utrecht-button--primary-action',
+        kind === 'secondary' && 'utrecht-button--secondary-action',
+        kind === 'tertiary' && 'rvo-button--tertiary-action',
+        kind === 'quaternary' && 'rvo-button--quaternary-action',
+        kind === 'warning-subtle' && 'rvo-button--warning-subtle-action',
+        kind === 'warning' && 'rvo-button--warning-action',
+        active && 'utrecht-button--active',
+        busy && 'utrecht-button--busy',
+        hover && 'utrecht-button--hover',
+        focus && 'utrecht-button--focus',
+        focusVisible && 'utrecht-button--focus-visible',
+        disabled && 'utrecht-button--disabled',
+        'rvo-layout-row',
+        size === 'xs' && 'rvo-layout-gap--xs',
+        size === 'sm' && 'rvo-layout-gap--sm',
+        size === 'md' && 'rvo-layout-gap--md',
+        size === 'xs' && 'rvo-button--xs',
+        size === 'sm' && 'rvo-button--sm',
+        size === 'md' && 'rvo-button--md',
+      )}
       aria-disabled={disabled || null}
     >
       {showIcon === 'before' && iconMarkup}
