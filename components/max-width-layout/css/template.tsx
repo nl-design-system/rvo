@@ -10,6 +10,7 @@ interface IMaxWidthLayoutProps {
   size?: string;
   content?: string;
   className?: string | string[];
+  children?: React.ReactNode;
 }
 
 export const argTypes = {
