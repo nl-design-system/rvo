@@ -9,6 +9,7 @@
 }
 
 .rvo-checkbox__input {
+  align-self: flex-start;
   -webkit-appearance: none;
   appearance: none;
   background-color: var(--rvo-checkbox-background-color, var(--utrecht-form-input-background-color));
@@ -16,6 +17,7 @@
   border-style: solid;
   border-width: var(--rvo-checkbox-border-width, var(--utrecht-form-input-border-width));
   display: grid;
+  flex: 24px 0 0;
   height: var(--rvo-checkbox-size);
   place-content: center;
   width: var(--rvo-checkbox-size);
