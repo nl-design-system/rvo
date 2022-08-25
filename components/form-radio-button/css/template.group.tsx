@@ -52,6 +52,7 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
     className={clsx(
       layout === 'horizontal' ? 'rvo-layout-row' : 'rvo-layout-column',
       'rvo-layout-gap--xl',
+      'rvo-layout--wrap',
       invalid && 'rvo-custom-radio-button__group--error',
     )}
   >

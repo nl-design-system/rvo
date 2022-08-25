@@ -5,12 +5,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-.utrecht-button {
-  align-items: center;
-  display: flex;
-  gap: var(--rvo-button-gap);
-}
-
 .utrecht-button--hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):not(.utrecht-button--busy),
 .utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):not(.utrecht-button--busy) {
   cursor: pointer;
@@ -395,9 +389,17 @@
 }
 
 // Sizes
+.rvo-button--xs {
+  font-size: var(--rvo-button-xs-font-size);
+  font-weight: var(--rvo-button-xs-font-weight);
+  min-block-size: var(--rvo-button-xs-min-block-size);
+  padding-block-end: var(--rvo-button-xs-padding-block-end);
+  padding-block-start: var(--rvo-button-xs-padding-block-start);
+}
+
 .rvo-button--sm {
   font-size: var(--rvo-button-sm-font-size);
-  min-block-size: 30px;
+  min-block-size: var(--rvo-button-sm-min-block-size);
   padding-block-end: var(--rvo-button-sm-padding-block-end);
   padding-block-start: var(--rvo-button-sm-padding-block-start);
   padding-inline-end: var(--rvo-button-sm-padding-inline-end);

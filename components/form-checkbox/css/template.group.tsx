@@ -51,6 +51,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
       invalid && 'rvo-custom-radio-button__group--error',
       layout === 'horizontal' ? 'rvo-layout-row' : 'rvo-layout-column',
       'rvo-layout-gap--md',
+      'rvo-layout--wrap',
     )}
   >
     {options.map((option) => (

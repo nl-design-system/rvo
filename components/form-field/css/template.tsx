@@ -15,6 +15,7 @@ export interface IFieldProps {
   expandableHelperTextTitle?: string;
   warningText?: string;
   errorText?: string;
+  children?: React.ReactNode;
 }
 
 export const argTypes = {

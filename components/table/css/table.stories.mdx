@@ -1,0 +1,27 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import markdown from "../README.md";
+import { argTypes, defaultArgs, Table } from "./template";
+
+<Meta
+  title="CSS Components/Table/Table"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Table
+
+<Canvas>
+  <Story name="Table" args={defaultArgs}>
+    {Table.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Table" />
+
+<Description>{markdown}</Description>
