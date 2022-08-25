@@ -21,7 +21,7 @@ Een modal dialog bestaat uit:
 
 ## Rijkshuisstijl
 
-Vanuit de Rijkshuisstijl zijn er geen richtlijnen wat betreft het card component.
+Vanuit de Rijkshuisstijl zijn er geen richtlijnen wat betreft modal dialogs.
 
 ## Bronnen
 
