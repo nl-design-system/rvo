@@ -23,19 +23,19 @@ const Breadcrumbs = () => {
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
                   <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
-                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw"></div>Second
+                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></div>Second
                     step
                   </a>
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
                   <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
-                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw"></div>Third
+                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></div>Third
                     step
                   </a>
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
                   <span className="rvo-layout-row rvo-layout-gap--sm rvo-breadcrumb-current-page">
-                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw"></div>Current
+                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></div>Current
                     page
                   </span>
                 </li>
