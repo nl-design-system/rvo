@@ -1,54 +1,54 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
-import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Table } from "./template";
+// import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+// import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+// import { argTypes, defaultArgs, Table } from "./template";
 
-<Meta
-  title="CSS Components/Table/Column sorting"
-  argTypes={argTypes}
-  parameters={{
-    status: {
-      type: "WORK IN PROGRESS",
-    },
-  }}
-  decorators={[frameworkDecorator]}
-/>
+// <Meta
+// title="CSS Components/Table/Column sorting"
+// argTypes={argTypes}
+// parameters={{
+//     status: {
+//       type: "WORK IN PROGRESS",
+//     },
+//   }}
+// decorators={[frameworkDecorator]}
+// />
 
-# Ascending
+// # Ascending
 
-<Canvas>
-  <Story
-    name="Ascending sorting"
-    args={{
-      description: "Table with titles in ascending order.",
-      rows: [
-        ["Title value 1", "Text value 1"],
-        ["Title value 2", "Text value 2"],
-        ["Title value 3", "Text value 3"],
-        ["Title value 4", "Text value 4"],
-      ],
-      columns: [{ label: "Title", sortable: true, sortDirection: "ASC" }, { label: "Text" }],
-    }}
-  >
-    {Table.bind({})}
-  </Story>
-</Canvas>
+// <Canvas>
+// <Story
+// name="Ascending sorting"
+// args={{
+//       description: "Table with titles in ascending order.",
+//       rows: [
+//         ["Title value 1", "Text value 1"],
+//         ["Title value 2", "Text value 2"],
+//         ["Title value 3", "Text value 3"],
+//         ["Title value 4", "Text value 4"],
+//       ],
+//       columns: [{ label: "Title", sortable: true, sortDirection: "ASC" }, { label: "Text" }],
+//     }}
+// >
+// {Table.bind({})}
+// </Story>
+// </Canvas>
 
-# Descending
+// # Descending
 
-<Canvas>
-  <Story
-    name="Descending sorting"
-    args={{
-      description: "Table with titles in descending order.",
-      rows: [
-        ["Title value 1", "Text value 1"],
-        ["Title value 2", "Text value 2"],
-        ["Title value 3", "Text value 3"],
-        ["Title value 4", "Text value 4"],
-      ],
-      columns: [{ label: "Title", sortable: true, sortDirection: "DESC" }, { label: "Text" }],
-    }}
-  >
-    {Table.bind({})}
-  </Story>
-</Canvas>
+// <Canvas>
+// <Story
+// name="Descending sorting"
+// args={{
+//       description: "Table with titles in descending order.",
+//       rows: [
+//         ["Title value 1", "Text value 1"],
+//         ["Title value 2", "Text value 2"],
+//         ["Title value 3", "Text value 3"],
+//         ["Title value 4", "Text value 4"],
+//       ],
+//       columns: [{ label: "Title", sortable: true, sortDirection: "DESC" }, { label: "Text" }],
+//     }}
+// >
+// {Table.bind({})}
+// </Story>
+// </Canvas>
