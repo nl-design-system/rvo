@@ -385,86 +385,86 @@ const Filters = () => {
           <MaxWidthLayout size="lg">
             <ul className="rvo-footer-menu">
               <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent="Footer menu title"></Heading>
+                <Heading type="h3" textContent="RVO"></Heading>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Over ons"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Contact"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Pers"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Zaken regelen bij RVO"></Link>
               </li>
             </ul>
             <ul className="rvo-footer-menu">
               <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent="Footer menu title"></Heading>
+                <Heading type="h3" textContent="Over deze site"></Heading>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Privacy"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Cookies en anti-spam"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Toegankelijkheid"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Proclaimer"></Link>
               </li>
             </ul>
             <ul className="rvo-footer-menu">
               <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent="Footer menu title"></Heading>
+                <Heading type="h3" textContent="Snel naar"></Heading>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Onderwerpen A t/m Z"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Klantenpanel"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Documenten en publicaties"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Overheidspublicaties en auteursrecht"></Link>
               </li>
             </ul>
             <ul className="rvo-footer-menu">
               <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent="Footer menu title"></Heading>
+                <Heading type="h3" textContent="Blijf op de hoogte"></Heading>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Social media"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Higherlevel.nl ondernemersforum"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="RSS"></Link>
               </li>
               <li className="rvo-footer-menu-item">
                 <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
-                <Link url="#" content="Menu item"></Link>
+                <Link url="#" content="Gratis nieuwsbrief"></Link>
               </li>
             </ul>
           </MaxWidthLayout>
