@@ -662,7 +662,8 @@
   }
 
   /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
-  .utrecht-custom-radio-button {
+  .utrecht-custom-radio-button,
+  .rvo-checkbox__input {
     align-self: flex-start;
     flex: 24px 0 0;
   }
@@ -796,20 +797,17 @@
 
   .rvo-tmp-filters .rvo-layout-row {
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   /* @TAGS EN @ACTIEVE FILTERS */
-
-  .rvo-active-filters .rvo-layout-row {
-    justify-content: center;
-  }
 
   .rvo-tag {
     align-items: center;
     background-color: var(--rvo-color-hemelblauw-tint2);
     border-radius: 3px;
     display: inline-flex;
-    gap: var(--rvo-space-sm);
+    gap: var(--rvo-space-xs);
     padding-block-end: var(--rvo-space-2xs);
     padding-block-start: var(--rvo-space-2xs);
     padding-inline-end: var(--rvo-space-sm);
@@ -826,13 +824,18 @@
     font-size: var(--rvo-font-size-lg);
   }
 
-  .rvo-result .rvo-result-meta-data {
+  .rvo-result-meta-data {
     display: flex;
     font-size: var(--rvo-font-size-sm);
     gap: var(--rvo-space-md);
   }
 
-  .rvo-result .rvo-result-meta-data-item {
+  .rvo-result-meta--column {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rvo-result-meta-data-item {
     display: flex;
     font-size: var(--rvo-font-size-sm);
     gap: var(--rvo-space-xs);
@@ -840,10 +843,17 @@
 
   .rvo-result--w-image > .rvo-layout-row {
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   .rvo-result-image {
     max-width: 200px;
+    padding-block-start: var(--rvo-space-sm);
+  }
+
+  .rvo-result-profile-pic {
+    border-radius: 50%;
+    max-width: 125px;
     padding-block-start: var(--rvo-space-sm);
   }
 
@@ -904,6 +914,18 @@
   .rvo-footer-menu-item .rvo-link--focus {
     background-color: var(--rvo-color-donkerblauw);
     text-decoration: underline;
+  }
+
+  /* TEMP HEADING FIX */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-end: 0;
+    margin-block-start: 0;
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
