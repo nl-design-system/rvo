@@ -27,8 +27,7 @@ export const argTypes = {
     options: options,
   },
   size: {
-    options: ['small', 'medium', 'large'],
-    mapping: { small: 'sm', medium: 'md', large: 'lg' },
+    options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
 };

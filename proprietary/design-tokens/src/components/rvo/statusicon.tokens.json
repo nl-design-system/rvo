@@ -9,6 +9,9 @@
       },
       "waarschuwing": {
         "background-color": { "value": "{rvo.color.donkergeel}" }
+      },
+      "info": {
+        "background-color": { "value": "{rvo.color.hemelblauw}" }
       }
     }
   }
