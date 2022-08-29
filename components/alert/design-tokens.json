@@ -1,0 +1,80 @@
+{
+  "rvo": {
+    "alert": {
+      "gap": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "fieldset-margin": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "info": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "warning": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "error": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "success": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

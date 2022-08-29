@@ -1,0 +1,49 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Alert, argTypes, defaultArgs } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Alert/Kinds"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Alert kinds
+
+## Info
+
+<Canvas>
+  <Story name="Info" args={{ ...defaultArgs, content: "This is an example of an info alert", kind: "info" }}>
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+## Warning
+
+<Canvas>
+  <Story name="Warning" args={{ ...defaultArgs, content: "This is an example of a warning alert", kind: "warning" }}>
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+## Error
+
+<Canvas>
+  <Story name="Error" args={{ ...defaultArgs, content: "This is an example of an error alert", kind: "error" }}>
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+## Success
+
+<Canvas>
+  <Story name="Success" args={{ ...defaultArgs, content: "This is an example of a success alert", kind: "success" }}>
+    {Alert.bind({})}
+  </Story>
+</Canvas>
