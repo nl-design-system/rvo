@@ -115,6 +115,8 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         </a>
       </li>
     ));
+  rightItemsMarkup.unshift(<div className="rvo-topnav__spacer"></div>);
+
   return (
     <div className="rvo-topnav__background">
       <nav
