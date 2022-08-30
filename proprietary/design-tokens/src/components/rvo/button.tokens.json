@@ -92,6 +92,8 @@
         "font-weight": { "value": "{rvo.font-weight.normal}" },
         "padding-block-start": { "value": "{rvo.space.xs}" },
         "padding-block-end": { "value": "{rvo.space.xs}" },
+        "padding-inline-start": { "value": "calc({rvo.space.sm} + {rvo.space.xs})" },
+        "padding-inline-end": { "value": "calc({rvo.space.sm} + {rvo.space.xs})" },
         "min-block-size": { "value": "auto" }
       },
       "sm": {
