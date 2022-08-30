@@ -9,6 +9,7 @@ interface IFieldsetProps {
   legend: string;
   disabled?: boolean;
   fields?: ITextInputFieldProps[];
+  children?: React.ReactNode;
 }
 
 export const argTypes = {
