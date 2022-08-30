@@ -10,7 +10,7 @@ import validateHTML from '../../utils/validateHTML';
 export interface IFieldProps {
   fieldId?: string;
   labelText: string;
-  helperText?: string;
+  helperText?: string | React.ReactNode;
   expandableHelperText?: boolean;
   expandableHelperTextTitle?: string;
   warningText?: string;
@@ -52,22 +52,30 @@ export const Field: React.FC<IFieldProps> = ({
   errorText,
   children,
 }) => {
-  // Parse helper text markup
   let helperTextMarkup;
-  if (helperText && helperText.length) {
-    if (!expandableHelperText) {
-      const isValidHTML = validateHTML(helperText);
-      helperTextMarkup = isValidHTML ? (
-        <div className="rvo-form-field__helper-text" dangerouslySetInnerHTML={{ __html: helperText }}></div>
-      ) : (
-        <div className="rvo-form-field__helper-text">{helperText}</div>
-      );
-    } else {
+  // Parse default helper text markup (strings or react node)
+  if (helperText) {
+    helperTextMarkup = <div className="rvo-form-field__helper-text">{helperText}</div>;
+
+    // Parse helper text markup for expandable text
+    if (expandableHelperText) {
       helperTextMarkup = (
         <div className="rvo-form-field__helper-text">
           <ExpandableText title={expandableHelperTextTitle} text={helperText} />
         </div>
       );
+    }
+
+    // Parse helper text markup for HTML strings
+    else if (typeof helperText === 'string' && helperText.length) {
+      const isValidHTML = validateHTML(helperText);
+      if (isValidHTML) {
+        helperTextMarkup = (
+          <div className="rvo-form-field__helper-text" dangerouslySetInnerHTML={{ __html: helperText }}></div>
+        );
+      } else {
+        helperTextMarkup = <div className="rvo-form-field__helper-text">{helperText}</div>;
+      }
     }
   }
 

@@ -7,7 +7,7 @@ import validateHTML from '../../utils/validateHTML';
 
 interface IExpandableTextProps {
   title: string;
-  text: string;
+  text: string | React.ReactNode;
   open?: boolean;
 }
 
@@ -34,18 +34,18 @@ export const ExpandableText: React.FC<IExpandableTextProps> = ({
   text = defaultArgs.text,
   open = defaultArgs.open,
 }) => {
-  const isValidHTML = validateHTML(text);
+  let textMarkup = <span className="rvo-expandable-text__details">{text}</span>;
+  if (typeof text === 'string' && text.length && validateHTML(text)) {
+    textMarkup = <span className="rvo-expandable-text__details" dangerouslySetInnerHTML={{ __html: text }}></span>;
+  }
+
   return (
     <details className="rvo-expandable-text" open={open || null}>
       <summary className="rvo-expandable-text__summary">
         <div className="rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"></div>
         {title}
       </summary>
-      {isValidHTML ? (
-        <span className="rvo-expandable-text__details" dangerouslySetInnerHTML={{ __html: text }}></span>
-      ) : (
-        <span className="rvo-expandable-text__details">{text}</span>
-      )}
+      {textMarkup}
     </details>
   );
 };

@@ -123,10 +123,12 @@ const Aanvrager = () => {
                     <Fieldset legend="Technologiegebied">
                       <SelectField
                         labelText="Technologiegebied"
-                        helperText="<dl className='rvo-data'>
-                      <dt>aard- en milieuwetenschappen</dt>
-                      <dd>geowetenschappen | meteorologie | klimaatonderzoek | water & ecologie onderzoek</dd>
-                    </dl>"
+                        helperText={
+                          <dl>
+                            <dt>aard- en milieuwetenschappen</dt>
+                            <dd>geowetenschappen | meteorologie | klimaatonderzoek | water & ecologie onderzoek</dd>
+                          </dl>
+                        }
                         expandableHelperText={true}
                         expandableHelperTextTitle="Uitleg over technologiegebieden"
                         options={[{ value: '1', label: 'aard- en milieuwetenschappen' }]}

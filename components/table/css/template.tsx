@@ -97,19 +97,22 @@ export const Table: React.FC<ITableProps> = ({
             <tr key={rowIndex} className="rvo-table-row">
               {columns.map((column, columnIndex) => {
                 const cellValue = row[columnIndex];
-                const isValidHTML = validateHTML(cellValue);
                 const cellClassNames = clsx('rvo-table-cell', column.type === 'numeric' && 'rvo-table-cell--numeric');
-                if (isValidHTML) {
-                  return (
+
+                // Parse cell markup (value is either string, HTML string or React node)
+                let cellMarkup = (
+                  <td key={columnIndex} className={cellClassNames}>
+                    {cellValue}
+                  </td>
+                );
+
+                if (typeof cellValue === 'string' && cellValue.length && validateHTML(cellValue)) {
+                  cellMarkup = (
                     <td key={columnIndex} className={cellClassNames} dangerouslySetInnerHTML={{ __html: cellValue }} />
                   );
-                } else {
-                  return (
-                    <td key={columnIndex} className={cellClassNames}>
-                      {cellValue}
-                    </td>
-                  );
                 }
+
+                return cellMarkup;
               })}
             </tr>
           ))}

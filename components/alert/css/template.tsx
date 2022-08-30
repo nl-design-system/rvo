@@ -11,7 +11,7 @@ import validateHTML from '../../utils/validateHTML';
 export interface IAlertProps {
   kind?: string;
   heading?: string;
-  content?: string;
+  content?: string | React.ReactNode;
   closable?: boolean;
 }
 
@@ -60,14 +60,18 @@ export const Alert: React.FC<IAlertProps> = ({
       break;
   }
 
-  const isValidHTML = validateHTML(content);
+  // Parse content markup (either a string, HTML string or React node)
+  let contentMarkup = <div>{content}</div>;
+  if (typeof content === 'string' && content.length && validateHTML(content)) {
+    contentMarkup = <div dangerouslySetInnerHTML={{ __html: content }}></div>;
+  }
 
   return (
     <div className={clsx('rvo-alert', `rvo-alert--${kind}`)}>
       {iconMarkup}
       <div className="rvo-alert-text">
         {heading?.length > 0 && <strong>{heading}</strong>}
-        {isValidHTML ? <div dangerouslySetInnerHTML={{ __html: content }}></div> : <div>{content}</div>}
+        {contentMarkup}
       </div>
       {closable && (
         <button className="utrecht-button rvo-button--close">
