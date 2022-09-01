@@ -25,6 +25,7 @@ const previewTabs = {
 const storySort = {
   order: [
     'Introductie',
+    'Aan de slag',
     'Huisstijl',
     ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
     'CSS Components',
