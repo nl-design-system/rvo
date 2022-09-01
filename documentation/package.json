@@ -14,7 +14,7 @@
     "@nl-rvo/components": "file:../components",
     "@nl-rvo/design-tokens": "file:../proprietary/design-tokens",
     "@nl-rvo/storybook": "file:../packages/storybook",
-    "@storybook/addon-docs": "6.5.9"
+    "@storybook/addon-docs": "6.5.10"
   },
   "dependencies": {
     "html-react-parser": "3.0.1"
