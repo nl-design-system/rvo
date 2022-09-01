@@ -23,14 +23,20 @@ import { Link } from "../../link/css/template";
       appearance: "rows",
       items: [
         {
-          key: "Item",
-          value: "A",
+          key: "Voornaam",
+          value: "Mees",
           actions: <Link content="Bewerken" url="#" />,
         },
         {
-          key: "Item",
-          value: "B",
+          key: "Achternaam",
+          value: "De vos",
           actions: <Link content="Bewerken" url="#" />,
+        },
+        {
+          key: "Adres",
+          value: "Tweede Kamer der Staten-Generaal\nPostbus 20018\n2500 EA Den Haag",
+          actions: <Link content="Bewerken" url="#" />,
+          multiline: true,
         },
       ],
     }}
