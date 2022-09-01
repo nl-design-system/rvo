@@ -1,6 +1,7 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, DataList } from "./template";
+import { Link } from "../../link/css/template";
 
 <Meta
   title="CSS Components/Data list"
@@ -22,13 +23,14 @@ import { argTypes, DataList } from "./template";
       appearance: "rows",
       items: [
         {
-          key: "Voornaam",
-          value: "Mees",
-          actions: (
-            <a className="utrecht-link-button utrecht-link-button--inline" href="#">
-              Edit
-            </a>
-          ),
+          key: "Item",
+          value: "A",
+          actions: <Link content="Bewerken" url="#" />,
+        },
+        {
+          key: "Item",
+          value: "B",
+          actions: <Link content="Bewerken" url="#" />,
         },
       ],
     }}
