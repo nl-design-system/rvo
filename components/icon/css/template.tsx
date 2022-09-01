@@ -68,12 +68,12 @@ export const Icon: React.FC<IIconProps> = ({
   }
 
   return (
-    <div
+    <span
       className={clsx('rvo-icon', `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`, `rvo-icon--${size}`, {
         'rvo-icon--wit': !color || color === 'wit',
         'rvo-icon--hemelblauw': color === 'hemelblauw',
         'rvo-icon--zwart': color === 'zwart',
       })}
-    ></div>
+    ></span>
   );
 };
