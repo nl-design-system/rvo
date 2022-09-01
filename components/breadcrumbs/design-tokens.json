@@ -1,0 +1,30 @@
+{
+  "rvo": {
+    "breadcrumbs": {
+      "sm": {
+        "font-size": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "md": {
+        "font-size": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "lg": {
+        "font-size": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

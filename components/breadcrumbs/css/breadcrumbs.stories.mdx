@@ -1,0 +1,29 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Breadcrumbs, defaultArgs } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Breadcrumbs/Breadcrumbs"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Breadcrumbs
+
+<Canvas>
+  <Story name="Breadcrumbs" args={defaultArgs}>
+    {Breadcrumbs.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Breadcrumbs" />
+
+## Dependencies
+
+@nl-rvo/assets/icons
