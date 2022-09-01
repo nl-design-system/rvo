@@ -1,0 +1,24 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, DateInput, defaultArgs } from "./template";
+
+<Meta
+  title="CSS Components/Form/Date input/Date input"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Form date input
+
+<Canvas>
+  <Story name="Date input" args={defaultArgs}>
+    {DateInput.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Date input" />
