@@ -1,0 +1,26 @@
+{
+  "utrecht": {
+    "data-list": {
+      "margin-block-end": {},
+      "margin-block-start": { "value": "{rvo.space.md}" },
+      "item-key": {
+        "color": {},
+        "font-size": {},
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
+        "line-height": {}
+      },
+      "item-value": {
+        "font-size": {},
+        "line-height": {}
+      },
+      "rows": {
+        "item": {
+          "margin-block-start": { "value": "{rvo.space.md}" }
+        },
+        "item-value": {
+          "margin-block-start": { "value": "{rvo.space.md}" }
+        }
+      }
+    }
+  }
+}

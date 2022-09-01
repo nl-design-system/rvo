@@ -1,0 +1,24 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, DataList, defaultArgs } from "./template";
+
+<Meta
+  title="CSS Components/Data list"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Data list
+
+<Canvas>
+  <Story name="Data List" args={defaultArgs}>
+    {DataList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Data List" />
