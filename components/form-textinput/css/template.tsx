@@ -46,7 +46,7 @@ export const argTypes = {
   value: {
     control: 'text',
   },
-  valueType: { options: ['text', 'number'], control: { type: 'radio' } },
+  valueType: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
 };
 
 export const defaultArgs: ITextInputProps = {
@@ -89,9 +89,12 @@ export const TextInput: React.FC<ITextInputProps> = ({
     'aria-invalid': invalid || null,
     required: required || null,
     readOnly: readOnly || null,
-    placeholder: placeholder || null,
+    placeholder: valueType === 'currency' ? '€' : placeholder || null,
     defaultValue: value,
-    ...(valueType === 'number' && { inputMode: 'numeric' as any, pattern: '[0-9]*' }),
+    ...((valueType === 'number' || valueType === 'currency') && {
+      inputMode: 'numeric' as any,
+      pattern: valueType === 'currency' ? '[0-9.,]*' : '[0-9]*',
+    }),
   };
 
   if (inputType !== 'textarea') {
