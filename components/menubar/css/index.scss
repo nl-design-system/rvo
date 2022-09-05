@@ -14,15 +14,12 @@
   font-size: var(--rvo-topnav-md-font-size);
 }
 
-.rvo-topnav__spacer {
-  flex: 1;
-}
-
 .rvo-topnav__background {
   background-color: var(--utrecht-topnav-list-background-color);
 }
 
 .utrecht-topnav__list {
+  background-color: transparent;
   justify-content: normal;
 }
 
@@ -30,9 +27,32 @@
   flex: none;
 }
 
+.utrecht-topnav__item--active {
+  background-color: var(--rvo-topnav-item-active-background-color);
+}
+
+.utrecht-topnav__item--align-right {
+  margin-inline-start: auto;
+}
+
 .utrecht-topnav__link {
   padding-block-end: var(--rvo-topnav-link-padding-block-end);
   padding-block-start: var(--rvo-topnav-link-padding-block-start);
   padding-inline-end: var(--rvo-topnav-link-padding-inline-end);
   padding-inline-start: var(--rvo-topnav-link-padding-inline-start);
+}
+
+// Submenu
+.rvo-topnav--sub.rvo-topnav__background {
+  background-color: var(--rvo-topnav-submenu-background-color);
+}
+
+.rvo-topnav--sub .utrecht-topnav__item--active .utrecht-topnav__link:focus {
+  background-color: var(--rvo-topnav-item-active-background-color);
+}
+
+// Submenu grid
+.rvo-topnav--sub-grid .utrecht-topnav__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }

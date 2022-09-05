@@ -13,6 +13,14 @@
         "padding-block-end": { "value": "{rvo.space.md}" },
         "padding-inline-start": { "value": "{rvo.space.md}" },
         "padding-inline-end": { "value": "{rvo.space.md}" }
+      },
+      "item": {
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" }
+        }
+      },
+      "submenu": {
+        "background-color": { "value": "{rvo.color.donkerblauw}" }
       }
     }
   }

@@ -12,6 +12,7 @@ interface IMenuBarItem {
   icon?: string;
   link: string;
   align?: string;
+  active?: boolean;
 }
 
 interface IMenuBarProps {
@@ -20,6 +21,7 @@ interface IMenuBarProps {
   useIcons: boolean;
   iconPlacement: string;
   menuMaxWidth?: string;
+  type?: 'primary' | 'sub' | 'sub-grid';
 }
 
 const defaultItems = [
@@ -51,6 +53,10 @@ export const argTypes = {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  type: {
+    options: ['primary', 'sub', 'sub-grid'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs: IMenuBarProps = {
@@ -59,6 +65,7 @@ export const defaultArgs: IMenuBarProps = {
   useIcons: true,
   iconPlacement: 'before',
   menuMaxWidth: 'none',
+  type: 'primary',
 };
 
 const parseMenuItem = (
@@ -96,11 +103,12 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
   menuMaxWidth = defaultArgs.menuMaxWidth,
+  type = defaultArgs.type,
 }) => {
   const leftItemsMarkup = items
     .filter((item) => item.align !== 'right')
     .map((item, index) => (
-      <li key={index} className="utrecht-topnav__item">
+      <li key={index} className={clsx('utrecht-topnav__item', item.active && 'utrecht-topnav__item--active')}>
         <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
           {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
         </a>
@@ -109,16 +117,28 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   const rightItemsMarkup = items
     .filter((item) => item.align === 'right')
     .map((item, index) => (
-      <li key={index} className="utrecht-topnav__item">
+      <li
+        key={index}
+        className={clsx(
+          'utrecht-topnav__item',
+          item.active && 'utrecht-topnav__item--active',
+          index === 0 && 'utrecht-topnav__item--align-right',
+        )}
+      >
         <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
           {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
         </a>
       </li>
     ));
-  rightItemsMarkup.unshift(<div key="spacer" className="rvo-topnav__spacer"></div>);
 
   return (
-    <div className="rvo-topnav__background">
+    <div
+      className={clsx(
+        'rvo-topnav__background',
+        type === 'sub' && 'rvo-topnav--sub',
+        type === 'sub-grid' && ['rvo-topnav--sub', 'rvo-topnav--sub-grid'],
+      )}
+    >
       <nav
         className={clsx(
           `rvo-topnav rvo-topnav--${size}`,
@@ -134,3 +154,10 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     </div>
   );
 };
+
+export const MenuBarWithSubmenu: React.FC<{ primary: IMenuBarProps; sub: IMenuBarProps }> = ({ primary, sub }) => (
+  <div>
+    <MenuBar {...primary} />
+    <MenuBar {...sub} />
+  </div>
+);

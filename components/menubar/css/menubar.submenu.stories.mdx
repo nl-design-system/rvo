@@ -1,0 +1,100 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MenuBarWithSubmenu } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Submenu"
+  argTypes={{ primary: argTypes, sub: argTypes }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Menubar with submenu
+
+<Canvas>
+  <Story
+    name="Submenu"
+    args={{
+      primary: {
+        size: "md",
+        items: [
+          { label: "Home", link: "#" },
+          { label: "Expanded menu item", link: "#", active: true },
+          { label: "Uitloggen", icon: "versleutelen", link: "#", align: "right" },
+        ],
+        useIcons: true,
+        iconPlacement: "before",
+        menuMaxWidth: "none",
+        type: "primary",
+      },
+      sub: {
+        size: "md",
+        items: [
+          { label: "Submenu item", link: "#" },
+          { label: "Submenu item", link: "#" },
+          { label: "Submenu item", link: "#", align: "right" },
+        ],
+        useIcons: true,
+        iconPlacement: "before",
+        menuMaxWidth: "none",
+        type: "sub",
+      },
+    }}
+  >
+    {MenuBarWithSubmenu.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Submenu" />
+
+# Menubar with submenu grid
+
+<Canvas>
+  <Story
+    name="Submenu grid"
+    args={{
+      primary: {
+        size: "md",
+        items: [
+          { label: "Home", link: "#" },
+          { label: "Expanded menu item", link: "#", active: true },
+          { label: "Uitloggen", icon: "versleutelen", link: "#", align: "right" },
+        ],
+        useIcons: true,
+        iconPlacement: "before",
+        menuMaxWidth: "none",
+        type: "primary",
+      },
+      sub: {
+        size: "md",
+        items: [
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+          { label: "Submenu item", link: "#", icon: "plus" },
+        ],
+        useIcons: true,
+        iconPlacement: "before",
+        menuMaxWidth: "none",
+        type: "sub-grid",
+      },
+    }}
+  >
+    {MenuBarWithSubmenu.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Submenu" />
+
+## Dependencies
+
+@nl-rvo/assets/icons
