@@ -68,13 +68,20 @@ export const defaultArgs: IMenuBarProps = {
   type: 'primary',
 };
 
-const parseMenuItem = (
+const parseMenuItem = ({
   label,
   icon,
+  active,
   useIcon = defaultArgs.useIcons,
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
-) => {
+}) => {
+  // Parse delta for active menu items
+  let deltaMarkup;
+  if (active !== undefined) {
+    deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" color="wit" />;
+  }
+
   if (useIcon && icon) {
     const iconMarkup = <Icon icon={icon} size={size} color="wit" />;
 
@@ -83,6 +90,7 @@ const parseMenuItem = (
         <>
           {iconMarkup}
           {label}
+          {deltaMarkup}
         </>
       );
     } else {
@@ -90,11 +98,17 @@ const parseMenuItem = (
         <>
           {label}
           {iconMarkup}
+          {deltaMarkup}
         </>
       );
     }
   }
-  return label;
+  return (
+    <>
+      {label}
+      {deltaMarkup}
+    </>
+  );
 };
 
 export const MenuBar: React.FC<IMenuBarProps> = ({
@@ -110,7 +124,14 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     .map((item, index) => (
       <li key={index} className={clsx('utrecht-topnav__item', item.active && 'utrecht-topnav__item--active')}>
         <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
-          {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
+          {parseMenuItem({
+            label: item.label,
+            icon: item.icon,
+            active: item.active,
+            useIcon: useIcons,
+            size,
+            iconPlacement,
+          })}
         </a>
       </li>
     ));
@@ -121,12 +142,19 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         key={index}
         className={clsx(
           'utrecht-topnav__item',
-          item.active && 'utrecht-topnav__item--active',
+          type === 'primary' && item.active && 'utrecht-topnav__item--active',
           index === 0 && 'utrecht-topnav__item--align-right',
         )}
       >
         <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
-          {parseMenuItem(item.label, item.icon, useIcons, size, iconPlacement)}
+          {parseMenuItem({
+            label: item.label,
+            icon: item.icon,
+            active: item.active,
+            useIcon: useIcons,
+            size,
+            iconPlacement,
+          })}
         </a>
       </li>
     ));
