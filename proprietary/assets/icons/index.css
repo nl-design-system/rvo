@@ -90,7 +90,6 @@
 .rvo-icon-bg-activiteit--before::before,
 .rvo-icon-bg-activiteit--after::after {
   background-image: var(--rvo-icon-activiteit);
-  background-size: contain;
 }
 
 .rvo-icon-agile-werken,
@@ -110,7 +109,6 @@
 .rvo-icon-bg-agile-werken--before::before,
 .rvo-icon-bg-agile-werken--after::after {
   background-image: var(--rvo-icon-agile-werken);
-  background-size: contain;
 }
 
 .rvo-icon-api-inrichting,
@@ -130,7 +128,6 @@
 .rvo-icon-bg-api-inrichting--before::before,
 .rvo-icon-bg-api-inrichting--after::after {
   background-image: var(--rvo-icon-api-inrichting);
-  background-size: contain;
 }
 
 .rvo-icon-audio,
@@ -150,7 +147,6 @@
 .rvo-icon-bg-audio--before::before,
 .rvo-icon-bg-audio--after::after {
   background-image: var(--rvo-icon-audio);
-  background-size: contain;
 }
 
 .rvo-icon-bel,
@@ -170,7 +166,6 @@
 .rvo-icon-bg-bel--before::before,
 .rvo-icon-bg-bel--after::after {
   background-image: var(--rvo-icon-bel);
-  background-size: contain;
 }
 
 .rvo-icon-bewerken,
@@ -190,7 +185,6 @@
 .rvo-icon-bg-bewerken--before::before,
 .rvo-icon-bg-bewerken--after::after {
   background-image: var(--rvo-icon-bewerken);
-  background-size: contain;
 }
 
 .rvo-icon-blog,
@@ -210,7 +204,6 @@
 .rvo-icon-bg-blog--before::before,
 .rvo-icon-bg-blog--after::after {
   background-image: var(--rvo-icon-blog);
-  background-size: contain;
 }
 
 .rvo-icon-comment,
@@ -230,7 +223,6 @@
 .rvo-icon-bg-comment--before::before,
 .rvo-icon-bg-comment--after::after {
   background-image: var(--rvo-icon-comment);
-  background-size: contain;
 }
 
 .rvo-icon-communicatie,
@@ -250,7 +242,6 @@
 .rvo-icon-bg-communicatie--before::before,
 .rvo-icon-bg-communicatie--after::after {
   background-image: var(--rvo-icon-communicatie);
-  background-size: contain;
 }
 
 .rvo-icon-delen,
@@ -270,7 +261,6 @@
 .rvo-icon-bg-delen--before::before,
 .rvo-icon-bg-delen--after::after {
   background-image: var(--rvo-icon-delen);
-  background-size: contain;
 }
 
 .rvo-icon-delta-naar-links,
@@ -290,7 +280,6 @@
 .rvo-icon-bg-delta-naar-links--before::before,
 .rvo-icon-bg-delta-naar-links--after::after {
   background-image: var(--rvo-icon-delta-naar-links);
-  background-size: contain;
 }
 
 .rvo-icon-delta-naar-rechts,
@@ -310,7 +299,6 @@
 .rvo-icon-bg-delta-naar-rechts--before::before,
 .rvo-icon-bg-delta-naar-rechts--after::after {
   background-image: var(--rvo-icon-delta-naar-rechts);
-  background-size: contain;
 }
 
 .rvo-icon-delta-omhoog,
@@ -330,7 +318,6 @@
 .rvo-icon-bg-delta-omhoog--before::before,
 .rvo-icon-bg-delta-omhoog--after::after {
   background-image: var(--rvo-icon-delta-omhoog);
-  background-size: contain;
 }
 
 .rvo-icon-delta-omlaag,
@@ -350,7 +337,6 @@
 .rvo-icon-bg-delta-omlaag--before::before,
 .rvo-icon-bg-delta-omlaag--after::after {
   background-image: var(--rvo-icon-delta-omlaag);
-  background-size: contain;
 }
 
 .rvo-icon-diagonale-pijl,
@@ -370,7 +356,6 @@
 .rvo-icon-bg-diagonale-pijl--before::before,
 .rvo-icon-bg-diagonale-pijl--after::after {
   background-image: var(--rvo-icon-diagonale-pijl);
-  background-size: contain;
 }
 
 .rvo-icon-downloaden,
@@ -390,7 +375,6 @@
 .rvo-icon-bg-downloaden--before::before,
 .rvo-icon-bg-downloaden--after::after {
   background-image: var(--rvo-icon-downloaden);
-  background-size: contain;
 }
 
 .rvo-icon-externe-link,
@@ -410,7 +394,6 @@
 .rvo-icon-bg-externe-link--before::before,
 .rvo-icon-bg-externe-link--after::after {
   background-image: var(--rvo-icon-externe-link);
-  background-size: contain;
 }
 
 .rvo-icon-favoriet,
@@ -430,7 +413,6 @@
 .rvo-icon-bg-favoriet--before::before,
 .rvo-icon-bg-favoriet--after::after {
   background-image: var(--rvo-icon-favoriet);
-  background-size: contain;
 }
 
 .rvo-icon-foto-vergroten,
@@ -450,7 +432,6 @@
 .rvo-icon-bg-foto-vergroten--before::before,
 .rvo-icon-bg-foto-vergroten--after::after {
   background-image: var(--rvo-icon-foto-vergroten);
-  background-size: contain;
 }
 
 .rvo-icon-gegevensuitwisseling,
@@ -470,7 +451,6 @@
 .rvo-icon-bg-gegevensuitwisseling--before::before,
 .rvo-icon-bg-gegevensuitwisseling--after::after {
   background-image: var(--rvo-icon-gegevensuitwisseling);
-  background-size: contain;
 }
 
 .rvo-icon-geluid-aan,
@@ -490,7 +470,6 @@
 .rvo-icon-bg-geluid-aan--before::before,
 .rvo-icon-bg-geluid-aan--after::after {
   background-image: var(--rvo-icon-geluid-aan);
-  background-size: contain;
 }
 
 .rvo-icon-geluid-uit,
@@ -510,7 +489,6 @@
 .rvo-icon-bg-geluid-uit--before::before,
 .rvo-icon-bg-geluid-uit--after::after {
   background-image: var(--rvo-icon-geluid-uit);
-  background-size: contain;
 }
 
 .rvo-icon-haakse-pijl,
@@ -530,7 +508,6 @@
 .rvo-icon-bg-haakse-pijl--before::before,
 .rvo-icon-bg-haakse-pijl--after::after {
   background-image: var(--rvo-icon-haakse-pijl);
-  background-size: contain;
 }
 
 .rvo-icon-hashtag,
@@ -550,7 +527,6 @@
 .rvo-icon-bg-hashtag--before::before,
 .rvo-icon-bg-hashtag--after::after {
   background-image: var(--rvo-icon-hashtag);
-  background-size: contain;
 }
 
 .rvo-icon-home,
@@ -570,7 +546,6 @@
 .rvo-icon-bg-home--before::before,
 .rvo-icon-bg-home--after::after {
   background-image: var(--rvo-icon-home);
-  background-size: contain;
 }
 
 .rvo-icon-info,
@@ -590,7 +565,6 @@
 .rvo-icon-bg-info--before::before,
 .rvo-icon-bg-info--after::after {
   background-image: var(--rvo-icon-info);
-  background-size: contain;
 }
 
 .rvo-icon-inloggen,
@@ -610,7 +584,6 @@
 .rvo-icon-bg-inloggen--before::before,
 .rvo-icon-bg-inloggen--after::after {
   background-image: var(--rvo-icon-inloggen);
-  background-size: contain;
 }
 
 .rvo-icon-instellingen,
@@ -630,7 +603,6 @@
 .rvo-icon-bg-instellingen--before::before,
 .rvo-icon-bg-instellingen--after::after {
   background-image: var(--rvo-icon-instellingen);
-  background-size: contain;
 }
 
 .rvo-icon-interne-link,
@@ -650,7 +622,6 @@
 .rvo-icon-bg-interne-link--before::before,
 .rvo-icon-bg-interne-link--after::after {
   background-image: var(--rvo-icon-interne-link);
-  background-size: contain;
 }
 
 .rvo-icon-kalender,
@@ -670,7 +641,6 @@
 .rvo-icon-bg-kalender--before::before,
 .rvo-icon-bg-kalender--after::after {
   background-image: var(--rvo-icon-kalender);
-  background-size: contain;
 }
 
 .rvo-icon-klok,
@@ -690,7 +660,6 @@
 .rvo-icon-bg-klok--before::before,
 .rvo-icon-bg-klok--after::after {
   background-image: var(--rvo-icon-klok);
-  background-size: contain;
 }
 
 .rvo-icon-kruis,
@@ -710,7 +679,6 @@
 .rvo-icon-bg-kruis--before::before,
 .rvo-icon-bg-kruis--after::after {
   background-image: var(--rvo-icon-kruis);
-  background-size: contain;
 }
 
 .rvo-icon-let-op-met-loep,
@@ -730,7 +698,6 @@
 .rvo-icon-bg-let-op-met-loep--before::before,
 .rvo-icon-bg-let-op-met-loep--after::after {
   background-image: var(--rvo-icon-let-op-met-loep);
-  background-size: contain;
 }
 
 .rvo-icon-let-op,
@@ -750,7 +717,6 @@
 .rvo-icon-bg-let-op--before::before,
 .rvo-icon-bg-let-op--after::after {
   background-image: var(--rvo-icon-let-op);
-  background-size: contain;
 }
 
 .rvo-icon-locatiemarker,
@@ -770,7 +736,6 @@
 .rvo-icon-bg-locatiemarker--before::before,
 .rvo-icon-bg-locatiemarker--after::after {
   background-image: var(--rvo-icon-locatiemarker);
-  background-size: contain;
 }
 
 .rvo-icon-mail,
@@ -790,7 +755,6 @@
 .rvo-icon-bg-mail--before::before,
 .rvo-icon-bg-mail--after::after {
   background-image: var(--rvo-icon-mail);
-  background-size: contain;
 }
 
 .rvo-icon-meer,
@@ -810,7 +774,6 @@
 .rvo-icon-bg-meer--before::before,
 .rvo-icon-bg-meer--after::after {
   background-image: var(--rvo-icon-meer);
-  background-size: contain;
 }
 
 .rvo-icon-menu,
@@ -830,7 +793,6 @@
 .rvo-icon-bg-menu--before::before,
 .rvo-icon-bg-menu--after::after {
   background-image: var(--rvo-icon-menu);
-  background-size: contain;
 }
 
 .rvo-icon-nieuws,
@@ -850,7 +812,6 @@
 .rvo-icon-bg-nieuws--before::before,
 .rvo-icon-bg-nieuws--after::after {
   background-image: var(--rvo-icon-nieuws);
-  background-size: contain;
 }
 
 .rvo-icon-permanent-beta,
@@ -870,7 +831,6 @@
 .rvo-icon-bg-permanent-beta--before::before,
 .rvo-icon-bg-permanent-beta--after::after {
   background-image: var(--rvo-icon-permanent-beta);
-  background-size: contain;
 }
 
 .rvo-icon-pijl-naar-rechts,
@@ -890,7 +850,6 @@
 .rvo-icon-bg-pijl-naar-rechts--before::before,
 .rvo-icon-bg-pijl-naar-rechts--after::after {
   background-image: var(--rvo-icon-pijl-naar-rechts);
-  background-size: contain;
 }
 
 .rvo-icon-pijl-naar-rechtsboven,
@@ -910,7 +869,6 @@
 .rvo-icon-bg-pijl-naar-rechtsboven--before::before,
 .rvo-icon-bg-pijl-naar-rechtsboven--after::after {
   background-image: var(--rvo-icon-pijl-naar-rechtsboven);
-  background-size: contain;
 }
 
 .rvo-icon-pijl-omhoog,
@@ -930,7 +888,6 @@
 .rvo-icon-bg-pijl-omhoog--before::before,
 .rvo-icon-bg-pijl-omhoog--after::after {
   background-image: var(--rvo-icon-pijl-omhoog);
-  background-size: contain;
 }
 
 .rvo-icon-pijl-omlaag,
@@ -950,7 +907,6 @@
 .rvo-icon-bg-pijl-omlaag--before::before,
 .rvo-icon-bg-pijl-omlaag--after::after {
   background-image: var(--rvo-icon-pijl-omlaag);
-  background-size: contain;
 }
 
 .rvo-icon-plus,
@@ -970,7 +926,6 @@
 .rvo-icon-bg-plus--before::before,
 .rvo-icon-bg-plus--after::after {
   background-image: var(--rvo-icon-plus);
-  background-size: contain;
 }
 
 .rvo-icon-printer,
@@ -990,7 +945,6 @@
 .rvo-icon-bg-printer--before::before,
 .rvo-icon-bg-printer--after::after {
   background-image: var(--rvo-icon-printer);
-  background-size: contain;
 }
 
 .rvo-icon-publicatie,
@@ -1010,7 +964,6 @@
 .rvo-icon-bg-publicatie--before::before,
 .rvo-icon-bg-publicatie--after::after {
   background-image: var(--rvo-icon-publicatie);
-  background-size: contain;
 }
 
 .rvo-icon-rechte-pijl,
@@ -1030,7 +983,6 @@
 .rvo-icon-bg-rechte-pijl--before::before,
 .rvo-icon-bg-rechte-pijl--after::after {
   background-image: var(--rvo-icon-rechte-pijl);
-  background-size: contain;
 }
 
 .rvo-icon-refresh,
@@ -1050,7 +1002,6 @@
 .rvo-icon-bg-refresh--before::before,
 .rvo-icon-bg-refresh--after::after {
   background-image: var(--rvo-icon-refresh);
-  background-size: contain;
 }
 
 .rvo-icon-rss,
@@ -1070,7 +1021,6 @@
 .rvo-icon-bg-rss--before::before,
 .rvo-icon-bg-rss--after::after {
   background-image: var(--rvo-icon-rss);
-  background-size: contain;
 }
 
 .rvo-icon-secure-link,
@@ -1090,7 +1040,6 @@
 .rvo-icon-bg-secure-link--before::before,
 .rvo-icon-bg-secure-link--after::after {
   background-image: var(--rvo-icon-secure-link);
-  background-size: contain;
 }
 
 .rvo-icon-smartphone,
@@ -1110,7 +1059,6 @@
 .rvo-icon-bg-smartphone--before::before,
 .rvo-icon-bg-smartphone--after::after {
   background-image: var(--rvo-icon-smartphone);
-  background-size: contain;
 }
 
 .rvo-icon-tegelweergave,
@@ -1130,7 +1078,6 @@
 .rvo-icon-bg-tegelweergave--before::before,
 .rvo-icon-bg-tegelweergave--after::after {
   background-image: var(--rvo-icon-tegelweergave);
-  background-size: contain;
 }
 
 .rvo-icon-telefoon,
@@ -1150,7 +1097,6 @@
 .rvo-icon-bg-telefoon--before::before,
 .rvo-icon-bg-telefoon--after::after {
   background-image: var(--rvo-icon-telefoon);
-  background-size: contain;
 }
 
 .rvo-icon-terug,
@@ -1170,7 +1116,6 @@
 .rvo-icon-bg-terug--before::before,
 .rvo-icon-bg-terug--after::after {
   background-image: var(--rvo-icon-terug);
-  background-size: contain;
 }
 
 .rvo-icon-toegankelijkheid,
@@ -1190,7 +1135,6 @@
 .rvo-icon-bg-toegankelijkheid--before::before,
 .rvo-icon-bg-toegankelijkheid--after::after {
   background-image: var(--rvo-icon-toegankelijkheid);
-  background-size: contain;
 }
 
 .rvo-icon-toelichting,
@@ -1210,7 +1154,6 @@
 .rvo-icon-bg-toelichting--before::before,
 .rvo-icon-bg-toelichting--after::after {
   background-image: var(--rvo-icon-toelichting);
-  background-size: contain;
 }
 
 .rvo-icon-uit-aanknop,
@@ -1230,7 +1173,6 @@
 .rvo-icon-bg-uit-aanknop--before::before,
 .rvo-icon-bg-uit-aanknop--after::after {
   background-image: var(--rvo-icon-uit-aanknop);
-  background-size: contain;
 }
 
 .rvo-icon-upload,
@@ -1250,7 +1192,6 @@
 .rvo-icon-bg-upload--before::before,
 .rvo-icon-bg-upload--after::after {
   background-image: var(--rvo-icon-upload);
-  background-size: contain;
 }
 
 .rvo-icon-user,
@@ -1270,7 +1211,6 @@
 .rvo-icon-bg-user--before::before,
 .rvo-icon-bg-user--after::after {
   background-image: var(--rvo-icon-user);
-  background-size: contain;
 }
 
 .rvo-icon-versleutelen,
@@ -1290,7 +1230,6 @@
 .rvo-icon-bg-versleutelen--before::before,
 .rvo-icon-bg-versleutelen--after::after {
   background-image: var(--rvo-icon-versleutelen);
-  background-size: contain;
 }
 
 .rvo-icon-verwijderen,
@@ -1310,7 +1249,6 @@
 .rvo-icon-bg-verwijderen--before::before,
 .rvo-icon-bg-verwijderen--after::after {
   background-image: var(--rvo-icon-verwijderen);
-  background-size: contain;
 }
 
 .rvo-icon-verzenden,
@@ -1330,7 +1268,6 @@
 .rvo-icon-bg-verzenden--before::before,
 .rvo-icon-bg-verzenden--after::after {
   background-image: var(--rvo-icon-verzenden);
-  background-size: contain;
 }
 
 .rvo-icon-video,
@@ -1350,7 +1287,6 @@
 .rvo-icon-bg-video--before::before,
 .rvo-icon-bg-video--after::after {
   background-image: var(--rvo-icon-video);
-  background-size: contain;
 }
 
 .rvo-icon-vinkje,
@@ -1370,7 +1306,6 @@
 .rvo-icon-bg-vinkje--before::before,
 .rvo-icon-bg-vinkje--after::after {
   background-image: var(--rvo-icon-vinkje);
-  background-size: contain;
 }
 
 .rvo-icon-vraagteken,
@@ -1390,7 +1325,6 @@
 .rvo-icon-bg-vraagteken--before::before,
 .rvo-icon-bg-vraagteken--after::after {
   background-image: var(--rvo-icon-vraagteken);
-  background-size: contain;
 }
 
 .rvo-icon-zoek,
@@ -1410,7 +1344,6 @@
 .rvo-icon-bg-zoek--before::before,
 .rvo-icon-bg-zoek--after::after {
   background-image: var(--rvo-icon-zoek);
-  background-size: contain;
 }
 
 .rvo-icon-bevestiging,
@@ -1430,7 +1363,6 @@
 .rvo-icon-bg-bevestiging--before::before,
 .rvo-icon-bg-bevestiging--after::after {
   background-image: var(--rvo-icon-bevestiging);
-  background-size: contain;
 }
 
 .rvo-icon-foutmelding,
@@ -1450,7 +1382,6 @@
 .rvo-icon-bg-foutmelding--before::before,
 .rvo-icon-bg-foutmelding--after::after {
   background-image: var(--rvo-icon-foutmelding);
-  background-size: contain;
 }
 
 .rvo-icon-waarschuwing,
@@ -1470,5 +1401,4 @@
 .rvo-icon-bg-waarschuwing--before::before,
 .rvo-icon-bg-waarschuwing--after::after {
   background-image: var(--rvo-icon-waarschuwing);
-  background-size: contain;
 }

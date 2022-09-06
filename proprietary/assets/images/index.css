@@ -33,7 +33,6 @@
 .rvo-image-bg-icon--before::before,
 .rvo-image-bg-icon--after::after {
   background-image: var(--rvo-image-icon);
-  background-size: contain;
 }
 
 .rvo-image-logo,
@@ -53,7 +52,6 @@
 .rvo-image-bg-logo--before::before,
 .rvo-image-bg-logo--after::after {
   background-image: var(--rvo-image-logo);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-completed-md,
@@ -73,7 +71,6 @@
 .rvo-image-bg-progress-tracker-completed-md--before::before,
 .rvo-image-bg-progress-tracker-completed-md--after::after {
   background-image: var(--rvo-image-progress-tracker-completed-md);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-completed-sm,
@@ -93,7 +90,6 @@
 .rvo-image-bg-progress-tracker-completed-sm--before::before,
 .rvo-image-bg-progress-tracker-completed-sm--after::after {
   background-image: var(--rvo-image-progress-tracker-completed-sm);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-doing-md,
@@ -113,7 +109,6 @@
 .rvo-image-bg-progress-tracker-doing-md--before::before,
 .rvo-image-bg-progress-tracker-doing-md--after::after {
   background-image: var(--rvo-image-progress-tracker-doing-md);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-doing-sm,
@@ -133,7 +128,6 @@
 .rvo-image-bg-progress-tracker-doing-sm--before::before,
 .rvo-image-bg-progress-tracker-doing-sm--after::after {
   background-image: var(--rvo-image-progress-tracker-doing-sm);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-incomplete-md,
@@ -153,7 +147,6 @@
 .rvo-image-bg-progress-tracker-incomplete-md--before::before,
 .rvo-image-bg-progress-tracker-incomplete-md--after::after {
   background-image: var(--rvo-image-progress-tracker-incomplete-md);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-incomplete-sm,
@@ -173,7 +166,6 @@
 .rvo-image-bg-progress-tracker-incomplete-sm--before::before,
 .rvo-image-bg-progress-tracker-incomplete-sm--after::after {
   background-image: var(--rvo-image-progress-tracker-incomplete-sm);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-line-straight,
@@ -193,7 +185,6 @@
 .rvo-image-bg-progress-tracker-line-straight--before::before,
 .rvo-image-bg-progress-tracker-line-straight--after::after {
   background-image: var(--rvo-image-progress-tracker-line-straight);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-line-substep-end,
@@ -213,7 +204,6 @@
 .rvo-image-bg-progress-tracker-line-substep-end--before::before,
 .rvo-image-bg-progress-tracker-line-substep-end--after::after {
   background-image: var(--rvo-image-progress-tracker-line-substep-end);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-line-substep-start,
@@ -233,7 +223,6 @@
 .rvo-image-bg-progress-tracker-line-substep-start--before::before,
 .rvo-image-bg-progress-tracker-line-substep-start--after::after {
   background-image: var(--rvo-image-progress-tracker-line-substep-start);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-start-end-md,
@@ -253,7 +242,6 @@
 .rvo-image-bg-progress-tracker-start-end-md--before::before,
 .rvo-image-bg-progress-tracker-start-end-md--after::after {
   background-image: var(--rvo-image-progress-tracker-start-end-md);
-  background-size: contain;
 }
 
 .rvo-image-progress-tracker-start-end-sm,
@@ -273,5 +261,4 @@
 .rvo-image-bg-progress-tracker-start-end-sm--before::before,
 .rvo-image-bg-progress-tracker-start-end-sm--after::after {
   background-image: var(--rvo-image-progress-tracker-start-end-sm);
-  background-size: contain;
 }

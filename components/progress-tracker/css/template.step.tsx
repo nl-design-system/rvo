@@ -56,13 +56,28 @@ export const Step: React.FC<IProgressTrackerStepProps> = ({
     labelMarkup = <Link content={label} url={link} classNames={['rvo-progress-tracker__step-link']} />;
   }
 
+  let stateImageCssClassname;
+  switch (state) {
+    case 'start':
+    case 'end':
+      stateImageCssClassname = 'start-end';
+      break;
+    case 'disabled':
+      stateImageCssClassname = 'incomplete';
+      break;
+    default:
+      stateImageCssClassname = state;
+  }
+
   return (
     <div
       className={clsx(
         'rvo-progress-tracker__step',
         `rvo-progress-tracker__step--${line !== 'substep-start' ? size : 'md'}`,
         `rvo-progress-tracker__step--${state}`,
+        `rvo-image-bg-progress-tracker-${stateImageCssClassname}-${line !== 'substep-start' ? size : 'md'}--after`,
         line !== 'none' && `rvo-progress-tracker__step--${line}`,
+        line !== 'none' && `rvo-image-bg-progress-tracker-line-${line}--before`,
         'rvo-layout-row',
       )}
     >

@@ -111,7 +111,6 @@ const generateCSS = (
         const bgClassName = `.${classnamePrefix}-bg-${iconFilename.replace('.svg', '').replace(/-/g, '-')}`;
         scssString += `${bgClassName}, ${bgClassName}--before::before, ${bgClassName}--after::after {\n`;
         scssString += `  background-image: var(--${className});\n`;
-        scssString += `  background-size: contain;\n`;
         scssString += `}\n\n`;
       }
     });
