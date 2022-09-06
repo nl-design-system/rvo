@@ -1,5 +1,4 @@
 import styled from '@emotion/styled/macro';
-import React from 'react';
 import { hexToRgb, path2css } from './helpers';
 
 type ColorDesignTokensProps = {
@@ -13,7 +12,7 @@ export const ColorDesignTokens = ({ tokens }: ColorDesignTokensProps) => {
         const rgbCode = hexToRgb(value);
         return (
           <TokenContainer key={name}>
-            <ColorExample color={value} size={3} round={true}></ColorExample>
+            <ColorExample color={value} size={3} round={true} useOutline={attributes.item === 'wit'}></ColorExample>
             <TokenInfo>
               <strong>{attributes.item.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())}</strong>
               <div>{value}</div>
@@ -49,10 +48,20 @@ const TokenInfo = styled.div`
 
 const ColorExample = styled.div(
   {
-    outline: '1px solid silver',
     display: 'inline-block',
   },
-  ({ color, round, size = 2 }: { color: string; round?: boolean; size?: number }) => ({
+  ({
+    color,
+    round,
+    size = 2,
+    useOutline = false,
+  }: {
+    color: string;
+    round?: boolean;
+    size?: number;
+    useOutline?: boolean;
+  }) => ({
+    outline: `${useOutline ? '1px solid black' : 'none'}`,
     backgroundColor: color,
     height: `${size}em`,
     width: `${size}em`,
