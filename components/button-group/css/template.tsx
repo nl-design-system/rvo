@@ -9,6 +9,7 @@ import { Button, IButtonProps } from '../../button/css/template';
 interface IButtonGroupProps {
   buttonsLeft: IButtonProps[];
   buttonsRight: IButtonProps[];
+  children?: React.ReactNode;
 }
 
 const defaultButtonsLeft = [
