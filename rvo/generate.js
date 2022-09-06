@@ -94,7 +94,7 @@ const generateCSS = (
 
       // Add mask class
       if (generateMaskClasses) {
-        scssString += `.${className} {\n`;
+        scssString += `.${className}, .${className}--before::before, .${className}--after::after {\n`;
         scssString += `  -webkit-mask-image: var(--${className});\n`;
         scssString += `  mask-image: var(--${className});\n`;
         scssString += `  -webkit-mask-position: center center;\n`;
@@ -108,9 +108,9 @@ const generateCSS = (
 
       // Add background image class
       if (generateBackgroundClasses) {
-        scssString += `.${classnamePrefix}-bg-${iconFilename.replace('.svg', '').replace(/-/g, '-')} {\n`;
+        const bgClassName = `.${classnamePrefix}-bg-${iconFilename.replace('.svg', '').replace(/-/g, '-')}`;
+        scssString += `${bgClassName}, ${bgClassName}--before::before, ${bgClassName}--after::after {\n`;
         scssString += `  background-image: var(--${className});\n`;
-        scssString += `  background-size: contain;\n`;
         scssString += `}\n\n`;
       }
     });
