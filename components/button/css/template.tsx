@@ -20,6 +20,7 @@ export interface IButtonProps {
   showIcon?: string;
   icon?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
 export const argTypes = {
@@ -85,6 +86,7 @@ export const Button: React.FC<IButtonProps> = ({
   textContent = defaultArgs.textContent,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
+  className = '',
 }) => {
   const iconMarkup = (
     <div className={clsx(`rvo-button__icon--${kind}-action`, 'rvo-icon', `rvo-icon-${icon}`, 'rvo-icon--md')}></div>
@@ -93,6 +95,7 @@ export const Button: React.FC<IButtonProps> = ({
     <button
       className={clsx(
         'utrecht-button',
+        className,
         kind === 'primary' && 'utrecht-button--primary-action',
         kind === 'secondary' && 'utrecht-button--secondary-action',
         kind === 'tertiary' && 'rvo-button--tertiary-action',

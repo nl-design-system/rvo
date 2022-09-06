@@ -57,10 +57,14 @@ export const ButtonGroup: React.FC<IButtonGroupProps> = ({
     <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
       {children}
       {!children && buttonsLeft.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
-      {!children && buttonsRight.length > 0 && <div className="rvo-button-group__spacer" />}
       {!children &&
         buttonsRight.length > 0 &&
-        buttonsRight.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
+        buttonsRight.map((buttonProps, index) => {
+          if (index === 0) {
+            buttonProps.className = 'rvo-button-group__align-right';
+          }
+          return <Button key={index} {...buttonProps} />;
+        })}
     </div>
   );
 };
