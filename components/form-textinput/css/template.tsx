@@ -89,7 +89,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
     'aria-invalid': invalid || null,
     required: required || null,
     readOnly: readOnly || null,
-    placeholder: valueType === 'currency' ? '€' : placeholder || null,
+    placeholder: placeholder || null,
     defaultValue: value,
     ...((valueType === 'number' || valueType === 'currency') && {
       inputMode: 'numeric' as any,
@@ -97,8 +97,13 @@ export const TextInput: React.FC<ITextInputProps> = ({
     }),
   };
 
-  if (inputType !== 'textarea') {
-    return <input type="text" {...props} />;
+  if (inputType === 'text') {
+    const inputMarkup = <input type="text" {...props} />;
+    if (valueType === 'currency') {
+      return <div className="rvo-layout-row rvo-layout-gap--md">€{inputMarkup}</div>;
+    } else {
+      return inputMarkup;
+    }
   } else {
     return <textarea {...props} />;
   }
