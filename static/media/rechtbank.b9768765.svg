@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+<g id="_x36_4px_Boxes">
+	<rect fill="none" width="64" height="64"/>
+</g>
+<g id="Production">
+	<circle cx="31.5" cy="24.5" r="2.5"/>
+	<path d="M53,12V8c0-0.5522-0.4478-1-1-1h-5c-0.5522,0-1,0.4478-1,1v4H17V8c0-0.5522-0.4478-1-1-1h-5c-0.5522,0-1,0.4478-1,1v4L4,27
+		v29h5v-3h3v-3h3V32.8083l5-0.9584V50h9V32.8083l5-0.9584V50h9V32.8083l5-0.9584V50h3v3h3v3h5V27L53,12z M51,30H12v-2.4111
+		l18.478-10.9815c0.6299-0.3745,1.4141-0.3745,2.044,0L51,27.5889V30z"/>
+</g>
+</svg>
