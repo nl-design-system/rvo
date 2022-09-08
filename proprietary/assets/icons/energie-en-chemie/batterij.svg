@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
-<g id="_x36_4px_Boxes">
-	<rect fill="none" width="64" height="64"/>
-</g>
-<g id="Label">
-</g>
-<g id="Production">
-	<path d="M45,8h-6V5c0-1.1046-0.8954-2-2-2H27c-1.1046,0-2,0.8954-2,2v1.4946l5.7349,1.1414
-		C31.0521,7.7377,31.0057,7.9438,30.9848,8H25h-6c-1.1046,0-2,0.8954-2,2v48c0,1.1046,0.8954,2,2,2h26c1.1046,0,2-0.8954,2-2V10
-		C47,8.8954,46.1046,8,45,8z M30,52l3.1933-15C25.2554,37,37.5165,37,22,37l12-21l-3.1933,15c7.9379,0-4.3232,0,11.1933,0L30,52z"/>
-</g>
-</svg>
+<svg height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h64v64h-64z" fill="none"/><path d="m45 8h-6v-3c0-1.1046-.8954-2-2-2h-10c-1.1046 0-2 .8954-2 2v1.4946l5.7349 1.1414c.3172.1017.2708.3078.2499.364h-5.9848-6c-1.1046 0-2 .8954-2 2v48c0 1.1046.8954 2 2 2h26c1.1046 0 2-.8954 2-2v-48c0-1.1046-.8954-2-2-2zm-15 44 3.1933-15c-7.9379 0 4.3232 0-11.1933 0l12-21-3.1933 15h11.1933z"/></svg>

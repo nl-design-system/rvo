@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
-<g id="_x36_4px_Box">
-	<rect fill="none" width="64" height="64"/>
-</g>
-<g id="Icon">
-	<g>
-		<polygon points="32,6.1277 41.1215,18 59.9412,18 52,3 32,3 12,3 4.0588,18 22.8785,18 		"/>
-		<path d="M32,9.7059L24,20H7v40h12v-2h4v-2h4V40h10v16h4v2h4v2h12V20H40L32,9.7059z M22,51l-10,0.0588V40h10V51z M22,35H12V24h10
-			V35z M32,15.7529c1.5434,0,2.7941,1.2037,2.7941,2.7471c0,1.5433-1.2507,2.75-2.7941,2.75s-2.7941-1.2067-2.7941-2.75
-			C29.2059,16.9566,30.4566,15.7529,32,15.7529z M37,35H27V24h10V35z M42,24h10v11H42V24z M42,40h10v11.0588L42,51V40z"/>
-	</g>
-</g>
-</svg>
+<svg height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h64v64h-64z" fill="none"/><path d="m32 6.1277 9.1215 11.8723h18.8197l-7.9412-15h-20-20l-7.9412 15h18.8197z"/><path d="m32 9.7059-8 10.2941h-17v40h12v-2h4v-2h4v-16h10v16h4v2h4v2h12v-40h-17zm-10 41.2941-10 .0588v-11.0588h10zm0-16h-10v-11h10zm10-19.2471c1.5434 0 2.7941 1.2037 2.7941 2.7471 0 1.5433-1.2507 2.75-2.7941 2.75s-2.7941-1.2067-2.7941-2.75c0-1.5434 1.2507-2.7471 2.7941-2.7471zm5 19.2471h-10v-11h10zm5-11h10v11h-10zm0 16h10v11.0588l-10-.0588z"/></svg>

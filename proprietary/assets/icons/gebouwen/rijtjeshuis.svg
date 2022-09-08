@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
-<g id="_x36_4px_Box">
-	<rect fill="none" width="64" height="64"/>
-</g>
-<g id="Icon">
-	<path d="M59.2783,22L47.1675,11.142c-0.3799-0.3406-0.9552-0.3406-1.3351,0L33.7217,22c-1.246,0-2.1973,0-3.4434,0L18.1675,11.142
-		c-0.3799-0.3406-0.9552-0.3406-1.3351,0L4.7217,22H3v38h18V45h6v15h5h18V45h6v15h5V22H59.2783z M14,55H8V45h6V55z M14,38H8V28h6V38
-		z M27,38h-6V28h6V38z M43,55h-6V45h6V55z M43,38h-6V28h6V38z M56,38h-6V28h6V38z"/>
-</g>
-</svg>
+<svg height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h64v64h-64z" fill="none"/><path d="m59.2783 22-12.1108-10.858c-.3799-.3406-.9552-.3406-1.3351 0l-12.1107 10.858c-1.246 0-2.1973 0-3.4434 0l-12.1108-10.858c-.3799-.3406-.9552-.3406-1.3351 0l-12.1107 10.858h-1.7217v38h18v-15h6v15h5 18v-15h6v15h5v-38zm-45.2783 33h-6v-10h6zm0-17h-6v-10h6zm13 0h-6v-10h6zm16 17h-6v-10h6zm0-17h-6v-10h6zm13 0h-6v-10h6z"/></svg>
