@@ -13,6 +13,10 @@
   padding-inline-start: var(--rvo-alert-padding-inline-start);
 }
 
+.rvo-alert p:first-child {
+  margin-block-start: 0;
+}
+
 .rvo-alert button {
   align-self: flex-start;
 }
