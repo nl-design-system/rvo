@@ -5,7 +5,7 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
-import { iconNames } from '../../icon/css/template';
+import { options as iconOptions } from '../../icon/css/template';
 
 export interface IButtonProps {
   kind?: string;
@@ -56,7 +56,7 @@ export const argTypes = {
   },
   icon: {
     control: 'select',
-    options: iconNames,
+    options: iconOptions,
   },
 };
 
@@ -71,7 +71,7 @@ export const defaultArgs: IButtonProps = {
   hover: false,
   textContent: 'Button',
   showIcon: 'no',
-  icon: iconNames[0],
+  icon: iconOptions[0],
 };
 
 export const Button: React.FC<IButtonProps> = ({

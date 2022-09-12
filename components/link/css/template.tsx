@@ -5,7 +5,7 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
-import { iconNames } from '../../icon/css/template';
+import { options as iconOptions } from '../../icon/css/template';
 
 interface ILinkProps {
   content: string;
@@ -33,7 +33,7 @@ export const argTypes = {
   },
   icon: {
     control: 'select',
-    options: iconNames,
+    options: iconOptions,
   },
   iconSize: {
     options: ['sm', 'md'],
@@ -58,7 +58,7 @@ export const defaultArgs: ILinkProps = {
   url: '#',
   showIcon: 'no',
   hover: false,
-  icon: iconNames[0],
+  icon: iconOptions[0],
   iconSize: 'md',
   active: false,
   focus: false,
