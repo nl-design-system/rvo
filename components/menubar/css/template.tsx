@@ -33,7 +33,7 @@ const defaultItems = [
 
 export const argTypes = {
   size: {
-    options: ['sm', 'md'],
+    options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
   items: {

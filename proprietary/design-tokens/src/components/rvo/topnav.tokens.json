@@ -8,6 +8,9 @@
       "md": {
         "font-size": { "value": "{rvo.font-size.md}" }
       },
+      "lg": {
+        "font-size": { "value": "{rvo.font-size.lg}" }
+      },
       "link": {
         "padding-block-start": { "value": "{rvo.space.md}" },
         "padding-block-end": { "value": "{rvo.space.md}" },
