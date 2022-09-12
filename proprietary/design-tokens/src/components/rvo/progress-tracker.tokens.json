@@ -4,10 +4,10 @@
       "max-width": { "value": "{rvo.layout.max-width.sm}" },
       "step": {
         "height": { "value": "36px" },
-        "label-padding": { "value": "calc({rvo.space.sm} + {rvo.space.2xl})" },
+        "label-padding": { "value": "calc({rvo.space.xs} + {rvo.space.2xl})" },
         "link": {
           "padding-block-start": {},
-          "padding-block-end": { "value": "{rvo.space.2xs}" },
+          "padding-block-end": { "value": "{rvo.space.3xs}" },
           "hover": { "color": "value" }
         },
         "line": {
@@ -38,7 +38,7 @@
         }
       },
       "substep": {
-        "block-padding": { "value": "{rvo.space.sm}" }
+        "block-padding": { "value": "{rvo.space.xs}" }
       }
     }
   }

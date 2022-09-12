@@ -2,7 +2,7 @@
   "rvo": {
     "alert": {
       "gap": {
-        "value": "calc({rvo.space.xs} + {rvo.space.sm})"
+        "value": "calc({rvo.space.2xs} + {rvo.space.xs})"
       },
       "padding-block-end": { "value": "{rvo.space.md}" },
       "padding-block-start": { "value": "{rvo.space.md}" },

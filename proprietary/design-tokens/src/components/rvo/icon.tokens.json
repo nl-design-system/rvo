@@ -2,12 +2,12 @@
   "rvo": {
     "icon": {
       "xs": {
-        "width": { "value": "{rvo.size.sm}" },
-        "height": { "value": "{rvo.size.sm}" }
+        "width": { "value": "{rvo.size.xs}" },
+        "height": { "value": "{rvo.size.xs}" }
       },
       "sm": {
-        "width": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" },
-        "height": { "value": "calc({rvo.size.xs} + {rvo.size.sm})" }
+        "width": { "value": "calc({rvo.size.2xs} + {rvo.size.xs})" },
+        "height": { "value": "calc({rvo.size.2xs} + {rvo.size.xs})" }
       },
       "md": {
         "width": { "value": "{rvo.size.md}" },

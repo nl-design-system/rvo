@@ -6,10 +6,10 @@
         "color": { "value": "{rvo.color.wit}" }
       },
       "outline-offset": { "value": "0" },
-      "padding-block-end": { "value": "{rvo.space.sm}" },
-      "padding-block-start": { "value": "calc({rvo.space.2xs} + {rvo.space.sm})" },
-      "padding-inline-end": { "value": "calc({rvo.space.xs} + {rvo.space.2xl})" },
-      "padding-inline-start": { "value": "calc({rvo.space.xs} + {rvo.space.sm})" }
+      "padding-block-end": { "value": "{rvo.space.xs}" },
+      "padding-block-start": { "value": "10px" },
+      "padding-inline-end": { "value": "calc({rvo.space.2xs} + {rvo.space.2xl})" },
+      "padding-inline-start": { "value": "calc({rvo.space.2xs} + {rvo.space.xs})" }
     }
   }
 }

@@ -6,7 +6,7 @@
       "font-size": { "value": "{rvo.font-size.md}" },
       "font-weight": { "value": "{rvo.font-weight.bold}" },
       "line-height": {},
-      "margin-block-end": { "value": "{rvo.space.xs}" },
+      "margin-block-end": { "value": "{rvo.space.2xs}" },
       "margin-block-start": {}
     }
   }

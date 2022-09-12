@@ -7,7 +7,7 @@
       "border-color": {},
       "border-radius": {},
       "border-width": {},
-      "padding-block-end": { "value": "calc({rvo.space.sm} + {rvo.space.2xs})" },
+      "padding-block-end": { "value": "10px" },
       "padding-block-start": {},
       "padding-inline-end": {},
       "padding-inline-start": {},

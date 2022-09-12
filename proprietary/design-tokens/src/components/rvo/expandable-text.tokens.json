@@ -6,15 +6,15 @@
       "summary": {
         "color": { "value": "{rvo.color.hemelblauw}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
-        "gap": { "value": "{rvo.space.xs}" },
+        "gap": { "value": "{rvo.space.2xs}" },
         "line-height": { "value": "{rvo.line-height.md}" },
         "icon": {
           "background-color": { "value": "{rvo.color.hemelblauw}" }
         }
       },
       "details": {
-        "padding-block-end": { "value": "{rvo.space.sm}" },
-        "padding-block-start": { "value": "{rvo.space.xs}" }
+        "padding-block-end": { "value": "{rvo.space.xs}" },
+        "padding-block-start": { "value": "{rvo.space.2xs}" }
       }
     }
   }
