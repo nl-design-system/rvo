@@ -5,6 +5,8 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
+import * as ReactDOMServer from 'react-dom/server';
+import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
 import validateHTML from '../../utils/validateHTML';
 
@@ -31,10 +33,12 @@ export const argTypes = {
   },
 };
 
+const linkMarkup = ReactDOMServer.renderToStaticMarkup(Link({ content: 'link', url: '#' }));
+
 export const defaultArgs: IAlertProps = {
   kind: 'info',
   heading: '',
-  content: 'This is an example of an alert.',
+  content: `This is an example of an alert, with a ${linkMarkup} inside.`,
   closable: false,
 };
 

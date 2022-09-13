@@ -101,8 +101,7 @@ export const Link: React.FC<ILinkProps> = ({
           'rvo-link--hover': hover,
           'rvo-link--focus': focus,
         },
-        'rvo-layout-row',
-        'rvo-layout-gap--sm',
+        showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
         noUnderline && 'rvo-link--no-underline',
       )}
     >
