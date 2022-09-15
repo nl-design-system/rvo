@@ -6,6 +6,8 @@
       "padding-block-start": { "value": "{rvo.space.2xs}" },
       "padding-inline-end": { "value": "{rvo.space.sm}" },
       "padding-inline-start": { "value": "{rvo.space.sm}" },
+      "padding-inline-end-with-icon": { "value": "{rvo.space.xs}" },
+      "padding-inline-start-with-icon": { "value": "{rvo.space.xs}" },
       "default": {
         "background-color": { "value": "{rvo.color.grijs4}" },
         "color": { "value": "{utrecht.document.color}" },

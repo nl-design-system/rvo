@@ -31,6 +31,18 @@
           "inherits": true
         }
       },
+      "padding-inline-end-with-icon": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-start-with-icon": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
       "default": {
         "background-color": {
           "css": {

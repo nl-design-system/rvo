@@ -12,6 +12,11 @@
   padding-inline-start: var(--rvo-tag-padding-inline-start);
 }
 
+.rvo-tag--with-icon {
+  padding-inline-end: var(--rvo-tag-padding-inline-end-with-icon);
+  padding-inline-start: var(--rvo-tag-padding-inline-start-with-icon);
+}
+
 // Default
 .rvo-tag--default {
   background-color: var(--rvo-tag-default-background-color);

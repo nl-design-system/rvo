@@ -6,6 +6,7 @@ import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, options as iconOptions } from '../../icon/css/template';
+import { StatusIcon } from '../../status-icon/css/template';
 
 interface ITagProps {
   content: string;
@@ -79,14 +80,33 @@ export const Tag: React.FC<ITagProps> = ({
   if (showIcon === 'after') {
     iconClassNames.push('rvo-link__icon--after');
   }
-  const iconMarkup = Icon({ icon, size: 'md', color: 'hemelblauw', classNames: iconClassNames });
+
+  let iconMarkup;
+  switch (type) {
+    default:
+    case 'default':
+      iconMarkup = Icon({ icon, size: 'lg', color: 'hemelblauw', classNames: iconClassNames });
+      break;
+    case 'info':
+      iconMarkup = Icon({ icon: 'info', size: 'xl', color: 'hemelblauw', classNames: iconClassNames });
+      break;
+    case 'warning':
+      iconMarkup = StatusIcon({ type: 'waarschuwing', size: 'lg' });
+      break;
+    case 'error':
+      iconMarkup = StatusIcon({ type: 'foutmelding', size: 'lg' });
+      break;
+    case 'success':
+      iconMarkup = StatusIcon({ type: 'bevestiging', size: 'lg' });
+      break;
+  }
 
   return (
     <div
       className={clsx(
         'rvo-tag',
         classNames,
-        showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+        showIcon !== 'no' && ['rvo-tag--with-icon', 'rvo-layout-row', 'rvo-layout-gap--sm'],
         {
           'rvo-tag--active': active,
           'rvo-tag--hover': hover,

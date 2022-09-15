@@ -9,6 +9,7 @@ import React from 'react';
 interface IStatusIconProps {
   type: string;
   size: string;
+  classNames?: string[];
 }
 
 const toProperCase = (inputString) => {
@@ -37,7 +38,15 @@ export const defaultArgs: IStatusIconProps = {
   size: argTypes.size.options[1],
 };
 
-export const StatusIcon: React.FC<IStatusIconProps> = ({ type = defaultArgs.type, size = defaultArgs.size }) => {
+export const StatusIcon: React.FC<IStatusIconProps> = ({
+  type = defaultArgs.type,
+  size = defaultArgs.size,
+  classNames,
+}) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
-  return <span className={clsx('rvo-icon', `rvo-icon-${iconName} rvo-status-icon-${iconName}`, `rvo-icon--${size}`)} />;
+  return (
+    <span
+      className={clsx('rvo-icon', `rvo-icon-${iconName} rvo-status-icon-${iconName}`, `rvo-icon--${size}`, classNames)}
+    />
+  );
 };
