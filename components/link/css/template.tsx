@@ -5,7 +5,7 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
-import { options as iconOptions } from '../../icon/css/template';
+import { Icon, options as iconOptions } from '../../icon/css/template';
 
 interface ILinkProps {
   content: string;
@@ -77,18 +77,15 @@ export const Link: React.FC<ILinkProps> = ({
   noUnderline = defaultArgs.noUnderline,
   classNames = [],
 }) => {
-  const iconMarkup = (
-    <div
-      className={clsx(
-        'rvo-link__icon',
-        { 'rvo-link__icon--before': showIcon === 'before', 'rvo-link__icon--after': showIcon === 'after' },
-        'rvo-icon',
-        `rvo-icon--${iconSize}`,
-        'rvo-icon--hemelblauw',
-        `rvo-icon-${icon}`,
-      )}
-    ></div>
-  );
+  // Parse icon markup
+  const iconClassNames = [];
+  if (showIcon === 'before') {
+    iconClassNames.push('rvo-link__icon--before');
+  }
+  if (showIcon === 'after') {
+    iconClassNames.push('rvo-link__icon--after');
+  }
+  const iconMarkup = Icon({ icon, size: iconSize, color: 'hemelblauw', classNames: iconClassNames });
 
   return (
     <a

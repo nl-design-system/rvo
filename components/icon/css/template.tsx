@@ -10,6 +10,7 @@ interface IIconProps {
   icon: string;
   size: string;
   color?: string;
+  classNames?: string[];
 }
 
 const toProperCase = (inputString) =>
@@ -61,6 +62,7 @@ export const Icon: React.FC<IIconProps> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,
+  classNames,
 }) => {
   let iconName = icon;
   if (icon.indexOf(' > ') > -1) {
@@ -69,11 +71,17 @@ export const Icon: React.FC<IIconProps> = ({
 
   return (
     <span
-      className={clsx('rvo-icon', `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`, `rvo-icon--${size}`, {
-        'rvo-icon--wit': !color || color === 'wit',
-        'rvo-icon--hemelblauw': color === 'hemelblauw',
-        'rvo-icon--zwart': color === 'zwart',
-      })}
+      className={clsx(
+        'rvo-icon',
+        `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`,
+        `rvo-icon--${size}`,
+        {
+          'rvo-icon--wit': !color || color === 'wit',
+          'rvo-icon--hemelblauw': color === 'hemelblauw',
+          'rvo-icon--zwart': color === 'zwart',
+        },
+        classNames,
+      )}
     ></span>
   );
 };
