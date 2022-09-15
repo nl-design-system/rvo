@@ -19,7 +19,7 @@
 }
 
 .rvo-tag--default .rvo-icon {
-  background-color: var(--rvo-tag-default-color);
+  background-color: var(--rvo-tag-default-icon-color);
 }
 
 // Info
@@ -29,7 +29,7 @@
 }
 
 .rvo-tag--info .rvo-icon {
-  background-color: var(--rvo-tag-info-color);
+  background-color: var(--rvo-tag-info-icon-color);
 }
 
 // Warning
@@ -39,7 +39,7 @@
 }
 
 .rvo-tag--warning .rvo-icon {
-  background-color: var(--rvo-tag-warning-color);
+  background-color: var(--rvo-tag-warning-icon-color);
 }
 
 // Error
@@ -50,7 +50,7 @@
 }
 
 .rvo-tag--error .rvo-icon {
-  background-color: var(--rvo-tag-error-color);
+  background-color: var(--rvo-tag-error-icon-color);
 }
 
 // Success
@@ -60,7 +60,7 @@
 }
 
 .rvo-tag--success .rvo-icon {
-  background-color: var(--rvo-tag-success-color);
+  background-color: var(--rvo-tag-success-icon-color);
 }
 
 // Hover
@@ -71,7 +71,7 @@
     color: var(--rvo-tag-default-hover-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-default-hover-color);
+      background-color: var(--rvo-tag-default-hover-icon-color);
     }
   }
   &.rvo-tag--info {
@@ -79,7 +79,7 @@
     color: var(--rvo-tag-info-hover-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-info-hover-color);
+      background-color: var(--rvo-tag-info-hover-icon-color);
     }
   }
   &.rvo-tag--warning {
@@ -87,7 +87,7 @@
     color: var(--rvo-tag-warning-hover-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-warning-hover-color);
+      background-color: var(--rvo-tag-warning-hover-icon-color);
     }
   }
   &.rvo-tag--error {
@@ -95,7 +95,7 @@
     color: var(--rvo-tag-error-hover-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-error-hover-color);
+      background-color: var(--rvo-tag-error-hover-icon-color);
     }
   }
   &.rvo-tag--success {
@@ -103,7 +103,7 @@
     color: var(--rvo-tag-success-hover-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-success-hover-color);
+      background-color: var(--rvo-tag-success-hover-icon-color);
     }
   }
 }
@@ -116,7 +116,7 @@
     color: var(--rvo-tag-default-active-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-default-active-color);
+      background-color: var(--rvo-tag-default-active-icon-color);
     }
   }
   &.rvo-tag--info {
@@ -124,7 +124,7 @@
     color: var(--rvo-tag-info-active-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-info-active-color);
+      background-color: var(--rvo-tag-info-active-icon-color);
     }
   }
   &.rvo-tag--warning {
@@ -132,7 +132,7 @@
     color: var(--rvo-tag-warning-active-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-warning-active-color);
+      background-color: var(--rvo-tag-warning-active-icon-color);
     }
   }
   &.rvo-tag--error {
@@ -140,7 +140,7 @@
     color: var(--rvo-tag-error-active-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-error-active-color);
+      background-color: var(--rvo-tag-error-active-icon-color);
     }
   }
   &.rvo-tag--success {
@@ -148,7 +148,7 @@
     color: var(--rvo-tag-success-active-color);
 
     .rvo-icon {
-      background-color: var(--rvo-tag-success-active-color);
+      background-color: var(--rvo-tag-success-active-icon-color);
     }
   }
 }

@@ -44,6 +44,12 @@
             "inherits": true
           }
         },
+        "icon-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "hover": {
           "background-color": {
             "css": {
@@ -52,6 +58,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -66,6 +78,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -86,6 +104,12 @@
             "inherits": true
           }
         },
+        "icon-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "hover": {
           "background-color": {
             "css": {
@@ -94,6 +118,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -108,6 +138,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -128,6 +164,12 @@
             "inherits": true
           }
         },
+        "icon-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "hover": {
           "background-color": {
             "css": {
@@ -136,6 +178,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -150,6 +198,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -170,6 +224,12 @@
             "inherits": true
           }
         },
+        "icon-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "hover": {
           "background-color": {
             "css": {
@@ -178,6 +238,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -192,6 +258,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -212,6 +284,12 @@
             "inherits": true
           }
         },
+        "icon-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "hover": {
           "background-color": {
             "css": {
@@ -220,6 +298,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
@@ -234,6 +318,12 @@
             }
           },
           "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "icon-color": {
             "css": {
               "syntax": "<color>",
               "inherits": true
