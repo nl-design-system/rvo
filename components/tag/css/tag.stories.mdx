@@ -1,0 +1,25 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Tag } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Tag"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Tag
+
+<Canvas>
+  <Story name="Tag" args={defaultArgs}>
+    {Tag.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Tag" />

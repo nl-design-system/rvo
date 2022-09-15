@@ -1,0 +1,41 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Tag } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Tag/States"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# States
+
+## Hover
+
+<Canvas>
+  <Story name="Hover" args={{ ...defaultArgs, hover: true, showIcon: "before" }}>
+    {Tag.bind({})}
+  </Story>
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story name="Active" args={{ ...defaultArgs, active: true, showIcon: "before" }}>
+    {Tag.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story name="Focus" args={{ ...defaultArgs, focus: true, showIcon: "before" }}>
+    {Tag.bind({})}
+  </Story>
+</Canvas>

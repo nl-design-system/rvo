@@ -1,0 +1,164 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-tag {
+  border-radius: var(--rvo-tag-border-radius);
+  display: inline-flex;
+  padding-block-end: var(--rvo-tag-padding-block-end);
+  padding-block-start: var(--rvo-tag-padding-block-start);
+  padding-inline-end: var(--rvo-tag-padding-inline-end);
+  padding-inline-start: var(--rvo-tag-padding-inline-start);
+}
+
+// Default
+.rvo-tag--default {
+  background-color: var(--rvo-tag-default-background-color);
+  color: var(--rvo-tag-default-color);
+}
+
+.rvo-tag--default .rvo-icon {
+  background-color: var(--rvo-tag-default-color);
+}
+
+// Info
+.rvo-tag--info {
+  background-color: var(--rvo-tag-info-background-color);
+  color: var(--rvo-tag-info-color);
+}
+
+.rvo-tag--info .rvo-icon {
+  background-color: var(--rvo-tag-info-color);
+}
+
+// Warning
+.rvo-tag--warning {
+  background-color: var(--rvo-tag-warning-background-color);
+  color: var(--rvo-tag-warning-color);
+}
+
+.rvo-tag--warning .rvo-icon {
+  background-color: var(--rvo-tag-warning-color);
+}
+
+// Error
+
+.rvo-tag--error {
+  background-color: var(--rvo-tag-error-background-color);
+  color: var(--rvo-tag-error-color);
+}
+
+.rvo-tag--error .rvo-icon {
+  background-color: var(--rvo-tag-error-color);
+}
+
+// Success
+.rvo-tag--success {
+  background-color: var(--rvo-tag-success-background-color);
+  color: var(--rvo-tag-success-color);
+}
+
+.rvo-tag--success .rvo-icon {
+  background-color: var(--rvo-tag-success-color);
+}
+
+// Hover
+.rvo-tag:hover:not(:focus):not(:focus-visible):not(.rvo-tag--focus):not(.rvo-tag--nohover),
+.rvo-tag--hover:not(:focus):not(:focus-visible):not(.rvo-tag--focus):not(.rvo-tag--nohover) {
+  &.rvo-tag--default {
+    background-color: var(--rvo-tag-default-hover-background-color);
+    color: var(--rvo-tag-default-hover-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-default-hover-color);
+    }
+  }
+  &.rvo-tag--info {
+    background-color: var(--rvo-tag-info-hover-background-color);
+    color: var(--rvo-tag-info-hover-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-info-hover-color);
+    }
+  }
+  &.rvo-tag--warning {
+    background-color: var(--rvo-tag-warning-hover-background-color);
+    color: var(--rvo-tag-warning-hover-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-warning-hover-color);
+    }
+  }
+  &.rvo-tag--error {
+    background-color: var(--rvo-tag-error-hover-background-color);
+    color: var(--rvo-tag-error-hover-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-error-hover-color);
+    }
+  }
+  &.rvo-tag--success {
+    background-color: var(--rvo-tag-success-hover-background-color);
+    color: var(--rvo-tag-success-hover-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-success-hover-color);
+    }
+  }
+}
+
+// Active
+.rvo-tag:active,
+.rvo-tag--active {
+  &.rvo-tag--default {
+    background-color: var(--rvo-tag-default-active-background-color);
+    color: var(--rvo-tag-default-active-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-default-active-color);
+    }
+  }
+  &.rvo-tag--info {
+    background-color: var(--rvo-tag-info-active-background-color);
+    color: var(--rvo-tag-info-active-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-info-active-color);
+    }
+  }
+  &.rvo-tag--warning {
+    background-color: var(--rvo-tag-warning-active-background-color);
+    color: var(--rvo-tag-warning-active-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-warning-active-color);
+    }
+  }
+  &.rvo-tag--error {
+    background-color: var(--rvo-tag-error-active-background-color);
+    color: var(--rvo-tag-error-active-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-error-active-color);
+    }
+  }
+  &.rvo-tag--success {
+    background-color: var(--rvo-tag-success-active-background-color);
+    color: var(--rvo-tag-success-active-color);
+
+    .rvo-icon {
+      background-color: var(--rvo-tag-success-active-color);
+    }
+  }
+}
+
+// Focus
+.rvo-tag:focus,
+.rvo-tag:focus-visible,
+.rvo-tag--focus {
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
