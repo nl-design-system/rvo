@@ -34,7 +34,7 @@ export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text
   } else {
     return (
       <div className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm">
-        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--sm"></div>
+        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
         {text}
       </div>
     );
