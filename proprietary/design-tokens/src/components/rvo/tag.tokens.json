@@ -54,6 +54,7 @@
       "error": {
         "background-color": { "value": "{rvo.color.rood}" },
         "color": { "value": "{rvo.color.wit}" },
+        "icon-color": { "value": "{rvo.color.wit}" },
         "hover": {
           "background-color": { "value": "{rvo.color.rood-tint1}" },
           "color": { "value": "{utrecht.document.color}" },
@@ -68,6 +69,7 @@
       "success": {
         "background-color": { "value": "{rvo.color.groen}" },
         "color": { "value": "{rvo.color.wit}" },
+        "icon-color": { "value": "{rvo.color.wit}" },
         "hover": {
           "background-color": { "value": "{rvo.color.groen-tint1}" },
           "color": { "value": "{utrecht.document.color}" },
