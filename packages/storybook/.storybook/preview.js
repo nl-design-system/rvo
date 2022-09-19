@@ -27,7 +27,7 @@ const storySort = {
     'Introductie',
     'Aan de slag',
     'Huisstijl',
-    ['Kleuren', 'Typografie', 'Ruimtes', 'Groottes'],
+    ['Color', 'Font', 'Size', 'Space'],
     'CSS Components',
     "Pagina's",
     'Informatie',
