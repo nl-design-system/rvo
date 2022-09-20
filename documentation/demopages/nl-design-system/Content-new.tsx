@@ -29,7 +29,7 @@ const Content = () => {
               <strong>Paragraph large.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link href="#">Dit is een link. </Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
+              <Link href="#">Dit is een link.</Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
               ambassades en lokale overheden.
             </Paragraph>
             <Heading2>Heading 2</Heading2>
@@ -37,7 +37,7 @@ const Content = () => {
               <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link href="#">Dit is een link. </Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
+              <Link href="#">Dit is een link.</Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
               ambassades en lokale overheden.
             </Paragraph>
             <Heading3>Heading 3</Heading3>
