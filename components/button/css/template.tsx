@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import '@utrecht/component-library-css';
+import { Button as ButtonUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 import { iconNames as iconOptions } from '../../icon/css/template';
@@ -92,22 +93,16 @@ export const Button: React.FC<IButtonProps> = ({
     <div className={clsx(`rvo-button__icon--${kind}-action`, 'rvo-icon', `rvo-icon-${icon}`, 'rvo-icon--md')}></div>
   );
   return (
-    <button
+    <ButtonUtrecht
       className={clsx(
-        'utrecht-button',
         classNames,
-        kind === 'primary' && 'utrecht-button--primary-action',
-        kind === 'secondary' && 'utrecht-button--secondary-action',
         kind === 'tertiary' && 'rvo-button--tertiary-action',
         kind === 'quaternary' && 'rvo-button--quaternary-action',
-        kind === 'warning-subtle' && 'rvo-button--warning-subtle-action',
-        kind === 'warning' && 'rvo-button--warning-action',
         active && 'utrecht-button--active',
         busy && 'utrecht-button--busy',
         hover && 'utrecht-button--hover',
         focus && 'utrecht-button--focus',
         focusVisible && 'utrecht-button--focus-visible',
-        disabled && 'utrecht-button--disabled',
         'rvo-layout-row',
         size === 'xs' && 'rvo-layout-gap--xs',
         size === 'sm' && 'rvo-layout-gap--sm',
@@ -116,12 +111,22 @@ export const Button: React.FC<IButtonProps> = ({
         size === 'sm' && 'rvo-button--sm',
         size === 'md' && 'rvo-button--md',
       )}
-      aria-disabled={disabled || null}
+      disabled={disabled || null}
+      appearance={
+        kind === 'primary'
+          ? 'primary-action-button'
+          : kind === 'secondary'
+          ? 'secondary-action-button'
+          : kind === 'subtle' || kind === 'warning-subtle'
+          ? 'subtle-button'
+          : null
+      }
+      hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : null}
     >
       {showIcon === 'before' && iconMarkup}
       {textContent}
       {showIcon === 'after' && iconMarkup}
-    </button>
+    </ButtonUtrecht>
   );
 };
 

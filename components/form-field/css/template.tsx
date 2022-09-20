@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { FormField, FormLabel } from '@utrecht/component-library-react';
 import React from 'react';
 import { ExpandableText } from '../../expandable-text/css/template';
 import { FormFeedback } from '../../form-feedback/css/template';
@@ -80,14 +81,16 @@ export const Field: React.FC<IFieldProps> = ({
   }
 
   return (
-    <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-      <label className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs" htmlFor={fieldId}>
-        <span className="rvo-form-field__label-text">{labelText}</span>
+    <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+      <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
+        <FormLabel className="rvo-form-field__label-text" htmlFor={fieldId}>
+          {labelText}
+        </FormLabel>
         {helperTextMarkup}
         {errorText && <FormFeedback text={errorText} type="error" />}
         {warningText && <FormFeedback text={warningText} type="warning" />}
-      </label>
+      </div>
       {children}
-    </div>
+    </FormField>
   );
 };

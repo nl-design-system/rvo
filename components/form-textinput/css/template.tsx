@@ -2,9 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import clsx from 'clsx';
 import './index.scss';
+import { Textarea, Textbox } from '@utrecht/component-library-react';
 import React from 'react';
+import clsx from 'clsx';
 
 export interface ITextInputProps {
   id?: string;
@@ -81,7 +82,6 @@ export const defaultArgs: ITextInputProps = {
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
@@ -95,22 +95,11 @@ export const TextInput: React.FC<ITextInputProps> = ({
 }) => {
   const props = {
     id,
-    className: clsx(
-      'utrecht-textbox',
-      'utrecht-textbox--html-input',
-      disabled && 'utrecht-textbox--disabled',
-      focus && 'utrecht-textbox--focus utrecht-textbox--focus-visible',
-      invalid && 'utrecht-textbox--invalid',
-      readOnly && 'utrecht-textbox--readonly',
-      required && 'utrecht-textbox--required',
-      size === 'sm' && 'utrecht-textbox--sm',
-      size === 'md' && 'utrecht-textbox--md',
-    ),
-    disabled: disabled || null,
-    'aria-invalid': invalid || null,
-    required: required || null,
-    readOnly: readOnly || null,
-    placeholder: placeholder || null,
+    disabled,
+    invalid,
+    required,
+    readOnly,
+    placeholder,
     defaultValue: value,
     ...((validation === 'number' || validation === 'currency') && {
       inputMode: 'numeric' as any,
@@ -119,7 +108,12 @@ export const TextInput: React.FC<ITextInputProps> = ({
   };
 
   if (inputType === 'text') {
-    const inputMarkup = <input type="text" {...props} />;
+    const inputMarkup = (
+      <Textbox
+        {...props}
+        className={clsx(size === 'sm' && 'utrecht-textbox--sm', size === 'md' && 'utrecht-textbox--md')}
+      />
+    );
     if (prefix || suffix) {
       return (
         <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
@@ -132,6 +126,6 @@ export const TextInput: React.FC<ITextInputProps> = ({
       return inputMarkup;
     }
   } else {
-    return <textarea {...props} />;
+    return <Textarea {...props} />;
   }
 };
