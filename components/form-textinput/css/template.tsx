@@ -2,8 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import clsx from 'clsx';
 import './index.scss';
+import { Textarea, Textbox } from '@utrecht/component-library-react';
 import React from 'react';
 
 export interface ITextInputProps {
@@ -65,7 +65,6 @@ export const defaultArgs: ITextInputProps = {
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
@@ -76,20 +75,11 @@ export const TextInput: React.FC<ITextInputProps> = ({
 }) => {
   const props = {
     id,
-    className: clsx(
-      'utrecht-textbox',
-      'utrecht-textbox--html-input',
-      disabled && 'utrecht-textbox--disabled',
-      focus && 'utrecht-textbox--focus utrecht-textbox--focus-visible',
-      invalid && 'utrecht-textbox--invalid',
-      readOnly && 'utrecht-textbox--readonly',
-      required && 'utrecht-textbox--required',
-    ),
-    disabled: disabled || null,
-    'aria-invalid': invalid || null,
-    required: required || null,
-    readOnly: readOnly || null,
-    placeholder: placeholder || null,
+    disabled,
+    invalid,
+    required,
+    readOnly,
+    placeholder,
     defaultValue: value,
     ...((valueType === 'number' || valueType === 'currency') && {
       inputMode: 'numeric' as any,
@@ -98,13 +88,13 @@ export const TextInput: React.FC<ITextInputProps> = ({
   };
 
   if (inputType === 'text') {
-    const inputMarkup = <input type="text" {...props} />;
+    const inputMarkup = <Textbox {...props} />;
     if (valueType === 'currency') {
       return <div className="rvo-layout-row rvo-layout-gap--md">€{inputMarkup}</div>;
     } else {
       return inputMarkup;
     }
   } else {
-    return <textarea {...props} />;
+    return <Textarea {...props} />;
   }
 };
