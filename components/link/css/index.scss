@@ -8,9 +8,9 @@
   color: var(--rvo-link-color);
   display: inline-flex;
   font-weight: var(--rvo-link-font-weight);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: var(--rvo-link-text-decoration);
+  text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
+  text-underline-offset: var(--rvo-link-text-underline-offset);
 }
 
 .rvo-link--no-underline {
@@ -23,7 +23,7 @@
   background-color: var(--rvo-link-hover-background-color);
   color: var(--rvo-link-hover-color);
   font-weight: var(--rvo-link-hover-font-weight);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
 }
 
 // Active
@@ -32,7 +32,7 @@
   background-color: var(--rvo-link-active-background-color);
   color: var(--rvo-link-active-color);
   font-weight: var(--rvo-link-active-font-weight);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--rvo-link-active-text-decoration-thickness);
 }
 
 // Focus
@@ -43,7 +43,7 @@
   color: var(--rvo-link-focus-color);
   font-weight: var(--rvo-link-focus-font-weight);
   outline: none;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
 }
 
 // Icon

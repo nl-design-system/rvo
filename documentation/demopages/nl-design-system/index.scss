@@ -1,7 +1,12 @@
 .utrecht-link {
   font-weight: var(--rvo-link-font-weight);
-  text-decoration: underline;
 }
+.utrecht-link:focus,
+.utrecht-link:focus-visible {
+  background-color: var(--rvo-link-focus-background-color);
+  outline: none;
+}
+
 .utrecht-form-field-description {
   --utrecht-icon-inset-block-start: var(--utrecht-icon-baseline-inset-block-start, 0.2em);
 }
