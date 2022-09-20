@@ -7,7 +7,6 @@ import './index.scss';
 import React from 'react';
 import { IRadioButtonProps, RadioButton } from './template';
 export interface IRadioButtonGroupProps {
-  layout: string;
   name: string;
   invalid?: boolean;
   options: IRadioButtonProps[];
@@ -21,10 +20,6 @@ const defaultOptions: IRadioButtonProps[] = [
 ];
 
 export const argTypes = {
-  layout: {
-    options: ['vertical', 'horizontal'],
-    control: { type: 'radio' },
-  },
   name: { control: 'text' },
   invalid: { control: 'boolean' },
   options: {
@@ -36,22 +31,20 @@ export const argTypes = {
 };
 
 export const defaultArgs: IRadioButtonGroupProps = {
-  layout: 'vertical',
   name: 'group',
   invalid: false,
   options: defaultOptions,
 };
 
 export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
-  layout = defaultArgs.layout,
   name = defaultArgs.name,
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
 }) => (
   <div
     className={clsx(
-      layout === 'horizontal' ? 'rvo-layout-row' : 'rvo-layout-column',
-      layout === 'horizontal' ? 'rvo-layout-gap--xl' : 'rvo-layout-gap--md',
+      'rvo-layout-column',
+      'rvo-layout-gap--md',
       'rvo-layout--wrap',
       invalid && 'rvo-custom-radio-button__group--error',
     )}

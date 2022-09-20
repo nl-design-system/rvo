@@ -8,7 +8,6 @@ import React from 'react';
 import { Checkbox, ICheckboxProps } from './template';
 
 export interface ICheckboxGroupProps {
-  layout: string;
   invalid: boolean;
   options: ICheckboxProps[];
 }
@@ -21,10 +20,6 @@ const defaultOptions: ICheckboxProps[] = [
 ];
 
 export const argTypes = {
-  layout: {
-    options: ['vertical', 'horizontal'],
-    control: { type: 'radio' },
-  },
   invalid: { control: 'boolean' },
   options: {
     type: {
@@ -35,13 +30,11 @@ export const argTypes = {
 };
 
 export const defaultArgs: ICheckboxGroupProps = {
-  layout: 'vertical',
   invalid: false,
   options: defaultOptions,
 };
 
 export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
-  layout = defaultArgs.layout,
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
 }) => (
@@ -49,7 +42,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
     className={clsx(
       'rvo-checkbox__group',
       invalid && 'rvo-custom-radio-button__group--error',
-      layout === 'horizontal' ? 'rvo-layout-row' : 'rvo-layout-column',
+      'rvo-layout-column',
       'rvo-layout-gap--md',
       'rvo-layout--wrap',
     )}
