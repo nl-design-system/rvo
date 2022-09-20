@@ -61,7 +61,7 @@ export const Fieldset: React.FC<IFieldsetProps> = ({
   children,
 }) => {
   return (
-    <fieldset className="utrecht-form-fieldset rvo-layout-column rvo-layout-gap--lg" disabled={disabled || null}>
+    <fieldset className="utrecht-form-fieldset rvo-layout-column rvo-layout-gap--xl" disabled={disabled || null}>
       {legend && <legend className="utrecht-form-fieldset__legend">{legend}</legend>}
       {fields &&
         fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />)}
