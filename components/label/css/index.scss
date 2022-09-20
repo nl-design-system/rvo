@@ -1,0 +1,31 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-label {
+  color: var(--rvo-label-color);
+  font-size: var(--rvo-label-font-size);
+  font-weight: var(--rvo-label-font-weight);
+}
+
+.rvo-label--sm {
+  font-size: var(--rvo-label-sm-font-size);
+  font-weight: var(--rvo-label-sm-font-weight);
+}
+
+.rvo-label--optional::after {
+  color: var(--rvo-label-optional-color);
+  content: var(--rvo-label-optional-content);
+  font-size: var(--rvo-label-optional-font-size);
+  font-weight: var(--rvo-label-optional-font-weight);
+}
+
+.rvo-label--required::after {
+  color: var(--rvo-label-required-color);
+  content: var(--rvo-label-required-content);
+  font-size: var(--rvo-label-required-font-size);
+  font-weight: var(--rvo-label-required-font-weight);
+  position: relative;
+  top: -2px;
+}
