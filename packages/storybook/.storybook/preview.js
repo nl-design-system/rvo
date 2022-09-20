@@ -8,6 +8,8 @@ import './preview.scss';
 import prettier from 'prettier/standalone';
 import prettierBabel from 'prettier/parser-babel';
 
+import '@utrecht/component-library-css/dist/index.css';
+
 defineCustomElements();
 
 // const statuses = {
