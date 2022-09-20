@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
 import React from 'react';
 import { ITextInputFieldProps, TextInputField } from '../../form-field/css/textinput-field.template';
 
@@ -61,11 +62,11 @@ export const Fieldset: React.FC<IFieldsetProps> = ({
   children,
 }) => {
   return (
-    <fieldset className="utrecht-form-fieldset rvo-layout-column rvo-layout-gap--xl" disabled={disabled || null}>
-      {legend && <legend className="utrecht-form-fieldset__legend">{legend}</legend>}
+    <FieldsetUtrecht className="rvo-layout-column rvo-layout-gap--xl" disabled={disabled || null}>
+      {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {fields &&
         fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />)}
       {children}
-    </fieldset>
+    </FieldsetUtrecht>
   );
 };

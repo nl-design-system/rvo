@@ -2,3 +2,6 @@
   font-weight: var(--rvo-link-font-weight);
   text-decoration: underline;
 }
+.utrecht-form-field-description {
+  --utrecht-icon-inset-block-start: var(--utrecht-icon-baseline-inset-block-start, 0.2em);
+}
