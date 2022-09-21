@@ -1,0 +1,33 @@
+/*  Overrides.
+    Todo: move these to Utrecht theme tokens */
+
+.utrecht-link {
+  font-weight: var(--rvo-link-font-weight);
+}
+.utrecht-link:focus,
+.utrecht-link:focus-visible {
+  background-color: var(--rvo-link-focus-background-color);
+  outline: none;
+}
+
+.utrecht-form-field-description {
+  --utrecht-icon-inset-block-start: var(--utrecht-icon-baseline-inset-block-start, 0.2em);
+}
+
+/* Todo: Convert to Utrecht class for paragraph component */
+.rvo-paragraph--sm {
+  font-size: var(--rvo-font-size-sm);
+  line-height: var(--rvo-line-height-md);
+}
+
+/* Todo: Convert to Utrecht class for list components */
+.rvo-list {
+  line-height: var(--rvo-line-height-md);
+}
+
+/* Todo: @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
+.utrecht-custom-radio-button,
+.rvo-checkbox__input {
+  align-self: flex-start;
+  flex: 24px 0 0;
+}

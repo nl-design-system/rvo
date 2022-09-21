@@ -12,13 +12,12 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../common/style.scss';
-import './index.scss';
 
 const Content = () => {
   return (
-    <div className="rvo-demo-page">
+    <div className="rvo-nl-demo-page">
       <Header />
       <LayoutColumnRow size="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
@@ -41,19 +40,19 @@ const Content = () => {
               ambassades en lokale overheden.
             </Paragraph>
             <Heading3>Heading 3</Heading3>
-            <Paragraph className="rvo-paragraph rvo-paragraph--sm">
+            <Paragraph className="rvo-paragraph--sm">
               <strong>Paragraph small.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
               <Link href="#">Dit is een link. </Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
               ambassades en lokale overheden.
             </Paragraph>
-            <UnorderedList className="rvo-list rvo-list--unordered">
+            <UnorderedList className="rvo-list">
               <UnorderedListItem className="rvo-list-item">Unordered list</UnorderedListItem>
               <UnorderedListItem className="rvo-list-item">Second item</UnorderedListItem>
               <UnorderedListItem className="rvo-list-item">Third item</UnorderedListItem>
             </UnorderedList>
-            <OrderedList className="rvo-list rvo-list--ordered">
+            <OrderedList className="rvo-list">
               <OrderedListItem className="rvo-list-item">Ordered list</OrderedListItem>
               <OrderedListItem className="rvo-list-item">Second item</OrderedListItem>
               <OrderedListItem className="rvo-list-item">Third item</OrderedListItem>

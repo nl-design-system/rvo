@@ -1,0 +1,12 @@
+@mixin button {
+  /* @BUTTON XS TOEVOEGING */
+
+  .rvo-button--xs {
+    font-size: var(--rvo-font-size-sm);
+    font-weight: var(--rvo-font-weight-regular);
+    gap: var(--rvo-space-2xs);
+    min-block-size: auto;
+    padding-block-end: var(--rvo-space-2xs);
+    padding-block-start: var(--rvo-space-2xs);
+  }
+}

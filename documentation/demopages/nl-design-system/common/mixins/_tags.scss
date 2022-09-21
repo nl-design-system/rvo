@@ -1,0 +1,19 @@
+@mixin tags {
+  /* @TAGS EN @ACTIEVE FILTERS */
+
+  .rvo-tag {
+    align-items: center;
+    background-color: var(--rvo-color-hemelblauw-tint2);
+    border-radius: 3px;
+    display: inline-flex;
+    gap: var(--rvo-space-2xs);
+    padding-block-end: var(--rvo-space-3xs);
+    padding-block-start: var(--rvo-space-3xs);
+    padding-inline-end: var(--rvo-space-xs);
+    padding-inline-start: var(--rvo-space-xs);
+  }
+
+  .rvo-tag--sm {
+    font-size: var(--rvo-font-size-sm);
+  }
+}

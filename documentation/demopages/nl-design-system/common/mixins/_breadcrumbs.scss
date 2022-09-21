@@ -1,0 +1,26 @@
+@mixin breadcrumbs {
+  /* @BREADCRUMBS */
+
+  ol.rvo-breadcrumbs__list {
+    display: flex;
+    gap: var(--rvo-space-xs);
+    list-style: none;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .rvo-breadcrumbs__list-item .rvo-link {
+    font-size: var(--rvo-font-size-sm);
+    text-decoration: none;
+  }
+
+  .rvo-breadcrumbs__list-item .rvo-link:hover,
+  .rvo-breadcrumbs__list-item .rvo-link:focus,
+  .rvo-breadcrumbs__list-item .rvo-link:active {
+    text-decoration: underline;
+  }
+
+  .rvo-breadcrumb-current-page {
+    font-size: var(--rvo-font-size-sm);
+  }
+}

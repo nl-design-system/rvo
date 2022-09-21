@@ -1,0 +1,8 @@
+@mixin body {
+  /* @BODY */
+  body {
+    color: var(--rvo-color-zwart);
+    font-family: var(--rvo-font-rijksoverheidwebsanstext);
+    font-size: var(--rvo-font-size-md);
+  }
+}
