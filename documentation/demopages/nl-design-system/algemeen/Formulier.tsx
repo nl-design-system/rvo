@@ -6,13 +6,12 @@ import { SelectField } from '@nl-rvo/components/form-field/css/select-field.temp
 import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
-import { Link } from '@utrecht/component-library-react';
+import { Heading1, Link } from '@utrecht/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Formulier = () => {
@@ -28,8 +27,11 @@ const Formulier = () => {
               <div className="rvo-form">
                 <LayoutColumnRow size="sm">
                   <div className="intro">
-                    <Link href="#">Terug</Link>
-                    <Heading type="h1" textContent="Heading" />
+                    <Link href="#" className="utrecht-link--icon-left">
+                      <span className="rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before" />
+                      Terug
+                    </Link>
+                    <Heading1>Heading</Heading1>
                   </div>
                   <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
                     <Fieldset legend="Keyboard inputs">
@@ -140,7 +142,7 @@ const Formulier = () => {
                       <FileInputField labelText="File" />
                     </Fieldset>
 
-                    <div className="rvo-button-group utrecht-button-group">
+                    <div className="rvo-button-group">
                       <Button
                         kind="secondary"
                         size="md"
