@@ -1,0 +1,7 @@
+@mixin intro {
+  /* @INTRO */
+
+  .rvo-intro p:last-child {
+    margin-block-end: 0;
+  }
+}

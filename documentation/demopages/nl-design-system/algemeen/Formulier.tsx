@@ -13,11 +13,11 @@ import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
 import { Link } from '@utrecht/component-library-react';
-import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Formulier = () => {
   return (
-    <div className="rvo-demo-page">
+    <div className="rvo-nl-demo-page">
       <Header />
       <LayoutColumnRow size="2xl">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />

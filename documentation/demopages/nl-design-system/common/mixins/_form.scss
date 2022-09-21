@@ -1,0 +1,61 @@
+@mixin form {
+  /* @FORM */
+
+  /* stylelint-disable-next-line block-no-empty */
+  .rvo-form {
+  }
+
+  .rvo-form .rvo-intro {
+    line-height: var(--rvo-line-height-md);
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+    max-width: 580px;
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+  }
+
+  .rvo-file::file-selector-button {
+    background-color: var(--rvo-color-wit);
+    border: none;
+    color: var(--rvo-color-hemelblauw);
+    font-weight: var(--rvo-font-weight-bold);
+  }
+
+  input[type="file"] {
+    background-color: var(--rvo-color-wit);
+    border: 2px solid var(--rvo-color-zwart);
+    padding-block-end: 10px;
+    padding-block-start: var(--rvo-space-sm);
+    padding-inline-end: var(--rvo-space-sm);
+    padding-inline-start: var(--rvo-space-sm);
+    z-index: 1;
+  }
+
+  input[type="file"]:focus,
+  textarea:focus {
+    outline: 3px solid var(--rvo-color-hemelblauw);
+  }
+
+  .rvo-input-error {
+    outline: 3px solid var(--rvo-color-rood);
+  }
+
+  input[type="file"]:disabled {
+    background-color: var(--rvo-color-grijs3);
+    border-color: var(--rvo-color-grijs7);
+    color: var(--rvo-color-grijs7);
+  }
+
+  .rvo-button-group {
+    display: flex;
+    grid-gap: var(--rvo-space-md);
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: 0;
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-button-group :last-child {
+    margin-inline-start: auto;
+  }
+}
