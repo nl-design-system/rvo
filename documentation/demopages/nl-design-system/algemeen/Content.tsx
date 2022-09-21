@@ -40,7 +40,7 @@ const Content = () => {
               lokale overheden.
             </Paragraph>
             <Heading3>Heading 3</Heading3>
-            <Paragraph className="rvo-paragraph--sm">
+            <Paragraph className="utrecht-paragraph--small">
               <strong>Paragraph small.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}

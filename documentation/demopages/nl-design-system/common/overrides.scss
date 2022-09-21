@@ -14,8 +14,9 @@
 }
 
 /* Todo: Convert to Utrecht class for paragraph component */
-.rvo-paragraph--sm {
+.utrecht-paragraph--small {
   font-size: var(--rvo-font-size-sm);
+  line-height: var(--rvo-line-height-md);
 }
 
 /* Todo: Convert to Utrecht class for list components */
