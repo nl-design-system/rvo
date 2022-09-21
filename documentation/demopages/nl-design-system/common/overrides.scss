@@ -6,7 +6,6 @@
 }
 .utrecht-link:focus,
 .utrecht-link:focus-visible {
-  background-color: var(--rvo-link-focus-background-color);
   outline: none;
 }
 
@@ -17,7 +16,6 @@
 /* Todo: Convert to Utrecht class for paragraph component */
 .rvo-paragraph--sm {
   font-size: var(--rvo-font-size-sm);
-  line-height: var(--rvo-line-height-md);
 }
 
 /* Todo: Convert to Utrecht class for list components */
