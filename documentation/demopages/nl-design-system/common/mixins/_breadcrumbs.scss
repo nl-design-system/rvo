@@ -1,26 +1,39 @@
+/**
+ * This file temporary and rules should be available inside the Utrecht Breadcrumb component
+ */
 @mixin breadcrumbs {
   /* @BREADCRUMBS */
 
-  ol.rvo-breadcrumbs__list {
-    display: flex;
-    gap: var(--rvo-space-xs);
-    list-style: none;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-  }
+  .utrecht-breadcrumb {
+    align-items: baseline;
 
-  .rvo-breadcrumbs__list-item .rvo-link {
-    font-size: var(--rvo-font-size-sm);
-    text-decoration: none;
-  }
+    &__item {
+      align-items: baseline;
+      display: inline-flex;
 
-  .rvo-breadcrumbs__list-item .rvo-link:hover,
-  .rvo-breadcrumbs__list-item .rvo-link:focus,
-  .rvo-breadcrumbs__list-item .rvo-link:active {
-    text-decoration: underline;
-  }
+      /* Add as gap in utrecht breadcrumb tokens */
+      & > * {
+        margin-inline-end: var(--utrecht-breadcrumb-item-gap, 0);
+      }
+    }
 
-  .rvo-breadcrumb-current-page {
-    font-size: var(--rvo-font-size-sm);
+    /* Add to link element in utrecht breadcrumb tokens */
+    &__link {
+      text-decoration: var(--utrecht-breadcrumb-link-text-decoration);
+
+      &:hover {
+        text-decoration: var(--utrecht-breadcrumb-link-hover-text-decoration);
+        text-decoration-thickness: var(--utrecht-breadcrumb-link-hover-text-decoration-thickness);
+      }
+
+      &:focus {
+        text-decoration: var(--utrecht-breadcrumb-link-focus-text-decoration);
+        text-decoration-thickness: var(--utrecht-breadcrumb-link-focus-text-decoration-thickness);
+      }
+
+      &:active {
+        text-decoration: var(--utrecht-breadcrumb-link-active-text-decoration);
+      }
+    }
   }
 }
