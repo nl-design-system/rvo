@@ -21,7 +21,9 @@
   @include mixins.spacers;
 
   // @include mixins.date;
-  // @include mixins.breadcrumbs;
+
+  @include mixins.breadcrumbs;
+
   // @include mixins.button;
   // @include mixins.filters;
   // @include mixins.tags;

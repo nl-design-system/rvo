@@ -19,9 +19,10 @@
   "scripts": {
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",
-    "build": "style-dictionary build --config ./src/style-dictionary.config.js",
+    "build": "npm-run-all build:**",
+    "build:style-dictionary": "style-dictionary build --config ./src/style-dictionary.config.js",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' './src/**/*.tokens.json'"
+    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build:style-dictionary' './src/**/*.tokens.json'"
   },
   "devDependencies": {
     "chokidar-cli": "3.0.0",
