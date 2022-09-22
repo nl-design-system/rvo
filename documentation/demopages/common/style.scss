@@ -44,6 +44,38 @@
     margin-block-start: 0;
   }
 
+  /* @HERO */
+
+  .rvo-hero {
+    background-color: var(--rvo-color-lichtblauw-tint2);
+  }
+
+  .rvo-hero--man-met-laptop {
+    // background-image: url("/rvo/images/hero-bg--man-met-laptop.webp");
+  }
+
+  .rvo-hero-content {
+    align-items: center;
+    display: flex;
+  }
+
+  .rvo-hero-img-container {
+    align-items: flex-end;
+    display: flex;
+  }
+
+  .rvo-hero-img {
+    max-width: 75%;
+  }
+
+  .rvo-hero-text {
+    max-width: 400px;
+    padding-block-end: var(--rvo-space-lg);
+    padding-block-start: var(--rvo-space-lg);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+  }
+
   /* @PARAGRAPHS */
 
   .rvo-paragraph--sm {
