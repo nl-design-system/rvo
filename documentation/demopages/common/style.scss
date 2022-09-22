@@ -48,20 +48,44 @@
 
   .rvo-hero {
     background-color: var(--rvo-color-lichtblauw-tint2);
+    position: relative;
   }
 
-  .rvo-hero--man-met-laptop {
-    // background-image: url("/rvo/images/hero-bg--man-met-laptop.webp");
+  .rvo-hero-bg-img-container {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .rvo-hero-bg-img-container::before {
+    background: linear-gradient(90deg, var(--rvo-color-lichtblauw-tint2) 0%, rgb(217 235 247 / 0%) 52.25%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25%;
+    z-index: 1;
+  }
+
+  .rvo-hero-bg-img {
+    mix-blend-mode: overlay;
+    object-fit: contain;
   }
 
   .rvo-hero-content {
     align-items: center;
     display: flex;
+    position: relative;
+    z-index: 1;
   }
 
   .rvo-hero-img-container {
     align-items: flex-end;
     display: flex;
+    padding-block-start: var(--rvo-space-xl);
   }
 
   .rvo-hero-img {
@@ -69,7 +93,7 @@
   }
 
   .rvo-hero-text {
-    max-width: 400px;
+    max-width: 50%;
     padding-block-end: var(--rvo-space-lg);
     padding-block-start: var(--rvo-space-lg);
     padding-inline-end: var(--rvo-space-xl);
