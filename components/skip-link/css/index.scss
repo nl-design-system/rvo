@@ -1,0 +1,11 @@
+.rvo-skip-link {
+  font-weight: 700;
+  outline: none;
+  position: absolute;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.rvo-skip-link:focus {
+  transform: translateY(0%);
+}

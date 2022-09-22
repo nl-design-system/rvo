@@ -73,7 +73,7 @@ export const Tag: React.FC<ITagProps> = ({
   classNames,
 }) => {
   // Parse icon markup
-  const iconClassNames = [];
+  const iconClassNames: string[] = [];
   if (showIcon === 'before') {
     iconClassNames.push('rvo-link__icon--before');
   }

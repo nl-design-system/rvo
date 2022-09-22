@@ -61,7 +61,7 @@ export const ButtonGroup: React.FC<IButtonGroupProps> = ({
         buttonsRight.length > 0 &&
         buttonsRight.map((buttonProps, index) => {
           if (index === 0) {
-            buttonProps.className = 'rvo-button-group__align-right';
+            buttonProps.classNames = ['rvo-button-group__align-right'];
           }
           return <Button key={index} {...buttonProps} />;
         })}
