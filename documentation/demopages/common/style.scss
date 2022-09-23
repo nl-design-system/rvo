@@ -22,9 +22,9 @@
 
   /* @TMP FIXES */
 
-  .rvo-layout-row {
-    align-items: flex-start;
-  }
+  // .rvo-layout-row {
+  //   align-items: flex-start;
+  // }
 
   .rvo-progress-tracker {
     min-width: 268px;
@@ -98,6 +98,45 @@
     padding-block-start: var(--rvo-space-lg);
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
+  }
+
+  /* @TABLE FILTER */
+
+  .rvo-table--responsive.rvo-table--w-filter {
+    width: 900px;
+  }
+
+  .rvo-table--responsive .rvo-tmp-filters fieldset {
+    background-color: var(--rvo-color-wit);
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .rvo-table--mijn-zaken .rvo-tmp-filters fieldset,
+  .rvo-table--mijn-zaken .rvo-table-row {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 343px 200px 232px 125px;
+  }
+
+  .rvo-table--mijn-zaken .rvo-tmp-filter .rvo-checkbox__group {
+    margin-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-table--mijn-zaken a.rvo-layout-row {
+    align-items: baseline;
+  }
+
+  .rvo-table--mijn-zaken .rvo-tag {
+    margin-block-end: -2px;
+    margin-block-start: -2px;
+  }
+
+  .rvo-table--mijn-zaken .rvo-tmp-filters .rvo-form-field {
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
   }
 
   /* @PARAGRAPHS */

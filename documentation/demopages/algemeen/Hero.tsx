@@ -12,7 +12,7 @@ const Hero = () => {
       <MenuBar items={defaultMenuBarItems} size="lg" useIcons={true} iconPlacement="before" menuMaxWidth="lg" />
       <div className="rvo-hero rvo-hero--man-met-laptop">
         <div className="rvo-hero-bg-img-container">
-          <img src="/rvo/rvo/images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />
+          <img src="/rvo/images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />
         </div>
         <MaxWidthLayout size="lg">
           <div className="rvo-hero-content">
@@ -24,7 +24,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="rvo-hero-img-container">
-              <img src="/rvo/rvo/images/hero/man-met-laptop.webp" className="rvo-hero-img" />
+              <img src="/rvo/images/hero/man-met-laptop.webp" className="rvo-hero-img" />
             </div>
           </div>
         </MaxWidthLayout>
