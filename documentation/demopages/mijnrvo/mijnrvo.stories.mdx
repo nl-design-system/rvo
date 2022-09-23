@@ -1,0 +1,27 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import MijnZaken from "./MijnZaken";
+
+<Meta
+  title="Pagina's/Mijn RVO"
+  parameters={{
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    docs: {
+      source: {
+        state: "closed",
+      },
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Mijn RVO
+
+<Canvas>
+  <Story name="Mijn zaken">
+    <MijnZaken />
+  </Story>
+</Canvas>
