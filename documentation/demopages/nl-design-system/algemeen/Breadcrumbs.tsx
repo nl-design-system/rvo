@@ -42,9 +42,9 @@ const Breadcrumbs = () => {
             <div className="rvo-content">
               <Heading1>Breadcrumbs example</Heading1>
               <Paragraph>
-                <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
-                ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
-                voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
+                <span className="utrecht-emphasis--strong">Paragraph medium.</span> De overheid zet zich in voor een
+                uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor uit. En de taak om dit uit te
+                voeren ligt bij RVO: de Rijksdienst voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
                 <Link href="#">Dit is een link. </Link> Tussen bedrijven, kennis- en financiële instellingen, ambassades
                 en lokale overheden.
               </Paragraph>
