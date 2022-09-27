@@ -5,7 +5,7 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
-import { options as iconOptions } from '../../icon/css/template';
+import { iconNames as iconOptions } from '../../icon/css/template';
 
 export interface IButtonProps {
   kind?: string;
