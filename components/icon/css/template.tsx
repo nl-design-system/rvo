@@ -13,6 +13,8 @@ interface IIconProps {
   classNames?: string[];
 }
 
+export const iconColors = ['hemelblauw', 'wit', 'zwart'];
+
 const toProperCase = (inputString) =>
   inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 
@@ -47,7 +49,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   color: {
-    options: ['hemelblauw', 'wit', 'zwart'],
+    options: iconColors,
     control: { type: 'radio' },
   },
 };

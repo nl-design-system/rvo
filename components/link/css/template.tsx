@@ -5,7 +5,7 @@
 import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
-import { Icon, options as iconOptions } from '../../icon/css/template';
+import { Icon, iconColors, options as iconOptions } from '../../icon/css/template';
 
 interface ILinkProps {
   content: string;
@@ -13,6 +13,7 @@ interface ILinkProps {
   showIcon?: string;
   icon?: string;
   iconSize?: string;
+  iconColor?: string;
   hover?: boolean;
   active?: boolean;
   focus?: boolean;
@@ -39,6 +40,10 @@ export const argTypes = {
     options: ['sm', 'md'],
     control: { type: 'radio' },
   },
+  iconColor: {
+    options: iconColors,
+    control: { type: 'radio' },
+  },
   hover: {
     control: 'boolean',
   },
@@ -60,6 +65,7 @@ export const defaultArgs: ILinkProps = {
   hover: false,
   icon: iconOptions[0],
   iconSize: 'md',
+  iconColor: 'hemelblauw',
   active: false,
   focus: false,
   noUnderline: false,
@@ -71,6 +77,7 @@ export const Link: React.FC<ILinkProps> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   iconSize = defaultArgs.iconSize,
+  iconColor = defaultArgs.iconColor,
   hover = defaultArgs.hover,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
@@ -85,7 +92,7 @@ export const Link: React.FC<ILinkProps> = ({
   if (showIcon === 'after') {
     iconClassNames.push('rvo-link__icon--after');
   }
-  const iconMarkup = Icon({ icon, size: iconSize, color: 'hemelblauw', classNames: iconClassNames });
+  const iconMarkup = Icon({ icon, size: iconSize, color: iconColor, classNames: iconClassNames });
 
   return (
     <a

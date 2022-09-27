@@ -1,0 +1,31 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Footer } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Footer/Footer"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Footer
+
+<Canvas>
+  <Story name="Footer" args={defaultArgs}>
+    {Footer.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Footer" />
+
+Items containing a link will be rendered as text links with an icon (e.g. > Link content), otherwise items are rendered as generic HTML content.
+
+## Dependencies
+
+@nl-rvo/assets/icons
