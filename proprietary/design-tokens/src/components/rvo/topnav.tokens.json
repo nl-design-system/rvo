@@ -19,7 +19,8 @@
       },
       "item": {
         "active": {
-          "background-color": { "value": "{rvo.color.donkerblauw}" }
+          "background-color": { "value": "{rvo.color.donkerblauw}" },
+          "font-weight": { "value": "{rvo.font-weight.bold}" }
         }
       },
       "submenu": {

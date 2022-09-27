@@ -1,0 +1,36 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MenuBar } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Menu active item"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Menubar active item
+
+Make an item active with the `.utrecht-topnav__item--active` classname:
+
+<Canvas>
+  <Story
+    name="Menu active item"
+    args={{
+      ...defaultArgs,
+      items: [
+        { label: "Home", icon: "home", link: "#" },
+        { label: "Mijn aanvragen", icon: "publicatie", link: "#", active: true },
+        { label: "Nieuwe aanvraag", icon: "plus", link: "#" },
+        { label: "Uitloggen", icon: "versleutelen", link: "#", align: "right" },
+      ],
+    }}
+  >
+    {MenuBar.bind()}
+  </Story>
+</Canvas>
