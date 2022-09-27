@@ -1,0 +1,23 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, LayoutColumnRow } from "./template";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Layout/Layout column &frasl; row"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+<Canvas>
+  <Story name="Row align to top" args={{ ...defaultArgs, row: true, alignToTop: true }}>
+    {LayoutColumnRow.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Row align to top" />

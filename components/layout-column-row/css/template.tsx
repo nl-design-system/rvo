@@ -9,6 +9,7 @@ interface ILayoutColumnRowProps {
   size?: string;
   row?: boolean;
   wrap?: boolean;
+  alignToTop?: boolean;
   children?: React.ReactNode;
 }
 
@@ -31,11 +32,12 @@ export const defaultArgs: ILayoutColumnRowProps = {
   wrap: false,
 };
 
-export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({ size, row, wrap, children }) => {
+export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({ size, row, wrap, alignToTop, children }) => {
   return (
     <div
       className={clsx(
         row ? 'rvo-layout-row' : 'rvo-layout-column',
+        row && alignToTop && 'rvo-layout-row--flex-start',
         `rvo-layout-gap--${size}`,
         wrap && 'rvo-layout--wrap',
       )}
