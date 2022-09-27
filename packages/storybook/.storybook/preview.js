@@ -73,6 +73,7 @@ export const parameters = {
         .replace('=""', '');
     },
   },
+  layout: 'fullscreen',
   html: {
     root: '#story',
     removeEmptyComments: true,
