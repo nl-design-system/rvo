@@ -21,6 +21,7 @@ const SearchInNav = () => {
         size="md"
         useIcons={true}
         iconPlacement="before"
+        menuMaxWidth="md"
       />
       <LayoutColumnRow size="md">
         <div className="search-form">
