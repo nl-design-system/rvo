@@ -3,57 +3,49 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 .rvo-icon {
-  display: inline-block;
+  background-color: var(--utrecht-icon-color, currentColor);
 }
 
 .rvo-icon--xs {
-  height: var(--rvo-icon-xs-height);
-  width: var(--rvo-icon-xs-width);
+  --utrecht-icon-size: var(--rvo-icon-xs-width);
 }
 
 .rvo-icon--sm {
-  height: var(--rvo-icon-sm-height);
-  width: var(--rvo-icon-sm-width);
+  --utrecht-icon-size: var(--rvo-icon-sm-width);
 }
 
 .rvo-icon--md {
-  height: var(--rvo-icon-md-height);
-  width: var(--rvo-icon-md-width);
+  --utrecht-icon-size: var(--rvo-icon-md-width);
 }
 
 .rvo-icon--lg {
-  height: var(--rvo-icon-lg-height);
-  width: var(--rvo-icon-lg-width);
+  --utrecht-icon-size: var(--rvo-icon-lg-width);
 }
 
 .rvo-icon--xl {
-  height: var(--rvo-icon-xl-height);
-  width: var(--rvo-icon-xl-width);
+  --utrecht-icon-size: var(--rvo-icon-xl-width);
 }
 
 .rvo-icon--2xl {
-  height: var(--rvo-icon-2xl-height);
-  width: var(--rvo-icon-2xl-width);
+  --utrecht-icon-size: var(--rvo-icon-2xl-width);
 }
 
 .rvo-icon--3xl {
-  height: var(--rvo-icon-3xl-height);
-  width: var(--rvo-icon-3xl-width);
+  --utrecht-icon-size: var(--rvo-icon-3xl-width);
 }
 
 .rvo-icon--4xl {
-  height: var(--rvo-icon-4xl-height);
-  width: var(--rvo-icon-4xl-width);
+  --utrecht-icon-size: var(--rvo-icon-4xl-width);
 }
 
 .rvo-icon--wit {
-  background-color: var(--rvo-color-wit);
+  --utrecht-icon-color: var(--rvo-color-wit);
 }
 
 .rvo-icon--hemelblauw {
-  background-color: var(--rvo-color-hemelblauw);
+  --utrecht-icon-color: var(--rvo-color-hemelblauw);
 }
 
 .rvo-icon--zwart {
-  background-color: var(--rvo-color-zwart);
+  --utrecht-icon-color: var(--rvo-color-zwart);
 }

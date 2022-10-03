@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import { Icon } from '../../link/css/template';
+import { Icon } from '../../icon/css/template';
 import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
 import validateHTML from '../../utils/validateHTML';

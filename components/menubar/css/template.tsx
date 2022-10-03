@@ -78,11 +78,11 @@ const parseMenuItem = ({
   // Parse delta for active menu items
   let deltaMarkup;
   if (active !== undefined) {
-    deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" color="wit" />;
+    deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" />;
   }
 
   if (useIcon && icon) {
-    const iconMarkup = <Icon icon={icon} size={size} color="wit" />;
+    const iconMarkup = <Icon icon={icon} size={size} />;
 
     if (iconPlacement === 'before') {
       return (

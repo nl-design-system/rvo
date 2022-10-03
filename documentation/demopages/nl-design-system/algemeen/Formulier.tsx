@@ -6,6 +6,7 @@ import { SelectField } from '@nl-rvo/components/form-field/css/select-field.temp
 import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
@@ -28,7 +29,7 @@ const Formulier = () => {
                 <LayoutColumnRow size="sm">
                   <div className="intro">
                     <Link href="#" className="utrecht-link--icon-left">
-                      <span className="rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before" />
+                      <Icon icon="terug" color="hemelblauw" size="md" classNames={['rvo-link__icon--before']} />
                       Terug
                     </Link>
                     <Heading1>Heading</Heading1>

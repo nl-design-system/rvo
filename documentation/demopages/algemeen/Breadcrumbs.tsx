@@ -1,5 +1,6 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
@@ -23,20 +24,20 @@ const Breadcrumbs = () => {
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
                   <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
-                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></div>Second
-                    step
+                    <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
+                    Second step
                   </a>
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
                   <a className="rvo-link rvo-layout-row rvo-layout-gap--sm" href="#">
-                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></div>Third
-                    step
+                    <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
+                    Third step
                   </a>
                 </li>
                 <li className="rvo-breadcrumbs__list-item">
                   <span className="rvo-layout-row rvo-layout-gap--sm rvo-breadcrumb-current-page">
-                    <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></div>Current
-                    page
+                    <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
+                    Current page
                   </span>
                 </li>
               </ol>

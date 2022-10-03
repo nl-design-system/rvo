@@ -9,10 +9,6 @@
   outline: none;
 }
 
-.utrecht-form-field-description {
-  --utrecht-icon-inset-block-start: var(--utrecht-icon-baseline-inset-block-start, 0.2em);
-}
-
 /* Todo: Convert to Utrecht class for paragraph component */
 .utrecht-paragraph--small {
   font-size: var(--rvo-font-size-sm);

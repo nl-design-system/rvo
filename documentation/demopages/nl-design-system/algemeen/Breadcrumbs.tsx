@@ -1,4 +1,5 @@
 import { Header } from '@nl-rvo/components/header/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
@@ -22,19 +23,19 @@ const Breadcrumbs = () => {
                   </Link>
                 </OrderedListItem>
                 <OrderedListItem className="utrecht-breadcrumb__item">
-                  <i className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></i>
+                  <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
                   <Link href="#" className="utrecht-breadcrumb__link">
                     Second step
                   </Link>
                 </OrderedListItem>
                 <OrderedListItem className="utrecht-breadcrumb__item">
-                  <i className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></i>
+                  <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
                   <Link href="#" className="utrecht-breadcrumb__link">
                     Third step
                   </Link>
                 </OrderedListItem>
                 <OrderedListItem className="utrecht-breadcrumb__item">
-                  <i className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"></i>
+                  <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
                   Current page
                 </OrderedListItem>
               </OrderedList>
