@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import '@utrecht/component-library-css';
 import { Button as ButtonUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';

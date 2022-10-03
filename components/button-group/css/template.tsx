@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import '@utrecht/component-library-css';
 import React from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
 
