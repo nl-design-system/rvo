@@ -57,7 +57,7 @@
             "color": { "value": "{rvo.color.wit}" }
           },
           "hover": {
-            "background-color": { "value": "{rvo.color.rood}" },
+            "background-color": { "value": "#4d0a0b" },
             "color": { "value": "{rvo.color.wit}" }
           },
           "disabled": {

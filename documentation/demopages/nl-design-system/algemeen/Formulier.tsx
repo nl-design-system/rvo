@@ -147,7 +147,6 @@ const Formulier = () => {
                       <Button
                         kind="secondary"
                         size="md"
-                        textContent="Secondary action"
                         active={false}
                         busy={false}
                         focus={false}
@@ -161,7 +160,6 @@ const Formulier = () => {
                       <Button
                         kind="primary"
                         size="md"
-                        textContent="Primary action"
                         active={false}
                         busy={false}
                         focus={false}
@@ -170,7 +168,7 @@ const Formulier = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Primary action
                       </Button>
                     </div>
                   </form>

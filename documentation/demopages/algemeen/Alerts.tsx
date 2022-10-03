@@ -1,3 +1,4 @@
+import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
@@ -35,7 +36,9 @@ const Alerts = () => {
                   <Icon icon="info" color="hemelblauw" size="lg" />
                   <div className="rvo-alert-text">
                     <p>This is an example of an info alert with a button.</p>
-                    <button className="utrecht-button utrecht-button--primary-action rvo-button--sm">Button</button>
+                    <Button kind="primary" size="sm">
+                      Button
+                    </Button>
                   </div>
                 </div>
                 <div className="rvo-alert rvo-alert--info">
@@ -65,7 +68,9 @@ const Alerts = () => {
                   <Icon icon="waarschuwing" size="lg" classNames={['rvo-status-icon-waarschuwing']} />
                   <div className="rvo-alert-text">
                     <p>This is an example of a warning alert with a button.</p>
-                    <button className="utrecht-button utrecht-button--primary-action rvo-button--sm">Button</button>
+                    <Button kind="primary" size="sm">
+                      Button
+                    </Button>
                   </div>
                 </div>
                 <div className="rvo-alert rvo-alert--warning">
@@ -95,7 +100,9 @@ const Alerts = () => {
                   <Icon icon="foutmelding" size="lg" classNames={['rvo-status-icon-foutmelding']} />
                   <div className="rvo-alert-text">
                     <p>This is an example of a error alert with a button.</p>
-                    <button className="utrecht-button utrecht-button--primary-action rvo-button--sm">Button</button>
+                    <Button kind="primary" size="sm">
+                      Button
+                    </Button>
                   </div>
                 </div>
                 <div className="rvo-alert rvo-alert--error">
@@ -125,7 +132,9 @@ const Alerts = () => {
                   <Icon icon="bevestiging" size="lg" classNames={['rvo-status-icon-bevestiging']} />
                   <div className="rvo-alert-text">
                     <p>This is an example of a succes alert with a button.</p>
-                    <button className="utrecht-button utrecht-button--primary-action rvo-button--sm">Button</button>
+                    <Button kind="primary" size="sm">
+                      Button
+                    </Button>
                   </div>
                 </div>
                 <div className="rvo-alert rvo-alert--succes">

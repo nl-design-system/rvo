@@ -11,6 +11,7 @@ export interface IButtonProps {
   kind?: string;
   size?: string;
   textContent: string;
+  children?: React.ReactNode;
   active?: boolean;
   busy?: boolean;
   focus?: boolean;
@@ -69,9 +70,14 @@ export const defaultArgs: IButtonProps = {
   focus: false,
   focusVisible: false,
   hover: false,
-  textContent: 'Button',
+  textContent: '',
   showIcon: 'no',
   icon: iconOptions[0],
+};
+
+export const exampleArgs = {
+  ...defaultArgs,
+  textContent: 'Button',
 };
 
 export const Button: React.FC<IButtonProps> = ({
@@ -84,6 +90,7 @@ export const Button: React.FC<IButtonProps> = ({
   focusVisible = defaultArgs.focusVisible,
   hover = defaultArgs.hover,
   textContent = defaultArgs.textContent,
+  children,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   classNames = [],
@@ -122,6 +129,7 @@ export const Button: React.FC<IButtonProps> = ({
     >
       {showIcon === 'before' && iconMarkup}
       {textContent}
+      {children}
       {showIcon === 'after' && iconMarkup}
     </ButtonUtrecht>
   );
@@ -130,22 +138,22 @@ export const Button: React.FC<IButtonProps> = ({
 export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
   <div>
     <p>
-      <Button {...buttonArgs} kind="primary" />
+      <Button textContent="Button" {...buttonArgs} kind="primary" />
     </p>
     <p>
-      <Button {...buttonArgs} kind="secondary" />
+      <Button textContent="Button" {...buttonArgs} kind="secondary" />
     </p>
     <p>
-      <Button {...buttonArgs} kind="tertiary" />
+      <Button textContent="Button" {...buttonArgs} kind="tertiary" />
     </p>
     <p>
-      <Button {...buttonArgs} kind="quaternary" />
+      <Button textContent="Button" {...buttonArgs} kind="quaternary" />
     </p>
     <p>
-      <Button {...buttonArgs} kind="warning-subtle" />
+      <Button textContent="Button" {...buttonArgs} kind="warning-subtle" />
     </p>
     <p>
-      <Button {...buttonArgs} kind="warning" />
+      <Button textContent="Button" {...buttonArgs} kind="warning" />
     </p>
   </div>
 );
