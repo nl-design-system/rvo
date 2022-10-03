@@ -44,6 +44,26 @@
     margin-block-start: 0;
   }
 
+  /* @LOGIN OPTIONS */
+
+  .rvo-login-options {
+    display: grid;
+    gap: var(--rvo-space-xl);
+    grid-template-columns: 4fr 3fr 3fr;
+  }
+
+  .rvo-login-option-img--e-herkenning {
+    max-height: 40px;
+  }
+
+  .rvo-login-option-img--digid {
+    max-height: 40px;
+  }
+
+  .rvo-button-group--left-aligned.rvo-button-group :last-child {
+    margin-inline-start: 0;
+  }
+
   /* @HERO */
 
   .rvo-hero {
