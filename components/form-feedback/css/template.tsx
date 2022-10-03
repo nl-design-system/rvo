@@ -5,6 +5,7 @@
 import { FormFieldDescription } from '@utrecht/component-library-react';
 import React from 'react';
 import './index.scss';
+import { Icon } from '../../icon/css/template';
 
 interface IFeedbackProps {
   text: string;
@@ -31,7 +32,7 @@ export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text
         warning
         className="rvo-form-feedback rvo-form-feedback--warning rvo-layout-row rvo-layout-gap--sm"
       >
-        <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--md utrecht-icon"></div>
+        <Icon icon="waarschuwing" size="md" classNames={['rvo-status-icon-waarschuwing']} />
         {text}
       </FormFieldDescription>
     );
@@ -41,7 +42,7 @@ export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text
         invalid
         className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm"
       >
-        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md utrecht-icon"></div>
+        <Icon icon="foutmelding" size="md" classNames={['rvo-status-icon-foutmelding']} />
         {text}
       </FormFieldDescription>
     );
