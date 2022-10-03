@@ -14,7 +14,7 @@
         "color": {}
       },
       "padding-inline-start": {
-        "value": "40px"
+        "value": "{rvo.space.lg}"
       }
     }
   }

@@ -11,7 +11,7 @@
       "marker": {
         "color": {}
       },
-      "padding-inline-start": { "value": "{rvo.space.2xl}" }
+      "padding-inline-start": { "value": "{rvo.space.sm}" }
     }
   }
 }
