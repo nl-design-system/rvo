@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, options as iconOptions } from '../../icon/css/template';
