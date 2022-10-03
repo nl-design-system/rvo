@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
+import { Icon } from '../../icon/css/template';
 import validateHTML from '../../utils/validateHTML';
 
 export interface ITableColumnProps {
@@ -78,15 +79,17 @@ export const Table: React.FC<ITableProps> = ({
               >
                 {column.label}
                 {column.sortable && column.sortDirection.length > 0 && (
-                  <div
-                    className={clsx(
-                      'rvo-icon',
-                      column.sortDirection === 'ASC' && 'rvo-icon-delta-omhoog',
-                      column.sortDirection === 'DESC' && 'rvo-icon-delta-omlaag',
-                      'rvo-icon--sm',
-                      'rvo-icon--hemelblauw',
-                    )}
-                  ></div>
+                  <Icon
+                    size="sm"
+                    color="hemelblauw"
+                    icon={
+                      column.sortDirection === 'ASC'
+                        ? 'rvo-icon-delta-omhoog'
+                        : column.sortDirection === 'DESC'
+                        ? 'rvo-icon-delta-omlaag'
+                        : ''
+                    }
+                  />
                 )}
               </th>
             ))}

@@ -4,6 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import { Icon } from '../../icon/css/template';
 
 interface IBreadcrumbItem {
   label: string;
@@ -44,7 +45,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items = defaultArgs.it
       {items.map((item, index) => {
         // Parse divider markup
         let dividerMarkup = index > 0 && index < items.length && (
-          <div className={clsx('rvo-icon', 'rvo-icon-delta-naar-rechts', `rvo-icon--xs`, 'rvo-icon--hemelblauw')}></div>
+          <Icon color="hemelblauw" icon="delta-naar-rechts" size="xs" />
         );
 
         // Parse item markup

@@ -5,7 +5,7 @@
 import { Button as ButtonUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
-import { iconNames as iconOptions } from '../../icon/css/template';
+import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 
 export interface IButtonProps {
   kind?: string;
@@ -88,9 +88,7 @@ export const Button: React.FC<IButtonProps> = ({
   icon = defaultArgs.icon,
   classNames = [],
 }) => {
-  const iconMarkup = (
-    <div className={clsx(`rvo-button__icon--${kind}-action`, 'rvo-icon', `rvo-icon-${icon}`, 'rvo-icon--md')}></div>
-  );
+  const iconMarkup = <Icon icon={icon} size="md" classNames={[`rvo-button__icon--${kind}-action`]} />;
   return (
     <ButtonUtrecht
       className={clsx(

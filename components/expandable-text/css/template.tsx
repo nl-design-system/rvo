@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { Icon } from '../../icon/css/template';
 import validateHTML from '../../utils/validateHTML';
 
 interface IExpandableTextProps {
@@ -42,7 +43,7 @@ export const ExpandableText: React.FC<IExpandableTextProps> = ({
   return (
     <details className="rvo-expandable-text" open={open || null}>
       <summary className="rvo-expandable-text__summary">
-        <div className="rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"></div>
+        <Icon color="hemelblauw" size="md" icon="info" />
         {title}
       </summary>
       {textMarkup}
