@@ -93,8 +93,8 @@ export const Button: React.FC<IButtonProps> = ({
     <ButtonUtrecht
       className={clsx(
         classNames,
-        kind === 'tertiary' && 'rvo-button--tertiary-action',
-        kind === 'quaternary' && 'rvo-button--quaternary-action',
+        kind === 'tertiary' && 'utrecht-button--rvo-tertiary-action',
+        kind === 'quaternary' && 'utrecht-button--rvo-quaternary-action',
         active && 'utrecht-button--active',
         busy && 'utrecht-button--busy',
         hover && 'utrecht-button--hover',
@@ -104,13 +104,13 @@ export const Button: React.FC<IButtonProps> = ({
         size === 'xs' && 'rvo-layout-gap--xs',
         size === 'sm' && 'rvo-layout-gap--sm',
         size === 'md' && 'rvo-layout-gap--md',
-        size === 'xs' && 'rvo-button--xs',
-        size === 'sm' && 'rvo-button--sm',
-        size === 'md' && 'rvo-button--md',
+        size === 'xs' && 'utrecht-button--rvo-xs',
+        size === 'sm' && 'utrecht-button--rvo-sm',
+        size === 'md' && 'utrecht-button--rvo-md',
       )}
       disabled={disabled || null}
       appearance={
-        kind === 'primary'
+        kind === 'primary' || kind === 'warning'
           ? 'primary-action-button'
           : kind === 'secondary'
           ? 'secondary-action-button'
