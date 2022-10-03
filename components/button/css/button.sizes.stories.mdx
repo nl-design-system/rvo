@@ -16,6 +16,20 @@ import "./index.scss";
 
 # Button sizes
 
+### Extra small
+
+<Canvas>
+  <Story
+    name="Extra small"
+    args={{
+      kind: "primary",
+      size: "xs",
+    }}
+  >
+    {AllButtonKinds.bind({})}
+  </Story>
+</Canvas>
+
 ### Small
 
 <Canvas>
@@ -23,7 +37,7 @@ import "./index.scss";
     name="Small"
     args={{
       kind: "primary",
-      size: "small",
+      size: "sm",
     }}
   >
     {AllButtonKinds.bind({})}

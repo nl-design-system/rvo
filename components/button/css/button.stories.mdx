@@ -1,6 +1,6 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button, defaultArgs } from "./template";
+import { argTypes, Button, exampleArgs } from "./template";
 import "./index.scss";
 
 <Meta
@@ -17,7 +17,7 @@ import "./index.scss";
 # Button
 
 <Canvas>
-  <Story name="Button" args={defaultArgs}>
+  <Story name="Button" args={exampleArgs}>
     {Button.bind({})}
   </Story>
 </Canvas>

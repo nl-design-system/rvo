@@ -1,6 +1,6 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button } from "./template";
+import { argTypes, Button, exampleArgs } from "./template";
 import "./index.scss";
 
 <Meta
@@ -19,12 +19,7 @@ import "./index.scss";
 ## Primary
 
 <Canvas>
-  <Story
-    name="Primary"
-    args={{
-      kind: "primary",
-    }}
-  >
+  <Story name="Primary" args={{ ...exampleArgs, kind: "primary" }}>
     {Button.bind({})}
   </Story>
 </Canvas>
@@ -35,6 +30,7 @@ import "./index.scss";
   <Story
     name="Secondary"
     args={{
+      ...exampleArgs,
       kind: "secondary",
     }}
   >
@@ -48,6 +44,7 @@ import "./index.scss";
   <Story
     name="Tertiary"
     args={{
+      ...exampleArgs,
       kind: "tertiary",
     }}
   >
@@ -61,6 +58,7 @@ import "./index.scss";
   <Story
     name="Quaternary"
     args={{
+      ...exampleArgs,
       kind: "quaternary",
     }}
   >
@@ -74,6 +72,7 @@ import "./index.scss";
   <Story
     name="Warning subtle"
     args={{
+      ...exampleArgs,
       kind: "warning-subtle",
     }}
   >
@@ -87,6 +86,7 @@ import "./index.scss";
   <Story
     name="Warning"
     args={{
+      ...exampleArgs,
       kind: "warning",
     }}
   >

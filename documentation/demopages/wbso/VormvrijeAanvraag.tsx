@@ -73,7 +73,6 @@ const VormvrijeAanvraag = () => {
                     <Button
                       kind="secondary"
                       size="md"
-                      textContent="Opslaan en sluiten"
                       active={false}
                       busy={false}
                       focus={false}
@@ -82,12 +81,11 @@ const VormvrijeAanvraag = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Opslaan en sluiten
                     </Button>
                     <Button
                       kind="primary"
                       size="md"
-                      textContent="Opslaan en verder"
                       active={false}
                       busy={false}
                       focus={false}
@@ -96,7 +94,7 @@ const VormvrijeAanvraag = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Opslaan en verder
                     </Button>
                   </div>
                 </LayoutColumnRow>
