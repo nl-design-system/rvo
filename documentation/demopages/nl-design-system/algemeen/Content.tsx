@@ -57,7 +57,7 @@ const Content = () => {
               <OrderedListItem>Second item</OrderedListItem>
               <OrderedListItem>Third item</OrderedListItem>
             </OrderedList>
-            <blockquote className="rvo-blockquote">
+            <blockquote className="utrecht-blockquote">
               <strong>Dit is een blockquote.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland.
