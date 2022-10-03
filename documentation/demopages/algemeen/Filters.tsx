@@ -3,6 +3,7 @@ import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-fiel
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
@@ -283,13 +284,13 @@ const Filters = () => {
                           <span className="rvo-tag rvo-tag--default rvo-tag--sm">
                             Agro en visserij
                             <a href="#">
-                              <div className="rvo-icon rvo-icon-kruis rvo-icon--sm rvo-icon--zwart"></div>
+                              <Icon icon="kruis" color="zwart" size="sm" />
                             </a>
                           </span>
                           <span className="rvo-tag rvo-tag--default rvo-tag--sm">
                             Milieusector
                             <a href="#">
-                              <div className="rvo-icon rvo-icon-kruis rvo-icon--sm rvo-icon--zwart"></div>
+                              <Icon icon="kruis" color="zwart" size="sm" />
                             </a>
                           </span>
                           {/* <Button
@@ -428,19 +429,19 @@ const Filters = () => {
                   <Heading type="h3" textContent="RVO"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Over ons"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Contact"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Pers"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Zaken regelen bij RVO"></Link>
                 </li>
               </ul>
@@ -449,19 +450,19 @@ const Filters = () => {
                   <Heading type="h3" textContent="Over deze site"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Privacy"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Cookies en anti-spam"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Toegankelijkheid"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Proclaimer"></Link>
                 </li>
               </ul>
@@ -470,19 +471,19 @@ const Filters = () => {
                   <Heading type="h3" textContent="Snel naar"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Onderwerpen A t/m Z"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Klantenpanel"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Documenten en publicaties"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Overheidspublicaties en auteursrecht"></Link>
                 </li>
               </ul>
@@ -491,19 +492,19 @@ const Filters = () => {
                   <Heading type="h3" textContent="Blijf op de hoogte"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Social media"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Higherlevel.nl ondernemersforum"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="RSS"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
-                  <div className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit"></div>
+                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
                   <Link url="#" content="Gratis nieuwsbrief"></Link>
                 </li>
               </ul>

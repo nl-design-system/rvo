@@ -84,9 +84,9 @@ export const Table: React.FC<ITableProps> = ({
                     color="hemelblauw"
                     icon={
                       column.sortDirection === 'ASC'
-                        ? 'rvo-icon-delta-omhoog'
+                        ? 'delta-omhoog'
                         : column.sortDirection === 'DESC'
-                        ? 'rvo-icon-delta-omlaag'
+                        ? 'delta-omlaag'
                         : ''
                     }
                   />

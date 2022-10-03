@@ -1,6 +1,7 @@
 import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
@@ -118,7 +119,7 @@ const Samenvatting = () => {
                 </div>
 
                 <div className="rvo-alert rvo-alert--warning">
-                  <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--lg"></div>
+                  <Icon icon="waarschuwing" classNames={['rvo-status-icon-waarschuwing']} size="lg" />
                   <div className="rvo-alert-text">
                     <p>
                       U kunt het vissersvaartuig aanschaffen na uw aanvraag voor subsidie. Dat betekent dat ook betaling

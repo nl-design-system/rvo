@@ -1,5 +1,6 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import '../common/style.scss';
@@ -23,7 +24,7 @@ const Table = () => {
                       Title
                     </th>
                     <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                      Text <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
+                      Text <Icon icon="delta-omlaag" size="sm" color="hemelblauw" />
                     </th>
                     <th scope="col" className="rvo-table-header rvo-table-header--numeric">
                       Price ($)

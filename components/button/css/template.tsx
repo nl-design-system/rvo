@@ -88,7 +88,7 @@ export const Button: React.FC<IButtonProps> = ({
   icon = defaultArgs.icon,
   classNames = [],
 }) => {
-  const iconMarkup = <Icon icon={icon} size="md" classNames={[`rvo-button__icon--${kind}-action`]} />;
+  const iconMarkup = <Icon icon={icon} size="md" />;
   return (
     <ButtonUtrecht
       className={clsx(
