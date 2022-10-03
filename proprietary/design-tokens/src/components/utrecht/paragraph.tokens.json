@@ -10,9 +10,9 @@
       "margin-block-end": { "value": "{rvo.space.md}" },
       "lead": {
         "color": {},
-        "font-size": {},
+        "font-size": { "value": "{rvo.font-size.lg}" },
         "font-weight": {},
-        "line-height": {}
+        "line-height": { "value": "{rvo.line-height.md}" }
       }
     }
   }
