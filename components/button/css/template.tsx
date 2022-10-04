@@ -95,6 +95,22 @@ export const Button: React.FC<IButtonProps> = ({
   classNames = [],
 }) => {
   const iconMarkup = <Icon icon={icon} size="md" />;
+
+  let appearance: string = null;
+  switch (kind) {
+    case 'primary':
+    case 'warning':
+      appearance = 'primary-action-button';
+      break;
+    case 'secondary':
+      appearance = 'secondary-action-button';
+      break;
+    case 'subtle':
+    case 'warning-subtle':
+      appearance = 'subtle-button';
+      break;
+  }
+
   return (
     <ButtonUtrecht
       className={clsx(
@@ -115,15 +131,7 @@ export const Button: React.FC<IButtonProps> = ({
         size === 'md' && 'utrecht-button--rvo-md',
       )}
       disabled={disabled || null}
-      appearance={
-        kind === 'primary' || kind === 'warning'
-          ? 'primary-action-button'
-          : kind === 'secondary'
-          ? 'secondary-action-button'
-          : kind === 'subtle' || kind === 'warning-subtle'
-          ? 'subtle-button'
-          : null
-      }
+      appearance={appearance}
       hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : null}
     >
       {showIcon === 'before' && iconMarkup}
