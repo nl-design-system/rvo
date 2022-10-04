@@ -8,6 +8,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 export interface ITextInputProps {
+  key?: string;
   id?: string;
   disabled?: boolean;
   focus?: boolean;
