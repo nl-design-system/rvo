@@ -66,33 +66,34 @@ export const Table: React.FC<ITableProps> = ({
         <caption className="rvo-caption">{description}</caption>
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
-            {columns.map((column, index) => (
-              <th
-                key={index}
-                scope="col"
-                className={clsx(
-                  'rvo-table-header',
-                  column.sortable && 'rvo-table-header--sortable',
-                  column.sortable && column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
-                  column.type === 'numeric' && 'rvo-table-header--numeric',
-                )}
-              >
-                {column.label}
-                {column.sortable && column.sortDirection.length > 0 && (
-                  <Icon
-                    size="sm"
-                    color="hemelblauw"
-                    icon={
-                      column.sortDirection === 'ASC'
-                        ? 'delta-omhoog'
-                        : column.sortDirection === 'DESC'
-                        ? 'delta-omlaag'
-                        : ''
-                    }
-                  />
-                )}
-              </th>
-            ))}
+            {columns.map((column, index) => {
+              let icon: string;
+              if (column.sortDirection === 'ASC') {
+                icon = 'delta-omhoog';
+              } else if (column.sortDirection === 'DESC') {
+                icon = 'delta-omlaag';
+              } else {
+                icon = '';
+              }
+
+              return (
+                <th
+                  key={index}
+                  scope="col"
+                  className={clsx(
+                    'rvo-table-header',
+                    column.sortable && 'rvo-table-header--sortable',
+                    column.sortable && column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+                    column.type === 'numeric' && 'rvo-table-header--numeric',
+                  )}
+                >
+                  {column.label}
+                  {column.sortable && column.sortDirection.length > 0 && (
+                    <Icon size="sm" color="hemelblauw" icon={icon} />
+                  )}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody className="rvo-table-body">
