@@ -20,7 +20,6 @@ export interface IButtonProps {
   disabled?: boolean;
   showIcon?: string;
   icon?: string;
-  children?: React.ReactNode;
   classNames?: string[];
 }
 
