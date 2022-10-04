@@ -8,6 +8,7 @@ import React from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 
 export interface IButtonProps {
+  key?: string | number;
   kind?: string;
   size?: string;
   textContent: string;
