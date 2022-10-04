@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import React from 'react';
 import { ITextInputFieldProps, TextInputField } from '../../form-field/css/textinput-field.template';
 
@@ -10,6 +11,7 @@ interface IFieldsetProps {
   legend: string;
   disabled?: boolean;
   fields?: ITextInputFieldProps[];
+  hideFields?: boolean;
   children?: React.ReactNode;
 }
 
@@ -24,6 +26,9 @@ export const argTypes = {
     type: {
       name: 'array',
     },
+  },
+  hideFields: {
+    control: 'boolean',
   },
 };
 
@@ -53,16 +58,21 @@ export const defaultArgs: IFieldsetProps = {
   legend: 'Fieldset legend',
   disabled: false,
   fields: defaultFields,
+  hideFields: false,
 };
 
 export const Fieldset: React.FC<IFieldsetProps> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,
   fields,
+  hideFields,
   children,
 }) => {
   return (
-    <FieldsetUtrecht className="rvo-layout-column rvo-layout-gap--xl" disabled={disabled || null}>
+    <FieldsetUtrecht
+      className={clsx('rvo-layout-column rvo-layout-gap--xl', hideFields && 'utrecht-form-fieldset--hidden')}
+      disabled={disabled || null}
+    >
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {fields &&
         fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />)}
