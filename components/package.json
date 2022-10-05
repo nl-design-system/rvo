@@ -8,6 +8,9 @@
     "nl-design-system"
   ],
   "private": true,
+  "scripts": {
+    "lint": "tsc --noEmit --project tsconfig.json"
+  },
   "devDependencies": {
     "@nl-rvo/storybook": "file:../packages/storybook",
     "@storybook/addon-docs": "6.5.9",
