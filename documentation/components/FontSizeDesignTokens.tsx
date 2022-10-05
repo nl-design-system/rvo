@@ -1,5 +1,4 @@
 import styled from '@emotion/styled/macro';
-import React from 'react';
 import { path2css } from './helpers';
 
 type FontSizeDesignTokensProps = {

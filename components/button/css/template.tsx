@@ -11,7 +11,7 @@ export interface IButtonProps {
   key?: string | number;
   kind?: string;
   size?: string;
-  textContent: string;
+  textContent?: string;
   children?: React.ReactNode;
   active?: boolean;
   busy?: boolean;

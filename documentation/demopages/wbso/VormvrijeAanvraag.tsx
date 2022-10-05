@@ -58,7 +58,6 @@ const VormvrijeAanvraag = () => {
                   <LayoutColumnRow row={false} size="md">
                     <Fieldset legend="">
                       <RadioButtonField
-                        layout="horizontal"
                         name="radio-buttons"
                         labelText="Wilt u een vormvrije aanvraag indienen?"
                         helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."

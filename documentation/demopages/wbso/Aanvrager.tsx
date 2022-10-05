@@ -90,7 +90,6 @@ const Aanvrager = () => {
                     </Fieldset>
                     <Fieldset legend="Organisatie">
                       <RadioButtonField
-                        layout="horizontal"
                         name="radio-buttons"
                         labelText="U drijft een onderneming in de zin van de Wet IB of Wet Vpb en bent geen publieke kennisinstelling?"
                         helperText="Bent u geen ondernemer in de zin van de Wet IB (Inkomstenbelasting 2001) of Wet VpB
@@ -110,7 +109,6 @@ const Aanvrager = () => {
                     </Fieldset>
                     <Fieldset legend="S&O-uurloon">
                       <RadioButtonField
-                        layout="horizontal"
                         name="radio-buttons"
                         labelText="Heeft u in 2020 S&O-werkzaamheden verricht waarvoor u een S&O-verklaring heeft ontvangen?"
                         warningText="Voor u geldt in 2022 een forfaitar uurloon van €29."
