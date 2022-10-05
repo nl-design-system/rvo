@@ -4,13 +4,12 @@
  */
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 interface IMaxWidthLayoutProps {
   size?: string;
   content?: string;
   className?: string | string[];
-  children?: React.ReactNode;
 }
 
 export const argTypes = {
@@ -28,7 +27,12 @@ export const defaultArgs: IMaxWidthLayoutProps = {
   content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
 };
 
-export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({ size, content, children, className = [] }) => {
+export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> = ({
+  size,
+  content,
+  children,
+  className = [],
+}) => {
   let parsedContent = content || children;
   if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
