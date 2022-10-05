@@ -3,14 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 interface ILayoutColumnRowProps {
   size?: string;
   row?: boolean;
   wrap?: boolean;
   alignToTop?: boolean;
-  children?: React.ReactNode;
 }
 
 export const argTypes = {
@@ -32,7 +31,13 @@ export const defaultArgs: ILayoutColumnRowProps = {
   wrap: false,
 };
 
-export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({ size, row, wrap, alignToTop, children }) => {
+export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>> = ({
+  size,
+  row,
+  wrap,
+  alignToTop,
+  children,
+}) => {
   return (
     <div
       className={clsx(

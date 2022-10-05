@@ -4,7 +4,7 @@
  */
 import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ITextInputFieldProps, TextInputField } from '../../form-field/css/textinput-field.template';
 
 interface IFieldsetProps {
@@ -12,7 +12,6 @@ interface IFieldsetProps {
   disabled?: boolean;
   fields?: ITextInputFieldProps[];
   hideFields?: boolean;
-  children?: React.ReactNode;
 }
 
 export const argTypes = {
@@ -61,7 +60,7 @@ export const defaultArgs: IFieldsetProps = {
   hideFields: false,
 };
 
-export const Fieldset: React.FC<IFieldsetProps> = ({
+export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,
   fields,

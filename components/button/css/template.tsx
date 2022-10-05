@@ -4,7 +4,7 @@
  */
 import { Button as ButtonUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 
 export interface IButtonProps {
@@ -12,7 +12,6 @@ export interface IButtonProps {
   kind?: string;
   size?: string;
   textContent?: string;
-  children?: React.ReactNode;
   active?: boolean;
   busy?: boolean;
   focus?: boolean;
@@ -80,7 +79,7 @@ export const exampleArgs = {
   textContent: 'Button',
 };
 
-export const Button: React.FC<IButtonProps> = ({
+export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   kind = defaultArgs.kind,
   size = defaultArgs.size,
   active = defaultArgs.active,

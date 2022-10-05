@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { FormField, FormLabel } from '@utrecht/component-library-react';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ExpandableText } from '../../expandable-text/css/template';
 import { FormFeedback } from '../../form-feedback/css/template';
 import validateHTML from '../../utils/validateHTML';
@@ -16,7 +16,6 @@ export interface IFieldProps {
   expandableHelperTextTitle?: string;
   warningText?: string;
   errorText?: string;
-  children?: React.ReactNode;
 }
 
 export const argTypes = {
@@ -43,7 +42,7 @@ export const defaultArgs: IFieldProps = {
   errorText: '',
 };
 
-export const Field: React.FC<IFieldProps> = ({
+export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   fieldId = defaultArgs.fieldId,
   labelText = defaultArgs.labelText,
   helperText,
