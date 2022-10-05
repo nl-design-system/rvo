@@ -55,7 +55,6 @@ const Formulier = () => {
 
                     <Fieldset legend="Options">
                       <RadioButtonField
-                        layout="vertical"
                         name="radio-buttons"
                         labelText="Radio buttons"
                         helperText="This is an helper text"
@@ -67,7 +66,6 @@ const Formulier = () => {
                         ]}
                       ></RadioButtonField>
                       <RadioButtonField
-                        layout="vertical"
                         name="radio-buttons-error"
                         labelText="Radio buttons invalid"
                         errorText="This is an error"
@@ -81,7 +79,6 @@ const Formulier = () => {
                       ></RadioButtonField>
 
                       <RadioButtonField
-                        layout="vertical"
                         name="radio-buttons-warning"
                         labelText="Radio buttons with warning"
                         warningText="This is a warning"
@@ -95,7 +92,6 @@ const Formulier = () => {
 
                       <CheckboxField
                         helperText="This is an helper text"
-                        layout="vertical"
                         labelText="Checkboxes"
                         invalid={false}
                         options={[
@@ -108,7 +104,6 @@ const Formulier = () => {
 
                       <CheckboxField
                         errorText="This is an error"
-                        layout="vertical"
                         labelText="Checkboxes with error"
                         invalid={true}
                         options={[
@@ -121,7 +116,6 @@ const Formulier = () => {
 
                       <CheckboxField
                         warningText="This is a warning"
-                        layout="vertical"
                         labelText="Checkboxes with a warning"
                         invalid={false}
                         options={[

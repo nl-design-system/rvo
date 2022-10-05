@@ -1,6 +1,5 @@
 import styled from '@emotion/styled/macro';
 import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
-import React from 'react';
 import { path2css } from './helpers';
 
 type SizeDesignTokensProps = {
