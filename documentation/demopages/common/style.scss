@@ -44,24 +44,35 @@
     margin-block-start: 0;
   }
 
+  /* @STICKY FOOTER */
+
+  .rvo-sticky-footer-container .rvo-layout-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .rvo-sticky-footer-main {
+    flex: 1 0 auto;
+  }
+
   /* @LOGIN OPTIONS */
 
   .rvo-login-options {
     display: grid;
-    gap: var(--rvo-space-xl);
-    grid-template-columns: 4fr 3fr 3fr;
+    gap: var(--rvo-space-2xl);
   }
 
   .rvo-login-option-img--e-herkenning {
-    max-height: 40px;
+    max-width: 150px;
   }
 
   .rvo-login-option-img--digid {
-    max-height: 40px;
+    max-width: 80px;
   }
 
-  .rvo-button-group--left-aligned.rvo-button-group :last-child {
-    margin-inline-start: 0;
+  .rvo-login-option-img--eu {
+    max-width: 100px;
   }
 
   /* @HERO */
@@ -116,6 +127,15 @@
     max-width: 50%;
     padding-block-end: var(--rvo-space-lg);
     padding-block-start: var(--rvo-space-lg);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+  }
+
+  /* @MAIN */
+
+  .rvo-main {
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
   }
@@ -989,15 +1009,17 @@
   /* @FOOTER */
 
   .rvo-footer {
-    background-color: var(--rvo-color-hemelblauw);
-    padding-inline-end: var(--rvo-space-lg);
-    padding-inline-start: var(--rvo-space-lg);
+    background-color: rgb(21 66 115);
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
   }
 
   .rvo-footer > .rvo-max-width-layout {
-    display: flex;
-    gap: var(--rvo-space-3xl);
-    justify-content: center;
+    display: grid;
+    gap: var(--rvo-space-xl);
+    justify-content: flex-start;
   }
 
   .rvo-footer-menu {
@@ -1007,8 +1029,8 @@
     list-style: none;
     margin-block-end: 0;
     margin-block-start: 0;
-    padding-block-end: var(--rvo-space-2xl);
-    padding-block-start: var(--rvo-space-2xl);
+    padding-block-end: 0;
+    padding-block-start: 0;
     padding-inline-start: 0;
   }
 
