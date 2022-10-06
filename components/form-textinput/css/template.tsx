@@ -19,6 +19,7 @@ export interface ITextInputProps {
   validation?: string;
   prefix?: string;
   suffix?: string;
+  size?: string;
 }
 
 export const argTypes = {
@@ -55,6 +56,10 @@ export const argTypes = {
   suffix: {
     control: 'text',
   },
+  size: {
+    options: ['sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs: ITextInputProps = {
@@ -70,6 +75,7 @@ export const defaultArgs: ITextInputProps = {
   validation: 'text',
   prefix: '',
   suffix: '',
+  size: 'lg',
 };
 
 export const TextInput: React.FC<ITextInputProps> = ({
@@ -85,6 +91,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   validation = defaultArgs.validation,
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
+  size = defaultArgs.size,
 }) => {
   const props = {
     id,
@@ -96,6 +103,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
       invalid && 'utrecht-textbox--invalid',
       readOnly && 'utrecht-textbox--readonly',
       required && 'utrecht-textbox--required',
+      size === 'sm' && 'utrecht-textbox--sm',
+      size === 'md' && 'utrecht-textbox--md',
     ),
     disabled: disabled || null,
     'aria-invalid': invalid || null,
@@ -113,7 +122,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
     const inputMarkup = <input type="text" {...props} />;
     if (prefix || suffix) {
       return (
-        <div className="rvo-layout-row rvo-layout-gap--md">
+        <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
           {prefix}
           {inputMarkup}
           {suffix}
