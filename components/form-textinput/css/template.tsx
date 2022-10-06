@@ -16,7 +16,9 @@ export interface ITextInputProps {
   inputType?: string;
   placeholder?: string;
   value?: string;
-  valueType?: string;
+  validation?: string;
+  prefix?: string;
+  suffix?: string;
 }
 
 export const argTypes = {
@@ -46,7 +48,13 @@ export const argTypes = {
   value: {
     control: 'text',
   },
-  valueType: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
+  validation: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
+  prefix: {
+    control: 'text',
+  },
+  suffix: {
+    control: 'text',
+  },
 };
 
 export const defaultArgs: ITextInputProps = {
@@ -59,7 +67,9 @@ export const defaultArgs: ITextInputProps = {
   inputType: 'text',
   placeholder: '',
   value: '',
-  valueType: 'text',
+  validation: 'text',
+  prefix: '',
+  suffix: '',
 };
 
 export const TextInput: React.FC<ITextInputProps> = ({
@@ -72,7 +82,9 @@ export const TextInput: React.FC<ITextInputProps> = ({
   inputType = defaultArgs.inputType,
   placeholder = defaultArgs.placeholder,
   value = defaultArgs.value,
-  valueType = defaultArgs.valueType,
+  validation = defaultArgs.validation,
+  prefix = defaultArgs.prefix,
+  suffix = defaultArgs.suffix,
 }) => {
   const props = {
     id,
@@ -91,16 +103,22 @@ export const TextInput: React.FC<ITextInputProps> = ({
     readOnly: readOnly || null,
     placeholder: placeholder || null,
     defaultValue: value,
-    ...((valueType === 'number' || valueType === 'currency') && {
+    ...((validation === 'number' || validation === 'currency') && {
       inputMode: 'numeric' as any,
-      pattern: valueType === 'currency' ? '[0-9.,]*' : '[0-9]*',
+      pattern: validation === 'currency' ? '[0-9.,]*' : '[0-9]*',
     }),
   };
 
   if (inputType === 'text') {
     const inputMarkup = <input type="text" {...props} />;
-    if (valueType === 'currency') {
-      return <div className="rvo-layout-row rvo-layout-gap--md">€{inputMarkup}</div>;
+    if (prefix || suffix) {
+      return (
+        <div className="rvo-layout-row rvo-layout-gap--md">
+          {prefix}
+          {inputMarkup}
+          {suffix}
+        </div>
+      );
     } else {
       return inputMarkup;
     }
