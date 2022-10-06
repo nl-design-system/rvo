@@ -12,7 +12,7 @@ import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
-import { Heading1, Link } from '@utrecht/component-library-react';
+import { ButtonGroup, Heading1, Link } from '@utrecht/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Formulier = () => {
@@ -142,8 +142,7 @@ const Formulier = () => {
                     <Fieldset legend="Other">
                       <FileInputField labelText="File" />
                     </Fieldset>
-
-                    <div className="rvo-button-group">
+                    <ButtonGroup className="utrecht-button-group--horizontal">
                       <Button
                         kind="secondary"
                         size="md"
@@ -170,7 +169,7 @@ const Formulier = () => {
                       >
                         Primary action
                       </Button>
-                    </div>
+                    </ButtonGroup>
                   </form>
                 </LayoutColumnRow>
               </div>

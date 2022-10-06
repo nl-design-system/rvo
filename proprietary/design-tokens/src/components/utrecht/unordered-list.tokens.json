@@ -6,12 +6,12 @@
       "item": {
         "margin-block-start": {},
         "margin-block-end": {},
-        "padding-inline-start": { "value": "{rvo.space.xs}" }
+        "padding-inline-start": { "value": "{rvo.space.2xs}" }
       },
       "marker": {
         "color": {}
       },
-      "padding-inline-start": { "value": "{rvo.space.sm}" }
+      "padding-inline-start": { "value": "40px" }
     }
   }
 }

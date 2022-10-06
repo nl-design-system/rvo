@@ -9,6 +9,7 @@ import {
   OrderedList,
   OrderedListItem,
   Paragraph,
+  Strong,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
@@ -25,25 +26,25 @@ const Content = () => {
           <div className="rvo-content">
             <Heading1>Heading 1</Heading1>
             <Paragraph lead className="utrecht-paragraph--distanced">
-              <span className="utrecht-emphasis--strong">Paragraph large.</span> De overheid zet zich in voor een
-              uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor uit. En de taak om dit uit te
-              voeren ligt bij RVO: de Rijksdienst voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
+              <Strong>Paragraph large.</Strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
+              ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
+              voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
               <Link href="#">Dit is een link.</Link> Tussen bedrijven, kennis- en financiële instellingen, ambassades en
               lokale overheden.
             </Paragraph>
             <Heading2>Heading 2</Heading2>
             <Paragraph className="utrecht-paragraph--distanced">
-              <span className="utrecht-emphasis--strong">Paragraph medium.</span> De overheid zet zich in voor een
-              uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor uit. En de taak om dit uit te
-              voeren ligt bij RVO: de Rijksdienst voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
+              <Strong>Paragraph medium.</Strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
+              ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
+              voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
               <Link href="#">Dit is een link.</Link> Tussen bedrijven, kennis- en financiële instellingen, ambassades en
               lokale overheden.
             </Paragraph>
             <Heading3>Heading 3</Heading3>
             <Paragraph className="utrecht-paragraph--small utrecht-paragraph--distanced">
-              <span className="utrecht-emphasis--strong">Paragraph small.</span> De overheid zet zich in voor een
-              uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor uit. En de taak om dit uit te
-              voeren ligt bij RVO: de Rijksdienst voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
+              <Strong>Paragraph small.</Strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
+              ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
+              voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
               <Link href="#">Dit is een link.</Link> Tussen bedrijven, kennis- en financiële instellingen, ambassades en
               lokale overheden.
             </Paragraph>
