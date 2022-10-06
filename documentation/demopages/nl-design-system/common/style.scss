@@ -1,38 +1,10 @@
-@use "normalize.css/normalize";
-@use "mixins";
-@use "overrides";
+/* RVO temp styling */
+@use "rvo/progress_tracker";
+@use "rvo/form";
+@use "rvo/spacers";
 
-.rvo-nl-demo-page {
-  @include mixins.typography;
-  @include mixins.blockquote;
-
-  // @include mixins.body; /* Body can't be reached from here */
-
-  @include mixins.menu;
-  @include mixins.form;
-
-  // @include mixins.data;
-  // @include mixins.table;
-  // @include mixins.alerts;
-  // @include mixins.submenu;
-  // @include mixins.search;
-
-  @include mixins.form-layout;
-  @include mixins.spacers;
-
-  // @include mixins.date;
-
-  @include mixins.breadcrumbs;
-
-  // @include mixins.button;
-  // @include mixins.filters;
-  // @include mixins.tags;
-  // @include mixins.results;
-  // @include mixins.footer;
-
-  @include mixins.layout-resets;
-
-  // @include mixins.intro;
-
-  @include mixins.responsive;
-}
+/* Component patches
+   Patch files will be removed when components have been updated and released */
+@use "patches/breadcrumbs";
+@use "patches/button-group";
+@use "patches/link";
