@@ -52,7 +52,7 @@ const Formulier = () => {
                       />
                       <TextInputField labelText="Text disabled" disabled={true} />
                       <TextInputField labelText="Text disabled with value" disabled={true} value="Value" />
-                      <TextInputField labelText="Number" valueType="number" />
+                      <TextInputField labelText="Number" validation="number" />
                       <TextInputField labelText="Textarea" inputType="textarea" />
                     </Fieldset>
 

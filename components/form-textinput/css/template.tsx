@@ -4,8 +4,8 @@
  */
 import './index.scss';
 import { Textarea, Textbox } from '@utrecht/component-library-react';
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
 
 export interface ITextInputProps {
   key?: string;

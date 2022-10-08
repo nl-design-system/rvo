@@ -152,18 +152,18 @@ const Project = () => {
                       ></RadioButtonField>
                       <TextInputField
                         labelText="Wat is dit EU-identificatienummer?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                       <TextInputField labelText="In welk land is het vaartuig dat u aanschaft geregistreerd in het EU-vlootregister?"></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <TextInputField
                         labelText="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                       <TextInputField
                         labelText="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                     </Fieldset>
 
