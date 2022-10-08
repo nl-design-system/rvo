@@ -50,7 +50,7 @@ const MijnZaken = () => {
               <div className="rvo-tmp-filters">
                 <Fieldset legend="">
                   <TextInputField labelText="Zoek op omschrijving"></TextInputField>
-                  <TextInputField labelText="Zoek op zaaknummer" valueType="numeric"></TextInputField>
+                  <TextInputField labelText="Zoek op zaaknummer" validation="numeric"></TextInputField>
                   <details className="rvo-tmp-filter">
                     <summary>
                       <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">

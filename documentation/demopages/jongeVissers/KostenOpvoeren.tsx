@@ -114,7 +114,7 @@ const KostenOpvoeren = () => {
                     <Fieldset legend="">
                       <TextInputField
                         labelText="Hoeveel kost het vissersvaartuig (exclusief btw)?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
@@ -136,7 +136,7 @@ const KostenOpvoeren = () => {
                         helperText="Uitgebreide uitleg over de subsidie."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                     </Fieldset>
 
