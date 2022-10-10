@@ -1,6 +1,7 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Logo } from "./template";
+import { Logo, LogoWithText } from "./template";
+import "./index.scss";
 
 <Meta
   title="CSS Components/Logo/Logo"
@@ -14,8 +15,34 @@ import { Logo } from "./template";
 
 # Logo
 
+Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo), [Specificaties logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/specificaties-logo) en [Logokleur](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/logokleuren).
+
+## Logo as image
+
 <Canvas>
-  <Story name="Logo">{Logo.bind({})}</Story>
+  <Story
+    name="Logo"
+    args={{
+      title: "Rijksdienst voor Ondernemend Nederland",
+      subtitle: "",
+    }}
+  >
+    {Logo.bind({})}
+  </Story>
+</Canvas>
+
+## Logo with text
+
+<Canvas>
+  <Story
+    name="Logo with text"
+    args={{
+      title: "Rijksdienst voor Ondernemend Nederland",
+      subtitle: "",
+    }}
+  >
+    {LogoWithText.bind({})}
+  </Story>
 </Canvas>
 
 ## Dependencies
