@@ -1,6 +1,4 @@
-.rvo-theme,
-.rvo-theme ::before,
-.rvo-theme ::after {
+.rvo-theme {
   --rvo-image-icon: url("favicon/icon.svg");
   --rvo-image-logo: url("logo.svg");
   --rvo-image-progress-tracker-completed-md: url("progress-tracker/progress-tracker-completed-md.svg");
