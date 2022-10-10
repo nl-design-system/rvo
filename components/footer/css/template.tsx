@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import React from 'react';
 import { Heading } from '../../heading/css/template';
 import { Link } from '../../link/css/template';
@@ -76,7 +77,7 @@ export const defaultArgs: IFooterProps = {
 
 export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }) => {
   return (
-    <footer className="rvo-footer">
+    <UtrechtPageFooter className="rvo-footer">
       <MaxWidthLayout size="lg">
         {columns.map((column, columnIndex) => (
           <ul key={columnIndex} className="rvo-footer-menu">
@@ -115,6 +116,6 @@ export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }
           </ul>
         ))}
       </MaxWidthLayout>
-    </footer>
+    </UtrechtPageFooter>
   );
 };
