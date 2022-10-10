@@ -24,7 +24,7 @@
     "color-hex-case": null,
     "color-no-invalid-hex": true,
     "comment-no-empty": true,
-    "custom-property-pattern": "^(rvo|utrecht)-[a-z0-9-]+$",
+    "custom-property-pattern": "^_?(rvo|utrecht)-[a-z0-9-]+$",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
     "declaration-block-no-duplicate-properties": true,
