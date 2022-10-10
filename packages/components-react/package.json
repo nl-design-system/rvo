@@ -45,7 +45,7 @@
     "@types/jest": "28.1.8",
     "@types/react": "18.0.17",
     "@types/testing-library__jest-dom": "5.14.5",
-    "@utrecht/component-library-react": "1.0.0-alpha.162",
+    "@utrecht/component-library-react": "1.0.0-alpha.164",
     "jest": "28.1.3",
     "jest-environment-jsdom": "28.1.3",
     "next": "12.2.3",
