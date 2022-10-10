@@ -41,7 +41,10 @@ Er is alleen een nadeel. Helaas wordt op dit moment de Assets library nog niet g
 Het is wel mogelijk om assets in de Assets library direct te linken. Bijvoorbeeld:
 
 ```html
-<img src="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@latest/images/logo.svg" class="rvo-logo rvo-header__logo-img" />
+<img
+  src="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@latest/images/logo.svg"
+  class="rvo-logo-img rvo-header__logo-img"
+/>
 ```
 
 We raden daarom op dit moment aan om de libraries met behulp van NPM te integreren.

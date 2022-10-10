@@ -1,0 +1,47 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-logo {
+  --_rvo-logo-emblem-inline-size: var(--rvo-logo-emblem-inline-size, calc(var(--rvo-logo-font-size, 1em) * 3.1415));
+
+  color: var(--rvo-logo-color);
+  display: grid;
+  font-family: var(--rvo-logo-font-family);
+  font-size: var(--rvo-logo-font-size, 1em);
+  gap: 0 var(--rvo-logo-gap, calc(var(--_rvo-logo-emblem-inline-size) / 4));
+  grid-auto-rows: var(--_rvo-logo-emblem-inline-size);
+  grid-template-areas: ". emblem ." ". emblem wordmark";
+  grid-template-columns: 1fr var(--_rvo-logo-emblem-inline-size) 1fr;
+  grid-template-rows: 1fr var(--_rvo-logo-emblem-inline-size);
+  line-height: var(--rvo-logo-line-height, 1);
+  min-block-size: calc(var(--rvo-logo-rows, 2) * var(--_rvo-logo-emblem-inline-size));
+}
+
+.rvo-logo__emblem {
+  align-items: center;
+  background-color: var(--rvo-logo-emblem-background-color);
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-area: emblem;
+  justify-content: end;
+}
+
+.rvo-logo__wordmark {
+  grid-area: wordmark;
+  max-inline-size: calc(210 / 14 * var(--rvo-logo-font-size, 1em));
+}
+
+.rvo-logo__subtitle {
+  font-style: italic;
+}
+
+.rvo-logo__title,
+.rvo-logo__subtitle {
+  /* reset margin of HTML <p> element */
+  margin-block-end: 0;
+  margin-block-start: 0;
+  white-space: pre-line;
+}
