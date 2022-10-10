@@ -75,6 +75,8 @@
         "project": [
           "components/tsconfig.json",
           "documentation/tsconfig.json",
+          "packages/components-react/tsconfig.json",
+          "packages/components-react/tsconfig.test.json",
           "packages/web-components-react/tsconfig.json",
           "packages/web-components-stencil/tsconfig.json",
           "packages/web-components-stencil/tsconfig.stencil.json"
