@@ -8,7 +8,7 @@ import React from 'react';
 
 interface IIconProps {
   icon: string;
-  size: string;
+  size?: string;
   color?: string;
   classNames?: string[];
 }
@@ -77,7 +77,7 @@ export const Icon: React.FC<IIconProps> = ({
         'utrecht-icon',
         'rvo-icon',
         `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`,
-        `rvo-icon--${size}`,
+        size && `rvo-icon--${size}`,
         {
           'rvo-icon--wit': color === 'wit',
           'rvo-icon--hemelblauw': color === 'hemelblauw',
