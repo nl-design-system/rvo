@@ -27,7 +27,7 @@
     "@utrecht/component-library-css": "1.0.0-alpha.355",
     "@utrecht/component-library-react": "1.0.0-alpha.164",
     "@utrecht/components": "1.0.0-alpha.316",
-    "eslint": "8.18.0",
+    "eslint": "8.25.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-json": "3.1.0",
