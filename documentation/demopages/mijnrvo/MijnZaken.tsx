@@ -10,8 +10,26 @@ import '../common/style.scss';
 
 const MijnZaken = () => {
   return (
-    <div className="rvo-demo-page">
+    <div className="rvo-demo-page rvo-demo-page--mijn-rvo">
       <Header />
+
+      <details className="rvo-responsive-menu">
+        <summary>
+          <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
+          <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
+        </summary>
+        <MenuBar
+          items={[
+            { label: 'Mijn zaken', icon: 'map', link: '#' },
+            { label: 'Mijn documenten', icon: 'document-blanco', link: '#' },
+            { label: 'Uitloggen', icon: '', link: '#', align: 'right' },
+          ]}
+          size="lg"
+          useIcons={true}
+          iconPlacement="before"
+          menuMaxWidth="md"
+        />
+      </details>
       <MenuBar
         items={[
           { label: 'Mijn zaken', icon: 'map', link: '#' },
@@ -92,88 +110,95 @@ const MijnZaken = () => {
                   </details>
                 </Fieldset>
               </div>
-              <table className="rvo-table">
-                <thead className="rvo-table-head">
-                  <tr className="rvo-table-row">
-                    <th scope="col" className="rvo-table-header">
-                      Omschrijving
-                    </th>
-                    <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                      Zaaknummer{' '}
-                      <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                    </th>
-                    <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                      Status zaak{' '}
-                      <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                    </th>
-                    <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                      Datum <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="rvo-table-body">
-                  <tr className="rvo-table-row">
-                    <td className="rvo-table-cell">
-                      <Link
-                        url="#"
-                        content="Gemeenschappelijke Marktordening 2023"
-                        showIcon="before"
-                        icon="delta-naar-rechts"
-                        iconSize="sm"
-                        noUnderline={true}
-                      ></Link>
-                    </td>
-                    <td className="rvo-table-cell">22292000001</td>
-                    <td className="rvo-table-cell">Bij u in bewerking</td>
-                    <td className="rvo-table-cell">03-08-2022</td>
-                  </tr>
-                  <tr className="rvo-table-row">
-                    <td className="rvo-table-cell">
-                      <Link
-                        url="#"
-                        content="POP3 Samenwerking Pilots gezonde kalverketen"
-                        showIcon="before"
-                        icon="delta-naar-rechts"
-                        iconSize="sm"
-                        noUnderline={true}
-                      ></Link>
-                    </td>
-                    <td className="rvo-table-cell">22269000022</td>
-                    <td className="rvo-table-cell">Bij u in bewerking </td>
-                    <td className="rvo-table-cell">03-08-2022</td>
-                  </tr>
-                  <tr className="rvo-table-row">
-                    <td className="rvo-table-cell">
-                      <Link
-                        url="#"
-                        content="Overheidsopdrachten R&N"
-                        showIcon="before"
-                        icon="delta-naar-rechts"
-                        iconSize="sm"
-                        noUnderline={true}
-                      ></Link>
-                    </td>
-                    <td className="rvo-table-cell">16148000014</td>
-                    <td className="rvo-table-cell">Beslissing genomen</td>
-                    <td className="rvo-table-cell">26-10-2021</td>
-                  </tr>
-                  <tr className="rvo-table-row">
-                    <td className="rvo-table-cell">
-                      <Link
-                        url="#"
-                        content="OverheidsOpdrachten NVLG"
-                        showIcon="before"
-                        icon="delta-naar-rechts"
-                        iconSize="sm"
-                        noUnderline={true}
-                      ></Link>
-                    </td>
-                    <td className="rvo-table-cell">16269000033</td>
-                    <td className="rvo-table-cell">Afgehandeld</td>
-                    <td className="rvo-table-cell">23-10-2019</td>
-                  </tr>
-                </tbody>
-              </table>
+              {/* 
+              
+              RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
+              Tabellen zijn om dingen te vergelijken en werken slecht repsonsive. Een lijst met items is een betere oplossing.
+              
+              <div className="rvo-table--responsive">
+                <table className="rvo-table">
+                  <thead className="rvo-table-head">
+                    <tr className="rvo-table-row">
+                      <th scope="col" className="rvo-table-header">
+                        Omschrijving
+                      </th>
+                      <th scope="col" className="rvo-table-header rvo-table-header--sortable">
+                        Zaaknummer{' '}
+                        <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
+                      </th>
+                      <th scope="col" className="rvo-table-header rvo-table-header--sortable">
+                        Status zaak{' '}
+                        <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
+                      </th>
+                      <th scope="col" className="rvo-table-header rvo-table-header--sortable">
+                        Datum <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="rvo-table-body">
+                    <tr className="rvo-table-row">
+                      <td className="rvo-table-cell">
+                        <Link
+                          url="#"
+                          content="Gemeenschappelijke Marktordening 2023"
+                          showIcon="before"
+                          icon="delta-naar-rechts"
+                          iconSize="sm"
+                          noUnderline={true}
+                        ></Link>
+                      </td>
+                      <td className="rvo-table-cell">22292000001</td>
+                      <td className="rvo-table-cell">Bij u in bewerking</td>
+                      <td className="rvo-table-cell">03-08-2022</td>
+                    </tr>
+                    <tr className="rvo-table-row">
+                      <td className="rvo-table-cell">
+                        <Link
+                          url="#"
+                          content="POP3 Samenwerking Pilots gezonde kalverketen"
+                          showIcon="before"
+                          icon="delta-naar-rechts"
+                          iconSize="sm"
+                          noUnderline={true}
+                        ></Link>
+                      </td>
+                      <td className="rvo-table-cell">22269000022</td>
+                      <td className="rvo-table-cell">Bij u in bewerking </td>
+                      <td className="rvo-table-cell">03-08-2022</td>
+                    </tr>
+                    <tr className="rvo-table-row">
+                      <td className="rvo-table-cell">
+                        <Link
+                          url="#"
+                          content="Overheidsopdrachten R&N"
+                          showIcon="before"
+                          icon="delta-naar-rechts"
+                          iconSize="sm"
+                          noUnderline={true}
+                        ></Link>
+                      </td>
+                      <td className="rvo-table-cell">16148000014</td>
+                      <td className="rvo-table-cell">Beslissing genomen</td>
+                      <td className="rvo-table-cell">26-10-2021</td>
+                    </tr>
+                    <tr className="rvo-table-row">
+                      <td className="rvo-table-cell">
+                        <Link
+                          url="#"
+                          content="OverheidsOpdrachten NVLG"
+                          showIcon="before"
+                          icon="delta-naar-rechts"
+                          iconSize="sm"
+                          noUnderline={true}
+                        ></Link>
+                      </td>
+                      <td className="rvo-table-cell">16269000033</td>
+                      <td className="rvo-table-cell">Afgehandeld</td>
+                      <td className="rvo-table-cell">23-10-2019</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> */}
             </div>
           </main>
         </MaxWidthLayout>
