@@ -1,23 +1,49 @@
-import '@nl-rvo/assets/fonts/index.css';
-import '@nl-rvo/assets/icons/index.css';
-import '@nl-rvo/assets/images/index.css';
-import '@nl-rvo/design-tokens/dist/index.css';
 import { defineCustomElements } from '@nl-rvo/web-components-stencil';
 import theme from './theme';
 import './preview.scss';
 import prettier from 'prettier/standalone';
 import prettierBabel from 'prettier/parser-babel';
+import * as ReactDOMServer from 'react-dom/server';
 
+import '@nl-rvo/assets/fonts/index.css';
+import '@nl-rvo/assets/icons/index.css';
+import '@nl-rvo/assets/images/index.css';
+import '@nl-rvo/design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
 
 defineCustomElements();
 
-// const statuses = {
-//   BETA: '#9F5E0F',
-//   STABLE: '#339900',
-//   DEPRECATED: '#f02c2c',
-//   'IN DEVELOPMENT': '#174050',
-// };
+// Configure @etchteam/storybook-addon-status
+const addonStatus = {
+  status: {
+    statuses: {
+      PRODUCTION: {
+        background: '#088008',
+        color: '#ffffff',
+        description:
+          'Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases.',
+      },
+      BETA: {
+        background: '#3065ee',
+        color: '#ffffff',
+        description:
+          'Used in production in a specific situation, evolving APIs based on feedback, breaking changes are still likely.',
+      },
+      ALPHA: {
+        background: '#e0bc2e',
+        color: '#000000',
+        description:
+          'Used in prototypes and in projects that are still in development, breaking changes occur frequently and are not communicated.',
+      },
+      'WORK IN PROGRESS': {
+        background: '#cc0000',
+        color: '#ffffff',
+        description:
+          'Do not use in production. Does not follow semantic versioning and any published packages are for internal use only.',
+      },
+    },
+  },
+};
 
 const previewTabs = {
   'storybook/docs/panel': { index: -1, title: 'Documentation' },
@@ -65,16 +91,21 @@ export const parameters = {
       state: 'open',
       language: 'html',
     },
-    transformSource: (input) => {
-      return prettier
-        .format(input, {
-          parser: 'babel',
-          plugins: [prettierBabel],
-        })
-        .replace(/;\s*$/, '')
-        .replace('=""', '');
+    transformSource: (src, storyContext) => {
+      // Ensure valid HTML in the Preview source
+      if (storyContext.component) {
+        return prettier
+          .format(ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args)), {
+            parser: 'babel',
+            plugins: [prettierBabel],
+          })
+          .replace(/\{\" \"\}/gm, ' ')
+          .replace(/(;)[^;]*$/g, '');
+      }
+      return src;
     },
   },
+  ...addonStatus,
   layout: 'fullscreen',
   html: {
     root: '#story',

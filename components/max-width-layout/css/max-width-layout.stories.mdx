@@ -1,4 +1,3 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import markdown from "../README.md";
 import { argTypes, defaultArgs, MaxWidthLayout } from "./template";
@@ -6,13 +5,13 @@ import "./index.scss";
 
 <Meta
   title="CSS Components/Layout/Max width layout"
+  component={MaxWidthLayout}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 <Canvas>

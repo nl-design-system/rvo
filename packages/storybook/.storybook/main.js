@@ -2,6 +2,7 @@
 module.exports = {
   core: {
     builder: 'webpack5',
+    disableTelemetry: true,
   },
   stories: [
     '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
@@ -10,9 +11,11 @@ module.exports = {
   features: {
     postcss: false,
     previewMdx2: true,
+    buildStoriesJson: true,
   },
+  framework: '@storybook/react',
   addons: [
-    '@etchteam/storybook-addon-status',
+    '@etchteam/storybook-addon-status/register',
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
     '@storybook/addon-controls',
@@ -24,6 +27,6 @@ module.exports = {
   webpackFinal: async (config) => {
     const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') == '/.s[ca]ss$/');
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
-    return config;
+    return { ...config, performance: { hints: false } };
   },
 };
