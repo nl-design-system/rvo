@@ -146,6 +146,11 @@ export default {
     WETBOEK: 'criminaliteit/wetboek.svg',
     WIET: 'criminaliteit/wiet.svg',
   },
+  CUSTOM: {
+    LANDSCHAPSELEMENT: 'custom/landschapselement.svg',
+    SPLITSEN_PERCEEL: 'custom/splitsen-perceel.svg',
+    SPLITSEN_WATER: 'custom/splitsen-water.svg',
+  },
   DIEREN: {
     DIERENTUIN: 'dieren/dierentuin.svg',
     EEND_ZWEMMEND_BIJ_RIET: 'dieren/eend-zwemmend-bij-riet.svg',

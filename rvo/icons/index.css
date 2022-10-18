@@ -136,6 +136,9 @@
   --rvo-icon-waterpijp: url("criminaliteit/waterpijp.svg");
   --rvo-icon-wetboek: url("criminaliteit/wetboek.svg");
   --rvo-icon-wiet: url("criminaliteit/wiet.svg");
+  --rvo-icon-landschapselement: url("custom/landschapselement.svg");
+  --rvo-icon-splitsen-perceel: url("custom/splitsen-perceel.svg");
+  --rvo-icon-splitsen-water: url("custom/splitsen-water.svg");
   --rvo-icon-dierentuin: url("dieren/dierentuin.svg");
   --rvo-icon-eend-zwemmend-bij-riet: url("dieren/eend-zwemmend-bij-riet.svg");
   --rvo-icon-fazant: url("dieren/fazant.svg");
@@ -3759,6 +3762,63 @@
 .rvo-icon-bg-wiet--before::before,
 .rvo-icon-bg-wiet--after::after {
   background-image: var(--rvo-icon-wiet);
+}
+
+.rvo-icon-landschapselement,
+.rvo-icon-landschapselement--before::before,
+.rvo-icon-landschapselement--after::after {
+  -webkit-mask-image: var(--rvo-icon-landschapselement);
+  mask-image: var(--rvo-icon-landschapselement);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon-bg-landschapselement,
+.rvo-icon-bg-landschapselement--before::before,
+.rvo-icon-bg-landschapselement--after::after {
+  background-image: var(--rvo-icon-landschapselement);
+}
+
+.rvo-icon-splitsen-perceel,
+.rvo-icon-splitsen-perceel--before::before,
+.rvo-icon-splitsen-perceel--after::after {
+  -webkit-mask-image: var(--rvo-icon-splitsen-perceel);
+  mask-image: var(--rvo-icon-splitsen-perceel);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon-bg-splitsen-perceel,
+.rvo-icon-bg-splitsen-perceel--before::before,
+.rvo-icon-bg-splitsen-perceel--after::after {
+  background-image: var(--rvo-icon-splitsen-perceel);
+}
+
+.rvo-icon-splitsen-water,
+.rvo-icon-splitsen-water--before::before,
+.rvo-icon-splitsen-water--after::after {
+  -webkit-mask-image: var(--rvo-icon-splitsen-water);
+  mask-image: var(--rvo-icon-splitsen-water);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon-bg-splitsen-water,
+.rvo-icon-bg-splitsen-water--before::before,
+.rvo-icon-bg-splitsen-water--after::after {
+  background-image: var(--rvo-icon-splitsen-water);
 }
 
 .rvo-icon-dierentuin,
