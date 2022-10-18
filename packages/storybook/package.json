@@ -23,12 +23,12 @@
   "devDependencies": {
     "@babel/core": "7.18.6",
     "@babel/preset-typescript": "7.18.6",
-    "@etchteam/storybook-addon-status": "4.2.1",
+    "@etchteam/storybook-addon-status": "4.2.2",
     "@nl-rvo/assets": "file:../../proprietary/assets",
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-css": "file:../web-components-css",
     "@nl-rvo/web-components-stencil": "file:../web-components-stencil",
-    "@percy/storybook": "4.3.3",
+    "@percy/storybook": "4.3.4",
     "@storybook/addon-a11y": "6.5.12",
     "@storybook/addon-controls": "6.5.12",
     "@storybook/addon-docs": "6.5.12",
@@ -50,11 +50,5 @@
     "sass-loader": "13.0.2",
     "style-loader": "2.0.0",
     "webpack": "5.74.0"
-  },
-  "resolutions": {
-    "webpack": "^5"
-  },
-  "overrides": {
-    "webpack": "^5"
   }
 }

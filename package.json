@@ -10,8 +10,8 @@
   ],
   "private": true,
   "engines": {
-    "node": "^16.13.0",
-    "npm": "^8"
+    "node": ">=16.14",
+    "npm": ">=8.3.0"
   },
   "workspaces": [
     "./documentation/",
@@ -49,7 +49,8 @@
     "stylelint": "14.9.1",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard-scss": "4.0.0",
-    "stylelint-order": "5.0.0"
+    "stylelint-order": "5.0.0",
+    "webpack": "5.74.0"
   },
   "scripts": {
     "build": "lerna run build",
@@ -84,5 +85,8 @@
   },
   "dependencies": {
     "http-server": "14.1.1"
+  },
+  "peerDependencies": {
+    "webpack": "*"
   }
 }
