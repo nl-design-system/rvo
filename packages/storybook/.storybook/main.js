@@ -13,7 +13,7 @@ module.exports = {
     previewMdx2: true,
     buildStoriesJson: true,
   },
-  typescript: { reactDocgen: false },
+  // typescript: { reactDocgen: false },
   framework: '@storybook/react',
   addons: [
     '@etchteam/storybook-addon-status/register',
