@@ -63,59 +63,63 @@ const MijnZaken = () => {
       <LayoutColumnRow size="3xl">
         <main>
           <div className=" rvo-table--w-filter rvo-table--mijn-zaken">
-            <details className="rvo-responsive-filters" open>
-              <summary className="rvo-responsive-filters-toggle">
-                Filters
-                <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-              </summary>
-              <div className="rvo-tmp-filters">
-                <Fieldset legend="">
-                  <TextInputField labelText="Zoek op omschrijving"></TextInputField>
-                  <TextInputField labelText="Zoek op zaaknummer" valueType="numeric"></TextInputField>
-                  <details className="rvo-tmp-filter">
-                    <summary>
-                      <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                        <label
-                          className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                          htmlFor="fieldId"
-                        >
-                          <span className="rvo-form-field__label-text">Status zaak</span>
-                        </label>
-                        <div className="rvo-select-wrapper">
-                          <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
-                            Maak een keuze
+            <div className="rvo-responsive-filter-wrapper">
+              <MaxWidthLayout size="md">
+                <details className="rvo-responsive-filters" open>
+                  <summary className="rvo-responsive-filters-toggle">
+                    Filters
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
+                  </summary>
+                  <div className="rvo-tmp-filters">
+                    <Fieldset legend="">
+                      <TextInputField labelText="Zoek op omschrijving"></TextInputField>
+                      <TextInputField labelText="Zoek op zaaknummer" valueType="numeric"></TextInputField>
+                      <details className="rvo-tmp-filter">
+                        <summary>
+                          <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                            <label
+                              className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
+                              htmlFor="fieldId"
+                            >
+                              <span className="rvo-form-field__label-text">Status zaak</span>
+                            </label>
+                            <div className="rvo-select-wrapper">
+                              <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
+                                Maak een keuze
+                              </div>
+                            </div>
                           </div>
+                        </summary>
+                        <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
+                          <label
+                            className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                            htmlFor="optionA"
+                          >
+                            <input type="checkbox" id="optionA" name="group" className="rvo-checkbox__input" value="" />
+                            Beslissing genomen
+                          </label>
+                          <label
+                            className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
+                            htmlFor="optionB"
+                          >
+                            <input type="checkbox" id="optionB" name="group" className="rvo-checkbox__input" value="" />
+                            Bij U in bewerking
+                          </label>
+                          <label
+                            className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                            htmlFor="optionC"
+                          >
+                            <input type="checkbox" id="optionC" name="group" className="rvo-checkbox__input" value="" />
+                            Afgehandeld
+                          </label>
                         </div>
-                      </div>
-                    </summary>
-                    <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
-                      <label
-                        className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                        htmlFor="optionA"
-                      >
-                        <input type="checkbox" id="optionA" name="group" className="rvo-checkbox__input" value="" />
-                        Beslissing genomen
-                      </label>
-                      <label
-                        className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
-                        htmlFor="optionB"
-                      >
-                        <input type="checkbox" id="optionB" name="group" className="rvo-checkbox__input" value="" />
-                        Bij U in bewerking
-                      </label>
-                      <label
-                        className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                        htmlFor="optionC"
-                      >
-                        <input type="checkbox" id="optionC" name="group" className="rvo-checkbox__input" value="" />
-                        Afgehandeld
-                      </label>
-                    </div>
-                  </details>
-                </Fieldset>
-              </div>
-            </details>
+                      </details>
+                    </Fieldset>
+                  </div>
+                </details>
+              </MaxWidthLayout>
+            </div>
             {/* 
               
               RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
