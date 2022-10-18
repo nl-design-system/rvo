@@ -1,4 +1,4 @@
-import { defineCustomElements } from '@nl-rvo/web-components-stencil';
+// import { defineCustomElements } from '@nl-rvo/web-components-stencil';
 import theme from './theme';
 import './preview.scss';
 import prettier from 'prettier/standalone';
@@ -11,7 +11,7 @@ import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
 
-defineCustomElements();
+// defineCustomElements();
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
