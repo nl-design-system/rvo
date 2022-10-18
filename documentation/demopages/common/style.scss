@@ -100,6 +100,47 @@
     display: none;
   }
 
+  .rvo-responsive-filters {
+    background-color: var(--rvo-color-lichtblauw-tint1);
+  }
+
+  .rvo-responsive-filters summary.rvo-responsive-filters-toggle {
+    align-items: center;
+    color: var(--rvo-color-donkerblauw);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: var(--rvo-font-size-lg);
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-xs);
+    justify-self: flex-end;
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-responsive-filters[open] > summary .rvo-icon-delta-omlaag {
+    display: none;
+  }
+
+  .rvo-responsive-filters > summary .rvo-icon-delta-omhoog {
+    display: none;
+  }
+
+  .rvo-responsive-filters[open] > summary .rvo-icon-delta-omhoog {
+    display: block;
+  }
+
+  /* @ RESPONSIVE FILTERS */
+
+  .rvo-responsive-filters > .rvo-responsive-filters-toggle {
+    list-style: none;
+  }
+
+  .rvo-responsive-filters > .rvo-responsive-filters-toggle::-webkit-details-marker {
+    display: none;
+  }
+
   /* @LOGIN OPTIONS */
 
   .rvo-login-options {
@@ -187,29 +228,31 @@
     padding-inline-start: var(--rvo-space-xl);
   }
 
-  /* @TABLE FILTER */
+  /* @FILTER */
 
-  .rvo-table--responsive.rvo-table--w-filter {
-    width: 900px;
+  .rvo-tmp-filters .utrecht-form-fieldset {
+    background-color: var(--rvo-color-lichtblauw-tint1);
+    gap: var(--rvo-space-md);
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: 0;
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
   }
 
+  /* @TABLE FILTER */
+
   .rvo-table--responsive .rvo-tmp-filters fieldset {
-    background-color: var(--rvo-color-wit);
+    background-color: var(--rvo-color-lichtblauw-tint2);
     margin-inline-end: 0;
     margin-inline-start: 0;
     padding-inline-end: 0;
     padding-inline-start: 0;
   }
 
-  .rvo-table--mijn-zaken .rvo-tmp-filters fieldset,
   .rvo-table--mijn-zaken .rvo-table-row {
     display: grid;
     gap: 0;
     grid-template-columns: 343px 200px 232px 125px;
-  }
-
-  .rvo-table--mijn-zaken .rvo-tmp-filter .rvo-checkbox__group {
-    margin-inline-start: var(--rvo-space-md);
   }
 
   .rvo-table--mijn-zaken a.rvo-layout-row {
@@ -219,11 +262,6 @@
   .rvo-table--mijn-zaken .rvo-tag {
     margin-block-end: -2px;
     margin-block-start: -2px;
-  }
-
-  .rvo-table--mijn-zaken .rvo-tmp-filters .rvo-form-field {
-    padding-inline-end: var(--rvo-space-md);
-    padding-inline-start: var(--rvo-space-md);
   }
 
   /* @PARAGRAPHS */
@@ -959,11 +997,10 @@
   .rvo-tmp-filter .utrecht-select {
     padding-block-end: 6px;
     padding-block-start: 6px;
-    width: 148px;
+    width: auto;
   }
 
   .rvo-tmp-filter[open] .utrecht-select {
-    background-color: var(--rvo-color-hemelblauw-tint2);
     padding-block-end: 8px;
   }
 
@@ -977,7 +1014,6 @@
     padding-inline-start: var(--rvo-space-xs);
     position: relative;
     top: -2px;
-    width: 180px;
   }
 
   .rvo-tmp-filters .utrecht-textbox {
@@ -1216,6 +1252,15 @@
     .rvo-form .rvo-intro {
       padding-inline-end: 0;
       padding-inline-start: 0;
+    }
+
+    .rvo-tmp-filters .utrecht-form-fieldset {
+      flex-direction: row;
+    }
+
+    .rvo-tmp-filters .utrecht-form-fieldset .rvo-form-field,
+    .rvo-tmp-filters .utrecht-form-fieldset .rvo-tmp-filter {
+      flex: 1;
     }
 
     // .rvo-form {

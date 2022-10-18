@@ -61,9 +61,14 @@ const MijnZaken = () => {
         </MaxWidthLayout>
       </div>
       <LayoutColumnRow size="3xl">
-        <MaxWidthLayout size="md">
-          <main>
-            <div className="rvo-table--responsive rvo-table--w-filter rvo-table--mijn-zaken">
+        <main>
+          <div className=" rvo-table--w-filter rvo-table--mijn-zaken">
+            <details className="rvo-responsive-filters" open>
+              <summary className="rvo-responsive-filters-toggle">
+                Filters
+                <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
+                <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
+              </summary>
               <div className="rvo-tmp-filters">
                 <Fieldset legend="">
                   <TextInputField labelText="Zoek op omschrijving"></TextInputField>
@@ -110,7 +115,8 @@ const MijnZaken = () => {
                   </details>
                 </Fieldset>
               </div>
-              {/* 
+            </details>
+            {/* 
               
               RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
               Tabellen zijn om dingen te vergelijken en werken slecht repsonsive. Een lijst met items is een betere oplossing.
@@ -199,9 +205,9 @@ const MijnZaken = () => {
                   </tbody>
                 </table>
               </div> */}
-            </div>
-          </main>
-        </MaxWidthLayout>
+          </div>
+        </main>
+
         <footer className="rvo-footer">
           <MaxWidthLayout size="lg">
             <ul className="rvo-footer-menu">
