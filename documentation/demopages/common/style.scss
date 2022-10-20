@@ -145,7 +145,7 @@
 
   .rvo-login-options {
     display: grid;
-    gap: var(--rvo-space-2xl);
+    gap: var(--rvo-space-lg);
   }
 
   .rvo-login-option-img--e-herkenning {
@@ -226,6 +226,11 @@
     padding-block-start: var(--rvo-space-xl);
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
+  }
+
+  .rvo-main--inloggen {
+    /* TEMP FIX: STICKY FOOTER NOG TOEVOEGEN */
+    min-height: 75vh;
   }
 
   /* @FILTER */
@@ -1206,6 +1211,51 @@
     border-radius: 50%;
     max-width: 125px;
     padding-block-start: var(--rvo-space-xs);
+  }
+
+  /* @ACCORDION */
+
+  .rvo-accordion__item-title .rvo-link {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--rvo-space-xs);
+    text-decoration: none;
+  }
+
+  .rvo-accordion__item-title .rvo-link:hover,
+  .rvo-accordion__item-title .rvo-link:focus {
+    text-decoration: underline;
+  }
+
+  .rvo-accordion__item > .rvo-accordion__item-title {
+    list-style: none;
+  }
+
+  .rvo-accordion__item > .rvo-accordion__item-title::-webkit-details-marker {
+    display: none;
+  }
+
+  .rvo-accordion__item {
+    border-bottom: 1px solid var(--rvo-color-hemelblauw-tint2);
+    padding-block-end: var(--rvo-space-md);
+  }
+
+  .rvo-accordion__item[open] .rvo-icon-delta-omhoog {
+    display: block;
+  }
+
+  .rvo-accordion__item[open] .rvo-icon-delta-omlaag,
+  .rvo-accordion__item .rvo-icon-delta-omhoog {
+    display: none;
+  }
+
+  .rvo-accordion__item[open] .rvo-accordion__item-title {
+    margin-block-end: var(--rvo-space-md);
+  }
+
+  .rvo-accordion__item p:last-child {
+    margin-block-end: 0;
   }
 
   /* @FOOTER */

@@ -20,12 +20,19 @@ const Inloggen = () => {
         menuMaxWidth="sm"
       />
 
-      <main className="rvo-main">
+      <main className="rvo-main rvo-main--inloggen">
         <MaxWidthLayout size="sm">
           <LayoutColumnRow size="2xl">
             <Heading type="h1" textContent="Inloggen" />
-            <div className="rvo-login-options">
-              <div className="rvo-login-option login-option--e-herkenning">
+            <div className="rvo-accordion rvo-login-options">
+              <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
+                <summary className="rvo-accordion__item-title">
+                  <h3 className="rvo-link">
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
+                    Voor ondernemers en gemeentes met e-Herkenning
+                  </h3>
+                </summary>
                 <img
                   src="/rvo/images/login-options/e-herkenning-logo.svg"
                   className="rvo-login-option-img rvo-login-option-img--e-herkenning"
@@ -40,12 +47,19 @@ const Inloggen = () => {
                 </p>{' '}
                 <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
                 <p>
-                  <Button textContent="inloggen e-Herkenning 2" size="md"></Button>
+                  <Button textContent="Inloggen met e-Herkenning 2" size="md"></Button>
                   <br />
-                  <Button textContent="inloggen e-Herkenning 3" size="md"></Button>
+                  <Button textContent="Inloggen met e-Herkenning 3" size="md"></Button>
                 </p>
-              </div>
-              <div className="rvo-login-option login-option--digid">
+              </details>
+              <details className="rvo-accordion__item rvo-login-option login-option--digid">
+                <summary className="rvo-accordion__item-title">
+                  <h3 className="rvo-link">
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
+                    Voor particulieren met DigiD
+                  </h3>
+                </summary>
                 <img
                   src="/rvo/images/login-options/digid-logo.svg"
                   className="rvo-login-option-img rvo-login-option-img--digid"
@@ -57,8 +71,15 @@ const Inloggen = () => {
                 </p>
 
                 <Button textContent="Inloggen met DigiD" size="md"></Button>
-              </div>
-              <div className="rvo-login-option login-option--eu">
+              </details>
+              <details className="rvo-accordion__item rvo-login-option login-option--eu">
+                <summary className="rvo-accordion__item-title">
+                  <h3 className="rvo-link">
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
+                    Digital identity from another European country
+                  </h3>
+                </summary>
                 <img
                   src="/rvo/images/login-options/eu-flag.svg"
                   className="rvo-login-option-img rvo-login-option-img--eu"
@@ -67,13 +88,20 @@ const Inloggen = () => {
                 <p>Log in with a digital identity from another European country.</p>
 
                 <Button textContent="EU login" size="md"></Button>
-              </div>
-              <div className="rvo-login-option login-option--anders">
-                <Heading type="h3" textContent="Anders inloggen"></Heading>
+              </details>
+              <details className="rvo-accordion__item rvo-login-option login-option--anders">
+                <summary className="rvo-accordion__item-title">
+                  <h3 className="rvo-link">
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
+                    Anders inloggen
+                  </h3>
+                </summary>
+
                 <p>U heeft geen eHerkenning of DigiD.</p>
 
                 <Button textContent="Anders inloggen" size="md"></Button>
-              </div>
+              </details>
             </div>
           </LayoutColumnRow>
         </MaxWidthLayout>
