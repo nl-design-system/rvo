@@ -8,12 +8,12 @@ import React from 'react';
 
 interface IIconProps {
   icon: string;
-  size: string;
+  size?: string;
   color?: string;
   classNames?: string[];
 }
 
-export const iconColors = ['hemelblauw', 'wit', 'zwart'];
+export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
 
 const toProperCase = (inputString) =>
   inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
@@ -74,11 +74,12 @@ export const Icon: React.FC<IIconProps> = ({
   return (
     <span
       className={clsx(
+        'utrecht-icon',
         'rvo-icon',
         `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`,
-        `rvo-icon--${size}`,
+        size && `rvo-icon--${size}`,
         {
-          'rvo-icon--wit': !color || color === 'wit',
+          'rvo-icon--wit': color === 'wit',
           'rvo-icon--hemelblauw': color === 'hemelblauw',
           'rvo-icon--zwart': color === 'zwart',
         },

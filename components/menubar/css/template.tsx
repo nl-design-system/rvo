@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
@@ -79,11 +78,11 @@ const parseMenuItem = ({
   // Parse delta for active menu items
   let deltaMarkup;
   if (active !== undefined) {
-    deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" color="wit" />;
+    deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" />;
   }
 
   if (useIcon && icon) {
-    const iconMarkup = <Icon icon={icon} size={size} color="wit" />;
+    const iconMarkup = <Icon icon={icon} size={size} />;
 
     if (iconPlacement === 'before') {
       return (

@@ -12,6 +12,10 @@
   padding-inline-start: var(--rvo-form-fieldset-padding-inline-start);
 }
 
+.utrecht-form-fieldset--hidden .utrecht-form-field {
+  visibility: hidden;
+}
+
 .utrecht-form-fieldset__legend {
   float: left;
 }

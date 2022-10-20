@@ -5,6 +5,12 @@
       "invalid-focus": {
         "border-color": { "value": "{rvo.color.zwart}" },
         "outline-color": { "value": "{rvo.color.rood}" }
+      },
+      "sm": {
+        "width": { "value": "{rvo.space.4xl}" }
+      },
+      "md": {
+        "width": { "value": "calc({rvo.space.4xl} * 2)" }
       }
     }
   }

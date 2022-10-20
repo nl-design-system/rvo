@@ -69,7 +69,6 @@ const VoordatUStart = () => {
                     <Button
                       kind="warning-subtle"
                       size="sm"
-                      textContent="Annuleren"
                       active={false}
                       busy={false}
                       focus={false}
@@ -78,12 +77,11 @@ const VoordatUStart = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Annuleren
                     </Button>
                     <Button
                       kind="primary"
                       size="md"
-                      textContent="Start aanvraag"
                       active={false}
                       busy={false}
                       focus={false}
@@ -92,7 +90,7 @@ const VoordatUStart = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Start aanvraag
                     </Button>
                   </div>
                 </LayoutColumnRow>

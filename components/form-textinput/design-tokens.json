@@ -20,6 +20,22 @@
             "inherits": true
           }
         }
+      },
+      "sm": {
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "md": {
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
       }
     }
   }

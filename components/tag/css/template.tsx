@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@utrecht/component-library-css';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, options as iconOptions } from '../../icon/css/template';
@@ -85,7 +84,7 @@ export const Tag: React.FC<ITagProps> = ({
   switch (type) {
     default:
     case 'default':
-      iconMarkup = Icon({ icon, size: 'lg', color: 'hemelblauw', classNames: iconClassNames });
+      iconMarkup = Icon({ icon, size: 'lg', classNames: iconClassNames });
       break;
     case 'info':
       iconMarkup = Icon({ icon: 'info', size: 'xl', color: 'hemelblauw', classNames: iconClassNames });

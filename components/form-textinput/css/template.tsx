@@ -2,11 +2,13 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import clsx from 'clsx';
 import './index.scss';
+import { Textarea, Textbox } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import React from 'react';
 
 export interface ITextInputProps {
+  key?: string;
   id?: string;
   disabled?: boolean;
   focus?: boolean;
@@ -16,7 +18,10 @@ export interface ITextInputProps {
   inputType?: string;
   placeholder?: string;
   value?: string;
-  valueType?: string;
+  validation?: string;
+  prefix?: string;
+  suffix?: string;
+  size?: string;
 }
 
 export const argTypes = {
@@ -46,7 +51,17 @@ export const argTypes = {
   value: {
     control: 'text',
   },
-  valueType: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
+  validation: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
+  prefix: {
+    control: 'text',
+  },
+  suffix: {
+    control: 'text',
+  },
+  size: {
+    options: ['sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs: ITextInputProps = {
@@ -59,52 +74,59 @@ export const defaultArgs: ITextInputProps = {
   inputType: 'text',
   placeholder: '',
   value: '',
-  valueType: 'text',
+  validation: 'text',
+  prefix: '',
+  suffix: '',
+  size: 'lg',
 };
 
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
   inputType = defaultArgs.inputType,
   placeholder = defaultArgs.placeholder,
   value = defaultArgs.value,
-  valueType = defaultArgs.valueType,
+  validation = defaultArgs.validation,
+  prefix = defaultArgs.prefix,
+  suffix = defaultArgs.suffix,
+  size = defaultArgs.size,
 }) => {
   const props = {
     id,
-    className: clsx(
-      'utrecht-textbox',
-      'utrecht-textbox--html-input',
-      disabled && 'utrecht-textbox--disabled',
-      focus && 'utrecht-textbox--focus utrecht-textbox--focus-visible',
-      invalid && 'utrecht-textbox--invalid',
-      readOnly && 'utrecht-textbox--readonly',
-      required && 'utrecht-textbox--required',
-    ),
-    disabled: disabled || null,
-    'aria-invalid': invalid || null,
-    required: required || null,
-    readOnly: readOnly || null,
-    placeholder: placeholder || null,
+    disabled,
+    invalid,
+    required,
+    readOnly,
+    placeholder,
     defaultValue: value,
-    ...((valueType === 'number' || valueType === 'currency') && {
+    ...((validation === 'number' || validation === 'currency') && {
       inputMode: 'numeric' as any,
-      pattern: valueType === 'currency' ? '[0-9.,]*' : '[0-9]*',
+      pattern: validation === 'currency' ? '[0-9.,]*' : '[0-9]*',
     }),
   };
 
   if (inputType === 'text') {
-    const inputMarkup = <input type="text" {...props} />;
-    if (valueType === 'currency') {
-      return <div className="rvo-layout-row rvo-layout-gap--md">€{inputMarkup}</div>;
+    const inputMarkup = (
+      <Textbox
+        {...props}
+        className={clsx(size === 'sm' && 'utrecht-textbox--sm', size === 'md' && 'utrecht-textbox--md')}
+      />
+    );
+    if (prefix || suffix) {
+      return (
+        <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
+          {prefix}
+          {inputMarkup}
+          {suffix}
+        </div>
+      );
     } else {
       return inputMarkup;
     }
   } else {
-    return <textarea {...props} />;
+    return <Textarea {...props} />;
   }
 };

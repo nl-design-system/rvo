@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
+import { Icon } from '../../icon/css/template';
 import validateHTML from '../../utils/validateHTML';
 
 export interface ITableColumnProps {
@@ -65,31 +66,34 @@ export const Table: React.FC<ITableProps> = ({
         <caption className="rvo-caption">{description}</caption>
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
-            {columns.map((column, index) => (
-              <th
-                key={index}
-                scope="col"
-                className={clsx(
-                  'rvo-table-header',
-                  column.sortable && 'rvo-table-header--sortable',
-                  column.sortable && column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
-                  column.type === 'numeric' && 'rvo-table-header--numeric',
-                )}
-              >
-                {column.label}
-                {column.sortable && column.sortDirection.length > 0 && (
-                  <div
-                    className={clsx(
-                      'rvo-icon',
-                      column.sortDirection === 'ASC' && 'rvo-icon-delta-omhoog',
-                      column.sortDirection === 'DESC' && 'rvo-icon-delta-omlaag',
-                      'rvo-icon--sm',
-                      'rvo-icon--hemelblauw',
-                    )}
-                  ></div>
-                )}
-              </th>
-            ))}
+            {columns.map((column, index) => {
+              let icon: string;
+              if (column.sortDirection === 'ASC') {
+                icon = 'delta-omhoog';
+              } else if (column.sortDirection === 'DESC') {
+                icon = 'delta-omlaag';
+              } else {
+                icon = '';
+              }
+
+              return (
+                <th
+                  key={index}
+                  scope="col"
+                  className={clsx(
+                    'rvo-table-header',
+                    column.sortable && 'rvo-table-header--sortable',
+                    column.sortable && column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+                    column.type === 'numeric' && 'rvo-table-header--numeric',
+                  )}
+                >
+                  {column.label}
+                  {column.sortable && column.sortDirection.length > 0 && (
+                    <Icon size="sm" color="hemelblauw" icon={icon} />
+                  )}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody className="rvo-table-body">

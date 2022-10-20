@@ -1,13 +1,12 @@
 import styled from '@emotion/styled/macro';
 import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 type ComponentNameProps = {
-  children: React.ReactNode;
   className?: string;
 };
 
-export const ComponentName = ({ children, className }: ComponentNameProps) => {
+export const ComponentName: React.FC = ({ children, className }: PropsWithChildren<ComponentNameProps>) => {
   return <StyledH1 className={className}>{children}</StyledH1>;
 };
 

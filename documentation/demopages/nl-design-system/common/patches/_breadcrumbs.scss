@@ -1,0 +1,38 @@
+/**
+ * This file temporary and rules should be available inside the Utrecht Breadcrumb component
+ */
+
+/* @BREADCRUMBS */
+
+.utrecht-breadcrumb {
+  align-items: baseline;
+
+  &__item {
+    align-items: baseline;
+    display: inline-flex;
+
+    /* Add as gap in utrecht breadcrumb tokens */
+    & > * {
+      margin-inline-end: var(--utrecht-breadcrumb-item-gap, 0);
+    }
+  }
+
+  /* Add to link element in utrecht breadcrumb tokens */
+  &__link {
+    text-decoration: var(--utrecht-breadcrumb-link-text-decoration);
+
+    &:hover {
+      text-decoration: var(--utrecht-breadcrumb-link-hover-text-decoration);
+      text-decoration-thickness: var(--utrecht-breadcrumb-link-hover-text-decoration-thickness);
+    }
+
+    &:focus {
+      text-decoration: var(--utrecht-breadcrumb-link-focus-text-decoration);
+      text-decoration-thickness: var(--utrecht-breadcrumb-link-focus-text-decoration-thickness);
+    }
+
+    &:active {
+      text-decoration: var(--utrecht-breadcrumb-link-active-text-decoration);
+    }
+  }
+}

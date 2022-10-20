@@ -152,18 +152,18 @@ const Project = () => {
                       ></RadioButtonField>
                       <TextInputField
                         labelText="Wat is dit EU-identificatienummer?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                       <TextInputField labelText="In welk land is het vaartuig dat u aanschaft geregistreerd in het EU-vlootregister?"></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <TextInputField
                         labelText="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                       <TextInputField
                         labelText="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                     </Fieldset>
 
@@ -186,7 +186,6 @@ const Project = () => {
                       <Button
                         kind="secondary"
                         size="md"
-                        textContent="Opslaan en sluiten"
                         active={false}
                         busy={false}
                         focus={false}
@@ -195,12 +194,11 @@ const Project = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Opslaan en sluiten
                       </Button>
                       <Button
                         kind="primary"
                         size="md"
-                        textContent="Opslaan en verder"
                         active={false}
                         busy={false}
                         focus={false}
@@ -209,7 +207,7 @@ const Project = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Opslaan en verder
                       </Button>
                     </div>
                   </LayoutColumnRow>

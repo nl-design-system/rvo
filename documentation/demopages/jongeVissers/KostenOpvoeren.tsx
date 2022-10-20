@@ -114,7 +114,7 @@ const KostenOpvoeren = () => {
                     <Fieldset legend="">
                       <TextInputField
                         labelText="Hoeveel kost het vissersvaartuig (exclusief btw)?"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
@@ -136,7 +136,7 @@ const KostenOpvoeren = () => {
                         helperText="Uitgebreide uitleg over de subsidie."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
-                        valueType="number"
+                        validation="number"
                       ></TextInputField>
                     </Fieldset>
 
@@ -144,7 +144,6 @@ const KostenOpvoeren = () => {
                       <Button
                         kind="secondary"
                         size="md"
-                        textContent="Opslaan en sluiten"
                         active={false}
                         busy={false}
                         focus={false}
@@ -153,12 +152,11 @@ const KostenOpvoeren = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Opslaan en sluiten
                       </Button>
                       <Button
                         kind="primary"
                         size="md"
-                        textContent="Opslaan en verder"
                         active={false}
                         busy={false}
                         focus={false}
@@ -167,7 +165,7 @@ const KostenOpvoeren = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Opslaan en verder
                       </Button>
                     </div>
                   </LayoutColumnRow>

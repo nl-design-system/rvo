@@ -26,3 +26,11 @@ textarea.utrecht-textbox {
   border-color: var(--rvo-textbox-invalid-focus-border-color);
   outline-color: var(--rvo-textbox-invalid-focus-outline-color);
 }
+
+.utrecht-textbox--sm {
+  width: var(--rvo-textbox-sm-width);
+}
+
+.utrecht-textbox--md {
+  width: var(--rvo-textbox-md-width);
+}

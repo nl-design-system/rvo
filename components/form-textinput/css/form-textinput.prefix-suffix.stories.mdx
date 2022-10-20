@@ -1,0 +1,30 @@
+import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, TextInput } from "./template";
+
+<Meta
+  title="CSS Components/Form/Text input/Prefix &frasl; Suffix"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+  decorators={[frameworkDecorator]}
+/>
+
+# Prefix
+
+<Canvas>
+  <Story name="Invalid" args={{ ...defaultArgs, valueType: "currency", prefix: "€" }}>
+    {TextInput.bind({})}
+  </Story>
+</Canvas>
+
+## Suffix
+
+<Canvas>
+  <Story name="Focus" args={{ ...defaultArgs, valueType: "number", suffix: "m³" }}>
+    {TextInput.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,13 @@
+{
+  "rvo": {
+    "logo": {
+      "font-family": { "value": "{rvo.font.serif.font-family}" },
+      "font-size": { "value": "16px" },
+      "color": {},
+      "emblem": {
+        "background-color": { "value": "#154273" },
+        "color": { "value": "{rvo.color.wit}" }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
@@ -119,14 +120,18 @@ const Kosten = () => {
                           <td className="rvo-table-cell rvo-table-cell--numeric">200.000,00</td>
                           <td className="rvo-table-cell rvo-table-cell--link">
                             <form>
-                              <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
-                                <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
+                              <Button kind="warning-subtle" size="xs">
+                                <Icon
+                                  icon="verwijderen"
+                                  size="md"
+                                  classNames={['rvo-button__icon--warning-subtle-action']}
+                                />
                                 Verwijderen
-                              </button>
-                              <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
-                                <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
+                              </Button>
+                              <Button kind="tertiary" size="xs">
+                                <Icon icon="bewerken" size="md" classNames={['rvo-button__icon--tertiary-action']} />
                                 Wijzigen
-                              </button>
+                              </Button>
                             </form>
                           </td>
                         </tr>
@@ -136,14 +141,18 @@ const Kosten = () => {
                           <td className="rvo-table-cell rvo-table-cell--numeric">100.000,00</td>
                           <td className="rvo-table-cell rvo-table-cell--link">
                             <form>
-                              <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
-                                <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
+                              <Button kind="warning-subtle" size="xs">
+                                <Icon
+                                  icon="verwijderen"
+                                  size="md"
+                                  classNames={['rvo-button__icon--warning-subtle-action']}
+                                />
                                 Verwijderen
-                              </button>
-                              <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
-                                <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
+                              </Button>
+                              <Button kind="tertiary" size="xs">
+                                <Icon icon="bewerken" size="md" classNames={['rvo-button__icon--tertiary-action']} />
                                 Wijzigen
-                              </button>
+                              </Button>
                             </form>
                           </td>
                         </tr>
@@ -188,14 +197,18 @@ const Kosten = () => {
                           <td className="rvo-table-cell rvo-table-cell--numeric">25.000,00</td>
                           <td className="rvo-table-cell rvo-table-cell--link">
                             <form>
-                              <button className="utrecht-button rvo-button--warning-subtle-action rvo-button--xs">
-                                <div className="rvo-button__icon--warning-subtle-action rvo-icon rvo-icon-verwijderen rvo-icon--md"></div>
+                              <Button kind="warning-subtle" size="xs">
+                                <Icon
+                                  icon="verwijderen"
+                                  size="md"
+                                  classNames={['rvo-button__icon--warning-subtle-action']}
+                                />
                                 Verwijderen
-                              </button>
-                              <button className="utrecht-button rvo-button--tertiary-action rvo-button--xs">
-                                <div className="rvo-button__icon--tertiary-action rvo-icon rvo-icon-bewerken rvo-icon--md"></div>
+                              </Button>
+                              <Button kind="tertiary" size="xs">
+                                <Icon icon="bewerken" size="md" classNames={['rvo-button__icon--tertiary-action']} />
                                 Wijzigen
-                              </button>
+                              </Button>
                             </form>
                           </td>
                         </tr>
@@ -212,7 +225,7 @@ const Kosten = () => {
                   <dd>€ 25.000,00</dd>
                 </dl>
                 <div className="rvo-alert rvo-alert--warning">
-                  <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--lg"></div>
+                  <Icon icon="waarschuwing" classNames={['rvo-status-icon-waarschuwing']} size="lg" />
                   <div className="rvo-alert-text">
                     <p>
                       De subsidie van uw investering kan maximaal € 25.000,00 bedragen. Dit is berekend aan de hand van
@@ -224,7 +237,6 @@ const Kosten = () => {
                   <Button
                     kind="secondary"
                     size="md"
-                    textContent="Opslaan en sluiten"
                     active={false}
                     busy={false}
                     focus={false}
@@ -233,12 +245,11 @@ const Kosten = () => {
                     hover={false}
                     showIcon="no"
                   >
-                    Secondary action
+                    Opslaan en sluiten
                   </Button>
                   <Button
                     kind="primary"
                     size="md"
-                    textContent="Opslaan en verder"
                     active={false}
                     busy={false}
                     focus={false}
@@ -247,7 +258,7 @@ const Kosten = () => {
                     hover={false}
                     showIcon="no"
                   >
-                    Secondary action
+                    Opslaan en verder
                   </Button>
                 </div>
               </LayoutColumnRow>

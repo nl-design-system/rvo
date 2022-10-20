@@ -58,7 +58,6 @@ const VormvrijeAanvraag = () => {
                   <LayoutColumnRow row={false} size="md">
                     <Fieldset legend="">
                       <RadioButtonField
-                        layout="horizontal"
                         name="radio-buttons"
                         labelText="Wilt u een vormvrije aanvraag indienen?"
                         helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."
@@ -73,7 +72,6 @@ const VormvrijeAanvraag = () => {
                     <Button
                       kind="secondary"
                       size="md"
-                      textContent="Opslaan en sluiten"
                       active={false}
                       busy={false}
                       focus={false}
@@ -82,12 +80,11 @@ const VormvrijeAanvraag = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Opslaan en sluiten
                     </Button>
                     <Button
                       kind="primary"
                       size="md"
-                      textContent="Opslaan en verder"
                       active={false}
                       busy={false}
                       focus={false}
@@ -96,7 +93,7 @@ const VormvrijeAanvraag = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Opslaan en verder
                     </Button>
                   </div>
                 </LayoutColumnRow>

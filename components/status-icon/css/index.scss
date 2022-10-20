@@ -4,17 +4,17 @@
  */
 
 .rvo-status-icon-bevestiging {
-  background-color: var(--rvo-statusicon-bevestiging-background-color);
+  --utrecht-icon-color: var(--rvo-statusicon-bevestiging-background-color);
 }
 
 .rvo-status-icon-foutmelding {
-  background-color: var(--rvo-statusicon-foutmelding-background-color);
+  --utrecht-icon-color: var(--rvo-statusicon-foutmelding-background-color);
 }
 
 .rvo-status-icon-waarschuwing {
-  background-color: var(--rvo-statusicon-waarschuwing-background-color);
+  --utrecht-icon-color: var(--rvo-statusicon-waarschuwing-background-color);
 }
 
 .rvo-status-icon-info {
-  background-color: var(--rvo-statusicon-info-background-color);
+  --utrecht-icon-color: var(--rvo-statusicon-info-background-color);
 }

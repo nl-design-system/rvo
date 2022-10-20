@@ -90,7 +90,6 @@ const Aanvrager = () => {
                     </Fieldset>
                     <Fieldset legend="Organisatie">
                       <RadioButtonField
-                        layout="horizontal"
                         name="radio-buttons"
                         labelText="U drijft een onderneming in de zin van de Wet IB of Wet Vpb en bent geen publieke kennisinstelling?"
                         helperText="Bent u geen ondernemer in de zin van de Wet IB (Inkomstenbelasting 2001) of Wet VpB
@@ -105,12 +104,11 @@ const Aanvrager = () => {
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="Gegevens aanvrager in aanvraagperiode">
-                      <TextInputField labelText="Prognose totaal aantal werknemers" valueType="number" />
-                      <TextInputField labelText="(Waarvan) eigen S&O-werknemers" valueType="number" />
+                      <TextInputField labelText="Prognose totaal aantal werknemers" validation="number" />
+                      <TextInputField labelText="(Waarvan) eigen S&O-werknemers" validation="number" />
                     </Fieldset>
                     <Fieldset legend="S&O-uurloon">
                       <RadioButtonField
-                        layout="horizontal"
                         name="radio-buttons"
                         labelText="Heeft u in 2020 S&O-werkzaamheden verricht waarvoor u een S&O-verklaring heeft ontvangen?"
                         warningText="Voor u geldt in 2022 een forfaitar uurloon van €29."
@@ -142,7 +140,6 @@ const Aanvrager = () => {
                     <Button
                       kind="secondary"
                       size="md"
-                      textContent="Opslaan en sluiten"
                       active={false}
                       busy={false}
                       focus={false}
@@ -151,12 +148,11 @@ const Aanvrager = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Opslaan en sluiten
                     </Button>
                     <Button
                       kind="primary"
                       size="md"
-                      textContent="Opslaan en verder"
                       active={false}
                       busy={false}
                       focus={false}
@@ -165,7 +161,7 @@ const Aanvrager = () => {
                       hover={false}
                       showIcon="no"
                     >
-                      Secondary action
+                      Opslaan en verder
                     </Button>
                   </div>
                 </LayoutColumnRow>

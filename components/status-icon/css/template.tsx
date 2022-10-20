@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import iconList from '@nl-rvo/assets/icons';
-import clsx from 'clsx';
 import React from 'react';
+import { Icon } from '../../icon/css/template';
 
 interface IStatusIconProps {
   type: string;
@@ -44,9 +44,5 @@ export const StatusIcon: React.FC<IStatusIconProps> = ({
   classNames,
 }) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
-  return (
-    <span
-      className={clsx('rvo-icon', `rvo-icon-${iconName} rvo-status-icon-${iconName}`, `rvo-icon--${size}`, classNames)}
-    />
-  );
+  return <Icon icon={iconName} size={size} classNames={[`rvo-status-icon-${iconName}`, ...(classNames || [])]} />;
 };

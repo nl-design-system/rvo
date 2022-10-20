@@ -3,6 +3,7 @@ import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
+import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
@@ -111,7 +112,7 @@ const Correspondentie = () => {
                         ]}
                       ></RadioButtonField>
                       <div className="rvo-alert rvo-alert--warning">
-                        <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--lg"></div>
+                        <Icon icon="waarschuwing" classNames={['rvo-status-icon-waarschuwing']} size="lg" />
                         <div className="rvo-alert-text">
                           <p>
                             U heeft aangegeven dat u de correspondentie digitaal wil ontvangen. Hiermee geeft u akkoord
@@ -135,7 +136,6 @@ const Correspondentie = () => {
                       <Button
                         kind="secondary"
                         size="md"
-                        textContent="Opslaan en sluiten"
                         active={false}
                         busy={false}
                         focus={false}
@@ -144,12 +144,11 @@ const Correspondentie = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Opslaan en sluiten
                       </Button>
                       <Button
                         kind="primary"
                         size="md"
-                        textContent="Opslaan en verder"
                         active={false}
                         busy={false}
                         focus={false}
@@ -158,7 +157,7 @@ const Correspondentie = () => {
                         hover={false}
                         showIcon="no"
                       >
-                        Secondary action
+                        Opslaan en verder
                       </Button>
                     </div>
                   </LayoutColumnRow>

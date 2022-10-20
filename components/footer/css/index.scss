@@ -4,12 +4,13 @@
  */
 
 .rvo-footer {
-  background-color: var(--rvo-footer-background-color);
-  color: var(--rvo-footer-color);
-  padding-inline-end: var(--rvo-footer-padding-inline-end);
-  padding-inline-start: var(--rvo-footer-padding-inline-start);
+  background-color: var(--utrecht-page-footer-background-color);
+  color: var(--utrecht-page-footer-color);
+  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
 }
 
+.utrecht-footer .rvo-max-width-layout,
 .rvo-footer > .rvo-max-width-layout {
   display: flex;
   gap: var(--rvo-footer-column-gap);

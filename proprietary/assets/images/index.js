@@ -2,6 +2,11 @@ export default {
   FAVICON: {
     ICON: 'favicon/icon.svg',
   },
+  LOGIN_OPTIONS: {
+    DIGID_LOGO: 'login-options/digid-logo.svg',
+    E_HERKENNING_LOGO: 'login-options/e-herkenning-logo.svg',
+    EU_FLAG: 'login-options/eu-flag.svg',
+  },
   LOGO: 'logo.svg',
   PROGRESS_TRACKER: {
     PROGRESS_TRACKER_COMPLETED_MD: 'progress-tracker/progress-tracker-completed-md.svg',

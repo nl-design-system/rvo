@@ -2,14 +2,12 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import '@utrecht/component-library-css';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
 
 interface IButtonGroupProps {
   buttonsLeft: IButtonProps[];
   buttonsRight: IButtonProps[];
-  children?: React.ReactNode;
 }
 
 const defaultButtonsLeft = [
@@ -48,7 +46,7 @@ export const defaultArgs: IButtonGroupProps = {
   buttonsRight: defaultButtonsRight,
 };
 
-export const ButtonGroup: React.FC<IButtonGroupProps> = ({
+export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
   children,

@@ -2,8 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { FormFieldDescription } from '@utrecht/component-library-react';
 import React from 'react';
 import './index.scss';
+import { Icon } from '../../icon/css/template';
 
 interface IFeedbackProps {
   text: string;
@@ -26,17 +28,23 @@ export const defaultArgs: IFeedbackProps = {
 export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text, type = defaultArgs.type }) => {
   if (type === 'warning') {
     return (
-      <div className="rvo-form-feedback rvo-form-feedback--warning rvo-layout-row rvo-layout-gap--sm">
-        <div className="rvo-icon rvo-icon-waarschuwing rvo-status-icon-waarschuwing rvo-icon--md"></div>
+      <FormFieldDescription
+        warning
+        className="rvo-form-feedback rvo-form-feedback--warning rvo-layout-row rvo-layout-gap--sm"
+      >
+        <Icon icon="waarschuwing" size="md" classNames={['rvo-status-icon-waarschuwing']} />
         {text}
-      </div>
+      </FormFieldDescription>
     );
   } else {
     return (
-      <div className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm">
-        <div className="rvo-icon rvo-icon-foutmelding rvo-status-icon-foutmelding rvo-icon--md"></div>
+      <FormFieldDescription
+        invalid
+        className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm"
+      >
+        <Icon icon="foutmelding" size="md" classNames={['rvo-status-icon-foutmelding']} />
         {text}
-      </div>
+      </FormFieldDescription>
     );
   }
 };

@@ -1,6 +1,8 @@
 import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import Content from "./Content-new";
+import Breadcrumbs from "./Breadcrumbs";
+import Content from "./Content";
+import Formulier from "./Formulier";
 
 <Meta
   title="Pagina's/NL Design System Community"
@@ -21,7 +23,19 @@ import Content from "./Content-new";
 # Demo
 
 <Canvas>
+  <Story name="Formulier">
+    <Formulier />
+  </Story>
+</Canvas>
+
+<Canvas>
   <Story name="Content">
     <Content />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Breadcrumbs">
+    <Breadcrumbs />
   </Story>
 </Canvas>
