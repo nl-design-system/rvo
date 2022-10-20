@@ -1208,6 +1208,14 @@
     padding-block-start: var(--rvo-space-xs);
   }
 
+  /* @ZAAK */
+
+  .rvo-case-number {
+    align-items: center;
+    display: flex;
+    gap: var(--rvo-space-xs);
+  }
+
   /* @FOOTER */
 
   .rvo-footer {
@@ -1320,6 +1328,11 @@
   @media (min-width: 360px) {
     .rvo-pagination {
       flex-direction: row;
+    }
+
+    .rvo-alert + .utrecht-button {
+      /* HACK OM BUTTON NIET FULL WIDTH TE TONEN */
+      align-self: flex-start;
     }
   }
 
