@@ -1,16 +1,15 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, ProgressTracker } from "./template";
 
 <Meta
   title="CSS Components/Progress Tracker/Progress Tracker"
+  component={ProgressTracker}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Progress Tracker

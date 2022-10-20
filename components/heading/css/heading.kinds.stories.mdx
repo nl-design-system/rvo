@@ -1,16 +1,15 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, Heading } from "./template";
 
 <Meta
   title="CSS Components/Heading/Kinds"
+  component={Heading}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 <Canvas>
