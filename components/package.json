@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@nl-rvo/storybook": "file:../packages/storybook",
-    "@storybook/addon-docs": "6.5.9",
+    "@storybook/addon-docs": "6.5.12",
     "@utrecht/component-library-css": "1.0.0-alpha.316"
   },
   "dependencies": {
