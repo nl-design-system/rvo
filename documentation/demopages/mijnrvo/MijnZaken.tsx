@@ -7,6 +7,7 @@ import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import '../common/style.scss';
+import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
 const MijnZaken = () => {
   return (
@@ -19,28 +20,14 @@ const MijnZaken = () => {
           <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
         </summary>
         <MenuBar
-          items={[
-            { label: 'Mijn zaken', icon: 'map', link: '#' },
-            { label: 'Mijn documenten', icon: 'document-blanco', link: '#' },
-            { label: 'Uitloggen', icon: '', link: '#', align: 'right' },
-          ]}
+          items={defaultMenuBarItemsMijnRVO}
           size="lg"
           useIcons={true}
           iconPlacement="before"
           menuMaxWidth="md"
         />
       </details>
-      <MenuBar
-        items={[
-          { label: 'Mijn zaken', icon: 'map', link: '#' },
-          { label: 'Mijn documenten', icon: 'document-blanco', link: '#' },
-          { label: 'Uitloggen', icon: '', link: '#', align: 'right' },
-        ]}
-        size="lg"
-        useIcons={true}
-        iconPlacement="before"
-        menuMaxWidth="md"
-      />
+      <MenuBar items={defaultMenuBarItemsMijnRVO} size="lg" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
 
       <div className="rvo-hero rvo-hero--man-met-laptop">
         <div className="rvo-hero-bg-img-container">
@@ -65,16 +52,17 @@ const MijnZaken = () => {
           <div className=" rvo-table--w-filter rvo-table--mijn-zaken">
             <div className="rvo-responsive-filter-wrapper">
               <MaxWidthLayout size="md">
-                <details className="rvo-responsive-filters" open>
+                <details className="rvo-responsive-filters">
                   <summary className="rvo-responsive-filters-toggle">
-                    Filters
+                    Zaken filteren
                     <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
                     <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                   </summary>
                   <div className="rvo-tmp-filters">
                     <Fieldset legend="">
-                      <TextInputField labelText="Zoek op omschrijving"></TextInputField>
-                      <TextInputField labelText="Zoek op zaaknummer" valueType="numeric"></TextInputField>
+                      <TextInputField labelText="Op zaaknummer" valueType="numeric"></TextInputField>
+                      <TextInputField labelText="Op omschrijving"></TextInputField>
+
                       <details className="rvo-tmp-filter">
                         <summary>
                           <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
@@ -82,7 +70,7 @@ const MijnZaken = () => {
                               className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
                               htmlFor="fieldId"
                             >
-                              <span className="rvo-form-field__label-text">Status zaak</span>
+                              <span className="rvo-form-field__label-text">Op status</span>
                             </label>
                             <div className="rvo-select-wrapper">
                               <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
@@ -120,6 +108,117 @@ const MijnZaken = () => {
                 </details>
               </MaxWidthLayout>
             </div>
+            <MaxWidthLayout size="md">
+              <div className="rvo-item-list rvo-item-list--cases">
+                <div className="rvo-item-list-item rvo-item-list-item--case">
+                  <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
+                    <span className="rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>22292000001
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                    <h3 className="utrecht-heading-3">
+                      <a className="rvo-link" href="#">
+                        Gemeenschappelijke Marktordening 2023
+                      </a>
+                    </h3>
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                    <div className="rvo-status-indicator rvo-status-indicator--edit"></div>
+                    <div className="rvo-status-title">Bij u in bewerking</div>
+                  </div>
+                </div>
+                <div className="rvo-item-list-item rvo-item-list-item--case">
+                  <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
+                    <span className="rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>22269000022
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                    <h3 className="utrecht-heading-3">
+                      <a className="rvo-link" href="#">
+                        POP3 Samenwerking Pilots gezonde kalverketen
+                      </a>
+                    </h3>
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                    <div className="rvo-status-indicator rvo-status-indicator--success"></div>
+                    <div className="rvo-status-title">Goedgekeurd</div>
+                  </div>
+                </div>
+                <div className="rvo-item-list-item rvo-item-list-item--case">
+                  <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
+                    <span className="rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>16269000033
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                    <h3 className="utrecht-heading-3">
+                      <a className="rvo-link" href="#">
+                        OverheidsOpdrachten NVLG
+                      </a>
+                    </h3>
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                    <div className="rvo-status-indicator rvo-status-indicator--error"></div>
+                    <div className="rvo-status-title">Afgekeurd</div>
+                  </div>
+                </div>
+                <div className="rvo-item-list-item rvo-item-list-item--case">
+                  <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
+                    <span className="rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>16269003453
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                    <h3 className="utrecht-heading-3">
+                      <a className="rvo-link" href="#">
+                        OverheidsOpdrachten NVLG
+                      </a>
+                    </h3>
+                  </div>
+                  <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                    <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
+                    <div className="rvo-status-title">In behandeling</div>
+                  </div>
+                </div>
+              </div>
+              <div className="rvo-pagination rvo-pagination--middle-page">
+                <div className="rvo-pagination-indicator rvo-pagination-indicator--previous">
+                  <span className="rvo-icon rvo-icon-delta-naar-links rvo-icon--sm rvo-icon--zwart"></span>
+                  <a className="rvo-link" href="#">
+                    Vorige
+                  </a>
+                </div>
+                <div className="rvo-pagination-page-numbers">
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator-page-number rvo-pagination-indicator-page-number--first">
+                    <a className="rvo-link" href="#">
+                      1
+                    </a>
+                  </div>
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator--separator">...</div>
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator-page-number">
+                    <a className="rvo-link" href="#">
+                      6
+                    </a>
+                  </div>
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator-page-number rvo-pagination-indicator-page-number--current">
+                    <a className="rvo-link" href="#">
+                      7
+                    </a>
+                  </div>
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator-page-number">
+                    <a className="rvo-link" href="#">
+                      8
+                    </a>
+                  </div>
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator--separator">...</div>
+                  <div className="rvo-pagination-indicator rvo-pagination-indicator-page-number rvo-pagination-indicator-page-number--last">
+                    <a className="rvo-link" href="#">
+                      42
+                    </a>
+                  </div>
+                </div>
+                <div className="rvo-pagination-indicator rvo-pagination-indicator--next">
+                  <a className="rvo-link" href="#">
+                    Volgende
+                  </a>
+                  <span className="rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--zwart"></span>
+                </div>
+              </div>
+            </MaxWidthLayout>
             {/* 
               
               RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
