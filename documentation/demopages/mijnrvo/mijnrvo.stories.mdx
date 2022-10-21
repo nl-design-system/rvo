@@ -1,6 +1,7 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import Inloggen from "./Inloggen";
 import MijnZaken from "./MijnZaken";
+import Zaak from "./Zaak";
 
 <Meta
   title="Pagina's/Mijn RVO"
@@ -20,13 +21,19 @@ import MijnZaken from "./MijnZaken";
 # Mijn RVO
 
 <Canvas>
+  <Story name="Inloggen">
+    <Inloggen />
+  </Story>
+</Canvas>
+
+<Canvas>
   <Story name="Mijn zaken">
     <MijnZaken />
   </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="Inloggen">
-    <Inloggen />
+  <Story name="Zaak">
+    <Zaak />
   </Story>
 </Canvas>
