@@ -40,7 +40,7 @@ module.exports = {
     '@storybook/preset-scss',
     'storybook-anima',
   ],
-  staticDirs: [{ from: '../../../proprietary/assets', to: '/rvo' }],
+  staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => {
     const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') == '/.s[ca]ss$/');
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
