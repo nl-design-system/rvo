@@ -34,7 +34,7 @@ const Inloggen = () => {
                   </h3>
                 </summary>
                 <img
-                  src="/rvo/images/login-options/e-herkenning-logo.svg"
+                  src="images/login-options/e-herkenning-logo.svg"
                   className="rvo-login-option-img rvo-login-option-img--e-herkenning"
                 />
                 <p>
@@ -61,7 +61,7 @@ const Inloggen = () => {
                   </h3>
                 </summary>
                 <img
-                  src="/rvo/images/login-options/digid-logo.svg"
+                  src="images/login-options/digid-logo.svg"
                   className="rvo-login-option-img rvo-login-option-img--digid"
                 />
 
@@ -80,10 +80,7 @@ const Inloggen = () => {
                     Digital identity from another European country
                   </h3>
                 </summary>
-                <img
-                  src="/rvo/images/login-options/eu-flag.svg"
-                  className="rvo-login-option-img rvo-login-option-img--eu"
-                />
+                <img src="images/login-options/eu-flag.svg" className="rvo-login-option-img rvo-login-option-img--eu" />
 
                 <p>Log in with a digital identity from another European country.</p>
 

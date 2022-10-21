@@ -18,11 +18,7 @@ export const Logo: React.FC<ILogoProps> = ({
   subtitle,
 }) => {
   return (
-    <img
-      src="rvo/images/logo.svg"
-      alt={`${title || ''} ${subtitle || ''}`}
-      className={clsx('rvo-logo-img', className)}
-    />
+    <img src="images/logo.svg" alt={`${title || ''} ${subtitle || ''}`} className={clsx('rvo-logo-img', className)} />
   );
 };
 
