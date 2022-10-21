@@ -50,6 +50,7 @@
     "rimraf": "3.0.2",
     "sass": "1.53.0",
     "sass-loader": "13.0.2",
+    "storybook-addon-themes": "6.1.0",
     "style-loader": "2.0.0",
     "webpack": "5.74.0"
   }

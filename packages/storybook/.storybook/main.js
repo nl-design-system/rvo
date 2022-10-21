@@ -39,6 +39,7 @@ module.exports = {
     '@storybook/addon-controls',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
+    'storybook-addon-themes',
   ],
   staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => {

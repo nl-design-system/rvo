@@ -9,6 +9,7 @@ import { useArgs } from '@storybook/client-api';
 import '@nl-rvo/assets/fonts/index.css';
 import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/assets/images/index.css';
+import '@nl-rvo/basiselementen-design-tokens/dist/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
 
@@ -106,6 +107,14 @@ export const parameters = {
   html: {
     root: '#story',
     removeEmptyComments: true,
+  },
+  themes: {
+    default: 'RVO',
+    target: 'root',
+    list: [
+      { name: 'RVO', class: 'rvo-theme', color: '#007bc7' },
+      { name: 'Basiselementen', class: 'basiselementen-theme', color: '#154273' },
+    ],
   },
 };
 
