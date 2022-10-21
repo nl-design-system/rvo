@@ -11,7 +11,7 @@ import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO
 
 const Zaak = () => {
   return (
-    <div className="rvo-demo-page rvo-demo-page--mijn-rvo test">
+    <div className="rvo-demo-page rvo-demo-page--mijn-rvo">
       <div className="rvo-header-content">
         <Header />
 
