@@ -1,17 +1,16 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Alert, argTypes, defaultArgs } from "./template";
 import "./index.scss";
 
 <Meta
   title="CSS Components/Alert/Kinds"
+  component={Alert}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Alert kinds

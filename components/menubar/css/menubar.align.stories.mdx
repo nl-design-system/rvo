@@ -1,17 +1,16 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, MenuBar } from "./template";
 import "./index.scss";
 
 <Meta
   title="CSS Components/Menubar/Menu item alignment"
+  component={MenuBar}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Menubar item alignment
