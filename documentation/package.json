@@ -9,7 +9,7 @@
   ],
   "private": true,
   "devDependencies": {
-    "@emotion/react": "11.9.3",
+    "@emotion/react": "11.10.4",
     "@emotion/styled": "11.9.3",
     "@nl-rvo/components": "file:../components",
     "@nl-rvo/design-tokens": "file:../proprietary/design-tokens",
