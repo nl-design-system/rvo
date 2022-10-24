@@ -87,18 +87,10 @@ export const Alert: React.FC<IAlertProps> = ({
 };
 
 export const AllAlertKinds: React.FC<IAlertProps> = (alertArgs) => (
-  <div>
-    <p>
-      <Alert {...alertArgs} kind="info" />
-    </p>
-    <p>
-      <Alert {...alertArgs} kind="warning" />
-    </p>
-    <p>
-      <Alert {...alertArgs} kind="error" />
-    </p>
-    <p>
-      <Alert {...alertArgs} kind="success" />
-    </p>
+  <div className="rvo-layout-column rvo-layout-gap--md">
+    <Alert {...alertArgs} kind="info" />
+    <Alert {...alertArgs} kind="warning" />
+    <Alert {...alertArgs} kind="error" />
+    <Alert {...alertArgs} kind="success" />
   </div>
 );

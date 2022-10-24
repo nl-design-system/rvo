@@ -1,4 +1,3 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, StatusIcon } from "./template";
 import "./index.scss";
@@ -6,12 +5,12 @@ import "./index.scss";
 <Meta
   title="CSS Components/Icon/Status Icon"
   argTypes={argTypes}
+  component={StatusIcon}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Status Icon

@@ -1,16 +1,15 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, CheckboxGroup, defaultArgs } from "./template.group";
 
 <Meta
   title="CSS Components/Form/Checkbox/Checkbox group"
+  component={CheckboxGroup}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Checkbox group

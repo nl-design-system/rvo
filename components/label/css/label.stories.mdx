@@ -1,4 +1,3 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import markdown from "../README.md";
 import { argTypes, defaultArgs, Label } from "./template";
@@ -6,13 +5,13 @@ import "./index.scss";
 
 <Meta
   title="CSS Components/Label/Label"
+  component={Label}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Label

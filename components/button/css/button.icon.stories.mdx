@@ -1,17 +1,16 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { AllButtonKinds, argTypes } from "./template";
 import "./index.scss";
 
 <Meta
   title="CSS Components/Button/Icons"
+  component={AllButtonKinds}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Button icons

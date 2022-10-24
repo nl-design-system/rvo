@@ -1,17 +1,16 @@
-import frameworkDecorator from "@nl-rvo/storybook/frameworkDecorator";
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, ExpandableText } from "./template";
 import "./index.scss";
 
 <Meta
   title="CSS Components/Expandable text/Expandable text"
+  component={ExpandableText}
   argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[frameworkDecorator]}
 />
 
 # Expandable text
