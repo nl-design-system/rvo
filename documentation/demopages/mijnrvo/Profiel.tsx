@@ -46,9 +46,14 @@ const Profiel = () => {
                   <LayoutColumnRow size="2xs">
                     <dl className="rvo-data-list">
                       <dt>Adres</dt>
-                      <dd>Prinses Beatrixlaan 2 2595AL s-GRAVENHAGE</dd>
+                      <dd>
+                        Prinses Beatrixlaan 2<br /> 2595AL s-GRAVENHAGE
+                      </dd>
                       <dt>Postbus</dt>
-                      <dd>40217 8004DE Zwolle</dd>
+                      <dd>
+                        40217
+                        <br /> 8004DE Zwolle
+                      </dd>
                       <dt>KVK-nr.</dt>
                       <dd>27378529</dd>
                       <dt>Relatienummer</dt>
