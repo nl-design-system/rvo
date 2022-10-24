@@ -2,7 +2,7 @@
   "utrecht": {
     "button": {
       "rvo-tertiary-action": {
-        "background-color": {},
+        "background-color": { "value": "transparent" },
         "border-color": {},
         "border-width": { "value": "0" },
         "color": { "value": "{rvo.color.hemelblauw}" },
@@ -14,7 +14,9 @@
           "color": { "value": "{rvo.color.donkerblauw}" }
         },
         "disabled": {
-          "color": { "value": "{rvo.color.grijs3}" }
+          "border-color": {},
+          "background-color": { "value": "transparent" },
+          "color": { "value": "{basiselementen.color.grijs3}" }
         },
         "focus": {
           "color": { "value": "{rvo.color.hemelblauw}" }

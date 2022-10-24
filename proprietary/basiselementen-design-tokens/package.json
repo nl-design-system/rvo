@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Design tokens voor de basiselementen van de huisstijl van RVO",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "name": "@nl-rvo/basiselementen-design-tokens",
+  "keywords": [
+    "nl-design-system",
+    "nl-rvo"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all build:**",
+    "build:style-dictionary": "style-dictionary build --config ./src/style-dictionary.config.js",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build:style-dictionary' './src/**/*.tokens.json'"
+  },
+  "devDependencies": {
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2",
+    "style-dictionary": "3.7.1"
+  },
+  "main": "dist/index.css"
+}

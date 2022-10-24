@@ -1,0 +1,9 @@
+{
+  "basiselementen": {
+    "button": {
+      "subtle": {
+        "text-transform": { "value": "uppercase" }
+      }
+    }
+  }
+}
