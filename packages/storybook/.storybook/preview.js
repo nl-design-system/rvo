@@ -42,6 +42,11 @@ const addonStatus = {
         description:
           'Do not use in production. Does not follow semantic versioning and any published packages are for internal use only.',
       },
+      HIDDEN: {
+        background: '#cccccc',
+        color: '#ffffff',
+        description: 'Hidden from sidebar.',
+      },
     },
   },
 };
@@ -78,16 +83,6 @@ export const parameters = {
   },
   docs: {
     theme,
-    components: {
-      // TODO: Add styled components to style docs template
-      // h1: ComponentName,
-      // h2: SectionName,
-      // h3: Title,
-      // li: AnchorListItem,
-      // a: LinkComponent,
-      // p: Paragraph,
-      // Tip,
-    },
     source: {
       state: 'open',
       language: 'html',
