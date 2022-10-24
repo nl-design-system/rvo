@@ -9,7 +9,7 @@ export default create({
   colorSecondary: designTokens.rvoColorHemelblauwTint1,
 
   // UI
-  appContentBg: `${designTokens.rvoColorWit}`,
+  appContentBg: `transparent`,
   textColor: `${designTokens.rvoColorGrijs7}`,
 
   // Typography
