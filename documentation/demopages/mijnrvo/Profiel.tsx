@@ -44,6 +44,24 @@ const Profiel = () => {
                   <h2 className="utrecht-heading-2">Mijn gegevens</h2>
 
                   <LayoutColumnRow size="2xs">
+                    <dl className="rvo-data-list">
+                      <dt>Adres</dt>
+                      <dd>Prinses Beatrixlaan 2 2595AL s-GRAVENHAGE</dd>
+                      <dt>Postbus</dt>
+                      <dd>40217 8004DE Zwolle</dd>
+                      <dt>KVK-nr.</dt>
+                      <dd>27378529</dd>
+                      <dt>Relatienummer</dt>
+                      <dd>203465993</dd>
+                      <dt>Telefoon</dt>
+                      <dd>033 - 9858 857</dd>
+                      <dt>Mobiel</dt>
+                      <dd>06 - 7584 7463</dd>
+                      <dt>E-mail</dt>
+                      <dd>info@rvo.nl</dd>
+                      <dt>Rekeningnummer</dt>
+                      <dd>NL41INGB0705001490</dd>
+                    </dl>
                     <a href="#" className="rvo-link rvo-layout-row rvo-layout-gap--sm">
                       <span className="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"></span>
                       Gegevens bewerken
