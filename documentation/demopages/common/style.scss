@@ -210,6 +210,10 @@
     padding-inline-start: var(--rvo-space-lg);
   }
 
+  .rvo-main--mijn-zaken {
+    padding-block-end: var(--rvo-space-md);
+  }
+
   /* @FILTER */
 
   .rvo-tmp-filters .utrecht-form-fieldset {
@@ -886,9 +890,9 @@
 
   .rvo-item-list--cases {
     padding-block-end: var(--rvo-space-xl);
-    padding-block-start: var(--rvo-space-sm);
-    padding-inline-end: var(--rvo-space-xl);
-    padding-inline-start: var(--rvo-space-xl);
+    padding-block-start: 0;
+    padding-inline-end: var(--rvo-space-lg);
+    padding-inline-start: var(--rvo-space-lg);
   }
 
   .rvo-item-list-item--case,
@@ -1077,10 +1081,10 @@
     border: 2px solid var(--rvo-color-zwart);
     border-radius: 50%;
     display: flex;
+    flex: 16px 0 0;
     height: 16px;
     justify-content: center;
     position: relative;
-    width: 16px;
   }
 
   .rvo-timeline-status--completed,
@@ -1106,8 +1110,7 @@
   }
 
   .rvo-timeline-event--completed::before {
-    left: 8px;
-    width: 4px;
+    background-color: var(--rvo-color-zwart);
   }
 
   .rvo-timeline-event--last::before {
