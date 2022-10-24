@@ -2,91 +2,91 @@
   "rvo": {
     "color": {
       "hemelblauw": {
-        "value": "#007bc7"
+        "value": "{basiselementen.color.hemelblauw}"
       },
       "hemelblauw-tint1": {
-        "value": "#b2d7ee"
+        "value": "{basiselementen.color.hemelblauw-tint1}"
       },
       "hemelblauw-tint2": {
-        "value": "#d9ebf7"
+        "value": "{basiselementen.color.hemelblauw-tint2}"
       },
       "lichtblauw": {
-        "value": "#8fcae7"
+        "value": "{basiselementen.color.lichtblauw}"
       },
       "lichtblauw-tint1": {
-        "value": "#ddeff8"
+        "value": "{basiselementen.color.lichtblauw-tint1}"
       },
       "lichtblauw-tint2": {
-        "value": "#eef7fb"
+        "value": "{basiselementen.color.lichtblauw-tint2}"
       },
       "donkerblauw": {
-        "value": "#01689b"
+        "value": "{basiselementen.color.donkerblauw}"
       },
       "oranje": {
-        "value": "#e17000"
+        "value": "{basiselementen.color.oranje}"
       },
       "oranje-tint1": {
-        "value": "#f6d4b2"
+        "value": "{basiselementen.color.oranje-tint1}"
       },
       "oranje-tint2": {
-        "value": "#fbead9"
+        "value": "{basiselementen.color.oranje-tint2}"
       },
       "groen": {
-        "value": "#39870c"
+        "value": "{basiselementen.color.groen}"
       },
       "groen-tint1": {
-        "value": "#c3dbb6"
+        "value": "{basiselementen.color.groen-tint1}"
       },
       "groen-tint2": {
-        "value": "#e1eddb"
+        "value": "{basiselementen.color.groen-tint2}"
       },
       "donkergroen": {
-        "value": "#275e08"
+        "value": "{basiselementen.color.donkergroen}"
       },
       "donkergeel": {
-        "value": "#ffb612"
+        "value": "{basiselementen.color.donkergeel}"
       },
       "donkergeel-tint1": {
-        "value": "#ffe9b7"
+        "value": "{basiselementen.color.donkergeel-tint1}"
       },
       "donkergeel-tint2": {
-        "value": "#fff4dc"
+        "value": "{basiselementen.color.donkergeel-tint2}"
       },
       "rood": {
-        "value": "#d51b1e"
+        "value": "{basiselementen.color.rood}"
       },
       "rood-tint1": {
-        "value": "#f2bfbb"
+        "value": "{basiselementen.color.rood-tint1}"
       },
       "rood-tint2": {
-        "value": "#f9dfdd"
+        "value": "{basiselementen.color.rood-tint2}"
       },
       "grijs1": {
-        "value": "#f3f3f3"
+        "value": "{basiselementen.color.grijs1}"
       },
       "grijs2": {
-        "value": "#e6e6e6"
+        "value": "{basiselementen.color.grijs2}"
       },
       "grijs3": {
-        "value": "#cccccc"
+        "value": "{basiselementen.color.grijs3}"
       },
       "grijs4": {
-        "value": "#b4b4b4"
+        "value": "{basiselementen.color.grijs4}"
       },
       "grijs5": {
-        "value": "#999999"
+        "value": "{basiselementen.color.grijs5}"
       },
       "grijs6": {
-        "value": "#696969"
+        "value": "{basiselementen.color.grijs6}"
       },
       "grijs7": {
-        "value": "#535353"
+        "value": "{basiselementen.color.grijs7}"
       },
       "zwart": {
-        "value": "#000000"
+        "value": "{basiselementen.color.zwart}"
       },
       "wit": {
-        "value": "#ffffff"
+        "value": "{basiselementen.color.wit}"
       }
     }
   }

@@ -7,11 +7,7 @@ module.exports = {
   format: {
     ...jsonListFormat,
   },
-  source: [
-    '../../components/**/*.tokens.json',
-    '../basiselementen-design-tokens/src/**/*.tokens.json',
-    './src/**/*.tokens.json',
-  ],
+  source: ['../../components/**/*.tokens.json', './src/**/*.tokens.json'],
   platforms: {
     js: {
       transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
@@ -31,7 +27,7 @@ module.exports = {
           destination: 'index.css',
           format: 'css/variables',
           options: {
-            selector: '.rvo-theme',
+            selector: '.basiselementen-theme',
             outputReferences: true,
           },
         },
