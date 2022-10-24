@@ -41,6 +41,14 @@ const Profiel = () => {
               <LayoutColumnRow size="2xl">
                 <LayoutColumnRow size="md">
                   <h1 className="utrecht-heading-1">Profiel</h1>
+                  <h2 className="utrecht-heading-2">Mijn gegevens</h2>
+
+                  <LayoutColumnRow size="2xs">
+                    <a href="#" className="rvo-link rvo-layout-row rvo-layout-gap--sm">
+                      <span className="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"></span>
+                      Gegevens bewerken
+                    </a>
+                  </LayoutColumnRow>
                 </LayoutColumnRow>
               </LayoutColumnRow>
             </div>
