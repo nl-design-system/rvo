@@ -210,7 +210,6 @@
     padding-inline-start: var(--rvo-space-lg);
   }
 
-
   .rvo-main--mijn-zaken {
     padding-block-end: var(--rvo-space-md);
   }
@@ -1124,12 +1123,11 @@
 
   .rvo-timeline-date {
     font-size: var(--rvo-font-size-sm);
-   }
-   
+  }
+
   /* @ACCORDION */
 
   .rvo-accordion__item-title .rvo-link {
-    align-items: center;
     cursor: pointer;
     display: flex;
     gap: var(--rvo-space-xs);
@@ -1139,6 +1137,11 @@
   .rvo-accordion__item-title .rvo-link:hover,
   .rvo-accordion__item-title .rvo-link:focus {
     text-decoration: underline;
+  }
+
+  .rvo-accordion__item-title .rvo-icon {
+    flex: 16px 0 0;
+    padding-block-start: var(--rvo-space-xs);
   }
 
   .rvo-accordion__item > .rvo-accordion__item-title {

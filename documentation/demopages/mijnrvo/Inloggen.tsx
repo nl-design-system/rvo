@@ -21,8 +21,8 @@ const Inloggen = () => {
           menuMaxWidth="sm"
         />
 
-        <main className="rvo-main rvo-main--inloggen">
-          <MaxWidthLayout size="sm">
+        <MaxWidthLayout size="sm">
+          <main className="rvo-main rvo-main--inloggen">
             <LayoutColumnRow size="2xl">
               <Heading type="h1" textContent="Inloggen" />
               <div className="rvo-accordion rvo-login-options">
@@ -105,8 +105,8 @@ const Inloggen = () => {
                 </details>
               </div>
             </LayoutColumnRow>
-          </MaxWidthLayout>
-        </main>
+          </main>
+        </MaxWidthLayout>
       </div>
       <footer className="rvo-footer">
         <MaxWidthLayout size="lg">
