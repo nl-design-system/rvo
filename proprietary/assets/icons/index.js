@@ -643,6 +643,7 @@ export default {
     VLAG_EUROPESE_UNIE: 'internationaal/vlag-europese-unie.svg',
     WERELDBOL_MET_LOEP: 'internationaal/wereldbol-met-loep.svg',
     WERELDBOL_TUSSEN_2_UITGESTOKEN_HANDEN: 'internationaal/wereldbol-tussen-2-uitgestoken-handen.svg',
+    WERELDBOL: 'internationaal/wereldbol.svg',
   },
   LICHAAM: {
     BIDDENDE_HANDEN: 'lichaam/biddende-handen.svg',

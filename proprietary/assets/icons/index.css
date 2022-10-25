@@ -608,6 +608,7 @@
   --rvo-icon-vlag-europese-unie: url("internationaal/vlag-europese-unie.svg");
   --rvo-icon-wereldbol-met-loep: url("internationaal/wereldbol-met-loep.svg");
   --rvo-icon-wereldbol-tussen-2-uitgestoken-handen: url("internationaal/wereldbol-tussen-2-uitgestoken-handen.svg");
+  --rvo-icon-wereldbol: url("internationaal/wereldbol.svg");
   --rvo-icon-biddende-handen: url("lichaam/biddende-handen.svg");
   --rvo-icon-brein-boven-uitgestoken-hand: url("lichaam/brein-boven-uitgestoken-hand.svg");
   --rvo-icon-brein: url("lichaam/brein.svg");
@@ -12730,6 +12731,25 @@
 .rvo-icon-bg-wereldbol-tussen-2-uitgestoken-handen--before::before,
 .rvo-icon-bg-wereldbol-tussen-2-uitgestoken-handen--after::after {
   background-image: var(--rvo-icon-wereldbol-tussen-2-uitgestoken-handen);
+}
+
+.rvo-icon-wereldbol,
+.rvo-icon-wereldbol--before::before,
+.rvo-icon-wereldbol--after::after {
+  -webkit-mask-image: var(--rvo-icon-wereldbol);
+  mask-image: var(--rvo-icon-wereldbol);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon-bg-wereldbol,
+.rvo-icon-bg-wereldbol--before::before,
+.rvo-icon-bg-wereldbol--after::after {
+  background-image: var(--rvo-icon-wereldbol);
 }
 
 .rvo-icon-biddende-handen,
