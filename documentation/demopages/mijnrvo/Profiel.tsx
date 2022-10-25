@@ -1,4 +1,3 @@
-import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
@@ -7,104 +6,76 @@ import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import '../common/style.scss';
+import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
-const Inloggen = () => {
+const Profiel = () => {
   return (
     <div className="rvo-demo-page rvo-demo-page--mijn-rvo">
       <div className="rvo-header-content">
         <Header />
+
+        <details className="rvo-responsive-menu">
+          <summary>
+            <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
+            <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
+          </summary>
+          <MenuBar
+            items={defaultMenuBarItemsMijnRVO}
+            size="lg"
+            useIcons={true}
+            iconPlacement="before"
+            menuMaxWidth="md"
+          />
+        </details>
         <MenuBar
-          items={[{ label: 'Mijn RVO', icon: '', link: '#' }]}
+          items={defaultMenuBarItemsMijnRVO}
           size="lg"
           useIcons={true}
           iconPlacement="before"
-          menuMaxWidth="sm"
+          menuMaxWidth="md"
         />
 
-        <MaxWidthLayout size="sm">
-          <main className="rvo-main rvo-main--inloggen">
-            <LayoutColumnRow size="2xl">
-              <Heading type="h1" textContent="Inloggen" />
-              <div className="rvo-accordion rvo-login-options">
-                <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
-                  <summary className="rvo-accordion__item-title">
-                    <h3 className="rvo-link">
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                      Voor ondernemers en gemeentes met e-Herkenning
-                    </h3>
-                  </summary>
-                  <img
-                    src="images/login-options/e-herkenning-logo.svg"
-                    className="rvo-login-option-img rvo-login-option-img--e-herkenning"
-                  />
-                  <p>
-                    U bent <strong>ondernemer</strong> en ingeschreven bij KVK. Of u logt in namens een{' '}
-                    <strong>gemeente</strong>.{' '}
-                  </p>
-                  <p>
-                    Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" url="#"></Link> . Lukt
-                    het inloggen niet? Ga naar <Link content="Hulp bij inloggen" url="#"></Link>.
-                  </p>{' '}
-                  <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
-                  <p>
-                    <Button textContent="Inloggen met e-Herkenning 2" size="md"></Button>
-                    <br />
-                    <Button textContent="Inloggen met e-Herkenning 3" size="md"></Button>
-                  </p>
-                </details>
-                <details className="rvo-accordion__item rvo-login-option login-option--digid">
-                  <summary className="rvo-accordion__item-title">
-                    <h3 className="rvo-link">
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                      Voor particulieren met DigiD
-                    </h3>
-                  </summary>
-                  <img
-                    src="images/login-options/digid-logo.svg"
-                    className="rvo-login-option-img rvo-login-option-img--digid"
-                  />
+        <MaxWidthLayout size="md">
+          <main className="rvo-main rvo-main--zaak">
+            <div className="rvo-main-content">
+              <LayoutColumnRow size="2xl">
+                <LayoutColumnRow size="md">
+                  <h1 className="utrecht-heading-1">Profiel</h1>
+                  <h2 className="utrecht-heading-2">Mijn gegevens</h2>
 
-                  <p>
-                    U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD. Meer
-                    informatie leest u op de website van <Link content="DigiD" url="#"></Link>
-                  </p>
-
-                  <Button textContent="Inloggen met DigiD" size="md"></Button>
-                </details>
-                <details className="rvo-accordion__item rvo-login-option login-option--eu">
-                  <summary className="rvo-accordion__item-title">
-                    <h3 className="rvo-link">
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                      Digital identity from another European country
-                    </h3>
-                  </summary>
-                  <img
-                    src="images/login-options/eu-flag.svg"
-                    className="rvo-login-option-img rvo-login-option-img--eu"
-                  />
-
-                  <p>Log in with a digital identity from another European country.</p>
-
-                  <Button textContent="EU login" size="md"></Button>
-                </details>
-                <details className="rvo-accordion__item rvo-login-option login-option--anders">
-                  <summary className="rvo-accordion__item-title">
-                    <h3 className="rvo-link">
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                      <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                      Anders inloggen
-                    </h3>
-                  </summary>
-
-                  <p>U heeft geen eHerkenning of DigiD.</p>
-
-                  <Button textContent="Anders inloggen" size="md"></Button>
-                </details>
-              </div>
-            </LayoutColumnRow>
+                  <LayoutColumnRow size="2xs">
+                    <dl className="rvo-data-list">
+                      <dt>Adres</dt>
+                      <dd>
+                        Prinses Beatrixlaan 2<br /> 2595AL s-GRAVENHAGE
+                      </dd>
+                      <dt>Postbus</dt>
+                      <dd>
+                        40217
+                        <br /> 8004DE Zwolle
+                      </dd>
+                      <dt>KVK-nr.</dt>
+                      <dd>27378529</dd>
+                      <dt>Relatienummer</dt>
+                      <dd>203465993</dd>
+                      <dt>Telefoon</dt>
+                      <dd>033 - 9858 857</dd>
+                      <dt>Mobiel</dt>
+                      <dd>06 - 7584 7463</dd>
+                      <dt>E-mail</dt>
+                      <dd>info@rvo.nl</dd>
+                      <dt>Rekeningnummer</dt>
+                      <dd>NL41INGB0705001490</dd>
+                    </dl>
+                    <a href="#" className="rvo-link rvo-layout-row rvo-layout-gap--sm">
+                      <span className="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"></span>
+                      Gegevens bewerken
+                    </a>
+                  </LayoutColumnRow>
+                </LayoutColumnRow>
+              </LayoutColumnRow>
+            </div>
+            <aside className="rvo-sidebar"></aside>
           </main>
         </MaxWidthLayout>
       </div>
@@ -204,4 +175,4 @@ const Inloggen = () => {
   );
 };
 
-export default Inloggen;
+export default Profiel;
