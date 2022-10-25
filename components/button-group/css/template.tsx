@@ -2,15 +2,16 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
+import { ButtonGroup as ButtonGroupNL } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
 
 interface IButtonGroupProps {
-  buttonsLeft: IButtonProps[];
   buttonsRight: IButtonProps[];
+  buttonsLeft: IButtonProps[];
 }
 
-const defaultButtonsLeft = [
+const defaultButtonsRight = [
   {
     kind: 'secondary',
     size: 'md',
@@ -18,7 +19,7 @@ const defaultButtonsLeft = [
   },
 ];
 
-const defaultButtonsRight = [
+const defaultButtonsLeft = [
   {
     kind: 'primary',
     size: 'md',
@@ -27,13 +28,13 @@ const defaultButtonsRight = [
 ];
 
 export const argTypes = {
-  buttonsLeft: {
+  buttonsRight: {
     type: {
       name: 'array',
       required: true,
     },
   },
-  buttonsRight: {
+  buttonsLeft: {
     type: {
       name: 'array',
       required: false,
@@ -42,27 +43,23 @@ export const argTypes = {
 };
 
 export const defaultArgs: IButtonGroupProps = {
-  buttonsLeft: defaultButtonsLeft,
   buttonsRight: defaultButtonsRight,
+  buttonsLeft: defaultButtonsLeft,
 };
 
 export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
-  buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
+  buttonsLeft = defaultArgs.buttonsLeft,
   children,
 }) => {
   return (
-    <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
+    <ButtonGroupNL>
       {children}
-      {!children && buttonsLeft.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
       {!children &&
-        buttonsRight.length > 0 &&
-        buttonsRight.map((buttonProps, index) => {
-          if (index === 0) {
-            buttonProps.classNames = ['rvo-button-group__align-right'];
-          }
+        buttonsLeft.map((buttonProps, index) => {
           return <Button key={index} {...buttonProps} />;
         })}
-    </div>
+      {!children && buttonsRight.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
+    </ButtonGroupNL>
   );
 };

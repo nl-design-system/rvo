@@ -142,20 +142,7 @@ const Formulier = () => {
                     <Fieldset legend="Other">
                       <FileInputField labelText="File" />
                     </Fieldset>
-                    <ButtonGroup className="utrecht-button-group--horizontal">
-                      <Button
-                        kind="secondary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
-                      >
-                        Secondary action
-                      </Button>
+                    <ButtonGroup>
                       <Button
                         kind="primary"
                         size="md"
@@ -168,6 +155,19 @@ const Formulier = () => {
                         showIcon="no"
                       >
                         Primary action
+                      </Button>
+                      <Button
+                        kind="secondary"
+                        size="md"
+                        active={false}
+                        busy={false}
+                        focus={false}
+                        focusVisible={false}
+                        disabled={false}
+                        hover={false}
+                        showIcon="no"
+                      >
+                        Secondary action
                       </Button>
                     </ButtonGroup>
                   </form>
