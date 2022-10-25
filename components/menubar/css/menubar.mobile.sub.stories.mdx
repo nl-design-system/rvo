@@ -1,0 +1,45 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MobileMenuBar } from "./template.mobile";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Mobile"
+  component={MobileMenuBar}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Mobile menubar with submenu
+
+<Canvas>
+  <Story
+    name="Mobile submenu"
+    args={{
+      size: "md",
+      items: [
+        { label: "Home", link: "#" },
+        { label: "Expanded menu item", link: "#", active: true },
+        { label: "Uitloggen", icon: "versleutelen", link: "#" },
+      ],
+      submenuItems: [
+        { label: "Submenu item", link: "#" },
+        { label: "Submenu item", link: "#" },
+        { label: "Submenu item", link: "#" },
+      ],
+      useIcons: true,
+      iconPlacement: "before",
+    }}
+  >
+    {MobileMenuBar.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Mobile with submenu" />
+
+## Dependencies
+
+@nl-rvo/assets/icons

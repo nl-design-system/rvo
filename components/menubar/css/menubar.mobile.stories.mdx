@@ -1,0 +1,28 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, MobileMenuBar } from "./template.mobile";
+import "./index.scss";
+
+<Meta
+  title="CSS Components/Menubar/Mobile"
+  component={MobileMenuBar}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Mobile menubar
+
+<Canvas>
+  <Story name="Mobile" args={defaultArgs}>
+    {MobileMenuBar.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Mobile" />
+
+## Dependencies
+
+@nl-rvo/assets/icons

@@ -5,8 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
-
-interface IMenuBarItem {
+export interface IMenuBarItem {
   label: string;
   icon?: string;
   link: string;
@@ -14,7 +13,7 @@ interface IMenuBarItem {
   active?: boolean;
 }
 
-interface IMenuBarProps {
+export interface IMenuBarProps {
   size: string;
   items: IMenuBarItem[];
   useIcons: boolean;
@@ -23,7 +22,7 @@ interface IMenuBarProps {
   type?: 'primary' | 'sub' | 'sub-grid';
 }
 
-const defaultItems = [
+export const defaultItems = [
   { label: 'Home', icon: 'home', link: '#' },
   { label: 'Mijn aanvragen', icon: 'publicatie', link: '#' },
   { label: 'Nieuwe aanvraag', icon: 'plus', link: '#' },
@@ -67,15 +66,17 @@ export const defaultArgs: IMenuBarProps = {
   type: 'primary',
 };
 
-const parseMenuItem = ({
+export const parseMenuItem = ({
   label,
   icon,
   active,
+  link,
   useIcon = defaultArgs.useIcons,
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
 }) => {
   // Parse delta for active menu items
+  let itemMarkup;
   let deltaMarkup;
   if (active !== undefined) {
     deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" />;
@@ -85,7 +86,7 @@ const parseMenuItem = ({
     const iconMarkup = <Icon icon={icon} size={size} />;
 
     if (iconPlacement === 'before') {
-      return (
+      itemMarkup = (
         <>
           {iconMarkup}
           {label}
@@ -93,7 +94,7 @@ const parseMenuItem = ({
         </>
       );
     } else {
-      return (
+      itemMarkup = (
         <>
           {label}
           {iconMarkup}
@@ -101,12 +102,22 @@ const parseMenuItem = ({
         </>
       );
     }
+  } else {
+    itemMarkup = (
+      <>
+        {label}
+        {deltaMarkup}
+      </>
+    );
   }
-  return (
-    <>
-      {label}
-      {deltaMarkup}
-    </>
+
+  return React.createElement(
+    active ? 'span' : 'a',
+    {
+      className: 'utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm',
+      ...(!active ? { href: link } : {}),
+    },
+    itemMarkup,
   );
 };
 
@@ -120,20 +131,21 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
 }) => {
   const leftItemsMarkup = items
     .filter((item) => item.align !== 'right')
-    .map((item, index) => (
-      <li key={index} className={clsx('utrecht-topnav__item', item.active && 'utrecht-topnav__item--active')}>
-        <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
+    .map((item, index) => {
+      return (
+        <li key={index} className={clsx('utrecht-topnav__item', item.active && 'utrecht-topnav__item--active')}>
           {parseMenuItem({
             label: item.label,
             icon: item.icon,
             active: item.active,
+            link: item.link,
             useIcon: useIcons,
             size,
             iconPlacement,
           })}
-        </a>
-      </li>
-    ));
+        </li>
+      );
+    });
   const rightItemsMarkup = items
     .filter((item) => item.align === 'right')
     .map((item, index) => (
@@ -145,16 +157,15 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           index === 0 && 'utrecht-topnav__item--align-right',
         )}
       >
-        <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={item.link}>
-          {parseMenuItem({
-            label: item.label,
-            icon: item.icon,
-            active: item.active,
-            useIcon: useIcons,
-            size,
-            iconPlacement,
-          })}
-        </a>
+        {parseMenuItem({
+          label: item.label,
+          icon: item.icon,
+          active: item.active,
+          link: item.link,
+          useIcon: useIcons,
+          size,
+          iconPlacement,
+        })}
       </li>
     ));
 
