@@ -46,9 +46,9 @@ const Alerts = () => {
                   <div className="rvo-alert-text">
                     <p>This is an example of an info alert with an optional close button.</p>
                   </div>
-                  <button className="utrecht-button rvo-button--close">
-                    <Icon icon="kruis" color="zwart" size="md" />
-                  </button>
+                  <Button kind="subtle" classNames={['rvo-button--close']}>
+                    <Icon icon="kruis" size="md" />
+                  </Button>
                 </div>
                 <div className="rvo-alert rvo-alert--warning">
                   <Icon icon="waarschuwing" size="lg" classNames={['rvo-status-icon-waarschuwing']} />
@@ -78,9 +78,9 @@ const Alerts = () => {
                   <div className="rvo-alert-text">
                     <p>This is an example of a warning alert with an optional close button.</p>
                   </div>
-                  <button className="utrecht-button rvo-button--close">
-                    <Icon icon="kruis" color="zwart" size="md" />
-                  </button>
+                  <Button kind="subtle" classNames={['rvo-button--close']}>
+                    <Icon icon="kruis" size="md" />
+                  </Button>
                 </div>
                 <div className="rvo-alert rvo-alert--error">
                   <Icon icon="foutmelding" size="lg" classNames={['rvo-status-icon-foutmelding']} />
@@ -110,9 +110,9 @@ const Alerts = () => {
                   <div className="rvo-alert-text">
                     <p>This is an example of a error alert with an optional close button.</p>
                   </div>
-                  <button className="utrecht-button rvo-button--close">
-                    <Icon icon="kruis" color="zwart" size="md" />
-                  </button>
+                  <Button kind="subtle" classNames={['rvo-button--close']}>
+                    <Icon icon="kruis" size="md" />
+                  </Button>
                 </div>
                 <div className="rvo-alert rvo-alert--succes">
                   <Icon icon="bevestiging" size="lg" classNames={['rvo-status-icon-bevestiging']} />
@@ -142,9 +142,9 @@ const Alerts = () => {
                   <div className="rvo-alert-text">
                     <p>This is an example of a succes alert with an optional close button.</p>
                   </div>
-                  <button className="utrecht-button rvo-button--close">
-                    <Icon icon="kruis" color="zwart" size="md" />
-                  </button>
+                  <Button kind="subtle" classNames={['rvo-button--close']}>
+                    <Icon icon="kruis" size="md" />
+                  </Button>
                 </div>
               </LayoutColumnRow>
             </div>
