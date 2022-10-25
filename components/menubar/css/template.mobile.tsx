@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Icon } from '../../icon/css/template';
 import { defaultItems, IMenuBarItem, IMenuBarProps, parseMenuItem } from './template';
 
@@ -39,6 +39,7 @@ export const argTypes = {
 interface IMobileMenuBarProps extends IMenuBarProps {
   submenuItems: IMenuBarItem[];
   isOpen: boolean;
+  updateArgs?: any;
 }
 
 export const defaultArgs: IMobileMenuBarProps = {
@@ -57,6 +58,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   iconPlacement = defaultArgs.iconPlacement,
   submenuItems = defaultArgs.submenuItems,
   isOpen = defaultArgs.isOpen,
+  updateArgs,
 }) => {
   const itemsMarkup = items.map((item, index) => {
     return (
@@ -90,18 +92,24 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     );
   });
 
+  const onClick = useCallback(() => {
+    updateArgs({ isOpen: !isOpen });
+  }, [updateArgs, isOpen]);
+
   return (
-    <details className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)} open={isOpen}>
-      <summary className={clsx('rvo-layout-row', 'rvo-layout-gap--sm')}>
+    <div className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)}>
+      <div className={clsx('rvo-mobile-menu__top-bar', 'rvo-layout-row', 'rvo-layout-gap--sm')} onClick={onClick}>
         <Icon icon="menu" size={size} color="wit" />
         <Icon icon="kruis" size={size} color="wit" />
         Menu
-      </summary>
-      <div className={clsx('rvo-topnav__background')}>
-        <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
-          <ul className="utrecht-topnav__list">{itemsMarkup}</ul>
-        </nav>
       </div>
-    </details>
+      {isOpen && (
+        <div className={clsx('rvo-mobile-menu__list', 'rvo-topnav__background')}>
+          <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
+            <ul className="utrecht-topnav__list">{itemsMarkup}</ul>
+          </nav>
+        </div>
+      )}
+    </div>
   );
 };

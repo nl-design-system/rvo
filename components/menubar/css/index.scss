@@ -79,7 +79,7 @@
     font-size: var(--rvo-topnav-lg-font-size);
   }
 
-  summary {
+  .rvo-mobile-menu__top-bar {
     color: var(--utrecht-topnav-link-color);
     cursor: pointer;
     font-size: var(--rvo-font-size-lg);
@@ -89,7 +89,7 @@
     padding-inline-start: var(--rvo-topnav-link-padding-inline-start);
   }
 
-  > summary .rvo-icon-kruis {
+  > .rvo-mobile-menu__top-bar .rvo-icon-kruis {
     display: none;
   }
 
@@ -97,20 +97,12 @@
     padding-block-start: 0;
   }
 
-  .rvo-mobile-menu[open] > summary .rvo-icon-menu {
+  .rvo-mobile-menu[open] > .rvo-mobile-menu__top-bar .rvo-icon-menu {
     display: none;
   }
 
-  .rvo-mobile-menu[open] > summary .rvo-icon-kruis {
+  .rvo-mobile-menu[open] > .rvo-mobile-menu__top-bar .rvo-icon-kruis {
     display: block;
-  }
-
-  > summary {
-    list-style: none;
-  }
-
-  > summary::-webkit-details-marker {
-    display: none;
   }
 
   .utrecht-topnav__list {
@@ -125,7 +117,7 @@
     background-color: var(--rvo-topnav-submenu-background-color);
   }
 
-  + .rvo-topnav__background {
+  + .rvo-mobile-menu__list {
     display: none;
   }
 }
