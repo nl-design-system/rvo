@@ -13,7 +13,7 @@
   text-underline-offset: var(--rvo-link-text-underline-offset);
 }
 
-.rvo-link--no-underline:not(:focus):not(:hover) {
+.rvo-link--no-underline:not(:focus):not(:hover):not(.rvo-link--hover):not(.rvo-link--focus) {
   text-decoration: none;
 }
 
