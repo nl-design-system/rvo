@@ -22,6 +22,9 @@
       "donkerblauw": {
         "value": "{basiselementen.color.donkerblauw}"
       },
+      "donkerblauw-shade1": {
+        "value": "{basiselementen.color.donkerblauw-shade1}"
+      },
       "oranje": {
         "value": "{basiselementen.color.oranje}"
       },

@@ -22,6 +22,10 @@
       "donkerblauw": {
         "value": "#01689b"
       },
+      "donkerblauw-shade1": {
+        "value": "#01496D",
+        "comment": "30% black (shade) of 'donkerblauw'"
+      },
       "oranje": {
         "value": "#e17000"
       },

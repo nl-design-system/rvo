@@ -2,7 +2,7 @@
   "utrecht": {
     "button": {
       "$comment": "https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/online-componenten/buttons",
-      "background-color": { "value": "{basiselementen.color.hemelblauw}" },
+      "background-color": { "value": "{basiselementen.color.donkerblauw}" },
       "border-bottom-color": {},
       "border-bottom-width": {},
       "border-color": {},
@@ -36,13 +36,13 @@
         "border-width": {},
         "color": {},
         "active": {
-          "background-color": { "value": "{basiselementen.color.donkerblauw}" }
+          "background-color": { "value": "{basiselementen.color.donkerblauw-shade1}" }
         },
         "focus": {
-          "background-color": { "value": "{basiselementen.color.hemelblauw}" }
+          "background-color": { "value": "{basiselementen.color.donkerblauw}" }
         },
         "hover": {
-          "background-color": { "value": "{basiselementen.color.donkerblauw}" }
+          "background-color": { "value": "{basiselementen.color.donkerblauw-shade1}" }
         },
         "disabled": {
           "border-color": { "value": "{basiselementen.color.grijs2}" },
@@ -52,16 +52,16 @@
       },
       "secondary-action": {
         "background-color": { "value": "{basiselementen.color.wit}" },
-        "border-color": { "value": "{basiselementen.color.hemelblauw}" },
+        "border-color": { "value": "{basiselementen.color.donkerblauw}" },
         "border-width": { "value": "1px" },
-        "color": { "value": "{basiselementen.color.hemelblauw}" },
+        "color": { "value": "{basiselementen.color.donkerblauw}" },
         "active": {
-          "background-color": { "value": "{basiselementen.color.donkerblauw}" },
-          "border-color": { "value": "{basiselementen.color.donkerblauw}" },
+          "background-color": { "value": "{basiselementen.color.donkerblauw-shade1}" },
+          "border-color": { "value": "{basiselementen.color.donkerblauw-shade1}" },
           "color": { "value": "{basiselementen.color.wit}" }
         },
         "focus": {
-          "color": { "value": "{basiselementen.color.hemelblauw}" },
+          "color": { "value": "{basiselementen.color.donkerblauw}" },
           "border-color": {},
           "border-width": {}
         },
@@ -71,14 +71,14 @@
           "color": { "value": "{basiselementen.color.grijs3}" }
         },
         "hover": {
-          "color": { "value": "{basiselementen.color.donkerblauw}" },
+          "color": { "value": "{basiselementen.color.donkerblauw-shade1}" },
           "background-color": { "value": "{basiselementen.color.wit}" },
-          "border-color": { "value": "{basiselementen.color.donkerblauw}" }
+          "border-color": { "value": "{basiselementen.color.donkerblauw-shade1}" }
         }
       },
       "subtle": {
         "background-color": { "value": "transparent" },
-        "color": { "value": "{basiselementen.color.hemelblauw}" },
+        "color": { "value": "{basiselementen.color.donkerblauw}" },
         "font-size": { "value": "16px" },
         "font-weight": { "value": "{basiselementen.font-weight.bold}" },
         "disabled": {
