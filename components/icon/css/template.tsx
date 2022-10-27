@@ -15,8 +15,8 @@ interface IIconProps {
 
 export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
 
-const toProperCase = (inputString) =>
-  inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+export const toProperCase = (inputString) =>
+  inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()).replace(/_/g, ' ');
 
 // eslint-disable-next-line no-unused-vars
 const { STATUS, ...iconListWithoutStatus } = iconList;

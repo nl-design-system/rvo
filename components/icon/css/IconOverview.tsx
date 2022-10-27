@@ -5,7 +5,7 @@
 import styled from '@emotion/styled/macro';
 import iconList from '@nl-rvo/assets/icons/index.js';
 import React from 'react';
-import { Icon, iconColors } from './template';
+import { Icon, iconColors, toProperCase } from './template';
 
 interface IIconProps {
   icon: string;
@@ -29,7 +29,7 @@ export const IconOverview: React.FC<IIconProps> = () => {
         >
           {Object.keys(iconList).map((categoryName) => (
             <option key={categoryName} value={categoryName}>
-              {categoryName}
+              {toProperCase(categoryName)}
             </option>
           ))}
         </select>
