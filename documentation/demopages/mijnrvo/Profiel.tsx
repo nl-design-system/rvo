@@ -1,3 +1,4 @@
+import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
@@ -55,7 +56,7 @@ const Profiel = () => {
         </div>
 
         <MaxWidthLayout size="md">
-          <main className="rvo-main rvo-main--zaak">
+          <main className="rvo-main rvo-main--profiel">
             <div className="rvo-main-content">
               <LayoutColumnRow size="2xl">
                 <LayoutColumnRow size="md">
@@ -93,7 +94,58 @@ const Profiel = () => {
                 </LayoutColumnRow>
               </LayoutColumnRow>
             </div>
-            <aside className="rvo-sidebar"></aside>
+            <aside className="rvo-sidebar">
+              <div className="rvo-machtigingen">
+                <Heading type="h2" textContent="Wie heb ik gemachtigd?"></Heading>
+
+                <div className="rvo-machtigingen-item">
+                  <div className="rvo-machtigingen-title">
+                    <Link url="#" content="G.G.L. Luijten"></Link>
+                    <Button
+                      kind="warning-subtle"
+                      textContent="Intrekken"
+                      showIcon="before"
+                      size="xs"
+                      icon="verwijderen"
+                    ></Button>
+                  </div>
+                  <div className="rvo-machtigingen-description">Voor alle diensten in Mijn machtigingen(volmacht)</div>
+                  <div className="rvo-machtigingen-date">vanaf 14-02-2022 tot 13-02-2023</div>
+                </div>
+                <div className="rvo-machtigingen-item">
+                  <div className="rvo-machtigingen-title">
+                    <Link url="#" content="Maatschap A.F. Nijboer en L. van der Lei"></Link>
+                    <Button
+                      kind="warning-subtle"
+                      textContent="Intrekken"
+                      showIcon="before"
+                      size="xs"
+                      icon="verwijderen"
+                    ></Button>
+                  </div>
+                  <div className="rvo-machtigingen-description">VDM gegevens leveren aan</div>
+                  <div className="rvo-machtigingen-date">vanaf 14-02-2017</div>
+                </div>
+              </div>
+              <div className="rvo-machtigingen">
+                <Heading type="h2" textContent="Wie heeft mij gemachtigd?"></Heading>
+
+                <div className="rvo-machtigingen-item">
+                  <div className="rvo-machtigingen-title">
+                    <Link url="#" content="ACME"></Link>
+                    <Button
+                      kind="warning-subtle"
+                      textContent="Intrekken"
+                      showIcon="before"
+                      size="xs"
+                      icon="verwijderen"
+                    ></Button>
+                  </div>
+                  <div className="rvo-machtigingen-description">Natuurbeheer (agrarisch) SNL</div>
+                  <div className="rvo-machtigingen-date">vanaf 16-11-2021</div>
+                </div>
+              </div>
+            </aside>
           </main>
         </MaxWidthLayout>
       </div>

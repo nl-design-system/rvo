@@ -956,8 +956,40 @@
 
   /* @CASE @ZAAK */
 
-  .rvo-main--zaak .rvo-sidebar {
+  .rvo-main--zaak .rvo-sidebar,
+  .rvo-main--profiel .rvo-sidebar {
     padding-block-start: var(--rvo-space-2xl);
+  }
+
+  /* @MACHTIGINGEN */
+
+  .rvo-machtigingen + .rvo-machtigingen {
+    margin-block-start: var(--rvo-space-xl);
+  }
+
+  .rvo-machtigingen-item {
+    border-bottom: 1px solid var(--rvo-color-grijs3);
+    margin-block-end: var(--rvo-space-sm);
+    padding-block-end: var(--rvo-space-sm);
+  }
+
+  h2 + .rvo-machtigingen-item {
+    margin-block-start: var(--rvo-space-xs);
+  }
+
+  .rvo-machtigingen-title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rvo-machtigingen-description,
+  .rvo-machtigingen-date {
+    font-size: var(--rvo-font-size-sm);
+  }
+
+  .rvo-machtigingen-date {
+    font-style: italic;
   }
 
   /* @PAGINATION */
@@ -1249,6 +1281,13 @@
     margin-block-start: 0;
   }
 
+  /* @TEMP DT FIX */
+
+  .rvo-data-list dt {
+    padding-inline-end: var(--rvo-data-list-breakpoint-sm-dt-padding-inline-end);
+    padding-inline-start: var(--rvo-data-list-breakpoint-sm-dt-padding-inline-start);
+  }
+
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
   .rvo-form-field,
   .rvo-form-field__label {
@@ -1403,15 +1442,24 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
-    .rvo-main--zaak {
+    .rvo-main--zaak,
+    .rvo-main--profiel {
       display: grid;
       gap: var(--rvo-space-3xl);
       grid-template-columns: 600px 1fr;
       padding-block-start: var(--rvo-space-xl);
     }
 
+    .rvo-main--profiel {
+      grid-template-columns: 1fr 1fr;
+    }
+
     .rvo-main--zaak .rvo-sidebar {
       padding-block-start: var(--rvo-space-sm);
+    }
+
+    .rvo-main--profiel .rvo-sidebar {
+      padding-block-start: 0;
     }
   }
 
