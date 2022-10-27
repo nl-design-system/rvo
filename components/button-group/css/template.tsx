@@ -2,14 +2,21 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import { ButtonGroup as ButtonGroupNL } from '@utrecht/component-library-react';
+import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
 
 interface IButtonGroupProps {
-  buttonsRight: IButtonProps[];
   buttonsLeft: IButtonProps[];
+  buttonsRight: IButtonProps[];
 }
+const defaultButtonsLeft = [
+  {
+    kind: 'primary',
+    size: 'md',
+    textContent: 'Primary action',
+  },
+];
 
 const defaultButtonsRight = [
   {
@@ -19,47 +26,39 @@ const defaultButtonsRight = [
   },
 ];
 
-const defaultButtonsLeft = [
-  {
-    kind: 'primary',
-    size: 'md',
-    textContent: 'Primary action',
-  },
-];
-
 export const argTypes = {
-  buttonsRight: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
   buttonsLeft: {
     type: {
       name: 'array',
       required: false,
     },
   },
+  buttonsRight: {
+    type: {
+      name: 'array',
+      required: true,
+    },
+  },
 };
 
 export const defaultArgs: IButtonGroupProps = {
-  buttonsRight: defaultButtonsRight,
   buttonsLeft: defaultButtonsLeft,
+  buttonsRight: defaultButtonsRight,
 };
 
 export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
-  buttonsRight = defaultArgs.buttonsRight,
   buttonsLeft = defaultArgs.buttonsLeft,
+  buttonsRight = defaultArgs.buttonsRight,
   children,
 }) => {
   return (
-    <ButtonGroupNL>
+    <UtrechtButtonGroup>
       {children}
       {!children &&
         buttonsLeft.map((buttonProps, index) => {
           return <Button key={index} {...buttonProps} />;
         })}
       {!children && buttonsRight.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
-    </ButtonGroupNL>
+    </UtrechtButtonGroup>
   );
 };
