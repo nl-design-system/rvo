@@ -5,7 +5,7 @@
 import './index.scss';
 import { Textarea, Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { useCallback } from 'react';
+import React from 'react';
 
 export interface ITextInputProps {
   key?: string;
@@ -94,7 +94,6 @@ export const TextInput: React.FC<ITextInputProps> = ({
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
-  updateArgs,
 }) => {
   const props = {
     id,
@@ -110,17 +109,11 @@ export const TextInput: React.FC<ITextInputProps> = ({
     }),
   };
 
-  // Create hook to update the arg on value change
-  const onChange = useCallback((event) => {
-    updateArgs({ value: event.target.value });
-  }, []);
-
   if (inputType === 'text') {
     const inputMarkup = (
       <Textbox
         {...props}
         className={clsx(size === 'sm' && 'utrecht-textbox--sm', size === 'md' && 'utrecht-textbox--md')}
-        onChange={onChange}
       />
     );
     if (prefix || suffix) {
@@ -135,6 +128,6 @@ export const TextInput: React.FC<ITextInputProps> = ({
       return inputMarkup;
     }
   } else {
-    return <Textarea {...props} onChange={onChange} />;
+    return <Textarea {...props} />;
   }
 };

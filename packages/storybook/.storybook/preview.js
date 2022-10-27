@@ -5,6 +5,7 @@ import prettier from 'prettier/standalone';
 import prettierBabel from 'prettier/parser-babel';
 import * as ReactDOMServer from 'react-dom/server';
 import { useArgs } from '@storybook/client-api';
+import { addons } from '@storybook/addons';
 
 import '@nl-rvo/assets/fonts/index.css';
 import '@nl-rvo/assets/icons/index.css';
@@ -73,7 +74,6 @@ const storySort = {
 export const parameters = {
   previewTabs,
   viewMode: 'docs',
-  // statuses,
   options: {
     panelPosition: 'bottom',
     storySort,
@@ -90,9 +90,21 @@ export const parameters = {
     },
     transformSource: (src, storyContext) => {
       // Ensure valid HTML in the Preview source
+      const currentStoryId = storyContext.id;
+      let currentStoryArgs = storyContext.parameters.args;
+
+      // If args have been updated, use the updated args instead
+      const channel = addons.getChannel();
+      if (channel.data.storyArgsUpdated) {
+        const updatedStory = channel.data.storyArgsUpdated.find(
+          (updatedStory) => updatedStory.storyId === currentStoryId,
+        );
+        currentStoryArgs = updatedStory.args;
+      }
+
       if (storyContext.component) {
         return prettier
-          .format(ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args)), {
+          .format(ReactDOMServer.renderToStaticMarkup(storyContext.component(currentStoryArgs)), {
             parser: 'babel',
             plugins: [prettierBabel],
           })

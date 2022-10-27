@@ -29,7 +29,6 @@ module.exports = {
     postcss: false,
     previewMdx2: true,
     buildStoriesJson: true,
-    modernInlineRender: true,
   },
   framework: '@storybook/react',
   addons: [
