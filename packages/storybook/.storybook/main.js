@@ -33,7 +33,7 @@ module.exports = {
   },
   framework: '@storybook/react',
   addons: [
-    '@etchteam/storybook-addon-status/register',
+    '@etchteam/storybook-addon-status',
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
     '@storybook/addon-controls',
