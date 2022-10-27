@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import { Button as ButtonUtrecht } from '@utrecht/component-library-react';
+import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
@@ -113,7 +113,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   }
 
   return (
-    <ButtonUtrecht
+    <UtrechtButton
       className={clsx(
         classNames,
         kind === 'tertiary' && 'utrecht-button--rvo-tertiary-action',
@@ -140,7 +140,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
       {textContent}
       {children}
       {showIcon === 'after' && iconMarkup}
-    </ButtonUtrecht>
+    </UtrechtButton>
   );
 };
 
