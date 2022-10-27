@@ -38,7 +38,7 @@ export const IconOverview: React.FC<IIconProps> = () => {
       {Object.entries(iconList).map(([categoryName, categoryIcons]) => {
         return (
           <React.Fragment key={categoryName}>
-            <CategoryName id={categoryName}>{categoryName}</CategoryName>
+            <CategoryName id={categoryName}>{toProperCase(categoryName)}</CategoryName>
             <IconTable>
               {Object.keys(categoryIcons).map((iconName) => {
                 return (
