@@ -99,7 +99,10 @@ export const parameters = {
         const updatedStory = channel.data.storyArgsUpdated.find(
           (updatedStory) => updatedStory.storyId === currentStoryId,
         );
-        currentStoryArgs = updatedStory.args;
+
+        if (updatedStory) {
+          currentStoryArgs = updatedStory.args;
+        }
       }
 
       if (storyContext.component) {
