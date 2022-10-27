@@ -35,12 +35,30 @@ const Profiel = () => {
           menuMaxWidth="md"
         />
 
+        <div className="rvo-hero rvo-hero--man-met-laptop">
+          <div className="rvo-hero-bg-img-container">
+            <img src="images/hero/hero-bg--vrouw-met-laptop.webp" className="rvo-hero-bg-img" />
+          </div>
+          <MaxWidthLayout size="md">
+            <div className="rvo-hero-content">
+              <div className="rvo-hero-text">
+                <Heading type="h1" textContent="Mijn profiel" />
+                <p className="rvo-hero-description">
+                  Hier vindt u een overzicht van uw gegevens en machtigingen zoals deze bij ons bekend zijn.
+                </p>
+              </div>
+              <div className="rvo-hero-img-container">
+                <img src="images/hero/vrouw-met-laptop.webp" className="rvo-hero-img" />
+              </div>
+            </div>
+          </MaxWidthLayout>
+        </div>
+
         <MaxWidthLayout size="md">
           <main className="rvo-main rvo-main--zaak">
             <div className="rvo-main-content">
               <LayoutColumnRow size="2xl">
                 <LayoutColumnRow size="md">
-                  <h1 className="utrecht-heading-1">Profiel</h1>
                   <h2 className="utrecht-heading-2">Mijn gegevens</h2>
 
                   <LayoutColumnRow size="2xs">
