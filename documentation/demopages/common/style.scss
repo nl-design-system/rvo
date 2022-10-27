@@ -1452,6 +1452,7 @@
 
     .rvo-main--profiel {
       grid-template-columns: 1fr 1fr;
+      padding-block-end: var(--rvo-space-2xl);
     }
 
     .rvo-main--zaak .rvo-sidebar {

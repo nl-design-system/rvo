@@ -86,10 +86,13 @@ const Profiel = () => {
                       <dt>Rekeningnummer</dt>
                       <dd>NL41INGB0705001490</dd>
                     </dl>
-                    <a href="#" className="rvo-link rvo-layout-row rvo-layout-gap--sm">
-                      <span className="utrecht-icon rvo-icon rvo-icon-bewerken rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"></span>
-                      Gegevens bewerken
-                    </a>
+                    <Link
+                      url="#"
+                      content="Gegevens bewerken"
+                      showIcon="before"
+                      icon="bewerken"
+                      noUnderline={true}
+                    ></Link>
                   </LayoutColumnRow>
                 </LayoutColumnRow>
               </LayoutColumnRow>
@@ -100,7 +103,7 @@ const Profiel = () => {
 
                 <div className="rvo-machtigingen-item">
                   <div className="rvo-machtigingen-title">
-                    <Link url="#" content="G.G.L. Luijten"></Link>
+                    <Link url="#" content="G.G.L. Luijten" showIcon="before" icon="user" noUnderline={true}></Link>
                     <Button
                       kind="warning-subtle"
                       textContent="Intrekken"
@@ -114,7 +117,13 @@ const Profiel = () => {
                 </div>
                 <div className="rvo-machtigingen-item">
                   <div className="rvo-machtigingen-title">
-                    <Link url="#" content="Maatschap A.F. Nijboer en L. van der Lei"></Link>
+                    <Link
+                      url="#"
+                      content="Maatschap A.F. Nijboer en L. van der Lei"
+                      showIcon="before"
+                      icon="user"
+                      noUnderline={true}
+                    ></Link>
                     <Button
                       kind="warning-subtle"
                       textContent="Intrekken"
@@ -132,7 +141,7 @@ const Profiel = () => {
 
                 <div className="rvo-machtigingen-item">
                   <div className="rvo-machtigingen-title">
-                    <Link url="#" content="ACME"></Link>
+                    <Link url="#" content="ACME" showIcon="before" icon="user" noUnderline={true}></Link>
                     <Button
                       kind="warning-subtle"
                       textContent="Intrekken"
