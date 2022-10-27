@@ -38,7 +38,7 @@ const MijnZaken = () => {
 
         <div className="rvo-hero rvo-hero--man-met-laptop">
           <div className="rvo-hero-bg-img-container">
-            <img src="/images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />
+            <img src="images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />
           </div>
           <MaxWidthLayout size="md">
             <div className="rvo-hero-content">
@@ -50,7 +50,7 @@ const MijnZaken = () => {
                 </p>
               </div>
               <div className="rvo-hero-img-container">
-                <img src="/images/hero/man-met-laptop.webp" className="rvo-hero-img" />
+                <img src="images/hero/man-met-laptop.webp" className="rvo-hero-img" />
               </div>
             </div>
           </MaxWidthLayout>
@@ -226,7 +226,7 @@ const MijnZaken = () => {
               </div>
             </div>
           </MaxWidthLayout>
-          {/* 
+          {/*
               
               RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
               Tabellen zijn om dingen te vergelijken en werken slecht repsonsive. Een lijst met items is een betere oplossing.
