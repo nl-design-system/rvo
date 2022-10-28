@@ -1,4 +1,3 @@
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -49,7 +48,7 @@ const Diensten = () => {
                 </p>
               </div>
               <div className="rvo-hero-img-container">
-                <img src="images/hero/man-met-laptop.webp" className="rvo-hero-img" />
+                <img src="images/hero/man_vrouw_met_laptop.webp" className="rvo-hero-img" />
               </div>
             </div>
           </MaxWidthLayout>
@@ -66,9 +65,6 @@ const Diensten = () => {
                 </summary>
                 <div className="rvo-tmp-filters">
                   <Fieldset legend="">
-                    <TextInputField labelText="Op zaaknummer" validation="numeric"></TextInputField>
-                    <TextInputField labelText="Op omschrijving"></TextInputField>
-
                     <details className="rvo-tmp-filter">
                       <summary>
                         <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
