@@ -36,9 +36,9 @@ const Diensten = () => {
           menuMaxWidth="md"
         />
 
-        <div className="rvo-hero rvo-hero--man-met-laptop">
+        <div className="rvo-hero rvo-hero--man_vrouw_met_laptop">
           <div className="rvo-hero-bg-img-container">
-            <img src="images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />
+            <img src="images/hero/hero-bg--man_vrouw_met_laptop.webp" className="rvo-hero-bg-img" />
           </div>
           <MaxWidthLayout size="md">
             <div className="rvo-hero-content">
