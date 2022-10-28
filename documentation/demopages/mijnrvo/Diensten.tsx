@@ -188,7 +188,7 @@ const Diensten = () => {
                   <div className="rvo-status-title">Bijna open</div>
                 </div>
               </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
@@ -205,7 +205,7 @@ const Diensten = () => {
                   <div className="rvo-status-title">Open</div>
                 </div>
               </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
@@ -214,11 +214,51 @@ const Diensten = () => {
                   </h3>
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--status">
-                  <div className="rvo-status-indicator rvo-status-indicator--error"></div>
-                  <div className="rvo-status-title">Gesloten</div>
+                  <div className="rvo-status-indicator rvo-status-indicator--success"></div>
+                  <div className="rvo-status-title">Open</div>
                 </div>
               </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Borgstelling MKB-kredieten (BMKB)
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--success"></div>
+                  <div className="rvo-status-title">Open</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Eureka: programma internationale marktgerichte R&D
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--edit"></div>
+                  <div className="rvo-status-title">Bijna open</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Groeifaciliteit
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--edit"></div>
+                  <div className="rvo-status-title">Bijna open</div>
+                </div>
+              </div>
+
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
@@ -235,66 +275,6 @@ const Diensten = () => {
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
-                      Gemeenschappelijke Marktordening 2023
-                    </a>
-                    <span className="rvo-item-list-detail rvo-item-list-detail--aanbevolen">
-                      <span className="utrecht-icon rvo-icon rvo-icon-favoriet rvo-icon--md rvo-icon--zwart"></span>Voor
-                      u aanbevolen
-                    </span>
-                  </h3>
-                </div>
-                <div className="rvo-item-list-detail rvo-item-list-detail--status">
-                  <div className="rvo-status-indicator rvo-status-indicator--edit"></div>
-                  <div className="rvo-status-title">Bijna open</div>
-                </div>
-              </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--description">
-                  <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
-                      POP3 Samenwerking Pilots gezonde kalverketen
-                    </a>
-                    <span className="rvo-item-list-detail rvo-item-list-detail--aanbevolen">
-                      <span className="utrecht-icon rvo-icon rvo-icon-favoriet rvo-icon--md rvo-icon--zwart"></span>Voor
-                      u aanbevolen
-                    </span>
-                  </h3>
-                </div>
-                <div className="rvo-item-list-detail rvo-item-list-detail--status">
-                  <div className="rvo-status-indicator rvo-status-indicator--success"></div>
-                  <div className="rvo-status-title">Open</div>
-                </div>
-              </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--description">
-                  <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
-                      OverheidsOpdrachten NVLG
-                    </a>
-                  </h3>
-                </div>
-                <div className="rvo-item-list-detail rvo-item-list-detail--status">
-                  <div className="rvo-status-indicator rvo-status-indicator--error"></div>
-                  <div className="rvo-status-title">Gesloten</div>
-                </div>
-              </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--description">
-                  <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
-                      Borgstelling MKB-kredieten (BMKB)
-                    </a>
-                  </h3>
-                </div>
-                <div className="rvo-item-list-detail rvo-item-list-detail--status">
-                  <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
-                  <div className="rvo-status-title">Bijna gesloten</div>
-                </div>
-              </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--description">
-                  <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
                       SBIR innovatie in opdracht
                     </a>
                   </h3>
@@ -304,7 +284,7 @@ const Diensten = () => {
                   <div className="rvo-status-title">Bijna gesloten</div>
                 </div>
               </div>
-              <div className="rvo-item-list-item rvo-item-list-item--case">
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
@@ -315,6 +295,19 @@ const Diensten = () => {
                 <div className="rvo-item-list-detail rvo-item-list-detail--status">
                   <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
                   <div className="rvo-status-title">Bijna gesloten</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      DHI-subsidieregeling
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--error"></div>
+                  <div className="rvo-status-title">Gesloten</div>
                 </div>
               </div>
             </div>
