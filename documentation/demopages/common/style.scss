@@ -2,6 +2,8 @@
 
 /* @TYPOGRAPHY */
 .rvo-demo-page {
+  background-color: var(--rvo-color-wit);
+
   &.rvo-demo-page--mijn-rvo {
     display: grid;
     grid-template-rows: 1fr auto;
