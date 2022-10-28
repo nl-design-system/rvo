@@ -138,6 +138,34 @@ const Formulier = () => {
 
                     <Fieldset legend="Other">
                       <FileInputField labelText="File" />
+                      <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                        <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
+                          <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">
+                            Date
+                          </label>
+                        </div>
+                        <input
+                          type="date"
+                          id="field"
+                          placeholder=""
+                          className="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--sm"
+                          value=""
+                        />
+                      </div>
+                      <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                        <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
+                          <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">
+                            Time
+                          </label>
+                        </div>
+                        <input
+                          type="time"
+                          id="field"
+                          placeholder=""
+                          className="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--sm"
+                          value=""
+                        />
+                      </div>
                     </Fieldset>
 
                     <div className="rvo-button-group">
