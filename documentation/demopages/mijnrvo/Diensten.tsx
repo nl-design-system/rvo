@@ -1,3 +1,5 @@
+import { SelectField } from '@nl-rvo/components/form-field/css/select-field.template';
+import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -10,7 +12,7 @@ import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO
 
 const Diensten = () => {
   return (
-    <div className="rvo-demo-page rvo-demo-page--mijn-rvo">
+    <div className="rvo-demo-page rvo-demo-page--mijn-rvo rvo-demo-page--diensten">
       <div className="rvo-header-content">
         <Header />
 
@@ -65,6 +67,7 @@ const Diensten = () => {
                 </summary>
                 <div className="rvo-tmp-filters">
                   <Fieldset legend="">
+                    <TextInputField labelText="Op titel"></TextInputField>
                     <details className="rvo-tmp-filter">
                       <summary>
                         <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
@@ -72,7 +75,47 @@ const Diensten = () => {
                             className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
                             htmlFor="fieldId"
                           >
-                            <span className="rvo-form-field__label-text">Op status</span>
+                            <span className="rvo-form-field__label-text">Ik zoek geld voor</span>
+                          </label>
+                          <div className="rvo-select-wrapper">
+                            <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
+                              Maak een keuze
+                            </div>
+                          </div>
+                        </div>
+                      </summary>
+                      <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
+                        <label
+                          className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                          htmlFor="option1A"
+                        >
+                          <input type="checkbox" id="option1A" name="group1" className="rvo-checkbox__input" value="" />
+                          Compensatie
+                        </label>
+                        <label
+                          className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
+                          htmlFor="option1B"
+                        >
+                          <input type="checkbox" id="option1B" name="group1" className="rvo-checkbox__input" value="" />
+                          Duurzaam en circulair ondernemen
+                        </label>
+                        <label
+                          className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                          htmlFor="option1C"
+                        >
+                          <input type="checkbox" id="option1C" name="group1" className="rvo-checkbox__input" value="" />
+                          Energie besparen
+                        </label>
+                      </div>
+                    </details>
+                    <details className="rvo-tmp-filter">
+                      <summary>
+                        <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                          <label
+                            className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
+                            htmlFor="fieldId"
+                          >
+                            <span className="rvo-form-field__label-text">Status openstelling</span>
                           </label>
                           <div className="rvo-select-wrapper">
                             <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
@@ -87,67 +130,82 @@ const Diensten = () => {
                           htmlFor="optionA"
                         >
                           <input type="checkbox" id="optionA" name="group" className="rvo-checkbox__input" value="" />
-                          Beslissing genomen
+                          Open voor aanvragen
                         </label>
                         <label
                           className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
                           htmlFor="optionB"
                         >
                           <input type="checkbox" id="optionB" name="group" className="rvo-checkbox__input" value="" />
-                          Bij U in bewerking
+                          Bijna open voor aanvragen
                         </label>
                         <label
                           className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
                           htmlFor="optionC"
                         >
                           <input type="checkbox" id="optionC" name="group" className="rvo-checkbox__input" value="" />
-                          Afgehandeld
+                          Tijdelijk gesloten voor aanvragen
+                        </label>
+                        <label
+                          className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                          htmlFor="optionD"
+                        >
+                          <input type="checkbox" id="optionD" name="group" className="rvo-checkbox__input" value="" />
+                          Gesloten voor aanvragen
                         </label>
                       </div>
                     </details>
+                    <SelectField
+                      labelText="Sorteren op"
+                      options={[
+                        { value: '1', label: 'Aanbevolen' },
+                        { value: '2', label: 'Openingsdatum' },
+                        { value: '3', label: 'A tot Z' },
+                        { value: '4', label: 'Z tot A' },
+                      ]}
+                    ></SelectField>
                   </Fieldset>
                 </div>
               </details>
             </MaxWidthLayout>
           </div>
           <MaxWidthLayout size="md">
-            <div className="rvo-item-list rvo-item-list--cases">
-              <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
-                  <span className="utrecht-icon rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>22292000001
-                </div>
+            <div className="rvo-item-list rvo-item-list--diensten">
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
                       Gemeenschappelijke Marktordening 2023
                     </a>
+                    <span className="rvo-item-list-detail rvo-item-list-detail--aanbevolen">
+                      <span className="utrecht-icon rvo-icon rvo-icon-favoriet rvo-icon--md rvo-icon--zwart"></span>Voor
+                      u aanbevolen
+                    </span>
                   </h3>
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--status">
                   <div className="rvo-status-indicator rvo-status-indicator--edit"></div>
-                  <div className="rvo-status-title">Bij u in bewerking</div>
+                  <div className="rvo-status-title">Bijna open</div>
                 </div>
               </div>
               <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
-                  <span className="utrecht-icon rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>22269000022
-                </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
                       POP3 Samenwerking Pilots gezonde kalverketen
                     </a>
+                    <span className="rvo-item-list-detail rvo-item-list-detail--aanbevolen">
+                      <span className="utrecht-icon rvo-icon rvo-icon-favoriet rvo-icon--md rvo-icon--zwart"></span>Voor
+                      u aanbevolen
+                    </span>
                   </h3>
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--status">
                   <div className="rvo-status-indicator rvo-status-indicator--success"></div>
-                  <div className="rvo-status-title">Goedgekeurd</div>
+                  <div className="rvo-status-title">Open</div>
                 </div>
               </div>
               <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
-                  <span className="utrecht-icon rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>16269000033
-                </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
@@ -157,13 +215,57 @@ const Diensten = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--status">
                   <div className="rvo-status-indicator rvo-status-indicator--error"></div>
-                  <div className="rvo-status-title">Afgekeurd</div>
+                  <div className="rvo-status-title">Gesloten</div>
                 </div>
               </div>
               <div className="rvo-item-list-item rvo-item-list-item--case">
-                <div className="rvo-item-list-detail rvo-item-list-detail--case-number">
-                  <span className="utrecht-icon rvo-icon rvo-icon-map rvo-icon--md rvo-icon--zwart"></span>16269003453
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Borgstelling MKB-kredieten (BMKB)
+                    </a>
+                  </h3>
                 </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
+                  <div className="rvo-status-title">Bijna gesloten</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--dienst">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Gemeenschappelijke Marktordening 2023
+                    </a>
+                    <span className="rvo-item-list-detail rvo-item-list-detail--aanbevolen">
+                      <span className="utrecht-icon rvo-icon rvo-icon-favoriet rvo-icon--md rvo-icon--zwart"></span>Voor
+                      u aanbevolen
+                    </span>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--edit"></div>
+                  <div className="rvo-status-title">Bijna open</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--case">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      POP3 Samenwerking Pilots gezonde kalverketen
+                    </a>
+                    <span className="rvo-item-list-detail rvo-item-list-detail--aanbevolen">
+                      <span className="utrecht-icon rvo-icon rvo-icon-favoriet rvo-icon--md rvo-icon--zwart"></span>Voor
+                      u aanbevolen
+                    </span>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--success"></div>
+                  <div className="rvo-status-title">Open</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--case">
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="#">
@@ -172,8 +274,47 @@ const Diensten = () => {
                   </h3>
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--error"></div>
+                  <div className="rvo-status-title">Gesloten</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--case">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Borgstelling MKB-kredieten (BMKB)
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
                   <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
-                  <div className="rvo-status-title">In behandeling</div>
+                  <div className="rvo-status-title">Bijna gesloten</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--case">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      SBIR innovatie in opdracht
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
+                  <div className="rvo-status-title">Bijna gesloten</div>
+                </div>
+              </div>
+              <div className="rvo-item-list-item rvo-item-list-item--case">
+                <div className="rvo-item-list-detail rvo-item-list-detail--description">
+                  <h3 className="utrecht-heading-3">
+                    <a className="rvo-link" href="#">
+                      Borgstelling MKB-kredieten (BMKB)
+                    </a>
+                  </h3>
+                </div>
+                <div className="rvo-item-list-detail rvo-item-list-detail--status">
+                  <div className="rvo-status-indicator rvo-status-indicator--warning"></div>
+                  <div className="rvo-status-title">Bijna gesloten</div>
                 </div>
               </div>
             </div>
@@ -221,95 +362,6 @@ const Diensten = () => {
               </div>
             </div>
           </MaxWidthLayout>
-          {/*
-              
-              RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
-              Tabellen zijn om dingen te vergelijken en werken slecht repsonsive. Een lijst met items is een betere oplossing.
-              
-              <div className="rvo-table--responsive">
-                <table className="rvo-table">
-                  <thead className="rvo-table-head">
-                    <tr className="rvo-table-row">
-                      <th scope="col" className="rvo-table-header">
-                        Omschrijving
-                      </th>
-                      <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                        Zaaknummer{' '}
-                        <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                      </th>
-                      <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                        Status zaak{' '}
-                        <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                      </th>
-                      <th scope="col" className="rvo-table-header rvo-table-header--sortable">
-                        Datum <div className="rvo-icon rvo-icon-delta-omlaag rvo-icon--sm rvo-icon--hemelblauw"></div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="rvo-table-body">
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <Link
-                          url="#"
-                          content="Gemeenschappelijke Marktordening 2023"
-                          showIcon="before"
-                          icon="delta-naar-rechts"
-                          iconSize="sm"
-                          noUnderline={true}
-                        ></Link>
-                      </td>
-                      <td className="rvo-table-cell">22292000001</td>
-                      <td className="rvo-table-cell">Bij u in bewerking</td>
-                      <td className="rvo-table-cell">03-08-2022</td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <Link
-                          url="#"
-                          content="POP3 Samenwerking Pilots gezonde kalverketen"
-                          showIcon="before"
-                          icon="delta-naar-rechts"
-                          iconSize="sm"
-                          noUnderline={true}
-                        ></Link>
-                      </td>
-                      <td className="rvo-table-cell">22269000022</td>
-                      <td className="rvo-table-cell">Bij u in bewerking </td>
-                      <td className="rvo-table-cell">03-08-2022</td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <Link
-                          url="#"
-                          content="Overheidsopdrachten R&N"
-                          showIcon="before"
-                          icon="delta-naar-rechts"
-                          iconSize="sm"
-                          noUnderline={true}
-                        ></Link>
-                      </td>
-                      <td className="rvo-table-cell">16148000014</td>
-                      <td className="rvo-table-cell">Beslissing genomen</td>
-                      <td className="rvo-table-cell">26-10-2021</td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <Link
-                          url="#"
-                          content="OverheidsOpdrachten NVLG"
-                          showIcon="before"
-                          icon="delta-naar-rechts"
-                          iconSize="sm"
-                          noUnderline={true}
-                        ></Link>
-                      </td>
-                      <td className="rvo-table-cell">16269000033</td>
-                      <td className="rvo-table-cell">Afgehandeld</td>
-                      <td className="rvo-table-cell">23-10-2019</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div> */}
         </main>
       </div>
       <footer className="rvo-footer">
