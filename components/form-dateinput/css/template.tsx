@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import React from 'react';
 import '../../form-textinput/css/index.scss';
 
-export interface IDateInputProps {
+export interface IDateInputProps extends React.DOMAttributes<any> {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
@@ -92,6 +92,7 @@ export const DateInput: React.FC<IDateInputProps> = ({
   min = defaultArgs.min,
   max = defaultArgs.max,
   size = defaultArgs.size,
+  ...otherProps
 }) => {
   const props = {
     id,
@@ -111,6 +112,7 @@ export const DateInput: React.FC<IDateInputProps> = ({
     defaultValue: value,
     ...(min && { min }),
     ...(max && { max }),
+    ...otherProps,
   };
 
   const inputMarkup = (

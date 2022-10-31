@@ -7,7 +7,7 @@ import { Textarea, Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 
-export interface ITextInputProps {
+export interface ITextInputProps extends React.DOMAttributes<any> {
   key?: string;
   id?: string;
   disabled?: boolean;
@@ -93,6 +93,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
+  ...otherProps
 }) => {
   const props = {
     id,
@@ -106,6 +107,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       inputMode: 'numeric' as any,
       pattern: validation === 'currency' ? '[0-9.,]*' : '[0-9]*',
     }),
+    ...otherProps,
   };
 
   if (inputType === 'text') {

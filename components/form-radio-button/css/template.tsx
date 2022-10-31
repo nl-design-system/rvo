@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
 
-export interface IRadioButtonProps {
+export interface IRadioButtonProps extends React.DOMAttributes<any> {
   id?: string;
   name?: string;
   labelText: string;
@@ -56,6 +56,7 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
+  ...otherProps
 }) => (
   <label className="rvo-layout-row rvo-layout-gap--sm" htmlFor={id}>
     <input
@@ -75,6 +76,7 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
         invalid && 'utrecht-custom-radio-button--invalid',
         required && 'utrecht-custom-radio-button--required',
       )}
+      {...otherProps}
     />
     {labelText}
   </label>

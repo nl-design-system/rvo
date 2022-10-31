@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import './index.scss';
 import React from 'react';
 
-export interface ICheckboxProps {
+export interface ICheckboxProps extends React.DOMAttributes<any> {
   id?: string;
   name?: string;
   labelText: string;
@@ -64,6 +64,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   value = defaultArgs.value,
+  ...otherProps
 }) => (
   <label
     className={clsx(
@@ -91,6 +92,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       disabled={disabled || null}
       required={required || null}
       defaultValue={value || ''}
+      {...otherProps}
     />
     {labelText}
   </label>

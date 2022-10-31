@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import './index.scss';
 import React from 'react';
 
-export interface IFileInputProps {
+export interface IFileInputProps extends React.DOMAttributes<any> {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
@@ -50,6 +50,7 @@ export const FileInput: React.FC<IFileInputProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   multiple = defaultArgs.multiple,
+  ...otherProps
 }) => (
   <input
     id={id}
@@ -64,5 +65,6 @@ export const FileInput: React.FC<IFileInputProps> = ({
     disabled={disabled || null}
     aria-invalid={invalid || null}
     multiple={multiple || null}
+    {...otherProps}
   />
 );

@@ -12,7 +12,7 @@ interface ISelectOption {
   selected?: boolean;
 }
 
-export interface ISelectProps {
+export interface ISelectProps extends React.DOMAttributes<any> {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
@@ -65,6 +65,7 @@ export const Select: React.FC<ISelectProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   options = defaultArgs.options,
+  ...otherProps
 }) => (
   <div className="rvo-select-wrapper">
     <select
@@ -79,6 +80,7 @@ export const Select: React.FC<ISelectProps> = ({
         'utrecht-select--invalid': invalid,
         'utrecht-select--required': required,
       })}
+      {...otherProps}
     >
       {options.map(({ label, selected, value }) => (
         <option key={value} selected={selected || null} defaultValue={value || null}>
