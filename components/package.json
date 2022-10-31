@@ -14,7 +14,7 @@
   "devDependencies": {
     "@nl-rvo/storybook": "file:../packages/storybook",
     "@storybook/addon-docs": "6.5.9",
-    "@utrecht/component-library-css": "1.0.0-alpha.316"
+    "@utrecht/component-library-css": "1.0.0-alpha.363"
   },
   "dependencies": {
     "clsx": "1.1.1"
