@@ -1,0 +1,17 @@
+{
+  "rvo": {
+    "textbox": {
+      "outline-offset": { "value": "0" },
+      "invalid-focus": {
+        "border-color": { "value": "{basiselementen.color.zwart}" },
+        "outline-color": { "value": "{basiselementen.color.rood}" }
+      },
+      "sm": {
+        "width": { "value": "128px" }
+      },
+      "md": {
+        "width": { "value": "calc(128px * 2)" }
+      }
+    }
+  }
+}

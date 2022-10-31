@@ -1,0 +1,11 @@
+{
+  "rvo": {
+    "form-fieldset": {
+      "background-color": { "value": "{basiselementen.color.grijs1}" },
+      "padding-block-end": { "value": "calc(8px + 16px)" },
+      "padding-block-start": { "value": "calc(8px + 16px)" },
+      "padding-inline-end": { "value": "calc(8px + 16px)" },
+      "padding-inline-start": { "value": "calc(8px + 16px)" }
+    }
+  }
+}
