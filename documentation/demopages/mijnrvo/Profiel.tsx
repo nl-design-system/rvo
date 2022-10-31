@@ -6,10 +6,13 @@ import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/templa
 import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { useState } from 'react';
 import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
 const Profiel = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   return (
     <div className="rvo-demo-page rvo-demo-page--mijn-rvo">
       <div className="rvo-header-content">
@@ -104,13 +107,17 @@ const Profiel = () => {
                 <div className="rvo-machtigingen-item">
                   <div className="rvo-machtigingen-title">
                     <Link url="#" content="G.G.L. Luijten" showIcon="before" icon="user" noUnderline={true}></Link>
-                    <Button
-                      kind="warning-subtle"
-                      textContent="Intrekken"
-                      showIcon="before"
-                      size="xs"
-                      icon="verwijderen"
-                    ></Button>
+                    <button
+                      className="utrecht-button utrecht-button--subtle utrecht-button--warning rvo-layout-row rvo-layout-gap--xs utrecht-button--rvo-xs"
+                      type="button"
+                      onClick={() => {
+                        setModalIsOpen(true);
+                        document.body.style.overflow = 'hidden';
+                      }}
+                    >
+                      <span className="utrecht-icon rvo-icon rvo-icon-verwijderen rvo-icon--md"></span>
+                      Intrekken
+                    </button>
                   </div>
                   <div className="rvo-machtigingen-description">Voor alle diensten in Mijn machtigingen(volmacht)</div>
                   <div className="rvo-machtigingen-date">vanaf 14-02-2022 tot 13-02-2023</div>
@@ -250,6 +257,26 @@ const Profiel = () => {
           </ul>
         </MaxWidthLayout>
       </footer>
+      {modalIsOpen && (
+        <div
+          className="rvo-modal"
+          onClick={() => {
+            setModalIsOpen(false);
+            document.body.style.overflow = 'auto';
+          }}
+        >
+          <div className="rvo-modal-element">
+            <Heading type="h3" textContent="Machtiging intrekken"></Heading>
+            <p>
+              Weet u zeker dat u de machtiging van <strong>G.G.L. Luijten</strong> wilt intrekken?
+            </p>
+            <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
+              <Button kind="secondary" textContent="Annuleren" size="sm"></Button>
+              <Button kind="warning" textContent="Machtiging intrekken" size="sm"></Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
