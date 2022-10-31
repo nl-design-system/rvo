@@ -145,11 +145,6 @@
 
   /* @LOGIN OPTIONS */
 
-  .rvo-login-options {
-    display: grid;
-    gap: var(--rvo-space-lg);
-  }
-
   .rvo-login-option-img--e-herkenning {
     max-width: 150px;
   }
@@ -1227,6 +1222,7 @@
   .rvo-accordion__item {
     border-bottom: 1px solid var(--rvo-color-hemelblauw-tint2);
     padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
   }
 
   .rvo-accordion__item[open] .rvo-icon-delta-omhoog {
@@ -1244,6 +1240,11 @@
 
   .rvo-accordion__item p:last-child {
     margin-block-end: 0;
+  }
+
+  .rvo-accordion-teaser {
+    font-size: var(--rvo-font-size-md);
+    font-weight: var(--rvo-font-weight-normal);
   }
 
   /* @LOGO GRID */
