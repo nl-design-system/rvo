@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 import '../../form-textinput/css/index.scss';
@@ -15,6 +16,9 @@ export interface IDateInputProps {
   required?: boolean;
   placeholder?: string;
   value?: string;
+  prefix?: string;
+  suffix?: string;
+  size?: string;
 }
 
 export const argTypes = {
@@ -38,6 +42,16 @@ export const argTypes = {
     control: 'text',
     description: 'Date value in "yyyy-MM-dd" format',
   },
+  prefix: {
+    control: 'text',
+  },
+  suffix: {
+    control: 'text',
+  },
+  size: {
+    options: ['sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
 };
 
 export const defaultArgs: IDateInputProps = {
@@ -48,6 +62,9 @@ export const defaultArgs: IDateInputProps = {
   invalid: false,
   required: false,
   value: '',
+  prefix: '',
+  suffix: '',
+  size: 'lg',
 };
 
 export const DateInput: React.FC<IDateInputProps> = ({
@@ -58,6 +75,9 @@ export const DateInput: React.FC<IDateInputProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   value = defaultArgs.value,
+  prefix = defaultArgs.prefix,
+  suffix = defaultArgs.suffix,
+  size = defaultArgs.size,
 }) => {
   const props = {
     id,
@@ -77,5 +97,22 @@ export const DateInput: React.FC<IDateInputProps> = ({
     defaultValue: value,
   };
 
-  return <input type="date" {...props} />;
+  const inputMarkup = (
+    <Textbox
+      type="date"
+      {...props}
+      className={clsx(size === 'sm' && 'utrecht-textbox--sm', size === 'md' && 'utrecht-textbox--md')}
+    />
+  );
+  if (prefix || suffix) {
+    return (
+      <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
+        {prefix}
+        {inputMarkup}
+        {suffix}
+      </div>
+    );
+  } else {
+    return inputMarkup;
+  }
 };
