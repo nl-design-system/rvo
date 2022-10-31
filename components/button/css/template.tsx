@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 
-export interface IButtonProps {
+export interface IButtonProps extends React.DOMAttributes<any> {
   key?: string | number;
   kind?: string;
   size?: string;
@@ -93,6 +93,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   classNames = [],
+  ...otherProps
 }) => {
   const iconMarkup = <Icon icon={icon} size="md" />;
 
@@ -133,6 +134,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
       disabled={disabled || null}
       appearance={appearance}
       hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : null}
+      {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
       {textContent}
