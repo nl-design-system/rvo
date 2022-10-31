@@ -18,6 +18,8 @@ export interface IDateInputProps {
   value?: string;
   prefix?: string;
   suffix?: string;
+  min?: string;
+  max?: string;
   size?: string;
 }
 
@@ -48,6 +50,14 @@ export const argTypes = {
   suffix: {
     control: 'text',
   },
+  min: {
+    control: 'text',
+    description: 'Date in "yyyy-MM-dd" format',
+  },
+  max: {
+    control: 'text',
+    description: 'Date in "yyyy-MM-dd" format',
+  },
   size: {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
@@ -64,6 +74,8 @@ export const defaultArgs: IDateInputProps = {
   value: '',
   prefix: '',
   suffix: '',
+  min: null,
+  max: null,
   size: 'lg',
 };
 
@@ -77,6 +89,8 @@ export const DateInput: React.FC<IDateInputProps> = ({
   value = defaultArgs.value,
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
+  min = defaultArgs.min,
+  max = defaultArgs.max,
   size = defaultArgs.size,
 }) => {
   const props = {
@@ -95,6 +109,8 @@ export const DateInput: React.FC<IDateInputProps> = ({
     required: required || null,
     readOnly: readOnly || null,
     defaultValue: value,
+    ...(min && { min }),
+    ...(max && { max }),
   };
 
   const inputMarkup = (
