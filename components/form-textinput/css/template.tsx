@@ -22,7 +22,6 @@ export interface ITextInputProps {
   prefix?: string;
   suffix?: string;
   size?: string;
-  updateArgs?: any;
 }
 
 export const argTypes = {
