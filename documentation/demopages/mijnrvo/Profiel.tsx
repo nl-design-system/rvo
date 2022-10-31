@@ -250,6 +250,18 @@ const Profiel = () => {
           </ul>
         </MaxWidthLayout>
       </footer>
+      <div className="rvo-modal">
+        <div className="rvo-modal-element">
+          <Heading type="h3" textContent="Machtiging verwijderen"></Heading>
+          <p>
+            Weet u zeker dat u de machtiging van <strong>G.G.L. Luijten</strong> wil verwijderen?
+          </p>
+          <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
+            <Button kind="tertiary" textContent="Annuleren" size="xs"></Button>
+            <Button kind="warning" textContent="Machtiging verwijderen" size="sm"></Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
