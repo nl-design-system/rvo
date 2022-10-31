@@ -257,7 +257,7 @@ const Profiel = () => {
             Weet u zeker dat u de machtiging van <strong>G.G.L. Luijten</strong> wil verwijderen?
           </p>
           <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
-            <Button kind="tertiary" textContent="Annuleren" size="xs"></Button>
+            <Button kind="secondary" textContent="Annuleren" size="sm"></Button>
             <Button kind="warning" textContent="Machtiging verwijderen" size="sm"></Button>
           </div>
         </div>
