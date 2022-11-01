@@ -1,6 +1,3 @@
-@import "normalize.css/normalize";
-
-/* @TYPOGRAPHY */
 .rvo-demo-page {
   background-color: var(--rvo-color-wit);
 
@@ -26,6 +23,17 @@
   cite {
     margin-block-end: var(--rvo-space-md);
     margin-block-start: 0;
+  }
+
+  /* @LINK THAT LOOKS AS A BUTTON HACK */
+
+  a.utrecht-button {
+    display: inline-flex;
+  }
+
+  .utrecht-button.rvo-link--no-underline:hover,
+  .utrecht-button.rvo-link--no-underline:focus {
+    text-decoration: none;
   }
 
   /* @MOBILE MENU */
