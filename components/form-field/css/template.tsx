@@ -80,11 +80,9 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   }
 
   return (
-    <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-      <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
-        <FormLabel className="rvo-form-field__label-text" htmlFor={fieldId}>
-          {labelText}
-        </FormLabel>
+    <FormField className="rvo-layout-column rvo-layout-gap--sm">
+      <div className="rvo-layout-column rvo-layout-gap--2xs">
+        <FormLabel htmlFor={fieldId}>{labelText}</FormLabel>
         {helperTextMarkup}
         {errorText && <FormFeedback text={errorText} type="error" />}
         {warningText && <FormFeedback text={warningText} type="warning" />}
