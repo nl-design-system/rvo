@@ -1,4 +1,3 @@
-import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
@@ -51,9 +50,20 @@ const Inloggen = () => {
                     </p>{' '}
                     <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
                     <p>
-                      <Button textContent="Inloggen met e-Herkenning 2" size="md"></Button>
+                      <a
+                        className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        href="/iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                      >
+                        Inloggen met e-Herkenning 2
+                      </a>
                       <br />
-                      <Button textContent="Inloggen met e-Herkenning 3" size="md"></Button>
+                      <br />
+                      <a
+                        className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        href="/iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                      >
+                        Inloggen met e-Herkenning 3
+                      </a>
                     </p>
                   </div>
                 </details>
@@ -78,7 +88,12 @@ const Inloggen = () => {
                       informatie leest u op de website van <Link content="DigiD" url="#"></Link>
                     </p>
 
-                    <Button textContent="Inloggen met DigiD" size="md"></Button>
+                    <a
+                      className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                      href="/iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                    >
+                      Inloggen met DigiD
+                    </a>
                   </div>
                 </details>
                 <details className="rvo-accordion__item rvo-login-option login-option--eu">
@@ -99,7 +114,12 @@ const Inloggen = () => {
 
                     <p>Log in with a digital identity from another European country.</p>
 
-                    <Button textContent="EU login" size="md"></Button>
+                    <a
+                      className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                      href="/iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                    >
+                      EU Login
+                    </a>
                   </div>
                 </details>
                 <details className="rvo-accordion__item rvo-login-option login-option--anders">
@@ -115,7 +135,12 @@ const Inloggen = () => {
                   <div className="rvo-accordion__content">
                     <p>U heeft geen eHerkenning of DigiD.</p>
 
-                    <Button textContent="Anders inloggen" size="md"></Button>
+                    <a
+                      className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                      href="/iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                    >
+                      Anders inloggen
+                    </a>
                   </div>
                 </details>
               </div>

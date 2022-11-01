@@ -123,7 +123,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
+                    <a className="rvo-link" href="/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       Gemeenschappelijke Marktordening 2023
                     </a>
                   </h3>
@@ -139,7 +139,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
+                    <a className="rvo-link" href="/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       POP3 Samenwerking Pilots gezonde kalverketen
                     </a>
                   </h3>
@@ -155,7 +155,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
+                    <a className="rvo-link" href="/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>
@@ -171,7 +171,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="#">
+                    <a className="rvo-link" href="/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>
