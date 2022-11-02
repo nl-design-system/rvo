@@ -86,7 +86,7 @@
           "background-color": { "value": "transparent" },
           "color": { "value": "{basiselementen.color.grijs3}" }
         },
-        "text-transform": { "value": "{basiselementen.button.subtle.text-transform}" }
+        "text-decoration": { "value": "none" }
       }
     }
   }

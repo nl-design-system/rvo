@@ -24,6 +24,9 @@
         "padding-block-end": { "value": "8px" },
         "padding-inline-start": { "value": "16px" },
         "padding-inline-end": { "value": "16px" }
+      },
+      "rvo-tertiary-action": {
+        "text-decoration": { "value": "none" }
       }
     }
   }
