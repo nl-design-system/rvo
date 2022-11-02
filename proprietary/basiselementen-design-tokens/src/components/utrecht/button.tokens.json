@@ -79,13 +79,14 @@
       "subtle": {
         "background-color": { "value": "transparent" },
         "color": { "value": "{basiselementen.color.donkerblauw}" },
-        "font-size": { "value": "16px" },
+        "font-size": { "value": "15px" },
         "font-weight": { "value": "{basiselementen.font-weight.bold}" },
         "disabled": {
           "border-color": {},
           "background-color": { "value": "transparent" },
           "color": { "value": "{basiselementen.color.grijs3}" }
-        }
+        },
+        "text-transform": { "value": "{basiselementen.button.subtle.text-transform}" }
       }
     }
   }
