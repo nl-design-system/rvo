@@ -1,15 +1,21 @@
 .utrecht-link {
-  font-weight: var(--rvo-link-font-weight);
-}
-
-.utrecht-link:focus,
-.utrecht-link:focus-visible {
-  outline: none;
-}
-
-.utrecht-link--icon-left {
   align-items: center;
   display: inline-flex;
   gap: var(--rvo-space-xs);
-  text-decoration: underline;
+}
+.rvo-theme {
+  .utrecht-link {
+    font-weight: var(--rvo-link-font-weight);
+  }
+
+  .utrecht-link:focus,
+  .utrecht-link:focus-visible {
+    outline: none;
+  }
+}
+.basiselementen-theme {
+  .utrecht-link:focus,
+  .utrecht-link:focus-visible {
+    outline-offset: 0;
+  }
 }
