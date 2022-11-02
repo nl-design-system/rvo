@@ -54,7 +54,7 @@
             "value": "underline"
           },
           "text-decoration-thickness": {
-            "value": "1px"
+            "value": "1px !important"
           }
         },
         "text-decoration": {
