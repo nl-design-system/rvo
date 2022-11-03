@@ -29,7 +29,24 @@ const MijnZaken = () => {
           />
         </details>
         <MenuBar
-          items={defaultMenuBarItemsMijnRVO}
+          items={[
+            { label: 'Profiel', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
+            {
+              label: 'Zaken',
+              icon: '',
+              active: true,
+              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story',
+            },
+            { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Help', icon: '', link: '#' },
+            {
+              label: 'Uitloggen',
+              icon: '',
+              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
+              align: 'right',
+            },
+            { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
+          ]}
           size="lg"
           useIcons={true}
           iconPlacement="before"
@@ -123,7 +140,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="/rvo/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       Gemeenschappelijke Marktordening 2023
                     </a>
                   </h3>
@@ -139,7 +156,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="/rvo/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       POP3 Samenwerking Pilots gezonde kalverketen
                     </a>
                   </h3>
@@ -155,7 +172,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="/rvo/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>
@@ -171,7 +188,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="/rvo/iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>
