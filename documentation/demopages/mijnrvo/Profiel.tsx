@@ -8,7 +8,6 @@ import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { useState } from 'react';
 import '../common/style.scss';
-import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
 const Profiel = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -24,7 +23,23 @@ const Profiel = () => {
             <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
           </summary>
           <MenuBar
-            items={defaultMenuBarItemsMijnRVO}
+            items={[
+              {
+                label: 'Profiel',
+                icon: '',
+                link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story',
+              },
+              { label: 'Zaken', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+              { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+              { label: 'Help', icon: '', link: '#' },
+              {
+                label: 'Uitloggen',
+                icon: '',
+                link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
+                align: 'right',
+              },
+              { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
+            ]}
             size="lg"
             useIcons={true}
             iconPlacement="before"
@@ -32,7 +47,24 @@ const Profiel = () => {
           />
         </details>
         <MenuBar
-          items={defaultMenuBarItemsMijnRVO}
+          items={[
+            {
+              label: 'Profiel',
+              icon: '',
+              active: true,
+              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story',
+            },
+            { label: 'Zaken', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+            { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Help', icon: '', link: '#' },
+            {
+              label: 'Uitloggen',
+              icon: '',
+              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
+              align: 'right',
+            },
+            { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
+          ]}
           size="lg"
           useIcons={true}
           iconPlacement="before"

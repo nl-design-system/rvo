@@ -138,6 +138,12 @@
     display: block;
   }
 
+  /* @TMP MENU ACTIVE ICON FIX */
+
+  .utrecht-topnav__item--active .rvo-icon-delta-omlaag {
+    display: none;
+  }
+
   /* @ RESPONSIVE FILTERS */
 
   .rvo-responsive-filters > .rvo-responsive-filters-toggle {
@@ -245,10 +251,6 @@
     padding-block-start: var(--rvo-space-lg);
     padding-inline-end: var(--rvo-space-lg);
     padding-inline-start: var(--rvo-space-lg);
-  }
-
-  .rvo-main--mijn-zaken {
-    padding-block-end: var(--rvo-space-md);
   }
 
   /* @FILTER */
@@ -1056,6 +1058,7 @@
     flex-direction: column;
     gap: var(--rvo-space-xs);
     justify-content: center;
+    margin-block-end: var(--rvo-space-2xl);
     padding-inline-start: var(--rvo-space-md);
   }
 
