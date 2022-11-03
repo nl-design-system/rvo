@@ -21,7 +21,7 @@ const Inloggen = () => {
         />
         <div className="rvo-hero rvo-hero--man-met-laptop">
           <div className="rvo-hero-bg-img-container">
-            <img src="images/hero/hero-bg--vrouw-met-laptop.webp" className="rvo-hero-bg-img" />
+            <img src="images/hero/hero-bg--vrouw-met-mobiel.webp" className="rvo-hero-bg-img" />
           </div>
           <MaxWidthLayout size="sm">
             <div className="rvo-hero-content">
@@ -32,7 +32,7 @@ const Inloggen = () => {
                 </p>
               </div>
               <div className="rvo-hero-img-container">
-                <img src="images/hero/vrouw-met-laptop.webp" className="rvo-hero-img" />
+                <img src="images/hero/vrouw_op_mobiel.webp" className="rvo-hero-img" />
               </div>
             </div>
           </MaxWidthLayout>
