@@ -42,6 +42,13 @@
     background-color: var(--rvo-color-hemelblauw);
   }
 
+  .rvo-responsive-menu,
+  .rvo-responsive-menu + .rvo-topnav__background {
+    position: sticky;
+    top: -1px;
+    z-index: 5;
+  }
+
   .rvo-responsive-menu summary {
     align-items: center;
     color: var(--rvo-color-wit);
