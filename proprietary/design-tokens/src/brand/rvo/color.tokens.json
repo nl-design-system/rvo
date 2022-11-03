@@ -58,6 +58,9 @@
       "rood": {
         "value": "{basiselementen.color.rood}"
       },
+      "rood-shade1": {
+        "value": "{basiselementen.color.rood-shade1}"
+      },
       "rood-tint1": {
         "value": "{basiselementen.color.rood-tint1}"
       },

@@ -11,7 +11,8 @@
           "color": { "value": "{rvo.color.donkerblauw}" }
         },
         "hover": {
-          "color": { "value": "{rvo.color.donkerblauw}" }
+          "color": { "value": "{rvo.color.donkerblauw}" },
+          "text-decoration": { "value": "underline" }
         },
         "disabled": {
           "border-color": {},
