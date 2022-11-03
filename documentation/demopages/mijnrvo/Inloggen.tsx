@@ -47,15 +47,15 @@ const Inloggen = () => {
                       <span className="rvo-accordion__item-title">
                         <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                         <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                        Voor ondernemers en gemeentes met e-Herkenning
+                        Voor ondernemers en gemeentes met e-Herkenning{' '}
+                        <img
+                          src="images/login-options/e-herkenning-logo.svg"
+                          className="rvo-login-option-img rvo-login-option-img--e-herkenning"
+                        />
                       </span>
                     </h3>
                   </summary>
                   <div className="rvo-accordion__content">
-                    <img
-                      src="images/login-options/e-herkenning-logo.svg"
-                      className="rvo-login-option-img rvo-login-option-img--e-herkenning"
-                    />
                     <p>
                       U bent <strong>ondernemer</strong> en ingeschreven bij KVK. Of u logt in namens een{' '}
                       <strong>gemeente</strong>.{' '}
@@ -89,16 +89,15 @@ const Inloggen = () => {
                       <span className="rvo-accordion__item-title">
                         <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                         <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                        Voor particulieren met DigiD
+                        Voor particulieren met DigiD{' '}
+                        <img
+                          src="images/login-options/digid-logo.svg"
+                          className="rvo-login-option-img rvo-login-option-img--digid"
+                        />
                       </span>
                     </h3>
                   </summary>
                   <div className="rvo-accordion__content">
-                    <img
-                      src="images/login-options/digid-logo.svg"
-                      className="rvo-login-option-img rvo-login-option-img--digid"
-                    />
-
                     <p>
                       U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD. Meer
                       informatie leest u op de website van <Link content="DigiD" url="#"></Link>
@@ -118,16 +117,15 @@ const Inloggen = () => {
                       <span className="rvo-accordion__item-title">
                         <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                         <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                        Digital identity from another European country
+                        Digital identity from another European country{' '}
+                        <img
+                          src="images/login-options/eu-flag.svg"
+                          className="rvo-login-option-img rvo-login-option-img--eu"
+                        />
                       </span>
                     </h3>
                   </summary>
                   <div className="rvo-accordion__content">
-                    <img
-                      src="images/login-options/eu-flag.svg"
-                      className="rvo-login-option-img rvo-login-option-img--eu"
-                    />
-
                     <p>Log in with a digital identity from another European country.</p>
 
                     <a
