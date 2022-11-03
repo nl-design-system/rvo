@@ -19,11 +19,27 @@ const Inloggen = () => {
           iconPlacement="before"
           menuMaxWidth="sm"
         />
-
+        <div className="rvo-hero rvo-hero--man-met-laptop">
+          <div className="rvo-hero-bg-img-container">
+            <img src="images/hero/hero-bg--vrouw-met-laptop.webp" className="rvo-hero-bg-img" />
+          </div>
+          <MaxWidthLayout size="sm">
+            <div className="rvo-hero-content">
+              <div className="rvo-hero-text">
+                <Heading type="h1" textContent="Inloggen" />
+                <p className="rvo-hero-description">
+                  Hieronder vindt u de verschillende manieren om in te loggen op Mijn RVO
+                </p>
+              </div>
+              <div className="rvo-hero-img-container">
+                <img src="images/hero/vrouw-met-laptop.webp" className="rvo-hero-img" />
+              </div>
+            </div>
+          </MaxWidthLayout>
+        </div>
         <MaxWidthLayout size="sm">
           <main className="rvo-main rvo-main--inloggen">
             <LayoutColumnRow size="sm">
-              <Heading type="h1" textContent="Inloggen" />
               <div className="rvo-accordion rvo-login-options">
                 <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
                   <summary className="rvo-accordion__item-summary">
