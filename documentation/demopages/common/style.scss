@@ -42,6 +42,13 @@
     background-color: var(--rvo-color-hemelblauw);
   }
 
+  .rvo-responsive-menu,
+  .rvo-responsive-menu + .rvo-topnav__background {
+    position: sticky;
+    top: -1px;
+    z-index: 5;
+  }
+
   .rvo-responsive-menu summary {
     align-items: center;
     color: var(--rvo-color-wit);
@@ -153,16 +160,22 @@
 
   /* @LOGIN OPTIONS */
 
+  .rvo-login-option-img {
+    margin-inline-start: auto;
+  }
+
   .rvo-login-option-img--e-herkenning {
-    max-width: 150px;
+    margin-block-start: var(--rvo-space-2xs);
+    max-height: 20px;
   }
 
   .rvo-login-option-img--digid {
-    max-width: 80px;
+    max-height: 24px;
   }
 
   .rvo-login-option-img--eu {
-    max-width: 100px;
+    margin-block-start: var(--rvo-space-2xs);
+    max-height: 20px;
   }
 
   /* @HERO */
@@ -207,6 +220,7 @@
   .rvo-hero-img-container {
     align-items: flex-end;
     display: flex;
+    justify-content: center;
   }
 
   .rvo-hero-img {
@@ -1480,6 +1494,7 @@
   @media (min-width: 612px) {
     .rvo-hero-content {
       flex-direction: row;
+      justify-content: space-between;
     }
 
     .rvo-hero-text {
