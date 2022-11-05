@@ -6,21 +6,13 @@ import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
+import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
 const Bevestiging = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar
-        items={[
-          { label: 'Home', icon: 'home', link: '#' },
-          { label: 'Uitloggen', icon: 'versleutelen', link: '#', align: 'right' },
-        ]}
-        size="md"
-        useIcons={true}
-        iconPlacement="before"
-        menuMaxWidth="md"
-      />
+      <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
           <ProgressTracker

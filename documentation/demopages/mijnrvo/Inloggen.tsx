@@ -68,7 +68,7 @@ const Inloggen = () => {
                     <p>
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        href="iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
                       >
                         Inloggen met e-Herkenning 2
                       </a>
@@ -76,7 +76,7 @@ const Inloggen = () => {
                       <br />
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        href="iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
                       >
                         Inloggen met e-Herkenning 3
                       </a>
@@ -105,7 +105,7 @@ const Inloggen = () => {
 
                     <a
                       className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                      href="iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                      href="iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
                     >
                       Inloggen met DigiD
                     </a>
@@ -130,7 +130,7 @@ const Inloggen = () => {
 
                     <a
                       className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                      href="iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                      href="iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
                     >
                       EU Login
                     </a>
@@ -151,7 +151,7 @@ const Inloggen = () => {
 
                     <a
                       className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                      href="iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story"
+                      href="iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
                     >
                       Anders inloggen
                     </a>

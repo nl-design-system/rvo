@@ -30,7 +30,6 @@ const MijnZaken = () => {
         </details>
         <MenuBar
           items={[
-            { label: 'Profiel', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
             {
               label: 'Zaken',
               icon: '',
@@ -39,6 +38,7 @@ const MijnZaken = () => {
             },
             { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
             { label: 'Help', icon: '', link: '#' },
+            { label: 'Profiel', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
             {
               label: 'Uitloggen',
               icon: '',
@@ -141,7 +141,7 @@ const MijnZaken = () => {
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
                     <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
-                      Gemeenschappelijke Marktordening 2023
+                      Jonge Vissers 2022
                     </a>
                   </h3>
                 </div>
