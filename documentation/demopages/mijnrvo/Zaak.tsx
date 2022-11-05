@@ -1,4 +1,3 @@
-import { Button } from '@nl-rvo/components/button/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
@@ -42,7 +41,7 @@ const Zaak = () => {
               <LayoutColumnRow size="2xl">
                 <LayoutColumnRow size="md">
                   <h1 className="utrecht-heading-1">
-                    Gemeenschappelijk Marktordening 2023
+                    Jonge Vissers 2022
                     <span className="rvo-case-number">
                       <span className="utrecht-icon rvo-icon rvo-icon-map rvo-icon--lg rvo-icon--zwart"></span> 22933948
                     </span>
@@ -54,26 +53,22 @@ const Zaak = () => {
                       <div>
                         De aanvraag is <strong>bij u in behandeling</strong>. Dat betekent dat deze nog niet is
                         ingediend. U kunt de{' '}
-                        <a href="#" className="rvo-link">
+                        <a
+                          href="iframe.html?args=&id=pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
+                          className="rvo-link"
+                        >
                           aanvraag openen
                         </a>
                         , verder invullen en dan indienen.
                       </div>
                     </div>
                   </div>
-                  <Button
-                    kind="primary"
-                    size="md"
-                    active={false}
-                    busy={false}
-                    focus={false}
-                    focusVisible={false}
-                    disabled={false}
-                    hover={false}
-                    showIcon="no"
+                  <a
+                    className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                    href="iframe.html?args=&id=pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
                   >
-                    Open aanvraag
-                  </Button>
+                    Aanvraag openen
+                  </a>
                 </LayoutColumnRow>
                 <div className="rvo-item-list rvo-item-list--documents">
                   <Heading type="h2" textContent="Documenten"></Heading>
