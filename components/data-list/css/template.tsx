@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
+import './index.scss';
 interface IDataListItem {
   key: string;
   value: string;

@@ -4,6 +4,7 @@
  */
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import React from 'react';
+import './index.scss';
 
 export const FormLayout: React.FC = () => {
   return (

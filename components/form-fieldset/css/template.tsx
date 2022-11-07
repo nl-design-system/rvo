@@ -6,7 +6,7 @@ import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { ITextInputFieldProps, TextInputField } from '../../form-field/css/textinput-field.template';
-
+import './index.scss';
 interface IFieldsetProps {
   legend: string;
   disabled?: boolean;

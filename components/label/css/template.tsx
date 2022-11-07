@@ -4,6 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import './index.scss';
 
 interface ILabelProps {
   content: string;

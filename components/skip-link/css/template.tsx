@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import { Button } from '../../button/css/template';
+import './index.scss';
 
 interface ISkipLinkProps {
   textContent?: string;

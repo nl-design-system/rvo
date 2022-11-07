@@ -6,11 +6,11 @@ import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
+import './index.scss';
 
 export interface IButtonProps extends React.DOMAttributes<any> {
-  key?: string | number;
-  kind?: string;
-  size?: string;
+  kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
+  size?: 'xs' | 'sm' | 'md';
   textContent?: string;
   active?: boolean;
   busy?: boolean;
@@ -18,14 +18,14 @@ export interface IButtonProps extends React.DOMAttributes<any> {
   focusVisible?: boolean;
   hover?: boolean;
   disabled?: boolean;
-  showIcon?: string;
+  showIcon?: 'no' | 'before' | 'after';
   icon?: string;
   classNames?: string[];
 }
 
 export const argTypes = {
   kind: {
-    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'warning-subtle', 'warning'],
+    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'subtle', 'warning-subtle', 'warning'],
     control: { type: 'radio' },
   },
   size: {
@@ -94,7 +94,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   icon = defaultArgs.icon,
   classNames = [],
   ...otherProps
-}) => {
+}: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon} size="md" />;
 
   let appearance: string = null;
@@ -166,3 +166,5 @@ export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
     </p>
   </div>
 );
+
+export default Button;

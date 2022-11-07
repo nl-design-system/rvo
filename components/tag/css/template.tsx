@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Icon, options as iconOptions } from '../../icon/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
+import './index.scss';
 
 interface ITagProps {
   content: string;

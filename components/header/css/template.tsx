@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import { Logo } from '../../logo/css/template';
+import './index.scss';
 
 interface IHeaderProps {
   link?: string;

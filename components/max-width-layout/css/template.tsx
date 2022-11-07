@@ -5,7 +5,7 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-
+import './index.scss';
 interface IMaxWidthLayoutProps {
   size?: string;
   content?: string;

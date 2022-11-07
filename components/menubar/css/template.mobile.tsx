@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import React, { useCallback } from 'react';
 import { Icon } from '../../icon/css/template';
 import { defaultItems, IMenuBarItem, IMenuBarProps, parseMenuItem } from './template';
+import './index.scss';
 
 export const argTypes = {
   size: {

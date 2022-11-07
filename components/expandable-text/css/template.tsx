@@ -5,7 +5,7 @@
 import React from 'react';
 import { Icon } from '../../icon/css/template';
 import validateHTML from '../../utils/validateHTML';
-
+import './index.scss';
 interface IExpandableTextProps {
   title: string;
   text: string | React.ReactNode;

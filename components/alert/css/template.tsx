@@ -10,9 +10,10 @@ import { Icon } from '../../icon/css/template';
 import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
 import validateHTML from '../../utils/validateHTML';
+import './index.scss';
 
 export interface IAlertProps {
-  kind?: string;
+  kind?: 'info' | 'warning' | 'error' | 'success';
   heading?: string;
   content?: string | React.ReactNode;
   closable?: boolean;
@@ -48,7 +49,7 @@ export const Alert: React.FC<IAlertProps> = ({
   heading = defaultArgs.heading,
   content = defaultArgs.content,
   closable = defaultArgs.closable,
-}) => {
+}: IAlertProps) => {
   let iconMarkup;
   switch (kind) {
     case 'info':
@@ -95,3 +96,5 @@ export const AllAlertKinds: React.FC<IAlertProps> = (alertArgs) => (
     <Alert {...alertArgs} kind="success" />
   </div>
 );
+
+export default Alert;

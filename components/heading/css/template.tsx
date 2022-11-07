@@ -6,6 +6,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Link } from '../../link/css/template';
+import './index.scss';
 
 interface IHeadingProps {
   type: string;

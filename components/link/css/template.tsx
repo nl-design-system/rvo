@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, iconColors, options as iconOptions } from '../../icon/css/template';
-
+import './index.scss';
 interface ILinkProps {
   content: string;
   url: string;

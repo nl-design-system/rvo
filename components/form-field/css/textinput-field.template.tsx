@@ -11,6 +11,7 @@ import {
 } from '../../form-textinput/css/template';
 import extractArgs from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, defaultArgs as fieldDefaultArgs, IFieldProps } from './template';
+import './index.scss';
 
 export interface ITextInputFieldProps extends IFieldProps, ITextInputProps {}
 

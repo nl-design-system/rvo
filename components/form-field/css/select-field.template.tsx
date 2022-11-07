@@ -11,6 +11,7 @@ import {
 } from '../../form-select/css/template';
 import extractArgs from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, defaultArgs as fieldDefaultArgs, IFieldProps } from './template';
+import './index.scss';
 
 interface ISelectFieldProps extends IFieldProps, ISelectProps {}
 

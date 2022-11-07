@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
+import './index.scss';
 export interface IMenuBarItem {
   label: string;
   icon?: string;

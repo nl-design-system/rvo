@@ -7,7 +7,7 @@ import React, { PropsWithChildren } from 'react';
 import { ExpandableText } from '../../expandable-text/css/template';
 import { FormFeedback } from '../../form-feedback/css/template';
 import validateHTML from '../../utils/validateHTML';
-
+import './index.scss';
 export interface IFieldProps {
   fieldId?: string;
   labelText: string;

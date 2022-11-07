@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import '@nl-rvo/assets/images/logo.svg';
 import React from 'react';
-
+import './index.scss';
 interface ILogoProps {
   title?: string;
   subtitle?: string;

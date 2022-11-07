@@ -8,6 +8,7 @@ import { Heading } from '../../heading/css/template';
 import { Link } from '../../link/css/template';
 import { MaxWidthLayout } from '../../max-width-layout/css/template';
 import validateHTML from '../../utils/validateHTML';
+import './index.scss';
 
 interface IFooterItem {
   content: string;

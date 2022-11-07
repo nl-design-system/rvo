@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import './index.scss';
 import React from 'react';
+import './index.scss';
 
 export interface ICheckboxProps extends React.DOMAttributes<any> {
   id?: string;

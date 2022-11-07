@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-
+import './index.scss';
 interface ILayoutColumnRowProps {
   size?: string;
   row?: boolean;

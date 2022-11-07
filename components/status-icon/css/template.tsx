@@ -5,7 +5,7 @@
 import iconList from '@nl-rvo/assets/icons';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
-
+import './index.scss';
 interface IStatusIconProps {
   type: string;
   size: string;

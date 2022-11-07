@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
+import './index.scss';
 
 interface IBreadcrumbItem {
   label: string;
@@ -13,7 +14,7 @@ interface IBreadcrumbItem {
 
 interface IBreadcrumbProps {
   items: IBreadcrumbItem[];
-  size: string;
+  size: 'sm' | 'md' | 'lg';
 }
 
 export const argTypes = {
@@ -39,7 +40,10 @@ export const defaultArgs: IBreadcrumbProps = {
   size: 'sm',
 };
 
-export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items = defaultArgs.items, size = defaultArgs.size }) => {
+export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
+  items = defaultArgs.items,
+  size = defaultArgs.size,
+}: IBreadcrumbProps) => {
   return (
     <ol className={clsx('rvo-breadcrumbs', `rvo-breadcrumbs--${size}`, 'rvo-layout-row', `rvo-layout-gap--sm`)}>
       {items.map((item, index) => {
@@ -78,3 +82,5 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items = defaultArgs.it
     </ol>
   );
 };
+
+export default Breadcrumbs;

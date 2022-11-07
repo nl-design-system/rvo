@@ -5,7 +5,7 @@
 import iconList from '@nl-rvo/assets/icons/index.js';
 import clsx from 'clsx';
 import React from 'react';
-
+import './index.scss';
 interface IIconProps {
   icon: string;
   size?: string;
