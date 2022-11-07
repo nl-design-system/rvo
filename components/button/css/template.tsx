@@ -8,9 +8,31 @@ import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 import './index.scss';
 
+export enum ButtonKind {
+  Primary = 'primary',
+  Secondary = 'secondary',
+  Tertiary = 'tertiary',
+  Quaternary = 'quaternary',
+  Subtle = 'subtle',
+  WarningSubtle = 'warning-subtle',
+  Warning = 'warning',
+}
+
+export enum ButtonSize {
+  Xs = 'xs',
+  Sm = 'sm',
+  Md = 'md',
+}
+
+export enum ShowIconType {
+  No = 'no',
+  Before = 'before',
+  After = 'after',
+}
+
 export interface IButtonProps extends React.DOMAttributes<any> {
-  kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
-  size?: 'xs' | 'sm' | 'md';
+  kind?: ButtonKind;
+  size?: ButtonSize;
   textContent?: string;
   active?: boolean;
   busy?: boolean;
@@ -18,7 +40,7 @@ export interface IButtonProps extends React.DOMAttributes<any> {
   focusVisible?: boolean;
   hover?: boolean;
   disabled?: boolean;
-  showIcon?: 'no' | 'before' | 'after';
+  showIcon?: ShowIconType;
   icon?: string;
   classNames?: string[];
 }
@@ -61,8 +83,8 @@ export const argTypes = {
 };
 
 export const defaultArgs: IButtonProps = {
-  kind: 'primary',
-  size: 'md',
+  kind: ButtonKind.Primary,
+  size: ButtonSize.Md,
   active: false,
   busy: false,
   disabled: false,
@@ -70,7 +92,7 @@ export const defaultArgs: IButtonProps = {
   focusVisible: false,
   hover: false,
   textContent: '',
-  showIcon: 'no',
+  showIcon: ShowIconType.No,
   icon: iconOptions[0],
 };
 
@@ -147,22 +169,22 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
 export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
   <div>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="primary" />
+      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Primary} />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="secondary" />
+      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Secondary} />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="tertiary" />
+      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Tertiary} />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="quaternary" />
+      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Quaternary} />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="warning-subtle" />
+      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.WarningSubtle} />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="warning" />
+      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Warning} />
     </p>
   </div>
 );

@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import { Button } from '../../button/css/template';
+import { Button, ButtonKind } from '../../button/css/template';
 import { Icon } from '../../icon/css/template';
 import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
@@ -83,7 +83,7 @@ export const Alert: React.FC<IAlertProps> = ({
         {contentMarkup}
       </div>
       {closable && (
-        <Button kind="subtle" classNames={['rvo-button--close']}>
+        <Button kind={ButtonKind.Subtle} classNames={['rvo-button--close']}>
           <Icon icon="kruis" size="md" />
         </Button>
       )}
