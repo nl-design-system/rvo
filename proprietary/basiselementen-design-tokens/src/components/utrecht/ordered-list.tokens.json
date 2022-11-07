@@ -1,0 +1,22 @@
+{
+  "utrecht": {
+    "ordered-list": {
+      "margin-block-start": {},
+      "margin-block-end": { "value": "16px" },
+      "item": {
+        "margin-block-start": {},
+        "margin-block-end": {},
+        "padding-inline-start": {
+          "value": "0"
+        }
+      },
+      "marker": {
+        "color": {}
+      },
+      "padding-inline-start": {
+        "value": "40px",
+        "comment": "Explicitly setting the user agent default (40px)"
+      }
+    }
+  }
+}
