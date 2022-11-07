@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import { Button } from '../../button/css/template';
 import { Icon } from '../../icon/css/template';
@@ -15,8 +15,10 @@ import './index.scss';
 export interface IAlertProps {
   kind?: 'info' | 'warning' | 'error' | 'success';
   heading?: string;
+  /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -49,6 +51,7 @@ export const Alert: React.FC<IAlertProps> = ({
   heading = defaultArgs.heading,
   content = defaultArgs.content,
   closable = defaultArgs.closable,
+  children,
 }: IAlertProps) => {
   let iconMarkup;
   switch (kind) {
@@ -67,7 +70,7 @@ export const Alert: React.FC<IAlertProps> = ({
   }
 
   // Parse content markup (either a string, HTML string or React node)
-  let contentMarkup = <div>{content}</div>;
+  let contentMarkup = children || <div>{content}</div>;
   if (typeof content === 'string' && content.length && validateHTML(content)) {
     contentMarkup = <div dangerouslySetInnerHTML={{ __html: content }}></div>;
   }
