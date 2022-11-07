@@ -14,7 +14,7 @@
         "color": {}
       },
       "padding-inline-start": {
-        "value": "40px",
+        "value": "20px",
         "comment": "Explicitly setting the user agent default (40px)"
       }
     }
