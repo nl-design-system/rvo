@@ -12,12 +12,20 @@ import { StatusIcon } from '../../status-icon/css/template';
 import validateHTML from '../../utils/validateHTML';
 import './index.scss';
 
+enum AlertKind {
+  Info = 'info',
+  Warning = 'warning',
+  Error = 'error',
+  Success = 'success',
+}
+
 export interface IAlertProps {
-  kind?: 'info' | 'warning' | 'error' | 'success';
+  kind?: AlertKind;
   heading?: string;
   /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
+  /** @uxpinpropname content */
   children?: ReactNode | undefined;
 }
 
@@ -40,7 +48,7 @@ export const argTypes = {
 const linkMarkup = ReactDOMServer.renderToStaticMarkup(Link({ content: 'link', url: '#' }));
 
 export const defaultArgs: IAlertProps = {
-  kind: 'info',
+  kind: AlertKind.Info,
   heading: '',
   content: `This is an example of an alert, with a ${linkMarkup} inside.`,
   closable: false,
@@ -93,10 +101,10 @@ export const Alert: React.FC<IAlertProps> = ({
 
 export const AllAlertKinds: React.FC<IAlertProps> = (alertArgs) => (
   <div className="rvo-layout-column rvo-layout-gap--md">
-    <Alert {...alertArgs} kind="info" />
-    <Alert {...alertArgs} kind="warning" />
-    <Alert {...alertArgs} kind="error" />
-    <Alert {...alertArgs} kind="success" />
+    <Alert {...alertArgs} kind={AlertKind.Info} />
+    <Alert {...alertArgs} kind={AlertKind.Warning} />
+    <Alert {...alertArgs} kind={AlertKind.Error} />
+    <Alert {...alertArgs} kind={AlertKind.Success} />
   </div>
 );
 
