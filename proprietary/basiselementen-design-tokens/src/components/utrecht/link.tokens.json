@@ -13,7 +13,7 @@
       "hover": {
         "background-color": {},
         "color": { "value": "{basiselementen.color.donkerblauw}" },
-        "text-decoration-thickness": { "value": "2px" },
+        "text-decoration-thickness": { "value": "1px" },
         "font-weight": { "value": "{basiselementen.font-weight.bold}" },
         "icon": {
           "background-color": {}
