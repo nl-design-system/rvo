@@ -9,10 +9,10 @@ import { Button, ButtonKind } from '../../button/css/template';
 import { Icon } from '../../icon/css/template';
 import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
-import validateHTML from '../../utils/validateHTML';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-enum AlertKind {
+export enum AlertKind {
   Info = 'info',
   Warning = 'warning',
   Error = 'error',
@@ -25,7 +25,7 @@ export interface IAlertProps {
   /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
-  /** @uxpinpropname content */
+  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
 
@@ -77,11 +77,8 @@ export const Alert: React.FC<IAlertProps> = ({
       break;
   }
 
-  // Parse content markup (either a string, HTML string or React node)
-  let contentMarkup = children || <div>{content}</div>;
-  if (typeof content === 'string' && content.length && validateHTML(content)) {
-    contentMarkup = <div dangerouslySetInnerHTML={{ __html: content }}></div>;
-  }
+  // Parse content markup (either a string, HTML string, React node or children)
+  let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
     <div className={clsx('rvo-alert', `rvo-alert--${kind}`)}>
