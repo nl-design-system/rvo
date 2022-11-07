@@ -8,8 +8,8 @@ import React from 'react';
 import { Checkbox, ICheckboxProps } from './template';
 
 export interface ICheckboxGroupProps {
-  invalid: boolean;
-  options: ICheckboxProps[];
+  invalid?: boolean;
+  options?: ICheckboxProps[];
 }
 
 const defaultOptions: ICheckboxProps[] = [

@@ -7,9 +7,9 @@ import './index.scss';
 import React from 'react';
 import { IRadioButtonProps, RadioButton } from './template';
 export interface IRadioButtonGroupProps {
-  name: string;
+  name?: string;
   invalid?: boolean;
-  options: IRadioButtonProps[];
+  options?: IRadioButtonProps[];
 }
 
 const defaultOptions: IRadioButtonProps[] = [

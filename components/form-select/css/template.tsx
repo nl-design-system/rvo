@@ -18,7 +18,7 @@ export interface ISelectProps extends React.DOMAttributes<any> {
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
-  options: ISelectOption[];
+  options?: ISelectOption[];
 }
 
 const defaultOptions: ISelectOption[] = [

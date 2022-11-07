@@ -10,7 +10,7 @@ import validateHTML from '../../utils/validateHTML';
 import './index.scss';
 export interface IFieldProps {
   fieldId?: string;
-  labelText: string;
+  labelText?: string;
   helperText?: string | React.ReactNode;
   expandableHelperText?: boolean;
   expandableHelperTextTitle?: string;
