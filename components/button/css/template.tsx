@@ -6,6 +6,7 @@ import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
+import '../../layout-column-row/css/index.scss';
 import './index.scss';
 
 export interface IButtonProps extends React.DOMAttributes<any> {
