@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
+import '../../layout-column-row/css/index.scss';
 import './index.scss';
 
 interface IBreadcrumbItem {
