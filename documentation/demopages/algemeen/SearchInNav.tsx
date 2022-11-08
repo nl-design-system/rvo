@@ -33,7 +33,7 @@ const SearchInNav = () => {
                   <Button
                     kind="primary"
                     size="md"
-                    textContent="Zoeken"
+                    label="Zoeken"
                     active={false}
                     busy={false}
                     focus={false}

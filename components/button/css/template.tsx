@@ -8,39 +8,17 @@ import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 import './index.scss';
 
-export enum ButtonKind {
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Tertiary = 'tertiary',
-  Quaternary = 'quaternary',
-  Subtle = 'subtle',
-  WarningSubtle = 'warning-subtle',
-  Warning = 'warning',
-}
-
-export enum ButtonSize {
-  Xs = 'xs',
-  Sm = 'sm',
-  Md = 'md',
-}
-
-export enum ShowIconType {
-  No = 'no',
-  Before = 'before',
-  After = 'after',
-}
-
 export interface IButtonProps extends React.DOMAttributes<any> {
-  kind?: ButtonKind;
-  size?: ButtonSize;
-  textContent?: string;
+  kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
+  size?: 'xs' | 'sm' | 'md';
+  label?: string;
   active?: boolean;
   busy?: boolean;
   focus?: boolean;
   focusVisible?: boolean;
   hover?: boolean;
   disabled?: boolean;
-  showIcon?: ShowIconType;
+  showIcon?: 'no' | 'before' | 'after';
   icon?: string;
   classNames?: string[];
 }
@@ -54,7 +32,7 @@ export const argTypes = {
     options: ['xs', 'sm', 'md'],
     control: { type: 'radio' },
   },
-  textContent: {
+  label: {
     control: 'text',
   },
   busy: {
@@ -83,22 +61,22 @@ export const argTypes = {
 };
 
 export const defaultArgs: IButtonProps = {
-  kind: ButtonKind.Primary,
-  size: ButtonSize.Md,
+  kind: 'primary',
+  size: 'md',
   active: false,
   busy: false,
   disabled: false,
   focus: false,
   focusVisible: false,
   hover: false,
-  textContent: '',
-  showIcon: ShowIconType.No,
+  label: 'Button',
+  showIcon: 'no',
   icon: iconOptions[0],
 };
 
 export const exampleArgs = {
   ...defaultArgs,
-  textContent: 'Button',
+  label: 'Button',
 };
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
@@ -110,7 +88,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
   hover = defaultArgs.hover,
-  textContent = defaultArgs.textContent,
+  label = defaultArgs.label,
   children,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
@@ -159,7 +137,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
       {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
-      {textContent}
+      {label}
       {children}
       {showIcon === 'after' && iconMarkup}
     </UtrechtButton>
@@ -169,22 +147,22 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
 export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
   <div>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Primary} />
+      <Button label="Button" {...buttonArgs} kind="primary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Secondary} />
+      <Button label="Button" {...buttonArgs} kind="secondary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Tertiary} />
+      <Button label="Button" {...buttonArgs} kind="tertiary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Quaternary} />
+      <Button label="Button" {...buttonArgs} kind="quaternary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.WarningSubtle} />
+      <Button label="Button" {...buttonArgs} kind="warning-subtle" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind={ButtonKind.Warning} />
+      <Button label="Button" {...buttonArgs} kind="warning" />
     </p>
   </div>
 );
