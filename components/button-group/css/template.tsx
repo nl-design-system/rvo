@@ -4,24 +4,25 @@
  */
 import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
-import { Button, ButtonKind, ButtonSize, IButtonProps } from '../../button/css/template';
+import { Button, IButtonProps } from '../../button/css/template';
 import './index.scss';
+
 interface IButtonGroupProps {
   buttonsLeft: IButtonProps[];
   buttonsRight: IButtonProps[];
 }
 const defaultButtonsLeft = [
   {
-    kind: 'primary',
-    size: 'md',
+    kind: 'primary' as const,
+    size: 'md' as const,
     textContent: 'Primary action',
   },
 ];
 
 const defaultButtonsRight = [
   {
-    kind: 'secondary',
-    size: 'md',
+    kind: 'secondary' as const,
+    size: 'md' as const,
     textContent: 'Secondary action',
   },
 ];
