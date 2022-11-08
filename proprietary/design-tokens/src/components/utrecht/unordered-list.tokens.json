@@ -23,6 +23,9 @@
       "padding-inline-start": {
         "value": "40px",
         "comment": "Explicitly setting the user agent default (40px)"
+      },
+      "list-style-type": {
+        "value": "disc"
       }
     }
   }

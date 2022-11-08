@@ -1,10 +1,13 @@
 {
-  "utrecht": {
+  "basiselementen": {
+    "root": {
+      "font-size": { "value": "100%" }
+    },
     "document": {
       "background-color": { "value": "{basiselementen.color.wit}" },
       "color": { "value": "{basiselementen.color.zwart}" },
       "font-family": { "value": "{basiselementen.font.sans-serif.font-family}" },
-      "font-size": { "value": "{basiselementen.document.font-size}" },
+      "font-size": { "value": "18px" },
       "font-weight": {},
       "line-height": {}
     }

@@ -1,9 +1,6 @@
-.basiselementen-theme {
-  .utrecht-unordered-list {
-    list-style-type: var(--utrecht-unordered-list-style-type, disc);
-  }
+.utrecht-unordered-list {
+  list-style-type: var(--utrecht-unordered-list-list-style-type, disc);
 }
-
 .utrecht-unordered-list__item::marker {
   content: var(--utrecht-unordered-list-item-marker);
 }

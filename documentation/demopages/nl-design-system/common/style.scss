@@ -13,3 +13,6 @@
 @use "patches/link";
 @use "patches/lists";
 @use "patches/datalist";
+
+/* Basiselementen base styling */
+@use "basiselements/root";
