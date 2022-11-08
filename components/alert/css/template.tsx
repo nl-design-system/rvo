@@ -12,15 +12,8 @@ import { StatusIcon } from '../../status-icon/css/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-export enum AlertKind {
-  Info = 'info',
-  Warning = 'warning',
-  Error = 'error',
-  Success = 'success',
-}
-
 export interface IAlertProps {
-  kind?: AlertKind;
+  kind?: 'info' | 'warning' | 'error' | 'success';
   heading?: string;
   /** @uxpinignoreprop */
   content?: string | React.ReactNode;
@@ -48,7 +41,7 @@ export const argTypes = {
 const linkMarkup = ReactDOMServer.renderToStaticMarkup(Link({ content: 'link', url: '#' }));
 
 export const defaultArgs: IAlertProps = {
-  kind: AlertKind.Info,
+  kind: 'info',
   heading: '',
   content: `This is an example of an alert, with a ${linkMarkup} inside.`,
   closable: false,
@@ -98,10 +91,10 @@ export const Alert: React.FC<IAlertProps> = ({
 
 export const AllAlertKinds: React.FC<IAlertProps> = (alertArgs) => (
   <div className="rvo-layout-column rvo-layout-gap--md">
-    <Alert {...alertArgs} kind={AlertKind.Info} />
-    <Alert {...alertArgs} kind={AlertKind.Warning} />
-    <Alert {...alertArgs} kind={AlertKind.Error} />
-    <Alert {...alertArgs} kind={AlertKind.Success} />
+    <Alert {...alertArgs} kind="info" />
+    <Alert {...alertArgs} kind="warning" />
+    <Alert {...alertArgs} kind="error" />
+    <Alert {...alertArgs} kind="success" />
   </div>
 );
 
