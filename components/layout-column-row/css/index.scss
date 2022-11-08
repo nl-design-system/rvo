@@ -1,5 +1,5 @@
 .rvo-layout-column {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
 }
 
@@ -9,7 +9,7 @@
 
 .rvo-layout-row {
   align-items: center;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 }
 
