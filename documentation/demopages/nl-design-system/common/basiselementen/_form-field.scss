@@ -1,0 +1,13 @@
+/* @FORM */
+
+.basiselementen-theme {
+  .utrecht-form-label {
+    margin-block: 8px;
+  }
+  .utrecht-form-field {
+    /* Trigger calculation for additional margins
+     * This is a hack. MUST REMOVE!!!
+     */
+    --utrecht-space-around: 1;
+  }
+}
