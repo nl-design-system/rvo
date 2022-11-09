@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import { Link as UtrechtLink } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, iconColors, options as iconOptions } from '../../icon/css/template';
@@ -78,16 +77,40 @@ export const Link: React.FC<ILinkProps> = ({
   icon = defaultArgs.icon,
   iconSize = defaultArgs.iconSize,
   iconColor = defaultArgs.iconColor,
+  hover = defaultArgs.hover,
+  active = defaultArgs.active,
+  focus = defaultArgs.focus,
   noUnderline = defaultArgs.noUnderline,
   classNames = [],
 }) => {
-  const iconMarkup = Icon({ icon, size: iconSize, color: iconColor });
+  // Parse icon markup
+  const iconClassNames = [];
+  if (showIcon === 'before') {
+    iconClassNames.push('rvo-link__icon--before');
+  }
+  if (showIcon === 'after') {
+    iconClassNames.push('rvo-link__icon--after');
+  }
+  const iconMarkup = Icon({ icon, size: iconSize, color: iconColor, classNames: iconClassNames });
 
   return (
-    <UtrechtLink href={url} className={clsx(classNames, noUnderline && 'rvo-link--no-underline')}>
+    <a
+      href={url}
+      className={clsx(
+        'rvo-link',
+        classNames,
+        {
+          'rvo-link--active': active,
+          'rvo-link--hover': hover,
+          'rvo-link--focus': focus,
+        },
+        showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+        noUnderline && 'rvo-link--no-underline',
+      )}
+    >
       {showIcon === 'before' && iconMarkup}
       {content}
       {showIcon === 'after' && iconMarkup}
-    </UtrechtLink>
+    </a>
   );
 };

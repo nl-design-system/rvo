@@ -1,21 +1,16 @@
-.utrecht-link {
-  align-items: center;
-  display: inline-flex;
-  gap: var(--rvo-space-xs);
+/* Patch to reduce outline offset in links */
+.utrecht-link:focus,
+.utrecht-link:focus-visible {
+  outline-offset: var(--utrecht-link-focus-outline-offset);
 }
+
+// Theme switch override
 .rvo-theme {
   .utrecht-link {
     font-weight: var(--rvo-link-font-weight);
   }
-
   .utrecht-link:focus,
   .utrecht-link:focus-visible {
     outline: none;
-  }
-}
-.basiselementen-theme {
-  .utrecht-link:focus,
-  .utrecht-link:focus-visible {
-    outline-offset: 0;
   }
 }

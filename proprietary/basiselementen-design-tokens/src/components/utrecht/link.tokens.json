@@ -36,6 +36,7 @@
         "icon": {
           "background-color": {}
         },
+        "outline-offset": { "value": "0" },
         "text-decoration-thickness": { "value": "1px" }
       }
     }
