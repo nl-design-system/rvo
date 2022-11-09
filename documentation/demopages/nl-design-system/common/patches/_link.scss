@@ -4,6 +4,13 @@
   outline-offset: var(--utrecht-link-focus-outline-offset);
 }
 
+/* Generic patch. Should be discussed */
+.utrecht-link {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
 // Theme switch override
 .rvo-theme {
   .utrecht-link {
