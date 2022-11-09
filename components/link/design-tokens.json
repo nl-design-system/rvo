@@ -20,7 +20,7 @@
             "inherits": true
           }
         },
-        "margin-inine": {
+        "margin-inline": {
           "css": {
             "syntax": "<length>",
             "inherits": true

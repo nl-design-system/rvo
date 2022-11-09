@@ -28,7 +28,7 @@ const Formulier = () => {
               <div className="rvo-form">
                 <LayoutColumnRow size="sm">
                   <div className="intro">
-                    <Link href="#" className="utrecht-link--icon-left">
+                    <Link href="#">
                       <Icon icon="terug" color="hemelblauw" size="md" classNames={['rvo-link__icon--before']} />
                       Terug
                     </Link>
