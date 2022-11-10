@@ -5,9 +5,9 @@
 import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 import '../../layout-column-row/css/index.scss';
-import { defaultArgs } from './defaultArgs';
 
 export interface IButtonGroupProps {
   buttonsLeft: IButtonProps[];
