@@ -7,6 +7,7 @@ module.exports = {
           '../components/alert/css/template.tsx',
           '../components/breadcrumbs/css/template.tsx',
           '../components/button/css/template.tsx',
+          '../components/button-group/css/template.tsx',
         ],
       },
     ],

@@ -6,26 +6,12 @@ import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-re
 import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
 import './index.scss';
+import { defaultArgs } from './defaultArgs';
 
-interface IButtonGroupProps {
+export interface IButtonGroupProps {
   buttonsLeft: IButtonProps[];
   buttonsRight: IButtonProps[];
 }
-const defaultButtonsLeft = [
-  {
-    kind: 'primary' as const,
-    size: 'md' as const,
-    textContent: 'Primary action',
-  },
-];
-
-const defaultButtonsRight = [
-  {
-    kind: 'secondary' as const,
-    size: 'md' as const,
-    textContent: 'Secondary action',
-  },
-];
 
 export const argTypes = {
   buttonsLeft: {
@@ -40,11 +26,6 @@ export const argTypes = {
       required: true,
     },
   },
-};
-
-export const defaultArgs: IButtonGroupProps = {
-  buttonsLeft: defaultButtonsLeft,
-  buttonsRight: defaultButtonsRight,
 };
 
 export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
@@ -63,3 +44,5 @@ export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
     </UtrechtButtonGroup>
   );
 };
+
+export default ButtonGroup;
