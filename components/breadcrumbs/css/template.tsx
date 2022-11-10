@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
 import '../../layout-column-row/css/index.scss';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 interface IBreadcrumbItem {
@@ -13,7 +14,7 @@ interface IBreadcrumbItem {
   url?: string;
 }
 
-interface IBreadcrumbProps {
+export interface IBreadcrumbProps {
   items: IBreadcrumbItem[];
   size: 'sm' | 'md' | 'lg';
 }
@@ -29,16 +30,6 @@ export const argTypes = {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
-};
-
-export const defaultArgs: IBreadcrumbProps = {
-  items: [
-    { label: 'First step', url: '#' },
-    { label: 'Second step', url: '#' },
-    { label: 'Third step', url: '#' },
-    { label: 'Current page' },
-  ],
-  size: 'sm',
 };
 
 export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({

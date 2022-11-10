@@ -1,5 +1,6 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button, exampleArgs } from "./template";
+import { argTypes, Button } from "./template";
+import { defaultArgs } from "./defaultArgs";
 
 <Meta
   title="CSS Components/Button/Kinds"
@@ -17,7 +18,7 @@ import { argTypes, Button, exampleArgs } from "./template";
 ## Primary
 
 <Canvas>
-  <Story name="Primary" args={{ ...exampleArgs, kind: "primary" }}>
+  <Story name="Primary" args={{ ...defaultArgs, kind: "primary" }}>
     {Button.bind({})}
   </Story>
 </Canvas>
@@ -28,7 +29,7 @@ import { argTypes, Button, exampleArgs } from "./template";
   <Story
     name="Secondary"
     args={{
-      ...exampleArgs,
+      ...defaultArgs,
       kind: "secondary",
     }}
   >
@@ -42,7 +43,7 @@ import { argTypes, Button, exampleArgs } from "./template";
   <Story
     name="Tertiary"
     args={{
-      ...exampleArgs,
+      ...defaultArgs,
       kind: "tertiary",
     }}
   >
@@ -56,7 +57,7 @@ import { argTypes, Button, exampleArgs } from "./template";
   <Story
     name="Quaternary"
     args={{
-      ...exampleArgs,
+      ...defaultArgs,
       kind: "quaternary",
     }}
   >
@@ -70,7 +71,7 @@ import { argTypes, Button, exampleArgs } from "./template";
   <Story
     name="Warning subtle"
     args={{
-      ...exampleArgs,
+      ...defaultArgs,
       kind: "warning-subtle",
     }}
   >
@@ -84,7 +85,7 @@ import { argTypes, Button, exampleArgs } from "./template";
   <Story
     name="Warning"
     args={{
-      ...exampleArgs,
+      ...defaultArgs,
       kind: "warning",
     }}
   >

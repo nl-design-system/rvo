@@ -4,13 +4,13 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import * as ReactDOMServer from 'react-dom/server';
 import { Button } from '../../button/css/template';
 import { Icon } from '../../icon/css/template';
-import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
+import { defaultArgs } from './defaultArgs';
+import '@utrecht/component-library-css/dist/index.css';
 
 export interface IAlertProps {
   kind?: 'info' | 'warning' | 'error' | 'success';
@@ -36,15 +36,6 @@ export const argTypes = {
   closable: {
     control: 'boolean',
   },
-};
-
-const linkMarkup = ReactDOMServer.renderToStaticMarkup(Link({ content: 'link', url: '#' }));
-
-export const defaultArgs: IAlertProps = {
-  kind: 'info',
-  heading: '',
-  content: `This is an example of an alert, with a ${linkMarkup} inside.`,
-  closable: false,
 };
 
 export const Alert: React.FC<IAlertProps> = ({

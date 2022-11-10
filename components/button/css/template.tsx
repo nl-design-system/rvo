@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 import '../../layout-column-row/css/index.scss';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IButtonProps extends React.DOMAttributes<any> {
@@ -59,25 +60,6 @@ export const argTypes = {
     control: 'select',
     options: iconOptions,
   },
-};
-
-export const defaultArgs: IButtonProps = {
-  kind: 'primary',
-  size: 'md',
-  active: false,
-  busy: false,
-  disabled: false,
-  focus: false,
-  focusVisible: false,
-  hover: false,
-  label: 'Button',
-  showIcon: 'no',
-  icon: iconOptions[0],
-};
-
-export const exampleArgs = {
-  ...defaultArgs,
-  label: 'Button',
 };
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({

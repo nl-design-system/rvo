@@ -17,8 +17,6 @@
     "npm": ">=8.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.17.6",
-    "@babel/core": "7.5.2",
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/plugin-proposal-decorators": "7.8.3",
     "@babel/plugin-proposal-do-expressions": "7.8.3",
@@ -67,6 +65,7 @@
     "@storybook/addon-docs": "6.5.9",
     "@utrecht/component-library-css": "1.0.0-alpha.316",
     "@utrecht/component-library-react": "1.0.0-alpha.164",
+    "@utrecht/components": "1.0.0-alpha.316",
     "@utrecht/design-tokens": "1.0.0-alpha.360",
     "clsx": "1.1.1",
     "prop-types": "15.6.2",
