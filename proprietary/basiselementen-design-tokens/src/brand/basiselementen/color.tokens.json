@@ -1,6 +1,9 @@
 {
   "basiselementen": {
     "color": {
+      "logoblauw": {
+        "value": "#154273"
+      },
       "hemelblauw": {
         "value": "#007bc7"
       },
