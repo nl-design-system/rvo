@@ -7,6 +7,7 @@
   .utrecht-form-field {
     /* Trigger calculation for additional margins
      * This is a hack. MUST REMOVE!!!
+     * This requires base elements to have their own react components or use Utrecht components directly
      */
     --utrecht-space-around: 1;
   }

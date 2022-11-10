@@ -3,7 +3,7 @@
     "form-label": {
       "color": {},
       "font-weight": { "value": "{basiselementen.font-weight.bold}" },
-      "font-size": {},
+      "font-size": { "value": "18px" },
       "checkbox": {
         "color": {},
         "font-weight": {}
@@ -16,7 +16,7 @@
       },
       "radio": {
         "color": {},
-        "font-weight": { "value": "{basiselementen.font-weight.normal}" }
+        "font-weight": {}
       }
     }
   }

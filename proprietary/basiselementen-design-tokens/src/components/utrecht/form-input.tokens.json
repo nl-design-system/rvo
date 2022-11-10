@@ -2,12 +2,12 @@
   "utrecht": {
     "form-input": {
       "background-color": { "value": "{basiselementen.color.wit}" },
-      "border-color": { "value": "{basiselementen.color.zwart}" },
+      "border-color": { "value": "{basiselementen.color.grijs6}" },
       "border-radius": { "value": "0" },
-      "border-width": { "value": "2px" },
+      "border-width": { "value": "1px" },
       "color": { "value": "{basiselementen.color.zwart}" },
       "font-family": {},
-      "font-size": { "value": "1rem" },
+      "font-size": { "value": "18px" },
       "font-style": {},
       "max-inline-size": {},
       "padding-block-end": { "value": "8px" },
@@ -20,18 +20,18 @@
       "disabled": {
         "background-color": { "value": "{basiselementen.color.grijs3} !important" },
         "border-color": { "value": "{basiselementen.color.grijs7}" },
-        "border-width": { "value": "2px" },
+        "border-width": { "value": "0" },
         "color": { "value": "{basiselementen.color.grijs7}" }
       },
       "focus": {
         "background-color": { "value": "{basiselementen.color.wit}" },
-        "border-color": {},
+        "border-color": { "value": "{basiselementen.color.grijs6}" },
         "border-width": {}
       },
       "invalid": {
         "background-color": { "value": "{basiselementen.color.wit}" },
         "border-color": { "value": "{basiselementen.color.rood}" },
-        "border-width": { "value": "2px" }
+        "border-width": { "value": "1px" }
       },
       "read-only": {
         "border-color": { "value": "{basiselementen.color.grijs7}" },
