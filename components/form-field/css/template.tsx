@@ -85,7 +85,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   }
 
   return (
-    <FormField className="utrecht-form-field rvo-layout-column rvo-layout-gap--sm">
+    <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
       <div className="rvo-layout-column rvo-layout-gap--2xs">
         <FormLabel htmlFor={fieldId}>{labelText}</FormLabel>
         {helperTextMarkup}
