@@ -23,6 +23,7 @@ export interface IButtonProps extends React.DOMAttributes<any> {
   showIcon?: 'no' | 'before' | 'after';
   icon?: string;
   classNames?: string[];
+  alignToRightInGroup?: boolean;
 }
 
 export const argTypes = {
@@ -76,6 +77,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   classNames = [],
+  alignToRightInGroup,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon} size="md" />;
@@ -113,6 +115,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'xs' && 'utrecht-button--rvo-xs',
         size === 'sm' && 'utrecht-button--rvo-sm',
         size === 'md' && 'utrecht-button--rvo-md',
+        alignToRightInGroup && 'rvo-button-group__align-right',
       )}
       disabled={disabled || null}
       appearance={appearance}

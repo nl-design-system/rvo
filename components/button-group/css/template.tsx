@@ -6,6 +6,7 @@ import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-re
 import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../../button/css/template';
 import './index.scss';
+import '../../layout-column-row/css/index.scss';
 import { defaultArgs } from './defaultArgs';
 
 export interface IButtonGroupProps {
@@ -32,7 +33,7 @@ export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
   children,
-}) => {
+}: PropsWithChildren<IButtonGroupProps>) => {
   return (
     <UtrechtButtonGroup>
       {children}
