@@ -1,4 +1,4 @@
-import { iconNames as iconOptions } from '../../icon/css/template';
+// import { iconNames as iconOptions } from '../../icon/css/template';
 import { IButtonProps } from './template';
 
 export const defaultArgs: IButtonProps = {
@@ -12,5 +12,6 @@ export const defaultArgs: IButtonProps = {
   hover: false,
   label: 'Button',
   showIcon: 'no',
-  icon: iconOptions[0],
+  // TODO: Fix this
+  // icon: iconOptions[0],
 };
