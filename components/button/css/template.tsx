@@ -106,7 +106,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         hover && 'utrecht-button--hover',
         focus && 'utrecht-button--focus',
         focusVisible && 'utrecht-button--focus-visible',
-        'rvo-layout-row',
+        'rvo-layout-row-inline',
         size === 'xs' && 'rvo-layout-gap--xs',
         size === 'sm' && 'rvo-layout-gap--sm',
         size === 'md' && 'rvo-layout-gap--md',

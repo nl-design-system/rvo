@@ -1,4 +1,9 @@
 .rvo-layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.rvo-layout-column-inline {
   display: inline-flex;
   flex-direction: column;
 }
@@ -9,8 +14,13 @@
 
 .rvo-layout-row {
   align-items: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
+}
+
+.rvo-layout-row-inline {
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .rvo-layout-row--flex-start {
