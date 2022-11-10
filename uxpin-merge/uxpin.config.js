@@ -2,13 +2,14 @@ module.exports = {
   components: {
     categories: [
       {
-        name: 'Test',
+        name: 'General',
         include: [
           '../components/alert/css/template.tsx',
           '../components/breadcrumbs/css/template.tsx',
           '../components/button/css/template.tsx',
           '../components/button-group/css/template.tsx',
           '../components/data-list/css/template.tsx',
+          '../components/expandable-text/css/template.tsx',
         ],
       },
     ],

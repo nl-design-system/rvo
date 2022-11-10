@@ -2,13 +2,14 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Icon } from '../../icon/css/template';
-import validateHTML from '../../utils/validateHTML';
+import parseContentMarkup from '../../utils/parseContentMarkup';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
-interface IExpandableTextProps {
+export interface IExpandableTextProps {
   title: string;
-  text: string | React.ReactNode;
+  content: string | React.ReactNode;
   open?: boolean;
 }
 
@@ -16,7 +17,7 @@ export const argTypes = {
   title: {
     control: 'text',
   },
-  text: {
+  content: {
     control: 'text',
   },
   open: {
@@ -24,29 +25,25 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IExpandableTextProps = {
-  title: 'Expandable text title',
-  text: 'Expandable text content',
-  open: false,
-};
-
-export const ExpandableText: React.FC<IExpandableTextProps> = ({
+export const ExpandableText: React.FC<PropsWithChildren<IExpandableTextProps>> = ({
   title = defaultArgs.title,
-  text = defaultArgs.text,
+  content = defaultArgs.content,
   open = defaultArgs.open,
-}) => {
-  let textMarkup = <span className="rvo-expandable-text__details">{text}</span>;
-  if (typeof text === 'string' && text.length && validateHTML(text)) {
-    textMarkup = <span className="rvo-expandable-text__details" dangerouslySetInnerHTML={{ __html: text }}></span>;
-  }
-
+  children,
+}: PropsWithChildren<IExpandableTextProps>) => {
+  // Parse content markup (either a string, HTML string, React node or children)
+  let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content, {
+    className: 'rvo-expandable-text__details',
+  });
   return (
     <details className="rvo-expandable-text" open={open || null}>
       <summary className="rvo-expandable-text__summary">
         <Icon color="hemelblauw" size="md" icon="info" />
         {title}
       </summary>
-      {textMarkup}
+      {contentMarkup}
     </details>
   );
 };
+
+export default ExpandableText;
