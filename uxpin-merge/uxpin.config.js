@@ -10,6 +10,7 @@ module.exports = {
           '../components/button-group/css/template.tsx',
           '../components/data-list/css/template.tsx',
           '../components/expandable-text/css/template.tsx',
+          '../components/footer/css/template.tsx',
         ],
       },
     ],
