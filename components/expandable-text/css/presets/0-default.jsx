@@ -1,4 +1,4 @@
 import { defaultArgs } from '../defaultArgs';
 import ExpandableText from '../template';
 
-export default <ExpandableText uxpId="datalist" {...defaultArgs} />;
+export default <ExpandableText uxpId="expandableText" {...defaultArgs} />;
