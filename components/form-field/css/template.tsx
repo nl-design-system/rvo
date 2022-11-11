@@ -55,12 +55,12 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   let helperTextMarkup;
   // Parse default helper text markup (strings or react node)
   if (helperText) {
-    helperTextMarkup = <div className="rvo-form-field__helper-text">{helperText}</div>;
+    helperTextMarkup = <div className="utrecht-form-field-description rvo-form-field__helper-text">{helperText}</div>;
 
     // Parse helper text markup for expandable text
     if (expandableHelperText) {
       helperTextMarkup = (
-        <div className="rvo-form-field__helper-text">
+        <div className="utrecht-form-field-description rvo-form-field__helper-text">
           <ExpandableText title={expandableHelperTextTitle} text={helperText} />
         </div>
       );
@@ -71,20 +71,23 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
       const isValidHTML = validateHTML(helperText);
       if (isValidHTML) {
         helperTextMarkup = (
-          <div className="rvo-form-field__helper-text" dangerouslySetInnerHTML={{ __html: helperText }}></div>
+          <div
+            className="utrecht-form-field-description rvo-form-field__helper-text"
+            dangerouslySetInnerHTML={{ __html: helperText }}
+          ></div>
         );
       } else {
-        helperTextMarkup = <div className="rvo-form-field__helper-text">{helperText}</div>;
+        helperTextMarkup = (
+          <div className="utrecht-form-field-description rvo-form-field__helper-text">{helperText}</div>
+        );
       }
     }
   }
 
   return (
     <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-      <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
-        <FormLabel className="rvo-form-field__label-text" htmlFor={fieldId}>
-          {labelText}
-        </FormLabel>
+      <div className="rvo-layout-column rvo-layout-gap--2xs">
+        <FormLabel htmlFor={fieldId}>{labelText}</FormLabel>
         {helperTextMarkup}
         {errorText && <FormFeedback text={errorText} type="error" />}
         {warningText && <FormFeedback text={warningText} type="warning" />}

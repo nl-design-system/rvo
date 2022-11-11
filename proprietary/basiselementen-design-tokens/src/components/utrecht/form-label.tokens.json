@@ -2,8 +2,8 @@
   "utrecht": {
     "form-label": {
       "color": {},
-      "font-weight": { "value": "{rvo.font-weight.bold}" },
-      "font-size": { "value": "16px" },
+      "font-weight": { "value": "{basiselementen.font-weight.bold}" },
+      "font-size": { "value": "18px" },
       "checkbox": {
         "color": {},
         "font-weight": {}
@@ -16,7 +16,7 @@
       },
       "radio": {
         "color": {},
-        "font-weight": { "value": "{rvo.font-weight.normal}" }
+        "font-weight": {}
       }
     }
   }
