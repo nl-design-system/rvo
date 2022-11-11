@@ -12,6 +12,7 @@ import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { ButtonGroup } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
@@ -168,20 +169,7 @@ const Formulier = () => {
                       </div>
                     </Fieldset>
 
-                    <div className="rvo-button-group">
-                      <Button
-                        kind="secondary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
-                      >
-                        Secondary action
-                      </Button>
+                    <ButtonGroup>
                       <Button
                         kind="primary"
                         size="md"
@@ -195,7 +183,20 @@ const Formulier = () => {
                       >
                         Primary action
                       </Button>
-                    </div>
+                      <Button
+                        kind="secondary"
+                        size="md"
+                        active={false}
+                        busy={false}
+                        focus={false}
+                        focusVisible={false}
+                        disabled={false}
+                        hover={false}
+                        showIcon="no"
+                      >
+                        Secondary action
+                      </Button>
+                    </ButtonGroup>
                   </form>
                 </LayoutColumnRow>
               </div>
