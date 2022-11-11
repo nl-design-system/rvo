@@ -1,6 +1,7 @@
 .basiselementen-theme {
   .rvo-nl-demo-page {
     background-color: var(--basiselementen-color-wit);
+    padding-inline: 32px;
     .utrecht-form-fieldset {
       background-color: var(--basiselementen-color-grijs1);
     }
@@ -12,7 +13,7 @@
   }
   form {
     margin-inline: auto;
-    width: min(680px, 100%);
+    width: min(768px, 100%);
   }
   .utrecht-form-fieldset {
     background-color: var(--basiselementen-color-wit);
