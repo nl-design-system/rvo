@@ -3,10 +3,11 @@
 @import "../../../node_modules/@utrecht/components/button/css/mixin";
 
 // Subtle button
+
 .utrecht-button--subtle.utrecht-button--hover:not(:disabled),
 .utrecht-button--subtle.utrecht-button-link--hover:not(:disabled),
 .utrecht-button--subtle:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  text-decoration: underline;
+  text-decoration: var(--utrecht-button-subtle-hover-text-decoration, underline);
   text-underline-offset: 30%;
 }
 
@@ -16,7 +17,7 @@
 .utrecht-button--rvo-tertiary-action.utrecht-button--hover:not(:disabled),
 .utrecht-button--rvo-tertiary-action.utrecht-button-link--hover:not(:disabled),
 .utrecht-button--rvo-tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  text-decoration: underline;
+  text-decoration: var(--utrecht-button-rvo-tertiary-action-hover-text-decoration, underline);
   text-underline-offset: 30%;
 }
 
