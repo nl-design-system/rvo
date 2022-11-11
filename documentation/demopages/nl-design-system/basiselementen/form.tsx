@@ -37,16 +37,15 @@ const Form = () => {
           <div className={'utrecht-form-field-description'}>
             Vul de datum in die op de factuur van de zonnepanelen staat.
           </div>
-
           <LayoutColumnRow size="sm" row={true}>
             <TextInputField size={'sm'} labelText="Dag" />
             <TextInputField size={'sm'} labelText="Maand" />
             <TextInputField size={'sm'} labelText="Jaar" />
           </LayoutColumnRow>
-
+        </Fieldset>
+        <Fieldset>
           <div className={'utrecht-form-label'}>Adres zonnepanelen</div>
           <div className={'utrecht-form-field-description'}>Vul het adres in waar de zonnepanelen zijn geplaatst.</div>
-
           <LayoutColumnRow size="sm" row={true}>
             <TextInputField size={'md'} labelText="Straatnaam" />
             <TextInputField size={'sm'} labelText="Huisnummer" />
