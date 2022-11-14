@@ -13,7 +13,6 @@ export interface IHeadingProps {
   type: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   textContent: string;
   link?: string;
-  distanced?: boolean;
 }
 
 export const argTypes = {
