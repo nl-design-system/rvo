@@ -15,7 +15,6 @@ module.exports = {
           '../components/footer/css/template.tsx',
           // '../components/logo/css/template.tsx',
           '../components/icon/css/template.tsx',
-          '../components/layout-column-row/css/template.tsx',
           '../components/link/css/template.tsx',
           '../components/tag/css/template.tsx',
         ],
@@ -23,7 +22,6 @@ module.exports = {
       {
         name: 'Forms',
         include: [
-          '../components/form-layout/css/template.tsx',
           '../components/form-fieldset/css/template.tsx',
           '../components/form-textinput/css/template.tsx',
           '../components/form-field-textinput/css/template.tsx',
@@ -47,7 +45,11 @@ module.exports = {
       },
       {
         name: 'Layout',
-        include: ['../components/max-width-layout/css/template.tsx', '../components/form-layout/css/template.tsx'],
+        include: [
+          '../components/max-width-layout/css/template.tsx',
+          '../components/form-layout/css/template.tsx',
+          '../components/layout-column-row/css/template.tsx',
+        ],
       },
     ],
     wrapper: './src/Wrapper/UXPinWrapper.tsx',
