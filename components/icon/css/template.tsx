@@ -6,7 +6,8 @@ import iconList from '@nl-rvo/assets/icons/index.js';
 import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
-interface IIconProps {
+import { defaultArgs } from './defaultArgs';
+export interface IIconProps {
   icon: string;
   size?: string;
   color?: string;
@@ -54,18 +55,12 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IIconProps = {
-  icon: argTypes.icon.options[0],
-  size: argTypes.size.options[2],
-  color: argTypes.color.options[0],
-};
-
 export const Icon: React.FC<IIconProps> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,
   classNames,
-}) => {
+}: IIconProps) => {
   let iconName = icon;
   if (icon.indexOf(' > ') > -1) {
     iconName = icon.split(' > ')[1];
@@ -88,3 +83,5 @@ export const Icon: React.FC<IIconProps> = ({
     ></span>
   );
 };
+
+export default Icon;
