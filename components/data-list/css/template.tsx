@@ -26,11 +26,11 @@ export const argTypes = {
 
 export const DataList: React.FC<IDataListProps> = ({ items = defaultArgs.items }: IDataListProps) => (
   <dl className={clsx('rvo-data-list')}>
-    {items.map(({ key, value }) => (
-      <>
+    {items.map(({ key, value }, index) => (
+      <React.Fragment key={index}>
         <dt>{key}</dt>
         <dd>{value}</dd>
-      </>
+      </React.Fragment>
     ))}
   </dl>
 );
