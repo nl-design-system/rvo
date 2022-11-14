@@ -29,7 +29,8 @@ export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> =
   children,
   className = [],
 }: PropsWithChildren<IMaxWidthLayoutProps>) => {
-  let parsedContent = content || children;
+  let parsedContent = children || content;
+
   if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
     switch (size) {
