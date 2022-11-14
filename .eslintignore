@@ -7,6 +7,7 @@ build/
 coverage/
 dist/
 tmp/
+.uxpin-merge/
 
 # Ignore generated files from Stencil
 components/components.d.ts
@@ -15,3 +16,6 @@ packages/web-components-angular/src/directives/proxies.ts
 packages/web-components-stencil/loader
 packages/web-components-react/src/react-component-lib/
 packages/web-components-react/src/components.ts
+
+# Ignore assets package
+proprietary/assets

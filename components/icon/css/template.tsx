@@ -3,14 +3,15 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
+import IconType from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
 import { defaultArgs } from './defaultArgs';
 export interface IIconProps {
-  icon: string;
-  size?: string;
-  color?: string;
+  icon: typeof IconType;
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  color?: '' | 'hemelblauw' | 'wit' | 'zwart';
   classNames?: string[];
 }
 
@@ -19,7 +20,7 @@ export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
 export const toProperCase = (inputString) =>
   inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()).replace(/_/g, ' ');
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { STATUS, ...iconListWithoutStatus } = iconList;
 
 export const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {
@@ -62,8 +63,8 @@ export const Icon: React.FC<IIconProps> = ({
   classNames,
 }: IIconProps) => {
   let iconName = icon;
-  if (icon.indexOf(' > ') > -1) {
-    iconName = icon.split(' > ')[1];
+  if ((icon as string).indexOf(' > ') > -1) {
+    iconName = (icon as string).split(' > ')[1];
   }
 
   return (
@@ -71,7 +72,7 @@ export const Icon: React.FC<IIconProps> = ({
       className={clsx(
         'utrecht-icon',
         'rvo-icon',
-        `rvo-icon-${iconName.toLowerCase().replace(/_/g, '-')}`,
+        `rvo-icon-${iconName}`,
         size && `rvo-icon--${size}`,
         {
           'rvo-icon--wit': color === 'wit',

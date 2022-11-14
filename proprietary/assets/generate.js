@@ -66,6 +66,28 @@ const generateJS = (assetList, targetFolder) => {
   }
 };
 
+// TS file generator
+const generateTS = (assetList, targetFolder) => {
+  const jsStringArray = ['export type IconType = '];
+  let iconNames = '';
+
+  // Loop over categories
+  Object.keys(assetList).forEach((iconCategoryName) => {
+    // Loop over icons
+    assetList[iconCategoryName].forEach((iconFilename) => {
+      iconNames += `| '${iconFilename.replace('.svg', '').replace(/-/g, '_').toLowerCase()}'`;
+    });
+  });
+
+  jsStringArray.push(iconNames);
+
+  try {
+    fs.writeFileSync(path.join(__dirname, `${targetFolder}/types.d.ts`), jsStringArray.join('\n'));
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 // CSS file generator
 const generateCSS = (
   assetList,
@@ -131,6 +153,7 @@ const generateIconList = () => {
   const folderPath = path.join(__dirname, 'icons');
   const assetList = readFolder(folderPath);
   generateJS(assetList, 'icons');
+  generateTS(assetList, 'icons');
   generateCSS(assetList, 'icons', 'rvo-icon', true, true);
 };
 
