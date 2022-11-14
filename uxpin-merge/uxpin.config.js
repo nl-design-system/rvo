@@ -21,6 +21,7 @@ module.exports = {
           '../components/form-field-checkbox/css/template.tsx',
           '../components/form-dateinput/css/template.tsx',
           '../components/form-feedback/css/template.tsx',
+          '../components/form-fieldset/css/template.tsx',
         ],
       },
     ],
