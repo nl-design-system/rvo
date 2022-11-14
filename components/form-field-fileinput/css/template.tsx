@@ -3,20 +3,15 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import { defaultArgs as fileInputDefaultArgs } from '../../form-fileinput/css/defaultArgs';
+import { Field, argTypes as fieldArgTypes, IFieldProps } from '../../form-field/css/template';
 import { FileInput, argTypes as fileInputArgTypes, IFileInputProps } from '../../form-fileinput/css/template';
 import extractArgs from '../../utils/extractArgs';
-import { defaultArgs as fieldDefaultArgs } from './defaultArgs';
-import { Field, argTypes as fieldArgTypes, IFieldProps } from './template';
-import './index.scss';
 
-interface IFileInputFieldProps extends IFieldProps, IFileInputProps {}
+export interface IFileInputFieldProps extends IFieldProps, IFileInputProps {}
 
 export const argTypes = { ...fieldArgTypes, ...fileInputArgTypes };
 
-export const defaultArgs: IFileInputFieldProps = { ...fieldDefaultArgs, ...fileInputDefaultArgs };
-
-export const FileInputField: React.FC<IFileInputFieldProps> = (args) => {
+export const FileInputField: React.FC<IFileInputFieldProps> = (args: IFileInputFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes);
   const fileInputArgs = extractArgs(args, fileInputArgTypes);
   return (
@@ -25,3 +20,5 @@ export const FileInputField: React.FC<IFileInputFieldProps> = (args) => {
     </Field>
   );
 };
+
+export default FileInputField;
