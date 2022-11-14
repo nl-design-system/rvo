@@ -30,6 +30,8 @@ module.exports = {
           '../components/form-field-select/css/template.tsx',
           '../components/form-dateinput/css/template.tsx',
           '../components/form-field-dateinput/css/template.tsx',
+          '../components/form-timeinput/css/template.tsx',
+          '../components/form-field-timeinput/css/template.tsx',
           '../components/form-fileinput/css/template.tsx',
           '../components/form-field-fileinput/css/template.tsx',
           '../components/form-feedback/css/template.tsx',
