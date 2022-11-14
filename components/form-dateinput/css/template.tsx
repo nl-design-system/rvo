@@ -15,7 +15,6 @@ export interface IDateInputProps {
   readOnly?: boolean;
   invalid?: boolean;
   required?: boolean;
-  placeholder?: string;
   value?: string;
   prefix?: string;
   suffix?: string;
