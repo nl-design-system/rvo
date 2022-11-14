@@ -26,3 +26,4 @@ export const RadioButtonField: React.FC<PropsWithChildren<IRadioButtonFieldProps
     </Field>
   );
 };
+export default RadioButtonField;
