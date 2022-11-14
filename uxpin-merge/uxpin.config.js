@@ -44,6 +44,10 @@ module.exports = {
           '../components/label/css/template.tsx',
         ],
       },
+      {
+        name: 'Layout',
+        include: ['../components/max-width-layout/css/template.tsx', '../components/form-layout/css/template.tsx'],
+      },
     ],
     wrapper: './src/Wrapper/UXPinWrapper.tsx',
     webpackConfig: './webpack.config.js',
