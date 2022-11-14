@@ -11,6 +11,7 @@ module.exports = {
           '../components/data-list/css/template.tsx',
           '../components/expandable-text/css/template.tsx',
           '../components/footer/css/template.tsx',
+          '../components/form-checkbox/css/template.tsx',
         ],
       },
     ],

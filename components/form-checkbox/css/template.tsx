@@ -4,9 +4,10 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface ICheckboxProps extends React.DOMAttributes<any> {
+export interface ICheckboxProps {
   id?: string;
   name?: string;
   label: string;
@@ -19,6 +20,11 @@ export interface ICheckboxProps extends React.DOMAttributes<any> {
   invalid?: boolean;
   required?: boolean;
   value?: string;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
 export const argTypes = {
@@ -34,21 +40,6 @@ export const argTypes = {
   invalid: { control: 'boolean' },
   required: { control: 'boolean' },
   value: { control: 'text' },
-};
-
-export const defaultArgs: ICheckboxProps = {
-  id: 'field',
-  name: 'group',
-  label: 'Label',
-  checked: false,
-  hover: false,
-  disabled: false,
-  active: false,
-  focus: false,
-  indeterminate: false,
-  invalid: false,
-  required: false,
-  value: '',
 };
 
 export const Checkbox: React.FC<ICheckboxProps> = ({
