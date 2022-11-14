@@ -10,7 +10,6 @@ import { StatusIcon } from '../../status-icon/css/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 import { defaultArgs } from './defaultArgs';
-import '@utrecht/component-library-css/dist/index.css';
 
 export interface IAlertProps {
   kind?: 'info' | 'warning' | 'error' | 'success';

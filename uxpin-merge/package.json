@@ -63,12 +63,8 @@
     "@nl-rvo/basiselementen-design-tokens": "file:../proprietary/basiselementen-design-tokens",
     "@nl-rvo/design-tokens": "file:../proprietary/design-tokens",
     "@storybook/addon-docs": "6.5.9",
-    "@utrecht/component-library-css": "1.0.0-alpha.316",
-    "@utrecht/component-library-react": "1.0.0-alpha.164",
-    "@utrecht/components": "1.0.0-alpha.316",
     "@utrecht/design-tokens": "1.0.0-alpha.360",
     "clsx": "1.1.1",
-    "prop-types": "15.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   }
