@@ -1,9 +1,11 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormLayout } from "./template";
+import { defaultArgs } from "defaultArgs";
+import { argTypes, FormLayout } from "./template";
 
 <Meta
   title="CSS Components/Layout/Form layout"
   component={FormLayout}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -14,5 +16,7 @@ import { FormLayout } from "./template";
 # Form layout
 
 <Canvas>
-  <Story name="Form layout">{FormLayout.bind({})}</Story>
+  <Story name="Form layout" args={defaultArgs}>
+    {FormLayout.bind({})}
+  </Story>
 </Canvas>
