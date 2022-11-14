@@ -80,7 +80,7 @@ export const parseMenuItem = ({
   let itemMarkup;
   let deltaMarkup;
   if (active !== undefined) {
-    deltaMarkup = <Icon icon={active ? 'delta_omlaag' : 'delta_omhoog'} size="xs" />;
+    deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" />;
   }
 
   if (useIcon && icon) {
