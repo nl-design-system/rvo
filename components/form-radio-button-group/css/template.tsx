@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import './index.scss';
 import React, { PropsWithChildren } from 'react';
 import { IRadioButtonProps, RadioButton } from '../../form-radio-button/css/template';
 import { defaultArgs } from './defaultArgs';
