@@ -12,6 +12,7 @@ module.exports = {
           '../components/expandable-text/css/template.tsx',
           '../components/footer/css/template.tsx',
           '../components/form-checkbox/css/template.tsx',
+          '../components/form-dateinput/css/template.tsx',
         ],
       },
     ],

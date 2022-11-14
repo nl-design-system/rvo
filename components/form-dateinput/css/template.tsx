@@ -5,9 +5,10 @@
 import { Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import '../../form-textinput/css/index.scss';
 
-export interface IDateInputProps extends React.DOMAttributes<any> {
+export interface IDateInputProps {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
@@ -21,6 +22,12 @@ export interface IDateInputProps extends React.DOMAttributes<any> {
   min?: string;
   max?: string;
   size?: string;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInput?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
 export const argTypes = {
@@ -64,21 +71,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IDateInputProps = {
-  id: 'field',
-  disabled: false,
-  focus: false,
-  readOnly: false,
-  invalid: false,
-  required: false,
-  value: '',
-  prefix: '',
-  suffix: '',
-  min: null,
-  max: null,
-  size: 'lg',
-};
-
 export const DateInput: React.FC<IDateInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
@@ -93,7 +85,7 @@ export const DateInput: React.FC<IDateInputProps> = ({
   max = defaultArgs.max,
   size = defaultArgs.size,
   ...otherProps
-}) => {
+}: IDateInputProps) => {
   const props = {
     id,
     className: clsx(
@@ -134,3 +126,5 @@ export const DateInput: React.FC<IDateInputProps> = ({
     return inputMarkup;
   }
 };
+
+export default DateInput;
