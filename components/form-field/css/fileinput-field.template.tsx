@@ -3,12 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import {
-  FileInput,
-  argTypes as fileInputArgTypes,
-  defaultArgs as fileInputDefaultArgs,
-  IFileInputProps,
-} from '../../form-fileinput/css/template';
+import { defaultArgs as fileInputDefaultArgs } from '../../form-fileinput/css/defaultArgs';
+import { FileInput, argTypes as fileInputArgTypes, IFileInputProps } from '../../form-fileinput/css/template';
 import extractArgs from '../../utils/extractArgs';
 import { defaultArgs as fieldDefaultArgs } from './defaultArgs';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from './template';
