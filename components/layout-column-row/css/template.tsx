@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import './index.scss';
 export interface ILayoutColumnRowProps {
-  size?: string;
+  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;
   alignToTop?: boolean;
