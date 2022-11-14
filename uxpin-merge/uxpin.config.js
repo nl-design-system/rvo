@@ -13,6 +13,7 @@ module.exports = {
           '../components/footer/css/template.tsx',
           '../components/form-checkbox/css/template.tsx',
           '../components/form-dateinput/css/template.tsx',
+          '../components/form-feedback/css/template.tsx',
         ],
       },
     ],
