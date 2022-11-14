@@ -4,20 +4,15 @@
  */
 import clsx from 'clsx';
 import './index.scss';
-import React from 'react';
-import { IRadioButtonProps, RadioButton } from './template';
+import React, { PropsWithChildren } from 'react';
+import { IRadioButtonProps, RadioButton } from '../../form-radio-button/css/template';
+import { defaultArgs } from './defaultArgs';
+
 export interface IRadioButtonGroupProps {
   name?: string;
   invalid?: boolean;
   options?: IRadioButtonProps[];
 }
-
-const defaultOptions: IRadioButtonProps[] = [
-  { id: 'optionA', label: 'Option A' },
-  { id: 'optionB', label: 'Option B' },
-  { id: 'optionC', label: 'Option C' },
-  { id: 'optionD', label: 'Option D' },
-];
 
 export const argTypes = {
   name: { control: 'text' },
@@ -30,17 +25,12 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IRadioButtonGroupProps = {
-  name: 'group',
-  invalid: false,
-  options: defaultOptions,
-};
-
-export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
+export const RadioButtonGroup: React.FC<PropsWithChildren<IRadioButtonGroupProps>> = ({
   name = defaultArgs.name,
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
-}) => (
+  children,
+}: PropsWithChildren<IRadioButtonGroupProps>) => (
   <div
     className={clsx(
       'rvo-layout-column',
@@ -49,8 +39,11 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
       invalid && 'rvo-custom-radio-button__group--error',
     )}
   >
-    {options.map((option) => (
-      <RadioButton key={option.id} id={option.id} name={name} label={option.label} checked={option.checked} />
-    ))}
+    {children ||
+      options.map((option) => (
+        <RadioButton key={option.id} id={option.id} name={name} label={option.label} checked={option.checked} />
+      ))}
   </div>
 );
+
+export default RadioButtonGroup;

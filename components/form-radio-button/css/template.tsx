@@ -4,9 +4,10 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IRadioButtonProps extends React.DOMAttributes<any> {
+export interface IRadioButtonProps {
   id?: string;
   name?: string;
   label: string;
@@ -17,6 +18,11 @@ export interface IRadioButtonProps extends React.DOMAttributes<any> {
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
 export const argTypes = {
@@ -32,19 +38,6 @@ export const argTypes = {
   required: { control: 'boolean' },
 };
 
-export const defaultArgs: IRadioButtonProps = {
-  id: 'field',
-  name: 'group',
-  label: 'Label',
-  checked: false,
-  hover: false,
-  disabled: false,
-  active: false,
-  focus: false,
-  invalid: false,
-  required: false,
-};
-
 export const RadioButton: React.FC<IRadioButtonProps> = ({
   id = defaultArgs.id,
   name = defaultArgs.name,
@@ -57,7 +50,7 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   ...otherProps
-}) => (
+}: IRadioButtonProps) => (
   <label className="rvo-layout-row rvo-layout-gap--sm" htmlFor={id}>
     <input
       id={id}
@@ -81,3 +74,5 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
     {label}
   </label>
 );
+
+export default RadioButton;
