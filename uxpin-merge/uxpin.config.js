@@ -22,6 +22,8 @@ module.exports = {
           '../components/form-radio-button/css/template.tsx',
           '../components/form-radio-button-group/css/template.tsx',
           '../components/form-field-radio-button/css/template.tsx',
+          '../components/form-select/css/template.tsx',
+          '../components/form-field-select/css/template.tsx',
           '../components/form-dateinput/css/template.tsx',
           '../components/form-fileinput/css/template.tsx',
           '../components/form-field-fileinput/css/template.tsx',
