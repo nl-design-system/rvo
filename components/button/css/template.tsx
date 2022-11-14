@@ -10,7 +10,7 @@ import '../../layout-column-row/css/index.scss';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IButtonProps extends React.DOMAttributes<any> {
+export interface IButtonProps {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
   label?: string;
@@ -24,6 +24,9 @@ export interface IButtonProps extends React.DOMAttributes<any> {
   icon?: string;
   classNames?: string[];
   alignToRightInGroup?: boolean;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onClick?: (event) => void;
 }
 
 export const argTypes = {
