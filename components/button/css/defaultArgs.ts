@@ -12,6 +12,5 @@ export const defaultArgs: IButtonProps = {
   hover: false,
   label: 'Button',
   showIcon: 'no',
-  // TODO: Fix this
-  // icon: iconOptions[0],
+  icon: 'home',
 };

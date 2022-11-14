@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
+import { IconType } from '@nl-rvo/assets/icons/types';
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
@@ -21,7 +22,7 @@ export interface IButtonProps {
   hover?: boolean;
   disabled?: boolean;
   showIcon?: 'no' | 'before' | 'after';
-  icon?: string;
+  icon?: IconType;
   classNames?: string[];
   alignToRightInGroup?: boolean;
   onFocus?: (event) => void;
