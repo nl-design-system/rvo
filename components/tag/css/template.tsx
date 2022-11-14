@@ -85,7 +85,7 @@ export const Tag: React.FC<ITagProps> = ({
   switch (type) {
     default:
     case 'default':
-      iconMarkup = Icon({ icon, size: 'lg', classNames: iconClassNames });
+      iconMarkup = Icon({ icon: icon as any, size: 'lg', classNames: iconClassNames });
       break;
     case 'info':
       iconMarkup = Icon({ icon: 'info', size: 'xl', color: 'hemelblauw', classNames: iconClassNames });

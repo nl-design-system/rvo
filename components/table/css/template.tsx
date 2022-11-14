@@ -89,7 +89,7 @@ export const Table: React.FC<ITableProps> = ({
                 >
                   {column.label}
                   {column.sortable && column.sortDirection.length > 0 && (
-                    <Icon size="sm" color="hemelblauw" icon={icon} />
+                    <Icon size="sm" color="hemelblauw" icon={icon as any} />
                   )}
                 </th>
               );

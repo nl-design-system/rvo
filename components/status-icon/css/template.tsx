@@ -45,6 +45,10 @@ export const StatusIcon: React.FC<IStatusIconProps> = ({
 }) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
   return (
-    <Icon icon={iconName} size={size as any} classNames={[`rvo-status-icon-${iconName}`, ...(classNames || [])]} />
+    <Icon
+      icon={iconName as any}
+      size={size as any}
+      classNames={[`rvo-status-icon-${iconName}`, ...(classNames || [])]}
+    />
   );
 };

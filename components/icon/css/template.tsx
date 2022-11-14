@@ -3,13 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
-import IconType from '@nl-rvo/assets/icons/types';
+import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
 import { defaultArgs } from './defaultArgs';
 export interface IIconProps {
-  icon: typeof IconType;
+  icon: IconType;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   color?: '' | 'hemelblauw' | 'wit' | 'zwart';
   classNames?: string[];
@@ -62,9 +62,9 @@ export const Icon: React.FC<IIconProps> = ({
   color = defaultArgs.color,
   classNames,
 }: IIconProps) => {
-  let iconName = icon;
-  if ((icon as string).indexOf(' > ') > -1) {
-    iconName = (icon as string).split(' > ')[1];
+  let iconName = icon as string;
+  if (icon.indexOf(' > ') > -1) {
+    iconName = icon.split(' > ')[1];
   }
 
   return (

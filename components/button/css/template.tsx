@@ -83,7 +83,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   alignToRightInGroup,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
-  const iconMarkup = <Icon icon={icon} size="md" />;
+  const iconMarkup = <Icon icon={icon as any} size="md" />;
 
   let appearance: string = null;
   switch (kind) {

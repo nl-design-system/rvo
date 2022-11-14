@@ -43,7 +43,7 @@ export const IconOverview: React.FC<IIconProps> = () => {
               {Object.keys(categoryIcons).map((iconName) => {
                 return (
                   <IconContainer key={`${categoryName}-${iconName}`}>
-                    <Icon icon={iconName} size="3xl" color={iconColors[0] as any} />
+                    <Icon icon={iconName as any} size="3xl" color={iconColors[0] as any} />
                     <span>{iconName.toLowerCase()}</span>
                   </IconContainer>
                 );

@@ -75,14 +75,14 @@ const generateTS = (assetList, targetFolder) => {
   Object.keys(assetList).forEach((iconCategoryName) => {
     // Loop over icons
     assetList[iconCategoryName].forEach((iconFilename) => {
-      iconNames += `| '${iconFilename.replace('.svg', '').replace(/-/g, '_').toLowerCase()}'`;
+      iconNames += `| '${iconFilename.replace('.svg', '').toLowerCase()}'`;
     });
   });
 
   jsStringArray.push(iconNames);
 
   try {
-    fs.writeFileSync(path.join(__dirname, `${targetFolder}/types.d.ts`), jsStringArray.join('\n'));
+    fs.writeFileSync(path.join(__dirname, `${targetFolder}/types.ts`), jsStringArray.join('\n'));
   } catch (err) {
     console.error(err);
   }

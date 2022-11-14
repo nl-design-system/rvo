@@ -41,7 +41,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
       {items.map((item, index) => {
         // Parse divider markup
         let dividerMarkup = index > 0 && index < items.length && (
-          <Icon color="hemelblauw" icon="delta-naar-rechts" size="xs" />
+          <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />
         );
 
         // Parse item markup
