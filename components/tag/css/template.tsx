@@ -2,17 +2,19 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, options as iconOptions } from '../../icon/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
 import './index.scss';
+import { defaultArgs } from './defaultArgs';
 
-interface ITagProps {
+export interface ITagProps {
   content: string;
   type: 'default' | 'info' | 'warning' | 'error' | 'success';
   showIcon?: string;
-  icon?: string;
+  icon?: IconType;
   hover?: boolean;
   disableHover?: boolean;
   active?: boolean;
@@ -50,17 +52,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ITagProps = {
-  content: 'Tag name',
-  type: 'default',
-  showIcon: 'no',
-  icon: iconOptions[0],
-  hover: false,
-  disableHover: false,
-  active: false,
-  focus: false,
-};
-
 export const Tag: React.FC<ITagProps> = ({
   content = defaultArgs.content,
   type = defaultArgs.type,
@@ -71,7 +62,7 @@ export const Tag: React.FC<ITagProps> = ({
   disableHover = defaultArgs.disableHover,
   focus = defaultArgs.focus,
   classNames,
-}) => {
+}: ITagProps) => {
   // Parse icon markup
   const iconClassNames: string[] = [];
   if (showIcon === 'before') {
@@ -126,3 +117,5 @@ export const Tag: React.FC<ITagProps> = ({
     </div>
   );
 };
+
+export default Tag;

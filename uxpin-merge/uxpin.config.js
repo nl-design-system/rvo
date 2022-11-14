@@ -17,6 +17,7 @@ module.exports = {
           '../components/icon/css/template.tsx',
           '../components/layout-column-row/css/template.tsx',
           '../components/link/css/template.tsx',
+          '../components/tag/css/template.tsx',
         ],
       },
       {
