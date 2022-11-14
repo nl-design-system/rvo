@@ -13,6 +13,7 @@ module.exports = {
           '../components/expandable-text/css/template.tsx',
           '../components/header/css/template.tsx',
           '../components/footer/css/template.tsx',
+          '../components/logo/css/template.tsx',
         ],
       },
       {
