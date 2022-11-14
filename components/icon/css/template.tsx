@@ -20,7 +20,7 @@ export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
 export const toProperCase = (inputString) =>
   inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()).replace(/_/g, ' ');
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 const { STATUS, ...iconListWithoutStatus } = iconList;
 
 export const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {

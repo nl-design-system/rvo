@@ -84,7 +84,7 @@ export const parseMenuItem = ({
   }
 
   if (useIcon && icon) {
-    const iconMarkup = <Icon icon={icon} size={size} />;
+    const iconMarkup = <Icon icon={icon} size={size as any} />;
 
     if (iconPlacement === 'before') {
       itemMarkup = (

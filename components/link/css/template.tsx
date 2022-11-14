@@ -91,7 +91,7 @@ export const Link: React.FC<ILinkProps> = ({
   if (showIcon === 'after') {
     iconClassNames.push('rvo-link__icon--after');
   }
-  const iconMarkup = Icon({ icon, size: iconSize, color: iconColor, classNames: iconClassNames });
+  const iconMarkup = Icon({ icon, size: iconSize as any, color: iconColor as any, classNames: iconClassNames });
 
   return (
     <a
