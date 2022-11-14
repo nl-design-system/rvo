@@ -14,10 +14,11 @@ module.exports = {
         ],
       },
       {
-        name: 'General',
+        name: 'Forms',
         include: [
           '../components/form-checkbox/css/template.tsx',
           '../components/form-checkbox-group/css/template.tsx',
+          '../components/form-field-checkbox/css/template.tsx',
           '../components/form-dateinput/css/template.tsx',
           '../components/form-feedback/css/template.tsx',
         ],

@@ -7,7 +7,9 @@ import React, { PropsWithChildren } from 'react';
 import { ExpandableText } from '../../expandable-text/css/template';
 import { Feedback } from '../../form-feedback/css/template';
 import validateHTML from '../../utils/validateHTML';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
+
 export interface IFieldProps {
   fieldId?: string;
   label?: string;
@@ -30,16 +32,6 @@ export const argTypes = {
   expandableHelperTextTitle: { control: 'text' },
   warningText: { control: 'text' },
   errorText: { control: 'text' },
-};
-
-export const defaultArgs: IFieldProps = {
-  fieldId: 'fieldId',
-  label: 'Field label',
-  helperText: 'Helper text',
-  expandableHelperText: false,
-  expandableHelperTextTitle: 'Expandable helper text title',
-  warningText: '',
-  errorText: '',
 };
 
 export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
