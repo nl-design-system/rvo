@@ -21,7 +21,7 @@ export const argTypes = {
   },
 };
 
-export const FormFeedback: React.FC<IFeedbackProps> = ({
+export const Feedback: React.FC<IFeedbackProps> = ({
   text = defaultArgs.text,
   type = defaultArgs.type,
 }: IFeedbackProps) => {
@@ -48,4 +48,4 @@ export const FormFeedback: React.FC<IFeedbackProps> = ({
   }
 };
 
-export default FormFeedback;
+export default Feedback;

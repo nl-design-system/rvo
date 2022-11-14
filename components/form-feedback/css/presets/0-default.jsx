@@ -1,4 +1,4 @@
 import { defaultArgs } from '../defaultArgs';
-import FormFeedback from '../template';
+import Feedback from '../template';
 
-export default <FormFeedback uxpId="formFeedback" {...defaultArgs} />;
+export default <Feedback uxpId="feedback" {...defaultArgs} />;
