@@ -6,9 +6,10 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Link } from '../../link/css/template';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-interface IHeadingProps {
+export interface IHeadingProps {
   type: string;
   textContent: string;
   link?: string;
@@ -28,17 +29,11 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IHeadingProps = {
-  type: 'h1',
-  textContent: 'Heading',
-  link: '',
-};
-
 export const Heading: React.FC<IHeadingProps> = ({
   type = defaultArgs.type,
   textContent = defaultArgs.textContent,
   link = defaultArgs.link,
-}) => {
+}: IHeadingProps) => {
   const props = {
     className: clsx(`utrecht-heading-${type.replace('h', '')}`),
   };
@@ -72,3 +67,5 @@ export const Heading: React.FC<IHeadingProps> = ({
     return headingMarkup;
   }
 };
+
+export default Heading;

@@ -8,6 +8,7 @@ module.exports = {
           '../components/breadcrumbs/css/template.tsx',
           '../components/button/css/template.tsx',
           '../components/button-group/css/template.tsx',
+          '../components/heading/css/template.tsx',
           '../components/data-list/css/template.tsx',
           '../components/expandable-text/css/template.tsx',
           '../components/header/css/template.tsx',
