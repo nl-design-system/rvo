@@ -133,4 +133,4 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
   }
 };
 
-export default ITimeInputProps;
+export default TimeInput;
