@@ -16,6 +16,8 @@ module.exports = {
       {
         name: 'Forms',
         include: [
+          '../components/form-layout/css/template.tsx',
+          '../components/form-fieldset/css/template.tsx',
           '../components/form-textinput/css/template.tsx',
           '../components/form-field-textinput/css/template.tsx',
           '../components/form-checkbox/css/template.tsx',
@@ -27,11 +29,10 @@ module.exports = {
           '../components/form-select/css/template.tsx',
           '../components/form-field-select/css/template.tsx',
           '../components/form-dateinput/css/template.tsx',
+          '../components/form-field-dateinput/css/template.tsx',
           '../components/form-fileinput/css/template.tsx',
           '../components/form-field-fileinput/css/template.tsx',
           '../components/form-feedback/css/template.tsx',
-          '../components/form-fieldset/css/template.tsx',
-          '../components/form-layout/css/template.tsx',
         ],
       },
     ],
