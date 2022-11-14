@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import './index.scss';
-interface ILayoutColumnRowProps {
+export interface ILayoutColumnRowProps {
   size?: string;
   row?: boolean;
   wrap?: boolean;
@@ -25,19 +25,13 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ILayoutColumnRowProps = {
-  size: 'md',
-  row: false,
-  wrap: false,
-};
-
 export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>> = ({
   size,
   row,
   wrap,
   alignToTop,
   children,
-}) => {
+}: PropsWithChildren<ILayoutColumnRowProps>) => {
   return (
     <div
       className={clsx(
@@ -56,3 +50,5 @@ export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>>
     </div>
   );
 };
+
+export default LayoutColumnRow;
