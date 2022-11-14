@@ -16,6 +16,8 @@ module.exports = {
       {
         name: 'Forms',
         include: [
+          '../components/form-textinput/css/template.tsx',
+          '../components/form-field-textinput/css/template.tsx',
           '../components/form-checkbox/css/template.tsx',
           '../components/form-checkbox-group/css/template.tsx',
           '../components/form-field-checkbox/css/template.tsx',

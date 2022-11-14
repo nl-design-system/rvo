@@ -6,8 +6,9 @@ import './index.scss';
 import { Textarea, Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 
-export interface ITextInputProps extends React.DOMAttributes<any> {
+export interface ITextInputProps {
   key?: string;
   id?: string;
   disabled?: boolean;
@@ -22,6 +23,12 @@ export interface ITextInputProps extends React.DOMAttributes<any> {
   prefix?: string;
   suffix?: string;
   size?: string;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInput?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
 export const argTypes = {
@@ -64,22 +71,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ITextInputProps = {
-  id: 'field',
-  disabled: false,
-  focus: false,
-  invalid: false,
-  readOnly: false,
-  required: false,
-  inputType: 'text',
-  placeholder: '',
-  value: '',
-  validation: 'text',
-  prefix: '',
-  suffix: '',
-  size: 'lg',
-};
-
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
@@ -94,7 +85,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
   ...otherProps
-}) => {
+}: ITextInputProps) => {
   const props = {
     id,
     disabled,
@@ -132,3 +123,5 @@ export const TextInput: React.FC<ITextInputProps> = ({
     return <Textarea {...props} />;
   }
 };
+
+export default TextInput;

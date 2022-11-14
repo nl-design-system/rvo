@@ -5,7 +5,7 @@
 import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-import { ITextInputFieldProps, TextInputField } from '../../form-field/css/textinput-field.template';
+import { ITextInputFieldProps, TextInputField } from '../../form-field-textinput/css/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 export interface IFieldsetProps {
