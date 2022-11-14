@@ -29,7 +29,7 @@ const SearchInNav = () => {
             <div className="rvo-form-layout">
               <MaxWidthLayout size="sm">
                 <div className="rvo-inline-form">
-                  <TextInputField labelText="Zoekterm"></TextInputField>
+                  <TextInputField label="Zoekterm"></TextInputField>
                   <Button
                     kind="primary"
                     size="md"

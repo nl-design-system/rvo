@@ -49,7 +49,7 @@ const Filters = () => {
                     <Fieldset legend="">
                       <MaxWidthLayout size="lg">
                         <LayoutColumnRow size="xl" row={true}>
-                          <TextInputField labelText="Zoek op trefwoord/code"></TextInputField>
+                          <TextInputField label="Zoek op trefwoord/code"></TextInputField>
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">

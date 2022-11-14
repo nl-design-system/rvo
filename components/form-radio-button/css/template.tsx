@@ -9,7 +9,7 @@ import './index.scss';
 export interface IRadioButtonProps extends React.DOMAttributes<any> {
   id?: string;
   name?: string;
-  labelText: string;
+  label: string;
   checked?: boolean;
   hover?: boolean;
   disabled?: boolean;
@@ -22,7 +22,7 @@ export interface IRadioButtonProps extends React.DOMAttributes<any> {
 export const argTypes = {
   id: { control: 'text' },
   name: { control: 'text' },
-  labelText: { control: 'text' },
+  label: { control: 'text' },
   checked: { control: 'boolean' },
   hover: { control: 'boolean' },
   disabled: { control: 'boolean' },
@@ -35,7 +35,7 @@ export const argTypes = {
 export const defaultArgs: IRadioButtonProps = {
   id: 'field',
   name: 'group',
-  labelText: 'Label',
+  label: 'Label',
   checked: false,
   hover: false,
   disabled: false,
@@ -48,7 +48,7 @@ export const defaultArgs: IRadioButtonProps = {
 export const RadioButton: React.FC<IRadioButtonProps> = ({
   id = defaultArgs.id,
   name = defaultArgs.name,
-  labelText = defaultArgs.labelText,
+  label = defaultArgs.label,
   checked = defaultArgs.checked,
   hover = defaultArgs.hover,
   disabled = defaultArgs.disabled,
@@ -78,6 +78,6 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
       )}
       {...otherProps}
     />
-    {labelText}
+    {label}
   </label>
 );

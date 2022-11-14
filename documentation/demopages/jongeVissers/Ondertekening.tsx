@@ -92,23 +92,23 @@ const Ondertekening = () => {
                       <RadioButtonField
                         name="radio-buttons"
                         helperText="Uitgebreide informatie over overtredingen."
-                        labelText="Zijn er één of meerdere overtredingen bij u vastgesteld?"
+                        label="Zijn er één of meerdere overtredingen bij u vastgesteld?"
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
                         options={[
-                          { id: 'overa', labelText: 'Ja' },
-                          { id: 'overb', labelText: 'Nee' },
+                          { id: 'overa', label: 'Ja' },
+                          { id: 'overb', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                       <RadioButtonField
                         name="radio-buttons"
                         helperText="Uitgebreide informatie over fraude."
-                        labelText="Is er fraude bij u vastgesteld?"
+                        label="Is er fraude bij u vastgesteld?"
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
                         options={[
-                          { id: 'fraua', labelText: 'Ja' },
-                          { id: 'fraub', labelText: 'Nee' },
+                          { id: 'fraua', label: 'Ja' },
+                          { id: 'fraub', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>

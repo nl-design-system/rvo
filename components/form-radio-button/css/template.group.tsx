@@ -13,10 +13,10 @@ export interface IRadioButtonGroupProps {
 }
 
 const defaultOptions: IRadioButtonProps[] = [
-  { id: 'optionA', labelText: 'Option A' },
-  { id: 'optionB', labelText: 'Option B' },
-  { id: 'optionC', labelText: 'Option C' },
-  { id: 'optionD', labelText: 'Option D' },
+  { id: 'optionA', label: 'Option A' },
+  { id: 'optionB', label: 'Option B' },
+  { id: 'optionC', label: 'Option C' },
+  { id: 'optionD', label: 'Option D' },
 ];
 
 export const argTypes = {
@@ -50,7 +50,7 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
     )}
   >
     {options.map((option) => (
-      <RadioButton key={option.id} id={option.id} name={name} labelText={option.labelText} checked={option.checked} />
+      <RadioButton key={option.id} id={option.id} name={name} label={option.label} checked={option.checked} />
     ))}
   </div>
 );

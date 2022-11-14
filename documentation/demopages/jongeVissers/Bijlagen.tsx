@@ -101,66 +101,66 @@ const Bijlagen = () => {
                     <Fieldset legend="Financiële capaciteit">
                       <CheckboxField
                         invalid={false}
-                        labelText="Wat stuurt u mee om uw financiële capaciteit aan te tonen?"
+                        label="Wat stuurt u mee om uw financiële capaciteit aan te tonen?"
                         options={[
                           {
                             id: 'fca',
-                            labelText: 'Bewijs van het eigen vermogen',
+                            label: 'Bewijs van het eigen vermogen',
                           },
-                          { id: 'fcb', labelText: 'Bewijs van de lening die is toegezegd' },
+                          { id: 'fcb', label: 'Bewijs van de lening die is toegezegd' },
                         ]}
                       ></CheckboxField>
                       <FileInputField
-                        labelText="Bewijs van het eigen vermogen"
+                        label="Bewijs van het eigen vermogen"
                         helperText="Het is mogelijk meerdere bestanden te selecteren"
                       ></FileInputField>
                     </Fieldset>
                     <Fieldset legend="Opleiding of werkervaring">
                       <CheckboxField
                         invalid={false}
-                        labelText="Wat stuurt u mee om uw opleiding of werkervaring aan te tonen?"
+                        label="Wat stuurt u mee om uw opleiding of werkervaring aan te tonen?"
                         options={[
                           {
                             id: 'wea',
-                            labelText: 'Bewijs van de opleiding',
+                            label: 'Bewijs van de opleiding',
                           },
-                          { id: 'web', labelText: 'Bewijs dat u vijf jaar werkervaring heeft' },
+                          { id: 'web', label: 'Bewijs dat u vijf jaar werkervaring heeft' },
                         ]}
                       ></CheckboxField>
                       <FileInputField
-                        labelText="Bewijs dat u vijf jaar werkervaring heeft"
+                        label="Bewijs dat u vijf jaar werkervaring heeft"
                         helperText="Het is mogelijk meerdere bestanden te selecteren"
                       ></FileInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <FileInputField
-                        labelText="Offerte vaartuig"
+                        label="Offerte vaartuig"
                         helperText="Het is mogelijk meerdere bestanden te selecteren"
                       ></FileInputField>
                     </Fieldset>
                     <Fieldset legend="Marktwaarde vissersvaartuig">
                       <RadioButtonField
                         name="vv"
-                        labelText="Wat stuurt u mee om de marktwaarde van het visservaartuig aan te tonen?"
+                        label="Wat stuurt u mee om de marktwaarde van het visservaartuig aan te tonen?"
                         options={[
                           {
                             id: 'mwa',
-                            labelText: 'Taxatierapport',
+                            label: 'Taxatierapport',
                           },
-                          { id: 'mwb', labelText: 'Twee andere offertes van vergelijkbare voertuigen' },
+                          { id: 'mwb', label: 'Twee andere offertes van vergelijkbare voertuigen' },
                         ]}
                       ></RadioButtonField>
-                      <FileInputField labelText="Taxatierapport"></FileInputField>
+                      <FileInputField label="Taxatierapport"></FileInputField>
                     </Fieldset>
                     <Fieldset legend="Bewijs andere subsidies">
                       <FileInputField
-                        labelText="U stuurt de beslissing mee van deze andere subsidies"
+                        label="U stuurt de beslissing mee van deze andere subsidies"
                         helperText="Heeft u nog geen beslissing ontvangen? Stuur dan een kopie van de aanvraag mee. Het is mogelijk meerdere bestanden te selecteren."
                       ></FileInputField>
                     </Fieldset>
                     <Fieldset legend="Niet verplichte bijlagen">
                       <FileInputField
-                        labelText="Voeg hier de overige (niet verplichte) bijlagen toe"
+                        label="Voeg hier de overige (niet verplichte) bijlagen toe"
                         helperText="Het is mogelijk meerdere bestanden te selecteren"
                       ></FileInputField>
                     </Fieldset>

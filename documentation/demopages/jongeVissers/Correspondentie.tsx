@@ -93,14 +93,14 @@ const Correspondentie = () => {
                     <Fieldset legend="">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="Hoe wilt u correspondentie ontvangen?"
+                        label="Hoe wilt u correspondentie ontvangen?"
                         options={[
                           {
                             id: 'cora',
-                            labelText:
+                            label:
                               'Ik ontvang berichten digitaal in Mijn Dossier.Ik verklaar dat ik voldoende bereikbaar ben via e-mail en Mijn Dossier',
                           },
-                          { id: 'corb', labelText: 'Ik ontvang berichten liever op papier.' },
+                          { id: 'corb', label: 'Ik ontvang berichten liever op papier.' },
                         ]}
                       ></RadioButtonField>
                       <div className="rvo-alert rvo-alert--warning">
@@ -117,10 +117,10 @@ const Correspondentie = () => {
                     <Fieldset legend="Contactpersoon">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="Is de contactpersoon iemand anders dan de indiener?"
+                        label="Is de contactpersoon iemand anders dan de indiener?"
                         options={[
-                          { id: 'cpa', labelText: 'Ja' },
-                          { id: 'cpb', labelText: 'Nee' },
+                          { id: 'cpa', label: 'Ja' },
+                          { id: 'cpb', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>

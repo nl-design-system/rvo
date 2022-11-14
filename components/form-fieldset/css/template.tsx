@@ -32,22 +32,22 @@ export const argTypes = {
 };
 
 const defaultFields = [
-  { id: 'fieldA', labelText: 'Field', helperText: '' },
+  { id: 'fieldA', label: 'Field', helperText: '' },
   {
     id: 'fieldB',
-    labelText: 'Field met helper tekst',
+    label: 'Field met helper tekst',
     helperText: 'Deze helpertekst kan gebruikt worden voor instructies',
     value: '',
   },
   {
     id: 'fieldC',
-    labelText: 'Field met waarschuwing',
+    label: 'Field met waarschuwing',
     warningText: 'Dit is een waarschuwing',
     value: '',
   },
   {
     id: 'fieldD',
-    labelText: 'Field met foutmelding',
+    label: 'Field met foutmelding',
     errorText: 'Dit is een foutmelding',
     value: '',
   },

@@ -97,64 +97,61 @@ const Project = () => {
                     <Fieldset legend="">
                       <RadioButtonField
                         name="vv"
-                        labelText="Heeft u een vissersvaartuig in bezit of in bezit gehad?"
+                        label="Heeft u een vissersvaartuig in bezit of in bezit gehad?"
                         options={[
                           {
                             id: 'vva',
-                            labelText: 'Ja',
+                            label: 'Ja',
                           },
-                          { id: 'vvb', labelText: 'Nee' },
+                          { id: 'vvb', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                       <RadioButtonField
                         name="vvg"
-                        labelText="Waar gaat u het aan te schaffen visservaartuig voor gebruiken?"
+                        label="Waar gaat u het aan te schaffen visservaartuig voor gebruiken?"
                         options={[
                           {
                             id: 'vvga',
-                            labelText: 'Zee- of kustvisserij',
+                            label: 'Zee- of kustvisserij',
                           },
-                          { id: 'vvgb', labelText: 'Binnenvisserij' },
+                          { id: 'vvgb', label: 'Binnenvisserij' },
                         ]}
                       ></RadioButtonField>
                       <RadioButtonField
                         name="vvu"
-                        labelText="Voor welke vorm van visserij is het vissersvaartuig uitgerust?"
+                        label="Voor welke vorm van visserij is het vissersvaartuig uitgerust?"
                         options={[
                           {
                             id: 'vvua',
-                            labelText: 'Zee- of kustvisserij',
+                            label: 'Zee- of kustvisserij',
                           },
-                          { id: 'vvub', labelText: 'Binnenvisserij' },
-                          { id: 'vvuc', labelText: 'Geen uitrusting' },
+                          { id: 'vvub', label: 'Binnenvisserij' },
+                          { id: 'vvuc', label: 'Geen uitrusting' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="">
                       <RadioButtonField
                         name="vveu"
-                        labelText="Heeft het vaartuig dat u aanschaft een nummer in het EU-vlootregister (een EU-identificatienummer)?"
+                        label="Heeft het vaartuig dat u aanschaft een nummer in het EU-vlootregister (een EU-identificatienummer)?"
                         options={[
                           {
                             id: 'vveua',
-                            labelText: 'Ja',
+                            label: 'Ja',
                           },
-                          { id: 'vveub', labelText: 'Nee' },
+                          { id: 'vveub', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
-                      <TextInputField
-                        labelText="Wat is dit EU-identificatienummer?"
-                        validation="number"
-                      ></TextInputField>
-                      <TextInputField labelText="In welk land is het vaartuig dat u aanschaft geregistreerd in het EU-vlootregister?"></TextInputField>
+                      <TextInputField label="Wat is dit EU-identificatienummer?" validation="number"></TextInputField>
+                      <TextInputField label="In welk land is het vaartuig dat u aanschaft geregistreerd in het EU-vlootregister?"></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <TextInputField
-                        labelText="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?"
+                        label="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?"
                         validation="number"
                       ></TextInputField>
                       <TextInputField
-                        labelText="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?"
+                        label="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?"
                         validation="number"
                       ></TextInputField>
                     </Fieldset>
@@ -163,13 +160,13 @@ const Project = () => {
                       {' '}
                       <RadioButtonField
                         name="com"
-                        labelText="Gaat u met het publiek communiceren over uw investering (bijvoorbeeld via een brochure, flyer of persbericht)?"
+                        label="Gaat u met het publiek communiceren over uw investering (bijvoorbeeld via een brochure, flyer of persbericht)?"
                         options={[
                           {
                             id: 'coma',
-                            labelText: 'Ja',
+                            label: 'Ja',
                           },
-                          { id: 'comb', labelText: 'Nee' },
+                          { id: 'comb', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>

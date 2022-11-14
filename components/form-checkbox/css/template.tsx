@@ -9,7 +9,7 @@ import './index.scss';
 export interface ICheckboxProps extends React.DOMAttributes<any> {
   id?: string;
   name?: string;
-  labelText: string;
+  label: string;
   checked?: boolean;
   hover?: boolean;
   disabled?: boolean;
@@ -24,7 +24,7 @@ export interface ICheckboxProps extends React.DOMAttributes<any> {
 export const argTypes = {
   id: { control: 'text' },
   name: { control: 'text' },
-  labelText: { control: 'text' },
+  label: { control: 'text' },
   checked: { control: 'boolean' },
   hover: { control: 'boolean' },
   disabled: { control: 'boolean' },
@@ -39,7 +39,7 @@ export const argTypes = {
 export const defaultArgs: ICheckboxProps = {
   id: 'field',
   name: 'group',
-  labelText: 'Label',
+  label: 'Label',
   checked: false,
   hover: false,
   disabled: false,
@@ -54,7 +54,7 @@ export const defaultArgs: ICheckboxProps = {
 export const Checkbox: React.FC<ICheckboxProps> = ({
   id = defaultArgs.id,
   name = defaultArgs.name,
-  labelText = defaultArgs.labelText,
+  label = defaultArgs.label,
   checked = defaultArgs.checked,
   hover = defaultArgs.hover,
   disabled = defaultArgs.disabled,
@@ -65,7 +65,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   required = defaultArgs.required,
   value = defaultArgs.value,
   ...otherProps
-}) => (
+}: ICheckboxProps) => (
   <label
     className={clsx(
       'rvo-checkbox',
@@ -94,6 +94,8 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       defaultValue={value || ''}
       {...otherProps}
     />
-    {labelText}
+    {label}
   </label>
 );
+
+export default Checkbox;

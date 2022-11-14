@@ -105,26 +105,26 @@ const KostenOpvoeren = () => {
                   <LayoutColumnRow size="md">
                     <Fieldset legend="">
                       <TextInputField
-                        labelText="Hoeveel kost het vissersvaartuig (exclusief btw)?"
+                        label="Hoeveel kost het vissersvaartuig (exclusief btw)?"
                         validation="number"
                       ></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <RadioButtonField
                         name="vv-eigenaar"
-                        labelText="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?"
+                        label="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?"
                         options={[
                           {
                             id: 'vveiga',
-                            labelText: 'Volledig eigenaar',
+                            label: 'Volledig eigenaar',
                           },
-                          { id: 'vveigb', labelText: 'Mede eigenaar' },
+                          { id: 'vveigb', label: 'Mede eigenaar' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="">
                       <TextInputField
-                        labelText="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
+                        label="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
                         helperText="Uitgebreide uitleg over de subsidie."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"

@@ -5,12 +5,12 @@
 import { FormField, FormLabel } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { ExpandableText } from '../../expandable-text/css/template';
-import { FormFeedback } from '../../form-feedback/css/template';
+import { Feedback } from '../../form-feedback/css/template';
 import validateHTML from '../../utils/validateHTML';
 import './index.scss';
 export interface IFieldProps {
   fieldId?: string;
-  labelText?: string;
+  label?: string;
   helperText?: string | React.ReactNode;
   expandableHelperText?: boolean;
   expandableHelperTextTitle?: string;
@@ -22,7 +22,7 @@ export const argTypes = {
   fieldId: {
     control: 'text',
   },
-  labelText: {
+  label: {
     control: 'text',
   },
   helperText: { control: 'text' },
@@ -34,7 +34,7 @@ export const argTypes = {
 
 export const defaultArgs: IFieldProps = {
   fieldId: 'fieldId',
-  labelText: 'Field label',
+  label: 'Field label',
   helperText: 'Helper text',
   expandableHelperText: false,
   expandableHelperTextTitle: 'Expandable helper text title',
@@ -44,7 +44,7 @@ export const defaultArgs: IFieldProps = {
 
 export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   fieldId = defaultArgs.fieldId,
-  labelText = defaultArgs.labelText,
+  label = defaultArgs.label,
   helperText,
   expandableHelperText,
   expandableHelperTextTitle,
@@ -87,10 +87,10 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   return (
     <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
       <div className="rvo-layout-column rvo-layout-gap--2xs">
-        <FormLabel htmlFor={fieldId}>{labelText}</FormLabel>
+        <FormLabel htmlFor={fieldId}>{label}</FormLabel>
         {helperTextMarkup}
-        {errorText && <FormFeedback text={errorText} type="error" />}
-        {warningText && <FormFeedback text={warningText} type="warning" />}
+        {errorText && <Feedback text={errorText} type="error" />}
+        {warningText && <Feedback text={warningText} type="warning" />}
       </div>
       {children}
     </FormField>

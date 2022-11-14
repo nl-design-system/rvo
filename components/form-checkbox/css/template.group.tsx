@@ -13,10 +13,10 @@ export interface ICheckboxGroupProps {
 }
 
 const defaultOptions: ICheckboxProps[] = [
-  { id: 'optionA', labelText: 'Option A' },
-  { id: 'optionB', labelText: 'Option B', checked: true },
-  { id: 'optionC', labelText: 'Option C' },
-  { id: 'optionD', labelText: 'Option D' },
+  { id: 'optionA', label: 'Option A' },
+  { id: 'optionB', label: 'Option B', checked: true },
+  { id: 'optionC', label: 'Option C' },
+  { id: 'optionD', label: 'Option D' },
 ];
 
 export const argTypes = {
@@ -48,7 +48,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
     )}
   >
     {options.map((option) => (
-      <Checkbox key={option.id} id={option.id} labelText={option.labelText} checked={option.checked} />
+      <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
     ))}
   </div>
 );

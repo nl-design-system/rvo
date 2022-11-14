@@ -84,7 +84,7 @@ const Diensten = () => {
                 </summary>
                 <div className="rvo-tmp-filters">
                   <Fieldset legend="">
-                    <TextInputField labelText="Op titel"></TextInputField>
+                    <TextInputField label="Op titel"></TextInputField>
                     <details className="rvo-tmp-filter">
                       <summary>
                         <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
@@ -173,7 +173,7 @@ const Diensten = () => {
                       </div>
                     </details>
                     <SelectField
-                      labelText="Sorteren op"
+                      label="Sorteren op"
                       options={[
                         { value: '1', label: 'Aanbevolen' },
                         { value: '2', label: 'Openingsdatum' },

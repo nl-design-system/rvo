@@ -59,11 +59,11 @@ const VormvrijeAanvraag = () => {
                     <Fieldset legend="">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="Wilt u een vormvrije aanvraag indienen?"
+                        label="Wilt u een vormvrije aanvraag indienen?"
                         helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."
                         options={[
-                          { id: 'vva', labelText: 'Ja' },
-                          { id: 'vva', labelText: 'Nee' },
+                          { id: 'vva', label: 'Ja' },
+                          { id: 'vva', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
