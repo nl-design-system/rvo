@@ -1,4 +1,3 @@
-// import { iconNames as iconOptions } from '../../icon/css/template';
 import { ICheckboxProps } from './template';
 
 export const defaultArgs: ICheckboxProps = {

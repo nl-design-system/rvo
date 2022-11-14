@@ -1,4 +1,3 @@
-// import { iconNames as iconOptions } from '../../icon/css/template';
 import { IDataListProps } from './template';
 
 export const defaultArgs: IDataListProps = {
