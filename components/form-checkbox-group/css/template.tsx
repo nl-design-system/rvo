@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useCallback, useRef } from 'react';
 import { Checkbox, ICheckboxProps } from '../../form-checkbox/css/template';
 import { defaultArgs } from './defaultArgs';
 
@@ -12,6 +12,10 @@ export interface ICheckboxGroupProps {
   /** @uxpinignoreprop */
   options?: ICheckboxProps[];
   onChange?: (event) => void;
+  /**
+   * @uxpinbind onChange 1
+   */
+  currentSelection?: number[];
 }
 
 export const argTypes = {
@@ -27,30 +31,49 @@ export const argTypes = {
 export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = ({
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
+  onChange,
   children,
-}: PropsWithChildren<ICheckboxGroupProps>) => (
-  <div
-    className={clsx(
-      'rvo-checkbox__group',
-      invalid && 'rvo-custom-radio-button__group--error',
-      'rvo-layout-column',
-      'rvo-layout-gap--md',
-      'rvo-layout--wrap',
-    )}
-  >
-    {(children &&
-      React.Children.map(children, (child, index) => (
-        <Checkbox
-          key={index}
-          id={(child as any).props.id}
-          label={(child as any).props.label}
-          checked={(child as any).props.checked}
-        />
-      ))) ||
-      options.map((option) => (
-        <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
-      ))}
-  </div>
-);
+}: PropsWithChildren<ICheckboxGroupProps>) => {
+  const checkboxGroupRef = useRef<HTMLDivElement>(null);
+  const onUpdateGroup = useCallback(() => {
+    if (checkboxGroupRef.current) {
+      const allCheckboxElements = Array.from(checkboxGroupRef.current.getElementsByTagName('input'));
+      const currentGroupSelection = allCheckboxElements.reduce((currentGroupSelection, checkbox, currentIndex) => {
+        if (checkbox.checked) {
+          currentGroupSelection.push(currentIndex);
+        }
+        return currentGroupSelection;
+      }, []);
+      onChange(currentGroupSelection);
+    }
+  }, [checkboxGroupRef]);
+
+  return (
+    <div
+      className={clsx(
+        'rvo-checkbox__group',
+        invalid && 'rvo-custom-radio-button__group--error',
+        'rvo-layout-column',
+        'rvo-layout-gap--md',
+        'rvo-layout--wrap',
+      )}
+      ref={checkboxGroupRef}
+    >
+      {(children &&
+        React.Children.map(children, (child, index) => (
+          <Checkbox
+            key={index}
+            id={(child as any).props.id}
+            label={(child as any).props.label}
+            checked={(child as any).props.checked}
+            onUpdateGroup={onUpdateGroup}
+          />
+        ))) ||
+        options.map((option) => (
+          <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
+        ))}
+    </div>
+  );
+};
 
 export default CheckboxGroup;

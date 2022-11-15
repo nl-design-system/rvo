@@ -28,6 +28,10 @@ export interface ICheckboxProps {
   onChange?: (event) => void;
   onClick?: (event) => void;
   onInvalid?: (event) => void;
+  /** @uxpinignoreprop */
+  groupRef?: React.Ref<any>;
+  /** @uxpinignoreprop */
+  onUpdateGroup?: (event) => void;
 }
 
 export const argTypes = {
@@ -58,6 +62,8 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   value = defaultArgs.value,
+  onChange,
+  onUpdateGroup,
   ...otherProps
 }: ICheckboxProps) => (
   <label
@@ -86,6 +92,10 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       disabled={disabled || null}
       required={required || null}
       defaultValue={value || ''}
+      onChange={(event) => {
+        onChange?.(event);
+        onUpdateGroup?.(event);
+      }}
       {...otherProps}
     />
     {label}
