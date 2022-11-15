@@ -11,6 +11,9 @@ export interface ICheckboxProps {
   id?: string;
   name?: string;
   label: string;
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
   checked?: boolean;
   hover?: boolean;
   disabled?: boolean;
@@ -79,7 +82,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       name={name}
       className="rvo-checkbox__input"
       type="checkbox"
-      defaultChecked={checked || null}
+      checked={checked || null}
       disabled={disabled || null}
       required={required || null}
       defaultValue={value || ''}
