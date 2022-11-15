@@ -11,6 +11,9 @@ export interface IRadioButtonProps {
   id?: string;
   name?: string;
   label: string;
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
   checked?: boolean;
   hover?: boolean;
   disabled?: boolean;
@@ -23,6 +26,8 @@ export interface IRadioButtonProps {
   onChange?: (event) => void;
   onClick?: (event) => void;
   onInvalid?: (event) => void;
+  /** @uxpinignoreprop */
+  onUpdateGroup?: (event) => void;
 }
 
 export const argTypes = {
@@ -49,6 +54,8 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
+  onChange,
+  onUpdateGroup,
   ...otherProps
 }: IRadioButtonProps) => (
   <label className="rvo-layout-row rvo-layout-gap--sm" htmlFor={id}>
@@ -56,7 +63,7 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
       id={id}
       name={name}
       type="radio"
-      defaultChecked={checked || null}
+      checked={checked || null}
       disabled={disabled || null}
       required={required || null}
       className={clsx(
@@ -69,6 +76,10 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
         invalid && 'utrecht-custom-radio-button--invalid',
         required && 'utrecht-custom-radio-button--required',
       )}
+      onChange={(event) => {
+        onChange?.(event);
+        onUpdateGroup?.(event);
+      }}
       {...otherProps}
     />
     {label}
