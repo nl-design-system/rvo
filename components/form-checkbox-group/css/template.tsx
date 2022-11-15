@@ -9,7 +9,9 @@ import { defaultArgs } from './defaultArgs';
 
 export interface ICheckboxGroupProps {
   invalid?: boolean;
+  /** @uxpinignoreprop */
   options?: ICheckboxProps[];
+  onChange?: (event) => void;
 }
 
 export const argTypes = {
@@ -36,7 +38,15 @@ export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = (
       'rvo-layout--wrap',
     )}
   >
-    {children ||
+    {(children &&
+      React.Children.map(children, (child, index) => (
+        <Checkbox
+          key={index}
+          id={(child as any).props.id}
+          label={(child as any).props.label}
+          checked={(child as any).props.checked}
+        />
+      ))) ||
       options.map((option) => (
         <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
       ))}
