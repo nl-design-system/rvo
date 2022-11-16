@@ -2,33 +2,28 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 export interface IMenuBarItem {
   label: string;
-  icon?: string;
+  icon?: IconType;
   link: string;
-  align?: string;
+  align?: 'left' | 'right';
   active?: boolean;
 }
 
 export interface IMenuBarProps {
-  size: string;
+  size: 'sm' | 'md' | 'lg';
   items: IMenuBarItem[];
   useIcons: boolean;
-  iconPlacement: string;
-  menuMaxWidth?: string;
+  iconPlacement: 'before' | 'after';
+  menuMaxWidth?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
 }
-
-export const defaultItems = [
-  { label: 'Home', icon: 'home', link: '#' },
-  { label: 'Mijn aanvragen', icon: 'publicatie', link: '#' },
-  { label: 'Nieuwe aanvraag', icon: 'plus', link: '#' },
-  { label: 'Uitloggen', icon: 'versleutelen', link: '#', align: 'right' },
-];
 
 export const argTypes = {
   size: {
@@ -58,15 +53,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IMenuBarProps = {
-  size: 'md',
-  items: defaultItems,
-  useIcons: true,
-  iconPlacement: 'before',
-  menuMaxWidth: 'none',
-  type: 'primary',
-};
-
 export const parseMenuItem = ({
   label,
   icon,
@@ -80,11 +66,11 @@ export const parseMenuItem = ({
   let itemMarkup;
   let deltaMarkup;
   if (active !== undefined) {
-    deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" />;
+    deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" color="wit" />;
   }
 
   if (useIcon && icon) {
-    const iconMarkup = <Icon icon={icon} size={size as any} />;
+    const iconMarkup = <Icon icon={icon} size={size as any} color="wit" />;
 
     if (iconPlacement === 'before') {
       itemMarkup = (
@@ -129,7 +115,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   iconPlacement = defaultArgs.iconPlacement,
   menuMaxWidth = defaultArgs.menuMaxWidth,
   type = defaultArgs.type,
-}) => {
+}: IMenuBarProps) => {
   const leftItemsMarkup = items
     .filter((item) => item.align !== 'right')
     .map((item, index) => {
@@ -200,3 +186,5 @@ export const MenuBarWithSubmenu: React.FC<{ primary: IMenuBarProps; sub: IMenuBa
     <MenuBar {...sub} />
   </div>
 );
+
+export default MenuBar;

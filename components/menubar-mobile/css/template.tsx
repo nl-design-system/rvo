@@ -5,7 +5,8 @@
 import clsx from 'clsx';
 import React, { useCallback } from 'react';
 import { Icon } from '../../icon/css/template';
-import { defaultItems, IMenuBarItem, IMenuBarProps, parseMenuItem } from './template';
+import { IMenuBarItem, IMenuBarProps, parseMenuItem } from '../../menubar/css/template';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export const argTypes = {
@@ -37,21 +38,12 @@ export const argTypes = {
   },
 };
 
-interface IMobileMenuBarProps extends IMenuBarProps {
+export interface IMobileMenuBarProps extends IMenuBarProps {
   submenuItems: IMenuBarItem[];
   isOpen: boolean;
+  /** @uxpinignoreprop */
   updateArgs?: any;
 }
-
-export const defaultArgs: IMobileMenuBarProps = {
-  size: 'md',
-  items: defaultItems,
-  submenuItems: [],
-  useIcons: true,
-  iconPlacement: 'before',
-  isOpen: true,
-};
-
 export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   size = defaultArgs.size,
   items = defaultArgs.items,
@@ -60,7 +52,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   submenuItems = defaultArgs.submenuItems,
   isOpen = defaultArgs.isOpen,
   updateArgs,
-}) => {
+}: IMobileMenuBarProps) => {
   const itemsMarkup = items.map((item, index) => {
     return (
       <React.Fragment key={index}>
@@ -114,3 +106,5 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     </div>
   );
 };
+
+export default MobileMenuBar;
