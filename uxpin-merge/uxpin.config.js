@@ -15,6 +15,7 @@ module.exports = {
           '../components/footer/css/template.tsx',
           // '../components/logo/css/template.tsx',
           '../components/icon/css/template.tsx',
+          '../components/status-icon/css/template.tsx',
           '../components/link/css/template.tsx',
           '../components/tag/css/template.tsx',
         ],
