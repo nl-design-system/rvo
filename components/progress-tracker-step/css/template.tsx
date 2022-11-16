@@ -5,7 +5,9 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Link } from '../../link/css/template';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
+
 export interface IProgressTrackerStepProps {
   state: string;
   line: string;
@@ -36,21 +38,13 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IProgressTrackerStepProps = {
-  state: 'incomplete',
-  line: 'none',
-  size: 'medium',
-  label: 'Step label',
-  link: '#',
-};
-
-export const Step: React.FC<IProgressTrackerStepProps> = ({
+export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
   state = defaultArgs.state,
   line = defaultArgs.line,
   size = defaultArgs.size,
   label = defaultArgs.label,
   link = defaultArgs.link,
-}) => {
+}: IProgressTrackerStepProps) => {
   let labelMarkup: string | React.ReactNode = label;
   if (state === 'incomplete' || state === 'doing' || state === 'completed') {
     labelMarkup = <Link content={label} url={link} classNames={['rvo-progress-tracker__step-link']} />;
@@ -85,3 +79,5 @@ export const Step: React.FC<IProgressTrackerStepProps> = ({
     </div>
   );
 };
+
+export default ProgressTrackerStep;

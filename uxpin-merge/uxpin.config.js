@@ -18,6 +18,9 @@ module.exports = {
           '../components/status-icon/css/template.tsx',
           '../components/link/css/template.tsx',
           '../components/tag/css/template.tsx',
+          '../components/table/css/template.tsx',
+          '../components/progress-tracker/css/template.tsx',
+          '../components/progress-tracker-step/css/template.tsx',
         ],
       },
       {
