@@ -13,7 +13,7 @@ import { defaultArgs } from './defaultArgs';
 export interface ITagProps {
   content: string;
   type: 'default' | 'info' | 'warning' | 'error' | 'success';
-  showIcon?: string;
+  showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   hover?: boolean;
   disableHover?: boolean;
