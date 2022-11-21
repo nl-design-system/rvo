@@ -137,8 +137,10 @@ jobs:
         with:
           node-version: "12.x"
       - name: Install
-        run: yarn
+        run: |
+          npm ci
+          npm ls
       - name: Push To UXpin
-        run: yarn push
+        run: npm push
         env:
           UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
