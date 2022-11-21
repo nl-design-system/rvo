@@ -60,6 +60,16 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_NLDESIGNSYSTEM }}
           storybookBuildDir: packages/storybook/dist/
 
+      - name: Push to UXPin
+        uses: actions/checkout@master
+        if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
+        with:
+          ref: refs/heads/master
+          fetch-depth: 0
+        run: cd uxpin-merge && npm run push
+        env:
+          UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
+
   publish-storybook:
     runs-on: ubuntu-latest
     needs: continuous-integration
@@ -123,24 +133,3 @@ jobs:
           npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           npm run publish -- --no-verify-access --yes
           npm config delete "//registry.npmjs.org/:_authToken"
-  publish-uxpin:
-    runs-on: ubuntu-latest
-    needs: continuous-integration
-    if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-    steps:
-      - uses: actions/checkout@master
-        with:
-          ref: refs/heads/master
-          fetch-depth: 0
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "16.14.0"
-      - name: Install
-        run: |
-          npm ci
-          npm ls
-      - name: Push To UXpin
-        run: cd uxpin-merge && npm run push
-        env:
-          UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
