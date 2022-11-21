@@ -16,6 +16,6 @@
     "@storybook/addon-docs": "6.5.9"
   },
   "dependencies": {
-    "clsx": "1.1.1"
+    "clsx": "1.2.1"
   }
 }
