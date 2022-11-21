@@ -1,6 +1,6 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -105,26 +105,26 @@ const KostenOpvoeren = () => {
                   <LayoutColumnRow size="md">
                     <Fieldset legend="">
                       <TextInputField
-                        labelText="Hoeveel kost het vissersvaartuig (exclusief btw)?"
+                        label="Hoeveel kost het vissersvaartuig (exclusief btw)?"
                         validation="number"
                       ></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <RadioButtonField
                         name="vv-eigenaar"
-                        labelText="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?"
+                        label="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?"
                         options={[
                           {
                             id: 'vveiga',
-                            labelText: 'Volledig eigenaar',
+                            label: 'Volledig eigenaar',
                           },
-                          { id: 'vveigb', labelText: 'Mede eigenaar' },
+                          { id: 'vveigb', label: 'Mede eigenaar' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="">
                       <TextInputField
-                        labelText="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
+                        label="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
                         helperText="Uitgebreide uitleg over de subsidie."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"

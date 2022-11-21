@@ -4,12 +4,16 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IRadioButtonProps extends React.DOMAttributes<any> {
+export interface IRadioButtonProps {
   id?: string;
   name?: string;
-  labelText: string;
+  label: string;
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
   checked?: boolean;
   hover?: boolean;
   disabled?: boolean;
@@ -17,12 +21,19 @@ export interface IRadioButtonProps extends React.DOMAttributes<any> {
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInvalid?: (event) => void;
+  /** @uxpinignoreprop */
+  onUpdateGroup?: (event) => void;
 }
 
 export const argTypes = {
   id: { control: 'text' },
   name: { control: 'text' },
-  labelText: { control: 'text' },
+  label: { control: 'text' },
   checked: { control: 'boolean' },
   hover: { control: 'boolean' },
   disabled: { control: 'boolean' },
@@ -32,23 +43,10 @@ export const argTypes = {
   required: { control: 'boolean' },
 };
 
-export const defaultArgs: IRadioButtonProps = {
-  id: 'field',
-  name: 'group',
-  labelText: 'Label',
-  checked: false,
-  hover: false,
-  disabled: false,
-  active: false,
-  focus: false,
-  invalid: false,
-  required: false,
-};
-
 export const RadioButton: React.FC<IRadioButtonProps> = ({
   id = defaultArgs.id,
   name = defaultArgs.name,
-  labelText = defaultArgs.labelText,
+  label = defaultArgs.label,
   checked = defaultArgs.checked,
   hover = defaultArgs.hover,
   disabled = defaultArgs.disabled,
@@ -56,14 +54,16 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
+  onChange,
+  onUpdateGroup,
   ...otherProps
-}) => (
+}: IRadioButtonProps) => (
   <label className="rvo-layout-row rvo-layout-gap--sm" htmlFor={id}>
     <input
       id={id}
       name={name}
       type="radio"
-      defaultChecked={checked || null}
+      checked={checked || null}
       disabled={disabled || null}
       required={required || null}
       className={clsx(
@@ -76,8 +76,14 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
         invalid && 'utrecht-custom-radio-button--invalid',
         required && 'utrecht-custom-radio-button--required',
       )}
+      onChange={(event) => {
+        onChange?.(event);
+        onUpdateGroup?.(event);
+      }}
       {...otherProps}
     />
-    {labelText}
+    {label}
   </label>
 );
+
+export default RadioButton;

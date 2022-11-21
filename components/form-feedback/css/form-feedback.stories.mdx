@@ -1,9 +1,10 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, FormFeedback } from "./template";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Feedback } from "./template";
 
 <Meta
-  title="CSS Components/Form/Form feedback"
-  component={FormFeedback}
+  title="CSS Components/Form/Feedback"
+  component={Feedback}
   argTypes={argTypes}
   parameters={{
     status: {
@@ -12,12 +13,12 @@ import { argTypes, defaultArgs, FormFeedback } from "./template";
   }}
 />
 
-# Form feedback
+# Feedback
 
 <Canvas>
-  <Story name="Form feedback" args={defaultArgs}>
-    {FormFeedback.bind({})}
+  <Story name="Feedback" args={defaultArgs}>
+    {Feedback.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Form feedback" />
+<ArgsTable story="Feedback" />

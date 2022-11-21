@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, TimeInputField } from "./template";
+
+<Meta
+  title="CSS Components/Form/Field/Time input field"
+  component={TimeInputField}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Time input field
+
+<Canvas>
+  <Story name="Time input field" args={defaultArgs}>
+    {TimeInputField.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Time input field" />

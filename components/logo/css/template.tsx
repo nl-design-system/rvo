@@ -2,24 +2,24 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+// TODO: Fix this
+// import LogoSrc from '@nl-rvo/assets/images/logo.svg';
 import clsx from 'clsx';
-import '@nl-rvo/assets/images/logo.svg';
 import React from 'react';
-
-interface ILogoProps {
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
+export interface ILogoProps {
   title?: string;
   subtitle?: string;
   className?: string;
 }
 
 export const Logo: React.FC<ILogoProps> = ({
-  className,
-  title = 'Rijksdienst voor Ondernemend Nederland',
-  subtitle,
+  className = defaultArgs.className,
+  title = defaultArgs.title,
+  subtitle = defaultArgs.subtitle,
 }) => {
-  return (
-    <img src="images/logo.svg" alt={`${title || ''} ${subtitle || ''}`} className={clsx('rvo-logo-img', className)} />
-  );
+  return <img src={'/LogoSrc'} alt={`${title || ''} ${subtitle || ''}`} className={clsx('rvo-logo-img', className)} />;
 };
 
 export const Emblem = () => (
@@ -233,3 +233,5 @@ export const LogoWithText: React.FC<ILogoProps> = ({
     </div>
   );
 };
+
+export default Logo;

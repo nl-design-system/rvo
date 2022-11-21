@@ -3,26 +3,14 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import React from 'react';
-import { IProgressTrackerStepProps, Step } from './template.step';
+import React, { PropsWithChildren } from 'react';
+import { IProgressTrackerStepProps, ProgressTrackerStep } from '../../progress-tracker-step/css/template';
+import { defaultArgs } from './defaultArgs';
 
-interface IProgressTrackerProps {
+export interface IProgressTrackerProps {
+  /** @uxpinignoreprop */
   steps: IProgressTrackerStepProps[];
 }
-
-export const defaultSteps = [
-  { state: 'start', label: 'Progress Tracker', link: '#', size: 'md', line: 'straight' },
-  { state: 'completed', label: 'Step completed', link: '#', size: 'md', line: 'straight' },
-  { state: 'doing', label: 'Step doing', link: '#', size: 'md', line: 'straight' },
-  { state: 'incomplete', label: 'Step incomplete', link: '#', size: 'md', line: 'substep-start' },
-  { state: 'incomplete', label: 'First sub-step', link: '#', size: 'sm', line: 'straight' },
-  { state: 'doing', label: 'Sub-step doing', link: '#', size: 'sm', line: 'straight' },
-  { state: 'completed', label: 'Sub-step completed', link: '#', size: 'sm', line: 'straight' },
-  { state: 'disabled', label: 'Sub-step disabled', link: '#', size: 'sm', line: 'straight' },
-  { state: 'incomplete', label: 'Last sub-step', link: '#', size: 'sm', line: 'substep-end' },
-  { state: 'disabled', label: 'Step disabled', link: '#', size: 'md', line: 'straight' },
-  { state: 'end', label: 'Process completed', link: '#', size: 'md', line: 'none' },
-];
 
 export const argTypes = {
   steps: {
@@ -33,16 +21,19 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IProgressTrackerProps = {
-  steps: defaultSteps,
-};
-
-export const ProgressTracker: React.FC<IProgressTrackerProps> = ({ steps = defaultArgs.steps }) => {
+export const ProgressTracker: React.FC<PropsWithChildren<IProgressTrackerProps>> = ({
+  steps = defaultArgs.steps,
+  children,
+}: PropsWithChildren<IProgressTrackerProps>) => {
   return (
     <div className="rvo-progress-tracker">
-      {steps.map((stepProps, index) => (
-        <Step key={index} {...stepProps} />
-      ))}
+      {(children &&
+        React.Children.map(children, (child, index) => (
+          <ProgressTrackerStep key={index} {...(child as any).props} />
+        ))) ||
+        steps.map((stepProps, index) => <ProgressTrackerStep key={index} {...stepProps} />)}
     </div>
   );
 };
+
+export default ProgressTracker;

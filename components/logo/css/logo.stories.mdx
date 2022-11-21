@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
 import { Logo } from "./template";
-import "./index.scss";
 
 <Meta
   title="CSS Components/Logo/Logo"
@@ -19,13 +19,7 @@ Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/bas
 ## Logo as image
 
 <Canvas>
-  <Story
-    name="Logo"
-    args={{
-      title: "Rijksdienst voor Ondernemend Nederland",
-      subtitle: "",
-    }}
-  >
+  <Story name="Logo" args={defaultArgs}>
     {Logo.bind({})}
   </Story>
 </Canvas>

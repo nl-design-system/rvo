@@ -1,6 +1,9 @@
 {
   "rvo": {
     "color": {
+      "logoblauw": {
+        "value": "{basiselementen.color.logoblauw}"
+      },
       "hemelblauw": {
         "value": "{basiselementen.color.hemelblauw}"
       },

@@ -10,7 +10,7 @@ const LogoGrid = () => {
             <img src="images/logo-grid/enjoy-signature-bottom_en.svg" className="rvo-logo-grid__logo" />
           </div>
           <div className="rvo-logo-grid__item">
-            <img src="images/logo-grid/Flag_of_Europe.svg" className="rvo-logo-grid__logo" />
+            <img src="images/logo-grid/flag-of-europe.svg" className="rvo-logo-grid__logo" />
           </div>
           <div className="rvo-logo-grid__item">Ministerie van Economische Zaken en Klimaat</div>
         </div>

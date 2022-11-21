@@ -5,8 +5,9 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-
-interface IMaxWidthLayoutProps {
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
+export interface IMaxWidthLayoutProps {
   size?: string;
   content?: string;
   className?: string | string[];
@@ -22,18 +23,14 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IMaxWidthLayoutProps = {
-  size: 'md',
-  content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
-};
-
 export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> = ({
-  size,
-  content,
+  size = defaultArgs.size,
+  content = defaultArgs.content,
   children,
   className = [],
-}) => {
-  let parsedContent = content || children;
+}: PropsWithChildren<IMaxWidthLayoutProps>) => {
+  let parsedContent = children || content;
+
   if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
     switch (size) {
@@ -54,3 +51,5 @@ export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> =
     <div className={clsx('rvo-max-width-layout', `rvo-max-width-layout--${size}`, className)}>{parsedContent}</div>
   );
 };
+
+export default MaxWidthLayout;

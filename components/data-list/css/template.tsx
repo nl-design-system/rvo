@@ -3,12 +3,15 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
+import React from 'react';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 interface IDataListItem {
   key: string;
   value: string;
 }
 
-interface IDataListProps {
+export interface IDataListProps {
   items: IDataListItem[];
 }
 
@@ -21,29 +24,15 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IDataListProps = {
-  items: [
-    {
-      key: 'Voornaam',
-      value: 'Mees',
-    },
-    {
-      key: 'Achternaam',
-      value: 'de Vos',
-    },
-    {
-      key: 'Adres',
-      value: 'Tweede Kamer der Staten-Generaal\nPostbus 20018\n2500 EA Den Haag',
-    },
-  ],
-};
-export const DataList = ({ items }) => (
+export const DataList: React.FC<IDataListProps> = ({ items = defaultArgs.items }: IDataListProps) => (
   <dl className={clsx('rvo-data-list')}>
-    {items.map(({ key, value }) => (
-      <>
+    {items.map(({ key, value }, index) => (
+      <React.Fragment key={index}>
         <dt>{key}</dt>
         <dd>{value}</dd>
-      </>
+      </React.Fragment>
     ))}
   </dl>
 );
+
+export default DataList;

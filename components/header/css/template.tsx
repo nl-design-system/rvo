@@ -4,8 +4,10 @@
  */
 import React from 'react';
 import { Logo } from '../../logo/css/template';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
-interface IHeaderProps {
+export interface IHeaderProps {
   link?: string;
 }
 
@@ -15,11 +17,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IHeaderProps = {
-  link: '/',
-};
-
-export const Header: React.FC<IHeaderProps> = ({ link = defaultArgs.link }) => (
+export const Header: React.FC<IHeaderProps> = ({ link = defaultArgs.link }: IHeaderProps) => (
   <header className="rvo-header">
     <div className="rvo-header__logo-wrapper">
       {link ? (
@@ -32,3 +30,5 @@ export const Header: React.FC<IHeaderProps> = ({ link = defaultArgs.link }) => (
     </div>
   </header>
 );
+
+export default Header;

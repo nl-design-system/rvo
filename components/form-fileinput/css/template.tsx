@@ -5,14 +5,20 @@
 import clsx from 'clsx';
 import './index.scss';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 
-export interface IFileInputProps extends React.DOMAttributes<any> {
+export interface IFileInputProps {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
   multiple?: boolean;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
 export const argTypes = {
@@ -34,15 +40,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IFileInputProps = {
-  id: 'field',
-  disabled: false,
-  focus: false,
-  invalid: false,
-  required: false,
-  multiple: true,
-};
-
 export const FileInput: React.FC<IFileInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
@@ -51,7 +48,7 @@ export const FileInput: React.FC<IFileInputProps> = ({
   required = defaultArgs.required,
   multiple = defaultArgs.multiple,
   ...otherProps
-}) => (
+}: IFileInputProps) => (
   <input
     id={id}
     type="file"
@@ -68,3 +65,5 @@ export const FileInput: React.FC<IFileInputProps> = ({
     {...otherProps}
   />
 );
+
+export default FileInput;

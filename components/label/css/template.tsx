@@ -4,8 +4,10 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
-interface ILabelProps {
+export interface ILabelProps {
   content: string;
   size: 'sm' | 'md';
   type: 'default' | 'optional' | 'required';
@@ -26,18 +28,12 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ILabelProps = {
-  content: 'Label',
-  size: 'md',
-  type: 'default',
-};
-
 export const Label: React.FC<ILabelProps> = ({
   content = defaultArgs.content,
   size = defaultArgs.size,
   type = defaultArgs.type,
   classNames,
-}) => {
+}: ILabelProps) => {
   return (
     <div
       className={clsx(
@@ -52,3 +48,5 @@ export const Label: React.FC<ILabelProps> = ({
     </div>
   );
 };
+
+export default Label;

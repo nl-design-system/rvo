@@ -1,4 +1,4 @@
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -32,16 +32,14 @@ const MijnZaken = () => {
           items={[
             {
               label: 'Zaken',
-              icon: '',
               active: true,
               link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story',
             },
-            { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
-            { label: 'Help', icon: '', link: '#' },
-            { label: 'Profiel', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
+            { label: 'Diensten', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Help', link: '#' },
+            { label: 'Profiel', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
             {
               label: 'Uitloggen',
-              icon: '',
               link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
               align: 'right',
             },
@@ -84,8 +82,8 @@ const MijnZaken = () => {
                 </summary>
                 <div className="rvo-tmp-filters">
                   <Fieldset legend="">
-                    <TextInputField labelText="Op zaaknummer" validation="numeric"></TextInputField>
-                    <TextInputField labelText="Op omschrijving"></TextInputField>
+                    <TextInputField label="Op zaaknummer" validation="numeric"></TextInputField>
+                    <TextInputField label="Op omschrijving"></TextInputField>
 
                     <details className="rvo-tmp-filter">
                       <summary>

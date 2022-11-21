@@ -5,9 +5,10 @@
 import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-import { ITextInputFieldProps, TextInputField } from '../../form-field/css/textinput-field.template';
-
-interface IFieldsetProps {
+import { ITextInputFieldProps, TextInputField } from '../../form-field-textinput/css/template';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
+export interface IFieldsetProps {
   legend: string;
   disabled?: boolean;
   fields?: ITextInputFieldProps[];
@@ -26,56 +27,22 @@ export const argTypes = {
       name: 'array',
     },
   },
-  hideFields: {
-    control: 'boolean',
-  },
-};
-
-const defaultFields = [
-  { id: 'fieldA', labelText: 'Field', helperText: '' },
-  {
-    id: 'fieldB',
-    labelText: 'Field met helper tekst',
-    helperText: 'Deze helpertekst kan gebruikt worden voor instructies',
-    value: '',
-  },
-  {
-    id: 'fieldC',
-    labelText: 'Field met waarschuwing',
-    warningText: 'Dit is een waarschuwing',
-    value: '',
-  },
-  {
-    id: 'fieldD',
-    labelText: 'Field met foutmelding',
-    errorText: 'Dit is een foutmelding',
-    value: '',
-  },
-];
-
-export const defaultArgs: IFieldsetProps = {
-  legend: 'Fieldset legend',
-  disabled: false,
-  fields: defaultFields,
-  hideFields: false,
 };
 
 export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,
   fields,
-  hideFields,
   children,
-}) => {
+}: PropsWithChildren<IFieldsetProps>) => {
   return (
-    <FieldsetUtrecht
-      className={clsx('rvo-layout-column rvo-layout-gap--xl', hideFields && 'utrecht-form-fieldset--hidden')}
-      disabled={disabled || null}
-    >
+    <FieldsetUtrecht className={clsx('rvo-layout-column rvo-layout-gap--xl')} disabled={disabled || null}>
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
-      {fields &&
-        fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />)}
-      {children}
+      {children ||
+        (fields &&
+          fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />))}
     </FieldsetUtrecht>
   );
 };
+
+export default Fieldset;

@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.rvo-layout-column-inline {
+  display: inline-flex;
+  flex-direction: column;
+}
+
 .rvo-layout-row--align-top {
   align-items: flex-start;
 }
@@ -11,6 +16,11 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+}
+
+.rvo-layout-row-inline {
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .rvo-layout-row--flex-start {

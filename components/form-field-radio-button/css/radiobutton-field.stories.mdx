@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, RadioButtonField } from "./template";
+
+<Meta
+  title="CSS Components/Form/Field/Radio button field"
+  component={RadioButtonField}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Radio button field
+
+<Canvas>
+  <Story name="Radio button field" args={defaultArgs}>
+    {RadioButtonField.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Radio button field" />

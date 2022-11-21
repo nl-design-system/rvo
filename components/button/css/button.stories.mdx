@@ -1,6 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button, exampleArgs } from "./template";
-import "./index.scss";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Button } from "./template";
 
 <Meta
   title="CSS Components/Button"
@@ -16,7 +16,7 @@ import "./index.scss";
 # Button
 
 <Canvas>
-  <Story name="Button" args={exampleArgs}>
+  <Story name="Button" args={defaultArgs}>
     {Button.bind({})}
   </Story>
 </Canvas>

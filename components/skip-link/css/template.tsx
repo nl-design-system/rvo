@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import { Button } from '../../button/css/template';
+import './index.scss';
 
 interface ISkipLinkProps {
   textContent?: string;
@@ -30,7 +31,7 @@ export const SkipLink: React.FC<ISkipLinkProps> = ({
 }) => {
   return (
     <a className="rvo-skip-link" href={anchorLink}>
-      <Button textContent={textContent} />
+      <Button label={textContent} />
     </a>
   );
 };

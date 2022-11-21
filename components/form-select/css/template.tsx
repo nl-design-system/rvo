@@ -5,27 +5,27 @@
 import clsx from 'clsx';
 import './index.scss';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 
-interface ISelectOption {
+export interface ISelectOption {
   value: string;
   label: string;
   selected?: boolean;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
-export interface ISelectProps extends React.DOMAttributes<any> {
+export interface ISelectProps {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
-  options: ISelectOption[];
+  options?: ISelectOption[];
 }
-
-const defaultOptions: ISelectOption[] = [
-  { value: '1', label: 'Option #1' },
-  { value: '2', label: 'Option #2', selected: true },
-  { value: '3', label: 'Option #3' },
-];
 
 export const argTypes = {
   id: { control: 'text' },
@@ -49,15 +49,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ISelectProps = {
-  id: 'field',
-  disabled: false,
-  focus: false,
-  invalid: false,
-  required: false,
-  options: defaultOptions,
-};
-
 export const Select: React.FC<ISelectProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
@@ -66,7 +57,7 @@ export const Select: React.FC<ISelectProps> = ({
   required = defaultArgs.required,
   options = defaultArgs.options,
   ...otherProps
-}) => (
+}: ISelectProps) => (
   <div className="rvo-select-wrapper">
     <select
       id={id}
@@ -90,3 +81,5 @@ export const Select: React.FC<ISelectProps> = ({
     </select>
   </div>
 );
+
+export default Select;

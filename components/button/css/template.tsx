@@ -2,37 +2,44 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
+import { IconType } from '@nl-rvo/assets/icons/types';
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
+import '../../layout-column-row/css/index.scss';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
-export interface IButtonProps extends React.DOMAttributes<any> {
-  key?: string | number;
-  kind?: string;
-  size?: string;
-  textContent?: string;
+export interface IButtonProps {
+  kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
+  size?: 'xs' | 'sm' | 'md';
+  label?: string;
   active?: boolean;
   busy?: boolean;
   focus?: boolean;
   focusVisible?: boolean;
   hover?: boolean;
   disabled?: boolean;
-  showIcon?: string;
-  icon?: string;
+  showIcon?: 'no' | 'before' | 'after';
+  icon?: IconType;
   classNames?: string[];
+  alignToRightInGroup?: boolean;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onClick?: (event) => void;
 }
 
 export const argTypes = {
   kind: {
-    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'warning-subtle', 'warning'],
+    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'subtle', 'warning-subtle', 'warning'],
     control: { type: 'radio' },
   },
   size: {
     options: ['xs', 'sm', 'md'],
     control: { type: 'radio' },
   },
-  textContent: {
+  label: {
     control: 'text',
   },
   busy: {
@@ -60,25 +67,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IButtonProps = {
-  kind: 'primary',
-  size: 'md',
-  active: false,
-  busy: false,
-  disabled: false,
-  focus: false,
-  focusVisible: false,
-  hover: false,
-  textContent: '',
-  showIcon: 'no',
-  icon: iconOptions[0],
-};
-
-export const exampleArgs = {
-  ...defaultArgs,
-  textContent: 'Button',
-};
-
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   kind = defaultArgs.kind,
   size = defaultArgs.size,
@@ -88,14 +76,15 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
   hover = defaultArgs.hover,
-  textContent = defaultArgs.textContent,
+  label = defaultArgs.label,
   children,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   classNames = [],
+  alignToRightInGroup,
   ...otherProps
-}) => {
-  const iconMarkup = <Icon icon={icon} size="md" />;
+}: PropsWithChildren<IButtonProps>) => {
+  const iconMarkup = <Icon icon={icon as any} size="md" />;
 
   let appearance: string = null;
   switch (kind) {
@@ -123,13 +112,14 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         hover && 'utrecht-button--hover',
         focus && 'utrecht-button--focus',
         focusVisible && 'utrecht-button--focus-visible',
-        'rvo-layout-row',
+        'rvo-layout-row-inline',
         size === 'xs' && 'rvo-layout-gap--xs',
         size === 'sm' && 'rvo-layout-gap--sm',
         size === 'md' && 'rvo-layout-gap--md',
         size === 'xs' && 'utrecht-button--rvo-xs',
         size === 'sm' && 'utrecht-button--rvo-sm',
         size === 'md' && 'utrecht-button--rvo-md',
+        alignToRightInGroup && 'rvo-button-group__align-right',
       )}
       disabled={disabled || null}
       appearance={appearance}
@@ -137,7 +127,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
       {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
-      {textContent}
+      {label}
       {children}
       {showIcon === 'after' && iconMarkup}
     </UtrechtButton>
@@ -147,22 +137,24 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
 export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
   <div>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="primary" />
+      <Button label="Button" {...buttonArgs} kind="primary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="secondary" />
+      <Button label="Button" {...buttonArgs} kind="secondary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="tertiary" />
+      <Button label="Button" {...buttonArgs} kind="tertiary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="quaternary" />
+      <Button label="Button" {...buttonArgs} kind="quaternary" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="warning-subtle" />
+      <Button label="Button" {...buttonArgs} kind="warning-subtle" />
     </p>
     <p>
-      <Button textContent="Button" {...buttonArgs} kind="warning" />
+      <Button label="Button" {...buttonArgs} kind="warning" />
     </p>
   </div>
 );
+
+export default Button;

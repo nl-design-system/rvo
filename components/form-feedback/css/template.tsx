@@ -6,10 +6,11 @@ import { FormFieldDescription } from '@utrecht/component-library-react';
 import React from 'react';
 import './index.scss';
 import { Icon } from '../../icon/css/template';
+import { defaultArgs } from './defaultArgs';
 
-interface IFeedbackProps {
+export interface IFeedbackProps {
   text: string;
-  type: string;
+  type: 'warning' | 'error';
 }
 
 export const argTypes = {
@@ -20,12 +21,10 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IFeedbackProps = {
-  text: 'Dit is een melding.',
-  type: 'warning',
-};
-
-export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text, type = defaultArgs.type }) => {
+export const Feedback: React.FC<IFeedbackProps> = ({
+  text = defaultArgs.text,
+  type = defaultArgs.type,
+}: IFeedbackProps) => {
   if (type === 'warning') {
     return (
       <FormFieldDescription
@@ -48,3 +47,5 @@ export const FormFeedback: React.FC<IFeedbackProps> = ({ text = defaultArgs.text
     );
   }
 };
+
+export default Feedback;

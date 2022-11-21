@@ -4,9 +4,9 @@
  */
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-
-interface ILayoutColumnRowProps {
-  size?: string;
+import './index.scss';
+export interface ILayoutColumnRowProps {
+  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;
   alignToTop?: boolean;
@@ -25,19 +25,13 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ILayoutColumnRowProps = {
-  size: 'md',
-  row: false,
-  wrap: false,
-};
-
 export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>> = ({
   size,
   row,
   wrap,
   alignToTop,
   children,
-}) => {
+}: PropsWithChildren<ILayoutColumnRowProps>) => {
   return (
     <div
       className={clsx(
@@ -56,3 +50,5 @@ export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>>
     </div>
   );
 };
+
+export default LayoutColumnRow;

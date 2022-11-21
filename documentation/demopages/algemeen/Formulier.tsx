@@ -1,9 +1,9 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { CheckboxField } from '@nl-rvo/components/form-field/css/checkbox-field.template';
-import { FileInputField } from '@nl-rvo/components/form-field/css/fileinput-field.template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
-import { SelectField } from '@nl-rvo/components/form-field/css/select-field.template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { CheckboxField } from '@nl-rvo/components/form-field-checkbox/css/template';
+import { FileInputField } from '@nl-rvo/components/form-field-fileinput/css/template';
+import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
+import { SelectField } from '@nl-rvo/components/form-field-select/css/template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -11,7 +11,8 @@ import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/templa
 import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { defaultSteps, ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { defaultSteps } from '@nl-rvo/components/progress-tracker/css/defaultArgs';
+import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import { ButtonGroup } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
@@ -34,101 +35,101 @@ const Formulier = () => {
                   </div>
                   <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
                     <Fieldset legend="Keyboard inputs">
-                      <TextInputField labelText="Text" />
+                      <TextInputField label="Text" />
                       <TextInputField
-                        labelText="Text with helper text"
+                        label="Text with helper text"
                         helperText="This is a helper text which can be used for instructions."
                       />
-                      <TextInputField labelText="Text" />
-                      <TextInputField labelText="Text with an error" errorText="This is an error" invalid={true} />
-                      <TextInputField labelText="Text with a warning" warningText="This is a warning" />
+                      <TextInputField label="Text" />
+                      <TextInputField label="Text with an error" errorText="This is an error" invalid={true} />
+                      <TextInputField label="Text with a warning" warningText="This is a warning" />
                       <TextInputField
-                        labelText="Text with expandable helper text"
+                        label="Text with expandable helper text"
                         helperText="This is a helper text which can be used for instructions."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Expandable helper text"
                       />
-                      <TextInputField labelText="Text disabled" disabled={true} />
-                      <TextInputField labelText="Text disabled with value" disabled={true} value="Value" />
-                      <TextInputField labelText="Number" validation="number" />
-                      <TextInputField labelText="Textarea" inputType="textarea" />
+                      <TextInputField label="Text disabled" disabled={true} />
+                      <TextInputField label="Text disabled with value" disabled={true} value="Value" />
+                      <TextInputField label="Number" validation="number" />
+                      <TextInputField label="Textarea" inputType="textarea" />
                     </Fieldset>
 
                     <Fieldset legend="Options">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="Radio buttons"
+                        label="Radio buttons"
                         helperText="This is an helper text"
                         options={[
-                          { id: 'optionA', labelText: 'Option A' },
-                          { id: 'optionB', labelText: 'Option B' },
-                          { id: 'optionC', labelText: 'Option C' },
-                          { id: 'optionD', labelText: 'Option D' },
+                          { id: 'optionA', label: 'Option A' },
+                          { id: 'optionB', label: 'Option B' },
+                          { id: 'optionC', label: 'Option C' },
+                          { id: 'optionD', label: 'Option D' },
                         ]}
                       ></RadioButtonField>
                       <RadioButtonField
                         name="radio-buttons-error"
-                        labelText="Radio buttons invalid"
+                        label="Radio buttons invalid"
                         errorText="This is an error"
                         invalid={true}
                         options={[
-                          { id: 'optionA-error', labelText: 'Option A' },
-                          { id: 'optionB-error', labelText: 'Option B' },
-                          { id: 'optionC-error', labelText: 'Option C' },
-                          { id: 'optionD-error', labelText: 'Option D' },
+                          { id: 'optionA-error', label: 'Option A' },
+                          { id: 'optionB-error', label: 'Option B' },
+                          { id: 'optionC-error', label: 'Option C' },
+                          { id: 'optionD-error', label: 'Option D' },
                         ]}
                       ></RadioButtonField>
 
                       <RadioButtonField
                         name="radio-buttons-warning"
-                        labelText="Radio buttons with warning"
+                        label="Radio buttons with warning"
                         warningText="This is a warning"
                         options={[
-                          { id: 'optionA-warning', labelText: 'Option A' },
-                          { id: 'optionB-warning', labelText: 'Option B' },
-                          { id: 'optionC-warning', labelText: 'Option C' },
-                          { id: 'optionD-warning', labelText: 'Option D' },
+                          { id: 'optionA-warning', label: 'Option A' },
+                          { id: 'optionB-warning', label: 'Option B' },
+                          { id: 'optionC-warning', label: 'Option C' },
+                          { id: 'optionD-warning', label: 'Option D' },
                         ]}
                       ></RadioButtonField>
 
                       <CheckboxField
                         helperText="This is an helper text"
-                        labelText="Checkboxes"
+                        label="Checkboxes"
                         invalid={false}
                         options={[
-                          { id: 'optionA-cb', labelText: 'Option A' },
-                          { id: 'optionB-cb', labelText: 'Option B' },
-                          { id: 'optionC-cb', labelText: 'Option C' },
-                          { id: 'optionD-cb', labelText: 'Option D' },
+                          { id: 'optionA-cb', label: 'Option A' },
+                          { id: 'optionB-cb', label: 'Option B' },
+                          { id: 'optionC-cb', label: 'Option C' },
+                          { id: 'optionD-cb', label: 'Option D' },
                         ]}
                       ></CheckboxField>
 
                       <CheckboxField
                         errorText="This is an error"
-                        labelText="Checkboxes with error"
+                        label="Checkboxes with error"
                         invalid={true}
                         options={[
-                          { id: 'optionA-cb-error', labelText: 'Option A' },
-                          { id: 'optionB-cb-error', labelText: 'Option B' },
-                          { id: 'optionC-cb-error', labelText: 'Option C' },
-                          { id: 'optionD-cb-error', labelText: 'Option D' },
+                          { id: 'optionA-cb-error', label: 'Option A' },
+                          { id: 'optionB-cb-error', label: 'Option B' },
+                          { id: 'optionC-cb-error', label: 'Option C' },
+                          { id: 'optionD-cb-error', label: 'Option D' },
                         ]}
                       ></CheckboxField>
 
                       <CheckboxField
                         warningText="This is a warning"
-                        labelText="Checkboxes with a warning"
+                        label="Checkboxes with a warning"
                         invalid={false}
                         options={[
-                          { id: 'optionA-cb-warning', labelText: 'Option A' },
-                          { id: 'optionB-cb-warning', labelText: 'Option B' },
-                          { id: 'optionC-cb-warning', labelText: 'Option C' },
-                          { id: 'optionD-cb-warning', labelText: 'Option D' },
+                          { id: 'optionA-cb-warning', label: 'Option A' },
+                          { id: 'optionB-cb-warning', label: 'Option B' },
+                          { id: 'optionC-cb-warning', label: 'Option C' },
+                          { id: 'optionD-cb-warning', label: 'Option D' },
                         ]}
                       ></CheckboxField>
 
                       <SelectField
-                        labelText="Select"
+                        label="Select"
                         options={[
                           { value: '1', label: 'Option #1' },
                           { value: '2', label: 'Option #2' },
@@ -138,7 +139,7 @@ const Formulier = () => {
                     </Fieldset>
 
                     <Fieldset legend="Other">
-                      <FileInputField labelText="File" />
+                      <FileInputField label="File" />
                       <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
                         <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
                           <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">

@@ -3,13 +3,17 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import './index.scss';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
-export interface ICheckboxProps extends React.DOMAttributes<any> {
+export interface ICheckboxProps {
   id?: string;
   name?: string;
-  labelText: string;
+  label: string;
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
   checked?: boolean;
   hover?: boolean;
   disabled?: boolean;
@@ -19,12 +23,19 @@ export interface ICheckboxProps extends React.DOMAttributes<any> {
   invalid?: boolean;
   required?: boolean;
   value?: string;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInvalid?: (event) => void;
+  /** @uxpinignoreprop */
+  onUpdateGroup?: (event) => void;
 }
 
 export const argTypes = {
   id: { control: 'text' },
   name: { control: 'text' },
-  labelText: { control: 'text' },
+  label: { control: 'text' },
   checked: { control: 'boolean' },
   hover: { control: 'boolean' },
   disabled: { control: 'boolean' },
@@ -36,25 +47,10 @@ export const argTypes = {
   value: { control: 'text' },
 };
 
-export const defaultArgs: ICheckboxProps = {
-  id: 'field',
-  name: 'group',
-  labelText: 'Label',
-  checked: false,
-  hover: false,
-  disabled: false,
-  active: false,
-  focus: false,
-  indeterminate: false,
-  invalid: false,
-  required: false,
-  value: '',
-};
-
 export const Checkbox: React.FC<ICheckboxProps> = ({
   id = defaultArgs.id,
   name = defaultArgs.name,
-  labelText = defaultArgs.labelText,
+  label = defaultArgs.label,
   checked = defaultArgs.checked,
   hover = defaultArgs.hover,
   disabled = defaultArgs.disabled,
@@ -64,8 +60,10 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   value = defaultArgs.value,
+  onChange,
+  onUpdateGroup,
   ...otherProps
-}) => (
+}: ICheckboxProps) => (
   <label
     className={clsx(
       'rvo-checkbox',
@@ -88,12 +86,18 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       name={name}
       className="rvo-checkbox__input"
       type="checkbox"
-      defaultChecked={checked || null}
+      checked={checked || null}
       disabled={disabled || null}
       required={required || null}
-      defaultValue={value || ''}
+      value={value || ''}
+      onChange={(event) => {
+        onChange?.(event);
+        onUpdateGroup?.(event);
+      }}
       {...otherProps}
     />
-    {labelText}
+    {label}
   </label>
 );
+
+export default Checkbox;

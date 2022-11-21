@@ -2,15 +2,17 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon, iconColors, options as iconOptions } from '../../icon/css/template';
-
-interface ILinkProps {
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
+export interface ILinkProps {
   content: string;
   url: string;
   showIcon?: string;
-  icon?: string;
+  icon?: IconType;
   iconSize?: string;
   iconColor?: string;
   hover?: boolean;
@@ -57,19 +59,6 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: ILinkProps = {
-  content: 'Dit is een link',
-  url: '#',
-  showIcon: 'no',
-  hover: false,
-  icon: iconOptions[0],
-  iconSize: 'md',
-  iconColor: 'hemelblauw',
-  active: false,
-  focus: false,
-  noUnderline: false,
-};
-
 export const Link: React.FC<ILinkProps> = ({
   content = defaultArgs.content,
   url = defaultArgs.url,
@@ -82,7 +71,7 @@ export const Link: React.FC<ILinkProps> = ({
   focus = defaultArgs.focus,
   noUnderline = defaultArgs.noUnderline,
   classNames = [],
-}) => {
+}: ILinkProps) => {
   // Parse icon markup
   const iconClassNames = [];
   if (showIcon === 'before') {
@@ -91,7 +80,12 @@ export const Link: React.FC<ILinkProps> = ({
   if (showIcon === 'after') {
     iconClassNames.push('rvo-link__icon--after');
   }
-  const iconMarkup = Icon({ icon, size: iconSize, color: iconColor, classNames: iconClassNames });
+  const iconMarkup = Icon({
+    icon: icon as any,
+    size: iconSize as any,
+    color: iconColor as any,
+    classNames: iconClassNames,
+  });
 
   return (
     <a
@@ -114,3 +108,5 @@ export const Link: React.FC<ILinkProps> = ({
     </a>
   );
 };
+
+export default Link;

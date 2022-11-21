@@ -1,7 +1,7 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
-import { SelectField } from '@nl-rvo/components/form-field/css/select-field.template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
+import { SelectField } from '@nl-rvo/components/form-field-select/css/template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -80,7 +80,7 @@ const Aanvrager = () => {
                   <LayoutColumnRow row={false} size="md">
                     <Fieldset legend="Contactpersoon">
                       <SelectField
-                        labelText="Contactpersoon"
+                        label="Contactpersoon"
                         options={[
                           { value: '1', label: 'Contactpersoon 1' },
                           { value: '2', label: 'Contactpersoon 2' },
@@ -91,36 +91,36 @@ const Aanvrager = () => {
                     <Fieldset legend="Organisatie">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="U drijft een onderneming in de zin van de Wet IB of Wet Vpb en bent geen publieke kennisinstelling?"
+                        label="U drijft een onderneming in de zin van de Wet IB of Wet Vpb en bent geen publieke kennisinstelling?"
                         helperText="Bent u geen ondernemer in de zin van de Wet IB (Inkomstenbelasting 2001) of Wet VpB
                       (Vennootschapsbelasting 1969), dan kunt u geen WBSO aanvragen. U kunt ook geen WBSO aanvragen
                       indienen als u een publieke kennisinstelling bent (zie artikel 1, onderdeel m van de WVA)."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer uitleg"
                         options={[
-                          { id: 'wet-ib', labelText: 'Ja' },
-                          { id: 'wet-ib', labelText: 'Nee' },
+                          { id: 'wet-ib', label: 'Ja' },
+                          { id: 'wet-ib', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="Gegevens aanvrager in aanvraagperiode">
-                      <TextInputField labelText="Prognose totaal aantal werknemers" validation="number" />
-                      <TextInputField labelText="(Waarvan) eigen S&O-werknemers" validation="number" />
+                      <TextInputField label="Prognose totaal aantal werknemers" validation="number" />
+                      <TextInputField label="(Waarvan) eigen S&O-werknemers" validation="number" />
                     </Fieldset>
                     <Fieldset legend="S&O-uurloon">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="Heeft u in 2020 S&O-werkzaamheden verricht waarvoor u een S&O-verklaring heeft ontvangen?"
+                        label="Heeft u in 2020 S&O-werkzaamheden verricht waarvoor u een S&O-verklaring heeft ontvangen?"
                         warningText="Voor u geldt in 2022 een forfaitar uurloon van €29."
                         options={[
-                          { id: 'so', labelText: 'Ja' },
-                          { id: 'so', labelText: 'Nee' },
+                          { id: 'so', label: 'Ja' },
+                          { id: 'so', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="Technologiegebied">
                       <SelectField
-                        labelText="Technologiegebied"
+                        label="Technologiegebied"
                         helperText={
                           <dl>
                             <dt>aard- en milieuwetenschappen</dt>
@@ -133,7 +133,7 @@ const Aanvrager = () => {
                       ></SelectField>
                     </Fieldset>
                     <Fieldset legend="Periode aanvraag">
-                      <SelectField labelText="Maand aanvang" options={[{ value: '1', label: 'Januari' }]}></SelectField>
+                      <SelectField label="Maand aanvang" options={[{ value: '1', label: 'Januari' }]}></SelectField>
                     </Fieldset>
                   </LayoutColumnRow>
                   <div className="rvo-button-group">

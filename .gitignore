@@ -58,3 +58,6 @@ Thumbs.db
 yarn.lock
 package-lock.json
 !/package-lock.json
+
+# Merge
+.uxpin-merge

@@ -5,15 +5,18 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
+import '../../layout-column-row/css/index.scss';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 interface IBreadcrumbItem {
   label: string;
   url?: string;
 }
 
-interface IBreadcrumbProps {
+export interface IBreadcrumbProps {
   items: IBreadcrumbItem[];
-  size: string;
+  size: 'sm' | 'md' | 'lg';
 }
 
 export const argTypes = {
@@ -29,23 +32,16 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IBreadcrumbProps = {
-  items: [
-    { label: 'First step', url: '#' },
-    { label: 'Second step', url: '#' },
-    { label: 'Third step', url: '#' },
-    { label: 'Current page' },
-  ],
-  size: 'sm',
-};
-
-export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items = defaultArgs.items, size = defaultArgs.size }) => {
+export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
+  items = defaultArgs.items,
+  size = defaultArgs.size,
+}: IBreadcrumbProps) => {
   return (
     <ol className={clsx('rvo-breadcrumbs', `rvo-breadcrumbs--${size}`, 'rvo-layout-row', `rvo-layout-gap--sm`)}>
       {items.map((item, index) => {
         // Parse divider markup
         let dividerMarkup = index > 0 && index < items.length && (
-          <Icon color="hemelblauw" icon="delta-naar-rechts" size="xs" />
+          <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />
         );
 
         // Parse item markup
@@ -78,3 +74,5 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items = defaultArgs.it
     </ol>
   );
 };
+
+export default Breadcrumbs;

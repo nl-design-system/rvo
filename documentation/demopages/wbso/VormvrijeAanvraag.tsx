@@ -1,5 +1,5 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
+import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -59,11 +59,11 @@ const VormvrijeAanvraag = () => {
                     <Fieldset legend="">
                       <RadioButtonField
                         name="radio-buttons"
-                        labelText="Wilt u een vormvrije aanvraag indienen?"
+                        label="Wilt u een vormvrije aanvraag indienen?"
                         helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."
                         options={[
-                          { id: 'vva', labelText: 'Ja' },
-                          { id: 'vva', labelText: 'Nee' },
+                          { id: 'vva', label: 'Ja' },
+                          { id: 'vva', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>

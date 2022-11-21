@@ -24,17 +24,15 @@ const Profiel = () => {
           </summary>
           <MenuBar
             items={[
-              { label: 'Zaken', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
-              { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
-              { label: 'Help', icon: '', link: '#' },
+              { label: 'Zaken', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+              { label: 'Diensten', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+              { label: 'Help', link: '#' },
               {
                 label: 'Profiel',
-                icon: '',
                 link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story',
               },
               {
                 label: 'Uitloggen',
-                icon: '',
                 link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
                 align: 'right',
               },
@@ -48,18 +46,16 @@ const Profiel = () => {
         </details>
         <MenuBar
           items={[
-            { label: 'Zaken', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
-            { label: 'Diensten', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
-            { label: 'Help', icon: '', link: '#' },
+            { label: 'Zaken', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+            { label: 'Diensten', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Help', link: '#' },
             {
               label: 'Profiel',
-              icon: '',
               active: true,
               link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story',
             },
             {
               label: 'Uitloggen',
-              icon: '',
               link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
               align: 'right',
             },
@@ -165,7 +161,7 @@ const Profiel = () => {
                     ></Link>
                     <Button
                       kind="warning-subtle"
-                      textContent="Intrekken"
+                      label="Intrekken"
                       showIcon="before"
                       size="xs"
                       icon="verwijderen"
@@ -183,7 +179,7 @@ const Profiel = () => {
                     <Link url="#" content="ACME" showIcon="before" icon="user" noUnderline={true}></Link>
                     <Button
                       kind="warning-subtle"
-                      textContent="Intrekken"
+                      label="Intrekken"
                       showIcon="before"
                       size="xs"
                       icon="verwijderen"
@@ -303,8 +299,8 @@ const Profiel = () => {
               Weet u zeker dat u de machtiging van <strong>G.G.L. Luijten</strong> wilt intrekken?
             </p>
             <div className="rvo-button-group rvo-layout-row rvo-layout-gap--md">
-              <Button kind="secondary" textContent="Annuleren" size="sm"></Button>
-              <Button kind="warning" textContent="Machtiging intrekken" size="sm"></Button>
+              <Button kind="secondary" label="Annuleren" size="sm"></Button>
+              <Button kind="warning" label="Machtiging intrekken" size="sm"></Button>
             </div>
           </div>
         </div>

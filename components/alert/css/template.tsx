@@ -3,19 +3,22 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
-import * as ReactDOMServer from 'react-dom/server';
+import React, { ReactNode } from 'react';
 import { Button } from '../../button/css/template';
 import { Icon } from '../../icon/css/template';
-import { Link } from '../../link/css/template';
 import { StatusIcon } from '../../status-icon/css/template';
-import validateHTML from '../../utils/validateHTML';
+import parseContentMarkup from '../../utils/parseContentMarkup';
+import './index.scss';
+import { defaultArgs } from './defaultArgs';
 
 export interface IAlertProps {
-  kind?: string;
+  kind?: 'info' | 'warning' | 'error' | 'success';
   heading?: string;
+  /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -34,21 +37,13 @@ export const argTypes = {
   },
 };
 
-const linkMarkup = ReactDOMServer.renderToStaticMarkup(Link({ content: 'link', url: '#' }));
-
-export const defaultArgs: IAlertProps = {
-  kind: 'info',
-  heading: '',
-  content: `This is an example of an alert, with a ${linkMarkup} inside.`,
-  closable: false,
-};
-
 export const Alert: React.FC<IAlertProps> = ({
   kind = defaultArgs.kind,
   heading = defaultArgs.heading,
   content = defaultArgs.content,
   closable = defaultArgs.closable,
-}) => {
+  children,
+}: IAlertProps) => {
   let iconMarkup;
   switch (kind) {
     case 'info':
@@ -65,11 +60,8 @@ export const Alert: React.FC<IAlertProps> = ({
       break;
   }
 
-  // Parse content markup (either a string, HTML string or React node)
-  let contentMarkup = <div>{content}</div>;
-  if (typeof content === 'string' && content.length && validateHTML(content)) {
-    contentMarkup = <div dangerouslySetInnerHTML={{ __html: content }}></div>;
-  }
+  // Parse content markup (either a string, HTML string, React node or children)
+  let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
     <div className={clsx('rvo-alert', `rvo-alert--${kind}`)}>
@@ -95,3 +87,5 @@ export const AllAlertKinds: React.FC<IAlertProps> = (alertArgs) => (
     <Alert {...alertArgs} kind="success" />
   </div>
 );
+
+export default Alert;

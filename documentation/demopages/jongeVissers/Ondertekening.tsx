@@ -1,5 +1,5 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
+import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -92,23 +92,23 @@ const Ondertekening = () => {
                       <RadioButtonField
                         name="radio-buttons"
                         helperText="Uitgebreide informatie over overtredingen."
-                        labelText="Zijn er één of meerdere overtredingen bij u vastgesteld?"
+                        label="Zijn er één of meerdere overtredingen bij u vastgesteld?"
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
                         options={[
-                          { id: 'overa', labelText: 'Ja' },
-                          { id: 'overb', labelText: 'Nee' },
+                          { id: 'overa', label: 'Ja' },
+                          { id: 'overb', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                       <RadioButtonField
                         name="radio-buttons"
                         helperText="Uitgebreide informatie over fraude."
-                        labelText="Is er fraude bij u vastgesteld?"
+                        label="Is er fraude bij u vastgesteld?"
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
                         options={[
-                          { id: 'fraua', labelText: 'Ja' },
-                          { id: 'fraub', labelText: 'Nee' },
+                          { id: 'fraua', label: 'Ja' },
+                          { id: 'fraub', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>

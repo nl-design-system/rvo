@@ -1,5 +1,5 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
@@ -29,11 +29,11 @@ const SearchInNav = () => {
             <div className="rvo-form-layout">
               <MaxWidthLayout size="sm">
                 <div className="rvo-inline-form">
-                  <TextInputField labelText="Zoekterm"></TextInputField>
+                  <TextInputField label="Zoekterm"></TextInputField>
                   <Button
                     kind="primary"
                     size="md"
-                    textContent="Zoeken"
+                    label="Zoeken"
                     active={false}
                     busy={false}
                     focus={false}

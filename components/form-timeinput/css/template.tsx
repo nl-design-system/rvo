@@ -5,9 +5,10 @@
 import { Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import '../../form-textinput/css/index.scss';
 
-export interface IDateInputProps extends React.DOMAttributes<any> {
+export interface ITimeInputProps {
   id?: string;
   disabled?: boolean;
   focus?: boolean;
@@ -22,6 +23,12 @@ export interface IDateInputProps extends React.DOMAttributes<any> {
   prefix?: string;
   suffix?: string;
   size?: string;
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onClick?: (event) => void;
+  onInput?: (event) => void;
+  onInvalid?: (event) => void;
 }
 
 export const argTypes = {
@@ -68,23 +75,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IDateInputProps = {
-  id: 'field',
-  disabled: false,
-  focus: false,
-  readOnly: false,
-  invalid: false,
-  required: false,
-  value: '',
-  min: null,
-  max: null,
-  step: null,
-  prefix: '',
-  suffix: '',
-  size: 'lg',
-};
-
-export const TimeInput: React.FC<IDateInputProps> = ({
+export const TimeInput: React.FC<ITimeInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
@@ -99,7 +90,7 @@ export const TimeInput: React.FC<IDateInputProps> = ({
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
   ...otherProps
-}) => {
+}: ITimeInputProps) => {
   const props = {
     id,
     className: clsx(
@@ -141,3 +132,5 @@ export const TimeInput: React.FC<IDateInputProps> = ({
     return inputMarkup;
   }
 };
+
+export default TimeInput;

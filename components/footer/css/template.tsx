@@ -8,6 +8,8 @@ import { Heading } from '../../heading/css/template';
 import { Link } from '../../link/css/template';
 import { MaxWidthLayout } from '../../max-width-layout/css/template';
 import validateHTML from '../../utils/validateHTML';
+import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 interface IFooterItem {
   content: string;
@@ -19,48 +21,9 @@ interface IFooterColumn {
   items: IFooterItem[];
 }
 
-interface IFooterProps {
+export interface IFooterProps {
   columns: IFooterColumn[];
 }
-
-const defaultColumns = [
-  {
-    label: 'RVO',
-    items: [
-      { content: 'Over ons', link: '#' },
-      { content: 'Contact', link: '#' },
-      { content: 'Pers', link: '#' },
-      { content: 'Zaken regelen bij RVO', link: '#' },
-    ],
-  },
-  {
-    label: 'Over deze site',
-    items: [
-      { content: 'Privacy', link: '#' },
-      { content: 'Cookies en anti-spam', link: '#' },
-      { content: 'Toegankelijkheid', link: '#' },
-      { content: 'Proclaimer', link: '#' },
-    ],
-  },
-  {
-    label: 'Snel naar',
-    items: [
-      { content: 'Onderwerpen A t/m Z', link: '#' },
-      { content: 'Klantenpanel', link: '#' },
-      { content: 'Documenten en publicaties', link: '#' },
-      { content: 'Overheidspublicaties en auteursrecht', link: '#' },
-    ],
-  },
-  {
-    label: 'Blijf op de hoogte',
-    items: [
-      { content: 'Social media', link: '#' },
-      { content: 'Higherlevel.nl ondernemersforum', link: '#' },
-      { content: 'RSS', link: '#' },
-      { content: 'Gratis nieuwsbrief', link: '#' },
-    ],
-  },
-];
 
 export const argTypes = {
   columns: {
@@ -71,11 +34,7 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs: IFooterProps = {
-  columns: defaultColumns,
-};
-
-export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }) => {
+export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }: IFooterProps) => {
   return (
     <UtrechtPageFooter className="rvo-footer">
       <MaxWidthLayout size="lg">
@@ -119,3 +78,5 @@ export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }
     </UtrechtPageFooter>
   );
 };
+
+export default Footer;

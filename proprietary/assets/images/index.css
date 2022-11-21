@@ -3,6 +3,9 @@
   --rvo-image-digid-logo: url("login-options/digid-logo.svg");
   --rvo-image-e-herkenning-logo: url("login-options/e-herkenning-logo.svg");
   --rvo-image-eu-flag: url("login-options/eu-flag.svg");
+  --rvo-image-enjoy-signature-bottom-en: url("logo-grid/enjoy-signature-bottom-en.svg");
+  --rvo-image-flag-of-europe: url("logo-grid/flag-of-europe.svg");
+  --rvo-image-nl-branding: url("logo-grid/nl-branding.svg");
   --rvo-image-logo: url("logo.svg");
   --rvo-image-progress-tracker-completed-md: url("progress-tracker/progress-tracker-completed-md.svg");
   --rvo-image-progress-tracker-completed-sm: url("progress-tracker/progress-tracker-completed-sm.svg");
@@ -91,6 +94,63 @@
 .rvo-image-bg-eu-flag--before::before,
 .rvo-image-bg-eu-flag--after::after {
   background-image: var(--rvo-image-eu-flag);
+}
+
+.rvo-image-enjoy-signature-bottom-en,
+.rvo-image-enjoy-signature-bottom-en--before::before,
+.rvo-image-enjoy-signature-bottom-en--after::after {
+  -webkit-mask-image: var(--rvo-image-enjoy-signature-bottom-en);
+  mask-image: var(--rvo-image-enjoy-signature-bottom-en);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-image-bg-enjoy-signature-bottom-en,
+.rvo-image-bg-enjoy-signature-bottom-en--before::before,
+.rvo-image-bg-enjoy-signature-bottom-en--after::after {
+  background-image: var(--rvo-image-enjoy-signature-bottom-en);
+}
+
+.rvo-image-flag-of-europe,
+.rvo-image-flag-of-europe--before::before,
+.rvo-image-flag-of-europe--after::after {
+  -webkit-mask-image: var(--rvo-image-flag-of-europe);
+  mask-image: var(--rvo-image-flag-of-europe);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-image-bg-flag-of-europe,
+.rvo-image-bg-flag-of-europe--before::before,
+.rvo-image-bg-flag-of-europe--after::after {
+  background-image: var(--rvo-image-flag-of-europe);
+}
+
+.rvo-image-nl-branding,
+.rvo-image-nl-branding--before::before,
+.rvo-image-nl-branding--after::after {
+  -webkit-mask-image: var(--rvo-image-nl-branding);
+  mask-image: var(--rvo-image-nl-branding);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-image-bg-nl-branding,
+.rvo-image-bg-nl-branding--before::before,
+.rvo-image-bg-nl-branding--after::after {
+  background-image: var(--rvo-image-nl-branding);
 }
 
 .rvo-image-logo,

@@ -1,5 +1,5 @@
 // import { Button } from '@nl-rvo/components/button/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -17,11 +17,11 @@ const Filters = () => {
       <LayoutColumnRow size="lg">
         <MenuBar
           items={[
-            { label: 'Home', icon: '', link: '#' },
-            { label: 'Onderwerpen', icon: '', link: '#' },
-            { label: 'Subsidie- en financieringswijzer', icon: '', link: '#' },
-            { label: 'Over ons', icon: '', link: '#' },
-            { label: 'Contact', icon: '', link: '#' },
+            { label: 'Home', link: '#' },
+            { label: 'Onderwerpen', link: '#' },
+            { label: 'Subsidie- en financieringswijzer', link: '#' },
+            { label: 'Over ons', link: '#' },
+            { label: 'Contact', link: '#' },
             { label: 'Zoeken', icon: 'zoek', link: '#', align: 'right' },
           ]}
           size="md"
@@ -49,7 +49,7 @@ const Filters = () => {
                     <Fieldset legend="">
                       <MaxWidthLayout size="lg">
                         <LayoutColumnRow size="xl" row={true}>
-                          <TextInputField labelText="Zoek op trefwoord/code"></TextInputField>
+                          <TextInputField label="Zoek op trefwoord/code"></TextInputField>
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">

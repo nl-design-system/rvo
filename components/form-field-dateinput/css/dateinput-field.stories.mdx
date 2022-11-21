@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, DateInputField } from "./template";
+
+<Meta
+  title="CSS Components/Form/Field/Date input field"
+  component={DateInputField}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Date input field
+
+<Canvas>
+  <Story name="Date input field" args={defaultArgs}>
+    {DateInputField.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Date input field" />

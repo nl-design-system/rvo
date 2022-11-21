@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, TextInputField } from "./template";
+
+<Meta
+  title="CSS Components/Form/Field/Text input field"
+  component={TextInputField}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text input field
+
+<Canvas>
+  <Story name="Text input field" args={defaultArgs}>
+    {TextInputField.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Text input field" />
