@@ -125,11 +125,12 @@ jobs:
           npm config delete "//registry.npmjs.org/:_authToken"
   publish-uxpin:
     runs-on: ubuntu-latest
-    if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
+    needs: continuous-integration
+    if: "github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
         with:
-          ref: refs/heads/master
+          ref: refs/heads/main
           fetch-depth: 0
       - name: Use Node.js
         uses: actions/setup-node@v1
