@@ -103,13 +103,10 @@ export const parseMenuItem = ({
     );
   }
 
-  return React.createElement(
-    active ? 'span' : 'a',
-    {
-      className: 'utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm',
-      ...(!active ? { href: link } : {}),
-    },
-    itemMarkup,
+  return (
+    <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={link}>
+      {itemMarkup}
+    </a>
   );
 };
 
