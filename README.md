@@ -87,8 +87,8 @@ We recommend the following extensions that are useful for this project:
 2. Select the directory this repository should be cloned into with `cd <name-of-directory>`
 3. Clone this Git repository
 4. `cd rvo`
-5. `git checkout main` to switch to the main branch, if you previously worked in this repository.
-6. `git pull` to get to the latest version of the main branch
+5. `git checkout master` to switch to the main master branch, if you previously worked in this repository.
+6. `git pull` to get to the latest version of the master branch
 7. `npm install` to download and install all the dependencies
 
 ### Run Docusaurus on your computer

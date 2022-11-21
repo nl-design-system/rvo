@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    target-branch: "main"
+    target-branch: "master"
     versioning-strategy: "increase-if-necessary"
     ignore:
       # Stay at webpack 4 until webpack 5 is fully supported by Storybook
@@ -53,12 +53,12 @@ updates:
     directory: "/documentation/"
     schedule:
       interval: "weekly"
-    target-branch: "main"
+    target-branch: "master"
     versioning-strategy: "increase-if-necessary"
 
   - package-ecosystem: "npm"
     directory: "/components/"
     schedule:
       interval: "weekly"
-    target-branch: "main"
+    target-branch: "master"
     versioning-strategy: "increase-if-necessary"
