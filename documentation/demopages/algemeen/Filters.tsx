@@ -1,5 +1,5 @@
 // import { Button } from '@nl-rvo/components/button/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -17,11 +17,11 @@ const Filters = () => {
       <LayoutColumnRow size="lg">
         <MenuBar
           items={[
-            { label: 'Home', icon: '', link: '#' },
-            { label: 'Onderwerpen', icon: '', link: '#' },
-            { label: 'Subsidie- en financieringswijzer', icon: '', link: '#' },
-            { label: 'Over ons', icon: '', link: '#' },
-            { label: 'Contact', icon: '', link: '#' },
+            { label: 'Home', link: '#' },
+            { label: 'Onderwerpen', link: '#' },
+            { label: 'Subsidie- en financieringswijzer', link: '#' },
+            { label: 'Over ons', link: '#' },
+            { label: 'Contact', link: '#' },
             { label: 'Zoeken', icon: 'zoek', link: '#', align: 'right' },
           ]}
           size="md"

@@ -16,11 +16,11 @@ const FiltersPersonen = () => {
       <LayoutColumnRow size="lg">
         <MenuBar
           items={[
-            { label: 'Home', icon: '', link: '#' },
-            { label: 'Onderwerpen', icon: '', link: '#' },
-            { label: 'Subsidie- en financieringswijzer', icon: '', link: '#' },
-            { label: 'Over ons', icon: '', link: '#' },
-            { label: 'Contact', icon: '', link: '#' },
+            { label: 'Home', link: '#' },
+            { label: 'Onderwerpen', link: '#' },
+            { label: 'Subsidie- en financieringswijzer', link: '#' },
+            { label: 'Over ons', link: '#' },
+            { label: 'Contact', link: '#' },
             { label: 'Zoeken', icon: 'zoek', link: '#', align: 'right' },
           ]}
           size="md"

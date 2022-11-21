@@ -20,7 +20,7 @@ export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
   items: IMenuBarItem[];
   useIcons: boolean;
-  iconPlacement: 'before' | 'after';
+  iconPlacement?: 'before' | 'after';
   menuMaxWidth?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
 }

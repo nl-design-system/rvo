@@ -1,5 +1,5 @@
 import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field/css/radiobutton-field.template';
+import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';

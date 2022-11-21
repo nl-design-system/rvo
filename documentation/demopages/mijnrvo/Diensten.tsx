@@ -1,5 +1,5 @@
-import { SelectField } from '@nl-rvo/components/form-field/css/select-field.template';
-import { TextInputField } from '@nl-rvo/components/form-field/css/textinput-field.template';
+import { SelectField } from '@nl-rvo/components/form-field-select/css/template';
+import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -31,18 +31,16 @@ const Diensten = () => {
         </details>
         <MenuBar
           items={[
-            { label: 'Zaken', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+            { label: 'Zaken', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
             {
               label: 'Diensten',
-              icon: '',
               active: true,
               link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story',
             },
-            { label: 'Help', icon: '', link: '#' },
-            { label: 'Profiel', icon: '', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
+            { label: 'Help', link: '#' },
+            { label: 'Profiel', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
             {
               label: 'Uitloggen',
-              icon: '',
               link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
               align: 'right',
             },

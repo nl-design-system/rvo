@@ -17,7 +17,6 @@ const Submenu = () => {
             ]}
             size="md"
             useIcons={false}
-            iconPlacement="none"
             menuMaxWidth="md"
           />
           <div className="rvo-tmp-submenu-wrapper">
@@ -29,7 +28,6 @@ const Submenu = () => {
               ]}
               size="md"
               useIcons={false}
-              iconPlacement="none"
               menuMaxWidth="md"
             />
           </div>

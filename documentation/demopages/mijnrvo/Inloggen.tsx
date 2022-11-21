@@ -13,7 +13,7 @@ const Inloggen = () => {
       <div className="rvo-header-content">
         <Header />
         <MenuBar
-          items={[{ label: 'Mijn RVO', icon: '', link: '#' }]}
+          items={[{ label: 'Mijn RVO', link: '#' }]}
           size="lg"
           useIcons={true}
           iconPlacement="before"
