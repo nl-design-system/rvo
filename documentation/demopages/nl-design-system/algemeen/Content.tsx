@@ -51,12 +51,26 @@ const Content = () => {
             <UnorderedList className="utrecht-unordered-list--distanced">
               <UnorderedListItem>Unordered list</UnorderedListItem>
               <UnorderedListItem>Second item</UnorderedListItem>
-              <UnorderedListItem>Third item</UnorderedListItem>
+              <UnorderedListItem>
+                Third item
+                <UnorderedList>
+                  <UnorderedListItem>Unordered list</UnorderedListItem>
+                  <UnorderedListItem>Second item</UnorderedListItem>
+                  <UnorderedListItem>Third item</UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
             </UnorderedList>
-            <OrderedList className="utrecht-ordered-list--distanced">
+            <OrderedList className="utrecht-ordered-list--distanced" start={1}>
               <OrderedListItem>Ordered list</OrderedListItem>
               <OrderedListItem>Second item</OrderedListItem>
-              <OrderedListItem>Third item</OrderedListItem>
+              <OrderedListItem>
+                Third item
+                <OrderedList className="utrecht-ordered-list--distanced">
+                  <OrderedListItem>Ordered list</OrderedListItem>
+                  <OrderedListItem>Second item</OrderedListItem>
+                  <OrderedListItem>Third item</OrderedListItem>
+                </OrderedList>
+              </OrderedListItem>
             </OrderedList>
             <blockquote className="utrecht-blockquote">
               <strong>Dit is een blockquote.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
