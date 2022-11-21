@@ -141,6 +141,6 @@ jobs:
           npm ci
           npm ls
       - name: Push To UXpin
-        run: npm push
+        run: cd uxpin-merge && npm run push
         env:
           UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
