@@ -23,6 +23,7 @@ export interface IMenuBarProps {
   iconPlacement?: 'before' | 'after';
   menuMaxWidth?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
+  useDeltaForActiveItem?: boolean;
 }
 
 export const argTypes = {
@@ -51,6 +52,9 @@ export const argTypes = {
     options: ['primary', 'sub', 'sub-grid'],
     control: { type: 'radio' },
   },
+  useDeltaForActiveItem: {
+    control: 'boolean',
+  },
 };
 
 export const parseMenuItem = ({
@@ -61,11 +65,12 @@ export const parseMenuItem = ({
   useIcon = defaultArgs.useIcons,
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
+  useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
 }) => {
   // Parse delta for active menu items
   let itemMarkup;
   let deltaMarkup;
-  if (active !== undefined) {
+  if (active !== undefined && useDeltaForActiveItem) {
     deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" color="wit" />;
   }
 
@@ -115,6 +120,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   iconPlacement = defaultArgs.iconPlacement,
   menuMaxWidth = defaultArgs.menuMaxWidth,
   type = defaultArgs.type,
+  useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
 }: IMenuBarProps) => {
   const leftItemsMarkup = items
     .filter((item) => item.align !== 'right')
@@ -129,6 +135,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
             useIcon: useIcons,
             size,
             iconPlacement,
+            useDeltaForActiveItem,
           })}
         </li>
       );
@@ -152,6 +159,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           useIcon: useIcons,
           size,
           iconPlacement,
+          useDeltaForActiveItem,
         })}
       </li>
     ));

@@ -15,4 +15,5 @@ export const defaultArgs: IMenuBarProps = {
   iconPlacement: 'before',
   menuMaxWidth: 'none',
   type: 'primary',
+  useDeltaForActiveItem: false,
 };
