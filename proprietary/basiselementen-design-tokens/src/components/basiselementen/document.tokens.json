@@ -9,7 +9,7 @@
       "font-family": { "value": "{basiselementen.font.sans-serif.font-family}" },
       "font-size": { "value": "18px" },
       "font-weight": {},
-      "line-height": {}
+      "line-height": { "value": "150%" }
     }
   }
 }

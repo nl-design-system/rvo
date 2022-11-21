@@ -6,7 +6,7 @@
       "font-family": { "value": "{basiselementen.font.sans-serif.font-family}" },
       "font-size": { "value": "{basiselementen.document.font-size}" },
       "font-weight": {},
-      "line-height": {}
+      "line-height": { "value": "{basiselementen.document.line-height}" }
     }
   }
 }
