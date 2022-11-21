@@ -123,3 +123,21 @@ jobs:
           npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           npm run publish -- --no-verify-access --yes
           npm config delete "//registry.npmjs.org/:_authToken"
+  publish-uxpin:
+    runs-on: ubuntu-latest
+    if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: refs/heads/master
+          fetch-depth: 0
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Install
+        run: yarn
+      - name: Push To UXpin
+        run: yarn push
+        env:
+          UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
