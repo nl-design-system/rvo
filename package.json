@@ -18,7 +18,8 @@
     "./components/",
     "./components/*",
     "./packages/*",
-    "./proprietary/*"
+    "./proprietary/*",
+    "./uxpin-merge/"
   ],
   "devDependencies": {
     "@types/node": "18.0.0",
