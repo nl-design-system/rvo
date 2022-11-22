@@ -3,7 +3,7 @@ import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { Heading1, Link, OrderedList, OrderedListItem, Paragraph } from '@utrecht/component-library-react';
+import { Heading1, Link, Paragraph } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
@@ -16,29 +16,29 @@ const Breadcrumbs = () => {
         <MaxWidthLayout size="md">
           <main>
             <nav className="utrecht-breadcrumb">
-              <OrderedList className="utrecht-breadcrumb__list">
-                <OrderedListItem className="utrecht-breadcrumb__item">
+              <ol className="utrecht-breadcrumb__list">
+                <li className="utrecht-breadcrumb__item">
                   <Link href="#" className="utrecht-breadcrumb__link">
                     First step
                   </Link>
-                </OrderedListItem>
-                <OrderedListItem className="utrecht-breadcrumb__item">
+                </li>
+                <li className="utrecht-breadcrumb__item">
                   <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
                   <Link href="#" className="utrecht-breadcrumb__link">
                     Second step
                   </Link>
-                </OrderedListItem>
-                <OrderedListItem className="utrecht-breadcrumb__item">
+                </li>
+                <li className="utrecht-breadcrumb__item">
                   <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
                   <Link href="#" className="utrecht-breadcrumb__link">
                     Third step
                   </Link>
-                </OrderedListItem>
-                <OrderedListItem className="utrecht-breadcrumb__item">
+                </li>
+                <li className="utrecht-breadcrumb__item">
                   <Icon icon="delta-naar-rechts" color="hemelblauw" size="xs" />
                   Current page
-                </OrderedListItem>
-              </OrderedList>
+                </li>
+              </ol>
             </nav>
             <div className="rvo-content">
               <Heading1>Breadcrumbs example</Heading1>
