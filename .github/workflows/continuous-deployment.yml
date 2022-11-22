@@ -61,12 +61,9 @@ jobs:
           storybookBuildDir: packages/storybook/dist/
 
       - name: Push to UXPin
-        uses: actions/checkout@master
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        with:
-          ref: refs/heads/master
-          fetch-depth: 0
-        run: cd uxpin-merge && npm run push
+        run: npm run push
+        working-directory: uxpin-merge
         env:
           UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
 
