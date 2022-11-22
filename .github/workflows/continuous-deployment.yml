@@ -44,6 +44,13 @@ jobs:
           path: packages/storybook/dist/
           retention-days: 1
 
+      - name: Push to UXPin
+        if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
+        run: npm run push
+        working-directory: ./uxpin-merge
+        env:
+          UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
+
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         if: github.event.pull_request.draft == false && (github.actor != 'dependabot[bot]' || github.actor != 'dependabot-preview[bot]')
@@ -59,13 +66,6 @@ jobs:
           autoAcceptChanges: master
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_NLDESIGNSYSTEM }}
           storybookBuildDir: packages/storybook/dist/
-
-      - name: Push to UXPin
-        if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        run: npm run push
-        working-directory: uxpin-merge
-        env:
-          UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
 
   publish-storybook:
     runs-on: ubuntu-latest
