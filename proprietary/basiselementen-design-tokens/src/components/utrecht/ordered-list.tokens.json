@@ -2,13 +2,11 @@
   "utrecht": {
     "ordered-list": {
       "margin-block-start": {},
-      "margin-block-end": { "value": "{rvo.space.md}" },
+      "margin-block-end": { "value": "0" },
       "item": {
-        "margin-block-start": {},
-        "margin-block-end": {},
-        "padding-inline-start": {
-          "value": "0"
-        }
+        "margin-block-start": { "value": "0.5ex" },
+        "margin-block-end": { "value": "0.5ex" },
+        "padding-inline-start": { "value": "0" }
       },
       "marker": {
         "color": {}

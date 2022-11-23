@@ -3,19 +3,19 @@
     "paragraph": {
       "color": {},
       "font-family": {},
-      "font-size": { "value": "1rem" },
+      "font-size": { "value": "18px" },
       "font-weight": {},
       "line-height": { "value": "150%" },
       "margin-block-start": {},
       "margin-block-end": { "value": "16px" },
       "lead": {
         "color": {},
-        "font-size": { "value": "1.125rem" },
+        "font-size": { "value": "20px" },
         "font-weight": {},
         "line-height": { "value": "150%" }
       },
       "small": {
-        "font-size": { "value": "0.875rem" },
+        "font-size": { "value": "16px" },
         "line-height": { "value": "150%" }
       }
     }
