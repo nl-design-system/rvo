@@ -39,8 +39,8 @@ export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = (
     if (checkboxGroupRef.current) {
       const allCheckboxElements = Array.from(checkboxGroupRef.current.getElementsByTagName('input'));
       const currentGroupSelection = allCheckboxElements.reduce((currentGroupSelection, checkbox, currentIndex) => {
-        if (checkbox.checked) {
-          currentGroupSelection.push(currentIndex);
+        if ((checkbox as any).checked) {
+          (currentGroupSelection as number[]).push(currentIndex);
         }
         return currentGroupSelection;
       }, []);
