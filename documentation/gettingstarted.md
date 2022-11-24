@@ -49,10 +49,17 @@ Het is wel mogelijk om assets in de Assets library direct te linken. Bijvoorbeel
 
 We raden daarom op dit moment aan om de libraries met behulp van NPM te integreren.
 
+## RVO theme class toevoegen
+
+Als de Design Tokens, Components en Assets libraries zijn toegevoegd kun je het design system gebruiken door aan de root van je applicatie de CSS-class `rvo-theme` toe te voegen:
+
+```html
+<body class="rvo-theme"></body>
+```
+
 ## CSS 'Components' gebruiken
 
-Als de Design Tokens, Components en Assets libraries zijn toegevoegd kunnen code snippets van componenten direct uit Storybook worden gekopieerd. Omdat het hier gaat om puur CSS styling is er verder geen bindende javascript functionaliteit of manier om componenten te gebruiken.
-Je kunt dus zelf de componenten naar wens combineren en waar nodig javascript functionaliteit toevoegen. Let wel op dat je de principes van het design system intact houdt.
+Nu kunnen code snippets van componenten direct uit Storybook worden gekopieerd. Omdat het hier gaat om puur CSS styling is er verder geen bindende javascript functionaliteit of manier om componenten te gebruiken. Je kunt dus zelf de componenten naar wens combineren en waar nodig javascript functionaliteit toevoegen. Let wel op dat je de principes van het design system intact houdt.
 
 ## Bijdragen
 
