@@ -16,7 +16,7 @@ const Form = () => {
       <Heading1>Gegevens zonnepanelen invullen</Heading1>
       <form className="basiselementen-layout-form">
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <FormField className={'basiselementen-layout-form__field'}>
+          <FormField>
             <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
             <Textbox id={'realname'}></Textbox>
           </FormField>
@@ -31,7 +31,7 @@ const Form = () => {
           ></RadioButtonField>
         </Fieldset>
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <FormField className={'basiselementen-layout-form__field'}>
+          <FormField>
             <FormLabel htmlFor={'billingname'}>Uw naam</FormLabel>
             <Textbox id={'billingname'}></Textbox>
           </FormField>
@@ -52,27 +52,15 @@ const Form = () => {
               Vul de datum in die op de factuur van de zonnepanelen staat.
             </div>
           </FormField>
-          <FormField
-            className={
-              'basiselementen-layout-form__field basiselementen-layout-form__field--xs basiselementen-layout-form__field--collapse'
-            }
-          >
+          <FormField className={'basiselementen-layout-form__field basiselementen-layout-form__field--xs '}>
             <FormLabel htmlFor={'day'}>Dag</FormLabel>
             <Textbox id={'day'}></Textbox>
           </FormField>
-          <FormField
-            className={
-              'basiselementen-layout-form__field basiselementen-layout-form__field--xs basiselementen-layout-form__field--collapse'
-            }
-          >
+          <FormField className={'basiselementen-layout-form__field basiselementen-layout-form__field--xs '}>
             <FormLabel htmlFor={'month'}>Maand</FormLabel>
             <Textbox id={'month'}></Textbox>
           </FormField>
-          <FormField
-            className={
-              'basiselementen-layout-form__field basiselementen-layout-form__field--sm basiselementen-layout-form__field--collapse'
-            }
-          >
+          <FormField className={'basiselementen-layout-form__field basiselementen-layout-form__field--sm '}>
             <FormLabel htmlFor={'year'}>Jaar</FormLabel>
             <Textbox id={'year'}></Textbox>
           </FormField>
