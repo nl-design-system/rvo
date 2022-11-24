@@ -46,10 +46,12 @@ const Form = () => {
           ></RadioButtonField>
         </Fieldset>
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <h3 className={'utrecht-form-label'}>Factuurdatum</h3>
-          <div className={'utrecht-form-field-description'}>
-            Vul de datum in die op de factuur van de zonnepanelen staat.
-          </div>
+          <FormField>
+            <h3 className={'utrecht-form-label'}>Factuurdatum</h3>
+            <div className={'utrecht-form-field-description'}>
+              Vul de datum in die op de factuur van de zonnepanelen staat.
+            </div>
+          </FormField>
           <FormField
             className={
               'basiselementen-layout-form__field basiselementen-layout-form__field--xs basiselementen-layout-form__field--collapse'
@@ -76,8 +78,12 @@ const Form = () => {
           </FormField>
         </Fieldset>
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <div className={'utrecht-form-label'}>Adres zonnepanelen</div>
-          <div className={'utrecht-form-field-description'}>Vul het adres in waar de zonnepanelen zijn geplaatst.</div>
+          <FormField>
+            <div className={'utrecht-form-label'}>Adres zonnepanelen</div>
+            <div className={'utrecht-form-field-description'}>
+              Vul het adres in waar de zonnepanelen zijn geplaatst.
+            </div>
+          </FormField>
           <FormField className={'basiselementen-layout-form__field basiselementen-layout-form__field--xl'}>
             <FormLabel htmlFor={'street'}>Straatnaam</FormLabel>
             <Textbox id={'street'}></Textbox>
