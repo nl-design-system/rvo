@@ -47,7 +47,7 @@ jobs:
       - name: Push to UXPin
         continue-on-error: true
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        run: npm run push
+        run: npm ci && npm run push
         working-directory: uxpin-merge
         env:
           UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
