@@ -47,10 +47,8 @@ jobs:
       - name: Push to UXPin
         continue-on-error: true
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        run: npm ci && npm run push
+        run: npm ci && npx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
-        env:
-          UXPIN_AUTH_TOKEN: ${{ secrets.UXPIN_TOKEN }}
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
