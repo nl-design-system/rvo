@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: require.resolve('ts-loader', { paths: ['./node_modules/@uxpin/merge-cli'] }),
       },
       {
         loader: require.resolve('babel-loader', { paths: ['./node_modules/@uxpin/merge-cli'] }),
