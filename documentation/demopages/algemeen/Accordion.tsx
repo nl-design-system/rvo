@@ -18,7 +18,7 @@ const Accordion = () => {
             <LayoutColumnRow size="sm">
               <Heading type="h1" textContent="Accordion" />
               <LayoutColumnRow size="xl">
-                <div className="rvo-accordion">
+                {/* <div className="rvo-accordion">
                   <Heading type="h2" textContent="Accordion Default" />
                   <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
                     <summary className="rvo-accordion__item-summary">
@@ -233,10 +233,10 @@ const Accordion = () => {
                       <p>U heeft geen eHerkenning of DigiD.</p>
                     </div>
                   </details>
-                </div>
+                </div> */}
 
                 <div className="rvo-accordion rvo-accordion--colored rvo-accordion--border-indicator">
-                  <Heading type="h2" textContent="Accordion with border indicator" />
+                  {/* <Heading type="h2" textContent="Accordion with border indicator" /> */}
                   <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
                     <summary className="rvo-accordion__item-summary">
                       <h3 className="rvo-link">
@@ -267,6 +267,7 @@ const Accordion = () => {
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
                           Voor particulieren met DigiD
                         </span>
+                        <span className="rvo-accordion-teaser">Optional teaser text</span>
                       </h3>
                     </summary>
                     <div className="rvo-accordion__content">
