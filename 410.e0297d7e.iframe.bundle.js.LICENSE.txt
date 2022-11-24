@@ -47,22 +47,6 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
 /**
-     * @license
-     * Copyright Google Inc. All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-
-/**
-   * @license
-   * Copyright Google Inc. All Rights Reserved.
-   *
-   * Use of this source code is governed by an MIT-style license that can be
-   * found in the LICENSE file at https://angular.io/license
-   */
-
-/**
  * @license
  * Lodash <https://lodash.com/>
  * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
