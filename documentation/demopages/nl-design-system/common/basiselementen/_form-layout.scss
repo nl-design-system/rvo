@@ -1,48 +1,58 @@
-.basiselementen-theme {
-  .basiselementen-layout-form {
-    --basiselementen-layout-form-display: grid;
-    --basiselementen-layout-form-gap-block: 0;
-    --basiselementen-layout-form-gap-inline: 1ch;
-    --basiselementen-layout-form-grid-column: 1 / -1;
+.basiselementen-layout-form {
+  --basiselementen-layout-form-display: grid;
+  --basiselementen-layout-form-gap-block: 0;
+  --basiselementen-layout-form-gap-inline: 1ch;
+  --basiselementen-layout-form-grid-column: 1 / -1;
 
-    &__fieldset {
+  &__fieldset {
+    display: var(--basiselementen-layout-form-display);
+    flex-direction: column;
+    gap: var(--basiselementen-layout-form-gap-block) var(--basiselementen-layout-form-gap-inline);
+    grid-template-columns: repeat(12, 1fr);
+
+    & > * {
       display: var(--basiselementen-layout-form-display);
       flex-direction: column;
-      gap: var(--basiselementen-layout-form-gap-block) var(--basiselementen-layout-form-gap-inline);
-      grid-template-columns: repeat(12, 1fr);
-      & > * {
-        display: var(--basiselementen-layout-form-display);
-        flex-direction: column;
-        grid-column: var(--basiselementen-layout-form-grid-column);
-      }
+      grid-column: var(--basiselementen-layout-form-grid-column);
+    }
+  }
+
+  &__field {
+    display: var(--basiselementen-layout-form-display);
+    flex-direction: column;
+    gap: var(--basiselementen-layout-form-gap-block) var(--basiselementen-layout-form-gap-inline);
+    grid-column: var(--basiselementen-layout-form-grid-column);
+
+    &--xs {
+      --basiselementen-layout-form-grid-column: auto / span 1;
     }
 
-    &__field {
-      display: var(--basiselementen-layout-form-display);
-      flex-direction: column;
-      gap: var(--basiselementen-layout-form-gap-block) var(--basiselementen-layout-form-gap-inline);
-      grid-column: var(--basiselementen-layout-form-grid-column);
-      &--xs {
-        --basiselementen-layout-form-grid-column: auto / span 1;
-      }
-      &--sm {
-        --basiselementen-layout-form-grid-column: auto / span 2;
-      }
-      &--md {
-        --basiselementen-layout-form-grid-column: auto / span 4;
-      }
-      &--lg {
-        --basiselementen-layout-form-grid-column: auto / span 8;
-      }
-      &--xl {
-        --basiselementen-layout-form-grid-column: auto / span 10;
-      }
-      &--half {
-        --basiselementen-layout-form-grid-column: auto / span 6;
-      }
-      &--full {
-        --basiselementen-layout-form-grid-column: 1 / -1;
-      }
+    &--sm {
+      --basiselementen-layout-form-grid-column: auto / span 2;
+    }
+
+    &--md {
+      --basiselementen-layout-form-grid-column: auto / span 4;
+    }
+
+    &--lg {
+      --basiselementen-layout-form-grid-column: auto / span 8;
+    }
+
+    &--xl {
+      --basiselementen-layout-form-grid-column: auto / span 10;
+    }
+
+    &--quarter {
+      --basiselementen-layout-form-grid-column: auto / span 3;
+    }
+
+    &--half {
+      --basiselementen-layout-form-grid-column: auto / span 6;
+    }
+
+    &--full {
+      --basiselementen-layout-form-grid-column: 1 / -1;
     }
   }
 }
