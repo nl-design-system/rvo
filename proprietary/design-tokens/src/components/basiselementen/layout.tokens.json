@@ -1,0 +1,23 @@
+{
+  "basiselementen": {
+    "layout": {
+      "form": {
+        "display": {
+          "value": "grid"
+        },
+        "row-gap": {
+          "value": "0.5ex"
+        },
+        "column-gap": {
+          "value": "1ch"
+        },
+        "grid-column": {
+          "value": "1 / -1"
+        },
+        "grid-template-columns": {
+          "value": "repeat(12, 1fr)"
+        }
+      }
+    }
+  }
+}

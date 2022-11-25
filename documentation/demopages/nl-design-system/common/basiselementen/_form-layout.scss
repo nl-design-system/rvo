@@ -1,27 +1,19 @@
 .basiselementen-layout-form {
-  --basiselementen-layout-form-display: grid;
-  --basiselementen-layout-form-gap-block: 0;
-  --basiselementen-layout-form-gap-inline: 1ch;
-  --basiselementen-layout-form-grid-column: 1 / -1;
-
   &__fieldset {
+    column-gap: var(--basiselementen-layout-form-column-gap);
     display: var(--basiselementen-layout-form-display);
     flex-direction: column;
-    gap: var(--basiselementen-layout-form-gap-block) var(--basiselementen-layout-form-gap-inline);
-    grid-template-columns: repeat(12, 1fr);
-
-    & > * {
-      display: var(--basiselementen-layout-form-display);
-      flex-direction: column;
-      grid-column: var(--basiselementen-layout-form-grid-column);
-    }
+    grid-template-columns: var(--basiselementen-layout-form-grid-template-columns);
+    row-gap: var(--basiselementen-layout-form-row-gap);
   }
 
   &__field {
+    align-content: space-between;
+    column-gap: var(--basiselementen-layout-form-column-gap);
     display: var(--basiselementen-layout-form-display);
     flex-direction: column;
-    gap: var(--basiselementen-layout-form-gap-block) var(--basiselementen-layout-form-gap-inline);
     grid-column: var(--basiselementen-layout-form-grid-column);
+    row-gap: var(--basiselementen-layout-form-row-gap);
 
     &--xs {
       --basiselementen-layout-form-grid-column: auto / span 1;

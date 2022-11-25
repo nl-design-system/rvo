@@ -2,33 +2,40 @@
   .rvo-nl-demo-page {
     background-color: var(--basiselementen-color-wit);
     padding-inline: 32px;
+
     .utrecht-form-fieldset {
       background-color: var(--basiselementen-color-grijs1);
     }
   }
+
   .basiselementen-demo-page {
     background-color: var(--basiselementen-color-lichtblauw-tint2);
     padding-block: 32px;
     padding-inline: 32px;
   }
+
   form {
     margin-inline: auto;
     width: min(768px, 100%);
   }
+
   .utrecht-form-fieldset {
     background-color: var(--basiselementen-color-wit);
     margin-block-end: 4px;
     margin-block-start: 4px;
-    padding-block-end: 24px;
-    padding-block-start: 16px;
+    padding-block-end: 32px;
+    padding-block-start: 24px;
     padding-inline: 32px;
   }
+
   .utrecht-form-fieldset:first-of-type {
     margin-block-start: 32px;
   }
+
   .utrecht-form-fieldset:last-of-type {
     margin-block-end: 32px;
   }
+
   .utrecht-form-field {
     margin-block-end: 8px;
     margin-block-start: 8px;
