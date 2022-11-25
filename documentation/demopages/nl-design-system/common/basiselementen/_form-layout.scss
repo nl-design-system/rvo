@@ -1,50 +1,50 @@
 .basiselementen-layout-form {
   &__fieldset {
-    column-gap: var(--basiselementen-layout-form-column-gap);
+    column-gap: var(--basiselementen-layout-form-fieldset-column-gap);
     display: var(--basiselementen-layout-form-display);
     flex-direction: column;
-    grid-template-columns: var(--basiselementen-layout-form-grid-template-columns);
-    row-gap: var(--basiselementen-layout-form-row-gap);
+    grid-template-columns: var(--basiselementen-layout-form-fieldset-grid-template-columns);
+    row-gap: var(--basiselementen-layout-form-fieldset-row-gap);
   }
 
   &__field {
     align-content: space-between;
-    column-gap: var(--basiselementen-layout-form-column-gap);
+    column-gap: var(--basiselementen-layout-form-field-column-gap);
     display: var(--basiselementen-layout-form-display);
     flex-direction: column;
-    grid-column: var(--basiselementen-layout-form-grid-column);
-    row-gap: var(--basiselementen-layout-form-row-gap);
+    grid-column: var(--basiselementen-layout-form-field-grid-column);
+    row-gap: var(--basiselementen-layout-form-field-row-gap);
 
     &--xs {
-      --basiselementen-layout-form-grid-column: auto / span 1;
+      --basiselementen-layout-form-field-grid-column: auto / span 1;
     }
 
     &--sm {
-      --basiselementen-layout-form-grid-column: auto / span 2;
+      --basiselementen-layout-form-field-grid-column: auto / span 2;
     }
 
     &--md {
-      --basiselementen-layout-form-grid-column: auto / span 4;
+      --basiselementen-layout-form-field-grid-column: auto / span 4;
     }
 
     &--lg {
-      --basiselementen-layout-form-grid-column: auto / span 8;
+      --basiselementen-layout-form-field-grid-column: auto / span 8;
     }
 
     &--xl {
-      --basiselementen-layout-form-grid-column: auto / span 10;
+      --basiselementen-layout-form-field-grid-column: auto / span 10;
     }
 
     &--quarter {
-      --basiselementen-layout-form-grid-column: auto / span 3;
+      --basiselementen-layout-form-field-grid-column: auto / span 3;
     }
 
     &--half {
-      --basiselementen-layout-form-grid-column: auto / span 6;
+      --basiselementen-layout-form-field-grid-column: auto / span 6;
     }
 
     &--full {
-      --basiselementen-layout-form-grid-column: 1 / -1;
+      --basiselementen-layout-form-field-grid-column: 1 / -1;
     }
   }
 }
