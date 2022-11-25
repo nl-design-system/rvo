@@ -16,37 +16,36 @@ const Form = () => {
       <Heading1>Gegevens zonnepanelen invullen</Heading1>
       <form className="basiselementen-layout-form">
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <FormField>
+          <FormField className={'basiselementen-layout-form__field'}>
             <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
             <Textbox id={'realname'}></Textbox>
           </FormField>
 
           <RadioButtonField
-            name="radio-buttons"
+            name="hasrealname"
             label="Staat uw naam op de energierekening?"
             options={[
-              { id: 'optionA', label: 'Ja' },
-              { id: 'optionB', label: 'Nee' },
+              { id: 'realnameA', label: 'Ja' },
+              { id: 'realnameB', label: 'Nee' },
             ]}
           ></RadioButtonField>
         </Fieldset>
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <FormField>
+          <FormField className={'basiselementen-layout-form__field'}>
             <FormLabel htmlFor={'billingname'}>Uw naam</FormLabel>
             <Textbox id={'billingname'}></Textbox>
           </FormField>
-
           <RadioButtonField
-            name="radio-buttons"
-            label="Staat uw naam op de factuur van de zonnepanelen?"
+            name="hasbillingname"
+            label="Staat uw naam op de energierekening?"
             options={[
-              { id: 'optionA', label: 'Ja' },
-              { id: 'optionB', label: 'Nee' },
+              { id: 'billingnameA', label: 'Ja' },
+              { id: 'billingnameB', label: 'Nee' },
             ]}
           ></RadioButtonField>
         </Fieldset>
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <FormField>
+          <FormField className={'basiselementen-layout-form__field'}>
             <h3 className={'utrecht-form-label'}>Factuurdatum</h3>
             <div className={'utrecht-form-field-description'}>
               Vul de datum in die op de factuur van de zonnepanelen staat.
@@ -66,7 +65,7 @@ const Form = () => {
           </FormField>
         </Fieldset>
         <Fieldset className="basiselementen-layout-form__fieldset">
-          <FormField>
+          <FormField className={'basiselementen-layout-form__field'}>
             <div className={'utrecht-form-label'}>Adres zonnepanelen</div>
             <div className={'utrecht-form-field-description'}>
               Vul het adres in waar de zonnepanelen zijn geplaatst.
