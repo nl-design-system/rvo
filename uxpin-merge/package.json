@@ -7,6 +7,7 @@
   "keywords": [
     "nl-design-system"
   ],
+  "private": true,
   "scripts": {
     "server": "uxpin-merge server",
     "start": "uxpin-merge --disable-tunneling",

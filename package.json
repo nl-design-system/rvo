@@ -71,7 +71,7 @@
     "lint-workspaces": "lerna run --no-bail lint",
     "prepare": "husky install",
     "prettier": "prettier --write .",
-    "publish": "lerna publish from-package",
+    "publish": "lerna publish from-package --no-private",
     "release": "lerna version prerelease --no-changelog --no-private",
     "start": "node_modules/http-server/bin packages/storybook/dist/",
     "storybook": "npm-run-all --parallel watch:**",
