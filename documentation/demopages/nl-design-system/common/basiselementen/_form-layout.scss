@@ -35,6 +35,10 @@
       --basiselementen-layout-form-field-grid-column: auto / span 10;
     }
 
+    &--third {
+      --basiselementen-layout-form-field-grid-column: auto / span 4;
+    }
+
     &--quarter {
       --basiselementen-layout-form-field-grid-column: auto / span 3;
     }
