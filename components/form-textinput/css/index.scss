@@ -34,3 +34,7 @@ textarea.utrecht-textbox {
 .utrecht-textbox--md {
   width: var(--rvo-textbox-md-width);
 }
+
+.utrecht-textbox-remaining-chars {
+  align-self: flex-end;
+}

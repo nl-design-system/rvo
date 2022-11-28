@@ -14,4 +14,6 @@ export const defaultArgs: ITextInputProps = {
   prefix: '',
   suffix: '',
   size: 'lg',
+  maxLength: null,
+  maxLengthIndicator: true,
 };

@@ -5,7 +5,7 @@
 import './index.scss';
 import { Textarea, Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 
 export interface ITextInputProps {
@@ -23,6 +23,8 @@ export interface ITextInputProps {
   prefix?: string;
   suffix?: string;
   size?: string;
+  maxLength?: number | null;
+  maxLengthIndicator?: boolean;
   onFocus?: (event) => void;
   onBlur?: (event) => void;
   onChange?: (event) => void;
@@ -69,6 +71,12 @@ export const argTypes = {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  maxLength: {
+    control: 'number',
+  },
+  maxLengthIndicator: {
+    control: 'boolean',
+  },
 };
 
 export const TextInput: React.FC<ITextInputProps> = ({
@@ -84,6 +92,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
+  maxLength = defaultArgs.maxLength,
+  maxLengthIndicator = defaultArgs.maxLengthIndicator,
   ...otherProps
 }: ITextInputProps) => {
   const props = {
@@ -98,8 +108,11 @@ export const TextInput: React.FC<ITextInputProps> = ({
       inputMode: 'numeric' as any,
       pattern: validation === 'currency' ? '[0-9.,]*' : '[0-9]*',
     }),
+    maxLength,
     ...otherProps,
   };
+
+  const [currentValue, setCurrentValue] = useState(value);
 
   if (inputType === 'text') {
     const inputMarkup = (
@@ -119,6 +132,20 @@ export const TextInput: React.FC<ITextInputProps> = ({
     } else {
       return inputMarkup;
     }
+  } else if (maxLength && maxLengthIndicator) {
+    // Override onChange
+    props.onChange = (event) => {
+      otherProps.onChange?.(event);
+      setCurrentValue(event.target.value);
+    };
+    return (
+      <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
+        <Textarea {...props} />
+        <span className="utrecht-textbox-remaining-chars">
+          Nog {maxLength - currentValue.length} teken{maxLength - currentValue.length > 1 && 's'} over
+        </span>
+      </div>
+    );
   } else {
     return <Textarea {...props} />;
   }
