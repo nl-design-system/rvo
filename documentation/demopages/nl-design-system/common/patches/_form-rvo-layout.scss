@@ -1,16 +1,22 @@
-.basiselementen-layout-form {
+.basiselementen-demo-page {
   .rvo-form-field,
   .rvo-layout-column {
-    column-gap: var(--basiselementen-layout-form-field-column-gap);
+    column-gap: var(--utrecht-form-field-column-gap);
     display: var(--basiselementen-layout-form-display);
     flex-direction: column;
-    grid-column: var(--basiselementen-layout-form-field-grid-column);
-    row-gap: var(--basiselementen-layout-form-field-row-gap);
+    grid-column: var(--utrecht-form-field-grid-column);
+    row-gap: var(--utrecht-form-field-row-gap);
   }
   .rvo-layout-column {
-    row-gap: var(--basiselementen-layout-form-field-column-gap);
+    row-gap: var(--utrecht-form-field-column-gap);
   }
   .rvo-layout-row {
-    column-gap: var(--basiselementen-layout-form-field-column-gap);
+    column-gap: var(--utrecht-form-field-column-gap);
+  }
+}
+
+.rvo-nl-demo-page {
+  .rvo-form-field {
+    padding-block-end: var(--rvo-space-xl);
   }
 }

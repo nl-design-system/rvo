@@ -1,58 +1,103 @@
-.basiselementen-layout-form {
-  &__fieldset {
-    column-gap: var(--basiselementen-layout-form-fieldset-column-gap);
-    display: var(--basiselementen-layout-form-display);
+.basiselementen-demo-page,
+.rvo-nl-demo-page {
+  .utrecht-form-fieldset {
+    column-gap: var(--utrecht-form-fieldset-column-gap);
+    display: var(--utrecht-form-fieldset-display);
     flex-direction: column;
-    grid-template-columns: var(--basiselementen-layout-form-fieldset-grid-template-columns);
-    row-gap: var(--basiselementen-layout-form-fieldset-row-gap);
-  }
-
-  &__field {
-    align-content: space-between;
-    column-gap: var(--basiselementen-layout-form-field-column-gap);
-    display: var(--basiselementen-layout-form-display);
-    flex-direction: column;
-    grid-column: var(--basiselementen-layout-form-field-grid-column);
-    row-gap: var(--basiselementen-layout-form-field-row-gap);
-
-    &--xs {
-      --basiselementen-layout-form-field-grid-column: auto / span 1;
+    grid-template-columns: var(--utrecht-form-fieldset-grid-template-columns);
+    margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
+    margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
+    row-gap: var(--utrecht-form-fieldset-row-gap);
+    &:last-of-type,
+    &:first-of-type {
+      margin-block-start: 0;
+    }
+    &__legend--label {
+      color: var(--utrecht-form-label-color);
+      display: block;
+      font-size: var(--utrecht-form-label-font-size);
+      font-weight: var(--utrecht-form-label-font-weight);
+    }
+    & > * {
+      align-content: space-between;
+      column-gap: var(--utrecht-form-field-column-gap);
+      display: var(--utrecht-form-field-display);
+      flex-direction: column;
+      grid-column: var(--utrecht-form-field-grid-column);
+      margin-block-end: 0;
+      margin-block-start: 0;
+      row-gap: var(--utrecht-form-field-row-gap);
     }
 
-    &--sm {
-      --basiselementen-layout-form-field-grid-column: auto / span 2;
+    .utrecht-form-field {
+      min-width: var(--utrecht-form-field-min-width);
+
+      &--xs {
+        --utrecht-form-field-min-width: 7ch;
+        --utrecht-form-field-grid-column: auto / span 1;
+      }
+
+      &--sm {
+        --utrecht-form-field-min-width: 12ch;
+        --utrecht-form-field-grid-column: auto / span 2;
+      }
+
+      &--md {
+        --utrecht-form-field-min-width: 20ch;
+        --utrecht-form-field-grid-column: auto / span 4;
+      }
+
+      &--lg {
+        --utrecht-form-field-min-width: 35ch;
+        --utrecht-form-field-grid-column: auto / span 8;
+      }
+
+      &--xl {
+        --utrecht-form-field-min-width: 50ch;
+        --utrecht-form-field-grid-column: auto / span 10;
+      }
+
+      &--third {
+        --utrecht-form-field-min-width: 20ch;
+        --utrecht-form-field-grid-column: auto / span 4;
+      }
+
+      &--quarter {
+        --utrecht-form-field-min-width: 15ch;
+        --utrecht-form-field-grid-column: auto / span 3;
+      }
+
+      &--half {
+        --utrecht-form-field-min-width: 30ch;
+        --utrecht-form-field-grid-column: auto / span 6;
+      }
+
+      &--full {
+        --utrecht-form-field-min-width: 70ch;
+        --utrecht-form-field-grid-column: 1 / -1;
+      }
+
+      &--start {
+        grid-column-start: 1;
+      }
     }
 
-    &--md {
-      --basiselementen-layout-form-field-grid-column: auto / span 4;
+    label:has(input) {
+      align-items: center;
+      column-gap: var(--utrecht-form-field-column-gap);
+      display: flex;
+      font-weight: 400;
     }
 
-    &--lg {
-      --basiselementen-layout-form-field-grid-column: auto / span 8;
+    .utrecht-form-field-description--invalid {
+      color: var(--basiselementen-color-rood);
     }
-
-    &--xl {
-      --basiselementen-layout-form-field-grid-column: auto / span 10;
+    .utrecht-form-field-description {
+      margin-block-end: var(--utrecht-form-field-description-margin-block-end);
+      margin-block-start: var(--utrecht-form-field-description-margin-block-start);
     }
-
-    &--third {
-      --basiselementen-layout-form-field-grid-column: auto / span 4;
-    }
-
-    &--quarter {
-      --basiselementen-layout-form-field-grid-column: auto / span 3;
-    }
-
-    &--half {
-      --basiselementen-layout-form-field-grid-column: auto / span 6;
-    }
-
-    &--full {
-      --basiselementen-layout-form-field-grid-column: 1 / -1;
-    }
-
-    &--start {
-      grid-column-start: 1;
+    .utrecht-form-field-description:has(+ .utrecht-form-field) {
+      margin-block-end: 2ex;
     }
   }
 }
