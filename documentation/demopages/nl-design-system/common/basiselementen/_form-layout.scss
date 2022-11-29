@@ -19,7 +19,7 @@
       font-weight: var(--utrecht-form-label-font-weight);
     }
     & > * {
-      align-content: space-between;
+      align-content: var(--utrecht-form-field-align-content);
       column-gap: var(--utrecht-form-field-column-gap);
       display: var(--utrecht-form-field-display);
       flex-direction: column;
