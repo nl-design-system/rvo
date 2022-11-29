@@ -7,8 +7,8 @@
       "margin-block-end": { "value": "9px" },
       "margin-block-start": { "value": "9px" },
       "section": {
-        "background-color": { "value": "{basiselementen.color.grijs2}" },
-        "color": { "value": "{basiselementen.color.zwart}" }
+        "background-color": { "value": "{basiselementen.color.wit}" },
+        "color": {}
       },
       "legend": {
         "color": {},

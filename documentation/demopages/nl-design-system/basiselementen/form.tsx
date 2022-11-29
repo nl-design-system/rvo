@@ -17,13 +17,13 @@ const Form = () => {
     <div className={'basiselementen-demo-page'}>
       <Heading1>Gegevens zonnepanelen invullen</Heading1>
       <form className="basiselementen-layout-form">
-        <Fieldset>
+        <Fieldset className="utrecht-form-fieldset--section">
           <FormField>
             <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
             <Textbox id={'realname'}></Textbox>
           </FormField>
         </Fieldset>
-        <Fieldset>
+        <Fieldset className={'utrecht-form-fieldset--section'}>
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
             Staat uw naam op de energierekening
           </FieldsetLegend>
@@ -40,7 +40,7 @@ const Form = () => {
             </FormLabel>
           </FormField>
         </Fieldset>
-        <Fieldset className={'utrecht-form-fieldset--subtle'}>
+        <Fieldset className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}>
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
             Staat uw naam op de factuur van de zonnepanelen
           </FieldsetLegend>
@@ -57,7 +57,7 @@ const Form = () => {
             </FormLabel>
           </FormField>
         </Fieldset>
-        <Fieldset className={'utrecht-form-fieldset--subtle'}>
+        <Fieldset className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}>
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Factuurdatum</FieldsetLegend>
           <FormFieldDescription>Vul de datum in die op de factuur van de zonnepanelen staat.</FormFieldDescription>
           <FormField className={'utrecht-form-field--xs'}>
@@ -74,7 +74,7 @@ const Form = () => {
           </FormField>
           <FormFieldDescription invalid={true}>Vul een geldige datum in.</FormFieldDescription>
         </Fieldset>
-        <Fieldset className={'utrecht-form-fieldset--subtle'}>
+        <Fieldset className="utrecht-form-fieldset--subtle utrecht-form-fieldset--section">
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Adres zonnepanelen</FieldsetLegend>
           <FormFieldDescription>Vul het adres in waar de zonnepanelen zijn geplaatst.</FormFieldDescription>
           <FormField className={'utrecht-form-field--lg'}>
