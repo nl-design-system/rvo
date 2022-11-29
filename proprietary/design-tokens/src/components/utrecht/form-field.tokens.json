@@ -1,11 +1,33 @@
 {
   "utrecht": {
     "form-field": {
+      "description": {
+        "margin-block-start": { "value": "0" },
+        "margin-block-end": { "value": "{rvo.space.2xs}" }
+      },
+      "label": {
+        "margin-block-start": { "value": "0" },
+        "margin-block-end": {
+          "value": "0"
+        }
+      },
       "margin-block-start": {
-        "value": "{rvo.space.2xs}"
+        "value": "0"
       },
       "margin-block-end": {
-        "value": "{rvo.space.2xs}"
+        "value": "0"
+      },
+      "display": {
+        "value": "grid"
+      },
+      "column-gap": {
+        "value": "1ch"
+      },
+      "grid-column": {
+        "value": "1 / -1"
+      },
+      "row-gap": {
+        "value": "0"
       }
     }
   }
