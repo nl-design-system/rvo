@@ -27,7 +27,7 @@
         "value": "repeat(12, 1fr)"
       },
       "row-gap": {
-        "value": "0"
+        "value": "2ex"
       }
     }
   }
