@@ -3,3 +3,10 @@
 .rvo-form {
   min-width: 600px;
 }
+.rvo-theme {
+  .rvo-nl-demo-page {
+    .utrecht-form-field:not(:last-of-type) {
+      padding-block-end: var(--rvo-space-xs);
+    }
+  }
+}
