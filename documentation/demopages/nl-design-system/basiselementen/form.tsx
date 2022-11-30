@@ -28,7 +28,6 @@ const Form = () => {
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
               Staat uw naam op de energierekening
             </FieldsetLegend>
-
             <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
               <FormLabel htmlFor={'realnameA'}>
                 <CustomRadioButton name={'hasrealname'} id={'realnameA'} />
@@ -43,23 +42,25 @@ const Form = () => {
             </FormField>
           </Fieldset>
         </Fieldset>
-        <Fieldset className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}>
-          <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
-            Staat uw naam op de factuur van de zonnepanelen
-          </FieldsetLegend>
-          <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
-            <FormLabel htmlFor={'billingnameA'}>
-              <CustomRadioButton name={'hasbillingname'} id={'billingnameA'} />
-              Ja
-            </FormLabel>
-          </FormField>
-          <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
-            <FormLabel htmlFor={'billingnameB'}>
-              <CustomRadioButton name={'hasbillingname'} id={'billingnameB'} />
-              Nee
-            </FormLabel>
-          </FormField>
-        </Fieldset>
+        <div className={'utrecht-form-fieldset utrecht-form-fieldset--section'}>
+          <Fieldset className={'utrecht-form-fieldset--subtle'}>
+            <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
+              Staat uw naam op de factuur van de zonnepanelen
+            </FieldsetLegend>
+            <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
+              <FormLabel htmlFor={'billingnameA'}>
+                <CustomRadioButton name={'hasbillingname'} id={'billingnameA'} />
+                Ja
+              </FormLabel>
+            </FormField>
+            <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
+              <FormLabel htmlFor={'billingnameB'}>
+                <CustomRadioButton name={'hasbillingname'} id={'billingnameB'} />
+                Nee
+              </FormLabel>
+            </FormField>
+          </Fieldset>
+        </div>
         <Fieldset className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}>
           <Fieldset aria-describedby={'billingdatedescription'}>
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Factuurdatum</FieldsetLegend>
