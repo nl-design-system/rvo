@@ -13,8 +13,8 @@
       "label": {
         "margin-block-end": {}
       },
-      "margin-block-end": { "value": "9px" },
-      "margin-block-start": { "value": "9px" },
+      "margin-block-end": { "value": "0" },
+      "margin-block-start": { "value": "0" },
       "min-width": { "value": "100%" },
       "display": {
         "value": "grid"

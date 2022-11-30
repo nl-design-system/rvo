@@ -8,10 +8,20 @@
     margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
     margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
     row-gap: var(--utrecht-form-fieldset-row-gap);
+    &--section {
+      background-color: var(--utrecht-form-fieldset-section-background-color);
+      color: var(--utrecht-form-fieldset-section-color);
+      padding-block-end: var(--utrecht-form-fieldset-section-padding-inline-end);
+      padding-block-start: var(--utrecht-form-fieldset-section-padding-inline-start);
+      padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
+      padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
+    }
+
     &:last-of-type,
     &:first-of-type {
       margin-block-start: 0;
     }
+    &__title,
     &__legend--label {
       color: var(--utrecht-form-label-color);
       display: block;
@@ -30,6 +40,8 @@
     }
 
     .utrecht-form-field {
+      margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
+      margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
       min-width: var(--utrecht-form-field-min-width);
 
       &--xs {

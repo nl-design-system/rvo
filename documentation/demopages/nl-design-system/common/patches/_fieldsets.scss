@@ -1,10 +1,22 @@
+.rvo-theme {
+  .rvo-nl-demo-page {
+    .utrecht-form-field:not(:last-of-type) {
+      padding-block-end: var(--rvo-space-xs);
+    }
+  }
+}
+
 .basiselementen-theme {
   .rvo-nl-demo-page {
     background-color: var(--basiselementen-color-wit);
     padding-inline: 32px;
-    form,
-    .utrecht-form-fieldset {
-      background-color: var(--basiselementen-color-grijs1);
+    form {
+      background-color: var(--basiselementen-color-lichtblauw-tint2);
+      margin-block-start: 32px;
+      margin-inline: auto;
+      padding-block: 32px;
+      padding-inline: 32px;
+      width: min(768px, 100%);
     }
   }
 
@@ -13,15 +25,6 @@
     padding-block: 32px;
     padding-inline: 32px;
 
-    .utrecht-form-fieldset--section {
-      background-color: var(--utrecht-form-fieldset-section-background-color);
-      padding-block: 32px;
-      padding-inline: 32px;
-    }
-
-    .utrecht-form-fieldset__legend {
-      font-size: var(--utrecht-form-label-font-size);
-    }
     form {
       margin-block-start: 32px;
       margin-inline: auto;
