@@ -27,7 +27,7 @@
         "value": "1 / -1"
       },
       "row-gap": {
-        "value": "0"
+        "value": "{rvo.space.xs}"
       }
     }
   }
