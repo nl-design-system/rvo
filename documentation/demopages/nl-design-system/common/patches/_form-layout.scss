@@ -1,32 +1,40 @@
 .basiselementen-demo-page,
 .rvo-nl-demo-page {
-  .utrecht-form-fieldset {
+  div.utrecht-form-fieldset {
+    background-color: var(--utrecht-form-fieldset-section-background-color);
+    color: var(--utrecht-form-fieldset-section-color);
+    display: block;
+    margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
+    margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
+    padding-block-end: var(--utrecht-form-fieldset-section-padding-block-end);
+    padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
+    padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
+    padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
+    & > * > div.utrecht-form-fieldset {
+      margin-block-end: 0;
+      margin-block-start: 0;
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+    & > * > div.utrecht-form-fieldset:not(:first-of-type) {
+      padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
+    }
+    &--subtle .utrecht-form-label {
+      font-weight: 400;
+    }
+  }
+  fieldset.utrecht-form-fieldset,
+  .utrecht-form-fieldset__fieldset {
     column-gap: var(--utrecht-form-fieldset-column-gap);
     display: var(--utrecht-form-fieldset-display);
     flex-direction: column;
     grid-template-columns: var(--utrecht-form-fieldset-grid-template-columns);
-    margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
-    margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
     row-gap: var(--utrecht-form-fieldset-row-gap);
-    &--section {
-      background-color: var(--utrecht-form-fieldset-section-background-color);
-      color: var(--utrecht-form-fieldset-section-color);
-      padding-block-end: var(--utrecht-form-fieldset-section-padding-block-end);
-      padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
-      padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
-      padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
-    }
-
     &:last-of-type,
     &:first-of-type {
       margin-block-start: 0;
-    }
-    &__title,
-    &__legend--label {
-      color: var(--utrecht-form-label-color);
-      display: block;
-      font-size: var(--utrecht-form-label-font-size);
-      font-weight: var(--utrecht-form-label-font-weight);
     }
     & > * {
       align-content: var(--utrecht-form-field-align-content);
@@ -34,86 +42,86 @@
       display: var(--utrecht-form-field-display);
       flex-direction: column;
       grid-column: var(--utrecht-form-field-grid-column);
-      margin-block-end: 0;
-      margin-block-start: 0;
       row-gap: var(--utrecht-form-field-row-gap);
     }
-    & + .utrecht-form-fieldset {
-      margin-block-start: 2ex;
+  }
+  .utrecht-form-fieldset {
+    &__title,
+    &__legend--label {
+      color: var(--utrecht-form-label-color);
+      display: block;
+      font-size: var(--utrecht-form-label-font-size);
+      font-weight: var(--utrecht-form-label-font-weight);
+      margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end, 0);
+      margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start, 0);
     }
-    .utrecht-form-field {
-      margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
-      margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
-      min-width: var(--utrecht-form-field-min-width);
 
-      &--xs {
-        --utrecht-form-field-min-width: 7ch;
-        --utrecht-form-field-grid-column: auto / span 1;
-      }
-
-      &--sm {
-        --utrecht-form-field-min-width: 12ch;
-        --utrecht-form-field-grid-column: auto / span 2;
-      }
-
-      &--md {
-        --utrecht-form-field-min-width: 20ch;
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--lg {
-        --utrecht-form-field-min-width: 35ch;
-        --utrecht-form-field-grid-column: auto / span 8;
-      }
-
-      &--xl {
-        --utrecht-form-field-min-width: 50ch;
-        --utrecht-form-field-grid-column: auto / span 10;
-      }
-
-      &--third {
-        --utrecht-form-field-min-width: 20ch;
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--quarter {
-        --utrecht-form-field-min-width: 15ch;
-        --utrecht-form-field-grid-column: auto / span 3;
-      }
-
-      &--half {
-        --utrecht-form-field-min-width: 30ch;
-        --utrecht-form-field-grid-column: auto / span 6;
-      }
-
-      &--full {
-        --utrecht-form-field-min-width: 70ch;
-        --utrecht-form-field-grid-column: 1 / -1;
-      }
-
-      &--start {
-        grid-column-start: 1;
-      }
-    }
-    &--subtle .utrecht-form-label {
-      font-weight: 400;
-    }
     label:has(input) {
       align-items: center;
       column-gap: var(--utrecht-form-field-column-gap);
       display: flex;
       font-weight: 400;
     }
+  }
+  .utrecht-form-field {
+    margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
+    margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
+    min-width: var(--utrecht-form-field-min-width);
 
-    .utrecht-form-field-description--invalid {
-      color: var(--basiselementen-color-rood);
+    &--xs {
+      --utrecht-form-field-min-width: 7ch;
+      --utrecht-form-field-grid-column: auto / span 1;
     }
-    .utrecht-form-field-description {
-      margin-block-end: var(--utrecht-form-field-description-margin-block-end);
-      margin-block-start: var(--utrecht-form-field-description-margin-block-start);
+
+    &--sm {
+      --utrecht-form-field-min-width: 12ch;
+      --utrecht-form-field-grid-column: auto / span 2;
     }
-    .utrecht-form-field-description:has(+ .utrecht-form-field) {
-      margin-block-end: 2ex;
+
+    &--md {
+      --utrecht-form-field-min-width: 20ch;
+      --utrecht-form-field-grid-column: auto / span 4;
     }
+
+    &--lg {
+      --utrecht-form-field-min-width: 35ch;
+      --utrecht-form-field-grid-column: auto / span 8;
+    }
+
+    &--xl {
+      --utrecht-form-field-min-width: 50ch;
+      --utrecht-form-field-grid-column: auto / span 10;
+    }
+
+    &--third {
+      --utrecht-form-field-min-width: 20ch;
+      --utrecht-form-field-grid-column: auto / span 4;
+    }
+
+    &--quarter {
+      --utrecht-form-field-min-width: 15ch;
+      --utrecht-form-field-grid-column: auto / span 3;
+    }
+
+    &--half {
+      --utrecht-form-field-min-width: 30ch;
+      --utrecht-form-field-grid-column: auto / span 6;
+    }
+
+    &--full {
+      --utrecht-form-field-min-width: 70ch;
+      --utrecht-form-field-grid-column: 1 / -1;
+    }
+
+    &--start {
+      grid-column-start: 1;
+    }
+  }
+  .utrecht-form-field-description--invalid {
+    color: var(--basiselementen-color-rood);
+  }
+  .utrecht-form-field-description {
+    margin-block-end: var(--utrecht-form-field-description-margin-block-end);
+    margin-block-start: var(--utrecht-form-field-description-margin-block-start);
   }
 }
