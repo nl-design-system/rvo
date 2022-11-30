@@ -11,6 +11,7 @@ import './index.scss';
 export interface IFieldsetProps {
   legend: string;
   disabled?: boolean;
+  section?: boolean;
   fields?: ITextInputFieldProps[];
   hideFields?: boolean;
 }
@@ -20,6 +21,9 @@ export const argTypes = {
     control: 'text',
   },
   disabled: {
+    control: 'boolean',
+  },
+  section: {
     control: 'boolean',
   },
   fields: {
@@ -32,11 +36,15 @@ export const argTypes = {
 export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,
+  section = defaultArgs.section,
   fields,
   children,
 }: PropsWithChildren<IFieldsetProps>) => {
   return (
-    <FieldsetUtrecht className={clsx('rvo-layout-column rvo-layout-gap--xl')} disabled={disabled || null}>
+    <FieldsetUtrecht
+      className={clsx('rvo-layout-column rvo-layout-gap--xl', section && 'utrecht-form-fieldset--section')}
+      disabled={disabled || null}
+    >
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children ||
         (fields &&
