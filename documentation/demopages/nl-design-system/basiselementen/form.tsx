@@ -17,7 +17,8 @@ const Form = () => {
     <div className={'basiselementen-demo-page'}>
       <Heading1>Gegevens zonnepanelen invullen</Heading1>
       <form className="basiselementen-layout-form">
-        <Fieldset className="utrecht-form-fieldset--section">
+        <Fieldset>
+          {' '}
           <Fieldset>
             <FormField>
               <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
@@ -42,27 +43,25 @@ const Form = () => {
             </FormField>
           </Fieldset>
         </Fieldset>
-        <div className={'utrecht-form-fieldset utrecht-form-fieldset--section'}>
-          <Fieldset className={'utrecht-form-fieldset--subtle'}>
-            <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
-              Staat uw naam op de factuur van de zonnepanelen
-            </FieldsetLegend>
-            <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
-              <FormLabel htmlFor={'billingnameA'}>
-                <CustomRadioButton name={'hasbillingname'} id={'billingnameA'} />
-                Ja
-              </FormLabel>
-            </FormField>
-            <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
-              <FormLabel htmlFor={'billingnameB'}>
-                <CustomRadioButton name={'hasbillingname'} id={'billingnameB'} />
-                Nee
-              </FormLabel>
-            </FormField>
-          </Fieldset>
-        </div>
-        <Fieldset className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}>
-          <Fieldset aria-describedby={'billingdatedescription'}>
+        <Fieldset className={'utrecht-form-fieldset--subtle'}>
+          <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
+            Staat uw naam op de factuur van de zonnepanelen
+          </FieldsetLegend>
+          <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
+            <FormLabel htmlFor={'billingnameA'}>
+              <CustomRadioButton name={'hasbillingname'} id={'billingnameA'} />
+              Ja
+            </FormLabel>
+          </FormField>
+          <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
+            <FormLabel htmlFor={'billingnameB'}>
+              <CustomRadioButton name={'hasbillingname'} id={'billingnameB'} />
+              Nee
+            </FormLabel>
+          </FormField>
+        </Fieldset>
+        <Fieldset>
+          <Fieldset aria-describedby={'billingdatedescription'} className={'utrecht-form-fieldset--subtle'}>
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Factuurdatum</FieldsetLegend>
             <FormFieldDescription id={'billingdatedescription'}>
               Vul de datum in die op de factuur van de zonnepanelen staat.
@@ -83,7 +82,7 @@ const Form = () => {
               Vul een geldige datum in.
             </FormFieldDescription>
           </Fieldset>
-          <Fieldset aria-describedby={'billingaddressdescription'}>
+          <Fieldset aria-describedby={'billingaddressdescription'} className={'utrecht-form-fieldset--subtle'}>
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Adres zonnepanelen</FieldsetLegend>
             <FormFieldDescription id={'billingaddressdescription'}>
               Vul het adres in waar de zonnepanelen zijn geplaatst.

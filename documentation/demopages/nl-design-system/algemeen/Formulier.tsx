@@ -36,7 +36,7 @@ const Formulier = () => {
                     <Heading1>Heading</Heading1>
                   </div>
                   <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
-                    <Fieldset legend="Keyboard inputs" section={true}>
+                    <Fieldset legend="Keyboard inputs">
                       <TextInputField label="Text" />
                       <TextInputField
                         label="Text with helper text"
@@ -57,7 +57,7 @@ const Formulier = () => {
                       <TextInputField label="Textarea" inputType="textarea" />
                     </Fieldset>
 
-                    <Fieldset legend="Options" section={true}>
+                    <Fieldset legend="Options">
                       <RadioButtonField
                         name="radio-buttons"
                         label="Radio buttons"
@@ -140,7 +140,7 @@ const Formulier = () => {
                       ></SelectField>
                     </Fieldset>
 
-                    <Fieldset legend="Other" section={true}>
+                    <Fieldset legend="Other">
                       <FileInputField label="File" />
                     </Fieldset>
                     <ButtonGroup>
