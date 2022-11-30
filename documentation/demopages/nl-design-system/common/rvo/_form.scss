@@ -2,6 +2,13 @@
 
 .rvo-form {
   min-width: 600px;
+  .utrecht-form-fieldset {
+    background-color: var(--rvo-color-grijs1);
+    padding-block-end: calc(var(--rvo-space-xs) + var(--rvo-space-md));
+    padding-block-start: calc(var(--rvo-space-xs) + var(--rvo-space-md));
+    padding-inline-end: calc(var(--rvo-space-xs) + var(--rvo-space-md));
+    padding-inline-start: calc(var(--rvo-space-xs) + var(--rvo-space-md));
+  }
 }
 .rvo-theme {
   .rvo-nl-demo-page {
