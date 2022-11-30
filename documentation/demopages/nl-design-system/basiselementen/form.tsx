@@ -27,6 +27,7 @@ const Form = () => {
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
             Staat uw naam op de energierekening
           </FieldsetLegend>
+
           <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
             <FormLabel htmlFor={'realnameA'}>
               <CustomRadioButton name={'hasrealname'} id={'realnameA'} />
@@ -57,9 +58,14 @@ const Form = () => {
             </FormLabel>
           </FormField>
         </Fieldset>
-        <Fieldset className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}>
+        <Fieldset
+          className={'utrecht-form-fieldset--subtle utrecht-form-fieldset--section'}
+          aria-describedby={'billingdatedescription'}
+        >
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Factuurdatum</FieldsetLegend>
-          <FormFieldDescription>Vul de datum in die op de factuur van de zonnepanelen staat.</FormFieldDescription>
+          <FormFieldDescription id={'billingdatedescription'}>
+            Vul de datum in die op de factuur van de zonnepanelen staat.
+          </FormFieldDescription>
           <FormField className={'utrecht-form-field--xs'}>
             <FormLabel htmlFor={'day'}>Dag</FormLabel>
             <Textbox id={'day'} invalid={true}></Textbox>
@@ -72,11 +78,18 @@ const Form = () => {
             <FormLabel htmlFor={'year'}>Jaar</FormLabel>
             <Textbox id={'year'} invalid={true}></Textbox>
           </FormField>
-          <FormFieldDescription invalid={true}>Vul een geldige datum in.</FormFieldDescription>
+          <FormFieldDescription invalid={true} id={'invalidbillingdate'}>
+            Vul een geldige datum in.
+          </FormFieldDescription>
         </Fieldset>
-        <Fieldset className="utrecht-form-fieldset--subtle utrecht-form-fieldset--section">
+        <Fieldset
+          className="utrecht-form-fieldset--subtle utrecht-form-fieldset--section"
+          aria-describedby={'billingaddressdescription'}
+        >
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Adres zonnepanelen</FieldsetLegend>
-          <FormFieldDescription>Vul het adres in waar de zonnepanelen zijn geplaatst.</FormFieldDescription>
+          <FormFieldDescription id={'billingaddressdescription'}>
+            Vul het adres in waar de zonnepanelen zijn geplaatst.
+          </FormFieldDescription>
           <FormField className={'utrecht-form-field--lg'}>
             <FormLabel htmlFor={'street'}>Straatnaam</FormLabel>
             <Textbox id={'street'}></Textbox>
