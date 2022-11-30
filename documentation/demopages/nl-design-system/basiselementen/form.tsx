@@ -12,6 +12,11 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 
+/* load from local:
+ * Version required: 1.0.0-alpha.190
+ * '../../../../../utrecht/packages/component-library-react'
+ */
+
 const Form = () => {
   return (
     <div className={'basiselementen-demo-page'}>
