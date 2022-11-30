@@ -1,11 +1,3 @@
-.rvo-theme {
-  .rvo-nl-demo-page {
-    .utrecht-form-field:not(:last-of-type) {
-      padding-block-end: var(--rvo-space-xs);
-    }
-  }
-}
-
 .basiselementen-theme {
   .rvo-nl-demo-page {
     background-color: var(--basiselementen-color-wit);
@@ -33,7 +25,4 @@
       width: min(768px, 100%);
     }
   }
-}
-.utrecht-form-fieldset--subtle .utrecht-form-label:not(.utrecht-form-fieldset__legend) {
-  font-weight: 400;
 }

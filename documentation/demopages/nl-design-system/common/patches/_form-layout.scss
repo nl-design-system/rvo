@@ -93,7 +93,9 @@
         grid-column-start: 1;
       }
     }
-
+    &--subtle .utrecht-form-label {
+      font-weight: 400;
+    }
     label:has(input) {
       align-items: center;
       column-gap: var(--utrecht-form-field-column-gap);
