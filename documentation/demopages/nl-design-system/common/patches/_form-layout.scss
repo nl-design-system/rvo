@@ -43,6 +43,7 @@
       flex-direction: column;
       grid-column: var(--utrecht-form-field-grid-column);
       row-gap: var(--utrecht-form-field-row-gap);
+      width: unset;
     }
   }
   .utrecht-form-fieldset {
@@ -66,52 +67,7 @@
   .utrecht-form-field {
     margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
     margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
-    min-width: var(--utrecht-form-field-min-width);
-
-    &--xs {
-      --utrecht-form-field-min-width: 7ch;
-      --utrecht-form-field-grid-column: auto / span 1;
-    }
-
-    &--sm {
-      --utrecht-form-field-min-width: 12ch;
-      --utrecht-form-field-grid-column: auto / span 2;
-    }
-
-    &--md {
-      --utrecht-form-field-min-width: 20ch;
-      --utrecht-form-field-grid-column: auto / span 4;
-    }
-
-    &--lg {
-      --utrecht-form-field-min-width: 35ch;
-      --utrecht-form-field-grid-column: auto / span 8;
-    }
-
-    &--xl {
-      --utrecht-form-field-min-width: 50ch;
-      --utrecht-form-field-grid-column: auto / span 10;
-    }
-
-    &--third {
-      --utrecht-form-field-min-width: 20ch;
-      --utrecht-form-field-grid-column: auto / span 4;
-    }
-
-    &--quarter {
-      --utrecht-form-field-min-width: 15ch;
-      --utrecht-form-field-grid-column: auto / span 3;
-    }
-
-    &--half {
-      --utrecht-form-field-min-width: 30ch;
-      --utrecht-form-field-grid-column: auto / span 6;
-    }
-
-    &--full {
-      --utrecht-form-field-min-width: 70ch;
-      --utrecht-form-field-grid-column: 1 / -1;
-    }
+    min-width: var(--utrecht-form-field-min-width, unset);
 
     &--start {
       grid-column-start: 1;

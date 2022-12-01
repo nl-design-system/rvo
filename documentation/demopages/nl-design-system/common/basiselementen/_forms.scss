@@ -14,15 +14,35 @@
 
   .basiselementen-demo-page {
     background-color: var(--basiselementen-color-lichtblauw-tint2);
-    padding-block: 32px;
-    padding-inline: 32px;
+    padding-block: 9px;
+    padding-inline: 9px;
 
     form {
       margin-block-start: 32px;
       margin-inline: auto;
+      padding-block: 9px;
+      padding-inline: 9px;
+    }
+    .utrecht-form-fieldset {
+      padding-block: 9px;
+      padding-inline: 9px;
+    }
+    @media (min-width: 768px) {
+      form {
+        padding-block: 36px;
+        padding-inline: 36px;
+      }
+      .utrecht-form-fieldset {
+        padding-block: 36px;
+        padding-inline: 36px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .basiselementen-demo-page {
       padding-block: 32px;
       padding-inline: 32px;
-      width: min(768px, 100%);
     }
   }
 }

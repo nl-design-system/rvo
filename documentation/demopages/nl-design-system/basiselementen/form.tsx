@@ -104,11 +104,11 @@ const Form = () => {
               <FormLabel htmlFor={'suffix'}>Toevoeging</FormLabel>
               <Textbox id={'suffix'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--sm utrecht-form-field--start'}>
+            <FormField className={'utrecht-form-field--md utrecht-form-field--start'}>
               <FormLabel htmlFor={'postcode'}>Postcode</FormLabel>
               <Textbox id={'postcode'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--xl'}>
+            <FormField className={'utrecht-form-field--lg'}>
               <FormLabel htmlFor={'city'}>Plaatsnaam</FormLabel>
               <Textbox id={'city'}></Textbox>
             </FormField>
