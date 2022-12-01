@@ -127,8 +127,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
       {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
-      {label}
-      {children}
+      {children || label}
       {showIcon === 'after' && iconMarkup}
     </UtrechtButton>
   );
