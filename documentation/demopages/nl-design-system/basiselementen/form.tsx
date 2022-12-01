@@ -12,11 +12,6 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 
-/* load from local:
- * Version required: 1.0.0-alpha.190
- * '../../../../../utrecht/packages/component-library-react'
- */
-
 const Form = () => {
   return (
     <div className={'basiselementen-demo-page'}>
@@ -24,13 +19,13 @@ const Form = () => {
       <form className="basiselementen-layout-form">
         <Fieldset>
           {' '}
-          <Fieldset>
+          <Fieldset className={'utrecht-form-fieldset--subtle'}>
             <FormField>
               <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
               <Textbox id={'realname'}></Textbox>
             </FormField>
           </Fieldset>
-          <Fieldset>
+          <Fieldset className={'utrecht-form-fieldset--subtle'}>
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
               Staat uw naam op de energierekening
             </FieldsetLegend>

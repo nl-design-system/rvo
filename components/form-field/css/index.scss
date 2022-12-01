@@ -3,6 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+.rvo-form-field {
+  clear: both;
+}
+
 .rvo-form-field__label-text {
-  font-weight: var(--rvo-form-field-label-font-weight);
+  font-weight: var(--utrecht-form-label-font-weight);
 }

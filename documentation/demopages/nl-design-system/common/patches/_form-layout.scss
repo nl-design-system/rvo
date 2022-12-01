@@ -1,83 +1,81 @@
-.basiselementen-demo-page,
-.rvo-nl-demo-page {
-  div.utrecht-form-fieldset {
-    background-color: var(--utrecht-form-fieldset-section-background-color);
-    color: var(--utrecht-form-fieldset-section-color);
-    display: block;
-    margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
-    margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
-    padding-block-end: var(--utrecht-form-fieldset-section-padding-block-end);
+div.utrecht-form-fieldset {
+  background-color: var(--utrecht-form-fieldset-section-background-color);
+  color: var(--utrecht-form-fieldset-section-color);
+  display: block;
+  margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
+  margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
+  padding-block-end: var(--utrecht-form-fieldset-section-padding-block-end);
+  padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
+  padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
+  & > * > div.utrecht-form-fieldset {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+  & > * > div.utrecht-form-fieldset:not(:first-of-type) {
     padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
-    padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
-    padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
-    & > * > div.utrecht-form-fieldset {
-      margin-block-end: 0;
-      margin-block-start: 0;
-      padding-block-end: 0;
-      padding-block-start: 0;
-      padding-inline-end: 0;
-      padding-inline-start: 0;
-    }
-    & > * > div.utrecht-form-fieldset:not(:first-of-type) {
-      padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
-    }
-    &--subtle .utrecht-form-label {
-      font-weight: 400;
-    }
   }
-  fieldset.utrecht-form-fieldset,
-  .utrecht-form-fieldset__fieldset {
-    column-gap: var(--utrecht-form-fieldset-column-gap);
-    display: var(--utrecht-form-fieldset-display);
+  &--subtle .utrecht-form-label {
+    font-weight: 400;
+  }
+}
+fieldset.utrecht-form-fieldset,
+.utrecht-form-fieldset__fieldset {
+  column-gap: var(--utrecht-form-fieldset-column-gap);
+  display: var(--utrecht-form-fieldset-display);
+  flex-direction: column;
+  grid-template-columns: var(--utrecht-form-fieldset-grid-template-columns);
+  row-gap: var(--utrecht-form-fieldset-row-gap);
+  &:last-of-type,
+  &:first-of-type {
+    margin-block-start: 0;
+  }
+  & > * {
+    align-content: var(--utrecht-form-field-align-content);
+    column-gap: var(--utrecht-form-field-column-gap);
+    display: var(--utrecht-form-field-display);
     flex-direction: column;
-    grid-template-columns: var(--utrecht-form-fieldset-grid-template-columns);
-    row-gap: var(--utrecht-form-fieldset-row-gap);
-    &:last-of-type,
-    &:first-of-type {
-      margin-block-start: 0;
-    }
-    & > * {
-      align-content: var(--utrecht-form-field-align-content);
-      column-gap: var(--utrecht-form-field-column-gap);
-      display: var(--utrecht-form-field-display);
-      flex-direction: column;
-      grid-column: var(--utrecht-form-field-grid-column);
-      row-gap: var(--utrecht-form-field-row-gap);
-      width: unset;
-    }
+    grid-column: var(--utrecht-form-field-grid-column);
+    row-gap: var(--utrecht-form-field-row-gap);
+    width: unset;
   }
-  .utrecht-form-fieldset {
-    &__title,
-    &__legend--label {
-      color: var(--utrecht-form-label-color);
-      display: block;
-      font-size: var(--utrecht-form-label-font-size);
-      font-weight: var(--utrecht-form-label-font-weight);
-      margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end, 0);
-      margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start, 0);
-    }
+}
+.utrecht-form-fieldset {
+  clear: both;
+  &__legend--label {
+    color: var(--utrecht-form-label-color);
+    display: block;
+    float: none;
+    font-size: var(--utrecht-form-label-font-size);
+    font-weight: var(--utrecht-form-label-font-weight);
+    margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end, 0);
+    margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start, 0);
+  }
 
-    label:has(input) {
-      align-items: center;
-      column-gap: var(--utrecht-form-field-column-gap);
-      display: flex;
-      font-weight: 400;
-    }
+  label:has(input) {
+    align-items: center;
+    column-gap: var(--utrecht-form-field-column-gap);
+    display: flex;
   }
-  .utrecht-form-field {
-    margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
-    margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
-    min-width: var(--utrecht-form-field-min-width, unset);
+}
+.utrecht-form-field {
+  clear: both;
+  margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
+  margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
+  min-width: var(--utrecht-form-field-min-width, unset);
 
-    &--start {
-      grid-column-start: 1;
-    }
+  &--start {
+    grid-column-start: 1 !important;
   }
-  .utrecht-form-field-description--invalid {
-    color: var(--basiselementen-color-rood);
-  }
-  .utrecht-form-field-description {
-    margin-block-end: var(--utrecht-form-field-description-margin-block-end);
-    margin-block-start: var(--utrecht-form-field-description-margin-block-start);
-  }
+}
+.utrecht-form-field-description--invalid {
+  color: var(--basiselementen-color-rood);
+}
+.utrecht-form-field-description {
+  margin-block-end: var(--utrecht-form-field-description-margin-block-end);
+  margin-block-start: var(--utrecht-form-field-description-margin-block-start);
 }

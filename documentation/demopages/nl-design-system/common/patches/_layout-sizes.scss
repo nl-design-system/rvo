@@ -59,5 +59,9 @@
     &--xl {
       --utrecht-form-field-grid-column: 1 / -1;
     }
+    &--quarter {
+      --utrecht-form-field-min-width: 12ch;
+      --utrecht-form-field-grid-column: auto / span 6;
+    }
   }
 }
