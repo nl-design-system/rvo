@@ -25,7 +25,7 @@
       },
       "focus": {
         "background-color": { "value": "{rvo.color.wit}" },
-        "border-color": {},
+        "border-color": { "value": "{rvo.color.zwart}" },
         "border-width": {}
       },
       "invalid": {
