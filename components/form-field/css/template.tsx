@@ -77,13 +77,11 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   }
 
   return (
-    <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-      <div className="rvo-layout-column rvo-layout-gap--2xs">
-        <FormLabel htmlFor={fieldId}>{label}</FormLabel>
-        {helperTextMarkup}
-        {errorText && <Feedback text={errorText} type="error" />}
-        {warningText && <Feedback text={warningText} type="warning" />}
-      </div>
+    <FormField className="">
+      <FormLabel htmlFor={fieldId}>{label}</FormLabel>
+      {helperTextMarkup}
+      {errorText && <Feedback text={errorText} type="error" />}
+      {warningText && <Feedback text={warningText} type="warning" />}
       {children}
     </FormField>
   );

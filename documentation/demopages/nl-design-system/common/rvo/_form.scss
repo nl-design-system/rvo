@@ -2,6 +2,10 @@
 
 .rvo-form {
   min-width: 600px;
+  .rvo-form-field {
+    clear: both;
+  }
+
   .utrecht-form-fieldset {
     background-color: var(--rvo-color-grijs1);
     padding-block-end: calc(var(--rvo-space-xs) + var(--rvo-space-md));

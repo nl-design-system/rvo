@@ -440,7 +440,7 @@
     line-height: var(--rvo-line-height-md);
     margin-inline-end: auto;
     margin-inline-start: auto;
-    max-width: 580;
+    max-width: 580px;
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
   }
@@ -689,6 +689,13 @@
 
   /* @SEARCH IN NAV */
 
+  /* stylelint-disable */
+  .search-form {
+    background-color: var(--rvo-color-grijs1);
+    padding-block-end: var(--rvo-space-xl);
+  }
+  /* stylelint-enable */
+
   .rvo-topnav__link--search-active {
     background-color: var(--rvo-color-grijs1);
     color: var(--rvo-color-grijs7);
@@ -713,7 +720,9 @@
     padding-block-end: 0.6rem;
     padding-block-start: 0.75rem;
   }
-
+  .rvo-inline-form .utrecht-form-field {
+    align-content: unset;
+  }
   .rvo-inline-form .utrecht-button {
     align-self: flex-end;
   }
