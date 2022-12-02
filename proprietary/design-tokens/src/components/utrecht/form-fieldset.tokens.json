@@ -20,15 +20,6 @@
         "margin-block-end": { "value": "{rvo.space.2xs}" },
         "margin-block-start": {},
         "text-transform": {}
-      },
-      "display": {
-        "value": "grid"
-      },
-      "column-gap": {
-        "value": "1ch"
-      },
-      "row-gap": {
-        "value": "{rvo.space.xs}"
       }
     }
   }

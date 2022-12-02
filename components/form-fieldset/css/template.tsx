@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { ITextInputFieldProps, TextInputField } from '../../form-field-textinput/css/template';
 import { defaultArgs } from './defaultArgs';
@@ -35,7 +36,7 @@ export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   children,
 }: PropsWithChildren<IFieldsetProps>) => {
   return (
-    <FieldsetUtrecht disabled={disabled || null}>
+    <FieldsetUtrecht className={clsx('rvo-layout-column rvo-layout-gap--xl')} disabled={disabled || null}>
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children ||
         (fields &&
