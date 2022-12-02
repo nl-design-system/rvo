@@ -45,7 +45,7 @@ const Filters = () => {
                 </MaxWidthLayout>
                 <LayoutColumnRow size="md">
                   <div className="rvo-tmp-filters">
-                    <Fieldset>
+                    <Fieldset className={'utrecht-form-fieldset--grid'}>
                       <MaxWidthLayout size="sm">
                         <FormField>
                           <TextInputField label="Zoek op trefwoord/code"></TextInputField>

@@ -27,7 +27,7 @@ const SearchInNav = () => {
           <div className="rvo-form-layout">
             <MaxWidthLayout size="sm">
               <div className="rvo-inline-form">
-                <Fieldset>
+                <Fieldset className={'utrecht-form-fieldset--grid'}>
                   <FormField className="utrecht-form-field--xl">
                     <TextInputField label="Zoekterm"></TextInputField>
                   </FormField>
