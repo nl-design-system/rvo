@@ -13,7 +13,7 @@ export interface ICheckboxGroupProps {
   options?: ICheckboxProps[];
   onChange?: (event) => void;
   /**
-   * @uxpinbind onChange 1
+   * @uxpinbind onChange 0
    */
   currentSelection?: number[];
 }

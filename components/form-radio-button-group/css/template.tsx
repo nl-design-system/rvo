@@ -14,7 +14,7 @@ export interface IRadioButtonGroupProps {
   options?: IRadioButtonProps[];
   onChange?: (event) => void;
   /**
-   * @uxpinbind onChange 1
+   * @uxpinbind onChange 0
    */
   currentSelection?: number | null;
 }
