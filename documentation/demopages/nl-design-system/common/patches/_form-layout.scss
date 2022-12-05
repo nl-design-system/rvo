@@ -51,8 +51,8 @@
       float: none;
       font-size: var(--utrecht-form-label-font-size);
       font-weight: var(--utrecht-form-label-font-weight);
-      margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end, 0);
-      margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start, 0);
+      margin-block-end: var(--utrecht-form-field-label-block-end, 0);
+      margin-block-start: var(--utrecht-form-field-label-block-start, 0);
     }
     label:has(input) {
       align-items: center;
@@ -83,5 +83,14 @@
   .utrecht-form-field-description {
     margin-block-end: var(--utrecht-form-field-description-margin-block-end);
     margin-block-start: var(--utrecht-form-field-description-margin-block-start);
+  }
+}
+
+.utrecht-form-fieldset:not(.utrecht-form-fieldset--grid) .utrecht-form-fieldset__legend {
+  margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end, 0);
+  margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start, 0);
+  &--label {
+    margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
+    margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
   }
 }
