@@ -13,8 +13,8 @@
       "label": {
         "margin-block-end": {}
       },
-      "margin-block-end": { "value": "0" },
-      "margin-block-start": { "value": "0" },
+      "margin-block-end": { "value": "1ex" },
+      "margin-block-start": { "value": "1ex" },
       "min-width": { "value": "100%" }
     }
   }

@@ -11,15 +11,15 @@ import {
   Heading1,
   Textbox,
 } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 
 const Form = () => {
   return (
     <div className={'basiselementen-demo-page'}>
       <Heading1>Gegevens zonnepanelen invullen</Heading1>
       <form className="basiselementen-layout-form">
-        <Fieldset>
-          {' '}
-          <Fieldset className={'utrecht-form-fieldset--subtle'}>
+        <Fieldset className={'utrecht-form-fieldset--grid'}>
+          <Fieldset>
             <FormField>
               <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
               <Textbox id={'realname'}></Textbox>
@@ -43,7 +43,7 @@ const Form = () => {
             </FormField>
           </Fieldset>
         </Fieldset>
-        <Fieldset className={'utrecht-form-fieldset--subtle'}>
+        <Fieldset className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--grid')}>
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
             Staat uw naam op de factuur van de zonnepanelen
           </FieldsetLegend>
@@ -60,7 +60,7 @@ const Form = () => {
             </FormLabel>
           </FormField>
         </Fieldset>
-        <Fieldset>
+        <Fieldset className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--grid')}>
           <Fieldset aria-describedby={'billingdatedescription'} className={'utrecht-form-fieldset--subtle'}>
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Factuurdatum</FieldsetLegend>
             <FormFieldDescription id={'billingdatedescription'}>

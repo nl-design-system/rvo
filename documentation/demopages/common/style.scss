@@ -608,6 +608,7 @@
 
   .utrecht-form-fieldset .rvo-alert:last-child {
     margin-block-end: -24px;
+    margin-block-start: 24px;
   }
 
   .rvo-alert > .rvo-icon {
@@ -688,13 +689,6 @@
   }
 
   /* @SEARCH IN NAV */
-
-  /* stylelint-disable */
-  .search-form {
-    background-color: var(--rvo-color-grijs1);
-    padding-block-end: var(--rvo-space-xl);
-  }
-  /* stylelint-enable */
 
   .rvo-topnav__link--search-active {
     background-color: var(--rvo-color-grijs1);
@@ -1462,7 +1456,16 @@
   }
 
   /* VERWIJDERD ONNODIGE MARGIN BIJ ELEMENTEN MET NIEUWE RVO LAYOUT SPACER */
-  .rvo-form-field,
+
+  .rvo-form-field {
+    clear: both;
+    margin-block-end: 0;
+  }
+
+  .rvo-form-field:not(:first-of-type) {
+    --utrecht-space-around: 3;
+  }
+
   .rvo-form-field__label {
     margin-block-end: 0;
   }

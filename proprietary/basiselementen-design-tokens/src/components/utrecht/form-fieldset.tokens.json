@@ -3,8 +3,10 @@
     "form-fieldset": {
       "margin-block-end": { "value": "9px" },
       "margin-block-start": { "value": "9px" },
-      "background-color": { "value": "{basiselementen.color.wit}" },
-      "color": {},
+      "section": {
+        "background-color": { "value": "{basiselementen.color.wit}" },
+        "color": {}
+      },
       "padding-block-end": { "value": "36px" },
       "padding-block-start": { "value": "36px" },
       "padding-inline-end": { "value": "36px" },
@@ -16,7 +18,7 @@
         "font-size": {},
         "font-weight": { "value": "{basiselementen.font-weight.bold}" },
         "line-height": { "value": "150%" },
-        "margin-block-end": { "value": "0" },
+        "margin-block-end": { "value": "1ex" },
         "margin-block-start": { "value": "0" },
         "text-transform": {}
       }
