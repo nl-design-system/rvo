@@ -1283,6 +1283,7 @@
     color: var(--rvo-color-zwart);
     display: block;
     font-size: var(--rvo-font-size-md);
+    font-style: italic;
     font-weight: var(--rvo-font-weight-normal);
     padding-block-start: var(--rvo-space-2xs);
     padding-inline-start: var(--rvo-space-xl);
@@ -1305,6 +1306,10 @@
     border-bottom-color: var(--rvo-color-hemelblauw-tint1);
     border-left: 6px solid var(--rvo-color-wit);
     padding-inline-start: var(--rvo-space-sm);
+  }
+
+  .rvo-accordion--border-indicator .rvo-accordion__item:first-child {
+    border-top: 1px solid var(--rvo-color-hemelblauw-tint1);
   }
 
   /* @LOGO GRID */
