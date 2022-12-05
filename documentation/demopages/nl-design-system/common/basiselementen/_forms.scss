@@ -1,7 +1,10 @@
 .basiselementen-theme {
   .rvo-nl-demo-page {
+    --utrecht-space-around: 3;
+
     background-color: var(--basiselementen-color-wit);
     padding-inline: 32px;
+
     form {
       background-color: var(--basiselementen-color-lichtblauw-tint2);
       margin-block-start: 32px;
