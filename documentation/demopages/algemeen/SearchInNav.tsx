@@ -1,11 +1,12 @@
 import { Button } from '@nl-rvo/components/button/css/template';
 import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
+import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import '../common/style.scss';
-import { Fieldset, FormField } from '@utrecht/component-library-react';
+
 const SearchInNav = () => {
   return (
     <div className="rvo-demo-page">
@@ -24,31 +25,27 @@ const SearchInNav = () => {
       />
       <LayoutColumnRow size="md">
         <div className="search-form">
-          <div className="rvo-form-layout">
-            <MaxWidthLayout size="sm">
-              <div className="rvo-inline-form">
-                <Fieldset className={'utrecht-form-fieldset--grid'}>
-                  <FormField className="utrecht-form-field--xl">
-                    <TextInputField label="Zoekterm"></TextInputField>
-                  </FormField>
-                  <FormField className="utrecht-form-field--sm">
-                    <Button
-                      kind="primary"
-                      size="md"
-                      label="Zoeken"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    ></Button>
-                  </FormField>
-                </Fieldset>
-              </div>
-            </MaxWidthLayout>
-          </div>
+          <Fieldset legend="">
+            <div className="rvo-form-layout">
+              <MaxWidthLayout size="sm">
+                <div className="rvo-inline-form">
+                  <TextInputField label="Zoekterm"></TextInputField>
+                  <Button
+                    kind="primary"
+                    size="md"
+                    label="Zoeken"
+                    active={false}
+                    busy={false}
+                    focus={false}
+                    focusVisible={false}
+                    disabled={false}
+                    hover={false}
+                    showIcon="no"
+                  ></Button>
+                </div>
+              </MaxWidthLayout>
+            </div>
+          </Fieldset>
         </div>
         <MaxWidthLayout size="sm">
           <main>

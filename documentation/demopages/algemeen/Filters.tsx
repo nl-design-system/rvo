@@ -1,4 +1,6 @@
+// import { Button } from '@nl-rvo/components/button/css/template';
 import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
+import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
@@ -7,7 +9,6 @@ import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import '../common/style.scss';
-import { Fieldset, FormField } from '@utrecht/component-library-react';
 
 const Filters = () => {
   return (
@@ -45,242 +46,233 @@ const Filters = () => {
                 </MaxWidthLayout>
                 <LayoutColumnRow size="md">
                   <div className="rvo-tmp-filters">
-                    <Fieldset className={'utrecht-form-fieldset--grid'}>
-                      <MaxWidthLayout size="sm">
-                        <FormField>
+                    <Fieldset legend="">
+                      <MaxWidthLayout size="lg">
+                        <LayoutColumnRow size="xl" row={true}>
                           <TextInputField label="Zoek op trefwoord/code"></TextInputField>
-                        </FormField>
+                          <details className="rvo-tmp-filter">
+                            <summary>
+                              <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                                <label
+                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
+                                  htmlFor="fieldId"
+                                >
+                                  <span className="rvo-form-field__label-text">Ik wil duurzaam investeren in</span>
+                                </label>
+                                <div className="rvo-select-wrapper">
+                                  <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
+                                    Maak een keuze
+                                  </div>
+                                </div>
+                              </div>
+                            </summary>
+                            <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionA"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionA"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Agro en visserij
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionB"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionB"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Bouw en infrastructuur
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionC"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionC"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Groot- en detailhandel
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionD"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionD"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Milieusector
+                              </label>
+                            </div>
+                          </details>
+                          <details className="rvo-tmp-filter">
+                            <summary>
+                              <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                                <label
+                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
+                                  htmlFor="fieldId"
+                                >
+                                  <span className="rvo-form-field__label-text">Mijn milieudoel is</span>
+                                </label>
+                                <div className="rvo-select-wrapper">
+                                  <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
+                                    Maak een keuze
+                                  </div>
+                                </div>
+                              </div>
+                            </summary>
+                            <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionA1"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionA1"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Afval(water) verwerken
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionB1"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionB1"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Bodem beschermen
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionC1"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionC1"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Broeikasgassen reduceren
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionD1"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionD1"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                Circular ondernemen
+                              </label>
+                            </div>
+                          </details>
+                          <details className="rvo-tmp-filter">
+                            <summary>
+                              <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                                <label
+                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
+                                  htmlFor="fieldId"
+                                >
+                                  <span className="rvo-form-field__label-text">Jaar</span>
+                                </label>
+                                <div className="rvo-select-wrapper">
+                                  <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
+                                    Maak een keuze
+                                  </div>
+                                </div>
+                              </div>
+                            </summary>
+                            <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionA2"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionA2"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                2022
+                              </label>
+                            </div>
+                          </details>
+                          <details className="rvo-tmp-filter">
+                            <summary>
+                              <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                                <label
+                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
+                                  htmlFor="fieldId"
+                                >
+                                  <span className="rvo-form-field__label-text">Regeling</span>
+                                </label>
+                                <div className="rvo-select-wrapper">
+                                  <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
+                                    Maak een keuze
+                                  </div>
+                                </div>
+                              </div>
+                            </summary>
+                            <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
+                              <label
+                                className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionA3"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionA3"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                MIA\Vamil
+                              </label>
+                              <label
+                                className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
+                                htmlFor="optionB3"
+                              >
+                                <input
+                                  type="checkbox"
+                                  id="optionB3"
+                                  name="group"
+                                  className="rvo-checkbox__input"
+                                  value=""
+                                />
+                                EIA
+                              </label>
+                            </div>
+                          </details>
+                        </LayoutColumnRow>
                       </MaxWidthLayout>
-                      <FormField className="utrecht-form-field--quarter utrecht-form-field--start">
-                        <details className="rvo-tmp-filter">
-                          <summary>
-                            <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                              <label
-                                className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                htmlFor="fieldId"
-                              >
-                                <span className="rvo-form-field__label-text">Ik wil duurzaam investeren in</span>
-                              </label>
-                              <div className="rvo-select-wrapper">
-                                <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
-                                  Maak een keuze
-                                </div>
-                              </div>
-                            </div>
-                          </summary>
-                          <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionA"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionA"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Agro en visserij
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionB"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionB"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Bouw en infrastructuur
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionC"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionC"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Groot- en detailhandel
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionD"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionD"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Milieusector
-                            </label>
-                          </div>
-                        </details>
-                      </FormField>
-                      <FormField className={'utrecht-form-field--quarter'}>
-                        <details className="rvo-tmp-filter">
-                          <summary>
-                            <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                              <label
-                                className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                htmlFor="fieldId"
-                              >
-                                <span className="rvo-form-field__label-text">Mijn milieudoel is</span>
-                              </label>
-                              <div className="rvo-select-wrapper">
-                                <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
-                                  Maak een keuze
-                                </div>
-                              </div>
-                            </div>
-                          </summary>
-                          <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionA1"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionA1"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Afval(water) verwerken
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionB1"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionB1"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Bodem beschermen
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionC1"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionC1"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Broeikasgassen reduceren
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionD1"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionD1"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              Circular ondernemen
-                            </label>
-                          </div>
-                        </details>
-                      </FormField>
-                      <FormField className={'utrecht-form-field--quarter'}>
-                        <details className="rvo-tmp-filter">
-                          <summary>
-                            <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                              <label
-                                className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                htmlFor="fieldId"
-                              >
-                                <span className="rvo-form-field__label-text">Jaar</span>
-                              </label>
-                              <div className="rvo-select-wrapper">
-                                <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
-                                  Maak een keuze
-                                </div>
-                              </div>
-                            </div>
-                          </summary>
-                          <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionA2"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionA2"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              2022
-                            </label>
-                          </div>
-                        </details>
-                      </FormField>
-                      <FormField className={'utrecht-form-field--quarter'}>
-                        <details className="rvo-tmp-filter">
-                          <summary>
-                            <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                              <label
-                                className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                htmlFor="fieldId"
-                              >
-                                <span className="rvo-form-field__label-text">Regeling</span>
-                              </label>
-                              <div className="rvo-select-wrapper">
-                                <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
-                                  Maak een keuze
-                                </div>
-                              </div>
-                            </div>
-                          </summary>
-                          <div className="rvo-checkbox__group rvo-layout-column rvo-layout-gap--sm">
-                            <label
-                              className="rvo-checkbox rvo-checkbox--not-checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionA3"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionA3"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              MIA\Vamil
-                            </label>
-                            <label
-                              className="rvo-checkbox rvo-checkbox--checked rvo-layout-row rvo-layout-gap--sm"
-                              htmlFor="optionB3"
-                            >
-                              <input
-                                type="checkbox"
-                                id="optionB3"
-                                name="group"
-                                className="rvo-checkbox__input"
-                                value=""
-                              />
-                              EIA
-                            </label>
-                          </div>
-                        </details>
-                      </FormField>
                     </Fieldset>
                   </div>
-
                   <LayoutColumnRow size="2xl">
                     <div className="rvo-active-filters">
                       <MaxWidthLayout size="sm">
