@@ -1,7 +1,6 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
@@ -16,247 +15,65 @@ const Accordion = () => {
         <MaxWidthLayout size="sm">
           <main className="rvo-main">
             <LayoutColumnRow size="sm">
-              <Heading type="h1" textContent="Accordion" />
+              <Heading type="h1" textContent="Telefonisch contact" />
+
+              <p>
+                Heeft u vragen? Neem gerust telefonisch contact met ons op. U bereikt ons op werkdagen van 08:30 tot
+                17:00 uur. Tussen 8:30 en 12:00 uur en tussen 14:00 en 17:00 uur zijn de wachttijden het kortst.
+              </p>
+
+              <Heading type="h2" textContent="Keuzemenu's"></Heading>
+
               <LayoutColumnRow size="xl">
-                {/* <div className="rvo-accordion">
-                  <Heading type="h2" textContent="Accordion Default" />
-                  <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor ondernemers en gemeentes met e-Herkenning
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>
-                        U bent <strong>ondernemer</strong> en ingeschreven bij KVK. Of u logt in namens een{' '}
-                        <strong>gemeente</strong>.{' '}
-                      </p>
-                      <p>
-                        Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" url="#"></Link> .
-                        Lukt het inloggen niet? Ga naar <Link content="Hulp bij inloggen" url="#"></Link>.
-                      </p>{' '}
-                      <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--digid">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor particulieren met DigiD
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>
-                        U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD.
-                        Meer informatie leest u op de website van <Link content="DigiD" url="#"></Link>
-                      </p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--eu">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Digital identity from another European country
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>Log in with a digital identity from another European country.</p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--anders">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Anders inloggen
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>U heeft geen eHerkenning of DigiD.</p>
-                    </div>
-                  </details>
-                </div>
-
-                <div className="rvo-accordion rvo-accordion--w-teasers">
-                  <Heading type="h2" textContent="Accordion with teasers" />
-                  <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor ondernemers en gemeentes met e-Herkenning
-                        </span>
-                        <span className="rvo-accordion-teaser">This is a teaser of what to expect when expanding</span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>
-                        U bent <strong>ondernemer</strong> en ingeschreven bij KVK. Of u logt in namens een{' '}
-                        <strong>gemeente</strong>.{' '}
-                      </p>
-                      <p>
-                        Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" url="#"></Link> .
-                        Lukt het inloggen niet? Ga naar <Link content="Hulp bij inloggen" url="#"></Link>.
-                      </p>{' '}
-                      <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--digid">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor particulieren met DigiD
-                        </span>
-                        <span className="rvo-accordion-teaser">Toon meer</span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>
-                        U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD.
-                        Meer informatie leest u op de website van <Link content="DigiD" url="#"></Link>
-                      </p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--eu">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Digital identity from another European country
-                        </span>
-                        <span className="rvo-accordion-teaser">Toon meer</span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>Log in with a digital identity from another European country.</p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--anders">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Anders inloggen
-                        </span>
-                        <span className="rvo-accordion-teaser">Toon meer</span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>U heeft geen eHerkenning of DigiD.</p>
-                    </div>
-                  </details>
-                </div>
-
-                <div className="rvo-accordion rvo-accordion--colored rvo-accordion--grijs">
-                  <Heading type="h2" textContent="Accordion colored (grijs)" />
-                  <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor ondernemers en gemeentes met e-Herkenning
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>
-                        U bent <strong>ondernemer</strong> en ingeschreven bij KVK. Of u logt in namens een{' '}
-                        <strong>gemeente</strong>.{' '}
-                      </p>
-                      <p>
-                        Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" url="#"></Link> .
-                        Lukt het inloggen niet? Ga naar <Link content="Hulp bij inloggen" url="#"></Link>.
-                      </p>{' '}
-                      <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--digid">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor particulieren met DigiD
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>
-                        U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD.
-                        Meer informatie leest u op de website van <Link content="DigiD" url="#"></Link>
-                      </p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--eu">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Digital identity from another European country
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>Log in with a digital identity from another European country.</p>
-                    </div>
-                  </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--anders">
-                    <summary className="rvo-accordion__item-summary">
-                      <h3 className="rvo-link">
-                        <span className="rvo-accordion__item-title">
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
-                          <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Anders inloggen
-                        </span>
-                      </h3>
-                    </summary>
-                    <div className="rvo-accordion__content">
-                      <p>U heeft geen eHerkenning of DigiD.</p>
-                    </div>
-                  </details>
-                </div> */}
-
                 <div className="rvo-accordion rvo-accordion--colored rvo-accordion--border-indicator">
-                  {/* <Heading type="h2" textContent="Accordion with border indicator" /> */}
-                  <details className="rvo-accordion__item rvo-login-option login-option--e-herkenning">
+                  <details className="rvo-accordion__item">
                     <summary className="rvo-accordion__item-summary">
                       <h3 className="rvo-link">
                         <span className="rvo-accordion__item-title">
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor ondernemers en gemeentes met e-Herkenning
+                          Keuzemenu 088 042 42 42
                         </span>
                       </h3>
+                      <span className="rvo-accordion-teaser">Voor bedrijven, instellingen en overheden</span>
                     </summary>
                     <div className="rvo-accordion__content">
                       <p>
-                        U bent <strong>ondernemer</strong> en ingeschreven bij KVK. Of u logt in namens een{' '}
-                        <strong>gemeente</strong>.{' '}
+                        Belt u namens een bedrijf, instelling of overheidsorganisatie? Via het keuzemenu krijgt u de
+                        juiste medewerker aan de lijn om u verder te helpen.
                       </p>
+
+                      <Heading type="h4" textContent="For English, press 8"></Heading>
+                      <br />
+
+                      <Heading
+                        type="h4"
+                        textContent="Keuze 0: voor BGT-check, sancties Rusland, de simulatietool van het nieuwe
+                      GLB en de SVV"
+                      ></Heading>
                       <p>
-                        Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" url="#"></Link> .
-                        Lukt het inloggen niet? Ga naar <Link content="Hulp bij inloggen" url="#"></Link>.
-                      </p>{' '}
-                      <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
+                        0 - 1: vragen over BGT check
+                        <br />
+                        0 - 2: vragen over sancties Rusland <br />0 - 3: vragen over de simulatietool ECO-regeling
+                        nieuwe Gemeenschappelijk Landbouwbeleid (GLB) <br />0 - 4: vragen over de Subsidie Saneren van
+                        Vissersvaartuigen (SVV)
+                      </p>
+                      <Heading
+                        type="h4"
+                        textContent="Keuze 1: dieren, spuitlicenties, landbouw, natuur en
+                      visserij"
+                      ></Heading>
+                      <p>
+                        1 - 1: openbaarmaking van fosfaatrechten, vervoer en uitrijden van mest, productierechten,
+                        gebruiksnormen en andere mestregelingen <br />
+                        1 - 2: dierregistratie, dierenwelzijn en andere dierregelingen
+                        <br />
+                        1 - 2 - 1: handel in bedreigde planten en diersoorten (CITES)
+                        <br />
+                        1 - 2 - 2: dierregistratie, dierenwelzijn en andere dierregelingen <br />
+                        1 - 3: spuitlicenties, betalingsrechten, GLB en grondregistratie <br />1 - 4: alle andere
+                        onderwerpen voor landbouw, natuur en visserij Keuze
+                      </p>
                     </div>
                   </details>
                   <details className="rvo-accordion__item rvo-login-option login-option--digid">
@@ -265,48 +82,91 @@ const Accordion = () => {
                         <span className="rvo-accordion__item-title">
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Voor particulieren met DigiD
+                          Keuzemenu 088 042 47 47
                         </span>
-                        <span className="rvo-accordion-teaser">Optional teaser text</span>
                       </h3>
+                      <span className="rvo-accordion-teaser">Voor particulieren, woningeigenaren</span>
                     </summary>
                     <div className="rvo-accordion__content">
                       <p>
-                        U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD.
-                        Meer informatie leest u op de website van <Link content="DigiD" url="#"></Link>
+                        Bent u particulier? Via het keuzemenu krijgt u de juiste medewerker aan de telefoon om u verder
+                        te helpen.
+                      </p>
+
+                      <Heading
+                        type="h4"
+                        textContent="Keuze 1: subsidies en andere regelgeving op het gebied van duurzaamheid, energie, of wonen"
+                      ></Heading>
+                      <p>
+                        1 - 1: Energielabel voor woningeigenaren <br />1 - 2: ISDE, Isolatie, Warmtepompen, Zonneboilers
+                        en aansluiting op warmtenet <br />1 - 3: elektrisch Rijden <br />1 - 4: SVOH
                       </p>
                     </div>
                   </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--eu">
+                  <details className="rvo-accordion__item rvo-login-option login-option--digid">
                     <summary className="rvo-accordion__item-summary">
                       <h3 className="rvo-link">
                         <span className="rvo-accordion__item-title">
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Digital identity from another European country
+                          Keuzemenu 088 042 25 00
                         </span>
                       </h3>
+                      <span className="rvo-accordion-teaser">COVID-19</span>
                     </summary>
                     <div className="rvo-accordion__content">
-                      <p>Log in with a digital identity from another European country.</p>
+                      <p>
+                        Belt u over de TVL of een andere COVID-19-regeling? Via het keuzemenu krijgt u de juiste
+                        medewerker aan de telefoon om u verder te helpen.
+                      </p>
+
+                      <Heading type="h4" textContent="Keuze 1: Tegemoetkoming Vaste Lasten (TVL)"></Heading>
+                      <br />
+                      <Heading type="h4" textContent="Keuze 2: Subsidieregeling Evenementen (ATE)"></Heading>
+                      <br />
+                      <Heading type="h4" textContent="Keuze 3: Ongedekte Vaste Kosten (OVK)"></Heading>
+                      <br />
+                      <Heading
+                        type="h4"
+                        textContent="Keuze 4: Tijdelijke Subsidieregeling Vuurwerkverbod COVID-19 (TSVC-19)"
+                      ></Heading>
                     </div>
                   </details>
-                  <details className="rvo-accordion__item rvo-login-option login-option--anders">
+                  <details className="rvo-accordion__item rvo-login-option login-option--digid">
                     <summary className="rvo-accordion__item-summary">
                       <h3 className="rvo-link">
                         <span className="rvo-accordion__item-title">
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw"></span>
                           <span className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw"></span>
-                          Anders inloggen
+                          Keuzemenu 088 042 4070
                         </span>
                       </h3>
+                      <span className="rvo-accordion-teaser">Waterschade (WTS)</span>
                     </summary>
                     <div className="rvo-accordion__content">
-                      <p>U heeft geen eHerkenning of DigiD.</p>
+                      <p>
+                        Belt u over de WTS? Via het keuzemenu krijgt u de juiste medewerker aan de telefoon om u verder
+                        te helpen.
+                      </p>
+
+                      <Heading
+                        type="h4"
+                        textContent="Keuze 1: WTS juli 2021 en tegemoetkoming omzetschade Limburg en Noord-Brabant"
+                      ></Heading>
+                      <br />
+                      <Heading
+                        type="h4"
+                        textContent="Keuze 2: Tegemoetkoming teeltplanschade Uiterwaarden juli 2021"
+                      ></Heading>
                     </div>
                   </details>
                 </div>
+                <Heading type="h2" textContent="Met u meekijken"></Heading>
               </LayoutColumnRow>
+              <p>
+                Met u meekijken Als het nodig is, kan onze medewerker met u meekijken op uw scherm. Dit gaat in overleg
+                met u. Wij zien alleen het scherm dat u ook ziet. Wij nemen niet uw computer over.
+              </p>
             </LayoutColumnRow>
           </main>
         </MaxWidthLayout>
