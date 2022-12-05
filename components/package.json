@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@nl-rvo/storybook": "file:../packages/storybook",
-    "@storybook/addon-docs": "6.5.9"
+    "@storybook/addon-docs": "6.5.14"
   },
   "dependencies": {
     "clsx": "1.1.1"
