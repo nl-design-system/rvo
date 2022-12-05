@@ -95,6 +95,9 @@
       },
       "subtle": {
         "font-weight": { "value": "{rvo.font-weight.bold}" },
+        "active": {
+          "color": { "value": "{rvo.color.rood-shade1}" }
+        },
         "hover": {
           "text-decoration": { "value": "underline" }
         },

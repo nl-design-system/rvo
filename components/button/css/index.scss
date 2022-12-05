@@ -3,7 +3,6 @@
 @import "../../../node_modules/@utrecht/components/button/css/mixin";
 
 // Subtle button
-
 .utrecht-button--subtle.utrecht-button--hover:not(:disabled),
 .utrecht-button--subtle.utrecht-button-link--hover:not(:disabled),
 .utrecht-button--subtle:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
@@ -50,4 +49,74 @@
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-md-padding-block-start);
   --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-md-padding-inline-end);
   --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-md-padding-inline-start);
+}
+
+// Override primary icon colors
+.utrecht-button--primary-action,
+.utrecht-button--secondary-action,
+.utrecht-button--rvo-tertiary-action,
+.utrecht-button--rvo-quaternary-action,
+.utrecht-button--subtle,
+.utrecht-button--warning {
+  .utrecht-icon.rvo-icon {
+    background-color: var(--_utrecht-button-appearance-color, var(--_utrecht-button-color));
+  }
+}
+
+.utrecht-button--primary-action:hover,
+.utrecht-button--primary-action.utrecht-button--hover,
+.utrecht-button--secondary-action:hover,
+.utrecht-button--secondary-action.utrecht-button--hover,
+.utrecht-button--rvo-tertiary-action:hover,
+.utrecht-button--rvo-tertiary-action.utrecht-button--hover,
+.utrecht-button--rvo-quaternary-action:hover,
+.utrecht-button--rvo-quaternary-action.utrecht-button--hover,
+.utrecht-button--subtle:hover,
+.utrecht-button--subtle.utrecht-button--hover,
+.utrecht-button--warning:hover,
+.utrecht-button--warning.utrecht-button--hover {
+  .utrecht-icon.rvo-icon {
+    background-color: var(--_utrecht-button-appearance-hover-color, var(--_utrecht-button-hover-color));
+  }
+}
+
+.utrecht-button--primary-action:disabled,
+.utrecht-button--primary-action.utrecht-button--disabled,
+.utrecht-button--secondary-action:disabled,
+.utrecht-button--secondary-action.utrecht-button--disabled,
+.utrecht-button--rvo-tertiary-action:disabled,
+.utrecht-button--rvo-tertiary-action.utrecht-button--disabled,
+.utrecht-button--rvo-quaternary-action:disabled,
+.utrecht-button--rvo-quaternary-action.utrecht-button--disabled,
+.utrecht-button--subtle:disabled,
+.utrecht-button--subtle.utrecht-button--disabled,
+.utrecht-button--warning:disabled,
+.utrecht-button--warning.utrecht-button--disabled {
+  .utrecht-icon.rvo-icon {
+    background-color: var(--_utrecht-button-appearance-disabled-color, var(--_utrecht-button-disabled-color));
+  }
+}
+
+.utrecht-button--primary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--secondary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--rvo-tertiary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--rvo-quaternary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--subtle:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--warning:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--active {
+  .utrecht-icon.rvo-icon {
+    background-color: var(--_utrecht-button-appearance-active-color, var(--_utrecht-button-active-color));
+  }
+}
+
+.utrecht-button--primary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--secondary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--rvo-tertiary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--rvo-quaternary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--subtle:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--warning:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--focus {
+  .utrecht-icon.rvo-icon {
+    background-color: var(--_utrecht-button-appearance-focus-color, var(--_utrecht-button-focus-color));
+  }
 }
