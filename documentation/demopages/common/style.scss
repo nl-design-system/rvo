@@ -1593,6 +1593,10 @@
     .rvo-tmp-filters .utrecht-form-fieldset {
       flex-direction: row;
     }
+    .rvo-tmp-filters .utrecht-form-fieldset__fieldset {
+      margin-inline-end: auto;
+      margin-inline-start: auto;
+    }
 
     .rvo-tmp-filters .utrecht-form-fieldset .rvo-form-field,
     .rvo-tmp-filters .utrecht-form-fieldset .rvo-tmp-filter {
