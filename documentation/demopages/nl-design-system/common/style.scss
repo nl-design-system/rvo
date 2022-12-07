@@ -5,8 +5,8 @@
 @use "rvo/table";
 
 /* Basiselementen temp styling */
-@use "basiselementen/form-field";
 @use "basiselementen/root";
+@use "basiselementen/forms";
 
 /* Component patches
    Patch files will be removed when components have been updated and released */
@@ -14,3 +14,5 @@
 @use "patches/link";
 @use "patches/lists";
 @use "patches/datalist";
+@use "patches/layout-sizes";
+@use "patches/form-layout";
