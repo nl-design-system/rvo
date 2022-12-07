@@ -57,7 +57,7 @@
     "webpack": "4.37.0"
   },
   "dependencies": {
-    "@emotion/react": "11.9.3",
+    "@emotion/react": "11.10.5",
     "@emotion/styled": "11.9.3",
     "@nl-rvo/assets": "file:../proprietary/assets",
     "@nl-rvo/basiselementen-design-tokens": "file:../proprietary/basiselementen-design-tokens",
