@@ -445,6 +445,11 @@
     padding-inline-start: var(--rvo-space-xl);
   }
 
+  .rvo-form .utrecht-form-fieldset__fieldset label:not([class]) {
+    display: inline-block;
+    margin-block-end: 1ex;
+  }
+
   .rvo-file::file-selector-button {
     background-color: var(--rvo-color-wit);
     border: none;

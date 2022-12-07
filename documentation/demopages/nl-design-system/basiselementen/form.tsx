@@ -110,11 +110,11 @@ const Form = () => {
           </Fieldset>
         </Fieldset>
         <ButtonGroup className="utrecht-button-group--horizontal">
-          <Button appearance="secondary-action-button" busy={false} disabled={false}>
-            Vorige
-          </Button>
           <Button appearance="primary-action-button" busy={false} disabled={false}>
             Volgende
+          </Button>
+          <Button appearance="secondary-action-button" busy={false} disabled={false}>
+            Vorige
           </Button>
         </ButtonGroup>
       </form>

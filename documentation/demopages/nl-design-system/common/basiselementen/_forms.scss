@@ -1,11 +1,11 @@
 .basiselementen-theme {
   .rvo-nl-demo-page {
-    --utrecht-space-around: 3;
-
     background-color: var(--basiselementen-color-wit);
     padding-inline: 32px;
 
     form {
+      --utrecht-space-around: 1;
+
       background-color: var(--basiselementen-color-lichtblauw-tint2);
       margin-block-start: 32px;
       margin-inline: auto;
@@ -21,7 +21,6 @@
     padding-inline: 9px;
 
     form {
-      margin-block-start: 32px;
       margin-inline: auto;
       padding-block: 9px;
       padding-inline: 9px;
@@ -30,7 +29,7 @@
     @media (min-width: 768px) {
       form {
         padding-block: 36px;
-        padding-inline: 36px;
+        padding-inline: 0;
       }
     }
   }

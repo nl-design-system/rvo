@@ -13,7 +13,9 @@
 }
 .rvo-theme {
   .rvo-nl-demo-page {
-    --utrecht-space-around: 3;
+    .utrecht-form-fieldset {
+      --utrecht-space-around: 1;
+    }
 
     .utrecht-form-field:not(:last-of-type) {
       padding-block-end: var(--rvo-space-xs);
