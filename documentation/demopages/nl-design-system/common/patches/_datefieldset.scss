@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+  .utrecht-form-fieldset--date {
+    .utrecht-form-field {
+      --utrecht-form-field-min-width: 7ch;
+      --utrecht-form-field-grid-column: auto / span 1;
+
+      & + .utrecht-form-field {
+        --utrecht-form-field-min-width: 7ch;
+        --utrecht-form-field-grid-column: auto / span 1;
+
+        & + .utrecht-form-field {
+          --utrecht-form-field-min-width: 12ch;
+          --utrecht-form-field-grid-column: auto / span 2;
+        }
+      }
+    }
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .utrecht-form-fieldset--date {
+    .utrecht-form-field {
+      --utrecht-form-field-min-width: 7ch;
+      --utrecht-form-field-grid-column: auto / span 2;
+
+      & + .utrecht-form-field {
+        --utrecht-form-field-min-width: 7ch;
+        --utrecht-form-field-grid-column: auto / span 2;
+
+        & + .utrecht-form-field {
+          --utrecht-form-field-min-width: 12ch;
+          --utrecht-form-field-grid-column: auto / span 3;
+        }
+      }
+    }
+  }
+}
