@@ -1,0 +1,12 @@
+{
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "project": ["packages/docusaurus/tsconfig.json"],
+    "sourceType": "module"
+  },
+  "globals": {
+    "JSX": true
+  }
+}
