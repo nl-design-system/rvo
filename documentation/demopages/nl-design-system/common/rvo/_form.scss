@@ -1,24 +1,18 @@
 /* @FORM */
 
-.rvo-form {
-  min-width: 600px;
-
-  .utrecht-form-fieldset {
-    background-color: var(--rvo-color-grijs1);
-    padding-block-end: calc(var(--rvo-space-xs) + var(--rvo-space-md));
-    padding-block-start: calc(var(--rvo-space-xs) + var(--rvo-space-md));
-    padding-inline-end: calc(var(--rvo-space-xs) + var(--rvo-space-md));
-    padding-inline-start: calc(var(--rvo-space-xs) + var(--rvo-space-md));
-  }
-}
 .rvo-theme {
   .rvo-nl-demo-page {
     .utrecht-form-fieldset {
       --utrecht-space-around: 1;
     }
-
     .utrecht-form-field:not(:last-of-type) {
       padding-block-end: var(--rvo-space-xs);
+    }
+  }
+  .rvo-nl-demo-page,
+  .basiselementen-demo-page {
+    .rvo-form {
+      min-width: 600px;
     }
   }
 }
