@@ -334,6 +334,7 @@ const Filters = () => {
                               </div>
                               <a href="#">
                                 <img
+                                  alt={''}
                                   className="rvo-result-image"
                                   src="https://www.rvo.nl/files/file/styles/content/public/2022-07/8-Augustus%202022%20JPJ%20JIC%20Schiphol30.jpg"
                                 ></img>

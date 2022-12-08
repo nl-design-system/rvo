@@ -1,12 +1,18 @@
 {
   "utrecht": {
     "form-field": {
-      "margin-block-start": {
-        "value": "{rvo.space.2xs}"
+      "description": {
+        "margin-block-start": { "value": "0" },
+        "margin-block-end": { "value": "0" }
       },
-      "margin-block-end": {
-        "value": "{rvo.space.2xs}"
-      }
+      "label": {
+        "margin-block-start": { "value": "0" },
+        "margin-block-end": {
+          "value": "0"
+        }
+      },
+      "margin-block-start": {},
+      "margin-block-end": {}
     }
   }
 }
