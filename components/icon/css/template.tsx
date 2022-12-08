@@ -64,7 +64,7 @@ export const Icon: React.FC<IIconProps> = ({
 }: IIconProps) => {
   let iconName = icon as string;
   if (icon.indexOf(' > ') > -1) {
-    iconName = icon.split(' > ')[1];
+    iconName = icon.split(' > ')[1].replace(/ /g, '-').toLowerCase();
   }
 
   return (

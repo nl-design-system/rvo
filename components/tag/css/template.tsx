@@ -76,19 +76,19 @@ export const Tag: React.FC<ITagProps> = ({
   switch (type) {
     default:
     case 'default':
-      iconMarkup = Icon({ icon: icon as any, size: 'lg', classNames: iconClassNames });
+      iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', classNames: iconClassNames });
       break;
     case 'info':
-      iconMarkup = Icon({ icon: 'info', size: 'xl', color: 'hemelblauw', classNames: iconClassNames });
+      iconMarkup = Icon({ icon: 'info', size: 'xl', color: '', classNames: iconClassNames });
       break;
     case 'warning':
-      iconMarkup = StatusIcon({ type: 'waarschuwing', size: 'lg' });
+      iconMarkup = StatusIcon({ type: 'waarschuwing', size: 'lg', ignoreDefaultIconColor: true });
       break;
     case 'error':
-      iconMarkup = StatusIcon({ type: 'foutmelding', size: 'lg' });
+      iconMarkup = StatusIcon({ type: 'foutmelding', size: 'lg', ignoreDefaultIconColor: true });
       break;
     case 'success':
-      iconMarkup = StatusIcon({ type: 'bevestiging', size: 'lg' });
+      iconMarkup = StatusIcon({ type: 'bevestiging', size: 'lg', ignoreDefaultIconColor: true });
       break;
   }
 
