@@ -1,8 +1,8 @@
 {
   "utrecht": {
     "form-fieldset": {
-      "margin-block-end": { "value": "9px" },
-      "margin-block-start": { "value": "9px" },
+      "margin-block-end": { "value": "1ex" },
+      "margin-block-start": { "value": "1ex" },
       "section": {
         "background-color": { "value": "{basiselementen.color.wit}" },
         "color": {}
