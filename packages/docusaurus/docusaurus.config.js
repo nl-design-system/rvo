@@ -1,8 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const lightCodeTheme = require('prism-react-renderer/themes/github');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -10,16 +6,20 @@ const config = {
   tagline: 'Documentatie',
   url: 'https://nl-design-system.github.io',
   baseUrl: '/rvo',
+  customFields: {
+    storybookUrl: process.env['NODE_ENV'] === 'development' ? 'http://localhost:6006/' : '.rvo/storybook/',
+  },
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'nl-rvo',
+  plugins: ['docusaurus-plugin-sass'],
   projectName: 'rvo',
   i18n: {
     defaultLocale: 'nl',
     locales: ['nl'],
   },
-
+  staticDirectories: ['static', '../../proprietary/assets'],
   presets: [
     [
       'classic',
@@ -27,9 +27,16 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs',
+          routeBasePath: 'docs',
+          editUrl: 'https://github.com/nl-design-system/rvo/tree/main/documentation',
+          breadcrumbs: false,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('@utrecht/design-tokens/dist/index.css'),
+            require.resolve('./src/css/custom.css'),
+          ],
         },
       },
     ],
@@ -38,6 +45,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
+      colorMode: {
+        respectPrefersColorScheme: false,
+        disableSwitch: true,
+      },
+      metadata: [
+        {
+          name: 'Content-Security-Policy',
+          content: `frame-ancestors 'none'; object-src 'none'; base-uri 'none'; default-src 'self'; media-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline' 'self'; connect-src 'self' https://*.algolia.net https://*.algolianet.com; frame-src 'self' https://nl-design-system.github.io; font-src 'self';`,
+        },
+      ],
+      prism: {
+        theme: require('prism-react-renderer/themes/github'),
+      },
       navbar: {
         title: 'ROOS ',
         logo: {
@@ -54,6 +74,12 @@ const config = {
           {
             href: 'https://github.com/nl-design-system/rvo',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            prependBaseUrlToHref: true,
+            href: './storybook/',
+            label: 'Storybook',
             position: 'right',
           },
         ],
@@ -88,11 +114,6 @@ const config = {
             ],
           },
         ],
-        copyright: `Met liefde gemaakt door RVO, 2022`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
     },
 };
