@@ -61,20 +61,23 @@ const Form = () => {
           </FormField>
         </Fieldset>
         <Fieldset className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--grid')}>
-          <Fieldset aria-describedby={'billingdatedescription'} className={'utrecht-form-fieldset--subtle'}>
+          <Fieldset
+            aria-describedby={'billingdatedescription'}
+            className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--date')}
+          >
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Factuurdatum</FieldsetLegend>
             <FormFieldDescription id={'billingdatedescription'}>
               Vul de datum in die op de factuur van de zonnepanelen staat.
             </FormFieldDescription>
-            <FormField className={'utrecht-form-field--xs'}>
+            <FormField>
               <FormLabel htmlFor={'day'}>Dag</FormLabel>
               <Textbox id={'day'} invalid={true}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--xs '}>
+            <FormField>
               <FormLabel htmlFor={'month'}>Maand</FormLabel>
               <Textbox id={'month'} invalid={true}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--sm '}>
+            <FormField>
               <FormLabel htmlFor={'year'}>Jaar</FormLabel>
               <Textbox id={'year'} invalid={true}></Textbox>
             </FormField>
