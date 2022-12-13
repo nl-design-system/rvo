@@ -3,7 +3,7 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ROOS Design System',
-  tagline: 'Documentatie',
+  tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   url: 'https://nl-design-system.github.io',
   baseUrl: '/rvo',
   customFields: {
