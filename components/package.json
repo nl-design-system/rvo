@@ -12,8 +12,11 @@
     "lint": "tsc --noEmit --project tsconfig.json"
   },
   "devDependencies": {
-    "@nl-rvo/storybook": "file:../packages/storybook",
-    "@storybook/addon-docs": "6.5.9"
+    "@emotion/styled": "11.9.3",
+    "@nl-rvo/assets": "workspace:*",
+    "@nl-rvo/storybook": "workspace:*",
+    "@storybook/addon-docs": "6.5.9",
+    "macro": "link:@emotion/styled/macro"
   },
   "dependencies": {
     "clsx": "1.1.1"

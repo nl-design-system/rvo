@@ -1,5 +1,4 @@
 {
-  "composer.json": "composer validate",
   "package.json": "npmPkgJsonLint --allowEmptyTargets",
   "*.md": ["markdownlint", "prettier --check"],
   "*.{js,jsx,ts,tsx}": ["eslint --no-error-on-unmatched-pattern", "prettier --check"],

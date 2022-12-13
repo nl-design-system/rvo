@@ -11,7 +11,13 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react-jsx",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
+      "@nl-rvo/assets/*": ["../proprietary/assets/*"]
+    }
   },
+  "include": ["**/*", "components.d.ts"],
   "exclude": ["**/node_modules"]
 }

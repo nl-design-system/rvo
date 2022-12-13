@@ -30,7 +30,6 @@
     "@nl-rvo/basiselementen-design-tokens": "file:../../proprietary/basiselementen-design-tokens",
     "@nl-rvo/design-tokens": "file:../../proprietary/design-tokens",
     "@nl-rvo/web-components-css": "file:../web-components-css",
-    "@percy/storybook": "4.3.4",
     "@storybook/addon-a11y": "6.5.10",
     "@storybook/addon-controls": "6.5.10",
     "@storybook/addon-docs": "6.5.10",

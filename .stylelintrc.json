@@ -155,6 +155,7 @@
     "value-list-comma-newline-before": null,
     "value-list-comma-space-after": null,
     "value-list-comma-space-before": null,
-    "value-list-max-empty-lines": null
+    "value-list-max-empty-lines": null,
+    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }]
   }
 }
