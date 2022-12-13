@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "16.14.0"
 
@@ -37,8 +37,15 @@ jobs:
         run: |
           npm run test --if-present
 
+      - name: "Retain build artifact: website"
+        uses: actions/upload-artifact@v3
+        with:
+          name: website
+          path: packages/design-system-website/dist/
+          retention-days: 1
+
       - name: "Retain build artifact: Storybook"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -66,25 +73,27 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_NLDESIGNSYSTEM }}
           storybookBuildDir: packages/storybook/dist/
 
-  publish-storybook:
+  publish-website:
     runs-on: ubuntu-latest
     needs: continuous-integration
     if: github.ref == 'refs/heads/master'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: "Checkout release branch"
+      - uses: actions/checkout@v3
 
-      - name: "Restore build artifact: Storybook"
-        uses: actions/download-artifact@v2
+      - name: "Restore build artifact: website"
+        uses: actions/download-artifact@v3
         with:
-          name: storybook
-          path: packages/storybook/dist/
+          name: website
+          path: packages/design-system-website/dist/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+        uses: JamesIves/github-pages-deploy-action@4.4.0
         with:
           branch: gh-pages
-          folder: packages/storybook/dist/
+          folder: packages/design-system-website/dist/
+          token: ${{ secrets.GH_TOKEN }}
 
   publish-npm:
     runs-on: ubuntu-latest
@@ -98,7 +107,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "16.14.0"
 
