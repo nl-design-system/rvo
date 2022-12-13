@@ -5,7 +5,6 @@
     }
 
     &--third {
-      --utrecht-form-field-min-width: 20ch;
       --utrecht-form-field-grid-column: auto / span 4;
     }
 
@@ -23,7 +22,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     .utrecht-form-field {
       &--xs {
         --utrecht-form-field-min-width: 7ch;
@@ -36,7 +35,6 @@
       }
 
       &--md {
-        --utrecht-form-field-min-width: 20ch;
         --utrecht-form-field-grid-column: auto / span 4;
       }
 
@@ -49,7 +47,38 @@
       }
     }
   }
-  @media not all and (min-width: 768px) {
+  @media (min-width: 480px) {
+    .utrecht-form-field {
+      &--xs {
+        --utrecht-form-field-min-width: 7ch;
+        --utrecht-form-field-grid-column: auto / span 1;
+      }
+
+      &--sm {
+        --utrecht-form-field-min-width: 12ch;
+        --utrecht-form-field-grid-column: auto / span 2;
+      }
+
+      &--md {
+        --utrecht-form-field-grid-column: auto / span 4;
+      }
+
+      &--lg {
+        --utrecht-form-field-grid-column: auto / span 8;
+      }
+
+      &--xl {
+        --utrecht-form-field-grid-column: auto / span 9;
+      }
+
+      &--quarter {
+        --utrecht-form-field-min-width: 12ch;
+        --utrecht-form-field-grid-column: auto / span 3;
+      }
+    }
+  }
+
+  @media not all and (min-width: 480px) {
     .utrecht-form-field {
       &--xs {
         --utrecht-form-field-min-width: 7ch;
@@ -62,7 +91,6 @@
       }
 
       &--md {
-        --utrecht-form-field-min-width: 20ch;
         --utrecht-form-field-grid-column: auto / span 6;
       }
 
@@ -76,7 +104,7 @@
 
       &--quarter {
         --utrecht-form-field-min-width: 12ch;
-        --utrecht-form-field-grid-column: auto / span 6;
+        --utrecht-form-field-grid-column: auto / span 3;
       }
     }
   }
