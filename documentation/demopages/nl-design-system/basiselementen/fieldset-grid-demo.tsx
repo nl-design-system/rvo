@@ -9,102 +9,112 @@ const Demo = () => {
       <form className="basiselementen-layout-form">
         <Fieldset className={clsx('utrecht-form-fieldset--grid')}>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--xs'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'xs'}></Textbox>
           </FormField>
 
-          <FormField className={'utrecht-form-field--sm'}>
-            <Textbox></Textbox>
+          <FormField className={clsx('utrecht-form-field--sm', 'utrecht-form-field--start')}>
+            <Textbox placeholder={'sm'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--sm'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'sm'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--sm'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'sm'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--sm'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'sm'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--sm'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'sm'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--sm'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'sm'}></Textbox>
           </FormField>
 
-          <FormField className={'utrecht-form-field--quarter'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--quarter'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--quarter'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--quarter'}>
-            <Textbox></Textbox>
-          </FormField>
-
-          <FormField className={'utrecht-form-field--md'}>
-            <Textbox></Textbox>
+          <FormField className={clsx('utrecht-form-field--md', 'utrecht-form-field--start')}>
+            <Textbox placeholder={'md'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--md'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'md'}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--md'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'md'}></Textbox>
           </FormField>
 
+          <FormField className={clsx('utrecht-form-field--start', 'utrecht-form-field--lg')}>
+            <Textbox placeholder={'lg'}></Textbox>
+          </FormField>
+          <FormField className={clsx('utrecht-form-field--start', 'utrecht-form-field--xl')}>
+            <Textbox placeholder={'xl'}></Textbox>
+          </FormField>
+          <FormField className={clsx('utrecht-form-field--full-1')}>
+            <Textbox placeholder={'full-1'}></Textbox>
+          </FormField>
+
+          <FormField className={clsx('utrecht-form-field--start', 'utrecht-form-field--quarter')}>
+            <Textbox placeholder={'quarter'}></Textbox>
+          </FormField>
+          <FormField className={'utrecht-form-field--quarter'}>
+            <Textbox placeholder={'quarter'}></Textbox>
+          </FormField>
+          <FormField className={'utrecht-form-field--quarter'}>
+            <Textbox placeholder={'quarter'}></Textbox>
+          </FormField>
+          <FormField className={'utrecht-form-field--quarter'}>
+            <Textbox placeholder={'quarter'}></Textbox>
+          </FormField>
+
+          <FormField className={clsx('utrecht-form-field--start', 'utrecht-form-field--third')}>
+            <Textbox placeholder={'third'}></Textbox>
+          </FormField>
+          <FormField className={'utrecht-form-field--third'}>
+            <Textbox placeholder={'third'}></Textbox>
+          </FormField>
+          <FormField className={'utrecht-form-field--third'}>
+            <Textbox placeholder={'third'}></Textbox>
+          </FormField>
+          <FormField className={clsx('utrecht-form-field--half')}>
+            <Textbox placeholder={'half'}></Textbox>
+          </FormField>
           <FormField className={'utrecht-form-field--half'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--half'}>
-            <Textbox></Textbox>
+            <Textbox placeholder={'half'}></Textbox>
           </FormField>
 
-          <FormField className={'utrecht-form-field--lg'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--xl'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--full-1'}>
-            <Textbox></Textbox>
-          </FormField>
-          <FormField className={'utrecht-form-field--full'}>
-            <Textbox></Textbox>
+          <FormField className={clsx('utrecht-form-field--full')}>
+            <Textbox placeholder={'full'}></Textbox>
           </FormField>
         </Fieldset>
       </form>

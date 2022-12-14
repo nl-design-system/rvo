@@ -1,93 +1,12 @@
 .utrecht-form-fieldset--grid {
-  .utrecht-form-field {
-    &--full-1 {
-      --utrecht-form-field-grid-column: auto / span 11;
-    }
-
-    &--third {
-      --utrecht-form-field-grid-column: auto / span 4;
-    }
-
-    &--quarter {
-      --utrecht-form-field-min-width: 12ch;
-      --utrecht-form-field-grid-column: auto / span 3;
-    }
-
-    &--half {
-      --utrecht-form-field-grid-column: auto / span 6;
-    }
-
-    &--full {
-      --utrecht-form-field-grid-column: 1 / -1;
-    }
-  }
-
-  @media (min-width: 960px) {
-    .utrecht-form-field {
-      &--xs {
-        --utrecht-form-field-min-width: 7ch;
-        --utrecht-form-field-grid-column: auto / span 1;
-      }
-
-      &--sm {
-        --utrecht-form-field-min-width: 12ch;
-        --utrecht-form-field-grid-column: auto / span 2;
-      }
-
-      &--md {
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--lg {
-        --utrecht-form-field-grid-column: auto / span 8;
-      }
-
-      &--xl {
-        --utrecht-form-field-grid-column: auto / span 10;
-      }
-    }
-  }
-  @media (min-width: 480px) {
-    .utrecht-form-field {
-      &--xs {
-        --utrecht-form-field-min-width: 7ch;
-        --utrecht-form-field-grid-column: auto / span 1;
-      }
-
-      &--sm {
-        --utrecht-form-field-min-width: 12ch;
-        --utrecht-form-field-grid-column: auto / span 2;
-      }
-
-      &--md {
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--lg {
-        --utrecht-form-field-grid-column: auto / span 8;
-      }
-
-      &--xl {
-        --utrecht-form-field-grid-column: auto / span 9;
-      }
-
-      &--quarter {
-        --utrecht-form-field-min-width: 12ch;
-        --utrecht-form-field-grid-column: auto / span 3;
-      }
-    }
-  }
-
   @media not all and (min-width: 480px) {
     .utrecht-form-field {
       &--xs {
-        --utrecht-form-field-min-width: 7ch;
-        --utrecht-form-field-grid-column: auto / span 2;
+        --utrecht-form-field-grid-column: auto / span 3;
       }
 
       &--sm {
-        --utrecht-form-field-min-width: 12ch;
-        --utrecht-form-field-grid-column: auto / span 3;
+        --utrecht-form-field-grid-column: auto / span 4;
       }
 
       &--md {
@@ -102,10 +21,81 @@
         --utrecht-form-field-grid-column: 1 / -1;
       }
 
-      &--quarter {
-        --utrecht-form-field-min-width: 12ch;
+      &--full-1 {
+        --utrecht-form-field-grid-column: auto / span 12;
+      }
+    }
+  }
+  @media (min-width: 480px) {
+    .utrecht-form-field {
+      &--xs {
+        --utrecht-form-field-grid-column: auto / span 2;
+      }
+
+      &--sm {
         --utrecht-form-field-grid-column: auto / span 3;
       }
+
+      &--md {
+        --utrecht-form-field-grid-column: auto / span 4;
+      }
+
+      &--lg {
+        --utrecht-form-field-grid-column: auto / span 8;
+      }
+
+      &--xl {
+        --utrecht-form-field-grid-column: auto / span 10;
+      }
+
+      &--full-1 {
+        --utrecht-form-field-grid-column: auto / span 12;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .utrecht-form-field {
+      &--xs {
+        --utrecht-form-field-grid-column: auto / span 1;
+      }
+
+      &--sm {
+        --utrecht-form-field-grid-column: auto / span 2;
+      }
+
+      &--md {
+        --utrecht-form-field-grid-column: auto / span 4;
+      }
+
+      &--lg {
+        --utrecht-form-field-grid-column: auto / span 8;
+      }
+
+      &--xl {
+        --utrecht-form-field-grid-column: auto / span 10;
+      }
+
+      &--full-1 {
+        --utrecht-form-field-grid-column: auto / span 11;
+      }
+    }
+  }
+
+  .utrecht-form-field {
+    &--third {
+      --utrecht-form-field-grid-column: auto / span 4;
+    }
+
+    &--quarter {
+      --utrecht-form-field-grid-column: auto / span 3;
+    }
+
+    &--half {
+      --utrecht-form-field-grid-column: auto / span 6;
+    }
+
+    &--full {
+      --utrecht-form-field-grid-column: 1 / -1;
     }
   }
 }
