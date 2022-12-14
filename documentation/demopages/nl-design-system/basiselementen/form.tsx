@@ -85,32 +85,39 @@ const Form = () => {
               Vul een geldige datum in.
             </FormFieldDescription>
           </Fieldset>
-          <Fieldset aria-describedby={'billingaddressdescription'} className={'utrecht-form-fieldset--subtle'}>
-            <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Adres zonnepanelen</FieldsetLegend>
+          <Fieldset
+            aria-describedby={'billingaddressdescription'}
+            className={clsx(
+              'utrecht-form-fieldset--subtle',
+              'utrecht-form-fieldset--adres',
+              'utrecht-form-fieldset--grid',
+            )}
+          >
+            <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Afleveradress</FieldsetLegend>
             <FormFieldDescription id={'billingaddressdescription'}>
-              Vul het adres in waar de zonnepanelen zijn geplaatst.
+              Vul het adres in waar uw bestelling wordt afgeleverd.
             </FormFieldDescription>
-            <FormField className={'utrecht-form-field--lg'}>
+            <FormField className={'utrecht-form-field--street'}>
               <FormLabel htmlFor={'street'}>Straatnaam</FormLabel>
-              <Textbox id={'street'}></Textbox>
+              <Textbox id={'street'} placeholder={'Vriezenveensewijkseachtersteeg'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--sm'}>
-              <FormLabel htmlFor={'housenumber'}>Huisnummer</FormLabel>
-              <Textbox id={'housenumber'}></Textbox>
+            <FormField className={'utrecht-form-field--street-number'}>
+              <FormLabel htmlFor={'housenumber'}>Huis&shy;num&shy;mer</FormLabel>
+              <Textbox id={'housenumber'} placeholder={'1024'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--sm'}>
-              <FormLabel htmlFor={'suffix'}>Toevoeging</FormLabel>
-              <Textbox id={'suffix'}></Textbox>
+            <FormField className={'utrecht-form-field--addition'}>
+              <FormLabel htmlFor={'suffix'}>Toe&shy;voeg&shy;ing</FormLabel>
+              <Textbox id={'suffix'} placeholder={'a'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--md utrecht-form-field--start'}>
+            <FormField className={'utrecht-form-field--postcode utrecht-form-field--start'}>
               <FormLabel htmlFor={'postcode'}>Postcode</FormLabel>
-              <Textbox id={'postcode'}></Textbox>
+              <Textbox id={'postcode'} placeholder={'0000 AB'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--lg'}>
+            <FormField className={'utrecht-form-field--city'}>
               <FormLabel htmlFor={'city'}>Plaatsnaam</FormLabel>
-              <Textbox id={'city'}></Textbox>
+              <Textbox id={'city'} placeholder={'Westerhaar-Vriezenveensewijk'}></Textbox>
             </FormField>
-          </Fieldset>
+          </Fieldset>{' '}
         </Fieldset>
         <ButtonGroup className="utrecht-button-group--horizontal">
           <Button appearance="primary-action-button" busy={false} disabled={false}>

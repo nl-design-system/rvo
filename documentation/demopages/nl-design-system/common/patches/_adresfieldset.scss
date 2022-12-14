@@ -1,0 +1,114 @@
+/* stylelint-disable */
+
+.utrecht-form-fieldset--adres {
+  container-type: inline-size;
+}
+
+@mixin small-viewport {
+  .utrecht-form-field {
+    &--street {
+      --utrecht-form-field-min-width: 16ch;
+      --utrecht-form-field-grid-column: auto / span 12;
+    }
+
+    &--street-number {
+      --utrecht-form-field-min-width: 7ch;
+      --utrecht-form-field-grid-column: auto / span 6;
+    }
+
+    &--addition {
+      --utrecht-form-field-min-width: 7ch;
+      --utrecht-form-field-grid-column: auto / span 6;
+    }
+
+    &--postcode {
+      --utrecht-form-field-min-width: 7ch;
+      --utrecht-form-field-grid-column: auto / span 12;
+    }
+
+    &--city {
+      --utrecht-form-field-min-width: 23ch;
+      --utrecht-form-field-grid-column: auto / span 12;
+    }
+  }
+}
+@mixin normal-viewport {
+  .utrecht-form-field--street {
+    --utrecht-form-field-min-width: 16ch;
+    --utrecht-form-field-grid-column: auto / span 7;
+  }
+  .utrecht-form-field--street-number {
+    --utrecht-form-field-min-width: 7ch;
+    --utrecht-form-field-grid-column: auto / span 3;
+  }
+  .utrecht-form-field--addition {
+    --utrecht-form-field-min-width: 7ch;
+    --utrecht-form-field-grid-column: auto / span 2;
+  }
+  .utrecht-form-field--postcode {
+    --utrecht-form-field-min-width: 8ch;
+    --utrecht-form-field-grid-column: auto / span 4;
+  }
+  .utrecht-form-field--city {
+    --utrecht-form-field-grid-column: auto / span 8;
+  }
+}
+@mixin large-viewport {
+  .utrecht-form-field--street {
+    --utrecht-form-field-min-width: 16ch;
+    --utrecht-form-field-grid-column: auto / span 8;
+  }
+  .utrecht-form-field--street-number {
+    --utrecht-form-field-min-width: 7ch;
+    --utrecht-form-field-grid-column: auto / span 2;
+  }
+  .utrecht-form-field--addition {
+    --utrecht-form-field-min-width: 7ch;
+    --utrecht-form-field-grid-column: auto / span 2;
+  }
+  .utrecht-form-field--postcode {
+    --utrecht-form-field-min-width: 7ch;
+    --utrecht-form-field-grid-column: auto / span 3;
+  }
+  .utrecht-form-field--city {
+    --utrecht-form-field-min-width: 23ch;
+    --utrecht-form-field-grid-column: auto / span 9;
+  }
+}
+
+@container (width < 520px) {
+  .utrecht-form-fieldset--adres {
+    @include small-viewport;
+  }
+}
+@container (width > 520px) and (width < 768px) {
+  .utrecht-form-fieldset--adres {
+    @include normal-viewport;
+  }
+}
+@container (width > 768px) {
+  .utrecht-form-fieldset--adres {
+    @include large-viewport;
+  }
+}
+
+@supports not (container-type: inline-size) {
+  @media not all and (min-width: 480px) {
+    .utrecht-form-fieldset--adres {
+      @include small-viewport;
+    }
+  }
+
+  @media (min-width: 480px) and (max-width: 768px) {
+    .utrecht-form-fieldset--adres {
+      @include normal-viewport;
+    }
+  }
+  @media (min-width: 768px) {
+    .utrecht-form-fieldset--adres {
+      @include large-viewport;
+    }
+  }
+}
+
+/* stylelint-enable */
