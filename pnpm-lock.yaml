@@ -214,7 +214,7 @@ importers:
       '@nl-rvo/basiselementen-design-tokens': workspace:*
       '@nl-rvo/components': workspace:*
       '@nl-rvo/design-tokens': workspace:*
-      '@tsconfig/docusaurus': 1.0.5
+      '@tsconfig/docusaurus': 1.0.6
       clsx: 1.2.1
       cpx: 1.5.0
       docusaurus-plugin-sass: 0.2.2
@@ -233,7 +233,7 @@ importers:
       '@nl-rvo/basiselementen-design-tokens': link:../../proprietary/basiselementen-design-tokens
       '@nl-rvo/components': link:../../components
       '@nl-rvo/design-tokens': link:../../proprietary/design-tokens
-      '@tsconfig/docusaurus': 1.0.5
+      '@tsconfig/docusaurus': 1.0.6
       clsx: 1.2.1
       cpx: 1.5.0
       docusaurus-plugin-sass: 0.2.2_@docusaurus+core@2.2.0
@@ -10662,8 +10662,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
-  /@tsconfig/docusaurus/1.0.5:
-    resolution: {integrity: sha512-KM/TuJa9fugo67dTGx+ktIqf3fVc077J6jwHu845Hex4EQf7LABlNonP/mohDKT0cmncdtlYVHHF74xR/YpThg==}
+  /@tsconfig/docusaurus/1.0.6:
+    resolution: {integrity: sha512-1QxDaP54hpzM6bq9E+yFEo4F9WbWHhsDe4vktZXF/iDlc9FqGr9qlg+3X/nuKQXx8QxHV7ue8NXFazzajsxFBA==}
     dev: true
 
   /@tsconfig/node10/1.0.9:
