@@ -9,7 +9,7 @@ const config = {
   customFields: {
     storybookUrl: process.env['NODE_ENV'] === 'development' ? 'http://localhost:6006/' : '.rvo/storybook/',
   },
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'nl-rvo',
