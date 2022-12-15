@@ -86,7 +86,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
 }: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon as any} size="md" />;
 
-  let appearance: string = null;
+  let appearance: string | undefined;
   switch (kind) {
     case 'primary':
     case 'warning':
@@ -121,9 +121,9 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'md' && 'utrecht-button--rvo-md',
         alignToRightInGroup && 'rvo-button-group__align-right',
       )}
-      disabled={disabled || null}
+      disabled={disabled || undefined}
       appearance={appearance}
-      hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : null}
+      hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : undefined}
       {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}

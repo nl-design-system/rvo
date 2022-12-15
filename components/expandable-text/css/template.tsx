@@ -36,7 +36,7 @@ export const ExpandableText: React.FC<PropsWithChildren<IExpandableTextProps>> =
     className: 'rvo-expandable-text__details',
   });
   return (
-    <details className="rvo-expandable-text" open={open || null}>
+    <details className="rvo-expandable-text" open={open || undefined}>
       <summary className="rvo-expandable-text__summary">
         <Icon color="hemelblauw" size="md" icon="info" />
         {title}

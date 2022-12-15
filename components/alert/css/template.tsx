@@ -67,7 +67,7 @@ export const Alert: React.FC<IAlertProps> = ({
     <div className={clsx('rvo-alert', `rvo-alert--${kind}`)}>
       {iconMarkup}
       <div className="rvo-alert-text">
-        {heading?.length > 0 && <strong>{heading}</strong>}
+        {heading?.length && heading?.length > 0 && <strong>{heading}</strong>}
         {contentMarkup}
       </div>
       {closable && (
