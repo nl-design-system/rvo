@@ -20,6 +20,7 @@ importers:
       eslint-config-prettier: 8.5.0
       eslint-plugin-import: 2.26.0
       eslint-plugin-json: 3.1.0
+      eslint-plugin-markdown: 3.0.0
       eslint-plugin-mdx: 2.0.5
       eslint-plugin-react: 7.31.11
       html-validate: 7.1.2
@@ -61,6 +62,7 @@ importers:
       eslint-config-prettier: 8.5.0_eslint@8.29.0
       eslint-plugin-import: 2.26.0_z7hwuz3w5sq2sbhy7d4iqrnsvq
       eslint-plugin-json: 3.1.0
+      eslint-plugin-markdown: 3.0.0_eslint@8.29.0
       eslint-plugin-mdx: 2.0.5_eslint@8.29.0
       eslint-plugin-react: 7.31.11_eslint@8.29.0
       html-validate: 7.1.2

@@ -16,14 +16,26 @@
       "version": "17.0.2"
     }
   },
+  "plugins": ["markdown"],
   "overrides": [
+    {
+      "files": ["**/*.md"],
+      "extends": ["plugin:markdown/recommended"],
+      "processor": "markdown/markdown"
+    },
     {
       "extends": ["plugin:json/recommended"],
       "files": ["*.json"]
     },
     {
-      "extends": ["plugin:mdx/recommended", "eslint-config-prettier", "./.eslintrc.js.json", "./.eslintrc.react.json"],
-      "files": ["*.mdx"],
+      "extends": [
+        "plugin:mdx/recommended",
+        "plugin:react/recommended",
+        "eslint-config-prettier",
+        "./.eslintrc.js.json",
+        "./.eslintrc.react.json"
+      ],
+      "files": ["**/*.mdx"],
       "settings": {
         "mdx/code-blocks": true
       },
