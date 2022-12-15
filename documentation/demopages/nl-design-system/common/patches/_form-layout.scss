@@ -1,8 +1,6 @@
 @mixin fieldsetgrid {
   --_utrecht-form-fieldset-display: grid;
-  --_utrecht-form-fieldset-row-gap: calc(
-    (var(--utrecht-form-field-margin-block-end, 1ex) + var(--utrecht-form-field-margin-block-start, 1ex))
-  );
+  --_utrecht-form-fieldset-row-gap: 2ex;
   --_utrecht-form-fieldset-column-gap: 1ch;
   --_utrecht-form-fieldset-grid-template-columns: repeat(12, 1fr);
   --_utrecht-form-field-display: grid;
@@ -46,8 +44,8 @@
         float: none;
         font-size: var(--utrecht-form-label-font-size);
         font-weight: var(--utrecht-form-label-font-weight);
-        margin-block-end: var(--utrecht-form-field-margin-block-end, 0);
-        margin-block-start: var(--utrecht-form-field-margin-block-start, 0);
+        margin-block-end: var(--_utrecht-form-field-row-gap, 0);
+        margin-block-start: 0;
       }
     }
   }
@@ -83,6 +81,9 @@
     padding-block-start: 0;
     padding-inline-end: 0;
     padding-inline-start: 0;
+  }
+  .utrecht-form-fieldset__fieldset div.utrecht-form-fieldset:not(:last-child) {
+    margin-block-end: 3ex;
   }
 }
 
