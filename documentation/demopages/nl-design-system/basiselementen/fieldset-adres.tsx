@@ -22,6 +22,7 @@ const FieldsetAdres = () => {
             'utrecht-form-fieldset--adres',
             'utrecht-form-fieldset--grid',
           )}
+          invalid={true}
         >
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Afleveradress</FieldsetLegend>
           <FormFieldDescription id={'billingaddressdescription'}>
@@ -29,24 +30,27 @@ const FieldsetAdres = () => {
           </FormFieldDescription>
           <FormField className={'utrecht-form-field--street'}>
             <FormLabel htmlFor={'street'}>Straatnaam</FormLabel>
-            <Textbox id={'street'} placeholder={'Vriezenveensewijkseachtersteeg'}></Textbox>
+            <Textbox id={'street'} placeholder={'Vriezenveensewijkseachtersteeg'} invalid={true}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--street-number'}>
-            <FormLabel htmlFor={'housenumber'}>Huis&shy;nummer</FormLabel>
-            <Textbox id={'housenumber'} placeholder={'1024'}></Textbox>
+            <FormLabel htmlFor={'housenumber'}>Huisnummer</FormLabel>
+            <Textbox id={'housenumber'} placeholder={'1024'} invalid={true}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--addition'}>
-            <FormLabel htmlFor={'suffix'}>Toe&shy;voeging</FormLabel>
-            <Textbox id={'suffix'} placeholder={'a'}></Textbox>
+            <FormLabel htmlFor={'suffix'}>Toevoeging</FormLabel>
+            <Textbox id={'suffix'} placeholder={'a'} invalid={true}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--postcode utrecht-form-field--start'}>
             <FormLabel htmlFor={'postcode'}>Postcode</FormLabel>
-            <Textbox id={'postcode'} placeholder={'0000 AB'}></Textbox>
+            <Textbox id={'postcode'} placeholder={'0000 AD'} value={'1ooo ad'} invalid={true}></Textbox>
           </FormField>
           <FormField className={'utrecht-form-field--city'}>
             <FormLabel htmlFor={'city'}>Plaatsnaam</FormLabel>
-            <Textbox id={'city'} placeholder={'Westerhaar-Vriezenveensewijk'}></Textbox>
+            <Textbox id={'city'} placeholder={'Westerhaar-Vriezenveensewijk'} invalid={true}></Textbox>
           </FormField>
+          <FormFieldDescription invalid={true} id={'invalidbillingdate'}>
+            Vul een geldige adres in.
+          </FormFieldDescription>
         </Fieldset>
       </form>
     </div>
