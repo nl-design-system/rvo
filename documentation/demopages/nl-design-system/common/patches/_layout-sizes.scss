@@ -1,101 +1,125 @@
+/* stylelint-disable */
+@mixin small-viewport {
+  .utrecht-form-field {
+    &--xs {
+      --_utrecht-form-field-grid-column: auto / span 3;
+    }
+
+    &--sm {
+      --_utrecht-form-field-grid-column: auto / span 4;
+    }
+
+    &--md {
+      --_utrecht-form-field-grid-column: auto / span 6;
+    }
+
+    &--lg {
+      --_utrecht-form-field-grid-column: 1 / -1;
+    }
+
+    &--xl {
+      --_utrecht-form-field-grid-column: 1 / -1;
+    }
+
+    &--full-1 {
+      --_utrecht-form-field-grid-column: auto / span 12;
+    }
+  }
+}
+@mixin normal-viewport {
+  .utrecht-form-field {
+    &--xs {
+      --_utrecht-form-field-grid-column: auto / span 2;
+    }
+
+    &--sm {
+      --_utrecht-form-field-grid-column: auto / span 3;
+    }
+
+    &--md {
+      --_utrecht-form-field-grid-column: auto / span 4;
+    }
+
+    &--lg {
+      --_utrecht-form-field-grid-column: auto / span 8;
+    }
+
+    &--xl {
+      --_utrecht-form-field-grid-column: auto / span 10;
+    }
+
+    &--full-1 {
+      --_utrecht-form-field-grid-column: auto / span 12;
+    }
+  }
+}
+@mixin large-viewport {
+  .utrecht-form-field {
+    &--xs {
+      --_utrecht-form-field-grid-column: auto / span 1;
+    }
+
+    &--sm {
+      --_utrecht-form-field-grid-column: auto / span 2;
+    }
+
+    &--md {
+      --_utrecht-form-field-grid-column: auto / span 4;
+    }
+
+    &--lg {
+      --_utrecht-form-field-grid-column: auto / span 8;
+    }
+
+    &--xl {
+      --_utrecht-form-field-grid-column: auto / span 10;
+    }
+
+    &--full-1 {
+      --_utrecht-form-field-grid-column: auto / span 11;
+    }
+  }
+}
+
 .utrecht-form-fieldset--grid {
-  @media not all and (min-width: 480px) {
-    .utrecht-form-field {
-      &--xs {
-        --utrecht-form-field-grid-column: auto / span 3;
-      }
+  container-type: inline-size;
 
-      &--sm {
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--md {
-        --utrecht-form-field-grid-column: auto / span 6;
-      }
-
-      &--lg {
-        --utrecht-form-field-grid-column: 1 / -1;
-      }
-
-      &--xl {
-        --utrecht-form-field-grid-column: 1 / -1;
-      }
-
-      &--full-1 {
-        --utrecht-form-field-grid-column: auto / span 12;
-      }
-    }
+  @container (width < 420px) {
+    @include small-viewport;
   }
-  @media (min-width: 480px) {
-    .utrecht-form-field {
-      &--xs {
-        --utrecht-form-field-grid-column: auto / span 2;
-      }
-
-      &--sm {
-        --utrecht-form-field-grid-column: auto / span 3;
-      }
-
-      &--md {
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--lg {
-        --utrecht-form-field-grid-column: auto / span 8;
-      }
-
-      &--xl {
-        --utrecht-form-field-grid-column: auto / span 10;
-      }
-
-      &--full-1 {
-        --utrecht-form-field-grid-column: auto / span 12;
-      }
-    }
+  @container (width > 420px) and (width < 768px) {
+    @include normal-viewport;
   }
-  @media (min-width: 768px) {
-    .utrecht-form-field {
-      &--xs {
-        --utrecht-form-field-grid-column: auto / span 1;
-      }
+  @container (width > 768px) {
+    @include large-viewport;
+  }
 
-      &--sm {
-        --utrecht-form-field-grid-column: auto / span 2;
-      }
-
-      &--md {
-        --utrecht-form-field-grid-column: auto / span 4;
-      }
-
-      &--lg {
-        --utrecht-form-field-grid-column: auto / span 8;
-      }
-
-      &--xl {
-        --utrecht-form-field-grid-column: auto / span 10;
-      }
-
-      &--full-1 {
-        --utrecht-form-field-grid-column: auto / span 11;
-      }
+  @supports not (container-type: inline-size) {
+    @media not all and (min-width: 640px) {
+      @include small-viewport;
+    }
+    @media (min-width: 640px) {
+      @include large-viewport;
     }
   }
 
   .utrecht-form-field {
+    --_utrecht-form-field-min-width: 4ch;
     &--third {
-      --utrecht-form-field-grid-column: auto / span 4;
+      --_utrecht-form-field-grid-column: auto / span 4;
     }
 
     &--quarter {
-      --utrecht-form-field-grid-column: auto / span 3;
+      --_utrecht-form-field-grid-column: auto / span 3;
     }
 
     &--half {
-      --utrecht-form-field-grid-column: auto / span 6;
+      --_utrecht-form-field-grid-column: auto / span 6;
     }
 
     &--full {
-      --utrecht-form-field-grid-column: 1 / -1;
+      --_utrecht-form-field-grid-column: 1 / -1;
     }
   }
 }
+/* stylelint-enable */

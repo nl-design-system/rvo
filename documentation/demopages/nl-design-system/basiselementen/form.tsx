@@ -71,19 +71,16 @@ const Form = () => {
             </FormFieldDescription>
             <FormField>
               <FormLabel htmlFor={'day'}>Dag</FormLabel>
-              <Textbox id={'day'} invalid={true}></Textbox>
+              <Textbox id={'day'} invalid={false}></Textbox>
             </FormField>
             <FormField>
               <FormLabel htmlFor={'month'}>Maand</FormLabel>
-              <Textbox id={'month'} invalid={true}></Textbox>
+              <Textbox id={'month'} invalid={false}></Textbox>
             </FormField>
             <FormField>
               <FormLabel htmlFor={'year'}>Jaar</FormLabel>
-              <Textbox id={'year'} invalid={true}></Textbox>
+              <Textbox id={'year'} invalid={false}></Textbox>
             </FormField>
-            <FormFieldDescription invalid={true} id={'invalidbillingdate'}>
-              Vul een geldige datum in.
-            </FormFieldDescription>
           </Fieldset>
           <Fieldset
             aria-describedby={'billingaddressdescription'}
@@ -117,7 +114,7 @@ const Form = () => {
               <FormLabel htmlFor={'city'}>Plaatsnaam</FormLabel>
               <Textbox id={'city'} placeholder={'Westerhaar-Vriezenveensewijk'}></Textbox>
             </FormField>
-          </Fieldset>{' '}
+          </Fieldset>
         </Fieldset>
         <ButtonGroup className="utrecht-button-group--horizontal">
           <Button appearance="primary-action-button" busy={false} disabled={false}>
