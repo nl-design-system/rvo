@@ -14,4 +14,9 @@ div.utrecht-form-fieldset {
     margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end, 0);
     margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start, 0);
   }
+  &--subtle {
+    .utrecht-form-label {
+      font-weight: 400;
+    }
+  }
 }
