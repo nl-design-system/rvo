@@ -8,6 +8,7 @@ import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/templa
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { FormField, FormLabel } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -91,9 +92,12 @@ const Project = () => {
                 <form>
                   <LayoutColumnRow size="md">
                     <Fieldset legend="">
-                      <label>Wat is uw geboortedatum?</label>
-                      <input type="date" className="rvo-date"></input>
+                      <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                        <FormLabel htmlFor={'geboortedatum'}>Wat is uw geboortedatum?</FormLabel>
+                        <input type="date" id={'geboortedatum'} className="rvo-date"></input>
+                      </FormField>
                     </Fieldset>
+
                     <Fieldset legend="">
                       <RadioButtonField
                         name="vv"
