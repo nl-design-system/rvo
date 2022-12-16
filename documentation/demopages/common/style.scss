@@ -153,6 +153,16 @@
   .rvo-responsive-filters > .rvo-responsive-filters-toggle::-webkit-details-marker {
     display: none;
   }
+  .rvo-responsive-filters .rvo-tmp-filters .utrecht-form-fieldset__fieldset {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    gap: var(--rvo-space-md);
+    .rvo-form-field {
+      margin-block-end: 0;
+      margin-block-start: 0;
+    }
+  }
 
   /* TMP SELECT FIX */
 
@@ -259,7 +269,7 @@
     background-color: var(--rvo-color-lichtblauw-tint1);
     gap: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-xl);
-    padding-block-start: 0;
+    padding-block-start: var(--rvo-space-sm);
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
   }
@@ -903,7 +913,7 @@
   }
 
   .rvo-tmp-filters .rvo-layout-row {
-    align-items: flex-start;
+    align-items: baseline;
     flex-wrap: nowrap;
   }
 
@@ -1593,7 +1603,6 @@
     .rvo-tmp-filters .utrecht-form-fieldset__fieldset .rvo-tmp-filter {
       flex: 1;
     }
-
     .rvo-item-list-detail--status {
       margin-inline-start: auto;
     }
