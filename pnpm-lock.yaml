@@ -89,18 +89,22 @@ importers:
     specifiers:
       '@emotion/styled': 11.9.3
       '@nl-rvo/assets': workspace:*
-      '@nl-rvo/storybook': workspace:*
       '@storybook/addon-docs': 6.5.9
       clsx: 1.1.1
       macro: link:@emotion/styled/macro
+      npm-run-all: 4.1.5
+      rimraf: 3.0.2
+      sass: 1.57.0
     dependencies:
       clsx: 1.1.1
     devDependencies:
       '@emotion/styled': 11.9.3
       '@nl-rvo/assets': link:../proprietary/assets
-      '@nl-rvo/storybook': link:../packages/storybook
       '@storybook/addon-docs': 6.5.9
       macro: link:@emotion/styled/macro
+      npm-run-all: 4.1.5
+      rimraf: 3.0.2
+      sass: 1.57.0
 
   documentation:
     specifiers:
@@ -12206,7 +12210,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -24699,6 +24703,17 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+    dev: true
+
+  /promise-inflight/1.0.1_bluebird@3.7.1:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dependencies:
+      bluebird: 3.7.1
 
   /promise-retry/2.0.1:
     resolution: {integrity: sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g==}
@@ -26506,6 +26521,16 @@ packages:
 
   /sass/1.56.2:
     resolution: {integrity: sha512-ciEJhnyCRwzlBCB+h5cCPM6ie/6f8HrhZMQOf5vlU60Y1bI1rx5Zb0vlDZvaycHsg/MqFfF1Eq2eokAa32iw8w==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.1.0
+      source-map-js: 1.0.2
+    dev: true
+
+  /sass/1.57.0:
+    resolution: {integrity: sha512-IZNEJDTK1cF5B1cGA593TPAV/1S0ysUDxq9XHjX/+SMy0QfUny+nfUsq5ZP7wWSl4eEf7wDJcEZ8ABYFmh3m/w==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
