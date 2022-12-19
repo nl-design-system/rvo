@@ -34,11 +34,9 @@
         "plugin:react/recommended",
         "eslint-config-prettier",
         "./.eslintrc.js.json",
-        "./.eslintrc.react.json"
+        "./.eslintrc.react.json",
+        "./.eslintrc.mdx.json"
       ],
-      "settings": {
-        "mdx/code-blocks": true
-      },
       "plugins": ["import"]
     },
     {
