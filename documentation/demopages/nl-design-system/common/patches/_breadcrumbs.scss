@@ -6,9 +6,9 @@
 
 .utrecht-breadcrumb {
   align-items: baseline;
-
   &__item {
     align-items: baseline;
+    color: var(--utrecht-breadcrumb-link-color);
     display: inline-flex;
 
     /* Add as gap in utrecht breadcrumb tokens */
