@@ -91,18 +91,17 @@ importers:
       '@nl-rvo/assets': workspace:*
       '@nl-rvo/design-tokens': workspace:*
       '@storybook/addon-docs': 6.5.9
-      clsx: 1.1.1
+      clsx: 1.2.1
       macro: link:@emotion/styled/macro
       npm-run-all: 4.1.5
       rimraf: 3.0.2
       sass: 1.57.0
-    dependencies:
-      clsx: 1.1.1
     devDependencies:
       '@emotion/styled': 11.9.3
       '@nl-rvo/assets': link:../proprietary/assets
       '@nl-rvo/design-tokens': link:../proprietary/design-tokens
       '@storybook/addon-docs': 6.5.9
+      clsx: 1.2.1
       macro: link:@emotion/styled/macro
       npm-run-all: 4.1.5
       rimraf: 3.0.2
