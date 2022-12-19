@@ -1,5 +1,5 @@
-import theme from './theme';
 import { addons } from '@storybook/addons';
+import theme from './theme';
 
 addons.setConfig({
   theme,
@@ -22,6 +22,8 @@ function waitForElement(selector) {
       childList: true,
       subtree: true,
     });
+
+    return null;
   });
 }
 

@@ -1,9 +1,10 @@
 /* eslint-env node */
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 
 function getPackageDir(filepath) {
   let currDir = path.dirname(require.resolve(filepath));
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     if (fs.existsSync(path.join(currDir, 'package.json'))) {
       return currDir;
@@ -42,7 +43,7 @@ module.exports = {
   ],
   staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => {
-    const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') == '/.s[ca]ss$/');
+    const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/');
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
     return {
       ...config,
