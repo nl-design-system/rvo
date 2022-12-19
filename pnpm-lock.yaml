@@ -89,6 +89,7 @@ importers:
     specifiers:
       '@emotion/styled': 11.9.3
       '@nl-rvo/assets': workspace:*
+      '@nl-rvo/design-tokens': workspace:*
       '@storybook/addon-docs': 6.5.9
       clsx: 1.1.1
       macro: link:@emotion/styled/macro
@@ -100,6 +101,7 @@ importers:
     devDependencies:
       '@emotion/styled': 11.9.3
       '@nl-rvo/assets': link:../proprietary/assets
+      '@nl-rvo/design-tokens': link:../proprietary/design-tokens
       '@storybook/addon-docs': 6.5.9
       macro: link:@emotion/styled/macro
       npm-run-all: 4.1.5
@@ -112,18 +114,16 @@ importers:
       '@emotion/styled': 11.9.3
       '@nl-rvo/components': workspace:*
       '@nl-rvo/design-tokens': workspace:*
-      '@nl-rvo/storybook': workspace:*
-      '@storybook/addon-docs': 6.5.9
+      clsx: 1.2.1
       html-react-parser: 3.0.1
     dependencies:
+      clsx: 1.2.1
       html-react-parser: 3.0.1
     devDependencies:
       '@emotion/react': 11.9.3
       '@emotion/styled': 11.9.3_@emotion+react@11.9.3
       '@nl-rvo/components': link:../components
       '@nl-rvo/design-tokens': link:../proprietary/design-tokens
-      '@nl-rvo/storybook': link:../packages/storybook
-      '@storybook/addon-docs': 6.5.9
 
   packages/components-react:
     specifiers:
@@ -12872,7 +12872,6 @@ packages:
   /clsx/1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
-    dev: true
 
   /cmd-shim/6.0.0:
     resolution: {integrity: sha512-wx+RWLgiSU6SCDzMtxG0Dv1lsuOcEfqq5SbqAViezaJIkR5sbveKzFU31YnWhqrJx3o3Iu3H0Rq8R00OS3oI+Q==}

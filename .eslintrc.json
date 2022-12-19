@@ -28,6 +28,7 @@
       "files": ["*.json"]
     },
     {
+      "files": ["*.mdx"],
       "extends": [
         "plugin:mdx/recommended",
         "plugin:react/recommended",
@@ -35,7 +36,6 @@
         "./.eslintrc.js.json",
         "./.eslintrc.react.json"
       ],
-      "files": ["**/*.mdx"],
       "settings": {
         "mdx/code-blocks": true
       },

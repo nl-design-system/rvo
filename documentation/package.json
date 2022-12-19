@@ -12,11 +12,10 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@nl-rvo/components": "workspace:*",
-    "@nl-rvo/design-tokens": "workspace:*",
-    "@nl-rvo/storybook": "workspace:*",
-    "@storybook/addon-docs": "6.5.9"
+    "@nl-rvo/design-tokens": "workspace:*"
   },
   "dependencies": {
+    "clsx": "1.2.1",
     "html-react-parser": "3.0.1"
   },
   "scripts": {
