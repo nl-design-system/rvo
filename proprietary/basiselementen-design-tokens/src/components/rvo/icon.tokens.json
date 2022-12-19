@@ -1,0 +1,38 @@
+{
+  "rvo": {
+    "icon": {
+      "xs": {
+        "width": { "value": "8px" },
+        "height": { "value": "8px" }
+      },
+      "sm": {
+        "width": { "value": "12px" },
+        "height": { "value": "12px" }
+      },
+      "md": {
+        "width": { "value": "16px" },
+        "height": { "value": "16px" }
+      },
+      "lg": {
+        "width": { "value": "18px" },
+        "height": { "value": "18px" }
+      },
+      "xl": {
+        "width": { "value": "24px" },
+        "height": { "value": "24px" }
+      },
+      "2xl": {
+        "width": { "value": "32px" },
+        "height": { "value": "32px" }
+      },
+      "3xl": {
+        "width": { "value": "64px" },
+        "height": { "value": "64px" }
+      },
+      "4xl": {
+        "width": { "value": "128px" },
+        "height": { "value": "128px" }
+      }
+    }
+  }
+}
