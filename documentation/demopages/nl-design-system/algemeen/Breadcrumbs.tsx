@@ -5,12 +5,15 @@ import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { Heading1, Link, Paragraph } from '@utrecht/component-library-react';
 import '../common/style.scss';
+import { Icon as UtrechtIcon } from '@utrecht/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Breadcrumbs = () => {
   return (
     <div className="rvo-nl-demo-page">
       <Header />
+      TEST
+      <UtrechtIcon color="hemelblauw" id={'utrecht-icon-arrow'} />
       <LayoutColumnRow size="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <MaxWidthLayout size="md">
