@@ -121,6 +121,7 @@ const Form = () => {
             Volgende
           </Button>
           <Button appearance="secondary-action-button" busy={false} disabled={false}>
+            <span className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md"></span>
             Vorige
           </Button>
         </ButtonGroup>

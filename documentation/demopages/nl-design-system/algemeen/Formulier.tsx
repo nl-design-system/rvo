@@ -1,4 +1,3 @@
-import { Button } from '@nl-rvo/components/button/css/template';
 import { CheckboxField } from '@nl-rvo/components/form-field-checkbox/css/template';
 import { FileInputField } from '@nl-rvo/components/form-field-fileinput/css/template';
 import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
@@ -13,7 +12,7 @@ import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps } from '@nl-rvo/components/progress-tracker/css/defaultArgs';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
-import { ButtonGroup, Heading1, Link } from '@utrecht/component-library-react';
+import { Button, ButtonGroup, Heading1, Link } from '@utrecht/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Formulier = () => {
@@ -144,32 +143,11 @@ const Formulier = () => {
                       <FileInputField label="File" />
                     </Fieldset>
                     <ButtonGroup>
-                      <Button
-                        kind="primary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
-                      >
+                      <Button className={'utrecht-button--primary-action'}>
                         Primary action
+                        <span className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md"></span>
                       </Button>
-                      <Button
-                        kind="secondary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
-                      >
-                        Secondary action
-                      </Button>
+                      <Button className={'utrecht-button--secondary-action'}>Secondary action</Button>
                     </ButtonGroup>
                   </form>
                 </LayoutColumnRow>
