@@ -6,6 +6,7 @@ import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/templa
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
 import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { FormField, FormLabel } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -90,8 +91,12 @@ const Datum = () => {
                 <form>
                   <LayoutColumnRow size="md">
                     <Fieldset legend="">
-                      <label>Wat is de datum op de poststempel van het verleningsverzoek?</label>
-                      <input type="date" className="rvo-date"></input>
+                      <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                        <FormLabel htmlFor={'verlengingsdatum'}>
+                          Wat is de datum op de poststempel van het verleningsverzoek?
+                        </FormLabel>
+                        <input type="date" id={'verlengingsdatum'} className="rvo-date"></input>
+                      </FormField>
                     </Fieldset>
 
                     <div className="rvo-button-group">

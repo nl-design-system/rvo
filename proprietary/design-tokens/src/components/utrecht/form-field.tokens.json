@@ -12,7 +12,7 @@
         }
       },
       "margin-block-start": {},
-      "margin-block-end": {}
+      "margin-block-end": { "value": "{rvo.space.xl}" }
     }
   }
 }

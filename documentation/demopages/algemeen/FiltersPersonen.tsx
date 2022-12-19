@@ -45,7 +45,7 @@ const FiltersPersonen = () => {
                 <LayoutColumnRow size="md">
                   <div className="rvo-tmp-filters">
                     <Fieldset legend="">
-                      <MaxWidthLayout size="lg">
+                      <MaxWidthLayout size="sm">
                         <LayoutColumnRow size="xl" row={true}>
                           <details className="rvo-tmp-filter">
                             <summary>
@@ -299,6 +299,7 @@ const FiltersPersonen = () => {
                               </div>
                               <a href="#">
                                 <img
+                                  alt=""
                                   className="rvo-result-profile-pic"
                                   src="https://media-exp1.licdn.com/dms/image/C4E03AQEirwEyMyg2pQ/profile-displayphoto-shrink_200_200/0/1657908152116?e=2147483647&v=beta&t=McXjZqk3FV1ud7n4sE7MzYloKoPc7ZpNoJTtzkHKc4k"
                                 ></img>
@@ -329,6 +330,7 @@ const FiltersPersonen = () => {
                               </div>
                               <a href="#">
                                 <img
+                                  alt=""
                                   className="rvo-result-profile-pic"
                                   src="https://pbs.twimg.com/profile_images/1275762454895738881/laNLU5lV_400x400.jpg"
                                 ></img>
