@@ -8,19 +8,16 @@ import { Header } from '@nl-rvo/components/header/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { defaultSteps } from '@nl-rvo/components/progress-tracker/css/defaultArgs';
 import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
 import '../common/style.scss';
 import { Button, ButtonGroup, Heading1, Link } from '@utrecht/component-library-react';
-import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Formulier = () => {
   return (
     <div className="rvo-nl-demo-page">
       <Header />
       <LayoutColumnRow size="2xl">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
         <MaxWidthLayout size="md">
           <main>
             <LayoutColumnRow size="2xl" row={true} alignToTop={true}>

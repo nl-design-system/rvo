@@ -1,6 +1,5 @@
 import { Header } from '@nl-rvo/components/header/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import {
   Heading1,
   Heading2,
@@ -13,7 +12,6 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../common/style.scss';
 
 const Content = () => {
@@ -21,7 +19,6 @@ const Content = () => {
     <div className="rvo-nl-demo-page">
       <Header />
       <LayoutColumnRow size="md">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <main className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-content">
             <Heading1>Heading 1</Heading1>

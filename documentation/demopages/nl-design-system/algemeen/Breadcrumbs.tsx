@@ -2,20 +2,16 @@ import { Header } from '@nl-rvo/components/header/css/template';
 import { Icon } from '@nl-rvo/components/icon/css/template';
 import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
 import { Heading1, Link, Paragraph } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { Icon as UtrechtIcon } from '@utrecht/component-library-react';
-import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Breadcrumbs = () => {
   return (
     <div className="rvo-nl-demo-page">
       <Header />
-      TEST
       <UtrechtIcon color="hemelblauw" id={'utrecht-icon-arrow'} />
       <LayoutColumnRow size="md">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <MaxWidthLayout size="md">
           <main>
             <nav className="utrecht-breadcrumb">
