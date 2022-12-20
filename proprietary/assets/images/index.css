@@ -1,4 +1,6 @@
+.basiselementen-theme,
 .rvo-theme {
+  --rvo-image-logo: url("logo.svg");
   --rvo-image-icon: url("favicon/icon.svg");
   --rvo-image-digid-logo: url("login-options/digid-logo.svg");
   --rvo-image-e-herkenning-logo: url("login-options/e-herkenning-logo.svg");
@@ -6,7 +8,6 @@
   --rvo-image-enjoy-signature-bottom-en: url("logo-grid/enjoy-signature-bottom-en.svg");
   --rvo-image-flag-of-europe: url("logo-grid/flag-of-europe.svg");
   --rvo-image-nl-branding: url("logo-grid/nl-branding.svg");
-  --rvo-image-logo: url("logo.svg");
   --rvo-image-progress-tracker-completed-md: url("progress-tracker/progress-tracker-completed-md.svg");
   --rvo-image-progress-tracker-completed-sm: url("progress-tracker/progress-tracker-completed-sm.svg");
   --rvo-image-progress-tracker-doing-md: url("progress-tracker/progress-tracker-doing-md.svg");
@@ -18,6 +19,25 @@
   --rvo-image-progress-tracker-line-substep-start: url("progress-tracker/progress-tracker-line-substep-start.svg");
   --rvo-image-progress-tracker-start-end-md: url("progress-tracker/progress-tracker-start-end-md.svg");
   --rvo-image-progress-tracker-start-end-sm: url("progress-tracker/progress-tracker-start-end-sm.svg");
+}
+
+.rvo-image-logo,
+.rvo-image-logo--before::before,
+.rvo-image-logo--after::after {
+  -webkit-mask-image: var(--rvo-image-logo);
+  mask-image: var(--rvo-image-logo);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-image-bg-logo,
+.rvo-image-bg-logo--before::before,
+.rvo-image-bg-logo--after::after {
+  background-image: var(--rvo-image-logo);
 }
 
 .rvo-image-icon,
@@ -151,25 +171,6 @@
 .rvo-image-bg-nl-branding--before::before,
 .rvo-image-bg-nl-branding--after::after {
   background-image: var(--rvo-image-nl-branding);
-}
-
-.rvo-image-logo,
-.rvo-image-logo--before::before,
-.rvo-image-logo--after::after {
-  -webkit-mask-image: var(--rvo-image-logo);
-  mask-image: var(--rvo-image-logo);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-logo,
-.rvo-image-bg-logo--before::before,
-.rvo-image-bg-logo--after::after {
-  background-image: var(--rvo-image-logo);
 }
 
 .rvo-image-progress-tracker-completed-md,

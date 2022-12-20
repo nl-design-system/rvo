@@ -1,4 +1,5 @@
 export default {
+  LOGO: 'logo.svg',
   FAVICON: {
     ICON: 'favicon/icon.svg',
   },
@@ -12,7 +13,6 @@ export default {
     FLAG_OF_EUROPE: 'logo-grid/flag-of-europe.svg',
     NL_BRANDING: 'logo-grid/nl-branding.svg',
   },
-  LOGO: 'logo.svg',
   PROGRESS_TRACKER: {
     PROGRESS_TRACKER_COMPLETED_MD: 'progress-tracker/progress-tracker-completed-md.svg',
     PROGRESS_TRACKER_COMPLETED_SM: 'progress-tracker/progress-tracker-completed-sm.svg',

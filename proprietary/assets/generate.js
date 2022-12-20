@@ -139,7 +139,7 @@ const generateCSS = (
   });
 
   // Add CSS vars
-  scssString = `.rvo-theme {\n${cssVars.join('\n')}}\n\n${scssString}`;
+  scssString = `.basiselementen-theme, .rvo-theme {\n${cssVars.join('\n')}}\n\n${scssString}`;
   const compiledCSS = sass.compileString(scssString);
 
   try {
