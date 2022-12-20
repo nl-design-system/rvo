@@ -269,7 +269,7 @@ jobs:
 
   publish-website:
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build, lint, test]
     if: github.ref == 'refs/heads/master'
 
     steps:
@@ -298,7 +298,7 @@ jobs:
 
   publish-npm:
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs: [build, lint, test]
     if: github.ref == 'refs/heads/master'
 
     steps:
