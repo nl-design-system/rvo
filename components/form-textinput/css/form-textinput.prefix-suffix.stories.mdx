@@ -16,7 +16,7 @@ import { argTypes, TextInput } from "./template";
 # Prefix
 
 <Canvas>
-  <Story name="Invalid" args={{ ...defaultArgs, valueType: "currency", prefix: "€" }}>
+  <Story name="Prefix" args={{ ...defaultArgs, valueType: "currency", prefix: "€" }}>
     {TextInput.bind({})}
   </Story>
 </Canvas>
@@ -24,7 +24,7 @@ import { argTypes, TextInput } from "./template";
 ## Suffix
 
 <Canvas>
-  <Story name="Focus" args={{ ...defaultArgs, valueType: "number", suffix: "m³" }}>
+  <Story name="Suffix" args={{ ...defaultArgs, valueType: "number", suffix: "m³" }}>
     {TextInput.bind({})}
   </Story>
 </Canvas>
