@@ -5,7 +5,7 @@
 import { IconType } from '@nl-rvo/assets/icons/types';
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import { Icon, iconNames as iconOptions } from '../../icon/css/template';
 import '../../layout-column-row/css/index.scss';
 import { defaultArgs } from './defaultArgs';
@@ -14,7 +14,7 @@ import './index.scss';
 export interface IButtonProps {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
-  label?: string;
+  label?: string | ReactNode;
   active?: boolean;
   busy?: boolean;
   focus?: boolean;
