@@ -33,10 +33,7 @@ const config = {
           breadcrumbs: false,
         },
         theme: {
-          customCss: [
-            require.resolve('@utrecht/design-tokens/dist/index.css'),
-            require.resolve('./src/css/custom.css'),
-          ],
+          customCss: [require.resolve('@nl-rvo/design-tokens/dist/index.css'), require.resolve('./src/css/custom.css')],
         },
       },
     ],
