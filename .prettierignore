@@ -17,9 +17,10 @@ pnpm-lock.yaml
 package-lock.json
 yarn.lock
 
-
-# Ignore generated files from Stencil
+# Ignore generated files from packages
 components/components.d.ts
 packages/web-components-stencil/loader
 packages/web-components-react/src/react-component-lib/
 packages/web-components-react/src/components.ts
+.uxpin-merge
+.docusaurus
