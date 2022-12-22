@@ -59,9 +59,9 @@
   "dependencies": {
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
-    "@nl-rvo/assets": "file:../proprietary/assets",
-    "@nl-rvo/basiselementen-design-tokens": "file:../proprietary/basiselementen-design-tokens",
-    "@nl-rvo/design-tokens": "file:../proprietary/design-tokens",
+    "@nl-rvo/assets": "workspace:*",
+    "@nl-rvo/basiselementen-design-tokens": "workspace:*",
+    "@nl-rvo/design-tokens": "workspace:*",
     "@storybook/addon-docs": "6.5.9",
     "@utrecht/design-tokens": "1.0.0-alpha.360",
     "clsx": "1.1.1",

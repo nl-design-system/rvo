@@ -2,12 +2,16 @@
 node_modules/
 vendor/
 
+# Ignore minified files
+*.min.js
+
 # Ignore generated files
-build/
-coverage/
-dist/
-tmp/
-.uxpin-merge/
+build
+coverage
+dist
+tmp
+.uxpin-merge
+.docusaurus
 
 # Ignore generated files from Stencil
 components/components.d.ts

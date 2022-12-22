@@ -7,88 +7,298 @@ on:
   pull_request:
 
 jobs:
-  continuous-integration:
+  install:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - name: Checkout branch
+        uses: actions/checkout@v3
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.14.0"
+          node-version: "16.16.x"
 
-      - name: Install
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
         run: |
-          npm ci
-          npm ls
-
-      - name: "Continuous Integration: build"
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
         run: |
-          npm run build --if-present
+          pnpm install
+          pnpm ls --recursive
 
+  lint:
+    runs-on: ubuntu-latest
+    needs: install
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.16.x"
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: |
+          pnpm install
       - name: "Continuous Integration: lint"
         run: |
-          npm run lint --if-present
+          pnpm run --if-present lint
 
-      - name: "Continuous Integration: test"
+  build:
+    runs-on: ubuntu-latest
+    needs: [install, lint]
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.16.x"
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
         run: |
-          npm run test --if-present
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: "Continuous Integration: build"
+        env:
+          BASE_URL: "/utrecht/"
+        run: |
+          pnpm run --if-present build
+      - name: "Retain build artifact: website"
+        uses: actions/upload-artifact@v3
+        with:
+          name: website
+          path: packages/design-system-website/dist/
+          retention-days: 1
 
-      - name: "Retain build artifact: Storybook"
-        uses: actions/upload-artifact@v2
+      - name: "Retain build artifact: storybook"
+        uses: actions/upload-artifact@v3
         with:
           name: storybook
           path: packages/storybook/dist/
           retention-days: 1
 
+  test:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.16.x"
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: "Continuous Integration: test"
+        run: |
+          pnpm run --if-present test
+
+  publish-uxpin:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.16.x"
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+
       - name: Push to UXPin
         continue-on-error: true
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        run: npm install && npx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
+        run: |
+          npm install && npx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
+
+  publish-chromatic:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.16.x"
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+
+      - name: "Continuous Integration: build Storybook with animation disabled"
+        env:
+          STORYBOOK_REDUCED_MOTION: 1
+        run: |
+          pnpm run --if-present build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
-        if: github.event.pull_request.draft == false && (github.actor != 'dependabot[bot]' || github.actor != 'dependabot-preview[bot]')
-        with:
-          autoAcceptChanges: master
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: packages/storybook/dist/
-
-      - name: Publish to Chromatic for NL Design System visual regression tests
-        uses: chromaui/action@v1
-        if: github.event.pull_request.draft == false && (github.actor != 'dependabot[bot]' || github.actor != 'dependabot-preview[bot]')
+        if: github.event.pull_request.draft == false
         with:
           autoAcceptChanges: master
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_NLDESIGNSYSTEM }}
           storybookBuildDir: packages/storybook/dist/
 
-  publish-storybook:
+  publish-website:
     runs-on: ubuntu-latest
-    needs: continuous-integration
+    needs: [build, lint, test]
     if: github.ref == 'refs/heads/master'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout release branch
+        uses: actions/checkout@v3
 
-      - name: "Restore build artifact: Storybook"
-        uses: actions/download-artifact@v2
+      - name: "Restore build artifact: website"
+        uses: actions/download-artifact@v3
         with:
-          name: storybook
-          path: packages/storybook/dist/
+          name: website
+          path: packages/design-system-website/dist/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
-          folder: packages/storybook/dist/
+          folder: packages/design-system-website/dist/
+
+      - name: Continuous Deployment to designsystem.utrecht.nl
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        with:
+          branch: master
+          folder: packages/design-system-website/dist/
+          repository-name: nl-design-system/designsystem.utrecht.nl
+          token: ${{ secrets.DOCS_GH_TOKEN }}
 
   publish-npm:
     runs-on: ubuntu-latest
-    needs: continuous-integration
+    needs: [build, lint, test]
     if: github.ref == 'refs/heads/master'
 
     steps:
@@ -98,19 +308,35 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.14.0"
+          node-version: "16.16.x"
 
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
       - name: "Continuous Deployment: install"
         run: |
-          npm ci
-          npm ls
-
+          pnpm install
+          pnpm ls --recursive
       - name: "Continuous Deployment: build"
         run: |
-          npm run build --if-present
-
+          pnpm run --if-present build
       - name: "Continuous Deployment: publish to GitHub repository"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -120,12 +346,11 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
         run: |
           git push --set-upstream origin HEAD
-          npm run release -- --yes
-
+          pnpm run release
       - name: "Continuous Deployment: publish to npm"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          npm run publish -- --no-verify-access --yes
-          npm config delete "//registry.npmjs.org/:_authToken"
+          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          pnpm run publish
+          pnpm config delete "//registry.npmjs.org/:_authToken"

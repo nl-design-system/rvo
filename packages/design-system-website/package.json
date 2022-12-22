@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "ROOS Design System website",
+  "license": "EUPL-1.2",
+  "name": "@nl-rvo/design-system-website",
+  "keywords": [
+    "nl-design-system",
+    "ROOS",
+    "rvo"
+  ],
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git"
+  },
+  "devDependencies": {
+    "@nl-rvo/docusaurus": "workspace:*",
+    "@nl-rvo/storybook": "workspace:*",
+    "rimraf": "3.0.2"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "rimraf dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../storybook/dist/ dist/storybook/"
+  }
+}

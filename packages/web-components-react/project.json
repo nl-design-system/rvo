@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "{workspaceRoot}/packages/web-components-react",
+  "sourceRoot": "{projectRoot}",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/web-components-react",
+        "outputPath": "packages/web-components-react/dist"
+      },
+      "dependsOn": ["^build"]
+    }
+  }
+}

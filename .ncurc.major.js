@@ -8,7 +8,7 @@ module.exports = {
     '@angular/compiler-cli',
     '@angular/core',
     '@angular/forms',
-    '@percy/storybook',
+    '@types/node',
     '@types/react',
     '@types/react-dom',
     'css-loader',

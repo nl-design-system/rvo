@@ -1,6 +1,10 @@
 # Ignore 3rd party files
+
 node_modules
 
-# Ignore generated files
+## Ignore generated files
+
 dist
+build
+tmp
 CHANGELOG.md

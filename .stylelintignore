@@ -1,9 +1,16 @@
 # Ignore 3rd party files
-node_modules/
-vendor/
+node_modules
+vendor
 
 # Ignore generated files
-build/
-coverage/
-dist/
-tmp/
+build
+coverage
+dist
+tmp
+
+# Ignore minified files
+*.min.js
+
+# Ignore generated files from Stencil
+packages/web-components-stencil
+packages/web-components-react

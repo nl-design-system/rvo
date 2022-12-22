@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "{workspaceRoot}/packages/web-components-stencil",
+  "sourceRoot": "{projectRoot}",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/web-components-stencil",
+        "outputPath": "packages/web-components-stencil/dist"
+      },
+      "dependsOn": ["^build"]
+    }
+  }
+}

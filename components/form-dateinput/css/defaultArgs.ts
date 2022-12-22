@@ -10,7 +10,7 @@ export const defaultArgs: IDateInputProps = {
   value: '',
   prefix: '',
   suffix: '',
-  min: null,
-  max: null,
+  min: undefined,
+  max: undefined,
   size: 'lg',
 };

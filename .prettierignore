@@ -1,23 +1,26 @@
 # Ignore 3rd party files
-node_modules/
-vendor/
+node_modules
+vendor
+
+# Ignore minified files
+*.min.js
 
 # Ignore generated files
-build/
-coverage/
-dist/
-tmp/
+build
+coverage
+dist
+tmp
 CHANGELOG.md
 
-# The indentation of dependency JSON files should only be updated by `yarn` and
-# `npm` commands, so dependency automation scripts (such as Dependabot and
-# Snyk) automatically use the correct indentation.
+# Package lock
+pnpm-lock.yaml
 package-lock.json
 yarn.lock
 
-
-# Ignore generated files from Stencil
+# Ignore generated files from packages
 components/components.d.ts
 packages/web-components-stencil/loader
 packages/web-components-react/src/react-component-lib/
 packages/web-components-react/src/components.ts
+.uxpin-merge
+.docusaurus

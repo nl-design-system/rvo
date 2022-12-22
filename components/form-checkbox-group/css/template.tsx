@@ -44,7 +44,7 @@ export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = (
         }
         return currentGroupSelection;
       }, []);
-      onChange(currentGroupSelection);
+      onChange?.(currentGroupSelection);
     }
   }, [checkboxGroupRef]);
 
@@ -69,7 +69,7 @@ export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = (
             onUpdateGroup={onUpdateGroup}
           />
         ))) ||
-        options.map((option) => (
+        options?.map((option) => (
           <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
         ))}
     </div>
