@@ -89,7 +89,7 @@
     "nx-lint-fix": "npx nx run-many --target=lint-fix --all --parallel",
     "prepare": "husky install",
     "prettier": "prettier --list-different --write .",
-    "publish": "lerna publish from-package --no-private",
+    "publish": "lerna publish from-package --no-private --yes",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "storybook": "nx run-many --nx-bail --parallel --projects=packages-storybook --target=storybook",
     "docusaurus": "nx start packages-docusaurus",
