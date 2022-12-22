@@ -82,6 +82,7 @@ export const argTypes = {
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
+  focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
@@ -118,7 +119,11 @@ export const TextInput: React.FC<ITextInputProps> = ({
     const inputMarkup = (
       <Textbox
         {...props}
-        className={clsx(size === 'sm' && 'utrecht-textbox--sm', size === 'md' && 'utrecht-textbox--md')}
+        className={clsx(
+          size === 'sm' && 'utrecht-textbox--sm',
+          size === 'md' && 'utrecht-textbox--md',
+          focus && 'utrecht-textbox--focus-visible',
+        )}
       />
     );
     if (prefix || suffix) {
@@ -140,14 +145,14 @@ export const TextInput: React.FC<ITextInputProps> = ({
     };
     return (
       <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
-        <Textarea {...props} />
+        <Textarea {...props} className={clsx(focus && 'utrecht-textbox--focus-visible')} />
         <span className="utrecht-textbox-remaining-chars">
           Nog {maxLength - currentValue.length} teken{maxLength - currentValue.length > 1 && 's'} over
         </span>
       </div>
     );
   } else {
-    return <Textarea {...props} />;
+    return <Textarea {...props} className={clsx(focus && 'utrecht-textbox--focus-visible')} />;
   }
 };
 
