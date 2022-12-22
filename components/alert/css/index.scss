@@ -46,7 +46,7 @@
   background-color: var(--rvo-alert-success-background-color);
 }
 
-.rvo-button--close {
+.rvo-button__close {
   --utrecht-icon-color: var(--rvo-color-zwart);
 
   margin-inline-start: auto;
@@ -56,4 +56,8 @@
   padding-block-start: 0;
   padding-inline-end: 0;
   padding-inline-start: 0;
+
+  .utrecht-icon.rvo-icon {
+    background-color: var(--utrecht-document-color);
+  }
 }
