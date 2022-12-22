@@ -5,7 +5,7 @@ const config = {
   title: 'ROOS Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   url: 'https://nl-design-system.github.io',
-  baseUrl: '/rvo',
+  baseUrl: '/rvo/docs',
   customFields: {
     storybookUrl: process.env['NODE_ENV'] === 'development' ? 'http://localhost:6006/' : '.rvo/storybook/',
   },
