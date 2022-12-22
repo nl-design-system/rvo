@@ -42,9 +42,15 @@ export const IconOverview: React.FC<IIconProps> = () => {
             <IconTable>
               {Object.keys(categoryIcons).map((iconName) => {
                 const parsedIconName = iconName.replace(/_/g, '-').toLowerCase();
-
+                const parsedIconCategory = categoryName.replace(/_/g, '-').toLowerCase();
+                const iconDownloadURL = `static/media/../../proprietary/assets/icons/${parsedIconCategory}/${parsedIconName}.svg`;
                 return (
-                  <IconContainer key={`${categoryName}-${parsedIconName}`}>
+                  <IconContainer
+                    key={`${categoryName}-${parsedIconName}`}
+                    download={`${parsedIconName}.svg`}
+                    href={iconDownloadURL}
+                    title={parsedIconName}
+                  >
                     <Icon icon={parsedIconName as any} size="3xl" color={iconColors[0] as any} />
                     <span>{parsedIconName}</span>
                   </IconContainer>
@@ -88,8 +94,10 @@ const IconTable = styled.div`
   justify-content: center;
 `;
 
-const IconContainer = styled.div`
+const IconContainer = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: var(--utrecht-icon-color);
 `;
