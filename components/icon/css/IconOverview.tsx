@@ -41,10 +41,12 @@ export const IconOverview: React.FC<IIconProps> = () => {
             <CategoryName id={categoryName}>{toProperCase(categoryName)}</CategoryName>
             <IconTable>
               {Object.keys(categoryIcons).map((iconName) => {
+                const parsedIconName = iconName.replace(/_/g, '-').toLowerCase();
+
                 return (
-                  <IconContainer key={`${categoryName}-${iconName}`}>
-                    <Icon icon={iconName as any} size="3xl" color={iconColors[0] as any} />
-                    <span>{iconName.toLowerCase()}</span>
+                  <IconContainer key={`${categoryName}-${parsedIconName}`}>
+                    <Icon icon={parsedIconName as any} size="3xl" color={iconColors[0] as any} />
+                    <span>{parsedIconName}</span>
                   </IconContainer>
                 );
               })}
