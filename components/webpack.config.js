@@ -14,6 +14,7 @@ const componentEntries = componentScssPaths.reduce((componentEntries, componentS
 
 module.exports = {
   mode: 'development',
+  devtool: 'source-map',
   entry: componentEntries,
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -28,7 +29,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name].css', chunkFilename: '[id].css' }),
+    new MiniCssExtractPlugin({ filename: '[name]/[name].css', chunkFilename: '[id].css' }),
     new EventHooksPlugin({
       afterEmit: () => {
         /// Remove JS files after emit
