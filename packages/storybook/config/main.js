@@ -41,14 +41,18 @@ module.exports = {
     '@storybook/preset-scss',
     'storybook-addon-themes',
   ],
-  staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => {
     const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/');
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
 
-    // Remove content has from assets to make them downloadable
+    // Put assets in predicatable location to make them downloadable
     const svgRule = config.module.rules.find((rule) => rule.type === 'asset/resource');
-    svgRule.generator.filename = svgRule.generator.filename.replace('.[contenthash:8]', '');
+    delete svgRule.generator.filename;
+
+    config.output.assetModuleFilename = (pathData) => {
+      const filepath = path.dirname(pathData.filename).match(/(?<=assets\/).*/)[0];
+      return `static/${filepath}/[name][ext][query]`;
+    };
 
     return {
       ...config,

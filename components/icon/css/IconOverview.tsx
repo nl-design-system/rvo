@@ -44,7 +44,7 @@ export const IconOverview: React.FC<IIconProps> = () => {
               {Object.keys(categoryIcons).map((iconName) => {
                 const parsedIconName = iconName.replace(/_/g, '-').toLowerCase();
                 const parsedIconCategory = categoryName.replace(/_/g, '-').toLowerCase();
-                const iconDownloadURL = `static/media/assets/icons/${parsedIconCategory}/${parsedIconName}.svg`;
+                const iconDownloadURL = `static/icons/${parsedIconCategory}/${parsedIconName}.svg`;
                 return (
                   <IconContainer
                     key={`${categoryName}-${parsedIconName}`}
