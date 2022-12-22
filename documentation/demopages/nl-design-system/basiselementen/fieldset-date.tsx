@@ -17,25 +17,20 @@ const FieldsetDate = () => {
       <form className="basiselementen-layout-form">
         <Fieldset
           aria-describedby={'billingdatedescription'}
-          className={clsx(
-            'utrecht-form-fieldset--subtle',
-            'utrecht-form-fieldset--date',
-            'utrecht-form-fieldset--grid',
-            'utrecht-form-fieldset--section',
-          )}
+          className={clsx('utrecht-form-fieldset--date', 'utrecht-form-fieldset--grid')}
           invalid={true}
         >
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Geboortedatum</FieldsetLegend>
           <FormFieldDescription id={'billingdatedescription'}>Vul uw geboortedatum in.</FormFieldDescription>
-          <FormField>
+          <FormField className={clsx('utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'day'}>Dag</FormLabel>
             <Textbox id={'day'} invalid={true} value={'12'}></Textbox>
           </FormField>
-          <FormField>
+          <FormField className={clsx('utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'month'}>Maand</FormLabel>
             <Textbox id={'month'} invalid={true} value={'31'}></Textbox>
           </FormField>
-          <FormField>
+          <FormField className={clsx('utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'year'}>Jaar</FormLabel>
             <Textbox id={'year'} invalid={true} value={'2023'}></Textbox>
           </FormField>

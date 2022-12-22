@@ -25,11 +25,13 @@ const Form = () => {
               <Textbox id={'realname'}></Textbox>
             </FormField>
           </Fieldset>
-          <Fieldset className={'utrecht-form-fieldset--subtle'}>
+          <Fieldset>
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
               Staat uw naam op de energierekening
             </FieldsetLegend>
-            <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
+            <FormField
+              className={clsx('utrecht-form-field--xs utrecht-form-field--start', 'utrecht-form-field--subtle')}
+            >
               <FormLabel htmlFor={'realnameA'}>
                 <CustomRadioButton name={'hasrealname'} id={'realnameA'} />
                 Ja
@@ -43,17 +45,11 @@ const Form = () => {
             </FormField>
           </Fieldset>
         </Fieldset>
-        <Fieldset
-          className={clsx(
-            'utrecht-form-fieldset--subtle',
-            'utrecht-form-fieldset--grid',
-            'utrecht-form-fieldset--section',
-          )}
-        >
+        <Fieldset className={clsx('utrecht-form-fieldset--grid', 'utrecht-form-fieldset--section')}>
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
             Staat uw naam op de factuur van de zonnepanelen
           </FieldsetLegend>
-          <FormField className={'utrecht-form-field--xs utrecht-form-field--start'}>
+          <FormField className={clsx('utrecht-form-field--xs utrecht-form-field--start', 'utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'billingnameA'}>
               <CustomRadioButton name={'hasbillingname'} id={'billingnameA'} />
               Ja
@@ -66,13 +62,7 @@ const Form = () => {
             </FormLabel>
           </FormField>
         </Fieldset>
-        <Fieldset
-          className={clsx(
-            'utrecht-form-fieldset--subtle',
-            'utrecht-form-fieldset--grid',
-            'utrecht-form-fieldset--section',
-          )}
-        >
+        <Fieldset className={clsx('utrecht-form-field--section', 'utrecht-form-fieldset--grid')}>
           <Fieldset
             aria-describedby={'billingdatedescription'}
             className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--date')}
@@ -81,7 +71,7 @@ const Form = () => {
             <FormFieldDescription id={'billingdatedescription'}>
               Vul de datum in die op de factuur van de zonnepanelen staat.
             </FormFieldDescription>
-            <FormField>
+            <FormField className={clsx('utrecht-form-field--subtle')}>
               <FormLabel htmlFor={'day'}>Dag</FormLabel>
               <Textbox id={'day'} invalid={false}></Textbox>
             </FormField>
@@ -89,40 +79,42 @@ const Form = () => {
               <FormLabel htmlFor={'month'}>Maand</FormLabel>
               <Textbox id={'month'} invalid={false}></Textbox>
             </FormField>
-            <FormField>
+            <FormField className={clsx('utrecht-form-field--subtle')}>
               <FormLabel htmlFor={'year'}>Jaar</FormLabel>
               <Textbox id={'year'} invalid={false}></Textbox>
             </FormField>
           </Fieldset>
           <Fieldset
             aria-describedby={'billingaddressdescription'}
-            className={clsx(
-              'utrecht-form-fieldset--subtle',
-              'utrecht-form-fieldset--adres',
-              'utrecht-form-fieldset--grid',
-            )}
+            className={clsx('utrecht-form-fieldset--adres', 'utrecht-form-fieldset--grid')}
           >
             <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>Afleveradress</FieldsetLegend>
             <FormFieldDescription id={'billingaddressdescription'}>
               Vul het adres in waar uw bestelling wordt afgeleverd.
             </FormFieldDescription>
-            <FormField className={'utrecht-form-field--street'}>
+            <FormField className={clsx('utrecht-form-field--street', 'utrecht-form-field--subtle')}>
               <FormLabel htmlFor={'street'}>Straatnaam</FormLabel>
               <Textbox id={'street'} placeholder={'Vriezenveensewijkseachtersteeg'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--street-number'}>
+            <FormField className={clsx('utrecht-form-field--street-number', 'utrecht-form-field--subtle')}>
               <FormLabel htmlFor={'housenumber'}>Huis&shy;num&shy;mer</FormLabel>
               <Textbox id={'housenumber'} placeholder={'1024'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--addition'}>
+            <FormField className={clsx('utrecht-form-field--addition', 'utrecht-form-field--subtle')}>
               <FormLabel htmlFor={'suffix'}>Toe&shy;voeg&shy;ing</FormLabel>
               <Textbox id={'suffix'} placeholder={'a'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--postcode utrecht-form-field--start'}>
+            <FormField
+              className={clsx(
+                'utrecht-form-field--postcode',
+                'utrecht-form-field--start',
+                'utrecht-form-field--subtle',
+              )}
+            >
               <FormLabel htmlFor={'postcode'}>Postcode</FormLabel>
               <Textbox id={'postcode'} placeholder={'0000 AB'}></Textbox>
             </FormField>
-            <FormField className={'utrecht-form-field--city'}>
+            <FormField className={clsx('utrecht-form-field--city', 'utrecht-form-field--subtle')}>
               <FormLabel htmlFor={'city'}>Plaatsnaam</FormLabel>
               <Textbox id={'city'} placeholder={'Westerhaar-Vriezenveensewijk'}></Textbox>
             </FormField>

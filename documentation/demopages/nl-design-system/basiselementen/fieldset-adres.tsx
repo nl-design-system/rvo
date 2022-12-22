@@ -29,23 +29,25 @@ const FieldsetAdres = () => {
           <FormFieldDescription id={'billingaddressdescription'}>
             Vul het adres in waar uw bestelling wordt afgeleverd.
           </FormFieldDescription>
-          <FormField className={'utrecht-form-field--street'}>
+          <FormField className={clsx('utrecht-form-field--street', 'utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'street'}>Straatnaam</FormLabel>
             <Textbox id={'street'} placeholder={'Vriezenveensewijkseachtersteeg'} invalid={true}></Textbox>
           </FormField>
-          <FormField className={'utrecht-form-field--street-number'}>
+          <FormField className={clsx('utrecht-form-field--street-number', 'utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'housenumber'}>Huisnummer</FormLabel>
             <Textbox id={'housenumber'} placeholder={'1024'} invalid={true}></Textbox>
           </FormField>
-          <FormField className={'utrecht-form-field--addition'}>
+          <FormField className={clsx('utrecht-form-field--addition', 'utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'suffix'}>Toevoeging</FormLabel>
             <Textbox id={'suffix'} placeholder={'a'} invalid={true}></Textbox>
           </FormField>
-          <FormField className={'utrecht-form-field--postcode utrecht-form-field--start'}>
+          <FormField
+            className={clsx('utrecht-form-field--postcode', 'utrecht-form-field--start', 'utrecht-form-field--subtle')}
+          >
             <FormLabel htmlFor={'postcode'}>Postcode</FormLabel>
             <Textbox id={'postcode'} placeholder={'0000 AD'} value={'1ooo ad'} invalid={true}></Textbox>
           </FormField>
-          <FormField className={'utrecht-form-field--city'}>
+          <FormField className={clsx('utrecht-form-field--city', 'utrecht-form-field--subtle')}>
             <FormLabel htmlFor={'city'}>Plaatsnaam</FormLabel>
             <Textbox id={'city'} placeholder={'Westerhaar-Vriezenveensewijk'} invalid={true}></Textbox>
           </FormField>
