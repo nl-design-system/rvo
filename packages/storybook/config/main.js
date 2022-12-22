@@ -45,6 +45,11 @@ module.exports = {
   webpackFinal: async (config) => {
     const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/');
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
+
+    // Remove content has from assets to make them downloadable
+    const svgRule = config.module.rules.find((rule) => rule.type === 'asset/resource');
+    svgRule.generator.filename = svgRule.generator.filename.replace('.[contenthash:8]', '');
+
     return {
       ...config,
       performance: { hints: false },
