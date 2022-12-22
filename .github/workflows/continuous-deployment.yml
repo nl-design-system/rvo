@@ -116,7 +116,7 @@ jobs:
           pnpm install
       - name: "Continuous Integration: build"
         env:
-          BASE_URL: "/utrecht/"
+          BASE_URL: "/rvo/"
         run: |
           pnpm run --if-present build
       - name: "Retain build artifact: website"
@@ -287,14 +287,6 @@ jobs:
         with:
           branch: gh-pages
           folder: packages/design-system-website/dist/
-
-      - name: Continuous Deployment to designsystem.utrecht.nl
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
-        with:
-          branch: master
-          folder: packages/design-system-website/dist/
-          repository-name: nl-design-system/designsystem.utrecht.nl
-          token: ${{ secrets.DOCS_GH_TOKEN }}
 
   publish-npm:
     runs-on: ubuntu-latest
