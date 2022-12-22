@@ -7,6 +7,7 @@
   background-color: transparent;
   border: none;
   color: var(--rvo-file-input-color, var(--utrecht-form-input-color));
+  font-family: var(--utrecht-form-input-font-family, var(--utrecht-document-font-family));
   font-weight: var(--rvo-file-input-font-weight);
 }
 
@@ -16,6 +17,7 @@
   border-radius: var(--rvo-file-input-border-radius, var(--utrecht-form-input-border-radius));
   border-style: solid;
   border-width: var(--rvo-file-input-border-width, var(--utrecht-form-input-border-width));
+  font-family: var(--utrecht-form-input-font-family, var(--utrecht-document-font-family));
   padding-block-end: var(--rvo-file-input-padding-block-end, var(--utrecht-form-input-padding-block-end));
   padding-block-start: var(--rvo-file-input-padding-block-start, var(--utrecht-form-input-padding-block-start));
   padding-inline-end: var(--rvo-file-input-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
