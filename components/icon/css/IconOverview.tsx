@@ -59,20 +59,23 @@ export const IconOverview: React.FC<IIconProps> = () => {
 };
 
 const Container = styled.div`
-  margin-top: 2em;
-  margin-bottom: 4em;
+  margin-block-start: 2em;
+  margin-block-end: 4em;
 `;
 
 const CategorySelector = styled.div`
   position: sticky;
-  top: 10px;
+  top: 0;
   display: flex;
   gap: 1em;
   z-index: 10;
+  padding-block-start: 1em;
+  padding-block-end: 1em;
+  background: white;
 `;
 
 const CategoryName = styled.h2`
-  padding-block-start: 40px;
+  padding-block-start: 55px;
 `;
 
 const IconTable = styled.div`
