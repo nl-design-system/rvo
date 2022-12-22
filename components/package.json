@@ -19,7 +19,7 @@
     "clean": "rimraf dist/"
   },
   "devDependencies": {
-    "@emotion/styled": "11.9.3",
+    "@emotion/styled": "11.10.5",
     "@nl-rvo/assets": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "@storybook/addon-docs": "6.5.9",
