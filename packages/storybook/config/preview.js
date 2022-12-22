@@ -65,6 +65,7 @@ const storySort = {
     'Huisstijl',
     ['Color', 'Font', 'Size', 'Space'],
     'CSS Components',
+    'Templates',
     "Demo pagina's",
     'Informatie',
     ['Toestemming voor gebruik', 'Open source licentie'],
