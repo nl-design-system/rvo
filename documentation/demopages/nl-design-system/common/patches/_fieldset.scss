@@ -1,12 +1,10 @@
-div.utrecht-form-fieldset {
+.utrecht-form-fieldset--section {
   background-color: var(--utrecht-form-fieldset-section-background-color);
   color: var(--utrecht-form-fieldset-section-color);
-  margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
-  margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
-  padding-block-end: var(--utrecht-form-fieldset-padding-block-end);
-  padding-block-start: var(--utrecht-form-fieldset-padding-block-start);
-  padding-inline-end: var(--utrecht-form-fieldset-padding-inline-end);
-  padding-inline-start: var(--utrecht-form-fieldset-padding-inline-start);
+  padding-block-end: var(--utrecht-form-fieldset-section-padding-block-end);
+  padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
+  padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
 }
 
 .utrecht-form-fieldset {

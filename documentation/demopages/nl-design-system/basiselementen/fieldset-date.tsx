@@ -21,6 +21,7 @@ const FieldsetDate = () => {
             'utrecht-form-fieldset--subtle',
             'utrecht-form-fieldset--date',
             'utrecht-form-fieldset--grid',
+            'utrecht-form-fieldset--section',
           )}
           invalid={true}
         >

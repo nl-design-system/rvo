@@ -21,6 +21,7 @@ const FieldsetAdres = () => {
             'utrecht-form-fieldset--subtle',
             'utrecht-form-fieldset--adres',
             'utrecht-form-fieldset--grid',
+            'utrecht-form-fieldset--section',
           )}
           invalid={true}
         >

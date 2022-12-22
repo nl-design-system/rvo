@@ -36,7 +36,10 @@ export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   children,
 }: PropsWithChildren<IFieldsetProps>) => {
   return (
-    <FieldsetUtrecht className={clsx('rvo-layout-column rvo-layout-gap--xl')} disabled={disabled || null}>
+    <FieldsetUtrecht
+      className={clsx('rvo-layout-column rvo-layout-gap--xl', 'utrecht-form-fieldset--section')}
+      disabled={disabled || null}
+    >
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children ||
         (fields &&

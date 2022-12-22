@@ -18,7 +18,7 @@ const Form = () => {
     <div className={'basiselementen-demo-page'}>
       <Heading1>Gegevens zonnepanelen invullen</Heading1>
       <form className="basiselementen-layout-form">
-        <Fieldset className={'utrecht-form-fieldset--grid'}>
+        <Fieldset className={clsx('utrecht-form-fieldset--grid', 'utrecht-form-fieldset--section')}>
           <Fieldset>
             <FormField>
               <FormLabel htmlFor={'realname'}>Uw naam</FormLabel>
@@ -43,7 +43,13 @@ const Form = () => {
             </FormField>
           </Fieldset>
         </Fieldset>
-        <Fieldset className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--grid')}>
+        <Fieldset
+          className={clsx(
+            'utrecht-form-fieldset--subtle',
+            'utrecht-form-fieldset--grid',
+            'utrecht-form-fieldset--section',
+          )}
+        >
           <FieldsetLegend className={'utrecht-form-fieldset__legend--label'}>
             Staat uw naam op de factuur van de zonnepanelen
           </FieldsetLegend>
@@ -60,7 +66,13 @@ const Form = () => {
             </FormLabel>
           </FormField>
         </Fieldset>
-        <Fieldset className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--grid')}>
+        <Fieldset
+          className={clsx(
+            'utrecht-form-fieldset--subtle',
+            'utrecht-form-fieldset--grid',
+            'utrecht-form-fieldset--section',
+          )}
+        >
           <Fieldset
             aria-describedby={'billingdatedescription'}
             className={clsx('utrecht-form-fieldset--subtle', 'utrecht-form-fieldset--date')}
