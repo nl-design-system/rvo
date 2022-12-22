@@ -37,7 +37,7 @@
     "@storybook/addon-viewport": "6.5.14",
     "@storybook/api": "6.5.14",
     "@storybook/builder-webpack5": "6.5.14",
-    "@storybook/cli": "6.5.14",
+    "@storybook/cli": "6.5.15",
     "@storybook/components": "6.5.14",
     "@storybook/core-events": "6.5.14",
     "@storybook/manager-webpack5": "6.5.14",
