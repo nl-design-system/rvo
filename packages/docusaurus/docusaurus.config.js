@@ -13,7 +13,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'nl-rvo',
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', './plugins/AddTSAliasPlugin.js'],
   projectName: 'rvo',
   i18n: {
     defaultLocale: 'nl',
