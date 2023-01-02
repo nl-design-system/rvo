@@ -216,10 +216,12 @@ importers:
     specifiers:
       '@nl-rvo/docusaurus': workspace:*
       '@nl-rvo/storybook': workspace:*
+      cpx: 1.5.0
       rimraf: 3.0.2
     devDependencies:
       '@nl-rvo/docusaurus': link:../docusaurus
       '@nl-rvo/storybook': link:../storybook
+      cpx: 1.5.0
       rimraf: 3.0.2
 
   packages/docusaurus:
