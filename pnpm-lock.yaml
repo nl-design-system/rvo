@@ -8407,7 +8407,7 @@ packages:
       glob: 7.2.3
       handlebars: 4.7.7
       interpret: 2.2.0
-      json5: 2.2.1
+      json5: 2.2.3
       lazy-universal-dotenv: 3.0.1
       picomatch: 2.3.1
       pkg-dir: 5.0.0
@@ -8478,7 +8478,7 @@ packages:
       glob: 7.2.3
       handlebars: 4.7.7
       interpret: 2.2.0
-      json5: 2.2.1
+      json5: 2.2.3
       lazy-universal-dotenv: 3.0.1
       picomatch: 2.3.1
       pkg-dir: 5.0.0
@@ -8548,7 +8548,7 @@ packages:
       glob: 7.2.3
       handlebars: 4.7.7
       interpret: 2.2.0
-      json5: 2.2.1
+      json5: 2.2.3
       lazy-universal-dotenv: 3.0.1
       picomatch: 2.3.1
       pkg-dir: 5.0.0
@@ -20060,6 +20060,7 @@ packages:
     resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
     engines: {node: '>=6'}
     hasBin: true
+    dev: true
 
   /json5/2.2.3:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
@@ -30760,5 +30761,5 @@ packages:
   file:packages/web-components-css:
     resolution: {directory: packages/web-components-css, type: directory}
     name: '@nl-rvo/component-library-css'
-    version: 1.0.0-alpha.264
+    version: 1.0.0-alpha.256
     dev: true

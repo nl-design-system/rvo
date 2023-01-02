@@ -1,5 +1,3 @@
-<!-- @license CC0-1.0 -->
-
 # Aan de slag met RVO Design System (ROOS)
 
 Om te starten met het design system gebruik je een drietal libraries.
