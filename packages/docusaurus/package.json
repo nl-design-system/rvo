@@ -18,14 +18,14 @@
     "build/"
   ],
   "scripts": {
-    "copy:docs": "rimraf docs/tmp && mkdirp docs/tmp && cpx '../../documentation/website/**/**' docs/tmp",
-    "copy:components": "rimraf tmp && mkdirp tmp && cpx '../../components/**/*.md' tmp",
+    "copy:docs": "rimraf docs/tmp && mkdirp docs/tmp && node copyDocs.js",
+    "copy:components": "rimraf tmp && mkdirp tmp && node copyComponentDocs.js",
     "docusaurus": "docusaurus",
     "prestart": "npm-run-all --parallel copy:**",
     "start": "npm-run-all --parallel docs:**",
     "docs:start": "docusaurus start",
-    "docs:watch": "cpx '../../documentation/website/**/*.md' docs/tmp --watch",
-    "docs:watch-components": "cpx '../../components/**/*.md' tmp --watch",
+    "docs:watch": "node copyDocs.js --watch",
+    "docs:watch-components": "node copyComponentDocs.js --watch",
     "prebuild": "npm-run-all --parallel copy:**",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
