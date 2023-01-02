@@ -17,7 +17,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
+    "build": "rimraf dist && rollup -c",
     "build:watch": "rollup -c --watch",
     "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
