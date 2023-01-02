@@ -24,6 +24,6 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "rimraf dist/ && cp -R ../storybook/dist/ dist && cp -R ../docusaurus/build/ dist/docs"
+    "build": "rimraf dist/ && node copyFiles.js"
   }
 }
