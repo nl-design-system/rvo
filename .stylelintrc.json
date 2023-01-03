@@ -162,7 +162,8 @@
     {
       "files": ["packages/docusaurus/src/**/*.css", "packages/docusaurus/src/**/*.scss"],
       "rules": {
-        "selector-class-pattern": null
+        "selector-class-pattern": null,
+        "custom-property-pattern": null
       }
     }
   ]
