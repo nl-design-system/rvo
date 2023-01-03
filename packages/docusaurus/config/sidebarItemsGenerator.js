@@ -17,10 +17,14 @@ const findOrAddCategory = (itemList, categoryName) => {
 };
 
 module.exports = async ({ docs }) => {
-  // Order docs by sidebar Position
+  // Order docs by sidebar position
   const orderedDocs = docs.sort((a, b) => {
     return a.sidebarPosition - b.sidebarPosition;
   });
+
+  // Remove the homepage from the sidebar
+  const homepageIndex = orderedDocs.findIndex((doc) => doc.sourceDirName === '.');
+  orderedDocs.splice(homepageIndex, 1);
 
   // Categorize docs by folder
   const sidebarItems = orderedDocs.reduce((currentSidebarItemList, doc) => {

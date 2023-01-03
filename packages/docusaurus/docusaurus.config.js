@@ -63,7 +63,10 @@ const config = {
         docs: false,
         blog: false,
         theme: {
-          customCss: [require.resolve('@nl-rvo/design-tokens/dist/index.css'), require.resolve('./src/css/custom.css')],
+          customCss: [
+            require.resolve('@nl-rvo/design-tokens/dist/index.css'),
+            require.resolve('./src/css/custom.scss'),
+          ],
         },
       },
     ],
