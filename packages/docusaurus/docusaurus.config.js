@@ -2,7 +2,8 @@
 const path = require('path');
 const includeList = ['**/*.docs.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docs)*'];
-const navigationConfig = require('./navigationConfig');
+const navigationConfig = require('./config/navigationConfig');
+const sidebarItemsGenerator = require('./config/sidebarItemsGenerator');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,7 +25,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'default',
-        sidebarPath: require.resolve('./sidebars.js'),
+        sidebarPath: require.resolve('./config/sidebarConfig.js'),
+        sidebarItemsGenerator,
         path: path.resolve(__dirname, '../../documentation/pages'),
         routeBasePath: '/',
         editUrl: 'https://github.com/nl-design-system/rvo/tree/main/documentation',
@@ -40,7 +42,7 @@ const config = {
         path: path.resolve(__dirname, '../../test'),
         routeBasePath: 'components',
         editUrl: 'https://github.com/nl-design-system/rvo/tree/main/components',
-        sidebarPath: require.resolve('./sidebars.js'),
+        // sidebarPath: require.resolve('./config/sidebarConfig.js'),
         include: includeList,
         exclude: excludeList,
       },
@@ -86,5 +88,4 @@ const config = {
     },
 };
 
-console.log(navigationConfig);
 module.exports = config;
