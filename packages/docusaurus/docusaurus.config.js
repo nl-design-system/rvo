@@ -81,7 +81,7 @@ const config = {
         theme: require('prism-react-renderer/themes/github'),
       },
       navbar: {
-        title: 'ROOS ',
+        title: 'ROOS',
         logo: {
           alt: 'RVO Logo',
           src: 'img/logo.svg',
@@ -110,32 +110,39 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Toegankelijkheid',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Sitemap',
+                to: '/docs/intro',
               },
+            ],
+          },
+          {
+            items: [
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Cookies',
+                to: '/docs/intro',
               },
+            ],
+          },
+          {
+            items: [
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Privacy',
+                to: '/docs/intro',
               },
             ],
           },
         ],
+        copyright: `Gebouwd door RVO in samenwerking met NL Design System.<br/>All content is available under the Open Government Licence v3.0, except where otherwise stated. `,
       },
     },
 };
