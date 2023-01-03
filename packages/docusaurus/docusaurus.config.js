@@ -2,6 +2,7 @@
 const path = require('path');
 const includeList = ['**/*.docs.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docs)*'];
+const navigationConfig = require('./navigationConfig');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -58,6 +59,7 @@ const config = {
       {
         debug: process.env['NODE_ENV'] === 'development' ? true : false,
         docs: false,
+        blog: false,
         theme: {
           customCss: [require.resolve('@nl-rvo/design-tokens/dist/index.css'), require.resolve('./src/css/custom.css')],
         },
@@ -80,71 +82,9 @@ const config = {
       prism: {
         theme: require('prism-react-renderer/themes/github'),
       },
-      navbar: {
-        title: 'ROOS',
-        logo: {
-          alt: 'RVO Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'test.docs',
-          //   position: 'left',
-          //   label: 'Test',
-          // },
-          // {
-          //   href: 'https://github.com/nl-design-system/rvo',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
-          // {
-          //   prependBaseUrlToHref: true,
-          //   href: './storybook/',
-          //   label: 'Storybook',
-          //   position: 'right',
-          // },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            items: [
-              {
-                label: 'Toegankelijkheid',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            items: [
-              {
-                label: 'Sitemap',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            items: [
-              {
-                label: 'Cookies',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            items: [
-              {
-                label: 'Privacy',
-                to: '/docs/intro',
-              },
-            ],
-          },
-        ],
-        copyright: `Gebouwd door RVO in samenwerking met NL Design System.<br/>All content is available under the Open Government Licence v3.0, except where otherwise stated. `,
-      },
+      ...navigationConfig,
     },
 };
 
+console.log(navigationConfig);
 module.exports = config;
