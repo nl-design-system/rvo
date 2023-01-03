@@ -17,8 +17,13 @@ const findOrAddCategory = (itemList, categoryName) => {
 };
 
 module.exports = async ({ docs }) => {
+  // Order docs by sidebar Position
+  const orderedDocs = docs.sort((a, b) => {
+    return a.sidebarPosition - b.sidebarPosition;
+  });
+
   // Categorize docs by folder
-  const sidebarItems = docs.reduce((currentSidebarItemList, doc) => {
+  const sidebarItems = orderedDocs.reduce((currentSidebarItemList, doc) => {
     // Get categories from doc's sourceDirName
     const categoryNames = doc.sourceDirName.split('/');
     categoryNames.shift();
