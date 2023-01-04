@@ -15,8 +15,8 @@ export default function HomepageHeader({ title, tagline }) {
 const HeroBanner = styled.header`
   padding-block-end: 4rem;
   padding-block-start: 4rem;
-  padding-inline-end: 0;
-  padding-inline-start: 0;
+  padding-inline-end: 4rem;
+  padding-inline-start: 4rem;
 
   @media screen and (max-width: 996px) {
     padding-block-end: 2rem;
