@@ -233,6 +233,8 @@ importers:
       '@docusaurus/preset-classic': 2.2.0
       '@docusaurus/theme-classic': 2.2.0
       '@docusaurus/types': 2.2.0
+      '@emotion/react': 11.10.5
+      '@emotion/styled': 11.10.5
       '@mdx-js/react': 1.6.22
       '@nl-rvo/basiselementen-design-tokens': workspace:*
       '@nl-rvo/components': workspace:*
@@ -252,6 +254,8 @@ importers:
       '@docusaurus/preset-classic': 2.2.0_3tgeifm2vmwrlpqlopppsnjtcu
       '@docusaurus/theme-classic': 2.2.0_3tgeifm2vmwrlpqlopppsnjtcu
       '@docusaurus/types': 2.2.0_sfoxds7t5ydpegc3knd667wn6m
+      '@emotion/react': 11.10.5_react@17.0.2
+      '@emotion/styled': 11.10.5_l7gftlbh7xaw66y2swwtfz6cva
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@nl-rvo/basiselementen-design-tokens': link:../../proprietary/basiselementen-design-tokens
       '@nl-rvo/components': link:../../components
@@ -5008,6 +5012,29 @@ packages:
   /@emotion/memoize/0.8.0:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
 
+  /@emotion/react/11.10.5_react@17.0.2:
+    resolution: {integrity: sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      '@types/react': '*'
+      react: '>=16.8.0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.20.6
+      '@emotion/babel-plugin': 11.10.5
+      '@emotion/cache': 11.10.5
+      '@emotion/serialize': 1.1.1
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.0_react@17.0.2
+      '@emotion/utils': 1.2.0
+      '@emotion/weak-memoize': 0.3.0
+      hoist-non-react-statics: 3.3.2
+      react: 17.0.2
+    dev: true
+
   /@emotion/react/11.10.5_zavbqmrropwrojvx6ojaa4s7im:
     resolution: {integrity: sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A==}
     peerDependencies:
@@ -5121,6 +5148,29 @@ packages:
       react: 18.2.0
     dev: true
 
+  /@emotion/styled/11.10.5_l7gftlbh7xaw66y2swwtfz6cva:
+    resolution: {integrity: sha512-8EP6dD7dMkdku2foLoruPCNkRevzdcBaY6q0l0OsbyJK+x8D9HWjX27ARiSIKNF634hY9Zdoedh8bJCiva8yZw==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      '@emotion/react': ^11.0.0-rc.0
+      '@types/react': '*'
+      react: '>=16.8.0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.20.6
+      '@emotion/babel-plugin': 11.10.5
+      '@emotion/is-prop-valid': 1.2.0
+      '@emotion/react': 11.10.5_react@17.0.2
+      '@emotion/serialize': 1.1.1
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.0_react@17.0.2
+      '@emotion/utils': 1.2.0
+      react: 17.0.2
+    dev: true
+
   /@emotion/styled/11.9.3:
     resolution: {integrity: sha512-o3sBNwbtoVz9v7WB1/Y/AmXl69YHmei2mrVnK7JgyBJ//Rst5yqPZCecEJlMlJrFeWHp+ki/54uN265V2pEcXA==}
     peerDependencies:
@@ -5190,6 +5240,14 @@ packages:
 
   /@emotion/unitless/0.8.0:
     resolution: {integrity: sha512-VINS5vEYAscRl2ZUDiT3uMPlrFQupiKgHz5AA4bCH1miKBg4qtwkim1qPmJj/4WG6TreYMY111rEFsjupcOKHw==}
+
+  /@emotion/use-insertion-effect-with-fallbacks/1.0.0_react@17.0.2:
+    resolution: {integrity: sha512-1eEgUGmkaljiBnRMTdksDV1W4kUnmwgp7X9G8B++9GYwl1lUdqSndSriIrTJ0N7LQaoauY9JJ2yhiOYK5+NI4A==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 17.0.2
+    dev: true
 
   /@emotion/use-insertion-effect-with-fallbacks/1.0.0_react@18.2.0:
     resolution: {integrity: sha512-1eEgUGmkaljiBnRMTdksDV1W4kUnmwgp7X9G8B++9GYwl1lUdqSndSriIrTJ0N7LQaoauY9JJ2yhiOYK5+NI4A==}
