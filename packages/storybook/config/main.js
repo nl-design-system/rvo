@@ -41,6 +41,7 @@ module.exports = {
     '@storybook/preset-scss',
     'storybook-addon-themes',
   ],
+  staticDirs: ['../../../documentation/demopages/common'],
   webpackFinal: async (config) => {
     const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/');
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];

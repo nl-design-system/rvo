@@ -1,18 +1,8 @@
 export default {
+  LOGO: 'logo.svg',
   FAVICON: {
     ICON: 'favicon/icon.svg',
   },
-  LOGIN_OPTIONS: {
-    DIGID_LOGO: 'login-options/digid-logo.svg',
-    E_HERKENNING_LOGO: 'login-options/e-herkenning-logo.svg',
-    EU_FLAG: 'login-options/eu-flag.svg',
-  },
-  LOGO_GRID: {
-    ENJOY_SIGNATURE_BOTTOM_EN: 'logo-grid/enjoy-signature-bottom-en.svg',
-    FLAG_OF_EUROPE: 'logo-grid/flag-of-europe.svg',
-    NL_BRANDING: 'logo-grid/nl-branding.svg',
-  },
-  LOGO: 'logo.svg',
   PROGRESS_TRACKER: {
     PROGRESS_TRACKER_COMPLETED_MD: 'progress-tracker/progress-tracker-completed-md.svg',
     PROGRESS_TRACKER_COMPLETED_SM: 'progress-tracker/progress-tracker-completed-sm.svg',

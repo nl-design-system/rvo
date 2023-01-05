@@ -1,12 +1,6 @@
 .rvo-theme {
-  --rvo-image-icon: url("favicon/icon.svg");
-  --rvo-image-digid-logo: url("login-options/digid-logo.svg");
-  --rvo-image-e-herkenning-logo: url("login-options/e-herkenning-logo.svg");
-  --rvo-image-eu-flag: url("login-options/eu-flag.svg");
-  --rvo-image-enjoy-signature-bottom-en: url("logo-grid/enjoy-signature-bottom-en.svg");
-  --rvo-image-flag-of-europe: url("logo-grid/flag-of-europe.svg");
-  --rvo-image-nl-branding: url("logo-grid/nl-branding.svg");
   --rvo-image-logo: url("logo.svg");
+  --rvo-image-icon: url("favicon/icon.svg");
   --rvo-image-progress-tracker-completed-md: url("progress-tracker/progress-tracker-completed-md.svg");
   --rvo-image-progress-tracker-completed-sm: url("progress-tracker/progress-tracker-completed-sm.svg");
   --rvo-image-progress-tracker-doing-md: url("progress-tracker/progress-tracker-doing-md.svg");
@@ -18,139 +12,6 @@
   --rvo-image-progress-tracker-line-substep-start: url("progress-tracker/progress-tracker-line-substep-start.svg");
   --rvo-image-progress-tracker-start-end-md: url("progress-tracker/progress-tracker-start-end-md.svg");
   --rvo-image-progress-tracker-start-end-sm: url("progress-tracker/progress-tracker-start-end-sm.svg");
-}
-
-.rvo-image-icon,
-.rvo-image-icon--before::before,
-.rvo-image-icon--after::after {
-  -webkit-mask-image: var(--rvo-image-icon);
-  mask-image: var(--rvo-image-icon);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-icon,
-.rvo-image-bg-icon--before::before,
-.rvo-image-bg-icon--after::after {
-  background-image: var(--rvo-image-icon);
-}
-
-.rvo-image-digid-logo,
-.rvo-image-digid-logo--before::before,
-.rvo-image-digid-logo--after::after {
-  -webkit-mask-image: var(--rvo-image-digid-logo);
-  mask-image: var(--rvo-image-digid-logo);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-digid-logo,
-.rvo-image-bg-digid-logo--before::before,
-.rvo-image-bg-digid-logo--after::after {
-  background-image: var(--rvo-image-digid-logo);
-}
-
-.rvo-image-e-herkenning-logo,
-.rvo-image-e-herkenning-logo--before::before,
-.rvo-image-e-herkenning-logo--after::after {
-  -webkit-mask-image: var(--rvo-image-e-herkenning-logo);
-  mask-image: var(--rvo-image-e-herkenning-logo);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-e-herkenning-logo,
-.rvo-image-bg-e-herkenning-logo--before::before,
-.rvo-image-bg-e-herkenning-logo--after::after {
-  background-image: var(--rvo-image-e-herkenning-logo);
-}
-
-.rvo-image-eu-flag,
-.rvo-image-eu-flag--before::before,
-.rvo-image-eu-flag--after::after {
-  -webkit-mask-image: var(--rvo-image-eu-flag);
-  mask-image: var(--rvo-image-eu-flag);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-eu-flag,
-.rvo-image-bg-eu-flag--before::before,
-.rvo-image-bg-eu-flag--after::after {
-  background-image: var(--rvo-image-eu-flag);
-}
-
-.rvo-image-enjoy-signature-bottom-en,
-.rvo-image-enjoy-signature-bottom-en--before::before,
-.rvo-image-enjoy-signature-bottom-en--after::after {
-  -webkit-mask-image: var(--rvo-image-enjoy-signature-bottom-en);
-  mask-image: var(--rvo-image-enjoy-signature-bottom-en);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-enjoy-signature-bottom-en,
-.rvo-image-bg-enjoy-signature-bottom-en--before::before,
-.rvo-image-bg-enjoy-signature-bottom-en--after::after {
-  background-image: var(--rvo-image-enjoy-signature-bottom-en);
-}
-
-.rvo-image-flag-of-europe,
-.rvo-image-flag-of-europe--before::before,
-.rvo-image-flag-of-europe--after::after {
-  -webkit-mask-image: var(--rvo-image-flag-of-europe);
-  mask-image: var(--rvo-image-flag-of-europe);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-flag-of-europe,
-.rvo-image-bg-flag-of-europe--before::before,
-.rvo-image-bg-flag-of-europe--after::after {
-  background-image: var(--rvo-image-flag-of-europe);
-}
-
-.rvo-image-nl-branding,
-.rvo-image-nl-branding--before::before,
-.rvo-image-nl-branding--after::after {
-  -webkit-mask-image: var(--rvo-image-nl-branding);
-  mask-image: var(--rvo-image-nl-branding);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-}
-
-.rvo-image-bg-nl-branding,
-.rvo-image-bg-nl-branding--before::before,
-.rvo-image-bg-nl-branding--after::after {
-  background-image: var(--rvo-image-nl-branding);
 }
 
 .rvo-image-logo,
@@ -170,6 +31,25 @@
 .rvo-image-bg-logo--before::before,
 .rvo-image-bg-logo--after::after {
   background-image: var(--rvo-image-logo);
+}
+
+.rvo-image-icon,
+.rvo-image-icon--before::before,
+.rvo-image-icon--after::after {
+  -webkit-mask-image: var(--rvo-image-icon);
+  mask-image: var(--rvo-image-icon);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-image-bg-icon,
+.rvo-image-bg-icon--before::before,
+.rvo-image-bg-icon--after::after {
+  background-image: var(--rvo-image-icon);
 }
 
 .rvo-image-progress-tracker-completed-md,
