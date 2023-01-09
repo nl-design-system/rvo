@@ -58,7 +58,7 @@ const config = {
   staticDirectories: ['static'],
   presets: [
     [
-      // 'classic',
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         debug: process.env['NODE_ENV'] === 'development' ? true : false,
