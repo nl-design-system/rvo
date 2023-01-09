@@ -8,9 +8,15 @@ module.exports = {
     items: [
       {
         type: 'doc',
-        docId: 'introduction/introduction.docs',
+        docId: 'getting-started/introduction.docs',
         position: 'left',
         label: 'Aan de slag',
+      },
+      {
+        type: 'doc',
+        docId: 'design-tokens/design-tokens.color.docs',
+        position: 'left',
+        label: 'Design tokens',
       },
       {
         href: 'https://github.com/nl-design-system/rvo',
