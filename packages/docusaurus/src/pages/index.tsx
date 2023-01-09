@@ -1,6 +1,6 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React from 'react';
