@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
             van andere ontwikkelaars en voorkom werk dat al gedaan is.
           </p>
           <div>
-            <Link className="button button--secondary button--lg" to="/docs/intro">
+            <Link className="button button--secondary button--lg" to="/introduction">
               Aan de slag 🚀
             </Link>
           </div>
@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
       <main>
         <Hero>
           <div className="container">
-            <div className="row">test</div>
+            <div className="row">Put frontend page content here</div>
           </div>
         </Hero>
       </main>

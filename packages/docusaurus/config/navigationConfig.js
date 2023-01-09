@@ -6,23 +6,23 @@ module.exports = {
       src: 'img/logo.svg',
     },
     items: [
-      //   {
-      //     type: 'doc',
-      //     docId: 'getting-started',
-      //     position: 'left',
-      //     label: 'Test',
-      //   },
-      // {
-      //   href: 'https://github.com/nl-design-system/rvo',
-      //   label: 'GitHub',
-      //   position: 'right',
-      // },
-      // {
-      //   prependBaseUrlToHref: true,
-      //   href: './storybook/',
-      //   label: 'Storybook',
-      //   position: 'right',
-      // },
+      {
+        type: 'doc',
+        docId: 'getting-started/getting-started.docs',
+        position: 'left',
+        label: 'Aan de slag',
+      },
+      {
+        href: 'https://github.com/nl-design-system/rvo',
+        label: 'GitHub',
+        position: 'right',
+      },
+      {
+        prependBaseUrlToHref: true,
+        href: './storybook/',
+        label: 'Storybook',
+        position: 'right',
+      },
     ],
   },
   footer: {
