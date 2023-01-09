@@ -26,6 +26,8 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "rimraf dist/ && cp -R ../storybook/dist/ dist && cp -R ../docusaurus/build/ dist/docs"
+    "generate": "npm-run-all copy:**",
+    "copy:storybook": "cpx '../storybook/dist/**' dist",
+    "copy:docusaurus": "cpx '../docusaurus/build/**' dist/docs"
   }
 }
