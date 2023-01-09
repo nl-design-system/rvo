@@ -19,6 +19,13 @@ module.exports = {
         label: 'Design tokens',
       },
       {
+        type: 'doc',
+        docId: 'alert/alert.docs',
+        position: 'left',
+        label: 'Component',
+        docsPluginId: 'components',
+      },
+      {
         href: 'https://github.com/nl-design-system/rvo',
         label: 'GitHub',
         position: 'right',

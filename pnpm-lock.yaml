@@ -236,9 +236,11 @@ importers:
       '@emotion/react': 11.10.5
       '@emotion/styled': 11.10.5
       '@mdx-js/react': 1.6.22
+      '@nl-rvo/assets': workspace:*
       '@nl-rvo/basiselementen-design-tokens': workspace:*
       '@nl-rvo/components': workspace:*
       '@nl-rvo/design-tokens': workspace:*
+      '@nl-rvo/web-components-css': file:../web-components-css
       '@tsconfig/docusaurus': 1.0.6
       clsx: 1.2.1
       docusaurus-plugin-sass: 0.2.2
@@ -257,9 +259,11 @@ importers:
       '@emotion/react': 11.10.5_react@17.0.2
       '@emotion/styled': 11.10.5_l7gftlbh7xaw66y2swwtfz6cva
       '@mdx-js/react': 1.6.22_react@17.0.2
+      '@nl-rvo/assets': link:../../proprietary/assets
       '@nl-rvo/basiselementen-design-tokens': link:../../proprietary/basiselementen-design-tokens
       '@nl-rvo/components': link:../../components
       '@nl-rvo/design-tokens': link:../../proprietary/design-tokens
+      '@nl-rvo/web-components-css': file:packages/web-components-css
       '@tsconfig/docusaurus': 1.0.6
       clsx: 1.2.1
       docusaurus-plugin-sass: 0.2.2_@docusaurus+core@2.2.0
@@ -28508,7 +28512,7 @@ packages:
       schema-utils: 3.1.1
       serialize-javascript: 6.0.0
       terser: 5.16.1
-      webpack: 5.75.0
+      webpack: 5.75.0_webpack-cli@5.0.1
     dev: true
 
   /terser/4.8.1:

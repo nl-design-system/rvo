@@ -17,10 +17,14 @@ const findOrAddCategory = (itemList, categoryName) => {
 };
 
 module.exports = async ({ item, docs }) => {
-  // Filter docs by dirname
-  let processedDocs = docs.filter((docItem) => {
-    return docItem.sourceDirName.split('/')[0] === item.dirName;
-  });
+  let processedDocs = docs;
+
+  // Filter docs by dirname (if present)
+  if (item.dirName !== '.') {
+    processedDocs = docs.filter((docItem) => {
+      return docItem.sourceDirName.split('/')[0] === item.dirName;
+    });
+  }
 
   // Order docs by sidebar position
   processedDocs = processedDocs.sort((a, b) => {

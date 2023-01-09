@@ -1,14 +1,8 @@
 // @ts-check
 
 // Parse all page categories as sidebar config
-const { readdirSync } = require('fs');
 const path = require('path');
-
-const getDirectories = (source) => {
-  return readdirSync(source, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
-};
+const { getDirectories } = require('./utils');
 
 const sections = path.resolve(__dirname, '../../../documentation/pages');
 const sidebarConfig = getDirectories(sections).reduce((sidebarConfig, section) => {

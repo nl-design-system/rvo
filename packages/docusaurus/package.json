@@ -38,6 +38,8 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@mdx-js/react": "1.6.22",
+    "@nl-rvo/assets": "workspace:*",
+    "@nl-rvo/web-components-css": "workspace:*",
     "@nl-rvo/basiselementen-design-tokens": "workspace:*",
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",

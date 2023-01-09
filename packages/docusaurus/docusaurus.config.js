@@ -25,7 +25,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'default',
-        sidebarPath: require.resolve('./config/sidebarConfig.js'),
+        sidebarPath: require.resolve('./config/docsSidebarConfig.js'),
         sidebarItemsGenerator,
         path: path.resolve(__dirname, '../../documentation/pages'),
         routeBasePath: '/',
@@ -39,10 +39,12 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'components',
-        path: path.resolve(__dirname, '../../test'),
+        path: path.resolve(__dirname, '../../components'),
         routeBasePath: 'components',
         editUrl: 'https://github.com/nl-design-system/rvo/tree/main/components',
-        // sidebarPath: require.resolve('./config/sidebarConfig.js'),
+        breadcrumbs: false,
+        sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
+        sidebarItemsGenerator,
         include: includeList,
         exclude: excludeList,
       },
@@ -56,7 +58,7 @@ const config = {
   staticDirectories: ['static'],
   presets: [
     [
-      'classic',
+      // 'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         debug: process.env['NODE_ENV'] === 'development' ? true : false,
@@ -64,7 +66,11 @@ const config = {
         blog: false,
         theme: {
           customCss: [
-            require.resolve('@nl-rvo/design-tokens/dist/index.css'),
+            require.resolve('../../proprietary/assets/fonts/index.css'),
+            require.resolve('../../proprietary/assets/icons/index.css'),
+            require.resolve('../../proprietary/assets/images/index.css'),
+            require.resolve('../../proprietary/design-tokens/dist/index.css'),
+            require.resolve('../web-components-css/dist/index.css'),
             require.resolve('./src/css/custom.scss'),
           ],
         },
