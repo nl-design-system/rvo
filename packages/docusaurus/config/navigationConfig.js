@@ -8,7 +8,7 @@ module.exports = {
     items: [
       {
         type: 'doc',
-        docId: 'getting-started/getting-started.docs',
+        docId: 'introduction/introduction.docs',
         position: 'left',
         label: 'Aan de slag',
       },
@@ -19,7 +19,8 @@ module.exports = {
       },
       {
         prependBaseUrlToHref: true,
-        href: './storybook/',
+        href:
+          process.env.NODE_ENV === 'development' ? 'http://localhost:6006' : 'https://nl-design-system.github.io/rvo/',
         label: 'Storybook',
         position: 'right',
       },
