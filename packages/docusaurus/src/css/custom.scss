@@ -32,18 +32,3 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 30%);
 }
-
-.docs-doc-page {
-  main {
-    .container {
-      padding-block: 0;
-      padding-inline: 0;
-
-      .col {
-        max-width: 100% !important;
-        padding-block: 0;
-        padding-inline: 0;
-      }
-    }
-  }
-}
