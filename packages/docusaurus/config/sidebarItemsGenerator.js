@@ -16,18 +16,25 @@ const findOrAddCategory = (itemList, categoryName) => {
   return category.items;
 };
 
-module.exports = async ({ docs }) => {
+module.exports = async ({ item, docs }) => {
+  // Filter docs by dirname
+  let processedDocs = docs.filter((docItem) => {
+    return docItem.sourceDirName.split('/')[0] === item.dirName;
+  });
+
   // Order docs by sidebar position
-  const orderedDocs = docs.sort((a, b) => {
+  processedDocs = processedDocs.sort((a, b) => {
     return a.sidebarPosition - b.sidebarPosition;
   });
 
   // Remove the homepage from the sidebar
-  const homepageIndex = orderedDocs.findIndex((doc) => doc.sourceDirName === '.');
-  orderedDocs.splice(homepageIndex, 1);
+  const homepageIndex = processedDocs.findIndex((doc) => doc.sourceDirName === '.');
+  if (homepageIndex > -1) {
+    processedDocs.splice(homepageIndex, 1);
+  }
 
   // Categorize docs by folder
-  const sidebarItems = orderedDocs.reduce((currentSidebarItemList, doc) => {
+  const sidebarItems = processedDocs.reduce((currentSidebarItemList, doc) => {
     // Get categories from doc's sourceDirName
     const categoryNames = doc.sourceDirName.split('/');
     categoryNames.shift();
