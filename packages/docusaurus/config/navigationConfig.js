@@ -22,7 +22,7 @@ module.exports = {
         type: 'doc',
         docId: 'alert/alert.docs',
         position: 'left',
-        label: 'Component',
+        label: 'Components',
         docsPluginId: 'components',
       },
       {
