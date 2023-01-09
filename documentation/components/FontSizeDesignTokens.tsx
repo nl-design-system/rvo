@@ -1,4 +1,4 @@
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 import { path2css } from './helpers';
 
 type FontSizeDesignTokensProps = {

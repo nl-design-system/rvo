@@ -1,4 +1,4 @@
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 // @ts-ignore
 import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
 import { path2css } from './helpers';

@@ -1,0 +1,13 @@
+import designTokens from "@nl-rvo/design-tokens/dist/index.json";
+import { SizeDesignTokens } from "../../components/SizeDesignTokens";
+
+export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/size.tokens.json"));
+
+<p>
+  Er zijn {tokens.length} design tokens voor sizes. Ruimtes tussen onderdelen worden gedaan met stapjes van 2 pixels.
+  <br />
+  Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals:
+  <strong>rvo-size-3xs + rvo-size-md</strong>
+</p>
+
+<SizeDesignTokens tokens={tokens} />
