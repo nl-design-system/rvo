@@ -39,10 +39,10 @@
     "@emotion/styled": "11.10.5",
     "@mdx-js/react": "1.6.22",
     "@nl-rvo/assets": "workspace:*",
-    "@nl-rvo/web-components-css": "workspace:*",
     "@nl-rvo/basiselementen-design-tokens": "workspace:*",
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
+    "@nl-rvo/web-components-css": "file:../web-components-css",
     "@tsconfig/docusaurus": "1.0.6",
     "clsx": "1.2.1",
     "docusaurus-plugin-sass": "0.2.2",
@@ -64,5 +64,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "jsdom": "21.0.0"
   }
 }

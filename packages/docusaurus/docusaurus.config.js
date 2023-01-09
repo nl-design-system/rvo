@@ -1,9 +1,14 @@
 // @ts-check
+const jsdom = require('jsdom');
 const path = require('path');
 const includeList = ['**/*.docs.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docs)*'];
 const navigationConfig = require('./config/navigationConfig');
 const sidebarItemsGenerator = require('./config/sidebarItemsGenerator');
+
+// Emulate DOMParser with jsdom
+const { JSDOM } = jsdom;
+global.DOMParser = new JSDOM().window.DOMParser;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -21,6 +26,7 @@ const config = {
   plugins: [
     'docusaurus-plugin-sass',
     './plugins/AddTSAliasPlugin.js',
+    './plugins/FixDevCSSPlugin.js',
     [
       '@docusaurus/plugin-content-docs',
       {
