@@ -9,12 +9,8 @@
   ],
   "private": true,
   "devDependencies": {
-    "@emotion/react": "11.9.3",
-    "@emotion/styled": "11.9.3",
     "@nl-rvo/components": "workspace:*",
-    "@nl-rvo/design-tokens": "workspace:*"
-  },
-  "dependencies": {
+    "@nl-rvo/design-tokens": "workspace:*",
     "clsx": "1.2.1",
     "html-react-parser": "3.0.1"
   },

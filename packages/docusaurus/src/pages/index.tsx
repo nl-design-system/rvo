@@ -1,6 +1,5 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styled from '@emotion/styled';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React from 'react';
@@ -24,21 +23,14 @@ export default function Home(): JSX.Element {
         </div>
       </header>
       <main>
-        <Hero>
+        <section
+          style={{ alignItems: 'center', display: 'flex', paddingBlock: '2rem', paddingInline: 0, width: '100%' }}
+        >
           <div className="container">
             <div className="row">Put frontend page content here</div>
           </div>
-        </Hero>
+        </section>
       </main>
     </Layout>
   );
 }
-
-const Hero = styled.section`
-  .features {
-    align-items: center;
-    display: flex;
-    padding: 2rem 0;
-    width: 100%;
-  }
-`;
