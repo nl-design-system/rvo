@@ -157,5 +157,19 @@
     "value-list-comma-space-before": null,
     "value-list-max-empty-lines": null,
     "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "documentation/**/*.css",
+        "documentation/**/*.scss",
+        "packages/docusaurus/src/**/*.css",
+        "packages/docusaurus/src/**/*.scss"
+      ],
+      "rules": {
+        "selector-class-pattern": null,
+        "custom-property-pattern": null
+      }
+    }
+  ]
 }

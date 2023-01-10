@@ -35,3 +35,5 @@ export const SkipLink: React.FC<ISkipLinkProps> = ({
     </a>
   );
 };
+
+export default SkipLink;
