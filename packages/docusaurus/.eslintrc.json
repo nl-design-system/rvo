@@ -8,5 +8,7 @@
   },
   "globals": {
     "JSX": true
-  }
+  },
+  "extends": ["plugin:@docusaurus/recommended"],
+  "plugins": ["@docusaurus"]
 }
