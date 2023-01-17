@@ -1,0 +1,77 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-accordion__item-summary .rvo-accordion__item-title {
+  display: flex;
+  gap: var(--rvo-space-xs);
+}
+
+.rvo-accordion__item-summary .rvo-link {
+  cursor: pointer;
+  display: block;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-decoration: none;
+}
+
+.rvo-accordion__item-summary .rvo-link:hover,
+.rvo-accordion__item-summary .rvo-link:focus {
+  text-decoration: underline;
+}
+
+.rvo-accordion__item-summary .rvo-icon {
+  flex: 16px 0 0;
+  padding-block-start: var(--rvo-space-xs);
+}
+
+.rvo-accordion__item > .rvo-accordion__item-summary {
+  cursor: pointer;
+  list-style: none;
+  padding-block-end: var(--rvo-space-md);
+  padding-block-start: var(--rvo-space-md);
+  padding-inline-end: var(--rvo-space-md);
+  padding-inline-start: var(--rvo-space-md);
+}
+
+.rvo-accordion--border-indicator .rvo-accordion__item:hover {
+  border-left-color: var(--rvo-color-hemelblauw-tint2);
+}
+
+.rvo-accordion__item > .rvo-accordion__item-summary::-webkit-details-marker {
+  display: none;
+}
+
+.rvo-accordion__item {
+  border-bottom: 1px solid var(--rvo-color-grijs3);
+}
+
+.rvo-accordion__item[open] .rvo-accordion__item-icon--open {
+  display: block;
+}
+
+.rvo-accordion__item[open] .rvo-accordion__item-icon--closed,
+.rvo-accordion__item .rvo-accordion__item-icon--open {
+  display: none;
+}
+
+.rvo-accordion__item p:last-child {
+  margin-block-end: 0;
+}
+
+.rvo-accordion__content {
+  padding-block-end: var(--rvo-space-xl);
+  padding-inline-end: var(--rvo-space-xl);
+  padding-inline-start: 42px;
+}
+
+.rvo-accordion-teaser {
+  color: var(--rvo-color-zwart);
+  display: block;
+  font-size: var(--rvo-font-size-md);
+  font-style: italic;
+  font-weight: var(--rvo-font-weight-normal);
+  padding-block-start: var(--rvo-space-2xs);
+  padding-inline-start: var(--rvo-space-xl);
+}
