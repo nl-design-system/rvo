@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
+import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { AccordionItem, IAccordionItemProps } from '../../accordion-item/css/template';
 import { defaultArgs } from './defaultArgs';
@@ -10,6 +11,7 @@ import { defaultArgs } from './defaultArgs';
 export interface IAccordionProps {
   /** @uxpinignoreprop */
   items: IAccordionItemProps[];
+  grijs?: boolean;
 }
 
 export const argTypes = {
@@ -19,14 +21,18 @@ export const argTypes = {
       required: true,
     },
   },
+  grijs: {
+    control: 'boolean',
+  },
 };
 
 export const Accordion: React.FC<PropsWithChildren<IAccordionProps>> = ({
   items = defaultArgs.items,
+  grijs = defaultArgs.grijs,
   children,
 }: PropsWithChildren<IAccordionProps>) => {
   return (
-    <div className="rvo-accordion rvo-accordion--colored rvo-accordion--border-indicator">
+    <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs', 'rvo-accordion--border-indicator')}>
       {(children &&
         React.Children.map(children, (child, index) => <AccordionItem key={index} {...(child as any).props} />)) ||
         items.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}

@@ -8,4 +8,5 @@ export const defaultArgs: IAccordionProps = {
     { title: 'Accordion item 4', teaser: 'Teaser for accordion item 4', content: 'Item content' },
     { title: 'Accordion item 5', teaser: 'Teaser for accordion item 5', content: 'Item content' },
   ],
+  grijs: false,
 };

@@ -2,12 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
-.rvo-accordion__item-summary .rvo-accordion__item-title {
-  display: flex;
-  gap: var(--rvo-space-xs);
-}
-
 .rvo-accordion__item-summary .rvo-link {
   cursor: pointer;
   display: block;
@@ -23,20 +17,20 @@
 
 .rvo-accordion__item-summary .rvo-icon {
   flex: 16px 0 0;
-  padding-block-start: var(--rvo-space-xs);
+  padding-block-start: var(--rvo-accordion-item-icon-padding-block-start);
 }
 
 .rvo-accordion__item > .rvo-accordion__item-summary {
   cursor: pointer;
   list-style: none;
-  padding-block-end: var(--rvo-space-md);
-  padding-block-start: var(--rvo-space-md);
-  padding-inline-end: var(--rvo-space-md);
-  padding-inline-start: var(--rvo-space-md);
+  padding-block-end: var(--rvo-accordion-item-summary-padding-block-end);
+  padding-block-start: var(--rvo-accordion-item-summary-padding-block-start);
+  padding-inline-end: var(--rvo-accordion-item-summary-padding-inline-end);
+  padding-inline-start: var(--rvo-accordion-item-summary-padding-inline-start);
 }
 
 .rvo-accordion--border-indicator .rvo-accordion__item:hover {
-  border-left-color: var(--rvo-color-hemelblauw-tint2);
+  border-left-color: var(--rvo-accordion-border-color);
 }
 
 .rvo-accordion__item > .rvo-accordion__item-summary::-webkit-details-marker {
@@ -44,7 +38,7 @@
 }
 
 .rvo-accordion__item {
-  border-bottom: 1px solid var(--rvo-color-grijs3);
+  border-bottom: 1px solid var(--rvo-accordion-item-border-bottom);
 }
 
 .rvo-accordion__item[open] .rvo-accordion__item-icon--open {
@@ -61,17 +55,19 @@
 }
 
 .rvo-accordion__content {
-  padding-block-end: var(--rvo-space-xl);
-  padding-inline-end: var(--rvo-space-xl);
-  padding-inline-start: 42px;
+  padding-block-end: var(--rvo-accordion-item-content-padding-block-end);
+  padding-block-start: var(--rvo-accordion-item-content-padding-block-start);
+  padding-inline-end: var(--rvo-accordion-item-content-padding-inline-end);
+  padding-inline-start: var(--rvo-accordion-item-content-padding-inline-start);
 }
 
 .rvo-accordion-teaser {
-  color: var(--rvo-color-zwart);
   display: block;
-  font-size: var(--rvo-font-size-md);
-  font-style: italic;
-  font-weight: var(--rvo-font-weight-normal);
-  padding-block-start: var(--rvo-space-2xs);
-  padding-inline-start: var(--rvo-space-xl);
+  font-size: var(--rvo-accordion-item-teaser-font-size);
+  font-style: var(--rvo-accordion-item-teaser-font-style);
+  font-weight: var(--rvo-accordion-item-teaser-font-weight);
+  padding-block-end: var(--rvo-accordion-item-teaser-padding-block-end);
+  padding-block-start: var(--rvo-accordion-item-teaser-padding-block-start);
+  padding-inline-end: var(--rvo-accordion-item-teaser-padding-inline-end);
+  padding-inline-start: var(--rvo-accordion-item-teaser-padding-inline-start);
 }

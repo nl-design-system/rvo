@@ -3,23 +3,19 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rvo-accordion--grijs .rvo-accordion__item {
-  background-color: var(--rvo-color-grijs1);
-}
-
 .rvo-accordion--border-indicator .rvo-accordion__item[open] {
-  border-left-color: var(--rvo-color-hemelblauw-tint1);
+  border-left-color: var(--rvo-accordion-border-color);
 }
 
 .rvo-accordion--border-indicator .rvo-accordion__item {
-  border-bottom-color: var(--rvo-color-hemelblauw-tint1);
-  border-left: 6px solid var(--rvo-color-wit);
+  border-bottom-color: var(--rvo-accordion-border-color);
+  border-left: 6px solid transparent;
 }
 
 .rvo-accordion--border-indicator .rvo-accordion__item:first-child {
-  border-top: 1px solid var(--rvo-color-hemelblauw-tint1);
+  border-top: 1px solid var(--rvo-accordion-border-color);
 }
 
-.rvo-accordion--w-teasers .rvo-accordion__item-title {
-  color: var(--rvo-color-zwart);
+.rvo-accordion--grijs .rvo-accordion__item {
+  background-color: var(--rvo-accordion-grijs-background-color);
 }
