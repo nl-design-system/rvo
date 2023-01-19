@@ -27,6 +27,7 @@ const config = {
     'docusaurus-plugin-sass',
     './plugins/AddTSAliasPlugin.js',
     './plugins/FixDevCSSPlugin.js',
+    './plugins/FixSVGLoaderPlugin.js',
     [
       '@docusaurus/plugin-content-docs',
       {
