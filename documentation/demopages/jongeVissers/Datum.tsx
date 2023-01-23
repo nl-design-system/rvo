@@ -1,4 +1,3 @@
-import { Button } from '@nl-rvo/components/button/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
 import { Heading } from '@nl-rvo/components/heading/css/template';
@@ -100,32 +99,18 @@ const Datum = () => {
                     </Fieldset>
 
                     <div className="rvo-button-group">
-                      <Button
-                        kind="secondary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
+                      <a
+                        className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story"
                       >
                         Opslaan en sluiten
-                      </Button>
-                      <Button
-                        kind="primary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
+                      </a>
+                      <a
+                        className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--project&viewMode=story"
                       >
                         Opslaan en verder
-                      </Button>
+                      </a>
                     </div>
                   </LayoutColumnRow>
                 </form>
