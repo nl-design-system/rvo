@@ -10,19 +10,36 @@ module.exports = {
         type: 'doc',
         docId: 'getting-started/introduction',
         position: 'left',
-        label: 'Aan de slag',
+        label: 'Aan de slag met ROOS',
       },
       {
         type: 'doc',
         docId: 'design-tokens/color',
         position: 'left',
-        label: 'Design tokens',
+        label: 'Huisstijl',
       },
+      // {
+      //   type: 'doc',
+      //   docId: 'design-tokens/color',
+      //   position: 'left',
+      //   label: 'Voorbeelden',
+      // },
       {
         type: 'doc',
         docId: 'components/accordion',
         position: 'left',
         label: 'Components',
+      },
+      // {
+      //   type: 'doc',
+      //   docId: 'components/accordion',
+      //   position: 'left',
+      //   label: 'Patronen',
+      // },
+      {
+        href: 'https://www.figma.com/file/NHV1JYxJ28vKZInSI9u200/ROOS-(RVO-Design-System)?node-id=282%3A5324',
+        label: 'Figma',
+        position: 'right',
       },
       {
         href: 'https://github.com/nl-design-system/rvo',

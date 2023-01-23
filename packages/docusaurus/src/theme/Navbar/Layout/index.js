@@ -34,7 +34,9 @@ export default function NavbarLayout({ children }) {
         })}
       >
         <div className="menubar" style={{ display: isMobile ? 'none' : 'block' }}>
-          <Menubar size="md">{children}</Menubar>
+          <Menubar size="md" menuMaxWidth="lg">
+            {children}
+          </Menubar>
         </div>
         {!mobileSidebar.disabled && (
           <div className="menubarMobile" style={{ display: isMobile ? 'block' : 'none' }}>
