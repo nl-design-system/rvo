@@ -33,14 +33,14 @@ const MijnZaken = () => {
             {
               label: 'Zaken',
               active: true,
-              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story',
+              link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story',
             },
-            { label: 'Diensten', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Diensten', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--diensten&viewMode=story' },
             { label: 'Help', link: '#' },
-            { label: 'Profiel', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story' },
+            { label: 'Profiel', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--profiel&viewMode=story' },
             {
               label: 'Uitloggen',
-              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
+              link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--inloggen&viewMode=story',
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
@@ -138,7 +138,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
                       Jonge Vissers 2022
                     </a>
                   </h3>
@@ -154,7 +154,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
                       POP3 Samenwerking Pilots gezonde kalverketen
                     </a>
                   </h3>
@@ -170,7 +170,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>
@@ -186,7 +186,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>

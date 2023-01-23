@@ -1,4 +1,3 @@
-import { Button } from '@nl-rvo/components/button/css/template';
 import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
 import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
 import { Header } from '@nl-rvo/components/header/css/template';
@@ -24,56 +23,56 @@ const Ondertekening = () => {
                 {
                   state: 'completed',
                   label: 'Controleer uw gegevens',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Correspondentie',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--correspondentie&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--correspondentie&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Datum verleningsverzoek',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--datum&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--datum&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Project vragen',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--project&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--project&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Kosten',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--kosten&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Bijlagen',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--bijlagen&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--bijlagen&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Samenvatting',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--samenvatting',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--samenvatting',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'doing',
                   label: 'Ondertekening',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--ondertekening&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--ondertekening&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
@@ -120,32 +119,18 @@ const Ondertekening = () => {
                     <Heading type="h2" textContent="Ondertekening"></Heading>
                     <p>Ondertekening m.b.v. TAN is alleen noodzakelijker voor klanten.</p>
                     <div className="rvo-button-group">
-                      <Button
-                        kind="secondary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
+                      <a
+                        className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story"
                       >
                         Opslaan en sluiten
-                      </Button>
-                      <Button
-                        kind="primary"
-                        size="md"
-                        active={false}
-                        busy={false}
-                        focus={false}
-                        focusVisible={false}
-                        disabled={false}
-                        hover={false}
-                        showIcon="no"
+                      </a>
+                      <a
+                        className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--bevestiging&viewMode=story"
                       >
                         Opslaan en verder
-                      </Button>
+                      </a>
                     </div>
                   </LayoutColumnRow>
                 </form>

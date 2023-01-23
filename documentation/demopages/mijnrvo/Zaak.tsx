@@ -54,7 +54,7 @@ const Zaak = () => {
                         De aanvraag is <strong>bij u in behandeling</strong>. Dat betekent dat deze nog niet is
                         ingediend. U kunt de{' '}
                         <a
-                          href="iframe.html?args=&id=pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
+                          href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
                           className="rvo-link"
                         >
                           aanvraag openen
@@ -65,7 +65,7 @@ const Zaak = () => {
                   </div>
                   <a
                     className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                    href="iframe.html?args=&id=pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
+                    href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
                   >
                     Aanvraag openen
                   </a>
