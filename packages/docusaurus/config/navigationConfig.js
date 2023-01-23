@@ -8,22 +8,21 @@ module.exports = {
     items: [
       {
         type: 'doc',
-        docId: 'getting-started/introduction.docs',
+        docId: 'getting-started/introduction',
         position: 'left',
         label: 'Aan de slag',
       },
       {
         type: 'doc',
-        docId: 'design-tokens/design-tokens.color.docs',
+        docId: 'design-tokens/color',
         position: 'left',
         label: 'Design tokens',
       },
       {
         type: 'doc',
-        docId: 'alert/alert.docs',
+        docId: 'components/accordion',
         position: 'left',
         label: 'Components',
-        docsPluginId: 'components',
       },
       {
         href: 'https://github.com/nl-design-system/rvo',

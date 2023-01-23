@@ -24,6 +24,7 @@ export interface IMenuBarProps {
   menuMaxWidth?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
   useDeltaForActiveItem?: boolean;
+  children?: React.ReactNode;
 }
 
 export const argTypes = {
@@ -62,15 +63,18 @@ export const parseMenuItem = ({
   icon,
   active,
   link,
+  align = 'left',
+  type = defaultArgs.type,
   useIcon = defaultArgs.useIcons,
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
   useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
+  ...otherProps
 }) => {
   // Parse delta for active menu items
   let itemMarkup;
   let deltaMarkup;
-  if (active !== undefined && useDeltaForActiveItem) {
+  if (active !== undefined && type === 'primary' && useDeltaForActiveItem) {
     deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" color="wit" />;
   }
 
@@ -104,9 +108,19 @@ export const parseMenuItem = ({
   }
 
   return (
-    <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={link}>
-      {itemMarkup}
-    </a>
+    <li
+      className={clsx(
+        'utrecht-topnav__item',
+        type === 'primary' && active && 'utrecht-topnav__item--active',
+        align === 'right' && 'utrecht-topnav__item--align-right',
+        type === 'sub' && 'utrecht-topnav__item--sub',
+      )}
+      {...otherProps}
+    >
+      <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={link}>
+        {itemMarkup}
+      </a>
+    </li>
   );
 };
 
@@ -118,37 +132,17 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   menuMaxWidth = defaultArgs.menuMaxWidth,
   type = defaultArgs.type,
   useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
+  children,
 }: IMenuBarProps) => {
-  const leftItemsMarkup = items
-    .filter((item) => item.align !== 'right')
-    .map((item, index) => {
-      return (
-        <li key={index} className={clsx('utrecht-topnav__item', item.active && 'utrecht-topnav__item--active')}>
-          {parseMenuItem({
-            label: item.label,
-            icon: item.icon,
-            active: item.active,
-            link: item.link,
-            useIcon: useIcons,
-            size,
-            iconPlacement,
-            useDeltaForActiveItem,
-          })}
-        </li>
-      );
-    });
-  const rightItemsMarkup = items
-    .filter((item) => item.align === 'right')
-    .map((item, index) => (
-      <li
-        key={index}
-        className={clsx(
-          'utrecht-topnav__item',
-          type === 'primary' && item.active && 'utrecht-topnav__item--active',
-          index === 0 && 'utrecht-topnav__item--align-right',
-        )}
-      >
-        {parseMenuItem({
+  let itemsMarkup = null;
+
+  if (!children) {
+    // Left items
+    itemsMarkup = items
+      .filter((item) => item.align !== 'right')
+      .map((item, index) =>
+        parseMenuItem({
+          key: `${item.label}--${index}`,
           label: item.label,
           icon: item.icon,
           active: item.active,
@@ -157,9 +151,31 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           size,
           iconPlacement,
           useDeltaForActiveItem,
-        })}
-      </li>
-    ));
+        }),
+      );
+
+    // Right items
+    itemsMarkup.push(
+      items
+        .filter((item) => item.align === 'right')
+        .map((item, index) =>
+          parseMenuItem({
+            key: `${item.label}--${index}`,
+            label: item.label,
+            icon: item.icon,
+            active: item.active,
+            link: item.link,
+            useIcon: useIcons,
+            align: index === 0 && 'right',
+            size,
+            iconPlacement,
+            useDeltaForActiveItem,
+          }),
+        ),
+    );
+  } else {
+    itemsMarkup = children;
+  }
 
   return (
     <div
@@ -176,10 +192,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           menuMaxWidth && menuMaxWidth !== 'none' && `rvo-max-width-layout--${menuMaxWidth}`,
         )}
       >
-        <ul className="utrecht-topnav__list">
-          {leftItemsMarkup}
-          {rightItemsMarkup}
-        </ul>
+        <ul className="utrecht-topnav__list">{itemsMarkup}</ul>
       </nav>
     </div>
   );
