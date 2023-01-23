@@ -24,49 +24,49 @@ const Kosten = () => {
                 {
                   state: 'completed',
                   label: 'Controleer uw gegevens',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Correspondentie',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--correspondentie&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--correspondentie&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Datum verleningsverzoek',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--datum&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--datum&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Project vragen',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--project&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--project&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'doing',
                   label: 'Kosten',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--kosten&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Bijlagen',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--bijlagen',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--bijlagen',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Samenvatting',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--samenvatting',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--samenvatting',
                   size: 'md',
                   line: 'straight',
                 },
@@ -74,7 +74,7 @@ const Kosten = () => {
                 {
                   state: 'incomplete',
                   label: 'Ondertekening',
-                  link: 'iframe.html?args=&id=pagina-s-jonge-vissers--ondertekening&viewMode=story',
+                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--ondertekening&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
@@ -154,7 +154,7 @@ const Kosten = () => {
                       content="Kosten toevoegen"
                       icon="plus"
                       showIcon="before"
-                      url="iframe.html?args=&id=pagina-s-jonge-vissers--kosten-opvoeren"
+                      url="iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren"
                     ></Link>
                   </LayoutColumnRow>
                 </div>

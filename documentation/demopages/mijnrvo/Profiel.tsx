@@ -24,16 +24,16 @@ const Profiel = () => {
           </summary>
           <MenuBar
             items={[
-              { label: 'Zaken', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
-              { label: 'Diensten', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+              { label: 'Zaken', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+              { label: 'Diensten', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--diensten&viewMode=story' },
               { label: 'Help', link: '#' },
               {
                 label: 'Profiel',
-                link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--profiel&viewMode=story',
               },
               {
                 label: 'Uitloggen',
-                link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--inloggen&viewMode=story',
                 align: 'right',
               },
               { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
@@ -46,17 +46,17 @@ const Profiel = () => {
         </details>
         <MenuBar
           items={[
-            { label: 'Zaken', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
-            { label: 'Diensten', link: 'iframe.html?args=&id=pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Zaken', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story' },
+            { label: 'Diensten', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--diensten&viewMode=story' },
             { label: 'Help', link: '#' },
             {
               label: 'Profiel',
               active: true,
-              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--profiel&viewMode=story',
+              link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--profiel&viewMode=story',
             },
             {
               label: 'Uitloggen',
-              link: 'iframe.html?args=&id=pagina-s-mijn-rvo--inloggen&viewMode=story',
+              link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--inloggen&viewMode=story',
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
