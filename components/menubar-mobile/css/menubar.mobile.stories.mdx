@@ -16,7 +16,7 @@ import { argTypes, MobileMenuBar } from "./template";
 # Mobile menubar
 
 <Canvas>
-  <Story name="Mobile" args={defaultArgs}>
+  <Story name="Mobile" args={{ ...defaultArgs, isOpen: true }}>
     {MobileMenuBar.bind({})}
   </Story>
 </Canvas>

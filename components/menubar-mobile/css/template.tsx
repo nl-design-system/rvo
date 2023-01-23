@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Icon } from '../../icon/css/template';
 import { IMenuBarItem, IMenuBarProps, parseMenuItem } from '../../menubar/css/template';
 import { defaultArgs } from './defaultArgs';
@@ -41,8 +41,6 @@ export const argTypes = {
 export interface IMobileMenuBarProps extends IMenuBarProps {
   submenuItems: IMenuBarItem[];
   isOpen: boolean;
-  /** @uxpinignoreprop */
-  updateArgs?: any;
 }
 export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   size = defaultArgs.size,
@@ -50,13 +48,14 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
   submenuItems = defaultArgs.submenuItems,
-  isOpen = defaultArgs.isOpen,
-  updateArgs,
+  isOpen: isOpenArg = defaultArgs.isOpen,
+  children,
 }: IMobileMenuBarProps) => {
-  const itemsMarkup = items.map((item, index) => {
-    return (
-      <React.Fragment key={index}>
-        <li className={clsx('utrecht-topnav__item', item.active && 'utrecht-topnav__item--active')}>
+  let itemsMarkup;
+  if (!children) {
+    itemsMarkup = items.map((item, index) => {
+      return (
+        <React.Fragment key={index}>
           {parseMenuItem({
             label: item.label,
             icon: item.icon,
@@ -66,28 +65,32 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
             size,
             iconPlacement,
           })}
-        </li>
-        {item.active &&
-          submenuItems.map((submenuItem, index) => (
-            <li key={index} className={clsx('utrecht-topnav__item', 'utrecht-topnav__item--sub')}>
-              {parseMenuItem({
-                label: submenuItem.label,
-                icon: submenuItem.icon,
-                active: undefined,
-                link: submenuItem.link,
-                useIcon: useIcons,
-                size,
-                iconPlacement,
-              })}
-            </li>
-          ))}
-      </React.Fragment>
-    );
-  });
+          {item.active &&
+            submenuItems.map((submenuItem, index) => (
+              <React.Fragment key={index}>
+                {parseMenuItem({
+                  key: `${item.label}--${index}`,
+                  label: submenuItem.label,
+                  icon: submenuItem.icon,
+                  active: undefined,
+                  link: submenuItem.link,
+                  useIcon: useIcons,
+                  size,
+                  iconPlacement,
+                })}
+              </React.Fragment>
+            ))}
+        </React.Fragment>
+      );
+    });
+  } else {
+    itemsMarkup = children;
+  }
 
+  const [isOpen, setIsOpen] = useState(isOpenArg);
   const onClick = useCallback(() => {
-    updateArgs({ isOpen: !isOpen });
-  }, [updateArgs, isOpen]);
+    setIsOpen((isOpen) => !isOpen);
+  }, [isOpen]);
 
   return (
     <div className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)}>
