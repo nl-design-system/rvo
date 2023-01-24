@@ -5,3 +5,17 @@
 .navbarHidden {
   transform: translate3d(0, calc(-100% - 2px), 0);
 }
+
+.menubarMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menubar {
+    display: none;
+  }
+
+  .menubarMobile {
+    display: block;
+  }
+}
