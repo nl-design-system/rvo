@@ -9,6 +9,12 @@
   "globals": {
     "JSX": true
   },
-  "extends": ["plugin:@docusaurus/recommended"],
-  "plugins": ["@docusaurus"]
+  "extends": [
+    "plugin:@docusaurus/recommended",
+    "plugin:react/recommended",
+    "eslint-config-prettier",
+    "../../.eslintrc.js.json",
+    "../../.eslintrc.react.json"
+  ],
+  "plugins": ["@docusaurus", "import"]
 }

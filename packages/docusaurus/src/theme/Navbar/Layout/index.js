@@ -34,7 +34,7 @@ export default function NavbarLayout({ children }) {
         })}
       >
         <div className="menubar" style={{ display: isMobile ? 'none' : 'block' }}>
-          <Menubar size="md" menuMaxWidth="lg">
+          <Menubar size="lg" menuMaxWidth="lg">
             {children}
           </Menubar>
         </div>
