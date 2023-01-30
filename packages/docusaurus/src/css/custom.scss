@@ -50,6 +50,6 @@
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 30%);
 }
 
-.markdown h1:first-child {
-  margin-block-start: 0.9rem;
+.markdown.theme-doc-markdown {
+  margin-block-start: 0 !important;
 }
