@@ -6,6 +6,7 @@
 .rvo-footer {
   background-color: var(--utrecht-page-footer-background-color);
   color: var(--utrecht-page-footer-color);
+  overflow: auto;
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
 }

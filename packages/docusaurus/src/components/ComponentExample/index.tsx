@@ -9,7 +9,7 @@ import * as ReactDOMServer from 'react-dom/server';
 import { serialize } from '../../utils/react-serialize';
 import styles from './styles.module.css';
 
-const ComponentExample = ({ children }) => {
+const ComponentExample = ({ children, minHeight }) => {
   const serialized = useMemo(() => encodeURIComponent(serialize(children)), [children]);
   const previewLink = `${useDocusaurusContext().siteConfig.baseUrl}preview?${serialized}`;
 
@@ -28,7 +28,9 @@ const ComponentExample = ({ children }) => {
       <div className={styles.infoContainer}>
         <Link content="Open voorbeeld in een nieuwe tab" href={previewLink} target="_blank" />
       </div>
-      <div className={styles.componentContainer}>{children}</div>
+      <div className={styles.componentContainer} style={{ minHeight }}>
+        {children}
+      </div>
       <div className={styles.infoContainer}>
         <ExpandableText title="Voorbeeld HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
       </div>

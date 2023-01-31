@@ -4,10 +4,20 @@ hide_title: false
 slug: .
 ---
 
+import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
 import LayoutColumnRow from "./css/template.tsx";
 
-<LayoutColumnRow />
+Column:
+
+<ComponentExample>
+  <LayoutColumnRow size="lg" />
+</ComponentExample>
 <br />
-<LayoutColumnRow row={true} />
+
+Row:
+
+<ComponentExample>
+  <LayoutColumnRow row={true} size="lg" />
+</ComponentExample>
 <br />
 Documentation for column/row layout
