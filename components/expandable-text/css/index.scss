@@ -4,17 +4,16 @@
  */
 .rvo-expandable-text {
   background: none;
-  display: inline-flex;
   padding-block-end: var(--rvo-expandable-text-padding-block-end);
   padding-block-start: var(--rvo-expandable-text-padding-block-start);
   padding-inline-start: 0;
+  width: 100%;
 }
 
 .rvo-expandable-text__summary {
   align-items: center;
   color: var(--rvo-expandable-text-summary-color);
   cursor: pointer;
-  display: inline-flex;
   font-weight: var(--rvo-expandable-text-summary-font-weight);
   gap: var(--rvo-expandable-text-summary-gap);
   line-height: var(--rvo-expendable-text-summary-line-height);
