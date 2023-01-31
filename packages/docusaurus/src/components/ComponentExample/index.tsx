@@ -9,19 +9,27 @@ import * as ReactDOMServer from 'react-dom/server';
 import { serialize } from '../../utils/react-serialize';
 import styles from './styles.module.css';
 
+function formatHTML(children) {
+  return prettier
+    .format(ReactDOMServer.renderToStaticMarkup(children), {
+      parser: 'babel',
+      plugins: [prettierBabel],
+    })
+    .replace(/\{" "\}/gm, ' ')
+    .replace(/(;)[^;]*$/g, '');
+}
+
 const ComponentExample = ({ children, minHeight }) => {
   const serialized = useMemo(() => encodeURIComponent(serialize(children)), [children]);
   const previewLink = `${useDocusaurusContext().siteConfig.baseUrl}preview?${serialized}`;
 
-  const html = useMemo(() => {
-    return prettier
-      .format(ReactDOMServer.renderToStaticMarkup(children), {
-        parser: 'babel',
-        plugins: [prettierBabel],
-      })
-      .replace(/\{" "\}/gm, ' ')
-      .replace(/(;)[^;]*$/g, '');
-  }, [children]);
+  // On the server side, using renderToStaticMarkup inside useMemo results in a bug
+  let html;
+  if (typeof window !== 'undefined') {
+    html = useMemo(() => formatHTML(children), [children]);
+  } else {
+    html = formatHTML(children);
+  }
 
   return (
     <div className={styles.componentExample}>

@@ -1,3 +1,4 @@
+import { useLocation } from '@docusaurus/router';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -28,7 +29,8 @@ export default function DocItemContent({ children }) {
   const syntheticTitle = useSyntheticTitle();
   const docusaurusContext = useDocusaurusContext();
   // Generate section title from url
-  let sectionTitle = document.location.pathname
+  const location = useLocation();
+  let sectionTitle = location.pathname
     .replace(docusaurusContext.siteConfig.baseUrl, '')
     .replace(/\/([^/]+)\/?$/g, '')
     .replace(/\//g, ' / ')

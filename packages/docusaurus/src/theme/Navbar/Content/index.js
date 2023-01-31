@@ -1,3 +1,4 @@
+import { useLocation } from '@docusaurus/router';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -13,7 +14,9 @@ export default function NavbarContent() {
   const firstRightItem = items.findIndex((item) => item.position === 'right');
   const searchBarItem = items.find((item) => item.type === 'search');
   const docusaurusContext = useDocusaurusContext();
-  const currentSection = document.location.pathname.replace(docusaurusContext.siteConfig.baseUrl, '').split('/')[0];
+  const location = useLocation();
+  const currentSection = location.pathname.replace(docusaurusContext.siteConfig.baseUrl, '').split('/')[0];
+
   return (
     <React.Fragment>
       {items.map((item, index) => {
