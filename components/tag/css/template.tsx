@@ -19,7 +19,7 @@ export interface ITagProps {
   disableHover?: boolean;
   active?: boolean;
   focus?: boolean;
-  className: string;
+  className?: string;
 }
 
 export const argTypes = {
