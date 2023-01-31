@@ -1,12 +1,4 @@
-// import { Button } from '@nl-rvo/components/button/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Fieldset, Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const FiltersPersonen = () => {
@@ -276,7 +268,7 @@ const FiltersPersonen = () => {
                             <LayoutColumnRow row={true} size="lg">
                               <div className="rvo-result-text">
                                 <LayoutColumnRow size="sm">
-                                  <Link url="#" content="Jelle Knop"></Link>
+                                  <Link href="#" content="Jelle Knop"></Link>
 
                                   <span className="rvo-result-description">
                                     Ik ben adviseur innovatieprogramma’s health bij RVO, waar ik me vooral focus op de
@@ -310,7 +302,7 @@ const FiltersPersonen = () => {
                             <LayoutColumnRow row={true} size="lg">
                               <div className="rvo-result-text">
                                 <LayoutColumnRow size="sm">
-                                  <Link url="#" content="Bert van der Heide"></Link>
+                                  <Link href="#" content="Bert van der Heide"></Link>
 
                                   <span className="rvo-result-description">
                                     Als adviseur internationale innovatie binnen RVO werk ik op het agri-food domein.
@@ -341,7 +333,7 @@ const FiltersPersonen = () => {
                             <LayoutColumnRow row={true} size="lg">
                               <div className="rvo-result-text">
                                 <LayoutColumnRow size="sm">
-                                  <Link url="#" content="Roy Paulissen"></Link>
+                                  <Link href="#" content="Roy Paulissen"></Link>
 
                                   <span className="rvo-result-description">
                                     Samen met de topsector HTSM vorm ik de nieuwe internationale strategie. Ik zit in
@@ -381,19 +373,19 @@ const FiltersPersonen = () => {
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Over ons"></Link>
+                  <Link href="#" content="Over ons"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Contact"></Link>
+                  <Link href="#" content="Contact"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Pers"></Link>
+                  <Link href="#" content="Pers"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Zaken regelen bij RVO"></Link>
+                  <Link href="#" content="Zaken regelen bij RVO"></Link>
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
@@ -402,19 +394,19 @@ const FiltersPersonen = () => {
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Privacy"></Link>
+                  <Link href="#" content="Privacy"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Cookies en anti-spam"></Link>
+                  <Link href="#" content="Cookies en anti-spam"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Toegankelijkheid"></Link>
+                  <Link href="#" content="Toegankelijkheid"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Proclaimer"></Link>
+                  <Link href="#" content="Proclaimer"></Link>
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
@@ -423,19 +415,19 @@ const FiltersPersonen = () => {
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Onderwerpen A t/m Z"></Link>
+                  <Link href="#" content="Onderwerpen A t/m Z"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Klantenpanel"></Link>
+                  <Link href="#" content="Klantenpanel"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Documenten en publicaties"></Link>
+                  <Link href="#" content="Documenten en publicaties"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Overheidspublicaties en auteursrecht"></Link>
+                  <Link href="#" content="Overheidspublicaties en auteursrecht"></Link>
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
@@ -444,19 +436,19 @@ const FiltersPersonen = () => {
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Social media"></Link>
+                  <Link href="#" content="Social media"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Higherlevel.nl ondernemersforum"></Link>
+                  <Link href="#" content="Higherlevel.nl ondernemersforum"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="RSS"></Link>
+                  <Link href="#" content="RSS"></Link>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link url="#" content="Gratis nieuwsbrief"></Link>
+                  <Link href="#" content="Gratis nieuwsbrief"></Link>
                 </li>
               </ul>
             </MaxWidthLayout>

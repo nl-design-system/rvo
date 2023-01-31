@@ -10,8 +10,8 @@ import './index.scss';
 import '../../layout-column-row/css/index.scss';
 
 export interface IButtonGroupProps {
-  buttonsLeft: IButtonProps[];
-  buttonsRight: IButtonProps[];
+  buttonsLeft?: IButtonProps[];
+  buttonsRight?: IButtonProps[];
 }
 
 export const argTypes = {

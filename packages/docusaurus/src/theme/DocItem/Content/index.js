@@ -1,7 +1,7 @@
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Heading from '@nl-rvo/components/heading/css/template';
+import { Heading } from '@nl-rvo/components';
 import MDXContent from '@theme/MDXContent';
 import clsx from 'clsx';
 import styles from './styles.module.css';

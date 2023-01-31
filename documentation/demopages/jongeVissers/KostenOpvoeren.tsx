@@ -1,12 +1,14 @@
-import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  Fieldset,
+  Header,
+  Heading,
+  LayoutColumnRow,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+  RadioButtonField,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 

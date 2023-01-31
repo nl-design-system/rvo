@@ -1,9 +1,5 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { Heading1, Link, Paragraph } from '@utrecht/component-library-react';
+import { Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Paragraph } from '@utrecht/component-library-react';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
@@ -41,7 +37,7 @@ const Breadcrumbs = () => {
               </ol>
             </nav>
             <div className="rvo-content">
-              <Heading1>Breadcrumbs example</Heading1>
+              <Heading>Breadcrumbs example</Heading>
               <Paragraph>
                 <span className="utrecht-emphasis--strong">Paragraph medium.</span> De overheid zet zich in voor een
                 uitstekend ondernemersklimaat. De ministeries stippelen daar beleid voor uit. En de taak om dit uit te

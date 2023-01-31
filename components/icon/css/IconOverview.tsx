@@ -6,14 +6,7 @@ import iconList from '@nl-rvo/assets/icons/index.js';
 import React from 'react';
 import { Icon, iconColors, toProperCase } from './template';
 
-interface IIconProps {
-  icon: string;
-  size?: string;
-  color?: string;
-  classNames?: string[];
-}
-
-export const IconOverview: React.FC<IIconProps> = () => {
+export const IconOverview: React.FC = () => {
   return (
     <div
       style={{

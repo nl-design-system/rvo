@@ -1,19 +1,20 @@
-import { Button } from '@nl-rvo/components/button/css/template';
-import { CheckboxField } from '@nl-rvo/components/form-field-checkbox/css/template';
-import { FileInputField } from '@nl-rvo/components/form-field-fileinput/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
-import { SelectField } from '@nl-rvo/components/form-field-select/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { defaultSteps } from '@nl-rvo/components/progress-tracker/css/defaultArgs';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
-import { ButtonGroup } from '@utrecht/component-library-react';
+import {
+  Button,
+  ButtonGroup,
+  CheckboxField,
+  Fieldset,
+  FileInputField,
+  Header,
+  Heading,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+  RadioButtonField,
+  SelectField,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
@@ -26,11 +27,11 @@ const Formulier = () => {
         <MaxWidthLayout size="md">
           <main>
             <LayoutColumnRow size="2xl" row={true} alignToTop={true}>
-              <ProgressTracker steps={defaultSteps} />
+              <ProgressTracker />
               <div className="rvo-form">
                 <LayoutColumnRow size="sm">
                   <div className="intro">
-                    <Link content="Terug" url="#" showIcon="before" icon="terug" />
+                    <Link content="Terug" href="#" showIcon="before" icon="terug" />
                     <Heading type="h1" textContent="Heading" />
                   </div>
                   <form className="rvo-layout-spacer rvo-layout-spacer--2xl">

@@ -1,10 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { Header, Heading, LayoutColumnRow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -106,7 +100,7 @@ const Bevestiging = () => {
                   <p>
                     Een PDF kunt u openen met{' '}
                     <Link
-                      url="#"
+                      href="#"
                       content="Adobe Acrobat
                   Reader"
                     ></Link>
@@ -116,7 +110,7 @@ const Bevestiging = () => {
                     Heeft u nog vragen? Dan kunt u ons bellen op werkdagen tussen 8:30 en 17:00 uur op 088 042 42 42
                     (lokaal tarief)
                   </p>
-                  <Link showIcon="before" url="#" content="Ontvangstbevestiging 192040000027" icon="downloaden"></Link>
+                  <Link showIcon="before" href="#" content="Ontvangstbevestiging 192040000027" icon="downloaden"></Link>
                 </div>
               </LayoutColumnRow>
             </div>

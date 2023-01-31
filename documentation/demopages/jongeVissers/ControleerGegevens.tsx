@@ -1,10 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { Header, Heading, LayoutColumnRow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -97,7 +91,7 @@ const ControleerGegevens = () => {
                         <dt>E-mailadres</dt>
                         <dd>albert@heijn.nl</dd>
                       </dl>
-                      <Link showIcon="before" url="#" icon="bewerken" content="Wijzig deze gegevens"></Link>
+                      <Link showIcon="before" href="#" icon="bewerken" content="Wijzig deze gegevens"></Link>
                     </LayoutColumnRow>
                   </LayoutColumnRow>
                 </div>

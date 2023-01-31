@@ -19,7 +19,7 @@ export interface ITagProps {
   disableHover?: boolean;
   active?: boolean;
   focus?: boolean;
-  classNames?: string[];
+  className: string;
 }
 
 export const argTypes = {
@@ -61,25 +61,25 @@ export const Tag: React.FC<ITagProps> = ({
   hover = defaultArgs.hover,
   disableHover = defaultArgs.disableHover,
   focus = defaultArgs.focus,
-  classNames,
+  className,
 }: ITagProps) => {
   // Parse icon markup
-  const iconClassNames: string[] = [];
+  let iconClassName = '';
   if (showIcon === 'before') {
-    iconClassNames.push('rvo-link__icon--before');
+    iconClassName += 'rvo-link__icon--before';
   }
   if (showIcon === 'after') {
-    iconClassNames.push('rvo-link__icon--after');
+    iconClassName += ' rvo-link__icon--after';
   }
 
   let iconMarkup;
   switch (type) {
     default:
     case 'default':
-      iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', classNames: iconClassNames });
+      iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
       break;
     case 'info':
-      iconMarkup = Icon({ icon: 'info', size: 'xl', color: '', classNames: iconClassNames });
+      iconMarkup = Icon({ icon: 'info', size: 'xl', color: '', className: iconClassName });
       break;
     case 'warning':
       iconMarkup = StatusIcon({ type: 'waarschuwing', size: 'lg', ignoreDefaultIconColor: true });
@@ -96,7 +96,7 @@ export const Tag: React.FC<ITagProps> = ({
     <div
       className={clsx(
         'rvo-tag',
-        classNames,
+        className,
         showIcon !== 'no' && ['rvo-tag--with-icon', 'rvo-layout-row', 'rvo-layout-gap--sm'],
         {
           'rvo-tag--active': active,

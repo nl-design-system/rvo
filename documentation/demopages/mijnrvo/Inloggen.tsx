@@ -1,10 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const Inloggen = () => {
@@ -61,8 +55,8 @@ const Inloggen = () => {
                       <strong>gemeente</strong>.{' '}
                     </p>
                     <p>
-                      Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" url="#"></Link> .
-                      Lukt het inloggen niet? Ga naar <Link content="Hulp bij inloggen" url="#"></Link>.
+                      Meer informatie leest u op onze pagina <Link content="Zaken regelen bij RVO" href="#"></Link> .
+                      Lukt het inloggen niet? Ga naar <Link content="Hulp bij inloggen" href="#"></Link>.
                     </p>{' '}
                     <p>Kies het niveau van het middel waarmee u wilt inloggen.</p>
                     <p>
@@ -100,7 +94,7 @@ const Inloggen = () => {
                   <div className="rvo-accordion__content">
                     <p>
                       U bent <strong>particulier</strong> en heeft een Burgerservicenummer (BSN). Log in met DigiD. Meer
-                      informatie leest u op de website van <Link content="DigiD" url="#"></Link>
+                      informatie leest u op de website van <Link content="DigiD" href="#"></Link>
                     </p>
 
                     <a
@@ -170,23 +164,23 @@ const Inloggen = () => {
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Help"></Link>
+              <Link href="#" content="Help"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Toegankelijkheid"></Link>
+              <Link href="#" content="Toegankelijkheid"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Webservices"></Link>
+              <Link href="#" content="Webservices"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Privacy"></Link>
+              <Link href="#" content="Privacy"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Sitemap"></Link>
+              <Link href="#" content="Sitemap"></Link>
             </li>
           </ul>
           <ul className="rvo-footer-menu">
@@ -195,23 +189,23 @@ const Inloggen = () => {
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Machtigingen en TAN-codes"></Link>
+              <Link href="#" content="Machtigingen en TAN-codes"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Zaken regelen bij RVO"></Link>
+              <Link href="#" content="Zaken regelen bij RVO"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Inschrijven en registreren"></Link>
+              <Link href="#" content="Inschrijven en registreren"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Bedrijfsoverdracht melden"></Link>
+              <Link href="#" content="Bedrijfsoverdracht melden"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Overlijden melden"></Link>
+              <Link href="#" content="Overlijden melden"></Link>
             </li>
           </ul>
           <ul className="rvo-footer-menu">
@@ -220,19 +214,19 @@ const Inloggen = () => {
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Abonneren op nieuwsbrief"></Link>
+              <Link href="#" content="Abonneren op nieuwsbrief"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Klantenpanel"></Link>
+              <Link href="#" content="Klantenpanel"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Berichtenbox voor bedrijven"></Link>
+              <Link href="#" content="Berichtenbox voor bedrijven"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="RVO.nl"></Link>
+              <Link href="#" content="RVO.nl"></Link>
             </li>
           </ul>
           <ul className="rvo-footer-menu">
@@ -241,15 +235,15 @@ const Inloggen = () => {
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Contactgegevens"></Link>
+              <Link href="#" content="Contactgegevens"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Contactformulier"></Link>
+              <Link href="#" content="Contactformulier"></Link>
             </li>
             <li className="rvo-footer-menu-item">
               <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-              <Link url="#" content="Aanvraag voorlichting/spreker"></Link>
+              <Link href="#" content="Aanvraag voorlichting/spreker"></Link>
             </li>
           </ul>
         </MaxWidthLayout>

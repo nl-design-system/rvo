@@ -23,7 +23,7 @@ export interface IButtonProps {
   disabled?: boolean;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
-  classNames?: string[];
+  className?: string;
   alignToRightInGroup?: boolean;
   onFocus?: (event) => void;
   onBlur?: (event) => void;
@@ -80,7 +80,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   children,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
-  classNames = [],
+  className,
   alignToRightInGroup,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
@@ -104,7 +104,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   return (
     <UtrechtButton
       className={clsx(
-        classNames,
+        className,
         kind === 'tertiary' && 'utrecht-button--rvo-tertiary-action',
         kind === 'quaternary' && 'utrecht-button--rvo-quaternary-action',
         active && 'utrecht-button--active',

@@ -1,11 +1,5 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Header, Heading, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
 import {
-  Heading1,
-  Heading2,
-  Heading3,
-  Link,
   OrderedList,
   OrderedListItem,
   Paragraph,
@@ -24,7 +18,7 @@ const Content = () => {
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <main className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-content">
-            <Heading1>Heading 1</Heading1>
+            <Heading type="h1">Heading 1</Heading>
             <Paragraph lead className="utrecht-paragraph--distanced">
               <Strong>Paragraph large.</Strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
@@ -32,7 +26,7 @@ const Content = () => {
               <Link href="#">Dit is een link.</Link> Tussen bedrijven, kennis- en financiële instellingen, ambassades en
               lokale overheden.
             </Paragraph>
-            <Heading2>Heading 2</Heading2>
+            <Heading type="h2">Heading 2</Heading>
             <Paragraph className="utrecht-paragraph--distanced">
               <Strong>Paragraph medium.</Strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
@@ -40,7 +34,7 @@ const Content = () => {
               <Link href="#">Dit is een link.</Link> Tussen bedrijven, kennis- en financiële instellingen, ambassades en
               lokale overheden.
             </Paragraph>
-            <Heading3>Heading 3</Heading3>
+            <Heading type="h3">Heading 3</Heading>
             <Paragraph className="utrecht-paragraph--small utrecht-paragraph--distanced">
               <Strong>Paragraph small.</Strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst

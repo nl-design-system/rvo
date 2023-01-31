@@ -10,7 +10,7 @@ import './index.scss';
 export interface IStatusIconProps {
   type: 'info' | 'bevestiging' | 'foutmelding' | 'waarschuwing';
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
-  classNames?: string[];
+  className?: string;
   ignoreDefaultIconColor?: boolean;
 }
 
@@ -28,21 +28,21 @@ export const argTypes = {
 export const StatusIcon: React.FC<IStatusIconProps> = ({
   type = defaultArgs.type,
   size = defaultArgs.size,
-  classNames,
+  className,
   ignoreDefaultIconColor,
 }: IStatusIconProps) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
 
-  const parsedClassNames: string[] = [];
+  let parsedClassName = '';
   if (!ignoreDefaultIconColor) {
-    parsedClassNames.push(`rvo-status-icon-${iconName}`);
+    parsedClassName += `rvo-status-icon-${iconName}`;
   }
 
-  if (classNames) {
-    parsedClassNames.push(...classNames);
+  if (className) {
+    parsedClassName += ` ${className}`;
   }
 
-  return <Icon icon={iconName as any} size={size as any} color="" classNames={parsedClassNames} />;
+  return <Icon icon={iconName as any} size={size as any} color="" className={parsedClassName} />;
 };
 
 export default StatusIcon;

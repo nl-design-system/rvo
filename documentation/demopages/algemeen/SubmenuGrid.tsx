@@ -1,6 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Header, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const SubmenuGrid = () => {

@@ -1,14 +1,16 @@
-import { CheckboxField } from '@nl-rvo/components/form-field-checkbox/css/template';
-import { FileInputField } from '@nl-rvo/components/form-field-fileinput/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  CheckboxField,
+  Fieldset,
+  FileInputField,
+  Header,
+  Heading,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+  RadioButtonField,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -85,7 +87,7 @@ const Bijlagen = () => {
                     <li>
                       U kunt alleen bijlagen versturen in PDF-formaat. Als u een ander type document wil versturen maakt
                       u hier eerst een PDF van waarvoor u eventueel de gratis{' '}
-                      <Link content="PDF Creator" url="#"></Link> kan gebruiken.
+                      <Link content="PDF Creator" href="#"></Link> kan gebruiken.
                     </li>
                     <li>
                       Iedere bijlage mag <strong>maximaal 25MB</strong> groot zijn.

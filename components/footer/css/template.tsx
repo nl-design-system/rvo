@@ -52,7 +52,7 @@ export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }
                 itemMarkup = (
                   <Link
                     content={item.content}
-                    url={item.link}
+                    href={item.link}
                     showIcon="before"
                     icon="delta-naar-rechts"
                     iconSize="sm"

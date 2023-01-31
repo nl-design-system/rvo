@@ -46,8 +46,8 @@ export const AccordionItem: React.FC<IAccordionItemProps> = ({
       <summary className="rvo-accordion__item-summary">
         <h3 className="rvo-link">
           <span className="rvo-accordion__item-title rvo-layout-row rvo-layout-row--flex-start rvo-layout-gap--sm">
-            <Icon icon="delta-omlaag" size="md" color="hemelblauw" classNames={['rvo-accordion__item-icon--closed']} />
-            <Icon icon="delta-omhoog" size="md" color="hemelblauw" classNames={['rvo-accordion__item-icon--open']} />
+            <Icon icon="delta-omlaag" size="md" color="hemelblauw" className="rvo-accordion__item-icon--closed" />
+            <Icon icon="delta-omhoog" size="md" color="hemelblauw" className="rvo-accordion__item-icon--open" />
             {title}
           </span>
         </h3>

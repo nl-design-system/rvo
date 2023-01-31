@@ -1,12 +1,14 @@
-import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  Fieldset,
+  Header,
+  Heading,
+  Icon,
+  LayoutColumnRow,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+  RadioButtonField,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -103,7 +105,7 @@ const Correspondentie = () => {
                         ]}
                       ></RadioButtonField>
                       <div className="rvo-alert rvo-alert--warning">
-                        <Icon icon="waarschuwing" classNames={['rvo-status-icon-waarschuwing']} size="lg" />
+                        <Icon icon="waarschuwing" className="rvo-status-icon-waarschuwing" size="lg" />
                         <div className="rvo-alert-text">
                           <p>
                             U heeft aangegeven dat u de correspondentie digitaal wil ontvangen. Hiermee geeft u akkoord

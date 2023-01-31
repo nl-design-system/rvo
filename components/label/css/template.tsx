@@ -7,11 +7,11 @@ import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface ILabelProps {
-  content: string;
-  size: 'sm' | 'md';
-  type: 'default' | 'optional' | 'required';
-  classNames?: string[];
+export interface ILabelProps extends React.LabelHTMLAttributes<any> {
+  content?: string;
+  size?: 'sm' | 'md';
+  type?: 'default' | 'optional' | 'required';
+  className?: string;
 }
 
 export const argTypes = {
@@ -32,19 +32,20 @@ export const Label: React.FC<ILabelProps> = ({
   content = defaultArgs.content,
   size = defaultArgs.size,
   type = defaultArgs.type,
-  classNames,
+  className,
+  children,
 }: ILabelProps) => {
   return (
     <div
       className={clsx(
         'rvo-label',
-        classNames,
+        className,
         size === 'sm' && 'rvo-label--sm',
         type === 'optional' && 'rvo-label--optional',
         type === 'required' && 'rvo-label--required',
       )}
     >
-      {content}
+      {children || content}
     </div>
   );
 };

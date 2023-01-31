@@ -70,7 +70,7 @@ export const Alert: React.FC<IAlertProps> = ({
         {heading && heading !== '' && <strong>{heading}</strong>}
         {contentMarkup}
       </div>
-      {closable && <Button kind="subtle" classNames={['rvo-button__close']} label={<Icon icon="kruis" size="md" />} />}
+      {closable && <Button kind="subtle" className="rvo-button__close" label={<Icon icon="kruis" size="md" />} />}
     </div>
   );
 };

@@ -1,10 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import { Header, Heading, Icon, LayoutColumnRow, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -110,7 +104,7 @@ const Samenvatting = () => {
                 </div>
 
                 <div className="rvo-alert rvo-alert--warning">
-                  <Icon icon="waarschuwing" classNames={['rvo-status-icon-waarschuwing']} size="lg" />
+                  <Icon icon="waarschuwing" className="rvo-status-icon-waarschuwing" size="lg" />
                   <div className="rvo-alert-text">
                     <p>
                       U kunt het vissersvaartuig aanschaffen na uw aanvraag voor subsidie. Dat betekent dat ook betaling

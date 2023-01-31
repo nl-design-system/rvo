@@ -9,7 +9,7 @@ import { defaultArgs } from './defaultArgs';
 
 export interface IProgressTrackerProps {
   /** @uxpinignoreprop */
-  steps: IProgressTrackerStepProps[];
+  steps?: IProgressTrackerStepProps[];
 }
 
 export const argTypes = {

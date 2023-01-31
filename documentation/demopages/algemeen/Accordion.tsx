@@ -1,8 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Header, Heading, LayoutColumnRow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 import '../common/style.scss';
 

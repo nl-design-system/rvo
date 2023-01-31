@@ -1,8 +1,4 @@
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Header, Heading, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 import '../common/style.scss';
 
@@ -19,7 +15,7 @@ const Content = () => {
               <strong>Paragraph large.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link content="Dit is een link. " url="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
+              <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
               instellingen, ambassades en lokale overheden.
             </p>
             <Heading type="h2" textContent="Heading 2"></Heading>
@@ -27,7 +23,7 @@ const Content = () => {
               <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link content="Dit is een link. " url="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
+              <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
               instellingen, ambassades en lokale overheden.
             </p>
             <Heading type="h3" textContent="Heading 3"></Heading>
@@ -36,7 +32,7 @@ const Content = () => {
               <strong>Paragraph small.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link content="Dit is een link. " url="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
+              <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
               instellingen, ambassades en lokale overheden.
             </p>
             <ul className="rvo-list rvo-list--unordered">

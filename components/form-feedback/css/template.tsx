@@ -31,7 +31,7 @@ export const Feedback: React.FC<IFeedbackProps> = ({
         warning
         className="rvo-form-feedback rvo-form-feedback--warning rvo-layout-row rvo-layout-gap--sm"
       >
-        <Icon icon="waarschuwing" size="md" classNames={['rvo-status-icon-waarschuwing']} />
+        <Icon icon="waarschuwing" size="md" className="rvo-status-icon-waarschuwing" />
         {text}
       </FormFieldDescription>
     );
@@ -41,7 +41,7 @@ export const Feedback: React.FC<IFeedbackProps> = ({
         invalid
         className="rvo-form-feedback rvo-form-feedback--error rvo-layout-row rvo-layout-gap--sm"
       >
-        <Icon icon="foutmelding" size="md" classNames={['rvo-status-icon-foutmelding']} />
+        <Icon icon="foutmelding" size="md" className="rvo-status-icon-foutmelding" />
         {text}
       </FormFieldDescription>
     );

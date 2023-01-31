@@ -1,8 +1,6 @@
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
-import Header from '@nl-rvo/components/header/css/template';
-import MobileMenubar from '@nl-rvo/components/menubar-mobile/css/template';
-import Menubar from '@nl-rvo/components/menubar/css/template';
+import { Header, MenuBar, MobileMenuBar } from '@nl-rvo/components';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
@@ -23,13 +21,13 @@ export default function NavbarLayout({ children }) {
         })}
       >
         <div className={styles.menubar}>
-          <Menubar size="lg" menuMaxWidth="lg">
+          <MenuBar size="lg" menuMaxWidth="lg">
             {children}
-          </Menubar>
+          </MenuBar>
         </div>
         {!mobileSidebar.disabled && (
           <div className={styles.menubarMobile}>
-            <MobileMenubar>{children}</MobileMenubar>
+            <MobileMenuBar>{children}</MobileMenuBar>
           </div>
         )}
       </nav>

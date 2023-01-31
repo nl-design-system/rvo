@@ -1,15 +1,17 @@
-import { Button } from '@nl-rvo/components/button/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
-import { SelectField } from '@nl-rvo/components/form-field-select/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  Button,
+  Fieldset,
+  Header,
+  Heading,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+  RadioButtonField,
+  SelectField,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
@@ -52,7 +54,7 @@ const Aanvrager = () => {
           <div className="rvo-form">
             <LayoutColumnRow size="md">
               <div className="intro">
-                <Link content="Terug" url="#" showIcon="before" icon="terug" />
+                <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Aanvrager" />
                 <Heading type="h2" textContent="Bedrijfsgegevens (NHR)" />
                 <dl className="rvo-data">

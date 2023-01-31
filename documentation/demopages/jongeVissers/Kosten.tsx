@@ -1,12 +1,14 @@
-import { Button } from '@nl-rvo/components/button/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  Button,
+  Header,
+  Heading,
+  Icon,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -116,12 +118,12 @@ const Kosten = () => {
                                 <Icon
                                   icon="verwijderen"
                                   size="md"
-                                  classNames={['rvo-button__icon--warning-subtle-action']}
+                                  className="rvo-button__icon--warning-subtle-action"
                                 />
                                 Verwijderen
                               </Button>
                               <Button kind="tertiary" size="xs">
-                                <Icon icon="bewerken" size="md" classNames={['rvo-button__icon--tertiary-action']} />
+                                <Icon icon="bewerken" size="md" className="rvo-button__icon--tertiary-action" />
                                 Wijzigen
                               </Button>
                             </form>
@@ -137,12 +139,12 @@ const Kosten = () => {
                                 <Icon
                                   icon="verwijderen"
                                   size="md"
-                                  classNames={['rvo-button__icon--warning-subtle-action']}
+                                  className="rvo-button__icon--warning-subtle-action"
                                 />
                                 Verwijderen
                               </Button>
                               <Button kind="tertiary" size="xs">
-                                <Icon icon="bewerken" size="md" classNames={['rvo-button__icon--tertiary-action']} />
+                                <Icon icon="bewerken" size="md" className="rvo-button__icon--tertiary-action" />
                                 Wijzigen
                               </Button>
                             </form>
@@ -154,7 +156,7 @@ const Kosten = () => {
                       content="Kosten toevoegen"
                       icon="plus"
                       showIcon="before"
-                      url="iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren"
+                      href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren"
                     ></Link>
                   </LayoutColumnRow>
                 </div>
@@ -193,12 +195,12 @@ const Kosten = () => {
                                 <Icon
                                   icon="verwijderen"
                                   size="md"
-                                  classNames={['rvo-button__icon--warning-subtle-action']}
+                                  className="rvo-button__icon--warning-subtle-action"
                                 />
                                 Verwijderen
                               </Button>
                               <Button kind="tertiary" size="xs">
-                                <Icon icon="bewerken" size="md" classNames={['rvo-button__icon--tertiary-action']} />
+                                <Icon icon="bewerken" size="md" className="rvo-button__icon--tertiary-action" />
                                 Wijzigen
                               </Button>
                             </form>
@@ -206,7 +208,7 @@ const Kosten = () => {
                         </tr>
                       </tbody>
                     </table>
-                    <Link content="Subsidie toevoegen" icon="plus" showIcon="before" url="#"></Link>
+                    <Link content="Subsidie toevoegen" icon="plus" showIcon="before" href="#"></Link>
                   </LayoutColumnRow>
                 </div>
                 <Heading type="h2" textContent="Berekening"></Heading>
@@ -217,7 +219,7 @@ const Kosten = () => {
                   <dd>€ 25.000,00</dd>
                 </dl>
                 <div className="rvo-alert rvo-alert--warning">
-                  <Icon icon="waarschuwing" classNames={['rvo-status-icon-waarschuwing']} size="lg" />
+                  <Icon icon="waarschuwing" className="rvo-status-icon-waarschuwing" size="lg" />
                   <div className="rvo-alert-text">
                     <p>
                       De subsidie van uw investering kan maximaal € 25.000,00 bedragen. Dit is berekend aan de hand van

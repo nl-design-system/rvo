@@ -1,10 +1,4 @@
-import { Button } from '@nl-rvo/components/button/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
+import { Button, Fieldset, Header, LayoutColumnRow, MaxWidthLayout, MenuBar, TextInputField } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const SearchInNav = () => {

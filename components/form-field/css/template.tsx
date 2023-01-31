@@ -18,6 +18,7 @@ export interface IFieldProps {
   expandableHelperTextTitle?: string;
   warningText?: string;
   errorText?: string;
+  className?: string;
 }
 
 export const argTypes = {

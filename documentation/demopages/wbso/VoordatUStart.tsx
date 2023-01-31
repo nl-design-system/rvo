@@ -1,11 +1,13 @@
-import { Button } from '@nl-rvo/components/button/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Heading } from '@nl-rvo/components/heading/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { Link } from '@nl-rvo/components/link/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  Button,
+  Header,
+  Heading,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+} from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
@@ -48,7 +50,7 @@ const VoordatUStart = () => {
           <div className="rvo-form">
             <LayoutColumnRow size="md">
               <div className="intro">
-                <Link content="Terug" url="#" showIcon="before" icon="terug" />
+                <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Voordat u start" />
                 <Heading type="h2" textContent="Dit heeft u nodig"></Heading>
                 <ul className="rvo-list">

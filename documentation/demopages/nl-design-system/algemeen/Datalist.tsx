@@ -1,4 +1,4 @@
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
+import { LayoutColumnRow } from '@nl-rvo/components';
 import { DataListItem, DataListKey, DataList as DataListNL, DataListValue } from '@utrecht/component-library-react';
 import '../common/style.scss';
 

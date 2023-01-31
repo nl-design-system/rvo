@@ -47,7 +47,7 @@ export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
 }: IProgressTrackerStepProps) => {
   let labelMarkup: string | React.ReactNode = label;
   if (state === 'incomplete' || state === 'doing' || state === 'completed') {
-    labelMarkup = <Link content={label} url={link} classNames={['rvo-progress-tracker__step-link']} />;
+    labelMarkup = <Link content={label} href={link} className="rvo-progress-tracker__step-link" />;
   }
 
   let stateImageCssClassname;

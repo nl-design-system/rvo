@@ -1,7 +1,7 @@
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import { isActiveSidebarItem } from '@docusaurus/theme-common/internal';
-import Link from '@nl-rvo/components/link/css/template';
+import { Link } from '@nl-rvo/components';
 import clsx from 'clsx';
 
 export default function DocSidebarItemLink({ item, onItemClick, activePath, level }) {
@@ -20,7 +20,7 @@ export default function DocSidebarItemLink({ item, onItemClick, activePath, leve
     >
       <Link
         content={label}
-        url={href}
+        href={href}
         showIcon={!isInternalLink ? true : false}
         icon="external-link"
         {...(isInternalLink && {

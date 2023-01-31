@@ -1,19 +1,22 @@
-import { Button } from '@nl-rvo/components/button/css/template';
-import { CheckboxField } from '@nl-rvo/components/form-field-checkbox/css/template';
-import { FileInputField } from '@nl-rvo/components/form-field-fileinput/css/template';
-import { RadioButtonField } from '@nl-rvo/components/form-field-radio-button/css/template';
-import { SelectField } from '@nl-rvo/components/form-field-select/css/template';
-import { TextInputField } from '@nl-rvo/components/form-field-textinput/css/template';
-import { Fieldset } from '@nl-rvo/components/form-fieldset/css/template';
-import { Header } from '@nl-rvo/components/header/css/template';
-import { Icon } from '@nl-rvo/components/icon/css/template';
-import { LayoutColumnRow } from '@nl-rvo/components/layout-column-row/css/template';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/css/template';
-import { MenuBar } from '@nl-rvo/components/menubar/css/template';
-import { defaultSteps } from '@nl-rvo/components/progress-tracker/css/defaultArgs';
-import { ProgressTracker } from '@nl-rvo/components/progress-tracker/css/template';
+import {
+  Button,
+  ButtonGroup,
+  CheckboxField,
+  Fieldset,
+  FileInputField,
+  Header,
+  Heading,
+  Icon,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+  RadioButtonField,
+  SelectField,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../common/style.scss';
-import { ButtonGroup, Heading1, Link } from '@utrecht/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Formulier = () => {
@@ -25,15 +28,15 @@ const Formulier = () => {
         <MaxWidthLayout size="md">
           <main>
             <LayoutColumnRow size="2xl" row={true} alignToTop={true}>
-              <ProgressTracker steps={defaultSteps} />
+              <ProgressTracker />
               <div className="rvo-form">
                 <LayoutColumnRow size="sm">
                   <div className="intro">
                     <Link href="#">
-                      <Icon icon="terug" color="hemelblauw" size="md" classNames={['rvo-link__icon--before']} />
+                      <Icon icon="terug" color="hemelblauw" size="md" className="rvo-link__icon--before" />
                       Terug
                     </Link>
-                    <Heading1>Heading</Heading1>
+                    <Heading>Heading</Heading>
                   </div>
                   <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
                     <Fieldset legend="Keyboard inputs">
