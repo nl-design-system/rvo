@@ -30,7 +30,7 @@ const ComponentExample = ({ children }) => {
       </div>
       <div className={styles.componentContainer}>{children}</div>
       <div className={styles.infoContainer}>
-        <ExpandableText title="HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
+        <ExpandableText title="Voorbeeld HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
       </div>
     </div>
   );
