@@ -1,0 +1,22 @@
+.componentExample {
+  border-color: var(--rvo-color-grijs3);
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+}
+
+.componentExample div:not(:last-child) {
+  border-bottom-color: var(--rvo-color-grijs3);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.infoContainer {
+  padding-block: var(--rvo-space-md);
+  padding-inline: var(--rvo-space-md);
+}
+
+.componentContainer {
+  padding-block: var(--rvo-space-xl);
+  padding-inline: var(--rvo-space-xl);
+}

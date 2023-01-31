@@ -66,7 +66,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
         }
 
         return (
-          <li key="index" className="rvo-breadcrumbs-item">
+          <li key={`${item.label}${index}`} className="rvo-breadcrumbs-item">
             {itemMarkup}
           </li>
         );

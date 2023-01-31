@@ -15,7 +15,8 @@
     "baseUrl": "./",
     "paths": {
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
-      "@nl-rvo/assets/*": ["../proprietary/assets/*"]
+      "@nl-rvo/assets/*": ["../proprietary/assets/*"],
+      "@docusaurus/components/*": ["../packages/docusaurus/src/components/*"]
     }
   },
   "include": ["**/*", "components.d.ts"],

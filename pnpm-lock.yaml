@@ -30866,5 +30866,5 @@ packages:
   file:packages/web-components-css:
     resolution: {directory: packages/web-components-css, type: directory}
     name: '@nl-rvo/component-library-css'
-    version: 1.0.0-alpha.267
+    version: 1.0.0-alpha.270
     dev: true

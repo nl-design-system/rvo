@@ -20,6 +20,7 @@ export interface ILinkProps {
   focus?: boolean;
   noUnderline?: boolean;
   classNames?: string[];
+  target: string;
 }
 
 export const argTypes = {
@@ -71,6 +72,7 @@ export const Link: React.FC<ILinkProps> = ({
   focus = defaultArgs.focus,
   noUnderline = defaultArgs.noUnderline,
   classNames = [],
+  ...otherProps
 }: ILinkProps) => {
   // Parse icon markup
   const iconClassNames = [];
@@ -101,6 +103,7 @@ export const Link: React.FC<ILinkProps> = ({
         showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
         noUnderline && 'rvo-link--no-underline',
       )}
+      {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
       {content}
