@@ -1,6 +1,9 @@
 # Ignore 3rd party files
 node_modules
 vendor
+.husky
+.github
+.vscode
 
 # Ignore minified files
 *.min.js
