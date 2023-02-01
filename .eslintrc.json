@@ -18,18 +18,15 @@
   },
   "plugins": ["markdown"],
   "overrides": [
-    // MD
     {
       "files": ["**/*.md"],
       "extends": ["plugin:markdown/recommended"],
       "processor": "markdown/markdown"
     },
-    // JSON
     {
       "extends": ["plugin:json/recommended"],
       "files": ["*.json"]
     },
-    // MDX
     {
       "files": ["*.mdx"],
       "extends": [
@@ -42,7 +39,6 @@
       ],
       "plugins": ["import"]
     },
-    // JS / JSX
     {
       "extends": [
         "plugin:react/recommended",
@@ -53,7 +49,6 @@
       "files": ["*.js", "*.jsx"],
       "plugins": ["import"]
     },
-    // TS / TSX
     {
       "extends": [
         "plugin:react/recommended",
