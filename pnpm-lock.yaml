@@ -233,7 +233,7 @@ importers:
       '@nl-rvo/basiselementen-design-tokens': workspace:*
       '@nl-rvo/components': workspace:*
       '@nl-rvo/design-tokens': workspace:*
-      '@nl-rvo/web-components-css': file:../web-components-css
+      '@nl-rvo/components-css': file:../components-css
       '@tsconfig/docusaurus': 1.0.6
       clsx: 1.2.1
       docusaurus-plugin-sass: 0.2.2
@@ -260,7 +260,7 @@ importers:
       '@nl-rvo/basiselementen-design-tokens': link:../../proprietary/basiselementen-design-tokens
       '@nl-rvo/components': link:../../components
       '@nl-rvo/design-tokens': link:../../proprietary/design-tokens
-      '@nl-rvo/web-components-css': file:packages/web-components-css
+      '@nl-rvo/components-css': file:packages/components-css
       '@tsconfig/docusaurus': 1.0.6
       clsx: 1.2.1
       docusaurus-plugin-sass: 0.2.2_@docusaurus+core@2.2.0
@@ -283,7 +283,7 @@ importers:
       '@nl-rvo/assets': workspace:*
       '@nl-rvo/basiselementen-design-tokens': workspace:*
       '@nl-rvo/design-tokens': workspace:*
-      '@nl-rvo/web-components-css': file:../web-components-css
+      '@nl-rvo/components-css': file:../components-css
       '@storybook/addon-a11y': 6.5.15
       '@storybook/addon-controls': 6.5.15
       '@storybook/addon-docs': 6.5.15
@@ -322,7 +322,7 @@ importers:
       '@nl-rvo/assets': link:../../proprietary/assets
       '@nl-rvo/basiselementen-design-tokens': link:../../proprietary/basiselementen-design-tokens
       '@nl-rvo/design-tokens': link:../../proprietary/design-tokens
-      '@nl-rvo/web-components-css': file:packages/web-components-css
+      '@nl-rvo/components-css': file:packages/components-css
       '@storybook/addon-a11y': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-controls': 6.5.15_xrxvbtylmve4l2tr3vmmqgfp7q
       '@storybook/addon-docs': 6.5.15_ol6rmlrtaptykpcxblhl6kqogm
@@ -352,7 +352,7 @@ importers:
       typescript: 4.7.4
       webpack: 5.75.0
 
-  packages/web-components-css:
+  packages/components-css:
     specifiers:
       '@nl-rvo/design-tokens': workspace:*
       '@utrecht/component-library-css': 1.0.0-alpha.355
@@ -365,45 +365,6 @@ importers:
       node-sass-package-importer: 5.3.2
       rimraf: 3.0.2
       sass: 1.53.0
-
-  packages/web-components-react:
-    specifiers:
-      '@nl-rvo/web-components-stencil': workspace:*
-      '@types/node': 18.0.0
-      '@types/react': 18.0.20
-      '@types/react-dom': 18.0.6
-      react: 18.2.0
-      react-dom: 18.2.0
-      rimraf: 3.0.2
-      typescript: 4.6.4
-    devDependencies:
-      '@nl-rvo/web-components-stencil': link:../web-components-stencil
-      '@types/node': 18.0.0
-      '@types/react': 18.0.20
-      '@types/react-dom': 18.0.6
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      rimraf: 3.0.2
-      typescript: 4.6.4
-
-  packages/web-components-stencil:
-    specifiers:
-      '@stencil/core': 2.17.1
-      '@stencil/react-output-target': 0.3.1
-      '@stencil/sass': 1.5.2
-      chokidar-cli: 3.0.0
-      node-sass-package-importer: 5.3.2
-      npm-run-all: 4.1.5
-      rimraf: 3.0.2
-    dependencies:
-      '@stencil/core': 2.17.1
-    devDependencies:
-      '@stencil/react-output-target': 0.3.1_@stencil+core@2.17.1
-      '@stencil/sass': 1.5.2_@stencil+core@2.17.1
-      chokidar-cli: 3.0.0
-      node-sass-package-importer: 5.3.2
-      npm-run-all: 4.1.5
-      rimraf: 3.0.2
 
   proprietary/assets:
     specifiers:
@@ -7412,27 +7373,6 @@ packages:
       eval: 0.1.8
       p-map: 4.0.0
       webpack-sources: 3.2.3
-    dev: true
-
-  /@stencil/core/2.17.1:
-    resolution: {integrity: sha512-ErjQsNALgZQ9SYeBHhqwL1UO+Zbptwl3kwrRJC2tGlc3G/T6UvPuaKr+PGsqI+CZGia+0+R5EELQvFu74mYeIg==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
-
-  /@stencil/react-output-target/0.3.1_@stencil+core@2.17.1:
-    resolution: {integrity: sha512-6d9pPhyajFfdxkqU/pPP2SzI7wn+EklySQc4KXlI/xcdvC2H9BzLmhmR40fR1q2TQoJbJui/nvSWhbYqkE3OBQ==}
-    peerDependencies:
-      '@stencil/core': ^2.9.0
-    dependencies:
-      '@stencil/core': 2.17.1
-    dev: true
-
-  /@stencil/sass/1.5.2_@stencil+core@2.17.1:
-    resolution: {integrity: sha512-nJ93pUSylsGsMX0eLmhxh1oEljcUjj5mYjhB9ziCdoaydAdjukrUoqDCC7tdVbOcBo2hKptQyWqCtETnBGYsXQ==}
-    peerDependencies:
-      '@stencil/core': '>=1.0.2'
-    dependencies:
-      '@stencil/core': 2.17.1
     dev: true
 
   /@storybook/addon-a11y/6.5.15_biqbaboplfbrettd7655fr4n2y:
@@ -28519,7 +28459,7 @@ packages:
       schema-utils: 3.1.1
       serialize-javascript: 6.0.0
       terser: 5.16.1
-      webpack: 5.75.0
+      webpack: 5.75.0_webpack-cli@5.0.1
     dev: true
 
   /terser/4.8.1:
@@ -30865,8 +30805,8 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
 
-  file:packages/web-components-css:
-    resolution: {directory: packages/web-components-css, type: directory}
+  file:packages/components-css:
+    resolution: {directory: packages/components-css, type: directory}
     name: '@nl-rvo/component-library-css'
     version: 1.0.0-alpha.270
     dev: true

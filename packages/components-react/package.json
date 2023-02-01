@@ -3,7 +3,7 @@
   "author": "Community for NL Design System",
   "description": "React component library bundle for RVO based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/components-react",
+  "name": "@nl-rvo/component-library-react",
   "keywords": [
     "nl-design-system"
   ],

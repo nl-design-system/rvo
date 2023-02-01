@@ -19,6 +19,6 @@
       "@docusaurus/components/*": ["../packages/docusaurus/src/components/*"]
     }
   },
-  "include": ["**/*", "components.d.ts"],
+  "include": ["**/*"],
   "exclude": ["**/node_modules"]
 }

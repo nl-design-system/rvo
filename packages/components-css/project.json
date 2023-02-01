@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "{workspaceRoot}/packages/web-components-css",
+  "root": "{workspaceRoot}/packages/components-css",
   "sourceRoot": "{projectRoot}",
   "projectType": "library",
   "targets": {
@@ -9,8 +9,8 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/web-components-css",
-        "outputPath": "packages/web-components-css/dist"
+        "cwd": "packages/components-css",
+        "outputPath": "packages/components-css/dist"
       },
       "dependsOn": ["^build"]
     }

@@ -10,7 +10,3 @@ tmp
 
 # Ignore minified files
 *.min.js
-
-# Ignore generated files from Stencil
-packages/web-components-stencil
-packages/web-components-react

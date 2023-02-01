@@ -30,7 +30,7 @@
     "@nl-rvo/assets": "workspace:*",
     "@nl-rvo/basiselementen-design-tokens": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
-    "@nl-rvo/web-components-css": "file:../web-components-css",
+    "@nl-rvo/components-css": "file:../components-css",
     "@storybook/addon-a11y": "6.5.15",
     "@storybook/addon-controls": "6.5.15",
     "@storybook/addon-docs": "6.5.15",
