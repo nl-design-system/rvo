@@ -1,35 +1,31 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Button, Heading, MaxWidthLayout } from '@nl-rvo/components';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
-import React from 'react';
+import styles from './index.module.css';
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout title={siteConfig.title} description={siteConfig.title}>
-      <header className={clsx('hero hero--primary')}>
-        <div className="container">
-          <h1 className="hero__title">Ontwerp met de componenten van ROOS</h1>
-          <p className="hero__subtitle">
-            Gebruik het ROOS design system om uw applicatie RVO-consistent te maken. Leer van de research en ervaring
-            van andere ontwikkelaars en voorkom werk dat al gedaan is.
-          </p>
-          <div>
-            <Link className="button button--secondary button--lg" to="/introduction">
-              Aan de slag 🚀
+      <header>
+        <div className={clsx(styles.heroContainer)}>
+          <MaxWidthLayout size="lg" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
+            <Heading>Het design system van RVO</Heading>
+            <p className={styles.heroParagraph}>
+              ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland.
+            </p>
+            <Link to="/introduction">
+              <Button>Aan de slag met ROOS</Button>
             </Link>
-          </div>
+          </MaxWidthLayout>
         </div>
       </header>
       <main>
         <section
           style={{ alignItems: 'center', display: 'flex', paddingBlock: '2rem', paddingInline: 0, width: '100%' }}
-        >
-          <div className="container">
-            <div className="row">Put frontend page content here</div>
-          </div>
-        </section>
+        ></section>
       </main>
     </Layout>
   );

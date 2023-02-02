@@ -1,0 +1,12 @@
+.heroContainer {
+  background-color: var(--rvo-color-lichtblauw-tint1);
+}
+
+.hero {
+  padding-block: var(--rvo-space-2xl);
+  padding-inline: var(--rvo-space-md);
+}
+
+.heroParagraph {
+  max-width: 390px;
+}
