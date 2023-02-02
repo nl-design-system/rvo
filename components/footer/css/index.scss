@@ -20,6 +20,7 @@
 
 .rvo-footer-menu {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: var(--rvo-footer-column-item-gap);
   list-style: none;

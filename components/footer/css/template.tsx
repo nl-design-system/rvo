@@ -7,7 +7,7 @@ import React from 'react';
 import { Heading } from '../../heading/css/template';
 import { Link } from '../../link/css/template';
 import { MaxWidthLayout } from '../../max-width-layout/css/template';
-import validateHTML from '../../utils/validateHTML';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
@@ -42,12 +42,11 @@ export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }
           <ul key={columnIndex} className="rvo-footer-menu">
             {column.label?.length && (
               <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent={column.label}></Heading>
+                <Heading type="h3" textContent={parseContentMarkup(column.label)}></Heading>
               </li>
             )}
             {column.items.map((item, itemIndex) => {
               let itemMarkup;
-
               if (item.link?.length) {
                 itemMarkup = (
                   <Link
@@ -60,10 +59,8 @@ export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }
                     noUnderline={true}
                   />
                 );
-              } else if (typeof item.content === 'string' && item.content.length && validateHTML(item.content)) {
-                itemMarkup = <div dangerouslySetInnerHTML={{ __html: item.content }}></div>;
               } else {
-                itemMarkup = item.content;
+                itemMarkup = parseContentMarkup(item.content);
               }
 
               return (
