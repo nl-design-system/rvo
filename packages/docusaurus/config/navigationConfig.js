@@ -56,41 +56,59 @@ module.exports = {
     ],
   },
   footer: {
-    style: 'dark',
     links: [
+      { title: "<em style='font-weight: var(--rvo-font-weight-normal);'>Wij helpen u graag vooruit!</em>" },
       {
+        title: 'RVO',
         items: [
           {
-            label: 'Toegankelijkheid',
+            label: 'Over ons',
+            to: '/docs/intro',
+          },
+          {
+            label: 'Onze klantbelofte',
+            to: '/docs/intro',
+          },
+          {
+            label: 'Contact',
             to: '/docs/intro',
           },
         ],
       },
       {
+        title: 'Over deze site',
         items: [
           {
-            label: 'Sitemap',
+            label: 'Over ons',
+            to: '/docs/intro',
+          },
+          {
+            label: 'Onze klantbelofte',
+            to: '/docs/intro',
+          },
+          {
+            label: 'Contact',
             to: '/docs/intro',
           },
         ],
       },
       {
+        title: 'Snel naar',
         items: [
           {
-            label: 'Cookies',
+            label: 'Over ons',
             to: '/docs/intro',
           },
-        ],
-      },
-      {
-        items: [
           {
-            label: 'Privacy',
+            label: 'Onze klantbelofte',
+            to: '/docs/intro',
+          },
+          {
+            label: 'Contact',
             to: '/docs/intro',
           },
         ],
       },
     ],
-    copyright: `Gebouwd door RVO in samenwerking met NL Design System.<br/>All content is available under the Open Government Licence v3.0, except where otherwise stated. `,
   },
 };

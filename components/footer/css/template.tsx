@@ -42,7 +42,7 @@ export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }
           <ul key={columnIndex} className="rvo-footer-menu">
             {column.label?.length && (
               <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent={parseContentMarkup(column.label)}></Heading>
+                <Heading type="h3" textContent={parseContentMarkup(column.label)} />
               </li>
             )}
             {column.items.map((item, itemIndex) => {
