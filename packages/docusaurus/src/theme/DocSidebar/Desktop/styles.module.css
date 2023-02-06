@@ -1,0 +1,40 @@
+@media (min-width: 997px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-block-start: var(--ifm-navbar-height);
+    transition: opacity 50ms ease;
+    width: var(--doc-sidebar-width);
+  }
+
+  .sidebarWithHideableNavbar {
+    padding-block-start: 0;
+  }
+
+  .sidebarHidden {
+    height: 0;
+    opacity: 0%;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .sidebarLogo {
+    align-items: center;
+    color: inherit !important;
+    display: flex !important;
+    margin-block: 0;
+    margin-inline: var(--ifm-navbar-padding-horizontal);
+    max-height: var(--ifm-navbar-height);
+    min-height: var(--ifm-navbar-height);
+    text-decoration: none !important;
+  }
+
+  .sidebarLogo img {
+    height: 2rem;
+    margin-inline-end: 0.5rem;
+  }
+}
+
+.sidebarLogo {
+  display: none;
+}
