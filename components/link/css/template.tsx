@@ -10,7 +10,7 @@ import { defaultArgs } from './defaultArgs';
 import './index.scss';
 export interface ILinkProps {
   content?: string;
-  href: string;
+  href?: string;
   showIcon?: string;
   icon?: IconType;
   iconSize?: string;
@@ -91,27 +91,38 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
     className: iconClassName,
   });
 
-  return (
-    <a
-      href={href}
-      className={clsx(
-        'rvo-link',
-        className,
-        {
-          'rvo-link--active': active,
-          'rvo-link--hover': hover,
-          'rvo-link--focus': focus,
-        },
-        showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
-        noUnderline && 'rvo-link--no-underline',
-      )}
-      {...otherProps}
-    >
-      {showIcon === 'before' && iconMarkup}
-      {children || content}
-      {showIcon === 'after' && iconMarkup}
-    </a>
-  );
+  const props = {
+    className: clsx(
+      'rvo-link',
+      className,
+      {
+        'rvo-link--active': active,
+        'rvo-link--hover': hover,
+        'rvo-link--focus': focus,
+      },
+      showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+      noUnderline && 'rvo-link--no-underline',
+    ),
+    ...otherProps,
+  };
+  if (href) {
+    return (
+      <a href={href} {...props}>
+        {showIcon === 'before' && iconMarkup}
+        {children || content}
+        {showIcon === 'after' && iconMarkup}
+      </a>
+    );
+  } else {
+    return (
+      <span {...props}>
+        {' '}
+        {showIcon === 'before' && iconMarkup}
+        {children || content}
+        {showIcon === 'after' && iconMarkup}
+      </span>
+    );
+  }
 };
 
 export default Link;
