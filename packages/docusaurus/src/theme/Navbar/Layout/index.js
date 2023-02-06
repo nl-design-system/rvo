@@ -6,14 +6,14 @@ import styles from './styles.module.css';
 
 export default function NavbarLayout({ children }) {
   const {
-    navbar: { hideOnScroll },
+    navbar: { hideOnScroll, logo },
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
 
   return (
     <>
-      <Header />
+      <Header link={logo.href} />
       <nav
         ref={navbarRef}
         className={clsx(hideOnScroll && [styles.navbarHideable, !isNavbarVisible && styles.navbarHidden], {

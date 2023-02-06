@@ -2,9 +2,11 @@ module.exports = {
   navbar: {
     title: 'ROOS',
     logo: {
-      alt: 'RVO Logo',
       src: 'img/logo.svg',
-      href: 'rvo/docs',
+      href:
+        process.env['NODE_ENV'] === 'development'
+          ? 'http://localhost:3000/rvo/docs'
+          : 'https://nl-design-system.github.io/rvo/docs',
     },
     items: [
       {
