@@ -10,3 +10,9 @@
 .heroParagraph {
   max-width: 390px;
 }
+
+.articleGrid {
+  display: grid;
+  grid-gap: var(--rvo-space-3xl);
+  grid-template-columns: 1fr 1fr 1fr;
+}
