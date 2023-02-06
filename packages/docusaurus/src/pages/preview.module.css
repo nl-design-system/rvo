@@ -1,0 +1,4 @@
+.componentContainer {
+  padding-block: var(--rvo-space-lg);
+  padding-inline: var(--rvo-space-lg);
+}

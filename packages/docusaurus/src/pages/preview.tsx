@@ -1,6 +1,7 @@
 import { useLocation } from '@docusaurus/router';
 import * as Components from '@nl-rvo/components';
 import { deserialize } from '../utils/react-serialize';
+import styles from './preview.module.css';
 
 export default function Preview(): JSX.Element {
   const { search } = useLocation();
@@ -8,7 +9,10 @@ export default function Preview(): JSX.Element {
     return null;
   }
 
-  console.log(deserialize(decodeURIComponent(search.slice(1))));
   const deserializedMarkup = deserialize(decodeURIComponent(search.slice(1)), { components: Components });
-  return <>{deserializedMarkup}</>;
+  return (
+    <Components.MaxWidthLayout size="lg" className={styles.componentContainer}>
+      {deserializedMarkup}
+    </Components.MaxWidthLayout>
+  );
 }
