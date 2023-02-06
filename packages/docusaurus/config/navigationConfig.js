@@ -4,6 +4,7 @@ module.exports = {
     logo: {
       alt: 'RVO Logo',
       src: 'img/logo.svg',
+      href: 'rvo/docs',
     },
     items: [
       {
