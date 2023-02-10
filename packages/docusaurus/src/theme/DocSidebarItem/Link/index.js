@@ -3,6 +3,7 @@ import { ThemeClassNames } from '@docusaurus/theme-common';
 import { isActiveSidebarItem } from '@docusaurus/theme-common/internal';
 import { Link } from '@nl-rvo/components';
 import clsx from 'clsx';
+import styles from './styles.module.css';
 
 export default function DocSidebarItemLink({ item, onItemClick, activePath, level }) {
   const { href, label, className } = item;
@@ -22,13 +23,13 @@ export default function DocSidebarItemLink({ item, onItemClick, activePath, leve
         content={label}
         href={href}
         showIcon={!isInternalLink ? true : false}
+        className={clsx(isActive ? styles.activeLink : styles.inactiveLink)}
         icon="external-link"
         {...(isInternalLink && {
           onClick: onItemClick ? () => onItemClick(item) : undefined,
         })}
         active={isActive}
         aria-current={isActive ? 'page' : undefined}
-        noUnderline={true}
       />
     </li>
   );
