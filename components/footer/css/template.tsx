@@ -6,7 +6,6 @@ import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-reac
 import React from 'react';
 import { Heading } from '../../heading/css/template';
 import { Link } from '../../link/css/template';
-import { MaxWidthLayout } from '../../max-width-layout/css/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
@@ -37,41 +36,39 @@ export const argTypes = {
 export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }: IFooterProps) => {
   return (
     <UtrechtPageFooter className="rvo-footer">
-      <MaxWidthLayout size="lg">
-        {columns.map((column, columnIndex) => (
-          <ul key={columnIndex} className="rvo-footer-menu">
-            {column.label?.length && (
-              <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent={parseContentMarkup(column.label)} />
-              </li>
-            )}
-            {column.items.map((item, itemIndex) => {
-              let itemMarkup;
-              if (item.link?.length) {
-                itemMarkup = (
-                  <Link
-                    content={item.content}
-                    href={item.link}
-                    showIcon="before"
-                    icon="delta-naar-rechts"
-                    iconSize="sm"
-                    iconColor="wit"
-                    noUnderline={true}
-                  />
-                );
-              } else {
-                itemMarkup = parseContentMarkup(item.content);
-              }
-
-              return (
-                <li key={itemIndex} className="rvo-footer-menu-item">
-                  {itemMarkup}
-                </li>
+      {columns.map((column, columnIndex) => (
+        <ul key={columnIndex} className="rvo-footer-menu">
+          {column.label?.length && (
+            <li className="rvo-footer-menu-title">
+              <Heading type="h3" textContent={parseContentMarkup(column.label)} />
+            </li>
+          )}
+          {column.items.map((item, itemIndex) => {
+            let itemMarkup;
+            if (item.link?.length) {
+              itemMarkup = (
+                <Link
+                  content={item.content}
+                  href={item.link}
+                  showIcon="before"
+                  icon="delta-naar-rechts"
+                  iconSize="sm"
+                  iconColor="wit"
+                  noUnderline={true}
+                />
               );
-            })}
-          </ul>
-        ))}
-      </MaxWidthLayout>
+            } else {
+              itemMarkup = parseContentMarkup(item.content);
+            }
+
+            return (
+              <li key={itemIndex} className="rvo-footer-menu-item">
+                {itemMarkup}
+              </li>
+            );
+          })}
+        </ul>
+      ))}
     </UtrechtPageFooter>
   );
 };
