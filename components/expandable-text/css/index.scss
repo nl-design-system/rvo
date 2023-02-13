@@ -14,6 +14,7 @@
   align-items: center;
   color: var(--rvo-expandable-text-summary-color);
   cursor: pointer;
+  display: flex;
   font-weight: var(--rvo-expandable-text-summary-font-weight);
   gap: var(--rvo-expandable-text-summary-gap);
   line-height: var(--rvo-expendable-text-summary-line-height);
