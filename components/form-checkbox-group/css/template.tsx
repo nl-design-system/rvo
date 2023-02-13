@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import React, { PropsWithChildren, useCallback, useRef } from 'react';
 import { Checkbox, ICheckboxProps } from '../../form-checkbox/css/template';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface ICheckboxGroupProps {
   invalid?: boolean;
@@ -50,13 +51,7 @@ export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = (
 
   return (
     <div
-      className={clsx(
-        'rvo-checkbox__group',
-        invalid && 'rvo-custom-radio-button__group--error',
-        'rvo-layout-column',
-        'rvo-layout-gap--md',
-        'rvo-layout--wrap',
-      )}
+      className={clsx('rvo-checkbox__group', invalid && 'rvo-custom-radio-button__group--error')}
       ref={checkboxGroupRef}
     >
       {(children &&
