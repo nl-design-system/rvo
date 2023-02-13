@@ -50,10 +50,7 @@ export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = (
   }, [checkboxGroupRef]);
 
   return (
-    <div
-      className={clsx('rvo-checkbox__group', invalid && 'rvo-custom-radio-button__group--error')}
-      ref={checkboxGroupRef}
-    >
+    <div className={clsx('rvo-checkbox__group', invalid && 'rvo-radio-button__group--error')} ref={checkboxGroupRef}>
       {(children &&
         React.Children.map(children, (child, index) => (
           <Checkbox

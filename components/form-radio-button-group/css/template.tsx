@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import React, { PropsWithChildren, useCallback, useRef } from 'react';
 import { IRadioButtonProps, RadioButton } from '../../form-radio-button/css/template';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface IRadioButtonGroupProps {
   name?: string;
@@ -47,15 +48,7 @@ export const RadioButtonGroup: React.FC<PropsWithChildren<IRadioButtonGroupProps
   }, [radioGroupRef]);
 
   return (
-    <div
-      className={clsx(
-        'rvo-layout-column',
-        'rvo-layout-gap--md',
-        'rvo-layout--wrap',
-        invalid && 'rvo-custom-radio-button__group--error',
-      )}
-      ref={radioGroupRef}
-    >
+    <div className={clsx('rvo-radio-button__group', invalid && 'rvo-radio-button__group--error')} ref={radioGroupRef}>
       {(children &&
         React.Children.map(children, (child, index) => (
           <RadioButton

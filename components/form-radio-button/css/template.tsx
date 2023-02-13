@@ -67,9 +67,8 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
       disabled={disabled || null}
       required={required || null}
       className={clsx(
-        'utrecht-custom-radio-button',
         checked && 'utrecht-custom-radio-button--checked',
-        hover && 'rvo-custom-radio-button--hover',
+        hover && 'rvo-radio-button--hover',
         disabled && 'utrecht-custom-radio-button--disabled',
         active && 'utrecht-custom-radio-button--active',
         focus && 'utrecht-custom-radio-button--focus-visible',
