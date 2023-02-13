@@ -58,7 +58,7 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   onUpdateGroup,
   ...otherProps
 }: IRadioButtonProps) => (
-  <label className="rvo-layout-row rvo-layout-gap--sm" htmlFor={id}>
+  <label className="rvo-radio-button" htmlFor={id}>
     <input
       id={id}
       name={name}
