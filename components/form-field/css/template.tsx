@@ -45,15 +45,15 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   errorText,
   children,
 }) => {
-  let helperTextMarkup;
+  let helperTextMarkup: React.ReactNode;
   // Parse default helper text markup (strings or react node)
   if (helperText) {
-    helperTextMarkup = <div className="utrecht-form-field-description rvo-form-field__helper-text">{helperText}</div>;
+    helperTextMarkup = <div className="utrecht-form-field-description">{helperText}</div>;
 
     // Parse helper text markup for expandable text
     if (expandableHelperText) {
       helperTextMarkup = (
-        <div className="utrecht-form-field-description rvo-form-field__helper-text">
+        <div className="utrecht-form-field-description">
           <ExpandableText title={expandableHelperTextTitle} content={helperText} />
         </div>
       );
@@ -64,22 +64,17 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
       const isValidHTML = validateHTML(helperText);
       if (isValidHTML) {
         helperTextMarkup = (
-          <div
-            className="utrecht-form-field-description rvo-form-field__helper-text"
-            dangerouslySetInnerHTML={{ __html: helperText }}
-          ></div>
+          <div className="utrecht-form-field-description" dangerouslySetInnerHTML={{ __html: helperText }}></div>
         );
       } else {
-        helperTextMarkup = (
-          <div className="utrecht-form-field-description rvo-form-field__helper-text">{helperText}</div>
-        );
+        helperTextMarkup = <div className="utrecht-form-field-description">{helperText}</div>;
       }
     }
   }
 
   return (
-    <FormField className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-      <div className="rvo-layout-column rvo-layout-gap--2xs">
+    <FormField className="rvo-form-field">
+      <div className="rvo-form-field__label">
         <FormLabel htmlFor={fieldId}>{label}</FormLabel>
         {helperTextMarkup}
         {errorText && <Feedback text={errorText} type="error" />}
