@@ -1,6 +1,7 @@
 /* stylelint-disable scss/no-global-function-names */
 @use "../../../proprietary/design-tokens/dist" as tokens;
 @import "../../../node_modules/@utrecht/components/button/css/mixin";
+@import "../../layout-column-row/css/index";
 
 // Subtle button
 .utrecht-button--subtle.utrecht-button--hover:not(:disabled),
@@ -32,6 +33,9 @@
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-xs-padding-block-start);
   --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-xs-padding-inline-end);
   --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-xs-padding-inline-start);
+
+  @extend .rvo-layout-row-inline;
+  @extend .rvo-layout-gap--xs;
 }
 
 .utrecht-button--rvo-sm {
@@ -41,6 +45,9 @@
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-sm-padding-block-start);
   --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-sm-padding-inline-end);
   --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-sm-padding-inline-start);
+
+  @extend .rvo-layout-row-inline;
+  @extend .rvo-layout-gap--sm;
 }
 
 .utrecht-button--rvo-md {
@@ -49,6 +56,9 @@
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-md-padding-block-start);
   --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-md-padding-inline-end);
   --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-md-padding-inline-start);
+
+  @extend .rvo-layout-row-inline;
+  @extend .rvo-layout-gap--md;
 }
 
 // Override primary icon colors
