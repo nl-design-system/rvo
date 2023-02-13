@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../icon/css/template';
+import Link from '../../link/css/template';
 import '../../layout-column-row/css/index.scss';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
@@ -37,7 +38,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
   size = defaultArgs.size,
 }: IBreadcrumbProps) => {
   return (
-    <ol className={clsx('rvo-breadcrumbs', `rvo-breadcrumbs--${size}`, 'rvo-layout-row', `rvo-layout-gap--sm`)}>
+    <ol className={clsx('rvo-breadcrumbs', `rvo-breadcrumbs--${size}`)}>
       {items.map((item, index) => {
         // Parse divider markup
         let dividerMarkup = index > 0 && index < items.length && (
@@ -46,19 +47,18 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
 
         // Parse item markup
         let itemMarkup;
-        let itemClassnames = ['rvo-layout-row', `rvo-layout-gap--sm`];
         if (index < items.length - 1) {
           // Not the last item
           itemMarkup = (
-            <a className={clsx(itemClassnames, 'rvo-link')} href={item.url}>
+            <Link href={item.url}>
               {dividerMarkup}
               {item.label}
-            </a>
+            </Link>
           );
         } else {
           // Last item
           itemMarkup = (
-            <span className={clsx(itemClassnames, 'rvo-breadcrumb-current-page')}>
+            <span className={clsx('rvo-breadcrumb-current-page')}>
               {dividerMarkup}
               {item.label}
             </span>
