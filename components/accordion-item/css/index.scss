@@ -1,3 +1,5 @@
+@import "../../layout-column-row/css/index";
+
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
@@ -52,6 +54,12 @@
 
 .rvo-accordion__item p:last-child {
   margin-block-end: 0;
+}
+
+.rvo-accordion__item-title {
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-row--flex-start;
+  @extend .rvo-layout-gap--sm;
 }
 
 .rvo-accordion__content {

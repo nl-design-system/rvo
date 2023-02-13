@@ -32,7 +32,7 @@ export const Accordion: React.FC<PropsWithChildren<IAccordionProps>> = ({
   children,
 }: PropsWithChildren<IAccordionProps>) => {
   return (
-    <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs', 'rvo-accordion--border-indicator')}>
+    <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')}>
       {(children &&
         React.Children.map(children, (child, index) => <AccordionItem key={index} {...(child as any).props} />)) ||
         items.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}
