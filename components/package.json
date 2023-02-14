@@ -1,7 +1,7 @@
 {
   "version": "1.0.0-alpha.31",
   "author": "Community for NL Design System",
-  "description": "Components for the RVO design system based on the NL Design System architecture",
+  "description": "Base components for the RVO design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
   "name": "@nl-rvo/components",
   "keywords": [
@@ -14,8 +14,6 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npm-run-all build:**",
-    "build:scss": "webpack",
     "clean": "rimraf dist/"
   },
   "devDependencies": {
