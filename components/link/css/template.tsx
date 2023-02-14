@@ -100,7 +100,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
         'rvo-link--hover': hover,
         'rvo-link--focus': focus,
       },
-      showIcon !== 'no' && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+      showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
     ),
     ...otherProps,
