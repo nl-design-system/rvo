@@ -1,3 +1,5 @@
+@import "../../layout-column-row/css/index";
+
 // Mobile
 .rvo-mobile-menu {
   background-color: var(--utrecht-topnav-list-background-color);
@@ -23,6 +25,9 @@
     padding-block-start: var(--rvo-topnav-link-padding-block-start);
     padding-inline-end: var(--rvo-topnav-link-padding-inline-end);
     padding-inline-start: var(--rvo-topnav-link-padding-inline-start);
+
+    @extend .rvo-layout-row;
+    @extend .rvo-layout-gap--sm;
   }
 
   > .rvo-mobile-menu__top-bar .rvo-icon-kruis {

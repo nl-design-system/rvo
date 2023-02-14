@@ -94,7 +94,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
 
   return (
     <div className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)}>
-      <div className={clsx('rvo-mobile-menu__top-bar', 'rvo-layout-row', 'rvo-layout-gap--sm')} onClick={onClick}>
+      <div className={clsx('rvo-mobile-menu__top-bar')} onClick={onClick}>
         <Icon icon="menu" size={size as any} color="wit" />
         <Icon icon="kruis" size={size as any} color="wit" />
         Menu
