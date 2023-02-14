@@ -28,7 +28,7 @@
     "macro": "link:@emotion/styled/macro",
     "mini-css-extract-plugin": "2.7.2",
     "npm-run-all": "4.1.5",
-    "rimraf": "3.0.2",
+    "rimraf": "4.1.2",
     "sass": "1.57.0",
     "sass-loader": "13.2.0",
     "webpack": "5.75.0",
