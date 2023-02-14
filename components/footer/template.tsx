@@ -2,8 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import React from 'react';
+import { PageFooter as UtrechtPageFooter } from '../../node_modules/@utrecht/component-library-react';
 import { Heading } from '../heading/template';
 import { Link } from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
