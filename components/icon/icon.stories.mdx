@@ -1,0 +1,33 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Icon } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Icon/Icon"
+  component={Icon}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Icon
+
+<Canvas>
+  <Story name="Icon" args={defaultArgs}>
+    {Icon.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Icon" />
+
+## Dependencies
+
+@nl-rvo/assets/icons
+
+## Changelog
+
+<Description>{changeLog}</Description>

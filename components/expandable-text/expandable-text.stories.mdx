@@ -1,0 +1,33 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, ExpandableText } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Expandable text/Expandable text"
+  component={ExpandableText}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Expandable text
+
+<Canvas>
+  <Story name="Expandable text" args={defaultArgs}>
+    {ExpandableText.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Expandable text" />
+
+## Dependencies
+
+@nl-rvo/assets/icons
+
+## Changelog
+
+<Description>{changeLog}</Description>

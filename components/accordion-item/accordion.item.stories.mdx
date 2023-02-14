@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { AccordionItem, argTypes } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Accordion"
+  component={AccordionItem}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Item
+
+<Canvas>
+  <Story name="Item" args={defaultArgs}>
+    {AccordionItem.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Item" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

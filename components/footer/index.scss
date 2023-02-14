@@ -1,0 +1,61 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "../max-width-layout/index";
+
+.rvo-footer {
+  background-color: var(--utrecht-page-footer-background-color);
+  color: var(--utrecht-page-footer-color);
+  display: flex;
+  gap: var(--rvo-footer-column-gap);
+  justify-content: center;
+  overflow: auto;
+  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+
+  @extend .rvo-max-width-layout;
+  @extend .rvo-max-width-layout--lg;
+}
+
+.rvo-footer-menu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--rvo-footer-column-item-gap);
+  list-style: none;
+  margin-block-end: var(--rvo-footer-column-margin-block-end);
+  margin-block-start: var(--rvo-footer-column-margin-block-start);
+  padding-block-end: var(--rvo-footer-column-padding-block-end);
+  padding-block-start: var(--rvo-footer-column-padding-block-start);
+  padding-inline-end: var(--rvo-footer-column-padding-inline-end);
+  padding-inline-start: var(--rvo-footer-column-padding-inline-start);
+}
+
+.rvo-footer-menu-title h3 {
+  color: var(--rvo-footer-column-label-color);
+  margin-block-end: var(--rvo-footer-column-label-margin-block-end);
+  margin-block-start: var(--rvo-footer-column-label-margin-block-start);
+}
+
+.rvo-footer-menu-item a {
+  color: var(--rvo-footer-column-itemlink-color);
+  font-weight: var(--rvo-footer-column-itemlink-font-weight);
+}
+
+.rvo-footer-menu-item .rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+.rvo-footer-menu-item.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+  color: var(--rvo-footer-column-itemlink-hover-color);
+  font-weight: var(--rvo-footer-column-itemlink-hover-font-weight);
+  text-decoration: underline;
+}
+
+.rvo-footer-menu-item .rvo-link:focus,
+.rvo-footer-menu-item .rvo-link:focus-visible,
+.rvo-footer-menu-item .rvo-link--focus {
+  background-color: var(--rvo-footer-column-itemlink-focus-background-color);
+  color: var(--rvo-footer-column-itemlink-focus-color);
+  font-weight: var(--rvo-footer-column-itemlink-focus-font-weight);
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, SelectField } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Form/Field/Select field"
+  component={SelectField}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Select field
+
+<Canvas>
+  <Story name="Select field" args={defaultArgs}>
+    {SelectField.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Select field" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

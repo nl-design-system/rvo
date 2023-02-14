@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, TimeInput } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Form/Time input/Time input"
+  component={TimeInput}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Time input
+
+<Canvas>
+  <Story name="Time input" args={defaultArgs}>
+    {TimeInput.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Time input" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

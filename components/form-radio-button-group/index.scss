@@ -1,0 +1,17 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "../layout-column-row/index";
+
+.rvo-radio-button__group {
+  @extend .rvo-layout-column;
+  @extend .rvo-layout-gap--md;
+  @extend .rvo-layout--wrap;
+}
+
+.rvo-radio-button__group--error {
+  border-left: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
+}

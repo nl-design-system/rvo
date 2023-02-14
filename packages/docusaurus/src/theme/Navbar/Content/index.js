@@ -2,7 +2,7 @@ import { useLocation } from '@docusaurus/router';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { parseMenuItem } from '@nl-rvo/components/menubar/css/template';
+import { parseMenuItem } from '@nl-rvo/components/menubar/template';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarSearch from '@theme/Navbar/Search';
 import SearchBar from '@theme/SearchBar';

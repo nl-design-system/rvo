@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, ButtonGroup } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Button group/Button group"
+  component={ButtonGroup}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button group
+
+<Canvas>
+  <Story name="Button group" args={defaultArgs}>
+    {ButtonGroup.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button group" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

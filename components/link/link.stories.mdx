@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Link } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Link"
+  component={Link}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Link
+
+<Canvas>
+  <Story name="Link" args={defaultArgs}>
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Link" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

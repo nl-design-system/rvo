@@ -4,7 +4,7 @@
  */
 import { PageFooter } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
-// import { MaxWidthLayout } from '../../max-width-layout/css/template';
+// import { MaxWidthLayout } from '../../max-width-layout/template';
 
 interface IFooterItem {
   content: string;

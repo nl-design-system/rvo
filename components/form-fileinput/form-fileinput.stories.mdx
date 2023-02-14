@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, FileInput } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Form/File input"
+  component={FileInput}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form file input
+
+<Canvas>
+  <Story name="File input" args={defaultArgs}>
+    {FileInput.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="File input" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

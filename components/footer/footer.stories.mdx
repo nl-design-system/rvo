@@ -1,0 +1,35 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Footer } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Footer/Footer"
+  component={Footer}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Footer
+
+<Canvas>
+  <Story name="Footer" args={defaultArgs}>
+    {Footer.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Footer" />
+
+Items containing a link will be rendered as text links with an icon (e.g. > Link content), otherwise items are rendered as generic HTML content.
+
+## Dependencies
+
+@nl-rvo/assets/icons
+
+## Changelog
+
+<Description>{changeLog}</Description>

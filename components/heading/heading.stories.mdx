@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Heading } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Heading"
+  component={Heading}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Heading
+
+<Canvas>
+  <Story name="Heading" args={{ ...defaultArgs, type: "h1", distanced: false, textContent: "Heading" }}>
+    {Heading.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

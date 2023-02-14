@@ -1,0 +1,22 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "../layout-column-row/index";
+
+.rvo-form-field {
+  clear: both;
+
+  @extend .rvo-layout-column;
+  @extend .rvo-layout-gap--sm;
+}
+
+.rvo-form-field__label {
+  @extend .rvo-layout-column;
+  @extend .rvo-layout-gap--2xs;
+}
+
+.rvo-form-field__label-text {
+  font-weight: var(--utrecht-form-label-font-weight);
+}

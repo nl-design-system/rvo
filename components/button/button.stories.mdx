@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Button } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Button"
+  component={Button}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+<Canvas>
+  <Story name="Button" args={defaultArgs}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

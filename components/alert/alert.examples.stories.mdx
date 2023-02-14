@@ -1,0 +1,59 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "../../button/template";
+import { defaultArgs } from "./defaultArgs";
+import { AllAlertKinds, argTypes } from "./template";
+
+<Meta
+  title="CSS Components/Alert/Examples"
+  component={AllAlertKinds}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Alert with heading
+
+<Canvas>
+  <Story name="With heading" args={{ defaultArgs, heading: "Heading" }}>
+    {AllAlertKinds.bind({})}
+  </Story>
+</Canvas>
+
+# Alert with button
+
+<Canvas>
+  <Story
+    name="With button"
+    args={{
+      defaultArgs,
+      content: (
+        <div className="rvo-layout-column rvo-layout-gap--md">
+          <div>This is an example of an alert with button</div>
+          <Button kind="primary" size="sm">
+            Button
+          </Button>
+        </div>
+      ),
+    }}
+  >
+    {AllAlertKinds.bind({})}
+  </Story>
+</Canvas>
+
+# Alert with close button
+
+<Canvas>
+  <Story
+    name="With close button"
+    args={{
+      defaultArgs,
+      content: "This is an example of an alert with close button",
+      closable: true,
+    }}
+  >
+    {AllAlertKinds.bind({})}
+  </Story>
+</Canvas>

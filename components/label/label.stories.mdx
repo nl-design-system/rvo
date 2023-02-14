@@ -1,0 +1,32 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import markdown from "./README.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Label } from "./template";
+import changeLog from "./CHANGELOG.md";
+
+<Meta
+  title="CSS Components/Label/Label"
+  component={Label}
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label
+
+<Canvas>
+  <Story name="Label" args={defaultArgs}>
+    {Label.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Label" />
+
+<Description>{markdown}</Description>
+
+## Changelog
+
+<Description>{changeLog}</Description>
