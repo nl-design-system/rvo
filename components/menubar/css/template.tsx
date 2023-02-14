@@ -117,7 +117,7 @@ export const parseMenuItem = ({
       )}
       {...otherProps}
     >
-      <a className="utrecht-topnav__link rvo-layout-row rvo-layout-gap--sm" href={link}>
+      <a className="utrecht-topnav__link" href={link}>
         {itemMarkup}
       </a>
     </li>
