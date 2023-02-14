@@ -1,2 +1,2 @@
-# @nl-rvo/component-library-css@1.0.0-alpha.61
+*@nl-rvo/component-library-css@1.0.0-alpha.61*:
 Added component

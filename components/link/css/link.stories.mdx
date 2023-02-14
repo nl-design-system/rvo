@@ -1,6 +1,7 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, Link } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Link"
@@ -22,3 +23,7 @@ import { argTypes, Link } from "./template";
 </Canvas>
 
 <ArgsTable story="Link" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

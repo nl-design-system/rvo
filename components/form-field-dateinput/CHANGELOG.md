@@ -1,5 +1,5 @@
-# @nl-rvo/component-library-css@1.0.0-alpha.280
+*@nl-rvo/component-library-css@1.0.0-alpha.280*:
 Simplified snippet by removing `rvo-layout-column`, `rvo-layout-gap--sm` and `rvo-layout-gap--2xs`
 
-# @nl-rvo/component-library-css@1.0.0-alpha.150
+*@nl-rvo/component-library-css@1.0.0-alpha.150*:
 Added component

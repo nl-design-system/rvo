@@ -1,6 +1,7 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { AccordionItem, argTypes } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Accordion"
@@ -22,3 +23,7 @@ import { AccordionItem, argTypes } from "./template";
 </Canvas>
 
 <ArgsTable story="Item" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

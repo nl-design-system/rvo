@@ -1,6 +1,7 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, RadioButtonGroup } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Form/Radio button/Radio button group"
@@ -22,3 +23,7 @@ import { argTypes, RadioButtonGroup } from "./template";
 </Canvas>
 
 <ArgsTable story="Radio button group" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

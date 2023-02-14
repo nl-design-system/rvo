@@ -1,6 +1,7 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, ProgressTracker } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Progress Tracker/Progress Tracker"
@@ -22,3 +23,7 @@ import { argTypes, ProgressTracker } from "./template";
 </Canvas>
 
 <ArgsTable story="Progress Tracker" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

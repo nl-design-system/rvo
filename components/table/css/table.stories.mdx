@@ -2,6 +2,7 @@ import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-do
 import markdown from "../README.md";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, Table } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Table/Table"
@@ -25,3 +26,7 @@ import { argTypes, Table } from "./template";
 <ArgsTable story="Table" />
 
 <Description>{markdown}</Description>
+
+## Changelog
+
+<Description>{changeLog}</Description>

@@ -1,6 +1,7 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, Checkbox } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Form/Checkbox/Checkbox"
@@ -22,3 +23,7 @@ import { argTypes, Checkbox } from "./template";
 </Canvas>
 
 <ArgsTable story="Checkbox" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

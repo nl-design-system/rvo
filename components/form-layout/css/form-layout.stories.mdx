@@ -1,6 +1,7 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, FormLayout } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Layout/Form layout"
@@ -20,3 +21,7 @@ import { argTypes, FormLayout } from "./template";
     {FormLayout.bind({})}
   </Story>
 </Canvas>
+
+## Changelog
+
+<Description>{changeLog}</Description>

@@ -1,6 +1,7 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs } from "./defaultArgs";
 import { argTypes, Footer } from "./template";
+import changeLog from "../CHANGELOG.md";
 
 <Meta
   title="CSS Components/Footer/Footer"
@@ -28,3 +29,7 @@ Items containing a link will be rendered as text links with an icon (e.g. > Link
 ## Dependencies
 
 @nl-rvo/assets/icons
+
+## Changelog
+
+<Description>{changeLog}</Description>
