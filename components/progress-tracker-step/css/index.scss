@@ -1,7 +1,11 @@
+@import "../../layout-column-row/css/index";
+
 .rvo-progress-tracker__step {
   min-height: var(--rvo-progress-tracker-step-height);
   padding-inline-start: var(--rvo-progress-tracker-step-label-padding);
   position: relative;
+
+  @extend .rvo-layout-row;
 
   &::after {
     background-position: 0 center;

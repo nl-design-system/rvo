@@ -72,7 +72,6 @@ export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
         `rvo-image-bg-progress-tracker-${stateImageCssClassname}-${line !== 'substep-start' ? size : 'md'}--after`,
         line !== 'none' && `rvo-progress-tracker__step--${line}`,
         line !== 'none' && `rvo-image-bg-progress-tracker-line-${line}--before`,
-        'rvo-layout-row',
       )}
     >
       {labelMarkup}
