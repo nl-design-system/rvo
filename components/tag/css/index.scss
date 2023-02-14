@@ -3,6 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+@import "../../layout-column-row/css/index";
+
 .rvo-tag {
   border-radius: var(--rvo-tag-border-radius);
   display: inline-flex;
@@ -15,6 +17,9 @@
 .rvo-tag--with-icon {
   padding-inline-end: var(--rvo-tag-padding-inline-end-with-icon);
   padding-inline-start: var(--rvo-tag-padding-inline-start-with-icon);
+
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
 }
 
 // Default

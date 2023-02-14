@@ -97,7 +97,7 @@ export const Tag: React.FC<ITagProps> = ({
       className={clsx(
         'rvo-tag',
         className,
-        showIcon !== 'no' && ['rvo-tag--with-icon', 'rvo-layout-row', 'rvo-layout-gap--sm'],
+        showIcon !== 'no' && ['rvo-tag--with-icon'],
         {
           'rvo-tag--active': active,
           'rvo-tag--hover': hover,
