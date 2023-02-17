@@ -1,6 +1,6 @@
 {
   "rvo": {
-    "custom-radio-button": {
+    "radio-button": {
       "label": {
         "disabled": {
           "color": { "value": "{rvo.color.grijs3}" }
