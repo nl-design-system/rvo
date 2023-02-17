@@ -41,4 +41,5 @@ const defaultColumns = [
 
 export const defaultArgs: IFooterProps = {
   columns: defaultColumns,
+  maxWidth: 'lg',
 };

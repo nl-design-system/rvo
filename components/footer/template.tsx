@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import clsx from 'clsx';
 import React from 'react';
 import { PageFooter as UtrechtPageFooter } from '../../node_modules/@utrecht/component-library-react';
 import { Heading } from '../heading/template';
@@ -22,6 +23,7 @@ interface IFooterColumn {
 
 export interface IFooterProps {
   columns: IFooterColumn[];
+  maxWidth?: 'none' | 'sm' | 'md' | 'lg';
 }
 
 export const argTypes = {
@@ -31,45 +33,61 @@ export const argTypes = {
       required: true,
     },
   },
+  maxWidth: {
+    options: ['none', 'sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
 };
 
-export const Footer: React.FC<IFooterProps> = ({ columns = defaultArgs.columns }: IFooterProps) => {
+export const Footer: React.FC<IFooterProps> = ({
+  columns = defaultArgs.columns,
+  maxWidth = defaultArgs.maxWidth,
+}: IFooterProps) => {
   return (
-    <UtrechtPageFooter className="rvo-footer">
-      {columns.map((column, columnIndex) => (
-        <ul key={columnIndex} className="rvo-footer-menu">
-          {column.label?.length && (
-            <li className="rvo-footer-menu-title">
-              <Heading type="h3" textContent={parseContentMarkup(column.label)} />
-            </li>
-          )}
-          {column.items.map((item, itemIndex) => {
-            let itemMarkup;
-            if (item.link?.length) {
-              itemMarkup = (
-                <Link
-                  content={item.content}
-                  href={item.link}
-                  showIcon="before"
-                  icon="delta-naar-rechts"
-                  iconSize="sm"
-                  iconColor="wit"
-                  noUnderline={true}
-                />
-              );
-            } else {
-              itemMarkup = parseContentMarkup(item.content);
-            }
-
-            return (
-              <li key={itemIndex} className="rvo-footer-menu-item">
-                {itemMarkup}
+    <div className="rvo-footer-bg">
+      <UtrechtPageFooter
+        className={clsx(
+          'rvo-footer',
+          maxWidth === 'sm' && 'rvo-footer--sm',
+          maxWidth === 'md' && 'rvo-footer--md',
+          maxWidth === 'lg' && 'rvo-footer--lg',
+        )}
+      >
+        {columns.map((column, columnIndex) => (
+          <ul key={columnIndex} className="rvo-footer-menu">
+            {column.label?.length && (
+              <li className="rvo-footer-menu-title">
+                <Heading type="h3" textContent={parseContentMarkup(column.label)} />
               </li>
-            );
-          })}
-        </ul>
-      ))}
-    </UtrechtPageFooter>
+            )}
+            {column.items.map((item, itemIndex) => {
+              let itemMarkup;
+              if (item.link?.length) {
+                itemMarkup = (
+                  <Link
+                    content={item.content}
+                    href={item.link}
+                    showIcon="before"
+                    icon="delta-naar-rechts"
+                    iconSize="sm"
+                    iconColor="wit"
+                    noUnderline={true}
+                  />
+                );
+              } else {
+                itemMarkup = parseContentMarkup(item.content);
+              }
+
+              return (
+                <li key={itemIndex} className="rvo-footer-menu-item">
+                  {itemMarkup}
+                </li>
+              );
+            })}
+          </ul>
+        ))}
+      </UtrechtPageFooter>
+    </div>
   );
 };
 
