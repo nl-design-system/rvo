@@ -25,17 +25,10 @@ De algemene layout van een applicatie is het eerste herkenningspunt voor de bezo
 Het is daarom van groot belang dat de layout van een applicatie die met ROOS is ontworpen herkenbaar wordt opgebouwd.
 
 - Begin altijd met het Header component. Hiermee wordt de Rijksoverheid 'ribbon' getoond over de gehele breedte van de pagina.
-
-<Header />
-
 - Toon vervolgens altijd de Menubar.
 - Kies voor small, medium of large. Dit bepaalt de maximale breedte van de items in de Menubar.
 - Zorg dat de gebruiker altijd kan uitloggen met de meest rechtse knop.
-
-<MenuBar menuMaxWidth="lg" />
-
 - Toon onder de Menubar de content van de pagina.
 - Zorg dat de breedte van de content gelijk is aan de breedte van de menubar items.
 - Voeg hiervoor de MaxWidthLayout classes toe aan de menubar en kies voor small, medium of large, bijvoorbeeld:
-
-`rvo-max-width-layout rvo-max-width-layout--lg`
+  `rvo-max-width-layout rvo-max-width-layout--lg`
