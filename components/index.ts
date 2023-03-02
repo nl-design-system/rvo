@@ -9,7 +9,6 @@ export { ExpandableText } from './expandable-text/template';
 export { Footer } from './footer/template';
 export { Checkbox } from './form-checkbox/template';
 export { CheckboxGroup } from './form-checkbox-group/template';
-export { DateInput } from './form-dateinput/template';
 export { Feedback } from './form-feedback/template';
 export { Field } from './form-field/template';
 export { CheckboxField } from './form-field-checkbox/template';
