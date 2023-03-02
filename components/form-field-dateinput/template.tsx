@@ -3,20 +3,33 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import { DateInput, argTypes as dateInputArgTypes, IDateInputProps } from '../form-dateinput/template';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from '../form-field/template';
+import { ITextInputProps, TextInput, argTypes as textInputArgTypes } from '../form-textinput/template';
 import extractArgs from '../utils/extractArgs';
+import './index.scss';
 
-export interface IDateInputFieldProps extends IFieldProps, IDateInputProps {}
+export interface IDateInputFieldProps extends IFieldProps, ITextInputProps {}
 
-export const argTypes = { ...fieldArgTypes, ...dateInputArgTypes };
+export const argTypes = { ...fieldArgTypes, ...textInputArgTypes };
 
 export const DateInputField: React.FC<IDateInputFieldProps> = (args: IDateInputFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes);
-  const dateInputArgs = extractArgs(args, dateInputArgTypes);
+  const TextInputArgs = extractArgs(args, textInputArgTypes);
   return (
-    <Field {...fieldArgs}>
-      <DateInput {...dateInputArgs} />
+    <Field {...fieldArgs} label="Datum veld" helperText="Bijvoorbeeld: 27 3 2007" className="rvo-dateinput">
+      <div className="rvo-dateinput__part">
+        dag
+        <TextInput {...TextInputArgs} size="xs" maxLength={2} />
+      </div>
+
+      <div className="rvo-dateinput__part">
+        maand
+        <TextInput {...TextInputArgs} size="xs" maxLength={2} />
+      </div>
+      <div className="rvo-dateinput__part">
+        jaar
+        <TextInput {...TextInputArgs} size="sm" maxLength={4} />
+      </div>
     </Field>
   );
 };
