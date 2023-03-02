@@ -6,7 +6,7 @@ sidebar_position: 2
 ---
 
 import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
-import { Fieldset, FormLayout, TextInputField, FileInputField } from "../../../../components";
+import { Fieldset, FormLayout, Heading, TextInputField, FileInputField } from "../../../../components";
 
 # Formulieren
 
@@ -14,50 +14,54 @@ Het perfecte gebruik van formulieren is een onderwerp dat al veel onderzocht is.
 ROOS heeft relevante research opgenomen in haar componenten voor formulieren.
 Daarnaast is het van belang dat formulieren op de correct manier worden opgebouwd.
 
+<Heading type="h2">Opbouw</Heading>
+
 - Gebruik FormLayout om de maximale breedte van het formulier te beperken.
 - Groupeer velden in Fieldsets.
 - Zorg dat elk veld een duidelijk label erboven heeft.
 
-  <ComponentExample>
-    <FormLayout>
-      <Fieldset legend="Uw gegevens">
-        <TextInputField label="Voornaam" />
-        <TextInputField label="Achternaam" />
-      </Fieldset>
-      <Fieldset legend="Opleiding">
-        <TextInputField label="Naam instelling" />
-        <TextInputField label="Plaats" />
-      </Fieldset>
-    </FormLayout>
-  </ComponentExample>
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw gegevens">
+      <TextInputField label="Voornaam" />
+      <TextInputField label="Achternaam" />
+    </Fieldset>
+    <Fieldset legend="Opleiding">
+      <TextInputField label="Naam instelling" />
+      <TextInputField label="Plaats" />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
+
+<Heading type="h2">Uitleg</Heading>
 
 - Zorg dat complexere velden zijn voorzien van een heldere uitleg.
 
-  <ComponentExample>
-    <FormLayout>
-      <Fieldset legend="Uw aanvraag">
-        <FileInputField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is." />
-        <TextInputField label="Uw vraag" inputType="textarea" helperText="Beschrijf beknopt wat uw vraag is." />
-      </Fieldset>
-    </FormLayout>
-  </ComponentExample>
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FileInputField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is." />
+      <TextInputField label="Uw vraag" inputType="textarea" helperText="Beschrijf beknopt wat uw vraag is." />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
 
 - Gebruik een 'expandable' helper tekst als een velden een langere uitleg nodig heeft.
 
-  <ComponentExample>
-    <FormLayout>
-      <Fieldset legend="Uw aanvraag">
-        <FileInputField
-          label="Upload uw document"
-          expandableHelperText={true}
-          expandableHelperTextTitle="Voorwaarden voor uw document"
-          helperText={
-            <ul>
-              <li>Zorg dat het document in PDF-formaat is.</li>
-              <li>Zorg dat het document al uw contactgegevens bevat.</li>
-            </ul>
-          }
-        />
-      </Fieldset>
-    </FormLayout>
-  </ComponentExample>
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FileInputField
+        label="Upload uw document"
+        expandableHelperText={true}
+        expandableHelperTextTitle="Voorwaarden voor uw document"
+        helperText={
+          <ul>
+            <li>Zorg dat het document in PDF-formaat is.</li>
+            <li>Zorg dat het document al uw contactgegevens bevat.</li>
+          </ul>
+        }
+      />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
