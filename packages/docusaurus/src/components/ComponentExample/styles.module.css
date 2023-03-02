@@ -8,15 +8,19 @@
 .infoContainer {
   padding-block: var(--rvo-space-md);
   padding-inline: var(--rvo-space-md);
+  position: relative;
+}
+
+.openInNewTabLink {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .componentContainer {
   border-bottom-color: var(--rvo-color-grijs3);
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-top-color: var(--rvo-color-grijs3);
-  border-top-style: solid;
-  border-top-width: 1px;
   overflow: auto;
   padding-block: var(--rvo-space-xl);
   padding-inline: var(--rvo-space-xl);

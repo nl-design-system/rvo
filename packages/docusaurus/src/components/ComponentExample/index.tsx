@@ -2,6 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { ExpandableText } from '@nl-rvo/components';
 import { Link } from '@nl-rvo/components';
 import CodeBlock from '@theme/CodeBlock';
+import clsx from 'clsx';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import { useMemo } from 'react';
@@ -33,14 +34,19 @@ const ComponentExample = ({ children, minHeight }) => {
 
   return (
     <div className={styles.componentExample}>
-      <div className={styles.infoContainer}>
-        <Link content="Open voorbeeld in een nieuwe tab" href={previewLink} target="_blank" />
-      </div>
       <div className={styles.componentContainer} style={{ minHeight }}>
         {children}
       </div>
-      <div className={styles.infoContainer}>
+      <div className={clsx(styles.infoContainer, 'rvo-layout-row')}>
         <ExpandableText title="Voorbeeld HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
+        <Link
+          className={styles.openInNewTabLink}
+          content="Open in nieuwe tab"
+          href={previewLink}
+          target="_blank"
+          showIcon="after"
+          icon="externe-link"
+        />
       </div>
     </div>
   );
