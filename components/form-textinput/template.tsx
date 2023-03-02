@@ -68,7 +68,7 @@ export const argTypes = {
     control: 'text',
   },
   size: {
-    options: ['sm', 'md', 'lg'],
+    options: ['xs', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
   maxLength: {
@@ -120,6 +120,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       <Textbox
         {...props}
         className={clsx(
+          size === 'xs' && 'utrecht-textbox--xs',
           size === 'sm' && 'utrecht-textbox--sm',
           size === 'md' && 'utrecht-textbox--md',
           focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'],

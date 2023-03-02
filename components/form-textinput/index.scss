@@ -27,6 +27,10 @@ textarea.utrecht-textbox {
   outline-color: var(--rvo-textbox-invalid-focus-outline-color);
 }
 
+.utrecht-textbox--xs {
+  width: var(--rvo-textbox-xs-width);
+}
+
 .utrecht-textbox--sm {
   width: var(--rvo-textbox-sm-width);
 }

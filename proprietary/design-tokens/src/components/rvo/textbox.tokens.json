@@ -6,6 +6,9 @@
         "border-color": { "value": "{rvo.color.zwart}" },
         "outline-color": { "value": "{rvo.color.rood}" }
       },
+      "xs": {
+        "width": { "value": "{rvo.space.3xl}" }
+      },
       "sm": {
         "width": { "value": "{rvo.space.4xl}" }
       },
