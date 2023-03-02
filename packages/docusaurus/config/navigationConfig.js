@@ -21,17 +21,11 @@ module.exports = {
         position: 'left',
         label: 'Huisstijl',
       },
-      // {
-      //   type: 'doc',
-      //   docId: 'design-tokens/color',
-      //   position: 'left',
-      //   label: 'Voorbeelden',
-      // },
       {
         type: 'doc',
         docId: 'components/accordion',
         position: 'left',
-        label: 'Components',
+        label: 'Componenten',
       },
       {
         type: 'doc',
