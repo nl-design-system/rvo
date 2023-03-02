@@ -8,15 +8,33 @@ import { ITextInputProps, TextInput, argTypes as textInputArgTypes } from '../fo
 import extractArgs from '../utils/extractArgs';
 import './index.scss';
 
-export interface IDateInputFieldProps extends IFieldProps, ITextInputProps {}
+type IStrippedFieldProps = Omit<IFieldProps, 'fieldId'>;
+type IStrippedTextInputProps = Pick<ITextInputProps, 'disabled' | 'invalid' | 'readOnly' | 'required'>;
 
-export const argTypes = { ...fieldArgTypes, ...textInputArgTypes };
+export interface IDateInputFieldProps extends IStrippedFieldProps, IStrippedTextInputProps {}
+
+export const argTypes = {
+  ...{
+    label: fieldArgTypes.label,
+    helperText: fieldArgTypes.helperText,
+    expandableHelperText: fieldArgTypes.expandableHelperText,
+    expandableHelperTextTitle: fieldArgTypes.expandableHelperTextTitle,
+    warningText: fieldArgTypes.warningText,
+    errorText: fieldArgTypes.errorText,
+  },
+  ...{
+    disabled: textInputArgTypes.disabled,
+    invalid: textInputArgTypes.invalid,
+    readOnly: textInputArgTypes.readOnly,
+    required: textInputArgTypes.required,
+  },
+};
 
 export const DateInputField: React.FC<IDateInputFieldProps> = (args: IDateInputFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes);
   const TextInputArgs = extractArgs(args, textInputArgTypes);
   return (
-    <Field {...fieldArgs} label="Datum veld" helperText="Bijvoorbeeld: 27 3 2007" className="rvo-dateinput">
+    <Field {...fieldArgs} className="rvo-dateinput">
       <div className="rvo-dateinput__part">
         dag
         <TextInput {...TextInputArgs} size="xs" maxLength={2} />
