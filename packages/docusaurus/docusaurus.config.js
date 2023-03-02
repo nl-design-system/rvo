@@ -51,7 +51,7 @@ const config = {
         editUrl: undefined,
         breadcrumbs: false,
         sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
-        // sidebarItemsGenerator,
+        sidebarItemsGenerator,
         include: includeList,
         exclude: excludeList,
       },
