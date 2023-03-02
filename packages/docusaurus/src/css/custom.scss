@@ -40,6 +40,7 @@
   --ifm-color-primary-lighter: var(--rvo-color-hemelblauw-tint2);
   --ifm-color-primary-lightest: var(--rvo-color-lichtblauw-tint2);
   --ifm-link-hover-decoration: none;
+  --ifm-menu-link-padding-horizontal: 0;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -60,4 +61,8 @@
 
 .pagination-nav {
   display: none;
+}
+
+.markdown h1:first-child {
+  margin-block-start: 0;
 }

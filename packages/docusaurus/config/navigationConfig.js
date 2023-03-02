@@ -33,12 +33,12 @@ module.exports = {
         position: 'left',
         label: 'Components',
       },
-      // {
-      //   type: 'doc',
-      //   docId: 'components/accordion',
-      //   position: 'left',
-      //   label: 'Patronen',
-      // },
+      {
+        type: 'doc',
+        docId: 'patterns/patterns',
+        position: 'left',
+        label: 'Patronen',
+      },
       {
         href: 'https://www.figma.com/file/NHV1JYxJ28vKZInSI9u200/ROOS-(RVO-Design-System)?node-id=282%3A5324',
         label: 'Figma',

@@ -8,6 +8,7 @@ const findOrAddCategory = (itemList, categoryName) => {
   if (!category) {
     category = {
       type: 'category',
+      collapsed: false,
       label: toProperCase(categoryName),
       items: [],
     };
