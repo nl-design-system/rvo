@@ -44,6 +44,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   warningText,
   errorText,
   children,
+  className,
 }) => {
   let helperTextMarkup: React.ReactNode;
   // Parse default helper text markup (strings or react node)
@@ -80,7 +81,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
         {errorText && <Feedback text={errorText} type="error" />}
         {warningText && <Feedback text={warningText} type="warning" />}
       </div>
-      {children}
+      {(className && <div className={className}>{children}</div>) || children}
     </FormField>
   );
 };
