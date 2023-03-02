@@ -3,13 +3,21 @@ const toProperCase = (string) => {
   return parsedString.charAt(0).toUpperCase() + parsedString.slice(1);
 };
 
+const removeNumbering = (string) => {
+  if (!isNaN(string[0])) {
+    return string.substring(2).trim();
+  } else {
+    return string.trim();
+  }
+};
+
 const findOrAddCategory = (itemList, categoryName) => {
   let category = itemList.find((item) => item.type === 'category' && item.label === toProperCase(categoryName));
   if (!category) {
     category = {
       type: 'category',
       collapsed: false,
-      label: toProperCase(categoryName),
+      label: toProperCase(removeNumbering(categoryName)),
       items: [],
     };
     itemList.push(category);
