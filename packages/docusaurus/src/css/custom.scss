@@ -63,6 +63,6 @@
   display: none;
 }
 
-.markdown h1:first-child {
+.markdown > h1:first-child {
   margin-block-start: 0;
 }
