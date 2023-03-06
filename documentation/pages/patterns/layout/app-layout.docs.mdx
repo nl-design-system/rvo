@@ -6,7 +6,7 @@ sidebar_position: 1
 ---
 
 import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
-import { Header, Heading, MaxWidthLayout, MenuBar } from "../../../../components";
+import { Breadcrumbs, Header, Heading, MaxWidthLayout, MenuBar } from "../../../../components";
 
 # Applicatie layout
 
@@ -15,6 +15,7 @@ import { Header, Heading, MaxWidthLayout, MenuBar } from "../../../../components
     <Header />
     <MenuBar menuMaxWidth="lg" />
     <MaxWidthLayout className="rvo-layout-column rvo-layout-gap--sm rvo-layout-margin-vertical--lg">
+      <Breadcrumbs />
       <Heading>Pagina</Heading>
       <p>Content</p>
     </MaxWidthLayout>
@@ -32,3 +33,4 @@ Het is daarom van groot belang dat de layout van een applicatie die met ROOS is 
 - Zorg dat de breedte van de content gelijk is aan de breedte van de menubar items.
 - Voeg hiervoor de MaxWidthLayout classes toe aan de menubar en kies voor small, medium of large, bijvoorbeeld:
   `rvo-max-width-layout rvo-max-width-layout--lg`
+- Als er sprake is van een navigatie-pad, toon deze dan altijd als eerste in de content.
