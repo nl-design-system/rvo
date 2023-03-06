@@ -105,9 +105,9 @@ export const parameters = {
         }
       }
 
-      if (storyContext.component) {
+      if (storyContext.originalStoryFn) {
         return prettier
-          .format(ReactDOMServer.renderToStaticMarkup(storyContext.component(currentStoryArgs)), {
+          .format(ReactDOMServer.renderToStaticMarkup(storyContext.originalStoryFn(currentStoryArgs)), {
             parser: 'babel',
             plugins: [prettierBabel],
           })
