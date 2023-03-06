@@ -6,7 +6,15 @@ sidebar_position: 2
 ---
 
 import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
-import { Fieldset, FileInputField, FormLayout, Heading, TextInputField } from "../../../../components";
+import {
+  Button,
+  ButtonGroup,
+  Fieldset,
+  FileInputField,
+  FormLayout,
+  Heading,
+  TextInputField,
+} from "../../../../components";
 
 # Formulieren
 
@@ -19,6 +27,7 @@ Daarnaast is het van belang dat formulieren op de correct manier worden opgebouw
 - Gebruik FormLayout om de maximale breedte van het formulier te beperken.
 - Groupeer velden in Fieldsets.
 - Zorg dat elk veld een duidelijk label erboven heeft.
+- Zorg dat de primaire actieknop rechts staat, en de secundaire actieknop links.
 
 <ComponentExample>
   <FormLayout>
@@ -30,6 +39,10 @@ Daarnaast is het van belang dat formulieren op de correct manier worden opgebouw
       <TextInputField label="Naam instelling" />
       <TextInputField label="Plaats" />
     </Fieldset>
+    <ButtonGroup>
+      <Button kind="secondary">Opslaan en sluiten</Button>
+      <Button className="rvo-button-group__align-right">Opslaan en verder</Button>
+    </ButtonGroup>
   </FormLayout>
 </ComponentExample>
 
