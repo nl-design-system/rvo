@@ -53,8 +53,8 @@ const addonStatus = {
 };
 
 const previewTabs = {
-  'storybook/docs/panel': { index: -1, title: 'Documentation' },
-  canvas: { title: 'Sandbox' },
+  'storybook/docs/panel': { index: -1, title: 'Component' },
+  canvas: { title: 'Compatibility checks' },
 };
 
 const storySort = {
@@ -126,10 +126,7 @@ export const parameters = {
   themes: {
     default: 'RVO',
     target: 'root',
-    list: [
-      { name: 'RVO', class: 'rvo-theme', color: '#007bc7' },
-      { name: 'Basiselementen', class: 'basiselementen-theme', color: '#154273' },
-    ],
+    list: [{ name: 'RVO', class: 'rvo-theme', color: '#007bc7' }],
   },
 };
 
