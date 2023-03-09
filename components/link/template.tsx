@@ -15,6 +15,7 @@ export interface ILinkProps {
   icon?: IconType;
   iconSize?: string;
   iconColor?: string;
+  iconAriaLabel?: string;
   hover?: boolean;
   active?: boolean;
   focus?: boolean;
@@ -47,6 +48,7 @@ export const argTypes = {
     options: iconColors,
     control: { type: 'radio' },
   },
+  iconAriaLabel: { control: 'text' },
   hover: {
     control: 'boolean',
   },
@@ -68,6 +70,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   icon = defaultArgs.icon,
   iconSize = defaultArgs.iconSize,
   iconColor = defaultArgs.iconColor,
+  iconAriaLabel = defaultArgs.iconAriaLabel,
   hover = defaultArgs.hover,
   active = defaultArgs.active,
   focus = defaultArgs.focus,
@@ -89,6 +92,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
     size: iconSize as any,
     color: iconColor as any,
     className: iconClassName,
+    ariaLabel: iconAriaLabel,
   });
 
   const props = {

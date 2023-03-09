@@ -16,7 +16,10 @@ import { argTypes, Link } from "./template";
 # Terug link
 
 <Canvas>
-  <Story name="Terug link" args={{ ...defaultArgs, content: "Terug", icon: "terug", showIcon: "before" }}>
+  <Story
+    name="Terug link"
+    args={{ ...defaultArgs, content: "Terug", icon: "terug", showIcon: "before", iconAriaLabel: "Ga terug" }}
+  >
     {Link.bind({})}
   </Story>
 </Canvas>
@@ -24,7 +27,16 @@ import { argTypes, Link } from "./template";
 # Verder link
 
 <Canvas>
-  <Story name="Verder link" args={{ ...defaultArgs, content: "Verder", icon: "pijl-naar-rechts", showIcon: "after" }}>
+  <Story
+    name="Verder link"
+    args={{
+      ...defaultArgs,
+      content: "Verder",
+      icon: "pijl-naar-rechts",
+      showIcon: "after",
+      iconAriaLabel: "Ga verder",
+    }}
+  >
     {Link.bind({})}
   </Story>
 </Canvas>
@@ -34,7 +46,13 @@ import { argTypes, Link } from "./template";
 <Canvas>
   <Story
     name="Externe link"
-    args={{ ...defaultArgs, content: "Externe link", icon: "pijl-naar-rechtsboven", showIcon: "after" }}
+    args={{
+      ...defaultArgs,
+      content: "Externe link",
+      icon: "pijl-naar-rechtsboven",
+      showIcon: "after",
+      iconAriaLabel: "Ga naar www.rvo.nl (externe link)",
+    }}
   >
     {Link.bind({})}
   </Story>
@@ -45,7 +63,14 @@ import { argTypes, Link } from "./template";
 <Canvas>
   <Story
     name="Zonder underline"
-    args={{ ...defaultArgs, content: "Verder", icon: "pijl-naar-rechts", showIcon: "after", noUnderline: true }}
+    args={{
+      ...defaultArgs,
+      content: "Verder",
+      icon: "pijl-naar-rechts",
+      showIcon: "after",
+      noUnderline: true,
+      iconAriaLabel: "Ga verder",
+    }}
   >
     {Link.bind({})}
   </Story>
@@ -56,7 +81,14 @@ import { argTypes, Link } from "./template";
 <Canvas>
   <Story
     name="Small icon"
-    args={{ ...defaultArgs, content: "Verder", icon: "pijl-naar-rechts", showIcon: "after", iconSize: "sm" }}
+    args={{
+      ...defaultArgs,
+      content: "Verder",
+      icon: "pijl-naar-rechts",
+      showIcon: "after",
+      iconSize: "sm",
+      iconAriaLabel: "Ga verder",
+    }}
   >
     {Link.bind({})}
   </Story>

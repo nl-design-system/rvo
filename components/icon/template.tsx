@@ -13,6 +13,7 @@ export interface IIconProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   color?: '' | 'hemelblauw' | 'wit' | 'zwart';
   className?: string;
+  ariaLabel?: string;
 }
 
 export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
@@ -54,12 +55,16 @@ export const argTypes = {
     options: iconColors,
     control: { type: 'radio' },
   },
+  ariaLabel: {
+    control: { type: 'text' },
+  },
 };
 
 export const Icon: React.FC<IIconProps> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,
+  ariaLabel = defaultArgs.ariaLabel,
   className,
   ...props
 }: IIconProps) => {
@@ -83,7 +88,10 @@ export const Icon: React.FC<IIconProps> = ({
         className,
       )}
       role="img"
-      aria-label={(iconName.charAt(0).toUpperCase() + iconName.substr(1).toLowerCase()).replace(/-/g, ' ')}
+      aria-label={(ariaLabel?.length
+        ? ariaLabel
+        : iconName.charAt(0).toUpperCase() + iconName.substr(1).toLowerCase()
+      ).replace(/-/g, ' ')}
       {...props}
     ></span>
   );
