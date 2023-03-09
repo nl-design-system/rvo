@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import './index.scss';
-import { Icon } from '../icon/template';
+import { Button } from '../button/template';
 import validateHTML from '../utils/validateHTML';
 import { defaultArgs } from './defaultArgs';
 
@@ -74,16 +74,7 @@ export const Table: React.FC<ITableProps> = ({
                 >
                   {column.label}
                   {column.sortable && column.sortDirection.length > 0 && (
-                    <Icon
-                      size="sm"
-                      color="hemelblauw"
-                      icon={icon as any}
-                      ariaLabel={
-                        column.sortDirection === 'ASC'
-                          ? `Sorteer kolom ${column.label} oplopend`
-                          : `Sorteer kolom ${column.label} aflopend`
-                      }
-                    />
+                    <Button kind="tertiary" showIcon="before" icon={icon as any} label="" size="sm" />
                   )}
                 </th>
               );
