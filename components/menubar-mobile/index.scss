@@ -18,13 +18,16 @@
   }
 
   .rvo-mobile-menu__top-bar {
+    background: none;
     color: var(--utrecht-topnav-link-color);
     cursor: pointer;
     font-size: var(--rvo-font-size-lg);
+    justify-content: flex-start;
     padding-block-end: var(--rvo-topnav-link-padding-block-end);
     padding-block-start: var(--rvo-topnav-link-padding-block-start);
     padding-inline-end: var(--rvo-topnav-link-padding-inline-end);
     padding-inline-start: var(--rvo-topnav-link-padding-inline-start);
+    width: 100%;
 
     @extend .rvo-layout-row;
     @extend .rvo-layout-gap--sm;

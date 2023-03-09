@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { useCallback, useState } from 'react';
 import { Icon } from '../icon/template';
@@ -93,12 +94,12 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   }, [isOpen]);
 
   return (
-    <div className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)}>
-      <div className={clsx('rvo-mobile-menu__top-bar')} onClick={onClick}>
+    <div className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)} aria-expanded={isOpen}>
+      <UtrechtButton className={clsx('rvo-mobile-menu__top-bar')} onClick={onClick}>
         <Icon icon="menu" size={size as any} color="wit" />
         <Icon icon="kruis" size={size as any} color="wit" />
         Menu
-      </div>
+      </UtrechtButton>
       {isOpen && (
         <div className={clsx('rvo-mobile-menu__list', 'rvo-topnav__background')}>
           <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
