@@ -36,7 +36,7 @@ export const Label: React.FC<ILabelProps> = ({
   children,
 }: ILabelProps) => {
   return (
-    <div
+    <label
       className={clsx(
         'rvo-label',
         className,
@@ -46,7 +46,7 @@ export const Label: React.FC<ILabelProps> = ({
       )}
     >
       {children || content}
-    </div>
+    </label>
   );
 };
 

@@ -29,7 +29,7 @@ export { TimeInput } from './form-timeinput/template';
 export { Header } from './header/template';
 export { Heading } from './heading/template';
 export { Icon } from './icon/template';
-export { Label } from './label/template';
+export { Label } from './form-field-label/template';
 export { LayoutColumnRow } from './layout-column-row/template';
 export { Link } from './link/template';
 export { Logo } from './logo/template';

@@ -45,7 +45,7 @@ module.exports = {
           '../components/form-fileinput/template.tsx',
           '../components/form-field-fileinput/template.tsx',
           '../components/form-feedback/template.tsx',
-          '../components/label/template.tsx',
+          '../components/form-field-label/template.tsx',
         ],
       },
       {
