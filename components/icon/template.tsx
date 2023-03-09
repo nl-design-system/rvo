@@ -13,6 +13,7 @@ export interface IIconProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   color?: '' | 'hemelblauw' | 'wit' | 'zwart';
   className?: string;
+  title?: string;
 }
 
 export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
@@ -61,6 +62,7 @@ export const Icon: React.FC<IIconProps> = ({
   size = defaultArgs.size,
   color = defaultArgs.color,
   className,
+  ...props
 }: IIconProps) => {
   let iconName = icon as string;
   if (icon.indexOf(' > ') > -1) {
@@ -81,6 +83,7 @@ export const Icon: React.FC<IIconProps> = ({
         },
         className,
       )}
+      {...props}
     ></span>
   );
 };
