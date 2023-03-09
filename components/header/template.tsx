@@ -22,7 +22,7 @@ export const Header: React.FC<IHeaderProps> = ({ link = defaultArgs.link }: IHea
     <div className="rvo-header__logo-wrapper">
       {link ? (
         <a href={link} className="rvo-header__logo-link">
-          <Logo className="rvo-header__logo-img" />
+          <Logo className="rvo-header__logo-img" subtitle="ga naar de startpagina van RVO" />
         </a>
       ) : (
         <Logo className="rvo-header__logo-img" />

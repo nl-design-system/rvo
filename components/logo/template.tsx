@@ -19,17 +19,16 @@ export const Logo: React.FC<ILogoProps> = ({
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
 }) => {
-  return <img src={LogoSrc} alt={`${title || ''} ${subtitle || ''}`} className={clsx('rvo-logo-img', className)} />;
+  return (
+    <img src={LogoSrc} alt={`${title || ''}${`, ${subtitle}` || ''}`} className={clsx('rvo-logo-img', className)} />
+  );
 };
 
-export const LogoWithText: React.FC<ILogoProps> = ({
-  title = 'Rijksdienst voor Ondernemend Nederland',
-  subtitle = '',
-}) => {
+export const LogoWithText: React.FC<ILogoProps> = ({ title = defaultArgs.title, subtitle = defaultArgs.subtitle }) => {
   return (
     <div className="rvo-logo">
       <div className="rvo-logo__emblem">
-        <img src={EmblemSrc} />
+        <img src={EmblemSrc} alt={`${title || ''}${`, ${subtitle}` || ''}`} />
       </div>
       <div className="rvo-logo__wordmark">
         <p className="rvo-logo__title">{title}</p>
