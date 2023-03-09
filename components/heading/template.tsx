@@ -14,6 +14,7 @@ export interface IHeadingProps {
   textContent?: string | React.ReactNode;
   link?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
 export const argTypes = {
@@ -34,9 +35,10 @@ export const Heading: React.FC<IHeadingProps> = ({
   textContent = defaultArgs.textContent,
   link = defaultArgs.link,
   children,
+  className,
 }: IHeadingProps) => {
   const props = {
-    className: clsx(`utrecht-heading-${type.replace('h', '')}`),
+    className: clsx(`utrecht-heading-${type.replace('h', '')}`, className),
   };
 
   let headingMarkup;

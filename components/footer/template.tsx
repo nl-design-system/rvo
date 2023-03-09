@@ -54,37 +54,37 @@ export const Footer: React.FC<IFooterProps> = ({
         )}
       >
         {columns.map((column, columnIndex) => (
-          <ul key={columnIndex} className="rvo-footer-menu">
+          <div key={`column.label${columnIndex}`} className="rvo-footer-column">
             {column.label?.length && (
-              <li className="rvo-footer-menu-title">
-                <Heading type="h3" textContent={parseContentMarkup(column.label)} />
-              </li>
+              <Heading type="h3" textContent={parseContentMarkup(column.label)} className="rvo-footer-menu-title" />
             )}
-            {column.items.map((item, itemIndex) => {
-              let itemMarkup;
-              if (item.link?.length) {
-                itemMarkup = (
-                  <Link
-                    content={item.content}
-                    href={item.link}
-                    showIcon="before"
-                    icon="delta-naar-rechts"
-                    iconSize="sm"
-                    iconColor="wit"
-                    noUnderline={true}
-                  />
-                );
-              } else {
-                itemMarkup = parseContentMarkup(item.content);
-              }
+            <ul key={columnIndex} className="rvo-footer-menu">
+              {column.items.map((item, itemIndex) => {
+                let itemMarkup;
+                if (item.link?.length) {
+                  itemMarkup = (
+                    <Link
+                      content={item.content}
+                      href={item.link}
+                      showIcon="before"
+                      icon="delta-naar-rechts"
+                      iconSize="sm"
+                      iconColor="wit"
+                      noUnderline={true}
+                    />
+                  );
+                } else {
+                  itemMarkup = parseContentMarkup(item.content);
+                }
 
-              return (
-                <li key={itemIndex} className="rvo-footer-menu-item">
-                  {itemMarkup}
-                </li>
-              );
-            })}
-          </ul>
+                return (
+                  <li key={itemIndex} className="rvo-footer-menu-item">
+                    {itemMarkup}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         ))}
       </UtrechtPageFooter>
     </div>
