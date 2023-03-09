@@ -6,7 +6,7 @@ export const defaultArgs: ITableProps = {
     { label: 'Title' },
     { label: 'Text', sortable: true, sortDirection: 'ASC' },
     { label: 'Price ($)', type: 'numeric' },
-    { label: '' },
+    { label: 'Link' },
   ],
   rows: [
     ['Title value 1', 'Text value 1', '57', '<a href="#" class="rvo-link">Link 1</a>'],
