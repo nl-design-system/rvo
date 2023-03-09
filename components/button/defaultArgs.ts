@@ -13,4 +13,5 @@ export const defaultArgs: IButtonProps = {
   label: 'Button',
   showIcon: 'no',
   icon: 'home',
+  iconAriaLabel: '',
 };

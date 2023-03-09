@@ -23,6 +23,7 @@ export interface IButtonProps {
   disabled?: boolean;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
+  iconAriaLabel?: string;
   className?: string;
   alignToRightInGroup?: boolean;
   onFocus?: (event) => void;
@@ -65,6 +66,7 @@ export const argTypes = {
     control: 'select',
     options: iconOptions,
   },
+  iconAriaLabel: { control: 'text' },
 };
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
@@ -80,11 +82,12 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   children,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
+  iconAriaLabel = defaultArgs.iconAriaLabel,
   className,
   alignToRightInGroup,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
-  const iconMarkup = <Icon icon={icon as any} size="md" />;
+  const iconMarkup = <Icon icon={icon as any} size={size} ariaLabel={iconAriaLabel} />;
 
   let appearance: string | undefined;
   switch (kind) {
