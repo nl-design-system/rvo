@@ -12,11 +12,11 @@ export interface ITextInputFieldProps extends IFieldProps, ITextInputProps {}
 export const argTypes = { ...fieldArgTypes, ...textInputArgTypes };
 
 export const TextInputField: React.FC<ITextInputFieldProps> = (args: ITextInputFieldProps) => {
-  const fieldArgs = extractArgs(args, fieldArgTypes);
+  const fieldArgs = extractArgs(args, fieldArgTypes) as IFieldProps;
   const textInputArgs = extractArgs(args, textInputArgTypes);
   return (
     <Field {...fieldArgs}>
-      <TextInput {...textInputArgs} />
+      <TextInput {...textInputArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
     </Field>
   );
 };

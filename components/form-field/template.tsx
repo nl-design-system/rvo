@@ -14,6 +14,7 @@ export interface IFieldProps {
   fieldId?: string;
   label?: string;
   helperText?: string | React.ReactNode;
+  helperTextId?: string;
   expandableHelperText?: boolean;
   expandableHelperTextTitle?: string;
   warningText?: string;
@@ -29,6 +30,7 @@ export const argTypes = {
     control: 'text',
   },
   helperText: { control: 'text' },
+  helperTextId: { control: 'text' },
   expandableHelperText: { control: 'boolean' },
   expandableHelperTextTitle: { control: 'text' },
   warningText: { control: 'text' },
@@ -38,11 +40,12 @@ export const argTypes = {
 export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   fieldId = defaultArgs.fieldId,
   label = defaultArgs.label,
-  helperText,
-  expandableHelperText,
-  expandableHelperTextTitle,
-  warningText,
-  errorText,
+  helperText = defaultArgs.helperText,
+  helperTextId = defaultArgs.helperTextId,
+  expandableHelperText = defaultArgs.expandableHelperText,
+  expandableHelperTextTitle = defaultArgs.expandableHelperTextTitle,
+  warningText = defaultArgs.warningText,
+  errorText = defaultArgs.errorText,
   children,
   className,
 }) => {
@@ -65,10 +68,18 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
       const isValidHTML = validateHTML(helperText);
       if (isValidHTML) {
         helperTextMarkup = (
-          <div className="utrecht-form-field-description" dangerouslySetInnerHTML={{ __html: helperText }}></div>
+          <div
+            id={helperTextId}
+            className="utrecht-form-field-description"
+            dangerouslySetInnerHTML={{ __html: helperText }}
+          ></div>
         );
       } else {
-        helperTextMarkup = <div className="utrecht-form-field-description">{helperText}</div>;
+        helperTextMarkup = (
+          <div id={helperTextId} className="utrecht-form-field-description">
+            {helperText}
+          </div>
+        );
       }
     }
   }

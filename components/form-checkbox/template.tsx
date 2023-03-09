@@ -23,6 +23,7 @@ export interface ICheckboxProps {
   invalid?: boolean;
   required?: boolean;
   value?: string;
+  helperTextId?: string;
   onFocus?: (event) => void;
   onBlur?: (event) => void;
   onChange?: (event) => void;
@@ -45,6 +46,7 @@ export const argTypes = {
   invalid: { control: 'boolean' },
   required: { control: 'boolean' },
   value: { control: 'text' },
+  helperTextId: { control: 'text' },
 };
 
 export const Checkbox: React.FC<ICheckboxProps> = ({
@@ -60,6 +62,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   value = defaultArgs.value,
+  helperTextId = defaultArgs.helperTextId,
   onChange,
   onUpdateGroup,
   ...otherProps
@@ -93,6 +96,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
         onUpdateGroup?.(event);
       }}
       {...otherProps}
+      aria-describedby={helperTextId?.length ? helperTextId : null}
     />
     {label}
   </label>

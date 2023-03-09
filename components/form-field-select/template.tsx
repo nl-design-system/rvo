@@ -12,11 +12,11 @@ export interface ISelectFieldProps extends IFieldProps, ISelectProps {}
 export const argTypes = { ...fieldArgTypes, ...selectArgTypes };
 
 export const SelectField: React.FC<ISelectFieldProps> = (args: ISelectFieldProps) => {
-  const fieldArgs = extractArgs(args, fieldArgTypes);
+  const fieldArgs = extractArgs(args, fieldArgTypes) as IFieldProps;
   const selectArgs = extractArgs(args, selectArgTypes);
   return (
     <Field {...fieldArgs}>
-      <Select {...selectArgs} />
+      <Select {...selectArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
     </Field>
   );
 };

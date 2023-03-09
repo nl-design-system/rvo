@@ -12,11 +12,11 @@ export interface ITimeInputFieldProps extends IFieldProps, ITimeInputProps {}
 export const argTypes = { ...fieldArgTypes, ...timeInputArgTypes };
 
 export const TimeInputField: React.FC<ITimeInputFieldProps> = (args: ITimeInputFieldProps) => {
-  const fieldArgs = extractArgs(args, fieldArgTypes);
+  const fieldArgs = extractArgs(args, fieldArgTypes) as IFieldProps;
   const timeInputArgs = extractArgs(args, timeInputArgTypes);
   return (
     <Field {...fieldArgs}>
-      <TimeInput {...timeInputArgs} />
+      <TimeInput {...timeInputArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
     </Field>
   );
 };

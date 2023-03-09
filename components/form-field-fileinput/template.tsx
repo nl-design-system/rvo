@@ -12,11 +12,11 @@ export interface IFileInputFieldProps extends IFieldProps, IFileInputProps {}
 export const argTypes = { ...fieldArgTypes, ...fileInputArgTypes };
 
 export const FileInputField: React.FC<IFileInputFieldProps> = (args: IFileInputFieldProps) => {
-  const fieldArgs = extractArgs(args, fieldArgTypes);
+  const fieldArgs = extractArgs(args, fieldArgTypes) as IFieldProps;
   const fileInputArgs = extractArgs(args, fileInputArgTypes);
   return (
     <Field {...fieldArgs}>
-      <FileInput {...fileInputArgs} />
+      <FileInput {...fileInputArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
     </Field>
   );
 };
