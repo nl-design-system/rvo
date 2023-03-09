@@ -74,7 +74,16 @@ export const Table: React.FC<ITableProps> = ({
                 >
                   {column.label}
                   {column.sortable && column.sortDirection.length > 0 && (
-                    <Icon size="sm" color="hemelblauw" icon={icon as any} />
+                    <Icon
+                      size="sm"
+                      color="hemelblauw"
+                      icon={icon as any}
+                      ariaLabel={
+                        column.sortDirection === 'ASC'
+                          ? `Sorteer kolom ${column.label} oplopend`
+                          : `Sorteer kolom ${column.label} aflopend`
+                      }
+                    />
                   )}
                 </th>
               );
