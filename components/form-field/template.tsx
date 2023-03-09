@@ -73,10 +73,14 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
     }
   }
 
+  const fieldLabelId = `${fieldId}-label`;
+
   return (
-    <FormField className="rvo-form-field">
+    <FormField className="rvo-form-field" role="group" aria-labelledby={fieldLabelId}>
       <div className="rvo-form-field__label">
-        <FormLabel htmlFor={fieldId}>{label}</FormLabel>
+        <FormLabel id={fieldLabelId} htmlFor={fieldId}>
+          {label}
+        </FormLabel>
         {helperTextMarkup}
         {errorText && <Feedback text={errorText} type="error" />}
         {warningText && <Feedback text={warningText} type="warning" />}
