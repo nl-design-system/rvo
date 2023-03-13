@@ -9,7 +9,7 @@
     "rvo",
     "ROOS"
   ],
-  "private": false,
+  "private": true,
   "publishConfig": {
     "access": "public"
   },
