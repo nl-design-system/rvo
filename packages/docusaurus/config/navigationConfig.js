@@ -34,6 +34,12 @@ module.exports = {
         label: 'Patronen',
       },
       {
+        type: 'doc',
+        docId: 'best-practices/overview-and-navigation',
+        position: 'left',
+        label: 'Best practices',
+      },
+      {
         href: 'https://www.figma.com/file/NHV1JYxJ28vKZInSI9u200/ROOS-(RVO-Design-System)?node-id=282%3A5324',
         label: 'Figma',
         position: 'right',

@@ -1,0 +1,151 @@
+---
+title: Overzicht en Navigatie
+hide_title: false
+slug: overview-and-navigation
+sidebar_position: 1
+---
+
+import { ProgressTracker, ProgressTrackerStep } from "../../../components";
+import ExpectationsSrc from "./img/expectations.jpg";
+import NoCollapsiblesSrc from "./img/nocollapsibles.jpg";
+import PyramidSrc from "./img/pyramid.svg";
+import SelfSegmentationSrc from "./img/selfsegmentation.jpg";
+import StepsSrc from "./img/steps.jpg";
+
+# 1. Gebruik het piramide principe.
+
+**Bevinding**<br/>
+De klant voelt zich overspoeld met informatie en kan hierdoor hoofd en bijzaak niet goed onderscheiden.
+
+**Advies**<br/>
+Gebruik het piramide principe.<br/>Breng de informatie gelaagd aan en onderscheid drie niveaus:
+
+<div className="rvo-layout-row rvo-layout-gap--lg">
+  <img src={PyramidSrc} style={{ height: 150 }} alt="Pyramide" />
+  <div className="rvo-layout-column rvo-layout-gap--md">
+    <div>
+      <b>1. Key point</b>
+      <br />
+      Belangrijkste informatie
+    </div>
+    <div>
+      <b>2. Argumentatie</b>
+      <br />
+      Minder belangrijke informatie
+    </div>
+    <div>
+      <b>3. Ondersteuning</b>
+      <br />
+      Minst belangrijke informatie
+    </div>
+  </div>
+</div>
+
+Breng de informatie gelaagd aan en onderscheid drie niveaus:
+
+1.  Overzicht van de regeling met antwoord op (wat, hoe kom ik in aanmerking en wat levert het op, wat zijn de voorwaarden)
+2.  Verdieping op wat deze onderdelen betekenen wanneer iemand op één link klikt.
+3.  Achterliggende beleidsmatige documenten en formulieren met specifieke gronden.
+
+# 2. Geef duidelijk aan wat de klant kan verwachten.
+
+**Bevinding**<br/>
+De klant weet niet goed wat zij kan verwachten en wanneer zij weer in actie moet komen.
+
+**Advies**<br/>
+Geef per stap in het proces duidelijk aan wat de klant kan verwachten en hoe het
+vervolg gaat lopen door dit kort en bondig op te sommen.
+
+- Wees duidelijk over de momenten waarop de ondernemer iets kan
+  verwachten.
+- Geef per stap de antwoorden op de op dat moment relevante vragen in de
+  communicatie uitingen (Oriëntatie, aanvraag voorbereiden, na de aanvraag).
+
+<img src={ExpectationsSrc} alt="Stapsgewijs overzicht met stappen" />
+
+# 3. Splits opties op in processtappen.
+
+<div className="rvo-layout-row rvo-layout-row--flex-start rvo-layout-gap--lg">
+  <div style={{ flex: 0.7 }}>
+    <p>
+      <strong>Bevinding</strong>
+      <br />
+      De klant heeft een duidelijke taak en wil deze volbrengen. De informatie staat echter niet op logische volgorde.
+      Dit verwart de klant.
+    </p>
+    <p>
+      <strong>Advies</strong>
+      <br />
+      <ul>
+        <li>Splits de opties op in de belangrijkste processtappen.</li>
+        <li>Groepeer subpagina's daaronder.</li>
+      </ul>
+      Zo maak je al snel een belangrijke scheiding.
+      <br />
+      Dus splits eerst de doelgroepen in een eigen route, en vervolgens de situatie.
+    </p>
+  </div>
+  <div style={{ flex: 0.3 }}>
+    <ProgressTracker>
+      <ProgressTrackerStep state="start" label="Kringlooplandbouwscan" line="straight" size="md" />
+      <ProgressTrackerStep state="completed" label="Vragen over uw bedrijf" line="substep-start" size="md" />
+      <ProgressTrackerStep state="completed" label="Vragen over uw bedrijf" line="straight" size="sm" />
+      <ProgressTrackerStep state="completed" label="Vragen over uw bedrijf" line="substep-end" size="sm" />
+      <ProgressTrackerStep state="completed" label="Toekomst van uw bedrijf" line="straight" size="md" />
+      <ProgressTrackerStep state="completed" label="Thema: Verdienmodel" line="substep-start" size="md" />
+      <ProgressTrackerStep state="completed" label="Nieuwe marktconcepten" line="straight" size="sm" />
+      <ProgressTrackerStep
+        state="completed"
+        label="Verbreding van uw bedrijfsactiviteiten"
+        line="substep-end"
+        size="sm"
+      />
+      <ProgressTrackerStep state="completed" label="Mogen we u nog wat vragen stellen?" line="straight" size="md" />
+      <ProgressTrackerStep state="end" label="Resultaten" line="none" size="md" />
+    </ProgressTracker>
+  </div>
+</div>
+
+# 4. Gebruik zelfsegmentatie vragen.
+
+**Bevinding**<br/>
+De klant krijgt veel informatie te zien die in haar geval niet relevant is.
+
+**Advies**<br/>
+Zelfsegmentatie vragen en verwachting bij knoppen werken heel goed om ondernemer juiste richting in te sturen.
+
+Ondernemers herkennen zichzelf in een bepaalde situatie of doelgroep. Dit geeft goede sturing.<br/>
+De verwachting wat er achter de knop te bereiken is wordt hiermee concreet en de route is deels afgebakend.<br/>
+Gebruik hiervoor bijvoorbeeld gekleurde visuele tegels om de doelgroep te laten navigeren.
+
+<img
+  src={SelfSegmentationSrc}
+  alt="Kijk of u in aanmerking komt voor de ISDE, met vier blokken voor verschillende klantsegmenten."
+/>
+
+# 5. Gebruik geen uitklap menu's.
+
+**Bevinding**<br/>
+Klanten vinden uitklapmenu's over het algemeen niet prettig.
+
+**Advies**<br/>
+Ondernemers navigeren op basis van herkenningspunten en met het gebruik van uitklapmenu's kunnen ze informatie niet goed scannen.<br/>
+De herkennings puntenverschillen per ondernemer.<br/><br/>
+Gebruik geen uitklap menu's.
+
+<img src={NoCollapsiblesSrc} alt="Overzicht van onderwerpen zonder uitklap menu's." />
+
+# 6. Wees consistent in (de volgorde van) knoppen
+
+**Bevinding**<br/>
+De klant wil eenvoudig naar de belangrijkste acties worden geleid.
+
+**Advies**<br/>
+Men verwacht consistentie in volgorde van knoppen als deze op meerdere pagina’s worden aangeboden.<br/>
+
+- Zet de belangrijkste acties op een pagina achter knoppen met een duidelijke ‘call to action’.
+- Gebruik linkjes met mate.
+- Voorkom dat de hele tekst er vol mee zit, dan lezen gebruikers de tekst nauwelijks.
+- Zet linkjes eventueel bij elkaar onder een kopje ‘Meer weten’.
+
+<img src={StepsSrc} alt="Stappen onder elkaar met duidelijke 'call to action' knoppen." />
