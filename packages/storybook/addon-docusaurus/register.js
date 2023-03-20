@@ -5,9 +5,8 @@ import { Icons, TabButton } from '@storybook/components';
 import React from 'react';
 
 addons.register('docusaurus', () => {
-  console.log(addons);
   addons.add('docusaurus', {
-    type: types.TOOL,
+    type: types.TOOLEXTRA,
     title: 'Documentatie',
     // route: ({ storyId, refId }) => 'http://www.nos.nl',
     match: ({ viewMode }) => !!(viewMode && viewMode.match(/^(story|docs)$/)),
