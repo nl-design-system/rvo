@@ -39,11 +39,13 @@ export default function DocItemContent({ children }) {
   // Capitalize title
   sectionTitle = sectionTitle.charAt(0).toUpperCase() + sectionTitle.slice(1);
 
+  const showSectionTitle = false;
+
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown', 'rvo-layout-column', 'rvo-layout-gap--lg')}>
       {syntheticTitle && (
         <header className="rvo-layout-column rvo-layout-gap--xs">
-          <div className={styles.sectionTitle}>{sectionTitle}</div>
+          {showSectionTitle && <div className={styles.sectionTitle}>{sectionTitle}</div>}
           <Heading type="h1" textContent={syntheticTitle} />
         </header>
       )}
