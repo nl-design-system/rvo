@@ -13,7 +13,7 @@ export default function DocPageLayout({ children }) {
   return (
     <Layout wrapperClassName={styles.docsWrapper}>
       <BackToTopButton />
-      <div className={clsx(styles.docPage, 'rvo-max-width-layout', 'rvo-max-width-layout--lg')}>
+      <div className={clsx(styles.docPage, 'rvo-max-width-layout', 'rvo-max-width-layout--md')}>
         {sidebar && (
           <DocPageLayoutSidebar
             sidebar={sidebar.items}

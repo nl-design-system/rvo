@@ -10,7 +10,7 @@ export default function FooterLayout({ links }) {
   }));
   return (
     <div>
-      <Footer columns={columns} />
+      <Footer columns={columns} maxWidth="md" />
     </div>
   );
 }
