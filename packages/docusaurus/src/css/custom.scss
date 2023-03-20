@@ -88,3 +88,12 @@ code {
 *:hover > .hash-link {
   display: none;
 }
+
+.menu__link,
+.menu__caret {
+  border-radius: 0;
+}
+
+.menu__list-item-collapsible:hover {
+  background: none;
+}
