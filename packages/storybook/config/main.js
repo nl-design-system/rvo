@@ -33,6 +33,7 @@ module.exports = {
   },
   framework: '@storybook/react',
   addons: [
+    '../addon-docusaurus/register.js',
     '@etchteam/storybook-addon-status',
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
