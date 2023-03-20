@@ -51,6 +51,10 @@
   padding-block-start: var(--rvo-footer-column-padding-block-start);
 }
 
+.rvo-footer-column:only-of-type {
+  flex: 1;
+}
+
 h3.rvo-footer-menu-title {
   color: var(--rvo-footer-column-label-color);
   margin-block-end: var(--rvo-footer-column-label-margin-block-end);
