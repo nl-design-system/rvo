@@ -6,3 +6,9 @@
 .docsWrapper {
   display: flex;
 }
+
+@media only screen and (max-width: 900px) {
+  .docPage {
+    padding-inline: var(--rvo-space-md);
+  }
+}
