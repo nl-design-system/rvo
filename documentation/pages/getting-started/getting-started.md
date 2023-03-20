@@ -1,4 +1,4 @@
-# Aan de slag met RVO Design System (ROOS)
+# Aan de slag met ROOS
 
 Om te starten met het design system gebruik je een drietal libraries.
 Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.

@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# RVO Design System (ROOS) introductie
+# Introductie
 
 Dit Design System heeft als doel om de klant van RVO een consistente gebruikerservaring te geven.
 
