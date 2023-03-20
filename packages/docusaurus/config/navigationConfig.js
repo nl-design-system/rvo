@@ -13,7 +13,7 @@ module.exports = {
         type: 'doc',
         docId: 'getting-started/introduction',
         position: 'left',
-        label: 'Aan de slag met ROOS',
+        label: 'ROOS',
       },
       {
         type: 'doc',
