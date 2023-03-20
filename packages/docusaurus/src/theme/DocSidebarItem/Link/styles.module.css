@@ -1,0 +1,12 @@
+.menuExternalLink {
+  align-items: center;
+}
+
+.inactiveLink {
+  text-decoration: none;
+}
+
+.activeLink {
+  color: var(--rvo-link-color);
+  text-decoration: underline;
+}
