@@ -83,3 +83,8 @@ code {
 .menu__list-item-collapsible {
   padding-inline-end: var(--rvo-space-md);
 }
+
+.hash-link:focus,
+*:hover > .hash-link {
+  display: none;
+}
