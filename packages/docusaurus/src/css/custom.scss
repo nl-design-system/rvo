@@ -80,10 +80,6 @@ code {
   padding-inline: var(--rvo-space-xs) !important;
 }
 
-.menu__list-item-collapsible {
-  padding-inline-end: var(--rvo-space-md);
-}
-
 .hash-link:focus,
 *:hover > .hash-link {
   display: none;
@@ -94,6 +90,15 @@ code {
   border-radius: 0;
 }
 
-.menu__list-item-collapsible:hover {
-  background: none;
+.menu__list-item-collapsible {
+  font-size: var(--rvo-size-lg);
+  font-weight: var(--rvo-font-weight-bold);
+
+  .menu__link {
+    color: var(--rvo-color-zwart);
+  }
+
+  &:hover {
+    background: none;
+  }
 }
