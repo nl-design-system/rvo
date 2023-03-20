@@ -23,6 +23,7 @@
     cursor: pointer;
     font-size: var(--rvo-font-size-lg);
     justify-content: flex-start;
+    outline: none !important;
     padding-block-end: var(--rvo-topnav-link-padding-block-end);
     padding-block-start: var(--rvo-topnav-link-padding-block-start);
     padding-inline-end: var(--rvo-topnav-link-padding-inline-end);
