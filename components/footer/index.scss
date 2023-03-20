@@ -14,7 +14,7 @@
   display: flex;
   gap: var(--rvo-footer-column-gap);
   justify-content: center;
-  overflow: scroll;
+  overflow: hidden;
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
 }
