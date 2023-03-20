@@ -66,3 +66,9 @@
 .markdown > h1:first-child {
   margin-block-start: 0;
 }
+
+p,
+ul,
+ol {
+  line-height: 150%;
+}
