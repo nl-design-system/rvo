@@ -41,7 +41,10 @@ export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
         buttonsLeft.map((buttonProps, index) => {
           return <Button key={index} {...buttonProps} />;
         })}
-      {!children && buttonsRight.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
+      {!children &&
+        buttonsRight.map((buttonProps, index) => (
+          <Button key={index} {...buttonProps} className="rvo-button-group__align-right" />
+        ))}
     </UtrechtButtonGroup>
   );
 };
