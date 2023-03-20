@@ -61,57 +61,57 @@ module.exports = {
   footer: {
     links: [
       { title: "<em style='font-weight: var(--rvo-font-weight-normal);'>Wij helpen u graag vooruit!</em>" },
-      {
-        title: 'RVO',
-        items: [
-          {
-            label: 'Over ons',
-            to: '/docs/intro',
-          },
-          {
-            label: 'Onze klantbelofte',
-            to: '/docs/intro',
-          },
-          {
-            label: 'Contact',
-            to: '/docs/intro',
-          },
-        ],
-      },
-      {
-        title: 'Over deze site',
-        items: [
-          {
-            label: 'Over ons',
-            to: '/docs/intro',
-          },
-          {
-            label: 'Onze klantbelofte',
-            to: '/docs/intro',
-          },
-          {
-            label: 'Contact',
-            to: '/docs/intro',
-          },
-        ],
-      },
-      {
-        title: 'Snel naar',
-        items: [
-          {
-            label: 'Over ons',
-            to: '/docs/intro',
-          },
-          {
-            label: 'Onze klantbelofte',
-            to: '/docs/intro',
-          },
-          {
-            label: 'Contact',
-            to: '/docs/intro',
-          },
-        ],
-      },
+      // {
+      //   title: 'RVO',
+      //   items: [
+      //     {
+      //       label: 'Over ons',
+      //       to: '/docs/intro',
+      //     },
+      //     {
+      //       label: 'Onze klantbelofte',
+      //       to: '/docs/intro',
+      //     },
+      //     {
+      //       label: 'Contact',
+      //       to: '/docs/intro',
+      //     },
+      //   ],
+      // },
+      // {
+      //   title: 'Over deze site',
+      //   items: [
+      //     {
+      //       label: 'Over ons',
+      //       to: '/docs/intro',
+      //     },
+      //     {
+      //       label: 'Onze klantbelofte',
+      //       to: '/docs/intro',
+      //     },
+      //     {
+      //       label: 'Contact',
+      //       to: '/docs/intro',
+      //     },
+      //   ],
+      // },
+      // {
+      //   title: 'Snel naar',
+      //   items: [
+      //     {
+      //       label: 'Over ons',
+      //       to: '/docs/intro',
+      //     },
+      //     {
+      //       label: 'Onze klantbelofte',
+      //       to: '/docs/intro',
+      //     },
+      //     {
+      //       label: 'Contact',
+      //       to: '/docs/intro',
+      //     },
+      //   ],
+      // },
     ],
   },
 };
