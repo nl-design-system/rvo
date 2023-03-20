@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         type: 'doc',
-        docId: 'patterns/patterns',
+        docId: 'patterns/layout/app-layout',
         position: 'left',
         label: 'Patronen',
       },
