@@ -52,7 +52,7 @@ export default function NavbarContent() {
                     label: section.label,
                     link: section.href,
                     type: 'sub',
-                    key: index,
+                    key: `${section.label}-${index}`,
                     active: section.href.indexOf(location) > -1,
                   });
                 })}
