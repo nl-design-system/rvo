@@ -38,8 +38,8 @@
     display: none;
   }
 
-  .rvo-mobile-menu[open] .utrecht-topnav__link {
-    padding-block-start: 0;
+  .utrecht-topnav__link {
+    width: 100%;
   }
 
   .rvo-mobile-menu[open] > .rvo-mobile-menu__top-bar .rvo-icon-menu {
@@ -55,12 +55,22 @@
     flex-direction: column;
   }
 
+  .utrecht-topnav__item {
+    display: inline-flex;
+    text-align: start;
+    width: 100%;
+  }
+
   .utrecht-topnav__item--align-right {
     margin-inline-start: 0;
   }
 
   .utrecht-topnav__item--sub {
     background-color: var(--rvo-topnav-submenu-background-color);
+
+    .utrecht-topnav__link {
+      padding-inline-start: var(--rvo-topnav-submenu-padding-inline-start);
+    }
   }
 
   + .rvo-mobile-menu__list {

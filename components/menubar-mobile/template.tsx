@@ -78,6 +78,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
                   useIcon: useIcons,
                   size,
                   iconPlacement,
+                  type: 'sub',
                 })}
               </React.Fragment>
             ))}

@@ -24,7 +24,8 @@
         }
       },
       "submenu": {
-        "background-color": { "value": "{rvo.color.donkerblauw}" }
+        "background-color": { "value": "{rvo.color.donkerblauw}" },
+        "padding-inline-start": { "value": "{rvo.space.xl}" }
       }
     }
   }

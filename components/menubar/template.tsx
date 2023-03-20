@@ -111,7 +111,7 @@ export const parseMenuItem = ({
     <li
       className={clsx(
         'utrecht-topnav__item',
-        type === 'primary' && active && 'utrecht-topnav__item--active',
+        active && 'utrecht-topnav__item--active',
         align === 'right' && 'utrecht-topnav__item--align-right',
         type === 'sub' && 'utrecht-topnav__item--sub',
       )}
