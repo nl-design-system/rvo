@@ -1505,6 +1505,30 @@
     margin-block-end: 0;
   }
 
+  /* @PRINT FORM */
+
+  @media print {
+    .rvo-topnav__background,
+    .rvo-progress-tracker,
+    .intro > .rvo-link,
+    .utrecht-button-group,
+    .rvo-icon {
+      display: none;
+    }
+
+    div.utrecht-form-fieldset {
+      background-color: var(--rvo-color-wit);
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+
+    .utrecht-form-fieldset__legend {
+      margin-block-end: 0;
+    }
+  }
+
   @media (min-width: 360px) {
     .rvo-pagination {
       flex-direction: row;
