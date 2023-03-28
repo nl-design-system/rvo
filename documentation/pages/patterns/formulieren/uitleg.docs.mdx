@@ -1,0 +1,42 @@
+---
+title: Uitleg
+hide_title: true
+slug: explanation
+sidebar_position: 3
+---
+
+import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
+import { Fieldset, FileInputField, FormLayout, Heading, TextInputField } from "../../../../components";
+
+<Heading type="h2">Uitleg</Heading>
+
+- Zorg dat complexere velden zijn voorzien van een heldere uitleg.
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FileInputField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is." />
+      <TextInputField label="Uw vraag" inputType="textarea" helperText="Beschrijf beknopt wat uw vraag is." />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
+
+- Gebruik een 'expandable' helper tekst als een velden een langere uitleg nodig heeft.
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FileInputField
+        label="Upload uw document"
+        expandableHelperText={true}
+        expandableHelperTextTitle="Voorwaarden voor uw document"
+        helperText={
+          <ul>
+            <li>Zorg dat het document in PDF-formaat is.</li>
+            <li>Zorg dat het document al uw contactgegevens bevat.</li>
+          </ul>
+        }
+      />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>

@@ -1,0 +1,31 @@
+---
+title: Dynamische lijsten
+hide_title: true
+slug: dynamic-lists
+sidebar_position: 3
+---
+
+import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
+import { Alert } from "../../../../components";
+
+# Bewerkbare rijen
+
+<Alert kind="warning" content="Let op: dit patroon is nog in ontwikkeling." />
+
+<ComponentExample>
+  <em>Voorbeeld nog niet beschikbaar</em>
+</ComponentExample>
+
+<p>
+  In complexe formulieren komt het regelmatig voor dat de bezoeker gevraagd wordt om een aantal 'rijen' met gegevens toe
+  te voegen aan een lijst. Binnen ROOS is er een patroon ontwikkeld dat dit mogelijk maakt. Samengevat:
+</p>
+
+- Een dynamische lijst met rijen die toegevoegd, bewerkt en verwijderd kunnen worden.
+- Boven de lijst staat een duidelijke instructie.
+- Als er nog geen rijen zijn toegevoegd wordt dit getoond in de lijst.
+- Er is een 'toevoegen' knop waarmee de bezoeker een rij kan toevoegen. Deze is voorzien van een duidelijk label.
+- Een rij kan bestaan uit 1 of meerdere velden.
+- De toegevoegde rijen hebben een 'verwijderen' knop waarmee de rij weer verwijderd kan worden.
+- De velden in toegevoegde rijen kunnen bewerkt worden.
+- Bij het toevoegen van een rij kunnen er aanvullend velden getoond worden waarvan de waarde automatisch wordt berekend op basis van de ingevoerde gegevens in de rij. Dit is bijvoorbeeld handig bij berekeningen.

@@ -1,0 +1,39 @@
+---
+title: Opbouw
+hide_title: true
+slug: structure
+sidebar_position: 3
+---
+
+import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
+import { Button, ButtonGroup, Fieldset, FormLayout, Heading, TextInputField } from "../../../../components";
+
+# Formulieren
+
+Het perfecte gebruik van formulieren is een onderwerp dat al veel onderzocht is.
+ROOS heeft relevante research opgenomen in haar componenten voor formulieren.
+Daarnaast is het van belang dat formulieren op de correct manier worden opgebouwd.
+
+<Heading type="h2">Opbouw</Heading>
+
+- Gebruik FormLayout om de maximale breedte van het formulier te beperken.
+- Groupeer velden in Fieldsets.
+- Zorg dat elk veld een duidelijk label erboven heeft.
+- Zorg dat de primaire actieknop rechts staat, en de secundaire actieknop links.
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw gegevens">
+      <TextInputField label="Voornaam" />
+      <TextInputField label="Achternaam" />
+    </Fieldset>
+    <Fieldset legend="Opleiding">
+      <TextInputField label="Naam instelling" />
+      <TextInputField label="Plaats" />
+    </Fieldset>
+    <ButtonGroup>
+      <Button kind="secondary">Opslaan en sluiten</Button>
+      <Button className="rvo-button-group__align-right">Opslaan en verder</Button>
+    </ButtonGroup>
+  </FormLayout>
+</ComponentExample>
