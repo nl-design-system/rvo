@@ -1,0 +1,39 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import Akkoord from "./Akkoord";
+import Profiel from "./Profiel";
+import Splash from "./Splash";
+
+<Meta
+  title="Demo pagina's/de Regelmaat"
+  parameters={{
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    docs: {
+      source: {
+        state: "closed",
+      },
+    },
+  }}
+/>
+
+# de Regelmaat
+
+<Canvas>
+  <Story name="Splash">
+    <Splash />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Akkoord">
+    <Akkoord />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Profiel">
+    <Profiel />
+  </Story>
+</Canvas>

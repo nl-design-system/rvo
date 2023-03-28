@@ -1529,6 +1529,102 @@
     }
   }
 
+  /* @DE REGELMAAT */
+
+  &.rvo-demo-page--regelmaat {
+    align-items: center;
+    background-color: var(--rvo-color-grijs1);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .rvo-app {
+    background: var(--rvo-color-wit);
+    box-sizing: border-box;
+    height: 844px;
+    padding-inline-end: var(--rvo-space-2xl);
+    padding-inline-start: var(--rvo-space-2xl);
+    position: relative;
+    width: 390px;
+  }
+
+  .rvo-app--profiel {
+    padding-block-start: var(--rvo-space-2xl);
+  }
+
+  .rvo-app--splash {
+    background-color: var(--rvo-color-hemelblauw-tint2);
+  }
+
+  .rvo-app--akkoord {
+    display: grid;
+    grid-template-rows: 60px 1fr 220px;
+  }
+
+  .rvo-app .utrecht-heading-1 {
+    color: var(--rvo-color-hemelblauw);
+    font-style: italic;
+    font-weight: var(--rvo-font-weight-regular);
+    margin-block-end: var(--rvo-space-md);
+  }
+
+  .rvo-app-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rvo-app-title {
+    color: var(--rvo-color-hemelblauw);
+    font-size: 64px;
+    font-style: italic;
+    line-height: 100%;
+    padding-block-end: 32px;
+    padding-block-start: 32px;
+    padding-inline-end: 48px;
+    padding-inline-start: 48px;
+  }
+
+  .rvo-app-title-small {
+    color: var(--rvo-color-donkerblauw);
+    display: block;
+    font-size: 48px;
+    margin-block-end: -16px;
+  }
+
+  .rvo-app-splash-illustration {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rvo-app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rvo-next-link {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .rvo-app svg {
+    max-width: 100%;
+  }
+
+  .rvo-app a.utrecht-button {
+    text-decoration: none;
+  }
+
+  .rvo-app--profiel .utrecht-button-group {
+    justify-content: space-between;
+    padding-block-start: var(--rvo-space-md);
+  }
+
   @media (min-width: 360px) {
     .rvo-pagination {
       flex-direction: row;
