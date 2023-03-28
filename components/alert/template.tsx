@@ -68,7 +68,7 @@ export const Alert: React.FC<IAlertProps> = ({
       {iconMarkup}
       <div className="rvo-alert-text">
         {heading && heading !== '' && <strong>{heading}</strong>}
-        {contentMarkup}
+        <div>{contentMarkup}</div>
       </div>
       {closable && (
         <Button

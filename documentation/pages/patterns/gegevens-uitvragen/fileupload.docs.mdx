@@ -1,0 +1,28 @@
+---
+title: Bestanden uploaden
+hide_title: true
+slug: file-upload
+---
+
+import ComponentExample from "@docusaurus/components/ComponentExample/index.tsx";
+import { FileInputField, Alert } from "../../../../components";
+
+# Bestanden uploaden
+
+<Alert kind="warning" content="Let op: dit patroon is nog in ontwikkeling." />
+
+<ComponentExample>
+  <FileInputField
+    label="Upload uw document"
+    helperText="Het bestand dient in PDF formaat te zijn en mag maximaal 3 mb groot zijn."
+  />
+</ComponentExample>
+
+<p>Wanneer je een bezoeker vraagt bestanden up te loaden, zorg dan dat de volgende informatie zichtbaar is:</p>
+
+- Upload knop
+- Informatie met upload-restricties
+- Lijst met geuploade bestandsnamen
+- Verwijder knop bij elk geupload bestand
+- Optioneel: Progress bar tijdens upload.
+- Optioneel: 'Drag and drop' gebied om bestanden in te slepen.
