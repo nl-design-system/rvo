@@ -1532,24 +1532,31 @@
   /* @DE REGELMAAT */
 
   &.rvo-demo-page--regelmaat {
-    align-items: center;
     background-color: var(--rvo-color-grijs1);
-    display: flex;
-    height: 100vh;
-    justify-content: center;
   }
 
   .rvo-app {
     background: var(--rvo-color-wit);
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .rvo-app-container {
     box-sizing: border-box;
-    height: 844px;
+    height: 100vh;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+    max-height: 844px;
+    max-width: 390px;
     padding-inline-end: var(--rvo-space-2xl);
     padding-inline-start: var(--rvo-space-2xl);
     position: relative;
-    width: 390px;
+    text-align: start;
   }
 
-  .rvo-app--profiel {
+  .rvo-app-container--maatregelen,
+  .rvo-app-container--profiel {
     padding-block-start: var(--rvo-space-2xl);
   }
 
@@ -1557,7 +1564,7 @@
     background-color: var(--rvo-color-hemelblauw-tint2);
   }
 
-  .rvo-app--akkoord {
+  .rvo-app-container--akkoord {
     display: grid;
     grid-template-rows: 60px 1fr 220px;
   }
@@ -1623,6 +1630,75 @@
   .rvo-app--profiel .utrecht-button-group {
     justify-content: space-between;
     padding-block-start: var(--rvo-space-md);
+  }
+
+  .rvo-app-menu {
+    background-color: var(--rvo-color-lichtblauw-tint1);
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    list-style: none;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+    position: fixed;
+    width: 100%;
+  }
+
+  .rvo-app-menu-item-link {
+    align-items: center;
+    color: var(--rvo-color-donkerblauw);
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-3xs);
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+    text-decoration: none;
+  }
+
+  .rvo-maatregelen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-md);
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .rvo-maatregel {
+    background-color: var(--rvo-color-grijs1);
+    border-left: 5px solid var(--rvo-color-grijs2);
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: var(--rvo-space-sm);
+    padding-block-start: var(--rvo-space-sm);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-maatregel-link {
+    color: var(--rvo-color-hemelblauw);
+    display: flex;
+    font-size: var(--rvo-font-size-lg);
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-xs);
+    text-decoration: none;
+  }
+
+  .rvo-maatregel-icon {
+    max-width: 24px;
+  }
+
+  .rvo-maatregel-bewaar-link {
+    align-items: center;
+    color: var(--rvo-color-donkerblauw);
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-2xs);
+    text-decoration: none;
   }
 
   @media (min-width: 360px) {
