@@ -1659,6 +1659,48 @@
     text-decoration: none;
   }
 
+  .rvo-maatregelen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-md);
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .rvo-maatregel {
+    background-color: var(--rvo-color-grijs1);
+    border-left: 5px solid var(--rvo-color-grijs2);
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: var(--rvo-space-sm);
+    padding-block-start: var(--rvo-space-sm);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-maatregel-link {
+    color: var(--rvo-color-hemelblauw);
+    display: flex;
+    font-size: var(--rvo-font-size-lg);
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-xs);
+    text-decoration: none;
+  }
+
+  .rvo-maatregel-icon {
+    max-width: 24px;
+  }
+
+  .rvo-maatregel-bewaar-link {
+    align-items: center;
+    color: var(--rvo-color-donkerblauw);
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-2xs);
+    text-decoration: none;
+  }
+
   @media (min-width: 360px) {
     .rvo-pagination {
       flex-direction: row;
