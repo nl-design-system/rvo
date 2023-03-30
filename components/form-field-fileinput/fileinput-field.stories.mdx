@@ -20,7 +20,7 @@ import { argTypes, FileInputField } from "./template";
 # File input field
 
 <Canvas>
-  <Story name="File input field" args={defaultArgs}>
+  <Story name="File input field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {FileInputField.bind({})}
   </Story>
 </Canvas>

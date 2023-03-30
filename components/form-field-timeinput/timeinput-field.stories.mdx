@@ -20,7 +20,7 @@ import { argTypes, TimeInputField } from "./template";
 # Time input field
 
 <Canvas>
-  <Story name="Time input field" args={defaultArgs}>
+  <Story name="Time input field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {TimeInputField.bind({})}
   </Story>
 </Canvas>

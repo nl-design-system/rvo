@@ -20,7 +20,7 @@ import { argTypes, CheckboxField } from "./template";
 # Checkbox field
 
 <Canvas>
-  <Story name="Checkbox field" args={defaultArgs}>
+  <Story name="Checkbox field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {CheckboxField.bind({})}
   </Story>
 </Canvas>

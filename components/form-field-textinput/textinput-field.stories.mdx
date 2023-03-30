@@ -20,7 +20,7 @@ import { argTypes, TextInputField } from "./template";
 # Text input field
 
 <Canvas>
-  <Story name="Text input field" args={defaultArgs}>
+  <Story name="Text input field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {TextInputField.bind({})}
   </Story>
 </Canvas>

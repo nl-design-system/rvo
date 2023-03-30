@@ -20,7 +20,7 @@ import { argTypes, DateInputField } from "./template";
 # Date input field
 
 <Canvas>
-  <Story name="Date input field" args={defaultArgs}>
+  <Story name="Date input field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {DateInputField.bind({})}
   </Story>
 </Canvas>

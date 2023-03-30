@@ -20,7 +20,7 @@ import { argTypes, RadioButtonField } from "./template";
 # Radio button field
 
 <Canvas>
-  <Story name="Radio button field" args={defaultArgs}>
+  <Story name="Radio button field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {RadioButtonField.bind({})}
   </Story>
 </Canvas>

@@ -21,7 +21,7 @@ import { argTypes, Label } from "./template";
 # Label
 
 <Canvas>
-  <Story name="Label" args={defaultArgs}>
+  <Story name="Label" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {Label.bind({})}
   </Story>
 </Canvas>

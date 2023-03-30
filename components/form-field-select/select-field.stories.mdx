@@ -20,7 +20,7 @@ import { argTypes, SelectField } from "./template";
 # Select field
 
 <Canvas>
-  <Story name="Select field" args={defaultArgs}>
+  <Story name="Select field" args={{ ...defaultArgs, helperText: "Helper text" }}>
     {SelectField.bind({})}
   </Story>
 </Canvas>
