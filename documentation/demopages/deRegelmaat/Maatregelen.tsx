@@ -9,7 +9,7 @@ const Maatregelen = () => {
           <div className="rvo-app-content">
             <Heading type="h1">Gevonden maatregelen</Heading>
             <p>
-              Regelmaat heeft de volgende <strong>maatregelen</strong> voor je gevonden
+              Regelmaat heeft de volgende <strong>maatregelen</strong> voor u gevonden
             </p>
             <div className="rvo-alert rvo-alert--warning">
               <span
@@ -21,50 +21,92 @@ const Maatregelen = () => {
                 <div>
                   <div>
                     Uw profiel is momenteel voor <strong>80%</strong> ingevuld.&nbsp;
-                    <a href="#" className="rvo-link">
+                    <a
+                      href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
+                      className="rvo-link rvo-link--no-underline"
+                    >
                       Maak uw profiel compleet
                     </a>
-                    &nbsp;om bettere suggesties voor maatregelen te krijgen
+                    &nbsp;om betere suggesties voor maatregelen te krijgen
                   </div>
                 </div>
               </div>
             </div>
             <ul className="rvo-maatregelen">
               <li className="rvo-maatregel">
-                <a href="#" className="rvo-maatregel-link">
-                  {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
+                  className="rvo-maatregel-link"
+                >
                   Onderzaai vanggewas
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
               <li className="rvo-maatregel">
-                <a href="#" className="rvo-maatregel-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
+                  className="rvo-maatregel-link"
+                >
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Vroeg oogsten rooigewas
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
               <li className="rvo-maatregel">
-                <a href="#" className="rvo-maatregel-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
+                  className="rvo-maatregel-link"
+                >
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Grasland met kruiden
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
               <li className="rvo-maatregel">
-                <a href="#" className="rvo-maatregel-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
+                  className="rvo-maatregel-link"
+                >
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Rustgewas
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
             </ul>
           </div>
@@ -88,7 +130,10 @@ const Maatregelen = () => {
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a href="#" className="rvo-app-menu-item-link">
+              <a
+                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
+                className="rvo-app-menu-item-link"
+              >
                 <Icon icon="user" color="hemelblauw" size="2xl" />
                 Profiel
               </a>

@@ -25,7 +25,7 @@ const Akkoord = () => {
           <div className="rvo-app-content">
             <Heading type="h1">Voorwaarden</Heading>
             <p>
-              De Regelmaat is een maat die op maat maatregelen voor je regelt. Vul je profiel in en de Regelmaat doet
+              De Regelmaat is een maat die op maat maatregelen voor u regelt. Vul uw profiel in en de Regelmaat doet
               suggesties voor maatregelen die voor jou van toepassing kunnen zijn.
             </p>{' '}
             <p>
