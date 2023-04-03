@@ -1556,7 +1556,8 @@
   }
 
   .rvo-app-container--maatregelen,
-  .rvo-app-container--profiel {
+  .rvo-app-container--profiel,
+  .rvo-app-container--maatregel {
     padding-block-start: var(--rvo-space-2xl);
   }
 
@@ -1608,6 +1609,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-block-end: 90px;
   }
 
   .rvo-next-link {
@@ -1699,6 +1701,21 @@
     font-weight: var(--rvo-font-weight-bold);
     gap: var(--rvo-space-2xs);
     text-decoration: none;
+  }
+
+  .rvo-maatregel-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rvo-maatregel-img-container {
+    display: flex;
+    justify-content: center;
+    padding-block-start: var(--rvo-space-md);
+  }
+
+  .rvo-maatregel-img {
+    max-width: 75%;
   }
 
   @media (min-width: 360px) {

@@ -1,4 +1,4 @@
-import { ButtonGroup, CheckboxField, Fieldset, Heading, SelectField } from '@nl-rvo/components';
+import { ButtonGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const Profiel = () => {
@@ -14,16 +14,16 @@ const Profiel = () => {
                 label="Ik ben een"
                 options={[
                   { value: '1', label: 'Melkveehouder' },
-                  { value: '2', label: 'Option #2' },
-                  { value: '3', label: 'Option #3' },
+                  { value: '2', label: 'Akkerbouwer' },
+                  { value: '3', label: 'Fruitteler' },
                 ]}
               ></SelectField>
               <SelectField
                 label="Mijn grondsoort"
                 options={[
                   { value: '1', label: 'Veengrond' },
-                  { value: '2', label: 'Option #2' },
-                  { value: '3', label: 'Option #3' },
+                  { value: '2', label: 'Grasland' },
+                  { value: '3', label: 'Zandgrond' },
                 ]}
               ></SelectField>
 
@@ -51,6 +51,35 @@ const Profiel = () => {
                 Overslaan
               </a>
             </ButtonGroup>
+            <ul className="rvo-app-menu">
+              <li className="rvo-app-menu-item">
+                <a href="#" className="rvo-app-menu-item-link">
+                  <Icon icon="zoek" color="hemelblauw" size="2xl" />
+                  Zoeken
+                </a>
+              </li>
+              <li className="rvo-app-menu-item">
+                <a href="#" className="rvo-app-menu-item-link">
+                  <Icon icon="favoriet" color="hemelblauw" size="2xl" />
+                  Bewaard
+                </a>
+              </li>
+              <li className="rvo-app-menu-item">
+                <a href="#" className="rvo-app-menu-item-link">
+                  <Icon icon="plus" color="hemelblauw" size="2xl" />
+                  Suggesties
+                </a>
+              </li>
+              <li className="rvo-app-menu-item">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
+                  className="rvo-app-menu-item-link"
+                >
+                  <Icon icon="user" color="hemelblauw" size="2xl" />
+                  Profiel
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
