@@ -1703,6 +1703,32 @@
     text-decoration: none;
   }
 
+  .rvo-maatregel-bewaar-link .rvo-bewaar {
+    padding-inline-end: 6px;
+  }
+
+  .rvo-maatregel-bewaar-link .rvo-bewaar,
+  .rvo-maatregel-bewaar-link .rvo-bewaard {
+    align-items: center;
+    display: flex;
+    gap: var(--rvo-space-2xs);
+  }
+
+  details .rvo-maatregel-bewaar-link .rvo-bewaard,
+  details[open] .rvo-bewaar {
+    display: none;
+  }
+
+  details[open] .rvo-bewaard {
+    color: var(--rvo-color-zwart);
+    display: flex;
+    font-weight: var(--rvo-font-weight-normal);
+  }
+
+  details[open] .rvo-icon--hemelblauw {
+    background-color: var(--rvo-color-rood);
+  }
+
   .rvo-maatregel-actions {
     display: flex;
     justify-content: space-between;

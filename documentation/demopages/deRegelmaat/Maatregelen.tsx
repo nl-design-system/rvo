@@ -23,7 +23,7 @@ const Maatregelen = () => {
                     Uw profiel is momenteel voor <strong>80%</strong> ingevuld.&nbsp;
                     <a
                       href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
-                      className="rvo-link"
+                      className="rvo-link rvo-link--no-underline"
                     >
                       Maak uw profiel compleet
                     </a>
@@ -40,9 +40,16 @@ const Maatregelen = () => {
                 >
                   Onderzaai vanggewas
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
               <li className="rvo-maatregel">
                 <a
@@ -52,9 +59,16 @@ const Maatregelen = () => {
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Vroeg oogsten rooigewas
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
               <li className="rvo-maatregel">
                 <a
@@ -64,9 +78,16 @@ const Maatregelen = () => {
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Grasland met kruiden
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
               <li className="rvo-maatregel">
                 <a
@@ -76,9 +97,16 @@ const Maatregelen = () => {
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Rustgewas
                 </a>
-                <a href="#" className="rvo-maatregel-bewaar-link">
-                  <Icon icon="favoriet"></Icon>Bewaar
-                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
               </li>
             </ul>
           </div>

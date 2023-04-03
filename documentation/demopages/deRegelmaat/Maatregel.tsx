@@ -30,9 +30,16 @@ const Maatregel = () => {
               eco-activiteit. En welke grassen, kruiden en vlinderbloemige gewassen uit de lijst Stikstofbindend gewas.
             </p>
             <div className="rvo-maatregel-actions">
-              <a href="#" className="rvo-maatregel-bewaar-link">
-                <Icon icon="favoriet"></Icon>Bewaar
-              </a>
+              <details>
+                <summary className="rvo-maatregel-bewaar-link">
+                  <span className="rvo-bewaar">
+                    <Icon icon="favoriet"></Icon>Bewaar
+                  </span>
+                  <span className="rvo-bewaard">
+                    <Icon icon="favoriet"></Icon>Bewaard
+                  </span>
+                </summary>
+              </details>
               <Link content="Meer informatie op rvo.nl" icon="externe-link" showIcon="after" noUnderline={true}></Link>
             </div>
             <div className="rvo-maatregel-img-container">
