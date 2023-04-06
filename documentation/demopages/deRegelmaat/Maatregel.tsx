@@ -60,7 +60,10 @@ const Maatregel = () => {
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a href="#" className="rvo-app-menu-item-link">
+              <a
+                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
+                className="rvo-app-menu-item-link"
+              >
                 <Icon icon="plus" color="hemelblauw" size="2xl" />
                 Suggesties
               </a>
