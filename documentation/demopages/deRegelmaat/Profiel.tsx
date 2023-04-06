@@ -36,6 +36,17 @@ const Profiel = () => {
                   { id: 'optionC-cb', label: 'die financieel interessant zijn' },
                 ]}
               ></CheckboxField>
+              <SelectField
+                label="Duurzaam op het gebied van"
+                options={[
+                  { value: '1', label: 'Klimaat' },
+                  { value: '2', label: 'Bodem en lucht' },
+                  { value: '3', label: 'Water' },
+                  { value: '4', label: 'Landschap' },
+                  { value: '5', label: 'Biodiversiteit' },
+                  { value: '6', label: 'Op alle gebieden' },
+                ]}
+              ></SelectField>
             </Fieldset>
             <ButtonGroup>
               <a
@@ -65,7 +76,10 @@ const Profiel = () => {
                 </a>
               </li>
               <li className="rvo-app-menu-item">
-                <a href="#" className="rvo-app-menu-item-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
+                  className="rvo-app-menu-item-link"
+                >
                   <Icon icon="plus" color="hemelblauw" size="2xl" />
                   Suggesties
                 </a>
@@ -73,9 +87,9 @@ const Profiel = () => {
               <li className="rvo-app-menu-item">
                 <a
                   href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
-                  className="rvo-app-menu-item-link"
+                  className="rvo-app-menu-item-link rvo-app-menu-item-link--active"
                 >
-                  <Icon icon="user" color="hemelblauw" size="2xl" />
+                  <Icon icon="user" color="wit" size="2xl" />
                   Profiel
                 </a>
               </li>

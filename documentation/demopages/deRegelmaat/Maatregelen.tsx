@@ -7,7 +7,7 @@ const Maatregelen = () => {
       <div className="rvo-app rvo-app--maatregelen">
         <div className="rvo-app-container rvo-app-container--maatregelen">
           <div className="rvo-app-content">
-            <Heading type="h1">Gevonden maatregelen</Heading>
+            <Heading type="h1">Suggesties</Heading>
             <p>
               Regelmaat heeft de volgende <strong>maatregelen</strong> voor u gevonden
             </p>
@@ -109,6 +109,27 @@ const Maatregelen = () => {
                 </details>
               </li>
             </ul>
+            Mogelijk ook interessant
+            <ul className="rvo-maatregelen">
+              <li className="rvo-maatregel">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
+                  className="rvo-maatregel-link"
+                >
+                  Verlengde weidegang
+                </a>
+                <details>
+                  <summary className="rvo-maatregel-bewaar-link">
+                    <span className="rvo-bewaar">
+                      <Icon icon="favoriet"></Icon>Bewaar
+                    </span>
+                    <span className="rvo-bewaard">
+                      <Icon icon="favoriet"></Icon>Bewaard
+                    </span>
+                  </summary>
+                </details>
+              </li>
+            </ul>
           </div>
           <ul className="rvo-app-menu">
             <li className="rvo-app-menu-item">
@@ -124,8 +145,11 @@ const Maatregelen = () => {
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a href="#" className="rvo-app-menu-item-link">
-                <Icon icon="plus" color="hemelblauw" size="2xl" />
+              <a
+                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
+                className="rvo-app-menu-item-link rvo-app-menu-item-link--active"
+              >
+                <Icon icon="plus" color="wit" size="2xl" />
                 Suggesties
               </a>
             </li>
