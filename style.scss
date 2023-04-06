@@ -1638,7 +1638,7 @@
     background-color: var(--rvo-color-lichtblauw-tint1);
     bottom: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     left: 0;
     list-style: none;
     margin-block-end: 0;
@@ -1646,6 +1646,10 @@
     padding-inline-start: 0;
     position: fixed;
     width: 100%;
+  }
+
+  .rvo-app-menu-item {
+    flex: 25% 0 0;
   }
 
   .rvo-app-menu-item-link {
@@ -1659,6 +1663,11 @@
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
     text-decoration: none;
+  }
+
+  .rvo-app-menu-item-link--active {
+    background-color: var(--rvo-color-hemelblauw);
+    color: var(--rvo-color-wit);
   }
 
   .rvo-maatregelen {
