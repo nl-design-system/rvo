@@ -1753,6 +1753,64 @@
     max-width: 75%;
   }
 
+  /* @NIEUWE RIJKSHUISSTIJL */
+
+  &.rvo-rhs-nieuw {
+    .utrecht-heading-1,
+    .utrecht-form-fieldset__legend,
+    .utrecht-form-label {
+      color: var(--rvo-color-logoblauw);
+    }
+
+    .rvo-topnav__background {
+      background-color: var(--rvo-color-wit);
+    }
+
+    .utrecht-topnav__list {
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    .utrecht-topnav__link {
+      color: var(--rvo-color-logoblauw);
+      padding-inline-end: var(--rvo-space-lg);
+      padding-inline-start: 0;
+
+      .rvo-icon--wit {
+        background-color: var(--rvo-color-logoblauw);
+      }
+    }
+
+    .utrecht-topnav__link--focus,
+    .utrecht-topnav__link:focus {
+      background: none;
+    }
+
+    div.utrecht-form-fieldset {
+      background-color: #f1f5f9;
+      border-start-start-radius: 25px;
+    }
+
+    .utrecht-textbox {
+      border-color: var(--rvo-color-logoblauw);
+      border-radius: 3px;
+      border-width: 1px;
+      color: var(--rvo-color-logoblauw);
+    }
+
+    .utrecht-textbox--html-input:focus {
+      outline-color: var(--rvo-color-logoblauw);
+      outline-width: 1px;
+    }
+
+    .utrecht-textbox--html-input:disabled {
+      background-color: #cbd5e1;
+    }
+
+    .utrecht-textbox--html-input:read-only {
+      color: #334155;
+    }
+  }
+
   @media (min-width: 360px) {
     .rvo-pagination {
       flex-direction: row;
