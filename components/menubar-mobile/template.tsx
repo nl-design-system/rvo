@@ -58,6 +58,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
       return (
         <React.Fragment key={index}>
           {parseMenuItem({
+            key: item.label,
             label: item.label,
             icon: item.icon,
             active: item.active,
