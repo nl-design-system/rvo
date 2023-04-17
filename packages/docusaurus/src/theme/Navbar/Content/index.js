@@ -43,7 +43,7 @@ export default function NavbarContent() {
           return menuItem;
         } else {
           return (
-            <>
+            <React.Fragment key={index}>
               {menuItem}
               {sections &&
                 sections.content &&
@@ -56,7 +56,7 @@ export default function NavbarContent() {
                     active: section.href.indexOf(location) > -1,
                   });
                 })}
-            </>
+            </React.Fragment>
           );
         }
       })}

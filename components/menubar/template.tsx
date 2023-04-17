@@ -59,6 +59,7 @@ export const argTypes = {
 };
 
 export const parseMenuItem = ({
+  key,
   label,
   icon,
   active,
@@ -109,6 +110,7 @@ export const parseMenuItem = ({
 
   return (
     <li
+      key={key}
       className={clsx(
         'utrecht-topnav__item',
         active && 'utrecht-topnav__item--active',
