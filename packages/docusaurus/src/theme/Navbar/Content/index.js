@@ -35,10 +35,9 @@ export default function NavbarContent() {
           link: item.docId ? useBaseUrl(item.docId) : item.href || '#',
           align: item.position === 'right' && index === firstRightItem && 'right',
           type: 'primary',
-          key: index,
+          key: `${item.label}-${index}`,
           active,
         });
-
         if (!active) {
           return menuItem;
         } else {
@@ -48,13 +47,31 @@ export default function NavbarContent() {
               {sections &&
                 sections.content &&
                 sections.content.props.sidebar.map((section, index) => {
-                  return parseMenuItem({
-                    label: section.label,
-                    link: section.href,
-                    type: 'sub',
-                    key: `${section.label}-${index}`,
-                    active: section.href.indexOf(location) > -1,
-                  });
+                  if (section.type === 'link') {
+                    return parseMenuItem({
+                      label: section.label,
+                      link: section.href,
+                      type: 'sub',
+                      key: `${section.label}-${index}`,
+                      active: section.href.indexOf(location) > -1,
+                    });
+                  } else if (section.type === 'category') {
+                    return (
+                      <React.Fragment key={`${section.label}-${index}`}>
+                        {section.items.map((item, index) =>
+                          parseMenuItem({
+                            label: item.label,
+                            link: item.href,
+                            type: 'sub',
+                            key: `${item.label}-${index}`,
+                            active: item.href.indexOf(location) > -1,
+                          }),
+                        )}
+                      </React.Fragment>
+                    );
+                  } else {
+                    return null;
+                  }
                 })}
             </React.Fragment>
           );
