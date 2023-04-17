@@ -3,7 +3,7 @@ import {
   ButtonGroup,
   CheckboxField,
   Fieldset,
-  FileInputField,
+  // FileInputField,
   Header,
   Heading,
   LayoutColumnRow,
@@ -140,7 +140,7 @@ const Formulier = () => {
                     </Fieldset>
 
                     <Fieldset legend="Other">
-                      <FileInputField label="File" />
+                      {/* <FileInputField label="File" /> */}
                       <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
                         <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
                           <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">

@@ -1790,15 +1790,36 @@
       border-start-start-radius: 25px;
     }
 
-    .utrecht-textbox {
+    .utrecht-textbox,
+    .utrecht-textarea,
+    .utrecht-select,
+    input[type="file"] {
       border-color: var(--rvo-color-logoblauw);
       border-radius: 3px;
       border-width: 1px;
       color: var(--rvo-color-logoblauw);
     }
 
-    .utrecht-textbox--html-input:focus {
+    .utrecht-custom-radio-button,
+    .rvo-checkbox__input {
+      border-color: var(--rvo-color-logoblauw);
+      border-width: 1px;
+    }
+
+    .rvo-checkbox__input {
+      border-radius: 3px;
+    }
+
+    .utrecht-textbox--html-input:focus,
+    .utrecht-textarea:focus,
+    .utrecht-custom-radio-button:hover,
+    .utrecht-custom-radio-button:focus,
+    .rvo-checkbox__input:focus,
+    .utrecht-select:focus,
+    .rvo-file-input:focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled),
+    .rvo-file-input--focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled) {
       outline-color: var(--rvo-color-logoblauw);
+      outline-offset: 0;
       outline-width: 1px;
     }
 
@@ -1808,6 +1829,45 @@
 
     .utrecht-textbox--html-input:read-only {
       color: #334155;
+    }
+
+    .utrecht-custom-radio-button:checked,
+    .rvo-custom-radio-button:checked,
+    .utrecht-custom-radio-button--checked {
+      background: radial-gradient(circle, var(--rvo-color-logoblauw) 45%, var(--rvo-color-wit) 50%);
+    }
+
+    .rvo-checkbox__input::after {
+      margin-block-start: 3px;
+      margin-inline-start: 3px;
+    }
+
+    .rvo-checkbox__input:checked::before,
+    .rvo-select-wrapper::before {
+      background: var(--rvo-color-logoblauw);
+      border-radius: 3px;
+    }
+
+    .utrecht-form-fieldset__legend {
+      margin-block-end: 12px;
+    }
+
+    .rvo-form {
+      min-width: 590px;
+    }
+    .utrecht-button--primary-action {
+      background-color: var(--rvo-color-logoblauw);
+      border-radius: 3px;
+    }
+
+    .utrecht-button--secondary-action {
+      border-color: var(--rvo-color-logoblauw);
+      border-radius: 3px;
+      color: var(--rvo-color-logoblauw);
+    }
+
+    .rvo-max-width-layout--md {
+      max-width: 864px;
     }
   }
 
