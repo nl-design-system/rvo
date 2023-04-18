@@ -1764,6 +1764,9 @@
 
     .rvo-topnav__background {
       background-color: var(--rvo-color-wit);
+      position: sticky;
+      top: -1px;
+      z-index: 3;
     }
 
     .utrecht-topnav__list {
@@ -1798,6 +1801,11 @@
       border-radius: 3px;
       border-width: 1px;
       color: var(--rvo-color-logoblauw);
+    }
+
+    .rvo-checkbox__input::before {
+      height: 18px;
+      width: 18px;
     }
 
     .utrecht-custom-radio-button,
@@ -1868,6 +1876,23 @@
 
     .rvo-max-width-layout--md {
       max-width: 864px;
+    }
+
+    .rvo-expandable-text__summary {
+      color: var(--rvo-color-logoblauw);
+      font-weight: var(--rvo-font-weight-regular);
+
+      &::after {
+        background-color: var(--rvo-color-logoblauw);
+      }
+
+      .rvo-icon {
+        background-color: var(--rvo-color-hemelblauw);
+      }
+    }
+
+    .rvo-header__logo-wrapper {
+      margin-block-end: 24px;
     }
   }
 
