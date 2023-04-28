@@ -1790,8 +1790,9 @@
     .rvo-responsive-menu {
       background-color: var(--rvo-color-wit);
       border-bottom: 1px solid #cbd5e1;
+      padding-block-start: var(--rvo-size-md);
       position: sticky;
-      top: -1px;
+      top: 0;
       z-index: 3;
     }
 
@@ -1825,6 +1826,7 @@
     div.utrecht-form-fieldset {
       background-color: #f1f5f9;
       border-start-end-radius: 25px;
+      margin-block-end: var(--rvo-space-xl);
       padding-block-end: var(--rvo-space-md);
       padding-block-start: var(--rvo-space-md);
       padding-inline-end: var(--rvo-space-md);
@@ -1838,16 +1840,6 @@
         padding-inline-end: var(--rvo-space-xl);
         padding-inline-start: var(--rvo-space-xl);
       }
-    }
-
-    div.utrecht-form-fieldset + div.utrecht-form-fieldset {
-      border-start-end-radius: 0;
-      border-start-start-radius: 25px;
-    }
-
-    div.utrecht-form-fieldset + div.utrecht-form-fieldset + div.utrecht-form-fieldset {
-      border-start-end-radius: 25px;
-      border-start-start-radius: 0;
     }
 
     .utrecht-textbox,
