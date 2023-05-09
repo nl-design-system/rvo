@@ -60,7 +60,6 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@nl-rvo/assets": "workspace:*",
-    "@nl-rvo/basiselementen-design-tokens": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "@storybook/addon-docs": "6.5.9",
     "@utrecht/design-tokens": "1.0.0-alpha.360",

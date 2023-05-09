@@ -17,7 +17,7 @@
         "disabled": {
           "border-color": {},
           "background-color": { "value": "transparent" },
-          "color": { "value": "{basiselementen.color.grijs3}" }
+          "color": { "value": "{rvo.color.grijs3}" }
         },
         "focus": {
           "color": { "value": "{rvo.color.hemelblauw}" }
