@@ -1,7 +1,8 @@
-import { addons, types } from '@storybook/addons';
 import { useParameter } from '@storybook/api';
-import { Icons, TabButton } from '@storybook/components';
+import { IconButton, Icons } from '@storybook/components';
+import { addons, types } from '@storybook/manager-api';
 // eslint-disable-next-line no-unused-vars
+// @ts-expect-error
 import React from 'react';
 
 addons.register('docusaurus', () => {
@@ -24,10 +25,17 @@ addons.register('docusaurus', () => {
       }
 
       return (
-        <TabButton href={url} target="_blank">
-          <Icons icon="document" style={{ width: '14px' }} />
-          &nbsp; Documentatie
-        </TabButton>
+        <IconButton
+          href={url}
+          target="_blank"
+          content={undefined}
+          autoFocus={undefined}
+          rel={undefined}
+          rev={undefined}
+          title="Open documentatie in Docusaurus"
+        >
+          <Icons icon="document" style={{ width: '12px' }} />
+        </IconButton>
       );
     },
   });

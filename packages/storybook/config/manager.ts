@@ -1,4 +1,4 @@
-import { addons } from '@storybook/addons';
+import { addons } from '@storybook/manager-api';
 import theme from './theme';
 
 addons.setConfig({
@@ -29,7 +29,7 @@ function waitForElement(selector) {
 
 // Register an addon that hides stories with STATUS = HIDDEN from the sidebar
 addons.register('HIDE_STORIES_ADDON', () => {
-  waitForElement('div[id="storybook-explorer-menu"] span[type="HIDDEN"]').then((elements) => {
+  waitForElement('div[id="storybook-explorer-menu"] span[type="HIDDEN"]').then((elements: any) => {
     elements.forEach((element) => {
       const linkId = element.closest('a').getAttribute('id');
       var style = document.createElement('style');

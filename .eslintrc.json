@@ -65,7 +65,8 @@
           "uxpin-merge/tsconfig.json",
           "packages/components-react/tsconfig.json",
           "packages/components-react/tsconfig.test.json",
-          "packages/docusaurus/tsconfig.json"
+          "packages/docusaurus/tsconfig.json",
+          "packages/storybook/tsconfig.json"
         ]
       },
       "plugins": ["@typescript-eslint", "import"],

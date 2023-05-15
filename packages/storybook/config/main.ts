@@ -1,7 +1,7 @@
 /* eslint-env node */
+import { StorybookConfig } from '@storybook/react-webpack5';
 const fs = require('fs');
 const path = require('path');
-
 function getPackageDir(filepath) {
   let currDir = path.dirname(require.resolve(filepath));
   // eslint-disable-next-line no-constant-condition
@@ -17,48 +17,51 @@ function getPackageDir(filepath) {
   }
 }
 
-module.exports = {
+const config: StorybookConfig = {
   core: {
-    builder: 'webpack5',
     disableTelemetry: true,
   },
   stories: [
-    '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
-    '../../../components/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
+    // TODO: Fix this
+    // '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
+    '../../../components/accordion/**/*.docpage.mdx',
+    '../../../components/accordion/**/*.stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
   ],
   features: {
-    postcss: false,
-    previewMdx2: true,
     buildStoriesJson: false,
   },
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
   addons: [
-    '../addon-docusaurus/register.js',
+    '../addon-docusaurus',
     '@etchteam/storybook-addon-status',
+    { name: '@storybook/addon-essentials', options: { actions: false } },
     '@storybook/addon-a11y',
-    '@storybook/addon-docs',
-    '@storybook/addon-controls',
-    '@storybook/addon-viewport',
     '@storybook/preset-scss',
     'storybook-addon-themes',
   ],
   staticDirs: ['../../../documentation/demopages/common'],
+  typescript: { check: true, checkOptions: {} },
   webpackFinal: async (config) => {
-    const scssRule = config.module.rules.find((rule) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/');
+    const scssRule = config.module.rules.find(
+      (rule: any) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/',
+    ) as any;
     scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
 
     // Put assets in predicatable location to make them downloadable
-    const svgRule = config.module.rules.find((rule) => rule.type === 'asset/resource');
+    const svgRule = config.module.rules.find((rule: any) => rule.type === 'asset/resource') as any;
     delete svgRule.generator.filename;
-
     config.output.assetModuleFilename = (pathData) => {
       const filepath = path.dirname(pathData.filename).match(/(?<=assets\/).*/)[0];
       return `static/${filepath}/[name][ext][query]`;
     };
-
     return {
       ...config,
-      performance: { hints: false },
+      performance: {
+        hints: false,
+      },
       resolve: {
         ...config.resolve,
         alias: {
@@ -70,4 +73,9 @@ module.exports = {
       },
     };
   },
+  docs: {
+    autodocs: false,
+  },
 };
+
+export default config;

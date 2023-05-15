@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { AccordionItem, argTypes } from "./template";
+import * as AccordionItemStories from "./accordion.item.stories";
+
+<Meta of={AccordionItemStories} />
+
+# Item
+
+<Canvas>
+  <Story of={AccordionItemStories.Item} />
+</Canvas>
+
+<ArgsTable story="Item" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

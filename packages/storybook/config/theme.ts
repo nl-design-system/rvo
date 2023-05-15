@@ -16,7 +16,6 @@ export default create({
   // Typography
   fontBase: `${designTokens.rvoFontSansSerifFontFamily}, ${designTokens.rvoFontSansSerifFallbackFontFamily}`,
   fontCode: 'monospace',
-  fontSize: '100%',
 
   brandTitle: 'NL Design System: RVO',
   brandUrl: `${document.location.protocol}//${document.location.host}${document.location.pathname}`,
