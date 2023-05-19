@@ -1,37 +1,16 @@
 import { Heading, Icon } from '@nl-rvo/components';
 import '../common/style.scss';
 
-const Maatregelen = () => {
+const Bewaard = () => {
   return (
     <div className="rvo-demo-page rvo-demo-page--regelmaat">
       <div className="rvo-app rvo-app--maatregelen">
         <div className="rvo-app-container rvo-app-container--maatregelen">
           <div className="rvo-app-content">
-            <Heading type="h1">Suggesties</Heading>
+            <Heading type="h1">Bewaarde maatregelen</Heading>
             <p>
-              Regelmaat heeft de volgende <strong>maatregelen</strong> voor u gevonden
+              Dit zijn de <strong>maatregelen</strong> die u zelf heeft bewaard
             </p>
-            <div className="rvo-alert rvo-alert--warning">
-              <span
-                className="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--xl rvo-status-icon-waarschuwing"
-                role="img"
-                aria-label="Waarschuwing"
-              ></span>
-              <div className="rvo-alert-text">
-                <div>
-                  <div>
-                    Uw profiel is momenteel voor <strong>80%</strong> ingevuld.&nbsp;
-                    <a
-                      href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
-                      className="rvo-link rvo-link--no-underline"
-                    >
-                      Maak uw profiel compleet
-                    </a>
-                    &nbsp;om betere suggesties voor maatregelen te krijgen
-                  </div>
-                </div>
-              </div>
-            </div>
             <ul className="rvo-maatregelen">
               <li className="rvo-maatregel">
                 <a
@@ -43,10 +22,10 @@ const Maatregelen = () => {
                 <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
-                      <Icon icon="favoriet"></Icon>Bewaar
+                      <Icon icon="verwijderen"></Icon>Verwijder
                     </span>
                     <span className="rvo-bewaard">
-                      <Icon icon="favoriet"></Icon>Bewaard
+                      <Icon icon="verwijderen"></Icon>Verwijderd
                     </span>
                   </summary>
                 </details>
@@ -62,10 +41,10 @@ const Maatregelen = () => {
                 <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
-                      <Icon icon="favoriet"></Icon>Bewaar
+                      <Icon icon="verwijderen"></Icon>Verwijder
                     </span>
                     <span className="rvo-bewaard">
-                      <Icon icon="favoriet"></Icon>Bewaard
+                      <Icon icon="verwijderen"></Icon>Verwijderd
                     </span>
                   </summary>
                 </details>
@@ -81,10 +60,10 @@ const Maatregelen = () => {
                 <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
-                      <Icon icon="favoriet"></Icon>Bewaar
+                      <Icon icon="verwijderen"></Icon>Verwijder
                     </span>
                     <span className="rvo-bewaard">
-                      <Icon icon="favoriet"></Icon>Bewaard
+                      <Icon icon="verwijderen"></Icon>Verwijderd
                     </span>
                   </summary>
                 </details>
@@ -100,31 +79,10 @@ const Maatregelen = () => {
                 <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
-                      <Icon icon="favoriet"></Icon>Bewaar
+                      <Icon icon="verwijderen"></Icon>Verwijder
                     </span>
                     <span className="rvo-bewaard">
-                      <Icon icon="favoriet"></Icon>Bewaard
-                    </span>
-                  </summary>
-                </details>
-              </li>
-            </ul>
-            Mogelijk ook interessant
-            <ul className="rvo-maatregelen">
-              <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
-                  Verlengde weidegang
-                </a>
-                <details className="rvo-bewaar-knop">
-                  <summary className="rvo-maatregel-bewaar-link">
-                    <span className="rvo-bewaar">
-                      <Icon icon="favoriet"></Icon>Bewaar
-                    </span>
-                    <span className="rvo-bewaard">
-                      <Icon icon="favoriet"></Icon>Bewaard
+                      <Icon icon="verwijderen"></Icon>Verwijderd
                     </span>
                   </summary>
                 </details>
@@ -144,18 +102,18 @@ const Maatregelen = () => {
             <li className="rvo-app-menu-item">
               <a
                 href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--bewaard&viewMode=story"
-                className="rvo-app-menu-item-link"
+                className="rvo-app-menu-item-link rvo-app-menu-item-link--active"
               >
-                <Icon icon="favoriet" color="hemelblauw" size="2xl" />
+                <Icon icon="favoriet" color="wit" size="2xl" />
                 Bewaard
               </a>
             </li>
             <li className="rvo-app-menu-item">
               <a
                 href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
-                className="rvo-app-menu-item-link rvo-app-menu-item-link--active"
+                className="rvo-app-menu-item-link "
               >
-                <Icon icon="plus" color="wit" size="2xl" />
+                <Icon icon="plus" color="hemelblauw" size="2xl" />
                 Suggesties
               </a>
             </li>
@@ -175,4 +133,4 @@ const Maatregelen = () => {
   );
 };
 
-export default Maatregelen;
+export default Bewaard;

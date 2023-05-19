@@ -57,13 +57,19 @@ const ProfielIntro = () => {
             </ButtonGroup>
             <ul className="rvo-app-menu">
               <li className="rvo-app-menu-item">
-                <a href="#" className="rvo-app-menu-item-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--zoeken&viewMode=story"
+                  className="rvo-app-menu-item-link"
+                >
                   <Icon icon="zoek" color="hemelblauw" size="2xl" />
                   Zoeken
                 </a>
               </li>
               <li className="rvo-app-menu-item">
-                <a href="#" className="rvo-app-menu-item-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--bewaard&viewMode=story"
+                  className="rvo-app-menu-item-link"
+                >
                   <Icon icon="favoriet" color="hemelblauw" size="2xl" />
                   Bewaard
                 </a>

@@ -35,14 +35,12 @@ const Zoeken = () => {
               <a
                 href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
                 className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
-              >
-                Overslaan
-              </a>
+              ></a>
               <a
                 href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
                 className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
               >
-                Opslaan
+                Zoeken
               </a>
             </ButtonGroup>
             <ul className="rvo-app-menu">
@@ -56,7 +54,10 @@ const Zoeken = () => {
                 </a>
               </li>
               <li className="rvo-app-menu-item">
-                <a href="#" className="rvo-app-menu-item-link">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--bewaard&viewMode=story"
+                  className="rvo-app-menu-item-link"
+                >
                   <Icon icon="favoriet" color="hemelblauw" size="2xl" />
                   Bewaard
                 </a>
