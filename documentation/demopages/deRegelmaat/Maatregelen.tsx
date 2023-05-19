@@ -40,7 +40,7 @@ const Maatregelen = () => {
                 >
                   Onderzaai vanggewas
                 </a>
-                <details>
+                <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
                       <Icon icon="favoriet"></Icon>Bewaar
@@ -59,7 +59,7 @@ const Maatregelen = () => {
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Vroeg oogsten rooigewas
                 </a>
-                <details>
+                <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
                       <Icon icon="favoriet"></Icon>Bewaar
@@ -78,7 +78,7 @@ const Maatregelen = () => {
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Grasland met kruiden
                 </a>
-                <details>
+                <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
                       <Icon icon="favoriet"></Icon>Bewaar
@@ -97,7 +97,7 @@ const Maatregelen = () => {
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Rustgewas
                 </a>
-                <details>
+                <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
                       <Icon icon="favoriet"></Icon>Bewaar
@@ -118,7 +118,7 @@ const Maatregelen = () => {
                 >
                   Verlengde weidegang
                 </a>
-                <details>
+                <details className="rvo-bewaar-knop">
                   <summary className="rvo-maatregel-bewaar-link">
                     <span className="rvo-bewaar">
                       <Icon icon="favoriet"></Icon>Bewaar
