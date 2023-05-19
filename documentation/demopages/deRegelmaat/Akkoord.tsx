@@ -33,7 +33,7 @@ const Akkoord = () => {
               <br /> Deze app is momenteel in de beta fase en daarom onderhevig aan constante verbeteringen.
             </p>
             <a
-              href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
+              href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel-intro&viewMode=story"
               className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
             >
               Akkoord

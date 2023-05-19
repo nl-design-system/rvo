@@ -1723,18 +1723,18 @@
     gap: var(--rvo-space-2xs);
   }
 
-  details .rvo-maatregel-bewaar-link .rvo-bewaard,
-  details[open] .rvo-bewaar {
+  .rvo-bewaar-knop .rvo-maatregel-bewaar-link .rvo-bewaard,
+  .rvo-bewaar-knop[open] .rvo-bewaar {
     display: none;
   }
 
-  details[open] .rvo-bewaard {
+  .rvo-bewaar-knop[open] .rvo-bewaard {
     color: var(--rvo-color-zwart);
     display: flex;
     font-weight: var(--rvo-font-weight-normal);
   }
 
-  details[open] .rvo-icon--hemelblauw {
+  .rvo-bewaar-knop[open] .rvo-icon--hemelblauw {
     background-color: var(--rvo-color-rood);
   }
 
@@ -1751,6 +1751,47 @@
 
   .rvo-maatregel-img {
     max-width: 75%;
+  }
+
+  .rvo-short-inputs {
+    margin-block-start: var(--rvo-space-md);
+  }
+
+  .rvo-short-inputs-details[open] {
+    padding-block-end: var(--rvo-space-md);
+  }
+
+  .rvo-short-inputs-details summary {
+    align-items: center;
+    color: var(--rvo-color-hemelblauw);
+    display: flex;
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-2xs);
+    list-style: none;
+
+    .rvo-icon {
+      margin-block-start: -2px;
+    }
+  }
+
+  .rvo-short-inputs-details[open] summary {
+    .rvo-icon {
+      transform: rotate(90deg);
+    }
+  }
+
+  .rvo-short-inputs-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rvo-short-input {
+    align-items: center;
+    display: flex;
+    gap: var(--rvo-space-sm);
+    margin-block-start: var(--rvo-space-xs);
+    input {
+      flex: 60px 0 0;
+    }
   }
 
   /* @NIEUWE RIJKSHUISSTIJL */
