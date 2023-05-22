@@ -1,0 +1,21 @@
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import * as FieldsetStories from "./form-fieldset.stories";
+
+<Meta of={FieldsetStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FieldsetStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>

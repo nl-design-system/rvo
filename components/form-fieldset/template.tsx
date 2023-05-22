@@ -11,7 +11,7 @@ export interface IFieldsetProps {
   legend: string;
   disabled?: boolean;
   fields?: ITextInputFieldProps[];
-  hideFields?: boolean;
+  children?: React.ReactNode;
 }
 
 export const argTypes = {
@@ -35,7 +35,7 @@ export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   children,
 }: PropsWithChildren<IFieldsetProps>) => {
   return (
-    <FieldsetUtrecht disabled={disabled || null}>
+    <FieldsetUtrecht disabled={disabled || null} className="rvo-form-fieldset">
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children ||
         (fields &&
