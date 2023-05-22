@@ -3,7 +3,7 @@ import { defaultArgs } from './defaultArgs';
 import { Accordion, argTypes } from './template';
 
 const meta: Meta<typeof Accordion> = {
-  title: 'Componenten/Accordion/Accordion',
+  title: 'Componenten/Accordion',
   component: Accordion,
   args: defaultArgs,
   argTypes,
@@ -20,4 +20,4 @@ export default meta;
 
 type Story = StoryObj<typeof Accordion>;
 
-export const Default: Story = { args: defaultArgs, name: 'Default' };
+export const Default: Story = { args: defaultArgs, name: 'Accordion' };

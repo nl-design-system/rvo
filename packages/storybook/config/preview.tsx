@@ -58,7 +58,7 @@ const addonStatus = {
 
 const parameters = {
   // previewTabs,
-  // viewMode: 'docs',
+  viewMode: 'docs',
   options: {
     // panelPosition: 'bottom',
     storySort: [

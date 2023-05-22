@@ -22,10 +22,9 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   stories: [
-    // TODO: Fix this
-    // '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
-    '../../../components/accordion/**/*.docpage.mdx',
-    '../../../components/accordion/**/*.stories.@(js|jsx|mdx|ts|tsx|js|jsx)',
+    // '../../../documentation/**!(node_modules)/*.stories.@(jsx|tsx)',
+    '../../../components/**!(node_modules)/*.docpage.mdx',
+    '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
   ],
   features: {
     buildStoriesJson: false,
