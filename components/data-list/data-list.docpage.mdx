@@ -1,0 +1,22 @@
+import { ArgsTable, Canvas, Markdown, Meta, Story } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { Alert, argTypes } from "./template";
+import * as DataListStories from "./data-list.stories";
+
+<Meta of={DataListStories} name="Documentatie" />
+
+# Data list
+
+<Canvas of={DataListStories.Default} />
+
+<ArgsTable story="Data list" />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
