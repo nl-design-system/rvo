@@ -5,12 +5,10 @@ export default {
   title: 'Componenten/Alert/Kinds',
   component: Alert,
   argTypes: argTypes,
-
   parameters: {
     status: {
       type: 'WORK IN PROGRESS',
     },
-
     docusaurus: {
       link: 'alert',
     },
@@ -20,7 +18,6 @@ export default {
 export const Info = {
   render: Alert.bind({}),
   name: 'Info',
-
   args: {
     ...defaultArgs,
     content: 'This is an example of an info alert',
@@ -31,7 +28,6 @@ export const Info = {
 export const Warning = {
   render: Alert.bind({}),
   name: 'Warning',
-
   args: {
     ...defaultArgs,
     content: 'This is an example of a warning alert',
@@ -42,7 +38,6 @@ export const Warning = {
 export const Error = {
   render: Alert.bind({}),
   name: 'Error',
-
   args: {
     ...defaultArgs,
     content: 'This is an example of an error alert',
@@ -53,7 +48,6 @@ export const Error = {
 export const Success = {
   render: Alert.bind({}),
   name: 'Success',
-
   args: {
     ...defaultArgs,
     content: 'This is an example of a success alert',

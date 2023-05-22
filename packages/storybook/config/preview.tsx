@@ -12,8 +12,6 @@ import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
 
-// defineCustomElements();
-
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
   status: {
@@ -51,16 +49,8 @@ const addonStatus = {
   },
 };
 
-// const previewTabs = {
-//   'storybook/docs/panel': { index: -1, title: 'Component' },
-//   canvas: { title: 'Compatibiliteit' },
-// };
-
 const parameters = {
-  // previewTabs,
-  viewMode: 'docs',
   options: {
-    // panelPosition: 'bottom',
     storySort: [
       'Introductie',
       'Aan de slag',
@@ -85,34 +75,7 @@ const parameters = {
       transform: (src, storyContext) => {
         // Ensure valid HTML in the Preview source
         let currentStoryArgs = storyContext.args;
-
-        // TODO: Check if this is still necessary
-        //   // If args have been updated, use the updated args instead
-        //   const currentStoryId = storyContext.id;
-        //   const channel = addons.getChannel() as any;
-        //   if (channel.data.storyArgsUpdated) {
-        //     const updatedStory = channel.data.storyArgsUpdated.find(
-        //       (updatedStory) => updatedStory.storyId === currentStoryId,
-        //     );
-
-        //     if (updatedStory) {
-        //       currentStoryArgs = updatedStory.args;
-        //     }
-        //   }
-
         if (storyContext.originalStoryFn) {
-          // console.log(
-          //   ReactDOMServer.renderToStaticMarkup(storyContext.originalStoryFn(currentStoryArgs, storyContext)),
-          // );
-          // console.log(
-          //   prettier
-          //     .format(ReactDOMServer.renderToStaticMarkup(src), {
-          //       parser: 'babel',
-          //       plugins: [prettierBabel],
-          //     })
-          //     .replace(/\{" "\}/gm, ' ')
-          //     .replace(/(;)[^;]*$/g, ''),
-          // );
           return prettier
             .format(ReactDOMServer.renderToStaticMarkup(storyContext.originalStoryFn(currentStoryArgs, storyContext)), {
               parser: 'babel',
@@ -129,7 +92,7 @@ const parameters = {
   ...addonStatus,
   layout: 'fullscreen',
   html: {
-    root: '#story',
+    root: '#storybook-root',
     removeEmptyComments: true,
   },
   themes: {
@@ -150,28 +113,9 @@ const decorators = [
   },
 ];
 
-// const globalTypes = {
-//   locale: {
-//     name: 'Locale',
-//     description: 'Internationalization locale',
-//     defaultValue: 'en',
-//     toolbar: {
-//       icon: 'globe',
-//       items: [
-//         { value: 'en', right: '🇺🇸', title: 'English' },
-//         { value: 'fr', right: '🇫🇷', title: 'Français' },
-//         { value: 'es', right: '🇪🇸', title: 'Español' },
-//         { value: 'zh', right: '🇨🇳', title: '中文' },
-//         { value: 'kr', right: '🇰🇷', title: '한국어' },
-//       ],
-//     },
-//   },
-// };
-
 const preview: Preview = {
   parameters,
   decorators,
-  // globalTypes,
 };
 
 export default preview;

@@ -419,10 +419,10 @@ importers:
         version: 7.18.6(@babel/core@7.20.5)
       '@emotion/react':
         specifier: 11.10.5
-        version: 11.10.5(@babel/core@7.20.5)(react@18.2.0)
+        version: 11.10.5(@babel/core@7.20.5)(@types/react@18.0.25)(react@18.2.0)
       '@emotion/styled':
         specifier: 11.10.5
-        version: 11.10.5(@babel/core@7.20.5)(@emotion/react@11.10.5)(react@18.2.0)
+        version: 11.10.5(@babel/core@7.20.5)(@emotion/react@11.10.5)(@types/react@18.0.25)(react@18.2.0)
       '@etchteam/storybook-addon-status':
         specifier: 4.2.4
         version: 4.2.4
@@ -480,6 +480,9 @@ importers:
       '@storybook/theming':
         specifier: 7.0.12
         version: 7.0.12(react-dom@18.2.0)(react@18.2.0)
+      '@whitespace/storybook-addon-html':
+        specifier: 5.1.4
+        version: 5.1.4(@storybook/addons@6.5.14)(@storybook/api@7.0.12)(@storybook/components@7.0.12)(@storybook/core-events@7.0.12)(@storybook/theming@7.0.12)(prettier@2.7.1)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
       babel-loader:
         specifier: 9.1.0
         version: 9.1.0(@babel/core@7.20.5)(webpack@5.75.0)
@@ -489,12 +492,18 @@ importers:
       css-loader:
         specifier: 6.7.3
         version: 6.7.3(webpack@5.75.0)
+      prettier:
+        specifier: 2.7.1
+        version: 2.7.1
       react:
         specifier: 18.2.0
         version: 18.2.0
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-syntax-highlighter:
+        specifier: 15.5.0
+        version: 15.5.0(react@18.2.0)
       resolve-url-loader:
         specifier: 5.0.0
         version: 5.0.0
@@ -5832,7 +5841,7 @@ packages:
   /@emotion/memoize@0.8.0:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
 
-  /@emotion/react@11.10.5(@babel/core@7.20.5)(react@18.2.0):
+  /@emotion/react@11.10.5(@babel/core@7.20.5)(@types/react@18.0.25)(react@18.2.0):
     resolution: {integrity: sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -5852,6 +5861,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
+      '@types/react': 18.0.25
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     dev: true
@@ -5902,7 +5912,7 @@ packages:
   /@emotion/sheet@1.2.1:
     resolution: {integrity: sha512-zxRBwl93sHMsOj4zs+OslQKg/uhF38MB+OMKoCrVuS0nyTkqnau+BM3WGEoOptg9Oz45T/aIGs1qbVAsEFo3nA==}
 
-  /@emotion/styled@11.10.5(@babel/core@7.20.5)(@emotion/react@11.10.5)(react@18.2.0):
+  /@emotion/styled@11.10.5(@babel/core@7.20.5)(@emotion/react@11.10.5)(@types/react@18.0.25)(react@18.2.0):
     resolution: {integrity: sha512-8EP6dD7dMkdku2foLoruPCNkRevzdcBaY6q0l0OsbyJK+x8D9HWjX27ARiSIKNF634hY9Zdoedh8bJCiva8yZw==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -5919,10 +5929,11 @@ packages:
       '@babel/runtime': 7.20.6
       '@emotion/babel-plugin': 11.10.5(@babel/core@7.20.5)
       '@emotion/is-prop-valid': 1.2.0
-      '@emotion/react': 11.10.5(@babel/core@7.20.5)(react@18.2.0)
+      '@emotion/react': 11.10.5(@babel/core@7.20.5)(@types/react@18.0.25)(react@18.2.0)
       '@emotion/serialize': 1.1.1
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
+      '@types/react': 18.0.25
       react: 18.2.0
     dev: true
 
@@ -8135,45 +8146,6 @@ packages:
       webpack-dev-server: 4.11.1(webpack@5.74.0)
     dev: true
 
-  /@pmmmwh/react-refresh-webpack-plugin@0.5.10(react-refresh@0.11.0)(webpack@5.75.0):
-    resolution: {integrity: sha512-j0Ya0hCFZPd4x40qLzbhGsh9TMtdb+CJQiso+WxLOPNasohq9cc5SNUcwsZaRH6++Xh91Xkm/xHCkuIiIu0LUA==}
-    engines: {node: '>= 10.13'}
-    peerDependencies:
-      '@types/webpack': 4.x || 5.x
-      react-refresh: '>=0.10.0 <1.0.0'
-      sockjs-client: ^1.4.0
-      type-fest: '>=0.17.0 <4.0.0'
-      webpack: '>=4.43.0 <6.0.0'
-      webpack-dev-server: 3.x || 4.x
-      webpack-hot-middleware: 2.x
-      webpack-plugin-serve: 0.x || 1.x
-    peerDependenciesMeta:
-      '@types/webpack':
-        optional: true
-      sockjs-client:
-        optional: true
-      type-fest:
-        optional: true
-      webpack-dev-server:
-        optional: true
-      webpack-hot-middleware:
-        optional: true
-      webpack-plugin-serve:
-        optional: true
-    dependencies:
-      ansi-html-community: 0.0.8
-      common-path-prefix: 3.0.0
-      core-js-pure: 3.26.1
-      error-stack-parser: 2.1.4
-      find-up: 5.0.0
-      html-entities: 2.3.3
-      loader-utils: 2.0.4
-      react-refresh: 0.11.0
-      schema-utils: 3.1.1
-      source-map: 0.7.3
-      webpack: 5.75.0(esbuild@0.17.19)
-    dev: true
-
   /@pnpm/network.ca-file@1.0.2:
     resolution: {integrity: sha512-YcPQ8a0jwYU9bTdJDpXjMi7Brhkr1mXsXrUJvjqM2mQDgkRiz8jFaQGOdaLxgjtUfQgZhKy/O3cG/YwmgKaxLA==}
     engines: {node: '>=12.22.0'}
@@ -9319,7 +9291,7 @@ packages:
       '@babel/core': 7.20.5
       '@babel/preset-flow': 7.18.6(@babel/core@7.20.5)
       '@babel/preset-react': 7.18.6(@babel/core@7.20.5)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.10(react-refresh@0.11.0)(webpack@5.75.0)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.10(react-refresh@0.10.0)(webpack-dev-server@4.11.1)(webpack@5.74.0)
       '@storybook/core-webpack': 7.0.12
       '@storybook/docs-tools': 7.0.12
       '@storybook/node-logger': 7.0.12
@@ -10914,6 +10886,35 @@ packages:
     dependencies:
       webpack: 5.75.0(webpack-cli@5.0.1)
       webpack-cli: 5.0.1(webpack@5.75.0)
+    dev: true
+
+  /@whitespace/storybook-addon-html@5.1.4(@storybook/addons@6.5.14)(@storybook/api@7.0.12)(@storybook/components@7.0.12)(@storybook/core-events@7.0.12)(@storybook/theming@7.0.12)(prettier@2.7.1)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0):
+    resolution: {integrity: sha512-omDhn5Ceh0998YHKjRk6XHjslTg28WgNao6C0jkGW4NXeO0ZcKL0VCj4qV+jgJ4DOs/3K3Aj+wvQ81seataXqw==}
+    peerDependencies:
+      '@storybook/addons': ^6.5.8
+      '@storybook/api': ^6.5.8
+      '@storybook/components': ^6.5.8
+      '@storybook/core-events': ^6.5.8
+      '@storybook/theming': ^6.5.8
+      prettier: ^2.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-syntax-highlighter: ^15.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@storybook/addons': 6.5.14(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/api': 7.0.12(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.0.12(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/core-events': 7.0.12
+      '@storybook/theming': 7.0.12(react-dom@18.2.0)(react@18.2.0)
+      prettier: 2.7.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-syntax-highlighter: 15.5.0(react@18.2.0)
     dev: true
 
   /@xtuc/ieee754@1.2.0:
@@ -15941,6 +15942,12 @@ packages:
       reusify: 1.0.4
     dev: true
 
+  /fault@1.0.4:
+    resolution: {integrity: sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==}
+    dependencies:
+      format: 0.2.2
+    dev: true
+
   /faye-websocket@0.11.4:
     resolution: {integrity: sha512-CzbClwlXAuiRQAlUyfqPgvPoNKTckTPGfwZV4ZdAhVcP2lh9KUxJg2b5GkE7XbjKQ3YJnQ9z6D9ntLAlB+tP8g==}
     engines: {node: '>=0.8.0'}
@@ -16465,6 +16472,11 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
+    dev: true
+
+  /format@0.2.2:
+    resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
+    engines: {node: '>=0.4.x'}
     dev: true
 
   /formidable@1.2.6:
@@ -17388,6 +17400,10 @@ packages:
     dependencies:
       capital-case: 1.0.4
       tslib: 2.4.0
+    dev: true
+
+  /highlight.js@10.7.3:
+    resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
     dev: true
 
   /history@4.10.1:
@@ -20524,6 +20540,13 @@ packages:
   /lowercase-keys@3.0.0:
     resolution: {integrity: sha512-ozCC6gdQ+glXOQsveKD0YsDy8DSQFjDTz4zyzEHNV5+JP5D62LmfDZ6o1cycFx9ouG940M5dE8C8CTewdj2YWQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
+
+  /lowlight@1.20.0:
+    resolution: {integrity: sha512-8Ktj+prEb1RoCPkEOrPMYUN/nCggB7qAWe3a7OpMjWQkh3l2RD5wKRQ+o8Q8YuI9RG/xs95waaI/E6ym/7NsTw==}
+    dependencies:
+      fault: 1.0.4
+      highlight.js: 10.7.3
     dev: true
 
   /lru-cache@5.1.1:
@@ -24471,6 +24494,11 @@ packages:
       react: 17.0.2
     dev: true
 
+  /prismjs@1.27.0:
+    resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
+    engines: {node: '>=6'}
+    dev: true
+
   /prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -25098,6 +25126,19 @@ packages:
       tiny-warning: 1.0.3
     dev: true
 
+  /react-syntax-highlighter@15.5.0(react@18.2.0):
+    resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
+    peerDependencies:
+      react: '>= 0.14.0'
+    dependencies:
+      '@babel/runtime': 7.20.6
+      highlight.js: 10.7.3
+      lowlight: 1.20.0
+      prismjs: 1.29.0
+      react: 18.2.0
+      refractor: 3.6.0
+    dev: true
+
   /react-textarea-autosize@8.4.0(@types/react@18.0.25)(react@17.0.2):
     resolution: {integrity: sha512-YrTFaEHLgJsi8sJVYHBzYn+mkP3prGkmP2DKb/tm0t7CLJY5t1Rxix8070LAKb0wby7bl/lf2EeHkuMihMZMwQ==}
     engines: {node: '>=10'}
@@ -25329,6 +25370,14 @@ packages:
     dependencies:
       indent-string: 4.0.0
       strip-indent: 3.0.0
+    dev: true
+
+  /refractor@3.6.0:
+    resolution: {integrity: sha512-MY9W41IOWxxk31o+YvFCNyNzdkc9M20NoZK5vq6jkv4I/uh2zkWcfudj0Q1fovjUQJrNewS9NMzeTtqPf+n5EA==}
+    dependencies:
+      hastscript: 6.0.0
+      parse-entities: 2.0.0
+      prismjs: 1.27.0
     dev: true
 
   /regenerate-unicode-properties@10.1.0:
