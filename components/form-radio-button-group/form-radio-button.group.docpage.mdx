@@ -1,0 +1,24 @@
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
+import fieldDocumentation from "../form-field/README.md";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import * as FormRadioButtonGroupStories from "./form-radio-button.group.stories";
+
+<Meta of={FormRadioButtonGroupStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormRadioButtonGroupStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+<Markdown>{fieldDocumentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
