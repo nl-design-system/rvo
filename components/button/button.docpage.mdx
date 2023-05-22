@@ -1,0 +1,22 @@
+import { ArgsTable, Canvas, Markdown, Meta, Story } from "@storybook/blocks";
+import documentation from "./DOCUMENTATION.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { Alert, argTypes } from "./template";
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} name="Documentatie" />
+
+# Button
+
+<Canvas of={ButtonStories.Default} />
+
+<ArgsTable story="Button" />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
