@@ -2,13 +2,13 @@ import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/block
 import documentation from "./README.md";
 import changeLog from "./CHANGELOG.md";
 import { defaultArgs } from "./defaultArgs";
-import * as FormRadioButtonStories from "./form-radio-button.stories";
+import * as FormSelectStories from "./form-select.stories";
 
-<Meta of={FormRadioButtonStories} name="Documentatie" />
+<Meta of={FormSelectStories} name="Documentatie" />
 
 <Title />
 
-<Canvas of={FormRadioButtonStories.Default} layout="padded" />
+<Canvas of={FormSelectStories.Default} layout="padded" />
 
 <Controls />
 
@@ -19,3 +19,7 @@ import * as FormRadioButtonStories from "./form-radio-button.stories";
 ## Changelog
 
 <Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_

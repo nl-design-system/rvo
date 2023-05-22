@@ -1,3 +1,1 @@
-<!-- @license CC0-1.0 -->
-
-# Form select
+Documentatie voor form select
