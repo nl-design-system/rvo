@@ -1,0 +1,24 @@
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, ExpandableText } from "./template";
+import * as ExpandableTextStories from "./expandable-text.stories";
+
+<Meta of={ExpandableTextStories} name="Documentatie" />
+
+<Title />
+<Canvas of={ExpandableTextStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
