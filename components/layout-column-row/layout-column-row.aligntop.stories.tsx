@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { argTypes, LayoutColumnRow } from './template';
 
 export default {
-  title: 'Componenten/Layout column & row',
+  title: 'Componenten/Layout/Layout column & row',
   component: LayoutColumnRow,
   argTypes: argTypes,
 

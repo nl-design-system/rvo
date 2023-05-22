@@ -1,7 +1,3 @@
-<!-- @license CC0-1.0 -->
-
-# Max width layout
-
 De max width layout component kadert een vlak af wanneer een bepaalde breedte bereikt wordt.
 
 ## Wanneer gebruik je max width layout

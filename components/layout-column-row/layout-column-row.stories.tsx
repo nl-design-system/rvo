@@ -3,7 +3,7 @@ import { defaultArgs } from './defaultArgs';
 import { LayoutColumnRow } from './template';
 
 const meta: Meta<typeof LayoutColumnRow> = {
-  title: 'Componenten/Layout column & row',
+  title: 'Componenten/Layout/Layout column & row',
   component: LayoutColumnRow,
   args: defaultArgs,
   parameters: {
