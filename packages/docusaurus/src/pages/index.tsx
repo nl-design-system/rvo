@@ -49,7 +49,7 @@ export default function Home(): JSX.Element {
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2">Voor designers</Heading>
               <p>Ben je een designer en wil je ROOS gebruiken? Gebruik dan ons Figma bestand</p>
-              <Link to="https://www.figma.com/file/NHV1JYxJ28vKZInSI9u200/ROOS-(RVO-Design-System)?node-id=282%3A5324">
+              <Link to="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0">
                 <RVOLink showIcon="after" icon="externe-link">
                   Figma bestand
                 </RVOLink>
