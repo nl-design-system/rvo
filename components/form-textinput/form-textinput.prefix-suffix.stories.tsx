@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { argTypes, TextInput } from './template';
 
 export default {
-  title: `Componenten/Form/Text input/Prefix & Suffix`,
+  title: 'Componenten/Form/Text input/Prefix Suffix',
   component: TextInput,
   argTypes: argTypes,
 
