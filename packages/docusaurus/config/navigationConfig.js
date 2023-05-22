@@ -46,7 +46,7 @@ module.exports = {
         label: 'Schrijfwijzer',
       },
       {
-        href: 'https://www.figma.com/file/NHV1JYxJ28vKZInSI9u200/ROOS-(RVO-Design-System)?node-id=282%3A5324',
+        href: 'https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0',
         label: 'Figma',
         position: 'right',
       },
