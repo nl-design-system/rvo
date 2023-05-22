@@ -40,6 +40,12 @@ module.exports = {
         label: 'Best practices',
       },
       {
+        type: 'doc',
+        docId: 'schrijfwijzer/schrijfwijzer',
+        position: 'left',
+        label: 'Schrijfwijzer',
+      },
+      {
         href: 'https://www.figma.com/file/NHV1JYxJ28vKZInSI9u200/ROOS-(RVO-Design-System)?node-id=282%3A5324',
         label: 'Figma',
         position: 'right',

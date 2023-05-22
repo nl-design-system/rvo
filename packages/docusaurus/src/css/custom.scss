@@ -73,6 +73,13 @@ html {
   margin-block-start: 0;
 }
 
+.markdown table td,
+.markdown table th {
+  padding-block: 12px;
+  padding-inline: 12px;
+  text-align: start;
+}
+
 p,
 ul,
 ol {
