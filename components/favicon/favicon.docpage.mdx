@@ -1,0 +1,20 @@
+import { Canvas, Controls, Markdown, Meta, Story } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { Favicon } from "./template";
+
+<Meta title="Componenten/Favicon/Documentatie" />
+
+<Favicon />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
