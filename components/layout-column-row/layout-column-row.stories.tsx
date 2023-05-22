@@ -19,4 +19,4 @@ export default meta;
 
 type Story = StoryObj<typeof LayoutColumnRow>;
 
-export const Default: Story = { args: defaultArgs, name: 'Componenten/Layout column & row' };
+export const Default: Story = { args: defaultArgs, name: 'Layout column & row' };

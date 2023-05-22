@@ -1,3 +1,3 @@
-<!-- @license CC0-1.0 -->
+Regels:
 
-# Link
+- Voorzie externe links altijd van externe link icoon
