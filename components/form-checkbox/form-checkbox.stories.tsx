@@ -11,7 +11,7 @@ const meta: Meta<typeof Checkbox> = {
       type: 'WORK IN PROGRESS',
     },
     docusaurus: {
-      link: 'checkbox',
+      link: 'form-checkbox',
     },
   },
 };
