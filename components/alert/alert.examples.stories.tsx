@@ -6,7 +6,6 @@ export default {
   title: 'Componenten/Alert/Examples',
   component: AllAlertKinds,
   argTypes: argTypes,
-
   parameters: {
     status: {
       type: 'WORK IN PROGRESS',

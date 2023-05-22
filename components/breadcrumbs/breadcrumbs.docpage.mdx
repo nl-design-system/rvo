@@ -1,0 +1,28 @@
+import { ArgsTable, Canvas, Markdown, Meta, Story } from "@storybook/blocks";
+import documentation from "./DOCUMENTATION.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Breadcrumbs } from "./template";
+import * as BreadcrumbsStories from "./breadcrumbs.stories";
+
+<Meta of={BreadcrumbsStories} name="Documentatie" />
+
+# Breadcrumbs
+
+<Canvas>
+  <Story of={BreadcrumbsStories.Default} />
+</Canvas>
+
+<ArgsTable story="Breadcrumbs" />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
