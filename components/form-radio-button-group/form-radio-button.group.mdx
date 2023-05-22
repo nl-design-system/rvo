@@ -1,0 +1,21 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, RadioButtonGroup } from "./template";
+import * as FormRadioButtonGroupStories from "./form-radio-button.group.stories";
+
+<Meta of={FormRadioButtonGroupStories} />
+
+# Radio button group
+
+Let op: Gebruik de radio button group altijd in combinatie met een heldere vraag erboven.
+
+<Canvas>
+  <Story of={FormRadioButtonGroupStories.RadioButtonGroup} />
+</Canvas>
+
+<ArgsTable story="Radio button group" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

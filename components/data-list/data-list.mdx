@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, DataList } from "./template";
+import * as DataListStories from "./data-list.stories";
+
+<Meta of={DataListStories} />
+
+# Data list
+
+<Canvas>
+  <Story of={DataListStories.DataList} />
+</Canvas>
+
+<ArgsTable story="Data list" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

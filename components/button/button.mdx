@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Button } from "./template";
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<Canvas>
+  <Story of={ButtonStories.Button} />
+</Canvas>
+
+<ArgsTable story="Button" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Checkbox } from "./template";
+import * as FormCheckboxStatesStories from "./form-checkbox.states.stories";
+
+<Meta of={FormCheckboxStatesStories} />
+
+## Hover
+
+<Canvas>
+  <Story of={FormCheckboxStatesStories.Hover} />
+</Canvas>
+
+## Checked
+
+<Canvas>
+  <Story of={FormCheckboxStatesStories.Checked} />
+</Canvas>
+
+## Indeterminate
+
+<Canvas>
+  <Story of={FormCheckboxStatesStories.Indeterminate} />
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story of={FormCheckboxStatesStories.Disabled} />
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story of={FormCheckboxStatesStories.Active} />
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story of={FormCheckboxStatesStories.Focus} />
+</Canvas>

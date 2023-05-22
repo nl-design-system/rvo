@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Fieldset } from "./template";
+import * as FormFieldsetStories from "./form-fieldset.stories";
+
+<Meta of={FormFieldsetStories} />
+
+# Fieldset
+
+<Canvas>
+  <Story of={FormFieldsetStories.Fieldset} />
+</Canvas>
+
+<ArgsTable story="Fieldset" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

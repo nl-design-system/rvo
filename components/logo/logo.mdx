@@ -1,0 +1,25 @@
+import { Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { Logo } from "./template";
+import * as LogoStories from "./logo.stories";
+
+<Meta of={LogoStories} />
+
+# Logo
+
+Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo), [Specificaties logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/specificaties-logo) en [Logokleur](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/logokleuren).
+
+## Logo as image
+
+<Canvas>
+  <Story of={LogoStories.Logo} />
+</Canvas>
+
+## Dependencies
+
+@nl-rvo/assets/images
+
+## Changelog
+
+<Description>{changeLog}</Description>

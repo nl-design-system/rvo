@@ -1,0 +1,44 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Button } from "./template";
+import * as ButtonKindsStories from "./button.kinds.stories";
+
+<Meta of={ButtonKindsStories} />
+
+# Button kinds
+
+## Primary
+
+<Canvas>
+  <Story of={ButtonKindsStories.Primary} />
+</Canvas>
+
+## Secondary
+
+<Canvas>
+  <Story of={ButtonKindsStories.Secondary} />
+</Canvas>
+
+## Tertiary
+
+<Canvas>
+  <Story of={ButtonKindsStories.Tertiary} />
+</Canvas>
+
+## Quaternary
+
+<Canvas>
+  <Story of={ButtonKindsStories.Quaternary} />
+</Canvas>
+
+## Warning subtle
+
+<Canvas>
+  <Story of={ButtonKindsStories.WarningSubtle} />
+</Canvas>
+
+## Warning
+
+<Canvas>
+  <Story of={ButtonKindsStories.Warning} />
+</Canvas>

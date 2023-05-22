@@ -1,0 +1,26 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, MenuBar } from "./template";
+import * as MenubarMaxwidthStories from "./menubar.maxwidth.stories";
+
+<Meta of={MenubarMaxwidthStories} />
+
+# Menubar max width
+
+### Small
+
+<Canvas>
+  <Story of={MenubarMaxwidthStories.Small} />
+</Canvas>
+
+### Medium
+
+<Canvas>
+  <Story of={MenubarMaxwidthStories.Medium} />
+</Canvas>
+
+### Large
+
+<Canvas>
+  <Story of={MenubarMaxwidthStories.Large} />
+</Canvas>

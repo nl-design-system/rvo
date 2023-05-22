@@ -1,0 +1,32 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, TextInput } from "./template";
+import * as FormTextinputStatesStories from "./form-textinput.states.stories";
+
+<Meta of={FormTextinputStatesStories} />
+
+# States
+
+## Invalid
+
+<Canvas>
+  <Story of={FormTextinputStatesStories.Invalid} />
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story of={FormTextinputStatesStories.Focus} />
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story of={FormTextinputStatesStories.Disabled} />
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story of={FormTextinputStatesStories.ReadOnly} />
+</Canvas>

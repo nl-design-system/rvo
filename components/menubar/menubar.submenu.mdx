@@ -1,0 +1,25 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/blocks";
+import { argTypes, MenuBarWithSubmenu } from "./template";
+import * as MenubarSubmenuStories from "./menubar.submenu.stories";
+
+<Meta of={MenubarSubmenuStories} />
+
+# Menubar with submenu
+
+<Canvas>
+  <Story of={MenubarSubmenuStories.Submenu} />
+</Canvas>
+
+<ArgsTable story="Submenu" />
+
+# Menubar with submenu grid
+
+<Canvas>
+  <Story of={MenubarSubmenuStories.SubmenuGrid} />
+</Canvas>
+
+<ArgsTable story="Submenu" />
+
+## Dependencies
+
+@nl-rvo/assets/icons

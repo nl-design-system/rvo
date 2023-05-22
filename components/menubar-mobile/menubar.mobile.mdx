@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, MobileMenuBar } from "./template";
+import * as MenubarMobileStories from "./menubar.mobile.stories";
+
+<Meta of={MenubarMobileStories} />
+
+# Mobile menubar
+
+<Canvas>
+  <Story of={MenubarMobileStories.Mobile} />
+</Canvas>
+
+<ArgsTable story="Mobile" />
+
+## Dependencies
+
+@nl-rvo/assets/icons
+
+## Changelog
+
+<Description>{changeLog}</Description>

@@ -1,0 +1,26 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Tag } from "./template";
+import * as TagStatesStories from "./tag.states.stories";
+
+<Meta of={TagStatesStories} />
+
+# States
+
+## Hover
+
+<Canvas>
+  <Story of={TagStatesStories.Hover} />
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story of={TagStatesStories.Active} />
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story of={TagStatesStories.Focus} />
+</Canvas>

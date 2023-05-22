@@ -1,0 +1,30 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Heading } from "./template";
+import * as HeadingKindsStories from "./heading.kinds.stories";
+
+<Meta of={HeadingKindsStories} />
+
+<Canvas>
+  <Story of={HeadingKindsStories.Heading1} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeadingKindsStories.Heading2} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeadingKindsStories.Heading3} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeadingKindsStories.Heading4} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeadingKindsStories.Heading5} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeadingKindsStories.Heading6} />
+</Canvas>

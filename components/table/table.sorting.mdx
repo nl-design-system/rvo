@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { argTypes, Table } from "./template";
+import * as TableSortingStories from "./table.sorting.stories";
+
+<Meta of={TableSortingStories} />
+
+# Ascending
+
+<Canvas>
+  <Story of={TableSortingStories.AscendingSorting} />
+</Canvas>
+
+# Descending
+
+<Canvas>
+  <Story of={TableSortingStories.DescendingSorting} />
+</Canvas>

@@ -1,0 +1,12 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Fieldset } from "./template";
+import * as FormFieldsetStatesStories from "./form-fieldset.states.stories";
+
+<Meta of={FormFieldsetStatesStories} />
+
+## Fieldset disabled
+
+<Canvas>
+  <Story of={FormFieldsetStatesStories.Disabled} />
+</Canvas>

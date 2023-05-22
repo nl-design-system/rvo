@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, ProgressTracker } from "./template";
+import * as ProgressTrackerStories from "./progress-tracker.stories";
+
+<Meta of={ProgressTrackerStories} />
+
+# Progress Tracker
+
+<Canvas>
+  <Story of={ProgressTrackerStories.ProgressTracker} />
+</Canvas>
+
+<ArgsTable story="Progress Tracker" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

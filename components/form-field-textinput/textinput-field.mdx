@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, TextInputField } from "./template";
+import * as TextinputFieldStories from "./textinput-field.stories";
+
+<Meta of={TextinputFieldStories} />
+
+# Text input field
+
+<Canvas>
+  <Story of={TextinputFieldStories.TextInputField} />
+</Canvas>
+
+<ArgsTable story="Text input field" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

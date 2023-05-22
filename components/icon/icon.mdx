@@ -1,0 +1,23 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Icon } from "./template";
+import * as IconStories from "./icon.stories";
+
+<Meta of={IconStories} />
+
+# Icon
+
+<Canvas>
+  <Story of={IconStories.Icon} />
+</Canvas>
+
+<ArgsTable story="Icon" />
+
+## Dependencies
+
+@nl-rvo/assets/icons
+
+## Changelog
+
+<Description>{changeLog}</Description>

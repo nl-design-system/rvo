@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import markdown from "./README.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, Table } from "./template";
+import * as TableStories from "./table.stories";
+
+<Meta of={TableStories} />
+
+# Table
+
+Let op: Zorg ervoor dat alle kolommen zijn voorzien van een naam.
+
+<Canvas>
+  <Story of={TableStories.Table} />
+</Canvas>
+
+<ArgsTable story="Table" />
+
+<Description>{markdown}</Description>
+
+## Changelog
+
+<Description>{changeLog}</Description>

@@ -1,0 +1,19 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, SelectField } from "./template";
+import * as SelectFieldStories from "./select-field.stories";
+
+<Meta of={SelectFieldStories} />
+
+# Select field
+
+<Canvas>
+  <Story of={SelectFieldStories.SelectField} />
+</Canvas>
+
+<ArgsTable story="Select field" />
+
+## Changelog
+
+<Description>{changeLog}</Description>

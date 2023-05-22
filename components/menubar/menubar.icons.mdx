@@ -1,0 +1,20 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { defaultArgs } from "./defaultArgs";
+import { argTypes, MenuBar } from "./template";
+import * as MenubarIconsStories from "./menubar.icons.stories";
+
+<Meta of={MenubarIconsStories} />
+
+# Menubar with icons
+
+Menubar containing items with icons aligned to the left:
+
+<Canvas>
+  <Story of={MenubarIconsStories.WithIconsLeft} />
+</Canvas>
+
+Menubar containing items with icons aligned to the right:
+
+<Canvas>
+  <Story of={MenubarIconsStories.WithIconsRight} />
+</Canvas>
