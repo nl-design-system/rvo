@@ -1,5 +1,3 @@
-// import markdown from './README.md';
-
 export default {
   title: 'Componenten/Card',
 
