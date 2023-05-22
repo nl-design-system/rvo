@@ -1,7 +1,3 @@
-<!-- @license CC0-1.0 -->
-
-# Documentatie
-
 Een label beschrijft het doel en de functionaliteit van het bijbehorende formulierveld.
 
 ## Wanneer gebruik je een label
