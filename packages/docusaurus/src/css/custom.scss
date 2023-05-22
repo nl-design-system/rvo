@@ -73,6 +73,10 @@ html {
   margin-block-start: 0;
 }
 
+.markdown blockquote {
+  padding-inline: var(--rvo-space-md);
+}
+
 .markdown table td,
 .markdown table th {
   padding-block: 12px;
