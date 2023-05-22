@@ -1,0 +1,19 @@
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import * as LayoutColumnRowStories from "./layout-column-row.stories";
+
+<Meta of={LayoutColumnRowStories} name="Documentatie" />
+
+<Title />
+<Canvas of={LayoutColumnRowStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
