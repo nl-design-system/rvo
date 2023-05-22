@@ -1,4 +1,4 @@
-import { ArgsTable, Canvas, Markdown, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
 import documentation from "./README.md";
 import changeLog from "./CHANGELOG.md";
 import { defaultArgs } from "./defaultArgs";
@@ -7,11 +7,9 @@ import * as DataListStories from "./data-list.stories";
 
 <Meta of={DataListStories} name="Documentatie" />
 
-# Data list
-
-<Canvas of={DataListStories.Default} />
-
-<ArgsTable story="Data list" />
+<Title />
+<Canvas of={DataListStories.Default} layout="padded" />
+<Controls />
 
 ## Documentatie
 

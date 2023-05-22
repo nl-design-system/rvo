@@ -1,4 +1,4 @@
-import { ArgsTable, Canvas, Markdown, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
 import documentation from "./README.md";
 import changeLog from "./CHANGELOG.md";
 import { defaultArgs } from "./defaultArgs";
@@ -7,13 +7,9 @@ import * as BreadcrumbsStories from "./breadcrumbs.stories";
 
 <Meta of={BreadcrumbsStories} name="Documentatie" />
 
-# Breadcrumbs
-
-<Canvas>
-  <Story of={BreadcrumbsStories.Default} />
-</Canvas>
-
-<ArgsTable story="Breadcrumbs" />
+<Title />
+<Canvas of={BreadcrumbsStories.Default} layout="padded" />
+<Controls />
 
 ## Documentatie
 

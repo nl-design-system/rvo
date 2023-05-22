@@ -1,4 +1,4 @@
-import { ArgsTable, Canvas, Markdown, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
 import documentation from "./README.md";
 import changeLog from "./CHANGELOG.md";
 import { defaultArgs } from "./defaultArgs";
@@ -7,13 +7,9 @@ import * as ButtonGroupStories from "./button-group.stories";
 
 <Meta of={ButtonGroupStories} name="Documentatie" />
 
-# Button group
-
-<Canvas>
-  <Story of={ButtonGroupStories.Default} />
-</Canvas>
-
-<ArgsTable story="Button group" />
+<Title />
+<Canvas of={ButtonGroupStories.Default} layout="padded" />
+<Controls />
 
 ## Documentatie
 
