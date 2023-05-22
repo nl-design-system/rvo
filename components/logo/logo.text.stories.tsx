@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { LogoWithText as LogoWithTextComponent } from './template';
 
 export default {
-  title: 'Componenten/Logo/Logo with text',
+  title: 'Componenten/Logo/Logo with alternate text',
   component: LogoWithTextComponent,
 
   parameters: {
@@ -18,6 +18,6 @@ export default {
 
 export const LogoWithText = {
   render: LogoWithTextComponent.bind({}),
-  name: 'Logo with text',
-  args: defaultArgs,
+  name: 'Logo with alternate text',
+  args: { ...defaultArgs, title: 'Alternatieve titel' },
 };

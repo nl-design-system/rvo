@@ -1,4 +1,5 @@
-import { Canvas, Description, Meta, Story } from "@storybook/blocks";
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import documentation from "./CHANGELOG.md";
 import changeLog from "./CHANGELOG.md";
 import { defaultArgs } from "./defaultArgs";
 import { Logo } from "./template";
@@ -6,20 +7,21 @@ import * as LogoStories from "./logo.stories";
 
 <Meta of={LogoStories} />
 
-# Logo
+<Title />
 
 Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo), [Specificaties logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/specificaties-logo) en [Logokleur](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/logokleuren).
 
-## Logo as image
+<Canvas of={LogoStories.Default} layout="padded" />
+<Controls />
 
-<Canvas>
-  <Story of={LogoStories.Logo} />
-</Canvas>
+## Documentatie
 
-## Dependencies
-
-@nl-rvo/assets/images
+<Markdown>{documentation}</Markdown>
 
 ## Changelog
 
-<Description>{changeLog}</Description>
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/images_
