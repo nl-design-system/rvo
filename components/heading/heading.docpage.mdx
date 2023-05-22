@@ -2,12 +2,12 @@ import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/block
 import documentation from "./README.md";
 import changeLog from "./CHANGELOG.md";
 import { defaultArgs } from "./defaultArgs";
-import * as HeaderStories from "./header.stories";
+import * as HeadingStories from "./heading.stories";
 
-<Meta of={HeaderStories} name="Documentatie" />
+<Meta of={HeadingStories} name="Documentatie" />
 
 <Title />
-<Canvas of={HeaderStories.Default} layout="padded" />
+<Canvas of={HeadingStories.Default} layout="padded" />
 <Controls />
 
 ## Documentatie
@@ -17,7 +17,3 @@ import * as HeaderStories from "./header.stories";
 ## Changelog
 
 <Markdown>{changeLog}</Markdown>
-
-## Dependencies
-
-_@nl-rvo/assets/images_
