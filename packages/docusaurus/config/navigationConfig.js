@@ -41,7 +41,7 @@ module.exports = {
       },
       {
         type: 'doc',
-        docId: 'schrijfwijzer/schrijfwijzer',
+        docId: 'schrijfwijzer/waarom-deze-schrijfwijzer',
         position: 'left',
         label: 'Schrijfwijzer',
       },
