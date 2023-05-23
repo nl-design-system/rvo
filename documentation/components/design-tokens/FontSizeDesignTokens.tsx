@@ -15,7 +15,10 @@ const FontSizeDesignTokens = ({ tokens }: FontSizeDesignTokensProps) => {
               <br />
               {`${16 * parseFloat(value)}px / ${value}`}
             </div>
-            <div className="design-tokens__column design-tokens__column--50" style={{ fontSize: value }}>
+            <div
+              className="design-tokens__column design-tokens__column--50"
+              style={{ fontSize: value, lineHeight: '1em' }}
+            >
               Rijksdienst voor Ondernemend Nederland
             </div>
             <code className="design-tokens__column design-tokens__column--flex">{path2css(path)}</code>

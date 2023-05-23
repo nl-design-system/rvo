@@ -1,7 +1,10 @@
+import { Meta } from "@storybook/blocks";
 import designTokens from "@nl-rvo/design-tokens/dist/index.json";
 import { ColorDesignTokens } from "../../components/design-tokens/ColorDesignTokens";
 
 export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/color.tokens.json"));
+
+<Meta title="Huisstijl/Color" />
 
 <span>Er zijn {tokens.length} design tokens voor kleuren.</span>
 

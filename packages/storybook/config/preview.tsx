@@ -51,17 +51,19 @@ const addonStatus = {
 
 const parameters = {
   options: {
-    storySort: [
-      'Introductie',
-      'Aan de slag',
-      'Huisstijl',
-      ['Color', 'Font', 'Size', 'Space'],
-      'Componenten',
-      'Templates',
-      "Demo pagina's",
-      'Informatie',
-      ['Toestemming voor gebruik', 'Open source licentie'],
-    ],
+    storySort: {
+      order: [
+        'Introductie',
+        'Aan de slag',
+        'Huisstijl',
+        ['Color', 'Font', 'Size', 'Space'],
+        'Componenten',
+        'Templates',
+        "Demo pagina's",
+        'Informatie',
+        ['Toestemming voor gebruik', 'Open source licentie'],
+      ],
+    },
   },
   controls: {
     expanded: true,

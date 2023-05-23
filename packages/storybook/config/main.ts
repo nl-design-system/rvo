@@ -22,7 +22,7 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   stories: [
-    // '../../../documentation/**!(node_modules)/*.stories.@(jsx|tsx)',
+    '../../../documentation/pages/**/*.docpage.mdx',
     '../../../components/**!(node_modules)/*.docpage.mdx',
     '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
   ],
