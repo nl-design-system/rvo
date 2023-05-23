@@ -18,7 +18,7 @@ export default {
 };
 
 export const Small = {
-  render: MenuBar.bind(),
+  render: MenuBar.bind({}),
   name: 'Small',
 
   args: {
@@ -29,7 +29,7 @@ export const Small = {
 };
 
 export const Medium = {
-  render: MenuBar.bind(),
+  render: MenuBar.bind({}),
   name: 'Medium',
 
   args: {
@@ -40,7 +40,7 @@ export const Medium = {
 };
 
 export const Large = {
-  render: MenuBar.bind(),
+  render: MenuBar.bind({}),
   name: 'Large',
 
   args: {

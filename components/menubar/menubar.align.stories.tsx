@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { argTypes, MenuBar } from './template';
 
 export default {
-  title: 'Componenten/Menubar/Menu item alignment',
+  title: 'Componenten/Menubar/Align to right',
   component: MenuBar,
   argTypes: argTypes,
 
@@ -18,7 +18,7 @@ export default {
 };
 
 export const MenuItemAlignment = {
-  render: MenuBar.bind(),
-  name: 'Menu item alignment',
+  render: MenuBar.bind({}),
+  name: 'Align to right',
   args: defaultArgs,
 };

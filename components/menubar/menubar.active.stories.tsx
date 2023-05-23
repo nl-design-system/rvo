@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { argTypes, MenuBar } from './template';
 
 export default {
-  title: 'Componenten/Menubar/Menu active item',
+  title: 'Componenten/Menubar/Active item',
   component: MenuBar,
   argTypes: argTypes,
 
@@ -18,8 +18,8 @@ export default {
 };
 
 export const MenuActiveItem = {
-  render: MenuBar.bind(),
-  name: 'Menu active item',
+  render: MenuBar.bind({}),
+  name: 'Active item',
 
   args: {
     ...defaultArgs,

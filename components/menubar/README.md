@@ -1,3 +1,3 @@
-<!-- @license CC0-1.0 -->
+Regels:
 
-# Menu bar
+- Zet altijd een knop 'uitloggen' rechts in de Menubar.

@@ -18,7 +18,7 @@ export default {
 };
 
 export const WithIconsLeft = {
-  render: MenuBar.bind(),
+  render: MenuBar.bind({}),
   name: 'With icons left',
 
   args: {
@@ -28,7 +28,7 @@ export const WithIconsLeft = {
 };
 
 export const WithIconsRight = {
-  render: MenuBar.bind(),
+  render: MenuBar.bind({}),
   name: 'With icons right',
 
   args: {
