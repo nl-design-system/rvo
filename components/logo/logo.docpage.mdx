@@ -1,0 +1,25 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import documentation from "./CHANGELOG.md";
+import changeLog from "./CHANGELOG.md";
+import * as LogoStories from "./logo.stories";
+
+<Meta of={LogoStories} />
+
+<Title />
+
+Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo), [Specificaties logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/specificaties-logo) en [Logokleur](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/logokleuren).
+
+<Canvas of={LogoStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/images_

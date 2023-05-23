@@ -1,1 +1,1 @@
-# Skip link
+Documentatie voor skip-link

@@ -1,0 +1,24 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as CheckboxStories from "./form-checkbox.stories";
+
+<Meta of={CheckboxStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={CheckboxStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_

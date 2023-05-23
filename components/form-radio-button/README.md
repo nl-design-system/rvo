@@ -1,7 +1,3 @@
-<!-- @license CC0-1.0 -->
-
-# Radio button
-
 Een radio button zorgt ervoor dat een gebruiker een keuze kan maken uit verschillende opties.
 
 ## Wanneer gebruik je een radio button?

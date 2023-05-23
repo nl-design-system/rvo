@@ -19,7 +19,7 @@
   "devDependencies": {
     "@nl-rvo/assets": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
-    "@storybook/addon-docs": "6.5.9",
+    "@types/mdx": "2.0.5",
     "clsx": "1.2.1",
     "css-loader": "6.7.3",
     "css-minimizer-webpack-plugin": "4.2.2",

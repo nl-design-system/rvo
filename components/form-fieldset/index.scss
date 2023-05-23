@@ -5,4 +5,10 @@
 
 .utrecht-form-fieldset {
   --utrecht-space-around: 1;
+
+  background-color: var(--rvo-form-fieldset-background-color);
+  padding-block-end: var(--rvo-form-fieldset-padding-block-end);
+  padding-block-start: var(--rvo-form-fieldset-padding-block-start);
+  padding-inline-end: var(--rvo-form-fieldset-padding-inline-end);
+  padding-inline-start: var(--rvo-form-fieldset-padding-inline-start);
 }

@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2">Patronen</Heading>
               <p>Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren</p>
-              <Link to="/patterns">
+              <Link to="/patterns/layout/app-layout">
                 <RVOLink>Bekijk de patronen</RVOLink>
               </Link>
             </div>

@@ -1,0 +1,26 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as FormFeedbackStories from "./form-feedback.stories";
+
+<Meta of={FormFeedbackStories} name="Documentatie" />
+
+<Title />
+
+Let op: Gebruik de checkbox group altijd in combinatie met een heldere vraag erboven.
+
+<Canvas of={FormFeedbackStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_

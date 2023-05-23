@@ -17,9 +17,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -53,9 +53,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -91,9 +91,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -146,9 +146,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -185,9 +185,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -230,9 +230,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -305,9 +305,9 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:

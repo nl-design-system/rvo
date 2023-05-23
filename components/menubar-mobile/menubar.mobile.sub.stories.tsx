@@ -1,0 +1,62 @@
+import { argTypes, MobileMenuBar } from './template';
+
+export default {
+  title: 'Componenten/Menubar/Mobile',
+  component: MobileMenuBar,
+  argTypes: argTypes,
+
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+
+    docusaurus: {
+      link: 'menubar-mobile',
+    },
+  },
+};
+
+export const MobileSubmenu = {
+  render: MobileMenuBar.bind({}),
+  name: 'Mobile submenu',
+
+  args: {
+    size: 'md',
+
+    items: [
+      {
+        label: 'Home',
+        link: '#',
+      },
+      {
+        label: 'Expanded menu item',
+        link: '#',
+        active: true,
+      },
+      {
+        label: 'Uitloggen',
+        icon: 'versleutelen',
+        link: '#',
+      },
+    ],
+
+    submenuItems: [
+      {
+        label: 'Submenu item',
+        link: '#',
+      },
+      {
+        label: 'Submenu item',
+        link: '#',
+      },
+      {
+        label: 'Submenu item',
+        link: '#',
+      },
+    ],
+
+    useIcons: true,
+    iconPlacement: 'before',
+    isOpen: true,
+  },
+};

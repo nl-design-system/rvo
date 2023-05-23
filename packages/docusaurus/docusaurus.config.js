@@ -1,8 +1,8 @@
 // @ts-check
 const jsdom = require('jsdom');
 const path = require('path');
-const includeList = ['**/*.docs.{md,mdx}'];
-const excludeList = ['node_modules/**/*', '**/!(*.docs)*'];
+const includeList = ['**/*.docusaurus.{md,mdx}'];
+const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 const navigationConfig = require('./config/navigationConfig');
 const sidebarItemsGenerator = require('./config/sidebarItemsGenerator');
 

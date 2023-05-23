@@ -16,10 +16,7 @@ export interface IAccordionProps {
 
 export const argTypes = {
   items: {
-    type: {
-      name: 'array',
-      required: true,
-    },
+    control: 'object',
   },
   grijs: {
     control: 'boolean',

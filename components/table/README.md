@@ -1,5 +1,3 @@
-# Table documentatie
-
 Met tabellen toon en organiseer je data in rijen en kolommen.
 
 ## Wanneer gebruik je een tabel?

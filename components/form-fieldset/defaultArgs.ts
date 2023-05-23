@@ -26,5 +26,4 @@ export const defaultArgs: IFieldsetProps = {
   legend: 'Fieldset legend',
   disabled: false,
   fields: defaultFields,
-  hideFields: false,
 };

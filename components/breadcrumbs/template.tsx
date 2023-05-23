@@ -22,10 +22,7 @@ export interface IBreadcrumbProps {
 
 export const argTypes = {
   items: {
-    type: {
-      name: 'array',
-      required: true,
-    },
+    control: 'object',
   },
   size: {
     options: ['sm', 'md', 'lg'],

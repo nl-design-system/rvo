@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2019"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2019",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@nl-rvo/design-tokens/*": ["../../proprietary/design-tokens/*"],
+      "@nl-rvo/assets/*": ["../../proprietary/assets/*"],
+      "@docusaurus/components/*": ["../docusaurus/src/components/*"]
+    }
+  },
+  "include": ["**/*"],
+  "exclude": ["**/node_modules"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "paths": {
+    "@bootstrap-icons/*": ["node_modules/bootstrap-icons/*"]
+  }
+}

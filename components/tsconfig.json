@@ -11,12 +11,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react-jsx",
+    "types": ["node", "mdx"],
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
       "@nl-rvo/assets/*": ["../proprietary/assets/*"],
-      "@docusaurus/components/*": ["../packages/docusaurus/src/components/*"]
+      "@docusaurus/components/*": ["../packages/docusaurus/src/components/*"],
+      "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
     }
   },
   "include": ["**/*"],

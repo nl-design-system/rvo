@@ -1,0 +1,24 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as FooterStories from "./footer.stories";
+
+<Meta of={FooterStories} name="Documentatie" />
+
+<Title />
+Items containing a link will be rendered as text links with an icon (e.g. > Link content), otherwise items are rendered as
+generic HTML content.
+<Canvas of={FooterStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
+
+## Dependencies
+
+_@nl-rvo/assets/icons_

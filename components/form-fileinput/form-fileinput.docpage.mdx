@@ -1,0 +1,23 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import fieldDocumentation from "../form-field/README.md";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as FormFileInputStories from "./form-fileinput.stories";
+
+<Meta of={FormFileInputStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormFileInputStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+<Markdown>{fieldDocumentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>

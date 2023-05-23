@@ -1,0 +1,18 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as AccordionStories from "./accordion.stories";
+
+<Meta of={AccordionStories} name="Documentatie" />
+
+<Title />
+<Canvas of={AccordionStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>

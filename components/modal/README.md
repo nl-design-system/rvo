@@ -1,4 +1,4 @@
-# Modal Dialog
+# Modal
 
 Een modal is een dialoog dat verschijnt over de hoofd content van de pagina heen. Het doel is om de interactie met de gebruiker van de hoofd content te verplaatsen naar de modal dialoog. De hoofd content is slechts nog deels zichtbaar en interactie is uitsluitend mogelijk in de modal dialoog.
 

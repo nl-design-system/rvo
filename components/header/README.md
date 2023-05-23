@@ -1,3 +1,1 @@
-<!-- @license CC0-1.0 -->
-
-# Header
+Documentatie voor header

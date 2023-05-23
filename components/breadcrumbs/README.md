@@ -1,3 +1,1 @@
-<!-- @license CC0-1.0 -->
-
-# Breadcrumbs
+Documentation for breadcrumbs

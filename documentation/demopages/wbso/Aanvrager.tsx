@@ -101,7 +101,7 @@ const Aanvrager = () => {
                         expandableHelperTextTitle="Meer uitleg"
                         options={[
                           { id: 'wet-ib', label: 'Ja' },
-                          { id: 'wet-ib', label: 'Nee' },
+                          { id: 'wet-ib2', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
@@ -116,7 +116,7 @@ const Aanvrager = () => {
                         warningText="Voor u geldt in 2022 een forfaitar uurloon van €29."
                         options={[
                           { id: 'so', label: 'Ja' },
-                          { id: 'so', label: 'Nee' },
+                          { id: 'so2', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>

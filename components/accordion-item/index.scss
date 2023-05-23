@@ -4,6 +4,7 @@
  */
 
 @import "../layout-column-row/index";
+@import "../link/index";
 
 .rvo-accordion__item-summary .rvo-link {
   cursor: pointer;
@@ -11,6 +12,8 @@
   margin-block-end: 0;
   margin-block-start: 0;
   text-decoration: none;
+
+  @extend .rvo-link;
 }
 
 .rvo-accordion__item-summary .rvo-link:hover,

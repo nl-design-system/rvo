@@ -5,8 +5,9 @@
 import React from 'react';
 import { Button } from '../button/template';
 import './index.scss';
+import { defaultArgs } from './defaultArgs';
 
-interface ISkipLinkProps {
+export interface ISkipLinkProps {
   textContent?: string;
   anchorLink?: string;
 }
@@ -18,11 +19,6 @@ export const argTypes = {
   anchorLink: {
     control: 'text',
   },
-};
-
-export const defaultArgs: ISkipLinkProps = {
-  textContent: 'Direct naar de inhoud',
-  anchorLink: '#main',
 };
 
 export const SkipLink: React.FC<ISkipLinkProps> = ({

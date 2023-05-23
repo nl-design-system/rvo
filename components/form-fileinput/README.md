@@ -1,3 +1,3 @@
-<!-- @license CC0-1.0 -->
+Regels:
 
-# Form file input
+- Toon altijd bestandsrestricties (formaat, extensies, maximale bestandsgroote etc.) onder de upload knop.
