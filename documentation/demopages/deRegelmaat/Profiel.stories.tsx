@@ -8,6 +8,9 @@ const meta: Meta<typeof Profiel> = {
     status: {
       type: 'WORK IN PROGRESS',
     },
+    viewport: {
+      defaultViewport: 'mobile2',
+    },
   },
 };
 export default meta;
