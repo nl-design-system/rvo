@@ -6,7 +6,7 @@ type FontWeightDesignTokensProps = {
 
 const FontWeightDesignTokens = ({ tokens }: FontWeightDesignTokensProps) => {
   return (
-    <div className="design-tokens__container">
+    <div className="design-tokens__container" style={{ marginBlockEnd: 'var(--rvo-space-3xl)' }}>
       {tokens.map(({ name, path, value }) => {
         return (
           <div className="design-tokens__row" key={name}>

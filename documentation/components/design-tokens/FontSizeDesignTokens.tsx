@@ -6,13 +6,12 @@ type FontSizeDesignTokensProps = {
 
 const FontSizeDesignTokens = ({ tokens }: FontSizeDesignTokensProps) => {
   return (
-    <div className="design-tokens__container">
+    <div className="design-tokens__container" style={{ marginBlockEnd: 'var(--rvo-space-3xl)' }}>
       {tokens.map(({ name, path, attributes, value }) => {
         return (
-          <div className="design-tokens__row" key={name}>
-            <div className="design-tokens__column design-tokens__column--20">
+          <div className="design-tokens__row" style={{ marginBlockEnd: 'var(--rvo-space-md)' }} key={name}>
+            <div className="design-tokens__column design-tokens__column--15">
               <strong>{attributes.item}</strong>
-              <br />
               {`${16 * parseFloat(value)}px / ${value}`}
             </div>
             <div

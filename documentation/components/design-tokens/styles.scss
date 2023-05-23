@@ -1,5 +1,5 @@
 .design-tokens__container {
-  margin-block-end: 4em;
+  margin-block-end: 8em;
   margin-block-start: 2em;
 }
 
@@ -18,6 +18,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.design-tokens__column--15 {
+  width: 15%;
 }
 
 .design-tokens__column--20 {
