@@ -1,0 +1,21 @@
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import * as SkipLinkStories from "./skip-link.stories";
+
+<Meta of={SkipLinkStories} name="Documentatie" />
+
+<Title />
+
+Druk op TAB om de skip link knop te tonen.
+
+<Canvas of={SkipLinkStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
