@@ -1,3 +1,3 @@
-<!-- @license CC0-1.0 -->
+Regels:
 
-# Progress tracker
+- Gebruik altijd een progress tracker in plaats van bijvoorbeeld tabbladen voor stappen in een formulier.
