@@ -1,3 +1,1 @@
-<!-- @license CC0-1.0 -->
-
-# Status Icon
+Documentatie voor status icon
