@@ -65,7 +65,7 @@ const VormvrijeAanvraag = () => {
                         helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."
                         options={[
                           { id: 'vva', label: 'Ja' },
-                          { id: 'vva', label: 'Nee' },
+                          { id: 'vva2', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
