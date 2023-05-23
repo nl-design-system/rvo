@@ -2,22 +2,25 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
-    "declaration": true,
+    "declaration": false,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2017"],
+    "lib": ["dom", "es2019"],
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "es2017",
+    "target": "es2019",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react-jsx",
-    "skipLibCheck": true
+    "types": ["node"],
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@nl-rvo/components/*": ["../proprietary/components/*"],
+      "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
+      "@nl-rvo/assets/*": ["../proprietary/assets/*"],
+      "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
+    }
   },
-  "baseUrl": "./",
-  "paths": {
-    "@nl-rvo/components/*": ["../proprietary/components/*"],
-    "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
-    "@nl-rvo/assets/*": ["../proprietary/assets/*"]
-  },
+  "include": ["**/*"],
   "exclude": ["**/node_modules"]
 }
