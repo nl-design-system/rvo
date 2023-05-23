@@ -12,7 +12,7 @@ import './index.scss';
 export interface ILogoProps {
   title?: string;
   subtitle?: string;
-  useEnglish: boolean;
+  useEnglish?: boolean;
   className?: string;
 }
 
