@@ -14,7 +14,7 @@
     "push": "uxpin-merge push"
   },
   "engines": {
-    "node": ">=16.14",
+    "node": "18.x",
     "npm": ">=8.3.0"
   },
   "devDependencies": {
