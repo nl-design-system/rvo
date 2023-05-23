@@ -1,0 +1,22 @@
+import { Canvas, Controls, Markdown, Meta, Story, Title } from "@storybook/blocks";
+import documentation from "./README.md";
+import changeLog from "./CHANGELOG.md";
+import { defaultArgs } from "./defaultArgs";
+import * as TableStories from "./table.stories";
+
+<Meta of={TableStories} name="Documentatie" />
+
+<Title />
+
+Let op: Zorg er altijd voor dat alle kolommen zijn voorzien van een naam.
+
+<Canvas of={TableStories.Default} layout="padded" />
+<Controls />
+
+# Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
