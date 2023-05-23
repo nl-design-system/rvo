@@ -1,7 +1,6 @@
 import { useParameter } from '@storybook/api';
 import { IconButton, Icons } from '@storybook/components';
 import { addons, types } from '@storybook/manager-api';
-// eslint-disable-next-line no-unused-vars
 // @ts-expect-error
 import React from 'react';
 
