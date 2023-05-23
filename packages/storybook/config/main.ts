@@ -23,6 +23,7 @@ const config: StorybookConfig = {
   },
   stories: [
     '../../../documentation/pages/**/*.docpage.mdx',
+    '../../../documentation/demopages/**/*.stories.@(jsx|tsx)',
     '../../../components/**!(node_modules)/*.docpage.mdx',
     '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
   ],
