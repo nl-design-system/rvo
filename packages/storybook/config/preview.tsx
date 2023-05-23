@@ -92,7 +92,7 @@ const parameters = {
     page: () => <div>test</div>,
   },
   ...addonStatus,
-  layout: 'fullscreen',
+  layout: 'centered',
   html: {
     root: '#storybook-root',
     removeEmptyComments: true,
