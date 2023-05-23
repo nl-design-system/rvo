@@ -9,3 +9,5 @@ export const Favicon = (props) => {
   const className = props && props.className ? props.className : '';
   return <img src={FavIconSrc} className={clsx('rvo-favicon', className)} />;
 };
+
+export default Favicon;
