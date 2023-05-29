@@ -32,7 +32,7 @@
   "devDependencies": {
     "@docusaurus/core": "2.2.0",
     "@docusaurus/eslint-plugin": "2.2.0",
-    "@docusaurus/module-type-aliases": "2.2.0",
+    "@docusaurus/module-type-aliases": "2.4.1",
     "@docusaurus/preset-classic": "2.2.0",
     "@docusaurus/theme-classic": "2.2.0",
     "@docusaurus/theme-common": "2.2.0",
