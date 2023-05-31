@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { IconType } from '@nl-rvo/assets/icons/types';
+import { linkTo } from '@storybook/addon-links';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { Icon, iconColors, options as iconOptions } from '../icon/template';
@@ -11,6 +12,7 @@ import './index.scss';
 export interface ILinkProps {
   content?: string;
   href?: string;
+  onClick?: (event) => void;
   showIcon?: string;
   icon?: IconType;
   iconSize?: string;
@@ -111,7 +113,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   };
   if (href) {
     return (
-      <a href={href} {...props}>
+      <a {...(href.startsWith('story:') ? { onClick: linkTo(href.replace('story:', '')) } : { href })} {...props}>
         {showIcon === 'before' && iconMarkup}
         {children || content}
         {showIcon === 'after' && iconMarkup}
