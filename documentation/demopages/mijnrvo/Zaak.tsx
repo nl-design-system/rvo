@@ -1,4 +1,5 @@
 import { Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
@@ -47,10 +48,7 @@ const Zaak = () => {
                       <div>
                         De aanvraag is <strong>bij u in behandeling</strong>. Dat betekent dat deze nog niet is
                         ingediend. U kunt de{' '}
-                        <a
-                          href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
-                          className="rvo-link"
-                        >
+                        <a onClick={linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens")} className="rvo-link">
                           aanvraag openen
                         </a>
                         , verder invullen en dan indienen.
@@ -59,7 +57,7 @@ const Zaak = () => {
                   </div>
                   <a
                     className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                    href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story"
+                    onClick={linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens")}
                   >
                     Aanvraag openen
                   </a>

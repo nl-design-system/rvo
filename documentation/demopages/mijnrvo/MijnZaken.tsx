@@ -1,4 +1,5 @@
 import { Fieldset, Header, Heading, Icon, Link, MaxWidthLayout, MenuBar, TextInputField } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
@@ -26,14 +27,14 @@ const MijnZaken = () => {
             {
               label: 'Zaken',
               active: true,
-              link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story',
+              link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken"),
             },
-            { label: 'Diensten', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--diensten&viewMode=story' },
+            { label: 'Diensten', link: linkTo("Demo pagina's/Mijn RVO/Diensten") },
             { label: 'Help', link: '#' },
-            { label: 'Profiel', link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--profiel&viewMode=story' },
+            { label: 'Profiel', link: linkTo("Demo pagina's/Mijn RVO/Profiel") },
             {
               label: 'Uitloggen',
-              link: 'iframe.html?args=&id=demo-pagina-s-mijn-rvo--inloggen&viewMode=story',
+              link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
@@ -131,7 +132,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}>
                       Jonge Vissers 2022
                     </a>
                   </h3>
@@ -147,7 +148,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}>
                       POP3 Samenwerking Pilots gezonde kalverketen
                     </a>
                   </h3>
@@ -163,7 +164,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}>
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>
@@ -179,7 +180,7 @@ const MijnZaken = () => {
                 </div>
                 <div className="rvo-item-list-detail rvo-item-list-detail--description">
                   <h3 className="utrecht-heading-3">
-                    <a className="rvo-link" href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story">
+                    <a className="rvo-link" onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}>
                       OverheidsOpdrachten NVLG
                     </a>
                   </h3>

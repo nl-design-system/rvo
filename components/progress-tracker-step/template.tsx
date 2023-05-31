@@ -13,7 +13,7 @@ export interface IProgressTrackerStepProps {
   line: string;
   size: string;
   label: string;
-  link: string;
+  link: string | ((event: any) => void);
 }
 
 export const argTypes = {

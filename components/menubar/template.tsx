@@ -8,10 +8,11 @@ import React from 'react';
 import { Icon } from '../icon/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+
 export interface IMenuBarItem {
   label: string;
   icon?: IconType;
-  link: string;
+  link: string | ((event: any) => void);
   align?: 'left' | 'right';
   active?: boolean;
 }
@@ -119,7 +120,7 @@ export const parseMenuItem = ({
       )}
       {...otherProps}
     >
-      <a className="utrecht-topnav__link" href={link}>
+      <a className="utrecht-topnav__link" {...(typeof link === 'function' ? { onClick: link } : { href: link })}>
         {itemMarkup}
       </a>
     </li>

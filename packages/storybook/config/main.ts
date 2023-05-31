@@ -42,6 +42,7 @@ const config: StorybookConfig = {
     '@storybook/preset-scss',
     'storybook-addon-themes',
     '@whitespace/storybook-addon-html',
+    '@storybook/addon-links',
   ],
   staticDirs: ['../../../documentation/demopages/common'],
   typescript: { check: true, checkOptions: {} },

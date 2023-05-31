@@ -1,4 +1,5 @@
 import { Heading, Icon } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 
 const Bewaard = () => {
@@ -13,10 +14,7 @@ const Bewaard = () => {
             </p>
             <ul className="rvo-maatregelen">
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   Onderzaai vanggewas
                 </a>
                 <details className="rvo-bewaar-knop">
@@ -31,10 +29,7 @@ const Bewaard = () => {
                 </details>
               </li>
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Vroeg oogsten rooigewas
                 </a>
@@ -50,10 +45,7 @@ const Bewaard = () => {
                 </details>
               </li>
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Grasland met kruiden
                 </a>
@@ -69,10 +61,7 @@ const Bewaard = () => {
                 </details>
               </li>
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Rustgewas
                 </a>
@@ -91,17 +80,14 @@ const Bewaard = () => {
           </div>
           <ul className="rvo-app-menu">
             <li className="rvo-app-menu-item">
-              <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--zoeken&viewMode=story"
-                className="rvo-app-menu-item-link"
-              >
+              <a onClick={linkTo("Demo pagina's/de Regelmaat/Zoeken")} className="rvo-app-menu-item-link">
                 <Icon icon="zoek" color="hemelblauw" size="2xl" />
                 Zoeken
               </a>
             </li>
             <li className="rvo-app-menu-item">
               <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--bewaard&viewMode=story"
+                onClick={linkTo("Demo pagina's/de Regelmaat/Bewaard")}
                 className="rvo-app-menu-item-link rvo-app-menu-item-link--active"
               >
                 <Icon icon="favoriet" color="wit" size="2xl" />
@@ -109,19 +95,13 @@ const Bewaard = () => {
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
-                className="rvo-app-menu-item-link "
-              >
+              <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregelen")} className="rvo-app-menu-item-link">
                 <Icon icon="plus" color="hemelblauw" size="2xl" />
                 Suggesties
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
-                className="rvo-app-menu-item-link"
-              >
+              <a onClick={linkTo("Demo pagina's/de Regelmaat/Profiel")} className="rvo-app-menu-item-link">
                 <Icon icon="user" color="hemelblauw" size="2xl" />
                 Profiel
               </a>

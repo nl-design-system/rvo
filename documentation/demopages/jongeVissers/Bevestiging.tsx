@@ -1,4 +1,5 @@
 import { Header, Heading, LayoutColumnRow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -16,56 +17,56 @@ const Bevestiging = () => {
                 {
                   state: 'completed',
                   label: 'Controleer uw gegevens',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Correspondentie',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--correspondentie&viewMode=story',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Datum verleningsverzoek',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--datum&viewMode=story',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Datum"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Project vragen',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--project&viewMode=story',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Project"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Kosten',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--kosten',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Bijlagen',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--bijlagen',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Samenvatting',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--samenvatting',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Ondertekening',
-                  link: 'iframe.html?args=&id=demo-demo-pagina-s-jonge-vissers--ondertekening&viewMode=story',
+                  link: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
                   size: 'md',
                   line: 'straight',
                 },

@@ -10,7 +10,8 @@ import { defaultArgs } from './defaultArgs';
 import './index.scss';
 export interface ILinkProps {
   content?: string;
-  href?: string;
+  href?: string | ((event: any) => void);
+  onClick?: (event) => void;
   showIcon?: string;
   icon?: IconType;
   iconSize?: string;
@@ -111,7 +112,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   };
   if (href) {
     return (
-      <a href={href} {...props}>
+      <a {...(typeof href === 'function' ? { onClick: href } : { href })} {...props}>
         {showIcon === 'before' && iconMarkup}
         {children || content}
         {showIcon === 'after' && iconMarkup}

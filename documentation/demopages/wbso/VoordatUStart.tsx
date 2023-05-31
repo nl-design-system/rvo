@@ -8,6 +8,7 @@ import {
   MenuBar,
   ProgressTracker,
 } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
@@ -24,21 +25,21 @@ const VoordatUStart = () => {
               {
                 state: 'doing',
                 label: 'Voordat u start',
-                link: 'iframe.html?args=&id=demo-demo-pagina-s-wbso--01-voordat-u-start&viewMode=story',
+                link: linkTo("Demo pagina's/WBSO/Voordat u start"),
                 size: 'md',
                 line: 'straight',
               },
               {
                 state: 'incomplete',
                 label: 'Vormvrije aanvraag',
-                link: 'iframe.html?args=&id=demo-demo-pagina-s-wbso--02-vormvrije-aanvraag&viewMode=story',
+                link: linkTo("Demo pagina's/WBSO/Vormvrije aanvraag"),
                 size: 'md',
                 line: 'straight',
               },
               {
                 state: 'incomplete',
                 label: 'Aanvrager',
-                link: 'iframe.html?args=&id=demo-demo-pagina-s-wbso--03-aanvrager&viewMode=story',
+                link: linkTo("Demo pagina's/WBSO/Aanvrager"),
                 size: 'md',
                 line: 'straight',
               },
