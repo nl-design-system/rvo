@@ -34,6 +34,7 @@
     "@nl-rvo/design-tokens": "workspace:*",
     "@storybook/addon-a11y": "7.0.14",
     "@storybook/addon-essentials": "7.0.14",
+    "@storybook/addon-links": "7.0.18",
     "@storybook/api": "7.0.14",
     "@storybook/blocks": "7.0.14",
     "@storybook/cli": "7.0.14",
