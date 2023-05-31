@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import VormvrijeAanvraag from './VormvrijeAanvraag';
 
 const meta: Meta<typeof VormvrijeAanvraag> = {
-  title: "Demo pagina's/WBSO/02 Vormvrije aanvraag",
+  title: "Demo pagina's/WBSO/Vormvrije aanvraag",
   component: VormvrijeAanvraag,
   parameters: {
     status: {
@@ -14,4 +14,4 @@ export default meta;
 
 type Story = StoryObj<typeof VormvrijeAanvraag>;
 
-export const Default: Story = { name: '02 Vormvrije aanvraag' };
+export const Default: Story = { name: 'Vormvrije aanvraag' };
