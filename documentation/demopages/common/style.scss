@@ -1655,6 +1655,7 @@
   .rvo-app-menu-item-link {
     align-items: center;
     color: var(--rvo-color-donkerblauw);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: var(--rvo-space-3xs);
@@ -1668,6 +1669,7 @@
   .rvo-app-menu-item-link--active {
     background-color: var(--rvo-color-hemelblauw);
     color: var(--rvo-color-wit);
+    cursor: default;
   }
 
   .rvo-maatregelen {
@@ -1691,6 +1693,7 @@
 
   .rvo-maatregel-link {
     color: var(--rvo-color-hemelblauw);
+    cursor: pointer;
     display: flex;
     font-size: var(--rvo-font-size-lg);
     font-weight: var(--rvo-font-weight-bold);

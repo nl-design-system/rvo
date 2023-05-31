@@ -1,3 +1,4 @@
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 
 const Splash = () => {
@@ -129,10 +130,7 @@ const Splash = () => {
               />
             </svg>
           </div>
-          <a
-            href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--akkoord&viewMode=story"
-            className="rvo-next-link"
-          ></a>
+          <a onClick={linkTo("Demo pagina's/de Regelmaat/Akkoord")} className="rvo-next-link"></a>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { Heading } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 
 const Akkoord = () => {
@@ -33,8 +34,8 @@ const Akkoord = () => {
               <br /> Deze app is momenteel in de beta fase en daarom onderhevig aan constante verbeteringen.
             </p>
             <a
-              href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel-intro&viewMode=story"
               className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
+              onClick={linkTo("Demo pagina's/de Regelmaat/Profiel intro")}
             >
               Akkoord
             </a>

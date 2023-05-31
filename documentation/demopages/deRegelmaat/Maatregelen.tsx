@@ -1,4 +1,5 @@
 import { Heading, Icon } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 
 const Maatregelen = () => {
@@ -22,7 +23,7 @@ const Maatregelen = () => {
                   <div>
                     Uw profiel is momenteel voor <strong>80%</strong> ingevuld.&nbsp;
                     <a
-                      href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
+                      onClick={linkTo("Demo pagina's/de Regelmaat/Profiel")}
                       className="rvo-link rvo-link--no-underline"
                     >
                       Maak uw profiel compleet
@@ -34,10 +35,7 @@ const Maatregelen = () => {
             </div>
             <ul className="rvo-maatregelen">
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   Onderzaai vanggewas
                 </a>
                 <details className="rvo-bewaar-knop">
@@ -52,10 +50,7 @@ const Maatregelen = () => {
                 </details>
               </li>
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Vroeg oogsten rooigewas
                 </a>
@@ -71,10 +66,7 @@ const Maatregelen = () => {
                 </details>
               </li>
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Grasland met kruiden
                 </a>
@@ -90,10 +82,7 @@ const Maatregelen = () => {
                 </details>
               </li>
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   {/* <img src="images/regelmaat/grond-icon.svg" className="rvo-maatregel-icon" /> */}
                   Rustgewas
                 </a>
@@ -112,10 +101,7 @@ const Maatregelen = () => {
             Mogelijk ook interessant
             <ul className="rvo-maatregelen">
               <li className="rvo-maatregel">
-                <a
-                  href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregel&viewMode=story"
-                  className="rvo-maatregel-link"
-                >
+                <a onClick={linkTo("Demo pagina's/de Regelmaat/Maatregel")} className="rvo-maatregel-link">
                   Verlengde weidegang
                 </a>
                 <details className="rvo-bewaar-knop">
@@ -133,26 +119,20 @@ const Maatregelen = () => {
           </div>
           <ul className="rvo-app-menu">
             <li className="rvo-app-menu-item">
-              <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--zoeken&viewMode=story"
-                className="rvo-app-menu-item-link"
-              >
+              <a onClick={linkTo("Demo pagina's/de Regelmaat/Zoeken")} className="rvo-app-menu-item-link">
                 <Icon icon="zoek" color="hemelblauw" size="2xl" />
                 Zoeken
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--bewaard&viewMode=story"
-                className="rvo-app-menu-item-link"
-              >
+              <a onClick={linkTo("Demo pagina's/de Regelmaat/Bewaard")} className="rvo-app-menu-item-link">
                 <Icon icon="favoriet" color="hemelblauw" size="2xl" />
                 Bewaard
               </a>
             </li>
             <li className="rvo-app-menu-item">
               <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--maatregelen&viewMode=story"
+                onClick={linkTo("Demo pagina's/de Regelmaat/Maatregelen")}
                 className="rvo-app-menu-item-link rvo-app-menu-item-link--active"
               >
                 <Icon icon="plus" color="wit" size="2xl" />
@@ -160,10 +140,7 @@ const Maatregelen = () => {
               </a>
             </li>
             <li className="rvo-app-menu-item">
-              <a
-                href="iframe.html?args=&id=demo-pagina-s-de-regelmaat--profiel&viewMode=story"
-                className="rvo-app-menu-item-link"
-              >
+              <a onClick={linkTo("Demo pagina's/de Regelmaat/Profiel")} className="rvo-app-menu-item-link">
                 <Icon icon="user" color="hemelblauw" size="2xl" />
                 Profiel
               </a>
