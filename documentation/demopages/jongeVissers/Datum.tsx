@@ -9,6 +9,7 @@ import {
   MenuBar,
   ProgressTracker,
 } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 
@@ -26,21 +27,21 @@ const Datum = () => {
                 {
                   state: 'completed',
                   label: 'Controleer uw gegevens',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--controleer-uw-gegevens&viewMode=story',
+                  link: "story:Demo pagina's/Jonge Vissers/Controleer uw gegevens",
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Correspondentie',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--correspondentie&viewMode=story',
+                  link: "story:Demo pagina's/Jonge Vissers/Correspondentie",
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'doing',
                   label: 'Datum verleningsverzoek',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--datum&viewMode=story',
+                  link: "story:Demo pagina's/Jonge Vissers/Datum",
                   size: 'md',
                   line: 'straight',
                 },
@@ -48,21 +49,21 @@ const Datum = () => {
                 {
                   state: 'incomplete',
                   label: 'Project vragen',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--project&viewMode=story',
+                  link: "story:Demo pagina's/Jonge Vissers/Project",
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Kosten',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten',
+                  link: "story:Demo pagina's/Jonge Vissers/Kosten",
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Bijlagen',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--bijlagen',
+                  link: "story:Demo pagina's/Jonge Vissers/Bijlagen",
                   size: 'md',
                   line: 'straight',
                 },
@@ -70,14 +71,14 @@ const Datum = () => {
                 {
                   state: 'incomplete',
                   label: 'Samenvatting',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--samenvatting',
+                  link: "story:Demo pagina's/Jonge Vissers/Samenvatting",
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Ondertekening',
-                  link: 'iframe.html?args=&id=demo-pagina-s-jonge-vissers--ondertekening&viewMode=story',
+                  link: "story:Demo pagina's/Jonge Vissers/Ondertekening",
                   size: 'md',
                   line: 'straight',
                 },
@@ -104,13 +105,13 @@ const Datum = () => {
                     <div className="rvo-button-group">
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--zaak&viewMode=story"
+                        onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
                       >
                         Opslaan en sluiten
                       </a>
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--project&viewMode=story"
+                        onClick={linkTo("Demo pagina's/Jonge Vissers/Project")}
                       >
                         Opslaan en verder
                       </a>
