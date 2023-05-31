@@ -1,4 +1,5 @@
 import { Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 
 const Inloggen = () => {
@@ -62,7 +63,7 @@ const Inloggen = () => {
                     <p>
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
+                        onClick={linkTo("Demo pagina's/Mijn RVO/Mijn zaken")}
                       >
                         Inloggen met e-Herkenning 2
                       </a>
@@ -70,7 +71,7 @@ const Inloggen = () => {
                       <br />
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
+                        onClick={linkTo("Demo pagina's/Mijn RVO/Mijn zaken")}
                       >
                         Inloggen met e-Herkenning 3
                       </a>
@@ -99,7 +100,7 @@ const Inloggen = () => {
 
                     <a
                       className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                      href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
+                      onClick={linkTo("Demo pagina's/Mijn RVO/Mijn zaken")}
                     >
                       Inloggen met DigiD
                     </a>
@@ -124,7 +125,7 @@ const Inloggen = () => {
 
                     <a
                       className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                      href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
+                      onClick={linkTo("Demo pagina's/Mijn RVO/Mijn zaken")}
                     >
                       EU Login
                     </a>
@@ -145,7 +146,7 @@ const Inloggen = () => {
 
                     <a
                       className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                      href="iframe.html?args=&id=demo-pagina-s-mijn-rvo--mijn-zaken&viewMode=story"
+                      onClick={linkTo("Demo pagina's/Mijn RVO/Mijn zaken")}
                     >
                       Anders inloggen
                     </a>
