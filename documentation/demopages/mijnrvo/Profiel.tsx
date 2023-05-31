@@ -1,4 +1,5 @@
 import { Button, Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import { useState } from 'react';
 import '../common/style.scss';
 
@@ -17,16 +18,16 @@ const Profiel = () => {
           </summary>
           <MenuBar
             items={[
-              { label: 'Zaken', link: "story:Demo pagina's/Mijn RVO/Mijn zaken" },
-              { label: 'Diensten', link: "story:Demo pagina's/Mijn RVO/Diensten" },
+              { label: 'Zaken', link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken") },
+              { label: 'Diensten', link: linkTo("Demo pagina's/Mijn RVO/Diensten") },
               { label: 'Help', link: '#' },
               {
                 label: 'Profiel',
-                link: "story:Demo pagina's/Mijn RVO/Profiel",
+                link: linkTo("Demo pagina's/Mijn RVO/Profiel"),
               },
               {
                 label: 'Uitloggen',
-                link: "story:Demo pagina's/Mijn RVO/Inloggen",
+                link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
                 align: 'right',
               },
               { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
@@ -39,17 +40,17 @@ const Profiel = () => {
         </details>
         <MenuBar
           items={[
-            { label: 'Zaken', link: "story:Demo pagina's/Mijn RVO/Mijn zaken" },
-            { label: 'Diensten', link: "story:Demo pagina's/Mijn RVO/Diensten" },
+            { label: 'Zaken', link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken") },
+            { label: 'Diensten', link: linkTo("Demo pagina's/Mijn RVO/Diensten") },
             { label: 'Help', link: '#' },
             {
               label: 'Profiel',
               active: true,
-              link: "story:Demo pagina's/Mijn RVO/Profiel",
+              link: linkTo("Demo pagina's/Mijn RVO/Profiel"),
             },
             {
               label: 'Uitloggen',
-              link: "story:Demo pagina's/Mijn RVO/Inloggen",
+              link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },

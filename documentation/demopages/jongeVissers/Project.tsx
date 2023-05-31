@@ -29,21 +29,21 @@ const Project = () => {
                 {
                   state: 'completed',
                   label: 'Controleer uw gegevens',
-                  link: "story:Demo pagina's/Jonge Vissers/Controleer uw gegevens",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Correspondentie',
-                  link: "story:Demo pagina's/Jonge Vissers/Correspondentie",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Datum verleningsverzoek',
-                  link: "story:Demo pagina's/Jonge Vissers/Datum",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Datum"),
 
                   size: 'md',
                   line: 'straight',
@@ -51,7 +51,7 @@ const Project = () => {
                 {
                   state: 'doing',
                   label: 'Project vragen',
-                  link: "story:Demo pagina's/Jonge Vissers/Project",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Project"),
 
                   size: 'md',
                   line: 'straight',
@@ -59,7 +59,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Kosten',
-                  link: "story:Demo pagina's/Jonge Vissers/Kosten",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
 
                   size: 'md',
                   line: 'straight',
@@ -67,7 +67,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Bijlagen',
-                  link: "story:Demo pagina's/Jonge Vissers/Bijlagen",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
 
                   size: 'md',
                   line: 'straight',
@@ -76,7 +76,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Samenvatting',
-                  link: "story:Demo pagina's/Jonge Vissers/Samenvatting",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
 
                   size: 'md',
                   line: 'straight',
@@ -84,7 +84,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Ondertekening',
-                  link: "story:Demo pagina's/Jonge Vissers/Ondertekening",
+                  link: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
 
                   size: 'md',
                   line: 'straight',

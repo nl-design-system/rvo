@@ -9,6 +9,7 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
+import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
 
@@ -35,18 +36,18 @@ const Diensten = () => {
           items={[
             {
               label: 'Zaken',
-              link: "story:Demo pagina's/Mijn RVO/Mijn zaken",
+              link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken"),
             },
             {
               label: 'Diensten',
               active: true,
-              link: "story:Demo pagina's/Mijn RVO/Diensten",
+              link: linkTo("Demo pagina's/Mijn RVO/Diensten"),
             },
             { label: 'Help', link: '#' },
-            { label: 'Profiel', link: "story:Demo pagina's/Mijn RVO/Profiel" },
+            { label: 'Profiel', link: linkTo("Demo pagina's/Mijn RVO/Profiel") },
             {
               label: 'Uitloggen',
-              link: "story:Demo pagina's/Mijn RVO/Inloggen",
+              link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },

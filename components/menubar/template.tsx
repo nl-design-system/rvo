@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { IconType } from '@nl-rvo/assets/icons/types';
-import { linkTo } from '@storybook/addon-links';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../icon/template';
@@ -13,7 +12,7 @@ import './index.scss';
 export interface IMenuBarItem {
   label: string;
   icon?: IconType;
-  link: string;
+  link: string | ((event: any) => void);
   align?: 'left' | 'right';
   active?: boolean;
 }
@@ -121,10 +120,7 @@ export const parseMenuItem = ({
       )}
       {...otherProps}
     >
-      <a
-        className="utrecht-topnav__link"
-        {...(link.startsWith('story:') ? { onClick: linkTo(link.replace('story:', '')) } : { href: link })}
-      >
+      <a className="utrecht-topnav__link" {...(typeof link === 'function' ? { onClick: link } : { href: link })}>
         {itemMarkup}
       </a>
     </li>
