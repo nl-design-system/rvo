@@ -131,9 +131,6 @@ importers:
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
-      '@storybook/addon-links':
-        specifier: file:../packages/storybook/node_modules/@storybook/addon-links
-        version: file:packages/storybook/node_modules/@storybook/addon-links(react-dom@18.2.0)(react@18.2.0)
       '@types/mdx':
         specifier: 2.0.5
         version: 2.0.5
@@ -30391,32 +30388,4 @@ packages:
     resolution: {directory: packages/components-css, type: directory}
     name: '@nl-rvo/component-library-css'
     version: 1.0.0-alpha.316
-    dev: true
-
-  file:packages/storybook/node_modules/@storybook/addon-links(react-dom@18.2.0)(react@18.2.0):
-    resolution: {directory: packages/storybook/node_modules/@storybook/addon-links, type: directory}
-    id: file:packages/storybook/node_modules/@storybook/addon-links
-    name: '@storybook/addon-links'
-    version: 7.0.18
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/client-logger': 7.0.18
-      '@storybook/core-events': 7.0.18
-      '@storybook/csf': 0.1.0
-      '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.0.18(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.0.18
-      '@storybook/router': 7.0.18(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.0.18
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      ts-dedent: 2.2.0
     dev: true
