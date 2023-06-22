@@ -16,8 +16,8 @@ const Zoeken = () => {
                 invalid={false}
                 options={[
                   { id: 'optionA-cb', label: 'die eenvoudig te realiseren zijn' },
-                  { id: 'optionB-cb', label: 'die duurzaam zijn' },
-                  { id: 'optionC-cb', label: 'die financieel interessant zijn' },
+                  { id: 'optionB-cb', label: 'die financieel interessant zijn' },
+                  { id: 'optionC-cb', label: 'die duurzaam zijn' },
                 ]}
               ></CheckboxField>
               <SelectField
