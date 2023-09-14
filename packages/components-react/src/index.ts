@@ -20,3 +20,4 @@ export { Footer } from './Footer';
 export { FooterMenu } from './FooterMenu';
 export { Link } from './Link';
 export { Icon } from './Icon';
+export { Logo } from './Logo';
