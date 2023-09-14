@@ -5,6 +5,7 @@
 
 // Components by RVO
 export { Footer } from './Footer';
+export { FooterMenu } from './FooterMenu';
 export { Icon } from './Icon';
 export { Link } from './Link';
 export { Logo } from './Logo';
