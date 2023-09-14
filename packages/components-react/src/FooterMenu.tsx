@@ -4,12 +4,12 @@
  */
 import { Heading, Link } from './index';
 
-interface IFooterMenuLinkProps {
+export interface IFooterMenuLinkProps {
   textContent: string;
   href?: string;
 }
 
-interface IFooterMenuProps {
+export interface IFooterMenuProps {
   links: IFooterMenuLinkProps[];
   heading?: string;
 }

@@ -10,7 +10,7 @@ export type IconColor = 'hemelblauw' | 'wit' | 'zwart';
 
 export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
 
-interface IconProps extends UtrechtIconProps {
+export interface IconProps extends UtrechtIconProps {
   icon: string;
   size?: string | IconSize;
   color?: string | IconColor;
