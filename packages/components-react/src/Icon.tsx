@@ -5,7 +5,6 @@
 import { Icon as UtrechtIcon } from '@utrecht/component-library-react';
 import type { IconProps as UtrechtIconProps } from '@utrecht/component-library-react/dist/Icon';
 import clsx from 'clsx';
-import React from 'react';
 
 export type IconColor = 'hemelblauw' | 'wit' | 'zwart';
 
@@ -17,7 +16,7 @@ interface IconProps extends UtrechtIconProps {
   color?: string | IconColor;
 }
 
-export const Icon: React.FC<IconProps> = ({ icon, size, color, className }) => {
+export const Icon = ({ icon, size, color, className }: IconProps) => {
   let iconName = icon;
   if (icon.indexOf(' > ') > -1) {
     iconName = icon.split(' > ')[1];

@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React from 'react';
 import { Heading, Link } from './index';
 
 interface IFooterMenuLinkProps {
@@ -15,7 +14,7 @@ interface IFooterMenuProps {
   heading?: string;
 }
 
-export const FooterMenu: React.FC<IFooterMenuProps> = ({ links, heading }) => {
+export const FooterMenu = ({ links, heading }: IFooterMenuProps) => {
   return (
     <ul className="rvo-footer-menu">
       {heading?.length && (
