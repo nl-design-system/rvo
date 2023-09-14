@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef } from 'react';
 
-interface LogoProps {
+export interface LogoProps {
   title?: string;
   subtitle?: string;
   className?: string;

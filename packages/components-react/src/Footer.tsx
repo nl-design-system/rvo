@@ -6,17 +6,17 @@ import { PageFooter } from '@utrecht/component-library-react';
 import { PropsWithChildren } from 'react';
 // import { MaxWidthLayout } from '../../max-width-layout/template';
 
-interface IFooterItem {
+export interface IFooterItem {
   content: string;
   link?: string;
 }
 
-interface IFooterColumn {
+export interface IFooterColumn {
   label?: string;
   items: IFooterItem[];
 }
 
-interface IFooterProps {
+export interface IFooterProps {
   columns: IFooterColumn[];
 }
 
