@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ForwardedRef, forwardRef } from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 
 interface LogoProps {
   title?: string;
@@ -206,8 +206,8 @@ export const Emblem = () => (
   </svg>
 );
 
-export const Logo: React.FC<LogoProps> = forwardRef(
-  ({ className, title = '', subtitle = '' }, ref: ForwardedRef<HTMLDivElement>) => {
+export const Logo = forwardRef(
+  ({ className, title = '', subtitle = '' }: LogoProps, ref: ForwardedRef<HTMLDivElement>) => {
     return (
       <div ref={ref} className={clsx('rvo-logo', className)}>
         <div className="rvo-logo__emblem">

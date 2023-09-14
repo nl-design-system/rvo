@@ -5,7 +5,7 @@
 import { Link as UtrechtLink } from '@utrecht/component-library-react';
 import type { LinkProps as UtrechtLinkProps } from '@utrecht/component-library-react/dist/Link';
 import clsx from 'clsx';
-import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Icon } from './index';
 
 export interface ILinkProps extends UtrechtLinkProps {
@@ -16,9 +16,18 @@ export interface ILinkProps extends UtrechtLinkProps {
   noUnderline?: boolean;
 }
 
-export const Link: React.FC<PropsWithChildren<ILinkProps>> = forwardRef(
+export const Link = forwardRef(
   (
-    { children, showIcon, icon, iconSize, iconColor, noUnderline = false, className, ...restProps },
+    {
+      children,
+      showIcon,
+      icon,
+      iconSize,
+      iconColor,
+      noUnderline = false,
+      className,
+      ...restProps
+    }: PropsWithChildren<ILinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const iconMarkup = icon ? (
