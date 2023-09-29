@@ -3,13 +3,14 @@ import { Preview, StoryContext, StoryFn } from '@storybook/react';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import * as ReactDOMServer from 'react-dom/server';
-import theme from './theme';
 import './preview.scss';
+import theme from './theme';
 
 import '@nl-rvo/assets/fonts/index.css';
 import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
+import '@nl-rvo/rijkshuisstijl-design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
 
 // Configure @etchteam/storybook-addon-status

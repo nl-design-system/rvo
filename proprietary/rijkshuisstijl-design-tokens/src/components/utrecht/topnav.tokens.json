@@ -1,0 +1,25 @@
+{
+  "utrecht": {
+    "topnav": {
+      "list": {
+        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "border-color": {}
+      },
+      "link": {
+        "color": { "value": "{rvo.color.wit}" },
+        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "focus": {
+          "color": {},
+          "box-shadow-color": {},
+          "border-type": {},
+          "text-decoration": {},
+          "background-color": {},
+          "outline-color": {}
+        },
+        "hover": {
+          "background-color": {}
+        }
+      }
+    }
+  }
+}

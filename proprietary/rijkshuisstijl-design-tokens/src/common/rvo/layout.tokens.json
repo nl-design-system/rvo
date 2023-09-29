@@ -1,0 +1,11 @@
+{
+  "rvo": {
+    "layout": {
+      "max-width": {
+        "sm": { "value": "600px" },
+        "md": { "value": "900px" },
+        "lg": { "value": "1200px" }
+      }
+    }
+  }
+}
