@@ -12,19 +12,28 @@ const LogoUpdate = () => {
         </p>
         <Logo></Logo>
         <p>
-          <strong>Aangepaste buttons</strong>
+          <strong>Aangepast Logo</strong>
         </p>
-        <div className="rvo-rhs-update-component"></div>
+        <div className="rvo-rhs-update-component">
+          <div className="rvo-logo">
+            <div className="rvo-logo-lint">
+              <img src="images/lint.svg"></img>
+            </div>
+            <div className="rvo-logo-text">
+              Rijksdienst voor Ondernemend
+              <br />
+              Nederland
+            </div>
+          </div>
+        </div>
         <p>
           <strong>Opmerkingen</strong>
         </p>
         <ul>
-          <li>De hoeken worden afgerond met 3 pixels.</li>
-          <li>De Tertiary en warning subtle buttons worden niet aangepast dus zijn niet opgenomen in dit voorbeeld.</li>
-          <li>
-            Er komt één disabled button voor alle kinds die gebruik maakt van de nieuwe grijstinten. Grijstint-7 voor de
-            tekst en grijstint-3 als achtergrondkleur.
-          </li>
+          <li>Het logo wordt een component met verschillende divs in plaats van een platte SVG afbeelding.</li>
+          <li>De tekst wordt het RijksOverheidSansWebText font.</li>
+          <li>De kleur van de tekst wordt logoblauw in plaats van zwart.</li>
+          <li>In de logo tekst zit een br element om de tekst correct af te breken.</li>
         </ul>
       </main>
     </div>
