@@ -237,6 +237,7 @@
   --rvo-icon-meer: url("functioneel/meer.svg");
   --rvo-icon-menu: url("functioneel/menu.svg");
   --rvo-icon-nieuws: url("functioneel/nieuws.svg");
+  --rvo-icon-paperclip: url("functioneel/paperclip.svg");
   --rvo-icon-permanent-beta: url("functioneel/permanent-beta.svg");
   --rvo-icon-pijl-naar-rechts: url("functioneel/pijl-naar-rechts.svg");
   --rvo-icon-pijl-naar-rechtsboven: url("functioneel/pijl-naar-rechtsboven.svg");
@@ -248,6 +249,7 @@
   --rvo-icon-rechte-pijl: url("functioneel/rechte-pijl.svg");
   --rvo-icon-refresh: url("functioneel/refresh.svg");
   --rvo-icon-rss: url("functioneel/rss.svg");
+  --rvo-icon-save: url("functioneel/save.svg");
   --rvo-icon-secure-link: url("functioneel/secure-link.svg");
   --rvo-icon-smartphone: url("functioneel/smartphone.svg");
   --rvo-icon-tegelweergave: url("functioneel/tegelweergave.svg");
@@ -5684,6 +5686,25 @@
   background-image: var(--rvo-icon-nieuws);
 }
 
+.rvo-icon-paperclip,
+.rvo-icon-paperclip--before::before,
+.rvo-icon-paperclip--after::after {
+  -webkit-mask-image: var(--rvo-icon-paperclip);
+  mask-image: var(--rvo-icon-paperclip);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon-bg-paperclip,
+.rvo-icon-bg-paperclip--before::before,
+.rvo-icon-bg-paperclip--after::after {
+  background-image: var(--rvo-icon-paperclip);
+}
+
 .rvo-icon-permanent-beta,
 .rvo-icon-permanent-beta--before::before,
 .rvo-icon-permanent-beta--after::after {
@@ -5891,6 +5912,25 @@
 .rvo-icon-bg-rss--before::before,
 .rvo-icon-bg-rss--after::after {
   background-image: var(--rvo-icon-rss);
+}
+
+.rvo-icon-save,
+.rvo-icon-save--before::before,
+.rvo-icon-save--after::after {
+  -webkit-mask-image: var(--rvo-icon-save);
+  mask-image: var(--rvo-icon-save);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-icon-bg-save,
+.rvo-icon-bg-save--before::before,
+.rvo-icon-bg-save--after::after {
+  background-image: var(--rvo-icon-save);
 }
 
 .rvo-icon-secure-link,
