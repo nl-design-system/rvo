@@ -6,7 +6,7 @@ const meta: Meta<typeof Zaak> = {
   component: Zaak,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'HIDDEN',
     },
   },
 };

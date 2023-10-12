@@ -6,7 +6,7 @@ const meta: Meta<typeof Inloggen> = {
   component: Inloggen,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'HIDDEN',
     },
   },
 };
