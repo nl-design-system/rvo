@@ -6,7 +6,7 @@ const meta: Meta<typeof Profiel> = {
   component: Profiel,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'HIDDEN',
     },
   },
 };
