@@ -5,12 +5,27 @@
   padding-inline-end: var(--rvo-space-xl);
   padding-inline-start: var(--rvo-space-xl);
 
+  /* BUTTONS */
+
   .rvo-rhs-update-component .utrecht-button {
     border-radius: 3px;
 
     &.utrecht-button--disabled {
       background-color: #e2e8f0; /* nieuwe grijs-3 tint */
       color: #475569; /* nieuwe grijs-7 tint */
+    }
+  }
+
+  /* LOGO */
+
+  .rvo-rhs-update-component .rvo-logo {
+    align-items: flex-start;
+    color: var(--rvo-color-logoblauw);
+    font-family: "RijksOverheidSansWebText", "verdana", sans-serif;
+    font-weight: 700;
+
+    .rvo-logo-text {
+      padding-block-start: 54px;
     }
   }
 }
