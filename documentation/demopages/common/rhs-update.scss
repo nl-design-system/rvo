@@ -44,4 +44,87 @@
       color: var(--rvo-color-hemelblauw);
     }
   }
+
+  /* TABS */
+
+  .rvo-tabs {
+    display: flex;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+
+    .rvo-tabs-item {
+      list-style: none;
+    }
+
+    .rvo-tabs-item-link {
+      border-bottom-color: #cbd5e1;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      color: #334155;
+      display: block;
+      padding-block-end: var(--rvo-space-xs);
+      padding-block-start: var(--rvo-space-sm);
+      padding-inline-end: var(--rvo-space-md);
+      padding-inline-start: var(--rvo-space-md);
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        border-color: #475569;
+      }
+    }
+
+    .rvo-tabs-item-link--active {
+      border-bottom-color: var(--rvo-color-hemelblauw);
+      color: var(--rvo-color-hemelblauw);
+      font-weight: 700;
+
+      &:hover,
+      &:focus {
+        color: #334155;
+      }
+    }
+  }
+
+  .rvo-tab-content {
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+  }
+
+  /* FORMS */
+
+  .rvo-rhs-update-component {
+    .utrecht-textbox,
+    .utrecht-textarea,
+    .utrecht-select,
+    input[type="file"] {
+      border-color: var(--rvo-color-logoblauw);
+      border-radius: 3px;
+      border-width: 1px;
+      color: var(--rvo-color-logoblauw);
+    }
+
+    .rvo-select-wrapper::before {
+      background: var(--rvo-color-logoblauw);
+      border-radius: 3px;
+    }
+  }
+
+  /* CARDS */
+
+  .rvo-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
 }

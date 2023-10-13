@@ -12,4 +12,61 @@
   .rvo-logo {
     margin-inline-start: 250px;
   }
+
+  .rvo-main--mijn-percelen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rvo-main-mijn-percelen--data {
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-cards--percelen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-md);
+  }
+
+  .rvo-card--perceel {
+    padding-block-end: 0;
+
+    .utrecht-heading-2 {
+      font-size: 18px;
+    }
+
+    .rvo-card-perceel-title,
+    .rvo-card-perceel-content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rvo-card-perceel-content {
+      color: #64748b;
+      margin-block-end: var(--rvo-space-md);
+    }
+
+    .rvo-alert {
+      margin-inline-end: -16px;
+      margin-inline-start: -16px;
+      padding-block-end: var(--rvo-space-xs);
+      padding-block-start: var(--rvo-space-xs);
+    }
+
+    .rvo-card-perceel-actions {
+      background-color: #e2e8f0;
+      display: flex;
+      justify-content: flex-end;
+      margin-inline-end: -16px;
+      margin-inline-start: -16px;
+
+      .utrecht-button {
+        color: var(--rvo-color-donkerblauw);
+      }
+    }
+  }
 }
