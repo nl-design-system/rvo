@@ -1,10 +1,11 @@
 .rvo-rhs-update {
-  background-color: var(--rvo-color-wit);
-  padding-block-end: var(--rvo-space-xl);
-  padding-block-start: var(--rvo-space-xl);
-  padding-inline-end: var(--rvo-space-xl);
-  padding-inline-start: var(--rvo-space-xl);
-
+  .rvo-rhs-update-content {
+    background-color: var(--rvo-color-wit);
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+  }
 
   /* BUTTONS */
 
@@ -22,11 +23,25 @@
   .rvo-rhs-update-component .rvo-logo {
     align-items: flex-start;
     color: var(--rvo-color-logoblauw);
+    display: inline-flex;
     font-family: "RijksOverheidSansWebText", "verdana", sans-serif;
     font-weight: 700;
+    text-decoration: none;
 
     .rvo-logo-text {
       padding-block-start: 54px;
+    }
+  }
+
+  /* MENU BAR */
+
+  .rvo-rhs-update-component .rvo-topnav__background {
+    background-color: var(--rvo-color-wit);
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 700;
+
+    .utrecht-topnav__link {
+      color: var(--rvo-color-hemelblauw);
     }
   }
 }
