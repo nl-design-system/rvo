@@ -1,4 +1,4 @@
-import { Alert, Button, Heading, LayoutColumnRow, MenuBar, SelectField } from '@nl-rvo/components';
+import { Alert, Button, CheckboxField, Heading, Icon, LayoutColumnRow, MenuBar, SelectField } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
 
@@ -50,11 +50,11 @@ const Percelen = () => {
                   Wijzigen
                 </a>
               </li>
-              <li role="presentation" className="rvo-tabs-item">
+              {/* <li role="presentation" className="rvo-tabs-item">
                 <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
                   Oplossen
                 </a>
-              </li>
+              </li> */}
               <li role="presentation" className="rvo-tabs-item">
                 <a role="tab" href="#versturen" id="tab3" className="rvo-tabs-item-link">
                   Versturen
@@ -64,13 +64,23 @@ const Percelen = () => {
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
-                  <SelectField
-                    label="Uw percelen op peildatum"
-                    options={[{ value: '1', label: '15-05-2023' }]}
-                    helperText="Hier meer informatie over de peildatum."
-                    expandableHelperText={true}
-                    expandableHelperTextTitle="Meer informatie over de peildatum"
-                  ></SelectField>
+                  <details className="rvo-percelen-filter">
+                    <summary>
+                      Filter percelen <Icon icon="delta-omlaag"></Icon>
+                      <Icon icon="delta-omhoog"></Icon>
+                    </summary>
+                    <LayoutColumnRow size="sm">
+                      <SelectField label="Op peildatum" options={[{ value: '1', label: '15-05-2023' }]}></SelectField>
+                      <CheckboxField
+                        label=""
+                        options={[
+                          { id: 'optionA-cb-warning', label: 'Toon percelen met conflicten' },
+                          { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
+                        ]}
+                      ></CheckboxField>
+                    </LayoutColumnRow>
+                  </details>
+
                   <div className="rvo-cards rvo-cards--percelen">
                     <div className="rvo-card rvo-card--perceel">
                       <div className="rvo-card-perceel-title">
@@ -83,7 +93,7 @@ const Percelen = () => {
                           van <em>15-01-2023</em> tot <em>25-03-2025</em>
                         </span>
                       </div>
-                      <Alert kind="warning" content="Dit perceel overlapt met een ander perceel."></Alert>
+                      <Alert kind="error" content="Dit perceel overlapt met een ander perceel."></Alert>
                       <div className="rvo-card-perceel-actions">
                         <Button kind="tertiary" size="xs" showIcon="no">
                           Oplossen
@@ -120,12 +130,62 @@ const Percelen = () => {
                         </Button>
                       </div>
                     </div>
+                    <div className="rvo-card rvo-card--perceel">
+                      <div className="rvo-card-perceel-title">
+                        <Heading type="h2" textContent="#25 Akker aan de hoogstraat"></Heading>
+                        <span className="rvo-card-perceel-hectare">1,565 ha</span>
+                      </div>
+                      <div className="rvo-card-perceel-content">
+                        <span className="rvo-card-perceel-gewas">Grasland</span>
+                        <span className="rvo-card-perceel-datum">
+                          van <em>15-01-2023</em>
+                        </span>
+                      </div>
+
+                      <div className="rvo-card-perceel-actions">
+                        <Button kind="tertiary" size="xs" showIcon="no">
+                          Oplossen
+                        </Button>
+                        <Button kind="tertiary" size="xs" showIcon="no">
+                          Bewerken
+                        </Button>
+                        <Button kind="tertiary" showIcon="no" size="xs">
+                          Verwijderen
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="rvo-card rvo-card--perceel rvo-card--active">
+                      <div className="rvo-card-perceel-title">
+                        <Heading type="h2" textContent="#433"></Heading>
+                        <span className="rvo-card-perceel-hectare">0,225 ha</span>
+                      </div>
+                      <div className="rvo-card-perceel-content">
+                        <span className="rvo-card-perceel-gewas">Grasland, blijvend </span>
+                        <span className="rvo-card-perceel-datum">
+                          van <em>15-01-2023</em> tot <em>25-03-2025</em>
+                        </span>
+                      </div>
+                      <Alert kind="warning" content="Dit perceel is nog niet volledig ingetekend."></Alert>
+                      <div className="rvo-card-perceel-actions">
+                        <Button kind="tertiary" size="xs" showIcon="no">
+                          Oplossen
+                        </Button>
+                        <Button kind="tertiary" size="xs" showIcon="no">
+                          Bewerken
+                        </Button>
+                        <Button kind="tertiary" showIcon="no" size="xs">
+                          Verwijderen
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 </LayoutColumnRow>
               </div>
             </div>
           </div>
-          <div className="rvo-main-mijn-percelen--map"></div>
+          <div className="rvo-main-mijn-percelen--map">
+            <img src="images/map.svg" alt="" className="rvo-perceel-kaart" />
+          </div>
         </main>
       </div>
     </body>

@@ -15,7 +15,7 @@
 
   .rvo-main--mijn-percelen {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 500px 1fr;
   }
 
   .rvo-main-mijn-percelen--data {
@@ -33,6 +33,25 @@
 
   .rvo-card--perceel {
     padding-block-end: 0;
+
+    &.rvo-card--active {
+      position: relative;
+
+      &::after {
+        background-color: var(--rvo-color-wit);
+        border: solid #64748b 1px;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        content: "";
+        display: block;
+        height: 12px;
+        position: absolute;
+        right: -7px;
+        top: 24px;
+        transform: rotate(45deg);
+        width: 12px;
+      }
+    }
 
     .utrecht-heading-2 {
       font-size: 18px;
@@ -58,14 +77,52 @@
     }
 
     .rvo-card-perceel-actions {
-      background-color: #e2e8f0;
+      border-top: 1px solid #cbd5e1;
       display: flex;
       justify-content: flex-end;
       margin-inline-end: -16px;
       margin-inline-start: -16px;
 
-      .utrecht-button {
-        color: var(--rvo-color-donkerblauw);
+      // .utrecht-button {
+      //   color: var(--rvo-color-donkerblauw);
+      // }
+    }
+  }
+
+  .rvo-perceel-kaart {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  /* @PERCELEN FILTER */
+
+  .rvo-percelen-filter {
+    summary {
+      align-items: center;
+      color: var(--rvo-color-hemelblauw);
+      cursor: pointer;
+      display: inline-flex;
+      font-weight: 700;
+      gap: var(--rvo-space-2xs);
+      list-style: none;
+
+      .rvo-icon-delta-omhoog {
+        display: none;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &[open] summary {
+      .rvo-icon-delta-omhoog {
+        display: inline-flex;
+      }
+
+      .rvo-icon-delta-omlaag {
+        display: none;
       }
     }
   }
