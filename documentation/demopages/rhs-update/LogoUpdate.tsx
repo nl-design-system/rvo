@@ -4,7 +4,7 @@ import '../common/rhs-update.scss';
 const LogoUpdate = () => {
   return (
     <div className="rvo-rhs-update">
-      <main className="rvo-max-width-layout rvo-max-width-layout--sm">
+      <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-rhs-update-content">
         <Heading type="h1" textContent="Logo"></Heading>
         <p>Deze demopagina laat zien hoe het Logo aangepast moeten worden volgens de aangepaste Rijkshuisstijl.</p>
         <p>

@@ -1,0 +1,129 @@
+.rvo-mijn-percelen {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  .rvo-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rvo-logo {
+    margin-inline-start: 250px;
+  }
+
+  .rvo-main--mijn-percelen {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+  }
+
+  .rvo-main-mijn-percelen--data {
+    padding-block-end: var(--rvo-space-md);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-cards--percelen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-md);
+  }
+
+  .rvo-card--perceel {
+    padding-block-end: 0;
+
+    &.rvo-card--active {
+      position: relative;
+
+      &::after {
+        background-color: var(--rvo-color-wit);
+        border: solid #64748b 1px;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        content: "";
+        display: block;
+        height: 12px;
+        position: absolute;
+        right: -7px;
+        top: 24px;
+        transform: rotate(45deg);
+        width: 12px;
+      }
+    }
+
+    .utrecht-heading-2 {
+      font-size: 18px;
+    }
+
+    .rvo-card-perceel-title,
+    .rvo-card-perceel-content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .rvo-card-perceel-content {
+      color: #64748b;
+      margin-block-end: var(--rvo-space-md);
+    }
+
+    .rvo-alert {
+      margin-inline-end: -16px;
+      margin-inline-start: -16px;
+      padding-block-end: var(--rvo-space-xs);
+      padding-block-start: var(--rvo-space-xs);
+    }
+
+    .rvo-card-perceel-actions {
+      border-top: 1px solid #cbd5e1;
+      display: flex;
+      justify-content: flex-end;
+      margin-inline-end: -16px;
+      margin-inline-start: -16px;
+
+      // .utrecht-button {
+      //   color: var(--rvo-color-donkerblauw);
+      // }
+    }
+  }
+
+  .rvo-perceel-kaart {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  /* @PERCELEN FILTER */
+
+  .rvo-percelen-filter {
+    summary {
+      align-items: center;
+      color: var(--rvo-color-hemelblauw);
+      cursor: pointer;
+      display: inline-flex;
+      font-weight: 700;
+      gap: var(--rvo-space-2xs);
+      list-style: none;
+
+      .rvo-icon-delta-omhoog {
+        display: none;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &[open] summary {
+      .rvo-icon-delta-omhoog {
+        display: inline-flex;
+      }
+
+      .rvo-icon-delta-omlaag {
+        display: none;
+      }
+    }
+  }
+}
