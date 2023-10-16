@@ -105,6 +105,16 @@
   /* FORMS */
 
   .rvo-rhs-update-component {
+    div.utrecht-form-fieldset {
+      background-color: #f1f5f9;
+      border-start-end-radius: 25px;
+      margin-block-end: var(--rvo-space-xl);
+      padding-block-end: var(--rvo-space-md);
+      padding-block-start: var(--rvo-space-md);
+      padding-inline-end: var(--rvo-space-md);
+      padding-inline-start: var(--rvo-space-md);
+    }
+
     .utrecht-textbox,
     .utrecht-textarea,
     .utrecht-select,

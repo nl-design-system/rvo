@@ -64,23 +64,29 @@ const Percelen = () => {
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
-                  <details className="rvo-percelen-filter">
-                    <summary>
-                      Filter percelen <Icon icon="delta-omlaag"></Icon>
-                      <Icon icon="delta-omhoog"></Icon>
-                    </summary>
-                    <LayoutColumnRow size="sm">
-                      <SelectField label="Op peildatum" options={[{ value: '1', label: '15-05-2023' }]}></SelectField>
-                      <CheckboxField
-                        label=""
-                        options={[
-                          { id: 'optionA-cb-warning', label: 'Toon percelen met conflicten' },
-                          { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
-                        ]}
-                      ></CheckboxField>
-                    </LayoutColumnRow>
-                  </details>
-
+                  <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
+                    <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
+                      <details className="rvo-percelen-filter">
+                        <summary>
+                          Filter percelen <Icon icon="delta-omlaag"></Icon>
+                          <Icon icon="delta-omhoog"></Icon>
+                        </summary>
+                        <LayoutColumnRow size="sm">
+                          <SelectField
+                            label="Op peildatum"
+                            options={[{ value: '1', label: '15-05-2023' }]}
+                          ></SelectField>
+                          <CheckboxField
+                            label=""
+                            options={[
+                              { id: 'optionA-cb-warning', label: 'Toon percelen met conflicten' },
+                              { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
+                            ]}
+                          ></CheckboxField>
+                        </LayoutColumnRow>
+                      </details>
+                    </fieldset>
+                  </div>
                   <div className="rvo-cards rvo-cards--percelen">
                     <div className="rvo-card rvo-card--perceel">
                       <div className="rvo-card-perceel-title">

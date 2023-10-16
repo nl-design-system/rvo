@@ -97,10 +97,15 @@
 
   /* @PERCELEN FILTER */
 
+  div.utrecht-form-fieldset.rvo-percelen-filter-form {
+    border-radius: 3px;
+    margin-block-end: 0;
+  }
+
   .rvo-percelen-filter {
     summary {
       align-items: center;
-      color: var(--rvo-color-hemelblauw);
+      color: var(--rvo-color-donkerblauw);
       cursor: pointer;
       display: inline-flex;
       font-weight: 700;
