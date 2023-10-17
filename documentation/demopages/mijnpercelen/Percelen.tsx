@@ -1,4 +1,14 @@
-import { Alert, Button, CheckboxField, Heading, Icon, LayoutColumnRow, MenuBar, SelectField } from '@nl-rvo/components';
+import {
+  Alert,
+  Button,
+  CheckboxField,
+  Heading,
+  Icon,
+  LayoutColumnRow,
+  MenuBar,
+  SelectField,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
 
@@ -68,12 +78,12 @@ const Percelen = () => {
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
                       <details className="rvo-percelen-filter">
                         <summary>
-                          Filter percelen <Icon icon="delta-omlaag"></Icon>
+                          Filter en sorteer percelen <Icon icon="delta-omlaag"></Icon>
                           <Icon icon="delta-omhoog"></Icon>
                         </summary>
-                        <LayoutColumnRow size="sm">
+                        <LayoutColumnRow size="md">
                           <SelectField
-                            label="Op peildatum"
+                            label="Filter op peildatum"
                             options={[{ value: '1', label: '15-05-2023' }]}
                           ></SelectField>
                           <CheckboxField
@@ -83,6 +93,15 @@ const Percelen = () => {
                               { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
                             ]}
                           ></CheckboxField>
+                          <TextInputField label="Filter op naam perceel"></TextInputField>
+                          <SelectField
+                            label="Sorteer percelen"
+                            options={[
+                              { value: 'a', label: 'Op naam' },
+                              { value: 'b', label: 'Op nummer' },
+                              { value: 'c', label: 'Op aantal hectare' },
+                            ]}
+                          ></SelectField>
                         </LayoutColumnRow>
                       </details>
                     </fieldset>
