@@ -74,6 +74,21 @@
       margin-inline-start: -16px;
       padding-block-end: var(--rvo-space-xs);
       padding-block-start: var(--rvo-space-xs);
+
+      .utrecht-icon {
+        flex: 16px 0 0;
+      }
+
+      a {
+        color: var(--rvo-color-donkerblauw);
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
     }
 
     .rvo-card-perceel-actions {
