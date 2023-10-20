@@ -74,6 +74,10 @@
       margin-inline-start: -16px;
       padding-block-end: var(--rvo-space-xs);
       padding-block-start: var(--rvo-space-xs);
+
+      .utrecht-icon {
+        flex: 16px 0 0;
+      }
     }
 
     .rvo-card-perceel-actions {
@@ -136,6 +140,51 @@
 
       .rvo-icon-delta-omlaag {
         display: none;
+      }
+    }
+  }
+
+  &.rvo-mijn-percelen-perceel--edit {
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .rvo-dateinput__part input {
+    text-align: center;
+  }
+
+  .rvo-dateinput__part:first-child input,
+  .rvo-dateinput__part:nth-child(2) input {
+    width: 48px;
+  }
+
+  .rvo-dateinput__part:nth-child(3) input {
+    width: 64px;
+  }
+
+  .rvo-value-information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rvo-value-information-value {
+    font-weight: 700;
+  }
+
+  .rvo-alert {
+    a {
+      color: var(--rvo-color-donkerblauw);
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
       }
     }
   }
