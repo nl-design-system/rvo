@@ -1,5 +1,9 @@
 import {
+  Alert,
+  Button,
+  ButtonGroup,
   CheckboxField,
+  DateInputField,
   Heading,
   LayoutColumnRow,
   Link,
@@ -74,6 +78,10 @@ const PerceelEdit = () => {
                 <LayoutColumnRow size="md">
                   <Link content="Terug naar overzicht percelen" showIcon="before" icon="terug" noUnderline={true} />
                   <Heading type="h1" textContent="Wijzig perceelgegevens #433" />
+                  <Alert
+                    kind="warning"
+                    content="Uw intekening is niet overal gelijk aan de topografische grenzen van het perceel. <a className='rvo-link' href='#surfaces'>Aanpassen</a>"
+                  />
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
                       <LayoutColumnRow size="md">
@@ -97,25 +105,143 @@ const PerceelEdit = () => {
                             { value: '2', label: 'Erfpacht' },
                           ]}
                         ></SelectField>
+                        <div className="rvo-surfaces">
+                          <a id="surfaces"></a>
+                          <Heading type="h2" textContent="Welke oppervlakte wilt u opslaan?"></Heading>
+                          <LayoutColumnRow size="sm">
+                            <div className="rvo-value-information">
+                              <span className="rvo-value-information-label">De door u ingetekende oppervlakte</span>
+                              <span className="rvo-value-information-value">1,0813 ha</span>
+                            </div>
+                            <div
+                              role="group"
+                              aria-labelledby="fieldId-label"
+                              className="utrecht-form-field utrecht-form-field--text rvo-form-field"
+                            >
+                              <div className="rvo-form-field__label">
+                                <label id="fieldId-label" className="utrecht-form-label">
+                                  Oppervlakte buiten topografische grens
+                                </label>
+                              </div>
+                              <div className="rvo-checkbox__group">
+                                <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
+                                  <input
+                                    id="sf1"
+                                    name="group"
+                                    className="rvo-checkbox__input"
+                                    type="checkbox"
+                                    value=""
+                                  />
+                                  0,007ha <Link content="Bekijk" noUnderline={true} />
+                                </label>
+                              </div>
+                              <div className="rvo-checkbox__group">
+                                <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
+                                  <input
+                                    id="sf1"
+                                    name="group"
+                                    className="rvo-checkbox__input"
+                                    type="checkbox"
+                                    value=""
+                                  />
+                                  0,014ha <Link content="Bekijk" noUnderline={true} />
+                                </label>
+                              </div>
+                              <div className="rvo-checkbox__group">
+                                <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
+                                  <input
+                                    id="sf1"
+                                    name="group"
+                                    className="rvo-checkbox__input"
+                                    type="checkbox"
+                                    value=""
+                                  />
+                                  0,025ha <Link content="Bekijk" noUnderline={true} />
+                                </label>
+                              </div>
+                            </div>
+                            <div className="rvo-button--inline">
+                              <Button kind="secondary" size="xs">
+                                Geselecteerde -0,044 ha afknippen
+                              </Button>
+                            </div>
+                            <div
+                              role="group"
+                              aria-labelledby="fieldId-label"
+                              className="utrecht-form-field utrecht-form-field--text rvo-form-field"
+                            >
+                              <div className="rvo-form-field__label">
+                                <label id="fieldId-label" className="utrecht-form-label">
+                                  Niet ingetekende oppervlakte (ruimte)
+                                </label>
+                              </div>
+                              <div className="rvo-checkbox__group">
+                                <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
+                                  <input
+                                    id="sf1"
+                                    name="group"
+                                    className="rvo-checkbox__input"
+                                    type="checkbox"
+                                    value=""
+                                  />
+                                  0,010ha <Link content="Bekijk" noUnderline={true} />
+                                </label>
+                              </div>
+                              <div className="rvo-checkbox__group">
+                                <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
+                                  <input
+                                    id="sf1"
+                                    name="group"
+                                    className="rvo-checkbox__input"
+                                    type="checkbox"
+                                    value=""
+                                  />
+                                  0,014ha <Link content="Bekijk" noUnderline={true} />
+                                </label>
+                              </div>
+                              <div className="rvo-checkbox__group">
+                                <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
+                                  <input
+                                    id="sf1"
+                                    name="group"
+                                    className="rvo-checkbox__input"
+                                    type="checkbox"
+                                    value=""
+                                  />
+                                  0,015ha <Link content="Bekijk" noUnderline={true} />
+                                </label>
+                              </div>
+                            </div>
+                            <div className="rvo-button--inline">
+                              <Button kind="secondary" size="xs">
+                                Geselecteerde 0,055 ha toevoegen
+                              </Button>
+                            </div>
+                            <div className="rvo-value-information">
+                              <span className="rvo-value-information-label">
+                                Oppervlakte na bovenstaande bewerkingen
+                              </span>
+                              <span className="rvo-value-information-value">1,0313 ha</span>
+                            </div>
+                          </LayoutColumnRow>
+                        </div>
+                        <DateInputField label="Ingangsdatum"></DateInputField>
+                        <DateInputField label="Einddatum"></DateInputField>
                         <CheckboxField
                           label=""
                           options={[
-                            { id: 'optionA-cb-warning', label: 'Toon percelen met conflicten' },
-                            { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
+                            {
+                              id: 'optionA-cb-warning',
+                              label: 'De topografische grens van het perceel is gewijzigd of niet juist.',
+                            },
                           ]}
                         ></CheckboxField>
-                        <TextInputField label="Filter op naam perceel"></TextInputField>
-                        <SelectField
-                          label="Sorteer percelen"
-                          options={[
-                            { value: 'a', label: 'Op naam' },
-                            { value: 'b', label: 'Op nummer' },
-                            { value: 'c', label: 'Op aantal hectare' },
-                          ]}
-                        ></SelectField>
                       </LayoutColumnRow>
                     </fieldset>
                   </div>
+                  <ButtonGroup>
+                    <Button kind="primary">Opslaan</Button>
+                  </ButtonGroup>
                 </LayoutColumnRow>
               </div>
             </div>

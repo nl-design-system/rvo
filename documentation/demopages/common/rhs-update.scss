@@ -104,6 +104,11 @@
 
   /* FORMS */
 
+  .utrecht-form-fieldset .rvo-link,
+  .utrecht-form-fieldset .rvo-expandable-text__summary {
+    color: var(--rvo-color-donkerblauw);
+  }
+
   .rvo-rhs-update-component {
     div.utrecht-form-fieldset {
       background-color: #f1f5f9;
