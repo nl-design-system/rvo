@@ -118,11 +118,11 @@ const Percelen = () => {
                           van <em>15-01-2023</em> tot <em>25-03-2025</em>
                         </span>
                       </div>
-                      <Alert kind="error" content="Dit perceel overlapt met een ander perceel."></Alert>
+                      <Alert
+                        kind="error"
+                        content="Dit perceel heeft gedurende (een deel van) de looptijd geheel of gedeeltelijk overlap met een perceel van een andere gebruiker. <a href='#'>Oplossen</a>"
+                      ></Alert>
                       <div className="rvo-card-perceel-actions">
-                        <Button kind="tertiary" size="xs" showIcon="no">
-                          Oplossen
-                        </Button>
                         <Button kind="tertiary" size="xs" showIcon="no">
                           Bewerken
                         </Button>
@@ -145,9 +145,6 @@ const Percelen = () => {
 
                       <div className="rvo-card-perceel-actions">
                         <Button kind="tertiary" size="xs" showIcon="no">
-                          Oplossen
-                        </Button>
-                        <Button kind="tertiary" size="xs" showIcon="no">
                           Bewerken
                         </Button>
                         <Button kind="tertiary" showIcon="no" size="xs">
@@ -169,9 +166,6 @@ const Percelen = () => {
 
                       <div className="rvo-card-perceel-actions">
                         <Button kind="tertiary" size="xs" showIcon="no">
-                          Oplossen
-                        </Button>
-                        <Button kind="tertiary" size="xs" showIcon="no">
                           Bewerken
                         </Button>
                         <Button kind="tertiary" showIcon="no" size="xs">
@@ -190,11 +184,11 @@ const Percelen = () => {
                           van <em>15-01-2023</em> tot <em>25-03-2025</em>
                         </span>
                       </div>
-                      <Alert kind="warning" content="Dit perceel is nog niet volledig ingetekend."></Alert>
+                      <Alert
+                        kind="warning"
+                        content="Er zijn niet geclaimde delen gevonden binnen de topografische grens. <a href='#'>Oplossen</a> of <a href='#'>negeren</a>"
+                      ></Alert>
                       <div className="rvo-card-perceel-actions">
-                        <Button kind="tertiary" size="xs" showIcon="no">
-                          Oplossen
-                        </Button>
                         <Button kind="tertiary" size="xs" showIcon="no">
                           Bewerken
                         </Button>
