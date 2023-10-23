@@ -386,8 +386,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1
       docusaurus-plugin-sass:
-        specifier: 0.2.2
-        version: 0.2.2(@docusaurus/core@2.2.0)(sass@1.57.0)(webpack@5.75.0)
+        specifier: 0.2.5
+        version: 0.2.5(@docusaurus/core@2.2.0)(sass@1.57.0)(webpack@5.75.0)
       jsdom:
         specifier: 21.0.0
         version: 21.0.0
@@ -11458,6 +11458,7 @@ packages:
 
   /anymatch@2.0.0:
     resolution: {integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==}
+    requiresBuild: true
     dependencies:
       micromatch: 3.1.10
       normalize-path: 2.1.1
@@ -13157,6 +13158,7 @@ packages:
   /chokidar@2.1.8:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==}
     deprecated: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+    requiresBuild: true
     dependencies:
       anymatch: 2.0.0
       async-each: 1.0.3
@@ -14884,10 +14886,10 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /docusaurus-plugin-sass@0.2.2(@docusaurus/core@2.2.0)(sass@1.57.0)(webpack@5.75.0):
-    resolution: {integrity: sha512-ZZBpj3PrhGpYE2kAnkZB9NRwy/CDi4rGun1oec6PYR8YvGzqxYGtXvLgHi6FFbu8/N483klk8udqyYMh6Ted+A==}
+  /docusaurus-plugin-sass@0.2.5(@docusaurus/core@2.2.0)(sass@1.57.0)(webpack@5.75.0):
+    resolution: {integrity: sha512-Z+D0fLFUKcFpM+bqSUmqKIU+vO+YF1xoEQh5hoFreg2eMf722+siwXDD+sqtwU8E4MvVpuvsQfaHwODNlxJAEg==}
     peerDependencies:
-      '@docusaurus/core': ^2.0.0-beta
+      '@docusaurus/core': ^2.0.0-beta || ^3.0.0-alpha
       sass: ^1.30.0
     dependencies:
       '@docusaurus/core': 2.2.0(@docusaurus/types@2.2.0)(eslint@8.29.0)(react-dom@17.0.2)(react@17.0.2)(typescript@4.7.4)
@@ -29097,6 +29099,7 @@ packages:
   /upath@1.2.0:
     resolution: {integrity: sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==}
     engines: {node: '>=4'}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -30518,5 +30521,4 @@ packages:
   file:packages/components-css:
     resolution: {directory: packages/components-css, type: directory}
     name: '@nl-rvo/component-library-css'
-    version: 1.0.0-alpha.325
     dev: true
