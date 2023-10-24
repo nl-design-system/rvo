@@ -76,7 +76,18 @@ const PerceelEdit = () => {
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
-                  <Link content="Terug naar overzicht percelen" showIcon="before" icon="terug" noUnderline={true} />
+                  <a
+                    className="rvo-link rvo-link--with-icon rvo-link--no-underline"
+                    href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
+                  >
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
+                      role="img"
+                      aria-label="Terug"
+                    ></span>
+                    Terug naar overzicht percelen
+                  </a>
+
                   <Heading type="h1" textContent="Wijzig perceelgegevens #433" />
                   <Alert
                     kind="warning"

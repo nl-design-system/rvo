@@ -60,11 +60,16 @@ const Percelen = () => {
                   Wijzigen
                 </a>
               </li>
-              {/* <li role="presentation" className="rvo-tabs-item">
+              <li role="presentation" className="rvo-tabs-item">
                 <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
                   Oplossen
                 </a>
-              </li> */}
+              </li>
+              <li role="presentation" className="rvo-tabs-item">
+                <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
+                  Samenvatting
+                </a>
+              </li>
               <li role="presentation" className="rvo-tabs-item">
                 <a role="tab" href="#versturen" id="tab3" className="rvo-tabs-item-link">
                   Versturen
@@ -74,6 +79,7 @@ const Percelen = () => {
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
+                  <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" />
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
                       <details className="rvo-percelen-filter">
@@ -188,10 +194,14 @@ const Percelen = () => {
                         kind="warning"
                         content="Er zijn niet geclaimde delen gevonden binnen de topografische grens. <a href='#'>Oplossen</a> of <a href='#'>negeren</a>"
                       ></Alert>
+
                       <div className="rvo-card-perceel-actions">
-                        <Button kind="tertiary" size="xs" showIcon="no">
+                        <a
+                          href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                          className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
+                        >
                           Bewerken
-                        </Button>
+                        </a>
                         <Button kind="tertiary" showIcon="no" size="xs">
                           Verwijderen
                         </Button>
