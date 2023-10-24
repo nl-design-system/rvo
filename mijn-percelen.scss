@@ -188,4 +188,40 @@
       }
     }
   }
+
+  a.utrecht-button {
+    text-decoration: none;
+  }
+
+  /* @TABLE */
+
+  .rvo-main--mijn-percelen-table {
+    grid-template-columns: 650px 1fr;
+  }
+
+  .rvo-table {
+    .rvo-table-cell {
+      vertical-align: top;
+
+      .utrecht-button {
+        padding-block-start: 0;
+        padding-inline-start: 0;
+      }
+    }
+  }
+
+  .rvo-table-row--alert {
+    .rvo-table-cell {
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+
+    .rvo-alert {
+      margin-block-start: -1px;
+      position: relative;
+      z-index: 2;
+    }
+  }
 }
