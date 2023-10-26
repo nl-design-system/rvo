@@ -36,7 +36,7 @@ const Percelen = () => {
               {
                 label: 'Mijn Percelen',
                 active: true,
-                link: '#',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
               },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
@@ -52,7 +52,7 @@ const Percelen = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="#wijzigen"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
                   id="tab1"
                   aria-selected="true"
                   className="rvo-tabs-item-link rvo-tabs-item-link--active"
@@ -61,17 +61,32 @@ const Percelen = () => {
                 </a>
               </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-oplossen--default&viewMode=story"
+                  id="tab2"
+                  className="rvo-tabs-item-link"
+                >
                   Oplossen
                 </a>
               </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-samenvatting--default&viewMode=story"
+                  id="tab2"
+                  className="rvo-tabs-item-link"
+                >
                   Samenvatting
                 </a>
               </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#versturen" id="tab3" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
+                  id="tab3"
+                  className="rvo-tabs-item-link"
+                >
                   Versturen
                 </a>
               </li>
@@ -197,7 +212,7 @@ const Percelen = () => {
 
                       <div className="rvo-card-perceel-actions">
                         <a
-                          href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                          href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
                           className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                         >
                           Bewerken

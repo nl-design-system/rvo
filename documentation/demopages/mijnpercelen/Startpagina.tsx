@@ -26,7 +26,7 @@ const Startpagina = () => {
               {
                 label: 'Mijn Percelen',
                 active: true,
-                link: '#',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
               },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
@@ -38,28 +38,49 @@ const Startpagina = () => {
         </div>
         <main className="rvo-main--mijn-percelen rvo-main--mijn-percelen-startpagina rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-main-mijn-percelen--data">
-            <ul role="tablist" className="rvo-tabs">
+            {/* <ul role="tablist" className="rvo-tabs">
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#wijzigen" id="tab1" aria-selected="true" className="rvo-tabs-item-link">
-                  Registreren & Wijzigen
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                  id="tab1"
+                  aria-selected="true"
+                  className="rvo-tabs-item-link"
+                >
+                  Wijzigen
                 </a>
               </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-oplossen--default&viewMode=story"
+                  id="tab2"
+                  className="rvo-tabs-item-link"
+                >
                   Oplossen
                 </a>
               </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-samenvatting--default&viewMode=story"
+                  id="tab2"
+                  className="rvo-tabs-item-link"
+                >
                   Samenvatting
                 </a>
               </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#versturen" id="tab3" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
+                  id="tab3"
+                  className="rvo-tabs-item-link"
+                >
                   Versturen
                 </a>
               </li>
-            </ul>
+            </ul> */}
             <div className="rvo-tab-content rvo-tab-content--startpagina">
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
@@ -87,7 +108,7 @@ const Startpagina = () => {
                           href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
                           className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
                         >
-                          Start met registreren en wijzigen
+                          Start met registreren en bewerken
                         </a>
                       </div>
                       <div className="rvo-instructions">
@@ -122,7 +143,7 @@ const Startpagina = () => {
                           van het ministerie van Economische Zaken en Klimaat en het ministerie van Landbouw, Natuur en
                           Voedselkwaliteit.
                         </p>
-                        <Button kind="primary">Start met registreren en wijzigen</Button>
+                        <Button kind="primary">Start met registreren en bewerken</Button>
                       </div>
                     </LayoutColumnRow>
                   </div>
