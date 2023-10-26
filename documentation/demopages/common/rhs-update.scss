@@ -192,4 +192,32 @@
   .rvo-table-cell {
     border-bottom-color: #e2e8f0;
   }
+
+  /* @CONTENT ELEMENTS */
+
+  .rvo-paragraph-spaced {
+    margin-block-start: 0;
+  }
+
+  .rvo-paragraph--lg {
+    font-size: 1.125rem;
+  }
+
+  .rvo-list {
+    padding-inline-start: 20px;
+  }
+
+  /* @INFO BLOCK */
+
+  .rvo-info-block {
+    border: 1px solid #e2e8f0;
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+
+    *:last-child {
+      margin-block-end: 0;
+    }
+  }
 }
