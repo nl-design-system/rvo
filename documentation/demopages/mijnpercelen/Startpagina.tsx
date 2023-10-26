@@ -83,7 +83,12 @@ const Startpagina = () => {
                           basis voor het aanvragen van subsidies en voor regelingen zoals de mestwetgeving. Daarom is
                           het belangrijk dat u uw gegevens bijhoudt.
                         </p>
-                        <Button kind="primary">Start met registreren en wijzigen</Button>
+                        <a
+                          href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                          className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
+                        >
+                          Start met registreren en wijzigen
+                        </a>
                       </div>
                       <div className="rvo-instructions">
                         <Heading type="h2" textContent="Voordat u begint" />
@@ -144,13 +149,11 @@ const Startpagina = () => {
                 </ul>
               </div>
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
-                <p className="rvo-paragraph-spaced">
-                  <Heading type="h4" textContent="Meekijken"></Heading>
-                  <p className="rvo-paragraph-spaced">Wil onze medewerker meekijken?</p>
-                  <Button kind="secondary" size="sm">
-                    Start meekijken
-                  </Button>
-                </p>
+                <Heading type="h4" textContent="Meekijken"></Heading>
+                <p className="rvo-paragraph-spaced">Wil onze medewerker meekijken?</p>
+                <Button kind="secondary" size="sm">
+                  Start meekijken
+                </Button>
               </div>
             </LayoutColumnRow>
           </div>
