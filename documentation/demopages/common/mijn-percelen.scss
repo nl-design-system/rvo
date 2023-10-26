@@ -18,11 +18,19 @@
     grid-template-columns: 500px 1fr;
   }
 
+  .rvo-main--mijn-percelen-startpagina {
+    grid-template-columns: 600px 1fr;
+  }
+
   .rvo-main-mijn-percelen--data {
     padding-block-end: var(--rvo-space-md);
-    padding-block-start: var(--rvo-space-md);
+    padding-block-start: 0;
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-main-mijn-percelen--sidebar {
+    padding-block-start: var(--rvo-space-xl);
   }
 
   .rvo-cards--percelen {
