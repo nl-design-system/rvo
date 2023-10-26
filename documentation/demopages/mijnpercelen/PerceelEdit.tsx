@@ -38,7 +38,7 @@ const PerceelEdit = () => {
               {
                 label: 'Mijn Percelen',
                 active: true,
-                link: '#',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
               },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
@@ -54,21 +54,41 @@ const PerceelEdit = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="#wijzigen"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
                   id="tab1"
                   aria-selected="true"
-                  className="rvo-tabs-item-link rvo-tabs-item-link--active"
+                  className="rvo-tabs-item-link  rvo-tabs-item-link--active"
                 >
                   Wijzigen
                 </a>
               </li>
-              {/* <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#oplossen" id="tab2" className="rvo-tabs-item-link">
+              <li role="presentation" className="rvo-tabs-item">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-oplossen--default&viewMode=story"
+                  id="tab2"
+                  className="rvo-tabs-item-link"
+                >
                   Oplossen
                 </a>
-              </li> */}
+              </li>
               <li role="presentation" className="rvo-tabs-item">
-                <a role="tab" href="#versturen" id="tab3" className="rvo-tabs-item-link">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-samenvatting--default&viewMode=story"
+                  id="tab2"
+                  className="rvo-tabs-item-link"
+                >
+                  Samenvatting
+                </a>
+              </li>
+              <li role="presentation" className="rvo-tabs-item">
+                <a
+                  role="tab"
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
+                  id="tab3"
+                  className="rvo-tabs-item-link"
+                >
                   Versturen
                 </a>
               </li>
@@ -78,7 +98,7 @@ const PerceelEdit = () => {
                 <LayoutColumnRow size="md">
                   <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
-                    href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
+                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
                   >
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"

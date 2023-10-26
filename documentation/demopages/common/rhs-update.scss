@@ -160,6 +160,12 @@
       background: var(--rvo-color-logoblauw);
       border-radius: 3px;
     }
+
+    .utrecht-custom-radio-button:checked,
+    .rvo-custom-radio-button:checked,
+    .utrecht-custom-radio-button--checked {
+      background: radial-gradient(circle, var(--rvo-color-logoblauw) 45%, var(--rvo-color-wit) 50%);
+    }
   }
 
   /* CARDS */
