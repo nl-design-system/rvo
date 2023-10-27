@@ -1,3 +1,12 @@
+.rvo-sidebar-menu-active {
+  background: linear-gradient(90deg, #f1f5f9 50%, #fff 50%);
+
+  .rvo-header,
+  .rvo-main-mijn-percelen--profiel {
+    background-color: var(--rvo-color-wit);
+  }
+}
+
 .rvo-rhs-update {
   .rvo-rhs-update-content {
     background-color: var(--rvo-color-wit);

@@ -1,4 +1,5 @@
 .rvo-mijn-percelen {
+  height: 100vh;
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-end: 0;
@@ -20,6 +21,72 @@
 
   .rvo-main--mijn-percelen-startpagina {
     grid-template-columns: 600px 1fr;
+  }
+
+  .rvo-main--mijn-percelen-sidebar-active {
+    grid-template-columns: 288px 1fr;
+    height: 85vh;
+  }
+
+  .rvo-main-mijn-percelen--sidebar-menu {
+    background-color: #f1f5f9;
+    padding-block-end: var(--rvo-space-2xl);
+    padding-block-start: var(--rvo-space-2xl);
+    padding-inline-end: var(--rvo-space-2xl);
+    padding-inline-start: var(--rvo-space-2xl);
+
+    .rvo-topnav__background {
+      background-color: #f1f5f9;
+    }
+
+    .utrecht-topnav__item--active .utrecht-topnav__link {
+      font-weight: 700;
+
+      &::before {
+        opacity: 100%;
+      }
+    }
+
+    .utrecht-topnav__link {
+      color: #475569;
+      font-weight: 400;
+
+      &::before {
+        background-color: var(--rvo-color-hemelblauw);
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 20px;
+        opacity: 0%;
+        width: 4px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        opacity: 10%;
+      }
+
+      .utrecht-icon {
+        background-color: #475569;
+      }
+    }
+  }
+
+  .rvo-main-mijn-percelen--profiel {
+    h1 {
+      margin-block-start: 16px;
+    }
+
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-2xl);
+    padding-inline-end: var(--rvo-space-3xl);
+    padding-inline-start: var(--rvo-space-3xl);
   }
 
   .rvo-main-mijn-percelen--data {
