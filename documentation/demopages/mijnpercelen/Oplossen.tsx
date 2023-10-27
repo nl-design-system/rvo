@@ -28,6 +28,11 @@ const Oplossen = () => {
                 active: true,
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
               },
+              {
+                label: 'Boer Overveen B.V',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                icon: 'user',
+              },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
             size="lg"
