@@ -47,6 +47,16 @@
 
     .utrecht-topnav__link {
       color: var(--rvo-color-hemelblauw);
+
+      &:hover,
+      &:focus {
+        background-color: var(--rvo-color-wit);
+        color: var(--rvo-color-hemelblauw);
+      }
+
+      .utrecht-icon {
+        background-color: var(--rvo-color-hemelblauw);
+      }
     }
   }
 

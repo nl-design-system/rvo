@@ -37,7 +37,9 @@ const Percelen = () => {
                 label: 'Mijn Percelen',
                 active: true,
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                icon: 'home',
               },
+              { label: 'Boer Overveen B.V', link: '#', icon: 'user' },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
             size="lg"
