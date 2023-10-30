@@ -12,4 +12,26 @@
     display: flex;
     justify-content: center;
   }
+
+  .rvo-paragraph--sm {
+    font-size: var(--rvo-font-size-sm);
+    line-height: var(--rvo-line-height-md);
+    margin-block-start: 0;
+  }
+
+  &.rvo-screenshots {
+    align-items: center;
+    background-color: var(--rvo-color-zwart);
+    display: flex;
+    flex-direction: column;
+    gap: var(--rvo-space-3xl);
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-3xl);
+    padding-inline-end: var(--rvo-space-3xl);
+    padding-inline-start: var(--rvo-space-3xl);
+  }
+
+  .rvo-screenshot {
+    max-width: 1920px;
+  }
 }
