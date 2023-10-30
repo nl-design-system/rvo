@@ -31,6 +31,15 @@ const Index = () => {
               >
                 Mijn Percelen
               </a>
+              <p className="rvo-paragraph--sm">
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-screenshots-uitgangspositie--default&viewMode=story"
+                  className="rvo-link rvo-link--no-underline"
+                  target="_blank"
+                >
+                  Screenshots uitgangspositie
+                </a>
+              </p>
             </li>
           </ul>
         </main>
