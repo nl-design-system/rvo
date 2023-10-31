@@ -23,6 +23,10 @@
     grid-template-columns: 600px 1fr;
   }
 
+  .rvo-main--mijn-percelen-samenvatting {
+    grid-template-columns: 750px 1fr;
+  }
+
   .rvo-main--mijn-percelen-sidebar-active {
     grid-template-columns: 288px 1fr;
     height: 85vh;
@@ -283,6 +287,10 @@
         padding-inline-start: 0;
       }
     }
+
+    .rvo-table-cell:not(first-child) {
+      width: 40px;
+    }
   }
 
   .rvo-table-row--alert {
@@ -298,5 +306,9 @@
       position: relative;
       z-index: 2;
     }
+  }
+
+  .rvo-value-line-through {
+    text-decoration: line-through;
   }
 }
