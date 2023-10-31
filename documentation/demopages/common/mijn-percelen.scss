@@ -311,4 +311,37 @@
   .rvo-value-line-through {
     text-decoration: line-through;
   }
+
+  .rvo-fake-checkbox summary::-webkit-details-marker,
+  .rvo-fake-checkbox summary::marker {
+    display: none;
+  }
+
+  .rvo-fake-checkbox summary {
+    display: flex;
+    gap: var(--rvo-space-xs);
+    position: relative;
+  }
+
+  .rvo-fake-checkbox summary::before {
+    background-color: var(--rvo-color-wit);
+    border: 1px solid var(--rvo-color-logoblauw);
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 24px;
+    width: 24px;
+  }
+
+  .rvo-fake-checkbox[open] summary::after {
+    background-color: var(--rvo-color-logoblauw);
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 3px;
+    width: 21px;
+  }
 }
