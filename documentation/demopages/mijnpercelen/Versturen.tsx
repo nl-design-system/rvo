@@ -2,7 +2,7 @@ import { Button, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
 
-const Startpagina = () => {
+const Versturen = () => {
   return (
     <body className="rvo-theme rvo-mijn-percelen">
       <div className="rvo-mijn-percelen rvo-rhs-update">
@@ -25,13 +25,15 @@ const Startpagina = () => {
             items={[
               {
                 label: 'Mijn Percelen',
-                active: true,
+
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                icon: 'home',
               },
               {
                 label: 'Boer Overveen B.V',
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
                 icon: 'user',
+                active: true,
               },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
@@ -43,7 +45,7 @@ const Startpagina = () => {
         </div>
         <main className="rvo-main--mijn-percelen rvo-main--mijn-percelen-startpagina rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-main-mijn-percelen--data">
-            {/* <ul role="tablist" className="rvo-tabs">
+            <ul role="tablist" className="rvo-tabs">
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
@@ -80,12 +82,12 @@ const Startpagina = () => {
                   role="tab"
                   href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
                   id="tab3"
-                  className="rvo-tabs-item-link"
+                  className="rvo-tabs-item-link rvo-tabs-item-link--active"
                 >
                   Versturen
                 </a>
               </li>
-            </ul> */}
+            </ul>
             <div className="rvo-tab-content rvo-tab-content--startpagina">
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
@@ -102,53 +104,96 @@ const Startpagina = () => {
                   </a> */}
                   <div className="rvo-content">
                     <LayoutColumnRow size="xl">
-                      <div className="rvo-intro">
-                        <Heading type="h1" textContent="Mijn Percelen"></Heading>
+                      <div className="rvo-info">
+                        <Heading type="h1" textContent="Controleren en versturen"></Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--lg">
-                          Hier registreert en wijzigt u de percelen die u in gebruik heeft. De perceelsgegevens zijn de
-                          basis voor het aanvragen van subsidies en voor regelingen zoals de mestwetgeving. Daarom is
-                          het belangrijk dat u uw gegevens bijhoudt.
-                        </p>
-                        <a
-                          href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
-                          className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
-                        >
-                          Start met registreren en bewerken
-                        </a>
-                      </div>
-                      <div className="rvo-instructions">
-                        <Heading type="h2" textContent="Voordat u begint" />
-                        <br />
-                        <Heading type="h3" textContent="Uw bouwplan voor 2024 opgeven"></Heading>
-                        <p className="rvo-paragraph-spaced">
-                          Wilt u alvast uw percelen voor 2024 opgeven? Klik op ‘Wijzigen’ en pas daarna de peildatum aan
-                          naar 15-05-2024. Klik vervolgens op de knop ‘Percelen wijzigen’. U kunt dan starten met het
-                          opgeven/bijwerken van uw gewaspercelen en landschapselementen voor 2024.
-                        </p>
-                        <Heading type="h3" textContent="Landschapselementen registreren"></Heading>
-                        <p className="rvo-paragraph-spaced">
-                          Om landschapselementen te registreren gebruikt u verschillende nieuwe functies. Meer
-                          informatie vindt u in het{' '}
-                          <a href="#" className="rvo-link">
-                            Stappenplan landschapselementen registreren
-                          </a>
-                          .
+                          Heeft u alle wijzigingen in uw percelen opgeslagen?
                         </p>
 
-                        <Heading type="h3" textContent="Privacy"></Heading>
-                        <p className="rvo-paragraph-spaced">
-                          Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons{' '}
-                          <a href="#" className="rvo-link">
-                            privacybeleid
-                          </a>
-                          . Informatie over specifieke verwerkingen vindt u in het{' '}
-                          <a href="#" className="rvo-link">
-                            AVG-register
-                          </a>{' '}
-                          van het ministerie van Economische Zaken en Klimaat en het ministerie van Landbouw, Natuur en
-                          Voedselkwaliteit.
+                        <Heading type="h2" textContent="Controleer wijzigingen" />
+                        <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--md">
+                          Het systeem controleert de wijzigingen. Start de controle niet vanzelf?
                         </p>
-                        <Button kind="primary">Start met registreren en bewerken</Button>
+                        <p className="rvo-paragraph-spaced">
+                          <a
+                            href="#"
+                            className="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-sm"
+                          >
+                            Start controle
+                          </a>
+                        </p>
+                        <Heading type="h2" textContent="Verstuur wijzigingen"></Heading>
+                        <p className="rvo-paragraph-spaced">
+                          <a href="#wijzigingen" className="rvo-link">
+                            Bekijk hieronder de wijzigingen
+                          </a>
+                          . Als u akkoord bent met de aanpassingen kunt u de wijzigingen versturen.
+                        </p>
+                        <p className="rvo-paragraph-spaced">
+                          <Button kind="primary">Verstuur wijzigingen</Button>
+                        </p>
+                      </div>
+                      <div className="rvo-gewijzigde-percelen">
+                        <a id="wijzigingen"></a>
+                        <LayoutColumnRow size="sm">
+                          <Heading type="h3" textContent="Gewijzigde percelen"></Heading>
+                          <div className="rvo-cards rvo-cards--percelen">
+                            <div className="rvo-card rvo-card--perceel">
+                              <div className="rvo-card-perceel-title">
+                                <Heading type="h2" textContent="#21 Slootje bij de buren"></Heading>
+                                <span className="rvo-card-perceel-hectare">
+                                  <span className="rvo-value-line-through">1,2495 ha</span> <strong>1,3495 ha</strong>
+                                </span>
+                              </div>
+                              <div className="rvo-card-perceel-content">
+                                <span className="rvo-card-perceel-gewas">Grasland, blijvend </span>
+                                <span className="rvo-card-perceel-datum">
+                                  van <em>15-01-2023</em> tot <em>25-03-2025</em>
+                                </span>
+                              </div>
+                            </div>
+                            <div className="rvo-card rvo-card--perceel">
+                              <div className="rvo-card-perceel-title">
+                                <Heading type="h2" textContent="#22 Groot maisveld"></Heading>
+                                <span className="rvo-card-perceel-hectare">2,395 ha</span>
+                              </div>
+                              <div className="rvo-card-perceel-content">
+                                <span className="rvo-card-perceel-gewas">
+                                  <span className="rvo-value-line-through">Mais</span> <strong>Aardappelen</strong>
+                                </span>
+                                <span className="rvo-card-perceel-datum">
+                                  van <em>15-01-2023</em> tot <em>25-03-2025</em>
+                                </span>
+                              </div>
+                            </div>
+                            <div className="rvo-card rvo-card--perceel">
+                              <div className="rvo-card-perceel-title">
+                                <Heading type="h2" textContent="#25 Akker aan de hoogstraat"></Heading>
+                                <span className="rvo-card-perceel-hectare">1,565 ha</span>
+                              </div>
+                              <div className="rvo-card-perceel-content">
+                                <span className="rvo-card-perceel-gewas">Grasland</span>
+                                <span className="rvo-card-perceel-datum">
+                                  van <em>15-01-2023</em> <strong> tot 15-01-2024</strong>
+                                </span>
+                              </div>
+                            </div>
+                            <div className="rvo-card rvo-card--perceel">
+                              <div className="rvo-card-perceel-title">
+                                <Heading type="h2" textContent="#433"></Heading>
+                                <span className="rvo-card-perceel-hectare">
+                                  <span className="rvo-value-line-through">1,100 ha</span> <strong>0,8495 ha</strong>
+                                </span>
+                              </div>
+                              <div className="rvo-card-perceel-content">
+                                <span className="rvo-card-perceel-gewas">Grasland, blijvend </span>
+                                <span className="rvo-card-perceel-datum">
+                                  van <em>15-01-2023</em> tot <em>25-03-2025</em>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </LayoutColumnRow>
                       </div>
                     </LayoutColumnRow>
                   </div>
@@ -191,4 +236,4 @@ const Startpagina = () => {
   );
 };
 
-export default Startpagina;
+export default Versturen;

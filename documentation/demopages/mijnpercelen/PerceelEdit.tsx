@@ -126,6 +126,7 @@ const PerceelEdit = () => {
                           expandableHelperText={true}
                           expandableHelperTextTitle="Meer uitleg"
                           helperText="Geef uw perceel een herkenbare en logische naam. Dat maakt uw lijst met percelen overzichtelijk wanneer u landschapselementen heeft geregistreerd. U ziet dan makkelijk bij welk perceel een landschapselement hoort."
+                          value="Sloot bij de buren"
                         ></TextInputField>
                         <SelectField
                           label="Gewas"
@@ -262,7 +263,11 @@ const PerceelEdit = () => {
                           </LayoutColumnRow>
                         </div>
                         <DateInputField label="Ingangsdatum"></DateInputField>
-                        <DateInputField label="Einddatum"></DateInputField>
+                        <details className="rvo-fake-checkbox">
+                          <summary>Ik stop met het gebruik van dit perceel</summary>
+                          <DateInputField label="Einddatum"></DateInputField>
+                        </details>
+
                         <CheckboxField
                           label=""
                           options={[
