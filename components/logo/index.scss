@@ -10,6 +10,7 @@
   flex-direction: row;
   font-family: var(--rvo-logo-font-family);
   font-size: var(--rvo-logo-font-size, 1em);
+  font-weight: var(--rvo-logo-font-weight);
   gap: var(--rvo-space-sm);
   line-height: var(--rvo-line-height-sm);
 }
@@ -33,6 +34,6 @@
 .rvo-logo__subtitle {
   margin-block-end: 0;
   margin-block-start: 0;
-  max-width: 200px;
+  max-width: 220px;
   white-space: pre-line;
 }
