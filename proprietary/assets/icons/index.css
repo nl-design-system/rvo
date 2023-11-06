@@ -1,4 +1,5 @@
-.rvo-theme {
+.rvo-theme,
+.rvo-rijkshuisstijl {
   --rvo-icon-afhaalpunt: url("activiteiten/afhaalpunt.svg");
   --rvo-icon-crisisoverleg: url("activiteiten/crisisoverleg.svg");
   --rvo-icon-dansen: url("activiteiten/dansen.svg");
