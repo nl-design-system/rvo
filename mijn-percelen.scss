@@ -166,6 +166,11 @@
       margin-inline-end: -16px;
       margin-inline-start: -16px;
 
+      .utrecht-icon {
+        height: 16px;
+        width: 16px;
+      }
+
       // .utrecht-button {
       //   color: var(--rvo-color-donkerblauw);
       // }
@@ -343,5 +348,21 @@
     position: absolute;
     top: 3px;
     width: 21px;
+  }
+
+  .rvo-instellingen {
+    text-align: end;
+
+    .utrecht-button {
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+
+    .utrecht-icon {
+      height: 16px;
+      width: 16px;
+    }
   }
 }
