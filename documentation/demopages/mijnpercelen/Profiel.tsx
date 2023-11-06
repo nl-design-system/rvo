@@ -24,16 +24,21 @@ const Profiel = () => {
           <MenuBar
             items={[
               {
+                label: 'Home',
+
+                icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+              },
+              {
                 label: 'Mijn Percelen',
 
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
-                icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
               },
               {
                 label: 'Boer Overveen B.V',
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
-                icon: 'user',
                 active: true,
+                icon: 'user',
               },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
@@ -46,7 +51,7 @@ const Profiel = () => {
         <main className="rvo-main--mijn-percelen rvo-main--mijn-percelen-sidebar-active rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-main-mijn-percelen--sidebar-menu">
             <MenuBar
-              items={[{ label: 'Voorkeuren', link: '#', icon: 'user', active: true }]}
+              items={[{ label: 'Instellingen', link: '#', icon: 'user', active: true }]}
               size="md"
               useIcons={true}
               iconPlacement="before"
@@ -54,7 +59,7 @@ const Profiel = () => {
             />
           </div>
           <div className="rvo-main-mijn-percelen--profiel">
-            <Heading type="h1" textContent="Voorkeuren" />
+            <Heading type="h1" textContent="Instellingen" />
             <LayoutColumnRow size="md">
               <ul role="tablist" className="rvo-tabs">
                 <li role="presentation" className="rvo-tabs-item">

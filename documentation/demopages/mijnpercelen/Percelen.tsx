@@ -34,10 +34,15 @@ const Percelen = () => {
           <MenuBar
             items={[
               {
+                label: 'Home',
+
+                icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+              },
+              {
                 label: 'Mijn Percelen',
                 active: true,
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
-                icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
               },
               {
                 label: 'Boer Overveen B.V',
@@ -101,6 +106,20 @@ const Percelen = () => {
               <div className="rvo-rhs-update-component">
                 <LayoutColumnRow size="md">
                   <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" />
+                  <div className="rvo-instellingen">
+                    <a
+                      className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
+                      type="button"
+                      href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story"
+                    >
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-tandwielen rvo-icon--xs rvo-icon--hemelblauw"
+                        role="img"
+                        aria-label="Tandwielen"
+                      ></span>
+                      Instellingen
+                    </a>
+                  </div>
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
                       <details className="rvo-percelen-filter">
@@ -133,6 +152,7 @@ const Percelen = () => {
                       </details>
                     </fieldset>
                   </div>
+
                   <div className="rvo-cards rvo-cards--percelen">
                     <div className="rvo-card rvo-card--perceel">
                       <div className="rvo-card-perceel-title">
@@ -171,6 +191,9 @@ const Percelen = () => {
                       </div>
 
                       <div className="rvo-card-perceel-actions">
+                        <Button kind="warning-subtle" size="xs" showIcon="before" icon="refresh">
+                          Ongedaan maken
+                        </Button>
                         <Button kind="tertiary" size="xs" showIcon="no">
                           Bewerken
                         </Button>

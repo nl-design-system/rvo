@@ -24,10 +24,15 @@ const Samenvatting = () => {
           <MenuBar
             items={[
               {
+                label: 'Home',
+
+                icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+              },
+              {
                 label: 'Mijn Percelen',
                 active: true,
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
-                icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
               },
               {
                 label: 'Boer Overveen B.V',

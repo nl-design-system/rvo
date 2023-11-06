@@ -24,16 +24,20 @@ const Versturen = () => {
           <MenuBar
             items={[
               {
-                label: 'Mijn Percelen',
+                label: 'Home',
 
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
                 icon: 'home',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+              },
+              {
+                label: 'Mijn Percelen',
+                active: true,
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
               },
               {
                 label: 'Boer Overveen B.V',
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
                 icon: 'user',
-                active: true,
               },
               { label: 'Uitloggen', link: '#', align: 'right' },
             ]}
