@@ -24,9 +24,14 @@ const Startpagina = () => {
           <MenuBar
             items={[
               {
-                label: 'Mijn Percelen',
+                label: 'Home',
                 active: true,
+                icon: 'home',
                 link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+              },
+              {
+                label: 'Mijn Percelen',
+                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
               },
               {
                 label: 'Boer Overveen B.V',
