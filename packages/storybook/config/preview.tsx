@@ -133,11 +133,11 @@ const parameters = {
     removeEmptyComments: true,
   },
   themes: {
-    default: 'RVO',
+    default: 'ROOS 1.0',
     target: 'root',
     list: [
-      { name: 'RVO', class: 'rvo-theme', color: '#007bc7' },
-      { name: 'RVO (Rijkshuisstijl)', class: 'rvo-rijkshuisstijl', color: '#007bc7' },
+      { name: 'ROOS 1.0', class: 'rvo-theme', color: '#007bc7' },
+      { name: 'ROOS 2.0', class: 'rvo-rijkshuisstijl', color: '#007bc7' },
     ],
   },
 };
