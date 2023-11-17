@@ -16,7 +16,8 @@
   },
   "engines": {
     "node": "^18.x",
-    "npm": "^8"
+    "npm": "^8",
+    "pnpm": "^8.8"
   },
   "workspaces": [
     "./documentation/",
