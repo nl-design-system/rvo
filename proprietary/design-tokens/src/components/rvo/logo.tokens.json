@@ -7,6 +7,9 @@
       "emblem": {
         "background-color": { "value": "#154273" },
         "color": { "value": "{rvo.color.wit}" }
+      },
+      "subtitle": {
+        "max-inline-size": { "value": "200px" }
       }
     }
   }
