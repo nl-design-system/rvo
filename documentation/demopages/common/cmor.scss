@@ -1,0 +1,127 @@
+.rvo-cmor {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  .rvo-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rvo-logo {
+    margin-inline-start: 250px;
+  }
+
+  .rvo-main--sidebar-active {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: 85vh;
+  }
+
+  .rvo-sidebar-menu {
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-3xl);
+    padding-inline-end: var(--rvo-space-3xl);
+    padding-inline-start: var(--rvo-space-3xl);
+
+    .rvo-topnav__background {
+      background-color: #f1f5f9;
+    }
+
+    .utrecht-topnav__list {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: var(--rvo-space-md);
+    }
+
+    .utrecht-topnav__item--active .utrecht-topnav__link {
+      font-weight: 700;
+
+      &::before,
+      &:hover::before,
+      &:focus::before {
+        opacity: 100%;
+      }
+    }
+
+    .utrecht-topnav__link {
+      color: #475569;
+      font-weight: 400;
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+
+      &::before {
+        background-color: var(--rvo-color-hemelblauw);
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 20px;
+        opacity: 0%;
+        width: 4px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        opacity: 10%;
+      }
+
+      .utrecht-icon {
+        background-color: #475569;
+      }
+    }
+  }
+
+  .rvo-main--cmor.rvo-main--overzicht {
+    background-color: var(--rvo-color-wit);
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-3xl);
+    padding-inline-end: var(--rvo-space-3xl);
+    padding-inline-start: var(--rvo-space-3xl);
+
+    .utrecht-heading-1 {
+      /* Heading has bold and non bold text in CMOR design */
+      font-weight: var(--rvo-font-weight-regular);
+
+      /* negative margin-block-start to get the same visual height as the start of the sidebar menu: is this the best way? */
+      margin-block-start: -5px;
+    }
+  }
+
+  .rvo-expandable-text--subtle {
+    .rvo-expandable-text__summary {
+      color: #64748b;
+      font-weight: var(--rvo-font-weight-regular);
+    }
+
+    .utrecht-icon,
+    .rvo-expandable-text__summary::after {
+      background-color: #64748b;
+    }
+  }
+
+  .rvo-alert--space-lg {
+    padding-block-end: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
+    padding-block-start: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
+    padding-inline-end: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
+    padding-inline-start: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
+  }
+
+  .rvo-reminders {
+    max-width: 408px;
+
+    .rvo-alert p {
+      font-size: var(--rvo-font-size-sm);
+      margin-block-end: var(--rvo-space-xs);
+      margin-block-start: 0;
+    }
+  }
+}
