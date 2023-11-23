@@ -5,8 +5,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../icon/template';
-import Link from '../link/template';
 import '../layout-column-row/index.scss';
+import Link from '../link/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 

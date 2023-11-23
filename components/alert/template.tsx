@@ -8,8 +8,8 @@ import { Button } from '../button/template';
 import { Icon } from '../icon/template';
 import { StatusIcon } from '../status-icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import './index.scss';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface IAlertProps {
   kind?: 'info' | 'warning' | 'error' | 'success';

@@ -26,6 +26,6 @@
     "url": "git@github.com:nl-design-system/rvo.git"
   },
   "devDependencies": {
-    "sass": "^1.53.0"
+    "sass": "^1.69.5"
   }
 }
