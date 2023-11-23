@@ -70,27 +70,34 @@ const Overzicht = () => {
               </h1>
               <div className="rvo-reminders">
                 <Heading type="h2" textContent="Nog te starten"></Heading>
-                <div className="rvo-expandable-text--subtle">
-                  <ExpandableText
-                    title="Wij vragen u onderstaande aanvragen op tijd te regelen"
-                    content="Extra uitleg over bovenstaande opmerking."
-                  />
-                </div>
-                <div className="rvo-alert rvo-alert--info rvo-alert--space-lg">
-                  <div className="rvo-alert-text">
-                    <div>
+                <LayoutColumnRow size="md">
+                  <div className="rvo-expandable-text--subtle">
+                    <ExpandableText
+                      title="Wij vragen u onderstaande aanvragen op tijd te regelen"
+                      content="Extra uitleg over bovenstaande opmerking."
+                    />
+                  </div>
+                  <div className="rvo-alert rvo-alert--info rvo-alert--space-lg">
+                    <div className="rvo-alert-text">
                       <div>
-                        <Heading type="h3" textContent="Mijn percelen" />
-                        <p>Uiterlijk 4 september 2024</p>
-                        <div className="rvo-rhs-update-component">
-                          <Button kind="primary" size="sm">
-                            Percelen registreren
-                          </Button>
+                        <div>
+                          <Heading type="h3" textContent="Mijn percelen" />
+                          <p>Uiterlijk 4 september 2024</p>
+                          <div className="rvo-rhs-update-component">
+                            <div className="utrecht-button-group">
+                              <Button kind="primary" size="sm">
+                                Percelen registreren
+                              </Button>
+                              <Button kind="secondary" size="sm" icon="externe-link" showIcon="after">
+                                Meer informatie
+                              </Button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </LayoutColumnRow>
               </div>
             </LayoutColumnRow>
           </div>

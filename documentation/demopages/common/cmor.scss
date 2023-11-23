@@ -109,10 +109,10 @@
   }
 
   .rvo-alert--space-lg {
-    padding-block-end: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
-    padding-block-start: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
-    padding-inline-end: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
-    padding-inline-start: calc(var(--rvo-space-lg) + var(--rvo-space-3xs));
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
   }
 
   .rvo-reminders {
