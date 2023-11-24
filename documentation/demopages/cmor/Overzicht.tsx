@@ -1,4 +1,4 @@
-import { Button, ExpandableText, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Button, ExpandableText, Heading, LayoutColumnRow, MenuBar, Tag } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/cmor.scss';
 
@@ -68,36 +68,50 @@ const Overzicht = () => {
               <h1 className="utrecht-heading-1">
                 <strong>Overzicht</strong> van Boer Overveen B.V.
               </h1>
-              <div className="rvo-reminders">
-                <Heading type="h2" textContent="Nog te starten"></Heading>
-                <LayoutColumnRow size="md">
-                  <div className="rvo-expandable-text--subtle">
-                    <ExpandableText
-                      title="Wij vragen u onderstaande aanvragen op tijd te regelen"
-                      content="Extra uitleg over bovenstaande opmerking."
-                    />
-                  </div>
-                  <div className="rvo-alert rvo-alert--info rvo-alert--space-lg">
-                    <div className="rvo-alert-text">
-                      <div>
+              <LayoutColumnRow size="xl">
+                <div className="rvo-reminders">
+                  <Heading type="h2" textContent="Nog te starten"></Heading>
+                  <LayoutColumnRow size="md">
+                    <div className="rvo-expandable-text--subtle">
+                      <ExpandableText
+                        title="Wij vragen u onderstaande aanvragen op tijd te regelen"
+                        content="Extra uitleg over bovenstaande opmerking."
+                      />
+                    </div>
+                    <div className="rvo-alert rvo-alert--info rvo-alert--space-lg">
+                      <div className="rvo-alert-text">
                         <div>
-                          <Heading type="h3" textContent="Mijn percelen" />
-                          <p>Uiterlijk 4 september 2024</p>
-                          <div className="rvo-rhs-update-component">
-                            <div className="utrecht-button-group">
-                              <Button kind="primary" size="sm">
-                                Percelen registreren
-                              </Button>
-                              <Button kind="secondary" size="sm" icon="externe-link" showIcon="after">
-                                Meer informatie
-                              </Button>
+                          <div>
+                            <Heading type="h3" textContent="Mijn percelen" />
+                            <p>Uiterlijk 4 september 2024</p>
+                            <div className="rvo-rhs-update-component">
+                              <div className="utrecht-button-group">
+                                <Button kind="primary" size="sm">
+                                  Percelen registreren
+                                </Button>
+                                <Button kind="secondary" size="sm" icon="externe-link" showIcon="after">
+                                  Meer informatie
+                                </Button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </LayoutColumnRow>
+                  </LayoutColumnRow>
+                </div>
+              </LayoutColumnRow>
+              <div className="rvo-cards rvo-cards--grid">
+                <div className="rvo-heading-w-tag">
+                  <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
+                  <Tag type="info" showIcon="no" content="2 openstaande acties" />
+                </div>
+                <div className="rvo-card">
+                  <Heading type="h3" textContent="ISDE 2023" />
+                  <p className="rvo-paragraph--sm rvo-paragraph--subtle">
+                    Investeringssubsidie duurzame energie en energiebesparing
+                  </p>
+                </div>
               </div>
             </LayoutColumnRow>
           </div>

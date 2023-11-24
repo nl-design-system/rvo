@@ -124,4 +124,9 @@
       margin-block-start: 0;
     }
   }
+
+  .rvo-heading-w-tag {
+    display: flex;
+    gap: var(--rvo-space-sm);
+  }
 }
