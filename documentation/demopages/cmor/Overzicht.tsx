@@ -1,4 +1,4 @@
-import { Button, ExpandableText, Heading, LayoutColumnRow, MenuBar, Tag } from '@nl-rvo/components';
+import { Button, ExpandableText, Heading, Icon, LayoutColumnRow, MenuBar, Tag } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/cmor.scss';
 
@@ -10,17 +10,38 @@ const Overzicht = () => {
           <div className="rvo-rhs-update-component">
             <a className="rvo-logo" href="#">
               <div className="rvo-logo-lint">
-                <img src="images/lint.svg" alt=""></img>
+                <img src="images/lint.svg" alt="" />
               </div>
-              <div className="rvo-logo-text">
-                Rijksdienst voor Ondernemend
-                <br />
+              <div className="rvo-logo-text rvo-logo-text--full">
+                Rijksdienst voor Ondernemend <br />
                 Nederland
               </div>
+              <div className="rvo-logo-text rvo-logo-text--abv">RVO</div>
             </a>
           </div>
         </header>
         <div className="rvo-rhs-update-component">
+          <div className="rvo-responsive-menu-wrapper">
+            <details className="rvo-responsive-menu">
+              <summary className="rvo-responsive-menu-toggle">
+                <Icon icon="menu" size="lg" /> Menu
+              </summary>
+              <div className="rvo-sidebar-menu">
+                <MenuBar
+                  items={[
+                    { label: 'Overzicht', link: '#', icon: 'home', active: true },
+                    { label: 'Mijn dossier', link: '#', icon: 'map' },
+                    { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                    { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+                  ]}
+                  size="md"
+                  useIcons={true}
+                  iconPlacement="before"
+                  menuMaxWidth="md"
+                />
+              </div>
+            </details>
+          </div>
           <MenuBar
             items={[
               {

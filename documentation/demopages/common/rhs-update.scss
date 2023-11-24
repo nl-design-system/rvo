@@ -1,9 +1,11 @@
-.rvo-sidebar-menu-active {
-  background: linear-gradient(90deg, #f1f5f9 50%, #fff 50%);
+@media (min-width: 780px) {
+  .rvo-sidebar-menu-active {
+    background: linear-gradient(90deg, #f1f5f9 50%, #fff 50%);
 
-  .rvo-header,
-  .rvo-main-mijn-percelen--profiel {
-    background-color: var(--rvo-color-wit);
+    .rvo-header,
+    .rvo-main-mijn-percelen--profiel {
+      background-color: var(--rvo-color-wit);
+    }
   }
 }
 
@@ -16,7 +18,7 @@
     padding-inline-start: var(--rvo-space-xl);
   }
 
-  /* BUTTONS */
+  // BUTTONS //
 
   .rvo-rhs-update-component .utrecht-button {
     border-radius: 3px;
@@ -24,15 +26,15 @@
     &.utrecht-button--disabled {
       background-color: #e2e8f0;
 
-      /* nieuwe grijs-3 tint */
+      // nieuwe grijs-3 tint //
 
       color: #475569;
 
-      /* nieuwe grijs-7 tint */
+      // nieuwe grijs-7 tint //
     }
   }
 
-  /* LOGO */
+  // LOGO //
 
   .rvo-rhs-update-component .rvo-logo {
     align-items: flex-start;
@@ -40,18 +42,105 @@
     display: inline-flex;
     font-family: "RijksOverheidSansWebText", "verdana", sans-serif;
     font-weight: 700;
+    margin-inline-start: 46px;
     text-decoration: none;
 
     .rvo-logo-text {
       padding-block-start: 54px;
     }
+
+    .rvo-logo-text--full {
+      // Hide full name on smaller screens //
+      display: none;
+    }
+
+    @media (min-width: 580px) {
+      margin-inline-start: 250px;
+
+      .rvo-logo-text--full {
+        // Show full name on smaller screens //
+        display: block;
+      }
+
+      .rvo-logo-text--abv {
+        // Hide abbreviated name on larger screens //
+        display: none;
+      }
+    }
   }
 
-  /* MENU BAR */
+  // MENU BAR //
 
-  .rvo-rhs-update-component .rvo-topnav__background {
+  .rvo-responsive-menu-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .rvo-responsive-menu > .rvo-responsive-menu-toggle {
+    align-items: center;
+    color: var(--rvo-color-hemelblauw);
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-2xs);
+    list-style: none;
+    padding-block-end: var(--rvo-space-xs);
+    padding-inline-end: var(--rvo-space-sm);
+    padding-inline-start: var(--rvo-space-sm);
+  }
+
+  .rvo-responsive-menu > .rvo-responsive-menu-toggle::marker,
+  .rvo-responsive-menu > .rvo-responsive-menu-toggle > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::before {
+    background-color: var(--rvo-color-zwart);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 35%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::after {
+    background-color: var(--rvo-color-hemelblauw);
+    content: "";
+    display: block;
+    height: 16px;
+    left: 196px;
+    -webkit-mask-image: var(--rvo-icon-kruis);
+    mask-image: var(--rvo-icon-kruis);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    position: absolute;
+    top: 32px;
+    width: 16px;
+    z-index: 3;
+  }
+
+  .rvo-responsive-menu .rvo-sidebar-menu {
+    height: 100vh;
+    left: 0;
+    padding-inline-end: var(--rvo-space-2xl);
+    padding-inline-start: var(--rvo-space-2xl);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+
+  .rvo-topnav__background {
     background-color: var(--rvo-color-wit);
-    border-bottom: 1px solid #e2e8f0;
+
+    // border-bottom: 1px solid #e2e8f0;
     font-weight: 700;
 
     .utrecht-topnav__link {
@@ -69,7 +158,69 @@
     }
   }
 
-  /* TABS */
+  .rvo-sidebar-menu {
+    background-color: #f1f5f9;
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-3xl);
+    padding-inline-end: var(--rvo-space-3xl);
+    padding-inline-start: var(--rvo-space-3xl);
+
+    .rvo-topnav__background {
+      background-color: #f1f5f9;
+    }
+
+    .utrecht-topnav__list {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: var(--rvo-space-md);
+    }
+
+    .utrecht-topnav__item--active .utrecht-topnav__link {
+      font-weight: 700;
+
+      &::before,
+      &:hover::before,
+      &:focus::before {
+        opacity: 100%;
+      }
+    }
+
+    .utrecht-topnav__link {
+      color: #475569;
+      font-weight: 400;
+      padding-block-end: 0;
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+
+      &::before {
+        background-color: var(--rvo-color-hemelblauw);
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 20px;
+        opacity: 0%;
+        width: 4px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        opacity: 10%;
+      }
+
+      .utrecht-icon {
+        background-color: #475569;
+      }
+    }
+  }
+
+  // TABS //
 
   .rvo-tabs {
     display: flex;
@@ -121,7 +272,7 @@
     padding-block-start: var(--rvo-space-md);
   }
 
-  /* FORMS */
+  // FORMS //
 
   .utrecht-form-fieldset .rvo-link,
   .utrecht-form-fieldset .rvo-expandable-text__summary {
@@ -187,7 +338,7 @@
     }
   }
 
-  /* CARDS */
+  // CARDS //
 
   .rvo-card {
     border: 1px solid #cbd5e1;
@@ -207,7 +358,7 @@
     }
   }
 
-  /* TABLE */
+  // TABLE //
 
   .rvo-table-header {
     background-color: #f8fafc;
@@ -218,7 +369,7 @@
     border-bottom-color: #e2e8f0;
   }
 
-  /* @CONTENT ELEMENTS */
+  // @CONTENT ELEMENTS //
 
   .rvo-paragraph-spaced {
     margin-block-start: 0;
@@ -232,7 +383,7 @@
     padding-inline-start: 20px;
   }
 
-  /* @INFO BLOCK */
+  // @INFO BLOCK //
 
   .rvo-info-block {
     border: 1px solid #e2e8f0;
