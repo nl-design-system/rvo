@@ -1,4 +1,4 @@
-import { Button, ExpandableText, Heading, Icon, LayoutColumnRow, MenuBar, Tag } from '@nl-rvo/components';
+import { Button, ExpandableText, Heading, Icon, LayoutColumnRow, MenuBar, StatusIcon, Tag } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/cmor.scss';
 
@@ -145,12 +145,29 @@ const Overzicht = () => {
                     <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
                     <Tag type="info" showIcon="no" content="2 openstaande acties" />
                   </div>
-                  <a className="rvo-card rvo-card--w-link" href="#">
-                    <Heading type="h3" textContent="ISDE 2023" />
-                    <span className="rvo-paragraph--sm rvo-paragraph--subtle">
-                      Investeringssubsidie duurzame energie en energiebesparing
-                    </span>
-                  </a>
+                  <div className="rvo-card rvo-card--w-link rvo-card--w-icon">
+                    <div className="rvo-card-content">
+                      <h3 className="utrecht-heading-3">
+                        <a href="#" className="rvo-link--full-click">
+                          ISDE 2023
+                        </a>
+                      </h3>
+                      <LayoutColumnRow size="xs">
+                        <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
+                          Investeringssubsidie duurzame energie en energiebesparing
+                        </p>
+                        <div className="rvo-card-status">
+                          <StatusIcon type="waarschuwing" size="md" />
+                          <div className="rvo-card-status-text">
+                            Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                          </div>
+                        </div>
+                      </LayoutColumnRow>
+                    </div>
+                    <div className="rvo-card-icon">
+                      <Icon icon="delta-naar-rechts" size="sm" />
+                    </div>
+                  </div>
                 </LayoutColumnRow>
               </div>
             </LayoutColumnRow>
