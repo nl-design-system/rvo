@@ -39,6 +39,23 @@ const Overzicht = () => {
                   iconPlacement="before"
                   menuMaxWidth="md"
                 />
+                <MenuBar
+                  items={[{ label: 'Hulp & Contact', link: '#', icon: 'communicatie' }]}
+                  size="md"
+                  useIcons={true}
+                  iconPlacement="before"
+                  menuMaxWidth="md"
+                />
+                <MenuBar
+                  items={[
+                    { label: 'English', link: '#', icon: 'wereldbol' },
+                    { label: 'Uitloggen', link: '#', icon: 'externe-link' },
+                  ]}
+                  size="md"
+                  useIcons={true}
+                  iconPlacement="before"
+                  menuMaxWidth="md"
+                />
               </div>
             </details>
           </div>
@@ -69,7 +86,7 @@ const Overzicht = () => {
             menuMaxWidth="lg"
           />
         </div>
-        <main className="rvo-main--cmor rvo-main--sidebar-active rvo-max-width-layout rvo-max-width-layout--lg">
+        <main className="rvo-main--cmor rvo-main--sidebar-active rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-sidebar-menu">
             <MenuBar
               items={[

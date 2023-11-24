@@ -139,8 +139,6 @@
 
   .rvo-topnav__background {
     background-color: var(--rvo-color-wit);
-
-    // border-bottom: 1px solid #e2e8f0;
     font-weight: 700;
 
     .utrecht-topnav__link {
@@ -158,6 +156,10 @@
     }
   }
 
+  .rvo-main--sidebar-active .rvo-sidebar-menu {
+    display: none;
+  }
+
   .rvo-sidebar-menu {
     background-color: #f1f5f9;
     padding-block-end: var(--rvo-space-3xl);
@@ -167,6 +169,12 @@
 
     .rvo-topnav__background {
       background-color: #f1f5f9;
+    }
+
+    .rvo-topnav__background + .rvo-topnav__background {
+      border-top: 1px solid #cbd5e1;
+      margin-block-start: var(--rvo-space-sm);
+      padding-block-start: var(--rvo-space-md);
     }
 
     .utrecht-topnav__list {
@@ -218,6 +226,12 @@
         background-color: #475569;
       }
     }
+  }
+
+  // MAIN //
+
+  .rvo-main--w-line {
+    border-top: 1px solid #e2e8f0;
   }
 
   // TABS //
