@@ -426,8 +426,44 @@
     }
   }
 
-  // TAG //
+  // SUBTLE EXPANDABLE TEXT //
+
+  .rvo-expandable-text--subtle {
+    .rvo-expandable-text__summary {
+      color: #64748b;
+      font-weight: var(--rvo-font-weight-regular);
+    }
+
+    .utrecht-icon,
+    .rvo-expandable-text__summary::after {
+      background-color: #64748b;
+    }
+  }
+
+  // GENERAL FIXES
+
+  .utrecht-button-group {
+    flex-wrap: wrap;
+  }
+
   .rvo-tag {
     align-items: center;
+  }
+
+  .rvo-expandable-text__summary {
+    align-items: flex-start;
+  }
+
+  .rvo-expandable-text__summary .utrecht-icon {
+    margin-block-start: 3px;
+    min-width: var(--rvo-size-md);
+  }
+
+  .rvo-expandable-text__summary::after {
+    margin-block-start: 3px;
+    min-width: 10px;
+  }
+  .rvo-expandable-text__details {
+    padding-inline-start: 20px;
   }
 }
