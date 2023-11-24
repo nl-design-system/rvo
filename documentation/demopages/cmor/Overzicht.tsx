@@ -140,16 +140,18 @@ const Overzicht = () => {
                 </div>
               </LayoutColumnRow>
               <div className="rvo-cards rvo-cards--grid">
-                <div className="rvo-heading-w-tag">
-                  <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
-                  <Tag type="info" showIcon="no" content="2 openstaande acties" />
-                </div>
-                <div className="rvo-card">
-                  <Heading type="h3" textContent="ISDE 2023" />
-                  <p className="rvo-paragraph--sm rvo-paragraph--subtle">
-                    Investeringssubsidie duurzame energie en energiebesparing
-                  </p>
-                </div>
+                <LayoutColumnRow size="md">
+                  <div className="rvo-heading-w-tag">
+                    <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
+                    <Tag type="info" showIcon="no" content="2 openstaande acties" />
+                  </div>
+                  <a className="rvo-card rvo-card--w-link" href="#">
+                    <Heading type="h3" textContent="ISDE 2023" />
+                    <span className="rvo-paragraph--sm rvo-paragraph--subtle">
+                      Investeringssubsidie duurzame energie en energiebesparing
+                    </span>
+                  </a>
+                </LayoutColumnRow>
               </div>
             </LayoutColumnRow>
           </div>

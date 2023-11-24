@@ -372,6 +372,12 @@
     }
   }
 
+  .rvo-card--w-link {
+    color: var(--rvo-color-zwart);
+    display: block;
+    text-decoration: none;
+  }
+
   // TABLE //
 
   .rvo-table-header {
@@ -397,6 +403,15 @@
     padding-inline-start: 20px;
   }
 
+  .rvo-heading-w-tag {
+    display: flex;
+    flex-wrap: wrap;
+
+    *[class^="utrecht-heading-"] {
+      margin-inline-end: var(--rvo-space-sm);
+    }
+  }
+
   // @INFO BLOCK //
 
   .rvo-info-block {
@@ -409,5 +424,10 @@
     *:last-child {
       margin-block-end: 0;
     }
+  }
+
+  // TAG //
+  .rvo-tag {
+    align-items: center;
   }
 }
