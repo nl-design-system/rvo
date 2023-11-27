@@ -557,6 +557,41 @@
     position: relative;
   }
 
+  // QUICK LINKS
+
+  .rvo-quick-links-list {
+    display: grid;
+    gap: var(--rvo-space-2xs);
+    list-style: none;
+    margin-block-start: var(--rvo-space-xs);
+    padding-inline-start: 0;
+  }
+
+  // MESSAGES
+
+  .rvo-messages {
+    display: grid;
+    gap: var(--rvo-space-sm);
+  }
+
+  .rvo-messages-list {
+    display: grid;
+    gap: var(--rvo-space-xs);
+  }
+
+  .rvo-messages-list-item {
+    border-bottom: 1px solid #e2e8f0;
+    padding-block-end: var(--rvo-space-xs);
+    position: relative;
+  }
+
+  .rvo-messages-meta-data {
+    color: #64748b;
+    display: flex;
+    font-size: var(--rvo-font-size-sm);
+    justify-content: space-between;
+  }
+
   // GENERAL FIXES
 
   .utrecht-button-group {
