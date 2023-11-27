@@ -36,8 +36,24 @@ const Index = () => {
                   href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-screenshots-uitgangspositie--default&viewMode=story"
                   className="rvo-link rvo-link--no-underline"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Screenshots uitgangspositie
+                </a>
+              </p>
+            </li>
+            <li>
+              <a href="iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story" className="rvo-link">
+                Centrale Mijn Omgeving RVO (CMOR)
+              </a>
+              <p className="rvo-paragraph--sm">
+                <a
+                  href="https://www.figma.com/proto/QpMO6STbDvz0YB8ND87v5o/CMOR-Specifiek-Ontwerp?page-id=7871%3A31861&type=design&node-id=8043-17660&viewport=643%2C149%2C0.02&t=Zv0paCJYenlnqBLR-1&scaling=scale-down&starting-point-node-id=8043%3A17660&mode=design"
+                  className="rvo-link rvo-link--no-underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Figma prototype uitgangspositie
                 </a>
               </p>
             </li>
