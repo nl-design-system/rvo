@@ -121,7 +121,7 @@ jobs:
           pnpm run --if-present build
       - name: "Generate design system website"
         run: |
-          npm run generate -w ./packages/design-system-website
+          pnpm run generate -w ./packages/design-system-website
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v3
         with:
@@ -215,7 +215,7 @@ jobs:
         continue-on-error: true
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
         run: |
-          npm install && npx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
+          pnpm install && pnpx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
 
   publish-chromatic:

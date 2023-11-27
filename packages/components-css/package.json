@@ -18,13 +18,13 @@
   },
   "devDependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
-    "@utrecht/component-library-css": "1.0.2-alpha.0",
+    "@utrecht/component-library-css": "2.0.0",
     "node-sass-package-importer": "5.3.3",
-    "rimraf": "3.0.2",
+    "rimraf": "5.0.5",
     "sass": "1.69.5"
   },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "build": "sass src/:dist/ --load-path=./node_modules/ --load-path=../../node_modules/ --no-source-map --style=compressed",
     "clean": "rimraf dist/"
   },

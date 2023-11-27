@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
@@ -15,7 +15,7 @@
       "dependsOn": ["^build"]
     },
     "build-watch": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build:watch",
@@ -24,14 +24,14 @@
       "dependsOn": ["^build"]
     },
     "test": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "npm run test",
         "cwd": "packages/components-react"
       }
     },
     "watch-test": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "npm run watch:test",
         "cwd": "packages/components-react"

@@ -16,7 +16,7 @@
   text-underline-offset: var(--rvo-link-text-underline-offset);
 }
 
-.rvo-link--no-underline:not(:focus):not(:hover):not(.rvo-link--hover):not(.rvo-link--focus) {
+.rvo-link--no-underline:not(:focus, :hover, .rvo-link--hover, .rvo-link--focus) {
   text-decoration: none;
 }
 
@@ -26,8 +26,8 @@
 }
 
 // Hover
-.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
   background-color: var(--rvo-link-hover-background-color);
   color: var(--rvo-link-hover-color);
   font-weight: var(--rvo-link-hover-font-weight);
@@ -59,8 +59,8 @@
   background-color: var(--rvo-link-icon-background-color);
 }
 
-.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) .rvo-link__icon,
-.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) .rvo-link__icon {
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon,
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon {
   background-color: var(--rvo-link-hover-icon-background-color);
 }
 

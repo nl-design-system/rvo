@@ -6,14 +6,14 @@ CSS components are developed using BEM class names and the stylesheets can be in
 Apply the class names to your elements to make them stylable using design tokens.
 
 ```shell
-npm install --save-dev --save-exact @nl-rvo/component-library-css
+pnpm install --save-dev --save-exact @nl-rvo/component-library-css
 
 ```
 
 Theoretically you can include the components in your HTML page like so, but this is not the typical use case of this library:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Example page</title>
@@ -36,8 +36,8 @@ export default class ExamplePage extends React.Component {
   render() {
     return (
       <>
-        <h1 className={btn["utrecht-heading-1"]}>Home</h1>
-        <p className={btn["utrecht-paragraph"]}>Hello, world!</p>
+        <h1 className={style["utrecht-heading-1"]}>Home</h1>
+        <p className={style["utrecht-paragraph"]}>Hello, world!</p>
       </>
     );
   }

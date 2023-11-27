@@ -1,8 +1,5 @@
 import { useArgs } from '@storybook/preview-api';
 import { Preview, StoryContext, StoryFn } from '@storybook/react';
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
-import * as ReactDOMServer from 'react-dom/server';
 import './preview.scss';
 import theme from './theme';
 
@@ -12,6 +9,9 @@ import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import '@nl-rvo/rijkshuisstijl-design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
+import parserBabel from 'prettier/esm/parser-babel.mjs';
+import prettier from 'prettier/esm/standalone.mjs';
+import * as ReactDOMServer from 'react-dom/server';
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
@@ -116,7 +116,7 @@ const parameters = {
           return prettier
             .format(ReactDOMServer.renderToStaticMarkup(storyContext.originalStoryFn(currentStoryArgs, storyContext)), {
               parser: 'babel',
-              plugins: [prettierBabel],
+              plugins: [parserBabel],
             })
             .replace(/\{" "\}/gm, ' ')
             .replace(/(;)[^;]*$/g, '');
@@ -124,7 +124,6 @@ const parameters = {
         return src;
       },
     },
-    page: () => <div>test</div>,
   },
   ...addonStatus,
   layout: 'fullscreen',

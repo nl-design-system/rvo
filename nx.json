@@ -39,7 +39,7 @@
   "targets": {
     "lint-css": {
       "inputs": ["**/*.{css,scss}"],
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "npm run lint:css"
       }

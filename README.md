@@ -66,7 +66,11 @@ Open a terminal and run the following commands to check:
 
 - `git --version`: a relatively recent version should be installed (Git 2.28 or later)
 - `node -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json)
-- `npm -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json)
+- `pnpm -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json)
+
+This repository uses pnpm as the package manager. Install pnpm with:
+
+- `npm install -g pnpm`
 
 ### Install code editor
 
@@ -89,14 +93,15 @@ We recommend the following extensions that are useful for this project:
 4. `cd rvo`
 5. `git checkout master` to switch to the main master branch, if you previously worked in this repository.
 6. `git pull` to get to the latest version of the master branch
-7. `npm install` to download and install all the dependencies
+7. `pnpm i` to download and install all the dependencies
+8. `pnpm run build` to build the packages
 
 ### Run Docusaurus on your computer
 
 1. Open Terminal
 2. Ensure your current directory is `rvo`
-3. Run `npm install` to ensure the latest and greatest of all dependencies
-4. Run `npm run docs`
+3. Run `pnpm i` to ensure the latest and greatest of all dependencies
+4. Run `pnpm run docs`
 5. The local version of docusaurus will be running on `localhost:3000/rvo`
 6. Press `Control+C` in your terminal to stop Docusaurus
 
@@ -106,8 +111,8 @@ Read the `standalone/docusaurus/README.md` for docusaurus details
 
 1. Open Terminal.
 2. Ensure your current directory is `rvo`
-3. Run `npm install` to ensure the latest and greatest of all dependencies
-4. Run `npm run storybook` to start Storybook
+3. Run `pnpm install` to ensure the latest and greatest of all dependencies
+4. Run `pnpm run storybook` to start Storybook
 5. Your main browser opens automatically with your local storybook on `localhost:6006`.
 6. Press `Control+C` in your terminal to stop Storybook.
 
@@ -117,12 +122,12 @@ First check the logs in the terminal if any error is displayed, if something doe
 
 Secondly check the JavaScript logs in your browsers developer tools if there are errors or warnings.
 
-You can run the code checks with `npm run lint` to see if any code errors can be detected.
+You can run the code checks with `pnpm run lint` to see if any code errors can be detected.
 
 You can also check the build logs of the design tokens for errors, if you have changed Style Dictionary JSON files, by building those separately:
 
 1. `cd proprietary/design-tokens/`
-2. `npm run build`
+2. `pnpm run build`
 
 ## Code of Conduct
 
