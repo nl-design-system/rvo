@@ -1,4 +1,5 @@
 import {
+  Accordion,
   Button,
   ExpandableText,
   Heading,
@@ -374,6 +375,45 @@ const Overzicht = () => {
                   </div>
                 </div>
                 <Link content="Alle berichten" showIcon="after" icon="pijl-naar-rechts" noUnderline={true} />
+              </div>
+              <div className="rvo-faq">
+                <Heading type="h2" textContent="Veelgestelde vragen" />
+                <div className="rvo-accordion--compact">
+                  <Accordion
+                    items={[
+                      {
+                        title: 'Mag ik voor deze regeling subsidies stapelen/combineren?',
+                        teaser: '',
+                        content:
+                          'Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.',
+                      },
+                      {
+                        title: 'Wat is een bestaande thermische schil?',
+                        teaser: '',
+                        content:
+                          'De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.',
+                      },
+                      {
+                        title: 'Wanneer krijg ik bericht over mijn subsidie?',
+                        teaser: '',
+                        content: 'Zo snel mogelijk.',
+                      },
+                    ]}
+                  />
+                </div>
+                <Link
+                  content="Bekijk alle veelgestelde vragen"
+                  showIcon="after"
+                  icon="pijl-naar-rechts"
+                  noUnderline={true}
+                />
+              </div>
+              <div className="rvo-contact-options">
+                <Heading type="h2" textContent="Neem contact op" />
+                <p className="rvo-paragraph">Staat uw vraag er niet bij? Neem dan contact met ons op.</p>
+                <Button kind="secondary" showIcon="after" icon="communicatie">
+                  Stel uw vraag via onze chat
+                </Button>
               </div>
             </LayoutColumnRow>
           </div>

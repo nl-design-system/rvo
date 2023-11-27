@@ -592,6 +592,41 @@
     justify-content: space-between;
   }
 
+  .rvo-messages-title:hover,
+  .rvo-messages-title:focus {
+    text-decoration: underline;
+  }
+
+  // FAQ
+
+  .rvo-faq {
+    display: grid;
+    gap: var(--rvo-space-sm);
+  }
+
+  // ACCORDION SMALL VARIANT
+
+  .rvo-accordion--compact {
+    .utrecht-heading-3 {
+      font-size: var(--rvo-font-size-md);
+    }
+
+    .rvo-accordion__item-summary {
+      padding-block-end: var(--rvo-space-xs);
+      padding-block-start: var(--rvo-space-sm);
+      padding-inline-end: var(--rvo-space-xs);
+      padding-inline-start: var(--rvo-space-xs);
+
+      .rvo-icon {
+        padding-block-start: 2px;
+      }
+
+      .rvo-accordion__content {
+        padding-inline-start: calc(var(--rvo-space-md) + var(--rvo-space-md));
+      }
+    }
+  }
+
   // GENERAL FIXES
 
   .utrecht-button-group {
