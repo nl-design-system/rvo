@@ -67,8 +67,8 @@
     "webpack": "5.89.0"
   },
   "scripts": {
-    "build": "npm run nx-build --skip-nx-cache",
-    "nx-build": "nx run-many --target=build --all --parallel",
+    "build": "npm run nx-build",
+    "nx-build": "nx run-many --target=build --all --skip-nx-cache --parallel=1",
     "clean": "npm run --if-present --workspaces clean",
     "clean-node-modules": "find . -name \"node_modules\" -exec rm -rf '{}' +; find . -name \"package-lock.json\" -exec rm -rf '{}' +; ",
     "docs": "npm run prepare-docusaurus && && npm run --workspace packages/docusaurus start",
