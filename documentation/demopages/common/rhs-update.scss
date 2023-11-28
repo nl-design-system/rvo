@@ -590,6 +590,17 @@
     padding-inline-start: 0;
   }
 
+  // BLOCK GROUP
+
+  .rvo-block-group {
+    display: grid;
+    gap: var(--rvo-space-xl);
+
+    @media (min-width: 1080px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   // MESSAGES
 
   .rvo-messages {
@@ -694,6 +705,18 @@
     padding-block-start: var(--rvo-space-xl);
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
+
+    @media (min-width: 780px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 1080px) {
+      grid-template-columns: repeat(4, 1fr);
+      padding-block-end: var(--rvo-space-3xl);
+      padding-block-start: var(--rvo-space-3xl);
+      padding-inline-end: var(--rvo-space-3xl);
+      padding-inline-start: var(--rvo-space-3xl);
+    }
   }
 
   .rvo-footer-column {
