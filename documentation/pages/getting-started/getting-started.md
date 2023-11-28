@@ -38,7 +38,22 @@ ROOS 1.0:
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.145"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.349"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/fonts/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/images/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/icons/index.css"
 />
 ```
 
@@ -48,12 +63,27 @@ ROOS 2.0:
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@nl-rvo/rijkshuisstijl-design-tokens@1.0.0-alpha.273"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/rijkshuisstijl-design-tokens@1.0.0-alpha.274"
 />
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.145"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.349"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/fonts/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/images/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/icons/index.css"
 />
 ```
 
