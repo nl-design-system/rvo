@@ -31,7 +31,7 @@ const config: StorybookConfig = {
     'storybook-addon-themes',
     '@whitespace/storybook-addon-html',
   ],
-  staticDirs: ['../../../documentation/demopages/common'],
+  staticDirs: ['../../../documentation/demopages/common', { from: '../../../proprietary/assets', to: '/static' }],
   viteFinal: async (config) => {
     return {
       ...config,
