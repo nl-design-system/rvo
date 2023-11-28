@@ -16,10 +16,24 @@ Include the Design Token CSS variables:
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/@nl-rvo/design-tokens/dist/index.css" />
 ```
 
-Combine it with the latest CSS Component classes from the NL Design System community, for example:
+or
+
+```html
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@nl-rvo/rijkshuisstijl-design-tokens/dist/index.css" />
+```
+
+Combine it with the latest CSS Component classes, for example:
 
 ```html
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/@nl-rvo/component-library-css/dist/index.css" />
+```
+
+And the assets, for example:
+
+```html
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@nl-rvo/assets/fonts/index.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@nl-rvo/assets/icons/index.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@nl-rvo/assets/images/index.css" />
 ```
 
 Then you can go ahead and use the HTML snippets of the components in this Storybook.
