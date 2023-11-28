@@ -48,10 +48,12 @@ https://unpkg.com/@nl-rvo/design-tokens@^1.0.0/dist/index.css
 
 ## npm packages
 
-| name                                                                                         | version                                                                                                                                       |
-| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [@nl-rvo/component-library-css](https://www.npmjs.com/package/@nl-rvo/component-library-css) | [![NPM version](https://img.shields.io/npm/v/@nl-rvo/component-library-css.svg)](https://www.npmjs.com/package/@nl-rvo/component-library-css) |
-| [@nl-rvo/design-tokens](https://www.npmjs.com/package/@nl-rvo/design-tokens)                 | [![NPM version](https://img.shields.io/npm/v/@nl-rvo/design-tokens.svg)](https://www.npmjs.com/package/@nl-rvo/design-tokens)                 |
+| name                                                                                                       | version                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [@nl-rvo/component-library-css](https://www.npmjs.com/package/@nl-rvo/component-library-css)               | [![NPM version](https://img.shields.io/npm/v/@nl-rvo/component-library-css.svg)](https://www.npmjs.com/package/@nl-rvo/component-library-css)               |
+| [@nl-rvo/design-tokens](https://www.npmjs.com/package/@nl-rvo/design-tokens)                               | [![NPM version](https://img.shields.io/npm/v/@nl-rvo/design-tokens.svg)](https://www.npmjs.com/package/@nl-rvo/design-tokens)                               |
+| [@nl-rvo/rijkshuisstijl-design-tokens](https://www.npmjs.com/package/@nl-rvo/rijkshuisstijl-design-tokens) | [![NPM version](https://img.shields.io/npm/v/@nl-rvo/rijkshuisstijl-design-tokens.svg)](https://www.npmjs.com/package/@nl-rvo/rijkshuisstijl-design-tokens) |
+| [@nl-rvo/assets](https://www.npmjs.com/package/@nl-rvo/assets)                                             | [![NPM version](https://img.shields.io/npm/v/@nl-rvo/assets.svg)](https://www.npmjs.com/package/@nl-rvo/assets)                                             |
 
 ## Contributing
 
@@ -94,7 +96,10 @@ We recommend the following extensions that are useful for this project:
 5. `git checkout master` to switch to the main master branch, if you previously worked in this repository.
 6. `git pull` to get to the latest version of the master branch
 7. `pnpm i` to download and install all the dependencies
-8. `pnpm run build` to build the packages
+
+### Build the design token packages
+
+1. Run `pnpm run build` to create a local build of the design token packages. These are used by Docusaurus and Storybook.
 
 ### Run Docusaurus on your computer
 
