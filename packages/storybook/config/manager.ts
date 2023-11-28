@@ -27,16 +27,16 @@ function waitForElement(selector: string): Promise<NodeListOf<Element>> {
   });
 }
 
-// Register an addon that hides stories with STATUS = HIDDEN from the sidebar
+// Register an addon that hides stories with [HIDDEN] in the title
 addons.register('HIDE_STORIES_ADDON', async () => {
-  await waitForElement('div[id="storybook-explorer-menu"] span[type="HIDDEN"]').then((elements) => {
+  await waitForElement('div[id="storybook-explorer-menu"] a[href*="hidden"]').then((elements) => {
     elements?.forEach((element) => {
-      const linkId = element.closest('a')?.getAttribute('id');
+      const linkId = element?.getAttribute('id');
       if (!linkId) {
         return;
       }
       var style = document.createElement('style');
-      style.innerHTML = `div[id="storybook-explorer-menu"] a[id="${linkId}"] { display: none; }`;
+      style.innerHTML = `div[id="storybook-explorer-menu"] div[data-item-id="${linkId}"] { display: none; }`;
       document.getElementsByTagName('head')[0].appendChild(style);
     });
   });
