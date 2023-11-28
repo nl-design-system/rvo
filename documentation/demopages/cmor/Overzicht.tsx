@@ -3,6 +3,7 @@ import {
   Button,
   ButtonGroup,
   ExpandableText,
+  Footer,
   Heading,
   Icon,
   LayoutColumnRow,
@@ -267,82 +268,84 @@ const Overzicht = () => {
                 </LayoutColumnRow>
               </div>
               <hr className="rvo-divider"></hr>
-              <div className="rvo-item-list">
-                <Heading type="h2" textContent="Start een nieuwe aanvraag" />
-                <span className="rvo-item-list-sub-title">Kies uit uw favorieten</span>
-                <LayoutColumnRow size="sm">
-                  <div className="rvo-item-list-items">
-                    <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
-                      <div className="rvo-item-list-item-content">
-                        <div className="rvo-status-indicator rvo-status-indicator--open"></div>
-                        <div className="rvo-item-list-item-title">
-                          <a href="#" className="rvo-link--full-click">
-                            ANLb-Collectieven
-                          </a>
+              <div className="rvo-block-group">
+                <div className="rvo-item-list">
+                  <Heading type="h2" textContent="Start een nieuwe aanvraag" />
+                  <span className="rvo-item-list-sub-title">Kies uit uw favorieten</span>
+                  <LayoutColumnRow size="sm">
+                    <div className="rvo-item-list-items">
+                      <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
+                        <div className="rvo-item-list-item-content">
+                          <div className="rvo-status-indicator rvo-status-indicator--open"></div>
+                          <div className="rvo-item-list-item-title">
+                            <a href="#" className="rvo-link--full-click">
+                              ANLb-Collectieven
+                            </a>
+                          </div>
+                          <div className="rvo-item-list-item-description">Open voor aanvragen</div>
                         </div>
-                        <div className="rvo-item-list-item-description">Open voor aanvragen</div>
+                        <div className="rvo-item-list-icon">
+                          <Icon icon="delta-naar-rechts" size="sm" />
+                        </div>
                       </div>
-                      <div className="rvo-item-list-icon">
-                        <Icon icon="delta-naar-rechts" size="sm" />
+                      <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
+                        <div className="rvo-item-list-item-content">
+                          <div className="rvo-status-indicator rvo-status-indicator--closed"></div>
+                          <div className="rvo-item-list-item-title">
+                            <a href="#" className="rvo-link--full-click">
+                              ISDE
+                            </a>
+                          </div>
+                          <div className="rvo-item-list-item-description">Gesloten voor aanvragen</div>
+                        </div>
+                        <div className="rvo-item-list-icon">
+                          <Icon icon="delta-naar-rechts" size="sm" />
+                        </div>
+                      </div>
+                      <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
+                        <div className="rvo-item-list-item-content">
+                          <div className="rvo-status-indicator rvo-status-indicator--tmp-closed"></div>
+                          <div className="rvo-item-list-item-title">
+                            <a href="#" className="rvo-link--full-click">
+                              Gecombineerde Opgave
+                            </a>
+                          </div>
+                          <div className="rvo-item-list-item-description">Tijdelijk gesloten voor aanvragen</div>
+                        </div>
+                        <div className="rvo-item-list-icon">
+                          <Icon icon="delta-naar-rechts" size="sm" />
+                        </div>
                       </div>
                     </div>
-                    <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
-                      <div className="rvo-item-list-item-content">
-                        <div className="rvo-status-indicator rvo-status-indicator--closed"></div>
-                        <div className="rvo-item-list-item-title">
-                          <a href="#" className="rvo-link--full-click">
-                            ISDE
-                          </a>
-                        </div>
-                        <div className="rvo-item-list-item-description">Gesloten voor aanvragen</div>
-                      </div>
-                      <div className="rvo-item-list-icon">
-                        <Icon icon="delta-naar-rechts" size="sm" />
-                      </div>
-                    </div>
-                    <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
-                      <div className="rvo-item-list-item-content">
-                        <div className="rvo-status-indicator rvo-status-indicator--tmp-closed"></div>
-                        <div className="rvo-item-list-item-title">
-                          <a href="#" className="rvo-link--full-click">
-                            Gecombineerde Opgave
-                          </a>
-                        </div>
-                        <div className="rvo-item-list-item-description">Tijdelijk gesloten voor aanvragen</div>
-                      </div>
-                      <div className="rvo-item-list-icon">
-                        <Icon icon="delta-naar-rechts" size="sm" />
-                      </div>
-                    </div>
-                  </div>
-                  <Link
-                    content="Zoek een andere regeling op rvo.nl"
-                    showIcon="after"
-                    icon="externe-link"
-                    target="#"
-                    noUnderline={true}
-                  />
-                </LayoutColumnRow>
-              </div>
-              <div className="rvo-quick-links">
-                <Heading type="h2" textContent="Snel naar" />
-                <ul className="rvo-quick-links-list">
-                  <li className="rvo-quick-links-list-item">
-                    <Link content="Wijzig e-mail of telefoonnummer" target="#" noUnderline={true} />
-                  </li>
-                  <li className="rvo-quick-links-list-item">
-                    <Link content="Neem contact op" target="#" noUnderline={true} />
-                  </li>
-                  <li className="rvo-quick-links-list-item">
-                    <Link content="Voeg favoriet toe" target="#" noUnderline={true} />
-                  </li>
-                  <li className="rvo-quick-links-list-item">
-                    <Link content="Machtig iemand anders" target="#" noUnderline={true} />
-                  </li>
-                  <li className="rvo-quick-links-list-item">
-                    <Link content="Meld een technisch probleem" target="#" noUnderline={true} />
-                  </li>
-                </ul>
+                    <Link
+                      content="Zoek een andere regeling op rvo.nl"
+                      showIcon="after"
+                      icon="externe-link"
+                      target="#"
+                      noUnderline={true}
+                    />
+                  </LayoutColumnRow>
+                </div>
+                <div className="rvo-quick-links">
+                  <Heading type="h2" textContent="Snel naar" />
+                  <ul className="rvo-quick-links-list">
+                    <li className="rvo-quick-links-list-item">
+                      <Link content="Wijzig e-mail of telefoonnummer" target="#" noUnderline={true} />
+                    </li>
+                    <li className="rvo-quick-links-list-item">
+                      <Link content="Neem contact op" target="#" noUnderline={true} />
+                    </li>
+                    <li className="rvo-quick-links-list-item">
+                      <Link content="Voeg favoriet toe" target="#" noUnderline={true} />
+                    </li>
+                    <li className="rvo-quick-links-list-item">
+                      <Link content="Machtig iemand anders" target="#" noUnderline={true} />
+                    </li>
+                    <li className="rvo-quick-links-list-item">
+                      <Link content="Meld een technisch probleem" target="#" noUnderline={true} />
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div className="rvo-messages">
                 <Heading type="h2" textContent="Berichten" />
@@ -425,6 +428,45 @@ const Overzicht = () => {
             </LayoutColumnRow>
           </div>
         </main>
+        <Footer
+          columns={[
+            {
+              label: 'RVO',
+              items: [
+                { content: 'Over ons', link: '#' },
+                { content: 'Contact', link: '#' },
+                { content: 'Pers', link: '#' },
+                { content: 'Zaken regelen bij RVO', link: '#' },
+              ],
+            },
+            {
+              label: 'Over deze site',
+              items: [
+                { content: 'Privacy', link: '#' },
+                { content: 'Cookies en anti-spam', link: '#' },
+                { content: 'Toegankelijkheid', link: '#' },
+                { content: 'Proclaimer', link: '#' },
+              ],
+            },
+            {
+              label: 'Snel naar',
+              items: [
+                { content: 'Onderwerpen A t/m Z', link: '#' },
+                { content: 'Klantenpanel', link: '#' },
+                { content: 'Documenten en publicaties', link: '#' },
+                { content: 'Overheidspublicaties en auteursrecht', link: '#' },
+              ],
+            },
+            {
+              label: 'Blijf op de hoogte',
+              items: [
+                { content: 'Social media', link: '#' },
+                { content: 'RSS', link: '#' },
+                { content: 'Gratis nieuwsbrief', link: '#' },
+              ],
+            },
+          ]}
+        />
       </div>
     </body>
   );
