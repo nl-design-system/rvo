@@ -322,6 +322,59 @@ const Overzicht = () => {
                   />
                 </LayoutColumnRow>
               </div>
+              <div className="rvo-quick-links">
+                <Heading type="h2" textContent="Snel naar" />
+                <ul className="rvo-quick-links-list">
+                  <li className="rvo-quick-links-list-item">
+                    <Link content="Wijzig e-mail of telefoonnummer" target="#" noUnderline={true} />
+                  </li>
+                  <li className="rvo-quick-links-list-item">
+                    <Link content="Neem contact op" target="#" noUnderline={true} />
+                  </li>
+                  <li className="rvo-quick-links-list-item">
+                    <Link content="Voeg favoriet toe" target="#" noUnderline={true} />
+                  </li>
+                  <li className="rvo-quick-links-list-item">
+                    <Link content="Machtig iemand anders" target="#" noUnderline={true} />
+                  </li>
+                  <li className="rvo-quick-links-list-item">
+                    <Link content="Meld een technisch probleem" target="#" noUnderline={true} />
+                  </li>
+                </ul>
+              </div>
+              <div className="rvo-messages">
+                <Heading type="h2" textContent="Berichten" />
+                <div className="rvo-messages-list">
+                  <div className="rvo-messages-list-item">
+                    <div className="rvo-messages-meta-data">
+                      <div className="rvo-messages-meta-data-subject">ISDE 2022</div>
+                      <div className="rvo-messages-meta-data-date">7 jun 2023</div>
+                    </div>
+                    <a className="rvo-messages-title rvo-link--full-click" href="#">
+                      U moet uw gegevens updaten
+                    </a>
+                  </div>
+                  <div className="rvo-messages-list-item">
+                    <div className="rvo-messages-meta-data">
+                      <div className="rvo-messages-meta-data-subject">Mijn Percelen</div>
+                      <div className="rvo-messages-meta-data-date">15 mei 2023</div>
+                    </div>
+                    <a className="rvo-messages-title rvo-link--full-click" href="#">
+                      Percelenregistratie goedgekeurd
+                    </a>
+                  </div>
+                  <div className="rvo-messages-list-item">
+                    <div className="rvo-messages-meta-data">
+                      <div className="rvo-messages-meta-data-subject">WBSO</div>
+                      <div className="rvo-messages-meta-data-date">22 apr 2023</div>
+                    </div>
+                    <a className="rvo-messages-title rvo-link--full-click" href="#">
+                      Aanvullend bewijsmateriaal aanleveren
+                    </a>
+                  </div>
+                </div>
+                <Link content="Alle berichten" showIcon="after" icon="pijl-naar-rechts" noUnderline={true} />
+              </div>
             </LayoutColumnRow>
           </div>
         </main>
