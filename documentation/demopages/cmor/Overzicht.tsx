@@ -1,6 +1,7 @@
 import {
   Accordion,
   Button,
+  ButtonGroup,
   ExpandableText,
   Heading,
   Icon,
@@ -411,9 +412,15 @@ const Overzicht = () => {
               <div className="rvo-contact-options">
                 <Heading type="h2" textContent="Neem contact op" />
                 <p className="rvo-paragraph">Staat uw vraag er niet bij? Neem dan contact met ons op.</p>
-                <Button kind="secondary" showIcon="after" icon="communicatie">
-                  Stel uw vraag via onze chat
-                </Button>
+                <ButtonGroup>
+                  <Button kind="secondary" showIcon="after" icon="communicatie">
+                    Stel uw vraag via onze chat
+                  </Button>
+                  <Button kind="secondary">Bekijk alle contactmogelijkheden</Button>
+                  <Button kind="secondary" showIcon="after" icon="externe-link">
+                    Geef uw mening
+                  </Button>
+                </ButtonGroup>
               </div>
             </LayoutColumnRow>
           </div>
