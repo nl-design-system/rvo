@@ -14,6 +14,10 @@
   .rvo-topnav {
     /* Hide topnav on smaller screens */
     display: none;
+
+    @media (min-width: 780px) {
+      display: block;
+    }
   }
 
   .rvo-responsive-menu .rvo-topnav {
@@ -23,8 +27,12 @@
   @media (min-width: 780px) {
     .rvo-main--sidebar-active {
       display: grid;
-      grid-template-columns: 320px 1fr;
-      height: 85vh;
+      grid-template-columns: 240px 1fr;
+    }
+
+    // Hide responsive menu
+    .rvo-responsive-menu-wrapper {
+      display: none !important;
     }
   }
 
@@ -41,18 +49,6 @@
 
       /* negative margin-block-start to get the same visual height as the start of the sidebar menu: is this the best way? */
       margin-block-start: -5px;
-    }
-  }
-
-  .rvo-expandable-text--subtle {
-    .rvo-expandable-text__summary {
-      color: #64748b;
-      font-weight: var(--rvo-font-weight-regular);
-    }
-
-    .utrecht-icon,
-    .rvo-expandable-text__summary::after {
-      background-color: #64748b;
     }
   }
 
