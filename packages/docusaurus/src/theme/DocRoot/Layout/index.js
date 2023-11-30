@@ -1,28 +1,35 @@
 import { useDocsSidebar } from '@docusaurus/theme-common/internal';
 import BackToTopButton from '@theme/BackToTopButton';
-import DocPageLayoutMain from '@theme/DocPage/Layout/Main';
-import DocPageLayoutSidebar from '@theme/DocPage/Layout/Sidebar';
-import Layout from '@theme/Layout';
+import DocRootLayoutMain from '@theme/DocRoot/Layout/Main';
+import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
 import clsx from 'clsx';
 import { useState } from 'react';
 import styles from './styles.module.css';
 
-export default function DocPageLayout({ children }) {
+export default function DocRootLayout({ children }) {
   const sidebar = useDocsSidebar();
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
   return (
-    <Layout wrapperClassName={styles.docsWrapper}>
+    <div className={styles.docsWrapper}>
       <BackToTopButton />
-      <div className={clsx(styles.docPage, 'rvo-max-width-layout', 'rvo-max-width-layout--md')}>
+      <div
+        className={clsx(
+          styles.docPage,
+          'rvo-max-width-layout',
+          'rvo-max-width-layout--md',
+          'rvo-layout-row',
+          'rvo-layout-row--flex-start',
+        )}
+      >
         {sidebar && (
-          <DocPageLayoutSidebar
+          <DocRootLayoutSidebar
             sidebar={sidebar.items}
             hiddenSidebarContainer={hiddenSidebarContainer}
             setHiddenSidebarContainer={setHiddenSidebarContainer}
           />
         )}
-        <DocPageLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>{children}</DocPageLayoutMain>
+        <DocRootLayoutMain hiddenSidebarContainer={hiddenSidebarContainer}>{children}</DocRootLayoutMain>
       </div>
-    </Layout>
+    </div>
   );
 }

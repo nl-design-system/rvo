@@ -14,7 +14,8 @@
       "@site/*": ["./*"],
       "@docusaurus/components/*": ["src/components/*"],
       "@nl-rvo/documentation/*": ["../../documentation/*"],
-      "@nl-rvo/assets/*": ["../../proprietary/assets/*"]
+      "@nl-rvo/assets/*": ["../../proprietary/assets/*"],
+      "@nl-rvo/design-tokens": ["../../proprietary/design-tokens"]
     }
   }
 }
