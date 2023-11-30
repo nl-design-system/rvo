@@ -138,6 +138,10 @@
     z-index: 2;
   }
 
+  .rvo-topnav--w-line .rvo-topnav__background {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
   .rvo-topnav__background {
     background-color: var(--rvo-color-wit);
     font-weight: 700;
@@ -239,12 +243,6 @@
         background-color: #475569;
       }
     }
-  }
-
-  // MAIN //
-
-  .rvo-main--w-line {
-    border-top: 1px solid #e2e8f0;
   }
 
   // TABS //

@@ -72,32 +72,34 @@ const Overzicht = () => {
               </div>
             </details>
           </div>
-          <MenuBar
-            items={[
-              {
-                align: 'right',
-                label: 'Hulp & Contact',
-                link: '#',
-              },
-              {
-                align: 'right',
-                label: 'English',
-                icon: 'wereldbol',
-                link: '#',
-              },
-              {
-                align: 'right',
-                label: 'Boer Overveen B.V',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
-                active: true,
-                icon: 'user',
-              },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="lg"
-          />
+          <div className="rvo-topnav--w-line">
+            <MenuBar
+              items={[
+                {
+                  align: 'right',
+                  label: 'Hulp & Contact',
+                  link: '#',
+                },
+                {
+                  align: 'right',
+                  label: 'English',
+                  icon: 'wereldbol',
+                  link: '#',
+                },
+                {
+                  align: 'right',
+                  label: 'Boer Overveen B.V',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  active: true,
+                  icon: 'user',
+                },
+              ]}
+              size="lg"
+              useIcons={true}
+              iconPlacement="before"
+              menuMaxWidth="lg"
+            />
+          </div>
         </div>
         <main className="rvo-main--cmor rvo-main--sidebar-active rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-sidebar-menu">
