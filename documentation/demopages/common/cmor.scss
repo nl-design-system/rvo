@@ -36,12 +36,25 @@
     }
   }
 
+  @media (min-width: 1080px) {
+    .rvo-main--sidebar-active {
+      grid-template-columns: 288px 1fr;
+    }
+  }
+
   .rvo-main--cmor.rvo-main--overzicht {
     background-color: var(--rvo-color-wit);
     padding-block-end: var(--rvo-space-xl);
     padding-block-start: var(--rvo-space-xl);
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
+
+    @media (min-width: 1080px) {
+      padding-block-end: var(--rvo-space-3xl);
+      padding-block-start: var(--rvo-space-3xl);
+      padding-inline-end: var(--rvo-space-3xl);
+      padding-inline-start: var(--rvo-space-3xl);
+    }
 
     .utrecht-heading-1 {
       /* Heading has bold and non bold text in CMOR design */
