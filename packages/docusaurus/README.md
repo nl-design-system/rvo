@@ -35,9 +35,9 @@ Daarom worden de bestanden uit `documentation` en `components` die we nodig hebb
 
 In de algemene `package.json` zijn wel alle scripts die nodig zijn voor het lokaal draaien van de documentatie opgenomen.
 
-`npm run docs` kopieert alles wat je nodig hebt en start de documentatie op [http://localhost:3000/rvo/](http://localhost:3000/rvo/) Een watcher zorgt er in principe voor dat nieuwe aanpassingen in de documentatie ook gelijk te zien zijn. Mocht dit niet lukken, dan kun je af en toe de documentatie opnieuw opstarten.
+`pnpm run docs` kopieert alles wat je nodig hebt en start de documentatie op [http://localhost:3000/rvo/](http://localhost:3000/rvo/) Een watcher zorgt er in principe voor dat nieuwe aanpassingen in de documentatie ook gelijk te zien zijn. Mocht dit niet lukken, dan kun je af en toe de documentatie opnieuw opstarten.
 
-Als je wil weten of de documentatie ook gebuild werkt, dan kan je dit testen met `npm run build:docs` gevolgd door `npm run serve:docs`.
+Als je wil weten of de documentatie ook gebuild werkt, dan kan je dit testen met `pnpm run build:docs` gevolgd door `pnpm run serve:docs`.
 
 ### Gedeelde documenten met frontmatter
 
@@ -51,11 +51,11 @@ Bestanden met `_` ervoor worden verder door docusaurus genegeerd.
 Om lokale stories in te laden tijdens het ontwikkelen van component documentatie in Docusaurus kun je de storybook verwijzing in docusaurus aanpasssen. Het is handig om dan een gebuilde versie van storybook te gebruiken, omdat anders de verschillende 'watchers' elkaar in de weg kunnen zitten.
 
 1. Ga naar de root van de `rvo` repository
-1. Draai `npm run build:storybook`
-1. Draai `npm run serve:storybook` om deze gebuilde versie in de browser te openen
+1. Draai `pnpm run build:storybook`
+1. Draai `pnpm run serve:storybook` om deze gebuilde versie in de browser te openen
 1. Deze gebuilde versie draait nu op `localhost:8080`, vergeet niet om deze steeds opnieuw te bouwen als je in storybook veranderingen hebt die je in docusaurus wil zien.
 1. Open `packages/docusaurus/docusaurus.config.js`
 1. Verander `storybookUrl: 'https://nl-design-system.github.io/rvo/storybook/'` naar `storybookUrl: 'http://localhost:8080'`,
-1. Draai `npm run docs`
+1. Draai `pnpm run docs`
 1. Tada, je locale storybook wordt getoond en gelinkt in docusaurus component documentatie
 1. BELANGRIJK: vergeet niet na het ontwikkelen de `storybookUrl` weer aan te passen naar `https://nl-design-system.github.io/rvo/storybook/`

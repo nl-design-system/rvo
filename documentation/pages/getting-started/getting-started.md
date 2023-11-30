@@ -3,20 +3,25 @@
 Om te starten met het design system gebruik je een drietal libraries.
 Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.
 
-1. Design tokens: <https://www.npmjs.com/package/@nl-rvo/design-tokens>
-   Bevat de ROOS design tokens in de vorm van o.a. CSS variabelen.
+1. De Roos Design tokens. Kies een van de volgende libraries:
 
-2. CSS voor components: <https://www.npmjs.com/package/@nl-rvo/component-library-css>
-   Bevat de CSS styling van alle ROOS componenten.
+   - ROOS 1.0 (RVO) Design tokens: [https://www.npmjs.com/package/@nl-rvo/design-tokens](https://www.npmjs.com/package/@nl-rvo/design-tokens).
+     Bevat de ROOS RVO design tokens in de vorm van o.a. CSS variabelen.
+   - ROOS 2.0 (Rijkshuisstijl) Design tokens: [https://www.npmjs.com/package/@nl-rvo/rijkshuisstijl-design-tokens](https://www.npmjs.com/package/@nl-rvo/rijkshuisstijl-design-tokens).
+     Bevat de ROOS 2.0 Rijkshuisstijl design tokens in de vorm van o.a. CSS variabelen.
 
-3. Assets: <https://www.npmjs.com/package/@nl-rvo/assets>
+2. CSS voor components: [https://www.npmjs.com/package/@nl-rvo/component-library-css](https://www.npmjs.com/package/@nl-rvo/component-library-css). Bevat de CSS styling van alle ROOS componenten. Deze styling maakt gebruik van de design tokens die je inlaadt.
+
+3. Assets: [https://www.npmjs.com/package/@nl-rvo/assets](https://www.npmjs.com/package/@nl-rvo/assets).
    Bevat alle assets als icons, plaatjes, fonts e.d.
 
 ## Libraries installeren met NPM
 
 De aanbevolen manier om de libraries te gebruiken is met behulp van NPM:
 
-`npm install --save-dev --save-exact @nl-rvo/design-tokens@1.0.0-alpha.89`
+`npm install --save-dev --save-exact @nl-rvo/design-tokens@1.0.0-alpha.291`
+´óf `npm install --save-dev --save-exact @nl-rvo/rijkshuisstijl-design-tokens@1.0.0-alpha.273`
+
 `npm install --save-dev --save-exact @nl-rvo/component-library-css@1.0.0-alpha.145`
 `npm install --save-dev --save-exact @nl-rvo/assets@1.0.0-alpha.80`
 
@@ -26,12 +31,59 @@ De aanbevolen manier om de libraries te gebruiken is met behulp van NPM:
 
 Het is mogelijk om de Design tokens en Components via open source CDN's als Unpckg of Jsdelivr in te laden:
 
+ROOS 1.0:
+
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/design-tokens@1.0.0-alpha.89" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/design-tokens@1.0.0-alpha.291" />
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.145"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.349"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/fonts/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/images/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/icons/index.css"
+/>
+```
+
+ROOS 2.0:
+
+```html
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/rijkshuisstijl-design-tokens@1.0.0-alpha.274"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.0.0-alpha.349"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/fonts/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/images/index.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@nl-rvo/assets@1.0.0-alpha.284/icons/index.css"
 />
 ```
 

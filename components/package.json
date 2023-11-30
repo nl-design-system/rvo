@@ -19,19 +19,19 @@
   "devDependencies": {
     "@nl-rvo/assets": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
-    "@types/mdx": "2.0.5",
-    "clsx": "1.2.1",
-    "css-loader": "6.7.3",
-    "css-minimizer-webpack-plugin": "4.2.2",
-    "event-hooks-webpack-plugin": "2.2.0",
-    "glob": "8.0.3",
+    "@types/mdx": "2.0.10",
+    "clsx": "2.0.0",
+    "css-loader": "6.8.1",
+    "css-minimizer-webpack-plugin": "5.0.1",
+    "event-hooks-webpack-plugin": "2.3.0",
+    "glob": "10.3.10",
     "macro": "link:@emotion/styled/macro",
-    "mini-css-extract-plugin": "2.7.2",
+    "mini-css-extract-plugin": "2.7.6",
     "npm-run-all": "4.1.5",
-    "rimraf": "3.0.2",
-    "sass": "1.57.0",
-    "sass-loader": "13.2.0",
-    "webpack": "5.75.0",
-    "webpack-cli": "5.0.1"
+    "rimraf": "5.0.5",
+    "sass": "1.69.5",
+    "sass-loader": "13.3.2",
+    "webpack": "5.89.0",
+    "webpack-cli": "5.1.4"
   }
 }

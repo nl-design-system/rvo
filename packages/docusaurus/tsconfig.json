@@ -1,12 +1,21 @@
 {
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "lib": ["DOM"],
+    "module": "esnext",
+    "noEmit": true,
+    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
     "baseUrl": ".",
-    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
     "paths": {
+      "@site/*": ["./*"],
       "@docusaurus/components/*": ["src/components/*"],
       "@nl-rvo/documentation/*": ["../../documentation/*"],
-      "@nl-rvo/assets/*": ["../../proprietary/assets/*"]
+      "@nl-rvo/assets/*": ["../../proprietary/assets/*"],
+      "@nl-rvo/design-tokens": ["../../proprietary/design-tokens"]
     }
   }
 }

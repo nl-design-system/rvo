@@ -1,21 +1,22 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { ExpandableText } from '@nl-rvo/components';
-import { Link } from '@nl-rvo/components';
+import { ExpandableText, Link } from '@nl-rvo/components';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import prettierBabel from 'prettier/parser-babel';
+import parserBabel from 'prettier/plugins/babel';
+import parserEstree from 'prettier/plugins/estree';
 import prettier from 'prettier/standalone';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import { serialize } from '../../utils/react-serialize';
 import styles from './styles.module.css';
 
-function formatHTML(children) {
-  return prettier
-    .format(ReactDOMServer.renderToStaticMarkup(children), {
+async function formatHTML(children) {
+  return (
+    await prettier.format(ReactDOMServer.renderToStaticMarkup(children), {
       parser: 'babel',
-      plugins: [prettierBabel],
+      plugins: [parserBabel, parserEstree],
     })
+  )
     .replace(/\{" "\}/gm, ' ')
     .replace(/(;)[^;]*$/g, '');
 }
@@ -25,12 +26,15 @@ const ComponentExample = ({ children, minHeight }) => {
   const previewLink = `${useDocusaurusContext().siteConfig.baseUrl}preview?${serialized}`;
 
   // On the server side, using renderToStaticMarkup inside useMemo results in a bug
-  let html;
-  if (typeof window !== 'undefined') {
-    html = useMemo(() => formatHTML(children), [children]);
-  } else {
-    html = formatHTML(children);
-  }
+  const [html, setHtml] = useState(null);
+  useEffect(() => {
+    const fetchHtml = async () => {
+      const result = await formatHTML(children);
+      setHtml(result);
+    };
+
+    fetchHtml();
+  }, [children]);
 
   return (
     <div className={styles.componentExample}>

@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import MijnZaken from './MijnZaken';
 
 const meta: Meta<typeof MijnZaken> = {
-  title: "Demo pagina's/Mijn RVO/Mijn zaken",
+  title: "Demo pagina's/Mijn RVO/Mijn zaken [HIDDEN]",
   component: MijnZaken,
   parameters: {
     status: {
-      type: 'HIDDEN',
+      type: 'WORK IN PROGRESS',
     },
   },
 };
@@ -14,4 +14,4 @@ export default meta;
 
 type Story = StoryObj<typeof MijnZaken>;
 
-export const Default: Story = { name: 'Mijn zaken' };
+export const Default: Story = { name: 'Mijn zaken [HIDDEN]' };

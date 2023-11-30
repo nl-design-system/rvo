@@ -5,6 +5,7 @@ const includeList = ['**/*.docusaurus.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 const navigationConfig = require('./config/navigationConfig');
 const sidebarItemsGenerator = require('./config/sidebarItemsGenerator');
+const { themes } = require('prism-react-renderer');
 
 // Emulate DOMParser with jsdom
 const { JSDOM } = jsdom;
@@ -98,7 +99,7 @@ const config = {
         },
       ],
       prism: {
-        theme: require('prism-react-renderer/themes/github'),
+        theme: themes.github,
       },
       ...navigationConfig,
     },

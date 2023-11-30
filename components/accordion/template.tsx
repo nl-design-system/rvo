@@ -2,11 +2,11 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import './index.scss';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { AccordionItem, IAccordionItemProps } from '../accordion-item/template';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface IAccordionProps {
   /** @uxpinignoreprop */

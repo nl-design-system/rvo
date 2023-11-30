@@ -65,8 +65,8 @@ h3.rvo-footer-menu-title {
   font-weight: var(--rvo-footer-column-itemlink-font-weight);
 }
 
-.rvo-footer-menu-item .rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-.rvo-footer-menu-item.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+.rvo-footer-menu-item .rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-footer-menu-item.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
   color: var(--rvo-footer-column-itemlink-hover-color);
   font-weight: var(--rvo-footer-column-itemlink-hover-font-weight);
   text-decoration: underline;

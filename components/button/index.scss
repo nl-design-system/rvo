@@ -1,27 +1,26 @@
 /* stylelint-disable scss/no-global-function-names */
-@use "../../proprietary/design-tokens/dist/index.scss" as tokens;
 @import "../../node_modules/@utrecht/components/button/css/mixin";
 @import "../layout-column-row/index";
 
 // Subtle button
 .utrecht-button--subtle.utrecht-button--hover:not(:disabled),
 .utrecht-button--subtle.utrecht-button-link--hover:not(:disabled),
-.utrecht-button--subtle:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+.utrecht-button--subtle:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
   text-decoration: var(--utrecht-button-subtle-hover-text-decoration, underline);
   text-underline-offset: 30%;
 }
 
-// Tertiary action
+/* Tertiary action */
 @include utrecht-button-appearance("utrecht-button", "rvo-tertiary-action");
 
 .utrecht-button--rvo-tertiary-action.utrecht-button--hover:not(:disabled),
 .utrecht-button--rvo-tertiary-action.utrecht-button-link--hover:not(:disabled),
-.utrecht-button--rvo-tertiary-action:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+.utrecht-button--rvo-tertiary-action:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
   text-decoration: var(--utrecht-button-rvo-tertiary-action-hover-text-decoration, underline);
   text-underline-offset: 30%;
 }
 
-// Quaternary action
+/* Quaternary action */
 @include utrecht-button-appearance("utrecht-button", "rvo-quaternary-action");
 
 // Sizes
@@ -107,24 +106,24 @@
   }
 }
 
-.utrecht-button--primary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--secondary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--rvo-tertiary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--rvo-quaternary-action:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--subtle:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--warning:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--primary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--secondary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--rvo-tertiary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--rvo-quaternary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--subtle:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--warning:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
 .utrecht-button--active {
   .utrecht-icon.rvo-icon {
     background-color: var(--_utrecht-button-appearance-active-color, var(--_utrecht-button-active-color));
   }
 }
 
-.utrecht-button--primary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--secondary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--rvo-tertiary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--rvo-quaternary-action:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--subtle:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
-.utrecht-button--warning:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button--primary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--secondary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--rvo-tertiary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--rvo-quaternary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--subtle:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--warning:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
 .utrecht-button--focus {
   .utrecht-icon.rvo-icon {
     background-color: var(--_utrecht-button-appearance-focus-color, var(--_utrecht-button-focus-color));

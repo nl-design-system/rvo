@@ -5,15 +5,15 @@
       "@babel/preset-env",
       {
         "targets": {
-          "chrome": 100
+          "chrome": 100,
+          "safari": 15,
+          "firefox": 91
         }
       }
     ],
     [
       "@babel/preset-typescript",
       {
-        "onlyRemoveTypeImports": true,
-        "allExtensions": true,
         "isTSX": true
       }
     ],

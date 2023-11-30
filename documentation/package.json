@@ -11,8 +11,8 @@
   "devDependencies": {
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
-    "clsx": "1.2.1",
-    "html-react-parser": "3.0.1"
+    "clsx": "2.0.0",
+    "html-react-parser": "5.0.6"
   },
   "scripts": {
     "lint": "tsc --noEmit --project tsconfig.json"

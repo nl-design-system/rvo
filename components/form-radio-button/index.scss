@@ -38,7 +38,7 @@
 }
 
 // Hover state
-.utrecht-custom-radio-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-radio-button--disabled):not(.utrecht-custom-radio-button--invalid) {
+.utrecht-custom-radio-button:not(:disabled, [aria-disabled="true"], .utrecht-custom-radio-button--disabled, .utrecht-custom-radio-button--invalid) {
   &.utrecht-custom-radio-button:hover,
   &.rvo-radio-button--hover,
   + .rvo-radio-button__label:hover {

@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -53,7 +53,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -91,7 +91,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -121,7 +121,7 @@ jobs:
           pnpm run --if-present build
       - name: "Generate design system website"
         run: |
-          npm run generate -w ./packages/design-system-website
+          pnpm run generate -w ./packages/design-system-website
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v3
         with:
@@ -146,7 +146,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -185,7 +185,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -215,7 +215,7 @@ jobs:
         continue-on-error: true
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
         run: |
-          npm install && npx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
+          pnpm install && pnpx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
 
   publish-chromatic:
@@ -230,7 +230,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -305,7 +305,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
