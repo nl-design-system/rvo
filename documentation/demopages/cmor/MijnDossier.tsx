@@ -15,7 +15,7 @@ import {
 import '../common/rhs-update.scss';
 import '../common/cmor.scss';
 
-const Overzicht = () => {
+const MijnDossier = () => {
   return (
     <body className="rvo-theme rvo-cmor rvo-sidebar-menu-active">
       <div className="rvo-cmor rvo-rhs-update">
@@ -42,8 +42,8 @@ const Overzicht = () => {
               <div className="rvo-sidebar-menu">
                 <MenuBar
                   items={[
-                    { label: 'Overzicht', link: '#', icon: 'home', active: true },
-                    { label: 'Mijn dossier', link: '#', icon: 'map' },
+                    { label: 'Overzicht', link: '#', icon: 'home' },
+                    { label: 'Mijn dossier', link: '#', icon: 'map', active: true },
                     { label: 'Mijn berichten', link: '#', icon: 'mail' },
                     { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
                   ]}
@@ -105,8 +105,8 @@ const Overzicht = () => {
           <div className="rvo-sidebar-menu">
             <MenuBar
               items={[
-                { label: 'Overzicht', link: '#', icon: 'home', active: true },
-                { label: 'Mijn dossier', link: '#', icon: 'map' },
+                { label: 'Overzicht', link: '#', icon: 'home' },
+                { label: 'Mijn dossier', link: '#', icon: 'map', active: true },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
                 { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
               ]}
@@ -116,10 +116,10 @@ const Overzicht = () => {
               menuMaxWidth="md"
             />
           </div>
-          <div className="rvo-content--cmor rvo-content--overzicht">
+          <div className="rvo-content--cmor rvo-content--mijn-dossier">
             <LayoutColumnRow size="xl">
               <h1 className="utrecht-heading-1">
-                <strong>Overzicht</strong> van Boer Overveen B.V.
+                <strong>Mijn dossier</strong>
               </h1>
               <LayoutColumnRow size="xl">
                 <div className="rvo-reminders">
@@ -478,4 +478,4 @@ const Overzicht = () => {
   );
 };
 
-export default Overzicht;
+export default MijnDossier;
