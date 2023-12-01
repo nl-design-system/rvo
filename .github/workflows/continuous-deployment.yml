@@ -78,7 +78,7 @@ jobs:
           pnpm install
       - name: "Continuous Integration: lint"
         run: |
-          pnpm run --if-present lint
+          pnpm run --if-present nx-lint
 
   build:
     runs-on: ubuntu-latest
@@ -118,7 +118,7 @@ jobs:
         env:
           BASE_URL: "/rvo/"
         run: |
-          pnpm run --if-present build
+          pnpm run --if-present nx-build
       - name: "Generate design system website"
         run: |
           pnpm run generate -w ./packages/design-system-website
@@ -171,7 +171,7 @@ jobs:
           pnpm install
       - name: "Continuous Integration: test"
         run: |
-          pnpm run --if-present test
+          pnpm run --if-present nx-test
 
   publish-uxpin:
     runs-on: ubuntu-latest
@@ -260,7 +260,7 @@ jobs:
         env:
           STORYBOOK_REDUCED_MOTION: 1
         run: |
-          pnpm run --if-present build
+          pnpm run --if-present nx-build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
@@ -331,7 +331,7 @@ jobs:
           pnpm ls --recursive
       - name: "Continuous Deployment: build"
         run: |
-          pnpm run --if-present build
+          pnpm run --if-present nx-build
       - name: "Continuous Deployment: publish to GitHub repository"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
