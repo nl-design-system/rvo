@@ -435,7 +435,10 @@
   }
 
   .rvo-navigation--w-shadow {
-    box-shadow: 0 0 #000, 0 0 #000, 0 1.25rem 0.62rem -0.62rem rgb(21 66 115 / 15%);
+    box-shadow:
+      0 0 #000,
+      0 0 #000,
+      0 1.25rem 0.62rem -0.62rem rgb(21 66 115 / 15%);
   }
 
   .rvo-sub-navigation {
@@ -1427,8 +1430,8 @@
     text-decoration: none;
   }
 
-  .rvo-footer-menu-item .rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-  .rvo-footer-menu-item.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+  .rvo-footer-menu-item .rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-footer-menu-item.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
     border-color: var(--rvo-color-wit);
     color: var(--rvo-color-wit);
     font-weight: var(--rvo-font-weight-regular);
@@ -1917,8 +1920,8 @@
     .utrecht-custom-radio-button:focus,
     .rvo-checkbox__input:focus,
     .utrecht-select:focus,
-    .rvo-file-input:focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled),
-    .rvo-file-input--focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled) {
+    .rvo-file-input:focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled),
+    .rvo-file-input--focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled) {
       outline-color: var(--rvo-color-logoblauw);
       outline-offset: 0;
       outline-width: 1px;
@@ -2124,9 +2127,9 @@
       flex-direction: row;
     }
 
-    // .rvo-form {
-    //   padding-inline-end: var(--rvo-space-xl);
-    // }
+    /* .rvo-form {
+       padding-inline-end: var(--rvo-space-xl);
+    } */
   }
 
   @media (min-width: 900px) {
