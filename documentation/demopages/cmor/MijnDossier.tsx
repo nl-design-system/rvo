@@ -1,4 +1,13 @@
-import { Button, Footer, Icon, LayoutColumnRow, Link, MenuBar, TextInputField } from '@nl-rvo/components';
+import {
+  Button,
+  CheckboxGroup,
+  Footer,
+  Icon,
+  LayoutColumnRow,
+  Link,
+  MenuBar,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/cmor.scss';
 
@@ -131,14 +140,50 @@ const MijnDossier = () => {
                   <Icon icon="delta-omhoog" />
                   <Link content="Uitgebreid zoeken" noUnderline={true}></Link>
                 </summary>
-                <div className="rvo-inline-form">
-                  <div className="rvo-rhs-update-component">
-                    <LayoutColumnRow row={true} size="sm">
-                      <TextInputField label="Regeling of referentienummer" />
-                      <Button kind="primary">Zoeken</Button>
-                    </LayoutColumnRow>
+                <LayoutColumnRow size="md">
+                  <div className="rvo-inline-form">
+                    <div className="rvo-rhs-update-component">
+                      <LayoutColumnRow row={true} size="sm">
+                        <TextInputField label="Regeling of referentienummer" />
+                        <Button kind="primary">Zoeken</Button>
+                      </LayoutColumnRow>
+                    </div>
                   </div>
-                </div>
+                  <LayoutColumnRow size="sm">
+                    <details className="rvo-expandable-area rvo-filter--cmor">
+                      <summary className="rvo-expandable-area-toggle">
+                        <Icon icon="delta-omlaag" />
+                        <Icon icon="delta-omhoog" />
+                        <Link content="Filter op type aanvraag" noUnderline={true}></Link>
+                      </summary>
+                      <div className="rvo-rhs-update-component">
+                        <CheckboxGroup
+                          options={[
+                            { id: 'optionA', label: 'Lopende aanvragen' },
+                            { id: 'optionB', label: 'Afgehandelde aanvragen' },
+                            { id: 'optionC', label: 'Concepten' },
+                          ]}
+                        ></CheckboxGroup>
+                      </div>
+                    </details>
+                    <details className="rvo-expandable-area rvo-filter--cmor">
+                      <summary className="rvo-expandable-area-toggle">
+                        <Icon icon="delta-omlaag" />
+                        <Icon icon="delta-omhoog" />
+                        <Link content="Filter op Status" noUnderline={true}></Link>
+                      </summary>
+                      <div className="rvo-rhs-update-component">
+                        <CheckboxGroup
+                          options={[
+                            { id: 'optionA', label: 'Lopende aanvragen' },
+                            { id: 'optionB', label: 'Afgehandelde aanvragen' },
+                            { id: 'optionC', label: 'Concepten' },
+                          ]}
+                        ></CheckboxGroup>
+                      </div>
+                    </details>
+                  </LayoutColumnRow>
+                </LayoutColumnRow>
               </details>
             </LayoutColumnRow>
           </div>

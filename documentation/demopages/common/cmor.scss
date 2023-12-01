@@ -81,4 +81,13 @@
       margin-block-start: 0;
     }
   }
+
+  // FILTERS
+  .rvo-filter--cmor[open] {
+    .rvo-expandable-area-toggle {
+      margin-block-end: var(--rvo-space-sm);
+    }
+
+    padding-block-end: var(--rvo-space-sm);
+  }
 }

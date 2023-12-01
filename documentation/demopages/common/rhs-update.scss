@@ -727,16 +727,16 @@
   }
 
   .rvo-expandable-area {
-    .rvo-icon-delta-omhoog {
+    > .rvo-expandable-area-toggle .rvo-icon-delta-omhoog {
       display: none;
     }
   }
 
   .rvo-expandable-area[open] {
-    .rvo-icon-delta-omlaag {
+    > .rvo-expandable-area-toggle .rvo-icon-delta-omlaag {
       display: none;
     }
-    .rvo-icon-delta-omhoog {
+    > .rvo-expandable-area-toggle .rvo-icon-delta-omhoog {
       display: block;
     }
   }
