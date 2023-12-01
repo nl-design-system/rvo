@@ -97,7 +97,6 @@
     "serve": "nx serve design-system-website",
     "serve-docusaurus": "nx serve docusaurus",
     "serve-storybook": "nx serve storybook",
-    "test": "npm run nx-test",
     "nx-test": "nx run-many --target=test --all --parallel --skip-nx-cache",
     "test-update": "npm-run-all --sequential clean lint build test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install --legacy-peer-deps",
