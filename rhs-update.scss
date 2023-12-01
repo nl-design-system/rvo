@@ -26,11 +26,11 @@
     &.utrecht-button--disabled {
       background-color: #e2e8f0;
 
-      /* nieuwe grijs-3 tint */
+      // nieuwe grijs-3 tint //
 
       color: #475569;
 
-      /* nieuwe grijs-7 tint */
+      // nieuwe grijs-7 tint //
     }
   }
 
@@ -50,7 +50,7 @@
     }
 
     .rvo-logo-text--full {
-      /* Hide full name on smaller screens */
+      // Hide full name on smaller screens //
       display: none;
     }
 
@@ -58,12 +58,12 @@
       margin-inline-start: 250px;
 
       .rvo-logo-text--full {
-        /* Show full name on smaller screens */
+        // Show full name on smaller screens //
         display: block;
       }
 
       .rvo-logo-text--abv {
-        /* Hide abbreviated name on larger screens */
+        // Hide abbreviated name on larger screens //
         display: none;
       }
     }
@@ -549,7 +549,7 @@
         text-decoration: underline;
       }
 
-      /* background-color: #E2E8F0; */
+      // background-color: #E2E8F0;
     }
   }
 
