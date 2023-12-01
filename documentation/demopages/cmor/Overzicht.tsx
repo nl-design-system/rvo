@@ -42,8 +42,17 @@ const Overzicht = () => {
               <div className="rvo-sidebar-menu">
                 <MenuBar
                   items={[
-                    { label: 'Overzicht', link: '#', icon: 'home', active: true },
-                    { label: 'Mijn dossier', link: '#', icon: 'map' },
+                    {
+                      label: 'Overzicht',
+                      link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                      icon: 'home',
+                      active: true,
+                    },
+                    {
+                      label: 'Mijn dossier',
+                      link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                      icon: 'map',
+                    },
                     { label: 'Mijn berichten', link: '#', icon: 'mail' },
                     { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
                   ]}
@@ -72,39 +81,50 @@ const Overzicht = () => {
               </div>
             </details>
           </div>
-          <MenuBar
-            items={[
-              {
-                align: 'right',
-                label: 'Hulp & Contact',
-                link: '#',
-              },
-              {
-                align: 'right',
-                label: 'English',
-                icon: 'wereldbol',
-                link: '#',
-              },
-              {
-                align: 'right',
-                label: 'Boer Overveen B.V',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
-                active: true,
-                icon: 'user',
-              },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="lg"
-          />
+          <div className="rvo-topnav--w-line">
+            <MenuBar
+              items={[
+                {
+                  align: 'right',
+                  label: 'Hulp & Contact',
+                  link: '#',
+                },
+                {
+                  align: 'right',
+                  label: 'English',
+                  icon: 'wereldbol',
+                  link: '#',
+                },
+                {
+                  align: 'right',
+                  label: 'Boer Overveen B.V',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  active: true,
+                  icon: 'user',
+                },
+              ]}
+              size="lg"
+              useIcons={true}
+              iconPlacement="before"
+              menuMaxWidth="lg"
+            />
+          </div>
         </div>
         <main className="rvo-main--cmor rvo-main--sidebar-active rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-sidebar-menu">
             <MenuBar
               items={[
-                { label: 'Overzicht', link: '#', icon: 'home', active: true },
-                { label: 'Mijn dossier', link: '#', icon: 'map' },
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                  active: true,
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                  icon: 'map',
+                },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
                 { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
               ]}
@@ -114,7 +134,7 @@ const Overzicht = () => {
               menuMaxWidth="md"
             />
           </div>
-          <div className="rvo-main--cmor rvo-main--overzicht">
+          <div className="rvo-content--cmor rvo-content--overzicht">
             <LayoutColumnRow size="xl">
               <h1 className="utrecht-heading-1">
                 <strong>Overzicht</strong> van Boer Overveen B.V.
