@@ -17,7 +17,7 @@
     "serve": {
       "executor": "@nrwl/web:file-server",
       "options": {
-        "buildTarget": "packages-storybook:build",
+        "buildTarget": "storybook:build",
         "port": 7006
       }
     },

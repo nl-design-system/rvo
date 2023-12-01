@@ -18,7 +18,7 @@
     "serve": {
       "executor": "@nrwl/web:file-server",
       "options": {
-        "buildTarget": "packages-docusaurus:build",
+        "buildTarget": "docusaurus:build",
         "port": 8080
       }
     },
