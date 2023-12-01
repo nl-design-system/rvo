@@ -1,4 +1,4 @@
-import { Footer, Icon, LayoutColumnRow, MenuBar, Tag } from '@nl-rvo/components';
+import { Button, Footer, Icon, LayoutColumnRow, Link, MenuBar, TextInputField } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/cmor.scss';
 
@@ -108,11 +108,38 @@ const MijnDossier = () => {
               <h1 className="utrecht-heading-1">
                 <strong>Mijn dossier</strong>
               </h1>
-              <p className="rvo-paragraph">Naar welke aanvraag bent u op zoek?</p>
-              <a className="rvo-tag rvo-tag--default" href="#">
-                ISDE
-              </a>
-              <Tag content="ISDE" type="default" />
+              <LayoutColumnRow size="sm">
+                <p className="rvo-paragraph rvo-paragraph--no-spacing">Naar welke aanvraag bent u op zoek?</p>
+                <LayoutColumnRow row={true} size="sm" wrap={true}>
+                  <a className="rvo-tag rvo-tag--outline rvo-tag--active" href="#">
+                    ISDE (active)
+                  </a>
+                  <a className="rvo-tag rvo-tag--outline" href="#">
+                    WSBO
+                  </a>
+                  <a className="rvo-tag rvo-tag--outline" href="#">
+                    Gecombineerde opgave
+                  </a>
+                  <a className="rvo-tag rvo-tag--outline" href="#">
+                    SVVE
+                  </a>
+                </LayoutColumnRow>
+              </LayoutColumnRow>
+              <details className="rvo-expandable-area">
+                <summary className="rvo-expandable-area-toggle">
+                  <Icon icon="delta-omlaag" />
+                  <Icon icon="delta-omhoog" />
+                  <Link content="Uitgebreid zoeken" noUnderline={true}></Link>
+                </summary>
+                <div className="rvo-inline-form">
+                  <div className="rvo-rhs-update-component">
+                    <LayoutColumnRow row={true} size="sm">
+                      <TextInputField label="Regeling of referentienummer" />
+                      <Button kind="primary">Zoeken</Button>
+                    </LayoutColumnRow>
+                  </div>
+                </div>
+              </details>
             </LayoutColumnRow>
           </div>
         </main>

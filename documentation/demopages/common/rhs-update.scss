@@ -363,6 +363,12 @@
     }
   }
 
+  .rvo-inline-form {
+    .rvo-layout-row {
+      align-items: flex-end;
+    }
+  }
+
   // CARDS //
 
   .rvo-card {
@@ -484,6 +490,11 @@
 
   .rvo-paragraph--lg {
     font-size: 1.125rem;
+  }
+
+  .rvo-paragraph--no-spacing {
+    margin-block-end: 0;
+    margin-block-start: 0;
   }
 
   .rvo-paragraph--subtle {
@@ -677,6 +688,59 @@
     }
   }
 
+  // TAG
+
+  .rvo-tag--outline {
+    border: 1px solid var(--rvo-color-zwart);
+    color: var(--rvo-color-zwart);
+
+    &:hover,
+    &:focus {
+      background-color: #f1f5f9;
+      text-decoration: underline;
+    }
+
+    &.rvo-tag--active {
+      background-color: var(--rvo-color-hemelblauw-tint1);
+      border-color: var(--rvo-color-hemelblauw);
+    }
+  }
+
+  // RVO EXPANDABLE AREA
+  .rvo-expandable-area > .rvo-expandable-area-toggle {
+    list-style: none;
+  }
+
+  .rvo-expandable-area > .rvo-expandable-area-toggle::marker,
+  .rvo-expandable-area > .rvo-expandable-area-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .rvo-expandable-area-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    gap: var(--rvo-space-2xs);
+
+    .rvo-icon {
+      margin-block-start: 3px;
+    }
+  }
+
+  .rvo-expandable-area {
+    .rvo-icon-delta-omhoog {
+      display: none;
+    }
+  }
+
+  .rvo-expandable-area[open] {
+    .rvo-icon-delta-omlaag {
+      display: none;
+    }
+    .rvo-icon-delta-omhoog {
+      display: block;
+    }
+  }
+
   // GENERAL FIXES
 
   .utrecht-button-group {
@@ -685,6 +749,11 @@
 
   .rvo-tag {
     align-items: center;
+  }
+
+  a.rvo-tag {
+    // Dont underline tag if it's a link
+    text-decoration: none;
   }
 
   .rvo-expandable-text__summary {
