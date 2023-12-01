@@ -741,6 +741,23 @@
     }
   }
 
+  // Filter Grid
+
+  .rvo-filter-grid .rvo-checkbox__group {
+    display: inline-grid;
+  }
+
+  .rvo-filter-grid--status .rvo-checkbox__group {
+    @media (min-width: 480px) {
+      grid-column-gap: var(--rvo-space-xl);
+      grid-template-columns: auto auto;
+    }
+
+    @media (min-width: 480px) {
+      grid-template-columns: auto auto auto;
+    }
+  }
+
   // GENERAL FIXES
 
   .utrecht-button-group {

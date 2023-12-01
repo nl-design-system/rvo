@@ -90,4 +90,47 @@
 
     padding-block-end: var(--rvo-space-sm);
   }
+
+  // TABLE
+
+  .rvo-table--cmor {
+    .rvo-table-head {
+      display: none;
+    }
+
+    .rvo-table-body .rvo-table-row {
+      display: grid;
+      gap: var(--rvo-space-2xs);
+      position: relative;
+    }
+
+    .rvo-table-header {
+      background-color: var(--rvo-color-wit);
+      color: #64748b;
+      font-size: var(--rvo-font-size-sm);
+    }
+
+    .rvo-table-cell {
+      padding-block-end: 0;
+      padding-block-start: 0;
+    }
+
+    .rvo-table-cell:not(:last-child) {
+      border-bottom: none;
+    }
+
+    .rvo-table-cell:last-child {
+      margin-block-end: var(--rvo-space-md);
+      padding-block-end: var(--rvo-space-md);
+    }
+
+    .rvo-table-cell--title {
+      font-weight: var(--rvo-font-weight-bold);
+    }
+
+    .rvo-table-head-indicator {
+      color: #64748b;
+      font-size: var(--rvo-font-size-sm);
+    }
+  }
 }

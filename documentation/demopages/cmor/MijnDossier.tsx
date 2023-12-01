@@ -6,6 +6,7 @@ import {
   LayoutColumnRow,
   Link,
   MenuBar,
+  StatusIcon,
   TextInputField,
 } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
@@ -159,9 +160,9 @@ const MijnDossier = () => {
                       <div className="rvo-rhs-update-component">
                         <CheckboxGroup
                           options={[
-                            { id: 'optionA', label: 'Lopende aanvragen' },
-                            { id: 'optionB', label: 'Afgehandelde aanvragen' },
-                            { id: 'optionC', label: 'Concepten' },
+                            { id: 'optionJ', label: 'Lopende aanvragen' },
+                            { id: 'optionK', label: 'Afgehandelde aanvragen' },
+                            { id: 'optionL', label: 'Concepten' },
                           ]}
                         ></CheckboxGroup>
                       </div>
@@ -172,12 +173,35 @@ const MijnDossier = () => {
                         <Icon icon="delta-omhoog" />
                         <Link content="Filter op Status" noUnderline={true}></Link>
                       </summary>
+                      <div className="rvo-rhs-update-component rvo-filter-grid rvo-filter-grid--status">
+                        <CheckboxGroup
+                          options={[
+                            { id: 'optionA', label: 'Geregistreerd' },
+                            { id: 'optionB', label: 'Financiële afhandeling' },
+                            { id: 'optionC', label: 'Afgerond' },
+                            { id: 'optionD', label: 'Actie nodig' },
+                            { id: 'optionE', label: 'Goedgekeurd' },
+                            { id: 'optionF', label: 'Geannuleerd' },
+                            { id: 'optionG', label: 'In behandeling' },
+                            { id: 'optionH', label: 'Afgewezen' },
+                            { id: 'optionI', label: 'Bezwaar' },
+                          ]}
+                        ></CheckboxGroup>
+                      </div>
+                    </details>
+                    <details className="rvo-expandable-area rvo-filter--cmor">
+                      <summary className="rvo-expandable-area-toggle">
+                        <Icon icon="delta-omlaag" />
+                        <Icon icon="delta-omhoog" />
+                        <Link content="Filter op startdatum" noUnderline={true}></Link>
+                      </summary>
                       <div className="rvo-rhs-update-component">
                         <CheckboxGroup
                           options={[
-                            { id: 'optionA', label: 'Lopende aanvragen' },
-                            { id: 'optionB', label: 'Afgehandelde aanvragen' },
-                            { id: 'optionC', label: 'Concepten' },
+                            { id: 'optionM', label: '2023' },
+                            { id: 'optionN', label: '2022' },
+                            { id: 'optionO', label: '2021' },
+                            { id: 'optionP', label: '2020 of ouder' },
                           ]}
                         ></CheckboxGroup>
                       </div>
@@ -185,6 +209,127 @@ const MijnDossier = () => {
                   </LayoutColumnRow>
                 </LayoutColumnRow>
               </details>
+              <div className="rvo-rhs-update-component">
+                <div className="rvo-table--responsive rvo-table--cmor">
+                  <table className="rvo-table">
+                    <thead className="rvo-table-head">
+                      <tr className="rvo-table-row">
+                        <th scope="col" className="rvo-table-header">
+                          Naam
+                        </th>
+                        <th
+                          scope="col"
+                          className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
+                        >
+                          Status
+                          <button
+                            className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
+                            type="button"
+                          >
+                            <span
+                              className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
+                              role="img"
+                              aria-label="Delta omhoog"
+                            ></span>
+                          </button>
+                        </th>
+                        <th scope="col" className="rvo-table-header">
+                          Referentienummer
+                        </th>
+                        <th scope="col" className="rvo-table-header">
+                          Laatste wijziging
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="rvo-table-body">
+                      <tr className="rvo-table-row">
+                        <td className="rvo-table-cell  rvo-table-cell--title">
+                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                            WBSO 2022
+                          </a>
+                        </td>
+                        <td className="rvo-table-cell">
+                          <LayoutColumnRow row={true} size="xs">
+                            <StatusIcon type="waarschuwing" size="md" />
+                            <div className="rvo-card-status-text">
+                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                            </div>
+                          </LayoutColumnRow>
+                        </td>
+                        <td className="rvo-table-cell ">
+                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                        </td>
+                        <td className="rvo-table-cell">
+                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
+                        </td>
+                      </tr>
+                      <tr className="rvo-table-row">
+                        <td className="rvo-table-cell  rvo-table-cell--title">
+                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                            WBSO 2022
+                          </a>
+                        </td>
+                        <td className="rvo-table-cell">
+                          <LayoutColumnRow row={true} size="xs">
+                            <StatusIcon type="waarschuwing" size="md" />
+                            <div className="rvo-card-status-text">
+                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                            </div>
+                          </LayoutColumnRow>
+                        </td>
+                        <td className="rvo-table-cell ">
+                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                        </td>
+                        <td className="rvo-table-cell">
+                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
+                        </td>
+                      </tr>
+                      <tr className="rvo-table-row">
+                        <td className="rvo-table-cell  rvo-table-cell--title">
+                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                            WBSO 2022
+                          </a>
+                        </td>
+                        <td className="rvo-table-cell">
+                          <LayoutColumnRow row={true} size="xs">
+                            <StatusIcon type="waarschuwing" size="md" />
+                            <div className="rvo-card-status-text">
+                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                            </div>
+                          </LayoutColumnRow>
+                        </td>
+                        <td className="rvo-table-cell ">
+                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                        </td>
+                        <td className="rvo-table-cell">
+                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
+                        </td>
+                      </tr>
+                      <tr className="rvo-table-row">
+                        <td className="rvo-table-cell  rvo-table-cell--title">
+                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                            WBSO 2022
+                          </a>
+                        </td>
+                        <td className="rvo-table-cell">
+                          <LayoutColumnRow row={true} size="xs">
+                            <StatusIcon type="waarschuwing" size="md" />
+                            <div className="rvo-card-status-text">
+                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                            </div>
+                          </LayoutColumnRow>
+                        </td>
+                        <td className="rvo-table-cell ">
+                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                        </td>
+                        <td className="rvo-table-cell">
+                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </LayoutColumnRow>
           </div>
         </main>
