@@ -78,7 +78,7 @@ jobs:
           pnpm install
       - name: "Continuous Integration: lint"
         run: |
-          pnpm run --if-present lint
+          pnpm run --if-present nx-lint
 
   build:
     runs-on: ubuntu-latest
