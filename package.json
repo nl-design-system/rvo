@@ -73,7 +73,6 @@
     "clean-node-modules": "find . -name \"node_modules\" -exec rm -rf '{}' +; find . -name \"package-lock.json\" -exec rm -rf '{}' +; ",
     "docs": "npm run prepare-docusaurus && && npm run --workspace packages/docusaurus start",
     "find-undocumented-tokens": "npm run --workspace proprietary/design-tokens/ build:stylelint && npm run lint:css --config ./.tokens.stylelintrc.json",
-    "lint": "npm-run-all lint:**",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
     "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build\\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
