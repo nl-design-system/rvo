@@ -78,7 +78,7 @@ jobs:
           pnpm install
       - name: "Continuous Integration: lint"
         run: |
-          pnpm run --if-present nx-lint
+          pnpm run --if-present lint
 
   build:
     runs-on: ubuntu-latest
@@ -171,7 +171,7 @@ jobs:
           pnpm install
       - name: "Continuous Integration: test"
         run: |
-          pnpm run --if-present nx-test
+          pnpm run --if-present test
 
   publish-uxpin:
     runs-on: ubuntu-latest
