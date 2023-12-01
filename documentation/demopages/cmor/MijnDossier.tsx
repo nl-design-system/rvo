@@ -39,8 +39,17 @@ const MijnDossier = () => {
               <div className="rvo-sidebar-menu">
                 <MenuBar
                   items={[
-                    { label: 'Overzicht', link: '#', icon: 'home' },
-                    { label: 'Mijn dossier', link: '#', icon: 'map', active: true },
+                    {
+                      label: 'Overzicht',
+                      link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                      icon: 'home',
+                    },
+                    {
+                      label: 'Mijn dossier',
+                      link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                      icon: 'map',
+                      active: true,
+                    },
                     { label: 'Mijn berichten', link: '#', icon: 'mail' },
                     { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
                   ]}
@@ -102,8 +111,17 @@ const MijnDossier = () => {
           <div className="rvo-sidebar-menu">
             <MenuBar
               items={[
-                { label: 'Overzicht', link: '#', icon: 'home' },
-                { label: 'Mijn dossier', link: '#', icon: 'map', active: true },
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                  icon: 'map',
+                  active: true,
+                },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
                 { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
               ]}
