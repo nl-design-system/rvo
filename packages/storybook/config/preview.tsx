@@ -133,7 +133,7 @@ const parameters = {
     removeEmptyComments: true,
   },
   themes: {
-    default: 'ROOS 1.0',
+    default: 'ROOS 2.0',
     target: 'root',
     list: [
       { name: 'ROOS 1.0', class: 'rvo-theme', color: '#007bc7' },
