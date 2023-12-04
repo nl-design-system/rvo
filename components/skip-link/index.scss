@@ -1,11 +1,25 @@
 .rvo-skip-link {
-  font-weight: 700;
-  outline: none;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
   position: absolute;
-  text-decoration: none;
-  transform: translateY(-1000%);
+  width: 1px;
 }
 
 .rvo-skip-link:focus {
-  transform: translateY(0%);
+  align-items: center;
+  background-color: var(--rvo-skip-link-background-color);
+  clip: auto;
+  color: var(--rvo-skip-link-color);
+  display: flex;
+  font-size: var(--rvo-skip-link-font-size);
+  font-weight: var(--rvo-skip-link-font-weight);
+  height: auto;
+  justify-content: center;
+  overflow: visible;
+  padding-block-end: var(--rvo-skip-link-padding-block-end);
+  padding-block-start: var(--rvo-skip-link-padding-block-start);
+  position: relative;
+  text-align: center;
+  width: auto;
 }
