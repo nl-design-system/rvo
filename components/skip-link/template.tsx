@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import { Button } from '../button/template';
-import './index.scss';
+import Link from '../link/template';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface ISkipLinkProps {
   textContent?: string;
@@ -26,9 +26,9 @@ export const SkipLink: React.FC<ISkipLinkProps> = ({
   anchorLink = defaultArgs.anchorLink,
 }) => {
   return (
-    <a className="rvo-skip-link" href={anchorLink}>
-      <Button label={textContent} />
-    </a>
+    <Link className="rvo-skip-link" href={anchorLink}>
+      {textContent}
+    </Link>
   );
 };
 
