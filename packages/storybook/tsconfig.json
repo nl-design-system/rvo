@@ -15,6 +15,7 @@
     "baseUrl": "./",
     "paths": {
       "@nl-rvo/design-tokens/*": ["../../proprietary/design-tokens/*"],
+      "@nl-rvo/rijkshuisstijl-design-tokens/*": ["../../proprietary/rijkshuisstijl-design-tokens/*"],
       "@nl-rvo/assets/*": ["../../proprietary/assets/*"],
       "@docusaurus/components/*": ["../docusaurus/src/components/*"]
     }

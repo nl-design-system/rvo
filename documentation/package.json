@@ -11,6 +11,7 @@
   "devDependencies": {
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
+    "@nl-rvo/rijkshuisstijl-design-tokens": "workspace:*",
     "clsx": "1.2.1",
     "html-react-parser": "3.0.1"
   },

@@ -17,6 +17,7 @@
     "paths": {
       "@nl-rvo/components/*": ["../proprietary/components/*"],
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
+      "@nl-rvo/rijkshuisstijl-design-tokens/*": ["../proprietary/rijkshuisstijl-design-tokens/*"],
       "@nl-rvo/assets/*": ["../proprietary/assets/*"],
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
     }

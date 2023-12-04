@@ -1,0 +1,8 @@
+import designTokens from "@nl-rvo/rijkshuisstijl-design-tokens/dist/index.json";
+import { ColorDesignTokens } from "../../components/design-tokens/ColorDesignTokens";
+
+export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/color.tokens.json"));
+
+<span>Er zijn {tokens.length} design tokens voor kleuren.</span>
+
+<ColorDesignTokens tokens={tokens} />

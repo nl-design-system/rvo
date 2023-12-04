@@ -1,0 +1,14 @@
+import designTokens from "@nl-rvo/rijkshuisstijl-design-tokens/dist/index.json";
+import { SpaceDesignTokens } from "../../components/design-tokens/SpaceDesignTokens";
+
+export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/space.tokens.json"));
+
+<span>
+  Er zijn {tokens.length} design tokens voor spaces. Ruimtes tussen onderdelen worden bepaald met stapjes van 2 pixels.
+</span>
+
+Wanneer je een waarde nodig hebt die niet in de lijst is opgenomen kun je waarden combineren zoals:
+
+<strong>rvo-space-3xs + rvo-space-md</strong>
+
+<SpaceDesignTokens tokens={tokens} />
