@@ -77,6 +77,7 @@ const config = {
             require.resolve('../../proprietary/assets/icons/index.css'),
             require.resolve('../../proprietary/assets/images/index.css'),
             require.resolve('../../proprietary/design-tokens/dist/index.css'),
+            require.resolve('../../proprietary/rijkshuisstijl-design-tokens/dist/index.css'),
             require.resolve('../components-css/dist/index.css'),
             require.resolve('./src/css/custom.scss'),
           ],
