@@ -19,4 +19,12 @@ export default meta;
 
 type Story = StoryObj<typeof Logo>;
 
-export const Default: Story = { args: defaultArgs, name: 'Logo' };
+export const Default: Story = {
+  args: defaultArgs,
+  name: 'Logo',
+};
+
+export const AlternateText: Story = {
+  args: { ...defaultArgs, title: 'Ministerie van Economische Zaken en Klimaat' },
+  name: 'Alternatieve tekst',
+};
