@@ -96,12 +96,41 @@
   .rvo-table--cmor {
     .rvo-table-head {
       display: none;
+
+      @media (min-width: 980px) {
+        display: table-row;
+      }
     }
 
     .rvo-table-body .rvo-table-row {
       display: grid;
       gap: var(--rvo-space-2xs);
       position: relative;
+
+      @media (min-width: 980px) {
+        display: table;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .rvo-table-header,
+      .rvo-table-cell {
+        &:first-child {
+          width: 30%;
+        }
+
+        &:nth-child(2) {
+          width: 30%;
+        }
+
+        &:nth-child(3) {
+          width: 20%;
+        }
+
+        &:nth-child(4) {
+          width: 20%;
+        }
+      }
     }
 
     .rvo-table-header {
@@ -113,6 +142,9 @@
     .rvo-table-cell {
       padding-block-end: 0;
       padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+      vertical-align: top;
     }
 
     .rvo-table-cell:not(:last-child) {
@@ -131,6 +163,10 @@
     .rvo-table-head-indicator {
       color: #64748b;
       font-size: var(--rvo-font-size-sm);
+
+      @media (min-width: 980px) {
+        display: none;
+      }
     }
   }
 }

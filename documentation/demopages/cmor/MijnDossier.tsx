@@ -227,125 +227,187 @@ const MijnDossier = () => {
                   </LayoutColumnRow>
                 </LayoutColumnRow>
               </details>
-              <div className="rvo-rhs-update-component">
-                <div className="rvo-table--responsive rvo-table--cmor">
-                  <table className="rvo-table">
-                    <thead className="rvo-table-head">
-                      <tr className="rvo-table-row">
-                        <th scope="col" className="rvo-table-header">
-                          Naam
-                        </th>
-                        <th
-                          scope="col"
-                          className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
-                        >
-                          Status
-                          <button
-                            className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
-                            type="button"
+              <LayoutColumnRow size="2xs">
+                <div className="rvo-rhs-update-component">
+                  <div className="rvo-table--responsive rvo-table--cmor">
+                    <table className="rvo-table">
+                      <thead className="rvo-table-head">
+                        <tr className="rvo-table-row">
+                          <th scope="col" className="rvo-table-header">
+                            Naam
+                          </th>
+                          <th
+                            scope="col"
+                            className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
                           >
-                            <span
-                              className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
-                              role="img"
-                              aria-label="Delta omhoog"
-                            ></span>
-                          </button>
-                        </th>
-                        <th scope="col" className="rvo-table-header">
-                          Referentienummer
-                        </th>
-                        <th scope="col" className="rvo-table-header">
-                          Laatste wijziging
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="rvo-table-body">
-                      <tr className="rvo-table-row">
-                        <td className="rvo-table-cell  rvo-table-cell--title">
-                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
-                            WBSO 2022
-                          </a>
-                        </td>
-                        <td className="rvo-table-cell">
-                          <LayoutColumnRow row={true} size="xs">
-                            <StatusIcon type="waarschuwing" size="md" />
-                            <div className="rvo-card-status-text">
-                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
-                            </div>
-                          </LayoutColumnRow>
-                        </td>
-                        <td className="rvo-table-cell ">
-                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
-                        </td>
-                        <td className="rvo-table-cell">
-                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
-                        </td>
-                      </tr>
-                      <tr className="rvo-table-row">
-                        <td className="rvo-table-cell  rvo-table-cell--title">
-                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
-                            WBSO 2022
-                          </a>
-                        </td>
-                        <td className="rvo-table-cell">
-                          <LayoutColumnRow row={true} size="xs">
-                            <StatusIcon type="waarschuwing" size="md" />
-                            <div className="rvo-card-status-text">
-                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
-                            </div>
-                          </LayoutColumnRow>
-                        </td>
-                        <td className="rvo-table-cell ">
-                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
-                        </td>
-                        <td className="rvo-table-cell">
-                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
-                        </td>
-                      </tr>
-                      <tr className="rvo-table-row">
-                        <td className="rvo-table-cell  rvo-table-cell--title">
-                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
-                            WBSO 2022
-                          </a>
-                        </td>
-                        <td className="rvo-table-cell">
-                          <LayoutColumnRow row={true} size="xs">
-                            <StatusIcon type="waarschuwing" size="md" />
-                            <div className="rvo-card-status-text">
-                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
-                            </div>
-                          </LayoutColumnRow>
-                        </td>
-                        <td className="rvo-table-cell ">
-                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
-                        </td>
-                        <td className="rvo-table-cell">
-                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
-                        </td>
-                      </tr>
-                      <tr className="rvo-table-row">
-                        <td className="rvo-table-cell  rvo-table-cell--title">
-                          <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
-                            WBSO 2022
-                          </a>
-                        </td>
-                        <td className="rvo-table-cell">
-                          <LayoutColumnRow row={true} size="xs">
-                            <StatusIcon type="waarschuwing" size="md" />
-                            <div className="rvo-card-status-text">
-                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
-                            </div>
-                          </LayoutColumnRow>
-                        </td>
-                        <td className="rvo-table-cell ">
-                          <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
-                        </td>
-                        <td className="rvo-table-cell">
-                          <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                            Status
+                            <button
+                              className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
+                              type="button"
+                            >
+                              <span
+                                className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
+                                role="img"
+                                aria-label="Delta omhoog"
+                              ></span>
+                            </button>
+                          </th>
+                          <th scope="col" className="rvo-table-header">
+                            Referentienummer
+                          </th>
+                          <th scope="col" className="rvo-table-header">
+                            Laatste wijziging
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="rvo-table-body">
+                        <tr className="rvo-table-row">
+                          <td className="rvo-table-cell  rvo-table-cell--title">
+                            <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                              WBSO 2022
+                            </a>
+                          </td>
+                          <td className="rvo-table-cell">
+                            <LayoutColumnRow row={true} size="xs">
+                              <StatusIcon type="waarschuwing" size="md" />
+                              <div className="rvo-card-status-text">
+                                Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                              </div>
+                            </LayoutColumnRow>
+                          </td>
+                          <td className="rvo-table-cell ">
+                            <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                          </td>
+                          <td className="rvo-table-cell">
+                            <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
+                          </td>
+                        </tr>
+                        <tr className="rvo-table-row">
+                          <td className="rvo-table-cell  rvo-table-cell--title">
+                            <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                              WBSO 2021
+                            </a>
+                          </td>
+                          <td className="rvo-table-cell">
+                            <LayoutColumnRow row={true} size="xs">
+                              <StatusIcon type="waarschuwing" size="md" />
+                              <div className="rvo-card-status-text">
+                                Stuur aanvullende informatie <strong>uiterlijk 4 aug 2023</strong>
+                              </div>
+                            </LayoutColumnRow>
+                          </td>
+                          <td className="rvo-table-cell ">
+                            <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                          </td>
+                          <td className="rvo-table-cell">
+                            <span className="rvo-table-head-indicator">Laatste wijziging:</span> 10 aug 2023
+                          </td>
+                        </tr>
+
+                        <tr className="rvo-table-row">
+                          <td className="rvo-table-cell  rvo-table-cell--title">
+                            <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                              Gecombineerde Opgave 2021
+                            </a>
+                          </td>
+                          <td className="rvo-table-cell">
+                            <LayoutColumnRow row={true} size="xs">
+                              <div className="rvo-card-status-text">Financiële afhandeling</div>
+                            </LayoutColumnRow>
+                          </td>
+                          <td className="rvo-table-cell ">
+                            <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
+                          </td>
+                          <td className="rvo-table-cell">
+                            <span className="rvo-table-head-indicator">Laatste wijziging:</span> 12 sep 2023
+                          </td>
+                        </tr>
+                        <tr className="rvo-table-row">
+                          <td className="rvo-table-cell  rvo-table-cell--title">
+                            <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-click">
+                              ISDE 2020
+                            </a>
+                          </td>
+                          <td className="rvo-table-cell">
+                            <LayoutColumnRow row={true} size="xs">
+                              <div className="rvo-card-status-text">Afgerond</div>
+                            </LayoutColumnRow>
+                          </td>
+                          <td className="rvo-table-cell ">
+                            <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-0454544
+                          </td>
+                          <td className="rvo-table-cell">
+                            <span className="rvo-table-head-indicator">Laatste wijziging:</span> 11 aug 2023
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div className="rvo-rhs-update-component">
+                  <nav className="rvo-pagination">
+                    <div className="rvo-pagination-prev">
+                      <Link content="Vorige" icon="delta-naar-links" showIcon="before" noUnderline={true} />
+                    </div>
+                    <ul className="rvo-pagination-list">
+                      <li className="rvo-pagination-item">
+                        <Link content="1" />
+                      </li>
+                      <li className="rvo-pagination-item rvo-pagination-item--ellipses">...</li>
+                      <li className="rvo-pagination-item">
+                        <Link content="5" />
+                      </li>
+                      <li className="rvo-pagination-item rvo-pagination-item--current">
+                        <Link content="6" />
+                      </li>
+                      <li className="rvo-pagination-item">
+                        <Link content="7" />
+                      </li>
+                      <li className="rvo-pagination-item rvo-pagination-item--ellipses">...</li>
+                      <li className="rvo-pagination-item">
+                        <Link content="42" />
+                      </li>
+                    </ul>
+                    <div className="rvo-pagination-next">
+                      <Link content="Volgende" icon="delta-naar-rechts" showIcon="after" noUnderline={true} />
+                    </div>
+                  </nav>
+                </div>
+              </LayoutColumnRow>
+              <div className="rvo-cards-grid">
+                <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--grijs-2">
+                  <div className="rvo-card-content">
+                    <h4 className="utrecht-heading-4">
+                      <a href="#" className="rvo-link--full-click">
+                        Wilt u een nieuwe regeling aanvragen?
+                      </a>
+                    </h4>
+                    <span className="rvo-link rvo-link--with-icon rvo-link--no-underline">
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
+                        role="img"
+                        aria-label="Plus"
+                      ></span>
+                      Start een nieuwe aanvraag
+                    </span>
+                  </div>
+                </div>
+                <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--grijs-2">
+                  <div className="rvo-card-content">
+                    <h4 className="utrecht-heading-4">
+                      <a href="#" className="rvo-link--full-click">
+                        Wilt u een nieuwe regeling aanvragen?
+                      </a>
+                    </h4>
+                    <span className="rvo-link rvo-link--with-icon rvo-link--no-underline">
+                      Wilt u een registratie doen of wijzigen?
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-externe-link rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
+                        role="img"
+                        aria-label="Plus"
+                      ></span>
+                    </span>
+                  </div>
                 </div>
               </div>
             </LayoutColumnRow>
