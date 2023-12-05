@@ -179,7 +179,7 @@ const Overzicht = () => {
                     <Tag type="info" showIcon="no" content="2 openstaande acties" />
                   </div>
                   <div className="rvo-cards-grid">
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
@@ -202,7 +202,7 @@ const Overzicht = () => {
                         <Icon icon="delta-naar-rechts" size="sm" />
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
@@ -225,7 +225,7 @@ const Overzicht = () => {
                         <Icon icon="delta-naar-rechts" size="sm" />
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
@@ -246,7 +246,7 @@ const Overzicht = () => {
                         <Icon icon="delta-naar-rechts" size="sm" />
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
