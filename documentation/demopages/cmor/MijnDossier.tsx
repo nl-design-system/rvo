@@ -227,7 +227,7 @@ const MijnDossier = () => {
                   </LayoutColumnRow>
                 </LayoutColumnRow>
               </details>
-              <LayoutColumnRow size="2xs">
+              <LayoutColumnRow size="md">
                 <div className="rvo-rhs-update-component">
                   <div className="rvo-table--responsive rvo-table--cmor">
                     <table className="rvo-table">
@@ -270,9 +270,7 @@ const MijnDossier = () => {
                           <td className="rvo-table-cell">
                             <LayoutColumnRow row={true} size="xs">
                               <StatusIcon type="waarschuwing" size="md" />
-                              <div className="rvo-card-status-text">
-                                Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
-                              </div>
+                              <div className="rvo-card-status-text">Actie nodig uiterlijk 19 aug 2023</div>
                             </LayoutColumnRow>
                           </td>
                           <td className="rvo-table-cell ">
@@ -291,9 +289,7 @@ const MijnDossier = () => {
                           <td className="rvo-table-cell">
                             <LayoutColumnRow row={true} size="xs">
                               <StatusIcon type="waarschuwing" size="md" />
-                              <div className="rvo-card-status-text">
-                                Stuur aanvullende informatie <strong>uiterlijk 4 aug 2023</strong>
-                              </div>
+                              <div className="rvo-card-status-text">Actie nodig uiterlijk 4 aug 2023</div>
                             </LayoutColumnRow>
                           </td>
                           <td className="rvo-table-cell ">
