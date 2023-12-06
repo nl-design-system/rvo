@@ -45,6 +45,7 @@
     display: flex;
     flex-direction: column;
     height: var(--rvo-mobile-menu-topnav-height);
+    min-width: var(--rvo-mobile-menu-topnav-min-width);
     padding-block-end: var(--rvo-mobile-menu-topnav-padding-block-end);
     padding-block-start: var(--rvo-mobile-menu-topnav-padding-block-start);
     padding-inline-end: var(--rvo-mobile-menu-topnav-padding-inline-end);
@@ -70,7 +71,7 @@
     --utrecht-icon-color: var(--rvo-mobile-menu-item-link-color);
   }
 
-  .utrecht-topnav__link {
+  .rvo-topnav__link {
     --utrecht-topnav-link-focus-background-color: var(--rvo-mobile-menu-item-link-focus-background-color);
     &:focus {
       background-color: var(--rvo-mobile-menu-item-link-focus-background-color);
@@ -78,6 +79,15 @@
 
     color: var(--rvo-mobile-menu-item-link-color);
     width: var(--rvo-mobile-menu-item-link-width, 100%);
+
+    &:hover {
+      color: var(--rvo-mobile-menu-item-link-hover-color);
+      text-decoration: var(--rvo-mobile-men-item-link-hover-text-decoration);
+    }
+
+    &:active {
+      color: var(--rvo-mobile-menu-item-link-active-color);
+    }
   }
 
   .rvo-mobile-menu__open-icon,
@@ -115,12 +125,12 @@
     }
   }
 
-  .utrecht-topnav__list {
+  .rvo-topnav__list {
     align-items: var(--rvo-mobile-menu-list-align-items, flex-start);
     flex-direction: var(--rvo-mobile-menu-list-flex-direction, column);
   }
 
-  .utrecht-topnav__item {
+  .rvo-topnav__item {
     display: inline-flex;
     position: relative;
     text-align: start;
@@ -131,19 +141,19 @@
     }
   }
 
-  .utrecht-topnav__item--align-right {
+  .rvo-topnav__item--align-right {
     margin-inline-start: 0;
   }
 
-  .utrecht-topnav__item--sub {
+  .rvo-topnav__item--sub {
     background-color: var(--rvo-mobile-menu-submenu-background-color);
 
-    .utrecht-topnav__link {
+    .rvo-topnav__link {
       padding-inline-start: var(--rvo-mobile-menu-submenu-padding-inline-start);
     }
   }
 
-  .utrecht-topnav__item--active::before {
+  .rvo-topnav__item--active::before {
     background-color: var(--rvo-mobile-menu-item-active-indicator-background-color);
     border-radius: var(--rvo-mobile-menu-item-active-indicator-border-radius);
     content: var(--rvo-mobile-menu-item-active-indicator-content);

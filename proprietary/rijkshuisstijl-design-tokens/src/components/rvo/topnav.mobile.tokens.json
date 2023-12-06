@@ -35,9 +35,10 @@
       },
       "topnav": {
         "background-color": { "value": "{rvo.color.grijs2}" },
+        "min-width": { "value": "170px" },
         "width": { "value": "fit-content" },
         "height": { "value": "100vh" },
-        "padding-block-start": { "value": "{rvo.space.3xl}" },
+        "padding-block-start": { "value": "{rvo.space.2xl}" },
         "padding-block-end": {},
         "padding-inline-end": { "value": "{rvo.space.2xl}" },
         "padding-inline-start": { "value": "{rvo.space.2xl}" }
@@ -74,7 +75,8 @@
           "color": { "value": "{rvo.color.grijs3}" },
           "width": { "value": "100%" },
           "hover": {
-            "color": { "value": "{rvo.color.grijs3}" }
+            "color": { "value": "{rvo.color.hemelblauw}" },
+            "text-decoration": { "value": "none" }
           },
           "focus": {
             "background-color": { "value": "transparent" }

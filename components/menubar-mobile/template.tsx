@@ -116,7 +116,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
       {isOpen && (
         <div className={clsx('rvo-topnav__background')} onClick={onClick}>
           <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
-            <ul className="utrecht-topnav__list">{itemsMarkup}</ul>
+            <ul className="rvo-topnav__list">{itemsMarkup}</ul>
           </nav>
         </div>
       )}

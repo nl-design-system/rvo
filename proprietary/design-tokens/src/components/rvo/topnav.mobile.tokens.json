@@ -35,6 +35,7 @@
       },
       "topnav": {
         "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "min-width": {},
         "width": {},
         "height": {},
         "padding-block-start": {},
@@ -74,7 +75,8 @@
           "color": { "value": "{rvo.color.wit}" },
           "width": { "value": "100%" },
           "hover": {
-            "color": { "value": "{rvo.color.wit}" }
+            "color": { "value": "{rvo.color.hemelblauw}" },
+            "text-decoration": { "value": "none" }
           },
           "focus": {
             "background-color": { "value": "{rvo.color.grijs3}" }
