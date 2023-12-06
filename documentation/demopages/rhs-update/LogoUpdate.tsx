@@ -1,5 +1,4 @@
 import { Heading, Logo } from '@nl-rvo/components';
-import { LogoWithText } from '@nl-rvo/components/logo/template';
 import '../common/rhs-update.scss';
 
 const LogoUpdate = () => {
@@ -16,7 +15,7 @@ const LogoUpdate = () => {
           <strong>Logo met tekst</strong>
         </p>
         <div>
-          <LogoWithText title="Rijksdienst voor Ondernemend Nederland" />
+          <Logo title="Rijksdienst voor Ondernemend Nederland" />
         </div>
         <p>
           <strong>Aangepast logo</strong>
