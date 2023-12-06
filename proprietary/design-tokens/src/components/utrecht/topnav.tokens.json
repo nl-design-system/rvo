@@ -9,7 +9,7 @@
         "color": { "value": "{rvo.color.wit}" },
         "background-color": { "value": "{rvo.color.hemelblauw}" },
         "focus": {
-          "color": {},
+          "color": { "value": "{rvo.color.wit}" },
           "box-shadow-color": {},
           "border-type": {},
           "text-decoration": {},

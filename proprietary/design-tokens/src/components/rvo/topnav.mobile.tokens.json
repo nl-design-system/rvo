@@ -1,0 +1,96 @@
+{
+  "rvo": {
+    "mobile-menu": {
+      "sm": {
+        "font-size": { "value": "{rvo.font-size.sm}" }
+      },
+      "md": {
+        "font-size": { "value": "{rvo.font-size.md}" }
+      },
+      "lg": {
+        "font-size": { "value": "{rvo.font-size.lg}" }
+      },
+      "toggle": {
+        "justify-content": { "value": "flex-start" },
+        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "color": { "value": "{rvo.color.wit}" },
+        "icon-color": { "value": "{rvo.color.wit}" },
+        "hover": {
+          "color": { "value": "{rvo.color.wit}" }
+        },
+        "active": {
+          "color": { "value": "{rvo.color.wit}" }
+        },
+        "padding-block-start": { "value": "{rvo.space.md}" },
+        "padding-block-end": { "value": "{rvo.space.md}" },
+        "padding-inline-start": { "value": "{rvo.space.md}" },
+        "padding-inline-end": { "value": "{rvo.space.md}" },
+        "width": { "value": "100%" },
+        "override-close-icon": {
+          "left": {},
+          "position": {},
+          "top": {},
+          "z-index": {}
+        }
+      },
+      "topnav": {
+        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "width": {},
+        "height": {},
+        "padding-block-start": {},
+        "padding-block-end": {},
+        "padding-inline-end": {},
+        "padding-inline-start": {}
+      },
+      "bg": {
+        "background-color": {},
+        "position": {},
+        "width": {},
+        "height": {},
+        "left": {},
+        "top": {}
+      },
+      "list": {
+        "align-items": { "value": "flex-start" },
+        "flex-direction": { "value": "column" }
+      },
+      "item": {
+        "width": { "value": "100%" },
+        "active": {
+          "background-color": { "value": "{rvo.color.donkerblauw}" },
+          "font-weight": { "value": "{rvo.font-weight.bold}" },
+          "indicator": {
+            "background-color": {},
+            "border-radius": {},
+            "content": {},
+            "display": {},
+            "height": {},
+            "width": {},
+            "position": {},
+            "top": {}
+          }
+        },
+        "link": {
+          "color": { "value": "{rvo.color.wit}" },
+          "width": { "value": "100%" },
+          "hover": {
+            "color": { "value": "{rvo.color.wit}" }
+          },
+          "focus": {
+            "background-color": { "value": "{rvo.color.grijs3}" }
+          },
+          "active": {
+            "color": { "value": "{rvo.color.wit}" }
+          }
+        },
+        "icon": {
+          "color": { "value": "{rvo.color.wit}" }
+        }
+      },
+      "submenu": {
+        "background-color": { "value": "{rvo.color.donkerblauw}" },
+        "padding-inline-start": { "value": "{rvo.space.xl}" }
+      }
+    }
+  }
+}

@@ -52,6 +52,10 @@
 
   @extend .rvo-layout-row;
   @extend .rvo-layout-gap--sm;
+
+  .utrecht-icon {
+    --utrecht-icon-color: var(--utrecht-topnav-link-color);
+  }
 }
 
 // Submenu

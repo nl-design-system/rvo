@@ -1,7 +1,7 @@
 import { argTypes, MobileMenuBar } from './template';
 
 export default {
-  title: 'Componenten/Menubar/Mobile',
+  title: 'Componenten/Mobile Menubar',
   component: MobileMenuBar,
   argTypes: argTypes,
 
@@ -18,7 +18,7 @@ export default {
 
 export const MobileSubmenu = {
   render: MobileMenuBar.bind({}),
-  name: 'Mobile submenu',
+  name: 'Mobile Submenu',
 
   args: {
     size: 'md',

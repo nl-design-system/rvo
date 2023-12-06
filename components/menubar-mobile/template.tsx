@@ -4,7 +4,7 @@
  */
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Icon } from '../icon/template';
 import { IMenuBarItem, IMenuBarProps, parseMenuItem } from '../menubar/template';
 import { defaultArgs } from './defaultArgs';
@@ -43,6 +43,7 @@ export interface IMobileMenuBarProps extends IMenuBarProps {
   submenuItems: IMenuBarItem[];
   isOpen: boolean;
 }
+
 export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   size = defaultArgs.size,
   items = defaultArgs.items,
@@ -50,6 +51,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   iconPlacement = defaultArgs.iconPlacement,
   submenuItems = defaultArgs.submenuItems,
   isOpen: isOpenArg = defaultArgs.isOpen,
+  useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
   children,
 }: IMobileMenuBarProps) => {
   let itemsMarkup;
@@ -66,6 +68,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
             useIcon: useIcons,
             size,
             iconPlacement,
+            useDeltaForActiveItem,
           })}
           {item.active &&
             submenuItems.map((submenuItem, index) => (
@@ -80,6 +83,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
                   size,
                   iconPlacement,
                   type: 'sub',
+                  useDeltaForActiveItem,
                 })}
               </React.Fragment>
             ))}
@@ -95,15 +99,22 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     setIsOpen((isOpen) => !isOpen);
   }, [isOpen]);
 
+  useEffect(() => {
+    setIsOpen(isOpenArg);
+  }, [isOpenArg]);
+
   return (
-    <div className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`)} aria-expanded={isOpen}>
-      <UtrechtButton className={clsx('rvo-mobile-menu__top-bar')} onClick={onClick}>
-        <Icon icon="menu" size={size as any} color="wit" />
-        <Icon icon="kruis" size={size as any} color="wit" />
+    <div
+      className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`, `rvo-mobile-menu--${isOpen ? 'open' : 'closed'}`)}
+      aria-expanded={isOpen}
+    >
+      <UtrechtButton className={clsx('rvo-mobile-menu__toggle')} onClick={onClick}>
+        <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
+        <Icon icon="kruis" size={size as any} className="rvo-mobile-menu__close-icon" />
         Menu
       </UtrechtButton>
       {isOpen && (
-        <div className={clsx('rvo-mobile-menu__list', 'rvo-topnav__background')}>
+        <div className={clsx('rvo-topnav__background')} onClick={onClick}>
           <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
             <ul className="utrecht-topnav__list">{itemsMarkup}</ul>
           </nav>

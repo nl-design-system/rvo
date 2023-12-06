@@ -1,7 +1,14 @@
 {
   "rvo": {
     "topnav": {
+      "background-color": { "value": "{rvo.color.grijs2}" },
+      "width": { "value": "fit-content" },
+      "height": { "value": "100vh" },
+      "padding-block-start": { "value": "{rvo.space.3xl}" },
+      "padding-inline-end": { "value": "{rvo.space.2xl}" },
+      "padding-inline-start": { "value": "{rvo.space.2xl}" },
       "font-family": { "value": "{rvo.font.sans-serif.font-family}" },
+      "justify-content": { "value": "flex-end" },
       "sm": {
         "font-size": { "value": "{rvo.font-size.sm}" }
       },
@@ -11,20 +18,33 @@
       "lg": {
         "font-size": { "value": "{rvo.font-size.lg}" }
       },
+      "bg": {
+        "background-color": { "value": "rgba(0,0,0,0.35)" },
+        "position": { "value": "fixed" },
+        "width": { "value": "100vw" },
+        "height": { "value": "100vh" },
+        "top": { "value": "0" }
+      },
+      "list": {
+        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "border-color": {}
+      },
       "link": {
-        "padding-block-start": { "value": "{rvo.space.md}" },
-        "padding-block-end": { "value": "{rvo.space.md}" },
-        "padding-inline-start": { "value": "{rvo.space.md}" },
+        "color": { "value": "{rvo.color.grijs6}" },
+        "padding-block-start": { "value": "{rvo.space.sm}" },
+        "padding-block-end": { "value": "{rvo.space.sm}" },
+        "padding-inline-start": { "value": "{rvo.space.sm}" },
         "padding-inline-end": { "value": "{rvo.space.md}" }
       },
       "item": {
         "active": {
           "background-color": { "value": "{rvo.color.donkerblauw}" },
           "font-weight": { "value": "{rvo.font-weight.bold}" }
-        }
+        },
+        "width": {}
       },
       "submenu": {
-        "background-color": { "value": "{rvo.color.donkerblauw}" },
+        "background-color": { "value": "{rvo.color.grijs2}" },
         "padding-inline-start": { "value": "{rvo.space.xl}" }
       }
     }

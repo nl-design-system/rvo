@@ -8,6 +8,7 @@
       "border-radius": {},
       "border-width": { "value": "0" },
       "color": {},
+      "hover-color": { "value": "{rvo.color.wit}" },
       "font-size": { "value": "{rvo.font-size.lg}" },
       "font-weight": {},
       "inline-size": {},
