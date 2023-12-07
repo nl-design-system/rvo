@@ -2,23 +2,20 @@ import {
   Accordion,
   Button,
   ButtonGroup,
-  ExpandableText,
   Footer,
   Heading,
   Icon,
   LayoutColumnRow,
   Link,
   MenuBar,
-  StatusIcon,
-  Tag,
 } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
-import '../common/cmor.scss';
+import '../common/www.scss';
 
-const Overzicht = () => {
+const Home = () => {
   return (
-    <body className="rvo-theme rvo-cmor rvo-sidebar-menu-active">
-      <div className="rvo-cmor rvo-rhs-update">
+    <body className="rvo-theme rvo-www">
+      <div className="rvo-www rvo-rhs-update">
         <header className="rvo-header">
           <div className="rvo-rhs-update-component">
             <a className="rvo-logo" href="#">
@@ -43,248 +40,190 @@ const Overzicht = () => {
                 <MenuBar
                   items={[
                     {
-                      label: 'Overzicht',
-                      link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
-                      icon: 'home',
+                      label: 'Home',
                       active: true,
+                      link: '#',
                     },
                     {
-                      label: 'Mijn dossier',
-                      link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
-                      icon: 'map',
+                      label: 'Onderwerpen',
+                      link: '#',
                     },
-                    { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                    { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+                    {
+                      label: 'Subsidie- en financieringswijzer',
+                      link: '#',
+                    },
+                    {
+                      label: 'Over ons',
+                      link: '#',
+                    },
+                    {
+                      label: 'Contact',
+                      link: '#',
+                    },
+                    {
+                      label: 'Mijn RVO',
+                      link: '#',
+                      icon: 'user',
+                    },
+                    {
+                      label: 'English',
+                      icon: 'wereldbol',
+                      link: '#',
+                    },
+                    {
+                      label: 'Zoeken',
+                      icon: 'zoek',
+                      link: '#',
+                    },
                   ]}
-                  size="md"
+                  size="lg"
                   useIcons={true}
                   iconPlacement="before"
-                  menuMaxWidth="md"
-                />
-                <MenuBar
-                  items={[{ label: 'Hulp & Contact', link: '#', icon: 'communicatie' }]}
-                  size="md"
-                  useIcons={true}
-                  iconPlacement="before"
-                  menuMaxWidth="md"
-                />
-                <MenuBar
-                  items={[
-                    { label: 'English', link: '#', icon: 'wereldbol' },
-                    { label: 'Uitloggen', link: '#', icon: 'externe-link' },
-                  ]}
-                  size="md"
-                  useIcons={true}
-                  iconPlacement="before"
-                  menuMaxWidth="md"
+                  menuMaxWidth="lg"
                 />
               </div>
             </details>
           </div>
-          <div className="rvo-topnav--w-line">
-            <MenuBar
-              items={[
-                {
-                  align: 'right',
-                  label: 'Hulp & Contact',
-                  link: '#',
-                },
-                {
-                  align: 'right',
-                  label: 'English',
-                  icon: 'wereldbol',
-                  link: '#',
-                },
-                {
-                  align: 'right',
-                  label: 'Boer Overveen B.V',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
-                  active: true,
-                  icon: 'user',
-                },
-              ]}
-              size="lg"
-              useIcons={true}
-              iconPlacement="before"
-              menuMaxWidth="lg"
-            />
-          </div>
+
+          <MenuBar
+            items={[
+              {
+                label: 'Home',
+                active: true,
+                link: '#',
+              },
+              {
+                label: 'Onderwerpen',
+                link: '#',
+              },
+              {
+                label: 'Subsidie- en financieringswijzer',
+                link: '#',
+              },
+              {
+                label: 'Over ons',
+                link: '#',
+              },
+              {
+                label: 'Contact',
+                link: '#',
+              },
+              {
+                align: 'right',
+                label: 'Mijn RVO',
+                link: '#',
+                active: true,
+                icon: 'user',
+              },
+              {
+                align: 'right',
+                label: 'English',
+                icon: 'wereldbol',
+                link: '#',
+              },
+              {
+                align: 'right',
+                label: 'Zoeken',
+                icon: 'zoek',
+                link: '#',
+              },
+            ]}
+            size="lg"
+            useIcons={true}
+            iconPlacement="before"
+            menuMaxWidth="lg"
+          />
         </div>
-        <main className="rvo-main--cmor rvo-main--sidebar-active rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
-          <div className="rvo-sidebar-menu">
-            <MenuBar
-              items={[
-                {
-                  label: 'Overzicht',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
-                  icon: 'home',
-                  active: true,
-                },
-                {
-                  label: 'Mijn dossier',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
-                  icon: 'map',
-                },
-                { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="before"
-              menuMaxWidth="md"
-            />
+        <div className="rvo-hero rvo-max-width-layout--lg">
+          <div className="rvo-hero-image">
+            <img src="images/home-hero.webp" className="rvo-hero-img" />
           </div>
-          <div className="rvo-content--cmor rvo-content--overzicht">
+          <h1 className="utrecht-heading-1">
+            Rijksdienst voor Ondernemend Nederland
+            <span className="rvo-heading-subtitle">Wij helpen u graag vooruit!</span>
+          </h1>
+        </div>
+        <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
+          <div className="rvo-content--www rvo-content--overzicht">
             <LayoutColumnRow size="xl">
-              <h1 className="utrecht-heading-1">
-                <strong>Overzicht</strong> van Boer Overveen B.V.
-              </h1>
-              <LayoutColumnRow size="xl">
-                <div className="rvo-reminders">
-                  <Heading type="h2" textContent="Nog te starten"></Heading>
-                  <LayoutColumnRow size="md">
-                    <div className="rvo-expandable-text--subtle">
-                      <ExpandableText
-                        title="Wij vragen u onderstaande aanvragen op tijd te regelen"
-                        content="Extra uitleg over bovenstaande opmerking."
-                      />
-                    </div>
-                    <div className="rvo-alert rvo-alert--info rvo-alert--space-lg">
-                      <div className="rvo-alert-text">
-                        <div>
-                          <div>
-                            <Heading type="h3" textContent="Mijn percelen" />
-                            <p>Uiterlijk 4 september 2024</p>
-                            <div className="rvo-rhs-update-component">
-                              <div className="utrecht-button-group">
-                                <Button kind="primary" size="sm">
-                                  Percelen registreren
-                                </Button>
-                                <Button kind="secondary" size="sm" icon="externe-link" showIcon="after">
-                                  Meer informatie
-                                </Button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </LayoutColumnRow>
-                </div>
-              </LayoutColumnRow>
               <div className="rvo-cards">
                 <LayoutColumnRow size="md">
-                  <div className="rvo-heading-w-tag">
-                    <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
-                    <Tag type="info" showIcon="no" content="2 openstaande acties" />
-                  </div>
+                  <h2 className="utrecht-heading-2">Onderwerpen</h2>
+
                   <div className="rvo-cards-grid">
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
+                      <div className="rvo-card-icon">
+                        <Icon icon="wereldbol" size="xl" />
+                      </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
-                            ISDE 2023
+                            Klimaat & Energie
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
-                          <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
-                            Investeringssubsidie duurzame energie en energiebesparing
-                          </p>
-                          <div className="rvo-card-status">
-                            <StatusIcon type="waarschuwing" size="md" />
-                            <div className="rvo-card-status-text">
-                              Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
-                            </div>
-                          </div>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
+
+                        <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
+                          Energie besparen en opwekken, duurzame mobiliteit, co2-reductie industrie...
+                        </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
+                      <div className="rvo-card-icon">
+                        <Icon icon="grootstedelijk" size="xl" />
+                      </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
-                            BSN Melding WBSO 2023
+                            Bouwen & Wonen
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
-                          <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
-                            Wet Bevordering Speur- en Ontwikkelingswerk
-                          </p>
-                          <div className="rvo-card-status">
-                            <StatusIcon type="waarschuwing" size="md" />
-                            <div className="rvo-card-status-text">
-                              Verzilver uw voucher <strong>uiterlijk 28 aug 2023</strong>
-                            </div>
-                          </div>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
+
+                        <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
+                          Energielabel, BENG, verduurzamen gebouwen en woningen, gebiedsontwikkeling..
+                        </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
+                      <div className="rvo-card-icon">
+                        <Icon icon="buitenlandse-handel" size="xl" />
+                      </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
-                            Gecombineerde opgave 2023
+                            Internationaal ondernemen
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
-                          <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
-                            Gemeenschappelijk Landbouwbeleid
-                          </p>
-                          <div className="rvo-card-status">
-                            <Icon icon="zandloper" size="md" />
-                            <div className="rvo-card-status-text">In behandeling</div>
-                          </div>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
+
+                        <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
+                          Landeninformatie, netwerken en contacten, financiering, handelsmissies...
+                        </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
+                      <div className="rvo-card-icon">
+                        <Icon icon="wereldbol-tussen-2-uitgestoken-handen" size="xl" />
+                      </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
                           <a href="#" className="rvo-link--full-click">
-                            SVVE 2023
+                            Ont­wikkelings­samen­werking
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
-                          <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
-                            Subsidieregeling verduurzaming voor verenigingen van eigenaars
-                          </p>
-                          <div className="rvo-card-status">
-                            <Icon icon="vinkje" size="md" />
-                            <div className="rvo-card-status-text">Goedgekeurd</div>
-                          </div>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
+
+                        <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
+                          Voedselzekerheid, humanitaire hulp, publiek-private partnerschappen...
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div className="rvo-link-list">
-                    <Link
-                      showIcon="after"
-                      icon="pijl-naar-rechts"
-                      target="#"
-                      content="Alle lopende aanvragen (13)"
-                      noUnderline={true}
-                    />
-                    <Link
-                      showIcon="after"
-                      icon="pijl-naar-rechts"
-                      target="#"
-                      content="Mijn dossier"
-                      noUnderline={true}
-                    />
-                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Concepten" noUnderline={true} />
-                  </div>
+
+                  <Link
+                    showIcon="after"
+                    icon="pijl-naar-rechts"
+                    target="#"
+                    content="Naar A-Z overzicht"
+                    noUnderline={true}
+                  />
                 </LayoutColumnRow>
               </div>
               <hr className="rvo-divider"></hr>
@@ -496,4 +435,4 @@ const Overzicht = () => {
   );
 };
 
-export default Overzicht;
+export default Home;

@@ -426,7 +426,7 @@
     }
   }
 
-  .rvo-card--w-icon {
+  .rvo-card--w-link-indicator {
     align-items: center;
     display: flex;
     gap: var(--rvo-space-xs);
@@ -817,6 +817,25 @@
     &.rvo-pagination-item--current {
       font-weight: var(--rvo-font-weight-bold);
     }
+  }
+
+  // HERO //
+
+  .rvo-hero-img {
+    width: 100%;
+  }
+
+  .rvo-hero .utrecht-heading-1 {
+    background-color: var(--rvo-color-hemelblauw);
+    border-start-end-radius: 25px;
+    color: var(--rvo-color-wit);
+    margin-block-start: -25px;
+    padding-block-end: var(--rvo-space-sm);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+    position: relative;
+    z-index: 1;
   }
 
   // GENERAL FIXES
