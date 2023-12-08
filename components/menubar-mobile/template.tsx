@@ -110,12 +110,12 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     >
       <UtrechtButton className={clsx('rvo-mobile-menu__toggle')} onClick={onClick}>
         <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
-        <Icon icon="kruis" size={size as any} className="rvo-mobile-menu__close-icon" />
         Menu
       </UtrechtButton>
       {isOpen && (
         <div className={clsx('rvo-topnav__background')} onClick={onClick}>
           <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
+            <Icon icon="kruis" size={size as any} className="rvo-mobile-menu__close-icon" />
             <ul className="rvo-topnav__list">{itemsMarkup}</ul>
           </nav>
         </div>

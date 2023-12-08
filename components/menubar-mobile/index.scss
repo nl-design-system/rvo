@@ -97,11 +97,8 @@
 
   &.rvo-mobile-menu--open {
     .rvo-mobile-menu__close-icon {
+      align-self: flex-end;
       display: block;
-      left: var(--rvo-mobile-menu-toggle-override-close-icon-left);
-      position: var(--rvo-mobile-menu-toggle-override-close-icon-position);
-      top: var(--rvo-mobile-menu-toggle-override-close-icon-top);
-      z-index: var(--rvo-mobile-menu-toggle-override-close-icon-z-index);
     }
 
     .rvo-mobile-menu__open-icon {
