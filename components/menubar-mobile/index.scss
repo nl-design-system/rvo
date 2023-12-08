@@ -64,7 +64,6 @@
     position: var(--rvo-mobile-menu-bg-position, static);
     top: var(--rvo-mobile-menu-bg-top);
     width: var(--rvo-mobile-menu-bg-width);
-    z-index: 9998;
   }
 
   .rvo-topnav__icon {
@@ -98,6 +97,7 @@
   &.rvo-mobile-menu--open {
     .rvo-mobile-menu__close-icon {
       align-self: flex-end;
+      cursor: pointer;
       display: block;
     }
 
