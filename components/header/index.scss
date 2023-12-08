@@ -9,10 +9,8 @@
 }
 
 .rvo-header__logo-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-block-end: 10px;
+  margin-inline-start: calc(50% - 25px);
 }
 
 .rvo-header__logo-link {
@@ -33,7 +31,6 @@
   }
 
   .rvo-header__logo-link {
-    margin-inline-end: -180px;
     overflow: visible;
     width: auto;
   }
@@ -48,11 +45,6 @@
   .rvo-header__logo-wrapper {
     margin-block-end: 25px;
   }
-
-  .rvo-header__logo-link {
-    margin-inline-end: -200px;
-  }
-
   .rvo-header__logo-img {
     max-height: none;
   }
