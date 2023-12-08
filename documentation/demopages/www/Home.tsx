@@ -215,6 +215,22 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
+                      <div className="rvo-card-icon">
+                        <Icon icon="tractor" size="xl" />
+                      </div>
+                      <div className="rvo-card-content">
+                        <h3 className="utrecht-heading-3">
+                          <a href="#" className="rvo-link--full-click">
+                            Landbouw
+                          </a>
+                        </h3>
+
+                        <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
+                          Grond, mest, marktordening, gemeenschappelijk landbouwbeleid...
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <Link
