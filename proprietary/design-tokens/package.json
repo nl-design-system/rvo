@@ -1,7 +1,7 @@
 {
   "version": "1.0.0-alpha.300",
   "author": "Community for NL Design System",
-  "description": "RVO design tokens",
+  "description": "RVO Rijkshuisstijl design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
   "name": "@nl-rvo/design-tokens",
   "keywords": [
