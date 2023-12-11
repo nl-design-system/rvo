@@ -7,8 +7,8 @@ import clsx from 'clsx';
 import React from 'react';
 import { Icon, options as iconOptions } from '../icon/template';
 import { StatusIcon } from '../status-icon/template';
-import './index.scss';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface ITagProps {
   content: string;
@@ -35,7 +35,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   icon: {
-    control: 'select',
+    control: { type: 'select' },
     options: iconOptions,
   },
   hover: {

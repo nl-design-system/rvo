@@ -6,8 +6,8 @@ import iconList from '@nl-rvo/assets/icons/index.js';
 import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
-import './index.scss';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 export interface IIconProps {
   icon: IconType;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
@@ -16,7 +16,7 @@ export interface IIconProps {
   ariaLabel?: string;
 }
 
-export const iconColors = ['', 'hemelblauw', 'wit', 'zwart'];
+export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart'];
 
 export const toProperCase = (inputString) =>
   inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()).replace(/_/g, ' ');
@@ -44,7 +44,7 @@ export const iconNames = options.map((option) => {
 
 export const argTypes = {
   icon: {
-    control: 'select',
+    control: { type: 'select' },
     options: options,
   },
   size: {

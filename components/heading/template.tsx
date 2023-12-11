@@ -37,7 +37,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   icon: {
-    control: 'select',
+    control: { type: 'select' },
     options: iconOptions,
   },
   iconAriaLabel: { control: 'text' },

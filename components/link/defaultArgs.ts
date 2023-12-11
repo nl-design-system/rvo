@@ -2,7 +2,8 @@ import { ILinkProps } from './template';
 
 export const defaultArgs: ILinkProps = {
   content: 'Dit is een link',
-  href: null,
+  href: '',
+  color: 'hemelblauw',
   showIcon: 'no',
   hover: false,
   icon: 'home',

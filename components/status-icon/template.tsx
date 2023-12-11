@@ -16,7 +16,7 @@ export interface IStatusIconProps {
 
 export const argTypes = {
   type: {
-    control: 'select',
+    control: { type: 'select' },
     options: ['info', 'bevestiging', 'foutmelding', 'waarschuwing'],
   },
   size: {
