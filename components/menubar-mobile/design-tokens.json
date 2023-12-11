@@ -197,6 +197,12 @@
             "syntax": "<*>",
             "inherits": true
           }
+        },
+        "gap": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
         }
       },
       "item": {
@@ -232,18 +238,6 @@
                 "inherits": true
               }
             },
-            "content": {
-              "css": {
-                "syntax": "<*>",
-                "inherits": true
-              }
-            },
-            "display": {
-              "css": {
-                "syntax": "<*>",
-                "inherits": true
-              }
-            },
             "height": {
               "css": {
                 "syntax": "<length>",
@@ -255,9 +249,7 @@
                 "syntax": "<length>",
                 "inherits": true
               }
-            },
-            "position": { "value": "absolute" },
-            "top": { "value": "calc(50% - 10px)" }
+            }
           }
         },
         "link": {
