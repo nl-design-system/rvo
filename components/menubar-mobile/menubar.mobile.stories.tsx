@@ -3,7 +3,7 @@ import { defaultArgs } from './defaultArgs';
 import { MobileMenuBar } from './template';
 
 const meta: Meta<typeof MobileMenuBar> = {
-  title: 'Componenten/Menubar (mobile)',
+  title: 'Componenten/Mobile Menubar',
   component: MobileMenuBar,
   args: defaultArgs,
   parameters: {
@@ -19,4 +19,4 @@ export default meta;
 
 type Story = StoryObj<typeof MobileMenuBar>;
 
-export const Default: Story = { args: defaultArgs, name: 'Menubar (mobile)' };
+export const Default: Story = { args: defaultArgs, name: 'Mobile Menubar' };

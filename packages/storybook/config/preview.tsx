@@ -10,7 +10,6 @@ import '@nl-rvo/assets/fonts/index.css';
 import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
-import '@nl-rvo/rijkshuisstijl-design-tokens/dist/index.css';
 import '@utrecht/component-library-css/dist/index.css';
 
 // Configure @etchteam/storybook-addon-status
@@ -124,21 +123,12 @@ const parameters = {
         return src;
       },
     },
-    page: () => <div>test</div>,
   },
   ...addonStatus,
   layout: 'fullscreen',
   html: {
     root: '#storybook-root',
     removeEmptyComments: true,
-  },
-  themes: {
-    default: 'ROOS 2.0',
-    target: 'root',
-    list: [
-      { name: 'ROOS 1.0', class: 'rvo-theme', color: '#007bc7' },
-      { name: 'ROOS 2.0', class: 'rvo-rijkshuisstijl', color: '#007bc7' },
-    ],
   },
 };
 

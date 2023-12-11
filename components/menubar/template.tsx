@@ -6,6 +6,7 @@ import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../icon/template';
+import MaxWidthLayout from '../max-width-layout/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
@@ -113,14 +114,14 @@ export const parseMenuItem = ({
     <li
       key={key}
       className={clsx(
-        'utrecht-topnav__item',
-        active && 'utrecht-topnav__item--active',
-        align === 'right' && 'utrecht-topnav__item--align-right',
-        type === 'sub' && 'utrecht-topnav__item--sub',
+        'rvo-topnav__item',
+        active && 'rvo-topnav__item--active',
+        align === 'right' && 'rvo-topnav__item--align-right',
+        type === 'sub' && 'rvo-topnav__item--sub',
       )}
       {...otherProps}
     >
-      <a className="utrecht-topnav__link" {...(typeof link === 'function' ? { onClick: link } : { href: link })}>
+      <a className="rvo-topnav__link" {...(typeof link === 'function' ? { onClick: link } : { href: link })}>
         {itemMarkup}
       </a>
     </li>
@@ -188,15 +189,11 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         type === 'sub-grid' && ['rvo-topnav--sub', 'rvo-topnav--sub-grid'],
       )}
     >
-      <nav
-        className={clsx(
-          `rvo-topnav rvo-topnav--${size}`,
-          menuMaxWidth && menuMaxWidth !== 'none' && 'rvo-max-width-layout',
-          menuMaxWidth && menuMaxWidth !== 'none' && `rvo-max-width-layout--${menuMaxWidth}`,
-        )}
-      >
-        <ul className="utrecht-topnav__list">{itemsMarkup}</ul>
-      </nav>
+      <MaxWidthLayout size={menuMaxWidth}>
+        <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
+          <ul className="rvo-topnav__list">{itemsMarkup}</ul>
+        </nav>
+      </MaxWidthLayout>
     </div>
   );
 };
