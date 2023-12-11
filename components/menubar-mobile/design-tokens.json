@@ -1,0 +1,324 @@
+{
+  "rvo": {
+    "mobile-menu": {
+      "sm": {
+        "font-size": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        }
+      },
+      "md": {
+        "font-size": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        }
+      },
+      "lg": {
+        "font-size": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        }
+      },
+      "toggle": {
+        "justify-content": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "icon-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "hover": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "active": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        },
+        "padding-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-block-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-inline-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-inline-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "topnav": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "min-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-block-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-inline-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-inline-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "bg": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "position": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "left": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "top": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "list": {
+        "align-items": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "flex-direction": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "gap": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "item": {
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "active": {
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "font-weight": {
+            "css": {
+              "syntax": "<*>",
+              "inherits": true
+            }
+          },
+          "indicator": {
+            "background-color": {
+              "css": {
+                "syntax": "<color>",
+                "inherits": true
+              }
+            },
+            "border-radius": {
+              "css": {
+                "syntax": "<length>",
+                "inherits": true
+              }
+            },
+            "height": {
+              "css": {
+                "syntax": "<length>",
+                "inherits": true
+              }
+            },
+            "width": {
+              "css": {
+                "syntax": "<length>",
+                "inherits": true
+              }
+            }
+          }
+        },
+        "link": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "width": {
+            "css": {
+              "syntax": "<*>",
+              "inherits": true
+            }
+          },
+          "hover": {
+            "color": {
+              "css": {
+                "syntax": "<color>",
+                "inherits": true
+              }
+            },
+            "text-decoration": {
+              "css": {
+                "syntax": "<*>",
+                "inherits": true
+              }
+            }
+          },
+          "focus": {
+            "background-color": {
+              "css": {
+                "syntax": "<color>",
+                "inherits": true
+              }
+            }
+          },
+          "active": {
+            "color": {
+              "css": {
+                "syntax": "<color>",
+                "inherits": true
+              }
+            }
+          }
+        },
+        "icon": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
+        }
+      },
+      "submenu": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "padding-inline-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

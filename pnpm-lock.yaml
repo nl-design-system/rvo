@@ -186,9 +186,6 @@ importers:
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
-      '@nl-rvo/rijkshuisstijl-design-tokens':
-        specifier: workspace:*
-        version: link:../proprietary/rijkshuisstijl-design-tokens
       clsx:
         specifier: 1.2.1
         version: 1.2.1
@@ -448,9 +445,6 @@ importers:
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
-      '@nl-rvo/rijkshuisstijl-design-tokens':
-        specifier: workspace:*
-        version: link:../../proprietary/rijkshuisstijl-design-tokens
       '@storybook/addon-a11y':
         specifier: 7.0.14
         version: 7.0.14(react-dom@18.2.0)(react@18.2.0)
@@ -558,21 +552,6 @@ importers:
         version: 1.56.2
 
   proprietary/design-tokens:
-    devDependencies:
-      chokidar-cli:
-        specifier: 3.0.0
-        version: 3.0.0
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
-      rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
-      style-dictionary:
-        specifier: 3.7.1
-        version: 3.7.1
-
-  proprietary/rijkshuisstijl-design-tokens:
     devDependencies:
       chokidar-cli:
         specifier: 3.0.0

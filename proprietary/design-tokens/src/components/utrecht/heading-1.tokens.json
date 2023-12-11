@@ -4,10 +4,10 @@
       "color": {},
       "font-family": {},
       "font-size": { "value": "{rvo.font-size.3xl}" },
-      "font-weight": { "value": "{rvo.font-weight.bold}" },
-      "line-height": { "value": "{rvo.line-height.lg}" },
+      "font-weight": {},
+      "line-height": { "value": "{rvo.line-height.sm}" },
       "margin-block-end": { "value": "{rvo.space.md}" },
-      "margin-block-start": { "value": "{rvo.space.md}" }
+      "margin-block-start": {}
     }
   }
 }
