@@ -390,6 +390,16 @@
       background-color: #f1f5f9;
     }
 
+    &.rvo-card--full-colour.rvo-card--hemelblauw {
+      background-color: var(--rvo-color-hemelblauw);
+    }
+
+    &.rvo-card--inverted-colours {
+      a.rvo-link--full-click {
+        color: var(--rvo-color-wit);
+      }
+    }
+
     &.rvo-card--outline {
       border: 1px solid #cbd5e1;
     }
@@ -410,9 +420,14 @@
   }
 
   .rvo-link--full-click {
-    color: var(--rvo-color-zwart);
+    // color: var(--rvo-color-zwart);
     display: block;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
 
     &::after {
       content: "";
@@ -431,6 +446,42 @@
     display: flex;
     gap: var(--rvo-space-xs);
     justify-content: space-between;
+  }
+
+  .rvo-card--w-img {
+    overflow: hidden;
+
+    &.rvo-card--sm {
+      align-items: center;
+      display: flex;
+
+      .rvo-card-img-container {
+        margin-block-end: -24px;
+        margin-inline-end: 24px;
+      }
+
+      .rvo-card-img {
+        width: 112px;
+      }
+    }
+
+    &.rvo-card--md {
+      .rvo-card-img {
+        height: 300px;
+      }
+    }
+  }
+
+  .rvo-card-img-container {
+    line-height: 0;
+    margin-block-end: var(--rvo-space-md);
+    margin-block-start: -24px;
+    margin-inline-end: -24px;
+    margin-inline-start: -24px;
+  }
+
+  .rvo-card-img {
+    object-fit: cover;
   }
 
   .rvo-card-status {
@@ -458,6 +509,13 @@
     .rvo-cards-grid {
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  // CONTENT ITEMS //
+
+  .rvo-content-items-grid {
+    display: grid;
+    gap: var(--rvo-space-md);
   }
 
   // LINK LIST //
