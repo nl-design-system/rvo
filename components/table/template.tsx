@@ -4,10 +4,10 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import './index.scss';
 import { Button } from '../button/template';
 import validateHTML from '../utils/validateHTML';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface ITableColumnProps {
   label: string;

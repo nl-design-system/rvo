@@ -6,8 +6,8 @@
     },
     "table": {
       "header": {
-        "background-color": { "value": "{rvo.color.grijs-100}" },
-        "color": { "value": "{rvo.color.grijs-700}" },
+        "background-color": { "value": "{rvo.color.grijs-050}" },
+        "color": { "value": "{rvo.color.grijs-600}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" },
         "padding-block-end": { "value": "{rvo.space.xs}" },
         "padding-block-start": { "value": "{rvo.space.xs}" },
