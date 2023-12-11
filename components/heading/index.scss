@@ -1,23 +1,29 @@
 .utrecht-heading-1 {
-  line-height: var(--rvo-heading-1-line-height, var(--utrecht-heading-1-line-height));
+  margin-block-end: var(--utrecht-heading-1-margin-block-end);
+  margin-block-start: var(--utrecht-heading-1-margin-block-start);
 }
 
 .utrecht-heading-2 {
-  line-height: var(--rvo-heading-2-line-height, var(--utrecht-heading-2-line-height));
+  margin-block-end: var(--utrecht-heading-2-margin-block-end);
+  margin-block-start: var(--utrecht-heading-2-margin-block-start);
 }
 
 .utrecht-heading-3 {
-  line-height: var(--rvo-heading-3-line-height, var(--utrecht-heading-3-line-height));
+  margin-block-end: var(--utrecht-heading-3-margin-block-end);
+  margin-block-start: var(--utrecht-heading-3-margin-block-start);
 }
 
 .utrecht-heading-4 {
-  line-height: var(--rvo-heading-4-line-height, var(--utrecht-heading-4-line-height));
+  margin-block-end: var(--utrecht-heading-4-margin-block-end);
+  margin-block-start: var(--utrecht-heading-4-margin-block-start);
 }
 
 .utrecht-heading-5 {
-  line-height: var(--rvo-heading-5-line-height, var(--utrecht-heading-5-line-height));
+  margin-block-end: var(--utrecht-heading-5-margin-block-end);
+  margin-block-start: var(--utrecht-heading-5-margin-block-start);
 }
 
 .utrecht-heading-6 {
-  line-height: var(--rvo-heading-6-line-height, var(--utrecht-heading-6-line-height));
+  margin-block-end: var(--utrecht-heading-6-margin-block-end);
+  margin-block-start: var(--utrecht-heading-6-margin-block-start);
 }
