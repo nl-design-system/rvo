@@ -3,7 +3,7 @@
     "radio-button": {
       "label": {
         "disabled": {
-          "color": { "value": "{rvo.color.grijs3}" }
+          "color": { "value": "{rvo.color.grijs-300}" }
         }
       },
       "hover": {

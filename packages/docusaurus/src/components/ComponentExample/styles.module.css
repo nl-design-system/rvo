@@ -1,5 +1,5 @@
 .componentExample {
-  border-color: var(--rvo-color-grijs3);
+  border-color: var(--rvo-color-grijs-200);
   border-style: solid;
   border-width: 1px;
   width: 100%;
@@ -18,7 +18,7 @@
 }
 
 .componentContainer {
-  border-bottom-color: var(--rvo-color-grijs3);
+  border-bottom-color: var(--rvo-color-grijs-200);
   border-bottom-style: solid;
   border-bottom-width: 1px;
   overflow: auto;

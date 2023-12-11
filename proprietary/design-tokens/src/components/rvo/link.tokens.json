@@ -29,7 +29,7 @@
         "text-decoration-thickness": { "value": "2px" }
       },
       "focus": {
-        "background-color": { "value": "{rvo.color.hemelblauw-tint2}" },
+        "background-color": { "value": "{rvo.color.hemelblauw-300}" },
         "color": { "value": "{rvo.color.zwart}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
         "icon": {

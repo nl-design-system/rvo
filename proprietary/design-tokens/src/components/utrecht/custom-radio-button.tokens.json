@@ -23,7 +23,7 @@
         "background-color": {}
       },
       "disabled": {
-        "border-color": { "value": "{rvo.color.grijs3}" },
+        "border-color": { "value": "{rvo.color.grijs-300}" },
         "border-width": {},
         "background-color": { "value": "{rvo.color.wit}" },
         "color": {}

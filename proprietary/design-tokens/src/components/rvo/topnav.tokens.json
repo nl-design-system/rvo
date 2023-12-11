@@ -1,7 +1,7 @@
 {
   "rvo": {
     "topnav": {
-      "background-color": { "value": "{rvo.color.grijs2}" },
+      "background-color": { "value": "{rvo.color.grijs-200}" },
       "sm": {
         "font-size": { "value": "{rvo.font-size.sm}" }
       },
@@ -37,7 +37,7 @@
         }
       },
       "submenu": {
-        "background-color": { "value": "{rvo.color.grijs2}" },
+        "background-color": { "value": "{rvo.color.grijs-200}" },
         "padding-inline-start": { "value": "{rvo.space.xl}" }
       }
     }

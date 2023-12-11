@@ -11,7 +11,7 @@
         "text-decoration-thickness": { "value": "{rvo.link.focus.text-decoration-thickness}" }
       },
       "focus": {
-        "background-color": { "value": "{rvo.color.hemelblauw-tint2}" },
+        "background-color": { "value": "{rvo.color.hemelblauw-300}" },
         "color": { "value": "{rvo.color.zwart}" },
         "text-decoration": { "value": "{rvo.link.text-decoration}" },
         "text-decoration-thickness": { "value": "{rvo.link.focus.text-decoration-thickness}" }

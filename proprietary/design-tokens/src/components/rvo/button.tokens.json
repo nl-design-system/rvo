@@ -17,7 +17,7 @@
         "disabled": {
           "border-color": {},
           "background-color": { "value": "transparent" },
-          "color": { "value": "{rvo.color.grijs3}" }
+          "color": { "value": "{rvo.color.grijs-300}" }
         },
         "focus": {
           "color": { "value": "{rvo.color.hemelblauw}" }
@@ -29,17 +29,17 @@
         "border-width": { "value": "0" },
         "color": { "value": "{rvo.color.wit}" },
         "active": {
-          "background-color": { "value": "{rvo.color.donkergroen}" },
+          "background-color": { "value": "{rvo.color.groen-750}" },
           "color": { "value": "{rvo.color.wit}" }
         },
         "hover": {
-          "background-color": { "value": "{rvo.color.donkergroen}" },
+          "background-color": { "value": "{rvo.color.groen-750}" },
           "color": { "value": "{rvo.color.wit}" }
         },
         "disabled": {
-          "border-color": { "value": "{rvo.color.grijs2}" },
-          "background-color": { "value": "{rvo.color.grijs2}" },
-          "color": { "value": "{rvo.color.grijs3}" }
+          "border-color": { "value": "{rvo.color.grijs-200}" },
+          "background-color": { "value": "{rvo.color.grijs-200}" },
+          "color": { "value": "{rvo.color.grijs-300}" }
         },
         "focus": {
           "background-color": { "value": "{rvo.color.groen}" },

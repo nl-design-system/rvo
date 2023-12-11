@@ -39,10 +39,10 @@ html {
   --ifm-color-primary: var(--rvo-color-hemelblauw);
   --ifm-color-primary-dark: var(--rvo-color-hemelblauw);
   --ifm-color-primary-darker: var(--rvo-color-donkerblauw);
-  --ifm-color-primary-darkest: var(--rvo-color-donkerblauw-shade1);
-  --ifm-color-primary-light: var(--rvo-color-hemelblauw-tint1);
-  --ifm-color-primary-lighter: var(--rvo-color-hemelblauw-tint2);
-  --ifm-color-primary-lightest: var(--rvo-color-lichtblauw-tint2);
+  --ifm-color-primary-darkest: var(--rvo-color-donkerblauw-150);
+  --ifm-color-primary-light: var(--rvo-color-hemelblauw-150);
+  --ifm-color-primary-lighter: var(--rvo-color-hemelblauw-150);
+  --ifm-color-primary-lightest: var(--rvo-color-lichtblauw-150);
   --ifm-link-hover-decoration: none;
   --ifm-menu-link-padding-horizontal: 0;
   --ifm-code-border-radius: 0;
@@ -52,11 +52,11 @@ html {
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-color-primary: var(--rvo-color-lichtblauw);
-  --ifm-color-primary-dark: var(--rvo-color-hemelblauw-tint1);
+  --ifm-color-primary-dark: var(--rvo-color-hemelblauw-150);
   --ifm-color-primary-darker: var(--rvo-color-lichtblauw);
   --ifm-color-primary-darkest: var(--rvo-color-hemelblauw);
-  --ifm-color-primary-light: var(--rvo-color-lichtblauw-tint1);
-  --ifm-color-primary-lighter: var(--rvo-color-lichtblauw-tint2);
+  --ifm-color-primary-light: var(--rvo-color-lichtblauw-150);
+  --ifm-color-primary-lighter: var(--rvo-color-lichtblauw-150);
   --ifm-color-primary-lightest: var(--rvo-color-wit);
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 30%);
 }

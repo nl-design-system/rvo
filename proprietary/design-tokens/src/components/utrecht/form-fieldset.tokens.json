@@ -4,7 +4,7 @@
       "margin-block-end": { "value": "0" },
       "margin-block-start": { "value": "0" },
       "section": {
-        "background-color": { "value": "{rvo.color.grijs1}" },
+        "background-color": { "value": "{rvo.color.grijs-100}" },
         "color": {}
       },
       "padding-block-end": { "value": "{rvo.space.xl}" },

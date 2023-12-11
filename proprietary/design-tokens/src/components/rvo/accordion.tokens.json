@@ -2,9 +2,9 @@
   "rvo": {
     "accordion": {
       "grijs": {
-        "background-color": { "value": "{rvo.color.grijs1}" }
+        "background-color": { "value": "{rvo.color.grijs-100}" }
       },
-      "border-color": { "value": "{rvo.color.hemelblauw-tint1}" },
+      "border-color": { "value": "{rvo.color.hemelblauw-300}" },
       "item": {
         "icon": {
           "padding-block-start": { "value": "{rvo.space.xs}" }
@@ -30,7 +30,7 @@
           "padding-inline-end": { "value": "{rvo.space.xl}" },
           "padding-inline-start": { "value": "calc({rvo.space.xl} + {rvo.space.lg})" }
         },
-        "border-bottom": { "value": "{rvo.color.grijs3}" }
+        "border-bottom": { "value": "{rvo.color.grijs-300}" }
       }
     }
   }

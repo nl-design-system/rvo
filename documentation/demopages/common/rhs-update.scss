@@ -711,7 +711,7 @@
   }
 
   .rvo-status-indicator--tmp-closed {
-    background-color: var(--rvo-color-rood-tint1);
+    background-color: var(--rvo-color-rood-300);
   }
 
   .rvo-item-list-item--w-link {
@@ -821,7 +821,7 @@
     }
 
     &.rvo-tag--active {
-      background-color: var(--rvo-color-hemelblauw-tint1);
+      background-color: var(--rvo-color-hemelblauw-150);
       border-color: var(--rvo-color-hemelblauw);
     }
   }
