@@ -1,4 +1,4 @@
-import { Footer, Heading, Icon, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
+import { Button, Footer, Heading, Icon, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/www.scss';
 
@@ -126,7 +126,7 @@ const Home = () => {
         </div>
         <div className="rvo-hero rvo-max-width-layout--lg">
           <div className="rvo-hero-image">
-            <img src="images/www/home-hero.webp" className="rvo-hero-img" />
+            <img src="images/www/home.jpg" className="rvo-hero-img" />
           </div>
           <h1 className="utrecht-heading-1">
             Rijksdienst voor Ondernemend Nederland
@@ -457,7 +457,7 @@ const Home = () => {
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                       <div className="rvo-card-img-container">
-                        <img src="images/www/bedrijven.webp" className="rvo-card-img" />
+                        <img src="images/www/socialfund.webp" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
@@ -472,48 +472,169 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
+                    <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                       <div className="rvo-card-img-container">
-                        <img src="images/www/particulieren.webp" className="rvo-card-img" />
+                        <img src="images/www/besparen.jpeg" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
-                            Particulieren
+                          <a href="#" className="rvo-link rvo-link--full-click">
+                            Energie besparen
                           </a>
                         </h3>
+                        <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
+                          Energie besparen is belangrijk voor het klimaat en uw portemonnee. Bedrijven en organisaties
+                          kunnen een forse bijdrage leveren. Doe ook mee en bespaar flink op uw energiekosten.
+                        </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
+                    <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                       <div className="rvo-card-img-container">
-                        <img src="images/www/overheden.webp" className="rvo-card-img" />
+                        <img src="images/www/beursbezoek.jpeg" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
-                            Overheden
+                          <a href="#" className="rvo-link rvo-link--full-click">
+                            Subsidie voor groen beursbezoek
                           </a>
                         </h3>
+                        <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
+                          Om klimaatverandering tegen te gaan, is vergroening nodig. Daarom kunt u nu ook subsidie
+                          aanvragen om mee te doen aan een handelsmissie of beurs, die zich hierop richt.
+                        </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
+
+                    <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                       <div className="rvo-card-img-container">
-                        <img src="images/www/kennisinstellingen.webp" className="rvo-card-img" />
+                        <img src="images/www/lbv.png" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
-                            Kennisinstellingen
+                          <a href="#" className="rvo-link rvo-link--full-click">
+                            Lbv en Lbv-plus actueel
                           </a>
                         </h3>
+                        <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
+                          De Landelijke beëindigingsregeling veehouderijlocaties (Lbv) en de Lbv-plus zijn sinds 3 juli
+                          2023 open voor aanvragen. We houden bij hoeveel veehouders een aanvraag hebben gedaan.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </LayoutColumnRow>
               </div>
+              <div className="rvo-feedback">
+                <LayoutColumnRow row={true} wrap={true} size="sm">
+                  <Icon icon="tekstballon-met-hart" size="2xl" />
+                  <em>Bent u tevreden over deze pagina?</em>
+                  <span className="rvo-rhs-update-component">
+                    <Button kind="secondary" size="sm">
+                      Geef uw mening
+                    </Button>
+                  </span>
+                </LayoutColumnRow>
+              </div>
             </LayoutColumnRow>
           </div>
         </main>
+        <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
+          <div className="rvo-cards">
+            <LayoutColumnRow size="md">
+              <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
+              <div className="rvo-cards-grid">
+                <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
+                  <div className="rvo-card-img-container">
+                    <img src="images/www/mobiel.webp" className="rvo-card-img" />
+                  </div>
+                  <div className="rvo-card-content">
+                    <h3 className="utrecht-heading-3">
+                      <a href="#" className="rvo-link rvo-link--full-click">
+                        Volg ons op social media
+                      </a>
+                    </h3>
+                    <br />
+                    <span className="rvo-rhs-update-component">
+                      <Button kind="primary" size="sm">
+                        Volg ons
+                      </Button>
+                    </span>
+                  </div>
+                </div>
+                <div className="rvo-card rvo-card--w-link  rvo-card--md">
+                  <div className="rvo-card-content">
+                    <LayoutColumnRow size="sm">
+                      <h2 className="utrecht-heading-2">Over ons</h2>
+                      <LayoutColumnRow size="md">
+                        <div className="rvo-card-content-item">
+                          <Icon icon="laptop" size="2xl"></Icon>
+                          <h3 className="utrecht-heading-3">
+                            <a href="#" className="rvo-link rvo-link--no-underline">
+                              Zaken regelen bij RVO
+                            </a>
+                          </h3>
+                          <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
+                            Alles over inloggen, machtigen, uw persoonsgegevens en onze rekeningnummers.
+                          </p>
+                        </div>
+                        <div className="rvo-card-content-item">
+                          <Icon icon="vrouw-met-laptop" size="2xl"></Icon>
+                          <h3 className="utrecht-heading-3">
+                            <a href="#" className="rvo-link rvo-link--no-underline">
+                              Werken bij RVO
+                            </a>
+                          </h3>
+                          <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
+                            Leer onze organisatie kennen en vind vacatures.
+                          </p>
+                        </div>
+                      </LayoutColumnRow>
+                    </LayoutColumnRow>
+                  </div>
+                </div>
+                <div className="rvo-card rvo-card--w-link rvo-card--md">
+                  <div className="rvo-card-content">
+                    <h3 className="utrecht-heading-3">
+                      <a href="#" className="rvo-link rvo-link--full-click">
+                        Zo kunnen we oneindig recyclen met onze nieuwe persmachine
+                      </a>
+                    </h3>
+                    <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
+                      Financiële steun van MIA\Vamil hielp bij ontwikkeling proces om snijafval met een pers te
+                      verwerken tot nieuwe grondstoffen.
+                      <br />
+                      <br />
+                    </p>
+                    <p className="rvo-paragraph rvo-paragraph--no-spacing">
+                      <strong>Jordy de Jong</strong>
+                      <br />
+                      <em>Customer success manager Probo</em>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
+                  <div className="rvo-card-img-container">
+                    <img src="images/www/nieuwsbrief.webp" className="rvo-card-img" />
+                  </div>
+                  <div className="rvo-card-content">
+                    <h3 className="utrecht-heading-3">
+                      <a href="#" className="rvo-link rvo-link--full-click">
+                        Blijf scherp met onze gratis, wekelijkse nieuwsbrief
+                      </a>
+                    </h3>
+                    <br />
+                    <span className="rvo-rhs-update-component">
+                      <Button kind="primary" size="sm">
+                        Aanmelden
+                      </Button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </LayoutColumnRow>
+          </div>
+        </div>
         <Footer
           columns={[
             {

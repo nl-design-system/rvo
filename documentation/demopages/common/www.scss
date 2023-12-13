@@ -15,7 +15,7 @@
     /* Hide topnav on smaller screens */
     display: none;
 
-    @media (min-width: 780px) {
+    @media (min-width: 1080px) {
       display: block;
     }
   }
@@ -24,9 +24,16 @@
     display: flex;
   }
 
+  .rvo-rhs-update .rvo-responsive-menu > .rvo-responsive-menu-toggle {
+    @media (min-width: 1080px) {
+      display: none;
+    }
+  }
+
   // MAIN //
 
-  .rvo-main--www {
+  .rvo-main--www,
+  .rvo-section--www {
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
