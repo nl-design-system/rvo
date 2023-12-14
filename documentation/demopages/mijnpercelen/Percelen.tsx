@@ -31,31 +31,33 @@ const Percelen = () => {
           </div>
         </header>
         <div className="rvo-rhs-update-component">
-          <MenuBar
-            items={[
-              {
-                label: 'Home',
+          <div className="rvo-topnav--w-line">
+            <MenuBar
+              items={[
+                {
+                  label: 'Home',
 
-                icon: 'home',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
-              },
-              {
-                label: 'Mijn Percelen',
-                active: true,
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
-              },
-              {
-                label: 'Boer Overveen B.V',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
-                icon: 'user',
-              },
-              { label: 'Uitloggen', link: '#', align: 'right' },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="md"
-          />
+                  icon: 'home',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                },
+                {
+                  label: 'Mijn Percelen',
+                  active: true,
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                },
+                {
+                  label: 'Boer Overveen B.V',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  icon: 'user',
+                },
+                { label: 'Uitloggen', link: '#', align: 'right' },
+              ]}
+              size="lg"
+              useIcons={true}
+              iconPlacement="before"
+              menuMaxWidth="md"
+            />
+          </div>
         </div>
         <main className="rvo-main--mijn-percelen">
           <div className="rvo-main-mijn-percelen--data">
@@ -154,7 +156,7 @@ const Percelen = () => {
                   </div>
 
                   <div className="rvo-cards rvo-cards--percelen">
-                    <div className="rvo-card rvo-card--perceel">
+                    <div className="rvo-card rvo-card--perceel rvo-card--outline">
                       <div className="rvo-card-perceel-title">
                         <Heading type="h2" textContent="#21 Slootje bij de buren"></Heading>
                         <span className="rvo-card-perceel-hectare">1,3495 ha</span>
@@ -178,7 +180,7 @@ const Percelen = () => {
                         </Button>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--perceel">
+                    <div className="rvo-card rvo-card--perceel rvo-card--outline">
                       <div className="rvo-card-perceel-title">
                         <Heading type="h2" textContent="#22 Groot maisveld"></Heading>
                         <span className="rvo-card-perceel-hectare">2,395 ha</span>
@@ -202,7 +204,7 @@ const Percelen = () => {
                         </Button>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--perceel">
+                    <div className="rvo-card rvo-card--perceel rvo-card--outline">
                       <div className="rvo-card-perceel-title">
                         <Heading type="h2" textContent="#25 Akker aan de hoogstraat"></Heading>
                         <span className="rvo-card-perceel-hectare">1,565 ha</span>
@@ -223,7 +225,7 @@ const Percelen = () => {
                         </Button>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--perceel rvo-card--active">
+                    <div className="rvo-card rvo-card--perceel rvo-card--active  rvo-card--outline">
                       <div className="rvo-card-perceel-title">
                         <Heading type="h2" textContent="#433"></Heading>
                         <span className="rvo-card-perceel-hectare">0,225 ha</span>

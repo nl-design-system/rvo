@@ -21,30 +21,32 @@ const Startpagina = () => {
           </div>
         </header>
         <div className="rvo-rhs-update-component">
-          <MenuBar
-            items={[
-              {
-                label: 'Home',
-                active: true,
-                icon: 'home',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
-              },
-              {
-                label: 'Mijn Percelen',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
-              },
-              {
-                label: 'Boer Overveen B.V',
-                link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
-                icon: 'user',
-              },
-              { label: 'Uitloggen', link: '#', align: 'right' },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="md"
-          />
+          <div className="rvo-topnav--w-line">
+            <MenuBar
+              items={[
+                {
+                  label: 'Home',
+                  active: true,
+                  icon: 'home',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                },
+                {
+                  label: 'Mijn Percelen',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                },
+                {
+                  label: 'Boer Overveen B.V',
+                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  icon: 'user',
+                },
+                { label: 'Uitloggen', link: '#', align: 'right' },
+              ]}
+              size="lg"
+              useIcons={true}
+              iconPlacement="before"
+              menuMaxWidth="md"
+            />
+          </div>
         </div>
         <main className="rvo-main--mijn-percelen rvo-main--mijn-percelen-startpagina rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-main-mijn-percelen--data">

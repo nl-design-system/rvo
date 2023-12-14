@@ -1,0 +1,83 @@
+.rvo-www {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+
+  .rvo-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  // NAVIGATION //
+
+  .rvo-topnav {
+    /* Hide topnav on smaller screens */
+    display: none;
+
+    @media (min-width: 1080px) {
+      display: block;
+    }
+  }
+
+  .rvo-responsive-menu .rvo-topnav {
+    display: flex;
+  }
+
+  .rvo-rhs-update .rvo-responsive-menu > .rvo-responsive-menu-toggle {
+    @media (min-width: 1080px) {
+      display: none;
+    }
+  }
+
+  .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::after {
+    left: 262px;
+  }
+
+  // MAIN //
+
+  .rvo-main--www,
+  .rvo-section--www {
+    padding-block-end: var(--rvo-space-2xl);
+    padding-block-start: var(--rvo-space-md);
+    padding-inline-end: var(--rvo-space-md);
+    padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-section--www {
+    padding-block-start: var(--rvo-space-xl);
+  }
+
+  .rvo-main--content-page {
+    padding-block-start: var(--rvo-space-2xl);
+  }
+
+  // HEADING //
+
+  .rvo-heading-subtitle {
+    display: block;
+    font-size: var(--rvo-font-size-lg);
+    font-style: italic;
+    font-weight: var(--rvo-font-weight-normal);
+    line-height: 150%;
+  }
+
+  // CARDS GRID //
+  @media (min-width: 1080px) {
+    .rvo-cards .rvo-cards-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .rvo-cards--overzichten {
+    .utrecht-heading-3 {
+      font-size: var(--rvo-font-size-lg);
+    }
+  }
+
+  // FEEDBACK //
+
+  .rvo-feedback .rvo-layout-row {
+    justify-content: center;
+  }
+}

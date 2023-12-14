@@ -372,12 +372,17 @@
   // CARDS //
 
   .rvo-card {
+    background-color: var(--rvo-color-wit);
     border-radius: 3px;
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
     position: relative;
+
+    &.rvo-card--md {
+      border-radius: 5px;
+    }
 
     &.rvo-card--full-colour {
       padding-block-end: var(--rvo-space-lg);
@@ -388,6 +393,18 @@
 
     &.rvo-card--full-colour.rvo-card--grijs-2 {
       background-color: #f1f5f9;
+    }
+
+    &.rvo-card--full-colour.rvo-card--hemelblauw {
+      background-color: var(--rvo-color-hemelblauw);
+    }
+
+    &.rvo-card--inverted-colours {
+      a.rvo-link--full-click,
+      a.rvo-link--full-click:hover,
+      a.rvo-link--full-click:focus {
+        color: var(--rvo-color-wit);
+      }
     }
 
     &.rvo-card--outline {
@@ -410,9 +427,14 @@
   }
 
   .rvo-link--full-click {
-    color: var(--rvo-color-zwart);
+    // color: var(--rvo-color-zwart);
     display: block;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
 
     &::after {
       content: "";
@@ -426,11 +448,53 @@
     }
   }
 
-  .rvo-card--w-icon {
+  .rvo-link--black {
+    color: var(--rvo-color-zwart);
+  }
+
+  .rvo-card--w-link-indicator {
     align-items: center;
     display: flex;
     gap: var(--rvo-space-xs);
     justify-content: space-between;
+  }
+
+  .rvo-card--w-img {
+    overflow: hidden;
+
+    &.rvo-card--sm {
+      align-items: center;
+      display: flex;
+
+      .rvo-card-img-container {
+        margin-block-end: -24px;
+        margin-inline-end: 24px;
+      }
+
+      .rvo-card-img {
+        height: 76px;
+        object-fit: cover;
+        width: 96px;
+      }
+    }
+
+    &.rvo-card--md {
+      .rvo-card-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .rvo-card-img-container {
+    line-height: 0;
+    margin-block-end: var(--rvo-space-md);
+    margin-block-start: -24px;
+    margin-inline-end: -24px;
+    margin-inline-start: -24px;
+  }
+
+  .rvo-card-img {
+    object-fit: cover;
   }
 
   .rvo-card-status {
@@ -441,6 +505,37 @@
     .rvo-icon {
       margin-block-start: 3px;
       min-width: var(--rvo-space-md);
+    }
+  }
+
+  .rvo-card--img-bg {
+    min-height: 150px;
+    padding-block-start: var(--rvo-space-xl);
+    position: relative;
+
+    &::after {
+      background-color: #1e293b;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 50%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .rvo-card-img {
+      left: 0;
+      min-height: 400px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+    }
+
+    .rvo-card-content {
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -458,6 +553,13 @@
     .rvo-cards-grid {
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  // CONTENT ITEMS //
+
+  .rvo-content-items-grid {
+    display: grid;
+    gap: var(--rvo-space-md);
   }
 
   // LINK LIST //
@@ -579,15 +681,6 @@
     justify-content: space-between;
     padding-block-end: var(--rvo-space-sm);
     padding-block-start: var(--rvo-space-sm);
-
-    &:hover,
-    &:focus {
-      .rvo-item-list-item-title {
-        text-decoration: underline;
-      }
-
-      // background-color: #E2E8F0;
-    }
   }
 
   .rvo-item-list-item-content {
@@ -673,9 +766,8 @@
     justify-content: space-between;
   }
 
-  .rvo-messages-title:hover,
-  .rvo-messages-title:focus {
-    text-decoration: underline;
+  .rvo-messages-title {
+    font-weight: var(--rvo-font-weight-regular);
   }
 
   // FAQ
@@ -817,6 +909,60 @@
     &.rvo-pagination-item--current {
       font-weight: var(--rvo-font-weight-bold);
     }
+  }
+
+  // HERO //
+
+  .rvo-hero {
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+    position: relative;
+  }
+
+  .rvo-hero-image {
+    line-height: 0;
+    max-height: 300px;
+    overflow: hidden;
+    padding-block-end: 25%;
+
+    @media (min-width: 540px) {
+      max-height: 500px;
+    }
+
+    @media (min-width: 540px) {
+      padding-block-end: 0;
+    }
+
+    @media (min-width: 780px) {
+      border-end-end-radius: 50px;
+    }
+  }
+
+  .rvo-hero-img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .rvo-hero .utrecht-heading-1 {
+    background-color: var(--rvo-color-hemelblauw);
+    border-start-end-radius: 50px;
+    bottom: 0;
+    color: var(--rvo-color-wit);
+    font-weight: var(--rvo-font-weight-regular);
+    max-width: 500px;
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+    position: absolute;
+    z-index: 1;
+  }
+
+  // SECTION //
+
+  .rvo-section--coloured-bg.rvo-section--grijs-3 {
+    background-color: #e2e8f0;
   }
 
   // GENERAL FIXES
