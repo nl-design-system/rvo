@@ -159,7 +159,7 @@ const Overzicht = () => {
                               <div className="utrecht-button-group">
                                 <a
                                   href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story"
-                                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-sm"
+                                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-sm rvo-link--no-underline"
                                 >
                                   Percelen registreren
                                 </a>
