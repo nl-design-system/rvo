@@ -30,14 +30,22 @@
     }
   }
 
+  .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::after {
+    left: 262px;
+  }
+
   // MAIN //
 
   .rvo-main--www,
   .rvo-section--www {
-    padding-block-end: var(--rvo-space-md);
+    padding-block-end: var(--rvo-space-2xl);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
+  }
+
+  .rvo-section--www {
+    padding-block-start: var(--rvo-space-xl);
   }
 
   // HEADING //
@@ -47,5 +55,24 @@
     font-size: var(--rvo-font-size-lg);
     font-style: italic;
     font-weight: var(--rvo-font-weight-normal);
+  }
+
+  // CARDS GRID //
+  @media (min-width: 1080px) {
+    .rvo-cards .rvo-cards-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .rvo-cards--overzichten {
+    .utrecht-heading-3 {
+      font-size: var(--rvo-font-size-lg);
+    }
+  }
+
+  // FEEDBACK //
+
+  .rvo-feedback .rvo-layout-row {
+    justify-content: center;
   }
 }

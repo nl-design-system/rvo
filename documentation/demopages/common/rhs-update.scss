@@ -448,6 +448,10 @@
     }
   }
 
+  .rvo-link--black {
+    color: var(--rvo-color-zwart);
+  }
+
   .rvo-card--w-link-indicator {
     align-items: center;
     display: flex;
@@ -468,7 +472,9 @@
       }
 
       .rvo-card-img {
-        width: 112px;
+        height: 76px;
+        object-fit: cover;
+        width: 96px;
       }
     }
 
@@ -521,6 +527,8 @@
 
     .rvo-card-img {
       left: 0;
+      min-height: 400px;
+      object-fit: cover;
       position: absolute;
       top: 0;
     }
@@ -673,15 +681,6 @@
     justify-content: space-between;
     padding-block-end: var(--rvo-space-sm);
     padding-block-start: var(--rvo-space-sm);
-
-    &:hover,
-    &:focus {
-      .rvo-item-list-item-title {
-        text-decoration: underline;
-      }
-
-      // background-color: #E2E8F0;
-    }
   }
 
   .rvo-item-list-item-content {
@@ -767,9 +766,8 @@
     justify-content: space-between;
   }
 
-  .rvo-messages-title:hover,
-  .rvo-messages-title:focus {
-    text-decoration: underline;
+  .rvo-messages-title {
+    font-weight: var(--rvo-font-weight-regular);
   }
 
   // FAQ
@@ -954,9 +952,9 @@
     font-weight: var(--rvo-font-weight-regular);
     max-width: 500px;
     padding-block-end: var(--rvo-space-sm);
-    padding-block-start: var(--rvo-space-lg);
-    padding-inline-end: var(--rvo-space-lg);
-    padding-inline-start: var(--rvo-space-lg);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
     position: absolute;
     z-index: 1;
   }

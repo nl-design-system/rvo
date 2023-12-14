@@ -182,7 +182,7 @@ const Overzicht = () => {
                     <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             ISDE 2023
                           </a>
                         </h3>
@@ -205,7 +205,7 @@ const Overzicht = () => {
                     <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             BSN Melding WBSO 2023
                           </a>
                         </h3>
@@ -228,7 +228,7 @@ const Overzicht = () => {
                     <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Gecombineerde opgave 2023
                           </a>
                         </h3>
@@ -249,7 +249,7 @@ const Overzicht = () => {
                     <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             SVVE 2023
                           </a>
                         </h3>
@@ -298,7 +298,7 @@ const Overzicht = () => {
                         <div className="rvo-item-list-item-content">
                           <div className="rvo-status-indicator rvo-status-indicator--open"></div>
                           <div className="rvo-item-list-item-title">
-                            <a href="#" className="rvo-link--full-click">
+                            <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                               ANLb-Collectieven
                             </a>
                           </div>
@@ -312,7 +312,7 @@ const Overzicht = () => {
                         <div className="rvo-item-list-item-content">
                           <div className="rvo-status-indicator rvo-status-indicator--closed"></div>
                           <div className="rvo-item-list-item-title">
-                            <a href="#" className="rvo-link--full-click">
+                            <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                               ISDE
                             </a>
                           </div>
@@ -326,7 +326,7 @@ const Overzicht = () => {
                         <div className="rvo-item-list-item-content">
                           <div className="rvo-status-indicator rvo-status-indicator--tmp-closed"></div>
                           <div className="rvo-item-list-item-title">
-                            <a href="#" className="rvo-link--full-click">
+                            <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                               Gecombineerde Opgave
                             </a>
                           </div>
@@ -376,7 +376,7 @@ const Overzicht = () => {
                       <div className="rvo-messages-meta-data-subject">ISDE 2022</div>
                       <div className="rvo-messages-meta-data-date">7 jun 2023</div>
                     </div>
-                    <a className="rvo-messages-title rvo-link--full-click" href="#">
+                    <a className="rvo-messages-title rvo-link rvo-link--full-click rvo-link--black" href="#">
                       U moet uw gegevens updaten
                     </a>
                   </div>
@@ -385,7 +385,7 @@ const Overzicht = () => {
                       <div className="rvo-messages-meta-data-subject">Mijn Percelen</div>
                       <div className="rvo-messages-meta-data-date">15 mei 2023</div>
                     </div>
-                    <a className="rvo-messages-title rvo-link--full-click" href="#">
+                    <a className="rvo-messages-title rvo-link rvo-link--full-click rvo-link--black" href="#">
                       Percelenregistratie goedgekeurd
                     </a>
                   </div>
@@ -394,7 +394,7 @@ const Overzicht = () => {
                       <div className="rvo-messages-meta-data-subject">WBSO</div>
                       <div className="rvo-messages-meta-data-date">22 apr 2023</div>
                     </div>
-                    <a className="rvo-messages-title rvo-link--full-click" href="#">
+                    <a className="rvo-messages-title rvo-link rvo-link--full-click rvo-link--black" href="#">
                       Aanvullend bewijsmateriaal aanleveren
                     </a>
                   </div>
