@@ -157,9 +157,12 @@ const Overzicht = () => {
                             <p>Uiterlijk 4 september 2024</p>
                             <div className="rvo-rhs-update-component">
                               <div className="utrecht-button-group">
-                                <Button kind="primary" size="sm">
+                                <a
+                                  href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story"
+                                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-sm"
+                                >
                                   Percelen registreren
-                                </Button>
+                                </a>
                                 <Button kind="secondary" size="sm" icon="externe-link" showIcon="after">
                                   Meer informatie
                                 </Button>

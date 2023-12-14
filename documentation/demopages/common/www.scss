@@ -48,6 +48,10 @@
     padding-block-start: var(--rvo-space-xl);
   }
 
+  .rvo-main--content-page {
+    padding-block-start: var(--rvo-space-2xl);
+  }
+
   // HEADING //
 
   .rvo-heading-subtitle {
@@ -55,6 +59,7 @@
     font-size: var(--rvo-font-size-lg);
     font-style: italic;
     font-weight: var(--rvo-font-weight-normal);
+    line-height: 150%;
   }
 
   // CARDS GRID //

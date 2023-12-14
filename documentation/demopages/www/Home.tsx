@@ -141,13 +141,13 @@ const Home = () => {
                   <h2 className="utrecht-heading-2">Onderwerpen</h2>
 
                   <div className="rvo-cards-grid">
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="wereldbol" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Klimaat & Energie
                           </a>
                         </h3>
@@ -157,13 +157,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="grootstedelijk" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Bouwen & Wonen
                           </a>
                         </h3>
@@ -173,13 +173,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="buitenlandse-handel" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Internationaal ondernemen
                           </a>
                         </h3>
@@ -189,13 +189,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="wereldbol-tussen-2-uitgestoken-handen" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Ont­wikkelings­samen­werking
                           </a>
                         </h3>
@@ -205,13 +205,16 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="tractor" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a
+                            href="iframe.html?args=&id=demo-pagina-s-www-landbouw--default&viewMode=story"
+                            className="rvo-link rvo-link--full-click rvo-link--black"
+                          >
                             Landbouw
                           </a>
                         </h3>
@@ -221,13 +224,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="vis" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Visserij
                           </a>
                         </h3>
@@ -236,13 +239,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="eend-zwemmend-bij-riet" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Dier & natuur
                           </a>
                         </h3>
@@ -251,13 +254,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="lamp" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Innovatie, Onderzoek & Onderwijs
                           </a>
                         </h3>
@@ -266,13 +269,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="grafiek" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Ondernemen & Bedrijfsvoering
                           </a>
                         </h3>
@@ -281,13 +284,13 @@ const Home = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline rvo-card--black-title">
+                    <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
                       <div className="rvo-card-icon">
                         <Icon icon="stethoscoop" size="xl" />
                       </div>
                       <div className="rvo-card-content">
                         <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click">
+                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Gezondheid, Zorg & Welzijn
                           </a>
                         </h3>
