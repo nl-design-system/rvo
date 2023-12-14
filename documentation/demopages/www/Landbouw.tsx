@@ -364,7 +364,12 @@ const Landbouw = () => {
                       <Link content="Doe uw agrarische registratie bij ons" target="#" noUnderline={true} />
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Registreer uw percelen" target="#" noUnderline={true} />
+                      <a
+                        className="rvo-link rvo-link--no-underline"
+                        href="iframe.html?args=&id=demo-pagina-s-www-percelenregistreren--default&viewMode=story"
+                      >
+                        Registreer uw percelen
+                      </a>
                     </li>
                     <li className="rvo-quick-links-list-item">
                       <Link content="Regel een agrarische bedrijfsoverdracht" target="#" noUnderline={true} />
