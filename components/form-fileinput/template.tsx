@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import './index.scss';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface IFileInputProps {
   id?: string;
@@ -13,6 +13,7 @@ export interface IFileInputProps {
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
+  accept?: string;
   multiple?: boolean;
   onFocus?: (event) => void;
   onBlur?: (event) => void;
@@ -35,6 +36,9 @@ export const argTypes = {
   required: {
     control: 'boolean',
   },
+  accept: {
+    control: 'text',
+  },
   multiple: {
     control: 'boolean',
   },
@@ -46,6 +50,7 @@ export const FileInput: React.FC<IFileInputProps> = ({
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
+  accept = defaultArgs.accept,
   multiple = defaultArgs.multiple,
   ...otherProps
 }: IFileInputProps) => (
@@ -61,6 +66,7 @@ export const FileInput: React.FC<IFileInputProps> = ({
     )}
     disabled={disabled || null}
     aria-invalid={invalid || null}
+    accept={(accept.length && accept) || null}
     multiple={multiple || null}
     {...otherProps}
   />

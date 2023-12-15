@@ -1,15 +1,15 @@
 {
   "rvo": {
     "label": {
-      "color": { "value": "{utrecht.document.color}" },
-      "font-size": { "value": "{rvo.font-size.sm}" },
+      "color": { "value": "{rvo.color.logoblauw}" },
+      "font-size": { "value": "{rvo.size.md}" },
       "font-weight": { "value": "{rvo.font-weight.bold}" },
       "sm": {
         "font-size": { "value": "{rvo.font-size.sm}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" }
       },
       "optional": {
-        "color": { "value": "{utrecht.document.color}" },
+        "color": { "value": "{rvo.color.logoblauw}" },
         "content": { "value": "' (optioneel)'" },
         "font-size": { "value": "{rvo.font-size.xs}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" }

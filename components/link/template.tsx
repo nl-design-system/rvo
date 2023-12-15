@@ -11,11 +11,12 @@ import './index.scss';
 export interface ILinkProps {
   content?: string;
   href?: string | ((event: any) => void);
+  color?: 'hemelblauw' | 'donkerblauw';
   onClick?: (event) => void;
-  showIcon?: string;
+  showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
-  iconSize?: string;
-  iconColor?: string;
+  iconSize?: 'sm' | 'md';
+  iconColor?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart';
   iconAriaLabel?: string;
   hover?: boolean;
   active?: boolean;
@@ -33,12 +34,16 @@ export const argTypes = {
   href: {
     control: 'text',
   },
+  color: {
+    control: { type: 'select' },
+    options: ['hemelblauw', 'donkerblauw'],
+  },
   showIcon: {
     options: ['no', 'before', 'after'],
     control: { type: 'radio' },
   },
   icon: {
-    control: 'select',
+    control: { type: 'select' },
     options: iconOptions,
   },
   iconSize: {
@@ -67,6 +72,7 @@ export const argTypes = {
 export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   content = defaultArgs.content,
   href = defaultArgs.href,
+  color = defaultArgs.color,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   iconSize = defaultArgs.iconSize,
@@ -107,6 +113,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
       },
       showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
+      color === 'donkerblauw' && 'rvo-link--donkerblauw',
     ),
     ...otherProps,
   };

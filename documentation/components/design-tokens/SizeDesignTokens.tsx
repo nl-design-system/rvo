@@ -16,7 +16,7 @@ export const SizeDesignTokens = ({ tokens }: SizeDesignTokensProps) => {
               <div
                 style={{
                   display: 'inline-block',
-                  backgroundColor: designTokens.rvoColorHemelblauwTint1,
+                  backgroundColor: designTokens.rvoColorHemelblauw300,
                   height: value,
                   width: value,
                 }}

@@ -2,30 +2,30 @@
   "utrecht": {
     "form-input": {
       "background-color": { "value": "{rvo.color.wit}" },
-      "border-color": { "value": "{rvo.color.zwart}" },
-      "border-radius": { "value": "0" },
-      "border-width": { "value": "{rvo.size.3xs}" },
-      "color": { "value": "{rvo.color.zwart}" },
+      "border-color": { "value": "{rvo.color.logoblauw}" },
+      "border-radius": { "value": "3px" },
+      "border-width": { "value": "1px" },
+      "color": { "value": "{rvo.color.logoblauw}" },
       "font-family": {},
       "font-size": { "value": "{rvo.font-size.md}" },
       "font-style": {},
       "max-inline-size": {},
-      "padding-block-end": { "value": "{rvo.space.xs}" },
-      "padding-block-start": { "value": "12px" },
-      "padding-inline-end": { "value": "12px" },
-      "padding-inline-start": { "value": "12px" },
+      "padding-block-end": { "value": "{rvo.space.sm}" },
+      "padding-block-start": { "value": "{rvo.space.sm}" },
+      "padding-inline-end": { "value": "{rvo.space.sm}" },
+      "padding-inline-start": { "value": "{rvo.space.sm}" },
       "placeholder": {
         "color": {}
       },
       "disabled": {
-        "background-color": { "value": "{rvo.color.grijs3} !important" },
-        "border-color": { "value": "{rvo.color.grijs7}" },
+        "background-color": { "value": "{rvo.color.grijs-300} !important" },
+        "border-color": { "value": "{rvo.color.grijs-700}" },
         "border-width": { "value": "{rvo.size.3xs}" },
-        "color": { "value": "{rvo.color.grijs7}" }
+        "color": { "value": "{rvo.color.grijs-700}" }
       },
       "focus": {
         "background-color": { "value": "{rvo.color.wit}" },
-        "border-color": { "value": "{rvo.color.zwart}" },
+        "border-color": { "value": "{rvo.color.logoblauw}" },
         "border-width": {}
       },
       "invalid": {
@@ -34,8 +34,8 @@
         "border-width": { "value": "{rvo.size.3xs}" }
       },
       "read-only": {
-        "border-color": { "value": "{rvo.color.grijs7}" },
-        "color": { "value": "{rvo.color.grijs7}" }
+        "border-color": { "value": "{rvo.color.grijs-700}" },
+        "color": { "value": "{rvo.color.grijs-700}" }
       }
     }
   }

@@ -9,16 +9,16 @@
       "padding-inline-end-with-icon": { "value": "{rvo.space.xs}" },
       "padding-inline-start-with-icon": { "value": "{rvo.space.xs}" },
       "default": {
-        "background-color": { "value": "{rvo.color.grijs4}" },
+        "background-color": { "value": "{rvo.color.grijs-400}" },
         "color": { "value": "{utrecht.document.color}" },
         "icon-color": { "value": "{utrecht.document.color}" },
         "hover": {
-          "background-color": { "value": "{rvo.color.grijs3}" },
+          "background-color": { "value": "{rvo.color.grijs-300}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{utrecht.document.color}" }
         },
         "active": {
-          "background-color": { "value": "{rvo.color.grijs2}" },
+          "background-color": { "value": "{rvo.color.grijs-200}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{utrecht.document.color}" }
         }
@@ -28,12 +28,12 @@
         "color": { "value": "{utrecht.document.color}" },
         "icon-color": { "value": "{rvo.color.hemelblauw}" },
         "hover": {
-          "background-color": { "value": "{rvo.color.lichtblauw-tint1}" },
+          "background-color": { "value": "{rvo.color.lichtblauw-300}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.hemelblauw}" }
         },
         "active": {
-          "background-color": { "value": "{rvo.color.lichtblauw-tint2}" },
+          "background-color": { "value": "{rvo.color.lichtblauw-450}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.hemelblauw}" }
         }
@@ -43,12 +43,12 @@
         "color": { "value": "{utrecht.document.color}" },
         "icon-color": { "value": "{utrecht.document.color}" },
         "hover": {
-          "background-color": { "value": "{rvo.color.donkergeel-tint1}" },
+          "background-color": { "value": "{rvo.color.donkergeel-150}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.donkergeel}" }
         },
         "active": {
-          "background-color": { "value": "{rvo.color.donkergeel-tint2}" },
+          "background-color": { "value": "{rvo.color.donkergeel-300}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.donkergeel}" }
         }
@@ -58,12 +58,12 @@
         "color": { "value": "{rvo.color.wit}" },
         "icon-color": { "value": "{rvo.color.wit}" },
         "hover": {
-          "background-color": { "value": "{rvo.color.rood-tint1}" },
+          "background-color": { "value": "{rvo.color.rood-150}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.rood}" }
         },
         "active": {
-          "background-color": { "value": "{rvo.color.rood-tint2}" },
+          "background-color": { "value": "{rvo.color.rood-300}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.rood}" }
         }
@@ -73,12 +73,12 @@
         "color": { "value": "{rvo.color.wit}" },
         "icon-color": { "value": "{rvo.color.wit}" },
         "hover": {
-          "background-color": { "value": "{rvo.color.groen-tint1}" },
+          "background-color": { "value": "{rvo.color.groen-150}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.groen}" }
         },
         "active": {
-          "background-color": { "value": "{rvo.color.groen-tint2}" },
+          "background-color": { "value": "{rvo.color.groen-300}" },
           "color": { "value": "{utrecht.document.color}" },
           "icon-color": { "value": "{rvo.color.groen}" }
         }

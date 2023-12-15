@@ -2,7 +2,7 @@
   "utrecht": {
     "data-list": {
       "border-color": {
-        "value": "{rvo.color.grijs4}"
+        "value": "{rvo.color.grijs-400}"
       },
       "border-width": {
         "value": "1px"

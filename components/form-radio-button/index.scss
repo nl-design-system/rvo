@@ -37,11 +37,21 @@
   }
 }
 
-// Hover state
 .utrecht-custom-radio-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-custom-radio-button--disabled):not(.utrecht-custom-radio-button--invalid) {
+  // Hover state
   &.utrecht-custom-radio-button:hover,
   &.rvo-radio-button--hover,
   + .rvo-radio-button__label:hover {
     border-color: var(--rvo-radio-button-hover-border-color);
+  }
+
+  // Focus state
+  &:focus,
+  &:focus-visible,
+  &.utrecht-custom-radio-button--focus-visible {
+    outline-color: var(--utrecht-focus-outline-color);
+    outline-offset: var(--utrecht-focus-outline-offset);
+    outline-style: var(--utrecht-focus-outline-style);
+    outline-width: var(--utrecht-focus-outline-width);
   }
 }

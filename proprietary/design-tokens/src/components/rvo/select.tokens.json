@@ -2,7 +2,7 @@
   "rvo": {
     "select": {
       "icon": {
-        "background-color": { "value": "{rvo.color.hemelblauw}" },
+        "background-color": { "value": "{rvo.color.logoblauw}" },
         "color": { "value": "{rvo.color.wit}" }
       },
       "outline-offset": { "value": "0" },

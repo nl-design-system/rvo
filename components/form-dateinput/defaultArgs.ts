@@ -1,6 +1,6 @@
-import { ITimeInputProps } from './template';
+import { IDateInputProps } from './template';
 
-export const defaultArgs: ITimeInputProps = {
+export const defaultArgs: IDateInputProps = {
   id: 'field',
   disabled: false,
   focus: false,
@@ -11,7 +11,5 @@ export const defaultArgs: ITimeInputProps = {
   min: null,
   max: null,
   step: null,
-  prefix: '',
-  suffix: '',
   size: 'sm',
 };

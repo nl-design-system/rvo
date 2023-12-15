@@ -20,6 +20,7 @@
   appearance: none;
   background-color: var(--rvo-checkbox-background-color, var(--utrecht-form-input-background-color));
   border-color: var(--rvo-checkbox-border-color, var(--utrecht-form-input-border-color));
+  border-radius: var(--rvo-checkbox-border-radius);
   border-style: solid;
   border-width: var(--rvo-checkbox-border-width, var(--utrecht-form-input-border-width));
   display: grid;
@@ -40,10 +41,10 @@
   border-color: var(--rvo-checkbox-focus-border-color, var(--utrecht-form-input-border-color));
   border-width: var(--rvo-checkbox-focus-border-width, var(--utrecht-form-input-border-width));
   box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
-  outline-color: var(--rvo-checkbox-focus-outline-color, var(--utrecht-focus-outline-color));
-  outline-offset: var(--rvo-checkbox-focus-outline-offset, var(--utrecht-focus-outline-offset));
-  outline-style: var(--rvo-checkbox-focus-outline-style, var(--utrecht-focus-outline-style));
-  outline-width: var(--rvo-checkbox-focus-outline-width, var(--utrecht-focus-outline-width));
+  outline-color: var(--utrecht-focus-outline-color);
+  outline-offset: var(--utrecht-focus-outline-offset);
+  outline-style: var(--utrecht-focus-outline-style);
+  outline-width: var(--utrecht-focus-outline-width);
 }
 
 .rvo-checkbox__input:hover,
@@ -81,10 +82,13 @@
 
 .rvo-checkbox__input:checked::before {
   background-color: var(--rvo-checkbox-checked-background-color);
+  border-radius: var(--rvo-checkbox-checked-border-radius);
 }
 
 .rvo-checkbox__input:checked::after {
   background-color: var(--rvo-checkbox-icon-color);
+  margin-block-start: var(--rvo-checkbox-icon-margin-block-start);
+  margin-inline-start: var(--rvo-checkbox-icon-margin-inline-start);
   -webkit-mask-image: var(--rvo-icon-vinkje);
   mask-image: var(--rvo-icon-vinkje);
   -webkit-mask-position: center center;

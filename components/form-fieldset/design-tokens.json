@@ -1,1 +1,60 @@
-{}
+{
+  "rvo": {
+    "form-fieldset": {
+      "background-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "border-start-start-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "border-start-end-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "border-end-start-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "border-end-end-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}

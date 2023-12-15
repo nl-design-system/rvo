@@ -6,12 +6,12 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
   colorPrimary: designTokens.rvoColorHemelblauw,
-  colorSecondary: designTokens.rvoColorHemelblauwTint1,
+  colorSecondary: designTokens.rvoColorHemelblauw300,
 
   // UI
   appBg: 'white',
   appContentBg: `transparent`,
-  textColor: `${designTokens.rvoColorGrijs7}`,
+  textColor: `${designTokens.rvoColorGrijs600}`,
 
   // Typography
   fontBase: `${designTokens.rvoFontSansSerifFontFamily}, ${designTokens.rvoFontSansSerifFallbackFontFamily}`,

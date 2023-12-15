@@ -4,8 +4,8 @@
       "padding-block-end": { "value": "0" },
       "padding-block-start": { "value": "0" },
       "summary": {
-        "color": { "value": "{rvo.color.hemelblauw}" },
-        "font-weight": { "value": "{rvo.font-weight.bold}" },
+        "color": { "value": "{rvo.color.logoblauw}" },
+        "font-weight": { "value": "{rvo.font-weight.normal}" },
         "gap": { "value": "{rvo.space.2xs}" },
         "line-height": { "value": "{rvo.line-height.md}" },
         "icon": {
@@ -15,6 +15,21 @@
       "details": {
         "padding-block-end": { "value": "{rvo.space.xs}" },
         "padding-block-start": { "value": "{rvo.space.2xs}" }
+      },
+      "subtle": {
+        "summary": {
+          "color": { "value": "{rvo.color.grijs-400}" },
+          "font-weight": { "value": "{rvo.font-weight.normal}" },
+          "gap": { "value": "{rvo.space.2xs}" },
+          "line-height": { "value": "{rvo.line-height.md}" },
+          "icon": {
+            "background-color": { "value": "{rvo.color.grijs-400}" }
+          }
+        },
+        "details": {
+          "padding-block-end": { "value": "{rvo.space.xs}" },
+          "padding-block-start": { "value": "{rvo.space.2xs}" }
+        }
       }
     }
   }

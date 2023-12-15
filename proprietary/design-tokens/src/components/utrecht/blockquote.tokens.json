@@ -1,7 +1,7 @@
 {
   "utrecht": {
     "blockquote": {
-      "background-color": { "value": "{rvo.color.hemelblauw-tint2}" },
+      "background-color": { "value": "{rvo.color.hemelblauw-300}" },
       "color": { "value": "{utrecht.document.color}" },
       "margin-inline-start": { "value": "0" },
       "margin-inline-end": { "value": "0" },

@@ -7,8 +7,17 @@
   --utrecht-space-around: 1;
 
   background-color: var(--rvo-form-fieldset-background-color);
+  border-end-end-radius: var(--rvo-form-fieldset-border-end-end-radius);
+  border-end-start-radius: var(--rvo-form-fieldset-border-end-start-radius);
+  border-start-end-radius: var(--rvo-form-fieldset-border-start-end-radius);
+  border-start-start-radius: var(--rvo-form-fieldset-border-start-start-radius);
   padding-block-end: var(--rvo-form-fieldset-padding-block-end);
   padding-block-start: var(--rvo-form-fieldset-padding-block-start);
   padding-inline-end: var(--rvo-form-fieldset-padding-inline-end);
   padding-inline-start: var(--rvo-form-fieldset-padding-inline-start);
+}
+
+.utrecht-form-fieldset__legend {
+  margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
+  margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
 }
