@@ -12,7 +12,7 @@
         }
       },
       "checked": {
-        "background": { "value": "radial-gradient(circle, {rvo.color.hemelblauw} 45%, {rvo.color.wit} 50%)" }
+        "background": { "value": "radial-gradient(circle, {rvo.color.logoblauw} 45%, {rvo.color.wit} 50%)" }
       }
     }
   }
