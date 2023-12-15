@@ -5,3 +5,8 @@
   @extend .rvo-layout-gap--md;
   @extend .rvo-layout--wrap;
 }
+
+.rvo-radio-button__group--error {
+  border-left: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
+}
