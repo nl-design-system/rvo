@@ -12,7 +12,7 @@
       "padding-inline-end": { "value": "{rvo.space.xl}" },
       "padding-inline-start": { "value": "{rvo.space.xl}" },
       "legend": {
-        "color": {},
+        "color": { "value": "{rvo.color.logoblauw}" },
         "font-family": {},
         "font-size": { "value": "{rvo.font-size.xl}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
