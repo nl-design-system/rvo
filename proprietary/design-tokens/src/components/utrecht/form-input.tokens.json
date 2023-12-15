@@ -2,10 +2,10 @@
   "utrecht": {
     "form-input": {
       "background-color": { "value": "{rvo.color.wit}" },
-      "border-color": { "value": "{rvo.color.zwart}" },
-      "border-radius": { "value": "0" },
-      "border-width": { "value": "{rvo.size.3xs}" },
-      "color": { "value": "{rvo.color.zwart}" },
+      "border-color": { "value": "{rvo.color.logoblauw}" },
+      "border-radius": { "value": "3px" },
+      "border-width": { "value": "1px" },
+      "color": { "value": "{rvo.color.logoblauw}" },
       "font-family": {},
       "font-size": { "value": "{rvo.font-size.md}" },
       "font-style": {},
