@@ -1,3 +1,6 @@
+*@nl-rvo/component-library-css@1.0.0-alpha.360*:
+Reverted combinatin of text inputs to one date input field
+
 *@nl-rvo/component-library-css@1.0.0-alpha.290*:
 Updated snippet to link helper text to field with `aria-described-by`.
 

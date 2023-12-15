@@ -19,4 +19,4 @@ export default meta;
 
 type Story = StoryObj<typeof DateInputField>;
 
-export const Default: Story = { args: { ...defaultArgs, helperText: 'Helper text' }, name: 'Date input field' };
+export const Default: Story = { args: { ...defaultArgs, helperText: 'Helper date' }, name: 'Date input field' };
