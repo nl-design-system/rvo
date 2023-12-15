@@ -16,3 +16,8 @@
   padding-inline-end: var(--rvo-form-fieldset-padding-inline-end);
   padding-inline-start: var(--rvo-form-fieldset-padding-inline-start);
 }
+
+.utrecht-form-fieldset__legend {
+  margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
+  margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
+}
