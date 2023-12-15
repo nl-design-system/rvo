@@ -102,7 +102,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   return (
     <FormField className="rvo-form-field" role="group" aria-labelledby={fieldLabelId}>
       <div className="rvo-form-field__label">
-        <Label id={fieldLabelId} size={labelSize} type={labelType} htmlFor={fieldId}>
+        <Label id={fieldLabelId} size={labelSize} type={labelType as any} htmlFor={fieldId}>
           {label}
         </Label>
         {helperTextMarkup}
