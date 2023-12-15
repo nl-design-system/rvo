@@ -108,7 +108,7 @@
   }
 
   .rvo-responsive-filters {
-    background-color: var(--rvo-color-lichtblauw-tint1);
+    background-color: var(--rvo-color-lichtblauw-150);
   }
 
   .rvo-responsive-filters summary.rvo-responsive-filters-toggle {
@@ -197,7 +197,7 @@
   /* @HERO */
 
   .rvo-hero {
-    background-color: var(--rvo-color-lichtblauw-tint2);
+    background-color: var(--rvo-color-lichtblauw-150);
     position: relative;
   }
 
@@ -210,7 +210,7 @@
   }
 
   .rvo-hero-bg-img-container::before {
-    background: linear-gradient(90deg, var(--rvo-color-lichtblauw-tint2) 0%, rgb(217 235 247 / 0%) 52.25%);
+    background: linear-gradient(90deg, var(--rvo-color-lichtblauw-150) 0%, rgb(217 235 247 / 0%) 52.25%);
     content: "";
     height: 100%;
     left: 0;
@@ -266,7 +266,7 @@
   /* @FILTER */
 
   .rvo-tmp-filters .utrecht-form-fieldset {
-    background-color: var(--rvo-color-lichtblauw-tint1);
+    background-color: var(--rvo-color-lichtblauw-150);
     gap: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-xl);
     padding-block-start: var(--rvo-space-sm);
@@ -277,7 +277,7 @@
   /* @TABLE FILTER */
 
   .rvo-table--responsive .rvo-tmp-filters fieldset {
-    background-color: var(--rvo-color-lichtblauw-tint2);
+    background-color: var(--rvo-color-lichtblauw-150);
     margin-inline-end: 0;
     margin-inline-start: 0;
     padding-inline-end: 0;
@@ -325,7 +325,7 @@
   /* @BLOCKQUOTE */
 
   .rvo-blockquote {
-    background-color: var(--rvo-color-hemelblauw-tint2);
+    background-color: var(--rvo-color-hemelblauw-150);
     font-size: var(--rvo-font-size-md);
     font-style: italic;
     line-height: var(--rvo-line-height-md);
@@ -346,7 +346,7 @@
   }
 
   .rvo-top {
-    background-color: var(--rvo-color-grijs1);
+    background-color: var(--rvo-color-150);
   }
 
   .rvo-menu {
@@ -385,7 +385,7 @@
   }
 
   .rvo-menu--top-menu .rvo-menu-link {
-    color: var(--rvo-color-grijs7);
+    color: var(--rvo-color-grijs-600);
     font-weight: var(--rvo-font-weight-regular);
   }
 
@@ -482,9 +482,9 @@
   }
 
   input[type="file"]:disabled {
-    background-color: var(--rvo-color-grijs3);
-    border-color: var(--rvo-color-grijs7);
-    color: var(--rvo-color-grijs7);
+    background-color: var(--rvo-color-grijs-200);
+    border-color: var(--rvo-color-grijs-600);
+    color: var(--rvo-color-grijs-600);
   }
 
   .rvo-button-group {
@@ -503,7 +503,7 @@
   /* @DATA */
 
   .rvo-data {
-    border: 1px solid var(--rvo-color-grijs4);
+    border: 1px solid var(--rvo-color-grijs-300);
     margin-block-end: 0;
   }
 
@@ -518,7 +518,7 @@
   }
 
   .rvo-data dt {
-    border-top: 1px solid var(--rvo-color-grijs4);
+    border-top: 1px solid var(--rvo-color-grijs-300);
     font-weight: 700;
     padding-block-end: 0;
     padding-block-start: var(--rvo-space-xs);
@@ -562,8 +562,8 @@
   }
 
   .rvo-table-header {
-    background-color: var(--rvo-color-grijs1);
-    color: var(--rvo-color-grijs7);
+    background-color: var(--rvo-color-150);
+    color: var(--rvo-color-grijs-600);
     font-weight: var(--rvo-font-weight-regular);
     padding-block-end: var(--rvo-space-xs);
     padding-block-start: var(--rvo-space-xs);
@@ -582,12 +582,12 @@
 
   .rvo-table-header--sortable:hover,
   .rvo-table-header--sortable:focus {
-    background-color: var(--rvo-color-grijs2);
+    background-color: var(--rvo-color-grijs-100);
     cursor: pointer;
   }
 
   .rvo-table-cell {
-    border-bottom: 0.05rem solid var(--rvo-color-grijs3);
+    border-bottom: 0.05rem solid var(--rvo-color-grijs-200);
     padding-block-end: var(--rvo-space-xs);
     padding-block-start: var(--rvo-space-xs);
     padding-inline-end: var(--rvo-space-md);
@@ -627,19 +627,19 @@
   }
 
   .rvo-alert--info {
-    background-color: var(--rvo-color-hemelblauw-tint2);
+    background-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-alert--warning {
-    background-color: var(--rvo-color-donkergeel-tint2);
+    background-color: var(--rvo-color-donkergeel-300);
   }
 
   .rvo-alert--error {
-    background-color: var(--rvo-color-rood-tint2);
+    background-color: var(--rvo-color-rood-300);
   }
 
   .rvo-alert--succes {
-    background-color: var(--rvo-color-groen-tint2);
+    background-color: var(--rvo-color-groen-300);
   }
 
   .rvo-alert p {
@@ -700,14 +700,14 @@
   /* @SEARCH IN NAV */
 
   .rvo-topnav__link--search-active {
-    background-color: var(--rvo-color-grijs1);
-    color: var(--rvo-color-grijs7);
+    background-color: var(--rvo-color-150);
+    color: var(--rvo-color-grijs-600);
   }
 
   .rvo-topnav__link--search-active:hover,
   .rvo-topnav__link--search-active:focus {
-    background-color: var(--rvo-color-grijs2);
-    color: var(--rvo-color-grijs7);
+    background-color: var(--rvo-color-grijs-100);
+    color: var(--rvo-color-grijs-600);
   }
 
   .rvo-form-layout {
@@ -872,7 +872,7 @@
   /* @FILTERS */
 
   .rvo-responsive-filter-wrapper {
-    background-color: var(--rvo-color-lichtblauw-tint1);
+    background-color: var(--rvo-color-lichtblauw-150);
   }
 
   .rvo-tmp-filter {
@@ -921,7 +921,7 @@
 
   .rvo-tag {
     align-items: center;
-    background-color: var(--rvo-color-hemelblauw-tint2);
+    background-color: var(--rvo-color-hemelblauw-150);
     border-radius: 3px;
     display: inline-flex;
     gap: var(--rvo-space-2xs);
@@ -948,7 +948,7 @@
   .rvo-item-list-item--case,
   .rvo-item-list-item--document,
   .rvo-item-list-item--dienst {
-    border-bottom: 1px solid var(--rvo-color-grijs3);
+    border-bottom: 1px solid var(--rvo-color-grijs-200);
     display: flex;
     flex-direction: column;
     gap: var(--rvo-space-xs);
@@ -996,7 +996,7 @@
   }
 
   .rvo-status-indicator--edit {
-    background-color: var(--rvo-color-hemelblauw-tint1);
+    background-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-status-indicator--success {
@@ -1037,7 +1037,7 @@
   }
 
   .rvo-machtigingen-item {
-    border-bottom: 1px solid var(--rvo-color-grijs3);
+    border-bottom: 1px solid var(--rvo-color-grijs-200);
     margin-block-end: var(--rvo-space-sm);
     padding-block-end: var(--rvo-space-sm);
   }
@@ -1264,7 +1264,7 @@
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item:hover {
-    border-left-color: var(--rvo-color-hemelblauw-tint2);
+    border-left-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-accordion__item > .rvo-accordion__item-summary::-webkit-details-marker {
@@ -1272,7 +1272,7 @@
   }
 
   .rvo-accordion__item {
-    border-bottom: 1px solid var(--rvo-color-grijs3);
+    border-bottom: 1px solid var(--rvo-color-grijs-200);
   }
 
   .rvo-accordion__item[open] .rvo-icon-delta-omhoog {
@@ -1305,20 +1305,20 @@
   }
 
   .rvo-accordion--grijs .rvo-accordion__item {
-    background-color: var(--rvo-color-grijs1);
+    background-color: var(--rvo-color-150);
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item[open] {
-    border-left-color: var(--rvo-color-hemelblauw-tint1);
+    border-left-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item {
-    border-bottom-color: var(--rvo-color-hemelblauw-tint1);
+    border-bottom-color: var(--rvo-color-hemelblauw-150);
     border-left: 6px solid var(--rvo-color-wit);
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item:first-child {
-    border-top: 1px solid var(--rvo-color-hemelblauw-tint1);
+    border-top: 1px solid var(--rvo-color-hemelblauw-150);
   }
 
   /* @LOGO GRID */
@@ -1532,7 +1532,7 @@
   /* @DE REGELMAAT */
 
   &.rvo-demo-page--regelmaat {
-    background-color: var(--rvo-color-grijs1);
+    background-color: var(--rvo-color-150);
   }
 
   .rvo-app {
@@ -1562,7 +1562,7 @@
   }
 
   .rvo-app--splash {
-    background-color: var(--rvo-color-hemelblauw-tint2);
+    background-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-app-container--akkoord {
@@ -1635,7 +1635,7 @@
   }
 
   .rvo-app-menu {
-    background-color: var(--rvo-color-lichtblauw-tint1);
+    background-color: var(--rvo-color-lichtblauw-150);
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -1681,8 +1681,8 @@
   }
 
   .rvo-maatregel {
-    background-color: var(--rvo-color-grijs1);
-    border-left: 5px solid var(--rvo-color-grijs2);
+    background-color: var(--rvo-color-150);
+    border-left: 5px solid var(--rvo-color-grijs-100);
     display: flex;
     justify-content: space-between;
     padding-block-end: var(--rvo-space-sm);
@@ -2049,8 +2049,8 @@
     }
 
     .rvo-data dd {
-      border-left: 1px solid var(--rvo-color-grijs4);
-      border-top: 1px solid var(--rvo-color-grijs4);
+      border-left: 1px solid var(--rvo-color-grijs-300);
+      border-top: 1px solid var(--rvo-color-grijs-300);
     }
 
     .rvo-data dd:nth-of-type(1) {
