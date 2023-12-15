@@ -6,5 +6,6 @@ export const defaultArgs: IFileInputProps = {
   focus: false,
   invalid: false,
   required: false,
+  accept: '',
   multiple: true,
 };
