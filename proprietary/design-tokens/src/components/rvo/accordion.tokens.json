@@ -30,7 +30,21 @@
           "padding-inline-end": { "value": "{rvo.space.xl}" },
           "padding-inline-start": { "value": "calc({rvo.space.xl} + {rvo.space.lg})" }
         },
-        "border-bottom": { "value": "{rvo.color.grijs-300}" }
+        "border-bottom": { "value": "{rvo.color.grijs-300}" },
+        "condensed": {
+          "summary": {
+            "padding-block-end": { "value": "{rvo.space.xs}" },
+            "padding-block-start": { "value": "{rvo.space.xs}" },
+            "padding-inline-end": { "value": "{rvo.space.xs}" },
+            "padding-inline-start": { "value": "{rvo.space.xs}" }
+          },
+          "content": {
+            "padding-block-end": { "value": "{rvo.space.md}" },
+            "padding-block-start": { "value": "0" },
+            "padding-inline-end": { "value": "{rvo.space.md}" },
+            "padding-inline-start": { "value": "calc({rvo.space.lg} + {rvo.space.md})" }
+          }
+        }
       }
     }
   }

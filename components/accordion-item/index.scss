@@ -29,10 +29,10 @@
 .rvo-accordion__item > .rvo-accordion__item-summary {
   cursor: pointer;
   list-style: none;
-  padding-block-end: var(--rvo-accordion-item-summary-padding-block-end);
-  padding-block-start: var(--rvo-accordion-item-summary-padding-block-start);
-  padding-inline-end: var(--rvo-accordion-item-summary-padding-inline-end);
-  padding-inline-start: var(--rvo-accordion-item-summary-padding-inline-start);
+  padding-block-end: var(--rvo-accordion-item-condensed-summary-padding-block-end);
+  padding-block-start: var(--rvo-accordion-item-condensed-summary-padding-block-start);
+  padding-inline-end: var(--rvo-accordion-item-condensed-summary-padding-inline-end);
+  padding-inline-start: var(--rvo-accordion-item-condensed-summary-padding-inline-start);
 }
 
 .rvo-accordion--border-indicator .rvo-accordion__item:hover {
@@ -67,10 +67,10 @@
 }
 
 .rvo-accordion__content {
-  padding-block-end: var(--rvo-accordion-item-content-padding-block-end);
-  padding-block-start: var(--rvo-accordion-item-content-padding-block-start);
-  padding-inline-end: var(--rvo-accordion-item-content-padding-inline-end);
-  padding-inline-start: var(--rvo-accordion-item-content-padding-inline-start);
+  padding-block-end: var(--rvo-accordion-item-condensed-content-padding-block-end);
+  padding-block-start: var(--rvo-accordion-item-condensed-content-padding-block-start);
+  padding-inline-end: var(--rvo-accordion-item-condensed-content-padding-inline-end);
+  padding-inline-start: var(--rvo-accordion-item-condensed-content-padding-inline-start);
 }
 
 .rvo-accordion-teaser {
@@ -79,7 +79,26 @@
   font-style: var(--rvo-accordion-item-teaser-font-style);
   font-weight: var(--rvo-accordion-item-teaser-font-weight);
   padding-block-end: var(--rvo-accordion-item-teaser-padding-block-end);
-  padding-block-start: var(--rvo-accordion-item-teaser-padding-block-start);
   padding-inline-end: var(--rvo-accordion-item-teaser-padding-inline-end);
   padding-inline-start: var(--rvo-accordion-item-teaser-padding-inline-start);
+}
+
+@media (min-width: 480px) {
+  .rvo-accordion__content {
+    padding-block-end: var(--rvo-accordion-item-content-padding-block-end);
+    padding-block-start: var(--rvo-accordion-item-content-padding-block-start);
+    padding-inline-end: var(--rvo-accordion-item-content-padding-inline-end);
+    padding-inline-start: var(--rvo-accordion-item-content-padding-inline-start);
+  }
+
+  .rvo-accordion__item > .rvo-accordion__item-summary {
+    padding-block-end: var(--rvo-accordion-item-summary-padding-block-end);
+    padding-block-start: var(--rvo-accordion-item-summary-padding-block-start);
+    padding-inline-end: var(--rvo-accordion-item-summary-padding-inline-end);
+    padding-inline-start: var(--rvo-accordion-item-summary-padding-inline-start);
+  }
+
+  .rvo-accordion-teaser {
+    padding-block-start: var(--rvo-accordion-item-teaser-padding-block-start);
+  }
 }

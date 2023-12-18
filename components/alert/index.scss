@@ -13,6 +13,13 @@
   padding-inline-start: var(--rvo-alert-padding-inline-start);
 }
 
+.rvo-alert--condensed {
+  padding-block-end: var(--rvo-alert-condensed-padding-block-end);
+  padding-block-start: var(--rvo-alert-condensed-padding-block-start);
+  padding-inline-end: var(--rvo-alert-condensed-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-condensed-padding-inline-start);
+}
+
 .rvo-alert p:first-child {
   margin-block-start: 0;
 }
