@@ -44,6 +44,12 @@
               "syntax": "<color>",
               "inherits": true
             }
+          },
+          "min-width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
           }
         }
       },
@@ -55,6 +61,12 @@
           }
         },
         "padding-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "margin-inline-start": {
           "css": {
             "syntax": "<length>",
             "inherits": true
