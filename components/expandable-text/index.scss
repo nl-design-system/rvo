@@ -11,7 +11,6 @@
 }
 
 .rvo-expandable-text__summary {
-  align-items: center;
   color: var(--rvo-expandable-text-summary-color);
   cursor: pointer;
   display: flex;
@@ -23,6 +22,9 @@
 
 .rvo-expandable-text__summary .rvo-icon {
   --utrecht-icon-color: var(--rvo-expandable-text-summary-icon-background-color);
+
+  margin-block-start: 3px;
+  min-width: var(--rvo-space-md);
 }
 
 .rvo-expandable-text__summary:hover {
@@ -38,6 +40,7 @@
   background-color: var(--rvo-expandable-text-summary-icon-background-color);
   content: "";
   height: 16px;
+  margin-block-start: 3px;
   -webkit-mask-image: var(--rvo-icon-delta-omlaag);
   mask-image: var(--rvo-icon-delta-omlaag);
   -webkit-mask-position: center center;
@@ -46,6 +49,7 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
+  min-width: 10px;
   width: 10px;
 }
 
