@@ -96,6 +96,7 @@
       },
       "subtle": {
         "font-weight": { "value": "{rvo.font-weight.bold}" },
+        "color": { "value": "{rvo.color.donkerblauw}" },
         "active": {
           "color": { "value": "{rvo.color.rood-300}" }
         },
