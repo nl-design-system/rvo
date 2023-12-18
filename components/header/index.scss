@@ -8,6 +8,12 @@
   margin-inline-start: auto;
 }
 
+.rvo-header--rule {
+  border-bottom-color: var(--rvo-header-rule-border-color);
+  border-bottom-style: solid;
+  border-bottom-width: var(--rvo-header-rule-border-width);
+}
+
 .rvo-header__logo-wrapper {
   margin-block-end: 10px;
   margin-inline-start: calc(50% - 25px);

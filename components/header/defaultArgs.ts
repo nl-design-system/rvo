@@ -5,4 +5,5 @@ export const defaultArgs: IHeaderProps = {
   title: logoDefaultArgs.title,
   subtitle: logoDefaultArgs.subtitle,
   link: '',
+  showHorizontalRule: true,
 };
