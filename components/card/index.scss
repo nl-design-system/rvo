@@ -1,0 +1,171 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rvo-card {
+  background-color: var(--rvo-color-wit);
+  border-radius: 3px;
+  padding-block-end: var(--rvo-space-md);
+  padding-block-start: var(--rvo-space-md);
+  padding-inline-end: var(--rvo-space-md);
+  padding-inline-start: var(--rvo-space-md);
+  position: relative;
+
+  &.rvo-card--md {
+    border-radius: 5px;
+  }
+
+  &.rvo-card--full-colour {
+    padding-block-end: var(--rvo-space-lg);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+  }
+
+  &.rvo-card--full-colour.rvo-card--grijs-2 {
+    background-color: #f1f5f9;
+  }
+
+  &.rvo-card--full-colour.rvo-card--hemelblauw {
+    background-color: var(--rvo-color-hemelblauw);
+  }
+
+  &.rvo-card--inverted-colours {
+    a.rvo-link--full-click,
+    a.rvo-link--full-click:hover,
+    a.rvo-link--full-click:focus {
+      color: var(--rvo-color-wit);
+    }
+  }
+
+  &.rvo-card--outline {
+    border: 1px solid #cbd5e1;
+  }
+
+  &.rvo-card--outline.rvo-card--active {
+    border-color: #64748b;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #64748b;
+  }
+}
+
+.rvo-card .rvo-paragraph {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.rvo-link--full-click {
+  // color: var(--rvo-color-zwart);
+  display: block;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.rvo-link--black {
+  color: var(--rvo-color-zwart);
+}
+
+.rvo-card--w-link-indicator {
+  align-items: center;
+  display: flex;
+  gap: var(--rvo-space-xs);
+  justify-content: space-between;
+}
+
+.rvo-card--w-img {
+  overflow: hidden;
+
+  &.rvo-card--sm {
+    align-items: center;
+    display: flex;
+
+    .rvo-card-img-container {
+      margin-block-end: -24px;
+      margin-inline-end: 24px;
+    }
+
+    .rvo-card-img {
+      height: 76px;
+      object-fit: cover;
+      width: 96px;
+    }
+  }
+
+  &.rvo-card--md {
+    .rvo-card-img {
+      width: 100%;
+    }
+  }
+}
+
+.rvo-card-img-container {
+  line-height: 0;
+  margin-block-end: var(--rvo-space-md);
+  margin-block-start: -24px;
+  margin-inline-end: -24px;
+  margin-inline-start: -24px;
+}
+
+.rvo-card-img {
+  object-fit: cover;
+}
+
+.rvo-card-status {
+  display: flex;
+  font-size: var(--rvo-font-size-sm);
+  gap: var(--rvo-space-2xs);
+
+  .rvo-icon {
+    margin-block-start: 3px;
+    min-width: var(--rvo-space-md);
+  }
+}
+
+.rvo-card--img-bg {
+  min-height: 150px;
+  padding-block-start: var(--rvo-space-xl);
+  position: relative;
+
+  &::after {
+    background-color: #1e293b;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .rvo-card-img {
+    left: 0;
+    min-height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+  }
+
+  .rvo-card-content {
+    position: relative;
+    z-index: 1;
+  }
+}
