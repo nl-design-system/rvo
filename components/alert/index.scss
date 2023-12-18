@@ -28,6 +28,10 @@
   align-self: flex-start;
 }
 
+.rvo-alert .rvo-icon {
+  min-width: var(--rvo-size-xl);
+}
+
 .utrecht-form-fieldset .rvo-alert {
   margin-inline-end: var(--rvo-alert-fieldset-margin);
   margin-inline-start: var(--rvo-alert-fieldset-margin);
@@ -66,5 +70,6 @@
 
   .utrecht-icon.rvo-icon {
     background-color: var(--utrecht-document-color);
+    min-width: var(--rvo-size-md);
   }
 }
