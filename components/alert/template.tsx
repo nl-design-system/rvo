@@ -8,8 +8,8 @@ import { Button } from '../button/template';
 import { Icon } from '../icon/template';
 import { StatusIcon } from '../status-icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import './index.scss';
 import { defaultArgs } from './defaultArgs';
+import './index.scss';
 
 export interface IAlertProps {
   kind?: 'info' | 'warning' | 'error' | 'success';
@@ -17,6 +17,7 @@ export interface IAlertProps {
   /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
+  condensed?: boolean;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
@@ -35,6 +36,9 @@ export const argTypes = {
   closable: {
     control: 'boolean',
   },
+  condensed: {
+    control: 'boolean',
+  },
 };
 
 export const Alert: React.FC<IAlertProps> = ({
@@ -42,6 +46,7 @@ export const Alert: React.FC<IAlertProps> = ({
   heading = defaultArgs.heading,
   content = defaultArgs.content,
   closable = defaultArgs.closable,
+  condensed = defaultArgs.condensed,
   children,
 }: IAlertProps) => {
   let iconMarkup;
@@ -64,7 +69,7 @@ export const Alert: React.FC<IAlertProps> = ({
   let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
-    <div className={clsx('rvo-alert', `rvo-alert--${kind}`)}>
+    <div className={clsx('rvo-alert', `rvo-alert--${kind}`, condensed && 'rvo-alert--condensed')}>
       {iconMarkup}
       <div className="rvo-alert-text">
         {heading && heading !== '' && <strong>{heading}</strong>}
