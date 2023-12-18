@@ -1,0 +1,14 @@
+{
+  "rvo": {
+    "header": {
+      "rule": {
+        "border-color": {
+          "value": "{rvo.color.grijs-200}"
+        },
+        "border-width": {
+          "value": "1px"
+        }
+      }
+    }
+  }
+}

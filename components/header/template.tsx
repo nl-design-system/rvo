@@ -2,15 +2,17 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React from 'react';
+import clsx from 'clsx';
+import React, { PropsWithChildren } from 'react';
 import { Logo } from '../logo/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IHeaderProps {
+export interface IHeaderProps extends PropsWithChildren {
   title?: string;
   subtitle?: string;
   link?: string;
+  showHorizontalRule?: boolean;
 }
 
 export const argTypes = {
@@ -23,14 +25,19 @@ export const argTypes = {
   link: {
     control: 'text',
   },
+  showHorizontalRule: {
+    control: 'boolean',
+  },
 };
 
 export const Header: React.FC<IHeaderProps> = ({
   link = defaultArgs.link,
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
+  showHorizontalRule = defaultArgs.showHorizontalRule,
+  children,
 }: IHeaderProps) => (
-  <header className="rvo-header">
+  <header className={clsx('rvo-header', showHorizontalRule && 'rvo-header--rule')}>
     <div className="rvo-header__logo-wrapper">
       {link ? (
         <a href={link} className="rvo-header__logo-link">
@@ -40,6 +47,7 @@ export const Header: React.FC<IHeaderProps> = ({
         <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} />
       )}
     </div>
+    {children}
   </header>
 );
 
