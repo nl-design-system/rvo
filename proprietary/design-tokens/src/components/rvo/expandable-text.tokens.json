@@ -9,7 +9,8 @@
         "gap": { "value": "{rvo.space.2xs}" },
         "line-height": { "value": "{rvo.line-height.md}" },
         "icon": {
-          "background-color": { "value": "{rvo.color.hemelblauw}" }
+          "background-color": { "value": "{rvo.color.hemelblauw}" },
+          "min-width": { "value": "{rvo.space.md}" }
         }
       },
       "details": {

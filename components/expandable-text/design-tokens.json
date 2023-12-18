@@ -44,6 +44,12 @@
               "syntax": "<color>",
               "inherits": true
             }
+          },
+          "min-width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
           }
         }
       },
