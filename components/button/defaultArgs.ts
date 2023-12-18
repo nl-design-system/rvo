@@ -14,4 +14,5 @@ export const defaultArgs: IButtonProps = {
   showIcon: 'no',
   icon: 'home',
   iconAriaLabel: '',
+  fullWidth: false,
 };

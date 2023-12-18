@@ -24,6 +24,7 @@ export interface IButtonProps {
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
+  fullWidth?: boolean;
   className?: string;
   alignToRightInGroup?: boolean;
   onFocus?: (event) => void;
@@ -67,6 +68,9 @@ export const argTypes = {
     options: iconOptions,
   },
   iconAriaLabel: { control: 'text' },
+  fullWidth: {
+    control: 'boolean',
+  },
 };
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
@@ -83,6 +87,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   iconAriaLabel = defaultArgs.iconAriaLabel,
+  fullWidth = defaultArgs.fullWidth,
   className,
   alignToRightInGroup,
   ...otherProps
@@ -119,6 +124,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'sm' && 'utrecht-button--rvo-sm',
         size === 'md' && 'utrecht-button--rvo-md',
         alignToRightInGroup && 'rvo-button-group__align-right',
+        fullWidth && 'utrecht-button--rvo-full-width',
       )}
       disabled={disabled || undefined}
       appearance={appearance}

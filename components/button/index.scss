@@ -3,6 +3,12 @@
 @import "../../node_modules/@utrecht/components/button/css/mixin";
 @import "../layout-column-row/index";
 
+// Don't wrap label, don't shrink
+.utrecht-button {
+  flex-shrink: 0;
+  text-wrap: nowrap;
+}
+
 // Subtle button
 .utrecht-button--subtle.utrecht-button--hover:not(:disabled),
 .utrecht-button--subtle.utrecht-button-link--hover:not(:disabled),
@@ -59,6 +65,11 @@
 
   @extend .rvo-layout-row-inline;
   @extend .rvo-layout-gap--md;
+}
+
+// Full width
+.utrecht-button--rvo-full-width {
+  width: 100%;
 }
 
 // Override primary icon colors
