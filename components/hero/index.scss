@@ -1,0 +1,58 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rvo-hero {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  position: relative;
+}
+
+.rvo-hero__image-container {
+  line-height: 0;
+  max-height: 300px;
+  overflow: hidden;
+  padding-block-end: 25%;
+
+  @media (min-width: 540px) {
+    max-height: 500px;
+  }
+
+  @media (min-width: 540px) {
+    padding-block-end: 0;
+  }
+
+  @media (min-width: 780px) {
+    border-end-end-radius: var(--rvo-hero-border-end-end-radius);
+  }
+}
+
+.rvo-hero__image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.rvo-hero__title {
+  background-color: var(--rvo-hero-title-background-color);
+  border-start-end-radius: var(--rvo-hero-title-border-start-end-radius);
+  bottom: 0;
+  color: var(--rvo-hero-title-color);
+  font-weight: var(--rvo-hero-title-font-weight);
+  margin-block-end: 0;
+  max-width: 500px;
+  padding-block-end: var(--rvo-hero-title-padding-block-end);
+  padding-block-start: var(--rvo-hero-title-padding-block-start);
+  padding-inline-end: var(--rvo-hero-title-padding-inline-end);
+  padding-inline-start: var(--rvo-hero-title-padding-inline-start);
+  position: absolute;
+  z-index: 1;
+}
+
+.rvo-hero__subtitle {
+  display: block;
+  font-size: var(--rvo-hero-subtitle-font-size);
+  font-style: var(--rvo-hero-subtitle-font-style);
+  font-weight: var(--rvo-hero-subtitle-font-weight);
+  line-height: var(--rvo-hero-subtitle-line-height);
+}
