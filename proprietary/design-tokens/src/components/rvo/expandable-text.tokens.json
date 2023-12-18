@@ -14,7 +14,8 @@
       },
       "details": {
         "padding-block-end": { "value": "{rvo.space.xs}" },
-        "padding-block-start": { "value": "{rvo.space.2xs}" }
+        "padding-block-start": { "value": "{rvo.space.2xs}" },
+        "margin-inline-start": { "value": "20px" }
       },
       "subtle": {
         "summary": {

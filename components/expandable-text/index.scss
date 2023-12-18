@@ -62,6 +62,7 @@
 
 .rvo-expandable-text__details {
   display: block;
+  margin-inline-start: var(--rvo-expandable-text-details-margin-inline-start);
   padding-block-end: var(--rvo-expandable-text-details-padding-block-end);
   padding-block-start: var(--rvo-expandable-text-details-padding-block-start);
 }
