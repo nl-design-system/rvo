@@ -5,8 +5,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../icon/template';
-import Link from '../link/template';
 import '../layout-column-row/index.scss';
+import Link from '../link/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
@@ -47,7 +47,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
         if (index < items.length - 1) {
           // Not the last item
           itemMarkup = (
-            <Link href={item.url}>
+            <Link href={item.url} noUnderline={true}>
               {dividerMarkup}
               {item.label}
             </Link>
