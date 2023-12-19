@@ -15,15 +15,18 @@
 }
 
 .rvo-sidebar {
-  background-color: #f1f5f9;
   display: none;
-  padding-block-end: var(--rvo-space-xl);
-  padding-block-start: var(--rvo-space-xl);
-  padding-inline-end: var(--rvo-space-xl);
-  padding-inline-start: var(--rvo-space-xl);
+  padding-block-end: var(--rvo-space-lg);
+  padding-block-start: var(--rvo-space-lg);
+  padding-inline-end: var(--rvo-space-lg);
+  padding-inline-start: var(--rvo-space-lg);
 
   @media (min-width: 780px) {
     display: block;
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
   }
 
   @media (min-width: 1080px) {
@@ -32,6 +35,10 @@
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-3xl);
   }
+}
+
+.rvo-sidebar--bg {
+  background-color: #f1f5f9;
 }
 
 .rvo-sidebar-layout--right {
