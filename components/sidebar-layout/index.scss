@@ -1,0 +1,50 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-sidebar-layout {
+  @media (min-width: 780px) {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: 288px 1fr;
+  }
+}
+
+.rvo-sidebar {
+  background-color: #f1f5f9;
+  display: none;
+  padding-block-end: var(--rvo-space-xl);
+  padding-block-start: var(--rvo-space-xl);
+  padding-inline-end: var(--rvo-space-xl);
+  padding-inline-start: var(--rvo-space-xl);
+
+  @media (min-width: 780px) {
+    display: block;
+  }
+
+  @media (min-width: 1080px) {
+    padding-block-end: var(--rvo-space-3xl);
+    padding-block-start: var(--rvo-space-3xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-3xl);
+  }
+}
+
+.rvo-sidebar-layout--right {
+  @media (min-width: 780px) {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: 1fr 288px;
+  }
+
+  .rvo-sidebar {
+    order: 1;
+  }
+}
