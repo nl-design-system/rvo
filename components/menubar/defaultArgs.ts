@@ -10,6 +10,7 @@ export const defaultItems = [
 
 export const defaultArgs: IMenuBarProps = {
   size: 'md',
+  direction: 'horizontal',
   items: defaultItems,
   useIcons: true,
   iconPlacement: 'before',

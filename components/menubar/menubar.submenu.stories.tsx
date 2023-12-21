@@ -27,7 +27,7 @@ export const Submenu = {
   args: {
     primary: {
       size: 'md',
-
+      direction: 'horizontal',
       items: [
         {
           label: 'Home',
@@ -55,7 +55,7 @@ export const Submenu = {
 
     sub: {
       size: 'md',
-
+      direction: 'horizontal',
       items: [
         {
           label: 'Submenu item',

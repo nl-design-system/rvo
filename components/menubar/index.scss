@@ -33,6 +33,14 @@
   padding-inline-start: 0;
 }
 
+.rvo-topnav__list.rvo-topnav__list--vertical {
+  flex-direction: column;
+
+  .rvo-topnav__item--align-right {
+    margin-inline-start: 0;
+  }
+}
+
 .rvo-topnav__item {
   cursor: pointer;
   flex: none;

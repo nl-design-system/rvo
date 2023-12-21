@@ -20,6 +20,7 @@ export interface IMenuBarItem {
 
 export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
+  direction: 'horizontal' | 'vertical';
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement?: 'before' | 'after';
@@ -32,6 +33,10 @@ export interface IMenuBarProps {
 export const argTypes = {
   size: {
     options: ['sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
+  direction: {
+    options: ['horizontal', 'vertical'],
     control: { type: 'radio' },
   },
   items: {
@@ -130,6 +135,7 @@ export const parseMenuItem = ({
 
 export const MenuBar: React.FC<IMenuBarProps> = ({
   size = defaultArgs.size,
+  direction = defaultArgs.direction,
   items = defaultArgs.items,
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
@@ -181,6 +187,14 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     itemsMarkup = children;
   }
 
+  const navMarkup = (
+    <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
+      <ul className={clsx('rvo-topnav__list', direction === 'vertical' && 'rvo-topnav__list--vertical')}>
+        {itemsMarkup}
+      </ul>
+    </nav>
+  );
+
   return (
     <div
       className={clsx(
@@ -189,11 +203,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         type === 'sub-grid' && ['rvo-topnav--sub', 'rvo-topnav--sub-grid'],
       )}
     >
-      <MaxWidthLayout size={menuMaxWidth}>
-        <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
-          <ul className="rvo-topnav__list">{itemsMarkup}</ul>
-        </nav>
-      </MaxWidthLayout>
+      {direction === 'horizontal' ? <MaxWidthLayout size={menuMaxWidth}>{navMarkup}</MaxWidthLayout> : navMarkup}
     </div>
   );
 };
