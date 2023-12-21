@@ -16,7 +16,11 @@
 
 .rvo-sidebar-layout__container {
   @media (min-width: 780px) {
-    background: linear-gradient(90deg, #f1f5f9 50%, #fff 50%);
+    background: linear-gradient(
+      90deg,
+      var(--rvo-sidebar-layout-sidebar-background-color) 50%,
+      var(--rvo-sidebar-layout-content-background-color) 50%
+    );
   }
 
   .rvo-sidebar-layout__content {
@@ -26,29 +30,33 @@
 
 .rvo-sidebar-layout__container--right {
   @media (min-width: 780px) {
-    background: linear-gradient(-90deg, #f1f5f9 50%, #fff 50%);
+    background: linear-gradient(
+      -90deg,
+      var(--rvo-sidebar-layout-sidebar-background-color) 50%,
+      var(--rvo-sidebar-layout-content-background-color) 50%
+    );
   }
 }
 
 .rvo-sidebar-layout__sidebar,
 .rvo-sidebar-layout__content {
-  padding-block-end: var(--rvo-space-lg);
-  padding-block-start: var(--rvo-space-lg);
-  padding-inline-end: var(--rvo-space-sm);
-  padding-inline-start: var(--rvo-space-lg);
+  padding-block-end: var(--rvo-sidebar-layout-sm-padding-block-end);
+  padding-block-start: var(--rvo-sidebar-layout-sm-padding-block-start);
+  padding-inline-end: var(--rvo-sidebar-layout-sm-padding-inline-end);
+  padding-inline-start: var(--rvo-sidebar-layout-sm-padding-inline-start);
 
   @media (min-width: 780px) {
-    padding-block-end: var(--rvo-space-xl);
-    padding-block-start: var(--rvo-space-xl);
-    padding-inline-end: var(--rvo-space-md);
-    padding-inline-start: var(--rvo-space-xl);
+    padding-block-end: var(--rvo-sidebar-layout-md-padding-block-end);
+    padding-block-start: var(--rvo-sidebar-layout-md-padding-block-start);
+    padding-inline-end: var(--rvo-sidebar-layout-md-padding-inline-end);
+    padding-inline-start: var(--rvo-sidebar-layout-md-padding-inline-start);
   }
 
   @media (min-width: 1080px) {
-    padding-block-end: var(--rvo-space-3xl);
-    padding-block-start: var(--rvo-space-3xl);
-    padding-inline-end: var(--rvo-space-xl);
-    padding-inline-start: var(--rvo-space-3xl);
+    padding-block-end: var(--rvo-sidebar-layout-lg-padding-block-end);
+    padding-block-start: var(--rvo-sidebar-layout-lg-padding-block-start);
+    padding-inline-end: var(--rvo-sidebar-layout-lg-padding-inline-end);
+    padding-inline-start: var(--rvo-sidebar-layout-lg-padding-inline-start);
   }
 }
 
@@ -60,7 +68,7 @@
   }
 
   &.rvo-sidebar-layout__sidebar--bg {
-    background-color: #f1f5f9;
+    background-color: var(--rvo-sidebar-layout-sidebar-background-color);
   }
 }
 
