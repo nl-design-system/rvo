@@ -18,7 +18,7 @@ export interface IHeadingProps {
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
-  noMargins: boolean;
+  noMargins?: boolean;
   className?: string;
 }
 
