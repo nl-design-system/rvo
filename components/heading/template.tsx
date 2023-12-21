@@ -18,6 +18,7 @@ export interface IHeadingProps {
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
+  noMargins: boolean;
   className?: string;
 }
 
@@ -41,6 +42,9 @@ export const argTypes = {
     options: iconOptions,
   },
   iconAriaLabel: { control: 'text' },
+  noMargins: {
+    control: 'boolean',
+  },
 };
 
 export const Heading: React.FC<IHeadingProps> = ({
@@ -51,6 +55,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   iconAriaLabel = defaultArgs.iconAriaLabel,
+  noMargins = defaultArgs.noMargins,
   className,
 }: IHeadingProps) => {
   const props = {
@@ -92,6 +97,10 @@ export const Heading: React.FC<IHeadingProps> = ({
     const iconMarkup = <Icon icon={icon as any} size={iconSize} ariaLabel={iconAriaLabel} />;
     props.className += ` rvo-layout-row rvo-layout-gap--${gap}`;
 
+    if (noMargins) {
+      props.className += ` utrecht-heading--no-margins`;
+    }
+
     if (showIcon === 'before') {
       headingMarkup = (
         <>
@@ -114,7 +123,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   switch (type) {
     default:
     case 'h1':
-      headingMarkup = <h1 {...props}>{children || headingMarkup}</h1>;
+      headingMarkup = <h1 {...props}>test{children || headingMarkup}</h1>;
       break;
     case 'h2':
       headingMarkup = <h2 {...props}>{children || headingMarkup}</h2>;

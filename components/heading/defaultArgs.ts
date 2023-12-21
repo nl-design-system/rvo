@@ -7,4 +7,5 @@ export const defaultArgs: IHeadingProps = {
   showIcon: 'no',
   icon: null,
   iconAriaLabel: '',
+  noMargins: false,
 };

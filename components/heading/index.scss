@@ -27,3 +27,8 @@
   margin-block-end: var(--utrecht-heading-6-margin-block-end);
   margin-block-start: var(--utrecht-heading-6-margin-block-start);
 }
+
+.utrecht-heading--no-margins {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
