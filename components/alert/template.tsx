@@ -66,7 +66,7 @@ export const Alert: React.FC<IAlertProps> = ({
   }
 
   // Parse content markup (either a string, HTML string, React node or children)
-  let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
+  const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
     <div className={clsx('rvo-alert', `rvo-alert--${kind}`, condensed && 'rvo-alert--condensed')}>
