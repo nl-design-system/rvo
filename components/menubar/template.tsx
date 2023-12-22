@@ -20,7 +20,7 @@ export interface IMenuBarItem {
 
 export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
-  direction: 'horizontal' | 'vertical';
+  direction?: 'horizontal' | 'vertical';
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement?: 'before' | 'after';
