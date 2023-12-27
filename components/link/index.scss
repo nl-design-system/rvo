@@ -78,3 +78,10 @@
 .rvo-link--donkerblauw {
   color: var(--rvo-color-donkerblauw);
 }
+
+.rvo-link--zwart {
+  color: var(--rvo-color-zwart);
+  &:hover {
+    color: var(--rvo-color-donkerblauw);
+  }
+}

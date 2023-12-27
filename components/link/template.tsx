@@ -11,7 +11,7 @@ import './index.scss';
 export interface ILinkProps {
   content?: string;
   href?: string | ((event: any) => void);
-  color?: 'hemelblauw' | 'donkerblauw';
+  color?: 'hemelblauw' | 'donkerblauw' | 'zwart';
   onClick?: (event) => void;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
@@ -36,7 +36,7 @@ export const argTypes = {
   },
   color: {
     control: { type: 'select' },
-    options: ['hemelblauw', 'donkerblauw'],
+    options: ['hemelblauw', 'donkerblauw', 'zwart'],
   },
   showIcon: {
     options: ['no', 'before', 'after'],
@@ -114,6 +114,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
       showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
       color === 'donkerblauw' && 'rvo-link--donkerblauw',
+      color === 'zwart' && 'rvo-link--zwart',
     ),
     ...otherProps,
   };
