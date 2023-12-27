@@ -14,6 +14,7 @@ export interface IIconProps {
   color?: '' | 'hemelblauw' | 'wit' | 'zwart';
   className?: string;
   ariaLabel?: string;
+  onClick?: (event: React.MouseEvent) => void;
 }
 
 export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart'];
