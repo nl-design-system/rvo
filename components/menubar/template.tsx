@@ -16,6 +16,7 @@ export interface IMenuBarItem {
   link: string | ((event: any) => void);
   align?: 'left' | 'right';
   active?: boolean;
+  useDivider?: boolean;
 }
 
 export interface IMenuBarProps {
@@ -77,6 +78,7 @@ export const parseMenuItem = ({
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
   useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
+  useDivider = false,
   ...otherProps
 }) => {
   // Parse delta for active menu items
@@ -123,6 +125,7 @@ export const parseMenuItem = ({
         active && 'rvo-topnav__item--active',
         align === 'right' && 'rvo-topnav__item--align-right',
         type === 'sub' && 'rvo-topnav__item--sub',
+        useDivider && 'rvo-topnav__item--with-divider',
       )}
       {...otherProps}
     >
@@ -161,6 +164,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           size,
           iconPlacement,
           useDeltaForActiveItem,
+          useDivider: item.useDivider,
         }),
       );
 
@@ -180,6 +184,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
             size,
             iconPlacement,
             useDeltaForActiveItem,
+            useDivider: item.useDivider,
           }),
         ),
     );

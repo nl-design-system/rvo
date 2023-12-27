@@ -64,6 +64,13 @@
             "width": { "value": "4px" }
           }
         },
+        "divider": {
+          "border-width": { "value": "1px" },
+          "border-style": { "value": "solid" },
+          "border-color": { "value": "{rvo.color.grijs-300}" },
+          "margin-block-start": { "value": "{rvo.space.sm}" },
+          "padding-block-start": { "value": "{rvo.space.md}" }
+        },
         "link": {
           "color": { "value": "{rvo.color.grijs-700}" },
           "width": { "value": "100%" },

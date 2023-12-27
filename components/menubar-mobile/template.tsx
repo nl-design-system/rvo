@@ -69,6 +69,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
             size,
             iconPlacement,
             useDeltaForActiveItem,
+            useDivider: item.useDivider,
           })}
           {item.active &&
             submenuItems.map((submenuItem, index) => (
@@ -84,6 +85,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
                   iconPlacement,
                   type: 'sub',
                   useDeltaForActiveItem,
+                  useDivider: item.useDivider,
                 })}
               </React.Fragment>
             ))}
