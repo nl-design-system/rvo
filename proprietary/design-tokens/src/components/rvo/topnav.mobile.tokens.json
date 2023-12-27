@@ -14,6 +14,7 @@
         "justify-content": { "value": "flex-end" },
         "background-color": { "value": "transparent" },
         "color": { "value": "{rvo.color.hemelblauw}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
         "icon-color": { "value": "{rvo.color.hemelblauw}" },
         "hover": {
           "color": { "value": "{rvo.color.hemelblauw}" }

@@ -28,6 +28,7 @@
     cursor: pointer;
     display: flex;
     font-size: inherit;
+    font-weight: var(--rvo-mobile-menu-toggle-font-weight);
     justify-content: var(--rvo-mobile-menu-toggle-justify-content);
     outline: none !important;
     padding-block-end: var(--rvo-mobile-menu-toggle-padding-block-end);
