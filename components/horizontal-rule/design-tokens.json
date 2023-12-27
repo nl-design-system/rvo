@@ -1,0 +1,24 @@
+{
+  "rvo": {
+    "horizontal-rule": {
+      "border-width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "border-style": {
+        "css": {
+          "syntax": "<*>",
+          "inherits": true
+        }
+      },
+      "border-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}
