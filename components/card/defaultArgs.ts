@@ -8,6 +8,8 @@ export const defaultArgs: ICardProps = {
   outline: true,
   title: 'Title',
   link: '#',
+  image: 'home.jpg',
+  imageSize: 'md',
   fullCardLink: true,
   showLinkIndicator: true,
   invertedColors: false,

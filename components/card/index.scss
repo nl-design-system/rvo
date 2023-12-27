@@ -12,8 +12,16 @@
     padding-inline-start: var(--rvo-space-xl);
   }
 
+  &.rvo-card--full-colour--wit {
+    background-color: var(--rvo-color-wit);
+  }
+
   &.rvo-card--full-colour--grijs-100 {
     background-color: var(--rvo-color-grijs-100);
+  }
+
+  &.rvo-card--full-colour--hemelblauw {
+    background-color: var(--rvo-color-hemelblauw);
   }
 
   &.rvo-card--inverted-colours {
@@ -65,11 +73,28 @@
     border-color: #64748b;
   }
 
-  &.rvo-card--with-link-indicator {
-    align-items: center;
-    display: flex;
-    gap: var(--rvo-space-xs);
-    justify-content: space-between;
+  &.rvo-card--with-image {
+    overflow: hidden;
+
+    &.rvo-card--with-image-sm {
+      align-items: center;
+      display: flex;
+
+      .rvo-card__image-container {
+        margin-block-end: -24px;
+        margin-inline-end: 24px;
+      }
+
+      .rvo-card__image {
+        height: 76px;
+        object-fit: cover;
+        width: 96px;
+      }
+    }
+
+    &.rvo-card--with-image-md .rvo-card__image {
+      width: 100%;
+    }
   }
 
   &:hover,
@@ -97,46 +122,28 @@
       z-index: 1;
     }
   }
-}
 
-.rvo-card--w-img {
-  overflow: hidden;
-
-  &.rvo-card--sm {
+  .rvo-card--with-link-indicator {
     align-items: center;
     display: flex;
-
-    .rvo-card-img-container {
-      margin-block-end: -24px;
-      margin-inline-end: 24px;
-    }
-
-    .rvo-card-img {
-      height: 76px;
-      object-fit: cover;
-      width: 96px;
-    }
+    gap: var(--rvo-space-xs);
+    justify-content: space-between;
   }
 
-  &.rvo-card--md {
-    .rvo-card-img {
-      width: 100%;
-    }
+  .rvo-card__image-container {
+    line-height: 0;
+    margin-block-end: var(--rvo-space-md);
+    margin-block-start: -24px;
+    margin-inline-end: -24px;
+    margin-inline-start: -24px;
+  }
+
+  .rvo-card__image {
+    object-fit: cover;
   }
 }
 
-.rvo-card-img-container {
-  line-height: 0;
-  margin-block-end: var(--rvo-space-md);
-  margin-block-start: -24px;
-  margin-inline-end: -24px;
-  margin-inline-start: -24px;
-}
-
-.rvo-card-img {
-  object-fit: cover;
-}
-
+// TO INCLUDE:
 .rvo-card__status {
   display: flex;
   font-size: var(--rvo-font-size-sm);
@@ -170,10 +177,5 @@
     object-fit: cover;
     position: absolute;
     top: 0;
-  }
-
-  .rvo-card__content {
-    position: relative;
-    z-index: 1;
   }
 }

@@ -12,16 +12,19 @@ import './index.scss';
 
 export interface ICardProps extends PropsWithChildren {
   background: 'none' | 'color' | 'image';
-  backgroundColor?: 'none' | 'grijs-100';
+  backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;
   padding?: 'sm' | 'md' | 'lg' | 'xl';
   outline?: boolean;
   title?: string;
   link?: string;
   fullCardLink?: boolean;
+  image?: string;
+  imageSize?: 'sm' | 'md';
   showLinkIndicator?: boolean;
   invertedColors?: boolean;
   content?: string | React.ReactNode;
+  className?: string;
 }
 
 export const argTypes = {
@@ -43,6 +46,12 @@ export const argTypes = {
   title: { control: { type: 'text' } },
   link: { control: { type: 'text' } },
   fullCardLink: { control: { type: 'boolean' } },
+  image: { control: { type: 'text' } },
+  imageSize: {
+    if: { arg: 'background', eq: 'image' },
+    options: ['sm', 'md'],
+    control: { type: 'radio' },
+  },
   showLinkIndicator: { control: { type: 'boolean' } },
   invertedColors: { control: { type: 'boolean' } },
   content: { control: { type: 'text' } },
@@ -57,10 +66,12 @@ export const Card: React.FC<ICardProps> = ({
   title = defaultArgs.title,
   link = defaultArgs.link,
   fullCardLink = defaultArgs.fullCardLink,
+  image = defaultArgs.image,
+  imageSize = defaultArgs.imageSize,
   showLinkIndicator = defaultArgs.showLinkIndicator,
   // invertedColors = defaultArgs.invertedColors,
   content = defaultArgs.content,
-
+  className = defaultArgs.className,
   children,
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
@@ -70,29 +81,38 @@ export const Card: React.FC<ICardProps> = ({
     <div
       className={clsx(
         'rvo-card',
-        hasLinkIndicator && 'rvo-card--with-link-indicator',
+        image.length > 0 && 'rvo-card--with-image',
+        image.length > 0 && imageSize && `rvo-card--with-image-${imageSize}`,
         outline && 'rvo-card--outline',
         (outline || background !== 'none') && `rvo-card--padding-${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
+        className,
       )}
     >
-      <div className="rvo-card__content">
-        {title.length && (
-          <h3 className="utrecht-heading-3">
-            {link.length ? (
-              <Link href="#" color="zwart" className={clsx(fullCardLink && 'rvo-card_full-card-link')}>
-                {title}
-              </Link>
-            ) : (
-              <>{title}</>
-            )}
-          </h3>
-        )}
-        {contentMarkup}
-      </div>
-      {hasLinkIndicator && (
-        <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" ariaLabel="Delta naar rechts" role="img" />
+      {image.length > 0 && (
+        <div className={clsx('rvo-card__image-container')}>
+          <img src={`images/www/${image}`} className="rvo-card__image" />
+        </div>
       )}
+      <div className={clsx(hasLinkIndicator && 'rvo-card--with-link-indicator')}>
+        <div className="rvo-card__content">
+          {title.length > 0 && (
+            <h3 className="utrecht-heading-3">
+              {link.length ? (
+                <Link href="#" color="zwart" className={clsx(fullCardLink && 'rvo-card_full-card-link')}>
+                  {title}
+                </Link>
+              ) : (
+                <>{title}</>
+              )}
+            </h3>
+          )}
+          {contentMarkup}
+        </div>
+        {hasLinkIndicator && (
+          <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" ariaLabel="Delta naar rechts" role="img" />
+        )}
+      </div>
     </div>
   );
 };
