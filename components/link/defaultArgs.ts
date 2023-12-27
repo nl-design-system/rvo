@@ -13,4 +13,5 @@ export const defaultArgs: ILinkProps = {
   active: false,
   focus: false,
   noUnderline: false,
+  fullContainerLink: false,
 };
