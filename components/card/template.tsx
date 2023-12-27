@@ -11,7 +11,7 @@ import './index.scss';
 
 export interface ICardProps extends PropsWithChildren {
   background: 'none' | 'color' | 'image';
-  backgroundColor?: string;
+  backgroundColor?: 'none' | 'grijs-100';
   backgroundImage?: string;
   padding?: 'sm' | 'md' | 'lg';
   outline?: boolean;
@@ -27,7 +27,11 @@ export const argTypes = {
     options: ['none', 'color', 'image'],
     control: { type: 'radio' },
   },
-  backgroundColor: { if: { arg: 'background', eq: 'color' }, control: { type: 'color' } },
+  backgroundColor: {
+    if: { arg: 'background', eq: 'color' },
+    options: ['', 'grijs-100'],
+    control: { type: 'radio' },
+  },
   backgroundImage: { if: { arg: 'background', eq: 'image' }, control: { type: 'text' } },
   padding: {
     options: ['sm', 'md', 'lg'],
@@ -42,10 +46,10 @@ export const argTypes = {
 };
 
 export const Card: React.FC<ICardProps> = ({
-  // background = defaultArgs.background,
-  // backgroundColor = defaultArgs.backgroundColor,
+  background = defaultArgs.background,
+  backgroundColor = defaultArgs.backgroundColor,
   // backgroundImage = defaultArgs.backgroundImage,
-  // padding = defaultArgs.padding,
+  padding = defaultArgs.padding,
   outline = defaultArgs.outline,
   // link = defaultArgs.link,
   showLinkIndicator = defaultArgs.showLinkIndicator,
@@ -58,7 +62,13 @@ export const Card: React.FC<ICardProps> = ({
 
   return (
     <div
-      className={clsx('rvo-card', showLinkIndicator && 'rvo-card--with-link-indicator', outline && 'rvo-card--outline')}
+      className={clsx(
+        'rvo-card',
+        showLinkIndicator && 'rvo-card--with-link-indicator',
+        outline && 'rvo-card--outline',
+        (outline || background !== 'none') && `rvo-card--padding-${padding}`,
+        background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
+      )}
     >
       <div className="rvo-card__content">{contentMarkup}</div>
       {showLinkIndicator && (
