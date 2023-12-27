@@ -7,7 +7,7 @@
       "border-color": { "value": "{rvo.color.hemelblauw-300}" },
       "item": {
         "icon": {
-          "padding-block-start": { "value": "{rvo.space.xs}" }
+          "padding-block-start": { "value": "{rvo.space.sm}" }
         },
         "summary": {
           "padding-block-end": { "value": "{rvo.space.md}" },
