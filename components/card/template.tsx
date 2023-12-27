@@ -23,7 +23,7 @@ export interface ICardProps extends PropsWithChildren {
   imageSize?: 'sm' | 'md';
   showLinkIndicator?: boolean;
   invertedColors?: boolean;
-  content?: string | React.ReactNode;
+  content?: string;
   className?: string;
 }
 

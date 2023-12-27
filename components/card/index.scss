@@ -168,6 +168,7 @@
   .rvo-card--with-link-indicator {
     align-items: center;
     display: flex;
+    flex: 1;
     gap: var(--rvo-space-xs);
     justify-content: space-between;
   }
