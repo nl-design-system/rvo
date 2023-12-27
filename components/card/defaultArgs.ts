@@ -1,10 +1,13 @@
 import { ICardProps } from './template';
 
 export const defaultArgs: ICardProps = {
-  children: null,
-  title: 'Card title',
-  image: '',
-  content: 'Investeringssubsidie duurzame energie en energiebesparing',
-  showArrow: true,
-  href: '#',
+  background: 'none',
+  backgroundColor: '',
+  backgroundImage: '',
+  padding: 'sm',
+  outline: true,
+  link: '#',
+  showLinkIndicator: true,
+  invertedColors: false,
+  content: '',
 };
