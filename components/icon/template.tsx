@@ -60,7 +60,7 @@ export const argTypes = {
   },
 };
 
-export const Icon: React.FC<IIconProps & { [key: string]: unknown }> = ({
+export const Icon: React.FC<IIconProps | HTMLSpanElement> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,
