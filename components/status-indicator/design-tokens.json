@@ -1,0 +1,24 @@
+{
+  "rvo": {
+    "status-indicator": {
+      "width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "border-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}

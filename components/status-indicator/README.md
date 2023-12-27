@@ -1,0 +1,1 @@
+Documentation for status indicator

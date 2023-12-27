@@ -22,6 +22,7 @@ export interface ILinkProps {
   active?: boolean;
   focus?: boolean;
   noUnderline?: boolean;
+  fullContainerLink?: boolean;
   className?: string;
   target?: string;
   children?: React.ReactNode;
@@ -67,6 +68,9 @@ export const argTypes = {
   noUnderline: {
     control: 'boolean',
   },
+  fullContainerLink: {
+    control: 'boolean',
+  },
 };
 
 export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
@@ -82,6 +86,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   active = defaultArgs.active,
   focus = defaultArgs.focus,
   noUnderline = defaultArgs.noUnderline,
+  fullContainerLink = defaultArgs.fullContainerLink,
   className,
   children,
   ...otherProps
@@ -115,6 +120,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
       noUnderline && 'rvo-link--no-underline',
       color === 'donkerblauw' && 'rvo-link--donkerblauw',
       color === 'zwart' && 'rvo-link--zwart',
+      fullContainerLink && 'rvo-link--full-container',
     ),
     ...otherProps,
   };

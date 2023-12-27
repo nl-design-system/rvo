@@ -85,3 +85,14 @@
     color: var(--rvo-color-donkerblauw);
   }
 }
+
+.rvo-link--full-container::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
