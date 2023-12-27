@@ -3,15 +3,15 @@ import { ICardProps } from './template';
 export const defaultArgs: ICardProps = {
   background: 'none',
   backgroundColor: 'none',
-  backgroundImage: '',
+  backgroundImage: 'mobiel.webp',
   padding: 'sm',
   outline: true,
   title: 'Title',
   link: '#',
-  image: 'home.jpg',
+  image: '',
   imageSize: 'md',
   fullCardLink: true,
   showLinkIndicator: true,
-  invertedColors: false,
+  invertedColors: true,
   content: '',
 };

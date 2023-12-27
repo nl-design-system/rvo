@@ -60,7 +60,7 @@ export const argTypes = {
 export const Card: React.FC<ICardProps> = ({
   background = defaultArgs.background,
   backgroundColor = defaultArgs.backgroundColor,
-  // backgroundImage = defaultArgs.backgroundImage,
+  backgroundImage = defaultArgs.backgroundImage,
   padding = defaultArgs.padding,
   outline = defaultArgs.outline,
   title = defaultArgs.title,
@@ -69,13 +69,14 @@ export const Card: React.FC<ICardProps> = ({
   image = defaultArgs.image,
   imageSize = defaultArgs.imageSize,
   showLinkIndicator = defaultArgs.showLinkIndicator,
-  // invertedColors = defaultArgs.invertedColors,
+  invertedColors = defaultArgs.invertedColors,
   content = defaultArgs.content,
   className = defaultArgs.className,
   children,
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
   const hasLinkIndicator = showLinkIndicator && link.length > 0 && fullCardLink === true;
+  const hasBackgroundImage = background === 'image' && backgroundImage.length > 0;
 
   return (
     <div
@@ -83,23 +84,32 @@ export const Card: React.FC<ICardProps> = ({
         'rvo-card',
         image.length > 0 && 'rvo-card--with-image',
         image.length > 0 && imageSize && `rvo-card--with-image-${imageSize}`,
-        outline && 'rvo-card--outline',
+        outline && background !== 'image' && 'rvo-card--outline',
         (outline || background !== 'none') && `rvo-card--padding-${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
+        hasBackgroundImage && 'rvo-card--with-background-image',
+        invertedColors && 'rvo-card--inverted-colors',
         className,
       )}
     >
+      {hasBackgroundImage && (
+        <div className={clsx('rvo-card__background-image-container')}>
+          <img src={`images/www/${backgroundImage}`} className="rvo-card__background-image" />
+        </div>
+      )}
+
       {image.length > 0 && (
         <div className={clsx('rvo-card__image-container')}>
           <img src={`images/www/${image}`} className="rvo-card__image" />
         </div>
       )}
+
       <div className={clsx(hasLinkIndicator && 'rvo-card--with-link-indicator')}>
         <div className="rvo-card__content">
           {title.length > 0 && (
             <h3 className="utrecht-heading-3">
               {link.length ? (
-                <Link href="#" color="zwart" className={clsx(fullCardLink && 'rvo-card_full-card-link')}>
+                <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
                   {title}
                 </Link>
               ) : (
@@ -110,7 +120,14 @@ export const Card: React.FC<ICardProps> = ({
           {contentMarkup}
         </div>
         {hasLinkIndicator && (
-          <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" ariaLabel="Delta naar rechts" role="img" />
+          <Icon
+            icon="delta-naar-rechts"
+            size="sm"
+            color="hemelblauw"
+            ariaLabel="Delta naar rechts"
+            role="img"
+            className="rvo-card__link-indicator"
+          />
         )}
       </div>
     </div>

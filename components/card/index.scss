@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 .rvo-card {
+  border-radius: 3px;
   position: relative;
 
   &.rvo-card--full-colour {
@@ -24,11 +25,15 @@
     background-color: var(--rvo-color-hemelblauw);
   }
 
-  &.rvo-card--inverted-colours {
-    a.rvo-link--full-click,
-    a.rvo-link--full-click:hover,
-    a.rvo-link--full-click:focus {
-      color: var(--rvo-color-wit);
+  &.rvo-card--inverted-colors {
+    --rvo-link-color: var(--rvo-color-wit);
+    --rvo-link-active-color: var(--rvo-color-wit);
+    --rvo-link-focus-color: var(--rvo-color-wit);
+    --rvo-link-hover-color: var(--rvo-color-wit);
+
+    color: var(--rvo-color-wit);
+    .rvo-card__link-indicator {
+      --utrecht-icon-color: var(--rvo-color-wit);
     }
   }
 
@@ -40,6 +45,7 @@
   }
 
   &.rvo-card--padding-md {
+    border-radius: 5px;
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
@@ -47,6 +53,7 @@
   }
 
   &.rvo-card--padding-lg {
+    border-radius: 5px;
     padding-block-end: var(--rvo-space-lg);
     padding-block-start: var(--rvo-space-lg);
     padding-inline-end: var(--rvo-space-lg);
@@ -54,6 +61,7 @@
   }
 
   &.rvo-card--padding-xl {
+    border-radius: 5px;
     padding-block-end: var(--rvo-space-xl);
     padding-block-start: var(--rvo-space-xl);
     padding-inline-end: var(--rvo-space-xl);
@@ -62,15 +70,15 @@
 
   &.rvo-card--outline {
     border: 1px solid #cbd5e1;
-    border-radius: 3px;
 
-    &.rvo-card--padding-md {
-      border-radius: 5px;
+    &.rvo-card--active {
+      border-color: #64748b;
     }
-  }
 
-  &.rvo-card--outline.rvo-card--active {
-    border-color: #64748b;
+    &:hover,
+    &:focus {
+      border-color: #64748b;
+    }
   }
 
   &.rvo-card--with-image {
@@ -97,19 +105,53 @@
     }
   }
 
-  &:hover,
-  &:focus {
-    border-color: #64748b;
+  &.rvo-card--with-background-image {
+    min-height: 150px;
+    overflow: hidden;
+    padding-block-start: var(--rvo-space-xl);
+    position: relative;
+
+    &::after {
+      background-color: #1e293b;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 50%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .rvo-card__background-image {
+      left: 0;
+      min-height: 400px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
 
+  .rvo-card__content,
+  .rvo-card--with-link-indicator {
+    position: relative;
+    z-index: 1;
+  }
+
+  // TODO: Remove this
   .rvo-paragraph {
     margin-block-end: 0;
     margin-block-start: 0;
   }
 
-  .rvo-card_full-card-link {
+  .rvo-card__full-card-link {
     display: block;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &::after {
       content: "";
@@ -151,31 +193,5 @@
 
   .rvo-icon {
     margin-block-start: 3px;
-  }
-}
-
-.rvo-card--img-bg {
-  min-height: 150px;
-  padding-block-start: var(--rvo-space-xl);
-  position: relative;
-
-  &::after {
-    background-color: #1e293b;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 50%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  .rvo-card-img {
-    left: 0;
-    min-height: 400px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
   }
 }
