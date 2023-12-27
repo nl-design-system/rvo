@@ -50,32 +50,40 @@
   font-weight: var(--rvo-topnav-item-active-font-weight);
 }
 
+.rvo-topnav__item--with-divider {
+  border-left-color: var(--rvo-topnav-item-divider-border-color);
+  border-left-style: var(--rvo-topnav-item-divider-border-style);
+  border-left-width: var(--rvo-topnav-item-divider-border-width);
+  margin-inline-start: var(--rvo-topnav-item-divider-margin-inline-start);
+  padding-inline-start: var(--rvo-topnav-item-divider-padding-inline-start);
+}
+
 .rvo-topnav__item--align-right {
   margin-inline-start: auto;
 }
 
 .rvo-topnav__item .rvo-topnav__link {
-  color: var(--rvo-topnav-link-color);
+  color: var(--rvo-topnav-item-link-color);
   display: inline-flex;
-  padding-block-end: var(--rvo-topnav-link-padding-block-end);
-  padding-block-start: var(--rvo-topnav-link-padding-block-start);
-  padding-inline-end: var(--rvo-topnav-link-padding-inline-end);
-  padding-inline-start: var(--rvo-topnav-link-padding-inline-start);
-  text-decoration: var(--rvo-topnav-link-text-decoration);
+  padding-block-end: var(--rvo-topnav-item-link-padding-block-end);
+  padding-block-start: var(--rvo-topnav-item-link-padding-block-start);
+  padding-inline-end: var(--rvo-topnav-item-link-padding-inline-end);
+  padding-inline-start: var(--rvo-topnav-item-link-padding-inline-start);
+  text-decoration: var(--rvo-topnav-item-link-text-decoration);
 
   @extend .rvo-layout-row;
   @extend .rvo-layout-gap--sm;
 
   &:focus {
-    color: var(--rvo-topnav-link-focus-color);
+    color: var(--rvo-topnav-item-link-focus-color);
   }
 
   &:hover {
-    text-decoration: var(--rvo-topnav-link-hover-text-decoration);
+    text-decoration: var(--rvo-topnav-item-link-hover-text-decoration);
   }
 
   .rvo-icon {
-    --utrecht-icon-color: var(--rvo-topnav-link-color);
+    --utrecht-icon-color: var(--rvo-topnav-item-link-color);
   }
 }
 

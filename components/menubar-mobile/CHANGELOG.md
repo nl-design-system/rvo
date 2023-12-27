@@ -1,3 +1,6 @@
+*@nl-rvo/component-library-css@1.0.0-alpha.365*:
+Add option for menu item divider by using `rvo-topnav__item--with-divider` modifier
+
 *@nl-rvo/component-library-css@1.0.0-alpha.290*:
 Adjusted top bar to be a `button`
 

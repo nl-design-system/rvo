@@ -156,6 +156,17 @@
     }
   }
 
+  .rvo-topnav__item--with-divider {
+    border-left: 0;
+    border-top-color: var(--rvo-mobile-menu-item-divider-border-color);
+    border-top-style: var(--rvo-mobile-menu-item-divider-border-style);
+    border-top-width: var(--rvo-mobile-menu-item-divider-border-width);
+    margin-block-start: var(--rvo-mobile-menu-item-divider-margin-block-start);
+    margin-inline-start: 0;
+    padding-block-start: var(--rvo-mobile-menu-item-divider-padding-block-start);
+    padding-inline-start: 0;
+  }
+
   .rvo-topnav__link::before {
     background-color: var(--rvo-mobile-menu-item-active-indicator-background-color);
     border-radius: var(--rvo-mobile-menu-item-active-indicator-border-radius);
