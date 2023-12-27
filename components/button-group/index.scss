@@ -2,20 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-.rvo-button-group {
-  padding-block-end: var(--rvo-button-group-padding-block-end);
-  padding-block-start: var(--rvo-button-group-padding-block-start);
-  padding-inline-end: var(--rvo-button-group-padding-inline-end);
-  padding-inline-start: var(--rvo-button-group-padding-inline-start);
+.utrecht-button-group {
+  flex-wrap: wrap;
 }
 
-@media (min-width: 612px) {
-  .rvo-button-group {
-    padding-inline-end: 0;
-    padding-inline-start: 0;
-  }
-}
-
-.rvo-button-group__align-right {
+.utrecht-button-group__align-right {
   margin-inline-start: auto;
 }

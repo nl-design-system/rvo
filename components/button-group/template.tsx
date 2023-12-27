@@ -5,9 +5,9 @@
 import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { Button, IButtonProps } from '../button/template';
+import '../layout-column-row/index.scss';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
-import '../layout-column-row/index.scss';
 
 export interface IButtonGroupProps {
   buttonsLeft?: IButtonProps[];
@@ -43,7 +43,7 @@ export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
         })}
       {!children &&
         buttonsRight.map((buttonProps, index) => (
-          <Button key={index} {...buttonProps} className="rvo-button-group__align-right" />
+          <Button key={index} {...buttonProps} className="utrecht-button-group__align-right" />
         ))}
     </UtrechtButtonGroup>
   );
