@@ -48,9 +48,9 @@ export const Submenu = {
 
       useIcons: true,
       iconPlacement: 'before',
-      menuMaxWidth: 'none',
+      maxWidth: 'none',
       type: 'primary',
-      useDeltaForActiveItem: true,
+      deltaForActiveItem: true,
     },
 
     sub: {
@@ -74,7 +74,7 @@ export const Submenu = {
 
       useIcons: true,
       iconPlacement: 'before',
-      menuMaxWidth: 'none',
+      maxWidth: 'none',
       type: 'sub',
     },
   },
@@ -108,9 +108,9 @@ export const SubmenuGrid = {
 
       useIcons: true,
       iconPlacement: 'before',
-      menuMaxWidth: 'none',
+      maxWidth: 'none',
       type: 'primary',
-      useDeltaForActiveItem: true,
+      deltaForActiveItem: true,
     },
 
     sub: {
@@ -161,7 +161,7 @@ export const SubmenuGrid = {
 
       useIcons: true,
       iconPlacement: 'before',
-      menuMaxWidth: 'none',
+      maxWidth: 'none',
       type: 'sub-grid',
     },
   },

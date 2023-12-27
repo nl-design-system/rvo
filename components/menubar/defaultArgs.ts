@@ -3,7 +3,7 @@ import { IMenuBarProps } from './template';
 
 export const defaultItems = [
   { label: 'Home', icon: 'home' as IconType, link: '#' },
-  { label: 'Mijn aanvragen', icon: 'publicatie' as IconType, useDivider: true, link: '#' },
+  { label: 'Mijn aanvragen', icon: 'publicatie' as IconType, link: '#' },
   { label: 'Nieuwe aanvraag', icon: 'plus' as IconType, link: '#' },
   { label: 'Uitloggen', icon: 'versleutelen' as IconType, link: '#', align: 'right' as const },
 ];
@@ -14,7 +14,8 @@ export const defaultArgs: IMenuBarProps = {
   items: defaultItems,
   useIcons: true,
   iconPlacement: 'before',
-  menuMaxWidth: 'none',
+  maxWidth: 'none',
   type: 'primary',
-  useDeltaForActiveItem: false,
+  deltaForActiveItem: false,
+  horizontalRule: true,
 };

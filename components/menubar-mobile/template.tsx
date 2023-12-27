@@ -6,7 +6,7 @@ import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Icon } from '../icon/template';
-import { IMenuBarItem, IMenuBarProps, parseMenuItem } from '../menubar/template';
+import { IMenuBarItem, parseMenuItem } from '../menubar/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
@@ -39,7 +39,13 @@ export const argTypes = {
   },
 };
 
-export interface IMobileMenuBarProps extends IMenuBarProps {
+export interface IMobileMenuBarProps {
+  size: 'sm' | 'md' | 'lg';
+  items: IMenuBarItem[];
+  useIcons: boolean;
+  iconPlacement?: 'before' | 'after';
+  deltaForActiveItem?: boolean;
+  children?: React.ReactNode;
   submenuItems: IMenuBarItem[];
   isOpen: boolean;
 }
@@ -51,7 +57,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   iconPlacement = defaultArgs.iconPlacement,
   submenuItems = defaultArgs.submenuItems,
   isOpen: isOpenArg = defaultArgs.isOpen,
-  useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
+  deltaForActiveItem = defaultArgs.deltaForActiveItem,
   children,
 }: IMobileMenuBarProps) => {
   let itemsMarkup;
@@ -68,7 +74,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
             useIcon: useIcons,
             size,
             iconPlacement,
-            useDeltaForActiveItem,
+            deltaForActiveItem,
             useDivider: item.useDivider,
           })}
           {item.active &&
@@ -84,7 +90,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
                   size,
                   iconPlacement,
                   type: 'sub',
-                  useDeltaForActiveItem,
+                  deltaForActiveItem,
                   useDivider: item.useDivider,
                 })}
               </React.Fragment>
@@ -118,7 +124,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
         <div className={clsx('rvo-topnav__background')} onClick={onClick}>
           <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
             <Icon icon="kruis" size={size as any} className="rvo-mobile-menu__close-icon" />
-            <ul className="rvo-topnav__list">{itemsMarkup}</ul>
+            <ul className={clsx('rvo-topnav__list', 'rvo-topnav__list--vertical')}>{itemsMarkup}</ul>
           </nav>
         </div>
       )}
