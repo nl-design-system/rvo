@@ -9,8 +9,8 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
+import '../common/rhs-update.scss';
 
 const Percelen = () => {
   return (
@@ -55,7 +55,7 @@ const Percelen = () => {
               size="lg"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
         </div>

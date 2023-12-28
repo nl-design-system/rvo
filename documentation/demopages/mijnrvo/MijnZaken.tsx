@@ -1,7 +1,7 @@
 import { Fieldset, Header, Heading, Icon, Link, MaxWidthLayout, MenuBar, TextInputField } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
+import '../common/style.scss';
 
 const MijnZaken = () => {
   return (
@@ -14,13 +14,7 @@ const MijnZaken = () => {
             <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
             <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
           </summary>
-          <MenuBar
-            items={defaultMenuBarItemsMijnRVO}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="md"
-          />
+          <MenuBar items={defaultMenuBarItemsMijnRVO} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         </details>
         <MenuBar
           items={[
@@ -42,7 +36,7 @@ const MijnZaken = () => {
           size="lg"
           useIcons={true}
           iconPlacement="before"
-          menuMaxWidth="md"
+          maxWidth="md"
         />
 
         <div className="rvo-hero rvo-hero--man-met-laptop">
@@ -236,10 +230,10 @@ const MijnZaken = () => {
             </div>
           </MaxWidthLayout>
           {/*
-              
+
               RR-2022-10-11 Geprobeerd op te lossen met tabellen maar lijkt toch niet de beste manier.
               Tabellen zijn om dingen te vergelijken en werken slecht repsonsive. Een lijst met items is een betere oplossing.
-              
+
               <div className="rvo-table--responsive">
                 <table className="rvo-table">
                   <thead className="rvo-table-head">

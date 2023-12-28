@@ -1,7 +1,7 @@
 import { Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
+import '../common/style.scss';
 
 const Zaak = () => {
   return (
@@ -14,21 +14,9 @@ const Zaak = () => {
             <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
             <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
           </summary>
-          <MenuBar
-            items={defaultMenuBarItemsMijnRVO}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="md"
-          />
+          <MenuBar items={defaultMenuBarItemsMijnRVO} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         </details>
-        <MenuBar
-          items={defaultMenuBarItemsMijnRVO}
-          size="lg"
-          useIcons={true}
-          iconPlacement="before"
-          menuMaxWidth="md"
-        />
+        <MenuBar items={defaultMenuBarItemsMijnRVO} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
 
         <MaxWidthLayout size="md">
           <main className="rvo-main rvo-main--zaak">

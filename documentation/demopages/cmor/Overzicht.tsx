@@ -12,8 +12,8 @@ import {
   StatusIcon,
   Tag,
 } from '@nl-rvo/components';
-import '../common/rhs-update.scss';
 import '../common/cmor.scss';
+import '../common/rhs-update.scss';
 
 const Overzicht = () => {
   return (
@@ -59,14 +59,14 @@ const Overzicht = () => {
                   size="md"
                   useIcons={true}
                   iconPlacement="before"
-                  menuMaxWidth="md"
+                  maxWidth="md"
                 />
                 <MenuBar
                   items={[{ label: 'Hulp & Contact', link: '#', icon: 'communicatie' }]}
                   size="md"
                   useIcons={true}
                   iconPlacement="before"
-                  menuMaxWidth="md"
+                  maxWidth="md"
                 />
                 <MenuBar
                   items={[
@@ -76,7 +76,7 @@ const Overzicht = () => {
                   size="md"
                   useIcons={true}
                   iconPlacement="before"
-                  menuMaxWidth="md"
+                  maxWidth="md"
                 />
               </div>
             </details>
@@ -106,7 +106,7 @@ const Overzicht = () => {
               size="lg"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="lg"
+              maxWidth="lg"
             />
           </div>
         </div>
@@ -131,7 +131,7 @@ const Overzicht = () => {
               size="md"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
           <div className="rvo-content--cmor rvo-content--overzicht">

@@ -69,7 +69,7 @@ const PercelenRegistreren = () => {
                   size="lg"
                   useIcons={true}
                   iconPlacement="before"
-                  menuMaxWidth="lg"
+                  maxWidth="lg"
                 />
               </div>
             </details>
@@ -121,7 +121,7 @@ const PercelenRegistreren = () => {
               size="lg"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="lg"
+              maxWidth="lg"
             />
           </div>
         </div>

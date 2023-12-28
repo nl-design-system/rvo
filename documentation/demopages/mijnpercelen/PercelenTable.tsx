@@ -8,8 +8,8 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
+import '../common/rhs-update.scss';
 
 const PercelenTable = () => {
   return (
@@ -42,7 +42,7 @@ const PercelenTable = () => {
             size="lg"
             useIcons={true}
             iconPlacement="before"
-            menuMaxWidth="md"
+            maxWidth="md"
           />
         </div>
         <main className="rvo-main--mijn-percelen rvo-main--mijn-percelen-table">

@@ -14,8 +14,8 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import '../common/style.scss';
 
 const Formulier = () => {
   return (
@@ -34,9 +34,9 @@ const Formulier = () => {
             <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
             <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
           </summary>
-          <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
+          <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
         </details>
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="sm">
           <main>
             {/* <ProgressTracker /> */}

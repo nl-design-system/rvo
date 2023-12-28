@@ -13,14 +13,14 @@ import {
   TextInputField,
 } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import '../common/style.scss';
 
 const Aanvrager = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="md" />
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
           <ProgressTracker

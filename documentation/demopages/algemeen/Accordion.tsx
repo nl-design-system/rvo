@@ -7,7 +7,7 @@ const Accordion = () => {
     <div className="rvo-demo-page rvo-demo-page--mijn-rvo">
       <div className="rvo-header-content">
         <Header />
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" menuMaxWidth="sm" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="sm" />
         <MaxWidthLayout size="sm">
           <main className="rvo-main">
             <LayoutColumnRow size="sm">

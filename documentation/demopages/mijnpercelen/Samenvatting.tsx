@@ -1,6 +1,6 @@
 import { MenuBar } from '@nl-rvo/components';
-import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
+import '../common/rhs-update.scss';
 
 const Samenvatting = () => {
   return (
@@ -45,7 +45,7 @@ const Samenvatting = () => {
               size="lg"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
         </div>

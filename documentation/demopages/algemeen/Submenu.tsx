@@ -15,7 +15,7 @@ const Submenu = () => {
             ]}
             size="md"
             useIcons={false}
-            menuMaxWidth="md"
+            maxWidth="md"
           />
           <div className="rvo-tmp-submenu-wrapper">
             <MenuBar
@@ -26,7 +26,7 @@ const Submenu = () => {
               ]}
               size="md"
               useIcons={false}
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
         </div>
