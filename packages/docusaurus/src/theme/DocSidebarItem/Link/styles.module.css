@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 
-.activeLink {
-  color: var(--rvo-link-color);
-  text-decoration: underline;
+.activeLink,
+.activeLink:hover {
+  font-weight: var(--rvo-font-weight-bold) !important;
 }
