@@ -57,7 +57,7 @@
 
       &::before {
         background-color: var(--rvo-color-hemelblauw);
-        border-radius: 3px;
+        border-radius: var(--rvo-border-radius-sm);
         content: "";
         display: block;
         height: 20px;
@@ -186,7 +186,7 @@
   /* @PERCELEN FILTER */
 
   div.utrecht-form-fieldset.rvo-percelen-filter-form {
-    border-radius: 3px;
+    border-radius: var(--rvo-border-radius-sm);
     margin-block-end: 0;
 
     .utrecht-form-field {
@@ -331,7 +331,7 @@
   .rvo-fake-checkbox summary::before {
     background-color: var(--rvo-color-wit);
     border: 1px solid var(--rvo-color-logoblauw);
-    border-radius: 3px;
+    border-radius: var(--rvo-border-radius-sm);
     content: "";
     display: block;
     height: 24px;
@@ -340,7 +340,7 @@
 
   .rvo-fake-checkbox[open] summary::after {
     background-color: var(--rvo-color-logoblauw);
-    border-radius: 3px;
+    border-radius: var(--rvo-border-radius-sm);
     content: "";
     display: block;
     height: 20px;

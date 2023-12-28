@@ -21,7 +21,7 @@
   // BUTTONS //
 
   .rvo-rhs-update-component .utrecht-button {
-    border-radius: 3px;
+    border-radius: var(--rvo-border-radius-sm);
 
     &.utrecht-button--disabled {
       background-color: #e2e8f0;
@@ -220,7 +220,7 @@
 
       &::before {
         background-color: var(--rvo-color-hemelblauw);
-        border-radius: 3px;
+        border-radius: var(--rvo-border-radius-sm);
         content: "";
         display: block;
         height: 20px;
@@ -320,14 +320,14 @@
     .utrecht-select,
     input[type="file"] {
       border-color: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
       border-width: 1px;
       color: var(--rvo-color-logoblauw);
     }
 
     .rvo-select-wrapper::before {
       background: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
     }
 
     .rvo-checkbox__input::before {
@@ -342,7 +342,7 @@
     }
 
     .rvo-checkbox__input {
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
     }
 
     .rvo-checkbox__input::after {
@@ -353,7 +353,7 @@
     .rvo-checkbox__input:checked::before,
     .rvo-select-wrapper::before {
       background: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
     }
 
     .utrecht-custom-radio-button:checked,
@@ -373,7 +373,7 @@
 
   .rvo-card {
     background-color: var(--rvo-color-wit);
-    border-radius: 3px;
+    border-radius: var(--rvo-border-radius-sm);
     padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
