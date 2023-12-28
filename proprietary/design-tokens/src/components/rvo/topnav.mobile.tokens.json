@@ -59,7 +59,7 @@
           "font-weight": { "value": "{rvo.font-weight.bold}" },
           "indicator": {
             "background-color": { "value": "{rvo.color.hemelblauw}" },
-            "border-radius": { "value": "4px" },
+            "border-radius": { "value": "{rvo.border-radius.md}" },
             "height": { "value": "20px" },
             "width": { "value": "4px" },
             "offset": { "value": "-10px" }

@@ -5,7 +5,7 @@
       "border-bottom-color": {},
       "border-bottom-width": {},
       "border-color": {},
-      "border-radius": { "value": "3px" },
+      "border-radius": { "value": "{rvo.border-radius.sm}" },
       "border-width": { "value": "0" },
       "color": {},
       "hover-color": { "value": "{rvo.color.hemelblauw}" },

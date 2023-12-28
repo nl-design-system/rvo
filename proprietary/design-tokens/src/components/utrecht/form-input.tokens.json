@@ -3,7 +3,7 @@
     "form-input": {
       "background-color": { "value": "{rvo.color.wit}" },
       "border-color": { "value": "{rvo.color.logoblauw}" },
-      "border-radius": { "value": "3px" },
+      "border-radius": { "value": "{rvo.border-radius.sm}" },
       "border-width": { "value": "1px" },
       "color": { "value": "{rvo.color.logoblauw}" },
       "font-family": {},
