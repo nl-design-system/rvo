@@ -1,7 +1,5 @@
 <!-- @license CC0-1.0 -->
 
-# Card
-
 Een card groepeert informatie die gerelateerd is aan elkaar. Over het algemeen is het mogelijk om via de card door te klikken naar meer informatie over het onderwerp.
 
 # Wanneer gebruik je een card?
