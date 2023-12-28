@@ -31,7 +31,7 @@ export interface IMenuBarProps {
   deltaForActiveItem?: boolean;
   children?: React.ReactNode;
   horizontalRule?: boolean;
-  linkColor: 'donkerblauw' | 'hemelblauw' | 'zwart';
+  linkColor?: 'donkerblauw' | 'hemelblauw' | 'zwart';
 }
 
 export const argTypes = {
