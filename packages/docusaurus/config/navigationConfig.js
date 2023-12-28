@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         type: 'doc',
-        docId: 'design-tokens-roos/color',
+        docId: 'design-tokens/color',
         position: 'left',
         label: 'Huisstijl',
       },

@@ -37,7 +37,7 @@ export default function DocPageLayoutSidebar({ sidebar, hiddenSidebarContainer, 
           setHiddenSidebar(true);
         }
       }}
-      style={{ paddingTop: '2.2rem', border: 'none', width: 'var(--doc-sidebar-width)' }}
+      style={{ border: 'none', width: 'var(--doc-sidebar-width)' }}
     >
       <ResetOnSidebarChange>
         <DocSidebar sidebar={sidebar} path={pathname} onCollapse={toggleSidebar} isHidden={hiddenSidebar} />

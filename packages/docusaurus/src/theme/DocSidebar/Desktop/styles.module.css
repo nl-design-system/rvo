@@ -2,7 +2,10 @@
   .sidebar {
     display: flex;
     flex-direction: column;
-    padding-block-start: var(--ifm-navbar-height);
+    height: 100%;
+    padding-block-end: 0 !important;
+    padding-block-start: var(--rvo-size-2xl) !important;
+    padding-inline-start: var(--rvo-size-2xl) !important;
     transition: opacity 50ms ease;
     width: var(--doc-sidebar-width);
   }

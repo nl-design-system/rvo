@@ -46,7 +46,7 @@ export default function DocItemContent({ children }) {
       {syntheticTitle && (
         <header className="rvo-layout-column rvo-layout-gap--xs">
           {showSectionTitle && <div className={styles.sectionTitle}>{sectionTitle}</div>}
-          <Heading type="h1" textContent={syntheticTitle} />
+          <Heading type="h1" textContent={syntheticTitle} noMargins={true} />
         </header>
       )}
       <MDXContent>{children}</MDXContent>

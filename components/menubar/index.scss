@@ -40,6 +40,10 @@
   margin-block-start: var(--rvo-topnav-list-margin-block-start);
   padding-inline-start: 0;
 
+  &:not(.rvo-topnav__list--vertical):first-child .rvo-topnav__link {
+    padding-inline-start: 0;
+  }
+
   &.rvo-topnav__list--vertical {
     flex-direction: column;
 
@@ -75,10 +79,6 @@
       .rvo-icon {
         --utrecht-icon-color: var(--rvo-topnav-item-link-color);
       }
-    }
-
-    &:first-child .rvo-topnav__link {
-      padding-inline-start: 0;
     }
 
     &:not(.rvo-topnav__item--active) .rvo-topnav__link {
