@@ -312,10 +312,20 @@
             "inherits": true
           }
         },
-        "padding-inline-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
+        "link": {
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "active": {
+            "padding-inline-start": {
+              "css": {
+                "syntax": "<length>",
+                "inherits": true
+              }
+            }
           }
         }
       }
