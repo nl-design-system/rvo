@@ -26,7 +26,7 @@ const Formulier = () => {
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main>
-            <LayoutColumnRow size="2xl" row={true} alignToTop={true}>
+            <LayoutColumnRow size="2xl" row={true} alignItems="start">
               <ProgressTracker />
               <div className="rvo-form">
                 <LayoutColumnRow size="sm">
