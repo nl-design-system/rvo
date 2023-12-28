@@ -30,7 +30,7 @@ export interface IMenuBarProps {
   type?: 'primary' | 'sub' | 'sub-grid';
   deltaForActiveItem?: boolean;
   children?: React.ReactNode;
-  horizontalRule: boolean;
+  horizontalRule?: boolean;
 }
 
 export const argTypes = {
