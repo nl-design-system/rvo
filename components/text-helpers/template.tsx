@@ -2,10 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import './index.scss';
 
-export const TextHelpers: React.FC<PropsWithChildren> = () => {
+export const TextHelpers: React.FC = () => {
   return (
     <div>
       <p>De volgende helperklassen kunnen optioneel worden gebruikt voor tekst:</p>
