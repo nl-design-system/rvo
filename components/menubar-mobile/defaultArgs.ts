@@ -12,5 +12,5 @@ export const defaultArgs: IMobileMenuBarProps = {
   submenuItems: [],
   useIcons: true,
   iconPlacement: 'before',
-  isOpen: true,
+  isOpen: false,
 };
