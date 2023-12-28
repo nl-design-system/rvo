@@ -10,6 +10,11 @@
       "lg": {
         "font-size": { "value": "{rvo.font-size.lg}" }
       },
+      "horizontal-rule": {
+        "border-bottom-width": { "value": "1px" },
+        "border-bottom-style": { "value": "solid" },
+        "border-bottom-color": { "value": "{rvo.color.grijs-200}" }
+      },
       "toggle": {
         "justify-content": { "value": "flex-end" },
         "background-color": { "value": "transparent" },

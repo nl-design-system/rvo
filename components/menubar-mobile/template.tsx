@@ -48,6 +48,7 @@ export interface IMobileMenuBarProps {
   children?: React.ReactNode;
   submenuItems: IMenuBarItem[];
   isOpen: boolean;
+  horizontalRule?: boolean;
 }
 
 export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
@@ -58,6 +59,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   submenuItems = defaultArgs.submenuItems,
   isOpen: isOpenArg = defaultArgs.isOpen,
   deltaForActiveItem = defaultArgs.deltaForActiveItem,
+  horizontalRule = defaultArgs.horizontalRule,
   children,
 }: IMobileMenuBarProps) => {
   let itemsMarkup;
@@ -113,7 +115,12 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
 
   return (
     <div
-      className={clsx('rvo-mobile-menu', `rvo-mobile-menu--${size}`, `rvo-mobile-menu--${isOpen ? 'open' : 'closed'}`)}
+      className={clsx(
+        'rvo-mobile-menu',
+        `rvo-mobile-menu--${size}`,
+        `rvo-mobile-menu--${isOpen ? 'open' : 'closed'}`,
+        horizontalRule && 'rvo-mobile-menu--horizontal-rule',
+      )}
       aria-expanded={isOpen}
     >
       <UtrechtButton className={clsx('rvo-mobile-menu__toggle')} onClick={onClick}>

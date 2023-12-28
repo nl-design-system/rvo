@@ -25,6 +25,26 @@
           }
         }
       },
+      "horizontal-rule": {
+        "border-bottom-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "border-bottom-style": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "border-bottom-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
       "toggle": {
         "justify-content": {
           "css": {

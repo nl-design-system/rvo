@@ -18,6 +18,12 @@
     font-size: var(--rvo-mobile-menu-lg-font-size);
   }
 
+  &.rvo-mobile-menu--horizontal-rule {
+    border-bottom-color: var(--rvo-mobile-menu-horizontal-rule-border-bottom-color);
+    border-bottom-style: var(--rvo-mobile-menu-horizontal-rule-border-bottom-style);
+    border-bottom-width: var(--rvo-mobile-menu-horizontal-rule-border-bottom-width);
+  }
+
   .rvo-mobile-menu__toggle {
     --utrecht-button-color: var(--rvo-mobile-menu-toggle-color, --rvo-mobile-menu-link-color);
     --utrecht-button-hover-color: var(--rvo-mobile-menu-toggle-hover-color, --rvo-mobile-menu-link-hover-color);
