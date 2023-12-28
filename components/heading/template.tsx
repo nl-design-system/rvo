@@ -123,7 +123,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   switch (type) {
     default:
     case 'h1':
-      headingMarkup = <h1 {...props}>test{children || headingMarkup}</h1>;
+      headingMarkup = <h1 {...props}>{children || headingMarkup}</h1>;
       break;
     case 'h2':
       headingMarkup = <h2 {...props}>{children || headingMarkup}</h2>;
