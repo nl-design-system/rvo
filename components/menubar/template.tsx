@@ -31,6 +31,7 @@ export interface IMenuBarProps {
   deltaForActiveItem?: boolean;
   children?: React.ReactNode;
   horizontalRule?: boolean;
+  linkColor: 'donkerblauw' | 'hemelblauw' | 'zwart';
 }
 
 export const argTypes = {
@@ -69,6 +70,10 @@ export const argTypes = {
   horizontalRule: {
     control: 'boolean',
   },
+  linkColor: {
+    options: ['hemelblauw', 'zwart'],
+    control: { type: 'radio' },
+  },
 };
 
 export const parseMenuItem = ({
@@ -83,6 +88,7 @@ export const parseMenuItem = ({
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
   deltaForActiveItem = defaultArgs.deltaForActiveItem,
+  linkColor = defaultArgs.linkColor,
   useDivider = false,
   ...otherProps
 }) => {
@@ -134,7 +140,11 @@ export const parseMenuItem = ({
       )}
       {...otherProps}
     >
-      <Link className="rvo-topnav__link" {...(typeof link === 'function' ? { onClick: link } : { href: link })}>
+      <Link
+        className="rvo-topnav__link"
+        {...(typeof link === 'function' ? { onClick: link } : { href: link })}
+        color={linkColor}
+      >
         {itemMarkup}
       </Link>
     </li>
@@ -151,6 +161,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   type = defaultArgs.type,
   deltaForActiveItem = defaultArgs.deltaForActiveItem,
   horizontalRule = defaultArgs.horizontalRule,
+  linkColor = defaultArgs.linkColor,
   children,
 }: IMenuBarProps) => {
   let itemsMarkup = null;
@@ -171,6 +182,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           iconPlacement,
           deltaForActiveItem,
           useDivider: item.useDivider,
+          linkColor,
         }),
       );
 
@@ -191,6 +203,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
             iconPlacement,
             deltaForActiveItem,
             useDivider: item.useDivider,
+            linkColor,
           }),
         ),
     );

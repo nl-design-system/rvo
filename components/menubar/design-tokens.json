@@ -125,12 +125,6 @@
           }
         },
         "link": {
-          "color": {
-            "css": {
-              "syntax": "<color>",
-              "inherits": true
-            }
-          },
           "text-decoration": {
             "css": {
               "syntax": "<*>",
@@ -168,12 +162,6 @@
             }
           },
           "focus": {
-            "color": {
-              "css": {
-                "syntax": "<color>",
-                "inherits": true
-              }
-            },
             "text-decoration": {
               "css": {
                 "syntax": "<*>",

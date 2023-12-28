@@ -35,7 +35,6 @@
           "padding-inline-start": { "value": "{rvo.space.md}" }
         },
         "link": {
-          "color": { "value": "{rvo.color.hemelblauw}" },
           "text-decoration": { "value": "none" },
           "font-weight": { "value": "{rvo.font-weight.normal}" },
           "padding-block-start": { "value": "{rvo.space.sm}" },
@@ -43,7 +42,6 @@
           "padding-inline-start": { "value": "{rvo.space.sm}" },
           "padding-inline-end": { "value": "{rvo.space.md}" },
           "focus": {
-            "color": { "value": "{rvo.color.hemelblauw}" },
             "text-decoration": { "value": "underline" },
             "font-weight": { "value": "{rvo.font-weight.normal}" }
           },
