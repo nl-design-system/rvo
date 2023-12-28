@@ -17,7 +17,7 @@ export interface IAlertProps {
   /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
-  condensed?: boolean;
+  padding?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
@@ -36,8 +36,9 @@ export const argTypes = {
   closable: {
     control: 'boolean',
   },
-  condensed: {
-    control: 'boolean',
+  padding: {
+    options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+    control: { type: 'radio' },
   },
 };
 
@@ -46,7 +47,7 @@ export const Alert: React.FC<IAlertProps> = ({
   heading = defaultArgs.heading,
   content = defaultArgs.content,
   closable = defaultArgs.closable,
-  condensed = defaultArgs.condensed,
+  padding = defaultArgs.padding,
   children,
 }: IAlertProps) => {
   let iconMarkup;
@@ -69,7 +70,7 @@ export const Alert: React.FC<IAlertProps> = ({
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
-    <div className={clsx('rvo-alert', `rvo-alert--${kind}`, condensed && 'rvo-alert--condensed')}>
+    <div className={clsx('rvo-alert', `rvo-alert--${kind}`, padding && `rvo-alert--padding-${padding}`)}>
       {iconMarkup}
       <div className="rvo-alert-text">
         {heading && heading !== '' && <strong>{heading}</strong>}

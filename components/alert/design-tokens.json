@@ -75,29 +75,161 @@
           }
         }
       },
-      "condensed": {
-        "padding-block-end": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
+      "padding": {
+        "xs": {
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
           }
         },
-        "padding-block-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
+        "sm": {
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
           }
         },
-        "padding-inline-end": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
+        "md": {
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
           }
         },
-        "padding-inline-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
+        "lg": {
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        },
+        "xl": {
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        },
+        "2xl": {
+          "padding-block-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-block-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-end": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          },
+          "padding-inline-start": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
           }
         }
       }
