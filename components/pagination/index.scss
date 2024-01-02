@@ -5,7 +5,7 @@
 .rvo-pagination {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--rvo-space-sm);
+  gap: var(--rvo-pagination-gap);
   justify-content: center;
 
   @media (min-width: 780px) {
@@ -15,10 +15,11 @@
 
 .rvo-pagination__list {
   display: flex;
-  gap: var(--rvo-space-sm);
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-inline-start: 0;
+  gap: var(--rvo-pagination-gap);
+  margin-block-end: var(--rvo-pagination-list-margin-block-end);
+  margin-block-start: var(--rvo-pagination-list-margin-block-start);
+  padding-inline-end: var(--rvo-pagination-list-padding-inline-end);
+  padding-inline-start: var(--rvo-pagination-list-padding-inline-start);
 }
 
 .rvo-pagination__item {
