@@ -16,10 +16,11 @@ export interface ITagProps {
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   showHover?: boolean;
-  useHover?: boolean;
   active?: boolean;
   focus?: boolean;
   className?: string;
+  link?: string;
+  linkTarget?: '_blank' | '_self' | '_parent' | '_top';
 }
 
 export const argTypes = {
@@ -41,14 +42,18 @@ export const argTypes = {
   showHover: {
     control: 'boolean',
   },
-  useHover: {
-    control: 'boolean',
-  },
   active: {
     control: 'boolean',
   },
   focus: {
     control: 'boolean',
+  },
+  link: {
+    control: 'text',
+  },
+  linkTarget: {
+    options: ['_blank', '_self', '_parent', '_top'],
+    control: { type: 'radio' },
   },
 };
 
@@ -59,9 +64,10 @@ export const Tag: React.FC<ITagProps> = ({
   icon = defaultArgs.icon,
   active = defaultArgs.active,
   showHover = defaultArgs.showHover,
-  useHover = defaultArgs.useHover,
   focus = defaultArgs.focus,
   className,
+  link,
+  linkTarget = '_self',
 }: ITagProps) => {
   // Parse icon markup
   let iconClassName = '';
@@ -92,8 +98,12 @@ export const Tag: React.FC<ITagProps> = ({
       break;
   }
 
+  const TagElement = link ? 'a' : 'div';
+
   return (
-    <div
+    <TagElement
+      {...(link ? { href: link } : {})}
+      target={linkTarget}
       className={clsx(
         'rvo-tag',
         className,
@@ -102,7 +112,7 @@ export const Tag: React.FC<ITagProps> = ({
           'rvo-tag--active': active,
           'rvo-tag--show-hover': showHover,
           'rvo-tag--focus': focus,
-          'rvo-tag--hover': useHover,
+          'rvo-tag--hover': link,
         },
         type === 'default' && 'rvo-tag--default',
         type === 'info' && 'rvo-tag--info',
@@ -114,7 +124,7 @@ export const Tag: React.FC<ITagProps> = ({
       {showIcon === 'before' && iconMarkup}
       {content}
       {showIcon === 'after' && iconMarkup}
-    </div>
+    </TagElement>
   );
 };
 

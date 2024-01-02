@@ -5,8 +5,9 @@ export const defaultArgs: ITagProps = {
   type: 'default',
   showIcon: 'no',
   icon: 'home',
-  useHover: false,
   showHover: false,
   active: false,
   focus: false,
+  link: '',
+  linkTarget: '_self',
 };
