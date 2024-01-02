@@ -135,7 +135,6 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   } else {
     return (
       <span {...props}>
-        {' '}
         {showIcon === 'before' && iconMarkup}
         {children || content}
         {showIcon === 'after' && iconMarkup}

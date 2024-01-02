@@ -1,0 +1,38 @@
+{
+  "rvo": {
+    "pagination": {
+      "gap": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "list": {
+        "margin-block-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "margin-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-inline-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "padding-inline-end": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}
