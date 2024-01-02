@@ -15,8 +15,8 @@ export interface ITagProps {
   type: 'default' | 'info' | 'warning' | 'error' | 'success';
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
-  hover?: boolean;
-  disableHover?: boolean;
+  showHover?: boolean;
+  useHover?: boolean;
   active?: boolean;
   focus?: boolean;
   className?: string;
@@ -38,10 +38,10 @@ export const argTypes = {
     control: { type: 'select' },
     options: iconOptions,
   },
-  hover: {
+  showHover: {
     control: 'boolean',
   },
-  disableHover: {
+  useHover: {
     control: 'boolean',
   },
   active: {
@@ -58,8 +58,8 @@ export const Tag: React.FC<ITagProps> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   active = defaultArgs.active,
-  hover = defaultArgs.hover,
-  disableHover = defaultArgs.disableHover,
+  showHover = defaultArgs.showHover,
+  useHover = defaultArgs.useHover,
   focus = defaultArgs.focus,
   className,
 }: ITagProps) => {
@@ -100,9 +100,9 @@ export const Tag: React.FC<ITagProps> = ({
         showIcon !== 'no' && ['rvo-tag--with-icon'],
         {
           'rvo-tag--active': active,
-          'rvo-tag--hover': hover,
+          'rvo-tag--show-hover': showHover,
           'rvo-tag--focus': focus,
-          'rvo-tag--nohover': disableHover,
+          'rvo-tag--hover': useHover,
         },
         type === 'default' && 'rvo-tag--default',
         type === 'info' && 'rvo-tag--info',
