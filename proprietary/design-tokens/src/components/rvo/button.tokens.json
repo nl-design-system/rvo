@@ -25,15 +25,17 @@
       },
       "rvo-quaternary-action": {
         "background-color": { "value": "{rvo.color.groen}" },
-        "border-color": {},
-        "border-width": { "value": "0" },
+        "border-color": { "value": "{rvo.color.groen}" },
+        "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.wit}" },
         "active": {
           "background-color": { "value": "{rvo.color.groen-750}" },
+          "border-color": { "value": "{rvo.color.groen-750}" },
           "color": { "value": "{rvo.color.wit}" }
         },
         "hover": {
           "background-color": { "value": "{rvo.color.groen-750}" },
+          "border-color": { "value": "{rvo.color.groen-750}" },
           "color": { "value": "{rvo.color.wit}" }
         },
         "disabled": {

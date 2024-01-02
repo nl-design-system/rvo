@@ -30,6 +30,9 @@
 // Quaternary action
 @include utrecht-button-appearance("utrecht-button", "rvo-quaternary-action");
 
+// Warning
+@include utrecht-button-appearance("utrecht-button", "subtle-warning");
+
 // Sizes
 .utrecht-button--rvo-xs {
   --utrecht-button-font-size: var(--utrecht-button-rvo-xs-font-size);
@@ -81,6 +84,16 @@
 .utrecht-button--warning {
   .utrecht-icon.rvo-icon {
     background-color: var(--_utrecht-button-appearance-color, var(--_utrecht-button-color));
+  }
+}
+
+.utrecht-button--subtle.utrecht-button--warning {
+  .utrecht-icon.rvo-icon {
+    --_utrecht-button-appearance-color: var(
+      --utrecht-button-subtle-warning-color,
+      --utrecht-button-appearance-color,
+      var(--_utrecht-button-color)
+    );
   }
 }
 
