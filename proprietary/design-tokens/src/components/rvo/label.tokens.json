@@ -1,7 +1,7 @@
 {
   "rvo": {
     "label": {
-      "color": { "value": "{rvo.color.logoblauw}" },
+      "color": {},
       "font-size": { "value": "{rvo.size.md}" },
       "font-weight": { "value": "{rvo.font-weight.bold}" },
       "sm": {
@@ -9,7 +9,7 @@
         "font-weight": { "value": "{rvo.font-weight.normal}" }
       },
       "optional": {
-        "color": { "value": "{rvo.color.logoblauw}" },
+        "color": {},
         "content": { "value": "' (optioneel)'" },
         "font-size": { "value": "{rvo.font-size.xs}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" }

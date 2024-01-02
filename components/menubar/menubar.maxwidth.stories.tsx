@@ -24,7 +24,7 @@ export const Small = {
   args: {
     ...defaultArgs,
     iconPlacement: 'before',
-    menuMaxWidth: 'sm',
+    maxWidth: 'sm',
   },
 };
 
@@ -35,7 +35,7 @@ export const Medium = {
   args: {
     ...defaultArgs,
     iconPlacement: 'before',
-    menuMaxWidth: 'md',
+    maxWidth: 'md',
   },
 };
 
@@ -46,6 +46,6 @@ export const Large = {
   args: {
     ...defaultArgs,
     iconPlacement: 'before',
-    menuMaxWidth: 'lg',
+    maxWidth: 'lg',
   },
 };

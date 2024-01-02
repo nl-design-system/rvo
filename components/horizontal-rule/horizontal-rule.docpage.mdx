@@ -1,0 +1,18 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as HorizontalRuleStories from "./horizontal-rule.stories";
+
+<Meta of={HorizontalRuleStories} name="Documentatie" />
+
+<Title />
+<Canvas of={HorizontalRuleStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>

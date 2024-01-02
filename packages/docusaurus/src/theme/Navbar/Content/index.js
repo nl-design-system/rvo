@@ -5,15 +5,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { parseMenuItem } from '@nl-rvo/components/menubar/template';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
-import NavbarSearch from '@theme/Navbar/Search';
-import SearchBar from '@theme/SearchBar';
 import React from 'react';
 import styles from './styles.module.css';
 
 export default function NavbarContent() {
   const items = useThemeConfig().navbar.items;
   const firstRightItem = items.findIndex((item) => item.position === 'right');
-  const searchBarItem = items.find((item) => item.type === 'search');
+  // const searchBarItem = items.find((item) => item.type === 'search');
   const docusaurusContext = useDocusaurusContext();
   const location = useLocation().pathname.replace(docusaurusContext.siteConfig.baseUrl, '');
   const currentPage = location.split('/')[0];
@@ -37,7 +35,9 @@ export default function NavbarContent() {
           type: 'primary',
           key: `${item.label}-${index}`,
           active,
+          linkColor: 'hemelblauw',
         });
+
         if (!active) {
           return menuItem;
         } else {
@@ -54,6 +54,7 @@ export default function NavbarContent() {
                       type: 'sub',
                       key: `${section.label}-${index}`,
                       active: section.href.indexOf(location) > -1,
+                      linkColor: 'hemelblauw',
                     });
                   } else if (section.type === 'category') {
                     return (
@@ -65,6 +66,7 @@ export default function NavbarContent() {
                             type: 'sub',
                             key: `${item.label}-${index}`,
                             active: item.href.indexOf(location) > -1,
+                            linkColor: 'hemelblauw',
                           }),
                         )}
                       </React.Fragment>
@@ -78,11 +80,11 @@ export default function NavbarContent() {
         }
       })}
       <NavbarColorModeToggle className={styles.colorModeToggle} />
-      {!searchBarItem && (
+      {/* {!searchBarItem && (
         <NavbarSearch>
           <SearchBar />
         </NavbarSearch>
-      )}
+      )} */}
     </React.Fragment>
   );
 }

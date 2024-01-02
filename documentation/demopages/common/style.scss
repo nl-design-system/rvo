@@ -922,7 +922,7 @@
   .rvo-tag {
     align-items: center;
     background-color: var(--rvo-color-hemelblauw-150);
-    border-radius: 3px;
+    border-radius: var(--rvo-border-radius-sm);
     display: inline-flex;
     gap: var(--rvo-space-2xs);
     padding-block-end: var(--rvo-space-3xs);
@@ -1891,7 +1891,7 @@
     .utrecht-select,
     input[type="file"] {
       border-color: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
       border-width: 1px;
       color: var(--rvo-color-logoblauw);
     }
@@ -1908,7 +1908,7 @@
     }
 
     .rvo-checkbox__input {
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
     }
 
     .utrecht-textbox--html-input:focus,
@@ -1946,7 +1946,7 @@
     .rvo-checkbox__input:checked::before,
     .rvo-select-wrapper::before {
       background: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
     }
 
     .utrecht-form-fieldset__legend {
@@ -1959,12 +1959,12 @@
 
     .utrecht-button--primary-action {
       background-color: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
     }
 
     .utrecht-button--secondary-action {
       border-color: var(--rvo-color-logoblauw);
-      border-radius: 3px;
+      border-radius: var(--rvo-border-radius-sm);
       color: var(--rvo-color-logoblauw);
     }
 

@@ -1,6 +1,6 @@
 import { Header, Heading, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
-import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
+import '../common/style.scss';
 
 const Home = () => {
   return (
@@ -13,13 +13,7 @@ const Home = () => {
             <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
             <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
           </summary>
-          <MenuBar
-            items={defaultMenuBarItemsMijnRVO}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="md"
-          />
+          <MenuBar items={defaultMenuBarItemsMijnRVO} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         </details>
         <MenuBar
           items={[
@@ -48,7 +42,7 @@ const Home = () => {
           size="lg"
           useIcons={true}
           iconPlacement="before"
-          menuMaxWidth="md"
+          maxWidth="md"
         />
 
         <div className="rvo-hero rvo-hero--man-met-laptop">
@@ -60,7 +54,7 @@ const Home = () => {
               <div className="rvo-hero-text">
                 <Heading
                   type="h1"
-                  textContent="Rijksdienst voor 
+                  textContent="Rijksdienst voor
 Ondernemend Nederland"
                 />
                 <p className="rvo-hero-description">

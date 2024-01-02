@@ -1,0 +1,42 @@
+{
+  "rvo": {
+    "list": {
+      "icon-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "icon-gap": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "icon-option-1-image": {
+        "css": {
+          "syntax": "<*>",
+          "inherits": true
+        }
+      },
+      "icon-option-2-image": {
+        "css": {
+          "syntax": "<*>",
+          "inherits": true
+        }
+      },
+      "icon-option-3-image": {
+        "css": {
+          "syntax": "<*>",
+          "inherits": true
+        }
+      },
+      "zero-padding-offset": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}

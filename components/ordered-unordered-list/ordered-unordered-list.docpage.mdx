@@ -1,0 +1,19 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as ListStories from "./ordered-unordered-list.stories";
+
+<Meta of={ListStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={ListStories.Default} layout="padded" />
+<Controls />
+
+# Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>

@@ -10,8 +10,8 @@ import {
   TextInputField,
 } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
 import { defaultMenuBarItemsMijnRVO } from '../common/defaultMenuBarItemsMijnRVO';
+import '../common/style.scss';
 
 const Diensten = () => {
   return (
@@ -24,13 +24,7 @@ const Diensten = () => {
             <span className="utrecht-icon rvo-icon rvo-icon-menu rvo-icon--lg rvo-icon--wit"></span>
             <span className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--lg rvo-icon--wit"></span>Menu
           </summary>
-          <MenuBar
-            items={defaultMenuBarItemsMijnRVO}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            menuMaxWidth="md"
-          />
+          <MenuBar items={defaultMenuBarItemsMijnRVO} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         </details>
         <MenuBar
           items={[
@@ -55,7 +49,7 @@ const Diensten = () => {
           size="lg"
           useIcons={true}
           iconPlacement="before"
-          menuMaxWidth="md"
+          maxWidth="md"
         />
 
         <div className="rvo-hero rvo-hero--man_vrouw_met_laptop">

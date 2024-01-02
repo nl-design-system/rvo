@@ -1,12 +1,12 @@
-/* stylelint-disable selector-class-pattern */
-
-/* Remove the 'copy code' button, because the copied code is not up to date when story args change */
-.os-host + div button {
-  // display: none;
+html,
+body {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
 }
 
-.rvo-theme,
-.rvo-rijkshuisstijl {
+.rvo-theme {
   background-color: var(--utrecht-document-background-color);
   color: var(--utrecht-document-color);
   font-family: var(--utrecht-document-font-family);

@@ -1,7 +1,7 @@
 {
   "rvo": {
     "tag": {
-      "border-radius": { "value": "3px" },
+      "border-radius": { "value": "{rvo.border-radius.sm}" },
       "padding-block-end": { "value": "{rvo.space.2xs}" },
       "padding-block-start": { "value": "{rvo.space.2xs}" },
       "padding-inline-end": { "value": "{rvo.space.sm}" },

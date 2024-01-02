@@ -1,12 +1,12 @@
 import { Header, Heading, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
-import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import '../common/style.scss';
 
 const Hero = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultMenuBarItems} size="lg" useIcons={true} iconPlacement="before" menuMaxWidth="lg" />
+      <MenuBar items={defaultMenuBarItems} size="lg" useIcons={true} iconPlacement="before" maxWidth="lg" />
       <div className="rvo-hero rvo-hero--man-met-laptop">
         <div className="rvo-hero-bg-img-container">
           <img src="images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />

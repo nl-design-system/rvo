@@ -20,12 +20,12 @@
       },
       "subtle": {
         "summary": {
-          "color": { "value": "{rvo.color.grijs-400}" },
+          "color": { "value": "{rvo.color.grijs-500}" },
           "font-weight": { "value": "{rvo.font-weight.normal}" },
           "gap": { "value": "{rvo.space.2xs}" },
           "line-height": { "value": "{rvo.line-height.md}" },
           "icon": {
-            "background-color": { "value": "{rvo.color.grijs-400}" }
+            "background-color": { "value": "{rvo.color.grijs-500}" }
           }
         },
         "details": {

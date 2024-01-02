@@ -11,7 +11,7 @@
       "background-color": { "value": "{utrecht.form-input.background-color}" },
       "border-width": { "value": "{utrecht.form-input.border-width}" },
       "border-color": { "value": "{utrecht.form-input.border-color}" },
-      "border-radius": { "value": "3px" },
+      "border-radius": { "value": "{rvo.border-radius.sm}" },
       "focus": {
         "border-color": {},
         "border-width": {},
@@ -23,7 +23,7 @@
       },
       "checked": {
         "background-color": { "value": "{rvo.color.logoblauw}" },
-        "border-radius": { "value": "3px" }
+        "border-radius": { "value": "{rvo.border-radius.sm}" }
       },
       "hover": {
         "background-color": { "value": "{rvo.color.logoblauw}" },

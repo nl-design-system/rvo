@@ -16,7 +16,7 @@ const FiltersPersonen = () => {
             { label: 'Zoeken', icon: 'zoek', link: '#', align: 'right' },
           ]}
           size="md"
-          menuMaxWidth="md"
+          maxWidth="md"
           useIcons={true}
           iconPlacement="before"
         />

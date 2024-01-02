@@ -1,0 +1,88 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-sidebar-layout {
+  @media (min-width: 780px) {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: 288px 1fr;
+  }
+}
+
+.rvo-sidebar-layout__container {
+  @media (min-width: 780px) {
+    background: linear-gradient(
+      90deg,
+      var(--rvo-sidebar-layout-sidebar-background-color) 50%,
+      var(--rvo-sidebar-layout-content-background-color) 50%
+    );
+  }
+
+  .rvo-sidebar-layout__content {
+    background: var(--rvo-color-wit);
+  }
+}
+
+.rvo-sidebar-layout__container--right {
+  @media (min-width: 780px) {
+    background: linear-gradient(
+      -90deg,
+      var(--rvo-sidebar-layout-sidebar-background-color) 50%,
+      var(--rvo-sidebar-layout-content-background-color) 50%
+    );
+  }
+}
+
+.rvo-sidebar-layout__sidebar,
+.rvo-sidebar-layout__content {
+  padding-block-end: var(--rvo-sidebar-layout-sm-padding-block-end);
+  padding-block-start: var(--rvo-sidebar-layout-sm-padding-block-start);
+  padding-inline-end: var(--rvo-sidebar-layout-sm-padding-inline-end);
+  padding-inline-start: var(--rvo-sidebar-layout-sm-padding-inline-start);
+
+  @media (min-width: 780px) {
+    padding-block-end: var(--rvo-sidebar-layout-md-padding-block-end);
+    padding-block-start: var(--rvo-sidebar-layout-md-padding-block-start);
+    padding-inline-end: var(--rvo-sidebar-layout-md-padding-inline-end);
+    padding-inline-start: var(--rvo-sidebar-layout-md-padding-inline-start);
+  }
+
+  @media (min-width: 1080px) {
+    padding-block-end: var(--rvo-sidebar-layout-lg-padding-block-end);
+    padding-block-start: var(--rvo-sidebar-layout-lg-padding-block-start);
+    padding-inline-end: var(--rvo-sidebar-layout-lg-padding-inline-end);
+    padding-inline-start: var(--rvo-sidebar-layout-lg-padding-inline-start);
+  }
+}
+
+.rvo-sidebar-layout__sidebar {
+  display: none;
+
+  @media (min-width: 780px) {
+    display: block;
+  }
+
+  &.rvo-sidebar-layout__sidebar--bg {
+    background-color: var(--rvo-sidebar-layout-sidebar-background-color);
+  }
+}
+
+.rvo-sidebar-layout--right {
+  @media (min-width: 780px) {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: 1fr 288px;
+  }
+
+  .rvo-sidebar-layout__sidebar {
+    order: 1;
+  }
+}

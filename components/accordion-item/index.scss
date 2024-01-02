@@ -62,7 +62,7 @@
 
 .rvo-accordion__item-title {
   @extend .rvo-layout-row;
-  @extend .rvo-layout-row--flex-start;
+  @extend .rvo-layout-align-items-start;
   @extend .rvo-layout-gap--sm;
 }
 

@@ -1,6 +1,6 @@
 import { Button, CheckboxField, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
-import '../common/rhs-update.scss';
 import '../common/mijn-percelen.scss';
+import '../common/rhs-update.scss';
 
 const Profiel = () => {
   return (
@@ -46,7 +46,7 @@ const Profiel = () => {
               size="lg"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ const Profiel = () => {
               size="md"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
           <div className="rvo-main-mijn-percelen--profiel">

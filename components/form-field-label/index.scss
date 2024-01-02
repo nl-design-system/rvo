@@ -4,7 +4,7 @@
  */
 
 .rvo-label {
-  color: var(--rvo-label-color);
+  color: var(--rvo-label-color, var(--utrecht-document-color));
   font-size: var(--rvo-label-font-size);
   font-weight: var(--rvo-label-font-weight);
 }

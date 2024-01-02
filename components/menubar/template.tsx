@@ -6,6 +6,7 @@ import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../icon/template';
+import Link from '../link/template';
 import MaxWidthLayout from '../max-width-layout/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
@@ -16,22 +17,30 @@ export interface IMenuBarItem {
   link: string | ((event: any) => void);
   align?: 'left' | 'right';
   active?: boolean;
+  useDivider?: boolean;
 }
 
 export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
+  direction?: 'horizontal' | 'vertical';
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement?: 'before' | 'after';
-  menuMaxWidth?: 'none' | 'sm' | 'md' | 'lg';
+  maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
-  useDeltaForActiveItem?: boolean;
+  deltaForActiveItem?: boolean;
   children?: React.ReactNode;
+  horizontalRule?: boolean;
+  linkColor?: 'donkerblauw' | 'hemelblauw' | 'zwart';
 }
 
 export const argTypes = {
   size: {
     options: ['sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
+  direction: {
+    options: ['horizontal', 'vertical'],
     control: { type: 'radio' },
   },
   items: {
@@ -47,7 +56,7 @@ export const argTypes = {
     options: ['before', 'after'],
     control: { type: 'radio' },
   },
-  menuMaxWidth: {
+  maxWidth: {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
@@ -55,8 +64,15 @@ export const argTypes = {
     options: ['primary', 'sub', 'sub-grid'],
     control: { type: 'radio' },
   },
-  useDeltaForActiveItem: {
+  deltaForActiveItem: {
     control: 'boolean',
+  },
+  horizontalRule: {
+    control: 'boolean',
+  },
+  linkColor: {
+    options: ['hemelblauw', 'zwart'],
+    control: { type: 'radio' },
   },
 };
 
@@ -71,13 +87,15 @@ export const parseMenuItem = ({
   useIcon = defaultArgs.useIcons,
   size = defaultArgs.size,
   iconPlacement = defaultArgs.iconPlacement,
-  useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
+  deltaForActiveItem = defaultArgs.deltaForActiveItem,
+  linkColor = defaultArgs.linkColor,
+  useDivider = false,
   ...otherProps
 }) => {
   // Parse delta for active menu items
   let itemMarkup;
   let deltaMarkup;
-  if (active !== undefined && type === 'primary' && useDeltaForActiveItem) {
+  if (active !== undefined && type === 'primary' && deltaForActiveItem) {
     deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" color="wit" />;
   }
 
@@ -118,24 +136,32 @@ export const parseMenuItem = ({
         active && 'rvo-topnav__item--active',
         align === 'right' && 'rvo-topnav__item--align-right',
         type === 'sub' && 'rvo-topnav__item--sub',
+        useDivider && 'rvo-topnav__item--with-divider',
       )}
       {...otherProps}
     >
-      <a className="rvo-topnav__link" {...(typeof link === 'function' ? { onClick: link } : { href: link })}>
+      <Link
+        className="rvo-topnav__link"
+        {...(typeof link === 'function' ? { onClick: link } : { href: link })}
+        color={linkColor}
+      >
         {itemMarkup}
-      </a>
+      </Link>
     </li>
   );
 };
 
 export const MenuBar: React.FC<IMenuBarProps> = ({
   size = defaultArgs.size,
+  direction = defaultArgs.direction,
   items = defaultArgs.items,
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
-  menuMaxWidth = defaultArgs.menuMaxWidth,
+  maxWidth = defaultArgs.maxWidth,
   type = defaultArgs.type,
-  useDeltaForActiveItem = defaultArgs.useDeltaForActiveItem,
+  deltaForActiveItem = defaultArgs.deltaForActiveItem,
+  horizontalRule = defaultArgs.horizontalRule,
+  linkColor = defaultArgs.linkColor,
   children,
 }: IMenuBarProps) => {
   let itemsMarkup = null;
@@ -154,7 +180,9 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
           useIcon: useIcons,
           size,
           iconPlacement,
-          useDeltaForActiveItem,
+          deltaForActiveItem,
+          useDivider: item.useDivider,
+          linkColor,
         }),
       );
 
@@ -173,7 +201,9 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
             align: index === 0 && 'right',
             size,
             iconPlacement,
-            useDeltaForActiveItem,
+            deltaForActiveItem,
+            useDivider: item.useDivider,
+            linkColor,
           }),
         ),
     );
@@ -181,19 +211,28 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     itemsMarkup = children;
   }
 
+  const navMarkup = (
+    <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
+      <ul className={clsx('rvo-topnav__list', direction === 'vertical' && 'rvo-topnav__list--vertical')}>
+        {itemsMarkup}
+      </ul>
+    </nav>
+  );
+
   return (
     <div
       className={clsx(
         'rvo-topnav__background',
+        horizontalRule && 'rvo-topnav__background--horizontal-rule',
         type === 'sub' && 'rvo-topnav--sub',
         type === 'sub-grid' && ['rvo-topnav--sub', 'rvo-topnav--sub-grid'],
       )}
     >
-      <MaxWidthLayout size={menuMaxWidth}>
-        <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)}>
-          <ul className="rvo-topnav__list">{itemsMarkup}</ul>
-        </nav>
-      </MaxWidthLayout>
+      {direction === 'horizontal' && maxWidth !== 'none' ? (
+        <MaxWidthLayout size={maxWidth}>{navMarkup}</MaxWidthLayout>
+      ) : (
+        navMarkup
+      )}
     </div>
   );
 };

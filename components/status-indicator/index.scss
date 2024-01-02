@@ -1,0 +1,42 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-status-indicator {
+  border-radius: var(--rvo-status-indicator-border-radius);
+  height: var(--rvo-status-indicator-height);
+  width: var(--rvo-status-indicator-width);
+}
+
+.rvo-status-indicator--groen {
+  background-color: var(--rvo-color-groen);
+}
+
+.rvo-status-indicator--groen-300 {
+  background-color: var(--rvo-color-groen-300);
+}
+
+.rvo-status-indicator--oranje {
+  background-color: var(--rvo-color-oranje);
+}
+
+.rvo-status-indicator--oranje-300 {
+  background-color: var(--rvo-color-oranje-300);
+}
+
+.rvo-status-indicator--rood {
+  background-color: var(--rvo-color-rood);
+}
+
+.rvo-status-indicator--rood-300 {
+  background-color: var(--rvo-color-rood-300);
+}
+
+.rvo-status-indicator--hemelblauw {
+  background-color: var(--rvo-color-hemelblauw);
+}
+
+.rvo-status-indicator--hemelblauw-300 {
+  background-color: var(--rvo-color-hemelblauw-300);
+}

@@ -12,7 +12,7 @@ const Inloggen = () => {
           size="lg"
           useIcons={true}
           iconPlacement="before"
-          menuMaxWidth="sm"
+          maxWidth="sm"
         />
         <div className="rvo-hero rvo-hero--man-met-laptop">
           <div className="rvo-hero-bg-img-container">

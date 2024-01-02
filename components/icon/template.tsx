@@ -14,6 +14,7 @@ export interface IIconProps {
   color?: '' | 'hemelblauw' | 'wit' | 'zwart';
   className?: string;
   ariaLabel?: string;
+  onClick?: (event: React.MouseEvent) => void;
 }
 
 export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart'];
@@ -60,7 +61,7 @@ export const argTypes = {
   },
 };
 
-export const Icon: React.FC<IIconProps> = ({
+export const Icon: React.FC<IIconProps | HTMLSpanElement> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,

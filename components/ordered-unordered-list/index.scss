@@ -1,0 +1,54 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-ul {
+  list-style-type: disc;
+}
+
+.rvo-ul--none {
+  list-style-type: none;
+}
+
+.rvo-ul--icon li {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+
+  &::before {
+    background-size: var(--rvo-list-icon-size) var(--rvo-list-icon-size);
+    content: "";
+    display: inline-block;
+    height: var(--rvo-list-icon-size);
+    margin-inline-end: var(--rvo-list-icon-gap);
+    width: var(--rvo-list-icon-size);
+  }
+}
+
+.rvo-ul--icon-option-1 li::before {
+  background-image: var(--rvo-list-icon-option-1-image);
+}
+
+.rvo-ul--icon-option-2 li::before {
+  background-image: var(--rvo-list-icon-option-2-image);
+}
+
+.rvo-ul--icon-option-3 li::before {
+  background-image: var(--rvo-list-icon-option-3-image);
+}
+
+.rvo-ol--no-margin,
+.rvo-ul--no-margin {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.rvo-ul--no-padding {
+  padding-inline-start: 0;
+}
+
+.rvo-ol--no-padding,
+.rvo-ul--no-padding:not(.rvo-ul--icon):not(.rvo-ul--none) {
+  padding-inline-start: var(--rvo-list-zero-padding-offset);
+}

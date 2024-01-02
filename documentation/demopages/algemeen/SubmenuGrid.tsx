@@ -15,7 +15,7 @@ const SubmenuGrid = () => {
             ]}
             size="md"
             useIcons={false}
-            menuMaxWidth="md"
+            maxWidth="md"
           />
           <div className="rvo-tmp-submenu-wrapper rvo-tmp-submenu-wrapper--grid">
             <MenuBar
@@ -32,7 +32,7 @@ const SubmenuGrid = () => {
               size="md"
               useIcons={true}
               iconPlacement="before"
-              menuMaxWidth="md"
+              maxWidth="md"
             />
           </div>
         </div>

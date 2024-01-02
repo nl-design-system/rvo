@@ -35,7 +35,7 @@ const Profiel = () => {
             size="lg"
             useIcons={true}
             iconPlacement="before"
-            menuMaxWidth="md"
+            maxWidth="md"
           />
         </details>
         <MenuBar
@@ -58,7 +58,7 @@ const Profiel = () => {
           size="lg"
           useIcons={true}
           iconPlacement="before"
-          menuMaxWidth="md"
+          maxWidth="md"
         />
 
         <div className="rvo-hero rvo-hero--man-met-laptop">

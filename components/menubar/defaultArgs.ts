@@ -10,10 +10,13 @@ export const defaultItems = [
 
 export const defaultArgs: IMenuBarProps = {
   size: 'md',
+  direction: 'horizontal',
   items: defaultItems,
   useIcons: true,
   iconPlacement: 'before',
-  menuMaxWidth: 'none',
+  maxWidth: 'none',
   type: 'primary',
-  useDeltaForActiveItem: false,
+  deltaForActiveItem: false,
+  horizontalRule: true,
+  linkColor: 'hemelblauw',
 };

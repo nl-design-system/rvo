@@ -8,9 +8,5 @@ export default function FooterLayout({ links }) {
       link: linkItem.to,
     })),
   }));
-  return (
-    <div style={{ marginBlockStart: 'var(--rvo-space-2xl)' }}>
-      <Footer columns={columns} maxWidth="md" />
-    </div>
-  );
+  return <Footer columns={columns} maxWidth="md" />;
 }

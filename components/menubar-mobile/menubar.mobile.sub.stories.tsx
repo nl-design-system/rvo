@@ -26,10 +26,12 @@ export const MobileSubmenu = {
     items: [
       {
         label: 'Home',
+        icon: 'home',
         link: '#',
       },
       {
         label: 'Expanded menu item',
+        icon: 'publicatie',
         link: '#',
         active: true,
       },
