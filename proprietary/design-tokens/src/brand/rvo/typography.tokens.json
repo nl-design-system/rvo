@@ -52,11 +52,23 @@
       }
     },
     "font-weight": {
+      "thin": {
+        "value": "200"
+      },
+      "light": {
+        "value": "300"
+      },
       "normal": {
         "value": "400"
       },
+      "semibold": {
+        "value": "550"
+      },
       "bold": {
         "value": "700"
+      },
+      "extrabold": {
+        "value": "800"
       }
     },
     "line-height": {
