@@ -70,12 +70,12 @@ const generatePageNumbers = (totalPages: number, activePage: number): ReactNode[
 };
 
 const generatePageNumber = (pageNumber: number, active?: number) => (
-  <li className={clsx('rvo-pagination-item', active === pageNumber && 'rvo-pagination-item--active')}>
+  <li className={clsx('rvo-pagination__item', active === pageNumber && 'rvo-pagination__item--active')}>
     <Link href="#">{pageNumber}</Link>
   </li>
 );
 
-const generateEllipses = () => <li className="rvo-pagination-item rvo-pagination-item--ellipses">...</li>;
+const generateEllipses = () => <li className="rvo-pagination__item rvo-pagination__item--ellipses">...</li>;
 
 export const Pagination: React.FC<IPaginationProps> = ({
   numberOfPages = defaultArgs.numberOfPages,
@@ -90,15 +90,15 @@ export const Pagination: React.FC<IPaginationProps> = ({
   return (
     <nav className="rvo-pagination">
       {numberOfPages > 1 && activePage > 1 && (
-        <div className="rvo-pagination-prev">
+        <div className="rvo-pagination__prev">
           <Link href="#" showIcon="before" icon="delta-naar-links" aria-label="Delta naar links">
             Vorige
           </Link>
         </div>
       )}
-      <ul className="rvo-pagination-list">{pageNumbers}</ul>
+      <ul className="rvo-pagination__list">{pageNumbers}</ul>
       {numberOfPages > 1 && activePage < numberOfPages && (
-        <div className="rvo-pagination-next">
+        <div className="rvo-pagination__next">
           <Link href="#" showIcon="after" icon="delta-naar-rechts" aria-label="Delta naar rechts">
             Volgende
           </Link>

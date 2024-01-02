@@ -13,7 +13,7 @@
   }
 }
 
-.rvo-pagination-list {
+.rvo-pagination__list {
   display: flex;
   gap: var(--rvo-space-sm);
   margin-block-end: 0;
@@ -21,14 +21,14 @@
   padding-inline-start: 0;
 }
 
-.rvo-pagination-item {
+.rvo-pagination__item {
   list-style: none;
 
   .rvo-link {
     font-weight: var(--rvo-font-weight-regular);
   }
 
-  &.rvo-pagination-item--active {
+  &.rvo-pagination__item--active {
     font-weight: var(--rvo-font-weight-bold);
   }
 }
