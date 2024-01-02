@@ -1,0 +1,18 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as PaginationStories from "./pagination.stories";
+
+<Meta of={PaginationStories} name="Documentatie" />
+
+<Title />
+<Canvas of={PaginationStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Markdown>{documentation}</Markdown>
+
+## Changelog
+
+<Markdown>{changeLog}</Markdown>
