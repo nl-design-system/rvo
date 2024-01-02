@@ -1,0 +1,76 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "../layout-column-row/index";
+
+.rvo-toggle {
+  border-radius: var(--rvo-toggle-border-radius);
+  display: inline-flex;
+  padding-block-end: var(--rvo-toggle-padding-block-end);
+  padding-block-start: var(--rvo-toggle-padding-block-start);
+  padding-inline-end: var(--rvo-toggle-padding-inline-end);
+  padding-inline-start: var(--rvo-toggle-padding-inline-start);
+}
+
+.rvo-toggle--with-icon {
+  padding-inline-end: var(--rvo-toggle-padding-inline-end-with-icon);
+  padding-inline-start: var(--rvo-toggle-padding-inline-start-with-icon);
+
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
+}
+
+// Default appearance
+.rvo-toggle--default {
+  --utrecht-icon-color: var(--rvo-toggle-default-icon-color);
+
+  background-color: var(--rvo-toggle-default-background-color);
+  border-color: var(--rvo-toggle-default-border-color);
+  border-style: var(--rvo-toggle-default-border-style);
+  border-width: var(--rvo-toggle-default-border-width);
+  color: var(--rvo-toggle-default-color);
+  text-decoration: var(--rvo-toggle-default-text-decoration);
+}
+
+// Hover
+.rvo-toggle--hover:hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus),
+.rvo-toggle--show-hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus) {
+  &.rvo-toggle--default {
+    --utrecht-icon-color: var(--rvo-toggle-default-hover-icon-color);
+
+    text-decoration: var(--rvo-toggle-default-hover-text-decoration);
+  }
+}
+
+.rvo-toggle--hover:hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus):not(.rvo-toggle--active),
+.rvo-toggle--show-hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus):not(.rvo-toggle--active) {
+  &.rvo-toggle--default {
+    background-color: var(--rvo-toggle-default-hover-background-color);
+    color: var(--rvo-toggle-default-hover-color);
+  }
+}
+
+// Active
+.rvo-toggle--active {
+  &.rvo-toggle--default {
+    --utrecht-icon-color: var(--rvo-toggle-default-active-icon-color);
+
+    background-color: var(--rvo-toggle-default-active-background-color);
+    border-color: var(--rvo-toggle-default-active-border-color);
+    border-style: var(--rvo-toggle-default-active-border-style);
+    border-width: var(--rvo-toggle-default-active-border-width);
+    color: var(--rvo-toggle-default-active-color);
+  }
+}
+
+// Focus
+.rvo-toggle:focus,
+.rvo-toggle:focus-visible,
+.rvo-toggle--focus {
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
