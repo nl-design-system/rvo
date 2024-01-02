@@ -6,10 +6,10 @@
       "border-style": {},
       "box-shadow-color": {},
       "box-shadow-spread-radius": {},
-      "outline-color": { "value": "{rvo.color.logoblauw}" },
-      "outline-offset": { "value": "0" },
+      "outline-color": { "value": "{rvo.color.hemelblauw}" },
+      "outline-offset": { "value": "3px" },
       "outline-style": { "value": "solid" },
-      "outline-width": { "value": "1px" }
+      "outline-width": { "value": "2px" }
     }
   }
 }
