@@ -30,7 +30,7 @@ const generatePageNumbers = (totalPages: number, activePage: number): ReactNode[
 
   // Add ellipses if the active page is more than 4
   if (activePage > 4) {
-    pages.push(generateEllipses());
+    pages.push(generateEllipses('ellipses-1'));
   }
   if (activePage === 4) {
     pages.push(generatePageNumber(2, activePage));
@@ -53,7 +53,7 @@ const generatePageNumbers = (totalPages: number, activePage: number): ReactNode[
 
   // Add ellipses if the active page is less than the total pages minus 3
   if (activePage < totalPages - 3) {
-    pages.push(generateEllipses());
+    pages.push(generateEllipses('ellipses-2'));
   }
 
   // Add the second last page if the active page is less than the total pages minus 1 and greater than or equal to total pages minus 3
@@ -70,12 +70,21 @@ const generatePageNumbers = (totalPages: number, activePage: number): ReactNode[
 };
 
 const generatePageNumber = (pageNumber: number, active?: number) => (
-  <li className={clsx('rvo-pagination__item', active === pageNumber && 'rvo-pagination__item--active')}>
+  <li
+    key={pageNumber}
+    className={clsx('rvo-pagination__item', active === pageNumber && 'rvo-pagination__item--active')}
+  >
     <Link href="#">{pageNumber}</Link>
   </li>
 );
 
-const generateEllipses = () => <li className="rvo-pagination__item rvo-pagination__item--ellipses">...</li>;
+const generateEllipses = (key: string) => {
+  return (
+    <li key={key} className="rvo-pagination__item rvo-pagination__item--ellipses">
+      ...
+    </li>
+  );
+};
 
 export const Pagination: React.FC<IPaginationProps> = ({
   numberOfPages = defaultArgs.numberOfPages,
