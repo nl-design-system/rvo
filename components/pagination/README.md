@@ -1,12 +1,19 @@
 Gebruik ellipsen (…) om eventuele overgeslagen pagina's te vervangen. Bijvoorbeeld:
 
-[1] 2 … 100
+[1] 2 … 10
+
 1 [2] 3 … 100
+
 1 2 [3] 4 … 100
+
 1 2 3 [4] 5 … 100
+
 1 … 4 [5] 6 … 100
+
 1 … 97 [98] 99 100
+
 1 … 98 [99] 100
+
 1 … 99 [100]
 
 De functie voor deze logica kan als volgt worden geschreven:
