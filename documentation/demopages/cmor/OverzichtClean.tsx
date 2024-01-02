@@ -68,7 +68,7 @@ const OverzichtClean = () => {
         size="lg"
         useIcons={true}
         iconPlacement="before"
-        menuMaxWidth="lg"
+        maxWidth="lg"
       />
 
       <main className="rvo-main--cmor rvo-main--sidebar-active rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
@@ -92,7 +92,7 @@ const OverzichtClean = () => {
             size="md"
             useIcons={true}
             iconPlacement="before"
-            menuMaxWidth="md"
+            maxWidth="md"
           />
         </div>
         <div className="rvo-content--cmor rvo-content--overzicht">
