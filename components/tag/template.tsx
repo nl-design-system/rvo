@@ -15,11 +15,12 @@ export interface ITagProps {
   type: 'default' | 'info' | 'warning' | 'error' | 'success';
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
-  hover?: boolean;
-  disableHover?: boolean;
+  showHover?: boolean;
   active?: boolean;
   focus?: boolean;
   className?: string;
+  link?: string;
+  linkTarget?: '_blank' | '_self' | '_parent' | '_top';
 }
 
 export const argTypes = {
@@ -38,10 +39,7 @@ export const argTypes = {
     control: { type: 'select' },
     options: iconOptions,
   },
-  hover: {
-    control: 'boolean',
-  },
-  disableHover: {
+  showHover: {
     control: 'boolean',
   },
   active: {
@@ -49,6 +47,13 @@ export const argTypes = {
   },
   focus: {
     control: 'boolean',
+  },
+  link: {
+    control: 'text',
+  },
+  linkTarget: {
+    options: ['_blank', '_self', '_parent', '_top'],
+    control: { type: 'radio' },
   },
 };
 
@@ -58,10 +63,11 @@ export const Tag: React.FC<ITagProps> = ({
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   active = defaultArgs.active,
-  hover = defaultArgs.hover,
-  disableHover = defaultArgs.disableHover,
+  showHover = defaultArgs.showHover,
   focus = defaultArgs.focus,
   className,
+  link,
+  linkTarget = '_self',
 }: ITagProps) => {
   // Parse icon markup
   let iconClassName = '';
@@ -92,17 +98,21 @@ export const Tag: React.FC<ITagProps> = ({
       break;
   }
 
+  const TagElement = link ? 'a' : 'div';
+
   return (
-    <div
+    <TagElement
+      {...(link ? { href: link } : {})}
+      target={linkTarget}
       className={clsx(
         'rvo-tag',
         className,
         showIcon !== 'no' && ['rvo-tag--with-icon'],
         {
           'rvo-tag--active': active,
-          'rvo-tag--hover': hover,
+          'rvo-tag--show-hover': showHover,
           'rvo-tag--focus': focus,
-          'rvo-tag--nohover': disableHover,
+          'rvo-tag--hover': link,
         },
         type === 'default' && 'rvo-tag--default',
         type === 'info' && 'rvo-tag--info',
@@ -114,7 +124,7 @@ export const Tag: React.FC<ITagProps> = ({
       {showIcon === 'before' && iconMarkup}
       {content}
       {showIcon === 'after' && iconMarkup}
-    </div>
+    </TagElement>
   );
 };
 
