@@ -1,22 +1,17 @@
 @font-face {
   font-family: "RijksoverheidSansWebText";
+  font-stretch: 75% 125%;
   font-style: normal;
-  font-weight: 400;
-  src: url("./ROsanswebtextregular.woff") format("woff");
+  font-weight: 200 800;
+  src: url("./RijksSansWeb-Regular.woff2") format("woff2-variations");
 }
 
 @font-face {
   font-family: "RijksoverheidSansWebText";
+  font-stretch: 75% 125%;
   font-style: italic;
-  font-weight: 400;
-  src: url("./ROsanswebtextitalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "RijksoverheidSansWebText";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./ROsanswebtextbold.woff") format("woff");
+  font-weight: 200 800;
+  src: url("./RijksSansWeb-Italic.woff2") format("woff2-variations");
 }
 
 @font-face {
