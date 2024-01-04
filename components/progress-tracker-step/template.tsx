@@ -13,7 +13,8 @@ export interface IProgressTrackerStepProps {
   line: string;
   size: string;
   label: string;
-  link: string | ((event: any) => void);
+  link?: string;
+  onClick?: (event) => void;
 }
 
 export const argTypes = {
@@ -44,10 +45,11 @@ export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
   size = defaultArgs.size,
   label = defaultArgs.label,
   link = defaultArgs.link,
+  onClick = defaultArgs.onClick,
 }: IProgressTrackerStepProps) => {
   let labelMarkup: string | React.ReactNode = label;
   if (state === 'incomplete' || state === 'doing' || state === 'completed') {
-    labelMarkup = <Link content={label} href={link} className="rvo-progress-tracker__step-link" />;
+    labelMarkup = <Link content={label} href={link} className="rvo-progress-tracker__step-link" onClick={onClick} />;
   }
 
   let stateImageCssClassname;
