@@ -45,6 +45,8 @@ html {
   --ifm-color-primary-lightest: var(--rvo-color-lichtblauw-150);
   --ifm-link-hover-decoration: underline;
   --ifm-menu-link-padding-horizontal: 0;
+  --ifm-menu-color-background-active: none;
+  --ifm-menu-color-background-hover: none;
   --ifm-code-border-radius: 0;
   --ifm-pre-padding: 0;
 }
@@ -106,8 +108,7 @@ code {
 }
 
 .menu__list-item-collapsible {
-  font-size: var(--rvo-size-lg);
-  font-weight: var(--rvo-font-weight-bold);
+  font-size: var(--rvo-size-md);
 
   .menu__link {
     color: var(--rvo-color-zwart);
@@ -116,4 +117,16 @@ code {
   &:hover {
     background: none;
   }
+}
+
+.menu__list-item-collapsible--active {
+  font-weight: var(--rvo-font-weight-bold);
+}
+
+.menu__list .menu__list {
+  display: none !important;
+}
+
+.menu__list-item-collapsible--active + .menu__list {
+  display: block !important;
 }

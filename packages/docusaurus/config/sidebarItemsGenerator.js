@@ -17,6 +17,29 @@ const findOrAddCategory = (itemList, categoryName) => {
   return category.items;
 };
 
+const addSidebarItem = (arrayToAddItem, doc) => {
+  let sidebarItem;
+  if (!doc.frontMatter.anchors) {
+    sidebarItem = { type: 'doc', id: doc.id, label: doc.title };
+  } else {
+    sidebarItem = {
+      type: 'category',
+      label: doc.title,
+      link: {
+        type: 'doc',
+        id: doc.id,
+      },
+      collapsible: false,
+      items: doc.frontMatter.anchors.map((anchorItem) => ({
+        type: 'link',
+        href: `#${anchorItem.anchor}`,
+        label: anchorItem.label,
+      })),
+    };
+  }
+  arrayToAddItem.push(sidebarItem);
+};
+
 module.exports = async ({ item, docs }) => {
   let processedDocs = docs;
 
@@ -44,22 +67,19 @@ module.exports = async ({ item, docs }) => {
     const categoryNames = doc.sourceDirName.split('/');
     categoryNames.shift();
 
-    // Parse sidebar item
-    const sidebarItem = { type: 'doc', id: doc.id, label: doc.title };
-
     if (categoryNames.length > 0) {
       categoryNames.reduce((currentCategory, categoryName, categoryIndex) => {
         // Find or add category if it does not exist
         const category = findOrAddCategory(currentCategory, categoryName);
         // If all categories are parsed, add doc to the category
         if (categoryIndex === categoryNames.length - 1) {
-          category.push(sidebarItem);
+          addSidebarItem(category, doc);
         }
         return category;
       }, currentSidebarItemList);
     } else {
       // No categories, just add the doc to the sidebar
-      currentSidebarItemList.push(sidebarItem);
+      addSidebarItem(currentSidebarItemList, doc);
     }
     return currentSidebarItemList;
   }, []);

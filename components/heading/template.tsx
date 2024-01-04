@@ -57,9 +57,11 @@ export const Heading: React.FC<IHeadingProps> = ({
   iconAriaLabel = defaultArgs.iconAriaLabel,
   noMargins = defaultArgs.noMargins,
   className,
+  ...otherProps
 }: IHeadingProps) => {
   const props = {
     className: clsx(`utrecht-heading-${type.replace('h', '')}`, className),
+    ...otherProps,
   };
 
   let headingMarkup = textContent;
