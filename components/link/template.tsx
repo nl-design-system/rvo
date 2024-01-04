@@ -10,7 +10,7 @@ import { defaultArgs } from './defaultArgs';
 import './index.scss';
 export interface ILinkProps {
   content?: string;
-  href?: string | ((event: any) => void);
+  href?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'zwart';
   onClick?: (event) => void;
   showIcon?: 'no' | 'before' | 'after';
@@ -124,23 +124,13 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
     ),
     ...otherProps,
   };
-  if (href) {
-    return (
-      <a {...(typeof href === 'function' ? { onClick: href } : { href })} {...props}>
-        {showIcon === 'before' && iconMarkup}
-        {children || content}
-        {showIcon === 'after' && iconMarkup}
-      </a>
-    );
-  } else {
-    return (
-      <span {...props}>
-        {showIcon === 'before' && iconMarkup}
-        {children || content}
-        {showIcon === 'after' && iconMarkup}
-      </span>
-    );
-  }
+  return (
+    <a {...props} href={href}>
+      {showIcon === 'before' && iconMarkup}
+      {children || content}
+      {showIcon === 'after' && iconMarkup}
+    </a>
+  );
 };
 
 export default Link;
