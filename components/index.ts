@@ -46,6 +46,7 @@ export { ProgressTrackerStep } from './progress-tracker-step/template';
 export { SidebarLayout } from './sidebar-layout/template';
 export { SkipLink } from './skip-link/template';
 export { StatusIcon } from './status-icon/template';
+export { StatusIndicator } from './status-indicator/template';
 export { Table } from './table/template';
 export { Tag } from './tag/template';
 export { Toggle } from './toggle/template';

@@ -3,6 +3,7 @@ import {
   Alert,
   Button,
   ButtonGroup,
+  Card,
   ExpandableText,
   Footer,
   Header,
@@ -140,78 +141,20 @@ const OverzichtClean = () => {
                   </div>
 
                   <div className="rvo-cards-grid">
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
-                      <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
-                          <h3 className="utrecht-heading-3">
-                            <a href="#" className="rvo-link rvo-card__link rvo-card__full-card-link">
-                              BSN Melding WBSO 2023
-                            </a>
-                          </h3>
-                          Wet Bevordering Speur- en Ontwikkelingswerk
-                        </div>
-                        <span
-                          className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                          role="img"
-                          aria-label="Delta naar rechts"
-                        ></span>
-                        <div className="rvo-card-status">
-                          <StatusIcon type="waarschuwing" size="md" />
-                          <div className="rvo-card-status-text">
-                            Verzilver uw voucher <strong>uiterlijk 28 aug 2023</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
-                      <div className="rvo-card-content"></div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
-                      </div>
-                    </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
-                      <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
-                            Gecombineerde opgave 2023
-                          </a>
-                        </h3>
-                        <LayoutColumnRow size="xs">
-                          <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
-                            Gemeenschappelijk Landbouwbeleid
-                          </p>
-                          <div className="rvo-card-status">
-                            <Icon icon="zandloper" size="md" />
-                            <div className="rvo-card-status-text">In behandeling</div>
-                          </div>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
-                      </div>
-                    </div>
-                    <div className="rvo-card rvo-card--w-link rvo-card--w-link-indicator rvo-card--outline">
-                      <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
-                          <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
-                            SVVE 2023
-                          </a>
-                        </h3>
-                        <LayoutColumnRow size="xs">
-                          <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
-                            Subsidieregeling verduurzaming voor verenigingen van eigenaars
-                          </p>
-                          <div className="rvo-card-status">
-                            <Icon icon="vinkje" size="md" />
-                            <div className="rvo-card-status-text">Goedgekeurd</div>
-                          </div>
-                        </LayoutColumnRow>
-                      </div>
-                      <div className="rvo-card-link-indicator">
-                        <Icon icon="delta-naar-rechts" size="sm" />
-                      </div>
-                    </div>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true}>
+                          BSN Melding WBSO 2023
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">Wet Bevordering Speur- en Ontwikkelingswerk</span>
+                      <LayoutColumnRow row={true} size="xs">
+                        <StatusIcon type="waarschuwing" size="md" />
+                        <span className="rvo-text--sm">
+                          Verzilver uw voucher <strong>uiterlijk 28 aug 2023</strong>
+                        </span>
+                      </LayoutColumnRow>
+                    </Card>
                   </div>
                   <LayoutColumnRow row={true}>
                     <Link
@@ -234,49 +177,43 @@ const OverzichtClean = () => {
               </div>
               <hr className="rvo-hr"></hr>
               <div className="rvo-block-group">
-                <div className="rvo-item-list">
-                  <Heading type="h2" textContent="Start een nieuwe aanvraag" />
-                  <span className="rvo-item-list-sub-title">Kies uit uw favorieten</span>
+                <LayoutColumnRow size="sm">
+                  <Heading type="h2" textContent="Start een nieuwe aanvraag" noMargins={true} />
+                  <span>Kies uit uw favorieten</span>
                   <LayoutColumnRow size="sm">
-                    <div className="rvo-item-list-items">
-                      <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
-                        <div className="rvo-item-list-item-content">
-                          <div className="rvo-status-indicator rvo-status-indicator--open"></div>
+                    <div className="rvo-item-list">
+                      <div className="rvo-item-list__item">
+                        <LayoutColumnRow row={true}>
+                          <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                           <div className="rvo-item-list-item-title">
-                            <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
-                              ANLb-Collectieven
-                            </a>
+                            <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
                           </div>
                           <div className="rvo-item-list-item-description">Open voor aanvragen</div>
-                        </div>
+                        </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
                           <Icon icon="delta-naar-rechts" size="sm" />
                         </div>
                       </div>
-                      <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
-                        <div className="rvo-item-list-item-content">
-                          <div className="rvo-status-indicator rvo-status-indicator--closed"></div>
+                      <div className="rvo-item-list__item">
+                        <LayoutColumnRow row={true}>
+                          <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
                           <div className="rvo-item-list-item-title">
-                            <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
-                              ISDE
-                            </a>
+                            <Link content="ISDE" color="zwart" noUnderline={true} />
                           </div>
                           <div className="rvo-item-list-item-description">Gesloten voor aanvragen</div>
-                        </div>
+                        </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
                           <Icon icon="delta-naar-rechts" size="sm" />
                         </div>
                       </div>
-                      <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
-                        <div className="rvo-item-list-item-content">
-                          <div className="rvo-status-indicator rvo-status-indicator--tmp-closed"></div>
+                      <div className="rvo-item-list__item">
+                        <LayoutColumnRow row={true}>
+                          <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
                           <div className="rvo-item-list-item-title">
-                            <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
-                              Gecombineerde Opgave
-                            </a>
+                            <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
                           </div>
                           <div className="rvo-item-list-item-description">Tijdelijk gesloten voor aanvragen</div>
-                        </div>
+                        </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
                           <Icon icon="delta-naar-rechts" size="sm" />
                         </div>
@@ -290,7 +227,7 @@ const OverzichtClean = () => {
                       noUnderline={true}
                     />
                   </LayoutColumnRow>
-                </div>
+                </LayoutColumnRow>
                 <div className="rvo-quick-links">
                   <Heading type="h2" textContent="Snel naar" />
                   <ul className="rvo-quick-links-list">
