@@ -30,18 +30,18 @@ const Diensten = () => {
           items={[
             {
               label: 'Zaken',
-              onClick: linkTo("Demo pagina's/Mijn RVO/Mijn zaken"),
+              link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken"),
             },
             {
               label: 'Diensten',
               active: true,
-              onClick: linkTo("Demo pagina's/Mijn RVO/Diensten"),
+              link: linkTo("Demo pagina's/Mijn RVO/Diensten"),
             },
             { label: 'Help', link: '#' },
-            { label: 'Profiel', onClick: linkTo("Demo pagina's/Mijn RVO/Profiel") },
+            { label: 'Profiel', link: linkTo("Demo pagina's/Mijn RVO/Profiel") },
             {
               label: 'Uitloggen',
-              onClick: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
+              link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
