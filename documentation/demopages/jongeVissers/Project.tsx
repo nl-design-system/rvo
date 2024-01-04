@@ -29,21 +29,21 @@ const Project = () => {
                 {
                   state: 'completed',
                   label: 'Controleer uw gegevens',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Correspondentie',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Datum verleningsverzoek',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Datum"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
 
                   size: 'md',
                   line: 'straight',
@@ -51,7 +51,7 @@ const Project = () => {
                 {
                   state: 'doing',
                   label: 'Project vragen',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Project"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
 
                   size: 'md',
                   line: 'straight',
@@ -59,7 +59,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Kosten',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
 
                   size: 'md',
                   line: 'straight',
@@ -67,7 +67,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Bijlagen',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
 
                   size: 'md',
                   line: 'straight',
@@ -76,7 +76,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Samenvatting',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
 
                   size: 'md',
                   line: 'straight',
@@ -84,7 +84,7 @@ const Project = () => {
                 {
                   state: 'incomplete',
                   label: 'Ondertekening',
-                  link: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
 
                   size: 'md',
                   line: 'straight',

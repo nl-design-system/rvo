@@ -18,16 +18,16 @@ const Profiel = () => {
           </summary>
           <MenuBar
             items={[
-              { label: 'Zaken', link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken") },
-              { label: 'Diensten', link: linkTo("Demo pagina's/Mijn RVO/Diensten") },
+              { label: 'Zaken', onClick: linkTo("Demo pagina's/Mijn RVO/Mijn zaken") },
+              { label: 'Diensten', onClick: linkTo("Demo pagina's/Mijn RVO/Diensten") },
               { label: 'Help', link: '#' },
               {
                 label: 'Profiel',
-                link: linkTo("Demo pagina's/Mijn RVO/Profiel"),
+                onClick: linkTo("Demo pagina's/Mijn RVO/Profiel"),
               },
               {
                 label: 'Uitloggen',
-                link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
+                onClick: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
                 align: 'right',
               },
               { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
@@ -40,17 +40,17 @@ const Profiel = () => {
         </details>
         <MenuBar
           items={[
-            { label: 'Zaken', link: linkTo("Demo pagina's/Mijn RVO/Mijn zaken") },
-            { label: 'Diensten', link: linkTo("Demo pagina's/Mijn RVO/Diensten") },
+            { label: 'Zaken', onClick: linkTo("Demo pagina's/Mijn RVO/Mijn zaken") },
+            { label: 'Diensten', onClick: linkTo("Demo pagina's/Mijn RVO/Diensten") },
             { label: 'Help', link: '#' },
             {
               label: 'Profiel',
               active: true,
-              link: linkTo("Demo pagina's/Mijn RVO/Profiel"),
+              onClick: linkTo("Demo pagina's/Mijn RVO/Profiel"),
             },
             {
               label: 'Uitloggen',
-              link: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
+              onClick: linkTo("Demo pagina's/Mijn RVO/Inloggen"),
               align: 'right',
             },
             { label: 'English', icon: 'wereldbol', link: '#', align: 'right' },
