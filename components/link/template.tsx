@@ -11,12 +11,12 @@ import './index.scss';
 export interface ILinkProps {
   content?: string;
   href?: string;
-  color?: 'hemelblauw' | 'donkerblauw' | 'zwart';
+  color?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700';
   onClick?: (event) => void;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconSize?: 'sm' | 'md';
-  iconColor?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart';
+  iconColor?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconAriaLabel?: string;
   hover?: boolean;
   active?: boolean;
@@ -37,7 +37,7 @@ export const argTypes = {
   },
   color: {
     control: { type: 'select' },
-    options: ['hemelblauw', 'donkerblauw', 'zwart'],
+    options: ['hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700'],
   },
   showIcon: {
     options: ['no', 'before', 'after'],
@@ -119,7 +119,9 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
       showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
       color === 'donkerblauw' && 'rvo-link--donkerblauw',
+      color === 'wit' && 'rvo-link--wit',
       color === 'zwart' && 'rvo-link--zwart',
+      color === 'grijs-700' && 'rvo-link--grijs-700',
       fullContainerLink && 'rvo-link--full-container',
     ),
     ...otherProps,
