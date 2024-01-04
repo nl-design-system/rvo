@@ -81,7 +81,24 @@
 
 .rvo-link--zwart {
   color: var(--rvo-color-zwart);
-  &:hover {
+  &.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+  .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus):hover {
+    color: var(--rvo-color-donkerblauw);
+  }
+}
+
+.rvo-link--wit {
+  color: var(--rvo-color-wit);
+  &.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+  .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus):hover {
+    color: var(--rvo-color-grijs-100);
+  }
+}
+
+.rvo-link--grijs-700 {
+  color: var(--rvo-color-grijs-700);
+  &.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+  .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus):hover {
     color: var(--rvo-color-donkerblauw);
   }
 }

@@ -8,4 +8,5 @@ export const defaultArgs: IHeadingProps = {
   icon: null,
   iconAriaLabel: '',
   noMargins: false,
+  mixedBoldAndNormal: false,
 };

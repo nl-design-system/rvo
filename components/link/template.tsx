@@ -10,13 +10,13 @@ import { defaultArgs } from './defaultArgs';
 import './index.scss';
 export interface ILinkProps {
   content?: string;
-  href?: string | ((event: any) => void);
-  color?: 'hemelblauw' | 'donkerblauw' | 'zwart';
+  href?: string;
+  color?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700';
   onClick?: (event) => void;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconSize?: 'sm' | 'md';
-  iconColor?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart';
+  iconColor?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconAriaLabel?: string;
   hover?: boolean;
   active?: boolean;
@@ -37,7 +37,7 @@ export const argTypes = {
   },
   color: {
     control: { type: 'select' },
-    options: ['hemelblauw', 'donkerblauw', 'zwart'],
+    options: ['hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700'],
   },
   showIcon: {
     options: ['no', 'before', 'after'],
@@ -119,28 +119,20 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
       showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
       color === 'donkerblauw' && 'rvo-link--donkerblauw',
+      color === 'wit' && 'rvo-link--wit',
       color === 'zwart' && 'rvo-link--zwart',
+      color === 'grijs-700' && 'rvo-link--grijs-700',
       fullContainerLink && 'rvo-link--full-container',
     ),
     ...otherProps,
   };
-  if (href) {
-    return (
-      <a {...(typeof href === 'function' ? { onClick: href } : { href })} {...props}>
-        {showIcon === 'before' && iconMarkup}
-        {children || content}
-        {showIcon === 'after' && iconMarkup}
-      </a>
-    );
-  } else {
-    return (
-      <span {...props}>
-        {showIcon === 'before' && iconMarkup}
-        {children || content}
-        {showIcon === 'after' && iconMarkup}
-      </span>
-    );
-  }
+  return (
+    <a {...props} href={href}>
+      {showIcon === 'before' && iconMarkup}
+      {children || content}
+      {showIcon === 'after' && iconMarkup}
+    </a>
+  );
 };
 
 export default Link;

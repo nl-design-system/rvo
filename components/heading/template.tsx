@@ -19,6 +19,7 @@ export interface IHeadingProps {
   icon?: IconType;
   iconAriaLabel?: string;
   noMargins?: boolean;
+  mixedBoldAndNormal?: boolean;
   className?: string;
 }
 
@@ -45,6 +46,9 @@ export const argTypes = {
   noMargins: {
     control: 'boolean',
   },
+  mixedBoldAndNormal: {
+    control: 'boolean',
+  },
 };
 
 export const Heading: React.FC<IHeadingProps> = ({
@@ -56,15 +60,16 @@ export const Heading: React.FC<IHeadingProps> = ({
   icon = defaultArgs.icon,
   iconAriaLabel = defaultArgs.iconAriaLabel,
   noMargins = defaultArgs.noMargins,
+  mixedBoldAndNormal = defaultArgs.mixedBoldAndNormal,
   className,
   ...otherProps
 }: IHeadingProps) => {
+  let headingMarkup = textContent;
+
   const props = {
     className: clsx(`utrecht-heading-${type.replace('h', '')}`, className),
     ...otherProps,
   };
-
-  let headingMarkup = textContent;
 
   if (!children && icon) {
     let iconSize, gap;
@@ -96,12 +101,8 @@ export const Heading: React.FC<IHeadingProps> = ({
         break;
     }
 
-    const iconMarkup = <Icon icon={icon as any} size={iconSize} ariaLabel={iconAriaLabel} />;
     props.className += ` rvo-layout-row rvo-layout-gap--${gap}`;
-
-    if (noMargins) {
-      props.className += ` utrecht-heading--no-margins`;
-    }
+    const iconMarkup = <Icon icon={icon as any} size={iconSize} ariaLabel={iconAriaLabel} />;
 
     if (showIcon === 'before') {
       headingMarkup = (
@@ -120,6 +121,14 @@ export const Heading: React.FC<IHeadingProps> = ({
         </>
       );
     }
+  }
+
+  if (noMargins) {
+    props.className += ` utrecht-heading--no-margins`;
+  }
+
+  if (mixedBoldAndNormal) {
+    props.className += ` utrecht-heading--mixed`;
   }
 
   switch (type) {
