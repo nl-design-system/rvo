@@ -1,1 +1,1 @@
-Documentatie voor heading
+Bij het gebruik van een heading met zowel dikgedrukte als normale tekst kun je de class `utrecht-heading--mixed` gebruiken. Deze class zorgt ervoor dat de heading standaard niet dikgedrukt is zodat je delen van de tekst dikgedrukt kunt maken met `<strong>` elementen.
