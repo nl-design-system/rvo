@@ -78,6 +78,9 @@ export const Card: React.FC<ICardProps> = ({
   const hasLinkIndicator = showLinkIndicator && link.length > 0 && fullCardLink === true;
   const hasBackgroundImage = background === 'image' && backgroundImage.length > 0;
 
+  const ContentContainer = hasLinkIndicator ? 'div' : React.Fragment;
+  const contentContainerProps = hasLinkIndicator ? { className: clsx('rvo-card--with-link-indicator') } : {};
+
   return (
     <div
       className={clsx(
@@ -104,9 +107,9 @@ export const Card: React.FC<ICardProps> = ({
         </div>
       )}
 
-      <div className={clsx(hasLinkIndicator && 'rvo-card--with-link-indicator')}>
+      <ContentContainer {...contentContainerProps}>
         <div className="rvo-card__content">
-          {title.length > 0 && (
+          {title?.length > 0 && (
             <h3 className="utrecht-heading-3">
               {link.length ? (
                 <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
@@ -129,7 +132,7 @@ export const Card: React.FC<ICardProps> = ({
             className="rvo-card__link-indicator"
           />
         )}
-      </div>
+      </ContentContainer>
     </div>
   );
 };
