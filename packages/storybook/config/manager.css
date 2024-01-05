@@ -1,0 +1,10 @@
+/* stylelint-disable selector-max-id */
+/* stylelint-disable selector-id-pattern */
+
+#demo-pagina-s-mijn-rvo-diensten--default,
+#demo-pagina-s-mijn-rvo-inloggen--default,
+#demo-pagina-s-mijn-rvo-mijn-zaken--default,
+#demo-pagina-s-mijn-rvo-profiel--default,
+#demo-pagina-s-mijn-rvo-zaak--default {
+  display: none;
+}
