@@ -25,7 +25,7 @@ type Story = StoryObj<typeof ItemList>;
 const args = {
   ...defaultArgs,
   items: [
-    <div key="0" className="rvo-layout-row rvo-layout-gap--sm" style={{ width: '100%', position: 'relative' }}>
+    <div key="0" className="rvo-layout-row rvo-layout-gap--sm">
       <StatusIndicator color="groen" />
       <Link href="#" color="zwart" noUnderline={true} fullContainerLink={true}>
         ANLb-Collectieven
@@ -33,7 +33,7 @@ const args = {
       <span style={{ flex: 1 }}>Open voor aanvragen</span>
       <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="sm" />
     </div>,
-    <div key="1" className="rvo-layout-row rvo-layout-gap--sm" style={{ width: '100%', position: 'relative' }}>
+    <div key="1" className="rvo-layout-row rvo-layout-gap--sm">
       <StatusIndicator color="rood" />
       <Link href="#" color="zwart" noUnderline={true} fullContainerLink={true}>
         ISDE
@@ -41,7 +41,7 @@ const args = {
       <span style={{ flex: 1 }}>Gesloten voor aanvragen</span>
       <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="sm" />
     </div>,
-    <div key="2" className="rvo-layout-row rvo-layout-gap--sm" style={{ width: '100%', position: 'relative' }}>
+    <div key="2" className="rvo-layout-row rvo-layout-gap--sm">
       <StatusIndicator color="rood-300" />
       <Link href="#" color="zwart" noUnderline={true} fullContainerLink={true}>
         Gecombineerde opgave
