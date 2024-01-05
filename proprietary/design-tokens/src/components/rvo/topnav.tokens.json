@@ -24,7 +24,7 @@
       },
       "item": {
         "active": {
-          "background-color": { "value": "{rvo.color.donkerblauw}" },
+          "background-color": {},
           "font-weight": { "value": "{rvo.font-weight.bold}" }
         },
         "divider": {
