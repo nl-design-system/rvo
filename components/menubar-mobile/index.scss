@@ -66,10 +66,6 @@
     z-index: 2;
   }
 
-  + .rvo-topnav__background {
-    display: none;
-  }
-
   .rvo-topnav__background::before {
     background-color: var(--rvo-mobile-menu-bg-background-color);
     content: "";
