@@ -16,6 +16,7 @@ import {
   StatusIcon,
   Tag,
 } from '@nl-rvo/components';
+import '../../../components/text-helpers/index.scss';
 // import '../common/rhs-update.scss';
 // import '../common/cmor.scss';
 
@@ -185,10 +186,8 @@ const OverzichtClean = () => {
                       <div className="rvo-item-list__item">
                         <LayoutColumnRow row={true}>
                           <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                          <div className="rvo-item-list-item-title">
-                            <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
-                          </div>
-                          <div className="rvo-item-list-item-description">Open voor aanvragen</div>
+                          <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
+                          Open voor aanvragen
                         </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
                           <Icon icon="delta-naar-rechts" size="sm" />
@@ -197,10 +196,8 @@ const OverzichtClean = () => {
                       <div className="rvo-item-list__item">
                         <LayoutColumnRow row={true}>
                           <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
-                          <div className="rvo-item-list-item-title">
-                            <Link content="ISDE" color="zwart" noUnderline={true} />
-                          </div>
-                          <div className="rvo-item-list-item-description">Gesloten voor aanvragen</div>
+                          <Link content="ISDE" color="zwart" noUnderline={true} />
+                          Gesloten voor aanvragen
                         </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
                           <Icon icon="delta-naar-rechts" size="sm" />
@@ -209,14 +206,11 @@ const OverzichtClean = () => {
                       <div className="rvo-item-list__item">
                         <LayoutColumnRow row={true}>
                           <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
-                          <div className="rvo-item-list-item-title">
-                            <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
-                          </div>
-                          <div className="rvo-item-list-item-description">Tijdelijk gesloten voor aanvragen</div>
+                          <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
+                          Tijdelijk gesloten voor aanvragen
                         </LayoutColumnRow>
-                        <div className="rvo-item-list-icon">
-                          <Icon icon="delta-naar-rechts" size="sm" />
-                        </div>
+
+                        <Icon icon="delta-naar-rechts" size="sm" />
                       </div>
                     </div>
                     <Link
@@ -228,61 +222,64 @@ const OverzichtClean = () => {
                     />
                   </LayoutColumnRow>
                 </LayoutColumnRow>
-                <div className="rvo-quick-links">
-                  <Heading type="h2" textContent="Snel naar" />
-                  <ul className="rvo-quick-links-list">
-                    <li className="rvo-quick-links-list-item">
+                <LayoutColumnRow size="xs">
+                  <Heading type="h2" textContent="Snel naar" noMargins={true} />
+
+                  <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--none">
+                    <li>
                       <Link content="Wijzig e-mail of telefoonnummer" target="#" noUnderline={true} />
                     </li>
-                    <li className="rvo-quick-links-list-item">
+                    <li>
                       <Link content="Neem contact op" target="#" noUnderline={true} />
                     </li>
-                    <li className="rvo-quick-links-list-item">
+                    <li>
                       <Link content="Voeg favoriet toe" target="#" noUnderline={true} />
                     </li>
-                    <li className="rvo-quick-links-list-item">
+                    <li>
                       <Link content="Machtig iemand anders" target="#" noUnderline={true} />
                     </li>
-                    <li className="rvo-quick-links-list-item">
+                    <li>
                       <Link content="Meld een technisch probleem" target="#" noUnderline={true} />
                     </li>
                   </ul>
-                </div>
+                </LayoutColumnRow>
               </div>
 
-              <div className="rvo-messages">
-                <Heading type="h2" textContent="Berichten" />
-                <div className="rvo-messages-list">
-                  <div className="rvo-messages-list-item">
-                    <div className="rvo-messages-meta-data">
-                      <div className="rvo-messages-meta-data-subject">ISDE 2022</div>
-                      <div className="rvo-messages-meta-data-date">7 jun 2023</div>
+              <LayoutColumnRow size="xs">
+                <Heading type="h2" textContent="Berichten" noMargins={true} />
+                <LayoutColumnRow size="sm">
+                  <div className="rvo-item-list">
+                    <div className="rvo-item-list__item">
+                      <LayoutColumnRow row={true}>
+                        <Link content="U moet uw gegevens updaten" noUnderline={true} color="zwart" />
+                        <LayoutColumnRow row={true}>
+                          <span className="rvo-text--sm rvo-text--subtle">ISDE 2022</span>
+                          <span className="rvo-text--sm rvo-text--subtle">7 jun 2023</span>
+                        </LayoutColumnRow>
+                      </LayoutColumnRow>
                     </div>
-                    <a className="rvo-messages-title rvo-link rvo-link--full-click rvo-link--black" href="#">
-                      U moet uw gegevens updaten
-                    </a>
-                  </div>
-                  <div className="rvo-messages-list-item">
-                    <div className="rvo-messages-meta-data">
-                      <div className="rvo-messages-meta-data-subject">Mijn Percelen</div>
-                      <div className="rvo-messages-meta-data-date">15 mei 2023</div>
+                    <div className="rvo-item-list__item">
+                      <LayoutColumnRow row={true}>
+                        <Link content="Percelenregistratie goedgekeurd" noUnderline={true} color="zwart" />
+                        <LayoutColumnRow row={true}>
+                          <span className="rvo-text--sm rvo-text--subtle">Mijn Percelen</span>
+                          <span className="rvo-text--sm rvo-text--subtle">15 mei 2023</span>
+                        </LayoutColumnRow>
+                      </LayoutColumnRow>
                     </div>
-                    <a className="rvo-messages-title rvo-link rvo-link--full-click rvo-link--black" href="#">
-                      Percelenregistratie goedgekeurd
-                    </a>
-                  </div>
-                  <div className="rvo-messages-list-item">
-                    <div className="rvo-messages-meta-data">
-                      <div className="rvo-messages-meta-data-subject">WBSO</div>
-                      <div className="rvo-messages-meta-data-date">22 apr 2023</div>
+                    <div className="rvo-item-list__item">
+                      <LayoutColumnRow row={true}>
+                        <Link content="Aanvullend bewijsmateriaal aanleveren" noUnderline={true} color="zwart" />
+                        <LayoutColumnRow row={true}>
+                          <span className="rvo-text--sm rvo-text--subtle">WBSO</span>
+                          <span className="rvo-text--sm rvo-text--subtle">22 apr 2023</span>
+                        </LayoutColumnRow>
+                      </LayoutColumnRow>
                     </div>
-                    <a className="rvo-messages-title rvo-link rvo-link--full-click rvo-link--black" href="#">
-                      Aanvullend bewijsmateriaal aanleveren
-                    </a>
                   </div>
-                </div>
-                <Link content="Alle berichten" showIcon="after" icon="pijl-naar-rechts" noUnderline={true} />
-              </div>
+                  <Link content="Alle berichten" showIcon="after" icon="pijl-naar-rechts" noUnderline={true} />
+                </LayoutColumnRow>
+              </LayoutColumnRow>
               <div className="rvo-block-group">
                 <div className="rvo-faq">
                   <Heading type="h2" textContent="Veelgestelde vragen" />
