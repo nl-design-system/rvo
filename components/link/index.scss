@@ -16,6 +16,17 @@
   text-underline-offset: var(--rvo-link-text-underline-offset);
 }
 
+.rvo-link.rvo-link--normal,
+.rvo-link.rvo-link--normal:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+.rvo-link.rvo-link--normal:active,
+.rvo-link.rvo-link--normal.rvo-link--active,
+.rvo-link.rvo-link--normal:focus,
+.rvo-link.rvo-link--normal:focus-visible,
+.rvo-link.rvo-link--normal.rvo-link--focus {
+  font-weight: var(--rvo-font-weight-normal);
+}
+
 .rvo-link--no-underline:not(:focus):not(:hover):not(.rvo-link--hover):not(.rvo-link--focus) {
   text-decoration: none;
 }
@@ -77,6 +88,10 @@
 
 .rvo-link--donkerblauw {
   color: var(--rvo-color-donkerblauw);
+}
+
+.rvo-link--logoblauw {
+  color: var(--rvo-color-logoblauw);
 }
 
 .rvo-link--zwart {

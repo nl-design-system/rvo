@@ -32,6 +32,10 @@
   align-content: flex-end;
 }
 
+.rvo-layout-align-content-space-between {
+  align-content: space-between;
+}
+
 .rvo-layout-justify-items-start {
   justify-items: flex-start;
 }
@@ -54,6 +58,10 @@
 
 .rvo-layout-justify-content-end {
   justify-content: flex-end;
+}
+
+.rvo-layout-justify-content-space-between {
+  justify-content: space-between;
 }
 
 .rvo-layout-row {

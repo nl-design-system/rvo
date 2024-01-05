@@ -31,7 +31,8 @@ export interface IMenuBarProps {
   deltaForActiveItem?: boolean;
   children?: React.ReactNode;
   horizontalRule?: boolean;
-  linkColor?: 'donkerblauw' | 'hemelblauw' | 'zwart';
+  linkColor?: 'donkerblauw' | 'hemelblauw' | 'logoblauw' | 'grijs-700' | 'zwart';
+  useBackgroundColor?: boolean;
 }
 
 export const argTypes = {
@@ -71,8 +72,11 @@ export const argTypes = {
     control: 'boolean',
   },
   linkColor: {
-    options: ['hemelblauw', 'zwart'],
+    options: ['donkerblauw', 'hemelblauw', 'logoblauw', 'grijs-700', 'zwart'],
     control: { type: 'radio' },
+  },
+  useBackgroundColor: {
+    control: 'boolean',
   },
 };
 
@@ -162,6 +166,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   deltaForActiveItem = defaultArgs.deltaForActiveItem,
   horizontalRule = defaultArgs.horizontalRule,
   linkColor = defaultArgs.linkColor,
+  useBackgroundColor = defaultArgs.useBackgroundColor,
   children,
 }: IMenuBarProps) => {
   let itemsMarkup = null;
@@ -223,6 +228,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     <div
       className={clsx(
         'rvo-topnav__background',
+        useBackgroundColor && 'rvo-topnav__background--background-color',
         horizontalRule && 'rvo-topnav__background--horizontal-rule',
         type === 'sub' && 'rvo-topnav--sub',
         type === 'sub-grid' && ['rvo-topnav--sub', 'rvo-topnav--sub-grid'],

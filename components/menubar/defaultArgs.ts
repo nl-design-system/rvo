@@ -19,4 +19,5 @@ export const defaultArgs: IMenuBarProps = {
   deltaForActiveItem: false,
   horizontalRule: true,
   linkColor: 'hemelblauw',
+  useBackgroundColor: false,
 };

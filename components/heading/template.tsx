@@ -124,11 +124,11 @@ export const Heading: React.FC<IHeadingProps> = ({
   }
 
   if (noMargins) {
-    props.className += ` utrecht-heading--no-margins`;
+    props.className += ` rvo-heading--no-margins`;
   }
 
   if (mixedBoldAndNormal) {
-    props.className += ` utrecht-heading--mixed`;
+    props.className += ` rvo-heading--mixed`;
   }
 
   switch (type) {

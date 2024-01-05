@@ -1,3 +1,6 @@
+*@nl-rvo/component-library-css@1.0.0-alpha.389*:
+Add option to enable/disable background color design token (use `.rvo-topnav__background--color` to enable)
+
 *@nl-rvo/component-library-css@1.0.0-alpha.365*:
 Add option for menu item divider by using `rvo-topnav__item--with-divider` modifier
 

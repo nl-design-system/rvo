@@ -102,6 +102,7 @@ const parameters = {
   controls: {
     expanded: true,
     sort: 'requiredFirst',
+    hideNoControlsWarning: true,
   },
   docs: {
     theme,
