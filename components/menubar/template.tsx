@@ -31,7 +31,7 @@ export interface IMenuBarProps {
   deltaForActiveItem?: boolean;
   children?: React.ReactNode;
   horizontalRule?: boolean;
-  linkColor?: 'donkerblauw' | 'hemelblauw' | 'zwart';
+  linkColor?: 'donkerblauw' | 'hemelblauw' | 'logoblauw' | 'grijs-700' | 'zwart';
 }
 
 export const argTypes = {
@@ -71,7 +71,7 @@ export const argTypes = {
     control: 'boolean',
   },
   linkColor: {
-    options: ['hemelblauw', 'zwart'],
+    options: ['donkerblauw', 'hemelblauw', 'logoblauw', 'grijs-700', 'zwart'],
     control: { type: 'radio' },
   },
 };
