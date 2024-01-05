@@ -17,12 +17,13 @@ import {
   Tag,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
+import '../common/responsive.scss';
 // import '../common/rhs-update.scss';
 // import '../common/cmor.scss';
 
 const OverzichtClean = () => {
   return (
-    <body className="rvo-theme rvo-cmor rvo-sidebar-menu-active">
+    <body className="rvo-theme rvo-responsive">
       <Header />
       <MobileMenuBar
         iconPlacement="before"
@@ -62,7 +63,7 @@ const OverzichtClean = () => {
           {
             align: 'right',
             label: 'Boer Overveen B.V',
-            link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+            link: '#',
             active: true,
             icon: 'user',
           },
