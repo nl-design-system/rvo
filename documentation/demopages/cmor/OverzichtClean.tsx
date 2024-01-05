@@ -109,7 +109,7 @@ const OverzichtClean = () => {
               </Heading>
               <LayoutColumnRow size="md">
                 <LayoutColumnRow size="xs">
-                  <Heading type="h2" textContent="Nog te starten" noMargins={true}></Heading>
+                  <Heading type="h2" textContent="Nog te starten" noMargins={true} />
                   <LayoutColumnRow size="md">
                     <ExpandableText
                       title="Wij vragen u onderstaande aanvragen op tijd te regelen"
@@ -137,13 +137,13 @@ const OverzichtClean = () => {
                 <LayoutColumnRow size="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutColumnRow row={true}>
-                      <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
+                      <Heading type="h2" textContent="Lopende aanvragen" noMargins={true}></Heading>
                       <Tag type="info" showIcon="no" content="2 openstaande acties" />
                     </LayoutColumnRow>
                   </div>
 
                   <div className="rvo-cards-grid">
-                    <Card background="none" outline={true} fullCardLink={true} padding="md">
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
                         <Link fullContainerLink={true} noUnderline={true}>
                           BSN Melding WBSO 2023
@@ -155,6 +155,48 @@ const OverzichtClean = () => {
                         <span className="rvo-text--sm">
                           Verzilver uw voucher <strong>uiterlijk 28 aug 2023</strong>
                         </span>
+                      </LayoutColumnRow>
+                    </Card>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true}>
+                          ISDE 2023
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">
+                        Investeringssubsidie duurzame energie en energiebesparing
+                      </span>
+                      <LayoutColumnRow row={true} size="xs">
+                        <StatusIcon type="waarschuwing" size="md" />
+                        <span className="rvo-text--sm">
+                          Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
+                        </span>
+                      </LayoutColumnRow>
+                    </Card>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true}>
+                          Gecombineerde opgave 2023
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">Gemeenschappelijk Landbouwbeleid</span>
+                      <LayoutColumnRow row={true} size="xs">
+                        <Icon icon="zandloper" size="md" />
+                        <span className="rvo-text--sm">In behandeling</span>
+                      </LayoutColumnRow>
+                    </Card>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true}>
+                          SVVE 2023
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">
+                        Subsidieregeling verduurzaming voor verenigingen van eigenaars
+                      </span>
+                      <LayoutColumnRow row={true} size="xs">
+                        <Icon icon="vinkje" size="md" />
+                        <span className="rvo-text--sm">Goedgekeurd</span>
                       </LayoutColumnRow>
                     </Card>
                   </div>
@@ -191,7 +233,9 @@ const OverzichtClean = () => {
                           Open voor aanvragen
                         </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
-                          <Icon icon="delta-naar-rechts" size="sm" />
+                          <Link target="#">
+                            <Icon icon="delta-naar-rechts" size="sm" />
+                          </Link>
                         </div>
                       </div>
                       <div className="rvo-item-list__item">
@@ -201,7 +245,9 @@ const OverzichtClean = () => {
                           Gesloten voor aanvragen
                         </LayoutColumnRow>
                         <div className="rvo-item-list-icon">
-                          <Icon icon="delta-naar-rechts" size="sm" />
+                          <Link target="#">
+                            <Icon icon="delta-naar-rechts" size="sm" />
+                          </Link>
                         </div>
                       </div>
                       <div className="rvo-item-list__item">
@@ -210,8 +256,9 @@ const OverzichtClean = () => {
                           <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
                           Tijdelijk gesloten voor aanvragen
                         </LayoutColumnRow>
-
-                        <Icon icon="delta-naar-rechts" size="sm" />
+                        <Link target="#">
+                          <Icon icon="delta-naar-rechts" size="sm" />
+                        </Link>
                       </div>
                     </div>
                     <Link
