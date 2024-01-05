@@ -8,7 +8,7 @@
       },
       "sans-serif-fallback": {
         "font-family": {
-          "value": "'Calibri', 'Verdana', 'Arial', sans-serif"
+          "value": "'Verdana', 'Calibri', 'Arial', sans-serif"
         }
       },
       "serif": {
