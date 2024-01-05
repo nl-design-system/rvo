@@ -1,4 +1,7 @@
 *@nl-rvo/component-library-css@1.0.0-alpha.370*:
+Added space between option (use `rvo-layout-justify-content-space-between` and `rvo-layout-align-content-space-between`)
+
+*@nl-rvo/component-library-css@1.0.0-alpha.370*:
 Added helper classes for align and justify items/content (`rvo-layout-align-items-start`, `rvo-layout-justify-content-end` etc.)
 
 *@nl-rvo/component-library-css@1.0.0-alpha.288*:

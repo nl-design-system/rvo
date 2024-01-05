@@ -12,9 +12,9 @@ export interface ILayoutColumnRowProps {
   row?: boolean;
   wrap?: boolean;
   alignItems?: '' | 'start' | 'center' | 'end';
-  alignContent?: '' | 'start' | 'center' | 'end';
+  alignContent?: '' | 'start' | 'center' | 'end' | 'space-between';
   justifyItems?: '' | 'start' | 'center' | 'end';
-  justifyContent?: '' | 'start' | 'center' | 'end';
+  justifyContent?: '' | 'start' | 'center' | 'end' | 'space-between';
 }
 
 export const argTypes = {
@@ -33,7 +33,7 @@ export const argTypes = {
     control: { type: 'select' },
   },
   alignContent: {
-    options: ['', 'start', 'center', 'end'],
+    options: ['', 'start', 'center', 'end', 'space-between'],
     control: { type: 'select' },
   },
   justifyItems: {
@@ -41,7 +41,7 @@ export const argTypes = {
     control: { type: 'select' },
   },
   justifyContent: {
-    options: ['', 'start', 'center', 'end'],
+    options: ['', 'start', 'center', 'end', 'space-between'],
     control: { type: 'select' },
   },
 };
