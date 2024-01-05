@@ -12,6 +12,7 @@ export interface ILinkProps {
   content?: string;
   href?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
+  weight?: 'normal' | 'bold';
   onClick?: (event) => void;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
@@ -38,6 +39,10 @@ export const argTypes = {
   color: {
     control: { type: 'select' },
     options: ['hemelblauw', 'donkerblauw', 'logoblauw', 'wit', 'zwart', 'grijs-700'],
+  },
+  weight: {
+    control: { type: 'select' },
+    options: ['normal', 'bold'],
   },
   showIcon: {
     options: ['no', 'before', 'after'],
@@ -77,6 +82,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
   content = defaultArgs.content,
   href = defaultArgs.href,
   color = defaultArgs.color,
+  weight = defaultArgs.weight,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
   iconSize = defaultArgs.iconSize,
@@ -123,6 +129,7 @@ export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
       color === 'wit' && 'rvo-link--wit',
       color === 'zwart' && 'rvo-link--zwart',
       color === 'grijs-700' && 'rvo-link--grijs-700',
+      weight === 'normal' && 'rvo-link--normal',
       fullContainerLink && 'rvo-link--full-container',
     ),
     ...otherProps,

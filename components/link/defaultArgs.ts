@@ -4,6 +4,7 @@ export const defaultArgs: ILinkProps = {
   content: 'Dit is een link',
   href: '#',
   color: 'hemelblauw',
+  weight: 'bold',
   showIcon: 'no',
   hover: false,
   icon: 'home',

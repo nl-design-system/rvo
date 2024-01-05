@@ -1,3 +1,6 @@
+*@nl-rvo/component-library-css@1.0.0-alpha.389*:
+Added normal link option (not bold) (use `.rvo-link--normal`)
+
 *@nl-rvo/component-library-css@1.0.0-alpha.282*:
 Added grijs-700 link color (use `.rvo-link--grijs-700`)
 
