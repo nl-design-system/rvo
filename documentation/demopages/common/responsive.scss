@@ -1,0 +1,11 @@
+.rvo-responsive {
+  @media (min-width: 780px) {
+    .rvo-mobile-menu + .rvo-topnav__background {
+      display: block;
+    }
+
+    .rvo-mobile-menu {
+      display: none;
+    }
+  }
+}
