@@ -59,10 +59,11 @@ Thumbs.db
 # Example file exceptions
 !.env.example
 
-# Only track the npm 7 workspace root package-lock.json
+# Only track the root pnpm lockfile, ignore other package manager
 yarn.lock
 package-lock.json
-!/package-lock.json
+pnpm-lock.yaml
+!/pnpm-lock.yaml
 
 # Merge
 .uxpin-merge
