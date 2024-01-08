@@ -15,8 +15,7 @@
     "url": "git@github.com:nl-design-system/rvo.git"
   },
   "engines": {
-    "node": "^18.x",
-    "npm": "^8",
+    "node": "^20",
     "pnpm": "^8.8"
   },
   "workspaces": [
