@@ -7,11 +7,11 @@
   "command": {
     "publish": {},
     "version": {
-      "allowBranch": ["master", "ci/pnpm"],
+      "allowBranch": ["master"],
       "conventionalCommits": true,
       "syncWorkspaceLock": true,
       "exact": true,
-      "message": "docs(release): design system packages %v"
+      "message": "docs(release): design system packages\n\n[skip ci]"
     }
   }
 }
