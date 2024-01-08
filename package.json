@@ -99,9 +99,9 @@
     "test": "npm run nx-test -- --skip-nx-cache",
     "nx-test": "nx run-many --target=test --all --parallel",
     "test-update": "npm-run-all --sequential clean lint build test",
-    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
-    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
-    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps"
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs --deep --dep dev,prod --target patch --upgrade && pnpm install",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs --deep --dep dev,prod --target minor --upgrade && pnpm install",
+    "update-major": "npm-check-updates --configFileName .ncurc.major.cjs --deep --dep dev,prod --target latest --upgrade && pnpm install"
   },
   "dependencies": {
     "http-server": "14.1.1"
