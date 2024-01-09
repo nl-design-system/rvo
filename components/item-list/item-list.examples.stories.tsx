@@ -27,26 +27,26 @@ const args = {
   items: [
     <div key="0" className="rvo-layout-row rvo-layout-gap--sm">
       <StatusIndicator color="groen" />
-      <Link href="#" color="zwart" noUnderline={true} fullContainerLink={true}>
+      <Link href="#" color="zwart" noUnderline={true}>
         ANLb-Collectieven
       </Link>
-      <span style={{ flex: 1 }}>Open voor aanvragen</span>
+      <span>Open voor aanvragen</span>
       <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="sm" />
     </div>,
     <div key="1" className="rvo-layout-row rvo-layout-gap--sm">
       <StatusIndicator color="rood" />
-      <Link href="#" color="zwart" noUnderline={true} fullContainerLink={true}>
+      <Link href="#" color="zwart" noUnderline={true}>
         ISDE
       </Link>
-      <span style={{ flex: 1 }}>Gesloten voor aanvragen</span>
+      <span>Gesloten voor aanvragen</span>
       <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="sm" />
     </div>,
     <div key="2" className="rvo-layout-row rvo-layout-gap--sm">
       <StatusIndicator color="rood-300" />
-      <Link href="#" color="zwart" noUnderline={true} fullContainerLink={true}>
+      <Link href="#" color="zwart" noUnderline={true}>
         Gecombineerde opgave
       </Link>
-      <span style={{ flex: 1 }}>Tijdelijk gesloten voor aanvragen</span>
+      <span>Tijdelijk gesloten voor aanvragen</span>
       <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="sm" />
     </div>,
   ],
