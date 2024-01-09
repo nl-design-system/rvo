@@ -9,7 +9,6 @@
 }
 
 .rvo-header__logo-wrapper {
-  margin-block-end: 10px;
   margin-inline-start: calc(50% - 25px);
 }
 
@@ -20,32 +19,13 @@
   width: 40px;
 }
 
-.rvo-header__logo-img {
-  margin-block-start: -20px;
-  max-height: 80px;
-}
-
 @media (min-width: 480px) {
   .rvo-header__logo-wrapper {
-    margin-block-end: 23px;
+    margin-block-end: 12px;
   }
 
   .rvo-header__logo-link {
     overflow: visible;
     width: auto;
-  }
-
-  .rvo-header__logo-img {
-    margin-block-start: 0;
-    max-height: 90px;
-  }
-}
-
-@media (min-width: 480px) {
-  .rvo-header__logo-wrapper {
-    margin-block-end: 25px;
-  }
-  .rvo-header__logo-img {
-    max-height: none;
   }
 }
