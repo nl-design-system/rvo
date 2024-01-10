@@ -18,11 +18,11 @@
   align-self: flex-start;
   -webkit-appearance: none;
   appearance: none;
-  background-color: var(--rvo-checkbox-background-color, var(--utrecht-form-input-background-color));
-  border-color: var(--rvo-checkbox-border-color, var(--utrecht-form-input-border-color));
+  background-color: var(--rvo-checkbox-background-color, var(--utrecht-form-control-background-color));
+  border-color: var(--rvo-checkbox-border-color, var(--utrecht-form-control-border-color));
   border-radius: var(--rvo-checkbox-border-radius);
   border-style: solid;
-  border-width: var(--rvo-checkbox-border-width, var(--utrecht-form-input-border-width));
+  border-width: var(--rvo-checkbox-border-width, var(--utrecht-form-control-border-width));
   display: grid;
   flex: 24px 0 0;
   height: var(--rvo-checkbox-size);
@@ -37,9 +37,9 @@
 .rvo-checkbox__input:focus,
 .rvo-checkbox__input:focus-visible,
 .rvo-checkbox--focus-visible .rvo-checkbox__input {
-  background-color: var(--rvo-checkbox-focus-background-color, var(--utrecht-form-input-background-color));
-  border-color: var(--rvo-checkbox-focus-border-color, var(--utrecht-form-input-border-color));
-  border-width: var(--rvo-checkbox-focus-border-width, var(--utrecht-form-input-border-width));
+  background-color: var(--rvo-checkbox-focus-background-color, var(--utrecht-form-control-background-color));
+  border-color: var(--rvo-checkbox-focus-border-color, var(--utrecht-form-control-border-color));
+  border-width: var(--rvo-checkbox-focus-border-width, var(--utrecht-form-control-border-width));
   box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
   outline-color: var(--utrecht-focus-outline-color);
   outline-offset: var(--utrecht-focus-outline-offset);
@@ -54,10 +54,13 @@
 
 .rvo-checkbox__input:disabled,
 .rvo-checkbox--disabled {
-  background-color: var(--rvo-checkbox-disabled-background-color, var(--utrecht-form-input-disabled-background-color));
-  border-color: var(--rvo-checkbox-disabled-border-color, var(--utrecht-form-input-disabled-border-color));
-  border-width: var(--rvo-checkbox-disabled-border-width, var(--utrecht-form-input-disabled-border-width));
-  color: var(--rvo-checkbox-disabled-color, var(--utrecht-form-input-disabled-color));
+  background-color: var(
+    --rvo-checkbox-disabled-background-color,
+    var(--utrecht-form-control-disabled-background-color)
+  );
+  border-color: var(--rvo-checkbox-disabled-border-color, var(--utrecht-form-control-disabled-border-color));
+  border-width: var(--rvo-checkbox-disabled-border-width, var(--utrecht-form-control-disabled-border-width));
+  color: var(--rvo-checkbox-disabled-color, var(--utrecht-form-control-disabled-color));
 }
 
 .rvo-checkbox__input:focus:not(:focus-visible) {

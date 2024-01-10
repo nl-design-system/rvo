@@ -8,9 +8,9 @@
         "margin-block-start": { "value": "3px" },
         "margin-inline-start": { "value": "3px" }
       },
-      "background-color": { "value": "{utrecht.form-input.background-color}" },
-      "border-width": { "value": "{utrecht.form-input.border-width}" },
-      "border-color": { "value": "{utrecht.form-input.border-color}" },
+      "background-color": { "value": "{utrecht.form-control.background-color}" },
+      "border-width": { "value": "{utrecht.form-control.border-width}" },
+      "border-color": { "value": "{utrecht.form-control.border-color}" },
       "border-radius": { "value": "{rvo.border-radius.sm}" },
       "focus": {
         "border-color": {},
