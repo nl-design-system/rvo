@@ -1,0 +1,27 @@
+.rvo-layout-grid {
+  display: grid;
+}
+
+.rvo-layout-grid-columns--one {
+  grid-template-columns: 1fr;
+}
+
+.rvo-layout-grid-columns--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.rvo-layout-grid-columns--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rvo-layout-grid-columns--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.rvo-layout-grid-columns--five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.rvo-layout-grid-columns--six {
+  grid-template-columns: repeat(6, 1fr);
+}
