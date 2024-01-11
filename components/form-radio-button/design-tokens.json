@@ -1,6 +1,6 @@
 {
   "rvo": {
-    "custom-radio-button": {
+    "radio-button": {
       "group": {
         "gap": {
           "css": {

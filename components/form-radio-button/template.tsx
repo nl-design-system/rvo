@@ -58,7 +58,7 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
   onUpdateGroup,
   ...otherProps
 }: IRadioButtonProps) => (
-  <label className="rvo-custom-radio-button" htmlFor={id}>
+  <label className="rvo-radio-button" htmlFor={id}>
     <input
       id={id}
       name={name}
@@ -67,14 +67,14 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
       disabled={disabled || null}
       required={required || null}
       className={clsx(
-        'utrecht-custom-radio-button',
-        checked && 'utrecht-custom-radio-button--checked',
+        'utrecht-radio-button',
+        checked && 'utrecht-radio-button--checked',
         hover && 'rvo-radio-button--hover',
-        disabled && 'utrecht-custom-radio-button--disabled',
-        active && 'utrecht-custom-radio-button--active',
-        focus && 'utrecht-custom-radio-button--focus-visible',
-        invalid && 'utrecht-custom-radio-button--invalid',
-        required && 'utrecht-custom-radio-button--required',
+        disabled && 'utrecht-radio-button--disabled',
+        active && 'utrecht-radio-button--active',
+        focus && 'utrecht-radio-button--focus-visible',
+        invalid && 'utrecht-radio-button--invalid',
+        required && 'utrecht-radio-button--required',
       )}
       onChange={(event) => {
         onChange?.(event);

@@ -335,7 +335,7 @@
       width: 18px;
     }
 
-    .utrecht-custom-radio-button,
+    .utrecht-radio-button,
     .rvo-checkbox__input {
       border-color: var(--rvo-color-logoblauw);
       border-width: 1px;
@@ -356,9 +356,9 @@
       border-radius: var(--rvo-border-radius-sm);
     }
 
-    .utrecht-custom-radio-button:checked,
-    .rvo-custom-radio-button:checked,
-    .utrecht-custom-radio-button--checked {
+    .utrecht-radio-button:checked,
+    .rvo-radio-button:checked,
+    .utrecht-radio-button--checked {
       background: radial-gradient(circle, var(--rvo-color-logoblauw) 45%, var(--rvo-color-wit) 50%);
     }
   }
