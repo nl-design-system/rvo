@@ -1,5 +1,5 @@
 import { Header, Heading, LayoutColumnRow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
-import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import { defaultMenuBarItems } from '../demopages/common/defaultMenuBarItems';
 import '../common/style.scss';
 
 const Accordion = () => {
