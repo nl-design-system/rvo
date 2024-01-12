@@ -3,6 +3,7 @@ node_modules
 vendor
 .husky
 .github
+.nx
 .vscode
 
 # Ignore minified files
