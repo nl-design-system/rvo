@@ -109,6 +109,6 @@
   }
 }
 
-.rvo-alert .rvo-link--logoblauw:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+.rvo-alert .rvo-link--logoblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
   color: var(--rvo-color-logoblauw);
 }

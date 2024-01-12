@@ -17,8 +17,8 @@
 }
 
 .rvo-link.rvo-link--normal,
-.rvo-link.rvo-link--normal:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
+.rvo-link.rvo-link--normal:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus),
 .rvo-link.rvo-link--normal:active,
 .rvo-link.rvo-link--normal.rvo-link--active,
 .rvo-link.rvo-link--normal:focus,
@@ -27,7 +27,7 @@
   font-weight: var(--rvo-font-weight-normal);
 }
 
-.rvo-link--no-underline:not(:focus):not(:hover):not(.rvo-link--hover):not(.rvo-link--focus) {
+.rvo-link--no-underline:not(:focus, :hover, .rvo-link--hover, .rvo-link--focus) {
   text-decoration: none;
 }
 
@@ -37,15 +37,15 @@
 }
 
 // Hover
-.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
   background-color: var(--rvo-link-hover-background-color);
   color: var(--rvo-link-hover-color);
   font-weight: var(--rvo-link-hover-font-weight);
   text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
 }
 
-.rvo-link--logoblauw:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+.rvo-link--logoblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
   color: var(--rvo-color-logoblauw);
 }
 
@@ -77,8 +77,8 @@
   background-color: var(--rvo-link-icon-background-color);
 }
 
-.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) .rvo-link__icon,
-.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) .rvo-link__icon {
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon,
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon {
   background-color: var(--rvo-link-hover-icon-background-color);
 }
 
@@ -104,8 +104,8 @@
 .rvo-link--zwart {
   color: var(--rvo-color-zwart);
 
-  &.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-  .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus):hover {
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
     color: var(--rvo-color-donkerblauw);
   }
 }
@@ -113,8 +113,8 @@
 .rvo-link--wit {
   color: var(--rvo-color-wit);
 
-  &.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-  .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus):hover {
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
     color: var(--rvo-color-grijs-100);
   }
 }
@@ -122,8 +122,8 @@
 .rvo-link--grijs-700 {
   color: var(--rvo-color-grijs-700);
 
-  &.rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-  .rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus):hover {
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
     color: var(--rvo-color-donkerblauw);
   }
 }

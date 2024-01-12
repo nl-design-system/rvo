@@ -35,8 +35,8 @@
 }
 
 // Hover
-.rvo-toggle--hover:hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus),
-.rvo-toggle--show-hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus) {
+.rvo-toggle--hover:hover:not(:focus, :focus-visible, .rvo-toggle--focus),
+.rvo-toggle--show-hover:not(:focus, :focus-visible, .rvo-toggle--focus) {
   &.rvo-toggle--default {
     --utrecht-icon-color: var(--rvo-toggle-default-hover-icon-color);
 
@@ -44,8 +44,8 @@
   }
 }
 
-.rvo-toggle--hover:hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus):not(.rvo-toggle--active),
-.rvo-toggle--show-hover:not(:focus):not(:focus-visible):not(.rvo-toggle--focus):not(.rvo-toggle--active) {
+.rvo-toggle--hover:hover:not(:focus, :focus-visible, .rvo-toggle--focus, .rvo-toggle--active),
+.rvo-toggle--show-hover:not(:focus, :focus-visible, .rvo-toggle--focus, .rvo-toggle--active) {
   &.rvo-toggle--default {
     background-color: var(--rvo-toggle-default-hover-background-color);
     color: var(--rvo-toggle-default-hover-color);

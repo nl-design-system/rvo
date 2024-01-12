@@ -64,8 +64,8 @@
 }
 
 // Hover
-.rvo-tag--hover:hover:not(:focus):not(:focus-visible):not(.rvo-tag--focus),
-.rvo-tag--show-hover:not(:focus):not(:focus-visible):not(.rvo-tag--focus) {
+.rvo-tag--hover:hover:not(:focus, :focus-visible, .rvo-tag--focus),
+.rvo-tag--show-hover:not(:focus, :focus-visible, .rvo-tag--focus) {
   &.rvo-tag--default {
     --utrecht-icon-color: var(--rvo-tag-default-hover-icon-color);
 
