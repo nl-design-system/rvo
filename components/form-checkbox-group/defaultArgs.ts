@@ -1,5 +1,5 @@
-import { ICheckboxProps } from '../form-checkbox/template';
 import { ICheckboxGroupProps } from './template';
+import { ICheckboxProps } from '../form-checkbox/template';
 
 const defaultOptions: ICheckboxProps[] = [
   { id: 'optionA', label: 'Option A' },

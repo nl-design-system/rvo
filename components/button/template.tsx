@@ -6,9 +6,9 @@ import { IconType } from '@nl-rvo/assets/icons/types';
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon/template';
 import '../layout-column-row/index.scss';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IButtonProps {

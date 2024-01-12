@@ -5,10 +5,10 @@
 import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
 import Link from '../link/template';
 import MaxWidthLayout from '../max-width-layout/template';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IMenuBarItem {

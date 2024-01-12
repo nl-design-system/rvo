@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import { Icon } from '../icon/template';
 import { defaultArgs } from './defaultArgs';
+import { Icon } from '../icon/template';
 import './index.scss';
 
 export interface IStatusIconProps {

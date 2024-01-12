@@ -1,6 +1,6 @@
-import { Button } from '../button/template';
 import { defaultArgs } from './defaultArgs';
 import { AllAlertKinds, argTypes } from './template';
+import { Button } from '../button/template';
 
 export default {
   title: 'Componenten/Alert/Examples',

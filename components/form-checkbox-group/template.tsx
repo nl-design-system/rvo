@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React, { PropsWithChildren, useCallback, useRef } from 'react';
-import { Checkbox, ICheckboxProps } from '../form-checkbox/template';
 import { defaultArgs } from './defaultArgs';
+import { Checkbox, ICheckboxProps } from '../form-checkbox/template';
 import './index.scss';
 
 export interface ICheckboxGroupProps {

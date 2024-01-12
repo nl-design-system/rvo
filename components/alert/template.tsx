@@ -4,11 +4,11 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Button } from '../button/template';
 import { Icon } from '../icon/template';
 import { StatusIcon } from '../status-icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IAlertProps {

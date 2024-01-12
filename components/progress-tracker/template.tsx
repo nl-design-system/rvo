@@ -4,8 +4,8 @@
  */
 import './index.scss';
 import React, { PropsWithChildren } from 'react';
-import { IProgressTrackerStepProps, ProgressTrackerStep } from '../progress-tracker-step/template';
 import { defaultArgs } from './defaultArgs';
+import { IProgressTrackerStepProps, ProgressTrackerStep } from '../progress-tracker-step/template';
 
 export interface IProgressTrackerProps {
   /** @uxpinignoreprop */

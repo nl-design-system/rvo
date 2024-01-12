@@ -5,10 +5,10 @@
 import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Heading } from '../heading/template';
 import { Link } from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 interface IFooterItem {

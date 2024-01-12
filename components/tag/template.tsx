@@ -5,9 +5,9 @@
 import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Icon, options as iconOptions } from '../icon/template';
 import { StatusIcon } from '../status-icon/template';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface ITagProps {
