@@ -31,6 +31,7 @@ addons.register('docusaurus', () => {
           autoFocus={undefined}
           rel={undefined}
           rev={undefined}
+          placeholder={undefined}
           title="Open documentatie in Docusaurus"
         >
           <Icons icon="document" style={{ width: '12px' }} />
