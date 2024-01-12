@@ -94,7 +94,7 @@ const KostenOpvoeren = () => {
             />
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
-                <div className="intro">
+                <div className="rvo-form-intro">
                   <LayoutColumnRow size="md">
                     <Heading type="h1" textContent="Kosten opvoeren"></Heading>
                     <dl className="rvo-data">

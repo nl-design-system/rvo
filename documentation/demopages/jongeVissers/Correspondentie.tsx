@@ -87,7 +87,7 @@ const Correspondentie = () => {
             />
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
-                <div className="intro">
+                <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Correspondentie"></Heading>
                 </div>
                 <form>

@@ -76,7 +76,7 @@ const ControleerGegevens = () => {
             />
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
-                <div className="intro">
+                <div className="rvo-form-intro">
                   <LayoutColumnRow size="md">
                     <Heading type="h1" textContent="Controleer uw gegevens"></Heading>
                     <LayoutColumnRow size="sm">

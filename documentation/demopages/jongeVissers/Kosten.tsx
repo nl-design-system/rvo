@@ -87,7 +87,7 @@ const Kosten = () => {
             />
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
-                <div className="intro">
+                <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Kosten en subsidies"></Heading>
                 </div>
                 <div className="rvo-table--responsive">
