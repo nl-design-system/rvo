@@ -5,9 +5,9 @@
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
 import { IMenuBarItem, parseMenuItem } from '../menubar/template';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export const argTypes = {

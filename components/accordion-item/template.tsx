@@ -3,10 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import Heading from '../heading/template';
 import Icon from '../icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IAccordionItemProps {

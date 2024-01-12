@@ -1,5 +1,5 @@
-import { defaultArgs as logoDefaultArgs } from '../logo/defaultArgs';
 import { IHeaderProps } from './template';
+import { defaultArgs as logoDefaultArgs } from '../logo/defaultArgs';
 
 export const defaultArgs: IHeaderProps = {
   title: logoDefaultArgs.title,

@@ -4,9 +4,9 @@
  */
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import { Button } from '../button/template';
 import validateHTML from '../utils/validateHTML';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface ITableColumnProps {

@@ -5,8 +5,8 @@
 import { FormFieldDescription } from '@utrecht/component-library-react';
 import React from 'react';
 import './index.scss';
-import { StatusIcon } from '../status-icon/template';
 import { defaultArgs } from './defaultArgs';
+import { StatusIcon } from '../status-icon/template';
 
 export interface IFeedbackProps {
   text: string;

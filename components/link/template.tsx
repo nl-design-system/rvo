@@ -5,8 +5,8 @@
 import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-import { Icon, iconColors, options as iconOptions } from '../icon/template';
 import { defaultArgs } from './defaultArgs';
+import { Icon, iconColors, options as iconOptions } from '../icon/template';
 import './index.scss';
 export interface ILinkProps {
   content?: string;

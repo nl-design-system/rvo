@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import Link from '../link/template';
 import { defaultArgs } from './defaultArgs';
+import Link from '../link/template';
 import './index.scss';
 
 export interface ISkipLinkProps {

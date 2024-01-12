@@ -4,10 +4,10 @@
  */
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
+import { defaultArgs } from './defaultArgs';
 import Icon from '../icon/template';
 import Link from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface ICardProps extends PropsWithChildren {
