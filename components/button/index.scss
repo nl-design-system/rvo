@@ -72,7 +72,8 @@
 
 // Full width
 .utrecht-button--rvo-full-width {
-  width: 100%;
+  --utrecht-button-inline-size: 100%;
+  --utrecht-button-max-inline-size: 100%;
 }
 
 // Override primary icon colors
