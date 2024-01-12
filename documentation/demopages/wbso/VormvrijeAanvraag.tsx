@@ -1,5 +1,6 @@
 import {
   Button,
+  ButtonGroup,
   Fieldset,
   Header,
   Heading,
@@ -71,7 +72,7 @@ const VormvrijeAanvraag = () => {
                       ></RadioButtonField>
                     </Fieldset>
                   </LayoutColumnRow>
-                  <div className="rvo-button-group">
+                  <ButtonGroup>
                     <Button
                       kind="secondary"
                       size="md"
@@ -98,7 +99,7 @@ const VormvrijeAanvraag = () => {
                     >
                       Opslaan en verder
                     </Button>
-                  </div>
+                  </ButtonGroup>
                 </LayoutColumnRow>
               </form>
             </LayoutColumnRow>
