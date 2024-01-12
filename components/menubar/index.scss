@@ -40,7 +40,7 @@
   margin-block-start: var(--rvo-topnav-list-margin-block-start);
   padding-inline-start: 0;
 
-  &:not(.rvo-topnav__list--vertical):not(.rvo-topnav--sub .rvo-topnav__list)
+  &:not(.rvo-topnav__list--vertical, .rvo-topnav--sub .rvo-topnav__list)
     .rvo-topnav__item:first-child
     .rvo-topnav__link {
     padding-inline-start: 0;
