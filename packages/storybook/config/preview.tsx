@@ -131,6 +131,38 @@ const parameters = {
     root: '#storybook-root',
     removeEmptyComments: true,
   },
+  viewport: {
+    viewports: {
+      Chromatic: {
+        name: 'Chromatic',
+        styles: {
+          width: '1200px',
+          height: '900px',
+        },
+      },
+      mobile1: {
+        name: 'Small mobile',
+        styles: {
+          width: '320px',
+          height: '568px',
+        },
+      },
+      mobile2: {
+        name: 'Large mobile',
+        styles: {
+          width: '414px',
+          height: '896px',
+        },
+      },
+      tablet: {
+        name: 'Tablet',
+        styles: {
+          width: '834px',
+          height: '1112px',
+        },
+      },
+    },
+  },
 };
 
 const decorators = [
