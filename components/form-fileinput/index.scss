@@ -25,8 +25,8 @@
   z-index: 1;
 }
 
-.rvo-file-input:focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled),
-.rvo-file-input--focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled) {
+.rvo-file-input:focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled),
+.rvo-file-input--focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled) {
   background-color: var(--rvo-file-input-focus-background-color, var(--utrecht-form-control-background-color));
   border-color: var(--rvo-file-input-focus-border-color, var(--utrecht-form-control-border-color));
   border-width: var(--rvo-file-input-focus-border-width, var(--utrecht-form-control-border-width));

@@ -49,6 +49,6 @@
 }
 
 .rvo-ol--no-padding,
-.rvo-ul--no-padding:not(.rvo-ul--icon):not(.rvo-ul--none) {
+.rvo-ul--no-padding:not(.rvo-ul--icon, .rvo-ul--none) {
   padding-inline-start: var(--rvo-list-zero-padding-offset);
 }

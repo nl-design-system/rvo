@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 .rvo-demo-page {
   background-color: var(--rvo-color-wit);
 
@@ -1427,8 +1429,8 @@
     text-decoration: none;
   }
 
-  .rvo-footer-menu-item .rvo-link:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus),
-  .rvo-footer-menu-item.rvo-link--hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+  .rvo-footer-menu-item .rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-footer-menu-item.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
     border-color: var(--rvo-color-wit);
     color: var(--rvo-color-wit);
     font-weight: var(--rvo-font-weight-regular);
@@ -1917,8 +1919,8 @@
     .utrecht-radio-button:focus,
     .rvo-checkbox__input:focus,
     .utrecht-select:focus,
-    .rvo-file-input:focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled),
-    .rvo-file-input--focus:not(:disabled):not([aria-disabled="true"]):not(.rvo-file-input--disabled) {
+    .rvo-file-input:focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled),
+    .rvo-file-input--focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled) {
       outline-color: var(--rvo-color-logoblauw);
       outline-offset: 0;
       outline-width: 1px;
