@@ -50,7 +50,7 @@ const VoordatUStart = () => {
           />
           <div className="rvo-form">
             <LayoutColumnRow size="md">
-              <div className="intro">
+              <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Voordat u start" />
                 <Heading type="h2" textContent="Dit heeft u nodig"></Heading>

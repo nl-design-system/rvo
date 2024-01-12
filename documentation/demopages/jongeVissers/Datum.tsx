@@ -88,7 +88,7 @@ const Datum = () => {
             />
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
-                <div className="intro">
+                <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Datum verleningsverzoek"></Heading>
                 </div>
                 <form>

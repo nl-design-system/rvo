@@ -52,7 +52,7 @@ const VormvrijeAanvraag = () => {
           />
           <div className="rvo-form">
             <LayoutColumnRow size="md">
-              <div className="intro">
+              <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Vormvrije aanvraag" />
               </div>
