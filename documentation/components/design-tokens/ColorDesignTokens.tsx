@@ -7,7 +7,7 @@ type ColorDesignTokensProps = {
 
 export const ColorDesignTokens = ({ tokens }: ColorDesignTokensProps) => {
   return (
-    <div className="design-tokens__container">
+    <div className="rvo-design-tokens__container">
       {tokens.map(({ path, attributes, value, name }) => {
         const rgbCode = hexToRgb(value);
         const colorExampleStyle = {
@@ -18,9 +18,9 @@ export const ColorDesignTokens = ({ tokens }: ColorDesignTokensProps) => {
           outline: `${attributes.item === 'wit' ? '1px solid black' : 'none'}`,
         };
         return (
-          <div className="design-tokens__row" key={name}>
-            <div className="design-tokens__column design-tokens__column--20" style={colorExampleStyle} />
-            <div className="design-tokens__column">
+          <div className="rvo-design-tokens__row" key={name}>
+            <div className="rvo-design-tokens__column rvo-design-tokens__column--20" style={colorExampleStyle} />
+            <div className="rvo-design-tokens__column">
               <strong>{attributes.item.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())}</strong>
               <div>{value}</div>
               <div>{`RGB ${rgbCode.r}-${rgbCode.g}-${rgbCode.b}`}</div>
