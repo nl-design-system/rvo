@@ -4,11 +4,11 @@
  */
 import { FormField } from '@utrecht/component-library-react';
 import React, { PropsWithChildren } from 'react';
+import { defaultArgs } from './defaultArgs';
 import { ExpandableText } from '../expandable-text/template';
 import { Feedback } from '../form-feedback/template';
 import { Label } from '../form-field-label/template';
 import validateHTML from '../utils/validateHTML';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IFieldProps {

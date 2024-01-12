@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
-import { Logo } from '../logo/template';
 import { defaultArgs } from './defaultArgs';
+import { Logo } from '../logo/template';
 import './index.scss';
 
 export interface IHeaderProps extends PropsWithChildren {

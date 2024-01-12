@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { defaultArgs } from './defaultArgs';
+import { ItemList } from './template';
 import Icon from '../icon/template';
 import Link from '../link/template';
 import StatusIndicator from '../status-indicator/template';
-import { defaultArgs } from './defaultArgs';
-import { ItemList } from './template';
 
 const meta: Meta<typeof ItemList> = {
   title: 'Componenten/Item list/Examples',

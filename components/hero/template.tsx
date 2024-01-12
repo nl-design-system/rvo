@@ -5,9 +5,9 @@
 // import EmblemSrc from '@nl-rvo/assets/images/emblem.svg';
 import clsx from 'clsx';
 import React from 'react';
+import { defaultArgs } from './defaultArgs';
 import Heading from '../heading/template';
 import MaxWidthLayout from '../max-width-layout/template';
-import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IHeroProps {

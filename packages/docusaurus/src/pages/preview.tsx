@@ -1,7 +1,7 @@
 import { useLocation } from '@docusaurus/router';
 import * as Components from '@nl-rvo/components';
-import { deserialize } from '../utils/react-serialize';
 import styles from './preview.module.css';
+import { deserialize } from '../utils/react-serialize';
 
 export default function Preview(): JSX.Element {
   const { search } = useLocation();

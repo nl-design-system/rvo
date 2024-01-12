@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React, { PropsWithChildren, useCallback, useRef } from 'react';
-import { IRadioButtonProps, RadioButton } from '../form-radio-button/template';
 import { defaultArgs } from './defaultArgs';
+import { IRadioButtonProps, RadioButton } from '../form-radio-button/template';
 import './index.scss';
 
 export interface IRadioButtonGroupProps {

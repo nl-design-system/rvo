@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode, useMemo } from 'react';
-import Link from '../link/template';
 import { defaultArgs } from './defaultArgs';
+import Link from '../link/template';
 import './index.scss';
 
 export interface IPaginationProps {

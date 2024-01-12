@@ -7,8 +7,8 @@ import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import { useMemo } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import { serialize } from '../../utils/react-serialize';
 import styles from './styles.module.css';
+import { serialize } from '../../utils/react-serialize';
 
 function formatHTML(children) {
   return prettier

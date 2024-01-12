@@ -1,5 +1,5 @@
-import { IRadioButtonProps } from '../form-radio-button/template';
 import { IRadioButtonGroupProps } from './template';
+import { IRadioButtonProps } from '../form-radio-button/template';
 
 const defaultOptions: IRadioButtonProps[] = [
   { id: 'optionA', label: 'Option A' },
