@@ -9,7 +9,7 @@ type FontFamilyDesignTokensProps = {
 
 const FontFamilyDesignTokens = ({ tokens }: FontFamilyDesignTokensProps) => {
   return (
-    <div className="design-tokens__container" style={{ marginBlockEnd: 'var(--rvo-space-3xl)' }}>
+    <div className="rvo-design-tokens__container" style={{ marginBlockEnd: 'var(--rvo-space-3xl)' }}>
       {tokens.map(({ name, path, attributes, value }) => {
         let fontName = value.split(',')[0].replace(/"/g, '');
         const isFallback = attributes.item.indexOf('fallback') > -1;
@@ -21,12 +21,12 @@ const FontFamilyDesignTokens = ({ tokens }: FontFamilyDesignTokensProps) => {
         };
 
         return (
-          <div className="design-tokens__row" style={isFallback ? { marginBlockEnd: '1em' } : {}} key={name}>
-            <div className="design-tokens__column design-tokens__column--30">
+          <div className="rvo-design-tokens__row" style={isFallback ? { marginBlockEnd: '1em' } : {}} key={name}>
+            <div className="rvo-design-tokens__column rvo-design-tokens__column--30">
               {isFallback && `Fallback: `}
               <div style={fontNameTitleStyle}>{fontName}</div>
             </div>
-            <code className="design-tokens__column">{cssVar}</code>
+            <code className="rvo-design-tokens__column">{cssVar}</code>
           </div>
         );
       })}

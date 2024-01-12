@@ -1,9 +1,9 @@
-.design-tokens__container {
+.rvo-design-tokens__container {
   margin-block-end: 8em;
   margin-block-start: 2em;
 }
 
-.design-tokens__row {
+.rvo-design-tokens__row {
   align-items: center;
   display: flex;
   gap: 2em;
@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.design-tokens__column {
+.rvo-design-tokens__column {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -20,22 +20,22 @@
   white-space: nowrap;
 }
 
-.design-tokens__column--15 {
+.rvo-design-tokens__column--15 {
   width: 15%;
 }
 
-.design-tokens__column--20 {
+.rvo-design-tokens__column--20 {
   width: 20%;
 }
 
-.design-tokens__column--30 {
+.rvo-design-tokens__column--30 {
   width: 30%;
 }
 
-.design-tokens__column--50 {
+.rvo-design-tokens__column--50 {
   width: 50%;
 }
 
-.design-tokens__column--flex {
+.rvo-design-tokens__column--flex {
   flex: 1;
 }
