@@ -9,3 +9,8 @@
 .utrecht-button-group__align-right {
   margin-inline-start: auto;
 }
+
+.utrecht-button-group--rvo-full-width {
+  --utrecht-button-inline-size: 100%;
+  --utrecht-button-max-inline-size: 100%;
+}
