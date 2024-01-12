@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Button, IButtonProps } from '../button/template';
@@ -12,6 +13,7 @@ import './index.scss';
 export interface IButtonGroupProps {
   buttonsLeft?: IButtonProps[];
   buttonsRight?: IButtonProps[];
+  fullWidth?: boolean;
 }
 
 export const argTypes = {
@@ -27,15 +29,26 @@ export const argTypes = {
       required: true,
     },
   },
+  fullWidth: {
+    type: {
+      name: 'boolean',
+      required: false,
+    },
+  },
 };
 
 export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
   children,
+  fullWidth = defaultArgs.fullWidth,
 }: PropsWithChildren<IButtonGroupProps>) => {
   return (
-    <UtrechtButtonGroup>
+    <UtrechtButtonGroup
+      className={clsx({
+        'utrecht-button-group--rvo-full-width': fullWidth,
+      })}
+    >
       {children}
       {!children &&
         buttonsLeft.map((buttonProps, index) => {

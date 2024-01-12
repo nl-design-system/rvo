@@ -1,6 +1,7 @@
 import { Heading } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
 import '../common/style.scss';
+import { ButtonGroup } from '@utrecht/component-library-react';
 
 const Akkoord = () => {
   return (
@@ -33,12 +34,14 @@ const Akkoord = () => {
               <strong>Disclaimer</strong>
               <br /> Deze app is momenteel in de beta fase en daarom onderhevig aan constante verbeteringen.
             </p>
-            <a
-              className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
-              onClick={linkTo("Demo pagina's/de Regelmaat/Profiel intro")}
-            >
-              Akkoord
-            </a>
+            <ButtonGroup className="utrecht-button-group--rvo-full-width">
+              <a
+                className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
+                onClick={linkTo("Demo pagina's/de Regelmaat/Profiel intro")}
+              >
+                Akkoord
+              </a>
+            </ButtonGroup>
           </div>
           <svg width="392" height="213" viewBox="0 0 392 213" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_6571_14351" maskUnits="userSpaceOnUse" x="0" y="0" width="392" height="213">
