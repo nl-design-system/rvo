@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
-    "@utrecht/component-library-css": "1.0.2-alpha.0",
+    "@utrecht/component-library-css": "3.0.1-alpha.1",
     "node-sass-package-importer": "5.3.3",
-    "rimraf": "3.0.2",
-    "sass": "1.53.0"
+    "rimraf": "5.0.5",
+    "sass": "1.69.7"
   },
   "scripts": {
     "prebuild": "npm run clean",
