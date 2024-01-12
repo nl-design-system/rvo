@@ -30,7 +30,7 @@ const Formulier = () => {
               <ProgressTracker />
               <div className="rvo-form">
                 <LayoutColumnRow size="sm">
-                  <div className="intro">
+                  <div className="rvo-form-intro">
                     <Link content="Terug" href="#" showIcon="before" icon="terug" />
                     <Heading type="h1" textContent="Heading" />
                   </div>

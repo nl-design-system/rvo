@@ -76,7 +76,7 @@ const Bevestiging = () => {
             />
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
-                <div className="intro">
+                <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Bevestiging"></Heading>
                   <p>
                     Wij hebben uw aanvraag verlenging Jonge Visser 2020 ontvangen op <strong>05-07-2022</strong>.<br />
