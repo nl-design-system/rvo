@@ -1,4 +1,13 @@
-import { Header, Heading, LayoutColumnRow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
+import {
+  ButtonGroup,
+  Header,
+  Heading,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+} from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
 import '../common/style.scss';
@@ -98,7 +107,7 @@ const ControleerGegevens = () => {
                 </div>
                 <form>
                   <LayoutColumnRow size="md">
-                    <div className="rvo-button-group">
+                    <ButtonGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
                         onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
@@ -111,7 +120,7 @@ const ControleerGegevens = () => {
                       >
                         Opslaan en verder
                       </a>
-                    </div>
+                    </ButtonGroup>
                   </LayoutColumnRow>
                 </form>
               </LayoutColumnRow>

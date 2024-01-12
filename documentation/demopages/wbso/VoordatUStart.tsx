@@ -1,5 +1,6 @@
 import {
   Button,
+  ButtonGroup,
   Header,
   Heading,
   LayoutColumnRow,
@@ -68,7 +69,7 @@ const VoordatUStart = () => {
               </div>
               <form>
                 <LayoutColumnRow row={false} size="md">
-                  <div className="rvo-button-group">
+                  <ButtonGroup>
                     <Button
                       kind="warning-subtle"
                       size="sm"
@@ -95,7 +96,7 @@ const VoordatUStart = () => {
                     >
                       Start aanvraag
                     </Button>
-                  </div>
+                  </ButtonGroup>
                 </LayoutColumnRow>
               </form>
             </LayoutColumnRow>
