@@ -1,5 +1,6 @@
 import {
   Button,
+  ButtonGroup,
   Fieldset,
   Header,
   Heading,
@@ -139,7 +140,7 @@ const Aanvrager = () => {
                       <SelectField label="Maand aanvang" options={[{ value: '1', label: 'Januari' }]}></SelectField>
                     </Fieldset>
                   </LayoutColumnRow>
-                  <div className="rvo-button-group">
+                  <ButtonGroup>
                     <Button
                       kind="secondary"
                       size="md"
@@ -166,7 +167,7 @@ const Aanvrager = () => {
                     >
                       Opslaan en verder
                     </Button>
-                  </div>
+                  </ButtonGroup>
                 </LayoutColumnRow>
               </form>
             </LayoutColumnRow>
