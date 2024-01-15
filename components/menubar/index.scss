@@ -40,7 +40,7 @@
   margin-block-start: var(--rvo-topnav-list-margin-block-start);
   padding-inline-start: 0;
 
-  &:not(.rvo-topnav__list--vertical):first-child .rvo-topnav__link {
+  &:not(.rvo-topnav__list--vertical) .rvo-topnav__item:first-child .rvo-topnav__link {
     padding-inline-start: 0;
   }
 
@@ -63,6 +63,7 @@
     &.rvo-topnav__item--align-right {
       margin-inline-start: auto;
     }
+
     .rvo-topnav__link {
       display: inline-flex;
       font-weight: var(--rvo-topnav-item-link-font-weight);
