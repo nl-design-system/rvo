@@ -6,6 +6,7 @@ import {
   Card,
   ExpandableText,
   Footer,
+  Grid,
   Header,
   Heading,
   Icon,
@@ -75,7 +76,7 @@ const OverzichtClean = () => {
       />
 
       <main className="rvo-sidebar-layout__container">
-        <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--md">
+        <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
             <MenuBar
               direction="vertical"
@@ -104,7 +105,7 @@ const OverzichtClean = () => {
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutColumnRow size="xl">
-              <Heading type="h1" noMargins={true}>
+              <Heading type="h1" noMargins={true} mixedBoldAndNormal={true}>
                 <strong>Overzicht</strong> van Boer Overveen B.V.
               </Heading>
               <LayoutColumnRow size="md">
@@ -116,19 +117,21 @@ const OverzichtClean = () => {
                       content="Extra uitleg over bovenstaande opmerking."
                       subtle={true}
                     />
-                    <Alert heading="Mijn Percelen" kind="info">
-                      <LayoutColumnRow size="sm">
-                        Uiterlijk 4 september 2024
-                        <ButtonGroup>
-                          <Button kind="primary" size="sm">
-                            Percelen registreren
-                          </Button>
-                          <Button kind="secondary" size="sm">
-                            Meer info
-                          </Button>
-                        </ButtonGroup>
-                      </LayoutColumnRow>
-                    </Alert>
+                    <Grid columns="two">
+                      <Alert heading="Mijn Percelen" kind="info">
+                        <LayoutColumnRow size="sm">
+                          Uiterlijk 4 september 2024
+                          <ButtonGroup>
+                            <Button kind="primary" size="sm">
+                              Percelen registreren
+                            </Button>
+                            <Button kind="secondary" size="sm">
+                              Meer info
+                            </Button>
+                          </ButtonGroup>
+                        </LayoutColumnRow>
+                      </Alert>
+                    </Grid>
                   </LayoutColumnRow>
                 </LayoutColumnRow>
               </LayoutColumnRow>
@@ -142,7 +145,7 @@ const OverzichtClean = () => {
                     </LayoutColumnRow>
                   </div>
 
-                  <div className="rvo-cards-grid">
+                  <Grid gap="md" columns="two">
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
                         <Link fullContainerLink={true} noUnderline={true}>
@@ -199,7 +202,7 @@ const OverzichtClean = () => {
                         <span className="rvo-text--sm">Goedgekeurd</span>
                       </LayoutColumnRow>
                     </Card>
-                  </div>
+                  </Grid>
                   <LayoutColumnRow row={true}>
                     <Link
                       showIcon="after"
@@ -220,7 +223,7 @@ const OverzichtClean = () => {
                 </LayoutColumnRow>
               </div>
               <hr className="rvo-hr"></hr>
-              <div className="rvo-block-group">
+              <Grid gap="xl" columns="two">
                 <LayoutColumnRow size="sm">
                   <Heading type="h2" textContent="Start een nieuwe aanvraag" noMargins={true} />
                   <span>Kies uit uw favorieten</span>
@@ -291,14 +294,14 @@ const OverzichtClean = () => {
                     </li>
                   </ul>
                 </LayoutColumnRow>
-              </div>
+              </Grid>
 
               <LayoutColumnRow size="xs">
                 <Heading type="h2" textContent="Berichten" noMargins={true} />
                 <LayoutColumnRow size="sm">
                   <div className="rvo-item-list">
                     <div className="rvo-item-list__item">
-                      <LayoutColumnRow row={true}>
+                      <LayoutColumnRow row={true} alignContent="space-between">
                         <Link content="U moet uw gegevens updaten" noUnderline={true} color="zwart" />
                         <LayoutColumnRow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">ISDE 2022</span>

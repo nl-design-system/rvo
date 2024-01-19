@@ -27,6 +27,7 @@ export { RadioButtonGroup } from './form-radio-button-group/template';
 export { Select } from './form-select/template';
 export { TextInput } from './form-textinput/template';
 export { TimeInput } from './form-timeinput/template';
+export { Grid } from './grid/template';
 export { Header } from './header/template';
 export { Heading } from './heading/template';
 export { Hr } from './horizontal-rule/template';
