@@ -21,13 +21,13 @@ export const argTypes = {
 };
 
 export const ItemList: React.FC<IItemListProps> = ({ items = defaultArgs.items }: IItemListProps) => (
-  <div className="rvo-item-list">
+  <ul className="rvo-item-list">
     {items.map((itemContent, index) => (
-      <div key={index} className="rvo-item-list__item">
+      <li key={index} className="rvo-item-list__item">
         {itemContent}
-      </div>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 export default ItemList;

@@ -1,3 +1,10 @@
+.rvo-item-list {
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
 .rvo-item-list__item {
   align-items: center;
   border-bottom: var(--rvo-item-list-border-width) var(--rvo-item-list-border-style) var(--rvo-item-list-border-color);
