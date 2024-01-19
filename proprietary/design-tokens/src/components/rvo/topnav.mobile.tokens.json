@@ -18,14 +18,14 @@
       "toggle": {
         "justify-content": { "value": "flex-end" },
         "background-color": { "value": "transparent" },
-        "color": { "value": "{rvo.color.hemelblauw}" },
+        "color": { "value": "{rvo.color.logoblauw}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
-        "icon-color": { "value": "{rvo.color.hemelblauw}" },
+        "icon-color": { "value": "{rvo.color.logoblauw}" },
         "hover": {
-          "color": { "value": "{rvo.color.hemelblauw}" }
+          "color": { "value": "{rvo.color.logoblauw}" }
         },
         "active": {
-          "color": { "value": "{rvo.color.hemelblauw}" }
+          "color": { "value": "{rvo.color.logoblauw}" }
         },
         "padding-block-start": { "value": "{rvo.space.md}" },
         "padding-block-end": { "value": "{rvo.space.md}" },
