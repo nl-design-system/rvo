@@ -40,7 +40,9 @@
   margin-block-start: var(--rvo-topnav-list-margin-block-start);
   padding-inline-start: 0;
 
-  &:not(.rvo-topnav__list--vertical) .rvo-topnav__item:first-child .rvo-topnav__link {
+  &:not(.rvo-topnav__list--vertical):not(.rvo-topnav--sub .rvo-topnav__list)
+    .rvo-topnav__item:first-child
+    .rvo-topnav__link {
     padding-inline-start: 0;
   }
 
@@ -71,7 +73,7 @@
       padding-block-start: var(--rvo-topnav-item-link-padding-block-start);
       padding-inline-end: var(--rvo-topnav-item-link-padding-inline-end);
       padding-inline-start: var(--rvo-topnav-item-link-padding-inline-start);
-      text-decoration: var(--rvo-topnav-item-link-text-decoration);
+      text-decoration-line: var(--rvo-topnav-item-link-text-decoration);
 
       @extend .rvo-layout-row;
       @extend .rvo-layout-gap--sm;
@@ -84,12 +86,12 @@
     &:not(.rvo-topnav__item--active) .rvo-topnav__link {
       &:focus {
         font-weight: var(--rvo-topnav-item-link-focus-font-weight) !important;
-        text-decoration: var(--rvo-topnav-item-link-focus-text-decoration);
+        text-decoration-line: var(--rvo-topnav-item-link-focus-text-decoration);
       }
 
       &:hover {
         font-weight: var(--rvo-topnav-item-link-hover-font-weight) !important;
-        text-decoration: var(--rvo-topnav-item-link-hover-text-decoration);
+        text-decoration-line: var(--rvo-topnav-item-link-hover-text-decoration);
       }
     }
   }

@@ -52,12 +52,6 @@
       }
     },
     "font-weight": {
-      "thin": {
-        "value": "200"
-      },
-      "light": {
-        "value": "300"
-      },
       "normal": {
         "value": "400"
       },
