@@ -18,6 +18,6 @@ export const defaultArgs: IMenuBarProps = {
   type: 'primary',
   deltaForActiveItem: false,
   horizontalRule: true,
-  linkColor: 'hemelblauw',
+  linkColor: 'logoblauw',
   useBackgroundColor: false,
 };

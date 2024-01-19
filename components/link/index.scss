@@ -11,7 +11,7 @@
   cursor: pointer;
   display: inline-flex;
   font-weight: var(--rvo-link-font-weight);
-  text-decoration: var(--rvo-link-text-decoration);
+  text-decoration-line: var(--rvo-link-text-decoration);
   text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
   text-underline-offset: var(--rvo-link-text-underline-offset);
 }
@@ -45,6 +45,10 @@
   text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
 }
 
+.rvo-link--logoblauw:hover:not(:focus):not(:focus-visible):not(.rvo-link--focus) {
+  color: var(--rvo-color-logoblauw);
+}
+
 // Active
 .rvo-link:active,
 .rvo-link--active {
@@ -52,6 +56,10 @@
   color: var(--rvo-link-active-color);
   font-weight: var(--rvo-link-active-font-weight);
   text-decoration-thickness: var(--rvo-link-active-text-decoration-thickness);
+}
+
+.rvo-link--logoblauw:active {
+  color: var(--rvo-color-logoblauw);
 }
 
 // Focus
