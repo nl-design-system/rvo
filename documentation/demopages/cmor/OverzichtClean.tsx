@@ -331,7 +331,7 @@ const OverzichtClean = () => {
                   <Link content="Alle berichten" showIcon="after" icon="pijl-naar-rechts" noUnderline={true} />
                 </LayoutColumnRow>
               </LayoutColumnRow>
-              <div className="rvo-block-group">
+              <Grid columns="two" gap="xl">
                 <div className="rvo-faq">
                   <Heading type="h2" textContent="Veelgestelde vragen" />
                   <div className="rvo-accordion--compact">
@@ -378,7 +378,7 @@ const OverzichtClean = () => {
                     </Button>
                   </ButtonGroup>
                 </div>
-              </div>
+              </Grid>
             </LayoutColumnRow>
           </div>
         </div>
