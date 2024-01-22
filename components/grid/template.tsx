@@ -29,17 +29,19 @@ export const Grid: React.FC<PropsWithChildren<IGridProps>> = ({
   children,
 }: PropsWithChildren<IGridProps>) => {
   return (
-    <div className={clsx('rvo-layout-grid', `rvo-layout-gap--${gap}`, `rvo-layout-grid-columns--${columns}`)}>
-      {children || (
-        <>
-          <div>Element A</div>
-          <div>Element B</div>
-          <div>Element C</div>
-          <div>Element D</div>
-          <div>Element E</div>
-          <div>Element F</div>
-        </>
-      )}
+    <div className="rvo-layout-grid-container">
+      <div className={clsx('rvo-layout-grid', `rvo-layout-gap--${gap}`, `rvo-layout-grid-columns--${columns}`)}>
+        {children || (
+          <>
+            <div>Element A</div>
+            <div>Element B</div>
+            <div>Element C</div>
+            <div>Element D</div>
+            <div>Element E</div>
+            <div>Element F</div>
+          </>
+        )}
+      </div>
     </div>
   );
 };
