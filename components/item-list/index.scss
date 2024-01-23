@@ -8,9 +8,6 @@
 .rvo-item-list__item {
   align-items: center;
   border-bottom: var(--rvo-item-list-border-width) var(--rvo-item-list-border-style) var(--rvo-item-list-border-color);
-  display: flex;
-  gap: var(--rvo-item-list-gap);
-  justify-content: space-between;
   padding-block-end: var(--rvo-item-list-padding-block-end);
   padding-block-start: var(--rvo-item-list-padding-block-start);
   width: 100%;
