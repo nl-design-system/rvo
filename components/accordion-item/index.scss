@@ -46,17 +46,9 @@
 }
 
 .rvo-accordion__item-title {
+  color: var(--rvo-color-hemelblauw);
   display: flex;
-
-  .rvo-link {
-    @extend .rvo-layout-row;
-    @extend .rvo-layout-align-items-start;
-    @extend .rvo-layout-gap--sm;
-
-    align-items: flex-start;
-    margin-block-end: 0;
-    margin-block-start: 0;
-  }
+  gap: var(--rvo-space-sm);
 }
 
 .rvo-accordion__content {
@@ -89,6 +81,10 @@
     padding-block-start: var(--rvo-accordion-item-summary-padding-block-start);
     padding-inline-end: var(--rvo-accordion-item-summary-padding-inline-end);
     padding-inline-start: var(--rvo-accordion-item-summary-padding-inline-start);
+  }
+
+  .rvo-accordion__item[open] > .rvo-accordion__item-summary {
+    padding-block-end: 0;
   }
 
   .rvo-accordion-teaser {

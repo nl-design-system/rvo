@@ -5,7 +5,6 @@
 import React from 'react';
 import Heading from '../heading/template';
 import Icon from '../icon/template';
-import Link from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
@@ -46,12 +45,10 @@ export const AccordionItem: React.FC<IAccordionItemProps> = ({
   return (
     <details className="rvo-accordion__item" {...(open ? { open } : {})}>
       <summary className="rvo-accordion__item-summary">
-        <Heading type="h3" noMargins={true} className="rvo-accordion__item-title">
-          <Link noUnderline={true} weight="normal">
-            <Icon icon="delta-omlaag" size="md" color="hemelblauw" className="rvo-accordion__item-icon--closed" />
-            <Icon icon="delta-omhoog" size="md" color="hemelblauw" className="rvo-accordion__item-icon--open" />
-            {title}
-          </Link>
+        <Heading type="h3" noMargins={true} className="rvo-accordion__item-title" mixedBoldAndNormal={true}>
+          <Icon icon="delta-omlaag" size="md" color="hemelblauw" className="rvo-accordion__item-icon--closed" />
+          <Icon icon="delta-omhoog" size="md" color="hemelblauw" className="rvo-accordion__item-icon--open" />
+          {title}
         </Heading>
         <span className="rvo-accordion-teaser">{teaserMarkup}</span>
       </summary>

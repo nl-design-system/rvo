@@ -230,38 +230,52 @@ const OverzichtClean = () => {
                   <LayoutColumnRow size="sm">
                     <div className="rvo-item-list">
                       <div className="rvo-item-list__item">
-                        <LayoutColumnRow row={true}>
-                          <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                          <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
-                          Open voor aanvragen
+                        <LayoutColumnRow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutColumnRow row={true} alignItems="start">
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <LayoutColumnRow row={true} wrap={true} size="sm">
+                              <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
+                              Open voor aanvragen
+                            </LayoutColumnRow>
+                          </LayoutColumnRow>
+                          <div className="rvo-item-list-icon">
+                            <Link target="#">
+                              <Icon icon="delta-naar-rechts" size="sm" />
+                            </Link>
+                          </div>
                         </LayoutColumnRow>
-                        <div className="rvo-item-list-icon">
-                          <Link target="#">
-                            <Icon icon="delta-naar-rechts" size="sm" />
-                          </Link>
-                        </div>
                       </div>
                       <div className="rvo-item-list__item">
-                        <LayoutColumnRow row={true}>
-                          <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
-                          <Link content="ISDE" color="zwart" noUnderline={true} />
-                          Gesloten voor aanvragen
+                        <LayoutColumnRow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutColumnRow row={true} alignItems="start">
+                            <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
+                            <LayoutColumnRow row={true} wrap={true} size="sm">
+                              <Link content="ISDE" color="zwart" noUnderline={true} />
+                              Gesloten voor aanvragen
+                            </LayoutColumnRow>
+                          </LayoutColumnRow>
+                          <div className="rvo-item-list-icon">
+                            <Link target="#">
+                              <Icon icon="delta-naar-rechts" size="sm" />
+                            </Link>
+                          </div>
                         </LayoutColumnRow>
-                        <div className="rvo-item-list-icon">
-                          <Link target="#">
-                            <Icon icon="delta-naar-rechts" size="sm" />
-                          </Link>
-                        </div>
                       </div>
                       <div className="rvo-item-list__item">
-                        <LayoutColumnRow row={true}>
-                          <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
-                          <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
-                          Tijdelijk gesloten voor aanvragen
+                        <LayoutColumnRow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutColumnRow row={true} alignItems="start">
+                            <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
+                            <LayoutColumnRow row={true} wrap={true} size="sm">
+                              <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
+                              Tijdelijk gesloten voor aanvragen
+                            </LayoutColumnRow>
+                          </LayoutColumnRow>
+                          <div className="rvo-item-list-icon">
+                            <Link target="#">
+                              <Icon icon="delta-naar-rechts" size="sm" />
+                            </Link>
+                          </div>
                         </LayoutColumnRow>
-                        <Link target="#">
-                          <Icon icon="delta-naar-rechts" size="sm" />
-                        </Link>
                       </div>
                     </div>
                     <Link
@@ -301,7 +315,7 @@ const OverzichtClean = () => {
                 <LayoutColumnRow size="sm">
                   <div className="rvo-item-list">
                     <div className="rvo-item-list__item">
-                      <LayoutColumnRow row={true} alignContent="space-between">
+                      <LayoutColumnRow row={true} justifyContent="space-between" wrap={true} size="sm">
                         <Link content="U moet uw gegevens updaten" noUnderline={true} color="zwart" />
                         <LayoutColumnRow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">ISDE 2022</span>
@@ -310,7 +324,7 @@ const OverzichtClean = () => {
                       </LayoutColumnRow>
                     </div>
                     <div className="rvo-item-list__item">
-                      <LayoutColumnRow row={true}>
+                      <LayoutColumnRow row={true} justifyContent="space-between" wrap={true} size="sm">
                         <Link content="Percelenregistratie goedgekeurd" noUnderline={true} color="zwart" />
                         <LayoutColumnRow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">Mijn Percelen</span>
@@ -319,7 +333,7 @@ const OverzichtClean = () => {
                       </LayoutColumnRow>
                     </div>
                     <div className="rvo-item-list__item">
-                      <LayoutColumnRow row={true}>
+                      <LayoutColumnRow row={true} justifyContent="space-between" wrap={true} size="sm">
                         <Link content="Aanvullend bewijsmateriaal aanleveren" noUnderline={true} color="zwart" />
                         <LayoutColumnRow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">WBSO</span>
@@ -334,7 +348,7 @@ const OverzichtClean = () => {
               <Grid columns="two" gap="xl">
                 <div className="rvo-faq">
                   <Heading type="h2" textContent="Veelgestelde vragen" />
-                  <div className="rvo-accordion--compact">
+                  <LayoutColumnRow size="sm">
                     <Accordion
                       items={[
                         {
@@ -356,13 +370,14 @@ const OverzichtClean = () => {
                         },
                       ]}
                     />
-                  </div>
-                  <Link
-                    content="Bekijk alle veelgestelde vragen"
-                    showIcon="after"
-                    icon="pijl-naar-rechts"
-                    noUnderline={true}
-                  />
+
+                    <Link
+                      content="Bekijk alle veelgestelde vragen"
+                      showIcon="after"
+                      icon="pijl-naar-rechts"
+                      noUnderline={true}
+                    />
+                  </LayoutColumnRow>
                 </div>
 
                 <div className="rvo-contact-options">
