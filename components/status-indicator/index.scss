@@ -6,6 +6,7 @@
 .rvo-status-indicator {
   border-radius: var(--rvo-status-indicator-border-radius);
   height: var(--rvo-status-indicator-height);
+  min-width: 3px;
   width: var(--rvo-status-indicator-width);
 }
 
