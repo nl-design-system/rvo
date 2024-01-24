@@ -25,18 +25,6 @@
   z-index: 1;
 }
 
-.rvo-file-input:focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled),
-.rvo-file-input--focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled) {
-  background-color: var(--rvo-file-input-focus-background-color, var(--utrecht-form-control-background-color));
-  border-color: var(--rvo-file-input-focus-border-color, var(--utrecht-form-control-border-color));
-  border-width: var(--rvo-file-input-focus-border-width, var(--utrecht-form-control-border-width));
-  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
-  outline-color: var(--rvo-file-input-focus-outline-color, var(--utrecht-focus-outline-color));
-  outline-offset: var(--rvo-file-input-focus-outline-offset, var(--utrecht-focus-outline-offset));
-  outline-style: var(--rvo-file-input-focus-outline-style, var(--utrecht-focus-outline-style));
-  outline-width: var(--rvo-file-input-focus-outline-width, var(--utrecht-focus-outline-width));
-}
-
 .rvo-file-input:disabled,
 .rvo-file-input--disabled {
   background-color: var(
@@ -56,4 +44,16 @@
   );
   border-color: var(--rvo-file-input-invalid-border-color, var(--utrecht-form-control-invalid-border-color));
   border-width: var(--rvo-file-input-invalid-border-width, var(--utrecht-form-control-invalid-border-width));
+}
+
+.rvo-file-input:focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled),
+.rvo-file-input--focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled) {
+  background-color: var(--rvo-file-input-focus-background-color, var(--utrecht-form-control-background-color));
+  border-color: var(--rvo-file-input-focus-border-color, var(--utrecht-form-control-border-color));
+  border-width: var(--rvo-file-input-focus-border-width, var(--utrecht-form-control-border-width));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--rvo-file-input-focus-outline-color, var(--utrecht-focus-outline-color));
+  outline-offset: var(--rvo-file-input-focus-outline-offset, var(--utrecht-focus-outline-offset));
+  outline-style: var(--rvo-file-input-focus-outline-style, var(--utrecht-focus-outline-style));
+  outline-width: var(--rvo-file-input-focus-outline-width, var(--utrecht-focus-outline-width));
 }

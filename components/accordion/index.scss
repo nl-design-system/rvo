@@ -12,10 +12,10 @@
   border-left: 6px solid transparent;
 }
 
-.rvo-accordion .rvo-accordion__item:first-child {
-  border-top: 1px solid var(--rvo-accordion-border-color);
-}
-
 .rvo-accordion--grijs .rvo-accordion__item {
   background-color: var(--rvo-accordion-grijs-background-color);
+}
+
+.rvo-accordion .rvo-accordion__item:first-child {
+  border-top: 1px solid var(--rvo-accordion-border-color);
 }

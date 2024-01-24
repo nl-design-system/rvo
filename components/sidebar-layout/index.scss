@@ -22,10 +22,6 @@
       var(--rvo-sidebar-layout-content-background-color) 50%
     );
   }
-
-  .rvo-sidebar-layout__content {
-    background: var(--rvo-color-wit);
-  }
 }
 
 .rvo-sidebar-layout__container--right {
@@ -36,6 +32,10 @@
       var(--rvo-sidebar-layout-content-background-color) 50%
     );
   }
+}
+
+.rvo-sidebar-layout__content {
+  background: var(--rvo-color-wit);
 }
 
 .rvo-sidebar-layout__sidebar,
