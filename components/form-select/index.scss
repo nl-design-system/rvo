@@ -9,6 +9,7 @@
 
 .rvo-select-wrapper::before {
   background-color: var(--rvo-select-icon-background-color);
+  border-radius: var(--rvo-border-radius-sm);
   content: "";
   display: block;
   height: 32px;
