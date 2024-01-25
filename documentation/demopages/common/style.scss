@@ -153,11 +153,13 @@
   .rvo-responsive-filters > .rvo-responsive-filters-toggle::-webkit-details-marker {
     display: none;
   }
+
   .rvo-responsive-filters .rvo-tmp-filters .utrecht-form-fieldset__fieldset {
     align-items: baseline;
     display: flex;
     flex-direction: row;
     gap: var(--rvo-space-md);
+
     .rvo-form-field {
       margin-block-end: 0;
       margin-block-start: 0;
@@ -266,7 +268,7 @@
   /* @FILTER */
 
   .rvo-tmp-filters .utrecht-form-fieldset {
-    background-color: var(--rvo-color-lichtblauw-150);
+    background-color: var(--rvo-color-wit);
     gap: var(--rvo-space-md);
     padding-block-end: var(--rvo-space-xl);
     padding-block-start: var(--rvo-space-sm);
@@ -886,8 +888,8 @@
   }
 
   .rvo-tmp-filter .utrecht-select {
-    padding-block-end: 6px;
-    padding-block-start: 6px;
+    padding-block-end: 7px;
+    padding-block-start: 8px;
     width: auto;
   }
 
@@ -897,7 +899,9 @@
 
   .rvo-tmp-filter .rvo-checkbox__group {
     background-color: var(--rvo-color-wit);
-    border: 2px solid var(--rvo-color-zwart);
+    border: 1px solid var(--rvo-color-logoblauw);
+    border-end-end-radius: var(--rvo-border-radius-sm);
+    border-end-start-radius: var(--rvo-border-radius-sm);
     border-top: 0;
     padding-block-end: var(--rvo-space-xs);
     padding-block-start: var(--rvo-space-xs);
@@ -1468,8 +1472,10 @@
   .rvo-form-field__label {
     margin-block-end: 0;
   }
+
   .rvo-form-field {
     --utrecht-space-around: 1;
+
     &:last-child {
       margin-block-end: 0;
     }
@@ -1792,6 +1798,7 @@
     display: flex;
     gap: var(--rvo-space-sm);
     margin-block-start: var(--rvo-space-xs);
+
     input {
       flex: 60px 0 0;
     }
@@ -2108,6 +2115,7 @@
     .rvo-tmp-filters .utrecht-form-fieldset__fieldset .rvo-tmp-filter {
       flex: 1;
     }
+
     .rvo-item-list-detail--status {
       margin-inline-start: auto;
     }

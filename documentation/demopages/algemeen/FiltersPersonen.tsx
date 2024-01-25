@@ -42,12 +42,7 @@ const FiltersPersonen = () => {
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                                <label
-                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                  htmlFor="fieldId"
-                                >
-                                  <span className="rvo-form-field__label-text">Thema</span>
-                                </label>
+                                <label className="rvo-label">Thema</label>
                                 <div className="rvo-select-wrapper">
                                   <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
                                     Maak een keuze
@@ -113,12 +108,7 @@ const FiltersPersonen = () => {
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                                <label
-                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                  htmlFor="fieldId"
-                                >
-                                  <span className="rvo-form-field__label-text">Fase activiteit</span>
-                                </label>
+                                <label className="rvo-label">Fase activiteit</label>
                                 <div className="rvo-select-wrapper">
                                   <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
                                     Maak een keuze
@@ -184,12 +174,7 @@ const FiltersPersonen = () => {
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                                <label
-                                  className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs"
-                                  htmlFor="fieldId"
-                                >
-                                  <span className="rvo-form-field__label-text">Subsidie/onderwerp</span>
-                                </label>
+                                <label className="rvo-label">Subsidie/onderwerp</label>
                                 <div className="rvo-select-wrapper">
                                   <div className="utrecht-select utrecht-select--html-select rvo-filter-select-placeholder">
                                     Maak een keuze
@@ -291,13 +276,14 @@ const FiltersPersonen = () => {
                               </div>
                               <a href="#">
                                 <img
-                                  alt=""
+                                  alt="Jelle Knop"
                                   className="rvo-result-profile-pic"
-                                  src="https://media-exp1.licdn.com/dms/image/C4E03AQEirwEyMyg2pQ/profile-displayphoto-shrink_200_200/0/1657908152116?e=2147483647&v=beta&t=McXjZqk3FV1ud7n4sE7MzYloKoPc7ZpNoJTtzkHKc4k"
+                                  src="images/profielfotos/jelle-knop.jpg"
                                 ></img>
                               </a>
                             </LayoutColumnRow>
                           </div>
+                          <hr className="rvo-hr" />
                           <div className="rvo-result rvo-result--w-image">
                             <LayoutColumnRow row={true} size="lg">
                               <div className="rvo-result-text">
@@ -329,6 +315,7 @@ const FiltersPersonen = () => {
                               </a>
                             </LayoutColumnRow>
                           </div>
+                          <hr className="rvo-hr" />
                           <div className="rvo-result">
                             <LayoutColumnRow row={true} size="lg">
                               <div className="rvo-result-text">
