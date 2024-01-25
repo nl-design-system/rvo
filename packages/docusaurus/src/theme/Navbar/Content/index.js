@@ -35,7 +35,7 @@ export default function NavbarContent() {
           type: 'primary',
           key: `${item.label}-${index}`,
           active,
-          linkColor: 'hemelblauw',
+          linkColor: 'logoblauw',
         });
 
         if (!active) {
@@ -54,7 +54,7 @@ export default function NavbarContent() {
                       type: 'sub',
                       key: `${section.label}-${index}`,
                       active: section.href.indexOf(location) > -1,
-                      linkColor: 'hemelblauw',
+                      linkColor: 'logoblauw',
                     });
                   } else if (section.type === 'category') {
                     return (
@@ -66,7 +66,7 @@ export default function NavbarContent() {
                             type: 'sub',
                             key: `${item.label}-${index}`,
                             active: item.href.indexOf(location) > -1,
-                            linkColor: 'hemelblauw',
+                            linkColor: 'logoblauw',
                           }),
                         )}
                       </React.Fragment>

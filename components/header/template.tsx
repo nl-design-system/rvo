@@ -35,7 +35,7 @@ export const Header: React.FC<IHeaderProps> = ({
   <header className={clsx('rvo-header')}>
     <div className="rvo-header__logo-wrapper">
       {link ? (
-        <a href={link} className="rvo-header__logo-link">
+        <a href={link} className="rvo-header__logo-link rvo-link rvo-link--no-underline">
           <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} />
         </a>
       ) : (
