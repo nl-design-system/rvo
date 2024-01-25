@@ -21,7 +21,7 @@ export default function NavbarLayout({ children }) {
         })}
       >
         <div className={styles.menubar}>
-          <MenuBar size="md" maxWidth="md" linkColor="hemelblauw">
+          <MenuBar size="md" maxWidth="md" linkColor="logoblauw">
             {children}
           </MenuBar>
         </div>

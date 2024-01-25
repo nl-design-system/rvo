@@ -11,21 +11,3 @@
 .rvo-header__logo-wrapper {
   margin-inline-start: calc(50% - 25px);
 }
-
-.rvo-header__logo-link {
-  display: inline-block;
-  font-size: 0;
-  overflow: hidden;
-  width: 40px;
-}
-
-@media (min-width: 480px) {
-  .rvo-header__logo-wrapper {
-    margin-block-end: 12px;
-  }
-
-  .rvo-header__logo-link {
-    overflow: visible;
-    width: auto;
-  }
-}

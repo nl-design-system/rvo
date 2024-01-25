@@ -130,3 +130,24 @@ code {
 .menu__list-item-collapsible--active + .menu__list {
   display: block !important;
 }
+
+// Fix logo
+
+.rvo-header {
+  margin-inline-end: 0 !important;
+  margin-inline-start: 0 !important;
+
+  .rvo-header__logo-link {
+    overflow: visible;
+    width: auto;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.rvo-header__logo-link {
+  overflow: visible;
+}
