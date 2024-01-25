@@ -3,7 +3,14 @@
 }
 
 .inactiveLink {
+  font-weight: var(--rvo-font-weight-regular);
   text-decoration: none;
+}
+
+.inactiveLink:hover,
+.inactiveLink:focus {
+  color: var(--rvo-color-grijs-700) !important;
+  font-weight: var(--rvo-font-weight-regular) !important;
 }
 
 .activeLink,

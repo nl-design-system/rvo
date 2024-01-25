@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-block-end: 0 !important;
     padding-block-start: var(--rvo-size-2xl) !important;
     padding-inline-start: var(--rvo-size-2xl) !important;
     transition: opacity 50ms ease;

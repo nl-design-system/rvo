@@ -22,7 +22,7 @@ export default function DocSidebarItemLink({ item, onItemClick, activePath, leve
       <Link
         content={label}
         href={href}
-        color="zwart"
+        color="grijs-700"
         showIcon={!isInternalLink ? true : false}
         className={clsx(isActive ? styles.activeLink : styles.inactiveLink)}
         icon="external-link"
