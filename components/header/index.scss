@@ -8,6 +8,23 @@
   margin-inline-start: auto;
 }
 
+.rvo-header__logo-link:hover,
+.rvo-header__logo-link:focus {
+  text-decoration: none;
+}
+
 .rvo-header__logo-wrapper {
-  margin-inline-start: calc(50% - 25px);
+  margin-inline-start: calc(50% - 20px);
+}
+
+@media (min-width: 495px) {
+  .rvo-header__logo-wrapper {
+    margin-inline-start: calc(50% - 22.5px);
+  }
+}
+
+@media (min-width: 650px) {
+  .rvo-header__logo-wrapper {
+    margin-inline-start: calc(50% - 25px);
+  }
 }
