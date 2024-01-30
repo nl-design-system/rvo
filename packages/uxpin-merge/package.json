@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "server": "uxpin-merge server",
-    "test": "uxpin-merge dump",
+    "test-build": "uxpin-merge dump",
     "start": "uxpin-merge --disable-tunneling",
     "push": "uxpin-merge push"
   },
