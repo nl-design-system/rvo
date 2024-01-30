@@ -98,6 +98,7 @@
     "serve-storybook": "nx serve packages-storybook",
     "test": "npm run nx-test -- --skip-nx-cache",
     "nx-test": "nx run-many --target=test --all --parallel",
+    "test-build": "pnpm run --recursive test-build",
     "test-update": "npm-run-all --sequential clean lint build test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs --deep --dep dev,prod --target patch --upgrade && pnpm install",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs --deep --dep dev,prod --target minor --upgrade && pnpm install",

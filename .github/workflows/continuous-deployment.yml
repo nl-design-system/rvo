@@ -114,11 +114,17 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
+
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/rvo/"
         run: |
           pnpm run --if-present build
+
+      - name: "Continuous Integration: test build"
+        run: |
+          pnpm run --if-present test-build
+
       - name: "Generate design system website"
         run: |
           npm run generate -w ./packages/design-system-website
