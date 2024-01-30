@@ -1,3 +1,4 @@
+/* eslint-env node */
 const path = require('path');
 
 module.exports = {
@@ -35,27 +36,36 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        loader: {
-          loader: 'url-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'images/',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
           },
-        },
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader: {
-          loader: 'url-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
           },
-        },
+        ],
       },
       {
         test: /\.(s*)css$/,
-        loader: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
+          { loader: 'sass-loader' },
+        ],
       },
     ],
   },

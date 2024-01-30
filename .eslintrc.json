@@ -62,11 +62,11 @@
         "project": [
           "components/tsconfig.json",
           "documentation/tsconfig.json",
-          "uxpin-merge/tsconfig.json",
           "packages/components-react/tsconfig.json",
           "packages/components-react/tsconfig.test.json",
           "packages/docusaurus/tsconfig.json",
-          "packages/storybook/tsconfig.json"
+          "packages/storybook/tsconfig.json",
+          "packages/uxpin-merge/tsconfig.json"
         ]
       },
       "plugins": ["@typescript-eslint", "import"],

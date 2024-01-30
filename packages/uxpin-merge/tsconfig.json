@@ -14,8 +14,8 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
-      "@nl-rvo/assets/*": ["../proprietary/assets/*"]
+      "@nl-rvo/design-tokens/*": ["../../proprietary/design-tokens/*"],
+      "@nl-rvo/assets/*": ["../../proprietary/assets/*"]
     }
   },
   "exclude": ["**/node_modules"]
