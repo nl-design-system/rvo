@@ -1,4 +1,4 @@
-import Checkbox from '../../../form-checkbox/template';
+import Checkbox from '../../form-checkbox/template';
 import { defaultArgs } from '../defaultArgs';
 import CheckboxField from '../template';
 
