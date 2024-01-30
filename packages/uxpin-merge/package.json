@@ -1,0 +1,56 @@
+{
+  "name": "@nl-rvo/uxpin-merge",
+  "version": "1.0.1-alpha.3",
+  "description": "UXPin Merge integration for ROOS",
+  "author": "",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "scripts": {
+    "server": "uxpin-merge server",
+    "test": "uxpin-merge dump",
+    "start": "uxpin-merge --disable-tunneling",
+    "push": "uxpin-merge push"
+  },
+  "dependencies": {
+    "@date-io/date-fns": "2.16.0",
+    "@emotion/react": "11.10.0",
+    "@emotion/styled": "11.10.0",
+    "@mui/icons-material": "5.10.3",
+    "@mui/lab": "5.0.0-alpha.97",
+    "@mui/material": "5.10.3",
+    "@mui/styles": "5.10.6",
+    "@mui/x-data-grid": "5.17.20",
+    "@mui/x-date-pickers": "5.0.0",
+    "@nl-rvo/assets": "workspace:*",
+    "@nl-rvo/design-tokens": "workspace:*",
+    "@utrecht/design-tokens": "1.0.0-alpha.613",
+    "apexcharts": "3.35.5",
+    "babel-loader": "9.1.2",
+    "css-loader": "6.7.3",
+    "date-fns": "2.29.3",
+    "normalize.css": "8.0.1",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-apexcharts": "1.4.0",
+    "react-credit-cards": "0.8.3",
+    "react-dom": "18.2.0",
+    "style-loader": "3.3.1",
+    "uuid": "8.3.2",
+    "webpack": "5.88.2"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.23.9",
+    "@utrecht/component-library-css": "3.0.1-alpha.1",
+    "@utrecht/component-library-react": "3.0.1-alpha.1",
+    "@uxpin/merge-cli": "3.4.0",
+    "clsx": "2.1.0",
+    "parcel": "2.7.0",
+    "resolve-url-loader": "5.0.0",
+    "sass-loader": "13.3.3",
+    "scheduler": "0.23.0",
+    "url-loader": "4.1.1"
+  }
+}
