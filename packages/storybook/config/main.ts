@@ -44,7 +44,7 @@ const config: StorybookConfig = {
     '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
   ],
-  staticDirs: ['../../../documentation/demopages/common'],
+  staticDirs: ['../../../documentation/demopages/common', '../../../proprietary/assets/'],
   typescript: { check: true, checkOptions: {} },
   webpackFinal: async (config) => {
     const scssRule = config.module.rules.find(

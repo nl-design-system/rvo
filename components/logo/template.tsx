@@ -2,7 +2,6 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import EmblemSrc from '@nl-rvo/assets/images/emblem.svg';
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -21,7 +20,7 @@ export const Logo: React.FC<ILogoProps> = ({
   return (
     <div className={clsx('rvo-logo', className)}>
       <div className="rvo-logo__emblem">
-        <img src={EmblemSrc} alt={`${title || ''}${subtitle.length ? `, ${subtitle}` : ''}`} />
+        <img src="images/emblem.svg" alt={`${title || ''}${subtitle.length ? `, ${subtitle}` : ''}`} />
       </div>
       <div className="rvo-logo__wordmark">
         <p className="rvo-logo__title">{title}</p>
