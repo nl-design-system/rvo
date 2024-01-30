@@ -1,4 +1,4 @@
-import ProgressTrackerStep from '../../../progress-tracker-step/template';
+import ProgressTrackerStep from '../../progress-tracker-step/template';
 import { defaultArgs } from '../defaultArgs';
 import ProgressTracker from '../template';
 
