@@ -1,5 +1,7 @@
 import {
   Alert,
+  Button,
+  ButtonGroup,
   Fieldset,
   Footer,
   Header,
@@ -7,6 +9,7 @@ import {
   LayoutColumnRow,
   MenuBar,
   MobileMenuBar,
+  ProgressTracker,
   RadioButtonField,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
@@ -44,6 +47,10 @@ const SIBstartpagina = () => {
             <MenuBar
               items={[
                 {
+                  label: 'Mijn RVO',
+                  link: '#',
+                },
+                {
                   align: 'right',
                   label: 'Hulp & Contact',
                   link: '#',
@@ -58,7 +65,7 @@ const SIBstartpagina = () => {
                   align: 'right',
                   label: 'Boer Overveen B.V',
                   link: '#',
-                  active: true,
+
                   icon: 'user',
                 },
               ]}
@@ -84,16 +91,87 @@ const SIBstartpagina = () => {
               size="md"
               useIcons={true}
               iconPlacement="before"
-              maxWidth="sm"
+              maxWidth="md"
               type="sub"
             />
           </div>
 
-          <main className="rvo-max-width-layout rvo-max-width-layout--sm">
+          <main className="rvo-max-width-layout rvo-max-width-layout--md">
+            <ProgressTracker
+              steps={[
+                { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'doing',
+                  label: 'Startpagina',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Uw gegevens',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Uw onderneming',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Zaakgegevens',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Kosten',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+
+                {
+                  state: 'incomplete',
+                  label: 'Uitvoerder coaching traject',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Maatschappelijk verantwoord ondernemen',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+
+                  size: 'md',
+                  line: 'straight',
+                },
+
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
+            />
             <LayoutColumnRow size="xl">
-              <Heading type="h1" noMargins={true}>
-                Support International Business (SIB) 2024: Coaching
-              </Heading>
+              <div>
+                <Heading type="h1" noMargins={true}>
+                  SIB 2024: Coaching
+                </Heading>
+                <p className="rvo-text--no-margins">
+                  Met dit formulier kunt u subsidie aanvragen voor het sparren met en leren van een coach over de
+                  organisatie van export naar een specifiek doelland. De subsidie bedraagt 50% van de kosten, tot ten
+                  hoogste € 1.000 exclusief btw.
+                </p>
+              </div>
               <Fieldset legend="Welke rol heeft u? ">
                 <RadioButtonField
                   name="rol"
@@ -104,7 +182,33 @@ const SIBstartpagina = () => {
                     { id: 'rolB', label: 'Intermediar' },
                   ]}
                 ></RadioButtonField>
+                <RadioButtonField
+                  name="aanmerking"
+                  label="Dient u deze aanvraag in namens een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) of maatschap?"
+                  expandableHelperText={true}
+                  expandableHelperTextTitle="Meer uitleg"
+                  helperText="Bedrijven zonder rechtspersoonlijkheid, zoals een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) en een maatschap, komen niet voor SIB in aanmerking. "
+                  options={[
+                    { id: 'aanmerkingA', label: 'Ja' },
+                    { id: 'aanmerkingB', label: 'Nee' },
+                  ]}
+                ></RadioButtonField>
               </Fieldset>
+
+              <div>
+                <Heading type="h2" noMargins={true}>
+                  Aanvrager
+                </Heading>
+                <dl className="rvo-data-list">
+                  <dt>Naam organisatie</dt>
+                  <dd>Albert Heijn B.V.</dd>
+                  <dt>KVK-nummer</dt>
+                  <dd>35012085</dd>
+                  <dt>Rechtsvorm</dt>
+                  <dd>Besloten vennootschap (bv)</dd>
+                </dl>
+              </div>
+
               <div>
                 <Heading type="h2" noMargins={true}>
                   Sluitingsdatum
@@ -122,6 +226,18 @@ const SIBstartpagina = () => {
                   verlaten&rsquo;.
                 </p>
               </div>
+              <div>
+                <Heading type="h2" noMargins={true}>
+                  Persoonsgegevens
+                </Heading>
+                <p className="rvo-text--no-margins">
+                  Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons{' '}
+                  <a href="#" className="rvo-link">
+                    privacybeleid
+                  </a>
+                  .
+                </p>
+              </div>
               <Alert kind="info">
                 Extra toelichting bij vragen vindt u in het informatie icoon bij de vraag en in toelichtende teksten in
                 het formulier. Informatie over de regeling leest u op{' '}
@@ -133,6 +249,9 @@ const SIBstartpagina = () => {
                   088 042 42 42
                 </a>
               </Alert>
+              <ButtonGroup>
+                <Button kind="primary">Start aanvraag</Button>
+              </ButtonGroup>
             </LayoutColumnRow>
           </main>
         </LayoutColumnRow>
