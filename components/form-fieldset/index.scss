@@ -21,3 +21,7 @@
   margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
   margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
 }
+
+.utrecht-form-fieldset .rvo-form-field:last-child {
+  margin-block-end: 0;
+}
