@@ -17,6 +17,7 @@ export const TextHelpers: React.FC = () => {
       <p className="rvo-text--error">Gebruik .rvo-text--error voor fouttekst</p>
       <p className="rvo-text--bold">Gebruik .rvo-text--bold voor vetgedrukte tekst</p>
       <p className="rvo-text--italic">Gebruik .rvo-text--italic voor cursieve tekst</p>
+      <p className="rvo-text--no-margins">Gebruik .rvo-text--no-margins als er geen margins toegevoegd moeten worden</p>
     </div>
   );
 };
