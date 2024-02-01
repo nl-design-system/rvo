@@ -34,3 +34,8 @@
 .rvo-text--italic {
   font-style: italic;
 }
+
+.rvo-text--no-margins {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}

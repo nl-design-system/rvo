@@ -19,3 +19,9 @@
 .rvo-max-width-layout--lg {
   max-width: var(--rvo-layout-max-width-lg);
 }
+
+.rvo-max-width-layout:has(.rvo-progress-tracker) {
+  display: grid;
+  gap: var(--rvo-space-md);
+  grid-template-columns: 240px 1fr;
+}
