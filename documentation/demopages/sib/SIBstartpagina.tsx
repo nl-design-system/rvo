@@ -162,9 +162,7 @@ const SIBstartpagina = () => {
             />
             <LayoutColumnRow size="xl">
               <div>
-                <Heading type="h1" noMargins={true}>
-                  SIB 2024: Coaching
-                </Heading>
+                <Heading type="h1">SIB 2024: Coaching</Heading>
                 <p className="rvo-text--no-margins">
                   Met dit formulier kunt u subsidie aanvragen voor het sparren met en leren van een coach over de
                   organisatie van export naar een specifiek doelland. De subsidie bedraagt 50% van de kosten, tot ten

@@ -1,6 +1,7 @@
 import {
   ButtonGroup,
   Fieldset,
+  FileInputField,
   Footer,
   Header,
   Heading,
@@ -8,13 +9,12 @@ import {
   MenuBar,
   MobileMenuBar,
   ProgressTracker,
-  RadioButtonField,
   TextInputField,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
 
-const UwOnderneming = () => {
+const Kosten = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
@@ -114,21 +114,21 @@ const UwOnderneming = () => {
                   line: 'straight',
                 },
                 {
-                  state: 'doing',
+                  state: 'completed',
                   label: 'Uw onderneming',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Zaakgegevens',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'doing',
                   label: 'Kosten',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story',
                   size: 'md',
@@ -164,63 +164,38 @@ const UwOnderneming = () => {
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon"
-                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story"
                 >
                   <span
                     className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
                     role="img"
                     aria-label="Terug"
                   ></span>
-                  Terug naar Uw gegevens
+                  Terug naar Zaakgegevens
                 </a>
-                <Heading type="h1" noMargins={true}>
-                  Uw onderneming
-                </Heading>
+                <Heading type="h1">Kosten voor inhuur</Heading>
+                <p className="rvo-text--no-margins">
+                  U kunt hier de totale kosten voor de inhuur van een adviseur opgeven.
+                </p>
               </div>
               <Fieldset legend="">
-                <RadioButtonField
-                  name="schuld"
-                  label="Is voor uw organisatie een verzoek tot surseance van betaling, tot faillissement, of tot het van toepassing verklaren van de schuldsaneringsregeling ingediend?"
-                  helperText=""
-                  options={[
-                    { id: 'schuldA', label: 'Ja' },
-                    { id: 'schuldB', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="mkb"
-                  label="Is uw organisatie een mkb-onderneming?"
-                  helperText=""
-                  options={[
-                    { id: 'mkb A', label: 'Ja' },
-                    { id: 'mkb B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="middelen"
-                  label="U beschikt over financiële middelen, potentie en ambitie om structureel internationaal actief te worden en verdere stappen te kunnen nemen. Klopt dit? *"
-                  helperText=""
-                  options={[
-                    { id: 'middelen A', label: 'Ja' },
-                    { id: 'middelen B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <TextInputField
-                  label="Hoeveel medewerkers heeft uw onderneming?"
-                  size="sm"
-                  validation="number"
-                ></TextInputField>
-                <TextInputField label="Wat is de website van uw organisatie?"></TextInputField>
-                <TextInputField
-                  label="SBI-code"
-                  size="sm"
-                  validation="number"
-                  helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
-                ></TextInputField>
+                <TextInputField label="Totaalkosten" prefix="€"></TextInputField>
+                <Heading type="h2" noMargins={true}>
+                  Gespecificeerde offerte
+                </Heading>
+                <p className="rvo-text">
+                  U kunt hier uw gespecificeerde offerte uploaden. In de offerte dienen de werkzaamheden en kosten van
+                  de coach gespecificeerd te zijn. De offerte mag niet ouder zijn dan 3 maanden op het moment van
+                  indiening.
+                </p>
+                <FileInputField
+                  label="Offertebestand"
+                  warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
+                ></FileInputField>
               </Fieldset>
               <ButtonGroup>
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-uitvoerder--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
@@ -273,4 +248,4 @@ const UwOnderneming = () => {
   );
 };
 
-export default UwOnderneming;
+export default Kosten;
