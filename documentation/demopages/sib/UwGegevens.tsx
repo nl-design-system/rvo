@@ -15,7 +15,7 @@ import {
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
 
-const SIBstartpagina = () => {
+const UwGegevens = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
@@ -299,4 +299,4 @@ const SIBstartpagina = () => {
   );
 };
 
-export default SIBstartpagina;
+export default UwGegevens;
