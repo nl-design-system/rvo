@@ -1,6 +1,5 @@
 import {
   Alert,
-  Button,
   ButtonGroup,
   Fieldset,
   Footer,
@@ -193,6 +192,15 @@ const SIBstartpagina = () => {
                     { id: 'aanmerkingB', label: 'Nee' },
                   ]}
                 ></RadioButtonField>
+                <RadioButtonField
+                  name="anders"
+                  label="Klopt het dat u deze aanvraag voor iemand anders doet?"
+                  helperText=""
+                  options={[
+                    { id: 'andersA', label: 'Ja' },
+                    { id: 'andersB', label: 'Nee' },
+                  ]}
+                ></RadioButtonField>
               </Fieldset>
 
               <div>
@@ -250,7 +258,12 @@ const SIBstartpagina = () => {
                 </a>
               </Alert>
               <ButtonGroup>
-                <Button kind="primary">Start aanvraag</Button>
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story"
+                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+                >
+                  Start aanvraag
+                </a>
               </ButtonGroup>
             </LayoutColumnRow>
           </main>

@@ -1,6 +1,5 @@
 import {
   Alert,
-  Button,
   ButtonGroup,
   Fieldset,
   Footer,
@@ -11,6 +10,7 @@ import {
   MobileMenuBar,
   ProgressTracker,
   RadioButtonField,
+  TextInputField,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
@@ -101,14 +101,14 @@ const UwGegevens = () => {
               steps={[
                 { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
                 {
-                  state: 'doing',
+                  state: 'completed',
                   label: 'Startpagina',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'doing',
                   label: 'Uw gegevens',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story',
                   size: 'md',
@@ -163,41 +163,19 @@ const UwGegevens = () => {
             />
             <LayoutColumnRow size="xl">
               <div>
+                <a
+                  className="rvo-link rvo-link--no-underline rvo-link--with-icon"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story"
+                >
+                  <span
+                    className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
+                    role="img"
+                    aria-label="Terug"
+                  ></span>
+                  Terug naar Startpagina
+                </a>
                 <Heading type="h1" noMargins={true}>
-                  SIB 2024: Coaching
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  Met dit formulier kunt u subsidie aanvragen voor het sparren met en leren van een coach over de
-                  organisatie van export naar een specifiek doelland. De subsidie bedraagt 50% van de kosten, tot ten
-                  hoogste € 1.000 exclusief btw.
-                </p>
-              </div>
-              <Fieldset legend="Welke rol heeft u? ">
-                <RadioButtonField
-                  name="rol"
-                  label="U doet deze aanvraag als"
-                  helperText=""
-                  options={[
-                    { id: 'rolA', label: 'Aanvrager' },
-                    { id: 'rolB', label: 'Intermediar' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="aanmerking"
-                  label="Dient u deze aanvraag in namens een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) of maatschap?"
-                  expandableHelperText={true}
-                  expandableHelperTextTitle="Meer uitleg"
-                  helperText="Bedrijven zonder rechtspersoonlijkheid, zoals een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) en een maatschap, komen niet voor SIB in aanmerking. "
-                  options={[
-                    { id: 'aanmerkingA', label: 'Ja' },
-                    { id: 'aanmerkingB', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-              </Fieldset>
-
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Aanvrager
+                  Uw gegevens
                 </Heading>
                 <dl className="rvo-data-list">
                   <dt>Naam organisatie</dt>
@@ -208,49 +186,68 @@ const UwGegevens = () => {
                   <dd>Besloten vennootschap (bv)</dd>
                 </dl>
               </div>
-
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Sluitingsdatum
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  U kunt uw aanvraag voor deze regeling tot en met 31-12-2024 15:00 uur indienen.
-                </p>
-              </div>
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Tussendoor opslaan
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  Wilt u deze aanvraag tussendoor opslaan en later afmaken? Klik op &lsquo;Opslaan en formulier
-                  verlaten&rsquo;.
-                </p>
-              </div>
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Persoonsgegevens
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons{' '}
-                  <a href="#" className="rvo-link">
-                    privacybeleid
-                  </a>
-                  .
-                </p>
-              </div>
-              <Alert kind="info">
-                Extra toelichting bij vragen vindt u in het informatie icoon bij de vraag en in toelichtende teksten in
-                het formulier. Informatie over de regeling leest u op{' '}
-                <a href="#" className="rvo-link rvo-link--logoblauw">
-                  de website
-                </a>{' '}
-                Heeft u vragen? Bel met RVO via{' '}
-                <a href="tel:088 042 42 42" className="rvo-link rvo-link--logoblauw">
-                  088 042 42 42
-                </a>
+              <Fieldset legend="">
+                <div
+                  role="group"
+                  aria-labelledby="fieldId-label"
+                  className="utrecht-form-field utrecht-form-field--text rvo-form-field"
+                >
+                  <div className="rvo-form-field__label">
+                    <label className="rvo-label">Kies een vestiging</label>
+                  </div>
+                  <div className="rvo-select-wrapper">
+                    <select id="field" className="utrecht-select utrecht-select--html-select">
+                      <option>Albert Heijn, Stadionweg 159, 1076NN AMSTERDAM, 000018364012</option>
+                      <option>Albert Heijn B.V., Prinses Margrietplnts 25, 2595AM</option>
+                    </select>
+                  </div>
+                  <p className="rvo-text--sm rvo-text--no-margins">
+                    <a
+                      href="#"
+                      className="rvo-link rvo-link--logoblauw rvo-link--sm rvo-link--with-icon rvo-link--no-underline"
+                    >
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-ondernemingen rvo-icon--sm rvo-icon--logoblauw  rvo-link__icon--before"
+                        role="img"
+                        aria-label="Ondernemingen"
+                      ></span>
+                      Haal vestigingen op van dit KVK nummer
+                    </a>
+                  </p>
+                </div>
+                <RadioButtonField
+                  name="iban"
+                  label="Voert u een IBAN nummer op?"
+                  helperText=""
+                  options={[
+                    { id: 'ibanA', label: 'Ja' },
+                    { id: 'ibanB', label: 'Nee' },
+                  ]}
+                ></RadioButtonField>
+              </Fieldset>
+              <Fieldset legend="Contactpersoon aanvrager ">
+                <TextInputField label="Voorletters" size="sm"></TextInputField>
+                <TextInputField label="Tussenvoegsels" size="sm"></TextInputField>
+                <TextInputField label="Achternaam"></TextInputField>
+                <TextInputField label="Telefoonnummer" size="md"></TextInputField>
+                <TextInputField label="E-mailadres"></TextInputField>
+              </Fieldset>
+              <Alert kind="warning">
+                <strong>U ontvangt over deze zaak altijd digitaal bericht van ons</strong>
+                <p>Ik weet dat RVO:</p>
+                <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-3">
+                  <li>berichten over deze aanvraag plaatst onder Mijn zaken</li>
+                  <li>mij een e-mail stuurt als er iets voor</li>
+                  <li>mij klaar staat over mijn aanvraag Ik ben voldoende bereikbaar via dit e-mailadres</li>
+                </ul>
               </Alert>
               <ButtonGroup>
-                <Button kind="primary">Start aanvraag</Button>
+                <a
+                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story"
+                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+                >
+                  Opslaan en verder gaan
+                </a>
               </ButtonGroup>
             </LayoutColumnRow>
           </main>
