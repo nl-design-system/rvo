@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import SIBstartpagina from './SIBstartpagina';
 
 const meta: Meta<typeof SIBstartpagina> = {
-  title: "Demo pagina's/SIB",
+  title: "Demo pagina's/SIB/Startpagina",
   component: SIBstartpagina,
   parameters: {
     status: {

@@ -1,6 +1,6 @@
 import {
-  Alert,
   ButtonGroup,
+  DateInputField,
   Fieldset,
   Footer,
   Header,
@@ -10,11 +10,12 @@ import {
   MobileMenuBar,
   ProgressTracker,
   RadioButtonField,
+  TextInputField,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
 
-const SIBstartpagina = () => {
+const Zaakgegevens = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
@@ -100,28 +101,28 @@ const SIBstartpagina = () => {
               steps={[
                 { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
                 {
-                  state: 'doing',
+                  state: 'completed',
                   label: 'Startpagina',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Uw gegevens',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Uw onderneming',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'doing',
                   label: 'Zaakgegevens',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story',
                   size: 'md',
@@ -162,105 +163,90 @@ const SIBstartpagina = () => {
             />
             <LayoutColumnRow size="xl">
               <div>
-                <Heading type="h1">SIB 2024: Coaching</Heading>
+                <a
+                  className="rvo-link rvo-link--no-underline rvo-link--with-icon"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story"
+                >
+                  <span
+                    className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
+                    role="img"
+                    aria-label="Terug"
+                  ></span>
+                  Terug naar Uw onderneming
+                </a>
+                <Heading type="h1">Zaakgegevens</Heading>
                 <p className="rvo-text--no-margins">
-                  Met dit formulier kunt u subsidie aanvragen voor het sparren met en leren van een coach over de
-                  organisatie van export naar een specifiek doelland. De subsidie bedraagt 50% van de kosten, tot ten
-                  hoogste € 1.000 exclusief btw.
+                  Geef hieronder, door middel van een begin- en einddatum, de periode aan waarbinnen u verwacht de
+                  coaching te volgen. Er mag pas met de coaching gestart worden na het indienen van de aanvraag.
                 </p>
               </div>
-              <Fieldset legend="Welke rol heeft u? ">
+              <Fieldset legend="">
+                <TextInputField label="Geef uw aanvraag een toepasselijke zaaknaam"></TextInputField>
+                <DateInputField
+                  label="Startdatum (van)"
+                  helperText="Geef hier de begindatum van uw coachingstraject op."
+                ></DateInputField>
+                <DateInputField
+                  label="Einddatum (t/m)"
+                  helperText="Geef hier de einddatum van uw coachingstraject op."
+                ></DateInputField>
+                <TextInputField
+                  label="Voor export naar welk land wilt u coaching ontvangen?"
+                  helperText="U kunt hier één land noemen, niet Nederland. Als u meerderde doellanden heeft, maakt u dan een keuze."
+                ></TextInputField>
                 <RadioButtonField
-                  name="rol"
-                  label="U doet deze aanvraag als"
-                  helperText=""
-                  options={[
-                    { id: 'rolA', label: 'Aanvrager' },
-                    { id: 'rolB', label: 'Intermediar' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="aanmerking"
-                  label="Dient u deze aanvraag in namens een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) of maatschap?"
+                  name="bedrag"
+                  label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
                   expandableHelperText={true}
                   expandableHelperTextTitle="Meer uitleg"
-                  helperText="Bedrijven zonder rechtspersoonlijkheid, zoals een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) en een maatschap, komen niet voor SIB in aanmerking. "
+                  helperText="U kunt maximaal € 6.500 SIB subsidie per kalenderjaar ontvangen. Dit betekent dat u in één kalenderjaar verschillende onderdelen van SIB mag aanvragen en de subsidie kunt stapelen tot dit maximum bedrag. Zie voor de voorwaarden en subsidiebedragen <a href='#' class='rvo-link rvo-link--donkerblauw'>Support International Business (SIB) (rvo.nl)</a>"
                   options={[
-                    { id: 'aanmerkingA', label: 'Ja' },
-                    { id: 'aanmerkingB', label: 'Nee' },
+                    { id: 'bedrag A', label: 'Ja' },
+                    { id: 'bedrag B', label: 'Nee' },
+                  ]}
+                ></RadioButtonField>
+                <TextInputField label="Welke kansen ziet u in dit land?" inputType="textarea"></TextInputField>
+                <RadioButtonField
+                  name="actief"
+                  label="Bent u al actief in dit doelland?"
+                  helperText=""
+                  options={[
+                    { id: 'actief A', label: 'Ja' },
+                    { id: 'actief B', label: 'Nee' },
                   ]}
                 ></RadioButtonField>
                 <RadioButtonField
-                  name="anders"
-                  label="Klopt het dat u deze aanvraag voor iemand anders doet?"
-                  helperText=""
+                  name="export"
+                  label="Gaat u exporteren met een eigen product of dienst?"
+                  helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst. "
                   options={[
-                    { id: 'andersA', label: 'Ja' },
-                    { id: 'andersB', label: 'Nee' },
+                    { id: 'export A', label: 'Ja' },
+                    { id: 'export B', label: 'Nee' },
+                  ]}
+                ></RadioButtonField>
+                <RadioButtonField
+                  name="capaciteit"
+                  label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?"
+                  options={[
+                    { id: 'capaciteit A', label: 'Ja' },
+                    { id: 'capaciteit B', label: 'Nee' },
+                  ]}
+                ></RadioButtonField>
+                <RadioButtonField
+                  name="nlmarkt"
+                  label="Bent u met uw product of dienst al actief op de Nederlandse markt?"
+                  options={[
+                    { id: 'nlmarkt A', label: 'Ja' },
+                    { id: 'nlmarkt B', label: 'Nee' },
                   ]}
                 ></RadioButtonField>
               </Fieldset>
-
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Aanvrager
-                </Heading>
-                <dl className="rvo-data-list">
-                  <dt>Naam organisatie</dt>
-                  <dd>Albert Heijn B.V.</dd>
-                  <dt>KVK-nummer</dt>
-                  <dd>35012085</dd>
-                  <dt>Rechtsvorm</dt>
-                  <dd>Besloten vennootschap (bv)</dd>
-                </dl>
-              </div>
-
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Sluitingsdatum
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  U kunt uw aanvraag voor deze regeling tot en met 31-12-2024 15:00 uur indienen.
-                </p>
-              </div>
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Tussendoor opslaan
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  Wilt u deze aanvraag tussendoor opslaan en later afmaken? Klik op &lsquo;Opslaan en formulier
-                  verlaten&rsquo;.
-                </p>
-              </div>
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Persoonsgegevens
-                </Heading>
-                <p className="rvo-text--no-margins">
-                  Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons{' '}
-                  <a href="#" className="rvo-link">
-                    privacybeleid
-                  </a>
-                  .
-                </p>
-              </div>
-              <Alert kind="info">
-                Extra toelichting bij vragen vindt u in het informatie icoon bij de vraag en in toelichtende teksten in
-                het formulier. Informatie over de regeling leest u op{' '}
-                <a href="#" className="rvo-link rvo-link--logoblauw">
-                  de website
-                </a>{' '}
-                Heeft u vragen? Bel met RVO via{' '}
-                <a href="tel:088 042 42 42" className="rvo-link rvo-link--logoblauw">
-                  088 042 42 42
-                </a>
-              </Alert>
               <ButtonGroup>
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
-                  Start aanvraag
+                  Opslaan en verder gaan
                 </a>
               </ButtonGroup>
             </LayoutColumnRow>
@@ -310,4 +296,4 @@ const SIBstartpagina = () => {
   );
 };
 
-export default SIBstartpagina;
+export default Zaakgegevens;
