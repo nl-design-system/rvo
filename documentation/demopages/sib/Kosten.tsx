@@ -163,7 +163,7 @@ const Kosten = () => {
             <LayoutColumnRow size="xl">
               <div>
                 <a
-                  className="rvo-link rvo-link--no-underline rvo-link--with-icon"
+                  className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
                   href="iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story"
                 >
                   <span
