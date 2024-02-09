@@ -1,6 +1,6 @@
 import {
   ButtonGroup,
-  DateInputField,
+  CheckboxField,
   Fieldset,
   Footer,
   Header,
@@ -9,13 +9,12 @@ import {
   MenuBar,
   MobileMenuBar,
   ProgressTracker,
-  RadioButtonField,
   TextInputField,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
 
-const Zaakgegevens = () => {
+const Mvo = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
@@ -122,14 +121,14 @@ const Zaakgegevens = () => {
                   line: 'straight',
                 },
                 {
-                  state: 'doing',
+                  state: 'completed',
                   label: 'Zaakgegevens',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Kosten',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story',
                   size: 'md',
@@ -137,14 +136,14 @@ const Zaakgegevens = () => {
                 },
 
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Uitvoerder coaching traject',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-uitvoerder--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'doing',
                   label: 'Maatschappelijk verantwoord ondernemen',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-mvo--default&viewMode=story',
                   size: 'md',
@@ -165,85 +164,121 @@ const Zaakgegevens = () => {
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
-                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story"
                 >
                   <span
                     className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
                     role="img"
                     aria-label="Terug"
                   ></span>
-                  Terug naar Uw onderneming
+                  Terug naar Uitvoerder coaching traject
                 </a>
-                <Heading type="h1">Zaakgegevens</Heading>
+                <Heading type="h1" noMargins={true}>
+                  Maatschappelijk Verantwoord Ondernemen (MVO)
+                </Heading>
                 <p className="rvo-text--no-margins">
-                  Geef hieronder, door middel van een begin- en einddatum, de periode aan waarbinnen u verwacht de
-                  coaching te volgen. Er mag pas met de coaching gestart worden na het indienen van de aanvraag.
+                  Als Nederlandse overheid vinden we investeren in duurzaamheid erg belangrijk. Sterker nog: de ambitie
+                  is om Europees koploper te zijn bij het tegengaan van de opwarming van de aarde en het stimuleren van
+                  een eerlijke, innovatieve, groene en circulaire economie. Om dit mogelijk te maken, is het belangrijk
+                  dat individuen en (publieke en private) organisaties ook environmental, social en governance (ESG)
+                  aspecten meenemen in hun ambities, dagelijkse activiteiten en reflecties.
+                </p>
+                <p>
+                  De Sustainable Development Goals (SDGs) van de Verenigde Naties helpen organisaties om hier concretere
+                  invulling aan te geven. Wanneer organisaties zich richten op het maken van impact op één of meerdere
+                  specifieke SDGs, dragen zij actief bij aan o.a. het oplossen van armoede, ongelijkheid, onrecht,
+                  milieuschade en klimaatverandering. Ook brengt het één gemeenschappelijke taal, een betere
+                  samenwerking met (gelijkgestemde) partners, en een efficiëntere wijze om acties en ambities van
+                  organisaties te vergelijken en te verbeteren. Bij de subsidies die RVO verstrekt, en zo ook binnen
+                  SIB, besteden we daarom aandacht aan de SDGs en duurzaam internationaal ondernemen.
                 </p>
               </div>
               <Fieldset legend="">
-                <TextInputField label="Geef uw aanvraag een toepasselijke zaaknaam"></TextInputField>
-                <DateInputField
-                  label="Startdatum (van)"
-                  helperText="Geef hier de begindatum van uw coachingstraject op."
-                ></DateInputField>
-                <DateInputField
-                  label="Einddatum (t/m)"
-                  helperText="Geef hier de einddatum van uw coachingstraject op."
-                ></DateInputField>
+                <CheckboxField
+                  helperText="Kies één of meerdere van de onderstaande antwoorden"
+                  label="Bent u actief op het gebied van duurzaamheid? "
+                  invalid={false}
+                  options={[
+                    {
+                      id: 'optionA-cb',
+                      label: 'Waardige werkomstandigheden en eerlijke beloning',
+                    },
+                    { id: 'optionB-cb', label: 'Efficiënter verbouwen voedsel en tegengaan van voedselverspilling ' },
+                    { id: 'optionC-cb', label: 'Inclusiviteit en vermindering ongelijkheid ' },
+                    { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
+                  ]}
+                ></CheckboxField>
                 <TextInputField
-                  label="Voor export naar welk land wilt u coaching ontvangen?"
-                  helperText="U kunt hier één land noemen, niet Nederland. Als u meerderde doellanden heeft, maakt u dan een keuze."
+                  inputType="textarea"
+                  label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?"
                 ></TextInputField>
-                <RadioButtonField
-                  name="bedrag"
-                  label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
-                  expandableHelperText={true}
-                  expandableHelperTextTitle="Meer uitleg"
-                  helperText="U kunt maximaal € 6.500 SIB subsidie per kalenderjaar ontvangen. Dit betekent dat u in één kalenderjaar verschillende onderdelen van SIB mag aanvragen en de subsidie kunt stapelen tot dit maximum bedrag. Zie voor de voorwaarden en subsidiebedragen <a href='#' class='rvo-link rvo-link--donkerblauw'>Support International Business (SIB) (rvo.nl)</a>"
+              </Fieldset>
+
+              <div>
+                <Heading type="h2" noMargins={true}>
+                  MVO Risico checker
+                </Heading>
+                <p className="rvo-text rvo-text--no-margins">
+                  Naast gerichte ambities op het maken van positieve impact, zoals hierboven genoemd, kunnen
+                  organisaties ook aan duurzaamheid en de SDGs bijdragen door potentiële negatieve impact zo veel
+                  mogelijk te voorkomen. Wanneer organisaties actief inzicht ophalen over potentiële
+                  duurzaamheidsrisico’s op mens en milieu en acties ondernemen ter voorkoming of vermindering hiervan -
+                  wordt dit Maatschappelijk Verantwoord Ondernemen (MVO) genoemd. Wanneer MVO (goed) wordt toegepast,
+                  leidt dit ook tot een toekomstbestendig bedrijfsmodel en sterke business case. Zo prikkelt het
+                  innovatie, stimuleert het efficiëntie (op kosten en grondstoffen), en biedt het kansen tot het
+                  aanboren van nieuwe markten. Ook leidt het vaak tot tevreden medewerkers en loyale consumenten door
+                  bijvoorbeeld een sterke reputatie. Een handige tool om een eerste inzicht te krijgen in de potentiële
+                  risico’s binnen uw organisatie, is de{' '}
+                  <a href="#" className="rvo-link">
+                    MVO Risico Checker
+                  </a>
+                  .
+                </p>
+              </div>
+              <Fieldset legend="">
+                <TextInputField
+                  inputType="textarea"
+                  label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? "
+                ></TextInputField>
+                <TextInputField
+                  inputType="textarea"
+                  label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?"
+                ></TextInputField>
+              </Fieldset>
+              <div>
+                <Heading type="h2" noMargins={true}>
+                  Verklaring MVO
+                </Heading>
+                <p className="rvo-text rvo-text--no-margins">
+                  De kern van MVO is de bewustwording van potentiële risico’s van de bedrijfsvoering, en de wil om dit
+                  als kans te zien om hier positief op de acteren. Dit is gebaseerd op de internationale richtlijnen van
+                  de Organisatie voor Economische Samenwerking en Ontwikkeling (OESO). De Nederlandse overheid hecht er
+                  grote waarde aan dat ondernemers die actief zijn over de grens deze richtlijnen onderschrijven. Alleen
+                  organisaties die verklaren dit te doen, ontvangen overheidssteun om internationaal te ondernemen. Meer
+                  informatie over Maatschappelijk Verantwoord Ondernemen in het buitenland vindt u op onze website:
+                  <a href="#" className="rvo-link">
+                    Maatschappelijk Verantwoord Ondernemen (MVO)
+                  </a>
+                  . Daar vindt u ook de verwijzing naar de site met de OESO richtlijnen (www.oesorichtlijnen.nl) en de
+                  ILO (www.ilo.org).
+                </p>
+              </div>
+              <Fieldset legend="">
+                <CheckboxField
+                  label=" "
+                  invalid={false}
                   options={[
-                    { id: 'bedrag A', label: 'Ja' },
-                    { id: 'bedrag B', label: 'Nee' },
+                    {
+                      id: 'verklaring',
+                      label:
+                        'Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO). ',
+                    },
                   ]}
-                ></RadioButtonField>
-                <TextInputField label="Welke kansen ziet u in dit land?" inputType="textarea"></TextInputField>
-                <RadioButtonField
-                  name="actief"
-                  label="Bent u al actief in dit doelland?"
-                  helperText=""
-                  options={[
-                    { id: 'actief A', label: 'Ja' },
-                    { id: 'actief B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="export"
-                  label="Gaat u exporteren met een eigen product of dienst?"
-                  helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst. "
-                  options={[
-                    { id: 'export A', label: 'Ja' },
-                    { id: 'export B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="capaciteit"
-                  label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?"
-                  options={[
-                    { id: 'capaciteit A', label: 'Ja' },
-                    { id: 'capaciteit B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="nlmarkt"
-                  label="Bent u met uw product of dienst al actief op de Nederlandse markt?"
-                  options={[
-                    { id: 'nlmarkt A', label: 'Ja' },
-                    { id: 'nlmarkt B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
+                ></CheckboxField>
               </Fieldset>
               <ButtonGroup>
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-ondertekening--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
@@ -296,4 +331,4 @@ const Zaakgegevens = () => {
   );
 };
 
-export default Zaakgegevens;
+export default Mvo;

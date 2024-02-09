@@ -1,7 +1,7 @@
 import {
   ButtonGroup,
-  DateInputField,
   Fieldset,
+  FileInputField,
   Footer,
   Header,
   Heading,
@@ -15,7 +15,7 @@ import {
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
 
-const Zaakgegevens = () => {
+const Uitvoerder = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
@@ -122,14 +122,14 @@ const Zaakgegevens = () => {
                   line: 'straight',
                 },
                 {
-                  state: 'doing',
+                  state: 'completed',
                   label: 'Zaakgegevens',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Kosten',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story',
                   size: 'md',
@@ -137,7 +137,7 @@ const Zaakgegevens = () => {
                 },
 
                 {
-                  state: 'incomplete',
+                  state: 'doing',
                   label: 'Uitvoerder coaching traject',
                   link: 'iframe.html?args=&id=demo-pagina-s-sib-uitvoerder--default&viewMode=story',
                   size: 'md',
@@ -165,85 +165,91 @@ const Zaakgegevens = () => {
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
-                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story"
                 >
                   <span
                     className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
                     role="img"
                     aria-label="Terug"
                   ></span>
-                  Terug naar Uw onderneming
+                  Terug naar Kosten
                 </a>
-                <Heading type="h1">Zaakgegevens</Heading>
-                <p className="rvo-text--no-margins">
-                  Geef hieronder, door middel van een begin- en einddatum, de periode aan waarbinnen u verwacht de
-                  coaching te volgen. Er mag pas met de coaching gestart worden na het indienen van de aanvraag.
-                </p>
+                <Heading type="h1" noMargins={true}>
+                  Uitvoerder coaching traject
+                </Heading>
               </div>
               <Fieldset legend="">
-                <TextInputField label="Geef uw aanvraag een toepasselijke zaaknaam"></TextInputField>
-                <DateInputField
-                  label="Startdatum (van)"
-                  helperText="Geef hier de begindatum van uw coachingstraject op."
-                ></DateInputField>
-                <DateInputField
-                  label="Einddatum (t/m)"
-                  helperText="Geef hier de einddatum van uw coachingstraject op."
-                ></DateInputField>
-                <TextInputField
-                  label="Voor export naar welk land wilt u coaching ontvangen?"
-                  helperText="U kunt hier één land noemen, niet Nederland. Als u meerderde doellanden heeft, maakt u dan een keuze."
-                ></TextInputField>
                 <RadioButtonField
-                  name="bedrag"
-                  label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
-                  expandableHelperText={true}
-                  expandableHelperTextTitle="Meer uitleg"
-                  helperText="U kunt maximaal € 6.500 SIB subsidie per kalenderjaar ontvangen. Dit betekent dat u in één kalenderjaar verschillende onderdelen van SIB mag aanvragen en de subsidie kunt stapelen tot dit maximum bedrag. Zie voor de voorwaarden en subsidiebedragen <a href='#' class='rvo-link rvo-link--donkerblauw'>Support International Business (SIB) (rvo.nl)</a>"
-                  options={[
-                    { id: 'bedrag A', label: 'Ja' },
-                    { id: 'bedrag B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <TextInputField label="Welke kansen ziet u in dit land?" inputType="textarea"></TextInputField>
-                <RadioButtonField
-                  name="actief"
-                  label="Bent u al actief in dit doelland?"
+                  name="uitvoerder"
+                  label="Uitvoerder coachingtraject"
                   helperText=""
                   options={[
-                    { id: 'actief A', label: 'Ja' },
-                    { id: 'actief B', label: 'Nee' },
+                    { id: 'uitvoerderA', label: 'Albert Heijn' },
+                    { id: 'uitvoerderB', label: 'Nieuwe organisatie toevoegen' },
                   ]}
                 ></RadioButtonField>
-                <RadioButtonField
-                  name="export"
-                  label="Gaat u exporteren met een eigen product of dienst?"
-                  helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst. "
-                  options={[
-                    { id: 'export A', label: 'Ja' },
-                    { id: 'export B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="capaciteit"
-                  label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?"
-                  options={[
-                    { id: 'capaciteit A', label: 'Ja' },
-                    { id: 'capaciteit B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
-                <RadioButtonField
-                  name="nlmarkt"
-                  label="Bent u met uw product of dienst al actief op de Nederlandse markt?"
-                  options={[
-                    { id: 'nlmarkt A', label: 'Ja' },
-                    { id: 'nlmarkt B', label: 'Nee' },
-                  ]}
-                ></RadioButtonField>
+                <div
+                  role="group"
+                  aria-labelledby="fieldId-label"
+                  className="utrecht-form-field utrecht-form-field--text rvo-form-field"
+                >
+                  <div className="rvo-form-field__label">
+                    <label className="rvo-label">Kies een vestiging</label>
+                  </div>
+                  <div className="rvo-select-wrapper">
+                    <select id="field" className="utrecht-select utrecht-select--html-select">
+                      <option>Albert Heijn, Stadionweg 159, 1076NN AMSTERDAM, 000018364012</option>
+                      <option>Albert Heijn B.V., Prinses Margrietplnts 25, 2595AM</option>
+                    </select>
+                  </div>
+                  <p className="rvo-text--sm rvo-text--no-margins">
+                    <a
+                      href="#"
+                      className="rvo-link rvo-link--logoblauw rvo-link--sm rvo-link--with-icon rvo-link--no-underline"
+                    >
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-ondernemingen rvo-icon--sm rvo-icon--logoblauw  rvo-link__icon--before"
+                        role="img"
+                        aria-label="Ondernemingen"
+                      ></span>
+                      Haal vestigingen op van dit KVK nummer
+                    </a>
+                  </p>
+                </div>
+              </Fieldset>
+              <Fieldset legend="Contactpersoon coach">
+                <TextInputField label="Voorletters" size="sm"></TextInputField>
+                <TextInputField label="Tussenvoegsels" size="sm"></TextInputField>
+                <TextInputField label="Achternaam"></TextInputField>
+                <TextInputField label="Telefoonnummer" size="md"></TextInputField>
+                <TextInputField label="E-mailadres"></TextInputField>
+                <TextInputField label="Wat is de website (URL) van de opgegeven coach?"></TextInputField>
+                <TextInputField
+                  inputType="textarea"
+                  label="Waarom heeft u voor de opgegeven coach gekozen?"
+                ></TextInputField>
+              </Fieldset>
+              <Fieldset legend="Curriculum Vitae (CV) coach">
+                <p className="rvo-text rvo-text--no-margins">
+                  Het CV van de opgegeven coach is opgesteld in het Nederlands of Engels en bevat maximaal 5 pagina's.
+                  Uit het CV blijkt dat de opgegeven coach:
+                </p>
+                <ul className="rvo-ul rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-1">
+                  <li>beschikt over tenminste hbo denk- werkniveau;</li>
+                  <li>de coaching uitvoert namens een organisatie die exportadvies als kerntaak heeft;</li>
+                  <li>
+                    aantoonbaar ten minste drie jaar praktijkervaring heeft in het uitvoeren van exportactiviteiten in
+                    het doelland.
+                  </li>
+                </ul>
+                <FileInputField
+                  label="CV bestand coach"
+                  warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
+                ></FileInputField>
               </Fieldset>
               <ButtonGroup>
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story"
+                  href="iframe.html?args=&id=demo-pagina-s-sib-mvo--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
@@ -296,4 +302,4 @@ const Zaakgegevens = () => {
   );
 };
 
-export default Zaakgegevens;
+export default Uitvoerder;
