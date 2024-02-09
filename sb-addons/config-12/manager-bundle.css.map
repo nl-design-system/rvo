@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../config/manager.css"],
-  "sourcesContent": ["/* stylelint-disable selector-max-id */\n/* stylelint-disable selector-id-pattern */\n\n#demo-pagina-s-mijn-rvo-diensten--default,\n#demo-pagina-s-mijn-rvo-inloggen--default,\n#demo-pagina-s-mijn-rvo-mijn-zaken--default,\n#demo-pagina-s-mijn-rvo-profiel--default,\n#demo-pagina-s-mijn-rvo-zaak--default {\n  display: none;\n}\n"],
-  "mappings": "AAGA,+MAKE",
-  "names": []
-}
