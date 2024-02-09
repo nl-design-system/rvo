@@ -245,6 +245,37 @@ const Mvo = () => {
                   label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?"
                 ></TextInputField>
               </Fieldset>
+              <div>
+                <Heading type="h2" noMargins={true}>
+                  Verklaring MVO
+                </Heading>
+                <p className="rvo-text rvo-text--no-margins">
+                  De kern van MVO is de bewustwording van potentiële risico’s van de bedrijfsvoering, en de wil om dit
+                  als kans te zien om hier positief op de acteren. Dit is gebaseerd op de internationale richtlijnen van
+                  de Organisatie voor Economische Samenwerking en Ontwikkeling (OESO). De Nederlandse overheid hecht er
+                  grote waarde aan dat ondernemers die actief zijn over de grens deze richtlijnen onderschrijven. Alleen
+                  organisaties die verklaren dit te doen, ontvangen overheidssteun om internationaal te ondernemen. Meer
+                  informatie over Maatschappelijk Verantwoord Ondernemen in het buitenland vindt u op onze website:
+                  <a href="#" className="rvo-link">
+                    Maatschappelijk Verantwoord Ondernemen (MVO)
+                  </a>
+                  . Daar vindt u ook de verwijzing naar de site met de OESO richtlijnen (www.oesorichtlijnen.nl) en de
+                  ILO (www.ilo.org).
+                </p>
+              </div>
+              <Fieldset legend="">
+                <CheckboxField
+                  label=" "
+                  invalid={false}
+                  options={[
+                    {
+                      id: 'verklaring',
+                      label:
+                        'Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO). ',
+                    },
+                  ]}
+                ></CheckboxField>
+              </Fieldset>
               <ButtonGroup>
                 <a
                   href="iframe.html?args=&id=demo-pagina-s-sib-ondertekening--default&viewMode=story"
