@@ -7,6 +7,7 @@
   border-style: var(--rvo-data-list-border-style);
   border-width: var(--rvo-data-list-border-width);
   margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 .rvo-data-list dt {
@@ -50,6 +51,7 @@
     padding-inline-end: var(--rvo-data-list-breakpoint-sm-dd-padding-inline-end);
     padding-inline-start: var(--rvo-data-list-breakpoint-sm-dd-padding-inline-start);
   }
+
   .rvo-data-list dt {
     padding-block-end: var(--rvo-data-list-breakpoint-sm-dt-padding-block-end);
     padding-block-start: var(--rvo-data-list-breakpoint-sm-dt-padding-block-start);
