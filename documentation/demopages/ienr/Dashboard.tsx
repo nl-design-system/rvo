@@ -92,7 +92,11 @@ const Dashboard = () => {
                   link: '#',
                   icon: 'user',
                 },
-                { label: 'Melden', link: '#', icon: 'plus' },
+                {
+                  label: 'Melden',
+                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story',
+                  icon: 'plus',
+                },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 { label: 'Bekijken', link: '#', icon: 'oog' },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
