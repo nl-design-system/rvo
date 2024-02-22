@@ -135,6 +135,24 @@ const Import = () => {
                         label="Land van herkomst"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
                       ></SelectField>
+                      <TextInputField
+                        expandableHelperTextTitle="Meer uitleg"
+                        expandableHelperText={true}
+                        label="Transport nummer (optioneel)"
+                        helperText="Vult u het transportnummer in? Dan heeft u een extra mogelijkheid om meldingen van hetzelfde transport bij elkaar te zoeken. Bij Bekijken van meldingen kunt u dan ook zoeken op transportnummer. Vul alleen cijfers in, geen letters."
+                        size="sm"
+                      ></TextInputField>
+                    </Fieldset>
+                    <Fieldset legend="">
+                      <LayoutColumnRow row={true} alignItems="start">
+                        <TextInputField label="Landcode"></TextInputField>
+                        <TextInputField label="Levensnummer"></TextInputField>
+                        <TextInputField label="Werknummer"></TextInputField>
+                        <DateInputField label="Geboortedatum"></DateInputField>
+                        <SelectField label="Geslacht"></SelectField>
+                        <SelectField label="Land van geboorte/oorsprong"></SelectField>
+                        <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
+                      </LayoutColumnRow>
                     </Fieldset>
                   </LayoutColumnRow>
                 </LayoutColumnRow>
