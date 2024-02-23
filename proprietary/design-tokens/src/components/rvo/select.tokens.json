@@ -8,7 +8,7 @@
       "outline-offset": { "value": "0" },
       "padding-block-end": { "value": "{rvo.space.xs}" },
       "padding-block-start": { "value": "10px" },
-      "padding-inline-end": { "value": "calc({rvo.space.2xs} + {rvo.space.2xl})" },
+      "padding-inline-end": { "value": "calc({rvo.space.2xl} + {rvo.space.2md})" },
       "padding-inline-start": { "value": "calc({rvo.space.2xs} + {rvo.space.xs})" }
     }
   }
