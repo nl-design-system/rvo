@@ -18,6 +18,7 @@
   border-style: solid;
   border-width: var(--rvo-file-input-border-width, var(--utrecht-form-control-border-width));
   font-family: var(--utrecht-form-control-font-family, var(--utrecht-document-font-family));
+  height: 45px;
   padding-block-end: var(--rvo-file-input-padding-block-end, var(--utrecht-form-control-padding-block-end));
   padding-block-start: var(--rvo-file-input-padding-block-start, var(--utrecht-form-control-padding-block-start));
   padding-inline-end: var(--rvo-file-input-padding-inline-end, var(--utrecht-form-control-padding-inline-end));
