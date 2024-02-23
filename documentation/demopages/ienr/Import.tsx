@@ -98,7 +98,11 @@ const Import = () => {
                   active: true,
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
-                { label: 'Bekijken', link: '#', icon: 'oog' },
+                {
+                  label: 'Bekijken',
+                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  icon: 'oog',
+                },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
                 { label: 'Overzichten', link: '#', icon: 'opsomming' },
               ]}
