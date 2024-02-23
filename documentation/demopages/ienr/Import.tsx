@@ -1,4 +1,5 @@
 import {
+  ButtonGroup,
   DateInputField,
   Fieldset,
   Footer,
@@ -110,50 +111,41 @@ const Import = () => {
           <div className="rvo-sidebar-layout__content">
             <LayoutColumnRow size="xl">
               <Heading type="h1" noMargins={true}>
-                Mijn I&R
+                Importmelding Rund
               </Heading>
+
               <LayoutColumnRow size="md">
                 <LayoutColumnRow size="xs">
                   <LayoutColumnRow size="md">
-                    <Fieldset legend="Importmelding Rund">
+                    <Fieldset legend="">
                       <DateInputField
                         label="Importdatum"
                         helperText="Vul hier de datum in waarop u het dier heeft ge&iuml;mporteerd. Gebruik de kalender om de datum te kiezen of vul de datum zelf in. Gebruik dan het formaat dd-mm-jjjj (bijvoorbeeld 01-09-2020)."
-                        expandableHelperText={true}
-                        expandableHelperTextTitle="Meer uitleg"
                       ></DateInputField>
                       <TextInputField
-                        expandableHelperTextTitle="Meer uitleg"
-                        expandableHelperText={true}
                         label="Nummer gezondheidscertificaat"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
                         size="sm"
                       ></TextInputField>
                       <SelectField
-                        expandableHelperTextTitle="Meer uitleg"
-                        expandableHelperText={true}
                         label="Land van herkomst"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
                       ></SelectField>
                       <TextInputField
-                        expandableHelperTextTitle="Meer uitleg"
-                        expandableHelperText={true}
                         label="Transport nummer (optioneel)"
                         helperText="Vult u het transportnummer in? Dan heeft u een extra mogelijkheid om meldingen van hetzelfde transport bij elkaar te zoeken. Bij Bekijken van meldingen kunt u dan ook zoeken op transportnummer. Vul alleen cijfers in, geen letters."
                         size="sm"
                       ></TextInputField>
                     </Fieldset>
-                    <Fieldset legend="">
-                      <LayoutColumnRow row={true} alignItems="start">
-                        <TextInputField label="Landcode"></TextInputField>
-                        <TextInputField label="Levensnummer"></TextInputField>
-                        <TextInputField label="Werknummer"></TextInputField>
-                        <DateInputField label="Geboortedatum"></DateInputField>
-                        <SelectField label="Geslacht"></SelectField>
-                        <SelectField label="Land van geboorte/oorsprong"></SelectField>
-                        <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                      </LayoutColumnRow>
-                    </Fieldset>
+
+                    <ButtonGroup>
+                      <a
+                        href="iframe.html?args=&id=demo-pagina-s-i-r-importgegevens--default&viewMode=story"
+                        className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+                      >
+                        Opslaan en gegevens runderen invoeren
+                      </a>
+                    </ButtonGroup>
                   </LayoutColumnRow>
                 </LayoutColumnRow>
               </LayoutColumnRow>
