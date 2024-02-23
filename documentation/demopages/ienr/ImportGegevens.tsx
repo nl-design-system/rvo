@@ -1,9 +1,11 @@
 import {
+  Accordion,
   Button,
   ButtonGroup,
   DateInputField,
   Fieldset,
   Footer,
+  Grid,
   Header,
   Heading,
   LayoutColumnRow,
@@ -82,6 +84,18 @@ const ImportGegevens = () => {
                 <Heading type="h1" noMargins={true}>
                   Gegevens runderen
                 </Heading>
+                <Grid columns="two">
+                  <Accordion
+                    items={[
+                      {
+                        title: 'Uitleg over in te voeren gegevens',
+                        teaser: '',
+                        content:
+                          '<span class="rvo-text--bold">Landcode: </span>Neem de landcode over van het (oor)merk.<br/> <span class="rvo-text--bold">Levensnummer: </span>Neem het levensnummer over van het (oor)merk.<br/> <span class="rvo-text--bold">Werknummer: </span>Neem het werknummer over van het (oor)merk.<br/> <span class="rvo-text--bold">Geboortedatum: </span>Vul hier de datum in waarop het dier is geboren.<br/> <span class="rvo-text--bold">Geslacht (optioneel): </span>Geef hier aan of het een mannelijk of vrouwelijk schaap is.<br/> <span class="rvo-text--bold">Land van geboorte/oorsprong (optioneel): </span>Kies hier het land van geboorte/oorsprong. Is dit geen EU-land? Vul dan ook het oorspronkelijke levensnummer (ID-code) in.<br/> <span class="rvo-text--bold">Oorspr. ID, niet EU land: </span>U bent verplicht dieren die uit een niet EU-land komen om te nummeren. Vul hier het oorspronkelijke levensnummer (ID-code) in zodat dierhistorie bewaard blijft.',
+                      },
+                    ]}
+                  />
+                </Grid>
 
                 <LayoutColumnRow size="md">
                   <LayoutColumnRow size="xs">
