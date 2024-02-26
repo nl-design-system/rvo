@@ -72,6 +72,16 @@ const Index = () => {
                 </a>
               </p>
             </li>
+            <li>
+              <a href="iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story" className="rvo-link">
+                Identificatie en Registratie van uw dieren (I&R)
+              </a>
+            </li>
+            <li>
+              <a href="iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story" className="rvo-link">
+                Support International Business (SIB) Coaching 2024 - UPNL
+              </a>
+            </li>
           </ul>
         </main>
       </div>
