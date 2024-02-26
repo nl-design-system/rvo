@@ -15,8 +15,8 @@
   height: 32px;
   pointer-events: none;
   position: absolute;
-  right: 4px;
-  top: 4px;
+  right: 7px;
+  top: 7px;
   width: 32px;
 }
 
@@ -35,14 +35,15 @@
   mask-size: 100%;
   pointer-events: none;
   position: absolute;
-  right: 13px;
-  top: 4px;
+  right: 16px;
+  top: 7px;
   width: 13px;
 }
 
 // Overrides
 .utrecht-select {
   appearance: none;
+  height: 45px;
   padding-block-end: var(--rvo-select-padding-block-end);
   padding-block-start: var(--rvo-select-padding-block-start);
   padding-inline-end: var(--rvo-select-padding-inline-end);

@@ -98,7 +98,11 @@ const Dashboard = () => {
                   icon: 'plus',
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
-                { label: 'Bekijken', link: '#', icon: 'oog' },
+                {
+                  label: 'Bekijken',
+                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  icon: 'oog',
+                },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
                 { label: 'Overzichten', link: '#', icon: 'opsomming' },
               ]}
@@ -191,8 +195,11 @@ const Dashboard = () => {
 
                         <span className="rvo-text--subtle rvo-text--sm">Peildatum: 20-02-2024</span>
                       </LayoutColumnRow>
-                      <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
-                        <span className="rvo-text--bold">0</span>
+                      <a
+                        href="iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story"
+                        className="rvo-link rvo-link--no-underline rvo-link--normal"
+                      >
+                        <span className="rvo-text--bold">6</span>
                         &nbsp;runderen{' '}
                       </a>{' '}
                       en{' '}
