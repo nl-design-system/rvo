@@ -20,8 +20,8 @@ export const Logo: React.FC<ILogoProps> = ({
   return (
     <div className={clsx('rvo-logo', className)}>
       <div className="rvo-logo__emblem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 44 88">
-          <title>{`${title || ''}${subtitle.length ? `, ${subtitle}` : ''}`}</title>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 44 88" role="img">
+          <title>Logo Rijksoverheid</title>
           <rect x="0" y="-12" fill="var(--rvo-logo-emblem-background-color, #154273)" width="44" height="88"></rect>
           <path
             fill="var(--rvo-logo-emblem-color, #FFFFFF)"
