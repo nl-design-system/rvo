@@ -1,6 +1,7 @@
 const minorConfig = require("./.ncurc.minor.cjs");
 
 module.exports = {
+  ...minorConfig,
   reject: [
     ...minorConfig.reject,
     ...Object.keys({
@@ -27,6 +28,7 @@ module.exports = {
       prettier: "3.1.1",
     }),
   ],
+  target: "latest",
 };
 
 console.log(`Reject major updates of:\n\n${module.exports.reject.join("\n")}`);
