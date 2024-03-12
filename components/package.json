@@ -19,9 +19,9 @@
   "devDependencies": {
     "@nl-rvo/assets": "1.0.0-alpha.360",
     "@nl-rvo/design-tokens": "workspace:*",
-    "@types/mdx": "2.0.10",
+    "@types/mdx": "2.0.11",
     "clsx": "2.1.0",
-    "css-loader": "6.9.0",
+    "css-loader": "6.9.1",
     "css-minimizer-webpack-plugin": "5.0.1",
     "event-hooks-webpack-plugin": "2.3.0",
     "glob": "10.3.10",
