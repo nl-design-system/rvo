@@ -58,7 +58,7 @@
     "resolve-url-loader": "5.0.0",
     "rimraf": "5.0.5",
     "sass": "1.71.1",
-    "sass-loader": "13.3.3",
+    "sass-loader": "14.1.1",
     "storybook": "7.6.17",
     "storybook-addon-themes": "6.1.0",
     "style-loader": "3.3.4",

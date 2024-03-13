@@ -20,7 +20,7 @@
   "overrides": [
     {
       "files": ["**/*.md"],
-      "extends": ["plugin:markdown/recommended"],
+      "extends": ["plugin:markdown/recommended-legacy"],
       "processor": "markdown/markdown"
     },
     {
