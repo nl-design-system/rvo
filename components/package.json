@@ -21,17 +21,17 @@
     "@nl-rvo/design-tokens": "workspace:*",
     "@types/mdx": "2.0.11",
     "clsx": "2.1.0",
-    "css-loader": "6.9.1",
+    "css-loader": "6.10.0",
     "css-minimizer-webpack-plugin": "5.0.1",
     "event-hooks-webpack-plugin": "2.3.0",
     "glob": "10.3.10",
     "macro": "link:@emotion/styled/macro",
-    "mini-css-extract-plugin": "2.7.7",
+    "mini-css-extract-plugin": "2.8.1",
     "npm-run-all": "4.1.5",
     "rimraf": "5.0.5",
-    "sass": "1.69.7",
+    "sass": "1.71.1",
     "sass-loader": "13.3.3",
-    "webpack": "5.89.0",
+    "webpack": "5.90.3",
     "webpack-cli": "5.1.4"
   }
 }
