@@ -1,3 +1,17 @@
+.rvo-paars {
+  --rvo-color-hemelblauw: #42145f;
+  --rvo-color-donkerblauw: #42145f;
+
+  .utrecht-page-footer,
+  .rvo-footer-bg {
+    background-color: #42145f;
+  }
+
+  .rvo-hero .utrecht-heading-1 {
+    margin-block-end: 0;
+  }
+}
+
 .rvo-www {
   margin-block-end: 0;
   margin-block-start: 0;
