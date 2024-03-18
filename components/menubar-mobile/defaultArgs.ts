@@ -1,5 +1,5 @@
-import { IconType } from '@nl-rvo/assets/icons/types';
 import { IMobileMenuBarProps } from './template';
+import { IconType } from '../icon/types';
 
 export const defaultArgs: IMobileMenuBarProps = {
   size: 'md',

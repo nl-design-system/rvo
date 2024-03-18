@@ -2,12 +2,12 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import { IconType } from '@nl-rvo/assets/icons/types';
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon/template';
+import { IconType } from '../icon/types';
 import '../layout-column-row/index.scss';
 import './index.scss';
 

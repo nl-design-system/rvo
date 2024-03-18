@@ -136,8 +136,8 @@ importers:
   components:
     devDependencies:
       '@nl-rvo/assets':
-        specifier: workspace:*
-        version: link:../proprietary/assets
+        specifier: 1.0.0-alpha.360
+        version: 1.0.0-alpha.360
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
@@ -374,8 +374,8 @@ importers:
         specifier: 1.6.22
         version: 1.6.22(react@18.2.0)
       '@nl-rvo/assets':
-        specifier: workspace:*
-        version: link:../../proprietary/assets
+        specifier: 1.0.0-alpha.360
+        version: 1.0.0-alpha.360
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../components-css
@@ -443,8 +443,8 @@ importers:
         specifier: 1.6.22
         version: 1.6.22(react@18.2.0)
       '@nl-rvo/assets':
-        specifier: workspace:*
-        version: link:../../proprietary/assets
+        specifier: 1.0.0-alpha.360
+        version: 1.0.0-alpha.360
       '@nl-rvo/components-css':
         specifier: file:../components-css
         version: file:packages/components-css
@@ -581,8 +581,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(@emotion/react@11.10.0)(@emotion/styled@11.10.0)(@mui/material@5.10.3)(@mui/system@5.15.6)(@types/react@18.2.47)(date-fns@2.29.3)(react-dom@18.2.0)(react@18.2.0)
       '@nl-rvo/assets':
-        specifier: workspace:*
-        version: link:../../proprietary/assets
+        specifier: 1.0.0-alpha.360
+        version: 1.0.0-alpha.360
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -659,12 +659,6 @@ importers:
       url-loader:
         specifier: 4.1.1
         version: 4.1.1(webpack@5.88.2)
-
-  proprietary/assets:
-    devDependencies:
-      sass:
-        specifier: ^1.69.7
-        version: 1.69.7
 
   proprietary/design-tokens:
     devDependencies:
@@ -5278,6 +5272,9 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@nl-rvo/assets@1.0.0-alpha.360:
+    resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}

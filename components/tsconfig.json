@@ -16,7 +16,7 @@
     "baseUrl": "./",
     "paths": {
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
-      "@nl-rvo/assets/*": ["../proprietary/assets/*"],
+      "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
       "react-dom/server": ["../packages/storybook/node_modules/react-dom/server"],
       "@docusaurus/components/*": ["../packages/docusaurus/src/components/*"],
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]

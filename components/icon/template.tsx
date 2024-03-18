@@ -3,10 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
-import { IconType } from '@nl-rvo/assets/icons/types';
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
+import { IconType } from '../icon/types';
 import './index.scss';
 export interface IIconProps {
   icon: IconType;

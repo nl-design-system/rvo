@@ -24,7 +24,7 @@
     "@mui/styles": "5.10.6",
     "@mui/x-data-grid": "5.17.20",
     "@mui/x-date-pickers": "5.0.0",
-    "@nl-rvo/assets": "workspace:*",
+    "@nl-rvo/assets": "1.0.0-alpha.360",
     "@nl-rvo/design-tokens": "workspace:*",
     "@utrecht/design-tokens": "1.0.0-alpha.613",
     "apexcharts": "3.35.5",

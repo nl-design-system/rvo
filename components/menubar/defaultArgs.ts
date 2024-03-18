@@ -1,5 +1,5 @@
-import { IconType } from '@nl-rvo/assets/icons/types';
 import { IMenuBarProps } from './template';
+import { IconType } from '../icon/types';
 
 export const defaultItems = [
   { label: 'Home', icon: 'home' as IconType, link: '#' },
