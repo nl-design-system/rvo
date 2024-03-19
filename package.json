@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.359",
+  "version": "1.0.0-alpha.360",
   "author": "Community for NL Design System",
   "description": "RVO assets",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -27,5 +27,6 @@
   },
   "devDependencies": {
     "sass": "^1.69.7"
-  }
+  },
+  "gitHead": "79e09532045fb61e387ceccb233950e04ac069e7"
 }
