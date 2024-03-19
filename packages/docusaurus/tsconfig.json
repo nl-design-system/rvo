@@ -6,7 +6,7 @@
     "paths": {
       "@docusaurus/components/*": ["src/components/*"],
       "@nl-rvo/documentation/*": ["../../documentation/*"],
-      "@nl-rvo/assets/*": ["../../proprietary/assets/*"]
+      "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"]
     }
   }
 }

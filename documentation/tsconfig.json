@@ -17,7 +17,7 @@
     "paths": {
       "@nl-rvo/components/*": ["../proprietary/components/*"],
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
-      "@nl-rvo/assets/*": ["../proprietary/assets/*"],
+      "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
     }
   },

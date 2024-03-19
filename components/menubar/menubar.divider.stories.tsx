@@ -1,6 +1,6 @@
-import { IconType } from '@nl-rvo/assets/icons/types';
 import { defaultArgs } from './defaultArgs';
 import { argTypes, MenuBar } from './template';
+import { IconType } from '../icon/types';
 
 export default {
   title: 'Componenten/Menubar/Divider',

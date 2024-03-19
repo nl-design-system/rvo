@@ -73,10 +73,10 @@ const config = {
         blog: false,
         theme: {
           customCss: [
-            require.resolve('../../proprietary/assets/fonts/index.css'),
-            require.resolve('../../proprietary/assets/icons/index.css'),
-            require.resolve('../../proprietary/assets/images/index.css'),
-            require.resolve('../../proprietary/design-tokens/dist/index.css'),
+            require.resolve('@nl-rvo/assets/fonts/index.css'),
+            require.resolve('@nl-rvo/assets/icons/index.css'),
+            require.resolve('@nl-rvo/assets/images/index.css'),
+            require.resolve('@nl-rvo/design-tokens/dist/index.css'),
             require.resolve('../components-css/dist/index.css'),
             require.resolve('./src/css/custom.scss'),
           ],
