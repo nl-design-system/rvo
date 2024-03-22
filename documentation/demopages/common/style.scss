@@ -2019,6 +2019,29 @@
     }
   }
 
+  .rvo-expandable-area > .rvo-expandable-area-summary {
+    color: var(--rvo-color-hemelblauw);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .rvo-expandable-area > .rvo-expandable-area-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rvo-expandable-area[open] .rvo-expandable-area-icon--open {
+    display: block;
+  }
+
+  .rvo-expandable-area[open] .rvo-expandable-area-icon--closed,
+  .rvo-expandable-area .rvo-expandable-area-icon--open {
+    display: none;
+  }
+
+  .rvo-expandable-area-demo > .rvo-layout-column {
+    width: 608px;
+  }
+
   @media (min-width: 360px) {
     .rvo-pagination {
       flex-direction: row;
