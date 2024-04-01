@@ -46,8 +46,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0(eslint@8.57.0)(typescript@4.9.5)
       '@utrecht/component-library-css':
-        specifier: 3.0.1-alpha.22
-        version: 3.0.1-alpha.22
+        specifier: 3.0.1-alpha.27
+        version: 3.0.1-alpha.27
       '@utrecht/component-library-react':
         specifier: 3.0.1-alpha.22
         version: 3.0.1-alpha.22(date-fns@3.4.0)(react-dom@18.2.0)(react@18.2.0)
@@ -205,8 +205,8 @@ importers:
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
       '@utrecht/component-library-css':
-        specifier: 3.0.1-alpha.22
-        version: 3.0.1-alpha.22
+        specifier: 3.0.1-alpha.27
+        version: 3.0.1-alpha.27
       node-sass-package-importer:
         specifier: 5.3.3
         version: 5.3.3
@@ -633,8 +633,8 @@ importers:
         specifier: 7.24.0
         version: 7.24.0
       '@utrecht/component-library-css':
-        specifier: 3.0.1-alpha.22
-        version: 3.0.1-alpha.22
+        specifier: 3.0.1-alpha.27
+        version: 3.0.1-alpha.27
       '@utrecht/component-library-react':
         specifier: 3.0.1-alpha.22
         version: 3.0.1-alpha.22(date-fns@3.4.0)(react-dom@18.2.0)(react@18.2.0)
@@ -10040,8 +10040,8 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@utrecht/component-library-css@3.0.1-alpha.22:
-    resolution: {integrity: sha512-cEn4b8VraWSz6aWfuLfmRGJ0pzW4uVzOVAiIOVkHvd1d27tdtVX7Br31tHiXJmX6oN5OFapiaqCMOBJkW7vjVw==}
+  /@utrecht/component-library-css@3.0.1-alpha.27:
+    resolution: {integrity: sha512-ZmdkJkUCaY3Y+hX4ubOqq2ci74r0DDxWrVMHK9zHy5D100bq9Uy5koEFYT8J+iEXIGtFA16iJ3UKcrioeJPXKg==}
     dev: true
 
   /@utrecht/component-library-react@3.0.1-alpha.22(date-fns@3.4.0)(react-dom@18.2.0)(react@18.2.0):
