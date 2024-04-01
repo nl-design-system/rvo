@@ -386,8 +386,8 @@ importers:
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
       '@tsconfig/docusaurus':
-        specifier: 1.0.7
-        version: 1.0.7
+        specifier: 2.0.3
+        version: 2.0.3
       clsx:
         specifier: 2.1.0
         version: 2.1.0
@@ -9263,8 +9263,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
-  /@tsconfig/docusaurus@1.0.7:
-    resolution: {integrity: sha512-ffTXxGIP/IRMCjuzHd6M4/HdIrw1bMfC7Bv8hMkTadnePkpe0lG0oDSdbRpSDZb2rQMAgpbWiR10BvxvNYwYrg==}
+  /@tsconfig/docusaurus@2.0.3:
+    resolution: {integrity: sha512-3l1L5PzWVa7l0691TjnsZ0yOIEwG9DziSqu5IPZPlI5Dowi7z42cEym8Y35GHbgHvPcBfNxfrbxm7Cncn4nByQ==}
     dev: true
 
   /@tsconfig/node10@1.0.9:
