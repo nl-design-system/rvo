@@ -42,7 +42,7 @@
     "webpack": "5.90.3"
   },
   "devDependencies": {
-    "@babel/runtime": "7.24.0",
+    "@babel/runtime": "7.24.1",
     "@utrecht/component-library-css": "3.0.1-alpha.22",
     "@utrecht/component-library-react": "3.0.1-alpha.22",
     "@uxpin/merge-cli": "3.4.3",
