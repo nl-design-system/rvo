@@ -575,8 +575,8 @@ importers:
         specifier: 5.15.13
         version: 5.15.13(@types/react@18.2.65)(react@18.2.0)
       '@mui/x-data-grid':
-        specifier: 6.19.6
-        version: 6.19.6(@mui/material@5.15.13)(@mui/system@5.15.14)(@types/react@18.2.65)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.1.0
+        version: 7.1.0(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@mui/material@5.15.13)(@types/react@18.2.65)(react-dom@18.2.0)(react@18.2.0)
       '@mui/x-date-pickers':
         specifier: 6.19.6
         version: 6.19.6(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@mui/material@5.15.13)(@mui/system@5.15.14)(@types/react@18.2.65)(date-fns@3.4.0)(react-dom@18.2.0)(react@18.2.0)
@@ -4579,7 +4579,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.0
       '@floating-ui/react-dom': 2.0.8(react-dom@18.2.0)(react@18.2.0)
-      '@mui/types': 7.2.13(@types/react@18.2.65)
+      '@mui/types': 7.2.14(@types/react@18.2.65)
       '@mui/utils': 5.15.14(@types/react@18.2.65)(react@18.2.0)
       '@popperjs/core': 2.11.8
       '@types/react': 18.2.65
@@ -4819,12 +4819,11 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /@mui/x-data-grid@6.19.6(@mui/material@5.15.13)(@mui/system@5.15.14)(@types/react@18.2.65)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-jpZkX1Gnlo87gKcD10mKMY8YoAzUD8Cv3/IvedH3FINDKO3hnraMeOciKDeUk0tYSj8RUDB02kpTHCM8ojLVBA==}
+  /@mui/x-data-grid@7.1.0(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@mui/material@5.15.13)(@types/react@18.2.65)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-VnvX6ZyVUw/cjosh6SvkPtTmukFIa587JHcnWDPnaOijSOg6Zq72xbzEqqwZn9oOZCj88FD7lEDVHUIjoncDvg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      '@mui/material': ^5.4.1
-      '@mui/system': ^5.4.1
+      '@mui/material': ^5.15.14
       react: ^17.0.0 || ^18.0.0
       react-dom: ^17.0.0 || ^18.0.0
     dependencies:
@@ -4838,6 +4837,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       reselect: 4.1.8
     transitivePeerDependencies:
+      - '@emotion/react'
+      - '@emotion/styled'
       - '@types/react'
     dev: false
 
