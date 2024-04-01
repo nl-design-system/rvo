@@ -52,8 +52,8 @@ importers:
         specifier: 3.0.1-alpha.22
         version: 3.0.1-alpha.22(date-fns@3.4.0)(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/components':
-        specifier: 3.0.1-alpha.22
-        version: 3.0.1-alpha.22
+        specifier: 3.0.1-alpha.27
+        version: 3.0.1-alpha.27
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -265,8 +265,8 @@ importers:
         specifier: 3.0.1-alpha.22
         version: 3.0.1-alpha.22(date-fns@3.4.0)(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/components':
-        specifier: 3.0.1-alpha.22
-        version: 3.0.1-alpha.22
+        specifier: 3.0.1-alpha.27
+        version: 3.0.1-alpha.27
       clsx:
         specifier: 2.1.0
         version: 2.1.0
@@ -10067,8 +10067,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/components@3.0.1-alpha.22:
-    resolution: {integrity: sha512-2uPGkiCK2vQW9uux9HtbFBNMN3zLBA1OuWHTv+4ask7eE7y8NbvPFxxnBEOHz7kwQt8P1cluG9ege674q33Kxw==}
+  /@utrecht/components@3.0.1-alpha.27:
+    resolution: {integrity: sha512-GjLDze/ypv7kSxirMtd4KchaB4CwhELvvHzt+9FiVvI27VHEoBnTWgtSc71oZtIAfJECFJqzyYYDPeAmY2JGdQ==}
     dependencies:
       clsx: 1.2.1
     dev: true
