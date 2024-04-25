@@ -32,6 +32,7 @@
     --rvo-link-hover-color: var(--rvo-card-inverted-color);
 
     color: var(--rvo-card-inverted-color);
+
     .rvo-card__link-indicator {
       --utrecht-icon-color: var(--rvo-card-inverted-color);
     }
@@ -165,6 +166,11 @@
     flex: 1;
     gap: var(--rvo-space-xs);
     justify-content: space-between;
+
+    .rvo-icon--sm {
+      min-height: var(--rvo-size-sm);
+      min-width: var(--rvo-size-sm);
+    }
   }
 
   .rvo-card__image-container {
