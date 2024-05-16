@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import HomePaars from './HomePaars';
 
 const meta: Meta<typeof HomePaars> = {
-  title: "Demo pagina's/www",
+  title: "Demo pagina's/www/kleurvariaties/Home (paars)",
   component: HomePaars,
   parameters: {
     status: {
@@ -14,4 +14,4 @@ export default meta;
 
 type Story = StoryObj<typeof HomePaars>;
 
-export const Default: Story = { name: 'Home(paars)' };
+export const Default: Story = { name: 'Home (paars)' };
