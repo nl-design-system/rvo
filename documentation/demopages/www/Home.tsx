@@ -70,6 +70,7 @@ const Home = () => {
                   useIcons={true}
                   iconPlacement="before"
                   maxWidth="lg"
+                  horizontalRule={false}
                 />
               </div>
             </details>
@@ -122,6 +123,7 @@ const Home = () => {
             useIcons={true}
             iconPlacement="before"
             maxWidth="lg"
+            horizontalRule={false}
           />
         </div>
         <div className="rvo-hero rvo-max-width-layout--lg">

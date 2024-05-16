@@ -2,9 +2,9 @@ import { Button, Footer, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, M
 import '../common/rhs-update.scss';
 import '../common/www.scss';
 
-const HomePaars = () => {
+const Home = () => {
   return (
-    <body className="rvo-theme rvo-www rvo-paars">
+    <body className="rvo-theme rvo-www rvo-lichtblauwhemelsblauw">
       <div className="rvo-www rvo-rhs-update">
         <header className="rvo-header">
           <div className="rvo-rhs-update-component">
@@ -120,9 +120,9 @@ const HomePaars = () => {
             ]}
             size="lg"
             useIcons={true}
-            horizontalRule={false}
             iconPlacement="before"
             maxWidth="lg"
+            horizontalRule={false}
           />
         </div>
         <div className="rvo-hero rvo-max-width-layout--lg">
@@ -689,4 +689,4 @@ const HomePaars = () => {
   );
 };
 
-export default HomePaars;
+export default Home;
