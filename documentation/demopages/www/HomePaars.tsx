@@ -120,6 +120,7 @@ const HomePaars = () => {
             ]}
             size="lg"
             useIcons={true}
+            horizontalRule={false}
             iconPlacement="before"
             maxWidth="lg"
           />

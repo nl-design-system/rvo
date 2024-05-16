@@ -33,7 +33,32 @@
   }
 }
 
+.rvo-lichtblauwhemelsblauw {
+  .utrecht-page-footer,
+  .rvo-footer-bg,
+  .rvo-rhs-update .rvo-hero .utrecht-heading-1,
+  .rvo-rhs-update .rvo-card.rvo-card--full-colour.rvo-card--hemelblauw,
+  .utrecht-button--primary-action {
+    background-color: var(--rvo-color-lichtblauw);
+    border-color: var(--rvo-color-lichtblauw);
+    color: var(--rvo-color-logoblauw);
+
+    a,
+    a:hover,
+    a:focus,
+    h3.rvo-footer-menu-title {
+      color: var(--rvo-color-logoblauw) !important;
+    }
+
+    .rvo-icon {
+      background-color: var(--rvo-color-logoblauw);
+    }
+  }
+}
+
 .rvo-www {
+  --rvo-color-zwart: var(--rvo-color-logoblauw);
+
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-end: 0;
