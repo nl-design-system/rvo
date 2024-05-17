@@ -60,15 +60,14 @@ const Filter = () => {
                   humanitarian spending easier to access, use and understand.
                 </p>
                 <Alert kind="warning">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">Disclaimer</h3>
-                  <p className="rvo-text rvo-text--no-margins">
-                    This site is launched in February 2020 and is being updated constantly. The data is under constant
-                    scrutiny and is by no means legally binding. The IATI datasets are updated daily. Questions about
-                    the data and the projects?{' '}
-                    <a href="mailto:iati@rvo.nl" className="rvo-link rvo-link--donkerblauw">
-                      iati@rvo.nl
-                    </a>
-                  </p>
+                  <strong>Disclaimer</strong>
+                  <br />
+                  This site is launched in February 2020 and is being updated constantly. The data is under constant
+                  scrutiny and is by no means legally binding. The IATI datasets are updated daily. Questions about the
+                  data and the projects?{' '}
+                  <a href="mailto:iati@rvo.nl" className="rvo-link rvo-link--donkerblauw">
+                    iati@rvo.nl
+                  </a>
                 </Alert>
               </div>
             </LayoutColumnRow>
