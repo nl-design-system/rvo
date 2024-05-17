@@ -38,16 +38,15 @@
       min-width: 10px;
       width: 10px;
     }
+  }
 
-    .rvo-label {
-      display: none;
-    }
+  .utrecht-form-field--text {
+    margin-block-end: var(--rvo-space-xs);
   }
 
   .utrecht-form-field + .rvo-collapsible-filter .rvo-collapsible-filter-label {
     font-weight: var(--rvo-font-weight-regular);
     gap: var(--rvo-space-2xs);
-    margin-block-start: -16px;
 
     .rvo-icon {
       margin-block-start: 3px;

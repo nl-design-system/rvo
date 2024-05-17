@@ -8,6 +8,7 @@ import {
   Icon,
   LayoutColumnRow,
   MenuBar,
+  TextInputField,
 } from '@nl-rvo/components';
 import '../common/filter.scss';
 
@@ -78,6 +79,9 @@ const Filter = () => {
                 <form className="rvo-form">
                   <LayoutColumnRow size="md">
                     <Fieldset legend="">
+                      <TextInputField label="Search projects" value="study"></TextInputField>
+                    </Fieldset>
+                    <Fieldset legend="">
                       <details open className="rvo-collapsible-filter">
                         <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
@@ -97,9 +101,9 @@ const Filter = () => {
                     <Fieldset legend="">
                       <details open className="rvo-collapsible-filter">
                         <summary className="rvo-collapsible-filter-label">Filter countries</summary>
-                        <span>Frequently used filters options</span>
+                        <span></span>
                         <CheckboxField
-                          label="Countries"
+                          label="Frequently used countries"
                           invalid={false}
                           options={[
                             { id: 'Poland', label: 'Poland' },
@@ -113,10 +117,10 @@ const Filter = () => {
                           {' '}
                           <summary className="rvo-collapsible-filter-label">
                             <Icon icon="plus"></Icon>
-                            All filter options alphabetically
+                            All countries sorted alphabetically
                           </summary>
                           <CheckboxField
-                            label="Countries"
+                            label="All countries"
                             invalid={false}
                             options={[
                               { id: 'Afghanistan', label: 'Afghanistan' },
@@ -318,6 +322,32 @@ const Filter = () => {
                         </details>
                       </details>
                     </Fieldset>
+                    <Fieldset legend="">
+                      <details open className="rvo-collapsible-filter">
+                        <summary className="rvo-collapsible-filter-label">Filter sector</summary>
+                        <TextInputField label="Refine filter options"></TextInputField>
+
+                        <CheckboxField
+                          label="Sector"
+                          invalid={false}
+                          options={[
+                            {
+                              id: 'Advanced technical and managerial training',
+                              label: 'Advanced technical and managerial training',
+                            },
+                            { id: 'Agrarian reform', label: 'Agrarian reform' },
+                            {
+                              id: 'Agricultural alternative development',
+                              label: 'Agricultural alternative development',
+                            },
+                            { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                            { id: 'Agricultural development', label: 'Agricultural development' },
+                            { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                            { id: 'Agricultural education/training', label: 'Agricultural education/training' },
+                          ]}
+                        ></CheckboxField>
+                      </details>
+                    </Fieldset>
                   </LayoutColumnRow>
                 </form>
               </div>
@@ -329,6 +359,16 @@ const Filter = () => {
                   {/* <div className="rvo-results-active-filters">Active filters</div> */}
                   <LayoutColumnRow row={true} size="sm">
                     <span className="rvo-results-active-filters">Active filters</span>
+                    <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
+                      <span>
+                        Search <strong> study</strong>
+                      </span>
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-kruis rvo-icon--sm  rvo-link__icon--after"
+                        role="img"
+                        aria-label="Kruis"
+                      ></span>
+                    </div>
                     <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
                       <span>
                         Country<strong> Congo</strong>
