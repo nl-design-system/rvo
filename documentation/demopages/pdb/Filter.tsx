@@ -80,7 +80,7 @@ const Filter = () => {
                   <LayoutColumnRow size="md">
                     <Fieldset legend="">
                       <details open className="rvo-collapsible-filter">
-                        <summary className="rvo-collapsible-filter-label">Filter on status</summary>
+                        <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
                         <CheckboxField
                           label="Status"
