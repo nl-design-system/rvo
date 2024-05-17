@@ -82,6 +82,12 @@ const Filter = () => {
                       <TextInputField label="Search projects" value="study"></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
+                      <LayoutColumnRow row={true} size="sm" alignItems="start">
+                        <TextInputField label="From (year)" value="2003" size="xs"></TextInputField>
+                        <TextInputField label="Till (year)" value="2028" size="xs"></TextInputField>
+                      </LayoutColumnRow>
+                    </Fieldset>
+                    <Fieldset legend="">
                       <details open className="rvo-collapsible-filter">
                         <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
@@ -322,6 +328,7 @@ const Filter = () => {
                         </details>
                       </details>
                     </Fieldset>
+
                     <Fieldset legend="">
                       <details open className="rvo-collapsible-filter">
                         <summary className="rvo-collapsible-filter-label">Filter sector</summary>
@@ -421,20 +428,77 @@ const Filter = () => {
                     <div className="rvo-card--with-link-indicator">
                       <div className="rvo-card__content">
                         <a className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link" href="#">
-                          Sector Study Poultry Democratic Republic of the Congo (DR Congo)
+                          Orange Corners Strategy Days
                         </a>
                         <div className="rvo-project-details">
                           <span>Programme: </span>
-                          <strong>PSD Toolkit – Phase 1</strong>
+                          <strong>PSD Toolkit – Phase 2</strong>
+                          <br />
+                          <span>Country: </span>
+                          <strong>
+                            Angola, Congo (the Democratic Republic of the), Côte d'Ivoire, Algeria, Egypt, Ghana, Iraq,
+                            Morocco, Mozambique, Nigeria, Sudan (the), Senegal, South Africa
+                          </strong>
+                          <br />
+                          <span>Total budget: </span>
+                          <strong>€0</strong>
+                          <br />
+                          <span>Project number: </span>
+                          <strong>NL-KVK-27378529-PSS20MC01</strong>
+                        </div>
+                      </div>
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
+                        role="img"
+                        aria-label="Delta naar rechts"
+                      ></span>
+                    </div>
+                  </div>
+                  <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card--with-link-indicator">
+                      <div className="rvo-card__content">
+                        <a className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link" href="#">
+                          Pilot Access to Finance – Digitalisation Guarantee Fund
+                        </a>
+                        <div className="rvo-project-details">
+                          <span>Programme: </span>
+                          <strong>PSD Toolkit – Phase 2</strong>
                           <br />
                           <span>Country: </span>
                           <strong>Congo (the Democratic Republic of the)</strong>
                           <br />
                           <span>Total budget: </span>
-                          <strong>€36,300</strong>
+                          <strong>€24,990</strong>
                           <br />
                           <span>Project number: </span>
-                          <strong>NL-KVK-27378529-MAT17CD01</strong>
+                          <strong>NL-KVK-27378529-PCB23CD01</strong>
+                        </div>
+                      </div>
+                      <span
+                        className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
+                        role="img"
+                        aria-label="Delta naar rechts"
+                      ></span>
+                    </div>
+                  </div>
+                  <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card--with-link-indicator">
+                      <div className="rvo-card__content">
+                        <a className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link" href="#">
+                          K2K Entrepreneurship curriculum DR Congo
+                        </a>
+                        <div className="rvo-project-details">
+                          <span>Programme: </span>
+                          <strong>PSD Toolkit – Phase 2</strong>
+                          <br />
+                          <span>Country: </span>
+                          <strong>Congo (the Democratic Republic of the)</strong>
+                          <br />
+                          <span>Total budget: </span>
+                          <strong>€107,500</strong>
+                          <br />
+                          <span>Project number: </span>
+                          <strong>NL-KVK-27378529-PCB20CD02</strong>
                         </div>
                       </div>
                       <span
