@@ -1,0 +1,69 @@
+.rvo-filter-body {
+  .rvo-filter-wrapper > .rvo-layout-row {
+    align-items: baseline;
+    display: grid;
+    gap: var(--rvo-space-xl);
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .rvo-collapsible-filter {
+    .rvo-collapsible-filter-label {
+      color: var(--rvo-color-logoblauw);
+      cursor: pointer;
+      display: flex;
+      font-weight: var(--rvo-font-weight-bold);
+      gap: var(--rvo-space-xs);
+      list-style: none;
+
+      &::marker,
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    .rvo-collapsible-filter-label::after {
+      background-color: var(--rvo-expandable-text-summary-icon-background-color);
+      content: "";
+      display: inline-block;
+      height: 16px;
+      margin-block-start: 4px;
+      -webkit-mask-image: var(--rvo-icon-delta-omhoog);
+      mask-image: var(--rvo-icon-delta-omhoog);
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100%;
+      mask-size: 100%;
+      min-width: 10px;
+      width: 10px;
+    }
+
+    .rvo-label {
+      display: none;
+    }
+  }
+
+  .utrecht-form-field + .rvo-collapsible-filter .rvo-collapsible-filter-label {
+    font-weight: var(--rvo-font-weight-regular);
+    gap: var(--rvo-space-2xs);
+    margin-block-start: -16px;
+
+    .rvo-icon {
+      margin-block-start: 3px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .rvo-collapsible-filter[open] .rvo-collapsible-filter-label::after {
+    -webkit-mask-image: var(--rvo-icon-delta-omlaag);
+    mask-image: var(--rvo-icon-delta-omlaag);
+  }
+
+  .rvo-project-details {
+    font-size: var(--rvo-font-size-sm);
+  }
+}
