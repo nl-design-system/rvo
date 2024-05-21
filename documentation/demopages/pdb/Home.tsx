@@ -35,7 +35,7 @@ const MijnDossier = () => {
             maxWidth="md"
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading noMargins={true}>Projecten Database</Heading>
+            <Heading noMargins={true}>Project Database</Heading>
             <LayoutColumnRow size="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
