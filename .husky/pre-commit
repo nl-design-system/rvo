@@ -1,2 +1,2 @@
-npx pretty-quick --staged
-npx --no-install lint-staged
+pnpm exec pretty-quick --staged
+pnpm exec lint-staged
