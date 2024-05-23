@@ -1,24 +1,24 @@
-const minorConfig = require("./.ncurc.minor.cjs");
+const minorConfig = require('./.ncurc.minor.cjs');
 
 module.exports = {
   ...minorConfig,
   reject: [
     ...minorConfig.reject,
     // Docusaurus needs a migration
-    "@docusaurus/*",
-    "@mdx-js/react",
-    "@tsconfig/docusaurus",
-    "prism-react-renderer",
+    '@docusaurus/*',
+    '@mdx-js/react',
+    '@tsconfig/docusaurus',
+    'prism-react-renderer',
     // Nx needs a migration
-    "@nrwl/*",
-    "nx",
+    '@nrwl/*',
+    'nx',
     // Prettier 3 is async, needs a refactoring
-    "prettier",
+    'prettier',
     // Storybook v8 needs a refactoring
-    "storybook",
-    "@storybook/*",
+    'storybook',
+    '@storybook/*',
   ],
-  target: "latest",
+  target: 'latest',
 };
 
-console.log(`Reject major updates of:\n\n${module.exports.reject.join("\n")}`);
+console.log(`Reject major updates of:\n\n${module.exports.reject.join('\n')}`);
