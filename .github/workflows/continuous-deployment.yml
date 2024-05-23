@@ -80,7 +80,7 @@ jobs:
         run: pnpm run --if-present test-build
 
       - name: "Generate design system website"
-        run: npm run generate -w ./packages/design-system-website
+        run: pnpm run --filter @nl-rvo/design-system-website generate
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:
@@ -140,7 +140,7 @@ jobs:
       - name: Push to UXPin
         continue-on-error: true
         if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        run: npm install && npx uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
+        run: pnpm install && pnpm exec uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
 
   publish-chromatic:

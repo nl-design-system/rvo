@@ -9,9 +9,6 @@ module.exports = {
     '@mdx-js/react',
     '@tsconfig/docusaurus',
     'prism-react-renderer',
-    // Nx needs a migration
-    '@nrwl/*',
-    'nx',
     // Prettier 3 is async, needs a refactoring
     'prettier',
     // Storybook v8 needs a refactoring
