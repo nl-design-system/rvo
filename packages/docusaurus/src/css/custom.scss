@@ -153,3 +153,9 @@ code {
 .rvo-header__logo-link {
   overflow: visible;
 }
+
+// Fix table alignment in preview page
+.markdown table th.rvo-table-cell--numeric,
+.markdown table td.rvo-table-cell--numeric {
+  text-align: end;
+}
