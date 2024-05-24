@@ -5,6 +5,7 @@
   .rvo-file-input:focus {
     box-shadow: none;
     outline: none;
+    outline-offset: 0;
   }
 
   *:focus-visible,
