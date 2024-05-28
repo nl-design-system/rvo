@@ -8,6 +8,7 @@ import {
   Icon,
   LayoutColumnRow,
   MenuBar,
+  SelectField,
   TextInputField,
 } from '@nl-rvo/components';
 import '../common/filter.scss';
@@ -22,7 +23,7 @@ const Filter = () => {
             items={[
               {
                 label: 'Home',
-                link: '#',
+                link: '/iframe.html?id=demo-pagina-s-projects-rvo-nl-home--default&viewMode=story',
               },
               {
                 label: 'Programmes',
@@ -87,8 +88,64 @@ const Filter = () => {
                         <TextInputField label="Search projects" value="study"></TextInputField>
 
                         <LayoutColumnRow row={true} size="sm" alignItems="start">
-                          <TextInputField label="From (year)" value="2003" size="xs"></TextInputField>
-                          <TextInputField label="Till (year)" value="2028" size="xs"></TextInputField>
+                          <SelectField
+                            label="From (year)"
+                            options={[
+                              {
+                                value: '1998',
+                                label: '1998',
+                              },
+                              {
+                                value: '1999',
+                                label: '1999',
+                              },
+                              {
+                                value: '2000',
+                                label: '2000',
+                              },
+                              {
+                                value: '2001',
+                                label: '2001',
+                              },
+                              {
+                                value: '2002',
+                                label: '2002',
+                              },
+                              {
+                                value: '2003',
+                                label: '2003',
+                              },
+                            ]}
+                          ></SelectField>
+                          <SelectField
+                            label="Till (year)"
+                            options={[
+                              {
+                                value: '1998',
+                                label: '1998',
+                              },
+                              {
+                                value: '1999',
+                                label: '1999',
+                              },
+                              {
+                                value: '2000',
+                                label: '2000',
+                              },
+                              {
+                                value: '2001',
+                                label: '2001',
+                              },
+                              {
+                                value: '2002',
+                                label: '2002',
+                              },
+                              {
+                                value: '2003',
+                                label: '2003',
+                              },
+                            ]}
+                          ></SelectField>
                         </LayoutColumnRow>
 
                         <details open className="rvo-collapsible-filter">
@@ -416,8 +473,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€36,300</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-MAT17CD01</strong>
+                          <span>Status: </span>
+                          <strong>Finalized</strong>
                         </div>
                       </div>
                       <span
@@ -446,8 +503,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€0</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-PSS20MC01</strong>
+                          <span>Status: </span>
+                          <strong>Cancelled</strong>
                         </div>
                       </div>
                       <span
@@ -473,8 +530,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€24,990</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-PCB23CD01</strong>
+                          <span>Status: </span>
+                          <strong>Implementation</strong>
                         </div>
                       </div>
                       <span
@@ -500,8 +557,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€107,500</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-PCB20CD02</strong>
+                          <span>Status: </span>
+                          <strong>Finalized</strong>
                         </div>
                       </div>
                       <span

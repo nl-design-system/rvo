@@ -1,4 +1,5 @@
 import { Footer, Header, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import '../common/filter.scss';
 
 const MijnDossier = () => {
   return (
@@ -11,7 +12,7 @@ const MijnDossier = () => {
               {
                 active: true,
                 label: 'Home',
-                link: '#',
+                link: '/iframe.html?id=demo-pagina-s-projects-rvo-nl-home--default&viewMode=story',
               },
               {
                 label: 'Programmes',
@@ -20,7 +21,7 @@ const MijnDossier = () => {
               },
               {
                 label: 'Projects',
-                link: '#',
+                link: '/iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-filter--default',
               },
               {
                 align: 'right',
@@ -90,7 +91,10 @@ const MijnDossier = () => {
                   <div className="rvo-card--with-link-indicator">
                     <div className="rvo-card__content">
                       <h3 className="utrecht-heading-3">
-                        <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
+                        <a
+                          className="rvo-link rvo-card__link rvo-card__full-card-link"
+                          href="/iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-filter--default"
+                        >
                           Projects
                         </a>
                       </h3>
@@ -105,6 +109,8 @@ const MijnDossier = () => {
                   </div>
                 </div>
               </div>
+              <p></p>
+              <p></p>
             </LayoutColumnRow>
           </main>
         </LayoutColumnRow>
