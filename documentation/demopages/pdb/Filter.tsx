@@ -8,6 +8,7 @@ import {
   Icon,
   LayoutColumnRow,
   MenuBar,
+  SelectField,
   TextInputField,
 } from '@nl-rvo/components';
 import '../common/filter.scss';
@@ -22,7 +23,7 @@ const Filter = () => {
             items={[
               {
                 label: 'Home',
-                link: '#',
+                link: '/iframe.html?id=demo-pagina-s-projects-rvo-nl-home--default&viewMode=story',
               },
               {
                 label: 'Programmes',
@@ -87,8 +88,64 @@ const Filter = () => {
                         <TextInputField label="Search projects" value="study"></TextInputField>
 
                         <LayoutColumnRow row={true} size="sm" alignItems="start">
-                          <TextInputField label="From (year)" value="2003" size="xs"></TextInputField>
-                          <TextInputField label="Till (year)" value="2028" size="xs"></TextInputField>
+                          <SelectField
+                            label="From (year)"
+                            options={[
+                              {
+                                value: '1998',
+                                label: '1998',
+                              },
+                              {
+                                value: '1999',
+                                label: '1999',
+                              },
+                              {
+                                value: '2000',
+                                label: '2000',
+                              },
+                              {
+                                value: '2001',
+                                label: '2001',
+                              },
+                              {
+                                value: '2002',
+                                label: '2002',
+                              },
+                              {
+                                value: '2003',
+                                label: '2003',
+                              },
+                            ]}
+                          ></SelectField>
+                          <SelectField
+                            label="Till (year)"
+                            options={[
+                              {
+                                value: '1998',
+                                label: '1998',
+                              },
+                              {
+                                value: '1999',
+                                label: '1999',
+                              },
+                              {
+                                value: '2000',
+                                label: '2000',
+                              },
+                              {
+                                value: '2001',
+                                label: '2001',
+                              },
+                              {
+                                value: '2002',
+                                label: '2002',
+                              },
+                              {
+                                value: '2003',
+                                label: '2003',
+                              },
+                            ]}
+                          ></SelectField>
                         </LayoutColumnRow>
 
                         <details open className="rvo-collapsible-filter">
@@ -355,6 +412,53 @@ const Filter = () => {
                               { id: 'Agricultural education/training', label: 'Agricultural education/training' },
                             ]}
                           ></CheckboxField>
+                          <hr className="rvo-hr" />
+                        </details>
+
+                        <details open className="rvo-collapsible-filter">
+                          <summary className="rvo-collapsible-filter-label">Project Partner organisation</summary>
+
+                          <CheckboxField
+                            label="Frequently used Project Partner organisations"
+                            invalid={false}
+                            options={[
+                              { id: '4 Fruit Company B.V.', label: '4 Fruit Company B.V.' },
+                              { id: '4 Returns Partners B.V.', label: '4 Returns Partners B.V.' },
+                              { id: '4Wieler', label: '4Wieler' },
+                              { id: '21st Century Informatics BV', label: '21st Century Informatics BV' },
+                              { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
+                            ]}
+                          ></CheckboxField>
+                          <details className="rvo-collapsible-filter">
+                            {' '}
+                            <summary className="rvo-collapsible-filter-label">
+                              <Icon icon="plus"></Icon>
+                              All Project Partner organisations
+                            </summary>
+                            <TextInputField label="Refine filter options"></TextInputField>
+                            <CheckboxField
+                              label="All Project Partner organisations"
+                              invalid={false}
+                              options={[
+                                { id: 'Stichting Het Groene Woudt', label: 'Stichting Het Groene Woudt' },
+                                { id: '.FABRIC', label: '.FABRIC' },
+                                { id: '2Bglobal B.V.', label: '2Bglobal B.V.' },
+                                { id: '2BGlobal V.O.F.', label: '2BGlobal V.O.F.' },
+                                {
+                                  id: '2M VIETNAM MEDIA JOINT STOCK COMPANY',
+                                  label: '2M VIETNAM MEDIA JOINT STOCK COMPANY',
+                                },
+                                { id: '3hi Africa', label: '3hi Africa' },
+                                { id: '3StarLobby', label: '3StarLobby' },
+                                { id: '4 Fruit Company B.V.', label: '4 Fruit Company B.V.' },
+                                { id: '4 Returns Partners B.V.', label: '4 Returns Partners B.V.' },
+                                { id: '4Wieler', label: '4Wieler' },
+                                { id: '21st Century Informatics BV', label: '21st Century Informatics BV' },
+                                { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
+                              ]}
+                            ></CheckboxField>
+                          </details>
+                          <hr className="rvo-hr" />
                         </details>
                       </LayoutColumnRow>
                     </form>
@@ -416,8 +520,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€36,300</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-MAT17CD01</strong>
+                          <span>Status: </span>
+                          <strong>Finalized</strong>
                         </div>
                       </div>
                       <span
@@ -446,8 +550,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€0</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-PSS20MC01</strong>
+                          <span>Status: </span>
+                          <strong>Cancelled</strong>
                         </div>
                       </div>
                       <span
@@ -473,8 +577,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€24,990</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-PCB23CD01</strong>
+                          <span>Status: </span>
+                          <strong>Implementation</strong>
                         </div>
                       </div>
                       <span
@@ -500,8 +604,8 @@ const Filter = () => {
                           <span>Total budget: </span>
                           <strong>€107,500</strong>
                           <br />
-                          <span>Project number: </span>
-                          <strong>NL-KVK-27378529-PCB20CD02</strong>
+                          <span>Status: </span>
+                          <strong>Finalized</strong>
                         </div>
                       </div>
                       <span
