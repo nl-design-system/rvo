@@ -42,7 +42,7 @@
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "@nl-rvo/component-library-css": "workspace:*",
-    "@tsconfig/docusaurus": "1.0.7",
+    "@tsconfig/docusaurus": "2.0.3",
     "clsx": "2.1.0",
     "docusaurus-plugin-sass": "0.2.5",
     "jsdom": "24.0.0",
