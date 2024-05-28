@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
-    "@utrecht/component-library-css": "3.0.1-alpha.22",
+    "@utrecht/component-library-css": "3.0.1-alpha.27",
     "node-sass-package-importer": "5.3.3",
     "rimraf": "5.0.5",
     "sass": "1.71.1"
