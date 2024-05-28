@@ -412,6 +412,53 @@ const Filter = () => {
                               { id: 'Agricultural education/training', label: 'Agricultural education/training' },
                             ]}
                           ></CheckboxField>
+                          <hr className="rvo-hr" />
+                        </details>
+
+                        <details open className="rvo-collapsible-filter">
+                          <summary className="rvo-collapsible-filter-label">Project Partner organisation</summary>
+
+                          <CheckboxField
+                            label="Frequently used Project Partner organisations"
+                            invalid={false}
+                            options={[
+                              { id: '4 Fruit Company B.V.', label: '4 Fruit Company B.V.' },
+                              { id: '4 Returns Partners B.V.', label: '4 Returns Partners B.V.' },
+                              { id: '4Wieler', label: '4Wieler' },
+                              { id: '21st Century Informatics BV', label: '21st Century Informatics BV' },
+                              { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
+                            ]}
+                          ></CheckboxField>
+                          <details className="rvo-collapsible-filter">
+                            {' '}
+                            <summary className="rvo-collapsible-filter-label">
+                              <Icon icon="plus"></Icon>
+                              All Project Partner organisations
+                            </summary>
+                            <TextInputField label="Refine filter options"></TextInputField>
+                            <CheckboxField
+                              label="All Project Partner organisations"
+                              invalid={false}
+                              options={[
+                                { id: 'Stichting Het Groene Woudt', label: 'Stichting Het Groene Woudt' },
+                                { id: '.FABRIC', label: '.FABRIC' },
+                                { id: '2Bglobal B.V.', label: '2Bglobal B.V.' },
+                                { id: '2BGlobal V.O.F.', label: '2BGlobal V.O.F.' },
+                                {
+                                  id: '2M VIETNAM MEDIA JOINT STOCK COMPANY',
+                                  label: '2M VIETNAM MEDIA JOINT STOCK COMPANY',
+                                },
+                                { id: '3hi Africa', label: '3hi Africa' },
+                                { id: '3StarLobby', label: '3StarLobby' },
+                                { id: '4 Fruit Company B.V.', label: '4 Fruit Company B.V.' },
+                                { id: '4 Returns Partners B.V.', label: '4 Returns Partners B.V.' },
+                                { id: '4Wieler', label: '4Wieler' },
+                                { id: '21st Century Informatics BV', label: '21st Century Informatics BV' },
+                                { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
+                              ]}
+                            ></CheckboxField>
+                          </details>
+                          <hr className="rvo-hr" />
                         </details>
                       </LayoutColumnRow>
                     </form>
