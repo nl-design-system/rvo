@@ -109,8 +109,6 @@ const MijnDossier = () => {
                   </div>
                 </div>
               </div>
-              <p></p>
-              <p></p>
             </LayoutColumnRow>
           </main>
         </LayoutColumnRow>
