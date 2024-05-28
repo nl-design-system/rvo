@@ -61,7 +61,7 @@ const Filter = () => {
                   International Aid Transparency Initiative (IATI) helps make information about development and
                   humanitarian spending easier to access, use and understand.
                 </p>
-                <Alert kind="warning">
+                <p className="rvo-text rvo-text--no-margins">
                   <strong>Disclaimer</strong>
                   <br />
                   This site is launched in February 2020 and is being updated constantly. The data is under constant
@@ -70,7 +70,7 @@ const Filter = () => {
                   <a href="mailto:iati@rvo.nl" className="rvo-link rvo-link--donkerblauw">
                     iati@rvo.nl
                   </a>
-                </Alert>
+                </p>
               </div>
             </LayoutColumnRow>
           </main>
