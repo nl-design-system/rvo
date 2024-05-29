@@ -40,7 +40,7 @@
     "@storybook/cli": "7.6.17",
     "@storybook/components": "7.6.17",
     "@storybook/core-events": "7.6.17",
-    "@storybook/manager-api": "7.6.17",
+    "@storybook/manager-api": "8.1.4",
     "@storybook/mdx2-csf": "1.1.0",
     "@storybook/preset-scss": "1.0.3",
     "@storybook/preview-api": "7.6.17",
