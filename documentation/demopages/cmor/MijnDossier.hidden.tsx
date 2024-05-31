@@ -6,7 +6,7 @@ const meta: Meta<typeof MijnDossier> = {
   component: MijnDossier,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'HIDDEN',
     },
   },
 };
