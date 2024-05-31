@@ -6,7 +6,7 @@ const meta: Meta<typeof Overzicht> = {
   component: Overzicht,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'HIDDEN',
     },
   },
 };
