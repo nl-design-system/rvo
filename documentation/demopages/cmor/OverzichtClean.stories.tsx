@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import OverzichtClean from './OverzichtClean';
 
 const meta: Meta<typeof OverzichtClean> = {
-  title: "Demo pagina's/CMOR/Clean (zonder externe CSS)/Overzicht",
+  title: "Demo pagina's/CMOR/Overzicht",
   component: OverzichtClean,
   parameters: {
     status: {
