@@ -34,7 +34,7 @@
     "@nrwl/nx-cloud": "14.7.0",
     "@nrwl/web": "14.8.9",
     "@nrwl/workspace": "14.8.9",
-    "@types/node": "20.11.27",
+    "@types/node": "20.13.0",
     "@types/react": "18.2.65",
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
