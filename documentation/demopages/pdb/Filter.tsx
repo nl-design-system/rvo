@@ -7,6 +7,7 @@ import {
   Icon,
   LayoutColumnRow,
   MenuBar,
+  Pagination,
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
@@ -503,6 +504,29 @@ const Filter = () => {
                       ></span>
                     </div>
                   </LayoutColumnRow>
+                  <div className="rvo-inline-sort">
+                    <SelectField
+                      label="Sort projects on"
+                      options={[
+                        {
+                          value: 'startdate-closest-now',
+                          label: 'Startdate closest to now',
+                        },
+                        {
+                          value: 'startdate-furthest-now',
+                          label: 'Startdate furthest from now',
+                        },
+                        {
+                          value: 'lowest-budget-first',
+                          label: 'Lowest budget first',
+                        },
+                        {
+                          value: 'biggest-budget-first',
+                          label: 'Biggest budget first',
+                        },
+                      ]}
+                    ></SelectField>
+                  </div>
                   <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
                     <div className="rvo-card--with-link-indicator">
                       <div className="rvo-card__content">
@@ -614,6 +638,7 @@ const Filter = () => {
                       ></span>
                     </div>
                   </div>
+                  <Pagination numberOfPages={30} activePage={1} />
                 </LayoutColumnRow>
               </div>
             </LayoutColumnRow>
