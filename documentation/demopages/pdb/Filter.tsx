@@ -530,7 +530,10 @@ const Filter = () => {
                   <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
                     <div className="rvo-card--with-link-indicator">
                       <div className="rvo-card__content">
-                        <a className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link" href="#">
+                        <a
+                          className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
+                          href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
+                        >
                           Sector Study Poultry Democratic Republic of the Congo (DR Congo)
                         </a>
                         <div className="rvo-project-details">
