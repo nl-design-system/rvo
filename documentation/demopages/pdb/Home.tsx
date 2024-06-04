@@ -1,7 +1,7 @@
 import { Footer, Header, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
 import '../common/filter.scss';
 
-const MijnDossier = () => {
+const Home = () => {
   return (
     <body className="rvo-theme">
       <Header link="#" />
@@ -156,4 +156,4 @@ const MijnDossier = () => {
   );
 };
 
-export default MijnDossier;
+export default Home;

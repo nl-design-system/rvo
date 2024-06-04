@@ -103,4 +103,12 @@
   .rvo-tag .rvo-icon {
     cursor: pointer;
   }
+
+  .rvo-inline-sort {
+    .rvo-form-field {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
 }
