@@ -64,9 +64,40 @@
   margin-inline-end: 0;
   margin-inline-start: 0;
 
-  .rvo-header {
-    display: flex;
-    justify-content: center;
+  .rvo-details {
+    margin-block-end: var(--rvo-space-md);
+
+    .rvo-icon-delta-omlaag {
+      display: none;
+    }
+  }
+
+  .rvo-hide {
+    display: none;
+  }
+
+  .rvo-details-summary {
+    cursor: pointer;
+    font-weight: var(--rvo-font-weight-bold);
+    list-style: none;
+  }
+
+  .rvo-details[open] {
+    .rvo-details-summary {
+      margin-block-end: var(--rvo-space-sm);
+    }
+
+    .rvo-icon-delta-omhoog {
+      display: none;
+    }
+
+    .rvo-icon-delta-omlaag {
+      display: block;
+    }
+  }
+
+  .rvo-details .utrecht-form-field {
+    margin-block-end: 0;
   }
 
   // NAVIGATION //
