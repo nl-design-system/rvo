@@ -50,4 +50,5 @@ export { StatusIcon } from './status-icon/template';
 export { StatusIndicator } from './status-indicator/template';
 export { Table } from './table/template';
 export { Tag } from './tag/template';
+export { TextHelpers } from './text-helpers/template';
 export { Toggle } from './toggle/template';

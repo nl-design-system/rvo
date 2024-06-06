@@ -1,4 +1,14 @@
-import { Button, Footer, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Icon,
+  LayoutColumnRow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+} from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/www.scss';
 
@@ -6,20 +16,7 @@ const HomeLichtblauw = () => {
   return (
     <body className="rvo-theme rvo-www rvo-lichtblauw">
       <div className="rvo-www rvo-rhs-update">
-        <header className="rvo-header">
-          <div className="rvo-rhs-update-component">
-            <a className="rvo-logo" href="#">
-              <div className="rvo-logo-lint">
-                <img src="images/lint.svg" alt="" />
-              </div>
-              <div className="rvo-logo-text rvo-logo-text--full">
-                Rijksdienst voor Ondernemend <br />
-                Nederland
-              </div>
-              <div className="rvo-logo-text rvo-logo-text--abv">RVO</div>
-            </a>
-          </div>
-        </header>
+        <Header />
         <div className="rvo-rhs-update-component">
           <div className="rvo-responsive-menu-wrapper">
             <details className="rvo-responsive-menu">
