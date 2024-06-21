@@ -138,25 +138,36 @@ const Notify = () => {
               Wilt u weten hoeveel budget er nog beschikbaar is voor de Investeringssubsidie duurzame energie en
               energiebesparing (ISDE)? Op deze pagina leest u de stand van zaken.
             </p>
-            <details className="rvo-details">
-              <summary className="rvo-details-summary">
-                <LayoutColumnRow row={true} size="xs">
-                  <Icon icon="envelop"></Icon>Ontvang e-mail notificaties <Icon icon="delta-omlaag" size="sm"></Icon>
-                  <Icon icon="delta-omhoog" size="sm"></Icon>
-                </LayoutColumnRow>
-              </summary>
-              <Fieldset legend="">
-                <form className="rvo-form">
-                  <LayoutColumnRow row={true} alignItems="end">
-                    <TextInputField
-                      label="E-mailadres"
-                      helperText="Ontvang een e-mail als de inhoud van deze pagina w."
-                    ></TextInputField>
-                    <Button>Verzenden</Button>
+            <LayoutColumnRow>
+              <LayoutColumnRow row={true} size="sm">
+                <Button size="sm">Direct aanvragen</Button>
+                <Button size="sm" kind="secondary">
+                  Gebruik rekentool
+                </Button>
+                <Button size="sm" kind="secondary">
+                  ISDE voor bedrijven
+                </Button>
+              </LayoutColumnRow>
+              <details className="rvo-details">
+                <summary className="rvo-details-summary">
+                  <LayoutColumnRow row={true} size="xs">
+                    <Icon icon="envelop"></Icon>Ontvang e-mail notificaties <Icon icon="delta-omlaag" size="sm"></Icon>
+                    <Icon icon="delta-omhoog" size="sm"></Icon>
                   </LayoutColumnRow>
-                </form>
-              </Fieldset>
-            </details>
+                </summary>
+                <Fieldset legend="">
+                  <form className="rvo-form">
+                    <LayoutColumnRow row={true} alignItems="end">
+                      <TextInputField
+                        label="E-mailadres"
+                        helperText="Ontvang een e-mail als de inhoud van deze pagina w."
+                      ></TextInputField>
+                      <Button>Verzenden</Button>
+                    </LayoutColumnRow>
+                  </form>
+                </Fieldset>
+              </details>
+            </LayoutColumnRow>
             <Heading type="h2" noMargins={true}>
               Op deze pagina:
             </Heading>
