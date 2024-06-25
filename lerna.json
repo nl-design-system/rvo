@@ -1,8 +1,7 @@
 {
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
-  "npmClient": "pnpm",
   "version": "independent",
-  "useWorkspaces": true,
+  "npmClient": "pnpm",
   "command": {
     "publish": {},
     "version": {
@@ -12,5 +11,7 @@
       "exact": true,
       "message": "docs(release): design system packages\n\n[skip ci]"
     }
-  }
+  },
+  "packages": ["./documentation/", "./components", "./components/*", "./packages/", "./proprietary", "./uxpin-merge"],
+  "useWorkspaces": false
 }
