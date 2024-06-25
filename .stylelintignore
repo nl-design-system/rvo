@@ -7,7 +7,6 @@ build
 coverage
 dist
 tmp
-.nx
 
 # Ignore minified files
 *.min.js
