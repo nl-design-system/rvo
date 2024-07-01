@@ -19,7 +19,9 @@ anchors:
   - anchor: tools-resources
     label: "Language tools and resources"
   - anchor: frequently-used
-    label: "Frequently used phrases, words and names
+    label: "Frequently used phrases, words and names"
+  - anchor: foutmeldingsteksten
+    label: "Error message texts"
 ---
 
 import { Heading, Link } from "../../../components";
@@ -551,3 +553,37 @@ Below you find standard phrases used regularly on subsidy and information pages.
 |                               | My application for DHI demonstration projects.                                                                                                 |
 |                               | You will receive a subsidy decision within 13 weeks of submitting your application.                                                            |
 |                               | Have you applied for DHI? If so, you can ask us to calculate the subsidy amount and notify us of progress or any changes via this page.        |
+
+<Heading type="h2" link="foutmeldingsteksten">
+  Standard error message texts
+</Heading>
+
+These are suggestions for notification texts when a mandatory field is not filled or an incorrect value is entered. You can make the error message specific to the situation.
+
+| **What is happening?**                                                                                                                           | **Notification text**                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| De gebruiker heeft geen antwoord gegeven op een verplichte vraag.                                                                                | This is a mandatory question. You must enter a response.                                                                            |
+| De gebruiker heeft geen keuze gemaakt bij een verplichte vraag.                                                                                  | This is a mandatory question. You must make a choice.                                                                               |
+| De gebruiker heeft een ongeldige postcode ingevuld en wil zoeken op postcode.                                                                    | You filled in an invalid postcode. You must enter 4 digits. (_niet gebruiken voor buitenlandse postcodes_)                          |
+| Plaatsnaam niet bekend en gebruiker wil zoeken op plaatsnaam.                                                                                    | No place names starting with those letters have been found.                                                                         |
+| De gebruiker heeft geen postcode ingevuld en wil zoeken op postcode.                                                                             | The postcode is missing. You must enter a postcode.                                                                                 |
+| De gebruiker heeft geen plaatsnaam ingevuld en wil zoeken op plaatsnaam.                                                                         | The place name is missing. You must enter the place name.                                                                           |
+| Datum is leeg (niet gevuld).                                                                                                                     | This is a mandatory question. You must enter a response.                                                                            |
+| Datum bestaat niet.                                                                                                                              | The date is incorrect. You must enter a valid date.                                                                                 |
+| De gebruiker heeft het telefoonnummer niet ingevuld. Deze controle is bedoeld om de gebruiker te bewegen toch zijn telefoonnummer op te geven.   | You did not enter a telephone number, is this correct? If so, please continue. If not, enter your phone number before you continue. |
+| Het telefoonnummer voldoet niet aan de voorwaarden. Het ingevulde telefoonnummer is ongeldig.                                                    | You have entered an incorrect phone number. Please enter the correct phone number and continue.                                     |
+| Het e-mailadres voldoet niet aan de voorwaarden. Het ingevulde e-mailadres bij vraag 'E-mailadres' is ongeldig.                                  | You have entered an invalid email address. Please enter your correct email address and then continue.                               |
+| De ingevulde adressen bij vraag 'E- mailadres' en 'Nogmaals e-mailadres' zijn ongelijk aan elkaar.                                               | The email addresses you entered are not the same. Please change your email first and then continue.                                 |
+| Jaartal systeemdatum. Het jaartal ligt in de toekomst.                                                                                           | The year is in the future. Choose the current year or one in the past.                                                              |
+| Het jaartal ligt in het verleden.                                                                                                                | The year is in the past. Choose the current year or one in the future.                                                              |
+| Geboortejaar ligt in de toekomst.                                                                                                                | The year of birth is in the future. Please change your date of birth first and then continue.                                       |
+| De nieuwe einddatum moet in de toekomst liggen.                                                                                                  | The end date is in the past. You must enter a future date.                                                                          |
+| Het eind van de geldigheidsperiode kan niet voor de start van de geldigheidsperiode liggen.                                                      | The end date is before the start date. You must adjust the end date.                                                                |
+| De begindatum mag niet in het verleden liggen.                                                                                                   | The start date you entered is in the past. Please change the end date.                                                              |
+| De einddatum mag niet in het verleden liggen.                                                                                                    | The end date you entered is in the past. Please change the end date.                                                                |
+| De einddatum moet na de begindatum liggen.                                                                                                       | The end date is before the start date. Change the start or end date.                                                                |
+| De einddatum van de machtiging moet leeg zijn of groter zijn dan de begindatum.                                                                  | The end date is before the start date. Change the start or end date. Do you not have an end date? Leave the field empty.            |
+| Een datum moet in een bepaalde periode liggen.                                                                                                   | The date is not between …. and …. Please enter a correct date.                                                                      |
+| Een veld moet en bepaalde waarde hebben.                                                                                                         | Enter an \[amount\]\[percentage\] with \[number of\] decimal places.                                                                      |
+|                                                                                                                                                  | The \[amount\] \[percentage\] should be between \[…\] and \[…\].                                                                            |
+|                                                                                                                                                  | The \[amount\] \[percentage\] cannot be lower/higher than \[…\].                                                                          |
