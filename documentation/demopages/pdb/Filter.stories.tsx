@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Filter from './Filter';
 
 const meta: Meta<typeof Filter> = {
-  title: "Demo pagina's/projects.rvo.nl/Filter",
+  title: "Demo pagina's/projects.rvo.nl/Filter/Filter A",
   component: Filter,
   parameters: {
     status: {
@@ -14,4 +14,4 @@ export default meta;
 
 type Story = StoryObj<typeof Filter>;
 
-export const Default: Story = { name: 'Filter' };
+export const Default: Story = { name: 'Filter A' };

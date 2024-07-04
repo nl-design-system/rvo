@@ -168,26 +168,9 @@ const Filter = () => {
 
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter countries</summary>
-
-                          <CheckboxField
-                            label="Frequently used countries"
-                            invalid={false}
-                            options={[
-                              { id: 'Poland', label: 'Poland' },
-                              { id: 'Peru', label: 'Peru' },
-                              { id: 'Netherlands', label: 'Netherlands' },
-                              { id: 'Angola', label: 'Angola' },
-                              { id: 'Qatar', label: 'Qatar' },
-                            ]}
-                          ></CheckboxField>
-                          <details className="rvo-collapsible-filter">
-                            {' '}
-                            <summary className="rvo-collapsible-filter-label">
-                              <Icon icon="plus"></Icon>
-                              All countries sorted alphabetically
-                            </summary>
+                          <div className="rvo-collapsible-filter--scroll">
                             <CheckboxField
-                              label="All countries"
+                              label=" "
                               invalid={false}
                               options={[
                                 { id: 'Afghanistan', label: 'Afghanistan' },
@@ -386,9 +369,9 @@ const Filter = () => {
                                 { id: 'Zimbabwe', label: 'Zimbabwe' },
                               ]}
                             ></CheckboxField>
-                          </details>
-                          <hr className="rvo-hr" />
+                          </div>
                         </details>
+                        <hr className="rvo-hr" />
 
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter sector</summary>
