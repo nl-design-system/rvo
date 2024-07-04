@@ -65,7 +65,14 @@
     }
   }
 
-  .utrecht-form-field--text {
+  .rvo-collapsible-filter--scroll {
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-color: var(--rvo-color-grijs-500) var(--rvo-color-grijs-200);
+  }
+
+  .rvo-filter .utrecht-form-field--text {
     margin-block-end: var(--rvo-space-xs);
   }
 
@@ -101,6 +108,7 @@
   }
 
   .rvo-tag .rvo-icon {
+    background-color: var(--rvo-color-zwart);
     cursor: pointer;
   }
 
@@ -108,7 +116,6 @@
     .rvo-form-field {
       align-items: center;
       flex-direction: row;
-      justify-content: flex-end;
     }
   }
 }
