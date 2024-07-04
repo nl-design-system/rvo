@@ -69,7 +69,7 @@
     max-height: 200px;
     overflow: scroll;
     overflow-x: hidden;
-    scrollbar-color: var(--rvo-color-logoblauw) var(--rvo-color-grijs-200);
+    scrollbar-color: var(--rvo-color-grijs-500) var(--rvo-color-grijs-200);
   }
 
   .rvo-filter .utrecht-form-field--text {
@@ -108,6 +108,7 @@
   }
 
   .rvo-tag .rvo-icon {
+    background-color: var(--rvo-color-zwart);
     cursor: pointer;
   }
 

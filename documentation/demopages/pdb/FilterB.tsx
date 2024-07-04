@@ -5,7 +5,6 @@ import {
   Footer,
   Header,
   Heading,
-  Icon,
   LayoutColumnRow,
   MenuBar,
   Pagination,
@@ -153,7 +152,7 @@ const Filter = () => {
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
                           <CheckboxField
-                            label="Status"
+                            label=" "
                             invalid={false}
                             options={[
                               { id: 'Cancelled', label: 'Cancelled' },
@@ -375,53 +374,36 @@ const Filter = () => {
 
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter sector</summary>
-                          <TextInputField label="Refine filter options"></TextInputField>
 
-                          <CheckboxField
-                            label="Sector"
-                            invalid={false}
-                            options={[
-                              {
-                                id: 'Advanced technical and managerial training',
-                                label: 'Advanced technical and managerial training',
-                              },
-                              { id: 'Agrarian reform', label: 'Agrarian reform' },
-                              {
-                                id: 'Agricultural alternative development',
-                                label: 'Agricultural alternative development',
-                              },
-                              { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
-                              { id: 'Agricultural development', label: 'Agricultural development' },
-                              { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
-                              { id: 'Agricultural education/training', label: 'Agricultural education/training' },
-                            ]}
-                          ></CheckboxField>
-                          <hr className="rvo-hr" />
+                          <div className="rvo-collapsible-filter--scroll">
+                            <CheckboxField
+                              label=" "
+                              invalid={false}
+                              options={[
+                                {
+                                  id: 'Advanced technical and managerial training',
+                                  label: 'Advanced technical and managerial training',
+                                },
+                                { id: 'Agrarian reform', label: 'Agrarian reform' },
+                                {
+                                  id: 'Agricultural alternative development',
+                                  label: 'Agricultural alternative development',
+                                },
+                                { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                                { id: 'Agricultural development', label: 'Agricultural development' },
+                                { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                                { id: 'Agricultural education/training', label: 'Agricultural education/training' },
+                              ]}
+                            ></CheckboxField>
+                          </div>
                         </details>
+                        <hr className="rvo-hr" />
 
                         <details open className="rvo-collapsible-filter">
-                          <summary className="rvo-collapsible-filter-label">Project Partner organisation</summary>
-
-                          <CheckboxField
-                            label="Frequently used Project Partner organisations"
-                            invalid={false}
-                            options={[
-                              { id: '4 Fruit Company B.V.', label: '4 Fruit Company B.V.' },
-                              { id: '4 Returns Partners B.V.', label: '4 Returns Partners B.V.' },
-                              { id: '4Wieler', label: '4Wieler' },
-                              { id: '21st Century Informatics BV', label: '21st Century Informatics BV' },
-                              { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
-                            ]}
-                          ></CheckboxField>
-                          <details className="rvo-collapsible-filter">
-                            {' '}
-                            <summary className="rvo-collapsible-filter-label">
-                              <Icon icon="plus"></Icon>
-                              All Project Partner organisations
-                            </summary>
-                            <TextInputField label="Refine filter options"></TextInputField>
+                          <summary className="rvo-collapsible-filter-label">Filter Project partners</summary>{' '}
+                          <div className="rvo-collapsible-filter--scroll">
                             <CheckboxField
-                              label="All Project Partner organisations"
+                              label=" "
                               invalid={false}
                               options={[
                                 { id: 'Stichting Het Groene Woudt', label: 'Stichting Het Groene Woudt' },
@@ -441,9 +423,9 @@ const Filter = () => {
                                 { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
                               ]}
                             ></CheckboxField>
-                          </details>
-                          <hr className="rvo-hr" />
+                          </div>
                         </details>
+                        <hr className="rvo-hr" />
                       </LayoutColumnRow>
                     </form>
                   </details>
