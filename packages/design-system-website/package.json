@@ -15,7 +15,8 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/rvo.git"
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "packages/design-system-website"
   },
   "devDependencies": {
     "@nl-rvo/docusaurus": "workspace:*",

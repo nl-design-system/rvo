@@ -8,6 +8,11 @@
     "nl-design-system"
   ],
   "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "packages/uxpin-merge"
+  },
   "scripts": {
     "server": "uxpin-merge server",
     "test-build": "uxpin-merge dump",

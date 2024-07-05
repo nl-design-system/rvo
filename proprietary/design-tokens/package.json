@@ -14,7 +14,8 @@
   },
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/rvo.git"
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "proprietary/design-tokens"
   },
   "scripts": {
     "clean": "rimraf dist/",
