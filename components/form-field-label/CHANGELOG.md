@@ -1,9 +1,15 @@
 # `@nl-rvo/form-field-label`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.290*:
+_@nl-rvo/component-library-css@1.0.0-alpha.290_:
 Changed element type to `label`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.3*:
+_@nl-rvo/component-library-css@1.0.0-alpha.3_:
 Added component

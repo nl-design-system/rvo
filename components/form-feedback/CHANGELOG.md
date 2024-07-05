@@ -1,9 +1,15 @@
 # `@nl-rvo/form-feedback`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.280*:
+_@nl-rvo/component-library-css@1.0.0-alpha.280_:
 Simplified snippet by removing `rvo-layout` and `rvo-layout-gap--sm`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.73*:
+_@nl-rvo/component-library-css@1.0.0-alpha.73_:
 Added component

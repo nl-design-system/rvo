@@ -1,18 +1,24 @@
 # `@nl-rvo/form-field-dateinput`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.360*:
+_@nl-rvo/component-library-css@1.0.0-alpha.360_:
 Reverted combinatin of text inputs to one date input field
 
-*@nl-rvo/component-library-css@1.0.0-alpha.290*:
+_@nl-rvo/component-library-css@1.0.0-alpha.290_:
 Updated snippet to link helper text to field with `aria-described-by`.
 
-*@nl-rvo/component-library-css@1.0.0-alpha.288*:
+_@nl-rvo/component-library-css@1.0.0-alpha.288_:
 Changed date input field to a combination of text inputs
 
-*@nl-rvo/component-library-css@1.0.0-alpha.280*:
+_@nl-rvo/component-library-css@1.0.0-alpha.280_:
 Simplified snippet by removing `rvo-layout-column`, `rvo-layout-gap--sm` and `rvo-layout-gap--2xs`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.150*:
+_@nl-rvo/component-library-css@1.0.0-alpha.150_:
 Added component
