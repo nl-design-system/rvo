@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "license": "EUPL-1.2",
+  "name": "@nl-rvo/footer",
+  "description": "Footer component",
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "footer"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/footer"
+  }
+}
