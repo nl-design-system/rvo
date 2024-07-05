@@ -1,12 +1,18 @@
 # `@nl-rvo/heading`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.385*:
+_@nl-rvo/component-library-css@1.0.0-alpha.385_:
 Add support for 'mixed' bold and normal headings by using `utrecht-heading--mixed`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.363*:
+_@nl-rvo/component-library-css@1.0.0-alpha.363_:
 Add option to remove margins
 
-*@nl-rvo/component-library-css@1.0.0-alpha.172*:
+_@nl-rvo/component-library-css@1.0.0-alpha.172_:
 Added component

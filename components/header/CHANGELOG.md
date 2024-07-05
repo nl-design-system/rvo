@@ -1,9 +1,15 @@
 # `@nl-rvo/header`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.263*:
+_@nl-rvo/component-library-css@1.0.0-alpha.263_:
 Added option for horizontal rule
 
-*@nl-rvo/component-library-css@1.0.0-alpha.10*:
+_@nl-rvo/component-library-css@1.0.0-alpha.10_:
 Added component

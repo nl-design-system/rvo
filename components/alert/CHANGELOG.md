@@ -1,12 +1,18 @@
 # `@nl-rvo/alert`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.362*:
+_@nl-rvo/component-library-css@1.0.0-alpha.362_:
 Changed consended/wide to padding sizes (e.g. `rvo-alert-padding-md`)
 
-*@nl-rvo/component-library-css@1.0.0-alpha.362*:
+_@nl-rvo/component-library-css@1.0.0-alpha.362_:
 Added condensed/wide variant
 
-*@nl-rvo/component-library-css@1.0.0-alpha.143*:
+_@nl-rvo/component-library-css@1.0.0-alpha.143_:
 Added component

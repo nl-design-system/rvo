@@ -1,15 +1,21 @@
 # `@nl-rvo/menubar-mobile`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.365*:
+_@nl-rvo/component-library-css@1.0.0-alpha.365_:
 Add option for menu item divider by using `rvo-topnav__item--with-divider` modifier
 
-*@nl-rvo/component-library-css@1.0.0-alpha.290*:
+_@nl-rvo/component-library-css@1.0.0-alpha.290_:
 Adjusted top bar to be a `button`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.282*:
+_@nl-rvo/component-library-css@1.0.0-alpha.282_:
 Simplified snippet by removing `rvo-layout-row` and `rvo-layout-gap--sm`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.231*:
+_@nl-rvo/component-library-css@1.0.0-alpha.231_:
 Added component

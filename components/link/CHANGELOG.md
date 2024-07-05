@@ -1,18 +1,24 @@
 # `@nl-rvo/link`
 
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.389*:
+_@nl-rvo/component-library-css@1.0.0-alpha.389_:
 Added normal link option (not bold) (use `.rvo-link--normal`)
 
-*@nl-rvo/component-library-css@1.0.0-alpha.282*:
+_@nl-rvo/component-library-css@1.0.0-alpha.282_:
 Added grijs-700 link color (use `.rvo-link--grijs-700`)
 
-*@nl-rvo/component-library-css@1.0.0-alpha.282*:
+_@nl-rvo/component-library-css@1.0.0-alpha.282_:
 Added full-container link option using `.rvo-link--full-container`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.282*:
+_@nl-rvo/component-library-css@1.0.0-alpha.282_:
 Simplified snippet by removing `.rvo-layout-row` and `.rvo-layout-gap--sm`
 
-*@nl-rvo/component-library-css@1.0.0-alpha.17*:
+_@nl-rvo/component-library-css@1.0.0-alpha.17_:
 Added component
