@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "license": "EUPL-1.2",
+  "name": "@nl-rvo/form-radio-button",
+  "description": "Form radio button component",
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "form-radio-button"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/form-radio-button"
+  }
+}
