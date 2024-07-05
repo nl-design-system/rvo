@@ -10,7 +10,8 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/rvo.git"
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "packages/storybook"
   },
   "scripts": {
     "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
