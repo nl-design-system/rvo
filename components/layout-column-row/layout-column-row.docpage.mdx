@@ -1,7 +1,8 @@
-import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
+import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
 import documentation from "./README.md";
 import * as LayoutColumnRowStories from "./layout-column-row.stories";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 
 <Meta of={LayoutColumnRowStories} name="Documentatie" />
 
@@ -11,8 +12,8 @@ import * as LayoutColumnRowStories from "./layout-column-row.stories";
 
 ## Documentatie
 
-<Markdown>{documentation}</Markdown>
+<Readme markdown={documentation} />
 
 ## Changelog
 
-<Markdown>{changeLog}</Markdown>
+<Changelog markdown={changeLog} />

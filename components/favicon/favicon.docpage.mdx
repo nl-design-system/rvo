@@ -1,7 +1,8 @@
-import { Markdown, Meta } from "@storybook/blocks";
+import { Meta } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
 import documentation from "./README.md";
 import { Favicon } from "./template";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 
 <Meta title="Componenten/Favicon/Documentatie" />
 
@@ -9,11 +10,11 @@ import { Favicon } from "./template";
 
 ## Documentatie
 
-<Markdown>{documentation}</Markdown>
+<Readme markdown={documentation} />
 
 ## Changelog
 
-<Markdown>{changeLog}</Markdown>
+<Changelog markdown={changeLog} />
 
 ## Dependencies
 

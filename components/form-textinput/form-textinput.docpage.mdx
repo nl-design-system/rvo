@@ -2,6 +2,7 @@ import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
 import documentation from "./README.md";
 import * as FormTextInputStories from "./form-textinput.stories";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 import fieldDocumentation from "../form-field/README.md";
 
 <Meta of={FormTextInputStories} name="Documentatie" />
@@ -14,10 +15,10 @@ import fieldDocumentation from "../form-field/README.md";
 
 ## Documentatie
 
-<Markdown>{documentation}</Markdown>
+<Readme markdown={documentation} />
 
 <Markdown>{fieldDocumentation}</Markdown>
 
 ## Changelog
 
-<Markdown>{changeLog}</Markdown>
+<Changelog markdown={changeLog} />
