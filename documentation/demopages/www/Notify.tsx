@@ -151,7 +151,8 @@ const Notify = () => {
               <details className="rvo-details">
                 <summary className="rvo-details-summary">
                   <LayoutColumnRow row={true} size="xs">
-                    <Icon icon="envelop"></Icon>Ontvang e-mail notificaties <Icon icon="delta-omlaag" size="sm"></Icon>
+                    <Icon icon="envelop"></Icon>Blijf op de hoogte via e-mail{' '}
+                    <Icon icon="delta-omlaag" size="sm"></Icon>
                     <Icon icon="delta-omhoog" size="sm"></Icon>
                   </LayoutColumnRow>
                 </summary>
@@ -160,7 +161,7 @@ const Notify = () => {
                     <LayoutColumnRow row={true} alignItems="end">
                       <TextInputField
                         label="E-mailadres"
-                        helperText="Ontvang een e-mail als de inhoud van deze pagina w."
+                        helperText="Wilt u een e-mail ontvangen als de inhoud van deze pagina wijzigt? Meld u dan aan. Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons <a href='#' class='rvo-link'>privacybeleid</a>."
                       ></TextInputField>
                       <Button>Verzenden</Button>
                     </LayoutColumnRow>
@@ -168,9 +169,83 @@ const Notify = () => {
                 </Fieldset>
               </details>
             </LayoutColumnRow>
-            <Heading type="h2" noMargins={true}>
-              Op deze pagina:
-            </Heading>
+            <LayoutColumnRow>
+              <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                <div className="rvo-card__content">
+                  <Heading type="h3">Hoogte subsidie en budget</Heading>
+                  <LayoutColumnRow size="md">
+                    <Grid columns="two">
+                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                        <Icon icon="kalender" color="donkerblauw" />
+                        <div>
+                          Startdatum:
+                          <br />
+                          <strong>dinsdag 9 januari 2024</strong>
+                          <br />
+                          09:00
+                        </div>
+                      </LayoutColumnRow>
+                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                        <Icon icon="kalender-met-vinkje" color="donkerblauw" />
+                        <div>
+                          Einddatum:
+                          <br />
+                          <strong>vrijdag 27 december 2024</strong>
+                          <br />
+                          12:00
+                        </div>
+                      </LayoutColumnRow>
+                    </Grid>
+                    <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      <Icon icon="stapel-munten" color="donkerblauw" />
+                      <div>
+                        Hoogte subsidie:
+                        <br />
+                        <strong>€ 2.950</strong>
+                      </div>
+                    </LayoutColumnRow>
+                    <Grid columns="two">
+                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                        <Icon icon="zak-met-geld" color="donkerblauw" />
+                        <div>
+                          Totaal budget:
+                          <br />
+                          <strong>€ 58.000.000</strong>
+                        </div>
+                      </LayoutColumnRow>
+                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                        <Icon icon="hand-met-rekening" color="donkerblauw" />
+                        <div>
+                          Verleend:
+                          <br /> <strong>€ 25.820.000</strong>
+                        </div>
+                      </LayoutColumnRow>
+                    </Grid>
+                    <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      <Icon icon="circulaire-economie" color="donkerblauw" />
+                      <div>
+                        Nog beschikbaar op 1 juli 2024:
+                        <br />
+                        <strong>55 % </strong>(€ 32.180.000)
+                      </div>
+                    </LayoutColumnRow>
+                    <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      <div>
+                        Aanvullende informatie:
+                        <br />
+                        <strong>
+                          Het budget van deze ronde kan nog veranderen omdat sommige aanvragen mogelijk worden afgewezen
+                          of ingetrokken. Daardoor komt er weer geld vrij.
+                        </strong>
+                      </div>
+                    </LayoutColumnRow>
+                  </LayoutColumnRow>
+                </div>
+              </div>
+              <Heading type="h2" noMargins={true}>
+                Op deze pagina:
+              </Heading>
+            </LayoutColumnRow>
             <Grid columns="two" gap="xs">
               <Link showIcon="before" icon="pijl-omlaag" target="#" content="Stand van zaken 2024" noUnderline={true} />
               <Link showIcon="before" icon="pijl-omlaag" target="#" content="ISDE verbreed" noUnderline={true} />
