@@ -151,7 +151,8 @@ const Notify = () => {
               <details className="rvo-details">
                 <summary className="rvo-details-summary">
                   <LayoutColumnRow row={true} size="xs">
-                    <Icon icon="envelop"></Icon>Ontvang e-mail notificaties <Icon icon="delta-omlaag" size="sm"></Icon>
+                    <Icon icon="envelop"></Icon>Blijf op de hoogte via e-mail{' '}
+                    <Icon icon="delta-omlaag" size="sm"></Icon>
                     <Icon icon="delta-omhoog" size="sm"></Icon>
                   </LayoutColumnRow>
                 </summary>
@@ -160,7 +161,7 @@ const Notify = () => {
                     <LayoutColumnRow row={true} alignItems="end">
                       <TextInputField
                         label="E-mailadres"
-                        helperText="Ontvang een e-mail als de inhoud van deze pagina w."
+                        helperText="Wilt u een e-mail ontvangen als de inhoud van deze pagina wijzigt? Meld u dan aan. Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons <a href='#' class='rvo-link'>privacybeleid</a>."
                       ></TextInputField>
                       <Button>Verzenden</Button>
                     </LayoutColumnRow>
