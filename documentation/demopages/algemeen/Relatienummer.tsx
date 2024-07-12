@@ -27,7 +27,11 @@ const Relatienummer = () => {
                 </li>
 
                 <li className="rvo-topnav__item rvo-topnav__item--align-right">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#" title="Relatienummer: 43459823">
+                  <a
+                    className="rvo-link rvo-topnav__link rvo-link--logoblauw rvo-link--rn"
+                    href="#"
+                    title="Relatienummer: 43459823"
+                  >
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-user rvo-icon--md rvo-icon--wit"
                       role="img"
