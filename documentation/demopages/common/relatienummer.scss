@@ -1,8 +1,5 @@
 .rvo-demopage-relatienummer {
-  .rvo-relatienummer {
-    color: var(--rvo-color-grijs-500);
-    display: block;
-
-    // font-size: var(--rvo-font-size-sm);
+  .rvo-link--rn:focus::after {
+    content: attr(title);
   }
 }
