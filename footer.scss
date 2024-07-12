@@ -1,0 +1,27 @@
+.rvo-footer-demopage {
+  .rvo-footer {
+    display: block;
+    padding-block-end: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+    padding-inline-end: var(--rvo-space-xl);
+    padding-inline-start: var(--rvo-space-xl);
+  }
+
+  .rvo-footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rvo-space-xl);
+  }
+
+  .rvo-footer-column {
+    min-width: 224px;
+    padding-block-end: 0;
+    padding-block-start: 0;
+  }
+
+  .rvo-footer-payoff {
+    font-size: var(--rvo-font-size-2xl);
+    font-style: italic;
+    padding-block-start: var(--rvo-space-xl);
+  }
+}
