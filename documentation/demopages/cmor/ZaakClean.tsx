@@ -194,7 +194,7 @@ const ZaakClean = () => {
                   </Heading>
                   <div className="">
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <LayoutColumnRow size="2xs">
+                      <LayoutColumnRow size="0">
                         <span className="rvo-text--sm">Aangevraagd</span>
                         <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">5 december 2023</span>
                       </LayoutColumnRow>

@@ -8,7 +8,7 @@ import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface ILayoutColumnRowProps {
-  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  size?: '0' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;
   alignItems?: '' | 'start' | 'center' | 'end';
@@ -19,7 +19,7 @@ export interface ILayoutColumnRowProps {
 
 export const argTypes = {
   size: {
-    options: ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
+    options: ['0', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
   row: {
