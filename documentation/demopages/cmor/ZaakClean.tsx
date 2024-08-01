@@ -200,14 +200,18 @@ const ZaakClean = () => {
                       </LayoutColumnRow>
                     </div>
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-image-bg-progress-tracker-completed-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <span className="rvo-text--md">In behandeling</span>
-                      <br />
-                      <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
+                      <LayoutColumnRow size="0">
+                        <span className="rvo-text--sm">In behandeling</span>
+
+                        <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
+                      </LayoutColumnRow>
                     </div>
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <a className="rvo-link rvo-progress-tracker__step-link" href="#">
-                        Step doing
-                      </a>
+                      <LayoutColumnRow size="0">
+                        <span className="rvo-text--sm">In behandeling</span>
+
+                        <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
+                      </LayoutColumnRow>
                     </div>
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--incomplete rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--substep-start rvo-image-bg-progress-tracker-line-substep-start--before">
                       <a className="rvo-link rvo-progress-tracker__step-link" href="#">
