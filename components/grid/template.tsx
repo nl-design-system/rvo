@@ -10,6 +10,7 @@ import './index.scss';
 export interface IGridProps {
   gap?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   columns?: 'one' | 'two' | 'three' | 'four' | 'five' | 'six';
+  layout?: '1fr' | '2fr1fr' | '1fr2fr';
 }
 
 export const argTypes = {
@@ -21,16 +22,28 @@ export const argTypes = {
     options: ['one', 'two', 'three', 'four', 'five', 'six'],
     control: { type: 'radio' },
   },
+  layout: {
+    options: ['1fr', '2fr1fr', '1fr2fr'],
+    control: { type: 'radio' },
+  },
 };
 
 export const Grid: React.FC<PropsWithChildren<IGridProps>> = ({
   gap = defaultArgs.gap,
   columns = defaultArgs.columns,
+  layout = defaultArgs.layout,
   children,
 }: PropsWithChildren<IGridProps>) => {
   return (
     <div className="rvo-layout-grid-container">
-      <div className={clsx('rvo-layout-grid', `rvo-layout-gap--${gap}`, `rvo-layout-grid-columns--${columns}`)}>
+      <div
+        className={clsx(
+          'rvo-layout-grid',
+          `rvo-layout-gap--${gap}`,
+          `rvo-layout-grid-columns--${columns}`,
+          `rvo-layout-grid-layout--${layout}`,
+        )}
+      >
         {children || (
           <>
             <div>Element A</div>

@@ -79,6 +79,10 @@
   flex-wrap: wrap;
 }
 
+.rvo-layout-gap--0 {
+  gap: 0;
+}
+
 .rvo-layout-gap--2xs {
   gap: var(--rvo-space-3xs);
 }
