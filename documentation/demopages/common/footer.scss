@@ -22,6 +22,27 @@
   .rvo-footer-payoff {
     font-size: var(--rvo-font-size-2xl);
     font-style: italic;
+  }
+
+  .rvo-footer-columns + .rvo-footer-payoff,
+  .rvo-footer-columns + .rvo-footer-bottom,
+  .rvo-footer-payoff + .rvo-footer-bottom {
     padding-block-start: var(--rvo-space-xl);
+  }
+
+  .rvo-footer-columns + .rvo-footer-bottom,
+  .rvo-footer-payoff + .rvo-footer-bottom {
+    border-top: 1px solid var(--rvo-color-logoblauw-600);
+    margin-block-start: var(--rvo-space-xl);
+    padding-block-start: var(--rvo-space-xl);
+  }
+
+  .rvo-footer-bottom-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rvo-space-xl);
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
