@@ -148,7 +148,11 @@ const OverzichtClean = () => {
                   <Grid gap="md" columns="two">
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link fullContainerLink={true} noUnderline={true}>
+                        <Link
+                          fullContainerLink={true}
+                          noUnderline={true}
+                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                        >
                           BSN Melding WBSO 2023
                         </Link>
                       </Heading>
@@ -162,7 +166,11 @@ const OverzichtClean = () => {
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link fullContainerLink={true} noUnderline={true}>
+                        <Link
+                          fullContainerLink={true}
+                          noUnderline={true}
+                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                        >
                           ISDE 2023
                         </Link>
                       </Heading>
@@ -178,7 +186,11 @@ const OverzichtClean = () => {
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link fullContainerLink={true} noUnderline={true}>
+                        <Link
+                          fullContainerLink={true}
+                          noUnderline={true}
+                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                        >
                           Gecombineerde opgave 2023
                         </Link>
                       </Heading>
@@ -190,7 +202,11 @@ const OverzichtClean = () => {
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link fullContainerLink={true} noUnderline={true}>
+                        <Link
+                          fullContainerLink={true}
+                          noUnderline={true}
+                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                        >
                           SVVE 2023
                         </Link>
                       </Heading>

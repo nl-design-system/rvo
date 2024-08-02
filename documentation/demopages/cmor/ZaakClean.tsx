@@ -80,7 +80,10 @@ const ZaakClean = () => {
                 <LayoutColumnRow>
                   <Breadcrumbs
                     items={[
-                      { label: 'Overzicht', url: '#' },
+                      {
+                        label: 'Overzicht',
+                        url: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                      },
                       { label: 'Mijn dossier', url: '#' },
 
                       { label: 'Eco-regeling 2023' },
