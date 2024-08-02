@@ -11,6 +11,7 @@ import './index.scss';
 export interface IMaxWidthLayoutProps {
   size?: string;
   content?: string;
+  inlinePadding?: 'none' | 'sm' | 'md' | 'lg';
   className?: string | string[];
 }
 
@@ -22,11 +23,16 @@ export const argTypes = {
   content: {
     control: 'text',
   },
+  inlinePadding: {
+    options: ['none', 'sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
 };
 
 export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> = ({
   size = defaultArgs.size,
   content = defaultArgs.content,
+  inlinePadding = defaultArgs.inlinePadding,
   children,
   className = [],
 }: PropsWithChildren<IMaxWidthLayoutProps>) => {
@@ -49,7 +55,16 @@ export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> =
   }
 
   return (
-    <div className={clsx('rvo-max-width-layout', `rvo-max-width-layout--${size}`, className)}>{parsedContent}</div>
+    <div
+      className={clsx(
+        'rvo-max-width-layout',
+        `rvo-max-width-layout--${size}`,
+        `rvo-max-width-layout-inline-padding--${inlinePadding}`,
+        className,
+      )}
+    >
+      {parsedContent}
+    </div>
   );
 };
 

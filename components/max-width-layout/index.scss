@@ -25,3 +25,18 @@
   gap: var(--rvo-space-md);
   grid-template-columns: 240px 1fr;
 }
+
+.rvo-max-width-layout-inline-padding--sm {
+  padding-inline-end: var(--rvo-space-sm);
+  padding-inline-start: var(--rvo-space-sm);
+}
+
+.rvo-max-width-layout-inline-padding--md {
+  padding-inline-end: var(--rvo-space-md);
+  padding-inline-start: var(--rvo-space-md);
+}
+
+.rvo-max-width-layout-inline-padding--lg {
+  padding-inline-end: var(--rvo-space-lg);
+  padding-inline-start: var(--rvo-space-lg);
+}
