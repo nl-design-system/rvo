@@ -249,17 +249,32 @@ const FooterDP = () => {
               <div className="rvo-footer-bottom">
                 <ul className="rvo-footer-bottom-menu">
                   <li className="rvo-footer-menu-item">
-                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/contact">
+                    <a
+                      className="rvo-link rvo-link--no-underline"
+                      href="https://www.rvo.nl/onderwerpen/contact"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Contact
                     </a>
                   </li>
                   <li className="rvo-footer-menu-item">
-                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/privacy">
+                    <a
+                      className="rvo-link rvo-link--no-underline"
+                      href="https://www.rvo.nl/onderwerpen/privacy"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Privacy
                     </a>
                   </li>
                   <li className="rvo-footer-menu-item">
-                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/cookies">
+                    <a
+                      className="rvo-link rvo-link--no-underline"
+                      href="https://www.rvo.nl/onderwerpen/cookies"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Cookies en anti-spam
                     </a>
                   </li>
@@ -269,8 +284,23 @@ const FooterDP = () => {
                     </a>
                   </li>
                   <li className="rvo-footer-menu-item">
-                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/proclaimer">
+                    <a
+                      className="rvo-link rvo-link--no-underline"
+                      href="https://www.rvo.nl/onderwerpen/proclaimer"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Proclaimer
+                    </a>
+                  </li>
+                  <li className="rvo-footer-menu-item">
+                    <a
+                      className="rvo-link rvo-link--no-underline"
+                      href="https://www.rvo.nl/onderwerpen/kwetsbaarheid"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Kwetsbaarheid melden
                     </a>
                   </li>
                 </ul>
