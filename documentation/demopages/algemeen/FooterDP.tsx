@@ -65,7 +65,7 @@ const FooterDP = () => {
             <footer className="utrecht-page-footer rvo-footer rvo-footer--lg">
               <div className="rvo-footer-columns">
                 <div className="rvo-footer-column">
-                  <h3 className="utrecht-heading-3 rvo-footer-menu-title">Over deze site</h3>
+                  <h3 className="utrecht-heading-3 rvo-footer-menu-title">Optionele extra lijst</h3>
                   <ul className="rvo-footer-menu">
                     <li className="rvo-footer-menu-item">
                       <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
@@ -74,27 +74,7 @@ const FooterDP = () => {
                           role="img"
                           aria-label="Delta naar rechts"
                         ></span>
-                        Privacy
-                      </a>
-                    </li>
-                    {/* <li className="rvo-footer-menu-item">
-                    <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit rvo-link__icon--before"
-                        role="img"
-                        aria-label="Delta naar rechts"
-                      ></span>
-                      Cookies en anti-spam
-                    </a>
-                  </li> */}
-                    <li className="rvo-footer-menu-item">
-                      <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
-                        <span
-                          className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit rvo-link__icon--before"
-                          role="img"
-                          aria-label="Delta naar rechts"
-                        ></span>
-                        Toegankelijkheid
+                        Optioneel extra menu item
                       </a>
                     </li>
                     <li className="rvo-footer-menu-item">
@@ -104,7 +84,7 @@ const FooterDP = () => {
                           role="img"
                           aria-label="Delta naar rechts"
                         ></span>
-                        Proclaimer
+                        Optioneel extra menu item
                       </a>
                     </li>
                     <li className="rvo-footer-menu-item">
@@ -114,7 +94,17 @@ const FooterDP = () => {
                           role="img"
                           aria-label="Delta naar rechts"
                         ></span>
-                        Contact
+                        Optioneel extra menu item
+                      </a>
+                    </li>
+                    <li className="rvo-footer-menu-item">
+                      <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
+                        <span
+                          className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--wit rvo-link__icon--before"
+                          role="img"
+                          aria-label="Delta naar rechts"
+                        ></span>
+                        Optioneel extra menu item
                       </a>
                     </li>
                   </ul>
@@ -256,6 +246,35 @@ const FooterDP = () => {
                 </div>
               </div>
               <div className="rvo-footer-payoff">Optionele RVO pay-off</div>
+              <div className="rvo-footer-bottom">
+                <ul className="rvo-footer-bottom-menu">
+                  <li className="rvo-footer-menu-item">
+                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/contact">
+                      Contact
+                    </a>
+                  </li>
+                  <li className="rvo-footer-menu-item">
+                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/privacy">
+                      Privacy
+                    </a>
+                  </li>
+                  <li className="rvo-footer-menu-item">
+                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/cookies">
+                      Cookies en anti-spam
+                    </a>
+                  </li>
+                  <li className="rvo-footer-menu-item">
+                    <a className="rvo-link rvo-link--no-underline" href="#">
+                      Toegankelijkheid
+                    </a>
+                  </li>
+                  <li className="rvo-footer-menu-item">
+                    <a className="rvo-link rvo-link--no-underline" href="https://www.rvo.nl/onderwerpen/proclaimer">
+                      Proclaimer
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </footer>
           </div>
         </LayoutColumnRow>
