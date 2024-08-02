@@ -12,6 +12,7 @@ import {
   Link,
   MenuBar,
   MobileMenuBar,
+  StatusIcon,
 } from '@nl-rvo/components';
 import '../../../components/text-helpers/index.scss';
 import '../common/responsive.scss';
@@ -104,7 +105,7 @@ const ZaakClean = () => {
                   </ButtonGroup>
                 </LayoutColumnRow>
               </Alert>
-              <Grid columns="two" gap="3xl">
+              <Grid columns="two" gap="3xl" layout="2fr1fr">
                 <div>
                   <LayoutColumnRow>
                     <div>
@@ -207,45 +208,20 @@ const ZaakClean = () => {
                       </LayoutColumnRow>
                     </div>
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <LayoutColumnRow size="0">
-                        <span className="rvo-text--sm">In behandeling</span>
-
-                        <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
+                      <LayoutColumnRow row={true} size="sm">
+                        <StatusIcon type="waarschuwing" size="md"></StatusIcon>
+                        <span className="rvo-text--sm">Actie nodig</span>
                       </LayoutColumnRow>
                     </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--incomplete rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--substep-start rvo-image-bg-progress-tracker-line-substep-start--before">
-                      <a className="rvo-link rvo-progress-tracker__step-link" href="#">
-                        Step incomplete
-                      </a>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--incomplete rvo-image-bg-progress-tracker-incomplete-sm--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <a className="rvo-link rvo-progress-tracker__step-link" href="#">
-                        First sub-step
-                      </a>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-sm--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <a className="rvo-link rvo-progress-tracker__step-link" href="#">
-                        Sub-step doing
-                      </a>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--completed rvo-image-bg-progress-tracker-completed-sm--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <a className="rvo-link rvo-progress-tracker__step-link" href="#">
-                        Sub-step completed
-                      </a>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-sm--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      Sub-step disabled
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--sm rvo-progress-tracker__step--incomplete rvo-image-bg-progress-tracker-incomplete-sm--after rvo-progress-tracker__step--substep-end rvo-image-bg-progress-tracker-line-substep-end--before">
-                      <a className="rvo-link rvo-progress-tracker__step-link" href="#">
-                        Last sub-step
-                      </a>
+
+                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
+                      <span className="rvo-text--sm">Ontvang de beslissing</span>
                     </div>
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      Step disabled
+                      <span className="rvo-text--sm">Financiële afhandeling</span>
                     </div>
                     <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--end rvo-image-bg-progress-tracker-start-end-md--after">
-                      Process completed
+                      Aanvraag afgerond
                     </div>
                   </div>
                 </div>
