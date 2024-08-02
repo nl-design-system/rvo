@@ -185,45 +185,58 @@ const ZaakClean = () => {
                   </LayoutColumnRow>
                 </div>
                 <div>
-                  <LayoutColumnRow row={true} size="xs">
-                    <span className="rvo-text--subtle">Status</span>
-                    <Icon icon="info" />
+                  <LayoutColumnRow size="lg">
+                    <div>
+                      <LayoutColumnRow row={true} size="xs">
+                        <span className="rvo-text--subtle">Status</span>
+                        <Icon icon="info" />
+                      </LayoutColumnRow>
+
+                      <Heading type="h2" noMargins={true}>
+                        Actie nodig
+                      </Heading>
+                      <div className="">
+                        <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
+                          <LayoutColumnRow size="0">
+                            <span className="rvo-text--sm">Aangevraagd</span>
+                            <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">5 december 2023</span>
+                          </LayoutColumnRow>
+                        </div>
+                        <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-image-bg-progress-tracker-completed-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
+                          <LayoutColumnRow size="0">
+                            <span className="rvo-text--sm">In behandeling</span>
+
+                            <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
+                          </LayoutColumnRow>
+                        </div>
+                        <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
+                          <LayoutColumnRow row={true} size="sm">
+                            <StatusIcon type="waarschuwing" size="md"></StatusIcon>
+                            <span className="rvo-text--sm">Actie nodig</span>
+                          </LayoutColumnRow>
+                        </div>
+
+                        <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
+                          <span className="rvo-text--sm">Ontvang de beslissing</span>
+                        </div>
+                        <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
+                          <span className="rvo-text--sm">Financiële afhandeling</span>
+                        </div>
+                        <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--end rvo-image-bg-progress-tracker-start-end-md--after">
+                          Aanvraag afgerond
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <Heading type="h2" noMargins={true}>
+                        Details
+                      </Heading>
+                      <LayoutColumnRow>
+                        <span className="rvo-text--subtle rvo-text--sm">Aanvrager</span>
+                        Jansen B.V.
+                      </LayoutColumnRow>
+                    </div>
                   </LayoutColumnRow>
-
-                  <Heading type="h2" noMargins={true}>
-                    Actie nodig
-                  </Heading>
-                  <div className="">
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <LayoutColumnRow size="0">
-                        <span className="rvo-text--sm">Aangevraagd</span>
-                        <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">5 december 2023</span>
-                      </LayoutColumnRow>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-image-bg-progress-tracker-completed-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <LayoutColumnRow size="0">
-                        <span className="rvo-text--sm">In behandeling</span>
-
-                        <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
-                      </LayoutColumnRow>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <LayoutColumnRow row={true} size="sm">
-                        <StatusIcon type="waarschuwing" size="md"></StatusIcon>
-                        <span className="rvo-text--sm">Actie nodig</span>
-                      </LayoutColumnRow>
-                    </div>
-
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <span className="rvo-text--sm">Ontvang de beslissing</span>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                      <span className="rvo-text--sm">Financiële afhandeling</span>
-                    </div>
-                    <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--end rvo-image-bg-progress-tracker-start-end-md--after">
-                      Aanvraag afgerond
-                    </div>
-                  </div>
                 </div>
               </Grid>
             </LayoutColumnRow>
