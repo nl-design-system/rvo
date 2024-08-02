@@ -18,10 +18,6 @@
   .rvo-layout-grid-columns--six {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .rvo-layout-grid-columns--two.rvo-layout-grid-layout--2fr1fr {
-    grid-template-columns: 2fr 1fr;
-  }
 }
 
 @media (min-width: 828px) {
@@ -29,6 +25,10 @@
   .rvo-layout-grid-columns--six,
   .rvo-layout-grid-columns--five {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rvo-layout-grid-columns--two.rvo-layout-grid-layout--2fr1fr {
+    grid-template-columns: 2fr 1fr;
   }
 }
 
