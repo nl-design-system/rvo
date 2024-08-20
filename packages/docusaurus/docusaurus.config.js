@@ -77,7 +77,7 @@ const config = {
             require.resolve('@nl-rvo/assets/icons/index.css'),
             require.resolve('@nl-rvo/assets/images/index.css'),
             require.resolve('@nl-rvo/design-tokens/dist/index.css'),
-            require.resolve('../components-css/dist/index.css'),
+            require.resolve('../component-library-css/dist/index.css'),
             require.resolve('./src/css/custom.scss'),
           ],
         },

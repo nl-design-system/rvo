@@ -62,8 +62,8 @@
         "project": [
           "components/tsconfig.json",
           "documentation/tsconfig.json",
-          "packages/components-react/tsconfig.json",
-          "packages/components-react/tsconfig.test.json",
+          "packages/component-library-react/tsconfig.json",
+          "packages/component-library-react/tsconfig.test.json",
           "packages/docusaurus/tsconfig.json",
           "packages/storybook/tsconfig.json",
           "packages/uxpin-merge/tsconfig.json"
