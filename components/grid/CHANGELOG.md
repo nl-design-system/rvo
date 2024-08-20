@@ -1,5 +1,11 @@
 # `@nl-rvo/grid`
 
+## 1.1.0
+
+### Minor Changes
+
+- b9a4080: Add layout options
+
 ## 1.0.0
 
 ### Major Changes
