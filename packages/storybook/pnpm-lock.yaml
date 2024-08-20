@@ -9,7 +9,7 @@ specifiers:
   '@nl-rvo/assets': file:../../proprietary/assets
   '@nl-rvo/basiselementen-design-tokens': file:../../proprietary/basiselementen-design-tokens
   '@nl-rvo/design-tokens': file:../../proprietary/design-tokens
-  '@nl-rvo/components-css': file:../components-css
+  '@nl-rvo/component-library-css': file:../component-library-css
   '@storybook/addon-a11y': 6.5.10
   '@storybook/addon-controls': 6.5.10
   '@storybook/addon-docs': 6.5.10
@@ -42,7 +42,7 @@ devDependencies:
   '@nl-rvo/assets': file:../../proprietary/assets
   '@nl-rvo/basiselementen-design-tokens': file:../../proprietary/basiselementen-design-tokens
   '@nl-rvo/design-tokens': file:../../proprietary/design-tokens
-  '@nl-rvo/components-css': file:../components-css
+  '@nl-rvo/component-library-css': file:../component-library-css
   '@storybook/addon-a11y': 6.5.10_sfoxds7t5ydpegc3knd667wn6m
   '@storybook/addon-controls': 6.5.10_sfoxds7t5ydpegc3knd667wn6m
   '@storybook/addon-docs': 6.5.10_eux3tb7v7msxphfv4r3kmlolpy
@@ -11679,8 +11679,8 @@ packages:
     version: 1.0.0-alpha.188
     dev: true
 
-  file:../components-css:
-    resolution: {directory: ../components-css, type: directory}
+  file:../component-library-css:
+    resolution: {directory: ../component-library-css, type: directory}
     name: '@nl-rvo/component-library-css'
     version: 1.0.0-alpha.245
     dev: true

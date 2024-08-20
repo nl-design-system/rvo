@@ -1,6 +1,6 @@
 ---
 "@nl-rvo/grid": minor
-"@nl-rvo/components-css": minor
+"@nl-rvo/component-library-css": minor
 ---
 
 Add layout options

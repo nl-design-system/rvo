@@ -15,7 +15,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "packages/components-css"
+    "directory": "packages/component-library-css"
   },
   "devDependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
