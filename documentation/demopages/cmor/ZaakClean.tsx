@@ -22,7 +22,7 @@ import '../common/responsive.scss';
 const ZaakClean = () => {
   return (
     <body className="rvo-theme rvo-responsive">
-      <LayoutColumnRow size="2xl">
+      <LayoutColumnRow size="3xl">
         <div>
           <Header />
           <MobileMenuBar
@@ -111,9 +111,9 @@ const ZaakClean = () => {
                         </ButtonGroup>
                       </LayoutColumnRow>
                     </Alert>
-                    <Grid columns="two" gap="3xl" layout="2fr1fr">
+                    <Grid columns="two" gap="4xl" layout="2fr1fr">
                       <div>
-                        <LayoutColumnRow>
+                        <LayoutColumnRow size="2xl">
                           <div>
                             <span className="rvo-text--subtle">Referentienummer</span>
                             <br />
@@ -127,7 +127,7 @@ const ZaakClean = () => {
                               <Button>Aanvraag beheren</Button>
                             </LayoutColumnRow>
                           </div>
-                          <hr className="rvo-hr"></hr>
+                          {/* <hr className="rvo-hr"></hr> */}
                           <div>
                             <LayoutColumnRow>
                               <Heading type="h2" noMargins={true}>
@@ -169,7 +169,7 @@ const ZaakClean = () => {
                               </div>
                             </LayoutColumnRow>
                           </div>
-                          <hr className="rvo-hr"></hr>
+                          {/* <hr className="rvo-hr"></hr> */}
                           <div>
                             <Heading type="h2">Hulp nodig?</Heading>
                             <LayoutColumnRow>
@@ -191,7 +191,7 @@ const ZaakClean = () => {
                         </LayoutColumnRow>
                       </div>
                       <div>
-                        <LayoutColumnRow size="lg">
+                        <LayoutColumnRow size="2xl">
                           <div>
                             <LayoutColumnRow row={true} size="xs">
                               <span className="rvo-text--subtle">Status</span>
