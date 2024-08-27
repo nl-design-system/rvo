@@ -1,138 +1,82 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
+import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
+import navigationConfig from './config/navigationConfig';
+
+// TODO: Add includeList
+// const includeList = ['**/*.docusaurus.{md,mdx}'];
+const includeList = ['**/getting-started/*.docusaurus.{md,mdx}'];
+const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'ROOS Design System',
+  tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://nl-design-system.github.io',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
+  organizationName: 'nl-rvo',
+  projectName: 'rvo',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'nl',
+    locales: ['nl'],
   },
-
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'default',
+        // TODO: Add sidebarPath
+        // sidebarPath: require.resolve('./config/docsSidebarConfig.js'),
+        // sidebarItemsGenerator,
+        path: path.resolve(__dirname, '../../documentation/pages'),
+        routeBasePath: '/',
+        editUrl: undefined,
+        breadcrumbs: false,
+        include: includeList,
+        exclude: excludeList,
+      },
+    ],
+  ],
   presets: [
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        debug: process.env['NODE_ENV'] === 'development' ? true : false,
+        docs: false,
+        blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            require.resolve('@nl-rvo/assets/fonts/index.css'),
+            require.resolve('@nl-rvo/assets/icons/index.css'),
+            require.resolve('@nl-rvo/assets/images/index.css'),
+            require.resolve('@nl-rvo/design-tokens/dist/index.css'),
+            require.resolve('../component-library-css/dist/index.css'),
+            require.resolve('./src/css/custom.scss'),
+          ],
         },
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+    colorMode: {
+      respectPrefersColorScheme: false,
+      disableSwitch: true,
+    },
+    metadata: [
+      {
+        name: 'Content-Security-Policy',
+        content: `frame-ancestors 'none'; object-src 'none'; base-uri 'none'; default-src 'self'; media-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline' 'self'; connect-src 'self' https://*.algolia.net https://*.algolianet.com; frame-src 'self' https://nl-design-system.github.io; font-src 'self';`,
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
+    ],
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    ...navigationConfig,
   } satisfies Preset.ThemeConfig,
 };
 

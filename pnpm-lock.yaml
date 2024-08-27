@@ -518,13 +518,16 @@ importers:
         version: 4.9.5
 
   packages/docusaurus-v3:
-    dependencies:
+    devDependencies:
       '@docusaurus/core':
         specifier: 3.5.2
         version: 3.5.2(@docusaurus/types@3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@mdx-js/react@3.0.0(@types/react@18.2.65)(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/eslint-plugin':
         specifier: 3.5.2
         version: 3.5.2(eslint@8.57.0)(typescript@5.5.2)
+      '@docusaurus/module-type-aliases':
+        specifier: 3.5.2
+        version: 3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@docusaurus/preset-classic':
         specifier: 3.5.2
         version: 3.5.2(@algolia/client-search@4.24.0)(@mdx-js/react@3.0.0(@types/react@18.2.65)(react@18.2.0))(@types/react@18.2.65)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.0)(typescript@5.5.2)
@@ -534,12 +537,33 @@ importers:
       '@docusaurus/theme-common':
         specifier: 3.5.2
         version: 3.5.2(@docusaurus/plugin-content-docs@3.5.2(@mdx-js/react@3.0.0(@types/react@18.2.65)(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@docusaurus/types@3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/tsconfig':
+        specifier: 3.5.2
+        version: 3.5.2
+      '@docusaurus/types':
+        specifier: 3.5.2
+        version: 3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@mdx-js/react':
         specifier: 3.0.0
         version: 3.0.0(@types/react@18.2.65)(react@18.2.0)
+      '@nl-rvo/assets':
+        specifier: 1.0.0-alpha.360
+        version: 1.0.0-alpha.360
+      '@nl-rvo/component-library-css':
+        specifier: workspace:*
+        version: link:../component-library-css
+      '@nl-rvo/components':
+        specifier: workspace:*
+        version: link:../../components
+      '@nl-rvo/design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/design-tokens
       clsx:
         specifier: 2.1.0
         version: 2.1.0
+      docusaurus-plugin-sass:
+        specifier: 0.2.5
+        version: 0.2.5(@docusaurus/core@3.5.2(@docusaurus/types@3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@mdx-js/react@3.0.0(@types/react@18.2.65)(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(sass@1.71.1)(webpack@5.90.3)
       prism-react-renderer:
         specifier: 2.3.0
         version: 2.3.0(react@18.2.0)
@@ -549,16 +573,6 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@docusaurus/module-type-aliases':
-        specifier: 3.5.2
-        version: 3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/tsconfig':
-        specifier: 3.5.2
-        version: 3.5.2
-      '@docusaurus/types':
-        specifier: 3.5.2
-        version: 3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       typescript:
         specifier: 5.5.2
         version: 5.5.2
@@ -22894,6 +22908,16 @@ snapshots:
   docusaurus-plugin-sass@0.2.5(@docusaurus/core@2.4.3(@docusaurus/types@2.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.9.5))(sass@1.71.1)(webpack@5.90.3):
     dependencies:
       '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.9.5)
+      sass: 1.71.1
+      sass-loader: 10.4.1(sass@1.71.1)(webpack@5.90.3)
+    transitivePeerDependencies:
+      - fibers
+      - node-sass
+      - webpack
+
+  docusaurus-plugin-sass@0.2.5(@docusaurus/core@3.5.2(@docusaurus/types@3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@mdx-js/react@3.0.0(@types/react@18.2.65)(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(sass@1.71.1)(webpack@5.90.3):
+    dependencies:
+      '@docusaurus/core': 3.5.2(@docusaurus/types@3.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@mdx-js/react@3.0.0(@types/react@18.2.65)(react@18.2.0))(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       sass: 1.71.1
       sass-loader: 10.4.1(sass@1.71.1)(webpack@5.90.3)
     transitivePeerDependencies:
