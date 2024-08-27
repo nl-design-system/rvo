@@ -110,27 +110,9 @@ code {
 .menu__list-item-collapsible {
   font-size: var(--rvo-size-md);
 
-  /*
-  .menu__link {
-    color: var(--rvo-color-zwart);
-  }
-  */
-
   &:hover {
     background: none;
   }
-}
-
-.menu__list-item-collapsible--active {
-  font-weight: var(--rvo-font-weight-bold);
-}
-
-.menu__list .menu__list {
-  display: none !important;
-}
-
-.menu__list-item-collapsible--active + .menu__list {
-  display: block !important;
 }
 
 // Fix logo
