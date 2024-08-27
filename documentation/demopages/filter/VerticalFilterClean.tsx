@@ -59,70 +59,69 @@ const VerticalFilterClean = () => {
                     </summary>
 
                     <form className="rvo-form">
+                      <TextInputField label="Search projects" value="study"></TextInputField>
+
+                      <LayoutColumnRow row={true} size="sm" alignItems="start">
+                        <SelectField
+                          label="From (year)"
+                          options={[
+                            {
+                              value: '1998',
+                              label: '1998',
+                            },
+                            {
+                              value: '1999',
+                              label: '1999',
+                            },
+                            {
+                              value: '2000',
+                              label: '2000',
+                            },
+                            {
+                              value: '2001',
+                              label: '2001',
+                            },
+                            {
+                              value: '2002',
+                              label: '2002',
+                            },
+                            {
+                              value: '2003',
+                              label: '2003',
+                            },
+                          ]}
+                        ></SelectField>
+                        <SelectField
+                          label="Till (year)"
+                          options={[
+                            {
+                              value: '1998',
+                              label: '1998',
+                            },
+                            {
+                              value: '1999',
+                              label: '1999',
+                            },
+                            {
+                              value: '2000',
+                              label: '2000',
+                            },
+                            {
+                              value: '2001',
+                              label: '2001',
+                            },
+                            {
+                              value: '2002',
+                              label: '2002',
+                            },
+                            {
+                              value: '2003',
+                              label: '2003',
+                            },
+                          ]}
+                        ></SelectField>
+                      </LayoutColumnRow>
                       <LayoutColumnRow size="xl">
-                        <TextInputField label="Search projects" value="study"></TextInputField>
-
-                        <LayoutColumnRow row={true} size="sm" alignItems="start">
-                          <SelectField
-                            label="From (year)"
-                            options={[
-                              {
-                                value: '1998',
-                                label: '1998',
-                              },
-                              {
-                                value: '1999',
-                                label: '1999',
-                              },
-                              {
-                                value: '2000',
-                                label: '2000',
-                              },
-                              {
-                                value: '2001',
-                                label: '2001',
-                              },
-                              {
-                                value: '2002',
-                                label: '2002',
-                              },
-                              {
-                                value: '2003',
-                                label: '2003',
-                              },
-                            ]}
-                          ></SelectField>
-                          <SelectField
-                            label="Till (year)"
-                            options={[
-                              {
-                                value: '1998',
-                                label: '1998',
-                              },
-                              {
-                                value: '1999',
-                                label: '1999',
-                              },
-                              {
-                                value: '2000',
-                                label: '2000',
-                              },
-                              {
-                                value: '2001',
-                                label: '2001',
-                              },
-                              {
-                                value: '2002',
-                                label: '2002',
-                              },
-                              {
-                                value: '2003',
-                                label: '2003',
-                              },
-                            ]}
-                          ></SelectField>
-                        </LayoutColumnRow>
-
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
