@@ -3,13 +3,13 @@
 Om te starten met het design system gebruik je een drietal libraries.
 Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.
 
-1. Design tokens: <https://www.npmjs.com/package/@nl-rvo/design-tokens>
+1. [Design tokens](https://www.npmjs.com/package/@nl-rvo/design-tokens):
    Bevat de ROOS design tokens in de vorm van o.a. CSS variabelen.
 
-2. CSS voor components: <https://www.npmjs.com/package/@nl-rvo/component-library-css>
+2. [CSS voor component](https://www.npmjs.com/package/@nl-rvo/component-library-css):
    Bevat de CSS styling van alle ROOS componenten.
 
-3. Assets: <https://www.npmjs.com/package/@nl-rvo/assets>
+3. [Assets](https://www.npmjs.com/package/@nl-rvo/assets):
    Bevat alle assets als icons, plaatjes, fonts e.d.
 
 ## Libraries installeren met NPM
