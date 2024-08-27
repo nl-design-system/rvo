@@ -28,6 +28,9 @@ Filters bestaan uit:
 - Laat zien welke filterwaarden een gebruiker geselecteerd heeft op de plek waar de gebruiker deze heeft geselecteerd
 - Toon de actieve filters bovenaan het overzicht met de mogelijkheid om de filterwaarde te verwijderen
 - Pas de filters automatisch toe wanneer ze gekozen worden. Dit zorgt ervoor dat de gebruiker direct resultaat ziet en het bespaart ruimte om dat er geen submit button getoond hoeft te worden
+- Biedt indien mogelijk een zoeken functionaliteit aan die kan zoeken in alle beschikbare filtercategorieën.
+- Wanneer er veel filterwaarden zijn (20+) biedt dan een mogelijkheid aan boven de filterwaarden om de filterwaarden verder te verfijnen.
+- Maak het mogelijk om door filterwaarden heen te scrollen als dit er veel zijn. Hiermee voorkom je dat de gebruiker door lange lijst geen overzicht van alle beschikbare filter opties.
 
 ## Rijkshuisstijl
 
@@ -38,3 +41,4 @@ Vanuit de Rijkshuisstijl zijn er geen richtlijnen wat betreft filters.
 - [Defining Helpful Filter Categories and Values for Better UX - Kate Moran](https://web.archive.org/web/20210813184550/https://www.nngroup.com/articles/filter-categories-values/)
 - [How to craft a kickass filtering UX - Laura Cuhna](https://uxdesign.cc/crafting-a-kickass-filtering-ux-beea1798d64b)
 - [Filtering UI - Baymard Institute](https://web.archive.org/web/20211016121449/https://baymard.com/blog/horizontal-filtering-sorting-design)
+- Eigen onderzoek uitgevoerd door RVO op 22 augustus 2024
