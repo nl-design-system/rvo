@@ -65,6 +65,7 @@
           "packages/component-library-react/tsconfig.json",
           "packages/component-library-react/tsconfig.test.json",
           "packages/docusaurus/tsconfig.json",
+          "packages/docusaurus-v3/tsconfig.json",
           "packages/storybook/tsconfig.json",
           "packages/uxpin-merge/tsconfig.json"
         ]

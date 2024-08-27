@@ -1,0 +1,20 @@
+{
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "project": ["packages/docusaurus-v3/tsconfig.json"],
+    "sourceType": "module"
+  },
+  "globals": {
+    "JSX": true
+  },
+  "extends": [
+    "plugin:@docusaurus/recommended",
+    "plugin:react/recommended",
+    "eslint-config-prettier",
+    "../../.eslintrc.js.json",
+    "../../.eslintrc.react.json"
+  ],
+  "plugins": ["@docusaurus", "import"]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@docusaurus/components/*": ["src/components/*"],
+      "@nl-rvo/documentation/*": ["../../documentation/*"],
+      "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"]
+    }
+  }
+}
