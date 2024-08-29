@@ -37,7 +37,7 @@ const Project = () => {
           />
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--md">
-            <Grid layout="1fr2fr" columns="two" gap="xl">
+            <Grid layout="2fr1fr" columns="two" gap="xl">
               <div>
                 <Heading>Legal Opinion OC DR Congo</Heading>
                 <LayoutColumnRow size="sm">
@@ -135,17 +135,17 @@ const Project = () => {
               <div>
                 <img
                   src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-07%2FBodemonderzoek.jpg%3Fitok%3DTPuhIeic&w=750&q=85"
-                  width="424px"
+                  width="100%"
                 />
                 <LayoutColumnRow row={true} size="sm" wrap={true}>
-                  <img src="images/sdg/E_WEB_01.png" width="64px" />
-                  <img src="images/sdg/E_WEB_02.png" width="64px" />
-                  <img src="images/sdg/E_WEB_03.png" width="64px" />
-                  <img src="images/sdg/E_WEB_04.png" width="64px" />
-                  <img src="images/sdg/E_WEB_05.png" width="64px" />
-                  <img src="images/sdg/E_WEB_06.png" width="64px" />
-                  <img src="images/sdg/E_WEB_07.png" width="64px" />
-                  <img src="images/sdg/E_WEB_08.png" width="64px" />
+                  <img src="images/sdg/E_WEB_01.png" width="68px" />
+                  <img src="images/sdg/E_WEB_02.png" width="68px" />
+                  <img src="images/sdg/E_WEB_03.png" width="68px" />
+                  <img src="images/sdg/E_WEB_04.png" width="68px" />
+                  <img src="images/sdg/E_WEB_05.png" width="68px" />
+                  <img src="images/sdg/E_WEB_06.png" width="68px" />
+                  <img src="images/sdg/E_WEB_07.png" width="68px" />
+                  <img src="images/sdg/E_WEB_08.png" width="68px" />
                 </LayoutColumnRow>
               </div>
             </Grid>
