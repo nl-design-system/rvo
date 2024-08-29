@@ -13,7 +13,7 @@ import {
 } from '@nl-rvo/components';
 import '../common/filter.scss';
 
-const FilterHorizontal = () => {
+const VerticalFilter = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
@@ -143,7 +143,7 @@ const FilterHorizontal = () => {
                           <TextInputField label="Search countries"></TextInputField>
                           <div className="rvo-collapsible-filter--scroll">
                             <CheckboxField
-                              label=" "
+                              label="Countries"
                               invalid={false}
                               options={[
                                 { id: 'Afghanistan', label: 'Afghanistan' },
@@ -582,4 +582,4 @@ const FilterHorizontal = () => {
   );
 };
 
-export default FilterHorizontal;
+export default VerticalFilter;
