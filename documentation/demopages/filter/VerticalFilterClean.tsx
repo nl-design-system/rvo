@@ -143,7 +143,7 @@ const VerticalFilterClean = () => {
                           <TextInputField label="Search countries"></TextInputField>
                           <div className="rvo-collapsible-filter--scroll">
                             <CheckboxField
-                              label=" "
+                              label="Countries"
                               invalid={false}
                               options={[
                                 { id: 'Afghanistan', label: 'Afghanistan' },
