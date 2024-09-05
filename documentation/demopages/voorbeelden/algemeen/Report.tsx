@@ -1,5 +1,5 @@
 import { Footer, Header, Heading, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
-import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
+import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Report = () => {
   return (

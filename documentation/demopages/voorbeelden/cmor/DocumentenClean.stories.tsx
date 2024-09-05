@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import DocumentenClean from './DocumentenClean';
 
 const meta: Meta<typeof DocumentenClean> = {
-  title: "Demo pagina's/CMOR/Documenten",
+  title: "Pagina's/Voorbeelden/CMOR/Documenten",
   component: DocumentenClean,
   parameters: {
     status: {

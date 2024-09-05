@@ -58,7 +58,7 @@ const parameters = {
         'Huisstijl',
         ['Color', 'Font', 'Size', 'Space'],
         'Componenten',
-        'Templates',
+        "Pagina's",
         "Demo pagina's",
         [
           'Algemeen',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ZaakClean from './ZaakClean';
 
 const meta: Meta<typeof ZaakClean> = {
-  title: "Demo pagina's/CMOR/Zaak",
+  title: "Pagina's/Voorbeelden/CMOR/Zaak",
   component: ZaakClean,
   parameters: {
     status: {
