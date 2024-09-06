@@ -13,7 +13,7 @@ import {
   LayoutColumnRow,
   Link,
   MenuBar,
-  MobileMenuBar,
+  // MobileMenuBar,
   StatusIcon,
   Tag,
 } from '@nl-rvo/components';
@@ -23,7 +23,7 @@ const OverzichtClean = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <MobileMenuBar
+      {/* <MobileMenuBar
         iconPlacement="before"
         useIcons={true}
         isOpen={false}
@@ -44,7 +44,7 @@ const OverzichtClean = () => {
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
           { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
         ]}
-      ></MobileMenuBar>
+      ></MobileMenuBar> */}
       <MenuBar
         items={[
           {
