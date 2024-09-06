@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Profiel from './Profiel';
 
 const meta: Meta<typeof Profiel> = {
-  title: "Demo pagina's/Mijn Percelen/Profiel",
+  title: "Pagina's/Experimenteel/Mijn Percelen/Profiel",
   component: Profiel,
   parameters: {
     status: {

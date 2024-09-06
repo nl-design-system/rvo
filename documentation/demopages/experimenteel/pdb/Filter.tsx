@@ -12,7 +12,7 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/filter.scss';
+import '../../common/filter.scss';
 
 const Filter = () => {
   return (
@@ -149,11 +149,11 @@ const Filter = () => {
                           ></SelectField>
                         </LayoutColumnRow>
 
-                        <details className="rvo-collapsible-filter">
+                        <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
                           <CheckboxField
-                            label=" "
+                            label="Status"
                             invalid={false}
                             options={[
                               { id: 'Cancelled', label: 'Cancelled' },
@@ -166,7 +166,7 @@ const Filter = () => {
                           <hr className="rvo-hr" />
                         </details>
 
-                        <details className="rvo-collapsible-filter">
+                        <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter countries</summary>
 
                           <CheckboxField
@@ -390,11 +390,12 @@ const Filter = () => {
                           <hr className="rvo-hr" />
                         </details>
 
-                        <details className="rvo-collapsible-filter">
+                        <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter sector</summary>
+                          <TextInputField label="Refine filter options"></TextInputField>
 
                           <CheckboxField
-                            label="Frequently used sectors"
+                            label="Sector"
                             invalid={false}
                             options={[
                               {
@@ -408,38 +409,14 @@ const Filter = () => {
                               },
                               { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
                               { id: 'Agricultural development', label: 'Agricultural development' },
+                              { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                              { id: 'Agricultural education/training', label: 'Agricultural education/training' },
                             ]}
                           ></CheckboxField>
-                          <details className="rvo-collapsible-filter">
-                            {' '}
-                            <summary className="rvo-collapsible-filter-label">
-                              <Icon icon="plus"></Icon>
-                              All sectors sorted alphabetically
-                            </summary>
-                            <CheckboxField
-                              label="All sectors"
-                              invalid={false}
-                              options={[
-                                {
-                                  id: 'Advanced technical and managerial training',
-                                  label: 'Advanced technical and managerial training',
-                                },
-                                { id: 'Agrarian reform', label: 'Agrarian reform' },
-                                {
-                                  id: 'Agricultural alternative development',
-                                  label: 'Agricultural alternative development',
-                                },
-                                { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
-                                { id: 'Agricultural development', label: 'Agricultural development' },
-                                { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
-                                { id: 'Agricultural education/training', label: 'Agricultural education/training' },
-                              ]}
-                            ></CheckboxField>
-                          </details>
                           <hr className="rvo-hr" />
                         </details>
 
-                        <details className="rvo-collapsible-filter">
+                        <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Project Partner organisation</summary>
 
                           <CheckboxField
@@ -459,6 +436,7 @@ const Filter = () => {
                               <Icon icon="plus"></Icon>
                               All Project Partner organisations
                             </summary>
+                            <TextInputField label="Refine filter options"></TextInputField>
                             <CheckboxField
                               label="All Project Partner organisations"
                               invalid={false}
@@ -486,8 +464,6 @@ const Filter = () => {
                       </LayoutColumnRow>
                     </form>
                   </details>
-                  <br />
-                  <Button>Apply filters</Button>
                 </Fieldset>
               </div>
               <div className="rvo-results">

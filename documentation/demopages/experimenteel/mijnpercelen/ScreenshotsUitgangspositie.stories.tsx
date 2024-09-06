@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ScreenshotsUitgangspositie from './ScreenshotsUitgangspositie';
 
 const meta: Meta<typeof ScreenshotsUitgangspositie> = {
-  title: "Demo pagina's/Mijn Percelen/Screenshots Uitgangspositie",
+  title: "Pagina's/Experimenteel/Mijn Percelen/Screenshots Uitgangspositie",
   component: ScreenshotsUitgangspositie,
   parameters: {
     status: {

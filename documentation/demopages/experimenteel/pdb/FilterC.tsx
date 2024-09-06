@@ -5,13 +5,14 @@ import {
   Footer,
   Header,
   Heading,
+  Icon,
   LayoutColumnRow,
   MenuBar,
   Pagination,
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/filter.scss';
+import '../../common/filter.scss';
 
 const Filter = () => {
   return (
@@ -148,7 +149,7 @@ const Filter = () => {
                           ></SelectField>
                         </LayoutColumnRow>
 
-                        <details open className="rvo-collapsible-filter">
+                        <details className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
                           <CheckboxField
@@ -165,11 +166,28 @@ const Filter = () => {
                           <hr className="rvo-hr" />
                         </details>
 
-                        <details open className="rvo-collapsible-filter">
+                        <details className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter countries</summary>
-                          <div className="rvo-collapsible-filter--scroll">
+
+                          <CheckboxField
+                            label="Frequently used countries"
+                            invalid={false}
+                            options={[
+                              { id: 'Poland', label: 'Poland' },
+                              { id: 'Peru', label: 'Peru' },
+                              { id: 'Netherlands', label: 'Netherlands' },
+                              { id: 'Angola', label: 'Angola' },
+                              { id: 'Qatar', label: 'Qatar' },
+                            ]}
+                          ></CheckboxField>
+                          <details className="rvo-collapsible-filter">
+                            {' '}
+                            <summary className="rvo-collapsible-filter-label">
+                              <Icon icon="plus"></Icon>
+                              All countries sorted alphabetically
+                            </summary>
                             <CheckboxField
-                              label=" "
+                              label="All countries"
                               invalid={false}
                               options={[
                                 { id: 'Afghanistan', label: 'Afghanistan' },
@@ -368,16 +386,38 @@ const Filter = () => {
                                 { id: 'Zimbabwe', label: 'Zimbabwe' },
                               ]}
                             ></CheckboxField>
-                          </div>
+                          </details>
+                          <hr className="rvo-hr" />
                         </details>
-                        <hr className="rvo-hr" />
 
-                        <details open className="rvo-collapsible-filter">
+                        <details className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter sector</summary>
 
-                          <div className="rvo-collapsible-filter--scroll">
+                          <CheckboxField
+                            label="Frequently used sectors"
+                            invalid={false}
+                            options={[
+                              {
+                                id: 'Advanced technical and managerial training',
+                                label: 'Advanced technical and managerial training',
+                              },
+                              { id: 'Agrarian reform', label: 'Agrarian reform' },
+                              {
+                                id: 'Agricultural alternative development',
+                                label: 'Agricultural alternative development',
+                              },
+                              { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                              { id: 'Agricultural development', label: 'Agricultural development' },
+                            ]}
+                          ></CheckboxField>
+                          <details className="rvo-collapsible-filter">
+                            {' '}
+                            <summary className="rvo-collapsible-filter-label">
+                              <Icon icon="plus"></Icon>
+                              All sectors sorted alphabetically
+                            </summary>
                             <CheckboxField
-                              label=" "
+                              label="All sectors"
                               invalid={false}
                               options={[
                                 {
@@ -395,15 +435,32 @@ const Filter = () => {
                                 { id: 'Agricultural education/training', label: 'Agricultural education/training' },
                               ]}
                             ></CheckboxField>
-                          </div>
+                          </details>
+                          <hr className="rvo-hr" />
                         </details>
-                        <hr className="rvo-hr" />
 
-                        <details open className="rvo-collapsible-filter">
-                          <summary className="rvo-collapsible-filter-label">Filter Project partners</summary>{' '}
-                          <div className="rvo-collapsible-filter--scroll">
+                        <details className="rvo-collapsible-filter">
+                          <summary className="rvo-collapsible-filter-label">Project Partner organisation</summary>
+
+                          <CheckboxField
+                            label="Frequently used Project Partner organisations"
+                            invalid={false}
+                            options={[
+                              { id: '4 Fruit Company B.V.', label: '4 Fruit Company B.V.' },
+                              { id: '4 Returns Partners B.V.', label: '4 Returns Partners B.V.' },
+                              { id: '4Wieler', label: '4Wieler' },
+                              { id: '21st Century Informatics BV', label: '21st Century Informatics BV' },
+                              { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
+                            ]}
+                          ></CheckboxField>
+                          <details className="rvo-collapsible-filter">
+                            {' '}
+                            <summary className="rvo-collapsible-filter-label">
+                              <Icon icon="plus"></Icon>
+                              All Project Partner organisations
+                            </summary>
                             <CheckboxField
-                              label=" "
+                              label="All Project Partner organisations"
                               invalid={false}
                               options={[
                                 { id: 'Stichting Het Groene Woudt', label: 'Stichting Het Groene Woudt' },
@@ -423,12 +480,14 @@ const Filter = () => {
                                 { id: '33 Asset Management B.V.', label: '33 Asset Management B.V.' },
                               ]}
                             ></CheckboxField>
-                          </div>
+                          </details>
+                          <hr className="rvo-hr" />
                         </details>
-                        <hr className="rvo-hr" />
                       </LayoutColumnRow>
                     </form>
                   </details>
+                  <br />
+                  <Button>Apply filters</Button>
                 </Fieldset>
               </div>
               <div className="rvo-results">

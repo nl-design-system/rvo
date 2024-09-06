@@ -1,5 +1,5 @@
 import {} from '@nl-rvo/components';
-import '../common/rhs-demos.scss';
+import '../../common/rhs-demos.scss';
 
 const ScreenshotsUitgangspositie = () => {
   return (

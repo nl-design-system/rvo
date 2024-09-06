@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Versturen from './Versturen';
 
 const meta: Meta<typeof Versturen> = {
-  title: "Demo pagina's/Mijn Percelen/Versturen",
+  title: "Pagina's/Experimenteel/Mijn Percelen/Versturen",
   component: Versturen,
   parameters: {
     status: {

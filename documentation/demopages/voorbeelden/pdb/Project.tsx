@@ -1,5 +1,4 @@
 import { Footer, Grid, Header, Heading, Icon, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
-// import '../common/filter.scss';
 
 const Project = () => {
   return (

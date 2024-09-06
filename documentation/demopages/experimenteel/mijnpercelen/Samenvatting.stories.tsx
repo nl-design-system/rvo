@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Samenvatting from './Samenvatting';
 
 const meta: Meta<typeof Samenvatting> = {
-  title: "Demo pagina's/Mijn Percelen/Samenvatting",
+  title: "Pagina's/Experimenteel/Mijn Percelen/Samenvatting",
   component: Samenvatting,
   parameters: {
     status: {

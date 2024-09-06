@@ -1,5 +1,5 @@
 import { Footer, Header, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
-import '../common/filter.scss';
+import '../../common/filter.scss';
 
 const Home = () => {
   return (

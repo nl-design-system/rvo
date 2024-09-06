@@ -1,6 +1,6 @@
 import { Button, CheckboxField, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
-import '../common/mijn-percelen.scss';
-import '../common/rhs-update.scss';
+import '../../common/mijn-percelen.scss';
+import '../../common/rhs-update.scss';
 
 const Profiel = () => {
   return (

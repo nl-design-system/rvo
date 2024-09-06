@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import PerceelEdit from '../mijnpercelen/PerceelEdit';
+import PerceelEdit from './PerceelEdit';
 
 const meta: Meta<typeof PerceelEdit> = {
-  title: "Demo pagina's/Mijn Percelen/PerceelEdit",
+  title: "Pagina's/Experimenteel/Mijn Percelen/PerceelEdit",
   component: PerceelEdit,
   parameters: {
     status: {

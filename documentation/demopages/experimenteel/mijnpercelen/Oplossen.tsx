@@ -1,6 +1,6 @@
 import { Button, Icon, LayoutColumnRow, Link, MenuBar, RadioButtonField } from '@nl-rvo/components';
-import '../common/mijn-percelen.scss';
-import '../common/rhs-update.scss';
+import '../../common/mijn-percelen.scss';
+import '../../common/rhs-update.scss';
 
 const Oplossen = () => {
   return (

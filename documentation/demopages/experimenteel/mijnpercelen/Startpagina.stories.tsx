@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Startpagina from './Startpagina';
 
 const meta: Meta<typeof Startpagina> = {
-  title: "Demo pagina's/Mijn Percelen/Startpagina",
+  title: "Pagina's/Experimenteel/Mijn Percelen/Startpagina",
   component: Startpagina,
   parameters: {
     status: {

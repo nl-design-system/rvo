@@ -8,8 +8,8 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/mijn-percelen.scss';
-import '../common/rhs-update.scss';
+import '../../common/mijn-percelen.scss';
+import '../../common/rhs-update.scss';
 
 const PercelenTable = () => {
   return (

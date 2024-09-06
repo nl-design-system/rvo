@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import FilterB from './FilterB';
 
 const meta: Meta<typeof FilterB> = {
-  title: "Demo pagina's/projects.rvo.nl/Filter/Filter B",
+  title: "Pagina's/Experimenteel/projects.rvo.nl/Filter/Filter B",
   component: FilterB,
   parameters: {
     status: {
