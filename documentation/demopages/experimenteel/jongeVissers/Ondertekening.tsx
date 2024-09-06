@@ -1,20 +1,19 @@
 import {
   ButtonGroup,
-  Field,
   Fieldset,
   Header,
   Heading,
-  Label,
   LayoutColumnRow,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
+  RadioButtonField,
 } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
-import '../common/style.scss';
+import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
+import '../../common/style.scss';
 
-const Datum = () => {
+const Ondertekening = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -40,44 +39,42 @@ const Datum = () => {
                   line: 'straight',
                 },
                 {
-                  state: 'doing',
+                  state: 'completed',
                   label: 'Datum verleningsverzoek',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
                   size: 'md',
                   line: 'straight',
                 },
-
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Project vragen',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Kosten',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Bijlagen',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
                   size: 'md',
                   line: 'straight',
                 },
-
                 {
-                  state: 'incomplete',
+                  state: 'completed',
                   label: 'Samenvatting',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'incomplete',
+                  state: 'doing',
                   label: 'Ondertekening',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
                   size: 'md',
@@ -90,19 +87,41 @@ const Datum = () => {
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Datum verleningsverzoek"></Heading>
+                  <Heading type="h1" textContent="Ondertekening"></Heading>
                 </div>
                 <form>
                   <LayoutColumnRow size="md">
-                    <Fieldset legend="">
-                      <Field className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                        <Label htmlFor={'verlengingsdatum'}>
-                          Wat is de datum op de poststempel van het verleningsverzoek?
-                        </Label>
-                        <input type="date" id={'verlengingsdatum'} className="rvo-date"></input>
-                      </Field>
+                    <Fieldset legend="Overtreding en fraude">
+                      <RadioButtonField
+                        name="radio-buttons"
+                        helperText="Uitgebreide informatie over overtredingen."
+                        label="Zijn er één of meerdere overtredingen bij u vastgesteld?"
+                        expandableHelperText={true}
+                        expandableHelperTextTitle="Meer informatie"
+                        options={[
+                          { id: 'overa', label: 'Ja' },
+                          { id: 'overb', label: 'Nee' },
+                        ]}
+                      ></RadioButtonField>
+                      <RadioButtonField
+                        name="radio-buttons"
+                        helperText="Uitgebreide informatie over fraude."
+                        label="Is er fraude bij u vastgesteld?"
+                        expandableHelperText={true}
+                        expandableHelperTextTitle="Meer informatie"
+                        options={[
+                          { id: 'fraua', label: 'Ja' },
+                          { id: 'fraub', label: 'Nee' },
+                        ]}
+                      ></RadioButtonField>
                     </Fieldset>
-
+                    <Heading type="h2" textContent="Verklaring"></Heading>
+                    <p>
+                      Ik verklaar dat ik voldoe aan de voorwaarden en dat dit formulier en de bijlagen naar waarheid
+                      zijn ingevuld.
+                    </p>
+                    <Heading type="h2" textContent="Ondertekening"></Heading>
+                    <p>Ondertekening m.b.v. TAN is alleen noodzakelijker voor klanten.</p>
                     <ButtonGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
@@ -112,7 +131,7 @@ const Datum = () => {
                       </a>
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        onClick={linkTo("Demo pagina's/Jonge Vissers/Project")}
+                        onClick={linkTo("Demo pagina's/Jonge Vissers/Bevestiging")}
                       >
                         Opslaan en verder
                       </a>
@@ -128,4 +147,4 @@ const Datum = () => {
   );
 };
 
-export default Datum;
+export default Ondertekening;

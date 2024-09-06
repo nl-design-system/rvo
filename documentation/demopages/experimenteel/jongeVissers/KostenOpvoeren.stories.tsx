@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import KostenOpvoeren from './KostenOpvoeren';
 
 const meta: Meta<typeof KostenOpvoeren> = {
-  title: "Demo pagina's/Jonge Vissers/Kosten opvoeren",
+  title: "Pagina's/Experimenteel/Jonge Vissers/Kosten opvoeren",
   component: KostenOpvoeren,
   parameters: {
     status: {

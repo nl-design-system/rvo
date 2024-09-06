@@ -9,8 +9,8 @@ import {
   ProgressTracker,
 } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
-import '../common/style.scss';
+import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
+import '../../common/style.scss';
 
 const Samenvatting = () => {
   return (

@@ -1,20 +1,18 @@
 import {
   ButtonGroup,
-  Fieldset,
   Header,
   Heading,
   LayoutColumnRow,
+  Link,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  RadioButtonField,
-  TextInputField,
 } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
-import '../common/style.scss';
+import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
+import '../../common/style.scss';
 
-const KostenOpvoeren = () => {
+const ControleerGegevens = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -26,46 +24,39 @@ const KostenOpvoeren = () => {
               steps={[
                 { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
                 {
-                  state: 'completed',
+                  state: 'doing',
                   label: 'Controleer uw gegevens',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Correspondentie',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Datum verleningsverzoek',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Project vragen',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'doing',
+                  state: 'incomplete',
                   label: 'Kosten',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
                   size: 'md',
-                  line: 'substep-start',
-                },
-                {
-                  state: 'doing',
-                  label: 'Kosten opvoeren',
-                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten opvoeren"),
-                  size: 'sm',
-                  line: 'substep-end',
+                  line: 'straight',
                 },
                 {
                   state: 'incomplete',
@@ -89,7 +80,6 @@ const KostenOpvoeren = () => {
                   size: 'md',
                   line: 'straight',
                 },
-
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
               ]}
             />
@@ -97,44 +87,26 @@ const KostenOpvoeren = () => {
               <LayoutColumnRow size="xl">
                 <div className="rvo-form-intro">
                   <LayoutColumnRow size="md">
-                    <Heading type="h1" textContent="Kosten opvoeren"></Heading>
-                    <dl className="rvo-data">
-                      <dt>Omschrijving van de investering</dt>
-                      <dd>Aanschaf voertuig</dd>
-                    </dl>
+                    <Heading type="h1" textContent="Controleer uw gegevens"></Heading>
+                    <LayoutColumnRow size="sm">
+                      <dl className="rvo-data">
+                        <dt>BSN</dt>
+                        <dd>35012085</dd>
+                        <dt>Naam</dt>
+                        <dd>Albert Heijn B.V.</dd>
+                        <dt>Rekeningnummer</dt>
+                        <dd>NLSNBD093845843</dd>
+                        <dt>Adres</dt>
+                        <dd>Haarsteeweg 25, 4560 KL, Zutphen</dd>
+                        <dt>E-mailadres</dt>
+                        <dd>albert@heijn.nl</dd>
+                      </dl>
+                      <Link showIcon="before" href="#" icon="bewerken" content="Wijzig deze gegevens"></Link>
+                    </LayoutColumnRow>
                   </LayoutColumnRow>
                 </div>
                 <form>
                   <LayoutColumnRow size="md">
-                    <Fieldset legend="">
-                      <TextInputField
-                        label="Hoeveel kost het vissersvaartuig (exclusief btw)?"
-                        validation="number"
-                      ></TextInputField>
-                    </Fieldset>
-                    <Fieldset legend="">
-                      <RadioButtonField
-                        name="vv-eigenaar"
-                        label="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?"
-                        options={[
-                          {
-                            id: 'vveiga',
-                            label: 'Volledig eigenaar',
-                          },
-                          { id: 'vveigb', label: 'Mede eigenaar' },
-                        ]}
-                      ></RadioButtonField>
-                    </Fieldset>
-                    <Fieldset legend="">
-                      <TextInputField
-                        label="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
-                        helperText="Uitgebreide uitleg over de subsidie."
-                        expandableHelperText={true}
-                        expandableHelperTextTitle="Meer informatie"
-                        validation="number"
-                      ></TextInputField>
-                    </Fieldset>
-
                     <ButtonGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
@@ -144,7 +116,7 @@ const KostenOpvoeren = () => {
                       </a>
                       <a
                         className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
-                        onClick={linkTo("Demo pagina's/Jonge Vissers/Kosten")}
+                        onClick={linkTo("Demo pagina's/Jonge Vissers/Correspondentie")}
                       >
                         Opslaan en verder
                       </a>
@@ -160,4 +132,4 @@ const KostenOpvoeren = () => {
   );
 };
 
-export default KostenOpvoeren;
+export default ControleerGegevens;

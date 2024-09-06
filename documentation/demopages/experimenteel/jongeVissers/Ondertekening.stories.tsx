@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Ondertekening from './Ondertekening';
 
 const meta: Meta<typeof Ondertekening> = {
-  title: "Demo pagina's/Jonge Vissers/Ondertekening",
+  title: "Pagina's/Experimenteel/Jonge Vissers/Ondertekening",
   component: Ondertekening,
   parameters: {
     status: {

@@ -1,9 +1,20 @@
-import { Header, Heading, LayoutColumnRow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
+import {
+  ButtonGroup,
+  Field,
+  Fieldset,
+  Header,
+  Heading,
+  Label,
+  LayoutColumnRow,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+} from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import { defaultMenuBarItemsJV } from '../common/defaultMenuBarItemsJV';
-import '../common/style.scss';
+import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
+import '../../common/style.scss';
 
-const Bevestiging = () => {
+const Datum = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
@@ -29,42 +40,44 @@ const Bevestiging = () => {
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'doing',
                   label: 'Datum verleningsverzoek',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
                   size: 'md',
                   line: 'straight',
                 },
+
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Project vragen',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Kosten',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Bijlagen',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
                   size: 'md',
                   line: 'straight',
                 },
+
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Samenvatting',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
                   size: 'md',
                   line: 'straight',
                 },
                 {
-                  state: 'completed',
+                  state: 'incomplete',
                   label: 'Ondertekening',
                   onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
                   size: 'md',
@@ -77,42 +90,35 @@ const Bevestiging = () => {
             <div className="rvo-form">
               <LayoutColumnRow size="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Bevestiging"></Heading>
-                  <p>
-                    Wij hebben uw aanvraag verlenging Jonge Visser 2020 ontvangen op <strong>05-07-2022</strong>.<br />
-                    Het zaaknummer dat wij hieraan hebben gegevens is <strong>192040000027</strong>. Gebruik dit nummer
-                    als u met ons belt of digitale post wilt versturen.
-                  </p>
-                  <Heading type="h2" textContent="Uw gegevens"></Heading>
-                  <LayoutColumnRow size="md">
-                    <dl className="rvo-data">
-                      <dt>Naam</dt>
-                      <dd>Albert Heijn B.V.</dd>
-                      <dt>KVK Nummer</dt>
-                      <dd>342346534634</dd>
-                      <dt>Relatienummer</dt>
-                      <dd>35012085</dd>
-                    </dl>
-                    <p>
-                      U kunt deze ontvangstbevestiging inzien in Mijn dossier. U kunt het document dan ook afdrukken of
-                      opslaan op uw computer.
-                    </p>
-                  </LayoutColumnRow>
-                  <p>
-                    Een PDF kunt u openen met{' '}
-                    <Link
-                      href="#"
-                      content="Adobe Acrobat
-                  Reader"
-                    ></Link>
-                    .
-                  </p>
-                  <p>
-                    Heeft u nog vragen? Dan kunt u ons bellen op werkdagen tussen 8:30 en 17:00 uur op 088 042 42 42
-                    (lokaal tarief)
-                  </p>
-                  <Link showIcon="before" href="#" content="Ontvangstbevestiging 192040000027" icon="downloaden"></Link>
+                  <Heading type="h1" textContent="Datum verleningsverzoek"></Heading>
                 </div>
+                <form>
+                  <LayoutColumnRow size="md">
+                    <Fieldset legend="">
+                      <Field className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
+                        <Label htmlFor={'verlengingsdatum'}>
+                          Wat is de datum op de poststempel van het verleningsverzoek?
+                        </Label>
+                        <input type="date" id={'verlengingsdatum'} className="rvo-date"></input>
+                      </Field>
+                    </Fieldset>
+
+                    <ButtonGroup>
+                      <a
+                        className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
+                      >
+                        Opslaan en sluiten
+                      </a>
+                      <a
+                        className="utrecht-button utrecht-button--primary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
+                        onClick={linkTo("Demo pagina's/Jonge Vissers/Project")}
+                      >
+                        Opslaan en verder
+                      </a>
+                    </ButtonGroup>
+                  </LayoutColumnRow>
+                </form>
               </LayoutColumnRow>
             </div>
           </main>
@@ -122,4 +128,4 @@ const Bevestiging = () => {
   );
 };
 
-export default Bevestiging;
+export default Datum;

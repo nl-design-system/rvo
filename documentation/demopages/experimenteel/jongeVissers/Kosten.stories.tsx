@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Kosten from './Kosten';
 
 const meta: Meta<typeof Kosten> = {
-  title: "Demo pagina's/Jonge Vissers/Kosten",
+  title: "Pagina's/Experimenteel/Jonge Vissers/Kosten",
   component: Kosten,
   parameters: {
     status: {

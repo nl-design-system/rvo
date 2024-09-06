@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Bijlagen from './Bijlagen';
 
 const meta: Meta<typeof Bijlagen> = {
-  title: "Demo pagina's/Jonge Vissers/Bijlagen",
+  title: "Pagina's/Experimenteel/Jonge Vissers/Bijlagen",
   component: Bijlagen,
   parameters: {
     status: {
