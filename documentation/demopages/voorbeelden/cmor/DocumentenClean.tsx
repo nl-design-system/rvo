@@ -7,7 +7,7 @@ import {
   LayoutColumnRow,
   Link,
   MenuBar,
-  MobileMenuBar,
+  // MobileMenuBar,
   Pagination,
 } from '@nl-rvo/components';
 import '../../../../components/text-helpers/index.scss';
@@ -16,7 +16,7 @@ const DocumentenClean = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <MobileMenuBar
+      {/* <MobileMenuBar
         iconPlacement="before"
         useIcons={true}
         isOpen={false}
@@ -37,7 +37,7 @@ const DocumentenClean = () => {
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
           { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
         ]}
-      ></MobileMenuBar>
+      ></MobileMenuBar> */}
       <MenuBar
         items={[
           {

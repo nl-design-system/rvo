@@ -11,7 +11,7 @@ import {
   LayoutColumnRow,
   Link,
   MenuBar,
-  MobileMenuBar,
+  // MobileMenuBar,
   StatusIcon,
 } from '@nl-rvo/components';
 import '../../../../components/text-helpers/index.scss';
@@ -22,7 +22,7 @@ const ZaakClean = () => {
       <LayoutColumnRow size="3xl">
         <div>
           <Header />
-          <MobileMenuBar
+          {/* <MobileMenuBar
             iconPlacement="before"
             useIcons={true}
             isOpen={false}
@@ -43,7 +43,7 @@ const ZaakClean = () => {
               { label: 'Mijn berichten', link: '#', icon: 'mail' },
               { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
             ]}
-          ></MobileMenuBar>
+          ></MobileMenuBar> */}
           <LayoutColumnRow size="sm">
             <MenuBar
               items={[
