@@ -3,6 +3,7 @@ import {
   CheckboxField,
   Fieldset,
   Footer,
+  Grid,
   Header,
   Heading,
   LayoutColumnRow,
@@ -11,9 +12,8 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '../common/filter.scss';
 
-const VerticalFilter = () => {
+const VerticalFilterClean = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
@@ -49,7 +49,7 @@ const VerticalFilter = () => {
           />
 
           <div className="rvo-filter-wrapper rvo-max-width-layout rvo-max-width-layout--md">
-            <LayoutColumnRow row={true}>
+            <Grid columns="two" layout="1fr2fr">
               <div className="rvo-filter">
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
@@ -58,70 +58,69 @@ const VerticalFilter = () => {
                     </summary>
 
                     <form className="rvo-form">
+                      <TextInputField label="Search projects" value="study"></TextInputField>
+
+                      <LayoutColumnRow row={true} size="sm" alignItems="start">
+                        <SelectField
+                          label="From (year)"
+                          options={[
+                            {
+                              value: '1998',
+                              label: '1998',
+                            },
+                            {
+                              value: '1999',
+                              label: '1999',
+                            },
+                            {
+                              value: '2000',
+                              label: '2000',
+                            },
+                            {
+                              value: '2001',
+                              label: '2001',
+                            },
+                            {
+                              value: '2002',
+                              label: '2002',
+                            },
+                            {
+                              value: '2003',
+                              label: '2003',
+                            },
+                          ]}
+                        ></SelectField>
+                        <SelectField
+                          label="Till (year)"
+                          options={[
+                            {
+                              value: '1998',
+                              label: '1998',
+                            },
+                            {
+                              value: '1999',
+                              label: '1999',
+                            },
+                            {
+                              value: '2000',
+                              label: '2000',
+                            },
+                            {
+                              value: '2001',
+                              label: '2001',
+                            },
+                            {
+                              value: '2002',
+                              label: '2002',
+                            },
+                            {
+                              value: '2003',
+                              label: '2003',
+                            },
+                          ]}
+                        ></SelectField>
+                      </LayoutColumnRow>
                       <LayoutColumnRow size="xl">
-                        <TextInputField label="Search projects" value="study"></TextInputField>
-
-                        <LayoutColumnRow row={true} size="sm" alignItems="start">
-                          <SelectField
-                            label="From (year)"
-                            options={[
-                              {
-                                value: '1998',
-                                label: '1998',
-                              },
-                              {
-                                value: '1999',
-                                label: '1999',
-                              },
-                              {
-                                value: '2000',
-                                label: '2000',
-                              },
-                              {
-                                value: '2001',
-                                label: '2001',
-                              },
-                              {
-                                value: '2002',
-                                label: '2002',
-                              },
-                              {
-                                value: '2003',
-                                label: '2003',
-                              },
-                            ]}
-                          ></SelectField>
-                          <SelectField
-                            label="Till (year)"
-                            options={[
-                              {
-                                value: '1998',
-                                label: '1998',
-                              },
-                              {
-                                value: '1999',
-                                label: '1999',
-                              },
-                              {
-                                value: '2000',
-                                label: '2000',
-                              },
-                              {
-                                value: '2001',
-                                label: '2001',
-                              },
-                              {
-                                value: '2002',
-                                label: '2002',
-                              },
-                              {
-                                value: '2003',
-                                label: '2003',
-                              },
-                            ]}
-                          ></SelectField>
-                        </LayoutColumnRow>
-
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
 
@@ -535,7 +534,7 @@ const VerticalFilter = () => {
                   <Pagination numberOfPages={30} activePage={1} />
                 </LayoutColumnRow>
               </div>
-            </LayoutColumnRow>
+            </Grid>
           </div>
         </LayoutColumnRow>
         <Footer
@@ -582,4 +581,4 @@ const VerticalFilter = () => {
   );
 };
 
-export default VerticalFilter;
+export default VerticalFilterClean;

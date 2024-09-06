@@ -1,6 +1,6 @@
 import { Heading, Icon } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
+import '../../common/style.scss';
 
 const Maatregelen = () => {
   return (

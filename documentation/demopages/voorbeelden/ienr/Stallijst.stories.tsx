@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Stallijst from './Stallijst';
 
 const meta: Meta<typeof Stallijst> = {
-  title: "Demo pagina's/I&R/Stallijst",
+  title: "Pagina's/Voorbeelden/I&R/Stallijst",
   component: Stallijst,
   parameters: {
     status: {

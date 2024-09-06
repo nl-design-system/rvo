@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Maatregel from './Maatregel';
 
 const meta: Meta<typeof Maatregel> = {
-  title: "Demo pagina's/de Regelmaat/Maatregel",
+  title: "Pagina's/Experimenteel/de Regelmaat/Maatregel",
   component: Maatregel,
   parameters: {
     status: {

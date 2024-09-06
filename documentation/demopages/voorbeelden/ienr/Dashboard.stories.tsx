@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Dashboard from './Dashboard';
 
 const meta: Meta<typeof Dashboard> = {
-  title: "Demo pagina's/I&R/Dashboard",
+  title: "Pagina's/Voorbeelden/I&R/Dashboard",
   component: Dashboard,
   parameters: {
     status: {

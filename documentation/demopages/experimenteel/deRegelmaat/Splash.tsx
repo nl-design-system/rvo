@@ -1,5 +1,5 @@
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
+import '../../common/style.scss';
 
 const Splash = () => {
   return (

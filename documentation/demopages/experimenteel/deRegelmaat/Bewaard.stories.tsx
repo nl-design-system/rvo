@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Bewaard from './Bewaard';
 
 const meta: Meta<typeof Bewaard> = {
-  title: "Demo pagina's/de Regelmaat/Bewaard",
+  title: "Pagina's/Experimenteel/de Regelmaat/Bewaard",
   component: Bewaard,
   parameters: {
     status: {

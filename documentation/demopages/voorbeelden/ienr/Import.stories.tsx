@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Import from './Import';
 
 const meta: Meta<typeof Import> = {
-  title: "Demo pagina's/I&R/Import",
+  title: "Pagina's/Voorbeelden/I&R/Import",
   component: Import,
   parameters: {
     status: {

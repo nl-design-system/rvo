@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Akkoord from './Akkoord';
 
 const meta: Meta<typeof Akkoord> = {
-  title: "Demo pagina's/de Regelmaat/Akkoord",
+  title: "Pagina's/Experimenteel/de Regelmaat/Akkoord",
   component: Akkoord,
   parameters: {
     status: {

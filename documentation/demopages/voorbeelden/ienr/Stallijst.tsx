@@ -9,10 +9,7 @@ import {
   MobileMenuBar,
   Pagination,
 } from '@nl-rvo/components';
-import '../../../components/text-helpers/index.scss';
-import '../common/responsive.scss';
-// import '../common/rhs-update.scss';
-// import '../common/cmor.scss';
+import '../../../../components/text-helpers/index.scss';
 
 const Stallijst = () => {
   return (

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import VerticalFilter from './VerticalFilter';
 
 const meta: Meta<typeof VerticalFilter> = {
-  title: "Demo pagina's/Filter/Vertical filter",
+  title: "Pagina's/Experimenteel/Filter/Vertical filter",
   component: VerticalFilter,
   parameters: {
     status: {

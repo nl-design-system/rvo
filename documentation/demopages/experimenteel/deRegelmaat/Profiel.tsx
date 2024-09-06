@@ -1,6 +1,6 @@
 import { ButtonGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
-import '../common/style.scss';
+import '../../common/style.scss';
 
 const Profiel = () => {
   return (

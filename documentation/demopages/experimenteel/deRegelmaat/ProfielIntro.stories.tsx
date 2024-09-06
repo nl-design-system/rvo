@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ProfielIntro from './ProfielIntro';
 
 const meta: Meta<typeof ProfielIntro> = {
-  title: "Demo pagina's/de Regelmaat/Profiel intro",
+  title: "Pagina's/Experimenteel/de Regelmaat/Profiel intro",
   component: ProfielIntro,
   parameters: {
     status: {
