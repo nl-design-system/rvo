@@ -59,6 +59,7 @@ const parameters = {
         ['Color', 'Font', 'Size', 'Space'],
         'Componenten',
         "Pagina's",
+        ['Templates', 'Voorbeelden', 'Experimenteel'],
         "Demo pagina's",
         [
           'Algemeen',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Index from './Index';
 
 const meta: Meta<typeof Index> = {
-  title: "Pagina's/Prototypes/Index",
+  title: 'Prototypes/Index',
   component: Index,
   parameters: {
     status: {

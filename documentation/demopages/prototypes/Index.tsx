@@ -22,7 +22,7 @@ const Index = () => {
         </header>
         <div className="rvo-rhs-update-component"></div>
         <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-main--demo">
-          <Heading type="h1" textContent="Beschikbare demo's" />
+          <Heading type="h1" textContent="Beschikbare prototypes" />
           <ul>
             <li>
               <a
