@@ -77,18 +77,18 @@
     margin-block-end: var(--rvo-space-xs);
   }
 
-  .utrecht-form-field + .rvo-collapsible-filter .rvo-collapsible-filter-label {
-    font-weight: var(--rvo-font-weight-regular);
-    gap: var(--rvo-space-2xs);
+  // .utrecht-form-field + .rvo-collapsible-filter .rvo-collapsible-filter-label {
+  //   font-weight: var(--rvo-font-weight-regular);
+  //   gap: var(--rvo-space-2xs);
 
-    .rvo-icon {
-      margin-block-start: 3px;
-    }
+  //   .rvo-icon {
+  //     margin-block-start: 3px;
+  //   }
 
-    &::after {
-      display: none;
-    }
-  }
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
 
   .rvo-collapsible-filter[open] > .rvo-collapsible-filter-label::after {
     -webkit-mask-image: var(--rvo-icon-delta-omlaag);
