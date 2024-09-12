@@ -37,7 +37,7 @@ const Landingspagina = () => {
       />
       <LayoutColumnRow size="3xl">
         <LayoutColumnRow size="xl">
-          <main className="rvo-max-width-layout rvo-max-width-layout--lg">
+          <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--md">
             <LayoutColumnRow size="2xl">
               <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
                 <div className="rvo-hero__image-container">
