@@ -30,6 +30,7 @@ export { TimeInput } from './form-timeinput/template';
 export { Grid } from './grid/template';
 export { Header } from './header/template';
 export { Heading } from './heading/template';
+export { Hero } from './hero/template';
 export { Hr } from './horizontal-rule/template';
 export { Icon } from './icon/template';
 export { ItemList } from './item-list/template';
