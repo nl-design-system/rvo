@@ -1,4 +1,4 @@
-import { Button, Footer, Grid, Header, Heading, Icon, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Accordion, Button, Footer, Grid, Header, Heading, Icon, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
 
 const Landingspagina = () => {
   return (
@@ -232,6 +232,32 @@ const Landingspagina = () => {
                     </div>
                   </Grid>
                 </LayoutColumnRow>
+              </div>
+              <div className="rvo-place-holder--faq rvo-max-width-layout rvo-max-width-layout--sm">
+                <LayoutColumnRow wrap={true} alignContent="center">
+                  <Heading type="h3">Veelgestelde vragen</Heading>
+                </LayoutColumnRow>
+                <Accordion
+                  items={[
+                    {
+                      title: 'Hoe maak ik een account aan voor de berichtenbox?',
+                      teaser: '',
+                      content:
+                        'Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.',
+                    },
+                    {
+                      title: 'Wat is een bestaande thermische schil?',
+                      teaser: '',
+                      content:
+                        'De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.',
+                    },
+                    {
+                      title: 'Wanneer krijg ik bericht over mijn subsidie?',
+                      teaser: '',
+                      content: 'Zo snel mogelijk.',
+                    },
+                  ]}
+                />
               </div>
             </LayoutColumnRow>
           </main>
