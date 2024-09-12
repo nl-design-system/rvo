@@ -113,6 +113,10 @@
     padding-block-start: var(--rvo-space-xl);
     position: relative;
 
+    .rvo-card__content {
+      position: relative;
+    }
+
     &::after {
       background-color: var(--rvo-card-background-image-overlay-color);
       content: "";
