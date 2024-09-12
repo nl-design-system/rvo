@@ -13,6 +13,10 @@ const Landingspagina = () => {
             active: true,
           },
           {
+            label: 'Overheidsorganisatie?',
+            link: '#',
+          },
+          {
             align: 'right',
             label: 'Inloggen',
             icon: 'user',
