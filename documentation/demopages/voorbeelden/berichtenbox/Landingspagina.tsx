@@ -304,15 +304,6 @@ const Landingspagina = () => {
         <Footer
           columns={[
             {
-              label: 'RVO',
-              items: [
-                { content: 'Over ons', link: '#' },
-                { content: 'Contact', link: '#' },
-                { content: 'Pers', link: '#' },
-                { content: 'Zaken regelen bij RVO', link: '#' },
-              ],
-            },
-            {
               label: 'Over deze site',
               items: [
                 { content: 'Privacy', link: '#' },
@@ -322,20 +313,28 @@ const Landingspagina = () => {
               ],
             },
             {
-              label: 'Snel naar',
+              label: 'Berichtenbox',
               items: [
-                { content: 'Onderwerpen A t/m Z', link: '#' },
-                { content: 'Klantenpanel', link: '#' },
-                { content: 'Documenten en publicaties', link: '#' },
-                { content: 'Overheidspublicaties en auteursrecht', link: '#' },
+                { content: 'Over Berichtenbox', link: '#' },
+                { content: 'Over veiligheid', link: '#' },
+                { content: 'Contact voor bedrijven', link: '#' },
+              ],
+            },
+
+            {
+              label: 'Account',
+              items: [
+                { content: 'Inloggen', link: '#' },
+                { content: 'Account aanmaken', link: '#' },
+                { content: 'Wachtwoord vergeten', link: '#' },
               ],
             },
             {
-              label: 'Blijf op de hoogte',
+              label: 'Onze partners',
               items: [
-                { content: 'Social media', link: '#' },
-                { content: 'RSS', link: '#' },
-                { content: 'Gratis nieuwsbrief', link: '#' },
+                { content: 'Rijksdienst voor Ondernemend Nederland', link: '#' },
+                { content: 'Ondernemersplein', link: '#' },
+                { content: 'Kamer van Koophandel', link: '#' },
               ],
             },
           ]}
