@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "author": "Community for NL Design System",
+  "license": "EUPL-1.2",
+  "name": "@nl-rvo/tabs-content-item",
+  "description": "Tabs content item component",
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "tabs-content-item"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/tabs-content-item"
+  }
+}

@@ -15,12 +15,8 @@
   }
 }
 
-.rvo-tab__content {
-  padding-block-start: var(--rvo-space-sm);
-}
-
 @media (min-width: 600px) {
-  .rvo-tabs__navigation {
+  .rvo-tabs {
     border-bottom: 2px solid var(--rvo-color-grijs-300);
     display: inline-flex;
 

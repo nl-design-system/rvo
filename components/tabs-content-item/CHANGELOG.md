@@ -1,4 +1,4 @@
-# `@nl-rvo/tabs`
+# `@nl-rvo/tabs-content-item`
 
 ## 1.0.0
 
