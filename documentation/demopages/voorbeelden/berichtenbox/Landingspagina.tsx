@@ -29,13 +29,13 @@ const Landingspagina = () => {
         useIcons={true}
         horizontalRule={false}
         iconPlacement="before"
-        maxWidth="lg"
+        maxWidth="md"
       />
       <LayoutColumnRow size="3xl">
         <LayoutColumnRow size="xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--lg">
-            <LayoutColumnRow size="3xl">
-              <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none rvo-hero">
+            <LayoutColumnRow size="2xl">
+              <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
                 <div className="rvo-hero__image-container">
                   <img
                     src="images/berichtenbox/berichtenbox-bedrijven.jpg"
@@ -52,7 +52,7 @@ const Landingspagina = () => {
                 </h1>
               </div>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
-                <LayoutColumnRow size="3xl">
+                <LayoutColumnRow size="2xl">
                   <Grid columns="two" gap="xl">
                     <div className="rvo-quote">
                       <div className="rvo-card rvo-card--outline rvo-card--padding-md">
@@ -99,7 +99,32 @@ const Landingspagina = () => {
                       </div>
                     </div>
                   </Grid>
-                  <LayoutColumnRow row={true} size="2xl">
+                  <div className="rvo-card rvo-card--padding-xl rvo-card--with-background-image rvo-card--inverted-colors">
+                    <div className="rvo-card__background-image-container">
+                      <img src="images/berichtenbox/video.jpg" className="rvo-card__background-image" />
+                    </div>
+                    <div className="rvo-card__content">
+                      <div className="rvo-max-width-layout rvo-max-width-layout--sm">
+                        <LayoutColumnRow>
+                          <LayoutColumnRow wrap={true} alignContent="center">
+                            <Icon icon="video" color="wit" size="2xl" />
+                          </LayoutColumnRow>
+                          <LayoutColumnRow wrap={true} alignContent="center">
+                            <span className="rvo-text rvo-text--xl">Video: Berichtenbox in 90 seconden</span>
+                          </LayoutColumnRow>
+                          <LayoutColumnRow wrap={true} alignContent="center">
+                            <span className="rvo-text rvo-text--sm">
+                              Wil je weten hoe de berichtenbox voor bedrijven jouw contact met overheden makkelijker
+                              maakt? <br />
+                              Bekijk dan deze video en sluit je aan.
+                            </span>
+                          </LayoutColumnRow>
+                        </LayoutColumnRow>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <LayoutColumnRow row={true} size="2xl">
                     <img src="images/berichtenbox/video.jpg" width="440px"></img>
                     <div>
                       <Heading type="h3" noMargins={true}>
@@ -110,7 +135,7 @@ const Landingspagina = () => {
                         Bekijk dan deze video en sluit je aan.
                       </p>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutColumnRow> */}
                 </LayoutColumnRow>
               </div>
               <hr className="rvo-hr rvo-max-width-layout rvo-max-width-layout--md"></hr>
@@ -240,21 +265,34 @@ const Landingspagina = () => {
                 <Accordion
                   items={[
                     {
-                      title: 'Hoe maak ik een account aan voor de berichtenbox?',
+                      title: 'Hoe maak ik een berichtenbox account?',
                       teaser: '',
                       content:
-                        'Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.',
+                        'Om een Berichtenbox account aan te maken, gaat u naar de website en klikt u op "Account aanmaken". Volg de stappen en gebruik uw eHerkenning om het proces te voltooien.',
                     },
                     {
-                      title: 'Wat is een bestaande thermische schil?',
+                      title: 'Is de Berichtenbox voor bedrijven veilig?',
                       teaser: '',
                       content:
-                        'De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.',
+                        'Ja, de Berichtenbox maakt gebruik van de nieuwste beveiligingstechnologieën en voldoet aan alle wettelijke eisen voor gegevensbescherming.',
                     },
                     {
-                      title: 'Wanneer krijg ik bericht over mijn subsidie?',
+                      title: 'Kan ik ook grote bijlagen versturen via de Berichtenbox?',
                       teaser: '',
-                      content: 'Zo snel mogelijk.',
+                      content:
+                        'De Berichtenbox ondersteunt bijlagen tot 20 MB. Voor grotere bestanden kunt u gebruik maken van een beveiligde downloadlink.',
+                    },
+                    {
+                      title: 'Hoe kan ik berichten versturen aan meerdere overheidsorganisaties?',
+                      teaser: '',
+                      content:
+                        'In de Berichtenbox kunt u eenvoudig meerdere ontvangers selecteren voordat u uw bericht verstuurt. Kies de relevante organisaties uit de lijst.',
+                    },
+                    {
+                      title: 'Kan een collega toegang krijgen tot mijn account?',
+                      teaser: '',
+                      content:
+                        "Ja, u kunt collega's machtigen om namens u de Berichtenbox te beheren. Gebruik hiervoor de machtigingsfunctie in uw accountinstellingen.",
                     },
                   ]}
                 />
