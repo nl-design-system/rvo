@@ -1,4 +1,4 @@
-import { Button, Footer, Grid, Header, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Button, Footer, Grid, Header, Heading, Icon, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
 
 const Landingspagina = () => {
   return (
@@ -29,13 +29,13 @@ const Landingspagina = () => {
         useIcons={true}
         horizontalRule={false}
         iconPlacement="before"
-        maxWidth="md"
+        maxWidth="lg"
       />
       <LayoutColumnRow size="3xl">
         <LayoutColumnRow size="xl">
-          <main className="rvo-max-width-layout rvo-max-width-layout--md">
-            <LayoutColumnRow>
-              <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
+          <main className="rvo-max-width-layout rvo-max-width-layout--lg">
+            <LayoutColumnRow size="3xl">
+              <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none rvo-hero">
                 <div className="rvo-hero__image-container">
                   <img
                     src="images/berichtenbox/berichtenbox-bedrijven.jpg"
@@ -51,24 +51,188 @@ const Landingspagina = () => {
                   </Button>
                 </h1>
               </div>
-              <Grid columns="two" gap="2xl">
-                <div className="rvo-quote">
-                  <div className="rvo-card rvo-card--outline rvo-card--padding-md">
-                    <div className="rvo-card__content">
-                      <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
-                        "Nu staat al mijn post van de overheid in de berichtenbox voor bedrijven"
-                      </span>
-                      <Grid columns="two">
-                        <div className="rvo-quote__image"></div>
-                        <div className="rvo-quote__person"></div>
-                      </Grid>
+              <div className="rvo-max-width-layout rvo-max-width-layout--md">
+                <LayoutColumnRow size="3xl">
+                  <Grid columns="two" gap="xl">
+                    <div className="rvo-quote">
+                      <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                        <div className="rvo-card__content">
+                          <LayoutColumnRow>
+                            <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
+                              "Mijn post van de overheid in de berichtenbox"
+                            </span>
+                            <LayoutColumnRow row={true} size="sm">
+                              <div className="rvo-quote__image">
+                                <img src="images/berichtenbox/profiel-foto-1.png" width="64px" height="64px" />
+                              </div>
+                              <div className="rvo-quote__person">
+                                <LayoutColumnRow size="0">
+                                  <span className="rvo-text rvo-text--bold">Pim Hassevoort</span>
+                                  <span className="rvo-text rvo-text--sm">Groene energie leverancier</span>
+                                </LayoutColumnRow>
+                              </div>
+                            </LayoutColumnRow>
+                          </LayoutColumnRow>
+                        </div>
+                      </div>
                     </div>
+                    <div className="rvo-quote">
+                      <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                        <div className="rvo-card__content">
+                          <LayoutColumnRow>
+                            <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
+                              "Al mijn overheidsberichten veilig op één plek."
+                            </span>
+                            <LayoutColumnRow row={true} size="sm">
+                              <div className="rvo-quote__image">
+                                <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                              </div>
+                              <div className="rvo-quote__person">
+                                <LayoutColumnRow size="0">
+                                  <span className="rvo-text rvo-text--bold">Charlotte Verduim</span>
+                                  <span className="rvo-text rvo-text--sm">Kinderopvang organisatie</span>
+                                </LayoutColumnRow>
+                              </div>
+                            </LayoutColumnRow>
+                          </LayoutColumnRow>
+                        </div>
+                      </div>
+                    </div>
+                  </Grid>
+                  <LayoutColumnRow row={true} size="2xl">
+                    <img src="images/berichtenbox/video.jpg" width="440px"></img>
+                    <div>
+                      <Heading type="h3" noMargins={true}>
+                        Video: Berichtenbox in 90 seconden
+                      </Heading>
+                      <p className="rvo-text rvo-text--no-margins">
+                        Wil je weten hoe de berichtenbox voor bedrijven jouw contact met overheden makkelijker maakt?
+                        Bekijk dan deze video en sluit je aan.
+                      </p>
+                    </div>
+                  </LayoutColumnRow>
+                </LayoutColumnRow>
+              </div>
+              <hr className="rvo-hr rvo-max-width-layout rvo-max-width-layout--md"></hr>
+              <div className="rvo-max-width-layout rvo-max-width-layout--md">
+                <Grid columns="three" gap="2xl">
+                  <LayoutColumnRow alignItems="" size="sm">
+                    <Icon size="2xl" icon="hangslot-dicht" color="grijs-700"></Icon>
+                    <Heading type="h3" noMargins={true}>
+                      Veilig en vertrouwd
+                    </Heading>
+                    <span className="rvo-text rvo-text--subtle rvo-text--sm">
+                      Lorem ipsum odor amet, consectetuer adipiscing elit. Semper curabitur et non dui hac purus. Felis
+                      imperdiet nisl eget odio; aptent interdum natoque.
+                    </span>
+                  </LayoutColumnRow>
+                  <LayoutColumnRow alignItems="" size="sm">
+                    <Icon size="2xl" icon="vermindering-papier" color="grijs-700"></Icon>
+                    <Heading type="h3" noMargins={true}>
+                      Alle berichten op één plek
+                    </Heading>
+                    <span className="rvo-text rvo-text--subtle rvo-text--sm">
+                      Sem ornare condimentum quam non ridiculus. Mollis rhoncus felis ultricies purus vivamus elementum.
+                      Class fermentum lobortis nisl netus; egestas magna in magna.
+                    </span>
+                  </LayoutColumnRow>
+                  <LayoutColumnRow alignItems="" size="sm">
+                    <Icon size="2xl" icon="tekstballonnen-met-vraagteken" color="grijs-700"></Icon>
+                    <Heading type="h3" noMargins={true}>
+                      Vraag en antwoord
+                    </Heading>
+                    <span className="rvo-text rvo-text--subtle rvo-text--sm">
+                      Mi magna ornare at ridiculus, cubilia euismod penatibus. Imperdiet porttitor velit pulvinar; sit
+                      in quis quam. Vivamus praesent cubilia feugiat eget lacus vulputate auctor sociosqu.
+                    </span>
+                  </LayoutColumnRow>
+                </Grid>
+              </div>
+              <hr className="rvo-hr rvo-max-width-layout rvo-max-width-layout--md"></hr>
+              <div className="rvo-placeholder--stappenplan">
+                <LayoutColumnRow>
+                  <div className="rvo-placeholder--stappenplan-title">
+                    <LayoutColumnRow alignContent="center" wrap={true}>
+                      <Heading type="h3" noMargins={true}>
+                        Stappenplan
+                      </Heading>
+                    </LayoutColumnRow>
+                    <LayoutColumnRow alignContent="center" wrap={true}>
+                      <span className="rvo-text rvo-text--subtle">Berichtenbox voor bedrijven gebruiken</span>
+                    </LayoutColumnRow>
                   </div>
-                </div>
-                <div className="rvo-quote">
-                  "Nu staat al mijn post van de overheid in de berichtenbox voor bedrijven"
-                </div>
-              </Grid>
+                  <Grid columns="four" gap="2xl">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                      <div className="rvo-card__content">
+                        <LayoutColumnRow>
+                          <span className="rvo-text--italic rvo-text--bold rvo-text--xl">1.</span>
+                          <LayoutColumnRow size="0">
+                            <span className="rvo-text rvo-text--bold">E-herkenning aanvragen</span>
+                            <span className="rvo-text rvo-text--subtle">
+                              Voor het aanmaken van een account en inloggen in de berichtenbox heeft u e-herkenning
+                              nodig.
+                              <a href="#" className="rvo-link rvo-link--no-underline">
+                                Direct e-herkenning aanvragen
+                              </a>
+                            </span>
+                          </LayoutColumnRow>
+                        </LayoutColumnRow>
+                      </div>
+                    </div>
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                      <div className="rvo-card__content">
+                        <LayoutColumnRow>
+                          <span className="rvo-text--italic rvo-text--bold rvo-text--xl">2.</span>
+                          <LayoutColumnRow size="0">
+                            <span className="rvo-text rvo-text--bold">Account aanmaken berichtenbox</span>
+                            <span className="rvo-text rvo-text--subtle">
+                              Vul daarna uw bedrijfgegevens in en maak een account aan voor de berichtenbox.
+                              <br />
+                              <a href="#" className="rvo-link rvo-link--no-underline">
+                                Account aanmaken
+                              </a>
+                            </span>
+                          </LayoutColumnRow>
+                        </LayoutColumnRow>
+                      </div>
+                    </div>
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                      <div className="rvo-card__content">
+                        <LayoutColumnRow>
+                          <span className="rvo-text--italic rvo-text--bold rvo-text--xl">3.</span>
+                          <LayoutColumnRow size="0">
+                            <span className="rvo-text rvo-text--bold">Naam registreren Handelregister</span>
+                            <span className="rvo-text rvo-text--subtle">
+                              Geef toegang tot overheidsorganisaties bij de Kamer van Koophandel.
+                              <br />
+                              <a href="#" className="rvo-link rvo-link--no-underline">
+                                Inloggen bij de KVK
+                              </a>
+                            </span>
+                          </LayoutColumnRow>
+                        </LayoutColumnRow>
+                      </div>
+                    </div>
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                      <div className="rvo-card__content">
+                        <LayoutColumnRow>
+                          <span className="rvo-text--italic rvo-text--bold rvo-text--xl">4.</span>
+                          <LayoutColumnRow size="0">
+                            <span className="rvo-text rvo-text--bold">Inloggen met e-herkenning</span>
+                            <span className="rvo-text rvo-text--subtle">
+                              Gefeliciteerd! Uw bedrijf kan nu gebruik maken van de berichtenbox voor bedrijven.
+                              <br />
+                              <a href="#" className="rvo-link rvo-link--no-underline">
+                                Nu inloggen met e-herkenning
+                              </a>
+                            </span>
+                          </LayoutColumnRow>
+                        </LayoutColumnRow>
+                      </div>
+                    </div>
+                  </Grid>
+                </LayoutColumnRow>
+              </div>
             </LayoutColumnRow>
           </main>
         </LayoutColumnRow>
