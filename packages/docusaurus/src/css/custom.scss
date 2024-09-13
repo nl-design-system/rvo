@@ -141,3 +141,11 @@ code {
 .markdown table td.rvo-table-cell--numeric {
   text-align: end;
 }
+
+// Fix table width on webkit
+
+table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
