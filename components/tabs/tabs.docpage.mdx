@@ -1,0 +1,20 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as TabsStories from "./tabs.stories";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
+
+<Meta of={TabsStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={TabsStories.Default} layout="padded" />
+<Controls />
+
+# Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

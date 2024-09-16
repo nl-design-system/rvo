@@ -19,6 +19,7 @@ export interface ILinkProps {
   iconSize?: 'sm' | 'md';
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconAriaLabel?: string;
+  role?: string;
   hover?: boolean;
   active?: boolean;
   focus?: boolean;
