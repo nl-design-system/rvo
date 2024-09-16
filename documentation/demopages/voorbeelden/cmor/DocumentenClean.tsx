@@ -9,6 +9,7 @@ import {
   MenuBar,
   // MobileMenuBar,
   Pagination,
+  Tabs,
 } from '@nl-rvo/components';
 import '../../../../components/text-helpers/index.scss';
 
@@ -105,6 +106,10 @@ const DocumentenClean = () => {
               </Heading>
               <div>
                 <LayoutColumnRow size="xl">
+                  <Tabs
+                    tabs={[{ label: 'Mijn ontvangen documenten' }, { label: 'Mijn verstuurde documenten' }]}
+                    activeTab={0}
+                  />
                   <Grid columns="four">
                     <div>Naam</div>
                     <div>Regeling</div>
