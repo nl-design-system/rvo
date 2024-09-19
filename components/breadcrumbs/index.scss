@@ -16,7 +16,7 @@
   @extend .rvo-layout-gap--sm;
 }
 
-.rvo-breadcrumbs-item > :first-child {
+.rvo-breadcrumbs-item {
   @extend .rvo-layout-row;
   @extend .rvo-layout-gap--sm;
 }
