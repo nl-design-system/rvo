@@ -4,7 +4,7 @@
  */
 import './index.scss';
 import clsx from 'clsx';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { AccordionItem, IAccordionItemProps } from '../accordion-item/template';
 
@@ -34,7 +34,7 @@ export const Accordion: React.FC<IAccordionProps> = ({
   items = defaultArgs.items,
   grijs = defaultArgs.grijs,
   children,
-}: PropsWithChildren<IAccordionProps>) => {
+}: IAccordionProps) => {
   return (
     <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')}>
       {(children &&
