@@ -7,7 +7,6 @@ import { defaultArgs } from './defaultArgs';
 import Heading from '../heading/template';
 import Icon from '../icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import './index.scss';
 
 export interface IAccordionItemProps {
   title: string;
