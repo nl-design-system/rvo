@@ -11,7 +11,7 @@ module.exports = {
           '../../components/alert/template.tsx',
           '../../components/breadcrumbs/template.tsx',
           '../../components/breadcrumbs-item/template.tsx',
-          // '../../components/button/template.tsx',
+          '../../components/button/template.tsx',
           // '../../components/button-group/template.tsx',
           // '../../components/heading/template.tsx',
           // '../../components/data-list/template.tsx',
