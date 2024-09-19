@@ -4,7 +4,7 @@
  */
 import './index.scss';
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { AccordionItem, IAccordionItemProps } from '../accordion-item/template';
 
@@ -12,6 +12,8 @@ export interface IAccordionProps {
   /** @uxpinignoreprop */
   items: IAccordionItemProps[];
   grijs?: boolean;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -23,7 +25,7 @@ export const argTypes = {
   },
 };
 
-export const Accordion: React.FC<PropsWithChildren<IAccordionProps>> = ({
+export const Accordion: React.FC<IAccordionProps> = ({
   items = defaultArgs.items,
   grijs = defaultArgs.grijs,
   children,

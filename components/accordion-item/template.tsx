@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Heading from '../heading/template';
 import Icon from '../icon/template';
@@ -12,8 +12,11 @@ import './index.scss';
 export interface IAccordionItemProps {
   title: string;
   teaser?: string;
-  content?: string;
+  /** @uxpinignoreprop */
+  content?: string | ReactNode;
   open?: boolean;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -31,14 +34,14 @@ export const argTypes = {
   },
 };
 
-export const AccordionItem: React.FC<PropsWithChildren<IAccordionItemProps>> = ({
+export const AccordionItem: React.FC<IAccordionItemProps> = ({
   title = defaultArgs.title,
   teaser = defaultArgs.teaser,
   content = defaultArgs.content,
   open = defaultArgs.open,
   children,
-}: PropsWithChildren<IAccordionItemProps>) => {
-  let teaserMarkup: string | React.ReactNode = parseContentMarkup(children || teaser);
+}: IAccordionItemProps) => {
+  let teaserMarkup: string | React.ReactNode = parseContentMarkup(teaser);
   let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (

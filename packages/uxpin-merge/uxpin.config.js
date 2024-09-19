@@ -8,7 +8,7 @@ module.exports = {
         include: [
           '../../components/accordion/template.tsx',
           '../../components/accordion-item/template.tsx',
-          // // '../../components/alert/template.tsx',
+          '../../components/alert/template.tsx',
           // '../../components/breadcrumbs/template.tsx',
           // '../../components/button/template.tsx',
           // '../../components/button-group/template.tsx',
