@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, SyntheticEvent } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Button } from '../button/template';
 import { Icon } from '../icon/template';
@@ -20,6 +20,7 @@ export interface IAlertProps {
   padding?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
+  onClose?: (event: SyntheticEvent<HTMLButtonElement>) => void;
 }
 
 export const argTypes = {
@@ -40,6 +41,16 @@ export const argTypes = {
     options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
     control: { type: 'radio' },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+  onClose: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Alert: React.FC<IAlertProps> = ({
@@ -48,6 +59,7 @@ export const Alert: React.FC<IAlertProps> = ({
   content = defaultArgs.content,
   closable = defaultArgs.closable,
   padding = defaultArgs.padding,
+  onClose,
   children,
 }: IAlertProps) => {
   let iconMarkup;
@@ -82,6 +94,7 @@ export const Alert: React.FC<IAlertProps> = ({
           className="rvo-button__close"
           label={<Icon icon="kruis" size="md" />}
           aria-label="Sluiten"
+          onClick={onClose}
         />
       )}
     </div>
