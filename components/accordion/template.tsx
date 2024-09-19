@@ -12,7 +12,7 @@ export interface IAccordionProps {
   /** @uxpinignoreprop */
   items: IAccordionItemProps[];
   grijs?: boolean;
-  /** @uxpinpropname Content */
+  /** @uxpinpropname Accordion items */
   children?: ReactNode | undefined;
 }
 
@@ -22,6 +22,11 @@ export const argTypes = {
   },
   grijs: {
     control: 'boolean',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
   },
 };
 
