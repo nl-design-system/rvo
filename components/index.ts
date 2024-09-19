@@ -50,6 +50,7 @@ export { SkipLink } from './skip-link/template';
 export { StatusIcon } from './status-icon/template';
 export { StatusIndicator } from './status-indicator/template';
 export { Table } from './table/template';
+export { Tabs } from './tabs/template';
 export { Tag } from './tag/template';
 export { TextHelpers } from './text-helpers/template';
 export { Toggle } from './toggle/template';
