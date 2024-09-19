@@ -27,8 +27,11 @@ export interface IButtonProps {
   fullWidth?: boolean;
   className?: string;
   alignToRightInGroup?: boolean;
+  /** @uxpinpropname On Focus */
   onFocus?: (event) => void;
+  /** @uxpinpropname On Blur */
   onBlur?: (event) => void;
+  /** @uxpinpropname On Click */
   onClick?: (event) => void;
 }
 
@@ -70,6 +73,11 @@ export const argTypes = {
   iconAriaLabel: { control: 'text' },
   fullWidth: {
     control: 'boolean',
+  },
+  alignToRightInGroup: {
+    table: {
+      disable: true,
+    },
   },
 };
 
@@ -123,7 +131,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'xs' && 'utrecht-button--rvo-xs',
         size === 'sm' && 'utrecht-button--rvo-sm',
         size === 'md' && 'utrecht-button--rvo-md',
-        alignToRightInGroup && 'rvo-button-group__align-right',
+        alignToRightInGroup && 'utrecht-button-group__align-right',
         fullWidth && 'utrecht-button--rvo-full-width',
       )}
       disabled={disabled || undefined}
