@@ -279,6 +279,8 @@ importers:
 
   components/table: {}
 
+  components/tabs: {}
+
   components/tag: {}
 
   components/text-helpers: {}
