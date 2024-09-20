@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Formulier from './Formulier';
 
-const meta: Meta<typeof Formulier> = {
-  title: "Pagina's/Experimenteel/Algemeen/Formulier",
+const meta: Meta<typeof Report> = {
+  title: "Pagina's/Templates/Formulier",
   component: Formulier,
   parameters: {
     status: {
