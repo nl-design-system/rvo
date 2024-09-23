@@ -21,7 +21,7 @@ module.exports = {
           // // '../../components/logo/template.tsx',
           // // '../../components/menubar/template.tsx',
           // // '../../components/menubar-mobile/template.tsx',
-          // // '../../components/icon/template.tsx',
+          '../../components/icon/template.tsx',
           // '../../components/status-icon/template.tsx',
           // // '../../components/link/template.tsx',
           // '../../components/tag/template.tsx',
