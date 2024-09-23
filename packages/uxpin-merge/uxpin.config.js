@@ -14,7 +14,7 @@ module.exports = {
           '../../components/button/template.tsx',
           '../../components/button-group/template.tsx',
           '../../components/heading/template.tsx',
-          // '../../components/data-list/template.tsx',
+          '../../components/data-list/template.tsx',
           // '../../components/expandable-text/template.tsx',
           // '../../components/header/template.tsx',
           // '../../components/footer/template.tsx',
