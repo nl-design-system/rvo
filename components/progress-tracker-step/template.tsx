@@ -6,12 +6,11 @@ import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Link } from '../link/template';
-import './index.scss';
 
 export interface IProgressTrackerStepProps {
-  state: string;
-  line: string;
-  size: string;
+  state: 'start' | 'incomplete' | 'doing' | 'completed' | 'disabled' | 'end';
+  line: 'none' | 'straight' | 'substep-start' | 'substep-end';
+  size: 'sm' | 'md';
   label: string;
   link?: string;
   onClick?: (event) => void;

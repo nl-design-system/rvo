@@ -28,8 +28,8 @@ module.exports = {
           '../../components/link/template.tsx',
           '../../components/tag/template.tsx',
           '../../components/table/template.tsx',
-          // // '../../components/progress-tracker/template.tsx',
-          // '../../components/progress-tracker-step/template.tsx',
+          '../../components/progress-tracker/template.tsx',
+          '../../components/progress-tracker-step/template.tsx',
         ],
       },
       {
