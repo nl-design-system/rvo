@@ -20,7 +20,7 @@ module.exports = {
           '../../components/footer/template.tsx',
           '../../components/footer-column/template.tsx',
           '../../components/footer-item/template.tsx',
-          // // '../../components/logo/template.tsx',
+          '../../components/logo/template.tsx',
           // // '../../components/menubar/template.tsx',
           // // '../../components/menubar-mobile/template.tsx',
           '../../components/icon/template.tsx',
