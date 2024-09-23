@@ -18,21 +18,6 @@ export interface IAccordionItemProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  title: {
-    control: 'text',
-  },
-  teaser: {
-    control: 'text',
-  },
-  content: {
-    control: 'text',
-  },
-  open: {
-    control: 'boolean',
-  },
-};
-
 export const AccordionItem: React.FC<IAccordionItemProps> = ({
   title = defaultArgs.title,
   teaser = defaultArgs.teaser,

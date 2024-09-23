@@ -12,15 +12,6 @@ export interface IBreadcrumbsItemProps extends IBreadcrumbsItem {
   onClick?: (event: SyntheticEvent<HTMLLinkElement>) => void;
 }
 
-export const argTypes = {
-  label: {
-    control: 'text',
-  },
-  url: {
-    control: 'text',
-  },
-};
-
 export const BreadcrumbsItem: React.FC<IBreadcrumbsItemProps> = ({
   label = defaultArgs.label,
   url = defaultArgs.url,
