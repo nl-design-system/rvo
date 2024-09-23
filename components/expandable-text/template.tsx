@@ -3,16 +3,19 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 export interface IExpandableTextProps {
   title: string;
-  content: string | React.ReactNode;
+  /** @uxpinignoreprop */
+  content: string | ReactNode;
   open?: boolean;
   subtle?: boolean;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -30,13 +33,13 @@ export const argTypes = {
   },
 };
 
-export const ExpandableText: React.FC<PropsWithChildren<IExpandableTextProps>> = ({
+export const ExpandableText: React.FC<IExpandableTextProps> = ({
   title = defaultArgs.title,
   content = defaultArgs.content,
   open = defaultArgs.open,
   subtle = defaultArgs.subtle,
   children,
-}: PropsWithChildren<IExpandableTextProps>) => {
+}: IExpandableTextProps) => {
   // Parse content markup (either a string, HTML string, React node or children)
   let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content, {
     className: 'rvo-expandable-text__details',
