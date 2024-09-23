@@ -31,6 +31,11 @@ export const argTypes = {
   subtle: {
     control: 'boolean',
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const ExpandableText: React.FC<IExpandableTextProps> = ({

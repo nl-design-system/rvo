@@ -3,15 +3,16 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Logo } from '../../packages/component-library-react/src/Logo';
+import { Logo } from '../logo/template';
 import './index.scss';
 
 export interface IHeaderProps extends PropsWithChildren {
   title?: string;
   subtitle?: string;
   link?: string;
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -23,6 +24,11 @@ export const argTypes = {
   },
   link: {
     control: 'text',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
   },
 };
 
