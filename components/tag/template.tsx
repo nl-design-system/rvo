@@ -18,9 +18,11 @@ export interface ITagProps {
   showHover?: boolean;
   active?: boolean;
   focus?: boolean;
+  /** @uxpinignoreprop */
   className?: string;
   link?: string;
   linkTarget?: '_blank' | '_self' | '_parent' | '_top';
+  onClick?: (event) => void;
 }
 
 export const argTypes = {
@@ -55,6 +57,11 @@ export const argTypes = {
     options: ['_blank', '_self', '_parent', '_top'],
     control: { type: 'radio' },
   },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Tag: React.FC<ITagProps> = ({
@@ -68,6 +75,7 @@ export const Tag: React.FC<ITagProps> = ({
   className,
   link,
   linkTarget = '_self',
+  onClick,
 }: ITagProps) => {
   // Parse icon markup
   let iconClassName = '';
@@ -120,6 +128,7 @@ export const Tag: React.FC<ITagProps> = ({
         type === 'error' && 'rvo-tag--error',
         type === 'success' && 'rvo-tag--success',
       )}
+      onClick={onClick}
     >
       {showIcon === 'before' && iconMarkup}
       {content}

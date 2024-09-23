@@ -26,7 +26,7 @@ module.exports = {
           '../../components/icon/template.tsx',
           // '../../components/status-icon/template.tsx',
           '../../components/link/template.tsx',
-          // '../../components/tag/template.tsx',
+          '../../components/tag/template.tsx',
           // '../../components/table/template.tsx',
           // // '../../components/progress-tracker/template.tsx',
           // '../../components/progress-tracker-step/template.tsx',
