@@ -3,11 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { FormField } from '@utrecht/component-library-react';
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ExpandableText } from '../expandable-text/template';
 import { Feedback } from '../form-feedback/template';
 import { Label } from '../form-field-label/template';
+import parseContentMarkup from '../utils/parseContentMarkup';
 import validateHTML from '../utils/validateHTML';
 import './index.scss';
 
@@ -22,7 +23,9 @@ export interface IFieldProps {
   expandableHelperTextTitle?: string;
   warningText?: string;
   errorText?: string;
+  /** @uxpinignoreprop */
   className?: string;
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -46,6 +49,11 @@ export const argTypes = {
   expandableHelperTextTitle: { control: 'text' },
   warningText: { control: 'text' },
   errorText: { control: 'text' },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
@@ -109,7 +117,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
         {errorText && <Feedback text={errorText} type="error" />}
         {warningText && <Feedback text={warningText} type="warning" />}
       </div>
-      {(className && <div className={className}>{children}</div>) || children}
+      {(className && <div className={className}>{parseContentMarkup(children)}</div>) || parseContentMarkup(children)}
     </FormField>
   );
 };

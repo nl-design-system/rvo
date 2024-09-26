@@ -14,7 +14,9 @@ export interface ITextInputProps {
   /** @uxpinignoreprop */
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   readOnly?: boolean;
   required?: boolean;
@@ -26,18 +28,14 @@ export interface ITextInputProps {
   suffix?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg';
   maxLength?: number | null;
+  /** @uxpinpropname Max length indicator (textarea) */
   maxLengthIndicator?: boolean;
-  /** @uxpinpropname On Focus */
+
   onFocus?: (event) => void;
-  /** @uxpinpropname On Blur */
   onBlur?: (event) => void;
-  /** @uxpinpropname On Change */
   onChange?: (event) => void;
-  /** @uxpinpropname On Click */
   onClick?: (event) => void;
-  /** @uxpinpropname On Input */
   onInput?: (event) => void;
-  /** @uxpinpropname On Invalid */
   onInvalid?: (event) => void;
 }
 
