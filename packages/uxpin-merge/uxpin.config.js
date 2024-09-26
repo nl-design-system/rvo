@@ -33,6 +33,13 @@ module.exports = {
           '../../components/table/template.tsx',
           '../../components/progress-tracker/template.tsx',
           '../../components/progress-tracker-step/template.tsx',
+          // grid
+          // hero
+          // horizontal rule
+          // item-list
+          // ordered-unordered-list
+          // paginations
+          // toggle
         ],
       },
       {
@@ -65,6 +72,7 @@ module.exports = {
           '../../components/max-width-layout/template.tsx',
           '../../components/form-layout/template.tsx',
           '../../components/layout-flow/template.tsx',
+          // sidebar-layout
         ],
       },
     ],
