@@ -7,8 +7,9 @@ import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
-import { IMenuBarItem, parseMenuItem } from '../menubar/template';
+import { IMenuBarItem } from '../menubar/template';
 import './index.scss';
+import MenuBarItem from '../menubar-item/template';
 
 export const argTypes = {
   size: {
@@ -67,34 +68,35 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     itemsMarkup = items.map((item, index) => {
       return (
         <React.Fragment key={index}>
-          {parseMenuItem({
-            key: item.label,
-            label: item.label,
-            icon: item.icon,
-            active: item.active,
-            link: item.link,
-            useIcon: useIcons,
-            size,
-            iconPlacement,
-            deltaForActiveItem,
-            useDivider: item.useDivider,
-          })}
+          <MenuBarItem
+            key={`${item.label}--${index}`}
+            label={item.label}
+            icon={item.icon}
+            active={item.active}
+            link={item.link}
+            useIcons={useIcons}
+            size={size}
+            iconPlacement={iconPlacement}
+            deltaForActiveItem={deltaForActiveItem}
+            useDivider={item.useDivider}
+          />
+
           {item.active &&
             submenuItems.map((submenuItem, index) => (
               <React.Fragment key={index}>
-                {parseMenuItem({
-                  key: `${item.label}--${index}`,
-                  label: submenuItem.label,
-                  icon: submenuItem.icon,
-                  active: undefined,
-                  link: submenuItem.link,
-                  useIcon: useIcons,
-                  size,
-                  iconPlacement,
-                  type: 'sub',
-                  deltaForActiveItem,
-                  useDivider: item.useDivider,
-                })}
+                <MenuBarItem
+                  key={`${submenuItem.label}--${index}`}
+                  label={submenuItem.label}
+                  icon={submenuItem.icon}
+                  active={undefined}
+                  link={submenuItem.link}
+                  useIcons={useIcons}
+                  size={size}
+                  iconPlacement={iconPlacement}
+                  type="sub"
+                  deltaForActiveItem={deltaForActiveItem}
+                  useDivider={item.useDivider}
+                />
               </React.Fragment>
             ))}
         </React.Fragment>
