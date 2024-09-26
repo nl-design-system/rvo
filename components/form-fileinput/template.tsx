@@ -10,9 +10,12 @@ import './index.scss';
 export interface IFileInputProps {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
+  /** @uxpinpropname accept (file type specifiers */
   accept?: string;
   multiple?: boolean;
   onFocus?: (event) => void;

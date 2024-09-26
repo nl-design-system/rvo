@@ -18,11 +18,11 @@ export interface IDateInputProps {
   invalid?: boolean;
   required?: boolean;
   placeholder?: string;
-  /** @uxpinpropname Value (hh:mm:ss format)> */
+  /** @uxpinpropname Value (yyyy-mm-dd format)> */
   value?: string;
-  /** @uxpinpropname Min (hh:mm:ss format)> */
+  /** @uxpinpropname Min (yyyy-mm-dd format)> */
   min?: string;
-  /** @uxpinpropname Max (hh:mm:ss format)> */
+  /** @uxpinpropname Max (yyyy-mm-dd format)> */
   max?: string;
   step?: number;
   size?: string;
