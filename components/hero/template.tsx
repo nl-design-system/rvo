@@ -14,7 +14,7 @@ export interface IHeroProps {
   image?: string;
   title?: string;
   subtitle?: string;
-  size?: string;
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 

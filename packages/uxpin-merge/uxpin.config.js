@@ -60,9 +60,9 @@ module.exports = {
       {
         name: 'Layout',
         include: [
-          // '../../components/max-width-layout/template.tsx',
-          // '../../components/form-layout/template.tsx',
-          // '../../components/layout-column-row/template.tsx',
+          '../../components/max-width-layout/template.tsx',
+          '../../components/form-layout/template.tsx',
+          '../../components/layout-column-row/template.tsx',
         ],
       },
     ],

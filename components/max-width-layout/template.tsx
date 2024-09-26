@@ -5,14 +5,19 @@
 // @ts-ignore
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 export interface IMaxWidthLayoutProps {
-  size?: string;
+  size?: 'sm' | 'md' | 'lg';
+  /** @uxpinignoreprop */
   content?: string;
   inlinePadding?: 'none' | 'sm' | 'md' | 'lg';
+  /** @uxpinignoreprop */
   className?: string | string[];
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -27,16 +32,21 @@ export const argTypes = {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const MaxWidthLayout: React.FC<PropsWithChildren<IMaxWidthLayoutProps>> = ({
+export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
   size = defaultArgs.size,
   content = defaultArgs.content,
   inlinePadding = defaultArgs.inlinePadding,
   children,
   className = [],
-}: PropsWithChildren<IMaxWidthLayoutProps>) => {
-  let parsedContent = children || content;
+}: IMaxWidthLayoutProps) => {
+  let parsedContent = parseContentMarkup(children || content);
 
   if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;

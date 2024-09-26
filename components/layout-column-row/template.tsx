@@ -3,8 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
 export interface ILayoutColumnRowProps {
@@ -15,6 +16,8 @@ export interface ILayoutColumnRowProps {
   alignContent?: '' | 'start' | 'center' | 'end' | 'space-between';
   justifyItems?: '' | 'start' | 'center' | 'end';
   justifyContent?: '' | 'start' | 'center' | 'end' | 'space-between';
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -44,9 +47,14 @@ export const argTypes = {
     options: ['', 'start', 'center', 'end', 'space-between'],
     control: { type: 'select' },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>> = ({
+export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({
   size = defaultArgs.size,
   row = defaultArgs.row,
   wrap = defaultArgs.wrap,
@@ -55,7 +63,7 @@ export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>>
   justifyItems = defaultArgs.justifyItems,
   justifyContent = defaultArgs.justifyContent,
   children,
-}: PropsWithChildren<ILayoutColumnRowProps>) => {
+}: ILayoutColumnRowProps) => {
   return (
     <div
       className={clsx(
@@ -69,7 +77,7 @@ export const LayoutColumnRow: React.FC<PropsWithChildren<ILayoutColumnRowProps>>
       )}
       {...(!children && { style: { height: '300px' } })}
     >
-      {children || (
+      {parseContentMarkup(children) || (
         <>
           <div>Element A</div>
           <div>Element B</div>
