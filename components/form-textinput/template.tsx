@@ -9,27 +9,35 @@ import React, { useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 
 export interface ITextInputProps {
+  /** @uxpinignoreprop */
   key?: string;
+  /** @uxpinignoreprop */
   id?: string;
   disabled?: boolean;
   focus?: boolean;
   invalid?: boolean;
   readOnly?: boolean;
   required?: boolean;
-  inputType?: string;
+  inputType?: 'text' | 'textarea';
   placeholder?: string;
   value?: string;
-  validation?: string;
+  validation?: 'text' | 'number' | 'currency';
   prefix?: string;
   suffix?: string;
-  size?: string;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   maxLength?: number | null;
   maxLengthIndicator?: boolean;
+  /** @uxpinpropname On Focus */
   onFocus?: (event) => void;
+  /** @uxpinpropname On Blur */
   onBlur?: (event) => void;
+  /** @uxpinpropname On Change */
   onChange?: (event) => void;
+  /** @uxpinpropname On Click */
   onClick?: (event) => void;
+  /** @uxpinpropname On Input */
   onInput?: (event) => void;
+  /** @uxpinpropname On Invalid */
   onInvalid?: (event) => void;
 }
 
