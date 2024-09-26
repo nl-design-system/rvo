@@ -54,8 +54,8 @@ module.exports = {
           '../../components/form-field-timeinput/template.tsx',
           '../../components/form-fileinput/template.tsx',
           '../../components/form-field-fileinput/template.tsx',
-          // // '../../components/form-feedback/template.tsx',
-          // // '../../components/form-field-label/template.tsx',
+          '../../components/form-feedback/template.tsx',
+          '../../components/form-field-label/template.tsx',
         ],
       },
       {
