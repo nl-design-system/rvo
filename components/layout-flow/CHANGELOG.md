@@ -1,4 +1,4 @@
-# `@nl-rvo/layout-column-row`
+# `@nl-rvo/layout-flow`
 
 ## 1.0.0
 

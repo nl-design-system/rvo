@@ -34,7 +34,7 @@ export { Hr } from './horizontal-rule/template';
 export { Icon } from './icon/template';
 export { ItemList } from './item-list/template';
 export { Label } from './form-field-label/template';
-export { LayoutColumnRow } from './layout-column-row/template';
+export { LayoutFlow } from './layout-flow/template';
 export { Link } from './link/template';
 export { List } from './ordered-unordered-list/template';
 export { Logo } from './logo/template';

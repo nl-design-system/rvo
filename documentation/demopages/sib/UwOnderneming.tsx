@@ -4,7 +4,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   ProgressTracker,
@@ -18,8 +18,8 @@ const UwOnderneming = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <LayoutColumnRow size="2xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="2xl">
+        <LayoutFlow size="xl">
           <div className="navigation">
             <MobileMenuBar
               iconPlacement="before"
@@ -160,7 +160,7 @@ const UwOnderneming = () => {
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
               ]}
             />
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon  rvo-link--normal"
@@ -226,9 +226,9 @@ const UwOnderneming = () => {
                   Opslaan en verder gaan
                 </a>
               </ButtonGroup>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
-        </LayoutColumnRow>
+        </LayoutFlow>
         <Footer
           columns={[
             {
@@ -268,7 +268,7 @@ const UwOnderneming = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Button, IButtonProps } from '../button/template';
-import '../layout-column-row/index.scss';
+import '../layout-flow/index.scss';
 import './index.scss';
 
 export interface IButtonGroupProps {

@@ -1,11 +1,11 @@
-import { Header, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Header, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const Submenu = () => {
   return (
     <div className="rvo-demo-page rvo-demo-page--sub-menu">
       <Header />
-      <LayoutColumnRow size="md">
+      <LayoutFlow size="md">
         <div className="rvo-navigation">
           <MenuBar
             items={[
@@ -39,7 +39,7 @@ const Submenu = () => {
             </p>
           </div>
         </main>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

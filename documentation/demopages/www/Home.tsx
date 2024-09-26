@@ -1,14 +1,4 @@
-import {
-  Button,
-  Footer,
-  Header,
-  Heading,
-  Icon,
-  LayoutColumnRow,
-  Link,
-  MaxWidthLayout,
-  MenuBar,
-} from '@nl-rvo/components';
+import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../common/rhs-update.scss';
 import '../common/www.scss';
 
@@ -134,9 +124,9 @@ const Home = () => {
         </div>
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-content--www rvo-content--home">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div className="rvo-cards">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <h2 className="utrecht-heading-2">Onderwerpen</h2>
 
                   <div className="rvo-cards-grid">
@@ -307,12 +297,12 @@ const Home = () => {
                     content="Naar A-Z overzicht"
                     noUnderline={true}
                   />
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
               <hr className="rvo-divider"></hr>
 
               <div className="rvo-cards rvo-cards--overzichten">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <h2 className="utrecht-heading-2">Overzichten voor ondernemend Nederland</h2>
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
@@ -364,14 +354,14 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
 
               <hr className="rvo-divider"></hr>
 
               <div className="rvo-block-group">
                 <div className="rvo-content-items rvo-content-items--w-date">
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Heading type="h2" textContent="Evenementen" />
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
@@ -412,11 +402,11 @@ const Home = () => {
                         </span>
                       </div>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
 
                 <div className="rvo-content-items rvo-content-items--w-date">
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Heading type="h2" textContent="Nieuws" />
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
@@ -452,13 +442,13 @@ const Home = () => {
                         <span className="rvo-content-item-date rvo-paragraph--subtle">5 december 2023</span>
                       </div>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
               </div>
               <hr className="rvo-divider"></hr>
 
               <div className="rvo-cards">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <h2 className="utrecht-heading-2">Uitgelicht</h2>
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
@@ -528,10 +518,10 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
               <div className="rvo-feedback">
-                <LayoutColumnRow row={true} wrap={true} size="sm">
+                <LayoutFlow row={true} wrap={true} size="sm">
                   <Icon icon="tekstballon-met-hart" size="2xl" />
                   <em>Bent u tevreden over deze pagina?</em>
                   <span className="rvo-rhs-update-component">
@@ -539,15 +529,15 @@ const Home = () => {
                       Geef uw mening
                     </Button>
                   </span>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
         <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
-              <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
                 <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
@@ -570,9 +560,9 @@ const Home = () => {
                   </div>
                   <div className="rvo-card rvo-card--w-link  rvo-card--md">
                     <div className="rvo-card-content">
-                      <LayoutColumnRow size="sm">
+                      <LayoutFlow size="sm">
                         <h2 className="utrecht-heading-2">Over ons</h2>
-                        <LayoutColumnRow size="md">
+                        <LayoutFlow size="md">
                           <div className="rvo-card-content-item">
                             <Icon icon="laptop" size="2xl"></Icon>
                             <h3 className="utrecht-heading-3">
@@ -595,8 +585,8 @@ const Home = () => {
                               Leer onze organisatie kennen en vind vacatures.
                             </p>
                           </div>
-                        </LayoutColumnRow>
-                      </LayoutColumnRow>
+                        </LayoutFlow>
+                      </LayoutFlow>
                     </div>
                   </div>
                   <div className="rvo-card rvo-card--w-link rvo-card--md">
@@ -639,7 +629,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </MaxWidthLayout>
         </div>

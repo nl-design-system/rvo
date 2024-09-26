@@ -8,7 +8,7 @@ import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
-import '../layout-column-row/index.scss';
+import '../layout-flow/index.scss';
 import './index.scss';
 
 export interface IButtonProps {

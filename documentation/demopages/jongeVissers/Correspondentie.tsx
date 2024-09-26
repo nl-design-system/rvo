@@ -4,7 +4,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -18,7 +18,7 @@ const Correspondentie = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -87,12 +87,12 @@ const Correspondentie = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Correspondentie"></Heading>
                 </div>
                 <form>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Fieldset legend="">
                       <RadioButtonField
                         name="radio-buttons"
@@ -141,13 +141,13 @@ const Correspondentie = () => {
                         Opslaan en verder
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </form>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

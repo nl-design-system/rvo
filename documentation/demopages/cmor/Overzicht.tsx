@@ -6,7 +6,7 @@ import {
   Footer,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   StatusIcon,
@@ -135,14 +135,14 @@ const Overzicht = () => {
             />
           </div>
           <div className="rvo-content--cmor rvo-content--overzicht">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <h1 className="utrecht-heading-1">
                 <strong>Overzicht</strong> van Boer Overveen B.V.
               </h1>
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-reminders">
                   <Heading type="h2" textContent="Nog te starten"></Heading>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <div className="rvo-expandable-text--subtle">
                       <ExpandableText
                         title="Wij vragen u onderstaande aanvragen op tijd te regelen"
@@ -172,11 +172,11 @@ const Overzicht = () => {
                         </div>
                       </div>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
               <div className="rvo-cards">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <div className="rvo-heading-w-tag">
                     <h2 className="utrecht-heading-2">Lopende aanvragen</h2>
                     <Tag type="info" showIcon="no" content="2 openstaande acties" />
@@ -189,7 +189,7 @@ const Overzicht = () => {
                             ISDE 2023
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
+                        <LayoutFlow size="xs">
                           <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                             Investeringssubsidie duurzame energie en energiebesparing
                           </p>
@@ -199,7 +199,7 @@ const Overzicht = () => {
                               Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
                             </div>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div className="rvo-card-link-indicator">
                         <Icon icon="delta-naar-rechts" size="sm" />
@@ -212,7 +212,7 @@ const Overzicht = () => {
                             BSN Melding WBSO 2023
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
+                        <LayoutFlow size="xs">
                           <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                             Wet Bevordering Speur- en Ontwikkelingswerk
                           </p>
@@ -222,7 +222,7 @@ const Overzicht = () => {
                               Verzilver uw voucher <strong>uiterlijk 28 aug 2023</strong>
                             </div>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div className="rvo-card-link-indicator">
                         <Icon icon="delta-naar-rechts" size="sm" />
@@ -235,7 +235,7 @@ const Overzicht = () => {
                             Gecombineerde opgave 2023
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
+                        <LayoutFlow size="xs">
                           <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                             Gemeenschappelijk Landbouwbeleid
                           </p>
@@ -243,7 +243,7 @@ const Overzicht = () => {
                             <Icon icon="zandloper" size="md" />
                             <div className="rvo-card-status-text">In behandeling</div>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div className="rvo-card-link-indicator">
                         <Icon icon="delta-naar-rechts" size="sm" />
@@ -256,7 +256,7 @@ const Overzicht = () => {
                             SVVE 2023
                           </a>
                         </h3>
-                        <LayoutColumnRow size="xs">
+                        <LayoutFlow size="xs">
                           <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                             Subsidieregeling verduurzaming voor verenigingen van eigenaars
                           </p>
@@ -264,7 +264,7 @@ const Overzicht = () => {
                             <Icon icon="vinkje" size="md" />
                             <div className="rvo-card-status-text">Goedgekeurd</div>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div className="rvo-card-link-indicator">
                         <Icon icon="delta-naar-rechts" size="sm" />
@@ -288,14 +288,14 @@ const Overzicht = () => {
                     />
                     <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Concepten" noUnderline={true} />
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
               <hr className="rvo-divider"></hr>
               <div className="rvo-block-group">
                 <div className="rvo-item-list">
                   <Heading type="h2" textContent="Start een nieuwe aanvraag" />
                   <span className="rvo-item-list-sub-title">Kies uit uw favorieten</span>
-                  <LayoutColumnRow size="sm">
+                  <LayoutFlow size="sm">
                     <div className="rvo-item-list-items">
                       <div className="rvo-item-list-item rvo-item-list-item--w-icon rvo-item-list-item--w-link">
                         <div className="rvo-item-list-item-content">
@@ -347,7 +347,7 @@ const Overzicht = () => {
                       target="#"
                       noUnderline={true}
                     />
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
                 <div className="rvo-quick-links">
                   <Heading type="h2" textContent="Snel naar" />
@@ -452,7 +452,7 @@ const Overzicht = () => {
                   </ButtonGroup>
                 </div>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
         <Footer

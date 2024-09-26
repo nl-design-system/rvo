@@ -8,7 +8,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   MobileMenuBar,
@@ -22,7 +22,7 @@ import '../common/responsive.scss';
 const ZaakClean = () => {
   return (
     <body className="rvo-theme rvo-responsive">
-      <LayoutColumnRow size="3xl">
+      <LayoutFlow size="3xl">
         <div>
           <Header />
           <MobileMenuBar
@@ -47,7 +47,7 @@ const ZaakClean = () => {
               { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
             ]}
           ></MobileMenuBar>
-          <LayoutColumnRow size="sm">
+          <LayoutFlow size="sm">
             <MenuBar
               items={[
                 {
@@ -77,7 +77,7 @@ const ZaakClean = () => {
 
             <main className="">
               <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--md">
-                <LayoutColumnRow>
+                <LayoutFlow>
                   <Breadcrumbs
                     items={[
                       {
@@ -91,15 +91,15 @@ const ZaakClean = () => {
                     size="sm"
                   ></Breadcrumbs>
 
-                  <LayoutColumnRow size="xl">
-                    <LayoutColumnRow size="xs">
+                  <LayoutFlow size="xl">
+                    <LayoutFlow size="xs">
                       <Heading type="h1" noMargins={true}>
                         Eco-regeling 2023
                       </Heading>
                       <span className="rvo-text--subtle">Gemeenschappelijk Landbouwbeleid</span>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                     <Alert heading="Actie nodig" kind="warning">
-                      <LayoutColumnRow size="sm">
+                      <LayoutFlow size="sm">
                         Voer de actie direct uit of bekijk de actie voor meer informatie over wat u moet doen.
                         <ButtonGroup>
                           <Button kind="primary" size="sm">
@@ -109,119 +109,119 @@ const ZaakClean = () => {
                             Bekijk de actie
                           </Button>
                         </ButtonGroup>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Alert>
                     <Grid columns="two" gap="4xl" layout="2fr1fr">
                       <div>
-                        <LayoutColumnRow size="2xl">
+                        <LayoutFlow size="2xl">
                           <div>
                             <span className="rvo-text--subtle">Referentienummer</span>
                             <br />
                             <Heading type="h2" noMargins={true}>
                               ERTKV-309483
                             </Heading>
-                            <LayoutColumnRow size="sm">
+                            <LayoutFlow size="sm">
                               <p className="rvo-text--no-margins">
                                 Wilt u uw aanvraagformulier bekijken of iets regelen voor uw aanvraag?
                               </p>
                               <Button>Aanvraag beheren</Button>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           {/* <hr className="rvo-hr"></hr> */}
                           <div>
-                            <LayoutColumnRow>
+                            <LayoutFlow>
                               <Heading type="h2" noMargins={true}>
                                 Documenten
                               </Heading>
                               <div>
-                                <LayoutColumnRow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutColumnRow size="2xs">
+                                <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
+                                  <LayoutFlow size="2xs">
                                     <p className="rvo-text--bold rvo-text--no-margins">Verzoek om informatie</p>
                                     <span className="rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                                  </LayoutColumnRow>
+                                  </LayoutFlow>
                                   <span className="rvo-text--subtle">14 december 2023</span>
                                   <Link icon="downloaden" showIcon="before" noUnderline={true}>
                                     Downloaden
                                   </Link>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                                 <hr className="rvo-hr"></hr>
-                                <LayoutColumnRow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutColumnRow size="2xs">
+                                <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
+                                  <LayoutFlow size="2xs">
                                     <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
                                     <span className="rvo-text--subtle rvo-text--sm">PDF document | 550.73 KB</span>
-                                  </LayoutColumnRow>
+                                  </LayoutFlow>
                                   <span className="rvo-text--subtle">9 november 2023</span>
                                   <Link icon="downloaden" showIcon="before" noUnderline={true}>
                                     Downloaden
                                   </Link>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                                 <hr className="rvo-hr"></hr>
-                                <LayoutColumnRow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutColumnRow size="2xs">
+                                <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
+                                  <LayoutFlow size="2xs">
                                     <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
                                     <span className="rvo-text--subtle rvo-text--sm">PDF document | 550.73 KB</span>
-                                  </LayoutColumnRow>
+                                  </LayoutFlow>
                                   <span className="rvo-text--subtle">9 november 2023</span>
                                   <Link icon="downloaden" showIcon="before" noUnderline={true}>
                                     Downloaden
                                   </Link>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           {/* <hr className="rvo-hr"></hr> */}
                           <div>
                             <Heading type="h2">Hulp nodig?</Heading>
-                            <LayoutColumnRow>
-                              <LayoutColumnRow size="xs">
+                            <LayoutFlow>
+                              <LayoutFlow size="xs">
                                 <span className="rvo-text--bold">Alles over over Eco-regeling</span>
                                 <Button size="sm" kind="secondary" fullWidth={true}>
                                   Bekijk regeling
                                 </Button>
-                              </LayoutColumnRow>
-                              <LayoutColumnRow size="xs">
+                              </LayoutFlow>
+                              <LayoutFlow size="xs">
                                 <span className="rvo-text--bold">Neem contact op</span>
 
                                 <Button size="sm" kind="secondary" fullWidth={true}>
                                   Stel uw vraag via de chat
                                 </Button>
-                              </LayoutColumnRow>
-                            </LayoutColumnRow>
+                              </LayoutFlow>
+                            </LayoutFlow>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div>
-                        <LayoutColumnRow size="2xl">
+                        <LayoutFlow size="2xl">
                           <div>
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <span className="rvo-text--subtle">Status</span>
                               <Icon icon="info" />
-                            </LayoutColumnRow>
+                            </LayoutFlow>
 
                             <Heading type="h2" noMargins={true}>
                               Actie nodig
                             </Heading>
                             <div className="">
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                                <LayoutColumnRow size="0">
+                                <LayoutFlow size="0">
                                   <span className="rvo-text--sm">Aangevraagd</span>
                                   <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">
                                     5 december 2023
                                   </span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-image-bg-progress-tracker-completed-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                                <LayoutColumnRow size="0">
+                                <LayoutFlow size="0">
                                   <span className="rvo-text--sm">In behandeling</span>
 
                                   <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                                <LayoutColumnRow row={true} size="sm">
+                                <LayoutFlow row={true} size="sm">
                                   <StatusIcon type="waarschuwing" size="md"></StatusIcon>
                                   <span className="rvo-text--sm">Actie nodig</span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
 
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-incomplete-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
@@ -239,27 +239,27 @@ const ZaakClean = () => {
                             <Heading type="h2" noMargins={true}>
                               Details
                             </Heading>
-                            <LayoutColumnRow>
-                              <LayoutColumnRow size="0">
+                            <LayoutFlow>
+                              <LayoutFlow size="0">
                                 <span className="rvo-text--subtle rvo-text--sm">Aanvrager</span>
                                 Jansen B.V.
-                              </LayoutColumnRow>
-                              <LayoutColumnRow size="0">
+                              </LayoutFlow>
+                              <LayoutFlow size="0">
                                 <span className="rvo-text--subtle rvo-text--sm">Aanvraagdatum</span>7 november 2023
-                              </LayoutColumnRow>
-                              <LayoutColumnRow size="0">
+                              </LayoutFlow>
+                              <LayoutFlow size="0">
                                 <span className="rvo-text--subtle rvo-text--sm">Regeling</span>Eco-regeling 2023
-                              </LayoutColumnRow>
-                            </LayoutColumnRow>
+                              </LayoutFlow>
+                            </LayoutFlow>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                     </Grid>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
               </div>
             </main>
-          </LayoutColumnRow>
+          </LayoutFlow>
         </div>
         <Footer
           columns={[
@@ -300,7 +300,7 @@ const ZaakClean = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

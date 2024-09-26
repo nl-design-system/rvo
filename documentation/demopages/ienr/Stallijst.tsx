@@ -4,7 +4,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   Pagination,
@@ -111,9 +111,9 @@ const Stallijst = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div>
-                <LayoutColumnRow size="md" row={true} alignItems="center">
+                <LayoutFlow size="md" row={true} alignItems="center">
                   <Icon size="3xl" icon="koe" color="zwart"></Icon>
                   <Heading type="h1" noMargins={true}>
                     Stallijst Rund
@@ -124,7 +124,7 @@ const Stallijst = () => {
                   <Button kind="secondary" size="xs">
                     Download stallijst
                   </Button>
-                </LayoutColumnRow>
+                </LayoutFlow>
                 <h2 className="utrecht-heading-2 rvo-heading--no-margins rvo-heading--mixed">
                   Er zijn &nbsp;
                   <span className="rvo-text--bold">6</span> runderen geregistreerd
@@ -508,7 +508,7 @@ const Stallijst = () => {
                 </table>
               </div>
               <Pagination numberOfPages={10} activePage={5}></Pagination>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </div>
       </main>

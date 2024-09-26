@@ -4,7 +4,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -18,7 +18,7 @@ const Kosten = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="lg">
           <main className="rvo-progress-tracker-active">
@@ -87,12 +87,12 @@ const Kosten = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Kosten en subsidies"></Heading>
                 </div>
                 <div className="rvo-table--responsive">
-                  <LayoutColumnRow size="sm">
+                  <LayoutFlow size="sm">
                     <table className="rvo-table">
                       <caption className="rvo-caption">Aanschafkosten</caption>
                       <thead className="rvo-table-head">
@@ -160,11 +160,11 @@ const Kosten = () => {
                       showIcon="before"
                       href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren"
                     ></Link>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
 
                 <div className="rvo-table--responsive">
-                  <LayoutColumnRow size="sm">
+                  <LayoutFlow size="sm">
                     <table className="rvo-table">
                       <caption className="rvo-caption">Andere subsidies</caption>
                       <thead className="rvo-table-head">
@@ -211,7 +211,7 @@ const Kosten = () => {
                       </tbody>
                     </table>
                     <Link content="Subsidie toevoegen" icon="plus" showIcon="before" href="#"></Link>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
                 <Heading type="h2" textContent="Berekening"></Heading>
                 <dl className="rvo-data">
@@ -243,11 +243,11 @@ const Kosten = () => {
                     Opslaan en verder
                   </a>
                 </ButtonGroup>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

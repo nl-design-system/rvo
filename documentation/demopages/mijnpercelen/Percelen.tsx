@@ -4,7 +4,7 @@ import {
   CheckboxField,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   SelectField,
   TextInputField,
@@ -106,7 +106,7 @@ const Percelen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" />
                   <div className="rvo-instellingen">
                     <a
@@ -129,7 +129,7 @@ const Percelen = () => {
                           Filter en sorteer percelen <Icon icon="delta-omlaag"></Icon>
                           <Icon icon="delta-omhoog"></Icon>
                         </summary>
-                        <LayoutColumnRow size="md">
+                        <LayoutFlow size="md">
                           <SelectField
                             label="Filter op peildatum"
                             options={[{ value: '1', label: '15-05-2023' }]}
@@ -150,7 +150,7 @@ const Percelen = () => {
                               { value: 'c', label: 'Op aantal hectare' },
                             ]}
                           ></SelectField>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </details>
                     </fieldset>
                   </div>
@@ -254,7 +254,7 @@ const Percelen = () => {
                       </div>
                     </div>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import {
   CheckboxField,
   DateInputField,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   SelectField,
@@ -108,7 +108,7 @@ const PerceelEdit = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
                     href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
@@ -128,7 +128,7 @@ const PerceelEdit = () => {
                   />
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                      <LayoutColumnRow size="md">
+                      <LayoutFlow size="md">
                         <TextInputField
                           label="Naam"
                           expandableHelperText={true}
@@ -153,7 +153,7 @@ const PerceelEdit = () => {
                         <div className="rvo-surfaces">
                           <a id="surfaces"></a>
                           <Heading type="h2" textContent="Welke oppervlakte wilt u opslaan?"></Heading>
-                          <LayoutColumnRow size="sm">
+                          <LayoutFlow size="sm">
                             <div className="rvo-value-information">
                               <span className="rvo-value-information-label">De door u ingetekende oppervlakte</span>
                               <span className="rvo-value-information-value">1,0813 ha</span>
@@ -268,7 +268,7 @@ const PerceelEdit = () => {
                               </span>
                               <span className="rvo-value-information-value">1,0313 ha</span>
                             </div>
-                          </LayoutColumnRow>
+                          </LayoutFlow>
                         </div>
                         <DateInputField label="Ingangsdatum"></DateInputField>
                         <details className="rvo-fake-checkbox">
@@ -285,13 +285,13 @@ const PerceelEdit = () => {
                             },
                           ]}
                         ></CheckboxField>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </fieldset>
                   </div>
                   <ButtonGroup>
                     <Button kind="primary">Opslaan</Button>
                   </ButtonGroup>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </div>
           </div>

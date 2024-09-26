@@ -1,4 +1,4 @@
-import { Header, Heading, LayoutColumnRow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import { defaultMenuBarItems } from '../demopages/common/defaultMenuBarItems';
 import '../common/style.scss';
 
@@ -10,7 +10,7 @@ const Accordion = () => {
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="sm" />
         <MaxWidthLayout size="sm">
           <main className="rvo-main">
-            <LayoutColumnRow size="sm">
+            <LayoutFlow size="sm">
               <Heading type="h1" textContent="Telefonisch contact" />
 
               <p>
@@ -20,7 +20,7 @@ const Accordion = () => {
 
               <Heading type="h2" textContent="Keuzemenu's"></Heading>
 
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-accordion rvo-accordion--colored rvo-accordion--border-indicator">
                   <details className="rvo-accordion__item">
                     <summary className="rvo-accordion__item-summary">
@@ -158,12 +158,12 @@ const Accordion = () => {
                   </details>
                 </div>
                 <Heading type="h2" textContent="Met u meekijken"></Heading>
-              </LayoutColumnRow>
+              </LayoutFlow>
               <p>
                 Met u meekijken Als het nodig is, kan onze medewerker met u meekijken op uw scherm. Dit gaat in overleg
                 met u. Wij zien alleen het scherm dat u ook ziet. Wij nemen niet uw computer over.
               </p>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
         </MaxWidthLayout>
       </div>

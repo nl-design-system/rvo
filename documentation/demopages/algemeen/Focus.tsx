@@ -8,7 +8,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   RadioButtonField,
@@ -21,7 +21,7 @@ const Focus = () => {
   return (
     <div className="rvo-demo-page rvo-focus-demopage">
       <Header link="#" />
-      <LayoutColumnRow size="lg">
+      <LayoutFlow size="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -36,7 +36,7 @@ const Focus = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutColumnRow size="3xl">
+        <LayoutFlow size="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading textContent="Focus indicator demo page"></Heading>
             <p className="rvo-text rvo-text--no-margins">
@@ -72,7 +72,7 @@ const Focus = () => {
               .
             </p>
             <div className="rvo-form">
-              <LayoutColumnRow size="sm">
+              <LayoutFlow size="sm">
                 <div className="rvo-form-intro">
                   <Link content="Terug" href="#" showIcon="before" icon="terug" />
                   <Heading type="h1" textContent="Heading" />
@@ -243,7 +243,7 @@ const Focus = () => {
                     </Button>
                   </ButtonGroup>
                 </form>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
 
@@ -286,8 +286,8 @@ const Focus = () => {
               },
             ]}
           />
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

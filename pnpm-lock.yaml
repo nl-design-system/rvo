@@ -245,7 +245,7 @@ importers:
 
   components/language-selector: {}
 
-  components/layout-column-row: {}
+  components/layout-flow: {}
 
   components/link: {}
 

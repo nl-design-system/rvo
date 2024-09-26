@@ -6,7 +6,7 @@ import {
   FileInputField,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -22,14 +22,14 @@ const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main>
-            <LayoutColumnRow size="2xl" row={true} alignItems="start">
+            <LayoutFlow size="2xl" row={true} alignItems="start">
               <ProgressTracker />
               <div className="rvo-form">
-                <LayoutColumnRow size="sm">
+                <LayoutFlow size="sm">
                   <div className="rvo-form-intro">
                     <Link content="Terug" href="#" showIcon="before" icon="terug" />
                     <Heading type="h1" textContent="Heading" />
@@ -200,12 +200,12 @@ const Formulier = () => {
                       </Button>
                     </ButtonGroup>
                   </form>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

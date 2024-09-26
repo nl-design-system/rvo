@@ -1,6 +1,6 @@
-import { ILayoutColumnRowProps } from './template';
+import { ILayoutFlowProps } from './template';
 
-export const defaultArgs: ILayoutColumnRowProps = {
+export const defaultArgs: ILayoutFlowProps = {
   size: 'md',
   row: false,
   wrap: false,

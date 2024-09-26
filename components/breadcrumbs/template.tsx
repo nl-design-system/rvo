@@ -7,7 +7,7 @@ import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import BreadcrumbsItem from '../breadcrumbs-item/template';
 import { Icon } from '../icon/template';
-import '../layout-column-row/index.scss';
+import '../layout-flow/index.scss';
 import './index.scss';
 
 export interface IBreadcrumbsItem {

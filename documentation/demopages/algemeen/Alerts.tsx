@@ -1,4 +1,4 @@
-import { Button, Header, Icon, LayoutColumnRow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Button, Header, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../common/style.scss';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
@@ -6,13 +6,13 @@ const Alerts = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="md">
+      <LayoutFlow size="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
 
         <MaxWidthLayout size="sm">
           <main>
             <div className="rvo-alerts">
-              <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
                 <div className="rvo-alert rvo-alert--info">
                   <Icon icon="info" color="hemelblauw" size="lg" />
                   <div className="rvo-alert-text">
@@ -141,11 +141,11 @@ const Alerts = () => {
                     <Icon icon="kruis" size="md" />
                   </Button>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Button, Icon, LayoutColumnRow, Link, MenuBar, RadioButtonField } from '@nl-rvo/components';
+import { Button, Icon, LayoutFlow, Link, MenuBar, RadioButtonField } from '@nl-rvo/components';
 import '../common/mijn-percelen.scss';
 import '../common/rhs-update.scss';
 
@@ -96,7 +96,7 @@ const Oplossen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   {/* <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" /> */}
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
@@ -105,7 +105,7 @@ const Oplossen = () => {
                           Filter conflicterende percelen <Icon icon="delta-omlaag"></Icon>
                           <Icon icon="delta-omhoog"></Icon>
                         </summary>
-                        <LayoutColumnRow size="md">
+                        <LayoutFlow size="md">
                           <RadioButtonField
                             label=""
                             options={[
@@ -114,13 +114,13 @@ const Oplossen = () => {
                               { id: 'optionB-cb-warning', label: 'Toon alleen niet ingetekende percelen' },
                             ]}
                           ></RadioButtonField>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </details>
                     </fieldset>
                   </div>
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                      <LayoutColumnRow size="xl">
+                      <LayoutFlow size="xl">
                         <div
                           role="group"
                           aria-labelledby="fieldId-label"
@@ -257,14 +257,14 @@ const Oplossen = () => {
                             </Button>
                           </div>
                         </div>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </fieldset>
                   </div>
                   <div className="utrecht-button-group">
                     <Button kind="primary">Versturen</Button>
                     <Button kind="secondary">Percelen wijzigen</Button>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </div>
           </div>

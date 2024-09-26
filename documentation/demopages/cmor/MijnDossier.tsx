@@ -3,7 +3,7 @@ import {
   CheckboxGroup,
   Footer,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   StatusIcon,
@@ -132,13 +132,13 @@ const MijnDossier = () => {
             />
           </div>
           <div className="rvo-content--cmor rvo-content--mijn-dossier">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <h1 className="utrecht-heading-1">
                 <strong>Mijn dossier</strong>
               </h1>
-              <LayoutColumnRow size="sm">
+              <LayoutFlow size="sm">
                 <p className="rvo-paragraph rvo-paragraph--no-spacing">Naar welke aanvraag bent u op zoek?</p>
-                <LayoutColumnRow row={true} size="sm" wrap={true}>
+                <LayoutFlow row={true} size="sm" wrap={true}>
                   <a className="rvo-tag rvo-tag--outline rvo-tag--active" href="#">
                     ISDE (active)
                   </a>
@@ -151,24 +151,24 @@ const MijnDossier = () => {
                   <a className="rvo-tag rvo-tag--outline" href="#">
                     SVVE
                   </a>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
+                </LayoutFlow>
+              </LayoutFlow>
               <details className="rvo-expandable-area">
                 <summary className="rvo-expandable-area-toggle">
                   <Icon icon="delta-omlaag" />
                   <Icon icon="delta-omhoog" />
                   <Link content="Uitgebreid zoeken" noUnderline={true}></Link>
                 </summary>
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <div className="rvo-inline-form">
                     <div className="rvo-rhs-update-component">
-                      <LayoutColumnRow row={true} size="sm">
+                      <LayoutFlow row={true} size="sm">
                         <TextInputField label="Regeling of referentienummer" />
                         <Button kind="primary">Zoeken</Button>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </div>
                   </div>
-                  <LayoutColumnRow size="sm">
+                  <LayoutFlow size="sm">
                     <details className="rvo-expandable-area rvo-filter--cmor">
                       <summary className="rvo-expandable-area-toggle">
                         <Icon icon="delta-omlaag" />
@@ -224,10 +224,10 @@ const MijnDossier = () => {
                         ></CheckboxGroup>
                       </div>
                     </details>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
               </details>
-              <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
                 <div className="rvo-rhs-update-component">
                   <div className="rvo-table--responsive rvo-table--cmor">
                     <table className="rvo-table">
@@ -268,10 +268,10 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <StatusIcon type="waarschuwing" size="md" />
                               <div className="rvo-card-status-text">Actie nodig uiterlijk 19 aug 2023</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
@@ -287,10 +287,10 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <StatusIcon type="waarschuwing" size="md" />
                               <div className="rvo-card-status-text">Actie nodig uiterlijk 4 aug 2023</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
@@ -307,9 +307,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">Financiële afhandeling</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04546009
@@ -325,9 +325,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">Afgerond</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-0454544
@@ -343,9 +343,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">Afgerond</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-0454544
@@ -361,9 +361,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">Afgewezen</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> MITKV23-04534444
@@ -379,9 +379,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">In afwachting</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> QIE49-304933
@@ -397,9 +397,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">Goedgekeurd</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> EURO0933-0393
@@ -415,9 +415,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">In behandeling</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> GMO9494-300
@@ -433,9 +433,9 @@ const MijnDossier = () => {
                             </a>
                           </td>
                           <td className="rvo-table-cell">
-                            <LayoutColumnRow row={true} size="xs">
+                            <LayoutFlow row={true} size="xs">
                               <div className="rvo-card-status-text">Goedgekeurd</div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </td>
                           <td className="rvo-table-cell ">
                             <span className="rvo-table-head-indicator">Referentienummer:</span> VIS0299-009
@@ -477,7 +477,7 @@ const MijnDossier = () => {
                     </div>
                   </nav>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
               <div className="rvo-cards-grid">
                 <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--grijs-2">
                   <div className="rvo-card-content">
@@ -514,7 +514,7 @@ const MijnDossier = () => {
                   </div>
                 </div>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
         <Footer

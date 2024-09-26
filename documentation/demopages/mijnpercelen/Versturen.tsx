@@ -1,4 +1,4 @@
-import { Button, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Button, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../common/mijn-percelen.scss';
 import '../common/rhs-update.scss';
 
@@ -96,7 +96,7 @@ const Versturen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--startpagina">
               <div className="rvo-rhs-update-component">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   {/* <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
                     href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
@@ -109,7 +109,7 @@ const Versturen = () => {
                     Terug naar mijn.rvo.nl
                   </a> */}
                   <div className="rvo-content">
-                    <LayoutColumnRow size="xl">
+                    <LayoutFlow size="xl">
                       <div className="rvo-info">
                         <Heading type="h1" textContent="Controleren en versturen"></Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--lg">
@@ -141,7 +141,7 @@ const Versturen = () => {
                       </div>
                       <div className="rvo-gewijzigde-percelen">
                         <a id="wijzigingen"></a>
-                        <LayoutColumnRow size="sm">
+                        <LayoutFlow size="sm">
                           <Heading type="h3" textContent="Gewijzigde percelen"></Heading>
                           <div className="rvo-cards rvo-cards--percelen">
                             <div className="rvo-card rvo-card--perceel">
@@ -199,16 +199,16 @@ const Versturen = () => {
                               </div>
                             </div>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </div>
           </div>
           <div className="rvo-main-mijn-percelen--sidebar">
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
                 <Heading type="h4" textContent="Hulp"></Heading>
                 <ul className="rvo-list rvo-list--unordered">
@@ -234,7 +234,7 @@ const Versturen = () => {
                   </Button>
                 </div>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </div>

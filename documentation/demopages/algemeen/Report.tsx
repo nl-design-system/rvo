@@ -1,14 +1,14 @@
-import { Footer, Header, Heading, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
 import { defaultMenuBarItems } from '../common/defaultMenuBarItems';
 
 const Report = () => {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
-      <LayoutColumnRow size="lg">
+      <LayoutFlow size="lg">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
-        <LayoutColumnRow size="3xl">
-          <LayoutColumnRow size="xl">
+        <LayoutFlow size="3xl">
+          <LayoutFlow size="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm">
               <Heading textContent="A Green Sustainable and Safe Water Source" type="h1"></Heading>
               <p>
@@ -36,30 +36,30 @@ const Report = () => {
                     </h3>
                   </summary>
                   <div className="rvo-accordion__content">
-                    <LayoutColumnRow size="sm" row={true}>
+                    <LayoutFlow size="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_01
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
-                    </LayoutColumnRow>
-                    <LayoutColumnRow size="sm" row={true}>
+                    </LayoutFlow>
+                    <LayoutFlow size="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_02
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
-                    </LayoutColumnRow>
-                    <LayoutColumnRow size="sm" row={true}>
+                    </LayoutFlow>
+                    <LayoutFlow size="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_03
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
-                    </LayoutColumnRow>
-                    <LayoutColumnRow size="sm" row={true}>
+                    </LayoutFlow>
+                    <LayoutFlow size="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_04
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </div>
                 </details>
               </div>
@@ -159,7 +159,7 @@ const Report = () => {
                 </tbody>
               </table>
             </div>
-          </LayoutColumnRow>
+          </LayoutFlow>
 
           <Footer
             columns={[
@@ -200,8 +200,8 @@ const Report = () => {
               },
             ]}
           />
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

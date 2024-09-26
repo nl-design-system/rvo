@@ -1,11 +1,11 @@
-import { Header, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../common/footer.scss';
 
 const FooterDP = () => {
   return (
     <div className="rvo-demo-page rvo-footer-demopage">
       <Header link="#" />
-      <LayoutColumnRow size="lg">
+      <LayoutFlow size="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -20,7 +20,7 @@ const FooterDP = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutColumnRow size="3xl">
+        <LayoutFlow size="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading textContent="Footer demo page"></Heading>
             <p>
@@ -307,8 +307,8 @@ const FooterDP = () => {
               </div>
             </footer>
           </div>
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ILayoutColumnRowProps {
+export interface ILayoutFlowProps {
   size?: '0' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;
@@ -54,7 +54,7 @@ export const argTypes = {
   },
 };
 
-export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({
+export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
   size = defaultArgs.size,
   row = defaultArgs.row,
   wrap = defaultArgs.wrap,
@@ -63,7 +63,7 @@ export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({
   justifyItems = defaultArgs.justifyItems,
   justifyContent = defaultArgs.justifyContent,
   children,
-}: ILayoutColumnRowProps) => {
+}: ILayoutFlowProps) => {
   return (
     <div
       className={clsx(
@@ -87,4 +87,4 @@ export const LayoutColumnRow: React.FC<ILayoutColumnRowProps> = ({
   );
 };
 
-export default LayoutColumnRow;
+export default LayoutFlow;

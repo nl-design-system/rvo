@@ -1,11 +1,11 @@
-import { Fieldset, Header, Heading, Icon, LayoutColumnRow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Fieldset, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../common/style.scss';
 
 const FiltersPersonen = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="lg">
+      <LayoutFlow size="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -20,10 +20,10 @@ const FiltersPersonen = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutColumnRow size="3xl">
+        <LayoutFlow size="3xl">
           <main>
             <div className="rvo-filter">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <MaxWidthLayout size="sm">
                   <div className="rvo-intro">
                     <Heading type="h1" textContent="Vind uw adviseur"></Heading>
@@ -34,11 +34,11 @@ const FiltersPersonen = () => {
                     </p>
                   </div>
                 </MaxWidthLayout>
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <div className="rvo-tmp-filters">
                     <Fieldset legend="">
                       <MaxWidthLayout size="sm">
-                        <LayoutColumnRow size="xl" row={true}>
+                        <LayoutFlow size="xl" row={true}>
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
@@ -211,14 +211,14 @@ const FiltersPersonen = () => {
                               </label>
                             </div>
                           </details>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </MaxWidthLayout>
                     </Fieldset>
                   </div>
-                  <LayoutColumnRow size="2xl">
+                  <LayoutFlow size="2xl">
                     <div className="rvo-active-filters">
                       <MaxWidthLayout size="sm">
-                        <LayoutColumnRow row={true} size="sm">
+                        <LayoutFlow row={true} size="sm">
                           <span className="rvo-results-count">
                             <strong>12</strong> resultaten voor
                           </span>
@@ -242,17 +242,17 @@ const FiltersPersonen = () => {
                         showIcon="before"
                         icon="verwijderen"
                       ></Button> */}
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </MaxWidthLayout>
                     </div>
 
                     <MaxWidthLayout size="sm">
                       <div className="rvo-results">
-                        <LayoutColumnRow size="2xl">
+                        <LayoutFlow size="2xl">
                           <div className="rvo-result rvo-result--w-image">
-                            <LayoutColumnRow row={true} size="lg">
+                            <LayoutFlow row={true} size="lg">
                               <div className="rvo-result-text">
-                                <LayoutColumnRow size="sm">
+                                <LayoutFlow size="sm">
                                   <Link href="#" content="Jelle Knop"></Link>
 
                                   <span className="rvo-result-description">
@@ -272,7 +272,7 @@ const FiltersPersonen = () => {
                                       <strong>Subsidie/onderwerp:</strong> Eureka/Eurostars
                                     </span>
                                   </span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
                               <a href="#">
                                 <img
@@ -281,13 +281,13 @@ const FiltersPersonen = () => {
                                   src="images/profielfotos/jelle-knop.jpg"
                                 ></img>
                               </a>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           <hr className="rvo-hr" />
                           <div className="rvo-result rvo-result--w-image">
-                            <LayoutColumnRow row={true} size="lg">
+                            <LayoutFlow row={true} size="lg">
                               <div className="rvo-result-text">
-                                <LayoutColumnRow size="sm">
+                                <LayoutFlow size="sm">
                                   <Link href="#" content="Bert van der Heide"></Link>
 
                                   <span className="rvo-result-description">
@@ -304,7 +304,7 @@ const FiltersPersonen = () => {
                                       <strong>Fase activiteit:</strong> Ontwikkeling; Toepassing
                                     </span>
                                   </span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
                               <a href="#">
                                 <img
@@ -313,13 +313,13 @@ const FiltersPersonen = () => {
                                   src="https://pbs.twimg.com/profile_images/1275762454895738881/laNLU5lV_400x400.jpg"
                                 ></img>
                               </a>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           <hr className="rvo-hr" />
                           <div className="rvo-result">
-                            <LayoutColumnRow row={true} size="lg">
+                            <LayoutFlow row={true} size="lg">
                               <div className="rvo-result-text">
-                                <LayoutColumnRow size="sm">
+                                <LayoutFlow size="sm">
                                   <Link href="#" content="Roy Paulissen"></Link>
 
                                   <span className="rvo-result-description">
@@ -339,16 +339,16 @@ const FiltersPersonen = () => {
                                       <strong>Subsidie/onderwerp:</strong> Innovatiepartner Search
                                     </span>
                                   </span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                     </MaxWidthLayout>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
             </div>
           </main>
 
@@ -440,8 +440,8 @@ const FiltersPersonen = () => {
               </ul>
             </MaxWidthLayout>
           </footer>
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

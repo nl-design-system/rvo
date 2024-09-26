@@ -37,7 +37,7 @@ module.exports = {
       {
         name: 'Forms',
         include: [
-          // '../../components/form-fieldset/template.tsx',
+          // // '../../components/form-fieldset/template.tsx',
           // // '../../components/form-textinput/template.tsx',
           // // '../../components/form-field-textinput/template.tsx',
           // '../../components/form-checkbox/template.tsx',
@@ -62,7 +62,7 @@ module.exports = {
         include: [
           '../../components/max-width-layout/template.tsx',
           '../../components/form-layout/template.tsx',
-          '../../components/layout-column-row/template.tsx',
+          '../../components/layout-flow/template.tsx',
         ],
       },
     ],
