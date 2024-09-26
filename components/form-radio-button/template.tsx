@@ -15,10 +15,13 @@ export interface IRadioButtonProps {
    * @uxpinbind onChange 0.target.checked
    */
   checked?: boolean;
+  /** @uxpinpropname Show hover */
   hover?: boolean;
   disabled?: boolean;
   active?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalud */
   invalid?: boolean;
   required?: boolean;
   onFocus?: (event) => void;

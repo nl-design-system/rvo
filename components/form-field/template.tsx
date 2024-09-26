@@ -9,7 +9,6 @@ import { ExpandableText } from '../expandable-text/template';
 import { Feedback } from '../form-feedback/template';
 import { Label } from '../form-field-label/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
-import validateHTML from '../utils/validateHTML';
 import './index.scss';
 
 export interface IFieldProps {
@@ -17,7 +16,7 @@ export interface IFieldProps {
   label?: string;
   labelSize?: 'sm' | 'md';
   labelType?: 'default' | 'optional' | 'required';
-  helperText?: string | React.ReactNode;
+  helperText?: ReactNode | undefined;
   helperTextId?: string;
   expandableHelperText?: boolean;
   expandableHelperTextTitle?: string;
@@ -73,36 +72,20 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   let helperTextMarkup: React.ReactNode;
   // Parse default helper text markup (strings or react node)
   if (helperText) {
-    helperTextMarkup = <div className="utrecht-form-field-description">{helperText}</div>;
+    helperTextMarkup = (
+      <div className="utrecht-form-field-description" id={helperTextId}>
+        {parseContentMarkup(helperText)}
+      </div>
+    );
+  }
 
-    // Parse helper text markup for expandable text
-    if (expandableHelperText) {
-      helperTextMarkup = (
-        <div className="utrecht-form-field-description">
-          <ExpandableText title={expandableHelperTextTitle} content={helperText} />
-        </div>
-      );
-    }
-
-    // Parse helper text markup for HTML strings
-    else if (typeof helperText === 'string' && helperText.length) {
-      const isValidHTML = validateHTML(helperText);
-      if (isValidHTML) {
-        helperTextMarkup = (
-          <div
-            id={helperTextId}
-            className="utrecht-form-field-description"
-            dangerouslySetInnerHTML={{ __html: helperText }}
-          ></div>
-        );
-      } else {
-        helperTextMarkup = (
-          <div id={helperTextId} className="utrecht-form-field-description">
-            {helperText}
-          </div>
-        );
-      }
-    }
+  // Parse helper text markup for expandable text
+  if (expandableHelperText) {
+    helperTextMarkup = (
+      <div className="utrecht-form-field-description">
+        <ExpandableText title={expandableHelperTextTitle} content={helperText} />
+      </div>
+    );
   }
 
   const fieldLabelId = `${fieldId}-label`;
