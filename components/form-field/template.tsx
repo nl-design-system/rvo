@@ -24,6 +24,7 @@ export interface IFieldProps {
   errorText?: string;
   /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinignoreprop */
   children?: ReactNode | undefined;
 }
 

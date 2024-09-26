@@ -11,20 +11,25 @@ export interface ISelectOption {
   value: string;
   label: string;
   selected?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInvalid?: (event) => void;
 }
 
 export interface ISelectProps {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   options?: ISelectOption[];
+  onFocus?: (event) => void;
+  onBlur?: (event) => void;
+  onChange?: (event) => void;
+  onInvalid?: (event) => void;
+  /**
+   * @uxpinbind onChange 0.target.value
+   */
+  currentSelection?: number | null;
 }
 
 export const argTypes = {
