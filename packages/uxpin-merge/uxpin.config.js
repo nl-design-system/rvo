@@ -13,6 +13,7 @@ module.exports = {
           '../../components/breadcrumbs-item/template.tsx',
           '../../components/button/template.tsx',
           '../../components/button-group/template.tsx',
+          '../../components/card/template.tsx',
           '../../components/heading/template.tsx',
           '../../components/data-list/template.tsx',
           '../../components/expandable-text/template.tsx',
