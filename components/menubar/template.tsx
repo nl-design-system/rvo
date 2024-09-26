@@ -125,25 +125,37 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     itemsMarkup.push(
       items
         .filter((item) => item.align === 'right')
-        .map((item, index) => (
-          <MenuBarItem
-            key={`${item.label}--${index}`}
-            label={item.label}
-            icon={item.icon}
-            active={item.active}
-            link={item.link}
-            useIcons={useIcons}
-            align={index === 0 ? 'right' : 'left'}
-            size={size}
-            iconPlacement={iconPlacement}
-            deltaForActiveItem={deltaForActiveItem}
-            useDivider={item.useDivider}
-            linkColor={linkColor}
-          />
-        )),
+        .map((item, index) => {
+          return (
+            <MenuBarItem
+              key={`${item.label}--${index}`}
+              label={item.label}
+              icon={item.icon}
+              active={item.active}
+              link={item.link}
+              useIcons={useIcons}
+              align={index === 0 ? 'right' : 'left'}
+              size={size}
+              iconPlacement={iconPlacement}
+              deltaForActiveItem={deltaForActiveItem}
+              useDivider={item.useDivider}
+              linkColor={linkColor}
+            />
+          );
+        }),
     );
   } else {
-    itemsMarkup = React.Children.map(children, (child, index) => <MenuBarItem key={index} {...(child as any).props} />);
+    let isAlignRightSet = false;
+    itemsMarkup = React.Children.map(children, (child, index) => {
+      // Only set align right prop for the first item that has align = right
+      const isAlignRight = (child as any).props.align === 'right';
+      if (isAlignRight && !isAlignRightSet) {
+        isAlignRightSet = true;
+        return <MenuBarItem key={index} {...(child as any).props} align="right" />;
+      } else {
+        return <MenuBarItem key={index} {...(child as any).props} align="left" />;
+      }
+    });
   }
 
   const navMarkup = (
