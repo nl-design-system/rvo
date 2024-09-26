@@ -11,13 +11,18 @@ import { defaultArgs } from './defaultArgs';
 export interface IDateInputProps {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
   readOnly?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   placeholder?: string;
+  /** @uxpinpropname Value (hh:mm:ss format)> */
   value?: string;
+  /** @uxpinpropname Min (hh:mm:ss format)> */
   min?: string;
+  /** @uxpinpropname Max (hh:mm:ss format)> */
   max?: string;
   step?: number;
   size?: string;
