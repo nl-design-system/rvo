@@ -40,7 +40,7 @@ module.exports = {
           '../../components/form-fieldset/template.tsx',
           '../../components/form-textinput/template.tsx',
           '../../components/form-field-textinput/template.tsx',
-          // '../../components/form-checkbox/template.tsx',
+          '../../components/form-checkbox/template.tsx',
           // '../../components/form-checkbox-group/template.tsx',
           // '../../components/form-field-checkbox/template.tsx',
           // '../../components/form-radio-button/template.tsx',
