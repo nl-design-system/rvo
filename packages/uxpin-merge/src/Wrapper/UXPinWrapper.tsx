@@ -7,6 +7,8 @@ import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 import './theme.scss';
 
+document.body.classList.add('rvo-theme');
+
 export default function UXPinWrapper({ children }) {
-  return <div className="rvo-theme">{children}</div>;
+  return children;
 }
