@@ -39,7 +39,7 @@ module.exports = {
           // item-list
           // ordered-unordered-list
           // paginations
-          // toggle
+          '../../components/toggle/template.tsx',
         ],
       },
       {

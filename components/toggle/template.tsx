@@ -3,13 +3,15 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, options as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
 import './index.scss';
+import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface IToggleProps {
+  /** @uxpinignoreprop */
   content: string;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
@@ -19,6 +21,8 @@ export interface IToggleProps {
   className?: string;
   link?: string;
   linkTarget?: '_blank' | '_self' | '_parent' | '_top';
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -49,6 +53,11 @@ export const argTypes = {
     options: ['_blank', '_self', '_parent', '_top'],
     control: { type: 'radio' },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Toggle: React.FC<IToggleProps> = ({
@@ -61,6 +70,7 @@ export const Toggle: React.FC<IToggleProps> = ({
   className,
   link,
   linkTarget = '_self',
+  children,
 }: IToggleProps) => {
   // Parse icon markup
   let iconClassName = '';
@@ -86,7 +96,7 @@ export const Toggle: React.FC<IToggleProps> = ({
       })}
     >
       {showIcon === 'before' && iconMarkup}
-      {content}
+      {parseContentMarkup(children || content)}
       {showIcon === 'after' && iconMarkup}
     </ToggleElement>
   );
