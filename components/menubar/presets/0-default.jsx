@@ -10,9 +10,3 @@ export default (
     <MenuBarItem uxpId="menuBarItem4" label="Uitloggen" icon="versleutelen" link="#" align="right" />
   </MenuBar>
 );
-
-// {
-//   defaultArgs.items.map((itemProps, index) => (
-//     <MenuBarItem uxpId={`menuBar-${index}`} key={index} {...itemProps} />
-//   ));
-// }
