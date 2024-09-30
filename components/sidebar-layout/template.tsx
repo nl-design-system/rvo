@@ -13,7 +13,7 @@ import SidebarLayoutContent from './sidebar-layout-content/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface ISidebarLayoutProps {
-  size?: string;
+  maxWidthLayoutSize?: 'sm' | 'md' | 'lg';
   sidebarPosition?: 'left' | 'right';
   /** @uxpinignoreprop */
   sidebarBackgroundColor?: boolean;
@@ -28,7 +28,7 @@ export interface ISidebarLayoutProps {
 }
 
 export const argTypes = {
-  size: {
+  maxWidthLayoutSize: {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
@@ -54,7 +54,7 @@ export const argTypes = {
 };
 
 export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
-  size = defaultArgs.size,
+  maxWidthLayoutSize = defaultArgs.maxWidthLayoutSize,
   sidebarPosition = defaultArgs.sidebarPosition,
   sidebarBackgroundColor = defaultArgs.sidebarBackgroundColor,
   sidebarContent = defaultArgs.sidebarContent,
@@ -73,7 +73,7 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
         className={clsx(
           'rvo-sidebar-layout',
           'rvo-max-width-layout',
-          `rvo-max-width-layout--${size}`,
+          `rvo-max-width-layout--${maxWidthLayoutSize}`,
           sidebarPosition === 'right' && 'rvo-sidebar-layout--right',
           className,
         )}
