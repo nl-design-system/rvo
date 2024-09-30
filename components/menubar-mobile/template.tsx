@@ -7,9 +7,9 @@ import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
+import MenuBarItem from '../menubar/menubar-item/template';
 import { IMenuBarItem } from '../menubar/template';
 import './index.scss';
-import MenuBarItem from '../menubar-item/template';
 
 export const argTypes = {
   size: {

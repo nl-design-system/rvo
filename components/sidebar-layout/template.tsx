@@ -8,6 +8,8 @@ import React, { ReactNode } from 'react';
 import '../max-width-layout/index.scss';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import SidebarLayoutBar from './sidebar-layout-bar/template';
+import SidebarLayoutContent from './sidebar-layout-content/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface ISidebarLayoutProps {
@@ -20,9 +22,7 @@ export interface ISidebarLayoutProps {
   content?: string;
   /** @uxpinignoreprop */
   className?: string;
-  /** @uxpinpropname Sidebar Content */
-  sidebarChildren?: ReactNode | undefined;
-  /** @uxpinpropname Content */
+  /** @uxpinignoreprop */
   children?: ReactNode | undefined;
 }
 
@@ -44,11 +44,7 @@ export const argTypes = {
   content: {
     control: 'text',
   },
-  sidebarChildren: {
-    table: {
-      disable: true,
-    },
-  },
+
   children: {
     table: {
       disable: true,
@@ -63,7 +59,6 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
   sidebarContent = defaultArgs.sidebarContent,
   content = defaultArgs.content,
   children,
-  sidebarChildren,
   className,
 }: ISidebarLayoutProps) => {
   return (
@@ -82,12 +77,14 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
           className,
         )}
       >
-        <div
-          className={clsx('rvo-sidebar-layout__sidebar', sidebarBackgroundColor && 'rvo-sidebar-layout__sidebar--bg')}
-        >
-          {parseContentMarkup(sidebarChildren || sidebarContent)}
-        </div>
-        <div className="rvo-sidebar-layout__content">{parseContentMarkup(children || content)}</div>
+        {children ? (
+          children
+        ) : (
+          <>
+            <SidebarLayoutBar>{parseContentMarkup(sidebarContent)}</SidebarLayoutBar>
+            <SidebarLayoutContent>{parseContentMarkup(content)}</SidebarLayoutContent>
+          </>
+        )}
       </div>
     </main>
   );
