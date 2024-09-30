@@ -21,7 +21,7 @@ export interface IRadioButtonProps {
   active?: boolean;
   /** @uxpinpropname Has focus */
   focus?: boolean;
-  /** @uxpinpropname Is invalud */
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   onFocus?: (event) => void;
