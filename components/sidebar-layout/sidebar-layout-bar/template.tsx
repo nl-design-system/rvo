@@ -10,26 +10,24 @@ import { defaultArgs } from '../defaultArgs';
 import '../index.scss';
 
 export interface ISidebarLayoutProps {
-  sidebarBackgroundColor?: boolean;
-  /** @uxpinignoreprop */
-  sidebarContent?: string;
+  backgroundColor?: boolean;
   /** @uxpinignoreprop */
   content?: string;
-  /** @uxpinignoreprop */
-  className?: string;
-  /** @uxpinpropname Sidebar Content */
-  sidebarChildren?: ReactNode | undefined;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
 
 export const SidebarLayoutBar: React.FC<ISidebarLayoutProps> = ({
-  sidebarBackgroundColor = defaultArgs.sidebarBackgroundColor,
+  backgroundColor = defaultArgs.sidebarBackgroundColor,
   content = defaultArgs.content,
   children,
+  ...props
 }: ISidebarLayoutProps) => {
   return (
-    <div className={clsx('rvo-sidebar-layout__sidebar', sidebarBackgroundColor && 'rvo-sidebar-layout__sidebar--bg')}>
+    <div
+      className={clsx('rvo-sidebar-layout__sidebar', backgroundColor && 'rvo-sidebar-layout__sidebar--bg')}
+      {...props}
+    >
       {parseContentMarkup(children || content)}
     </div>
   );

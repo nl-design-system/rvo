@@ -18,8 +18,13 @@ export interface ISidebarLayoutProps {
 export const SidebarLayoutContent: React.FC<ISidebarLayoutProps> = ({
   content = defaultArgs.content,
   children,
+  ...props
 }: ISidebarLayoutProps) => {
-  return <div className="rvo-sidebar-layout__content">{parseContentMarkup(children || content)}</div>;
+  return (
+    <div className="rvo-sidebar-layout__content" {...props}>
+      {parseContentMarkup(children || content)}
+    </div>
+  );
 };
 
 export default SidebarLayoutContent;

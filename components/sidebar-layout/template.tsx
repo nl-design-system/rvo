@@ -15,6 +15,7 @@ import parseContentMarkup from '../utils/parseContentMarkup';
 export interface ISidebarLayoutProps {
   size?: string;
   sidebarPosition?: 'left' | 'right';
+  /** @uxpinignoreprop */
   sidebarBackgroundColor?: boolean;
   /** @uxpinignoreprop */
   sidebarContent?: string;
@@ -64,7 +65,7 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
   return (
     <main
       className={clsx(
-        sidebarBackgroundColor && 'rvo-sidebar-layout__container',
+        'rvo-sidebar-layout__container',
         sidebarPosition === 'right' && 'rvo-sidebar-layout__container--right',
       )}
     >
@@ -77,11 +78,11 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
           className,
         )}
       >
-        {children ? (
-          children
-        ) : (
+        {children || (
           <>
-            <SidebarLayoutBar>{parseContentMarkup(sidebarContent)}</SidebarLayoutBar>
+            <SidebarLayoutBar backgroundColor={sidebarBackgroundColor}>
+              {parseContentMarkup(sidebarContent)}
+            </SidebarLayoutBar>
             <SidebarLayoutContent>{parseContentMarkup(content)}</SidebarLayoutContent>
           </>
         )}
