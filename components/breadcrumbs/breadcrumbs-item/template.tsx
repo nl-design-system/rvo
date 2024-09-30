@@ -5,8 +5,8 @@
 import clsx from 'clsx';
 import React, { SyntheticEvent } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { IBreadcrumbsItem } from '../breadcrumbs/template';
-import Link from '../link/template';
+import Link from '../../link/template';
+import { IBreadcrumbsItem } from '../template';
 
 export interface IBreadcrumbsItemProps extends IBreadcrumbsItem {
   onClick?: (event: SyntheticEvent<HTMLLinkElement>) => void;

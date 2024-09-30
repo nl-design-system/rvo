@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import BreadcrumbsItem from './breadcrumbs-item/template';
 import { defaultArgs } from './defaultArgs';
-import BreadcrumbsItem from '../breadcrumbs-item/template';
 import { Icon } from '../icon/template';
 import '../layout-flow/index.scss';
 import './index.scss';

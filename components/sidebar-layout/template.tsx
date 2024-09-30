@@ -4,18 +4,26 @@
  */
 // @ts-ignore
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import '../max-width-layout/index.scss';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface ISidebarLayoutProps {
   size?: string;
   sidebarPosition?: 'left' | 'right';
   sidebarBackgroundColor?: boolean;
+  /** @uxpinignoreprop */
   sidebarContent?: string;
+  /** @uxpinignoreprop */
   content?: string;
+  /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinpropname Sidebar Content */
+  sidebarChildren?: ReactNode | undefined;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -36,19 +44,28 @@ export const argTypes = {
   content: {
     control: 'text',
   },
+  sidebarChildren: {
+    table: {
+      disable: true,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const SidebarLayout: React.FC<PropsWithChildren<ISidebarLayoutProps>> = ({
+export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
   size = defaultArgs.size,
   sidebarPosition = defaultArgs.sidebarPosition,
   sidebarBackgroundColor = defaultArgs.sidebarBackgroundColor,
   sidebarContent = defaultArgs.sidebarContent,
   content = defaultArgs.content,
   children,
+  sidebarChildren,
   className,
-}: PropsWithChildren<ISidebarLayoutProps>) => {
-  let parsedContent = children || content;
-
+}: ISidebarLayoutProps) => {
   return (
     <main
       className={clsx(
@@ -68,9 +85,9 @@ export const SidebarLayout: React.FC<PropsWithChildren<ISidebarLayoutProps>> = (
         <div
           className={clsx('rvo-sidebar-layout__sidebar', sidebarBackgroundColor && 'rvo-sidebar-layout__sidebar--bg')}
         >
-          {sidebarContent}
+          {parseContentMarkup(sidebarChildren || sidebarContent)}
         </div>
-        <div className="rvo-sidebar-layout__content">{parsedContent}</div>
+        <div className="rvo-sidebar-layout__content">{parseContentMarkup(children || content)}</div>
       </div>
     </main>
   );

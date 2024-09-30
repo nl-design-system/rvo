@@ -5,9 +5,9 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import Icon from '../icon/template';
-import { IconType } from '../icon/types';
-import Link from '../link/template';
+import Icon from '../../icon/template';
+import { IconType } from '../../icon/types';
+import Link from '../../link/template';
 
 export interface IMenuBarItemProps {
   label: string;

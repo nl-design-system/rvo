@@ -1,4 +1,4 @@
-import AccordionItem from '../../accordion-item/template';
+import AccordionItem from '../accordion-item/template';
 import { defaultArgs } from '../defaultArgs';
 import Accordion from '../template';
 

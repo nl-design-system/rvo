@@ -4,9 +4,9 @@
  */
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import Heading from '../heading/template';
-import Icon from '../icon/template';
-import parseContentMarkup from '../utils/parseContentMarkup';
+import Heading from '../../heading/template';
+import Icon from '../../icon/template';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IAccordionItemProps {
   title: string;

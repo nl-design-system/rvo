@@ -71,8 +71,8 @@ module.exports = {
         include: [
           '../../components/max-width-layout/template.tsx',
           '../../components/form-layout/template.tsx',
+          '../../components/sidebar-layout/template.tsx',
           '../../components/layout-flow/template.tsx',
-          // sidebar-layout
         ],
       },
     ],

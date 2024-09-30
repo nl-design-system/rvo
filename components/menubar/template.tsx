@@ -5,10 +5,10 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import MenuBarItem from './menubar-item/template';
 import { IconType } from '../icon/types';
 import MaxWidthLayout from '../max-width-layout/template';
 import './index.scss';
-import MenuBarItem from '../menubar-item/template';
 export interface IMenuBarItem {
   label: string;
   icon?: IconType;

@@ -5,7 +5,7 @@
 import './index.scss';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { IProgressTrackerStepProps, ProgressTrackerStep } from '../progress-tracker-step/template';
+import { IProgressTrackerStepProps, ProgressTrackerStep } from './progress-tracker-step/template';
 
 export interface IProgressTrackerProps {
   /** @uxpinignoreprop */

@@ -5,8 +5,8 @@
 
 import React, { ReactNode, SyntheticEvent } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Link } from '../link/template';
-import parseContentMarkup from '../utils/parseContentMarkup';
+import { Link } from '../../link/template';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IFooterItemProps {
   /** @uxpinpropname Item content */

@@ -5,8 +5,8 @@
 import './index.scss';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import { AccordionItem, IAccordionItemProps } from './accordion-item/template';
 import { defaultArgs } from './defaultArgs';
-import { AccordionItem, IAccordionItemProps } from '../accordion-item/template';
 
 export interface IAccordionProps {
   /** @uxpinignoreprop */

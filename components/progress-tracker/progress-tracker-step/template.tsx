@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Link } from '../link/template';
+import { Link } from '../../link/template';
 
 export interface IProgressTrackerStepProps {
   state: 'start' | 'incomplete' | 'doing' | 'completed' | 'disabled' | 'end';

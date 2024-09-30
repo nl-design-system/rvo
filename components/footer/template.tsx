@@ -6,8 +6,8 @@ import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-reac
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import FooterColumn from '../footer-column/template';
-import FooterItem from '../footer-item/template';
+import FooterColumn from './footer-column/template';
+import FooterItem from './footer-item/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
