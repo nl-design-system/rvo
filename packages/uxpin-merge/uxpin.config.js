@@ -35,7 +35,7 @@ module.exports = {
           '../../components/progress-tracker/progress-tracker-step/template.tsx',
           // grid
           // hero
-          // horizontal rule
+          '../../components/horizontal-rule/template.tsx',
           // item-list
           // ordered-unordered-list
           // paginations
