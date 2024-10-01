@@ -77,8 +77,8 @@
       border-color: var(--rvo-card-outline-hover-border-color);
     }
 
-    &:has(a):hover,
-    &:has(a):focus {
+    &:has(.rvo-card__full-card-link):hover,
+    &:has(.rvo-card__full-card-link):focus {
       border-color: var(--rvo-card-outline-hover-border-color);
     }
   }
