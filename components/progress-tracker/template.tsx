@@ -31,7 +31,7 @@ export const ProgressTracker: React.FC<PropsWithChildren<IProgressTrackerProps>>
         React.Children.map(children, (child, index) => (
           <ProgressTrackerStep key={index} {...(child as any).props} />
         ))) ||
-        steps.map((stepProps, index) => <ProgressTrackerStep key={index} {...stepProps} />)}
+        (steps && steps.map((stepProps, index) => <ProgressTrackerStep key={index} {...stepProps} />))}
     </div>
   );
 };

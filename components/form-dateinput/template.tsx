@@ -21,12 +21,12 @@ export interface IDateInputProps {
   max?: string;
   step?: number;
   size?: string;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInput?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
 }
 
 export const argTypes = {
@@ -92,10 +92,10 @@ export const DateInput: React.FC<IDateInputProps> = ({
       readOnly && 'utrecht-textbox--readonly',
       required && 'utrecht-textbox--required',
     ),
-    disabled: disabled || null,
-    'aria-invalid': invalid || null,
-    required: required || null,
-    readOnly: readOnly || null,
+    disabled: disabled || undefined,
+    'aria-invalid': invalid || undefined,
+    required: required || undefined,
+    readOnly: readOnly || undefined,
     defaultValue: value,
     ...(min && { min }),
     ...(max && { max }),
