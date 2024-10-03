@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.2.0
+
+### Minor Changes
+
+- edb1cab: Added Tab component, several small fixes
+
 ## 1.1.0
 
 ### Minor Changes
