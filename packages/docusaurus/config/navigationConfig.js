@@ -29,6 +29,12 @@ module.exports = {
       },
       {
         type: 'doc',
+        docId: 'components/atoms',
+        position: 'left',
+        label: 'Atoms',
+      },
+      {
+        type: 'doc',
         docId: 'patterns/layout/app-layout',
         position: 'left',
         label: 'Patronen',

@@ -26,6 +26,8 @@ const config: StorybookConfig = {
     '../../../documentation/demopages/**/*.stories.@(jsx|tsx)',
     '../../../components/**!(node_modules)/*.docpage.mdx',
     '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
+    '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
+    '../../../components/atoms/**!(node_modules)/*.stories.@(jsx|tsx)',
   ],
   features: {
     buildStoriesJson: false,

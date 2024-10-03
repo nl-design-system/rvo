@@ -57,6 +57,7 @@ const parameters = {
         'Aan de slag',
         'Huisstijl',
         ['Color', 'Font', 'Size', 'Space'],
+        'Atoms',
         'Componenten',
         "Pagina's",
         ['Templates', 'Voorbeelden', 'Experimenteel'],
