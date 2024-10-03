@@ -62,45 +62,4 @@ export default [
       filesize(),
     ],
   },
-  {
-    input: 'src/css-module/index.ts',
-    output: [
-      {
-        file: 'dist/css-module/index.js',
-        format: 'cjs',
-        sourcemap: true,
-        globals: outputGlobals,
-      },
-      {
-        file: 'dist/css-module/index.mjs',
-        format: 'esm',
-        sourcemap: true,
-        globals: outputGlobals,
-      },
-    ],
-    external: [/@babel\/runtime/, 'react-dom', 'react'],
-    plugins: [
-      postcss({
-        extensions: ['.css', '.scss'],
-        minimize: true,
-      }),
-      peerDepsExternal({ includeDependencies: true }),
-      nodeExternal(),
-      resolve({ browser: true }),
-      commonjs({
-        include: /node_modules/,
-      }),
-      nodePolyfills(),
-      typescript({ includeDependencies: false }),
-      babel({
-        presets: ['@babel/preset-react'],
-        babelHelpers: 'runtime',
-        exclude: ['node_modules/**', 'dist/**'],
-        extensions: ['.ts', '.tsx'],
-        inputSourceMap: true,
-        plugins: ['@babel/plugin-transform-runtime'],
-      }),
-      filesize(),
-    ],
-  },
 ];
