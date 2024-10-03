@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Link } from '../link/template';
+import { ILinkProps, Link } from '../link/template';
 import './index.scss';
 
 export interface IProgressTrackerStepProps {
@@ -14,7 +14,7 @@ export interface IProgressTrackerStepProps {
   size: string;
   label: string;
   link?: string;
-  onClick?: (event) => void;
+  onClick?: ILinkProps['onClick'];
 }
 
 export const argTypes = {

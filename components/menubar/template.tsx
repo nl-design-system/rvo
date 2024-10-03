@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { JSX } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
 import { IconType } from '../icon/types';
@@ -95,10 +95,18 @@ export const parseMenuItem = ({
   linkColor = defaultArgs.linkColor,
   useDivider = false,
   ...otherProps
+}: IMenuBarItem & {
+  key?: string;
+  type?: IMenuBarProps['type'];
+  useIcon: IMenuBarProps['useIcons'];
+  size: IMenuBarProps['size'];
+  iconPlacement: IMenuBarProps['iconPlacement'];
+  deltaForActiveItem: IMenuBarProps['deltaForActiveItem'];
+  linkColor?: IMenuBarProps['linkColor'];
 }) => {
   // Parse delta for active menu items
-  let itemMarkup;
-  let deltaMarkup;
+  let itemMarkup: JSX.Element | null = null;
+  let deltaMarkup: JSX.Element | null = null;
   if (active !== undefined && type === 'primary' && deltaForActiveItem) {
     deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" color="wit" />;
   }
@@ -172,28 +180,28 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   let itemsMarkup = null;
 
   if (!children) {
-    // Left items
-    itemsMarkup = items
-      .filter((item) => item.align !== 'right')
-      .map((item, index) =>
-        parseMenuItem({
-          key: `${item.label}--${index}`,
-          label: item.label,
-          icon: item.icon,
-          active: item.active,
-          link: item.link,
-          useIcon: useIcons,
-          size,
-          iconPlacement,
-          deltaForActiveItem,
-          useDivider: item.useDivider,
-          linkColor,
-        }),
-      );
-
-    // Right items
-    itemsMarkup.push(
-      items
+    itemsMarkup = [
+      // Left items
+      ...items
+        .filter((item) => item.align !== 'right')
+        .map((item, index) =>
+          parseMenuItem({
+            key: `${item.label}--${index}`,
+            label: item.label,
+            icon: item.icon,
+            active: item.active,
+            link: item.link,
+            useIcon: useIcons,
+            size,
+            type,
+            iconPlacement,
+            deltaForActiveItem,
+            useDivider: item.useDivider,
+            linkColor,
+          }),
+        ),
+      // Right items
+      ...items
         .filter((item) => item.align === 'right')
         .map((item, index) =>
           parseMenuItem({
@@ -203,15 +211,16 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
             active: item.active,
             link: item.link,
             useIcon: useIcons,
-            align: index === 0 && 'right',
+            align: index === 0 ? 'right' : 'left',
             size,
+            type,
             iconPlacement,
             deltaForActiveItem,
             useDivider: item.useDivider,
             linkColor,
           }),
         ),
-    );
+    ];
   } else {
     itemsMarkup = children;
   }

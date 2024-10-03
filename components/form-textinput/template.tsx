@@ -23,14 +23,14 @@ export interface ITextInputProps {
   prefix?: string;
   suffix?: string;
   size?: string;
-  maxLength?: number | null;
+  maxLength?: number | undefined;
   maxLengthIndicator?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInput?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onInput?: (event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onInvalid?: (event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 export const argTypes = {
@@ -148,7 +148,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
         <Textarea {...props} className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])} />
         <span className="utrecht-textbox-remaining-chars">
-          Nog {maxLength - currentValue.length} teken{maxLength - currentValue.length > 1 && 's'} over
+          Nog {maxLength - (currentValue?.length || 0)} teken{maxLength - (currentValue?.length || 0) > 1 && 's'} over
         </span>
       </div>
     );

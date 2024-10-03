@@ -5,7 +5,7 @@ export const defaultArgs: IHeadingProps = {
   textContent: 'Heading',
   link: '',
   showIcon: 'no',
-  icon: null,
+  icon: undefined,
   iconAriaLabel: '',
   noMargins: false,
   mixedBoldAndNormal: false,

@@ -67,7 +67,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   let headingMarkup = textContent;
 
   const props = {
-    className: clsx(`utrecht-heading-${type.replace('h', '')}`, className),
+    className: clsx(`utrecht-heading-${type?.replace('h', '')}`, className),
     ...otherProps,
   };
 
@@ -75,29 +75,30 @@ export const Heading: React.FC<IHeadingProps> = ({
     let iconSize, gap;
 
     switch (type) {
+      default:
       case 'h1':
-        iconSize = 'xl';
-        gap = 'sm';
+        iconSize = 'xl' as const;
+        gap = 'sm' as const;
         break;
       case 'h2':
-        iconSize = 'xl';
-        gap = 'sm';
+        iconSize = 'xl' as const;
+        gap = 'sm' as const;
         break;
       case 'h3':
-        iconSize = 'lg';
-        gap = 'xs';
+        iconSize = 'lg' as const;
+        gap = 'xs' as const;
         break;
       case 'h4':
-        iconSize = 'lg';
-        gap = 'xs';
+        iconSize = 'lg' as const;
+        gap = 'xs' as const;
         break;
       case 'h5':
-        iconSize = 'md';
-        gap = 'xs';
+        iconSize = 'md' as const;
+        gap = 'xs' as const;
         break;
       case 'h6':
-        iconSize = 'sm';
-        gap = 'xs';
+        iconSize = 'sm' as const;
+        gap = 'xs' as const;
         break;
     }
 

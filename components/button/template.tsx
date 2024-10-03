@@ -27,9 +27,9 @@ export interface IButtonProps {
   fullWidth?: boolean;
   className?: string;
   alignToRightInGroup?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onClick?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const argTypes = {
