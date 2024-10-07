@@ -12,7 +12,7 @@ export interface ICheckboxGroupProps {
   invalid?: boolean;
   /** @uxpinignoreprop */
   options?: ICheckboxProps[];
-  onChange?: (event) => void;
+  onChange?: (currentGroupSelection: ICheckboxProps[]) => void;
   /**
    * @uxpinbind onChange 0.target.value
    */

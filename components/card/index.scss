@@ -77,8 +77,8 @@
       border-color: var(--rvo-card-outline-hover-border-color);
     }
 
-    &:hover,
-    &:focus {
+    &:has(.rvo-card__full-card-link):hover,
+    &:has(.rvo-card__full-card-link):focus {
       border-color: var(--rvo-card-outline-hover-border-color);
     }
   }
@@ -112,6 +112,10 @@
     overflow: hidden;
     padding-block-start: var(--rvo-space-xl);
     position: relative;
+
+    .rvo-card__content {
+      position: relative;
+    }
 
     &::after {
       background-color: var(--rvo-card-background-image-overlay-color);

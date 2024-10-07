@@ -13,7 +13,7 @@ export interface IRadioButtonGroupProps {
   invalid?: boolean;
   /** @uxpinignoreprop */
   options?: IRadioButtonProps[];
-  onChange?: (event) => void;
+  onChange?: (currentGroupSelection: number) => void;
   /**
    * @uxpinbind onChange 0.target.value
    */
@@ -55,7 +55,7 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
     if (radioGroupRef.current) {
       const allRadioElements = Array.from(radioGroupRef.current.getElementsByTagName('input'));
       const currentGroupSelection = allRadioElements.findIndex((radioElement) => radioElement.checked === true);
-      onChange(currentGroupSelection);
+      onChange?.(currentGroupSelection);
     }
   }, [radioGroupRef]);
 
@@ -71,9 +71,10 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
             onUpdateGroup={onUpdateGroup}
           />
         ))) ||
-        options.map((option) => (
-          <RadioButton key={option.id} id={option.id} name={name} label={option.label} checked={option.checked} />
-        ))}
+        (options &&
+          options.map((option) => (
+            <RadioButton key={option.id} id={option.id} name={name} label={option.label} checked={option.checked} />
+          )))}
     </div>
   );
 };

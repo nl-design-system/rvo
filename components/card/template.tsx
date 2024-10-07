@@ -91,8 +91,8 @@ export const Card: React.FC<ICardProps> = ({
   onClick,
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
-  const hasLinkIndicator = showLinkIndicator && link.length > 0 && fullCardLink === true;
-  const hasBackgroundImage = background === 'image' && backgroundImage.length > 0;
+  const hasLinkIndicator = showLinkIndicator && link && link.length > 0 && fullCardLink === true;
+  const hasBackgroundImage = background === 'image' && backgroundImage && backgroundImage?.length > 0;
 
   const ContentContainer = hasLinkIndicator ? 'div' : React.Fragment;
   const contentContainerProps = hasLinkIndicator ? { className: clsx('rvo-card--with-link-indicator') } : {};
@@ -105,8 +105,8 @@ export const Card: React.FC<ICardProps> = ({
     <div
       className={clsx(
         'rvo-card',
-        image.length > 0 && 'rvo-card--with-image',
-        image.length > 0 && imageSize && `rvo-card--with-image-${imageSize}`,
+        image && image.length > 0 && 'rvo-card--with-image',
+        image && image.length > 0 && imageSize && `rvo-card--with-image-${imageSize}`,
         outline && background !== 'image' && 'rvo-card--outline',
         (outline || background !== 'none') && `rvo-card--padding-${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
@@ -122,7 +122,7 @@ export const Card: React.FC<ICardProps> = ({
         </div>
       )}
 
-      {image.length > 0 && (
+      {image && image.length > 0 && (
         <div className={clsx('rvo-card__image-container')}>
           <img src={getImageSrc(image)} className="rvo-card__image" />
         </div>
@@ -130,9 +130,9 @@ export const Card: React.FC<ICardProps> = ({
 
       <ContentContainer {...contentContainerProps}>
         <div className="rvo-card__content">
-          {title?.length > 0 && (
+          {title && title.length > 0 && (
             <h3 className="utrecht-heading-3">
-              {link.length > 0 ? (
+              {link?.length > 0 ? (
                 <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
                   {parseContentMarkup(title)}
                 </Link>

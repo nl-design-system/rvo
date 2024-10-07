@@ -34,6 +34,7 @@
 .rvo-topnav__list {
   background-color: transparent;
   display: flex;
+  flex-wrap: wrap;
   justify-content: normal;
   list-style-type: none;
   margin-block-end: var(--rvo-topnav-list-margin-block-end);

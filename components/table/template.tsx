@@ -68,12 +68,14 @@ export const Table: React.FC<ITableProps> = ({
                   className={clsx(
                     'rvo-table-header',
                     column.sortable && 'rvo-table-header--sortable',
-                    column.sortable && column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
+                    column.sortable &&
+                      column.sortDirection &&
+                      column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
                     column.type === 'numeric' && 'rvo-table-header--numeric',
                   )}
                 >
                   {column.label}
-                  {column.sortable && column.sortDirection.length > 0 && (
+                  {column.sortable && column.sortDirection && column.sortDirection.length > 0 && (
                     <Button kind="tertiary" showIcon="before" icon={icon as any} label="" size="sm" />
                   )}
                 </th>

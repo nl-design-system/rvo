@@ -28,11 +28,11 @@ export interface IButtonProps {
   className?: string;
   alignToRightInGroup?: boolean;
   /** @uxpinpropname On Focus */
-  onFocus?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Blur */
-  onBlur?: (event) => void;
+  onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Click */
-  onClick?: (event) => void;
+  onClick?: (event: React.FocusEvent<HTMLButtonElement>) => void;
 }
 
 export const argTypes = {

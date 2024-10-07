@@ -1,4 +1,4 @@
-export default (htmlString) => {
+export default (htmlString: string) => {
   if (typeof window !== 'undefined') {
     let htmlStringToParse = htmlString;
     const containsHTML = /<[a-z][\s\S]*>/i.test(htmlString);

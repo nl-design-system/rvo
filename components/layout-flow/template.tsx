@@ -68,11 +68,11 @@ export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
     <div
       className={clsx(
         row ? 'rvo-layout-row' : 'rvo-layout-column',
-        alignItems.length > 0 && `rvo-layout-align-items-${alignItems}`,
-        alignContent.length > 0 && `rvo-layout-align-content-${alignContent}`,
-        justifyItems.length > 0 && `rvo-layout-justify-items-${justifyItems}`,
-        justifyContent.length > 0 && `rvo-layout-justify-content-${justifyContent}`,
-        `rvo-layout-gap--${size}`,
+        alignItems && alignItems.length > 0 && `rvo-layout-align-items-${alignItems}`,
+        alignContent && alignContent.length > 0 && `rvo-layout-align-content-${alignContent}`,
+        justifyItems && justifyItems.length > 0 && `rvo-layout-justify-items-${justifyItems}`,
+        justifyContent && justifyContent.length > 0 && `rvo-layout-justify-content-${justifyContent}`,
+        size && `rvo-layout-gap--${size}`,
         wrap && 'rvo-layout--wrap',
       )}
       {...(!children && { style: { height: '300px' } })}

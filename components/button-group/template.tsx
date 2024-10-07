@@ -60,11 +60,11 @@ export const ButtonGroup: React.FC<IButtonGroupProps> = ({
     >
       {children}
       {!children &&
-        buttonsLeft.map((buttonProps, index) => {
+        buttonsLeft?.map((buttonProps, index) => {
           return <Button key={index} {...buttonProps} />;
         })}
       {!children &&
-        buttonsRight.map((buttonProps, index) => (
+        buttonsRight?.map((buttonProps, index) => (
           <Button key={index} {...buttonProps} className="utrecht-button-group__align-right" />
         ))}
     </UtrechtButtonGroup>

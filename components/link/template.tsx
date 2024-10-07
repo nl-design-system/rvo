@@ -14,12 +14,13 @@ export interface ILinkProps {
   href?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
   weight?: 'normal' | 'bold';
-  onClick?: (event) => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconSize?: 'sm' | 'md';
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconAriaLabel?: string;
+  role?: string;
   hover?: boolean;
   active?: boolean;
   focus?: boolean;
