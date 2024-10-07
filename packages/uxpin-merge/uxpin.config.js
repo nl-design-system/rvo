@@ -33,7 +33,6 @@ module.exports = {
           '../../components/table/template.tsx',
           '../../components/progress-tracker/template.tsx',
           '../../components/progress-tracker/progress-tracker-step/template.tsx',
-          // grid
           // hero
           '../../components/horizontal-rule/template.tsx',
           // item-list
@@ -75,6 +74,7 @@ module.exports = {
           '../../components/sidebar-layout/sidebar-layout-bar/template.tsx',
           '../../components/sidebar-layout/sidebar-layout-content/template.tsx',
           '../../components/layout-flow/template.tsx',
+          '../../components/grid/template.tsx',
         ],
       },
     ],

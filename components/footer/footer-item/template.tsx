@@ -3,16 +3,16 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-import React, { ReactNode, SyntheticEvent } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Link } from '../../link/template';
+import { ILinkProps, Link } from '../../link/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IFooterItemProps {
   /** @uxpinpropname Item content */
   children?: ReactNode;
   link?: string;
-  onClick?: (event: SyntheticEvent<HTMLLinkElement>) => void;
+  onClick?: ILinkProps['onClick'];
 }
 
 export const FooterItem: React.FC<IFooterItemProps> = ({

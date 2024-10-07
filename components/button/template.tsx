@@ -32,7 +32,7 @@ export interface IButtonProps {
   /** @uxpinpropname On Blur */
   onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Click */
-  onClick?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const argTypes = {

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ILinkProps, Link } from '../../link/template';
-import './index.scss';
+import '../index.scss';
 
 export interface IProgressTrackerStepProps {
   state: 'start' | 'incomplete' | 'doing' | 'completed' | 'disabled' | 'end';

@@ -3,13 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { SyntheticEvent } from 'react';
+import React from 'react';
 import { defaultArgs } from './defaultArgs';
-import Link from '../../link/template';
+import Link, { ILinkProps } from '../../link/template';
 import { IBreadcrumbsItem } from '../template';
 
 export interface IBreadcrumbsItemProps extends IBreadcrumbsItem {
-  onClick?: (event: SyntheticEvent<HTMLLinkElement>) => void;
+  onClick?: ILinkProps['onClick'];
 }
 
 export const BreadcrumbsItem: React.FC<IBreadcrumbsItemProps> = ({
