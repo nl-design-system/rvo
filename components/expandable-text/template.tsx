@@ -11,7 +11,7 @@ import './index.scss';
 export interface IExpandableTextProps {
   title: string;
   /** @uxpinignoreprop */
-  content: string | ReactNode;
+  content?: string | ReactNode;
   open?: boolean;
   subtle?: boolean;
   /** @uxpinpropname Content */
