@@ -77,7 +77,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   let headingMarkup = parseContentMarkup(children || textContent);
 
   const props = {
-    className: clsx(`utrecht-heading-${type?.replace('h', '')}`, className),
+    className: clsx(className, `utrecht-heading-${type?.replace('h', '')}`),
     ...otherProps,
   };
 

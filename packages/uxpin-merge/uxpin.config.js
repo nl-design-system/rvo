@@ -33,7 +33,7 @@ module.exports = {
           '../../components/table/template.tsx',
           '../../components/progress-tracker/template.tsx',
           '../../components/progress-tracker/progress-tracker-step/template.tsx',
-          // hero
+          '../../components/hero/template.tsx',
           '../../components/horizontal-rule/template.tsx',
           // item-list
           // ordered-unordered-list

@@ -3,14 +3,14 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Icon from '../icon/template';
 import Link from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ICardProps extends PropsWithChildren {
+export interface ICardProps {
   background: 'none' | 'color' | 'image';
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;

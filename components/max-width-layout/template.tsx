@@ -45,6 +45,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
   inlinePadding = defaultArgs.inlinePadding,
   children,
   className = [],
+  ...props
 }: IMaxWidthLayoutProps) => {
   let parsedContent = parseContentMarkup(children || content);
 
@@ -72,6 +73,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
         `rvo-max-width-layout-inline-padding--${inlinePadding}`,
         className,
       )}
+      {...props}
     >
       {parsedContent}
     </div>
