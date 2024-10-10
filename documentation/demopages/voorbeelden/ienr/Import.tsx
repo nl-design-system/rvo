@@ -32,7 +32,7 @@ const Import = () => {
           },
           {
             label: 'Mijn dossier',
-            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-mijn-dossier--default&viewMode=story',
+            link: '#',
             icon: 'map',
           },
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
