@@ -61,7 +61,10 @@ const Index = () => {
               </p>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-www-home--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-experimenteel-www-home--default&viewMode=story"
+                className="rvo-link"
+              >
                 WWW RVO (rvo.nl)
               </a>
               <p className="rvo-paragraph--sm">

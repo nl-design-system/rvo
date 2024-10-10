@@ -363,7 +363,7 @@ const Landbouw = () => {
                     <li className="rvo-quick-links-list-item">
                       <a
                         className="rvo-link rvo-link--no-underline"
-                        href="iframe.html?args=&id=demo-pagina-s-www-percelenregistreren--default&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-experimenteel-www-percelenregistreren--default&viewMode=story"
                       >
                         Registreer uw percelen
                       </a>
