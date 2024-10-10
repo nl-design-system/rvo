@@ -79,7 +79,10 @@ const Index = () => {
               </p>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story"
+                className="rvo-link"
+              >
                 Identificatie en Registratie van uw dieren (I&R)
               </a>
             </li>

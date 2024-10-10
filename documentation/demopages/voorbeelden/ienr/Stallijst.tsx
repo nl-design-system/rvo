@@ -78,7 +78,7 @@ const Stallijst = () => {
               items={[
                 {
                   label: 'Dashboard',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
                 },
                 {
@@ -88,13 +88,13 @@ const Stallijst = () => {
                 },
                 {
                   label: 'Melden',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
                   icon: 'plus',
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 {
                   label: 'Bekijken',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
                   icon: 'oog',
                   active: true,
                 },

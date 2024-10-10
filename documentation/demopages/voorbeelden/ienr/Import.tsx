@@ -80,7 +80,7 @@ const Import = () => {
               items={[
                 {
                   label: 'Dashboard',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
                 },
                 {
@@ -90,14 +90,14 @@ const Import = () => {
                 },
                 {
                   label: 'Melden',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
                   icon: 'plus',
                   active: true,
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 {
                   label: 'Bekijken',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
                   icon: 'oog',
                 },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
@@ -141,7 +141,7 @@ const Import = () => {
 
                     <ButtonGroup>
                       <a
-                        href="iframe.html?args=&id=demo-pagina-s-i-r-importgegevens--default&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-importgegevens--default&viewMode=story"
                         className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                       >
                         Opslaan en gegevens runderen invoeren

@@ -80,7 +80,7 @@ const Dashboard = () => {
               items={[
                 {
                   label: 'Dashboard',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
                   active: true,
                 },
@@ -91,13 +91,13 @@ const Dashboard = () => {
                 },
                 {
                   label: 'Melden',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
                   icon: 'plus',
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 {
                   label: 'Bekijken',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
                   icon: 'oog',
                 },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
@@ -193,7 +193,7 @@ const Dashboard = () => {
                         <span className="rvo-text--subtle rvo-text--sm">Peildatum: 20-02-2024</span>
                       </LayoutColumnRow>
                       <a
-                        href="iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story"
                         className="rvo-link rvo-link--no-underline rvo-link--normal"
                       >
                         <span className="rvo-text--bold">6</span>
