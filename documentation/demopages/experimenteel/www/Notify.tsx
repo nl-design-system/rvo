@@ -6,7 +6,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -138,8 +138,8 @@ const Notify = () => {
               Wilt u weten hoeveel budget er nog beschikbaar is voor de Investeringssubsidie duurzame energie en
               energiebesparing (ISDE)? Op deze pagina leest u de stand van zaken.
             </p>
-            <LayoutColumnRow>
-              <LayoutColumnRow row={true} size="sm">
+            <LayoutFlow>
+              <LayoutFlow row={true} size="sm">
                 <Button size="sm">Direct aanvragen</Button>
                 <Button size="sm" kind="secondary">
                   Gebruik rekentool
@@ -147,35 +147,35 @@ const Notify = () => {
                 <Button size="sm" kind="secondary">
                   ISDE voor bedrijven
                 </Button>
-              </LayoutColumnRow>
+              </LayoutFlow>
               <details className="rvo-details">
                 <summary className="rvo-details-summary">
-                  <LayoutColumnRow row={true} size="xs">
+                  <LayoutFlow row={true} size="xs">
                     <Icon icon="envelop"></Icon>Blijf op de hoogte via e-mail{' '}
                     <Icon icon="delta-omlaag" size="sm"></Icon>
                     <Icon icon="delta-omhoog" size="sm"></Icon>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </summary>
                 <Fieldset legend="">
                   <form className="rvo-form">
-                    <LayoutColumnRow row={true} alignItems="end">
+                    <LayoutFlow row={true} alignItems="end">
                       <TextInputField
                         label="E-mailadres"
                         helperText="Wilt u een e-mail ontvangen als de inhoud van deze pagina wijzigt? Meld u dan aan. Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons <a href='#' class='rvo-link'>privacybeleid</a>."
                       ></TextInputField>
                       <Button>Verzenden</Button>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </form>
                 </Fieldset>
               </details>
-            </LayoutColumnRow>
-            <LayoutColumnRow>
+            </LayoutFlow>
+            <LayoutFlow>
               <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                 <div className="rvo-card__content">
                   <Heading type="h3">Hoogte subsidie en budget</Heading>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Grid columns="two">
-                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      <LayoutFlow row={true} size="xs" alignItems="start">
                         <Icon icon="kalender" color="donkerblauw" />
                         <div>
                           Startdatum:
@@ -184,8 +184,8 @@ const Notify = () => {
                           <br />
                           09:00
                         </div>
-                      </LayoutColumnRow>
-                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      </LayoutFlow>
+                      <LayoutFlow row={true} size="xs" alignItems="start">
                         <Icon icon="kalender-met-vinkje" color="donkerblauw" />
                         <div>
                           Einddatum:
@@ -194,42 +194,42 @@ const Notify = () => {
                           <br />
                           12:00
                         </div>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Grid>
-                    <LayoutColumnRow row={true} size="xs" alignItems="start">
+                    <LayoutFlow row={true} size="xs" alignItems="start">
                       <Icon icon="stapel-munten" color="donkerblauw" />
                       <div>
                         Hoogte subsidie:
                         <br />
                         <strong>€ 2.950</strong>
                       </div>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                     <Grid columns="two">
-                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      <LayoutFlow row={true} size="xs" alignItems="start">
                         <Icon icon="zak-met-geld" color="donkerblauw" />
                         <div>
                           Totaal budget:
                           <br />
                           <strong>€ 58.000.000</strong>
                         </div>
-                      </LayoutColumnRow>
-                      <LayoutColumnRow row={true} size="xs" alignItems="start">
+                      </LayoutFlow>
+                      <LayoutFlow row={true} size="xs" alignItems="start">
                         <Icon icon="hand-met-rekening" color="donkerblauw" />
                         <div>
                           Verleend:
                           <br /> <strong>€ 25.820.000</strong>
                         </div>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Grid>
-                    <LayoutColumnRow row={true} size="xs" alignItems="start">
+                    <LayoutFlow row={true} size="xs" alignItems="start">
                       <Icon icon="circulaire-economie" color="donkerblauw" />
                       <div>
                         Nog beschikbaar op 1 juli 2024:
                         <br />
                         <strong>55 % </strong>(€ 32.180.000)
                       </div>
-                    </LayoutColumnRow>
-                    <LayoutColumnRow row={true} size="xs" alignItems="start">
+                    </LayoutFlow>
+                    <LayoutFlow row={true} size="xs" alignItems="start">
                       <div>
                         Aanvullende informatie:
                         <br />
@@ -238,14 +238,14 @@ const Notify = () => {
                           of ingetrokken. Daardoor komt er weer geld vrij.
                         </strong>
                       </div>
-                    </LayoutColumnRow>
-                  </LayoutColumnRow>
+                    </LayoutFlow>
+                  </LayoutFlow>
                 </div>
               </div>
               <Heading type="h2" noMargins={true}>
                 Op deze pagina:
               </Heading>
-            </LayoutColumnRow>
+            </LayoutFlow>
             <Grid columns="two" gap="xs">
               <Link showIcon="before" icon="pijl-omlaag" target="#" content="Stand van zaken 2024" noUnderline={true} />
               <Link showIcon="before" icon="pijl-omlaag" target="#" content="ISDE verbreed" noUnderline={true} />
@@ -277,7 +277,7 @@ const Notify = () => {
         <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
-              <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
                 <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
@@ -300,9 +300,9 @@ const Notify = () => {
                   </div>
                   <div className="rvo-card rvo-card--w-link  rvo-card--md">
                     <div className="rvo-card-content">
-                      <LayoutColumnRow size="sm">
+                      <LayoutFlow size="sm">
                         <h2 className="utrecht-heading-2">Over ons</h2>
-                        <LayoutColumnRow size="md">
+                        <LayoutFlow size="md">
                           <div className="rvo-card-content-item">
                             <Icon icon="laptop" size="2xl"></Icon>
                             <h3 className="utrecht-heading-3">
@@ -325,8 +325,8 @@ const Notify = () => {
                               Leer onze organisatie kennen en vind vacatures.
                             </p>
                           </div>
-                        </LayoutColumnRow>
-                      </LayoutColumnRow>
+                        </LayoutFlow>
+                      </LayoutFlow>
                     </div>
                   </div>
                   <div className="rvo-card rvo-card--w-link rvo-card--md">
@@ -369,7 +369,7 @@ const Notify = () => {
                     </div>
                   </div>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </MaxWidthLayout>
         </div>

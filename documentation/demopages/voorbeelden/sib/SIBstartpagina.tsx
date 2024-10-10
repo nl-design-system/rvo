@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   ProgressTracker,
@@ -17,8 +17,8 @@ const SIBstartpagina = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <LayoutColumnRow size="2xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="2xl">
+        <LayoutFlow size="xl">
           <div className="navigation">
             <MobileMenuBar
               iconPlacement="before"
@@ -159,7 +159,7 @@ const SIBstartpagina = () => {
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
               ]}
             />
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div>
                 <Heading type="h1">SIB 2024: Coaching</Heading>
                 <p className="rvo-text--no-margins">
@@ -262,9 +262,9 @@ const SIBstartpagina = () => {
                   Start aanvraag
                 </a>
               </ButtonGroup>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
-        </LayoutColumnRow>
+        </LayoutFlow>
         <Footer
           columns={[
             {
@@ -304,7 +304,7 @@ const SIBstartpagina = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

@@ -1,4 +1,4 @@
-import { Button, Fieldset, Header, LayoutColumnRow, MaxWidthLayout, MenuBar, TextInputField } from '@nl-rvo/components';
+import { Button, Fieldset, Header, LayoutFlow, MaxWidthLayout, MenuBar, TextInputField } from '@nl-rvo/components';
 import '../../common/style.scss';
 
 const SearchInNav = () => {
@@ -17,7 +17,7 @@ const SearchInNav = () => {
         iconPlacement="before"
         maxWidth="md"
       />
-      <LayoutColumnRow size="md">
+      <LayoutFlow size="md">
         <div className="search-form">
           <Fieldset legend="">
             <div className="rvo-form-layout">
@@ -53,7 +53,7 @@ const SearchInNav = () => {
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

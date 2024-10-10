@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import { FormField } from '@utrecht/component-library-react';
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ExpandableText } from '../expandable-text/template';
 import { Feedback } from '../form-feedback/template';
 import { Label } from '../form-field-label/template';
-import validateHTML from '../utils/validateHTML';
+import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
 export interface IFieldProps {
@@ -16,13 +16,16 @@ export interface IFieldProps {
   label?: string;
   labelSize?: 'sm' | 'md';
   labelType?: 'default' | 'optional' | 'required';
-  helperText?: string | React.ReactNode;
+  helperText?: ReactNode | undefined;
   helperTextId?: string;
   expandableHelperText?: boolean;
   expandableHelperTextTitle?: string;
   warningText?: string;
   errorText?: string;
+  /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinignoreprop */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -46,6 +49,11 @@ export const argTypes = {
   expandableHelperTextTitle: { control: 'text' },
   warningText: { control: 'text' },
   errorText: { control: 'text' },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
@@ -65,36 +73,20 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   let helperTextMarkup: React.ReactNode;
   // Parse default helper text markup (strings or react node)
   if (helperText) {
-    helperTextMarkup = <div className="utrecht-form-field-description">{helperText}</div>;
+    helperTextMarkup = (
+      <div className="utrecht-form-field-description" id={helperTextId}>
+        {parseContentMarkup(helperText)}
+      </div>
+    );
+  }
 
-    // Parse helper text markup for expandable text
-    if (expandableHelperText) {
-      helperTextMarkup = (
-        <div className="utrecht-form-field-description">
-          <ExpandableText title={expandableHelperTextTitle || ''} content={helperText} />
-        </div>
-      );
-    }
-
-    // Parse helper text markup for HTML strings
-    else if (typeof helperText === 'string' && helperText.length) {
-      const isValidHTML = validateHTML(helperText);
-      if (isValidHTML) {
-        helperTextMarkup = (
-          <div
-            id={helperTextId}
-            className="utrecht-form-field-description"
-            dangerouslySetInnerHTML={{ __html: helperText }}
-          ></div>
-        );
-      } else {
-        helperTextMarkup = (
-          <div id={helperTextId} className="utrecht-form-field-description">
-            {helperText}
-          </div>
-        );
-      }
-    }
+  // Parse helper text markup for expandable text
+  if (expandableHelperText) {
+    helperTextMarkup = (
+      <div className="utrecht-form-field-description">
+        <ExpandableText title={expandableHelperTextTitle ?? ''}>{parseContentMarkup(helperText)}</ExpandableText>
+      </div>
+    );
   }
 
   const fieldLabelId = `${fieldId}-label`;
@@ -109,7 +101,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
         {errorText && <Feedback text={errorText} type="error" />}
         {warningText && <Feedback text={warningText} type="warning" />}
       </div>
-      {(className && <div className={className}>{children}</div>) || children}
+      {(className && <div className={className}>{parseContentMarkup(children)}</div>) || parseContentMarkup(children)}
     </FormField>
   );
 };

@@ -1,4 +1,4 @@
-import { Accordion, Button, Footer, Grid, Header, Heading, Icon, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Accordion, Button, Footer, Grid, Header, Heading, Icon, LayoutFlow, MenuBar } from '@nl-rvo/components';
 
 const Landingspagina = () => {
   return (
@@ -35,10 +35,10 @@ const Landingspagina = () => {
         iconPlacement="before"
         maxWidth="md"
       />
-      <LayoutColumnRow size="3xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="3xl">
+        <LayoutFlow size="xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--md">
-            <LayoutColumnRow size="2xl">
+            <LayoutFlow size="2xl">
               <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
                 <div className="rvo-hero__image-container">
                   <img
@@ -56,49 +56,49 @@ const Landingspagina = () => {
                 </h1>
               </div>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
-                <LayoutColumnRow size="2xl">
+                <LayoutFlow size="2xl">
                   <Grid columns="two" gap="xl">
                     <div className="rvo-quote">
                       <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                         <div className="rvo-card__content">
-                          <LayoutColumnRow>
+                          <LayoutFlow>
                             <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
                               "Mijn post van de overheid in de berichtenbox"
                             </span>
-                            <LayoutColumnRow row={true} size="sm">
+                            <LayoutFlow row={true} size="sm">
                               <div className="rvo-quote__image">
                                 <img src="images/berichtenbox/profiel-foto-1.png" width="64px" height="64px" />
                               </div>
                               <div className="rvo-quote__person">
-                                <LayoutColumnRow size="0">
+                                <LayoutFlow size="0">
                                   <span className="rvo-text rvo-text--bold">Pim Hassevoort</span>
                                   <span className="rvo-text rvo-text--sm">Groene energie leverancier</span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
-                            </LayoutColumnRow>
-                          </LayoutColumnRow>
+                            </LayoutFlow>
+                          </LayoutFlow>
                         </div>
                       </div>
                     </div>
                     <div className="rvo-quote">
                       <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                         <div className="rvo-card__content">
-                          <LayoutColumnRow>
+                          <LayoutFlow>
                             <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
                               "Al mijn overheidsberichten veilig op één plek."
                             </span>
-                            <LayoutColumnRow row={true} size="sm">
+                            <LayoutFlow row={true} size="sm">
                               <div className="rvo-quote__image">
                                 <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
                               </div>
                               <div className="rvo-quote__person">
-                                <LayoutColumnRow size="0">
+                                <LayoutFlow size="0">
                                   <span className="rvo-text rvo-text--bold">Charlotte Verduim</span>
                                   <span className="rvo-text rvo-text--sm">Kinderopvang organisatie</span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
-                            </LayoutColumnRow>
-                          </LayoutColumnRow>
+                            </LayoutFlow>
+                          </LayoutFlow>
                         </div>
                       </div>
                     </div>
@@ -109,26 +109,26 @@ const Landingspagina = () => {
                     </div>
                     <div className="rvo-card__content">
                       <div className="rvo-max-width-layout rvo-max-width-layout--sm">
-                        <LayoutColumnRow>
-                          <LayoutColumnRow wrap={true} alignContent="center">
+                        <LayoutFlow>
+                          <LayoutFlow wrap={true} alignContent="center">
                             <Icon icon="video" color="wit" size="2xl" />
-                          </LayoutColumnRow>
-                          <LayoutColumnRow wrap={true} alignContent="center">
+                          </LayoutFlow>
+                          <LayoutFlow wrap={true} alignContent="center">
                             <span className="rvo-text rvo-text--xl">Video: Berichtenbox in 90 seconden</span>
-                          </LayoutColumnRow>
-                          <LayoutColumnRow wrap={true} alignContent="center">
+                          </LayoutFlow>
+                          <LayoutFlow wrap={true} alignContent="center">
                             <span className="rvo-text rvo-text--sm">
                               Wil je weten hoe de berichtenbox voor bedrijven jouw contact met overheden makkelijker
                               maakt? <br />
                               Bekijk dan deze video en sluit je aan.
                             </span>
-                          </LayoutColumnRow>
-                        </LayoutColumnRow>
+                          </LayoutFlow>
+                        </LayoutFlow>
                       </div>
                     </div>
                   </div>
 
-                  {/* <LayoutColumnRow row={true} size="2xl">
+                  {/* <LayoutFlow row={true} size="2xl">
                     <img src="images/berichtenbox/video.jpg" width="440px"></img>
                     <div>
                       <Heading type="h3" noMargins={true}>
@@ -139,13 +139,13 @@ const Landingspagina = () => {
                         Bekijk dan deze video en sluit je aan.
                       </p>
                     </div>
-                  </LayoutColumnRow> */}
-                </LayoutColumnRow>
+                  </LayoutFlow> */}
+                </LayoutFlow>
               </div>
               <hr className="rvo-hr rvo-max-width-layout rvo-max-width-layout--md"></hr>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
                 <Grid columns="three" gap="2xl">
-                  <LayoutColumnRow alignItems="" size="sm">
+                  <LayoutFlow alignItems="" size="sm">
                     <Icon size="2xl" icon="hangslot-dicht" color="grijs-700"></Icon>
                     <Heading type="h3" noMargins={true}>
                       Veilig en vertrouwd
@@ -154,8 +154,8 @@ const Landingspagina = () => {
                       Lorem ipsum odor amet, consectetuer adipiscing elit. Semper curabitur et non dui hac purus. Felis
                       imperdiet nisl eget odio; aptent interdum natoque.
                     </span>
-                  </LayoutColumnRow>
-                  <LayoutColumnRow alignItems="" size="sm">
+                  </LayoutFlow>
+                  <LayoutFlow alignItems="" size="sm">
                     <Icon size="2xl" icon="vermindering-papier" color="grijs-700"></Icon>
                     <Heading type="h3" noMargins={true}>
                       Alle berichten op één plek
@@ -164,8 +164,8 @@ const Landingspagina = () => {
                       Sem ornare condimentum quam non ridiculus. Mollis rhoncus felis ultricies purus vivamus elementum.
                       Class fermentum lobortis nisl netus; egestas magna in magna.
                     </span>
-                  </LayoutColumnRow>
-                  <LayoutColumnRow alignItems="" size="sm">
+                  </LayoutFlow>
+                  <LayoutFlow alignItems="" size="sm">
                     <Icon size="2xl" icon="tekstballonnen-met-vraagteken" color="grijs-700"></Icon>
                     <Heading type="h3" noMargins={true}>
                       Vraag en antwoord
@@ -174,28 +174,28 @@ const Landingspagina = () => {
                       Mi magna ornare at ridiculus, cubilia euismod penatibus. Imperdiet porttitor velit pulvinar; sit
                       in quis quam. Vivamus praesent cubilia feugiat eget lacus vulputate auctor sociosqu.
                     </span>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </Grid>
               </div>
               <hr className="rvo-hr rvo-max-width-layout rvo-max-width-layout--md"></hr>
               <div className="rvo-placeholder--stappenplan">
-                <LayoutColumnRow>
+                <LayoutFlow>
                   <div className="rvo-placeholder--stappenplan-title">
-                    <LayoutColumnRow alignContent="center" wrap={true}>
+                    <LayoutFlow alignContent="center" wrap={true}>
                       <Heading type="h3" noMargins={true}>
                         Stappenplan
                       </Heading>
-                    </LayoutColumnRow>
-                    <LayoutColumnRow alignContent="center" wrap={true}>
+                    </LayoutFlow>
+                    <LayoutFlow alignContent="center" wrap={true}>
                       <span className="rvo-text rvo-text--subtle">Berichtenbox voor bedrijven gebruiken</span>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </div>
                   <Grid columns="four" gap="2xl">
                     <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                       <div className="rvo-card__content">
-                        <LayoutColumnRow>
+                        <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">1.</span>
-                          <LayoutColumnRow size="0">
+                          <LayoutFlow size="0">
                             <span className="rvo-text rvo-text--bold">E-herkenning aanvragen</span>
                             <span className="rvo-text rvo-text--subtle">
                               Voor het aanmaken van een account en inloggen in de berichtenbox heeft u e-herkenning
@@ -204,15 +204,15 @@ const Landingspagina = () => {
                                 Direct e-herkenning aanvragen
                               </a>
                             </span>
-                          </LayoutColumnRow>
-                        </LayoutColumnRow>
+                          </LayoutFlow>
+                        </LayoutFlow>
                       </div>
                     </div>
                     <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                       <div className="rvo-card__content">
-                        <LayoutColumnRow>
+                        <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">2.</span>
-                          <LayoutColumnRow size="0">
+                          <LayoutFlow size="0">
                             <span className="rvo-text rvo-text--bold">Account aanmaken berichtenbox</span>
                             <span className="rvo-text rvo-text--subtle">
                               Vul daarna uw bedrijfgegevens in en maak een account aan voor de berichtenbox.
@@ -221,15 +221,15 @@ const Landingspagina = () => {
                                 Account aanmaken
                               </a>
                             </span>
-                          </LayoutColumnRow>
-                        </LayoutColumnRow>
+                          </LayoutFlow>
+                        </LayoutFlow>
                       </div>
                     </div>
                     <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                       <div className="rvo-card__content">
-                        <LayoutColumnRow>
+                        <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">3.</span>
-                          <LayoutColumnRow size="0">
+                          <LayoutFlow size="0">
                             <span className="rvo-text rvo-text--bold">Naam registreren Handelregister</span>
                             <span className="rvo-text rvo-text--subtle">
                               Geef toegang tot overheidsorganisaties bij de Kamer van Koophandel.
@@ -238,15 +238,15 @@ const Landingspagina = () => {
                                 Inloggen bij de KVK
                               </a>
                             </span>
-                          </LayoutColumnRow>
-                        </LayoutColumnRow>
+                          </LayoutFlow>
+                        </LayoutFlow>
                       </div>
                     </div>
                     <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                       <div className="rvo-card__content">
-                        <LayoutColumnRow>
+                        <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">4.</span>
-                          <LayoutColumnRow size="0">
+                          <LayoutFlow size="0">
                             <span className="rvo-text rvo-text--bold">Inloggen met e-herkenning</span>
                             <span className="rvo-text rvo-text--subtle">
                               Gefeliciteerd! Uw bedrijf kan nu gebruik maken van de berichtenbox voor bedrijven.
@@ -255,17 +255,17 @@ const Landingspagina = () => {
                                 Nu inloggen met e-herkenning
                               </a>
                             </span>
-                          </LayoutColumnRow>
-                        </LayoutColumnRow>
+                          </LayoutFlow>
+                        </LayoutFlow>
                       </div>
                     </div>
                   </Grid>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
               <div className="rvo-place-holder--faq rvo-max-width-layout rvo-max-width-layout--sm">
-                <LayoutColumnRow wrap={true} alignContent="center">
+                <LayoutFlow wrap={true} alignContent="center">
                   <Heading type="h3">Veelgestelde vragen</Heading>
-                </LayoutColumnRow>
+                </LayoutFlow>
                 <Accordion
                   items={[
                     {
@@ -301,9 +301,9 @@ const Landingspagina = () => {
                   ]}
                 />
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
-        </LayoutColumnRow>
+        </LayoutFlow>
 
         <Footer
           columns={[
@@ -343,7 +343,7 @@ const Landingspagina = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren, useCallback, useRef } from 'react';
+import React, { ReactNode, useCallback, useRef } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { IRadioButtonProps, RadioButton } from '../form-radio-button/template';
 import './index.scss';
@@ -15,9 +15,11 @@ export interface IRadioButtonGroupProps {
   options?: IRadioButtonProps[];
   onChange?: (currentGroupSelection: number) => void;
   /**
-   * @uxpinbind onChange 0
+   * @uxpinbind onChange 0.target.value
    */
   currentSelection?: number | null;
+  /** @uxpinpropname Options */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -29,15 +31,25 @@ export const argTypes = {
       required: true,
     },
   },
+  currentSelection: {
+    table: {
+      disable: true,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const RadioButtonGroup: React.FC<PropsWithChildren<IRadioButtonGroupProps>> = ({
+export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
   name = defaultArgs.name,
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
   onChange,
   children,
-}: PropsWithChildren<IRadioButtonGroupProps>) => {
+}: IRadioButtonGroupProps) => {
   const radioGroupRef = useRef<HTMLDivElement>(null);
   const onUpdateGroup = useCallback(() => {
     if (radioGroupRef.current) {

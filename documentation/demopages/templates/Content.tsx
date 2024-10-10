@@ -1,4 +1,4 @@
-import { Footer, Header, Heading, Hero, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, Hero, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import { defaultFooterItems } from '../common/defaultFooterItems';
 
 const Content = () => {
@@ -34,8 +34,8 @@ const Content = () => {
         iconPlacement="before"
         maxWidth="md"
       />
-      <LayoutColumnRow size="3xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="3xl">
+        <LayoutFlow size="xl">
           <Hero />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
             <Heading type="h1">H1 heading</Heading>
@@ -72,10 +72,10 @@ const Content = () => {
               <li>Item 3</li>
             </ol>
           </main>
-        </LayoutColumnRow>
+        </LayoutFlow>
 
         <Footer columns={defaultFooterItems} />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

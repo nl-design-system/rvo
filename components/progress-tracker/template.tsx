@@ -3,13 +3,15 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { IProgressTrackerStepProps, ProgressTrackerStep } from '../progress-tracker-step/template';
+import { IProgressTrackerStepProps, ProgressTrackerStep } from './progress-tracker-step/template';
 
 export interface IProgressTrackerProps {
   /** @uxpinignoreprop */
   steps?: IProgressTrackerStepProps[];
+  /** @uxpinpropname Steps */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -19,12 +21,17 @@ export const argTypes = {
       required: true,
     },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const ProgressTracker: React.FC<PropsWithChildren<IProgressTrackerProps>> = ({
+export const ProgressTracker: React.FC<IProgressTrackerProps> = ({
   steps = defaultArgs.steps,
   children,
-}: PropsWithChildren<IProgressTrackerProps>) => {
+}: IProgressTrackerProps) => {
   return (
     <div className="rvo-progress-tracker">
       {(children &&

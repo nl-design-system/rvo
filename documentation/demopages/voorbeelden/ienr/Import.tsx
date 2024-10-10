@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   SelectField,
@@ -110,14 +110,14 @@ const Import = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <Heading type="h1" noMargins={true}>
                 Importmelding Rund
               </Heading>
 
-              <LayoutColumnRow size="md">
-                <LayoutColumnRow size="xs">
-                  <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
+                <LayoutFlow size="xs">
+                  <LayoutFlow size="md">
                     <Fieldset legend="">
                       <DateInputField
                         label="Importdatum"
@@ -147,10 +147,10 @@ const Import = () => {
                         Opslaan en gegevens runderen invoeren
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
-            </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
+            </LayoutFlow>
           </div>
         </div>
       </main>

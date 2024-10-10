@@ -3,23 +3,28 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
 import { Link } from '../link/template';
 import './index.scss';
+import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface IHeadingProps {
   type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  textContent?: string | React.ReactNode;
+  /** @uxpinignoreprop */
+  textContent?: string | ReactNode;
   link?: string;
-  children?: React.ReactNode;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
   noMargins?: boolean;
+  /** @uxpinignoreprop */
   mixedBoldAndNormal?: boolean;
+  /** @uxpinignoreprop */
   className?: string;
 }
 
@@ -49,6 +54,11 @@ export const argTypes = {
   mixedBoldAndNormal: {
     control: 'boolean',
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Heading: React.FC<IHeadingProps> = ({
@@ -64,14 +74,14 @@ export const Heading: React.FC<IHeadingProps> = ({
   className,
   ...otherProps
 }: IHeadingProps) => {
-  let headingMarkup = textContent;
+  let headingMarkup = parseContentMarkup(children || textContent);
 
   const props = {
-    className: clsx(`utrecht-heading-${type?.replace('h', '')}`, className),
+    className: clsx(className, `utrecht-heading-${type?.replace('h', '')}`),
     ...otherProps,
   };
 
-  if (!children && icon) {
+  if (icon) {
     let iconSize, gap;
 
     switch (type) {
@@ -109,7 +119,7 @@ export const Heading: React.FC<IHeadingProps> = ({
       headingMarkup = (
         <>
           {iconMarkup}
-          {textContent}
+          {headingMarkup}
         </>
       );
     }
@@ -117,7 +127,7 @@ export const Heading: React.FC<IHeadingProps> = ({
     if (showIcon === 'after') {
       headingMarkup = (
         <>
-          {textContent}
+          {headingMarkup}
           {iconMarkup}
         </>
       );
@@ -135,22 +145,22 @@ export const Heading: React.FC<IHeadingProps> = ({
   switch (type) {
     default:
     case 'h1':
-      headingMarkup = <h1 {...props}>{children || headingMarkup}</h1>;
+      headingMarkup = <h1 {...props}>{headingMarkup}</h1>;
       break;
     case 'h2':
-      headingMarkup = <h2 {...props}>{children || headingMarkup}</h2>;
+      headingMarkup = <h2 {...props}>{headingMarkup}</h2>;
       break;
     case 'h3':
-      headingMarkup = <h3 {...props}>{children || headingMarkup}</h3>;
+      headingMarkup = <h3 {...props}>{headingMarkup}</h3>;
       break;
     case 'h4':
-      headingMarkup = <h4 {...props}>{children || headingMarkup}</h4>;
+      headingMarkup = <h4 {...props}>{headingMarkup}</h4>;
       break;
     case 'h5':
-      headingMarkup = <h5 {...props}>{children || headingMarkup}</h5>;
+      headingMarkup = <h5 {...props}>{headingMarkup}</h5>;
       break;
     case 'h6':
-      headingMarkup = <h6 {...props}>{children || headingMarkup}</h6>;
+      headingMarkup = <h6 {...props}>{headingMarkup}</h6>;
       break;
   }
 

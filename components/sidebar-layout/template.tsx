@@ -4,22 +4,31 @@
  */
 // @ts-ignore
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import '../max-width-layout/index.scss';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import SidebarLayoutBar from './sidebar-layout-bar/template';
+import SidebarLayoutContent from './sidebar-layout-content/template';
+import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface ISidebarLayoutProps {
-  size?: string;
+  maxWidthLayoutSize?: 'sm' | 'md' | 'lg';
   sidebarPosition?: 'left' | 'right';
+  /** @uxpinignoreprop */
   sidebarBackgroundColor?: boolean;
+  /** @uxpinignoreprop */
   sidebarContent?: string;
+  /** @uxpinignoreprop */
   content?: string;
+  /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinignoreprop */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
-  size: {
+  maxWidthLayoutSize: {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
@@ -36,23 +45,27 @@ export const argTypes = {
   content: {
     control: 'text',
   },
+
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const SidebarLayout: React.FC<PropsWithChildren<ISidebarLayoutProps>> = ({
-  size = defaultArgs.size,
+export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
+  maxWidthLayoutSize = defaultArgs.maxWidthLayoutSize,
   sidebarPosition = defaultArgs.sidebarPosition,
   sidebarBackgroundColor = defaultArgs.sidebarBackgroundColor,
   sidebarContent = defaultArgs.sidebarContent,
   content = defaultArgs.content,
   children,
   className,
-}: PropsWithChildren<ISidebarLayoutProps>) => {
-  let parsedContent = children || content;
-
+}: ISidebarLayoutProps) => {
   return (
     <main
       className={clsx(
-        sidebarBackgroundColor && 'rvo-sidebar-layout__container',
+        'rvo-sidebar-layout__container',
         sidebarPosition === 'right' && 'rvo-sidebar-layout__container--right',
       )}
     >
@@ -60,17 +73,19 @@ export const SidebarLayout: React.FC<PropsWithChildren<ISidebarLayoutProps>> = (
         className={clsx(
           'rvo-sidebar-layout',
           'rvo-max-width-layout',
-          `rvo-max-width-layout--${size}`,
+          `rvo-max-width-layout--${maxWidthLayoutSize}`,
           sidebarPosition === 'right' && 'rvo-sidebar-layout--right',
           className,
         )}
       >
-        <div
-          className={clsx('rvo-sidebar-layout__sidebar', sidebarBackgroundColor && 'rvo-sidebar-layout__sidebar--bg')}
-        >
-          {sidebarContent}
-        </div>
-        <div className="rvo-sidebar-layout__content">{parsedContent}</div>
+        {children || (
+          <>
+            <SidebarLayoutBar backgroundColor={sidebarBackgroundColor}>
+              {parseContentMarkup(sidebarContent)}
+            </SidebarLayoutBar>
+            <SidebarLayoutContent>{parseContentMarkup(content)}</SidebarLayoutContent>
+          </>
+        )}
       </div>
     </main>
   );

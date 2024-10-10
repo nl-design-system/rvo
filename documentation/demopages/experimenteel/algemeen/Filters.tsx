@@ -3,7 +3,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -15,7 +15,7 @@ const Filters = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="lg">
+      <LayoutFlow size="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -30,10 +30,10 @@ const Filters = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutColumnRow size="3xl">
+        <LayoutFlow size="3xl">
           <main>
             <div className="rvo-filter">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <MaxWidthLayout size="sm">
                   <div className="rvo-intro">
                     <Heading type="h1" textContent="Milieu- en Energielijst 2022"></Heading>
@@ -45,11 +45,11 @@ const Filters = () => {
                     </p>
                   </div>
                 </MaxWidthLayout>
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <div className="rvo-tmp-filters">
                     <Fieldset legend="">
                       <MaxWidthLayout size="lg">
-                        <LayoutColumnRow size="xl" row={true}>
+                        <LayoutFlow size="xl" row={true}>
                           <TextInputField label="Zoek op trefwoord/code"></TextInputField>
                           <details className="rvo-tmp-filter">
                             <summary>
@@ -270,14 +270,14 @@ const Filters = () => {
                               </label>
                             </div>
                           </details>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </MaxWidthLayout>
                     </Fieldset>
                   </div>
-                  <LayoutColumnRow size="2xl">
+                  <LayoutFlow size="2xl">
                     <div className="rvo-active-filters">
                       <MaxWidthLayout size="sm">
-                        <LayoutColumnRow row={true} size="sm">
+                        <LayoutFlow row={true} size="sm">
                           <span className="rvo-results-count">
                             <strong>54</strong> resultaten voor
                           </span>
@@ -301,17 +301,17 @@ const Filters = () => {
                         showIcon="before"
                         icon="verwijderen"
                       ></Button> */}
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </MaxWidthLayout>
                     </div>
 
                     <MaxWidthLayout size="sm">
                       <div className="rvo-results">
-                        <LayoutColumnRow size="2xl">
+                        <LayoutFlow size="2xl">
                           <div className="rvo-result rvo-result--w-image">
-                            <LayoutColumnRow row={true} size="lg">
+                            <LayoutFlow row={true} size="lg">
                               <div className="rvo-result-text">
-                                <LayoutColumnRow size="sm">
+                                <LayoutFlow size="sm">
                                   <Link
                                     href="#"
                                     content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"
@@ -331,7 +331,7 @@ const Filters = () => {
                                       Code: <strong>210206</strong>
                                     </span>
                                   </span>
-                                </LayoutColumnRow>
+                                </LayoutFlow>
                               </div>
                               <a href="#">
                                 <img
@@ -340,10 +340,10 @@ const Filters = () => {
                                   src="https://www.rvo.nl/files/file/styles/content/public/2022-07/8-Augustus%202022%20JPJ%20JIC%20Schiphol30.jpg"
                                 ></img>
                               </a>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           <div className="rvo-result">
-                            <LayoutColumnRow size="sm">
+                            <LayoutFlow size="sm">
                               <Link href="#" content="HR-luchtverwarmer [W]"></Link>
 
                               <span className="rvo-result-description">
@@ -360,10 +360,10 @@ const Filters = () => {
                                   Code: <strong>210102</strong>
                                 </span>
                               </span>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           <div className="rvo-result">
-                            <LayoutColumnRow size="sm">
+                            <LayoutFlow size="sm">
                               <Link href="#" content="Direct gasgestookt stralingspaneel [W]"></Link>
 
                               <span className="rvo-result-description">
@@ -378,10 +378,10 @@ const Filters = () => {
                                   Code: <strong>210106</strong>
                                 </span>
                               </span>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           <div className="rvo-result">
-                            <LayoutColumnRow size="sm">
+                            <LayoutFlow size="sm">
                               <Link href="#" content="Warmteterugwinningsysteem uit luchtwassers"></Link>
 
                               <span className="rvo-result-description">
@@ -395,10 +395,10 @@ const Filters = () => {
                                   Code: <strong>210109</strong>
                                 </span>
                               </span>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
                           <div className="rvo-result">
-                            <LayoutColumnRow size="sm">
+                            <LayoutFlow size="sm">
                               <Link href="#" content="Verwarmingssysteem voor bestaande pluimveestallen [W]"></Link>
 
                               <span className="rvo-result-description">
@@ -413,14 +413,14 @@ const Filters = () => {
                                   Code: <strong>210109</strong>
                                 </span>
                               </span>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                     </MaxWidthLayout>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
             </div>
           </main>
 
@@ -512,8 +512,8 @@ const Filters = () => {
               </ul>
             </MaxWidthLayout>
           </footer>
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

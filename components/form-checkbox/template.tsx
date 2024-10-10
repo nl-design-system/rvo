@@ -18,8 +18,10 @@ export interface ICheckboxProps {
   hover?: boolean;
   disabled?: boolean;
   active?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
   indeterminate?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   value?: string;

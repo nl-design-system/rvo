@@ -2,13 +2,16 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import { parseChildren } from '../utils/parseChildren';
 
 export interface IItemListProps {
-  // eslint-disable-next-line no-undef
-  items: string[] | JSX.Element[];
+  /** @uxpinignoreprop */
+  items: string[];
+  /** @uxpinpropname Items */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -18,15 +21,26 @@ export const argTypes = {
       required: true,
     },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const ItemList: React.FC<IItemListProps> = ({ items = defaultArgs.items }: IItemListProps) => (
+export const ItemList: React.FC<IItemListProps> = ({ items = defaultArgs.items, children }: IItemListProps) => (
   <ul className="rvo-item-list">
-    {items.map((itemContent, index) => (
-      <li key={index} className="rvo-item-list__item">
-        {itemContent}
-      </li>
-    ))}
+    {children
+      ? React.Children.map(parseChildren(children), (child, index) => (
+          <li key={index} className="rvo-item-list__item">
+            {child}
+          </li>
+        ))
+      : items.map((itemContent, index) => (
+          <li key={index} className="rvo-item-list__item">
+            {itemContent}
+          </li>
+        ))}
   </ul>
 );
 

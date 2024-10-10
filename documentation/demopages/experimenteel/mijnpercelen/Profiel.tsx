@@ -1,4 +1,4 @@
-import { Button, CheckboxField, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Button, CheckboxField, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 
@@ -62,7 +62,7 @@ const Profiel = () => {
           </div>
           <div className="rvo-main-mijn-percelen--profiel">
             <Heading type="h1" textContent="Instellingen" />
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <ul role="tablist" className="rvo-tabs">
                 <li role="presentation" className="rvo-tabs-item">
                   <a
@@ -101,7 +101,7 @@ const Profiel = () => {
               <div className="rvo-rhs-update-component">
                 <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                   <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                    <LayoutColumnRow size="xl">
+                    <LayoutFlow size="xl">
                       <CheckboxField
                         label="Perceelweergave"
                         helperText="Bepaal welke onderdelen er getoond worden in het perceeloverzicht"
@@ -114,14 +114,14 @@ const Profiel = () => {
                           { id: 'optionB-cb-warning', label: 'Einddatum' },
                         ]}
                       ></CheckboxField>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </fieldset>
                 </div>
               </div>
               <div className="rvo-button-inline rvo-rhs-update-component">
                 <Button kind="primary">Voorkeuren opslaan</Button>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </div>

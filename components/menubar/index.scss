@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "../layout-column-row/index";
+@import "../layout-flow/index";
 
 .rvo-topnav {
   font-family: var(--rvo-topnav-font-family);
@@ -110,8 +110,11 @@
     border-left-color: var(--rvo-topnav-item-divider-border-color);
     border-left-style: var(--rvo-topnav-item-divider-border-style);
     border-left-width: var(--rvo-topnav-item-divider-border-width);
-    margin-inline-start: var(--rvo-topnav-item-divider-margin-inline-start);
     padding-inline-start: var(--rvo-topnav-item-divider-padding-inline-start);
+
+    &:not(.rvo-topnav__item--align-right) {
+      margin-inline-start: var(--rvo-topnav-item-divider-margin-inline-start);
+    }
   }
 
   .rvo-topnav__list.rvo-topnav__list--vertical .rvo-topnav__item--with-divider {

@@ -1,12 +1,12 @@
-import { Footer, Header, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/filter.scss';
 
 const Home = () => {
   return (
     <body className="rvo-theme">
       <Header link="#" />
-      <LayoutColumnRow size="xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="xl">
+        <LayoutFlow size="xl">
           <MenuBar
             items={[
               {
@@ -37,7 +37,7 @@ const Home = () => {
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading noMargins={true}>Project Database</Heading>
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
                   The{' '}
@@ -106,9 +106,9 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
-        </LayoutColumnRow>
+        </LayoutFlow>
         <Footer
           columns={[
             {
@@ -148,7 +148,7 @@ const Home = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

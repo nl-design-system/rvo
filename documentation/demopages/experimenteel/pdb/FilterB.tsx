@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   Pagination,
   SelectField,
@@ -17,8 +17,8 @@ const Filter = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
-      <LayoutColumnRow size="xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="xl">
+        <LayoutFlow size="xl">
           <MenuBar
             items={[
               {
@@ -49,7 +49,7 @@ const Filter = () => {
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading noMargins={true}>Projects</Heading>
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
                   Data reported to the IATI registry since January 2015. Find open data on development aid projects
@@ -72,10 +72,10 @@ const Filter = () => {
                   </a>
                 </p>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
           <div className="rvo-filter-wrapper rvo-max-width-layout rvo-max-width-layout--md">
-            <LayoutColumnRow row={true}>
+            <LayoutFlow row={true}>
               <div className="rvo-filter">
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
@@ -84,10 +84,10 @@ const Filter = () => {
                     </summary>
 
                     <form className="rvo-form">
-                      <LayoutColumnRow size="md">
+                      <LayoutFlow size="md">
                         <TextInputField label="Search projects" value="study"></TextInputField>
 
-                        <LayoutColumnRow row={true} size="sm" alignItems="start">
+                        <LayoutFlow row={true} size="sm" alignItems="start">
                           <SelectField
                             label="From (year)"
                             options={[
@@ -146,7 +146,7 @@ const Filter = () => {
                               },
                             ]}
                           ></SelectField>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
 
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
@@ -426,7 +426,7 @@ const Filter = () => {
                           </div>
                         </details>
                         <hr className="rvo-hr" />
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </form>
                   </details>
                 </Fieldset>
@@ -435,15 +435,15 @@ const Filter = () => {
                 <Heading type="h2" mixedBoldAndNormal={true} noMargins={true}>
                   <strong>4817</strong> projects found
                 </Heading>
-                <LayoutColumnRow>
-                  <LayoutColumnRow size="2xs">
-                    <LayoutColumnRow row={true} size="sm" wrap={true}>
+                <LayoutFlow>
+                  <LayoutFlow size="2xs">
+                    <LayoutFlow row={true} size="sm" wrap={true}>
                       <strong className="rvo-results-active-filters">Active filters</strong>
                       <Button kind="warning-subtle" size="xs" icon="foutmelding" showIcon="before">
                         Reset all filters
                       </Button>
-                    </LayoutColumnRow>
-                    <LayoutColumnRow row={true} size="sm" wrap={true}>
+                    </LayoutFlow>
+                    <LayoutFlow row={true} size="sm" wrap={true}>
                       <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
                         <span>
                           Search <strong> study</strong>
@@ -475,8 +475,8 @@ const Filter = () => {
                           aria-label="Kruis"
                         ></span>
                       </div>
-                    </LayoutColumnRow>
-                  </LayoutColumnRow>
+                    </LayoutFlow>
+                  </LayoutFlow>
                   <div className="rvo-inline-sort">
                     <SelectField
                       label="Sort projects on"
@@ -615,11 +615,11 @@ const Filter = () => {
                     </div>
                   </div>
                   <Pagination numberOfPages={30} activePage={1} />
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
-        </LayoutColumnRow>
+        </LayoutFlow>
         <Footer
           columns={[
             {
@@ -659,7 +659,7 @@ const Filter = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

@@ -1,4 +1,4 @@
-import { Button, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Button, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 
@@ -95,7 +95,7 @@ const Startpagina = () => {
             </ul> */}
             <div className="rvo-tab-content rvo-tab-content--startpagina">
               <div className="rvo-rhs-update-component">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   {/* <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
                     href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story#wijzigen"
@@ -108,7 +108,7 @@ const Startpagina = () => {
                     Terug naar mijn.rvo.nl
                   </a> */}
                   <div className="rvo-content">
-                    <LayoutColumnRow size="xl">
+                    <LayoutFlow size="xl">
                       <div className="rvo-intro">
                         <Heading type="h1" textContent="Mijn Percelen"></Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--lg">
@@ -157,14 +157,14 @@ const Startpagina = () => {
                         </p>
                         <Button kind="primary">Start met registreren en bewerken</Button>
                       </div>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </div>
           </div>
           <div className="rvo-main-mijn-percelen--sidebar">
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
                 <Heading type="h4" textContent="Hulp"></Heading>
                 <ul className="rvo-list rvo-list--unordered">
@@ -190,7 +190,7 @@ const Startpagina = () => {
                   </Button>
                 </div>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </div>

@@ -3,7 +3,7 @@ import {
   ButtonGroup,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -50,7 +50,7 @@ const VoordatUStart = () => {
             ]}
           />
           <div className="rvo-form">
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Voordat u start" />
@@ -68,7 +68,7 @@ const VoordatUStart = () => {
                 </ul>
               </div>
               <form>
-                <LayoutColumnRow row={false} size="md">
+                <LayoutFlow row={false} size="md">
                   <ButtonGroup>
                     <Button
                       kind="warning-subtle"
@@ -97,9 +97,9 @@ const VoordatUStart = () => {
                       Start aanvraag
                     </Button>
                   </ButtonGroup>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </form>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </MaxWidthLayout>

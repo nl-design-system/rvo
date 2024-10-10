@@ -8,7 +8,7 @@ import {
   Grid,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   SelectField,
@@ -42,7 +42,7 @@ const ImportGegevens = () => {
           { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
         ]}
       ></MobileMenuBar>
-      <LayoutColumnRow size="xl">
+      <LayoutFlow size="xl">
         <MenuBar
           items={[
             {
@@ -77,7 +77,7 @@ const ImportGegevens = () => {
         <main className="">
           <div className="rvo-max-width-layout rvo-max-width-layout--lg">
             <div>
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <Heading type="h1" noMargins={true}>
                   Gegevens runderen
                 </Heading>
@@ -94,9 +94,9 @@ const ImportGegevens = () => {
                   />
                 </Grid>
 
-                <LayoutColumnRow size="md">
-                  <LayoutColumnRow size="xs">
-                    <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
+                  <LayoutFlow size="xs">
+                    <LayoutFlow size="md">
                       <a
                         className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
                         href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"
@@ -109,7 +109,7 @@ const ImportGegevens = () => {
                         Terug
                       </a>
                       <Fieldset legend="">
-                        <LayoutColumnRow row={true} alignItems="start">
+                        <LayoutFlow row={true} alignItems="start">
                           <span>1</span>
                           <TextInputField label="Landcode" size="sm"></TextInputField>
                           <TextInputField label="Levensnummer" size="sm"></TextInputField>
@@ -118,8 +118,8 @@ const ImportGegevens = () => {
                           <SelectField label="Geslacht"></SelectField>
                           <SelectField label="Land van geboorte/oorsprong"></SelectField>
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                        </LayoutColumnRow>
-                        <LayoutColumnRow row={true} alignItems="start">
+                        </LayoutFlow>
+                        <LayoutFlow row={true} alignItems="start">
                           <span>2</span>
                           <TextInputField label="Landcode" size="sm"></TextInputField>
                           <TextInputField label="Levensnummer" size="sm"></TextInputField>
@@ -128,8 +128,8 @@ const ImportGegevens = () => {
                           <SelectField label="Geslacht"></SelectField>
                           <SelectField label="Land van geboorte/oorsprong"></SelectField>
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                        </LayoutColumnRow>
-                        <LayoutColumnRow row={true} alignItems="start">
+                        </LayoutFlow>
+                        <LayoutFlow row={true} alignItems="start">
                           <span>3</span>
                           <TextInputField label="Landcode" size="sm"></TextInputField>
                           <TextInputField label="Levensnummer" size="sm"></TextInputField>
@@ -138,8 +138,8 @@ const ImportGegevens = () => {
                           <SelectField label="Geslacht"></SelectField>
                           <SelectField label="Land van geboorte/oorsprong"></SelectField>
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                        </LayoutColumnRow>
-                        <LayoutColumnRow row={true} alignItems="start">
+                        </LayoutFlow>
+                        <LayoutFlow row={true} alignItems="start">
                           <span>4</span>
                           <TextInputField label="Landcode" size="sm"></TextInputField>
                           <TextInputField label="Levensnummer" size="sm"></TextInputField>
@@ -148,8 +148,8 @@ const ImportGegevens = () => {
                           <SelectField label="Geslacht"></SelectField>
                           <SelectField label="Land van geboorte/oorsprong"></SelectField>
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                        </LayoutColumnRow>
-                        <LayoutColumnRow row={true} alignItems="start">
+                        </LayoutFlow>
+                        <LayoutFlow row={true} alignItems="start">
                           <span>5</span>
                           <TextInputField label="Landcode" size="sm"></TextInputField>
                           <TextInputField label="Levensnummer" size="sm"></TextInputField>
@@ -158,8 +158,8 @@ const ImportGegevens = () => {
                           <SelectField label="Geslacht"></SelectField>
                           <SelectField label="Land van geboorte/oorsprong"></SelectField>
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                        </LayoutColumnRow>
-                        <LayoutColumnRow row={true} alignItems="start">
+                        </LayoutFlow>
+                        <LayoutFlow row={true} alignItems="start">
                           <span>6</span>
                           <TextInputField label="Landcode" size="sm"></TextInputField>
                           <TextInputField label="Levensnummer" size="sm"></TextInputField>
@@ -168,16 +168,16 @@ const ImportGegevens = () => {
                           <SelectField label="Geslacht"></SelectField>
                           <SelectField label="Land van geboorte/oorsprong"></SelectField>
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </Fieldset>
                       <ButtonGroup>
                         <Button>Opslaan</Button>
                         <Button kind="secondary">Opslaan en rij toevoegen</Button>
                       </ButtonGroup>
-                    </LayoutColumnRow>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
+                    </LayoutFlow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
             </div>
           </div>
         </main>
@@ -220,7 +220,7 @@ const ImportGegevens = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };
