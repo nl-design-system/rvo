@@ -1,5 +1,11 @@
 # `@nl-rvo/sidebar-layout`
 
+## 1.1.0
+
+### Minor Changes
+
+- 85bf371: Added .rvo-sidebar-layout\_\_container class to sidebar
+
 ## 1.0.0
 
 ### Major Changes

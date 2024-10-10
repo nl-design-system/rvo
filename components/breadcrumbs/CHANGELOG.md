@@ -1,5 +1,11 @@
 # `@nl-rvo/breadcrumbs`
 
+## 1.1.0
+
+### Minor Changes
+
+- 85bf371: Moved divider out of breadcrumb link
+
 ## 1.0.0
 
 ### Major Changes
