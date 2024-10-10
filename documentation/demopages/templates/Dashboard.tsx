@@ -121,7 +121,7 @@ const Dashboard = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
@@ -139,7 +139,7 @@ const Dashboard = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
@@ -157,7 +157,7 @@ const Dashboard = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
@@ -175,7 +175,7 @@ const Dashboard = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>

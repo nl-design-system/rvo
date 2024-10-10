@@ -28,16 +28,16 @@ const Profiel = () => {
                   label: 'Home',
 
                   icon: 'home',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story',
                 },
                 {
                   label: 'Mijn Percelen',
 
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story',
                 },
                 {
                   label: 'Boer Overveen B.V',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story',
                   active: true,
                   icon: 'user',
                 },
@@ -67,7 +67,7 @@ const Profiel = () => {
                 <li role="presentation" className="rvo-tabs-item">
                   <a
                     role="tab"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                     id="tab1"
                     aria-selected="true"
                     className="rvo-tabs-item-link rvo-tabs-item-link--active"
@@ -78,7 +78,7 @@ const Profiel = () => {
                 <li role="presentation" className="rvo-tabs-item">
                   <a
                     role="tab"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                     id="tab1"
                     aria-selected="true"
                     className="rvo-tabs-item-link"
@@ -89,7 +89,7 @@ const Profiel = () => {
                 <li role="presentation" className="rvo-tabs-item">
                   <a
                     role="tab"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                     id="tab1"
                     aria-selected="true"
                     className="rvo-tabs-item-link"

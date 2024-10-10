@@ -31,13 +31,13 @@ const ZaakClean = () => {
             items={[
               {
                 label: 'Overzicht',
-                link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                 icon: 'home',
                 active: true,
               },
               {
                 label: 'Mijn dossier',
-                link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                link: '#',
                 icon: 'map',
               },
               { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -79,7 +79,7 @@ const ZaakClean = () => {
                     items={[
                       {
                         label: 'Overzicht',
-                        url: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                        url: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                       },
                       { label: 'Mijn dossier', url: '#' },
 

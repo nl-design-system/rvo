@@ -40,16 +40,16 @@ const PerceelEdit = () => {
                   label: 'Home',
 
                   icon: 'home',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story',
                 },
                 {
                   label: 'Mijn Percelen',
                   active: true,
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story',
                 },
                 {
                   label: 'Boer Overveen B.V',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story',
                   icon: 'user',
                 },
                 { label: 'Uitloggen', link: '#', align: 'right' },
@@ -67,7 +67,7 @@ const PerceelEdit = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                   id="tab1"
                   aria-selected="true"
                   className="rvo-tabs-item-link  rvo-tabs-item-link--active"
@@ -78,7 +78,7 @@ const PerceelEdit = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-oplossen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-oplossen--default&viewMode=story"
                   id="tab2"
                   className="rvo-tabs-item-link"
                 >
@@ -88,7 +88,7 @@ const PerceelEdit = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-samenvatting--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-samenvatting--default&viewMode=story"
                   id="tab2"
                   className="rvo-tabs-item-link"
                 >
@@ -98,7 +98,7 @@ const PerceelEdit = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-versturen--default&viewMode=story"
                   id="tab3"
                   className="rvo-tabs-item-link"
                 >
@@ -111,7 +111,7 @@ const PerceelEdit = () => {
                 <LayoutFlow size="md">
                   <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story#wijzigen"
                   >
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"

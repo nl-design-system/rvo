@@ -204,7 +204,7 @@ const PercelenRegistreren = () => {
               </p>
               <div className="rvo-rhs-update-component">
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Mijn Percelen registreren

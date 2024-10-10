@@ -28,15 +28,15 @@ const Startpagina = () => {
                   label: 'Home',
                   active: true,
                   icon: 'home',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story',
                 },
                 {
                   label: 'Mijn Percelen',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story',
                 },
                 {
                   label: 'Boer Overveen B.V',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story',
                   icon: 'user',
                 },
                 { label: 'Uitloggen', link: '#', align: 'right' },
@@ -54,7 +54,7 @@ const Startpagina = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                   id="tab1"
                   aria-selected="true"
                   className="rvo-tabs-item-link"
@@ -65,7 +65,7 @@ const Startpagina = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-oplossen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-oplossen--default&viewMode=story"
                   id="tab2"
                   className="rvo-tabs-item-link"
                 >
@@ -75,7 +75,7 @@ const Startpagina = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-samenvatting--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-samenvatting--default&viewMode=story"
                   id="tab2"
                   className="rvo-tabs-item-link"
                 >
@@ -85,7 +85,7 @@ const Startpagina = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-versturen--default&viewMode=story"
                   id="tab3"
                   className="rvo-tabs-item-link"
                 >
@@ -98,7 +98,7 @@ const Startpagina = () => {
                 <LayoutFlow size="md">
                   {/* <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
-                    href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story#wijzigen"
+                    href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story#wijzigen"
                   >
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
@@ -117,7 +117,7 @@ const Startpagina = () => {
                           het belangrijk dat u uw gegevens bijhoudt.
                         </p>
                         <a
-                          href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                           className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md"
                         >
                           Start met registreren en bewerken

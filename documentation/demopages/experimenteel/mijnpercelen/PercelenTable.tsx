@@ -145,7 +145,7 @@ const PercelenTable = () => {
                           <td className="rvo-table-cell">
                             {' '}
                             <a
-                              href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                              href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-perceeledit--default&viewMode=story"
                               className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                             >
                               Bewerken
@@ -171,7 +171,7 @@ const PercelenTable = () => {
                           <td className="rvo-table-cell">
                             {' '}
                             <a
-                              href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                              href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-perceeledit--default&viewMode=story"
                               className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                             >
                               Bewerken
@@ -190,7 +190,7 @@ const PercelenTable = () => {
                           <td className="rvo-table-cell">
                             {' '}
                             <a
-                              href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                              href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-perceeledit--default&viewMode=story"
                               className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                             >
                               Bewerken
@@ -209,7 +209,7 @@ const PercelenTable = () => {
                           <td className="rvo-table-cell">
                             {' '}
                             <a
-                              href="/iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                              href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-perceeledit--default&viewMode=story"
                               className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                             >
                               Bewerken

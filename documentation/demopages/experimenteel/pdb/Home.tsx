@@ -21,7 +21,7 @@ const Home = () => {
               },
               {
                 label: 'Projects',
-                link: '/iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-filter--default',
+                link: '#',
               },
               {
                 align: 'right',
@@ -91,10 +91,7 @@ const Home = () => {
                   <div className="rvo-card--with-link-indicator">
                     <div className="rvo-card__content">
                       <h3 className="utrecht-heading-3">
-                        <a
-                          className="rvo-link rvo-card__link rvo-card__full-card-link"
-                          href="/iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-filter--default"
-                        >
+                        <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
                           Projects
                         </a>
                       </h3>
