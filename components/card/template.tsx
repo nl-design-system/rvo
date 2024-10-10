@@ -29,7 +29,7 @@ export interface ICardProps {
   className?: string;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
-  onClick?: (event) => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export const argTypes = {
@@ -132,7 +132,7 @@ export const Card: React.FC<ICardProps> = ({
         <div className="rvo-card__content">
           {title && title.length > 0 && (
             <h3 className="utrecht-heading-3">
-              {link?.length > 0 ? (
+              {link && link.length > 0 ? (
                 <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
                   {parseContentMarkup(title)}
                 </Link>

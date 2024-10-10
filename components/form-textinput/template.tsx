@@ -27,7 +27,7 @@ export interface ITextInputProps {
   prefix?: string;
   suffix?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg';
-  maxLength?: number | null;
+  maxLength?: number | undefined;
   /** @uxpinpropname Max length indicator (textarea) */
   maxLengthIndicator?: boolean;
   onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;

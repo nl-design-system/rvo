@@ -14,7 +14,7 @@ export interface IHeaderProps extends PropsWithChildren {
   /** @uxpinignoreprop */
   link?: string;
   children?: ReactNode | undefined;
-  onClick?: (event) => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export const argTypes = {

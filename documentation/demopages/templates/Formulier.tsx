@@ -7,7 +7,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   RadioButtonField,
@@ -20,7 +20,7 @@ const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
-      <LayoutColumnRow size="xl">
+      <LayoutFlow size="xl">
         <MenuBar
           items={[
             {
@@ -48,11 +48,11 @@ const Formulier = () => {
           iconPlacement="before"
           maxWidth="md"
         />
-        <LayoutColumnRow size="3xl">
-          <LayoutColumnRow size="xl">
+        <LayoutFlow size="3xl">
+          <LayoutFlow size="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
               <div className="rvo-form">
-                <LayoutColumnRow size="sm">
+                <LayoutFlow size="sm">
                   <div>
                     <Link content="Terug" href="#" showIcon="before" icon="terug" noUnderline={true} />
                     <Heading type="h1">Formulier template</Heading>
@@ -63,7 +63,7 @@ const Formulier = () => {
                     </p>
                   </div>
                   <form>
-                    <LayoutColumnRow>
+                    <LayoutFlow>
                       <div>
                         <Fieldset legend="Keyboard inputs">
                           <TextInputField label="Text" />
@@ -229,16 +229,16 @@ const Formulier = () => {
                           Secondary action
                         </Button>
                       </ButtonGroup>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </form>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </main>
-          </LayoutColumnRow>
+          </LayoutFlow>
 
           <Footer columns={defaultFooterItems} />
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

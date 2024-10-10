@@ -20,7 +20,7 @@ export const FooterColumn: React.FC<IFooterColumnProps> = ({
 }: IFooterColumnProps) => {
   return (
     <div className="rvo-footer-column">
-      {label?.length > 0 && (
+      {label?.length && label.length > 0 && (
         <Heading type="h3" textContent={parseContentMarkup(label)} className="rvo-footer-menu-title" />
       )}
       <ul className="rvo-footer-menu">{children}</ul>

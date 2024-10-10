@@ -57,7 +57,7 @@ export const Hero: React.FC<IHeroProps> = ({
   return (
     <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...props}>
       <div className="rvo-hero__image-container">
-        <img src={getImageSrc(image)} className="rvo-hero__image" alt={imageAlt} />
+        {image && <img src={getImageSrc(image)} className="rvo-hero__image" alt={imageAlt} />}
       </div>
       <Heading type="h1" className="rvo-hero__title">
         {title}

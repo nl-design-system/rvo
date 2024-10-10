@@ -22,7 +22,7 @@ export interface ITagProps {
   className?: string;
   link?: string;
   linkTarget?: '_blank' | '_self' | '_parent' | '_top';
-  onClick?: (event) => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>) => void;
 }
 
 export const argTypes = {
