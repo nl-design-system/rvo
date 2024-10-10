@@ -17,7 +17,7 @@ export const BreadcrumbsItem: React.FC<IBreadcrumbsItemProps> = ({
   url = defaultArgs.url,
   onClick,
 }: IBreadcrumbsItemProps) => {
-  if (url?.length > 0) {
+  if (url?.length && url.length > 0) {
     return (
       <Link href={url} noUnderline={true} onClick={onClick}>
         {label}
