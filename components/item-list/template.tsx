@@ -8,7 +8,6 @@ import './index.scss';
 import { parseChildren } from '../utils/parseChildren';
 
 export interface IItemListProps {
-  // eslint-disable-next-line no-undef
   /** @uxpinignoreprop */
   items: string[];
   /** @uxpinpropname Items */
