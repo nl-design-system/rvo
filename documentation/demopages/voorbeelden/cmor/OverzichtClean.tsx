@@ -32,13 +32,13 @@ const OverzichtClean = () => {
         items={[
           {
             label: 'Overzicht',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
             active: true,
           },
           {
             label: 'Mijn dossier',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+            link: '#',
             icon: 'map',
           },
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -82,13 +82,13 @@ const OverzichtClean = () => {
               items={[
                 {
                   label: 'Overzicht',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
                   active: true,
                 },
                 {
                   label: 'Mijn dossier',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                  link: '#',
                   icon: 'map',
                 },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -148,7 +148,7 @@ const OverzichtClean = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           BSN Melding WBSO 2023
                         </Link>
@@ -166,7 +166,7 @@ const OverzichtClean = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           ISDE 2023
                         </Link>
@@ -186,7 +186,7 @@ const OverzichtClean = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Gecombineerde opgave 2023
                         </Link>
@@ -202,7 +202,7 @@ const OverzichtClean = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           SVVE 2023
                         </Link>

@@ -14,4 +14,4 @@ export default meta;
 
 type Story = StoryObj<typeof SIBstartpagina>;
 
-export const Default: Story = { name: 'SIBstartpagina' };
+export const Default: Story = { name: 'Startpagina' };

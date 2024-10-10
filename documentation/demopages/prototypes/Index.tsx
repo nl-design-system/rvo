@@ -26,14 +26,14 @@ const Index = () => {
           <ul>
             <li>
               <a
-                href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story"
                 className="rvo-link"
               >
                 Mijn Percelen
               </a>
               <p className="rvo-paragraph--sm">
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-screenshots-uitgangspositie--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-screenshots-uitgangspositie--default&viewMode=story"
                   className="rvo-link rvo-link--no-underline"
                   target="_blank"
                   rel="noreferrer"
@@ -43,7 +43,10 @@ const Index = () => {
               </p>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
+                className="rvo-link"
+              >
                 Centrale Mijn Omgeving RVO (CMOR)
               </a>
               <p className="rvo-paragraph--sm">
@@ -58,7 +61,10 @@ const Index = () => {
               </p>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-www-home--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-experimenteel-www-home--default&viewMode=story"
+                className="rvo-link"
+              >
                 WWW RVO (rvo.nl)
               </a>
               <p className="rvo-paragraph--sm">
@@ -73,12 +79,18 @@ const Index = () => {
               </p>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story"
+                className="rvo-link"
+              >
                 Identificatie en Registratie van uw dieren (I&R)
               </a>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story"
+                className="rvo-link"
+              >
                 Support International Business (SIB) Coaching 2024 - UPNL
               </a>
             </li>

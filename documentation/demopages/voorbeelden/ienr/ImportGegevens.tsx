@@ -29,13 +29,13 @@ const ImportGegevens = () => {
         items={[
           {
             label: 'Overzicht',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
             active: true,
           },
           {
             label: 'Mijn dossier',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+            link: '#',
             icon: 'map',
           },
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -99,7 +99,7 @@ const ImportGegevens = () => {
                     <LayoutColumnRow size="md">
                       <a
                         className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
-                        href="iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"
                       >
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
