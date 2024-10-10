@@ -26,14 +26,14 @@ const Index = () => {
           <ul>
             <li>
               <a
-                href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story"
                 className="rvo-link"
               >
                 Mijn Percelen
               </a>
               <p className="rvo-paragraph--sm">
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-screenshots-uitgangspositie--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-screenshots-uitgangspositie--default&viewMode=story"
                   className="rvo-link rvo-link--no-underline"
                   target="_blank"
                   rel="noreferrer"
