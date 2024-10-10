@@ -119,28 +119,27 @@ jobs:
   publish-uxpin:
     runs-on: ubuntu-latest
     needs: install
+    if: github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')
     steps:
       - name: Checkout branch
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        uses: actions/checkout@master
         with:
+          ref: refs/heads/master
           fetch-depth: 0
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
-
       - name: Set up Node.js version
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        uses: actions/setup-node@v1
         with:
           node-version-file: .nvmrc
           cache: pnpm
+      - name: Install pnpm
+        uses: pnpm/ pnpm/action-setup@v4
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Push to UXPin
         continue-on-error: true
-        if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
-        run: pnpm install && pnpm exec uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
+        run: pnpm exec uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
 
   publish-chromatic:
