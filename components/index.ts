@@ -13,6 +13,7 @@ export { CheckboxGroup } from './form-checkbox-group/template';
 export { Feedback } from './form-feedback/template';
 export { Field } from './form-field/template';
 export { CheckboxField } from './form-field-checkbox/template';
+export { DateInput } from './form-dateinput/template';
 export { DateInputField } from './form-field-dateinput/template';
 export { FileInputField } from './form-field-fileinput/template';
 export { RadioButtonField } from './form-field-radio-button/template';

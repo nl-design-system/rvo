@@ -35,7 +35,7 @@ export const Fieldset: React.FC<PropsWithChildren<IFieldsetProps>> = ({
   children,
 }: PropsWithChildren<IFieldsetProps>) => {
   return (
-    <FieldsetUtrecht disabled={disabled || null} className="rvo-form-fieldset">
+    <FieldsetUtrecht disabled={disabled || undefined} className="rvo-form-fieldset">
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children ||
         (fields &&

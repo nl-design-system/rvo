@@ -71,7 +71,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
     if (expandableHelperText) {
       helperTextMarkup = (
         <div className="utrecht-form-field-description">
-          <ExpandableText title={expandableHelperTextTitle} content={helperText} />
+          <ExpandableText title={expandableHelperTextTitle || ''} content={helperText} />
         </div>
       );
     }

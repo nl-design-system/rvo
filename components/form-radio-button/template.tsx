@@ -21,13 +21,13 @@ export interface IRadioButtonProps {
   focus?: boolean;
   invalid?: boolean;
   required?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
   /** @uxpinignoreprop */
-  onUpdateGroup?: (event) => void;
+  onUpdateGroup?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const argTypes = {
@@ -63,9 +63,9 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
       id={id}
       name={name}
       type="radio"
-      checked={checked || null}
-      disabled={disabled || null}
-      required={required || null}
+      checked={checked || undefined}
+      disabled={disabled || undefined}
+      required={required || undefined}
       className={clsx(
         'utrecht-radio-button',
         checked && 'utrecht-radio-button--checked',

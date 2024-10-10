@@ -15,11 +15,11 @@ export interface IFileInputProps {
   required?: boolean;
   accept?: string;
   multiple?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
 }
 
 export const argTypes = {
@@ -64,10 +64,10 @@ export const FileInput: React.FC<IFileInputProps> = ({
       invalid && 'rvo-file-input--invalid',
       required && 'rvo-file-input--required',
     )}
-    disabled={disabled || null}
-    aria-invalid={invalid || null}
-    accept={(accept.length && accept) || null}
-    multiple={multiple || null}
+    disabled={disabled || undefined}
+    aria-invalid={invalid || undefined}
+    accept={accept || undefined}
+    multiple={multiple || undefined}
     {...otherProps}
   />
 );

@@ -4,6 +4,12 @@
 
 ### Major Changes
 
+- 5a3bda4: Added tabs component
+
+## 1.0.0
+
+### Major Changes
+
 - daa0537: Create npm package for each component.
 
 ## Pre-releases
