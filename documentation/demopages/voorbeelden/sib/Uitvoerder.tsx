@@ -102,35 +102,35 @@ const Uitvoerder = () => {
                 {
                   state: 'completed',
                   label: 'Startpagina',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Uw gegevens',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Uw onderneming',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Zaakgegevens',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Kosten',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
@@ -138,21 +138,21 @@ const Uitvoerder = () => {
                 {
                   state: 'doing',
                   label: 'Uitvoerder coaching traject',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-uitvoerder--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Maatschappelijk verantwoord ondernemen',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-mvo--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Ondertekening',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-ondertekening--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
@@ -164,7 +164,7 @@ const Uitvoerder = () => {
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
-                  href="iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story"
                 >
                   <span
                     className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
@@ -248,7 +248,7 @@ const Uitvoerder = () => {
               </Fieldset>
               <ButtonGroup>
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-sib-mvo--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan

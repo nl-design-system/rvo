@@ -87,7 +87,10 @@ const Index = () => {
               </a>
             </li>
             <li>
-              <a href="iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story" className="rvo-link">
+              <a
+                href="iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story"
+                className="rvo-link"
+              >
                 Support International Business (SIB) Coaching 2024 - UPNL
               </a>
             </li>
