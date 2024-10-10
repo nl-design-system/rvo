@@ -5,6 +5,7 @@
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import { parseChildren } from '../utils/parseChildren';
 
 export interface IItemListProps {
   // eslint-disable-next-line no-undef
@@ -31,7 +32,7 @@ export const argTypes = {
 export const ItemList: React.FC<IItemListProps> = ({ items = defaultArgs.items, children }: IItemListProps) => (
   <ul className="rvo-item-list">
     {children
-      ? React.Children.map(children, (child, index) => (
+      ? React.Children.map(parseChildren(children), (child, index) => (
           <li key={index} className="rvo-item-list__item">
             {child}
           </li>
