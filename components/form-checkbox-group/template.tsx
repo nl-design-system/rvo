@@ -14,7 +14,7 @@ export interface ICheckboxGroupProps {
   options?: ICheckboxProps[];
   onChange?: (currentGroupSelection: ICheckboxProps[]) => void;
   /**
-   * @uxpinbind onChange 0.target.value
+   * @uxpinbind onChange 0
    */
   currentSelection?: number[];
   /** @uxpinpropname Checkboxes */

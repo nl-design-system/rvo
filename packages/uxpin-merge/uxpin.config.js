@@ -37,7 +37,7 @@ module.exports = {
           '../../components/horizontal-rule/template.tsx',
           '../../components/item-list/template.tsx',
           '../../components/ordered-unordered-list/template.tsx',
-          // '../../components/paginations/template.tsx',
+          '../../components/pagination/template.tsx',
           '../../components/toggle/template.tsx',
         ],
       },

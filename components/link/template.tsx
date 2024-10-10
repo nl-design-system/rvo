@@ -86,6 +86,11 @@ export const argTypes = {
       disable: true,
     },
   },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Link: React.FC<ILinkProps> = ({
