@@ -14,7 +14,7 @@
   }
 }
 
-.rvo-sidebar-layout__container {
+.rvo-sidebar-layout__container:has(.rvo-sidebar-layout__sidebar--bg) {
   @media (min-width: 780px) {
     background: linear-gradient(
       90deg,
@@ -28,7 +28,7 @@
   }
 }
 
-.rvo-sidebar-layout__container--right {
+.rvo-sidebar-layout__container--right:has(.rvo-sidebar-layout__sidebar--bg) {
   @media (min-width: 780px) {
     background: linear-gradient(
       -90deg,

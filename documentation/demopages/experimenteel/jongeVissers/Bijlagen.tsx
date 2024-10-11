@@ -5,7 +5,7 @@ import {
   FileInputField,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -20,7 +20,7 @@ const Bijlagen = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -82,7 +82,7 @@ const Bijlagen = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Bijlagen"></Heading>
                   <ul>
@@ -100,7 +100,7 @@ const Bijlagen = () => {
                 </div>
 
                 <form>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Fieldset legend="Financiële capaciteit">
                       <CheckboxField
                         invalid={false}
@@ -182,13 +182,13 @@ const Bijlagen = () => {
                         Opslaan en verder
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </form>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

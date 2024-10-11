@@ -3,12 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconColors, options as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
 import './index.scss';
 export interface ILinkProps {
+  /** @uxpinignoreprop */
   content?: string;
   href?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
@@ -24,9 +25,12 @@ export interface ILinkProps {
   active?: boolean;
   focus?: boolean;
   noUnderline?: boolean;
+  /** @uxpinignoreprop */
   fullContainerLink?: boolean;
+  /** @uxpinignoreprop */
   className?: string;
   target?: string;
+  /** @uxpinpropname Content */
   children?: React.ReactNode;
 }
 
@@ -77,9 +81,19 @@ export const argTypes = {
   fullContainerLink: {
     control: 'boolean',
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const Link: React.FC<PropsWithChildren<ILinkProps>> = ({
+export const Link: React.FC<ILinkProps> = ({
   content = defaultArgs.content,
   href = defaultArgs.href,
   color = defaultArgs.color,

@@ -1,4 +1,4 @@
-import { Header, Heading, Icon, LayoutColumnRow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
@@ -6,7 +6,7 @@ const Breadcrumbs = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="md">
+      <LayoutFlow size="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <MaxWidthLayout size="md">
           <main>
@@ -51,7 +51,7 @@ const Breadcrumbs = () => {
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

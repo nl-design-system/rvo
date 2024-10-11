@@ -4,7 +4,7 @@ import {
   Fieldset,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -54,7 +54,7 @@ const Aanvrager = () => {
             ]}
           />
           <div className="rvo-form">
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Aanvrager" />
@@ -80,8 +80,8 @@ const Aanvrager = () => {
                 </dl>
               </div>
               <form>
-                <LayoutColumnRow row={false} size="md">
-                  <LayoutColumnRow row={false} size="md">
+                <LayoutFlow row={false} size="md">
+                  <LayoutFlow row={false} size="md">
                     <Fieldset legend="Contactpersoon">
                       <SelectField
                         label="Contactpersoon"
@@ -139,7 +139,7 @@ const Aanvrager = () => {
                     <Fieldset legend="Periode aanvraag">
                       <SelectField label="Maand aanvang" options={[{ value: '1', label: 'Januari' }]}></SelectField>
                     </Fieldset>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                   <ButtonGroup>
                     <Button
                       kind="secondary"
@@ -168,9 +168,9 @@ const Aanvrager = () => {
                       Opslaan en verder
                     </Button>
                   </ButtonGroup>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </form>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </MaxWidthLayout>

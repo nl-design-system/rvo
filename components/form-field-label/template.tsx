@@ -3,15 +3,24 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import parseContentMarkup from '../utils/parseContentMarkup';
 
-export interface ILabelProps extends React.LabelHTMLAttributes<any> {
+export interface ILabelProps {
+  /** @uxpinignoreprop */
+  id?: string;
+  /** @uxpinignoreprop */
+  htmlFor?: string;
+  /** @uxpinignoreprop */
   content?: string;
   size?: 'sm' | 'md';
   type?: 'default' | 'optional' | 'required';
+  /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -26,6 +35,21 @@ export const argTypes = {
     options: ['default', 'optional', 'required'],
     control: { type: 'select' },
   },
+  id: {
+    table: {
+      disable: true,
+    },
+  },
+  htmlFor: {
+    table: {
+      disable: true,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Label: React.FC<ILabelProps> = ({
@@ -34,6 +58,7 @@ export const Label: React.FC<ILabelProps> = ({
   type = defaultArgs.type,
   className,
   children,
+  ...otherProps
 }: ILabelProps) => {
   return (
     <label
@@ -44,8 +69,9 @@ export const Label: React.FC<ILabelProps> = ({
         type === 'optional' && 'rvo-label--optional',
         type === 'required' && 'rvo-label--required',
       )}
+      {...otherProps}
     >
-      {children || content}
+      {parseContentMarkup(children || content)}
     </label>
   );
 };

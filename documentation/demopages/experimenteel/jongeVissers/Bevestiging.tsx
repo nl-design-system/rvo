@@ -1,4 +1,4 @@
-import { Header, Heading, LayoutColumnRow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
+import { Header, Heading, LayoutFlow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
 import '../../common/style.scss';
@@ -7,7 +7,7 @@ const Bevestiging = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -75,7 +75,7 @@ const Bevestiging = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Bevestiging"></Heading>
                   <p>
@@ -84,7 +84,7 @@ const Bevestiging = () => {
                     als u met ons belt of digitale post wilt versturen.
                   </p>
                   <Heading type="h2" textContent="Uw gegevens"></Heading>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <dl className="rvo-data">
                       <dt>Naam</dt>
                       <dd>Albert Heijn B.V.</dd>
@@ -97,7 +97,7 @@ const Bevestiging = () => {
                       U kunt deze ontvangstbevestiging inzien in Mijn dossier. U kunt het document dan ook afdrukken of
                       opslaan op uw computer.
                     </p>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                   <p>
                     Een PDF kunt u openen met{' '}
                     <Link
@@ -113,11 +113,11 @@ const Bevestiging = () => {
                   </p>
                   <Link showIcon="before" href="#" content="Ontvangstbevestiging 192040000027" icon="downloaden"></Link>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

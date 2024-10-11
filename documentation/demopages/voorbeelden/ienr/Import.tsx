@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   SelectField,
@@ -26,13 +26,13 @@ const Import = () => {
         items={[
           {
             label: 'Overzicht',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
             active: true,
           },
           {
             label: 'Mijn dossier',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+            link: '#',
             icon: 'map',
           },
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -80,7 +80,7 @@ const Import = () => {
               items={[
                 {
                   label: 'Dashboard',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
                 },
                 {
@@ -90,14 +90,14 @@ const Import = () => {
                 },
                 {
                   label: 'Melden',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
                   icon: 'plus',
                   active: true,
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 {
                   label: 'Bekijken',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
                   icon: 'oog',
                 },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
@@ -110,14 +110,14 @@ const Import = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <Heading type="h1" noMargins={true}>
                 Importmelding Rund
               </Heading>
 
-              <LayoutColumnRow size="md">
-                <LayoutColumnRow size="xs">
-                  <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
+                <LayoutFlow size="xs">
+                  <LayoutFlow size="md">
                     <Fieldset legend="">
                       <DateInputField
                         label="Importdatum"
@@ -141,16 +141,16 @@ const Import = () => {
 
                     <ButtonGroup>
                       <a
-                        href="iframe.html?args=&id=demo-pagina-s-i-r-importgegevens--default&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-importgegevens--default&viewMode=story"
                         className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                       >
                         Opslaan en gegevens runderen invoeren
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
-            </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
+            </LayoutFlow>
           </div>
         </div>
       </main>

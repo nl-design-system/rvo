@@ -4,7 +4,7 @@ import {
   Grid,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   // MobileMenuBar,
@@ -26,13 +26,13 @@ const DocumentenClean = () => {
         items={[
           {
             label: 'Overzicht',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
             active: true,
           },
           {
             label: 'Mijn dossier',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+            link: '#',
             icon: 'map',
           },
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -76,17 +76,17 @@ const DocumentenClean = () => {
               items={[
                 {
                   label: 'Overzicht',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
                 },
                 {
                   label: 'Mijn dossier',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                  link: '#',
                   icon: 'map',
                 },
                 {
                   label: 'Mijn documenten',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                  link: '#',
                   icon: 'publicatie',
                   active: true,
                 },
@@ -100,12 +100,12 @@ const DocumentenClean = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <Heading type="h1" noMargins={true}>
                 Documenten
               </Heading>
               <div>
-                <LayoutColumnRow size="xl">
+                <LayoutFlow size="xl">
                   <Tabs
                     tabs={[{ label: 'Mijn ontvangen documenten' }, { label: 'Mijn verstuurde documenten' }]}
                     activeTab={0}
@@ -119,10 +119,10 @@ const DocumentenClean = () => {
                   <div className="rvo-wrapper rvo-documents">
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -141,10 +141,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -163,10 +163,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -185,10 +185,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -207,10 +207,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -229,10 +229,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -251,10 +251,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -273,10 +273,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -295,10 +295,10 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutColumnRow size="0">
+                        <LayoutFlow size="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                         <div>
                           <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
                         </div>
@@ -321,9 +321,9 @@ const DocumentenClean = () => {
                     Ontbreekt er een document in dit overzicht? Documenten worden ieder [tijd] ingeladen vanuit de
                     onderliggende systemen. Indien het probleem blijft bestaan neem contact op met ons klantenservice.{' '}
                   </Alert>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </div>
       </main>

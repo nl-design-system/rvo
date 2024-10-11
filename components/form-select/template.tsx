@@ -21,10 +21,20 @@ export interface ISelectOption {
 export interface ISelectProps {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   options?: ISelectOption[];
+  onFocus?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLSelectElement>) => void;
+  /**
+   * @uxpinbind onChange 0.target.value
+   */
+  currentSelection?: number | null;
 }
 
 export const argTypes = {

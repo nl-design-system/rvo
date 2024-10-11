@@ -8,7 +8,7 @@ import {
   Header,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MenuBar,
   StatusIcon,
@@ -80,16 +80,16 @@ const Dashboard = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <Heading type="h1" noMargins={true} mixedBoldAndNormal={true}>
                 <strong>Overzicht</strong> van klantnaam
               </Heading>
-              <LayoutColumnRow size="md">
-                <LayoutColumnRow size="xs">
-                  <LayoutColumnRow size="md">
+              <LayoutFlow size="md">
+                <LayoutFlow size="xs">
+                  <LayoutFlow size="md">
                     <Grid columns="two">
                       <Alert heading="Notificatie titel" kind="info">
-                        <LayoutColumnRow size="sm">
+                        <LayoutFlow size="sm">
                           Notificatie tekst
                           <ButtonGroup>
                             <Button kind="primary" size="sm">
@@ -99,20 +99,20 @@ const Dashboard = () => {
                               Secondary button
                             </Button>
                           </ButtonGroup>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </Alert>
                     </Grid>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
 
               <div className="rvo-cards">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <div className="rvo-heading-w-tag">
-                    <LayoutColumnRow row={true}>
+                    <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Overzicht met cards" noMargins={true}></Heading>
                       <Tag type="info" showIcon="no" content="Info tag" />
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </div>
 
                   <Grid gap="md" columns="two">
@@ -121,135 +121,135 @@ const Dashboard = () => {
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
                         </span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
                         </span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
                         </span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
                         <Link
                           fullContainerLink={true}
                           noUnderline={true}
-                          href="iframe.html?args=&id=demo-pagina-s-cmor-zaak--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
                         >
                           Card titel
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
                         </span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                   </Grid>
-                  <LayoutColumnRow row={true}>
+                  <LayoutFlow row={true}>
                     <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true} />
                     <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true} />
                     <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true} />
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
               </div>
               <hr className="rvo-hr"></hr>
               <Grid gap="xl" columns="two">
-                <LayoutColumnRow size="sm">
+                <LayoutFlow size="sm">
                   <Heading type="h2" textContent="Item list" noMargins={true} />
                   <span>Intro of uitleg</span>
-                  <LayoutColumnRow size="sm">
+                  <LayoutFlow size="sm">
                     <div className="rvo-item-list">
                       <div className="rvo-item-list__item">
-                        <LayoutColumnRow row={true} justifyContent="space-between" alignItems="start">
-                          <LayoutColumnRow row={true} alignItems="start">
+                        <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                            <LayoutColumnRow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} size="sm">
                               <Link content="Item list title" color="zwart" noUnderline={true} />
                               met groene status indicator
-                            </LayoutColumnRow>
-                          </LayoutColumnRow>
+                            </LayoutFlow>
+                          </LayoutFlow>
                           <div className="rvo-item-list-icon">
                             <Link target="#">
                               <Icon icon="delta-naar-rechts" size="sm" />
                             </Link>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div className="rvo-item-list__item">
-                        <LayoutColumnRow row={true} justifyContent="space-between" alignItems="start">
-                          <LayoutColumnRow row={true} alignItems="start">
+                        <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
-                            <LayoutColumnRow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} size="sm">
                               <Link content="Item list title" color="zwart" noUnderline={true} />
                               met rode status indicator
-                            </LayoutColumnRow>
-                          </LayoutColumnRow>
+                            </LayoutFlow>
+                          </LayoutFlow>
                           <div className="rvo-item-list-icon">
                             <Link target="#">
                               <Icon icon="delta-naar-rechts" size="sm" />
                             </Link>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                       <div className="rvo-item-list__item">
-                        <LayoutColumnRow row={true} justifyContent="space-between" alignItems="start">
-                          <LayoutColumnRow row={true} alignItems="start">
+                        <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
-                            <LayoutColumnRow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} size="sm">
                               <Link content="Item list title" color="zwart" noUnderline={true} />
                               met oranje status indicator
-                            </LayoutColumnRow>
-                          </LayoutColumnRow>
+                            </LayoutFlow>
+                          </LayoutFlow>
                           <div className="rvo-item-list-icon">
                             <Link target="#">
                               <Icon icon="delta-naar-rechts" size="sm" />
                             </Link>
                           </div>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                     </div>
                     <Link
@@ -259,10 +259,10 @@ const Dashboard = () => {
                       target="#"
                       noUnderline={true}
                     />
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
               </Grid>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </div>
       </main>

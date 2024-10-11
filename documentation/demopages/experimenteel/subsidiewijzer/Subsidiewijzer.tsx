@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   Pagination,
   SelectField,
@@ -17,8 +17,8 @@ const Subsidiewijzer = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
-      <LayoutColumnRow size="xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="xl">
+        <LayoutFlow size="xl">
           <MenuBar
             items={[
               {
@@ -61,7 +61,7 @@ const Subsidiewijzer = () => {
           />
 
           <div className="rvo-filter-wrapper rvo-max-width-layout rvo-max-width-layout--md">
-            <LayoutColumnRow row={true}>
+            <LayoutFlow row={true}>
               <div className="rvo-filter">
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
@@ -70,7 +70,7 @@ const Subsidiewijzer = () => {
                     </summary>
 
                     <form className="rvo-form">
-                      <LayoutColumnRow size="xl">
+                      <LayoutFlow size="xl">
                         <TextInputField label="Zoek subsidies en financiering" value="wbso"></TextInputField>
 
                         <details open className="rvo-collapsible-filter">
@@ -403,7 +403,7 @@ const Subsidiewijzer = () => {
                             ]}
                           ></CheckboxField>
                         </details>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </form>
                   </details>
                 </Fieldset>
@@ -413,7 +413,7 @@ const Subsidiewijzer = () => {
                   <strong>Subsidie- en financieringswijzer</strong>{' '}
                   <span className="rvo-text rvo-text--subtle rvo-text--md">166 resultaten</span>
                 </Heading>
-                <LayoutColumnRow>
+                <LayoutFlow>
                   <p className="rvo-text--no-margins">
                     Onze Subsidie- en financieringswijzer helpt u financiële ondersteuning voor uw plannen te vinden.
                     Geef aan wie u bent en wat u zoekt, en u krijgt een overzicht met regelingen op maat.
@@ -422,15 +422,15 @@ const Subsidiewijzer = () => {
                       Lees meer over onze Subsidie- en financieringswijzer
                     </a>
                   </p>
-                  <LayoutColumnRow>
-                    <LayoutColumnRow size="2xs">
-                      <LayoutColumnRow row={true} size="sm" wrap={true}>
+                  <LayoutFlow>
+                    <LayoutFlow size="2xs">
+                      <LayoutFlow row={true} size="sm" wrap={true}>
                         <strong className="rvo-results-active-filters">Actieve filters</strong>
                         <Button kind="warning-subtle" size="xs" icon="foutmelding" showIcon="before">
                           Reset filters
                         </Button>
-                      </LayoutColumnRow>
-                      <LayoutColumnRow row={true} size="sm" wrap={true}>
+                      </LayoutFlow>
+                      <LayoutFlow row={true} size="sm" wrap={true}>
                         <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
                           <span>
                             Zoekterm <strong> wbso</strong>
@@ -462,8 +462,8 @@ const Subsidiewijzer = () => {
                             aria-label="Kruis"
                           ></span>
                         </div>
-                      </LayoutColumnRow>
-                    </LayoutColumnRow>
+                      </LayoutFlow>
+                    </LayoutFlow>
                     <div className="rvo-inline-sort">
                       <SelectField
                         label="Sorteer resultaten op"
@@ -493,10 +493,10 @@ const Subsidiewijzer = () => {
                             Partners for International Business (PIB)
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Programma waarmee Nederlandse bedrijven in een publiek-private samenwerking hun
                               internationale ambities kunnen realiseren.
@@ -524,10 +524,10 @@ const Subsidiewijzer = () => {
                             Borgstelling MKB-kredieten (BMKB)
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Borgstelling voor mkb inclusief starters, om een lening te verkrijgen voor investeringen.
                               Ook voor investeerders die het mkb willen ondersteunen.
@@ -555,10 +555,10 @@ const Subsidiewijzer = () => {
                             Eurostars: subsidie internationale marktgerichte R&D
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Subsidie voor mkb-ondernemers die samen met Europese partners marktgerichte, nieuwe
                               technologieën ontwikkelen.
@@ -586,10 +586,10 @@ const Subsidiewijzer = () => {
                             Eureka: programma internationale marktgerichte R&D
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Financiering voor bedrijven en organisaties die met marktgerichte R&D bijdragen aan
                               economische groei en aan strategische en maatschappelijke oplossingen.
@@ -615,10 +615,10 @@ const Subsidiewijzer = () => {
                             Groeifaciliteit
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Garantstelling voor financiers om risicodragende financieringen te verstrekken aan
                               ondernemers.
@@ -646,10 +646,10 @@ const Subsidiewijzer = () => {
                             Garantie Ondernemingsfinanciering (GO)
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Garantstelling voor (middel)grote ondernemingen die krediet nodig hebben. De GO geeft
                               banken een 50% staatsgarantie op middelgrote en grote leningen.
@@ -677,10 +677,10 @@ const Subsidiewijzer = () => {
                             Subsidieregeling praktijkleren
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutColumnRow size="sm" row={true}>
+                            <LayoutFlow size="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
-                            </LayoutColumnRow>
+                            </LayoutFlow>
                             <span>
                               Subsidie voor ondernemers die een praktijk- of werkleerplaats aanbieden. De subsidie is
                               een tegemoetkoming in de kosten die een werkgever maakt voor de begeleiding van een
@@ -701,12 +701,12 @@ const Subsidiewijzer = () => {
                       </div>
                     </div>
                     <Pagination numberOfPages={30} activePage={1} />
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
-        </LayoutColumnRow>
+        </LayoutFlow>
         <Footer
           columns={[
             {
@@ -746,7 +746,7 @@ const Subsidiewijzer = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

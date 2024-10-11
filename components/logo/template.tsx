@@ -9,14 +9,27 @@ import './index.scss';
 export interface ILogoProps {
   title?: string;
   subtitle?: string;
+  /** @uxpinignoreprop */
   className?: string;
 }
+
+export const argTypes = {
+  title: {
+    control: 'text',
+  },
+  subtitle: {
+    control: 'text',
+  },
+  className: {
+    control: 'text',
+  },
+};
 
 export const Logo: React.FC<ILogoProps> = ({
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
-  className = defaultArgs.className,
-}) => {
+  className,
+}: ILogoProps) => {
   return (
     <div className={clsx('rvo-logo', className)}>
       <div className="rvo-logo__emblem">

@@ -1,4 +1,4 @@
-import { Grid, Header, Icon, LayoutColumnRow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Grid, Header, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
@@ -6,15 +6,15 @@ const ExpandableArea = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="md">
+      <LayoutFlow size="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="sm" />
 
         <MaxWidthLayout size="sm">
           <main className="rvo-expandable-area-demo">
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <Grid columns="three" gap="xl">
                 <div className="rvo-card">
-                  <LayoutColumnRow row={true} alignItems="start">
+                  <LayoutFlow row={true} alignItems="start">
                     <div className="rvo-card-icon">
                       <Icon icon="digitaal-onderzoek" size="2xl" />
                     </div>
@@ -23,10 +23,10 @@ const ExpandableArea = () => {
                       <br />
                       <strong>NL 039439</strong>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
                 <div className="rvo-card">
-                  <LayoutColumnRow row={true} alignItems="start">
+                  <LayoutFlow row={true} alignItems="start">
                     <div className="rvo-card-icon">
                       <Icon icon="portemonnee" size="2xl" />
                     </div>
@@ -35,10 +35,10 @@ const ExpandableArea = () => {
                       <br />
                       <strong>6,524</strong>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
                 <div className="rvo-card">
-                  <LayoutColumnRow row={true} alignItems="start">
+                  <LayoutFlow row={true} alignItems="start">
                     <div className="rvo-card-icon">
                       <Icon icon="wereldbol" size="2xl" />
                     </div>
@@ -53,11 +53,11 @@ const ExpandableArea = () => {
                         Spain
                       </a>
                     </div>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
               </Grid>
               <div className="rvo-card">
-                <LayoutColumnRow row={true} alignItems="start">
+                <LayoutFlow row={true} alignItems="start">
                   <div className="rvo-card-icon">
                     <Icon icon="ketting" size="2xl" />
                   </div>
@@ -73,7 +73,7 @@ const ExpandableArea = () => {
                     </a>
                     <details className="rvo-expandable-area">
                       <summary className="rvo-expandable-area-summary">
-                        <LayoutColumnRow row={true} size="xs">
+                        <LayoutFlow row={true} size="xs">
                           <div className="rvo-expandable-area-icon--closed">
                             <Icon icon="delta-omlaag" size="sm"></Icon>
                           </div>
@@ -81,7 +81,7 @@ const ExpandableArea = () => {
                             <Icon icon="delta-omhoog" size="sm"></Icon>
                           </div>
                           Show more
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </summary>
                       <a href="#" className="rvo-link">
                         NL-3049594-D9404
@@ -132,12 +132,12 @@ const ExpandableArea = () => {
                       </a>
                     </details>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

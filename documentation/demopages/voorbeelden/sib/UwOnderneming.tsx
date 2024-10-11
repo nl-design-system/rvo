@@ -4,7 +4,7 @@ import {
   Footer,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   ProgressTracker,
@@ -17,8 +17,8 @@ const UwOnderneming = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <LayoutColumnRow size="2xl">
-        <LayoutColumnRow size="xl">
+      <LayoutFlow size="2xl">
+        <LayoutFlow size="xl">
           <div className="navigation">
             <MobileMenuBar
               iconPlacement="before"
@@ -29,13 +29,13 @@ const UwOnderneming = () => {
               items={[
                 {
                   label: 'Overzicht',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
                   active: true,
                 },
                 {
                   label: 'Mijn dossier',
-                  link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+                  link: '#',
                   icon: 'map',
                 },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -101,35 +101,35 @@ const UwOnderneming = () => {
                 {
                   state: 'completed',
                   label: 'Startpagina',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'completed',
                   label: 'Uw gegevens',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'doing',
                   label: 'Uw onderneming',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-uw-onderneming--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Zaakgegevens',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Kosten',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-kosten--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
@@ -137,21 +137,21 @@ const UwOnderneming = () => {
                 {
                   state: 'incomplete',
                   label: 'Uitvoerder coaching traject',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-uitvoerder--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Maatschappelijk verantwoord ondernemen',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-mvo--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
                 {
                   state: 'incomplete',
                   label: 'Ondertekening',
-                  link: 'iframe.html?args=&id=demo-pagina-s-sib-ondertekening--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
                   size: 'md',
                   line: 'straight',
                 },
@@ -159,11 +159,11 @@ const UwOnderneming = () => {
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
               ]}
             />
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon  rvo-link--normal"
-                  href="iframe.html?args=&id=demo-pagina-s-sib-uw-gegevens--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story"
                 >
                   <span
                     className="utrecht-icon rvo-icon rvo-icon-terug rvo-icon--md rvo-icon--hemelblauw  rvo-link__icon--before"
@@ -219,15 +219,15 @@ const UwOnderneming = () => {
               </Fieldset>
               <ButtonGroup>
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-sib-zaakgegevens--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
               </ButtonGroup>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </main>
-        </LayoutColumnRow>
+        </LayoutFlow>
         <Footer
           columns={[
             {
@@ -267,7 +267,7 @@ const UwOnderneming = () => {
             },
           ]}
         />
-      </LayoutColumnRow>
+      </LayoutFlow>
     </body>
   );
 };

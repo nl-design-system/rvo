@@ -1,11 +1,11 @@
-import { Footer, Header, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/tabs.scss';
 
 const Tabs = () => {
   return (
     <div className="rvo-demo-page rvo-tabs-demopage">
       <Header link="#" />
-      <LayoutColumnRow size="lg">
+      <LayoutFlow size="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -20,7 +20,7 @@ const Tabs = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutColumnRow size="3xl">
+        <LayoutFlow size="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading textContent="Tabs demo page"></Heading>
             <div className="rvo-tabs">
@@ -114,8 +114,8 @@ const Tabs = () => {
               },
             ]}
           />
-        </LayoutColumnRow>
-      </LayoutColumnRow>
+        </LayoutFlow>
+      </LayoutFlow>
     </div>
   );
 };

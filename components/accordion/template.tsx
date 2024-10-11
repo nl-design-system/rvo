@@ -4,14 +4,16 @@
  */
 import './index.scss';
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
+import { AccordionItem, IAccordionItemProps } from './accordion-item/template';
 import { defaultArgs } from './defaultArgs';
-import { AccordionItem, IAccordionItemProps } from '../accordion-item/template';
 
 export interface IAccordionProps {
   /** @uxpinignoreprop */
   items: IAccordionItemProps[];
   grijs?: boolean;
+  /** @uxpinpropname Accordion items */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -21,13 +23,18 @@ export const argTypes = {
   grijs: {
     control: 'boolean',
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const Accordion: React.FC<PropsWithChildren<IAccordionProps>> = ({
+export const Accordion: React.FC<IAccordionProps> = ({
   items = defaultArgs.items,
   grijs = defaultArgs.grijs,
   children,
-}: PropsWithChildren<IAccordionProps>) => {
+}: IAccordionProps) => {
   return (
     <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')}>
       {(children &&

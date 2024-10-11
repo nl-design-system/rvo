@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './defaultArgs';
-import { Logo } from './template';
+import { argTypes, Logo } from './template';
 
 const meta: Meta<typeof Logo> = {
   title: 'Componenten/Logo',
   component: Logo,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'WORK IN PROGRESS',

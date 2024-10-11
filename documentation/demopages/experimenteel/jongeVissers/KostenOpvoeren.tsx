@@ -3,7 +3,7 @@ import {
   Fieldset,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -18,7 +18,7 @@ const KostenOpvoeren = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -94,18 +94,18 @@ const KostenOpvoeren = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Heading type="h1" textContent="Kosten opvoeren"></Heading>
                     <dl className="rvo-data">
                       <dt>Omschrijving van de investering</dt>
                       <dd>Aanschaf voertuig</dd>
                     </dl>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </div>
                 <form>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Fieldset legend="">
                       <TextInputField
                         label="Hoeveel kost het vissersvaartuig (exclusief btw)?"
@@ -149,13 +149,13 @@ const KostenOpvoeren = () => {
                         Opslaan en verder
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </form>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

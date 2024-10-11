@@ -5,7 +5,7 @@ import {
   Header,
   Heading,
   Label,
-  LayoutColumnRow,
+  LayoutFlow,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -18,7 +18,7 @@ const Datum = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -88,12 +88,12 @@ const Datum = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Datum verleningsverzoek"></Heading>
                 </div>
                 <form>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Fieldset legend="">
                       <Field className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
                         <Label htmlFor={'verlengingsdatum'}>
@@ -117,13 +117,13 @@ const Datum = () => {
                         Opslaan en verder
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </form>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

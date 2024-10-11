@@ -9,21 +9,26 @@ import React, { useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 
 export interface ITextInputProps {
+  /** @uxpinignoreprop */
   key?: string;
+  /** @uxpinignoreprop */
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   readOnly?: boolean;
   required?: boolean;
-  inputType?: string;
+  inputType?: 'text' | 'textarea';
   placeholder?: string;
   value?: string;
-  validation?: string;
+  validation?: 'text' | 'number' | 'currency';
   prefix?: string;
   suffix?: string;
-  size?: string;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   maxLength?: number | undefined;
+  /** @uxpinpropname Max length indicator (textarea) */
   maxLengthIndicator?: boolean;
   onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;

@@ -5,7 +5,7 @@ import {
   Grid,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   MobileMenuBar,
   RadioButtonField,
@@ -26,13 +26,13 @@ const Dashboard = () => {
         items={[
           {
             label: 'Overzicht',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
             active: true,
           },
           {
             label: 'Mijn dossier',
-            link: 'iframe.html?args=&id=demo-pagina-s-cmor-mijn-dossier--default&viewMode=story',
+            link: '#',
             icon: 'map',
           },
           { label: 'Mijn berichten', link: '#', icon: 'mail' },
@@ -80,7 +80,7 @@ const Dashboard = () => {
               items={[
                 {
                   label: 'Dashboard',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-dashboard--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
                   active: true,
                 },
@@ -91,13 +91,13 @@ const Dashboard = () => {
                 },
                 {
                   label: 'Melden',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-import--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
                   icon: 'plus',
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 {
                   label: 'Bekijken',
-                  link: 'iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
                   icon: 'oog',
                 },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
@@ -110,14 +110,14 @@ const Dashboard = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutColumnRow size="xl">
+            <LayoutFlow size="xl">
               <Heading type="h1" noMargins={true}>
                 Mijn I&R
               </Heading>
-              <LayoutColumnRow size="md">
-                <LayoutColumnRow size="xs">
+              <LayoutFlow size="md">
+                <LayoutFlow size="xs">
                   <Heading type="h2" textContent="Geselecteerde locatie" noMargins={true} />
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Grid columns="two">
                       <dl className="rvo-data-list">
                         <dt>UBN</dt>
@@ -131,7 +131,7 @@ const Dashboard = () => {
                         </dd>
                       </dl>
                       <div>
-                        <LayoutColumnRow size="md">
+                        <LayoutFlow size="md">
                           <RadioButtonField
                             name="ubn"
                             label="Selecteer een andere locatie"
@@ -144,33 +144,33 @@ const Dashboard = () => {
                           <Button kind="secondary" size="xs">
                             Zoek een andere UBN
                           </Button>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </div>
                     </Grid>
-                  </LayoutColumnRow>
-                </LayoutColumnRow>
-              </LayoutColumnRow>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
 
               <div className="rvo-cards">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <div className="rvo-heading-w-tag">
-                    <LayoutColumnRow row={true}>
+                    <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Diersoorten" noMargins={true}></Heading>
                       <Button kind="secondary" size="xs">
                         Diersoorten wijzigen
                       </Button>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </div>
 
                   <Grid gap="md" columns="two">
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutColumnRow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" size="sm">
                         <Heading type="h3" noMargins={true}>
                           Schaap
                         </Heading>
 
                         <span className="rvo-text--subtle rvo-text--sm">Peildatum: 20-02-2024</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">46</span>
                         &nbsp;schapen{' '}
@@ -179,21 +179,21 @@ const Dashboard = () => {
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">0 </span>&nbsp;vrije merken
                       </a>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="bevestiging" size="md" />
                         <span className="rvo-text--sm">Geen openstaande meldingen</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutColumnRow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" size="sm">
                         <Heading type="h3" noMargins={true}>
                           Rund
                         </Heading>
 
                         <span className="rvo-text--subtle rvo-text--sm">Peildatum: 20-02-2024</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                       <a
-                        href="iframe.html?args=&id=demo-pagina-s-i-r-stallijst--default&viewMode=story"
+                        href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story"
                         className="rvo-link rvo-link--no-underline rvo-link--normal"
                       >
                         <span className="rvo-text--bold">6</span>
@@ -203,19 +203,19 @@ const Dashboard = () => {
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">12 </span>&nbsp;vrije merken
                       </a>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="bevestiging" size="md" />
                         <span className="rvo-text--sm">Geen openstaande meldingen</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutColumnRow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" size="sm">
                         <Heading type="h3" noMargins={true}>
                           Geit
                         </Heading>
 
                         <span className="rvo-text--subtle rvo-text--sm">Peildatum: 20-02-2024</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">0</span>
                         &nbsp;geiten{' '}
@@ -224,34 +224,34 @@ const Dashboard = () => {
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">12 </span>&nbsp;vrije merken
                       </a>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="bevestiging" size="md" />
                         <span className="rvo-text--sm">Geen openstaande meldingen</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutColumnRow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" size="sm">
                         <Heading type="h3" noMargins={true}>
                           Paardachtige
                         </Heading>
 
                         <span className="rvo-text--subtle rvo-text--sm">Peildatum: 20-02-2024</span>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">10</span>
                         &nbsp;paardachtige{' '}
                       </a>
-                      <LayoutColumnRow row={true} size="xs">
+                      <LayoutFlow row={true} size="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal rvo-text--sm">
                           <span className="rvo-text--bold">2</span>&nbsp;openstaande meldingen
                         </a>
-                      </LayoutColumnRow>
+                      </LayoutFlow>
                     </Card>
                   </Grid>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </div>
       </main>

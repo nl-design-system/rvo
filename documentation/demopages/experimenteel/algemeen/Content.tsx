@@ -1,4 +1,4 @@
-import { Header, Heading, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../../common/style.scss';
 
@@ -6,7 +6,7 @@ const Content = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="md">
+      <LayoutFlow size="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <main className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-content">
@@ -52,7 +52,7 @@ const Content = () => {
             </blockquote>
           </div>
         </main>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

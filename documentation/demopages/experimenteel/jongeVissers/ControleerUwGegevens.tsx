@@ -2,7 +2,7 @@ import {
   ButtonGroup,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -16,7 +16,7 @@ const ControleerGegevens = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutColumnRow size="2xl">
+      <LayoutFlow size="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -84,11 +84,11 @@ const ControleerGegevens = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-form-intro">
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <Heading type="h1" textContent="Controleer uw gegevens"></Heading>
-                    <LayoutColumnRow size="sm">
+                    <LayoutFlow size="sm">
                       <dl className="rvo-data">
                         <dt>BSN</dt>
                         <dd>35012085</dd>
@@ -102,11 +102,11 @@ const ControleerGegevens = () => {
                         <dd>albert@heijn.nl</dd>
                       </dl>
                       <Link showIcon="before" href="#" icon="bewerken" content="Wijzig deze gegevens"></Link>
-                    </LayoutColumnRow>
-                  </LayoutColumnRow>
+                    </LayoutFlow>
+                  </LayoutFlow>
                 </div>
                 <form>
-                  <LayoutColumnRow size="md">
+                  <LayoutFlow size="md">
                     <ButtonGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
@@ -121,13 +121,13 @@ const ControleerGegevens = () => {
                         Opslaan en verder
                       </a>
                     </ButtonGroup>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                 </form>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
           </main>
         </MaxWidthLayout>
-      </LayoutColumnRow>
+      </LayoutFlow>
     </div>
   );
 };

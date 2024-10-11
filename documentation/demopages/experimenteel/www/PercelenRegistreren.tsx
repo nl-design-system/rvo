@@ -1,4 +1,4 @@
-import { Button, Footer, Header, Heading, Icon, LayoutColumnRow, Link, MenuBar } from '@nl-rvo/components';
+import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 
@@ -114,20 +114,20 @@ const PercelenRegistreren = () => {
         </div>
 
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--sm rvo-main--w-line rvo-main--content-page">
-          <LayoutColumnRow size="xl">
+          <LayoutFlow size="xl">
             <div className="rvo-content--www rvo-content--home">
-              <LayoutColumnRow size="sm">
+              <LayoutFlow size="sm">
                 <Heading type="h1">Alles over percelen registreren</Heading>
                 <p className="rvo-paragraph rvo-paragraph--subtle rvo-paragraph--sm rvo-paragraph--no-spacing">
                   <em>Gepubliceerd op: </em>22 januari 2015 | <em>Laatst gecontroleerd op: </em> 12 oktober 2023
                 </p>
-              </LayoutColumnRow>
+              </LayoutFlow>
               <p className="rvo-paragraph rvo-paragraph--lg">
                 Heeft u landbouwgrond of natuurgrond in gebruik? Dat registreert u bij ons. Dit doet u in Mijn percelen.
                 Wij gebruiken uw registratie bijvoorbeeld voor het mestbeleid en grondgebonden subsidies die u
                 aanvraagt.
               </p>
-              <LayoutColumnRow size="xl">
+              <LayoutFlow size="xl">
                 <div className="rvo-quick-links">
                   <Heading type="h2" textContent="Op deze pagina" />
                   <ul className="rvo-quick-links-list">
@@ -191,7 +191,7 @@ const PercelenRegistreren = () => {
                     de Gecombineerde opgave invult.
                   </p>
                 </div>
-              </LayoutColumnRow>
+              </LayoutFlow>
               <Heading type="h2">Wat registreert u en waar doet u dat?</Heading>
               <p className="rvo-paragraph">
                 U registreert bij ons uw bedrijfssituatie. Dit betekent dat u alle grond registreert die u in gebruik
@@ -204,7 +204,7 @@ const PercelenRegistreren = () => {
               </p>
               <div className="rvo-rhs-update-component">
                 <a
-                  href="iframe.html?args=&id=demo-pagina-s-cmor-overzicht--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Mijn Percelen registreren
@@ -224,7 +224,7 @@ const PercelenRegistreren = () => {
               <hr className="rvo-divider"></hr>
             </div>
             <div className="rvo-feedback">
-              <LayoutColumnRow row={true} wrap={true} size="sm">
+              <LayoutFlow row={true} wrap={true} size="sm">
                 <Icon icon="tekstballon-met-hart" size="2xl" />
                 <em>Bent u tevreden over deze pagina?</em>
                 <span className="rvo-rhs-update-component">
@@ -232,9 +232,9 @@ const PercelenRegistreren = () => {
                     Geef uw mening
                   </Button>
                 </span>
-              </LayoutColumnRow>
+              </LayoutFlow>
             </div>
-          </LayoutColumnRow>
+          </LayoutFlow>
         </main>
 
         <Footer

@@ -1,4 +1,4 @@
-import { Button, CheckboxField, Heading, LayoutColumnRow, MenuBar } from '@nl-rvo/components';
+import { Button, CheckboxField, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 
@@ -28,16 +28,16 @@ const Profiel = () => {
                   label: 'Home',
 
                   icon: 'home',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story',
                 },
                 {
                   label: 'Mijn Percelen',
 
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story',
                 },
                 {
                   label: 'Boer Overveen B.V',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story',
                   active: true,
                   icon: 'user',
                 },
@@ -62,12 +62,12 @@ const Profiel = () => {
           </div>
           <div className="rvo-main-mijn-percelen--profiel">
             <Heading type="h1" textContent="Instellingen" />
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <ul role="tablist" className="rvo-tabs">
                 <li role="presentation" className="rvo-tabs-item">
                   <a
                     role="tab"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                     id="tab1"
                     aria-selected="true"
                     className="rvo-tabs-item-link rvo-tabs-item-link--active"
@@ -78,7 +78,7 @@ const Profiel = () => {
                 <li role="presentation" className="rvo-tabs-item">
                   <a
                     role="tab"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                     id="tab1"
                     aria-selected="true"
                     className="rvo-tabs-item-link"
@@ -89,7 +89,7 @@ const Profiel = () => {
                 <li role="presentation" className="rvo-tabs-item">
                   <a
                     role="tab"
-                    href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                    href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                     id="tab1"
                     aria-selected="true"
                     className="rvo-tabs-item-link"
@@ -101,7 +101,7 @@ const Profiel = () => {
               <div className="rvo-rhs-update-component">
                 <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                   <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                    <LayoutColumnRow size="xl">
+                    <LayoutFlow size="xl">
                       <CheckboxField
                         label="Perceelweergave"
                         helperText="Bepaal welke onderdelen er getoond worden in het perceeloverzicht"
@@ -114,14 +114,14 @@ const Profiel = () => {
                           { id: 'optionB-cb-warning', label: 'Einddatum' },
                         ]}
                       ></CheckboxField>
-                    </LayoutColumnRow>
+                    </LayoutFlow>
                   </fieldset>
                 </div>
               </div>
               <div className="rvo-button-inline rvo-rhs-update-component">
                 <Button kind="primary">Voorkeuren opslaan</Button>
               </div>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </div>

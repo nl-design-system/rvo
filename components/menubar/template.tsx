@@ -3,14 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { JSX } from 'react';
+import React, { JSX, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Icon } from '../icon/template';
+import MenuBarItem from './menubar-item/template';
 import { IconType } from '../icon/types';
-import Link from '../link/template';
-import MaxWidthLayout from '../max-width-layout/template';
+import { Icon, Link, MaxWidthLayout } from '../index';
 import './index.scss';
-
 export interface IMenuBarItem {
   label: string;
   icon?: IconType;
@@ -23,13 +21,15 @@ export interface IMenuBarItem {
 export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
   direction?: 'horizontal' | 'vertical';
+  /** @uxpinignoreprop */
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement?: 'before' | 'after';
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
   deltaForActiveItem?: boolean;
-  children?: React.ReactNode;
+  /** @uxpinpropname MenuBar items */
+  children?: ReactNode | undefined;
   horizontalRule?: boolean;
   linkColor?: 'donkerblauw' | 'hemelblauw' | 'logoblauw' | 'grijs-700' | 'zwart';
   useBackgroundColor?: boolean;
@@ -77,6 +77,11 @@ export const argTypes = {
   },
   useBackgroundColor: {
     control: 'boolean',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
   },
 };
 
@@ -222,7 +227,17 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
         ),
     ];
   } else {
-    itemsMarkup = children;
+    let isAlignRightSet = false;
+    itemsMarkup = React.Children.map(children, (child, index) => {
+      // Only set align right prop for the first item that has align = right
+      const isAlignRight = (child as any).props.align === 'right';
+      if (isAlignRight && !isAlignRightSet) {
+        isAlignRightSet = true;
+        return <MenuBarItem key={index} {...(child as any).props} align="right" />;
+      } else {
+        return <MenuBarItem key={index} {...(child as any).props} align="left" />;
+      }
+    });
   }
 
   const navMarkup = (

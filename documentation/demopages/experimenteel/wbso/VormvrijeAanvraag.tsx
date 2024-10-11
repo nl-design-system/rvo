@@ -4,7 +4,7 @@ import {
   Fieldset,
   Header,
   Heading,
-  LayoutColumnRow,
+  LayoutFlow,
   Link,
   MaxWidthLayout,
   MenuBar,
@@ -52,14 +52,14 @@ const VormvrijeAanvraag = () => {
             ]}
           />
           <div className="rvo-form">
-            <LayoutColumnRow size="md">
+            <LayoutFlow size="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Vormvrije aanvraag" />
               </div>
               <form>
-                <LayoutColumnRow row={false} size="md">
-                  <LayoutColumnRow row={false} size="md">
+                <LayoutFlow row={false} size="md">
+                  <LayoutFlow row={false} size="md">
                     <Fieldset legend="">
                       <RadioButtonField
                         name="radio-buttons"
@@ -71,7 +71,7 @@ const VormvrijeAanvraag = () => {
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
-                  </LayoutColumnRow>
+                  </LayoutFlow>
                   <ButtonGroup>
                     <Button
                       kind="secondary"
@@ -100,9 +100,9 @@ const VormvrijeAanvraag = () => {
                       Opslaan en verder
                     </Button>
                   </ButtonGroup>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </form>
-            </LayoutColumnRow>
+            </LayoutFlow>
           </div>
         </main>
       </MaxWidthLayout>

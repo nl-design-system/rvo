@@ -4,7 +4,7 @@ import {
   CheckboxField,
   Heading,
   Icon,
-  LayoutColumnRow,
+  LayoutFlow,
   MenuBar,
   SelectField,
   TextInputField,
@@ -38,16 +38,16 @@ const Percelen = () => {
                   label: 'Home',
 
                   icon: 'home',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-startpagina--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story',
                 },
                 {
                   label: 'Mijn Percelen',
                   active: true,
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story',
                 },
                 {
                   label: 'Boer Overveen B.V',
-                  link: 'iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story',
+                  link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story',
                   icon: 'user',
                 },
                 { label: 'Uitloggen', link: '#', align: 'right' },
@@ -65,7 +65,7 @@ const Percelen = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-percelen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story"
                   id="tab1"
                   aria-selected="true"
                   className="rvo-tabs-item-link rvo-tabs-item-link--active"
@@ -76,7 +76,7 @@ const Percelen = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-oplossen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-oplossen--default&viewMode=story"
                   id="tab2"
                   className="rvo-tabs-item-link"
                 >
@@ -86,7 +86,7 @@ const Percelen = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-samenvatting--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-samenvatting--default&viewMode=story"
                   id="tab2"
                   className="rvo-tabs-item-link"
                 >
@@ -96,7 +96,7 @@ const Percelen = () => {
               <li role="presentation" className="rvo-tabs-item">
                 <a
                   role="tab"
-                  href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-versturen--default&viewMode=story"
+                  href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-versturen--default&viewMode=story"
                   id="tab3"
                   className="rvo-tabs-item-link"
                 >
@@ -106,13 +106,13 @@ const Percelen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutColumnRow size="md">
+                <LayoutFlow size="md">
                   <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" />
                   <div className="rvo-instellingen">
                     <a
                       className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                       type="button"
-                      href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-profiel--default&viewMode=story"
+                      href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story"
                     >
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-tandwielen rvo-icon--xs rvo-icon--hemelblauw"
@@ -129,7 +129,7 @@ const Percelen = () => {
                           Filter en sorteer percelen <Icon icon="delta-omlaag"></Icon>
                           <Icon icon="delta-omhoog"></Icon>
                         </summary>
-                        <LayoutColumnRow size="md">
+                        <LayoutFlow size="md">
                           <SelectField
                             label="Filter op peildatum"
                             options={[{ value: '1', label: '15-05-2023' }]}
@@ -150,7 +150,7 @@ const Percelen = () => {
                               { value: 'c', label: 'Op aantal hectare' },
                             ]}
                           ></SelectField>
-                        </LayoutColumnRow>
+                        </LayoutFlow>
                       </details>
                     </fieldset>
                   </div>
@@ -243,7 +243,7 @@ const Percelen = () => {
 
                       <div className="rvo-card-perceel-actions">
                         <a
-                          href="iframe.html?args=&id=demo-pagina-s-mijn-percelen-perceeledit--default&viewMode=story"
+                          href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-perceeledit--default&viewMode=story"
                           className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"
                         >
                           Bewerken
@@ -254,7 +254,7 @@ const Percelen = () => {
                       </div>
                     </div>
                   </div>
-                </LayoutColumnRow>
+                </LayoutFlow>
               </div>
             </div>
           </div>

@@ -3,14 +3,14 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Icon from '../icon/template';
 import Link from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ICardProps extends PropsWithChildren {
+export interface ICardProps {
   background: 'none' | 'color' | 'image';
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;
@@ -23,8 +23,13 @@ export interface ICardProps extends PropsWithChildren {
   imageSize?: 'sm' | 'md';
   showLinkIndicator?: boolean;
   invertedColors?: boolean;
+  /** @uxpinignoreprop */
   content?: string;
+  /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export const argTypes = {
@@ -55,6 +60,16 @@ export const argTypes = {
   showLinkIndicator: { control: { type: 'boolean' } },
   invertedColors: { control: { type: 'boolean' } },
   content: { control: { type: 'text' } },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Card: React.FC<ICardProps> = ({
@@ -73,6 +88,7 @@ export const Card: React.FC<ICardProps> = ({
   content = defaultArgs.content,
   className = defaultArgs.className,
   children,
+  onClick,
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
   const hasLinkIndicator = showLinkIndicator && link && link.length > 0 && fullCardLink === true;
@@ -80,6 +96,10 @@ export const Card: React.FC<ICardProps> = ({
 
   const ContentContainer = hasLinkIndicator ? 'div' : React.Fragment;
   const contentContainerProps = hasLinkIndicator ? { className: clsx('rvo-card--with-link-indicator') } : {};
+
+  const getImageSrc = (image: string) => {
+    return image.startsWith('http') ? image : `images/www/${image}`;
+  };
 
   return (
     <div
@@ -94,16 +114,17 @@ export const Card: React.FC<ICardProps> = ({
         invertedColors && 'rvo-card--inverted-colors',
         className,
       )}
+      onClick={onClick}
     >
       {hasBackgroundImage && (
         <div className={clsx('rvo-card__background-image-container')}>
-          <img src={`images/www/${backgroundImage}`} className="rvo-card__background-image" />
+          <img src={getImageSrc(backgroundImage)} className="rvo-card__background-image" />
         </div>
       )}
 
       {image && image.length > 0 && (
         <div className={clsx('rvo-card__image-container')}>
-          <img src={`images/www/${image}`} className="rvo-card__image" />
+          <img src={getImageSrc(image)} className="rvo-card__image" />
         </div>
       )}
 
@@ -111,12 +132,12 @@ export const Card: React.FC<ICardProps> = ({
         <div className="rvo-card__content">
           {title && title.length > 0 && (
             <h3 className="utrecht-heading-3">
-              {link?.length ? (
+              {link && link.length > 0 ? (
                 <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
-                  {title}
+                  {parseContentMarkup(title)}
                 </Link>
               ) : (
-                <>{title}</>
+                <>{parseContentMarkup(title)}</>
               )}
             </h3>
           )}

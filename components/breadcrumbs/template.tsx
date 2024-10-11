@@ -3,21 +3,24 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
+import BreadcrumbsItem from './breadcrumbs-item/template';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
-import Link from '../link/template';
-import '../layout-column-row/index.scss';
+import '../layout-flow/index.scss';
 import './index.scss';
 
-interface IBreadcrumbItem {
+export interface IBreadcrumbsItem {
   label: string;
   url?: string;
 }
 
 export interface IBreadcrumbProps {
-  items: IBreadcrumbItem[];
+  /** @uxpinignoreprop */
+  items: IBreadcrumbsItem[];
   size: 'sm' | 'md' | 'lg';
+  /** @uxpinpropname Breadcrumb items */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -28,46 +31,41 @@ export const argTypes = {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+};
+
+const parseDividerMarkup = (index: number, items: unknown[]) => {
+  return index > 0 && index < items.length && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
 };
 
 export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
   items = defaultArgs.items,
   size = defaultArgs.size,
+  children,
 }: IBreadcrumbProps) => {
   return (
     <ol className={clsx('rvo-breadcrumbs', `rvo-breadcrumbs--${size}`)}>
-      {items.map((item, index) => {
-        // Parse divider markup
-        let dividerMarkup = index > 0 && index < items.length && (
-          <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />
-        );
-
-        // Parse item markup
-        let itemMarkup;
-        if (index < items.length - 1) {
-          // Not the last item
-          itemMarkup = (
-            <Link href={item.url} noUnderline={true}>
-              {dividerMarkup}
-              {item.label}
-            </Link>
+      {(children &&
+        React.Children.map(children, (child, index) => {
+          return (
+            <li key={index} className="rvo-breadcrumbs-item">
+              {parseDividerMarkup(index, items)}
+              <BreadcrumbsItem key={index} {...(child as any).props} />
+            </li>
           );
-        } else {
-          // Last item
-          itemMarkup = (
-            <span className={clsx('rvo-breadcrumb-current-page')}>
-              {dividerMarkup}
-              {item.label}
-            </span>
+        })) ||
+        items.map((item, index) => {
+          return (
+            <li key={`${item.label}${index}`} className="rvo-breadcrumbs-item">
+              {parseDividerMarkup(index, items)}
+              <BreadcrumbsItem {...item} />
+            </li>
           );
-        }
-
-        return (
-          <li key={`${item.label}${index}`} className="rvo-breadcrumbs-item">
-            {itemMarkup}
-          </li>
-        );
-      })}
+        })}
     </ol>
   );
 };
