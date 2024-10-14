@@ -2,20 +2,22 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import clsx from 'clsx';
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 import '../ordered-unordered-list/index.scss';
-import Link from '../link/template';
-
-export interface ITabProps {
-  label: string;
-}
+import TabItem, { ITabItemProps } from './tab-item/template';
 
 export interface ITabsProps {
-  tabs: ITabProps[];
+  /** @uxpinignoreprop */
+  tabs: ITabItemProps[];
+  /**
+   * @uxpinbind onChange 0
+   */
   activeTab: number;
+  onChange?: (activeTab: number) => void;
+  /** @uxpinpropname Tab items */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -28,17 +30,33 @@ export const argTypes = {
       required: true,
     },
   },
+  OnChange: {
+    table: {
+      disable: true,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const Tabs: React.FC<ITabsProps> = ({ tabs = defaultArgs.tabs, activeTab = defaultArgs.activeTab }) => {
+export const Tabs: React.FC<ITabsProps> = ({
+  tabs = defaultArgs.tabs,
+  activeTab = defaultArgs.activeTab,
+  onChange,
+  children,
+}: ITabsProps) => {
   const [currentTab, setCurrentTab] = useState(activeTab);
 
   useEffect(() => {
     setCurrentTab(activeTab);
   }, [activeTab]);
 
-  const handleTabClick = (index: number) => {
-    setCurrentTab(index);
+  const handleTabClick = (tabIndex: number) => {
+    setCurrentTab(tabIndex);
+    onChange?.(tabIndex);
   };
 
   return (
@@ -47,25 +65,32 @@ export const Tabs: React.FC<ITabsProps> = ({ tabs = defaultArgs.tabs, activeTab 
       role="tablist"
       aria-label="Tabs"
     >
-      {tabs.map((tab, index) => (
-        <li role="presentation" className="rvo-tabs__item" key={index}>
-          <Link
-            role="tab"
-            href={`#tab-${index}`}
-            aria-selected={currentTab === index}
-            className={clsx('rvo-tabs__item-link', currentTab === index && 'rvo-tabs__item-link--active')}
-            noUnderline={true}
-            active={currentTab === index}
-            weight={currentTab === index ? 'bold' : 'normal'}
+      {(children &&
+        React.Children.map(children, (child, index) => (
+          <TabItem
+            key={`tab-${index}`}
+            label={(child as any).props.label}
+            href={(child as any).props.href}
+            selected={currentTab === index}
             onClick={(e) => {
               e.preventDefault();
               handleTabClick(index);
             }}
-          >
-            {tab.label}
-          </Link>
-        </li>
-      ))}
+          />
+        ))) ||
+        (tabs &&
+          tabs.map((tab, index) => (
+            <TabItem
+              key={`tab-${index}`}
+              label={tab.label}
+              href={tab.href}
+              selected={currentTab === index}
+              onClick={(e) => {
+                e.preventDefault();
+                handleTabClick(index);
+              }}
+            />
+          )))}
     </ul>
   );
 };
