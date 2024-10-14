@@ -5,7 +5,6 @@
 import clsx from 'clsx';
 import React, { JSX, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import MenuBarItem from './menubar-item/template';
 import { IconType } from '../icon/types';
 import { Icon, Link, MaxWidthLayout } from '../index';
 import './index.scss';
@@ -26,6 +25,7 @@ export interface IMenuBarProps {
   useIcons: boolean;
   iconPlacement?: 'before' | 'after';
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
+  maxWidthInlinePadding?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
   deltaForActiveItem?: boolean;
   /** @uxpinpropname MenuBar items */
@@ -58,6 +58,10 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   maxWidth: {
+    options: ['none', 'sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
+  maxWidthInlinePadding: {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
@@ -175,6 +179,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
   maxWidth = defaultArgs.maxWidth,
+  maxWidthInlinePadding = defaultArgs.maxWidthInlinePadding,
   type = defaultArgs.type,
   deltaForActiveItem = defaultArgs.deltaForActiveItem,
   horizontalRule = defaultArgs.horizontalRule,
@@ -233,10 +238,13 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
       const isAlignRight = (child as any).props.align === 'right';
       if (isAlignRight && !isAlignRightSet) {
         isAlignRightSet = true;
-        return <MenuBarItem key={index} {...(child as any).props} align="right" />;
-      } else {
-        return <MenuBarItem key={index} {...(child as any).props} align="left" />;
       }
+
+      return React.cloneElement(child as React.ReactElement, {
+        key: index,
+        align: isAlignRightSet ? 'right' : 'left',
+        ...(child as any).props,
+      });
     });
   }
 
@@ -259,7 +267,9 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
       )}
     >
       {direction === 'horizontal' && maxWidth !== 'none' ? (
-        <MaxWidthLayout size={maxWidth}>{navMarkup}</MaxWidthLayout>
+        <MaxWidthLayout size={maxWidth} inlinePadding={maxWidthInlinePadding}>
+          {navMarkup}
+        </MaxWidthLayout>
       ) : (
         navMarkup
       )}
