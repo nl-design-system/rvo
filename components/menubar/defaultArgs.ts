@@ -15,6 +15,7 @@ export const defaultArgs: IMenuBarProps = {
   useIcons: true,
   iconPlacement: 'before',
   maxWidth: 'none',
+  maxWidthInlinePadding: 'none',
   type: 'primary',
   deltaForActiveItem: false,
   horizontalRule: true,

@@ -3,7 +3,7 @@ import { useThemeConfig } from '@docusaurus/theme-common';
 import { useNavbarSecondaryMenu } from '@docusaurus/theme-common/internal';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { parseMenuItem } from '@nl-rvo/components/menubar/template';
+import { MenuBarItem } from '@nl-rvo/components';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import React from 'react';
 import styles from './styles.module.css';
@@ -28,47 +28,52 @@ export default function NavbarContent() {
           }
         }
 
-        const menuItem = parseMenuItem({
+        const menuItemProps = {
           label: item.label,
           link: item.docId ? useBaseUrl(item.docId) : item.href || '#',
           align: item.position === 'right' && index === firstRightItem && 'right',
           type: 'primary',
           key: `${item.label}-${index}`,
           active,
+          useIcons: false,
           linkColor: 'logoblauw',
-        });
+        };
 
         if (!active) {
-          return menuItem;
+          return <MenuBarItem key={`item-${index}`} {...menuItemProps} />;
         } else {
           return (
             <React.Fragment key={index}>
-              {menuItem}
+              <MenuBarItem {...menuItemProps} />
               {sections &&
                 sections.content &&
                 sections.content.props.sidebar.map((section, index) => {
                   if (section.type === 'link') {
-                    return parseMenuItem({
-                      label: section.label,
-                      link: section.href,
-                      type: 'sub',
-                      key: `${section.label}-${index}`,
-                      active: section.href.indexOf(location) > -1,
-                      linkColor: 'logoblauw',
-                    });
+                    return (
+                      <MenuBarItem
+                        key={`${section.label}-${index}`}
+                        label={section.label}
+                        link={section.href}
+                        type="sub"
+                        active={section.href.indexOf(location) > -1}
+                        useIcons={false}
+                        linkColor="logoblauw"
+                      />
+                    );
                   } else if (section.type === 'category') {
                     return (
                       <React.Fragment key={`${section.label}-${index}`}>
-                        {section.items.map((item, index) =>
-                          parseMenuItem({
-                            label: item.label,
-                            link: item.href,
-                            type: 'sub',
-                            key: `${item.label}-${index}`,
-                            active: item.href.indexOf(location) > -1,
-                            linkColor: 'logoblauw',
-                          }),
-                        )}
+                        {section.items.map((item, index) => (
+                          <MenuBarItem
+                            key={`${item.label}-${index}`}
+                            label={item.label}
+                            link={item.href}
+                            type="sub"
+                            active={item.href.indexOf(location) > -1}
+                            useIcons={false}
+                            linkColor="logoblauw"
+                          />
+                        ))}
                       </React.Fragment>
                     );
                   } else {
