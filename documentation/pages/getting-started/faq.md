@@ -22,7 +22,7 @@ ROOS is beschikbaar in drie vormen:
 2. Voor ontwikkelaars (developers) in [Storybook](https://nl-design-system.github.io/rvo/) en [Github](https://github.com/nl-design-system/rvo).
 3. Voor ontwerpers (designers) in [Figma.](<https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0>)
 
-### Wat is leidend? Figma of code (Storybook/Github)?
+## Wat is leidend? Figma of code (Storybook/Github)?
 
 Bij ROOS is de code leidend: dus wat je in Storybook en Github ziet. Al onze applicaties en websites worden uiteindelijk opgebouwd uit code en daarom is dat onze bron van waarheid.
 
