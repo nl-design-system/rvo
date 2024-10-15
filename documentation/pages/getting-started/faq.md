@@ -12,7 +12,7 @@ ROOS staat voor RVO Open Ontwerp Systeem. ROOS is het design system van de Rijks
 
 ## Waarvoor kan ik ROOS gebruiken?
 
-Je kan ROOS gebruiken om applicaties en websites mee te ontwerpen en bouwen.
+Je kan ROOS gebruiken om applicaties en websites mee te ontwerpen.
 
 ## Waar kan ik ROOS zien?
 
@@ -21,6 +21,14 @@ ROOS is beschikbaar in drie vormen:
 1. Voor iedereen als documentatie op [rvo.nl/roos.](https://rvo.nl/roos)
 2. Voor ontwikkelaars (developers) in [Storybook](https://nl-design-system.github.io/rvo/) en [Github](https://github.com/nl-design-system/rvo).
 3. Voor ontwerpers (designers) in [Figma.](<https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0>)
+
+### Wat is leidend? Figma of code (Storybook/Github)?
+
+Bij ROOS is de code leidend: dus wat je in Storybook en Github ziet. Al onze applicaties en websites worden uiteindelijk opgebouwd uit code en daarom is dat onze bron van waarheid.
+
+In Figma worden de componenten zo goed mogelijk nagebouwd. Hiermee kunnen designers ontwerpen maken zonder dat ze de code hoeven te gebruiken.
+
+Als je een verschil ziet tussen een component in Figma en een component in de code (Storybook of Github) dan klopt het laatstgenoemde.
 
 ## Waarom zou ik ROOS gebruiken?
 
