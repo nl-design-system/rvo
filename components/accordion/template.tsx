@@ -10,7 +10,7 @@ import { defaultArgs } from './defaultArgs';
 
 export interface IAccordionProps {
   /** @uxpinignoreprop */
-  items: IAccordionItemProps[];
+  items?: IAccordionItemProps[];
   grijs?: boolean;
   /** @uxpinpropname Accordion items */
   children?: ReactNode | undefined;
@@ -39,7 +39,7 @@ export const Accordion: React.FC<IAccordionProps> = ({
     <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')}>
       {(children &&
         React.Children.map(children, (child, index) => <AccordionItem key={index} {...(child as any).props} />)) ||
-        items.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}
+        items?.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}
     </div>
   );
 };

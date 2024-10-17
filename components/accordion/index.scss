@@ -29,7 +29,9 @@
 }
 
 .rvo-accordion__item > .rvo-accordion__item-summary {
+  align-items: center;
   cursor: pointer;
+  display: flex;
   list-style: none;
   padding-block-end: var(--rvo-accordion-item-condensed-summary-padding-block-end);
   padding-block-start: var(--rvo-accordion-item-condensed-summary-padding-block-start);
