@@ -60,3 +60,25 @@ const Example = () => {
 
 export default Example;
 ```
+
+## Gebruik van ROOS/Rijkshuisstijl lettertype, icons en images (assets)
+
+Het lettertype, icons en images van ROOS/Rijkshuisstijl moet je apart toevoegen aan je React project.
+Deze zitten omwille van licenties en gebruiksrechten niet in de NPM package.
+Dit betekent dat de componenten zonder deze assets niet helemaal correct gestyled zijn.
+
+### Aanvragen van assets
+
+Wanneer je de huisstijl assets wil gebruiken kun je voor de package en toestemming contact opnemen met de huisstijl coördinator van RVO via [rijksbredehuisstijl@rvo.nl](mailto:rijksbredehuisstijl@rvo.nl).
+
+### Installatie van assets
+
+Wanneer je de assets-package hebt ontvangen, kun je deze toevoegen aan je React project.
+
+```js
+import "./fonts/index.css";
+import "./icons/index.css";
+import "./images/index.css";
+```
+
+De CSS bestanden bevatten design tokens voor de assets die door de componenten worden gebruikt.
