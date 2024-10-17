@@ -61,5 +61,6 @@ export default [
       }),
       filesize(),
     ],
+    treeshake: false,
   },
 ];
