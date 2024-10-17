@@ -26,7 +26,7 @@
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
-  "types": "./dist/components/index.d.ts",
+  "types": "./dist/packages/component-library-react/src/index.d.ts",
   "files": [
     "dist/"
   ],
