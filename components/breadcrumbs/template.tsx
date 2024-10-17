@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import BreadcrumbsItem from './breadcrumbs-item/template';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
@@ -15,7 +15,7 @@ export interface IBreadcrumbsItem {
   link?: string;
 }
 
-export interface IBreadcrumbProps {
+export interface IBreadcrumbProps extends HTMLAttributes<HTMLDivElement> {
   /** @uxpinignoreprop */
   items?: IBreadcrumbsItem[];
   size?: 'sm' | 'md' | 'lg';

@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode, SyntheticEvent, useState } from 'react';
+import React, { HTMLAttributes, ReactNode, SyntheticEvent, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Button } from '../button/template';
 import { Icon } from '../icon/template';
@@ -11,7 +11,7 @@ import { StatusIcon } from '../status-icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface IAlertProps {
+export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {
   kind?: 'info' | 'warning' | 'error' | 'success';
   heading?: string;
   /** @uxpinignoreprop */
@@ -61,6 +61,7 @@ export const Alert: React.FC<IAlertProps> = ({
   padding = defaultArgs.padding,
   onClose,
   children,
+  ...props
 }: IAlertProps) => {
   // State to control the visibility of the alert
   const [isVisible, setIsVisible] = useState(true);
@@ -96,7 +97,7 @@ export const Alert: React.FC<IAlertProps> = ({
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
-    <div className={clsx('rvo-alert', `rvo-alert--${kind}`, padding && `rvo-alert--padding-${padding}`)}>
+    <div className={clsx('rvo-alert', `rvo-alert--${kind}`, padding && `rvo-alert--padding-${padding}`)} {...props}>
       {iconMarkup}
       <div className="rvo-alert-text">
         {heading && heading !== '' && <strong>{heading}</strong>}

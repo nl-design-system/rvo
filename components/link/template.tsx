@@ -3,16 +3,16 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconColors, options as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
 import './index.scss';
-export interface ILinkProps {
+export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   /** @uxpinignoreprop */
   content?: string;
   href?: string;
-  color?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
+  color?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
   weight?: 'normal' | 'bold';
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   showIcon?: 'no' | 'before' | 'after';
