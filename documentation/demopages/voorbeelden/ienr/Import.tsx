@@ -110,14 +110,14 @@ const Import = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <Heading type="h1" noMargins={true}>
                 Importmelding Rund
               </Heading>
 
-              <LayoutFlow size="md">
-                <LayoutFlow size="xs">
-                  <LayoutFlow size="md">
+              <LayoutFlow gap="md">
+                <LayoutFlow gap="xs">
+                  <LayoutFlow gap="md">
                     <Fieldset legend="">
                       <DateInputField
                         label="Importdatum"

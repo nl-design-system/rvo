@@ -5,10 +5,10 @@ const Report = () => {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
-      <LayoutFlow size="lg">
+      <LayoutFlow gap="lg">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
-        <LayoutFlow size="3xl">
-          <LayoutFlow size="xl">
+        <LayoutFlow gap="3xl">
+          <LayoutFlow gap="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm">
               <Heading textContent="A Green Sustainable and Safe Water Source" type="h1"></Heading>
               <p>
@@ -36,25 +36,25 @@ const Report = () => {
                     </h3>
                   </summary>
                   <div className="rvo-accordion__content">
-                    <LayoutFlow size="sm" row={true}>
+                    <LayoutFlow gap="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_01
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
                     </LayoutFlow>
-                    <LayoutFlow size="sm" row={true}>
+                    <LayoutFlow gap="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_02
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
                     </LayoutFlow>
-                    <LayoutFlow size="sm" row={true}>
+                    <LayoutFlow gap="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_03
                       </Link>
                       <span className="rvo-text rvo-text--subtle">Image</span>
                     </LayoutFlow>
-                    <LayoutFlow size="sm" row={true}>
+                    <LayoutFlow gap="sm" row={true}>
                       <Link icon="schilderij-met-bloemen-in-vaas" showIcon="before" iconSize="md" noUnderline={true}>
                         FDW12SA01_04
                       </Link>

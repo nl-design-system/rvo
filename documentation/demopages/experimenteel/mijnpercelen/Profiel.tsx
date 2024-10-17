@@ -62,7 +62,7 @@ const Profiel = () => {
           </div>
           <div className="rvo-main-mijn-percelen--profiel">
             <Heading type="h1" textContent="Instellingen" />
-            <LayoutFlow size="md">
+            <LayoutFlow gap="md">
               <ul role="tablist" className="rvo-tabs">
                 <li role="presentation" className="rvo-tabs-item">
                   <a
@@ -101,7 +101,7 @@ const Profiel = () => {
               <div className="rvo-rhs-update-component">
                 <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                   <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                    <LayoutFlow size="xl">
+                    <LayoutFlow gap="xl">
                       <CheckboxField
                         label="Perceelweergave"
                         helperText="Bepaal welke onderdelen er getoond worden in het perceeloverzicht"

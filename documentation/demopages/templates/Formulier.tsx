@@ -20,7 +20,7 @@ const Formulier = () => {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
-      <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
         <MenuBar
           items={[
             {
@@ -48,11 +48,11 @@ const Formulier = () => {
           iconPlacement="before"
           maxWidth="md"
         />
-        <LayoutFlow size="3xl">
-          <LayoutFlow size="xl">
+        <LayoutFlow gap="3xl">
+          <LayoutFlow gap="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
               <div className="rvo-form">
-                <LayoutFlow size="sm">
+                <LayoutFlow gap="sm">
                   <div>
                     <Link content="Terug" href="#" showIcon="before" icon="terug" noUnderline={true} />
                     <Heading type="h1">Formulier template</Heading>

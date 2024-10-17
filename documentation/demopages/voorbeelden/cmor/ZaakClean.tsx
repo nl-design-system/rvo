@@ -19,7 +19,7 @@ import '../../../../components/text-helpers/index.scss';
 const ZaakClean = () => {
   return (
     <body className="rvo-theme rvo-responsive">
-      <LayoutFlow size="3xl">
+      <LayoutFlow gap="3xl">
         <div>
           <Header />
           {/* <MobileMenuBar
@@ -44,7 +44,7 @@ const ZaakClean = () => {
               { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
             ]}
           ></MobileMenuBar> */}
-          <LayoutFlow size="sm">
+          <LayoutFlow gap="sm">
             <MenuBar
               items={[
                 {
@@ -79,24 +79,24 @@ const ZaakClean = () => {
                     items={[
                       {
                         label: 'Overzicht',
-                        url: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                        link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                       },
-                      { label: 'Mijn dossier', url: '#' },
+                      { label: 'Mijn dossier', link: '#' },
 
                       { label: 'Eco-regeling 2023' },
                     ]}
                     size="sm"
                   ></Breadcrumbs>
 
-                  <LayoutFlow size="xl">
-                    <LayoutFlow size="xs">
+                  <LayoutFlow gap="xl">
+                    <LayoutFlow gap="xs">
                       <Heading type="h1" noMargins={true}>
                         Eco-regeling 2023
                       </Heading>
                       <span className="rvo-text--subtle">Gemeenschappelijk Landbouwbeleid</span>
                     </LayoutFlow>
                     <Alert heading="Actie nodig" kind="warning">
-                      <LayoutFlow size="sm">
+                      <LayoutFlow gap="sm">
                         Voer de actie direct uit of bekijk de actie voor meer informatie over wat u moet doen.
                         <ButtonGroup>
                           <Button kind="primary" size="sm">
@@ -110,14 +110,14 @@ const ZaakClean = () => {
                     </Alert>
                     <Grid columns="two" gap="4xl" layout="2fr1fr">
                       <div>
-                        <LayoutFlow size="2xl">
+                        <LayoutFlow gap="2xl">
                           <div>
                             <span className="rvo-text--subtle">Referentienummer</span>
                             <br />
                             <Heading type="h2" noMargins={true}>
                               ERTKV-309483
                             </Heading>
-                            <LayoutFlow size="sm">
+                            <LayoutFlow gap="sm">
                               <p className="rvo-text--no-margins">
                                 Wilt u uw aanvraagformulier bekijken of iets regelen voor uw aanvraag?
                               </p>
@@ -132,7 +132,7 @@ const ZaakClean = () => {
                               </Heading>
                               <div>
                                 <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutFlow size="2xs">
+                                  <LayoutFlow gap="2xs">
                                     <p className="rvo-text--bold rvo-text--no-margins">Verzoek om informatie</p>
                                     <span className="rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                                   </LayoutFlow>
@@ -143,7 +143,7 @@ const ZaakClean = () => {
                                 </LayoutFlow>
                                 <hr className="rvo-hr"></hr>
                                 <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutFlow size="2xs">
+                                  <LayoutFlow gap="2xs">
                                     <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
                                     <span className="rvo-text--subtle rvo-text--sm">PDF document | 550.73 KB</span>
                                   </LayoutFlow>
@@ -154,7 +154,7 @@ const ZaakClean = () => {
                                 </LayoutFlow>
                                 <hr className="rvo-hr"></hr>
                                 <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutFlow size="2xs">
+                                  <LayoutFlow gap="2xs">
                                     <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
                                     <span className="rvo-text--subtle rvo-text--sm">PDF document | 550.73 KB</span>
                                   </LayoutFlow>
@@ -170,13 +170,13 @@ const ZaakClean = () => {
                           <div>
                             <Heading type="h2">Hulp nodig?</Heading>
                             <LayoutFlow>
-                              <LayoutFlow size="xs">
+                              <LayoutFlow gap="xs">
                                 <span className="rvo-text--bold">Alles over over Eco-regeling</span>
                                 <Button size="sm" kind="secondary" fullWidth={true}>
                                   Bekijk regeling
                                 </Button>
                               </LayoutFlow>
-                              <LayoutFlow size="xs">
+                              <LayoutFlow gap="xs">
                                 <span className="rvo-text--bold">Neem contact op</span>
 
                                 <Button size="sm" kind="secondary" fullWidth={true}>
@@ -188,9 +188,9 @@ const ZaakClean = () => {
                         </LayoutFlow>
                       </div>
                       <div>
-                        <LayoutFlow size="2xl">
+                        <LayoutFlow gap="2xl">
                           <div>
-                            <LayoutFlow row={true} size="xs">
+                            <LayoutFlow row={true} gap="xs">
                               <span className="rvo-text--subtle">Status</span>
                               <Icon icon="info" />
                             </LayoutFlow>
@@ -200,7 +200,7 @@ const ZaakClean = () => {
                             </Heading>
                             <div className="">
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--disabled rvo-image-bg-progress-tracker-start-end-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                                <LayoutFlow size="0">
+                                <LayoutFlow gap="0">
                                   <span className="rvo-text--sm">Aangevraagd</span>
                                   <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">
                                     5 december 2023
@@ -208,14 +208,14 @@ const ZaakClean = () => {
                                 </LayoutFlow>
                               </div>
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--completed rvo-image-bg-progress-tracker-completed-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                                <LayoutFlow size="0">
+                                <LayoutFlow gap="0">
                                   <span className="rvo-text--sm">In behandeling</span>
 
                                   <span className="rvo-text--subtle rvo-text--sm rvo-text--italic">13 april 2023</span>
                                 </LayoutFlow>
                               </div>
                               <div className="rvo-progress-tracker__step rvo-progress-tracker__step--md rvo-progress-tracker__step--doing rvo-image-bg-progress-tracker-doing-md--after rvo-progress-tracker__step--straight rvo-image-bg-progress-tracker-line-straight--before">
-                                <LayoutFlow row={true} size="sm">
+                                <LayoutFlow row={true} gap="sm">
                                   <StatusIcon type="waarschuwing" size="md"></StatusIcon>
                                   <span className="rvo-text--sm">Actie nodig</span>
                                 </LayoutFlow>
@@ -237,14 +237,14 @@ const ZaakClean = () => {
                               Details
                             </Heading>
                             <LayoutFlow>
-                              <LayoutFlow size="0">
+                              <LayoutFlow gap="0">
                                 <span className="rvo-text--subtle rvo-text--sm">Aanvrager</span>
                                 Jansen B.V.
                               </LayoutFlow>
-                              <LayoutFlow size="0">
+                              <LayoutFlow gap="0">
                                 <span className="rvo-text--subtle rvo-text--sm">Aanvraagdatum</span>7 november 2023
                               </LayoutFlow>
-                              <LayoutFlow size="0">
+                              <LayoutFlow gap="0">
                                 <span className="rvo-text--subtle rvo-text--sm">Regeling</span>Eco-regeling 2023
                               </LayoutFlow>
                             </LayoutFlow>

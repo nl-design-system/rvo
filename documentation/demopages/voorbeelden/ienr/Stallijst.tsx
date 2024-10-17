@@ -108,9 +108,9 @@ const Stallijst = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <div>
-                <LayoutFlow size="md" row={true} alignItems="center">
+                <LayoutFlow gap="md" row={true} alignItems="center">
                   <Icon size="3xl" icon="koe" color="zwart"></Icon>
                   <Heading type="h1" noMargins={true}>
                     Stallijst Rund

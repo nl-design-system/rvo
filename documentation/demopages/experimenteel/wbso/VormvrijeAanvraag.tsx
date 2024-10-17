@@ -52,14 +52,14 @@ const VormvrijeAanvraag = () => {
             ]}
           />
           <div className="rvo-form">
-            <LayoutFlow size="md">
+            <LayoutFlow gap="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Vormvrije aanvraag" />
               </div>
               <form>
-                <LayoutFlow row={false} size="md">
-                  <LayoutFlow row={false} size="md">
+                <LayoutFlow row={false} gap="md">
+                  <LayoutFlow row={false} gap="md">
                     <Fieldset legend="">
                       <RadioButtonField
                         name="radio-buttons"

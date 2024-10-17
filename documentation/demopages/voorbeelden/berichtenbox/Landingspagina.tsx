@@ -35,10 +35,10 @@ const Landingspagina = () => {
         iconPlacement="before"
         maxWidth="md"
       />
-      <LayoutFlow size="3xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="3xl">
+        <LayoutFlow gap="xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--md">
-            <LayoutFlow size="2xl">
+            <LayoutFlow gap="2xl">
               <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
                 <div className="rvo-hero__image-container">
                   <img
@@ -56,7 +56,7 @@ const Landingspagina = () => {
                 </h1>
               </div>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
-                <LayoutFlow size="2xl">
+                <LayoutFlow gap="2xl">
                   <Grid columns="two" gap="xl">
                     <div className="rvo-quote">
                       <div className="rvo-card rvo-card--outline rvo-card--padding-md">
@@ -65,12 +65,12 @@ const Landingspagina = () => {
                             <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
                               "Mijn post van de overheid in de berichtenbox"
                             </span>
-                            <LayoutFlow row={true} size="sm">
+                            <LayoutFlow row={true} gap="sm">
                               <div className="rvo-quote__image">
                                 <img src="images/berichtenbox/profiel-foto-1.png" width="64px" height="64px" />
                               </div>
                               <div className="rvo-quote__person">
-                                <LayoutFlow size="0">
+                                <LayoutFlow gap="0">
                                   <span className="rvo-text rvo-text--bold">Pim Hassevoort</span>
                                   <span className="rvo-text rvo-text--sm">Groene energie leverancier</span>
                                 </LayoutFlow>
@@ -87,12 +87,12 @@ const Landingspagina = () => {
                             <span className="rvo-text--italic rvo-text--subtle rvo-text--xl">
                               "Al mijn overheidsberichten veilig op één plek."
                             </span>
-                            <LayoutFlow row={true} size="sm">
+                            <LayoutFlow row={true} gap="sm">
                               <div className="rvo-quote__image">
                                 <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
                               </div>
                               <div className="rvo-quote__person">
-                                <LayoutFlow size="0">
+                                <LayoutFlow gap="0">
                                   <span className="rvo-text rvo-text--bold">Charlotte Verduim</span>
                                   <span className="rvo-text rvo-text--sm">Kinderopvang organisatie</span>
                                 </LayoutFlow>
@@ -145,7 +145,7 @@ const Landingspagina = () => {
               <hr className="rvo-hr rvo-max-width-layout rvo-max-width-layout--md"></hr>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
                 <Grid columns="three" gap="2xl">
-                  <LayoutFlow alignItems="" size="sm">
+                  <LayoutFlow alignItems="" gap="sm">
                     <Icon size="2xl" icon="hangslot-dicht" color="grijs-700"></Icon>
                     <Heading type="h3" noMargins={true}>
                       Veilig en vertrouwd
@@ -155,7 +155,7 @@ const Landingspagina = () => {
                       imperdiet nisl eget odio; aptent interdum natoque.
                     </span>
                   </LayoutFlow>
-                  <LayoutFlow alignItems="" size="sm">
+                  <LayoutFlow alignItems="" gap="sm">
                     <Icon size="2xl" icon="vermindering-papier" color="grijs-700"></Icon>
                     <Heading type="h3" noMargins={true}>
                       Alle berichten op één plek
@@ -165,7 +165,7 @@ const Landingspagina = () => {
                       Class fermentum lobortis nisl netus; egestas magna in magna.
                     </span>
                   </LayoutFlow>
-                  <LayoutFlow alignItems="" size="sm">
+                  <LayoutFlow alignItems="" gap="sm">
                     <Icon size="2xl" icon="tekstballonnen-met-vraagteken" color="grijs-700"></Icon>
                     <Heading type="h3" noMargins={true}>
                       Vraag en antwoord
@@ -195,7 +195,7 @@ const Landingspagina = () => {
                       <div className="rvo-card__content">
                         <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">1.</span>
-                          <LayoutFlow size="0">
+                          <LayoutFlow gap="0">
                             <span className="rvo-text rvo-text--bold">E-herkenning aanvragen</span>
                             <span className="rvo-text rvo-text--subtle">
                               Voor het aanmaken van een account en inloggen in de berichtenbox heeft u e-herkenning
@@ -212,7 +212,7 @@ const Landingspagina = () => {
                       <div className="rvo-card__content">
                         <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">2.</span>
-                          <LayoutFlow size="0">
+                          <LayoutFlow gap="0">
                             <span className="rvo-text rvo-text--bold">Account aanmaken berichtenbox</span>
                             <span className="rvo-text rvo-text--subtle">
                               Vul daarna uw bedrijfgegevens in en maak een account aan voor de berichtenbox.
@@ -229,7 +229,7 @@ const Landingspagina = () => {
                       <div className="rvo-card__content">
                         <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">3.</span>
-                          <LayoutFlow size="0">
+                          <LayoutFlow gap="0">
                             <span className="rvo-text rvo-text--bold">Naam registreren Handelregister</span>
                             <span className="rvo-text rvo-text--subtle">
                               Geef toegang tot overheidsorganisaties bij de Kamer van Koophandel.
@@ -246,7 +246,7 @@ const Landingspagina = () => {
                       <div className="rvo-card__content">
                         <LayoutFlow>
                           <span className="rvo-text--italic rvo-text--bold rvo-text--xl">4.</span>
-                          <LayoutFlow size="0">
+                          <LayoutFlow gap="0">
                             <span className="rvo-text rvo-text--bold">Inloggen met e-herkenning</span>
                             <span className="rvo-text rvo-text--subtle">
                               Gefeliciteerd! Uw bedrijf kan nu gebruik maken van de berichtenbox voor bedrijven.

@@ -108,7 +108,7 @@ const PerceelEdit = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
                     href="iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story#wijzigen"
@@ -128,7 +128,7 @@ const PerceelEdit = () => {
                   />
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                      <LayoutFlow size="md">
+                      <LayoutFlow gap="md">
                         <TextInputField
                           label="Naam"
                           expandableHelperText={true}
@@ -153,7 +153,7 @@ const PerceelEdit = () => {
                         <div className="rvo-surfaces">
                           <a id="surfaces"></a>
                           <Heading type="h2" textContent="Welke oppervlakte wilt u opslaan?"></Heading>
-                          <LayoutFlow size="sm">
+                          <LayoutFlow gap="sm">
                             <div className="rvo-value-information">
                               <span className="rvo-value-information-label">De door u ingetekende oppervlakte</span>
                               <span className="rvo-value-information-value">1,0813 ha</span>

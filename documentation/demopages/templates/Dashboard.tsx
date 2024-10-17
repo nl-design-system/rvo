@@ -80,16 +80,16 @@ const Dashboard = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <Heading type="h1" noMargins={true} mixedBoldAndNormal={true}>
                 <strong>Overzicht</strong> van klantnaam
               </Heading>
-              <LayoutFlow size="md">
-                <LayoutFlow size="xs">
-                  <LayoutFlow size="md">
+              <LayoutFlow gap="md">
+                <LayoutFlow gap="xs">
+                  <LayoutFlow gap="md">
                     <Grid columns="two">
                       <Alert heading="Notificatie titel" kind="info">
-                        <LayoutFlow size="sm">
+                        <LayoutFlow gap="sm">
                           Notificatie tekst
                           <ButtonGroup>
                             <Button kind="primary" size="sm">
@@ -107,7 +107,7 @@ const Dashboard = () => {
               </LayoutFlow>
 
               <div className="rvo-cards">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Overzicht met cards" noMargins={true}></Heading>
@@ -127,7 +127,7 @@ const Dashboard = () => {
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
@@ -145,7 +145,7 @@ const Dashboard = () => {
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
@@ -163,7 +163,7 @@ const Dashboard = () => {
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
@@ -181,7 +181,7 @@ const Dashboard = () => {
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Waarschuwing met <strong>dik gedrukte tekst</strong>
@@ -198,16 +198,16 @@ const Dashboard = () => {
               </div>
               <hr className="rvo-hr"></hr>
               <Grid gap="xl" columns="two">
-                <LayoutFlow size="sm">
+                <LayoutFlow gap="sm">
                   <Heading type="h2" textContent="Item list" noMargins={true} />
                   <span>Intro of uitleg</span>
-                  <LayoutFlow size="sm">
+                  <LayoutFlow gap="sm">
                     <div className="rvo-item-list">
                       <div className="rvo-item-list__item">
                         <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                            <LayoutFlow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} gap="sm">
                               <Link content="Item list title" color="zwart" noUnderline={true} />
                               met groene status indicator
                             </LayoutFlow>
@@ -223,7 +223,7 @@ const Dashboard = () => {
                         <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
-                            <LayoutFlow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} gap="sm">
                               <Link content="Item list title" color="zwart" noUnderline={true} />
                               met rode status indicator
                             </LayoutFlow>
@@ -239,7 +239,7 @@ const Dashboard = () => {
                         <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
-                            <LayoutFlow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} gap="sm">
                               <Link content="Item list title" color="zwart" noUnderline={true} />
                               met oranje status indicator
                             </LayoutFlow>

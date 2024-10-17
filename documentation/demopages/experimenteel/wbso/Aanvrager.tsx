@@ -54,7 +54,7 @@ const Aanvrager = () => {
             ]}
           />
           <div className="rvo-form">
-            <LayoutFlow size="md">
+            <LayoutFlow gap="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Aanvrager" />
@@ -80,8 +80,8 @@ const Aanvrager = () => {
                 </dl>
               </div>
               <form>
-                <LayoutFlow row={false} size="md">
-                  <LayoutFlow row={false} size="md">
+                <LayoutFlow row={false} gap="md">
+                  <LayoutFlow row={false} gap="md">
                     <Fieldset legend="Contactpersoon">
                       <SelectField
                         label="Contactpersoon"

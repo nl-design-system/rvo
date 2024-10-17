@@ -96,7 +96,7 @@ const Oplossen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   {/* <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" /> */}
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
@@ -105,7 +105,7 @@ const Oplossen = () => {
                           Filter conflicterende percelen <Icon icon="delta-omlaag"></Icon>
                           <Icon icon="delta-omhoog"></Icon>
                         </summary>
-                        <LayoutFlow size="md">
+                        <LayoutFlow gap="md">
                           <RadioButtonField
                             label=""
                             options={[
@@ -120,7 +120,7 @@ const Oplossen = () => {
                   </div>
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
-                      <LayoutFlow size="xl">
+                      <LayoutFlow gap="xl">
                         <div
                           role="group"
                           aria-labelledby="fieldId-label"

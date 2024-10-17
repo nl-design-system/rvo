@@ -18,7 +18,7 @@ const Kosten = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="2xl">
+      <LayoutFlow gap="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="lg">
           <main className="rvo-progress-tracker-active">
@@ -87,12 +87,12 @@ const Kosten = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Kosten en subsidies"></Heading>
                 </div>
                 <div className="rvo-table--responsive">
-                  <LayoutFlow size="sm">
+                  <LayoutFlow gap="sm">
                     <table className="rvo-table">
                       <caption className="rvo-caption">Aanschafkosten</caption>
                       <thead className="rvo-table-head">
@@ -164,7 +164,7 @@ const Kosten = () => {
                 </div>
 
                 <div className="rvo-table--responsive">
-                  <LayoutFlow size="sm">
+                  <LayoutFlow gap="sm">
                     <table className="rvo-table">
                       <caption className="rvo-caption">Andere subsidies</caption>
                       <thead className="rvo-table-head">

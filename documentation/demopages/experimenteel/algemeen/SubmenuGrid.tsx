@@ -5,7 +5,7 @@ const SubmenuGrid = () => {
   return (
     <div className="rvo-demo-page rvo-demo-page--sub-menu">
       <Header />
-      <LayoutFlow size="md">
+      <LayoutFlow gap="md">
         <div className="rvo-navigation">
           <MenuBar
             items={[

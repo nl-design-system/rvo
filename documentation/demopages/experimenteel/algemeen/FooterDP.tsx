@@ -5,7 +5,7 @@ const FooterDP = () => {
   return (
     <div className="rvo-demo-page rvo-footer-demopage">
       <Header link="#" />
-      <LayoutFlow size="lg">
+      <LayoutFlow gap="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -20,7 +20,7 @@ const FooterDP = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutFlow size="3xl">
+        <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading textContent="Footer demo page"></Heading>
             <p>

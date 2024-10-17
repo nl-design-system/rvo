@@ -34,8 +34,8 @@ const Content = () => {
         iconPlacement="before"
         maxWidth="md"
       />
-      <LayoutFlow size="3xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="3xl">
+        <LayoutFlow gap="xl">
           <Hero />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
             <Heading type="h1">H1 heading</Heading>

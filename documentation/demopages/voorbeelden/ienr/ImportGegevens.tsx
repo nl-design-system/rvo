@@ -42,7 +42,7 @@ const ImportGegevens = () => {
           { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
         ]}
       ></MobileMenuBar>
-      <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
         <MenuBar
           items={[
             {
@@ -77,7 +77,7 @@ const ImportGegevens = () => {
         <main className="">
           <div className="rvo-max-width-layout rvo-max-width-layout--lg">
             <div>
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <Heading type="h1" noMargins={true}>
                   Gegevens runderen
                 </Heading>
@@ -94,9 +94,9 @@ const ImportGegevens = () => {
                   />
                 </Grid>
 
-                <LayoutFlow size="md">
-                  <LayoutFlow size="xs">
-                    <LayoutFlow size="md">
+                <LayoutFlow gap="md">
+                  <LayoutFlow gap="xs">
+                    <LayoutFlow gap="md">
                       <a
                         className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-link--normal"
                         href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"

@@ -14,12 +14,12 @@ export interface IBreadcrumbsItemProps extends IBreadcrumbsItem {
 
 export const BreadcrumbsItem: React.FC<IBreadcrumbsItemProps> = ({
   label = defaultArgs.label,
-  url = defaultArgs.url,
+  link = defaultArgs.link,
   onClick,
 }: IBreadcrumbsItemProps) => {
-  if (url?.length && url.length > 0) {
+  if (link?.length && link.length > 0) {
     return (
-      <Link href={url} noUnderline={true} onClick={onClick}>
+      <Link href={link} noUnderline={true} onClick={onClick}>
         {label}
       </Link>
     );

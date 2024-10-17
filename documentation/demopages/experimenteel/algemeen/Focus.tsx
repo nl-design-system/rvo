@@ -21,7 +21,7 @@ const Focus = () => {
   return (
     <div className="rvo-demo-page rvo-focus-demopage">
       <Header link="#" />
-      <LayoutFlow size="lg">
+      <LayoutFlow gap="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -36,7 +36,7 @@ const Focus = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutFlow size="3xl">
+        <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading textContent="Focus indicator demo page"></Heading>
             <p className="rvo-text rvo-text--no-margins">
@@ -72,7 +72,7 @@ const Focus = () => {
               .
             </p>
             <div className="rvo-form">
-              <LayoutFlow size="sm">
+              <LayoutFlow gap="sm">
                 <div className="rvo-form-intro">
                   <Link content="Terug" href="#" showIcon="before" icon="terug" />
                   <Heading type="h1" textContent="Heading" />
