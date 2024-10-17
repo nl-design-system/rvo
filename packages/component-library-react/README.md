@@ -44,10 +44,19 @@ npm install --save-dev --save-exact @nl-rvo/design-tokens
 import "@nl-rvo/design-tokens/dist/index.css";
 ```
 
-- Gebruik de `rvo-theme` classname op een niveau boven de React componenten.
+- Gebruik de ThemeProvider op een niveau boven de React componenten.
 
-```html
-<body className="rvo-theme">
-  <button>Dit is een button</button>
-</body>
+```js
+import { Button, Heading, ThemeProvider } from "@nl-rvo/component-library-react";
+
+const Example = () => {
+  return (
+    <ThemeProvider>
+      <Heading>Home</Heading>
+      <Button>Dit is een button</Button>
+    </ThemeProvider>
+  );
+};
+
+export default Example;
 ```
