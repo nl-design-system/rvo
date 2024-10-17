@@ -5,3 +5,6 @@
 
 // Components by RVO (included wrapped components from NL Design System community)
 export * from '../../../components';
+
+// ThemeProvider
+export { default as ThemeProvider } from './ThemeProvider';
