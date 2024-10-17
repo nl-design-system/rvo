@@ -82,3 +82,7 @@ import "./images/index.css";
 ```
 
 De CSS bestanden bevatten design tokens voor de assets die door de componenten worden gebruikt.
+
+## TypeScript
+
+De TypeScript declarations voor de React componenten worden standaard meegeleverd.
