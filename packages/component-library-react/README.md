@@ -3,7 +3,7 @@
 # ROOS React Components
 
 ROOS voor React is een set van React componenten die eenvoudig te gebruiken zijn.
-De componenten maken gebruikt van de ROOS design tokens en assets (fonts, icons, images).
+De componenten maken gebruikt van de ROOS design tokens en assets (fonts, icons, images). Deze moet je apart toevoegen aan je project.
 
 ## Installatie van React componenten
 
@@ -26,4 +26,28 @@ const Example = () => {
 };
 
 export default Example;
+```
+
+## Installatie van ROOS huisstijl
+
+De design tokens van ROOS passen de RVO huisstijl toe op de componenten. Deze kun je als volgt toevoegen aan je project:
+
+- Installeer de NPM package
+
+```shell
+npm install --save-dev --save-exact @nl-rvo/design-tokens
+```
+
+- Importeer de design tokens in je React project
+
+```js
+import "@nl-rvo/design-tokens/dist/index.css";
+```
+
+- Gebruik de `rvo-theme` classname op een niveau boven de React componenten.
+
+```html
+<body className="rvo-theme">
+  <button>Dit is een button</button>
+</body>
 ```
