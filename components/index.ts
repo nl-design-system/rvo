@@ -7,6 +7,7 @@ export { Button } from './button/template';
 export { ButtonGroup } from './button-group/template';
 export { Card } from './card/template';
 export { DataList } from './data-list/template';
+export { DataListItem } from './data-list/data-list-item/template';
 export { ExpandableText } from './expandable-text/template';
 export { Footer } from './footer/template';
 export { FooterColumn } from './footer/footer-column/template';
