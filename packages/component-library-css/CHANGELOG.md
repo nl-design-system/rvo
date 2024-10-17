@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.3.0
+
+### Minor Changes
+
+- b87bcb1: Added Tabs component
+
 ## 1.2.0
 
 ### Minor Changes
