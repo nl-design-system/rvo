@@ -317,10 +317,6 @@ importers:
         version: 1.71.1
 
   packages/component-library-react:
-    dependencies:
-      '@babel/runtime':
-        specifier: 7.24.0
-        version: 7.24.0
     devDependencies:
       '@babel/core':
         specifier: 7.24.0
@@ -334,6 +330,9 @@ importers:
       '@babel/preset-react':
         specifier: 7.23.3
         version: 7.23.3(@babel/core@7.24.0)
+      '@babel/runtime':
+        specifier: 7.24.0
+        version: 7.24.0
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.24.0)(@types/babel__core@7.20.5)(rollup@4.13.0)
@@ -364,6 +363,9 @@ importers:
       '@types/testing-library__jest-dom':
         specifier: 5.14.9
         version: 5.14.9
+      '@utrecht/component-library-css':
+        specifier: 3.0.1-alpha.22
+        version: 3.0.1-alpha.22
       clsx:
         specifier: 2.1.0
         version: 2.1.0
