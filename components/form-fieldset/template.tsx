@@ -9,7 +9,7 @@ import { ITextInputFieldProps, TextInputField } from '../form-field-textinput/te
 import './index.scss';
 import parseContentMarkup from '../utils/parseContentMarkup';
 export interface IFieldsetProps {
-  legend: string;
+  legend?: string;
   disabled?: boolean;
   /** @uxpinignoreprop */
   fields?: ITextInputFieldProps[];
