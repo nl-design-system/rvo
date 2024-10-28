@@ -1,5 +1,11 @@
 # `@nl-rvo/form-fieldset`
 
+## 1.0.1
+
+### Patch Changes
+
+- c029d6a: Make legend in Fieldset optional
+
 ## 1.0.0
 
 ### Major Changes

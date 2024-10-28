@@ -1,5 +1,11 @@
 # `@nl-rvo/breadcrumbs`
 
+## 1.2.0
+
+### Minor Changes
+
+- c029d6a: Renamed url to link in BreadcrumbItem
+
 ## 1.1.0
 
 ### Minor Changes

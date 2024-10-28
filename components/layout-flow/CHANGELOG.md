@@ -1,5 +1,11 @@
 # `@nl-rvo/layout-flow`
 
+## 1.1.0
+
+### Minor Changes
+
+- c029d6a: Renamed size prop to gap in LayoutFlow
+
 ## 1.0.0
 
 ### Major Changes
