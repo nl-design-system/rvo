@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IFileInputProps {
+export interface IFileInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   disabled?: boolean;
   /** @uxpinpropname Has focus */
@@ -44,6 +44,36 @@ export const argTypes = {
   },
   multiple: {
     control: 'boolean',
+  },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
   },
 };
 

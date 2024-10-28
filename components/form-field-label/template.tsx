@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 import parseContentMarkup from '../utils/parseContentMarkup';
 
-export interface ILabelProps {
+export interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
   /** @uxpinignoreprop */
   id?: string;
   /** @uxpinignoreprop */

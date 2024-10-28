@@ -16,7 +16,7 @@ export const DateInputField: React.FC<IDateInputFieldProps> = (args: IDateInputF
   const dateInputArgs = extractArgs(args, dateInputArgTypes);
   return (
     <Field {...fieldArgs}>
-      <DateInput {...dateInputArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
+      <DateInput {...dateInputArgs} aria-describedby={fieldArgs.helperTextId} />
     </Field>
   );
 };

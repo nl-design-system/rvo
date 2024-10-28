@@ -5,10 +5,10 @@
 import './index.scss';
 import { Textarea, Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { HTMLAttributes, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 
-export interface ITextInputProps {
+export interface ITextInputProps extends HTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
   /** @uxpinignoreprop */
   key?: string;
   /** @uxpinignoreprop */
@@ -81,6 +81,36 @@ export const argTypes = {
   },
   maxLengthIndicator: {
     control: 'boolean',
+  },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
   },
 };
 
