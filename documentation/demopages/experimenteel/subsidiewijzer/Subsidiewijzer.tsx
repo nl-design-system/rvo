@@ -17,8 +17,8 @@ const Subsidiewijzer = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
-      <LayoutFlow size="xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
+        <LayoutFlow gap="xl">
           <MenuBar
             items={[
               {
@@ -70,7 +70,7 @@ const Subsidiewijzer = () => {
                     </summary>
 
                     <form className="rvo-form">
-                      <LayoutFlow size="xl">
+                      <LayoutFlow gap="xl">
                         <TextInputField label="Zoek subsidies en financiering" value="wbso"></TextInputField>
 
                         <details open className="rvo-collapsible-filter">
@@ -423,14 +423,14 @@ const Subsidiewijzer = () => {
                     </a>
                   </p>
                   <LayoutFlow>
-                    <LayoutFlow size="2xs">
-                      <LayoutFlow row={true} size="sm" wrap={true}>
+                    <LayoutFlow gap="2xs">
+                      <LayoutFlow row={true} gap="sm" wrap={true}>
                         <strong className="rvo-results-active-filters">Actieve filters</strong>
                         <Button kind="warning-subtle" size="xs" icon="foutmelding" showIcon="before">
                           Reset filters
                         </Button>
                       </LayoutFlow>
-                      <LayoutFlow row={true} size="sm" wrap={true}>
+                      <LayoutFlow row={true} gap="sm" wrap={true}>
                         <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
                           <span>
                             Zoekterm <strong> wbso</strong>
@@ -493,7 +493,7 @@ const Subsidiewijzer = () => {
                             Partners for International Business (PIB)
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>
@@ -524,7 +524,7 @@ const Subsidiewijzer = () => {
                             Borgstelling MKB-kredieten (BMKB)
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>
@@ -555,7 +555,7 @@ const Subsidiewijzer = () => {
                             Eurostars: subsidie internationale marktgerichte R&D
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>
@@ -586,7 +586,7 @@ const Subsidiewijzer = () => {
                             Eureka: programma internationale marktgerichte R&D
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>
@@ -615,7 +615,7 @@ const Subsidiewijzer = () => {
                             Groeifaciliteit
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>
@@ -646,7 +646,7 @@ const Subsidiewijzer = () => {
                             Garantie Ondernemingsfinanciering (GO)
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>
@@ -677,7 +677,7 @@ const Subsidiewijzer = () => {
                             Subsidieregeling praktijkleren
                           </a>
                           <div className="rvo-project-details">
-                            <LayoutFlow size="sm" row={true}>
+                            <LayoutFlow gap="sm" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                               <strong>Open voor aanvragen</strong>
                             </LayoutFlow>

@@ -4,11 +4,11 @@
  */
 import { Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import '../form-textinput/index.scss';
 
-export interface ITimeInputProps {
+export interface ITimeInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   disabled?: boolean;
   /** @uxpinpropname Has focus */
@@ -77,6 +77,36 @@ export const argTypes = {
   size: {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
+  },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
   },
 };
 

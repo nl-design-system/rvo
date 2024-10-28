@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import './index.scss';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 
 export interface ISelectOption {
@@ -18,7 +18,7 @@ export interface ISelectOption {
   onInvalid?: (event: React.InvalidEvent<HTMLSelectElement>) => void;
 }
 
-export interface ISelectProps {
+export interface ISelectProps extends HTMLAttributes<HTMLSelectElement> {
   id?: string;
   disabled?: boolean;
   /** @uxpinpropname Has focus */
@@ -55,6 +55,31 @@ export const argTypes = {
     type: {
       name: 'array',
       required: true,
+    },
+  },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
     },
   },
 };

@@ -110,14 +110,14 @@ const Dashboard = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <Heading type="h1" noMargins={true}>
                 Mijn I&R
               </Heading>
-              <LayoutFlow size="md">
-                <LayoutFlow size="xs">
+              <LayoutFlow gap="md">
+                <LayoutFlow gap="xs">
                   <Heading type="h2" textContent="Geselecteerde locatie" noMargins={true} />
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Grid columns="two">
                       <dl className="rvo-data-list">
                         <dt>UBN</dt>
@@ -131,7 +131,7 @@ const Dashboard = () => {
                         </dd>
                       </dl>
                       <div>
-                        <LayoutFlow size="md">
+                        <LayoutFlow gap="md">
                           <RadioButtonField
                             name="ubn"
                             label="Selecteer een andere locatie"
@@ -152,7 +152,7 @@ const Dashboard = () => {
               </LayoutFlow>
 
               <div className="rvo-cards">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Diersoorten" noMargins={true}></Heading>
@@ -164,7 +164,7 @@ const Dashboard = () => {
 
                   <Grid gap="md" columns="two">
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutFlow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" gap="sm">
                         <Heading type="h3" noMargins={true}>
                           Schaap
                         </Heading>
@@ -179,13 +179,13 @@ const Dashboard = () => {
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">0 </span>&nbsp;vrije merken
                       </a>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="bevestiging" size="md" />
                         <span className="rvo-text--sm">Geen openstaande meldingen</span>
                       </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutFlow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" gap="sm">
                         <Heading type="h3" noMargins={true}>
                           Rund
                         </Heading>
@@ -203,13 +203,13 @@ const Dashboard = () => {
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">12 </span>&nbsp;vrije merken
                       </a>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="bevestiging" size="md" />
                         <span className="rvo-text--sm">Geen openstaande meldingen</span>
                       </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutFlow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" gap="sm">
                         <Heading type="h3" noMargins={true}>
                           Geit
                         </Heading>
@@ -224,13 +224,13 @@ const Dashboard = () => {
                       <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal">
                         <span className="rvo-text--bold">12 </span>&nbsp;vrije merken
                       </a>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="bevestiging" size="md" />
                         <span className="rvo-text--sm">Geen openstaande meldingen</span>
                       </LayoutFlow>
                     </Card>
                     <Card background="none" outline={true} fullCardLink={false} padding="md" title="">
-                      <LayoutFlow row={true} alignItems="center" size="sm">
+                      <LayoutFlow row={true} alignItems="center" gap="sm">
                         <Heading type="h3" noMargins={true}>
                           Paardachtige
                         </Heading>
@@ -241,7 +241,7 @@ const Dashboard = () => {
                         <span className="rvo-text--bold">10</span>
                         &nbsp;paardachtige{' '}
                       </a>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <a href="#" className="rvo-link rvo-link--no-underline rvo-link--normal rvo-text--sm">
                           <span className="rvo-text--bold">2</span>&nbsp;openstaande meldingen

@@ -16,7 +16,7 @@ export const TimeInputField: React.FC<ITimeInputFieldProps> = (args: ITimeInputF
   const timeInputArgs = extractArgs(args, timeInputArgTypes);
   return (
     <Field {...fieldArgs}>
-      <TimeInput {...timeInputArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
+      <TimeInput {...timeInputArgs} aria-describedby={fieldArgs.helperTextId} />
     </Field>
   );
 };

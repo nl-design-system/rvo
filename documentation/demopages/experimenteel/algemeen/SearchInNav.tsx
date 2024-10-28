@@ -17,7 +17,7 @@ const SearchInNav = () => {
         iconPlacement="before"
         maxWidth="md"
       />
-      <LayoutFlow size="md">
+      <LayoutFlow gap="md">
         <div className="search-form">
           <Fieldset legend="">
             <div className="rvo-form-layout">

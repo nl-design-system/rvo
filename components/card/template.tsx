@@ -3,14 +3,14 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Icon from '../icon/template';
 import Link from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ICardProps {
+export interface ICardProps extends HTMLAttributes<HTMLDivElement> {
   background: 'none' | 'color' | 'image';
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;
@@ -89,6 +89,7 @@ export const Card: React.FC<ICardProps> = ({
   className = defaultArgs.className,
   children,
   onClick,
+  ...props
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
   const hasLinkIndicator = showLinkIndicator && link && link.length > 0 && fullCardLink === true;
@@ -115,6 +116,7 @@ export const Card: React.FC<ICardProps> = ({
         className,
       )}
       onClick={onClick}
+      {...props}
     >
       {hasBackgroundImage && (
         <div className={clsx('rvo-card__background-image-container')}>

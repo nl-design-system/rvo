@@ -16,7 +16,7 @@ const ControleerGegevens = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="2xl">
+      <LayoutFlow gap="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -84,11 +84,11 @@ const ControleerGegevens = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Heading type="h1" textContent="Controleer uw gegevens"></Heading>
-                    <LayoutFlow size="sm">
+                    <LayoutFlow gap="sm">
                       <dl className="rvo-data">
                         <dt>BSN</dt>
                         <dd>35012085</dd>
@@ -106,7 +106,7 @@ const ControleerGegevens = () => {
                   </LayoutFlow>
                 </div>
                 <form>
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <ButtonGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"

@@ -17,8 +17,8 @@ const VerticalFilter = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
-      <LayoutFlow size="xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
+        <LayoutFlow gap="xl">
           <MenuBar
             items={[
               {
@@ -58,10 +58,10 @@ const VerticalFilter = () => {
                     </summary>
 
                     <form className="rvo-form">
-                      <LayoutFlow size="xl">
+                      <LayoutFlow gap="xl">
                         <TextInputField label="Search projects" value="study"></TextInputField>
 
-                        <LayoutFlow row={true} size="sm" alignItems="start">
+                        <LayoutFlow row={true} gap="sm" alignItems="start">
                           <SelectField
                             label="From (year)"
                             options={[
@@ -354,14 +354,14 @@ const VerticalFilter = () => {
                   <strong>Projects</strong> <span className="rvo-text rvo-text--subtle rvo-text--md">1487 results</span>
                 </Heading>
                 <LayoutFlow>
-                  <LayoutFlow size="2xs">
-                    <LayoutFlow row={true} size="sm" wrap={true}>
+                  <LayoutFlow gap="2xs">
+                    <LayoutFlow row={true} gap="sm" wrap={true}>
                       <strong className="rvo-results-active-filters">Active filters</strong>
                       <Button kind="warning-subtle" size="xs" icon="foutmelding" showIcon="before">
                         Reset all filters
                       </Button>
                     </LayoutFlow>
-                    <LayoutFlow row={true} size="sm" wrap={true}>
+                    <LayoutFlow row={true} gap="sm" wrap={true}>
                       <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
                         <span>
                           Search <strong> study</strong>

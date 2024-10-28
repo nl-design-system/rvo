@@ -16,6 +16,7 @@ module.exports = {
           '../../components/card/template.tsx',
           '../../components/heading/template.tsx',
           '../../components/data-list/template.tsx',
+          '../../components/data-list/data-list-item/template.tsx',
           '../../components/expandable-text/template.tsx',
           '../../components/header/template.tsx',
           '../../components/footer/template.tsx',

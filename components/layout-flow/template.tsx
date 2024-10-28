@@ -9,7 +9,7 @@ import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
 export interface ILayoutFlowProps {
-  size?: '0' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  gap?: '0' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;
   alignItems?: '' | 'start' | 'center' | 'end';
@@ -21,7 +21,7 @@ export interface ILayoutFlowProps {
 }
 
 export const argTypes = {
-  size: {
+  gap: {
     options: ['0', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
@@ -55,7 +55,7 @@ export const argTypes = {
 };
 
 export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
-  size = defaultArgs.size,
+  gap = defaultArgs.gap,
   row = defaultArgs.row,
   wrap = defaultArgs.wrap,
   alignItems = defaultArgs.alignItems,
@@ -63,6 +63,7 @@ export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
   justifyItems = defaultArgs.justifyItems,
   justifyContent = defaultArgs.justifyContent,
   children,
+  ...props
 }: ILayoutFlowProps) => {
   return (
     <div
@@ -72,10 +73,11 @@ export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
         alignContent && alignContent.length > 0 && `rvo-layout-align-content-${alignContent}`,
         justifyItems && justifyItems.length > 0 && `rvo-layout-justify-items-${justifyItems}`,
         justifyContent && justifyContent.length > 0 && `rvo-layout-justify-content-${justifyContent}`,
-        size && `rvo-layout-gap--${size}`,
+        gap && `rvo-layout-gap--${gap}`,
         wrap && 'rvo-layout--wrap',
       )}
       {...(!children && { style: { height: '300px' } })}
+      {...props}
     >
       {parseContentMarkup(children) || (
         <>

@@ -96,7 +96,7 @@ const Versturen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--startpagina">
               <div className="rvo-rhs-update-component">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   {/* <a
                     className="rvo-link rvo-link--with-icon rvo-link--no-underline"
                     href="/iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story#wijzigen"
@@ -109,7 +109,7 @@ const Versturen = () => {
                     Terug naar mijn.rvo.nl
                   </a> */}
                   <div className="rvo-content">
-                    <LayoutFlow size="xl">
+                    <LayoutFlow gap="xl">
                       <div className="rvo-info">
                         <Heading type="h1" textContent="Controleren en versturen"></Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--lg">
@@ -141,7 +141,7 @@ const Versturen = () => {
                       </div>
                       <div className="rvo-gewijzigde-percelen">
                         <a id="wijzigingen"></a>
-                        <LayoutFlow size="sm">
+                        <LayoutFlow gap="sm">
                           <Heading type="h3" textContent="Gewijzigde percelen"></Heading>
                           <div className="rvo-cards rvo-cards--percelen">
                             <div className="rvo-card rvo-card--perceel">
@@ -208,7 +208,7 @@ const Versturen = () => {
             </div>
           </div>
           <div className="rvo-main-mijn-percelen--sidebar">
-            <LayoutFlow size="md">
+            <LayoutFlow gap="md">
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
                 <Heading type="h4" textContent="Hulp"></Heading>
                 <ul className="rvo-list rvo-list--unordered">

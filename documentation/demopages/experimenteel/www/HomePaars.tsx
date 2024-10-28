@@ -123,9 +123,9 @@ const HomePaars = () => {
         </div>
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-content--www rvo-content--home">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <div className="rvo-cards">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <h2 className="utrecht-heading-2">Onderwerpen</h2>
 
                   <div className="rvo-cards-grid">
@@ -301,7 +301,7 @@ const HomePaars = () => {
               <hr className="rvo-divider"></hr>
 
               <div className="rvo-cards rvo-cards--overzichten">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <h2 className="utrecht-heading-2">Overzichten voor ondernemend Nederland</h2>
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
@@ -360,7 +360,7 @@ const HomePaars = () => {
 
               <div className="rvo-block-group">
                 <div className="rvo-content-items rvo-content-items--w-date">
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Heading type="h2" textContent="Evenementen" />
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
@@ -405,7 +405,7 @@ const HomePaars = () => {
                 </div>
 
                 <div className="rvo-content-items rvo-content-items--w-date">
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Heading type="h2" textContent="Nieuws" />
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
@@ -447,7 +447,7 @@ const HomePaars = () => {
               <hr className="rvo-divider"></hr>
 
               <div className="rvo-cards">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <h2 className="utrecht-heading-2">Uitgelicht</h2>
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
@@ -520,7 +520,7 @@ const HomePaars = () => {
                 </LayoutFlow>
               </div>
               <div className="rvo-feedback">
-                <LayoutFlow row={true} wrap={true} size="sm">
+                <LayoutFlow row={true} wrap={true} gap="sm">
                   <Icon icon="tekstballon-met-hart" size="2xl" />
                   <em>Bent u tevreden over deze pagina?</em>
                   <span className="rvo-rhs-update-component">
@@ -536,7 +536,7 @@ const HomePaars = () => {
         <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
-              <LayoutFlow size="md">
+              <LayoutFlow gap="md">
                 <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
@@ -559,9 +559,9 @@ const HomePaars = () => {
                   </div>
                   <div className="rvo-card rvo-card--w-link  rvo-card--md">
                     <div className="rvo-card-content">
-                      <LayoutFlow size="sm">
+                      <LayoutFlow gap="sm">
                         <h2 className="utrecht-heading-2">Over ons</h2>
-                        <LayoutFlow size="md">
+                        <LayoutFlow gap="md">
                           <div className="rvo-card-content-item">
                             <Icon icon="laptop" size="2xl"></Icon>
                             <h3 className="utrecht-heading-3">

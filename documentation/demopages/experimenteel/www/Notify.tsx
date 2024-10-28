@@ -139,7 +139,7 @@ const Notify = () => {
               energiebesparing (ISDE)? Op deze pagina leest u de stand van zaken.
             </p>
             <LayoutFlow>
-              <LayoutFlow row={true} size="sm">
+              <LayoutFlow row={true} gap="sm">
                 <Button size="sm">Direct aanvragen</Button>
                 <Button size="sm" kind="secondary">
                   Gebruik rekentool
@@ -150,7 +150,7 @@ const Notify = () => {
               </LayoutFlow>
               <details className="rvo-details">
                 <summary className="rvo-details-summary">
-                  <LayoutFlow row={true} size="xs">
+                  <LayoutFlow row={true} gap="xs">
                     <Icon icon="envelop"></Icon>Blijf op de hoogte via e-mail{' '}
                     <Icon icon="delta-omlaag" size="sm"></Icon>
                     <Icon icon="delta-omhoog" size="sm"></Icon>
@@ -173,9 +173,9 @@ const Notify = () => {
               <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                 <div className="rvo-card__content">
                   <Heading type="h3">Hoogte subsidie en budget</Heading>
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Grid columns="two">
-                      <LayoutFlow row={true} size="xs" alignItems="start">
+                      <LayoutFlow row={true} gap="xs" alignItems="start">
                         <Icon icon="kalender" color="donkerblauw" />
                         <div>
                           Startdatum:
@@ -185,7 +185,7 @@ const Notify = () => {
                           09:00
                         </div>
                       </LayoutFlow>
-                      <LayoutFlow row={true} size="xs" alignItems="start">
+                      <LayoutFlow row={true} gap="xs" alignItems="start">
                         <Icon icon="kalender-met-vinkje" color="donkerblauw" />
                         <div>
                           Einddatum:
@@ -196,7 +196,7 @@ const Notify = () => {
                         </div>
                       </LayoutFlow>
                     </Grid>
-                    <LayoutFlow row={true} size="xs" alignItems="start">
+                    <LayoutFlow row={true} gap="xs" alignItems="start">
                       <Icon icon="stapel-munten" color="donkerblauw" />
                       <div>
                         Hoogte subsidie:
@@ -205,7 +205,7 @@ const Notify = () => {
                       </div>
                     </LayoutFlow>
                     <Grid columns="two">
-                      <LayoutFlow row={true} size="xs" alignItems="start">
+                      <LayoutFlow row={true} gap="xs" alignItems="start">
                         <Icon icon="zak-met-geld" color="donkerblauw" />
                         <div>
                           Totaal budget:
@@ -213,7 +213,7 @@ const Notify = () => {
                           <strong>€ 58.000.000</strong>
                         </div>
                       </LayoutFlow>
-                      <LayoutFlow row={true} size="xs" alignItems="start">
+                      <LayoutFlow row={true} gap="xs" alignItems="start">
                         <Icon icon="hand-met-rekening" color="donkerblauw" />
                         <div>
                           Verleend:
@@ -221,7 +221,7 @@ const Notify = () => {
                         </div>
                       </LayoutFlow>
                     </Grid>
-                    <LayoutFlow row={true} size="xs" alignItems="start">
+                    <LayoutFlow row={true} gap="xs" alignItems="start">
                       <Icon icon="circulaire-economie" color="donkerblauw" />
                       <div>
                         Nog beschikbaar op 1 juli 2024:
@@ -229,7 +229,7 @@ const Notify = () => {
                         <strong>55 % </strong>(€ 32.180.000)
                       </div>
                     </LayoutFlow>
-                    <LayoutFlow row={true} size="xs" alignItems="start">
+                    <LayoutFlow row={true} gap="xs" alignItems="start">
                       <div>
                         Aanvullende informatie:
                         <br />
@@ -277,7 +277,7 @@ const Notify = () => {
         <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
-              <LayoutFlow size="md">
+              <LayoutFlow gap="md">
                 <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
@@ -300,9 +300,9 @@ const Notify = () => {
                   </div>
                   <div className="rvo-card rvo-card--w-link  rvo-card--md">
                     <div className="rvo-card-content">
-                      <LayoutFlow size="sm">
+                      <LayoutFlow gap="sm">
                         <h2 className="utrecht-heading-2">Over ons</h2>
-                        <LayoutFlow size="md">
+                        <LayoutFlow gap="md">
                           <div className="rvo-card-content-item">
                             <Icon icon="laptop" size="2xl"></Icon>
                             <h3 className="utrecht-heading-3">

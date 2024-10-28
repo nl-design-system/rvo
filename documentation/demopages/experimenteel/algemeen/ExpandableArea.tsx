@@ -6,12 +6,12 @@ const ExpandableArea = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="md">
+      <LayoutFlow gap="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="sm" />
 
         <MaxWidthLayout size="sm">
           <main className="rvo-expandable-area-demo">
-            <LayoutFlow size="md">
+            <LayoutFlow gap="md">
               <Grid columns="three" gap="xl">
                 <div className="rvo-card">
                   <LayoutFlow row={true} alignItems="start">
@@ -73,7 +73,7 @@ const ExpandableArea = () => {
                     </a>
                     <details className="rvo-expandable-area">
                       <summary className="rvo-expandable-area-summary">
-                        <LayoutFlow row={true} size="xs">
+                        <LayoutFlow row={true} gap="xs">
                           <div className="rvo-expandable-area-icon--closed">
                             <Icon icon="delta-omlaag" size="sm"></Icon>
                           </div>

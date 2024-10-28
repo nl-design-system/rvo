@@ -101,14 +101,14 @@ const OverzichtClean = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <Heading type="h1" noMargins={true} mixedBoldAndNormal={true}>
                 <strong>Overzicht</strong> van Boer Overveen B.V.
               </Heading>
-              <LayoutFlow size="md">
-                <LayoutFlow size="xs">
+              <LayoutFlow gap="md">
+                <LayoutFlow gap="xs">
                   <Heading type="h2" textContent="Nog te starten" noMargins={true} />
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <ExpandableText
                       title="Wij vragen u onderstaande aanvragen op tijd te regelen"
                       content="Extra uitleg over bovenstaande opmerking."
@@ -116,7 +116,7 @@ const OverzichtClean = () => {
                     />
                     <Grid columns="two">
                       <Alert heading="Mijn Percelen" kind="info">
-                        <LayoutFlow size="sm">
+                        <LayoutFlow gap="sm">
                           Uiterlijk 4 september 2024
                           <ButtonGroup>
                             <Button kind="primary" size="sm">
@@ -134,7 +134,7 @@ const OverzichtClean = () => {
               </LayoutFlow>
 
               <div className="rvo-cards">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Lopende aanvragen" noMargins={true}></Heading>
@@ -154,7 +154,7 @@ const OverzichtClean = () => {
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Wet Bevordering Speur- en Ontwikkelingswerk</span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Verzilver uw voucher <strong>uiterlijk 28 aug 2023</strong>
@@ -174,7 +174,7 @@ const OverzichtClean = () => {
                       <span className="rvo-text--subtle rvo-text--sm">
                         Investeringssubsidie duurzame energie en energiebesparing
                       </span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <StatusIcon type="waarschuwing" size="md" />
                         <span className="rvo-text--sm">
                           Stuur aanvullende informatie <strong>uiterlijk 19 aug 2023</strong>
@@ -192,7 +192,7 @@ const OverzichtClean = () => {
                         </Link>
                       </Heading>
                       <span className="rvo-text--subtle rvo-text--sm">Gemeenschappelijk Landbouwbeleid</span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <Icon icon="zandloper" size="md" />
                         <span className="rvo-text--sm">In behandeling</span>
                       </LayoutFlow>
@@ -210,7 +210,7 @@ const OverzichtClean = () => {
                       <span className="rvo-text--subtle rvo-text--sm">
                         Subsidieregeling verduurzaming voor verenigingen van eigenaars
                       </span>
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <Icon icon="vinkje" size="md" />
                         <span className="rvo-text--sm">Goedgekeurd</span>
                       </LayoutFlow>
@@ -237,16 +237,16 @@ const OverzichtClean = () => {
               </div>
               <hr className="rvo-hr"></hr>
               <Grid gap="xl" columns="two">
-                <LayoutFlow size="sm">
+                <LayoutFlow gap="sm">
                   <Heading type="h2" textContent="Start een nieuwe aanvraag" noMargins={true} />
                   <span>Kies uit uw favorieten</span>
-                  <LayoutFlow size="sm">
+                  <LayoutFlow gap="sm">
                     <div className="rvo-item-list">
                       <div className="rvo-item-list__item">
                         <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                            <LayoutFlow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} gap="sm">
                               <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
                               Open voor aanvragen
                             </LayoutFlow>
@@ -262,7 +262,7 @@ const OverzichtClean = () => {
                         <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
-                            <LayoutFlow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} gap="sm">
                               <Link content="ISDE" color="zwart" noUnderline={true} />
                               Gesloten voor aanvragen
                             </LayoutFlow>
@@ -278,7 +278,7 @@ const OverzichtClean = () => {
                         <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
-                            <LayoutFlow row={true} wrap={true} size="sm">
+                            <LayoutFlow row={true} wrap={true} gap="sm">
                               <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
                               Tijdelijk gesloten voor aanvragen
                             </LayoutFlow>
@@ -300,7 +300,7 @@ const OverzichtClean = () => {
                     />
                   </LayoutFlow>
                 </LayoutFlow>
-                <LayoutFlow size="xs">
+                <LayoutFlow gap="xs">
                   <Heading type="h2" textContent="Snel naar" noMargins={true} />
 
                   <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--none">
@@ -323,12 +323,12 @@ const OverzichtClean = () => {
                 </LayoutFlow>
               </Grid>
 
-              <LayoutFlow size="xs">
+              <LayoutFlow gap="xs">
                 <Heading type="h2" textContent="Berichten" noMargins={true} />
-                <LayoutFlow size="sm">
+                <LayoutFlow gap="sm">
                   <div className="rvo-item-list">
                     <div className="rvo-item-list__item">
-                      <LayoutFlow row={true} justifyContent="space-between" wrap={true} size="sm">
+                      <LayoutFlow row={true} justifyContent="space-between" wrap={true} gap="sm">
                         <Link content="U moet uw gegevens updaten" noUnderline={true} color="zwart" />
                         <LayoutFlow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">ISDE 2022</span>
@@ -337,7 +337,7 @@ const OverzichtClean = () => {
                       </LayoutFlow>
                     </div>
                     <div className="rvo-item-list__item">
-                      <LayoutFlow row={true} justifyContent="space-between" wrap={true} size="sm">
+                      <LayoutFlow row={true} justifyContent="space-between" wrap={true} gap="sm">
                         <Link content="Percelenregistratie goedgekeurd" noUnderline={true} color="zwart" />
                         <LayoutFlow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">Mijn Percelen</span>
@@ -346,7 +346,7 @@ const OverzichtClean = () => {
                       </LayoutFlow>
                     </div>
                     <div className="rvo-item-list__item">
-                      <LayoutFlow row={true} justifyContent="space-between" wrap={true} size="sm">
+                      <LayoutFlow row={true} justifyContent="space-between" wrap={true} gap="sm">
                         <Link content="Aanvullend bewijsmateriaal aanleveren" noUnderline={true} color="zwart" />
                         <LayoutFlow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">WBSO</span>
@@ -361,7 +361,7 @@ const OverzichtClean = () => {
               <Grid columns="two" gap="xl">
                 <div className="rvo-faq">
                   <Heading type="h2" textContent="Veelgestelde vragen" />
-                  <LayoutFlow size="sm">
+                  <LayoutFlow gap="sm">
                     <Accordion
                       items={[
                         {

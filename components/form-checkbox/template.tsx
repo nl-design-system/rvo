@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface ICheckboxProps {
+export interface ICheckboxProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   name?: string;
   label: string;
@@ -49,6 +49,41 @@ export const argTypes = {
   required: { control: 'boolean' },
   value: { control: 'text' },
   helperTextId: { control: 'text' },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
+  },
+  onUpdateGroup: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Checkbox: React.FC<ICheckboxProps> = ({

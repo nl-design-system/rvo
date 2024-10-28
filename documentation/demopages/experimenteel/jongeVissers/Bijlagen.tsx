@@ -20,7 +20,7 @@ const Bijlagen = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="2xl">
+      <LayoutFlow gap="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -82,7 +82,7 @@ const Bijlagen = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Bijlagen"></Heading>
                   <ul>
@@ -100,7 +100,7 @@ const Bijlagen = () => {
                 </div>
 
                 <form>
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Fieldset legend="Financiële capaciteit">
                       <CheckboxField
                         invalid={false}

@@ -50,7 +50,7 @@ const VoordatUStart = () => {
             ]}
           />
           <div className="rvo-form">
-            <LayoutFlow size="md">
+            <LayoutFlow gap="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
                 <Heading type="h1" textContent="Voordat u start" />
@@ -68,7 +68,7 @@ const VoordatUStart = () => {
                 </ul>
               </div>
               <form>
-                <LayoutFlow row={false} size="md">
+                <LayoutFlow row={false} gap="md">
                   <ButtonGroup>
                     <Button
                       kind="warning-subtle"

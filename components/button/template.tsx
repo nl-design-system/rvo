@@ -4,14 +4,14 @@
  */
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
 import '../layout-flow/index.scss';
 import './index.scss';
 
-export interface IButtonProps {
+export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
   label?: string | ReactNode;

@@ -114,9 +114,9 @@ const PercelenRegistreren = () => {
         </div>
 
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--sm rvo-main--w-line rvo-main--content-page">
-          <LayoutFlow size="xl">
+          <LayoutFlow gap="xl">
             <div className="rvo-content--www rvo-content--home">
-              <LayoutFlow size="sm">
+              <LayoutFlow gap="sm">
                 <Heading type="h1">Alles over percelen registreren</Heading>
                 <p className="rvo-paragraph rvo-paragraph--subtle rvo-paragraph--sm rvo-paragraph--no-spacing">
                   <em>Gepubliceerd op: </em>22 januari 2015 | <em>Laatst gecontroleerd op: </em> 12 oktober 2023
@@ -127,7 +127,7 @@ const PercelenRegistreren = () => {
                 Wij gebruiken uw registratie bijvoorbeeld voor het mestbeleid en grondgebonden subsidies die u
                 aanvraagt.
               </p>
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-quick-links">
                   <Heading type="h2" textContent="Op deze pagina" />
                   <ul className="rvo-quick-links-list">
@@ -224,7 +224,7 @@ const PercelenRegistreren = () => {
               <hr className="rvo-divider"></hr>
             </div>
             <div className="rvo-feedback">
-              <LayoutFlow row={true} wrap={true} size="sm">
+              <LayoutFlow row={true} wrap={true} gap="sm">
                 <Icon icon="tekstballon-met-hart" size="2xl" />
                 <em>Bent u tevreden over deze pagina?</em>
                 <span className="rvo-rhs-update-component">

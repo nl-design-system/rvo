@@ -100,12 +100,12 @@ const DocumentenClean = () => {
             />
           </div>
           <div className="rvo-sidebar-layout__content">
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <Heading type="h1" noMargins={true}>
                 Documenten
               </Heading>
               <div>
-                <LayoutFlow size="xl">
+                <LayoutFlow gap="xl">
                   <Tabs
                     tabs={[{ label: 'Mijn ontvangen documenten' }, { label: 'Mijn verstuurde documenten' }]}
                     activeTab={0}
@@ -119,7 +119,7 @@ const DocumentenClean = () => {
                   <div className="rvo-wrapper rvo-documents">
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -141,7 +141,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -163,7 +163,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -185,7 +185,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -207,7 +207,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -229,7 +229,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -251,7 +251,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -273,7 +273,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>
@@ -295,7 +295,7 @@ const DocumentenClean = () => {
                     </div>
                     <div className="rvo-wrapper rvo-document">
                       <Grid columns="four">
-                        <LayoutFlow size="0">
+                        <LayoutFlow gap="0">
                           <strong>Verzoek om informatie</strong>
                           <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
                         </LayoutFlow>

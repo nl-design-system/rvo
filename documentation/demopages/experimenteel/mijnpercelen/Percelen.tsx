@@ -106,7 +106,7 @@ const Percelen = () => {
             </ul>
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" />
                   <div className="rvo-instellingen">
                     <a
@@ -129,7 +129,7 @@ const Percelen = () => {
                           Filter en sorteer percelen <Icon icon="delta-omlaag"></Icon>
                           <Icon icon="delta-omhoog"></Icon>
                         </summary>
-                        <LayoutFlow size="md">
+                        <LayoutFlow gap="md">
                           <SelectField
                             label="Filter op peildatum"
                             options={[{ value: '1', label: '15-05-2023' }]}

@@ -1,7 +1,7 @@
 import { ILayoutFlowProps } from './template';
 
 export const defaultArgs: ILayoutFlowProps = {
-  size: 'md',
+  gap: 'md',
   row: false,
   wrap: false,
   alignItems: '',

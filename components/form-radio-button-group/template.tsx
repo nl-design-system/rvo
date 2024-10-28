@@ -41,6 +41,11 @@ export const argTypes = {
       disable: true,
     },
   },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({

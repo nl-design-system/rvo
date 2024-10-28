@@ -16,7 +16,7 @@ const Samenvatting = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="2xl">
+      <LayoutFlow gap="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -83,7 +83,7 @@ const Samenvatting = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Samenvatting"></Heading>
                 </div>

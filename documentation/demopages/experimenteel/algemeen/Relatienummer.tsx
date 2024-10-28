@@ -5,7 +5,7 @@ const Relatienummer = () => {
   return (
     <div className="rvo-demo-page rvo-demopage-relatienummer">
       <Header link="#" />
-      <LayoutFlow size="lg">
+      <LayoutFlow gap="lg">
         <div className="rvo-topnav__background rvo-topnav__background--horizontal-rule">
           <div className="rvo-max-width-layout rvo-max-width-layout--md">
             <nav className="rvo-topnav rvo-topnav--md">
@@ -44,7 +44,7 @@ const Relatienummer = () => {
             </nav>
           </div>
         </div>
-        <LayoutFlow size="3xl">
+        <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading textContent="Relatienummer demopagina"></Heading>
             <p>

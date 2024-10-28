@@ -18,8 +18,8 @@ const Filter = () => {
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
-      <LayoutFlow size="xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
+        <LayoutFlow gap="xl">
           <MenuBar
             items={[
               {
@@ -50,7 +50,7 @@ const Filter = () => {
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading noMargins={true}>Projects</Heading>
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
                   Data reported to the IATI registry since January 2015. Find open data on development aid projects
@@ -85,10 +85,10 @@ const Filter = () => {
                     </summary>
 
                     <form className="rvo-form">
-                      <LayoutFlow size="md">
+                      <LayoutFlow gap="md">
                         <TextInputField label="Search projects" value="study"></TextInputField>
 
-                        <LayoutFlow row={true} size="sm" alignItems="start">
+                        <LayoutFlow row={true} gap="sm" alignItems="start">
                           <SelectField
                             label="From (year)"
                             options={[
@@ -471,14 +471,14 @@ const Filter = () => {
                   <strong>4817</strong> projects found
                 </Heading>
                 <LayoutFlow>
-                  <LayoutFlow size="2xs">
-                    <LayoutFlow row={true} size="sm" wrap={true}>
+                  <LayoutFlow gap="2xs">
+                    <LayoutFlow row={true} gap="sm" wrap={true}>
                       <strong className="rvo-results-active-filters">Active filters</strong>
                       <Button kind="warning-subtle" size="xs" icon="foutmelding" showIcon="before">
                         Reset all filters
                       </Button>
                     </LayoutFlow>
-                    <LayoutFlow row={true} size="sm" wrap={true}>
+                    <LayoutFlow row={true} gap="sm" wrap={true}>
                       <div className="rvo-tag rvo-tag--with-icon rvo-tag--info">
                         <span>
                           Search <strong> study</strong>

@@ -7,7 +7,7 @@ const Bevestiging = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="2xl">
+      <LayoutFlow gap="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -75,7 +75,7 @@ const Bevestiging = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <Heading type="h1" textContent="Bevestiging"></Heading>
                   <p>
@@ -84,7 +84,7 @@ const Bevestiging = () => {
                     als u met ons belt of digitale post wilt versturen.
                   </p>
                   <Heading type="h2" textContent="Uw gegevens"></Heading>
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <dl className="rvo-data">
                       <dt>Naam</dt>
                       <dd>Albert Heijn B.V.</dd>

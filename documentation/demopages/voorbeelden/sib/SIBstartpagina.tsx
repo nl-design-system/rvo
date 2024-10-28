@@ -17,8 +17,8 @@ const SIBstartpagina = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <LayoutFlow size="2xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="2xl">
+        <LayoutFlow gap="xl">
           <div className="navigation">
             <MobileMenuBar
               iconPlacement="before"
@@ -159,7 +159,7 @@ const SIBstartpagina = () => {
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
               ]}
             />
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <div>
                 <Heading type="h1">SIB 2024: Coaching</Heading>
                 <p className="rvo-text--no-margins">

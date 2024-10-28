@@ -16,7 +16,7 @@ export const SelectField: React.FC<ISelectFieldProps> = (args: ISelectFieldProps
   const selectArgs = extractArgs(args, selectArgTypes);
   return (
     <Field {...fieldArgs}>
-      <Select {...selectArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
+      <Select {...selectArgs} aria-describedby={fieldArgs.helperTextId} />
     </Field>
   );
 };

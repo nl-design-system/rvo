@@ -5,7 +5,7 @@ const FiltersPersonen = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="lg">
+      <LayoutFlow gap="lg">
         <MenuBar
           items={[
             { label: 'Home', link: '#' },
@@ -20,10 +20,10 @@ const FiltersPersonen = () => {
           useIcons={true}
           iconPlacement="before"
         />
-        <LayoutFlow size="3xl">
+        <LayoutFlow gap="3xl">
           <main>
             <div className="rvo-filter">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <MaxWidthLayout size="sm">
                   <div className="rvo-intro">
                     <Heading type="h1" textContent="Vind uw adviseur"></Heading>
@@ -34,11 +34,11 @@ const FiltersPersonen = () => {
                     </p>
                   </div>
                 </MaxWidthLayout>
-                <LayoutFlow size="md">
+                <LayoutFlow gap="md">
                   <div className="rvo-tmp-filters">
                     <Fieldset legend="">
                       <MaxWidthLayout size="sm">
-                        <LayoutFlow size="xl" row={true}>
+                        <LayoutFlow gap="xl" row={true}>
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">
@@ -215,10 +215,10 @@ const FiltersPersonen = () => {
                       </MaxWidthLayout>
                     </Fieldset>
                   </div>
-                  <LayoutFlow size="2xl">
+                  <LayoutFlow gap="2xl">
                     <div className="rvo-active-filters">
                       <MaxWidthLayout size="sm">
-                        <LayoutFlow row={true} size="sm">
+                        <LayoutFlow row={true} gap="sm">
                           <span className="rvo-results-count">
                             <strong>12</strong> resultaten voor
                           </span>
@@ -248,11 +248,11 @@ const FiltersPersonen = () => {
 
                     <MaxWidthLayout size="sm">
                       <div className="rvo-results">
-                        <LayoutFlow size="2xl">
+                        <LayoutFlow gap="2xl">
                           <div className="rvo-result rvo-result--w-image">
-                            <LayoutFlow row={true} size="lg">
+                            <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
-                                <LayoutFlow size="sm">
+                                <LayoutFlow gap="sm">
                                   <Link href="#" content="Jelle Knop"></Link>
 
                                   <span className="rvo-result-description">
@@ -285,9 +285,9 @@ const FiltersPersonen = () => {
                           </div>
                           <hr className="rvo-hr" />
                           <div className="rvo-result rvo-result--w-image">
-                            <LayoutFlow row={true} size="lg">
+                            <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
-                                <LayoutFlow size="sm">
+                                <LayoutFlow gap="sm">
                                   <Link href="#" content="Bert van der Heide"></Link>
 
                                   <span className="rvo-result-description">
@@ -317,9 +317,9 @@ const FiltersPersonen = () => {
                           </div>
                           <hr className="rvo-hr" />
                           <div className="rvo-result">
-                            <LayoutFlow row={true} size="lg">
+                            <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
-                                <LayoutFlow size="sm">
+                                <LayoutFlow gap="sm">
                                   <Link href="#" content="Roy Paulissen"></Link>
 
                                   <span className="rvo-result-description">

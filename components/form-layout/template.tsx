@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface IFormLayoutProps {
+export interface IFormLayoutProps extends HTMLAttributes<HTMLDivElement> {
   /** @uxpinignoreprop */
   content: string;
   /** @uxpinpropname Content */
@@ -25,8 +25,12 @@ export const argTypes = {
   },
 };
 
-export const FormLayout: React.FC<IFormLayoutProps> = ({ content, children }: IFormLayoutProps) => {
-  return <div className="rvo-form-layout">{parseContentMarkup(children || content)}</div>;
+export const FormLayout: React.FC<IFormLayoutProps> = ({ content, children, ...props }: IFormLayoutProps) => {
+  return (
+    <div className="rvo-form-layout" {...props}>
+      {parseContentMarkup(children || content)}
+    </div>
+  );
 };
 
 export default FormLayout;

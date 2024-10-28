@@ -18,7 +18,7 @@ const KostenOpvoeren = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="2xl">
+      <LayoutFlow gap="2xl">
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
@@ -94,9 +94,9 @@ const KostenOpvoeren = () => {
               ]}
             />
             <div className="rvo-form">
-              <LayoutFlow size="xl">
+              <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Heading type="h1" textContent="Kosten opvoeren"></Heading>
                     <dl className="rvo-data">
                       <dt>Omschrijving van de investering</dt>
@@ -105,7 +105,7 @@ const KostenOpvoeren = () => {
                   </LayoutFlow>
                 </div>
                 <form>
-                  <LayoutFlow size="md">
+                  <LayoutFlow gap="md">
                     <Fieldset legend="">
                       <TextInputField
                         label="Hoeveel kost het vissersvaartuig (exclusief btw)?"

@@ -4,13 +4,13 @@
  */
 import './index.scss';
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { AccordionItem, IAccordionItemProps } from './accordion-item/template';
 import { defaultArgs } from './defaultArgs';
 
-export interface IAccordionProps {
+export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
   /** @uxpinignoreprop */
-  items: IAccordionItemProps[];
+  items?: IAccordionItemProps[];
   grijs?: boolean;
   /** @uxpinpropname Accordion items */
   children?: ReactNode | undefined;
@@ -34,12 +34,13 @@ export const Accordion: React.FC<IAccordionProps> = ({
   items = defaultArgs.items,
   grijs = defaultArgs.grijs,
   children,
+  ...props
 }: IAccordionProps) => {
   return (
-    <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')}>
+    <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')} {...props}>
       {(children &&
         React.Children.map(children, (child, index) => <AccordionItem key={index} {...(child as any).props} />)) ||
-        items.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}
+        items?.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}
     </div>
   );
 };

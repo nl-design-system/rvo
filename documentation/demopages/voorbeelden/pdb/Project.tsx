@@ -4,8 +4,8 @@ const Project = () => {
   return (
     <body className="rvo-theme">
       <Header link="#" />
-      <LayoutFlow size="xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
+        <LayoutFlow gap="xl">
           <MenuBar
             items={[
               {
@@ -39,21 +39,21 @@ const Project = () => {
             <Grid layout="2fr1fr" columns="two" gap="xl">
               <div>
                 <Heading>Legal Opinion OC DR Congo</Heading>
-                <LayoutFlow size="sm">
-                  <LayoutFlow size="xs">
+                <LayoutFlow gap="sm">
+                  <LayoutFlow gap="xs">
                     <span className="rvo-text rvo-text--subtle">
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <Icon icon="klok" color="grijs-700"></Icon>Published: 2 March 2020 | 11:29
                       </LayoutFlow>
                     </span>
                     <span className="rvo-text rvo-text--subtle">
-                      <LayoutFlow row={true} size="xs">
+                      <LayoutFlow row={true} gap="xs">
                         <Icon icon="bewerken" color="grijs-700"></Icon>Updated: 30 april 2021 | 13:49
                       </LayoutFlow>
                     </span>
                   </LayoutFlow>
 
-                  <LayoutFlow size="xl">
+                  <LayoutFlow gap="xl">
                     <div className="rvo-content">
                       <p className="rvo-text rvo-text--no-margins">
                         The Orange Corners programme has been launched in DRC. This programme includes financial
@@ -82,7 +82,7 @@ const Project = () => {
                         </h3>
                       </summary>
                       <div className="rvo-accordion__content">
-                        <LayoutFlow size="sm" row={true}>
+                        <LayoutFlow gap="sm" row={true}>
                           <Link
                             icon="schilderij-met-bloemen-in-vaas"
                             showIcon="before"
@@ -93,7 +93,7 @@ const Project = () => {
                           </Link>
                           <span className="rvo-text rvo-text--subtle">Image</span>
                         </LayoutFlow>
-                        <LayoutFlow size="sm" row={true}>
+                        <LayoutFlow gap="sm" row={true}>
                           <Link
                             icon="schilderij-met-bloemen-in-vaas"
                             showIcon="before"
@@ -104,7 +104,7 @@ const Project = () => {
                           </Link>
                           <span className="rvo-text rvo-text--subtle">Image</span>
                         </LayoutFlow>
-                        <LayoutFlow size="sm" row={true}>
+                        <LayoutFlow gap="sm" row={true}>
                           <Link
                             icon="schilderij-met-bloemen-in-vaas"
                             showIcon="before"
@@ -115,7 +115,7 @@ const Project = () => {
                           </Link>
                           <span className="rvo-text rvo-text--subtle">Image</span>
                         </LayoutFlow>
-                        <LayoutFlow size="sm" row={true}>
+                        <LayoutFlow gap="sm" row={true}>
                           <Link
                             icon="schilderij-met-bloemen-in-vaas"
                             showIcon="before"
@@ -136,7 +136,7 @@ const Project = () => {
                   src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-07%2FBodemonderzoek.jpg%3Fitok%3DTPuhIeic&w=750&q=85"
                   width="100%"
                 />
-                <LayoutFlow row={true} size="sm" wrap={true}>
+                <LayoutFlow row={true} gap="sm" wrap={true}>
                   <img src="images/sdg/E_WEB_01.png" width="68px" />
                   <img src="images/sdg/E_WEB_02.png" width="68px" />
                   <img src="images/sdg/E_WEB_03.png" width="68px" />

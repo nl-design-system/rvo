@@ -6,13 +6,13 @@ const Alerts = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <LayoutFlow size="md">
+      <LayoutFlow gap="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
 
         <MaxWidthLayout size="sm">
           <main>
             <div className="rvo-alerts">
-              <LayoutFlow size="md">
+              <LayoutFlow gap="md">
                 <div className="rvo-alert rvo-alert--info">
                   <Icon icon="info" color="hemelblauw" size="lg" />
                   <div className="rvo-alert-text">

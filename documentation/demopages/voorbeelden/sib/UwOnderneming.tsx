@@ -17,8 +17,8 @@ const UwOnderneming = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <LayoutFlow size="2xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="2xl">
+        <LayoutFlow gap="xl">
           <div className="navigation">
             <MobileMenuBar
               iconPlacement="before"
@@ -159,7 +159,7 @@ const UwOnderneming = () => {
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
               ]}
             />
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <div>
                 <a
                   className="rvo-link rvo-link--no-underline rvo-link--with-icon  rvo-link--normal"

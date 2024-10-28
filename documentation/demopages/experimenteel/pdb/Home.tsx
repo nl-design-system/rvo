@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <body className="rvo-theme">
       <Header link="#" />
-      <LayoutFlow size="xl">
-        <LayoutFlow size="xl">
+      <LayoutFlow gap="xl">
+        <LayoutFlow gap="xl">
           <MenuBar
             items={[
               {
@@ -37,7 +37,7 @@ const Home = () => {
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading noMargins={true}>Project Database</Heading>
-            <LayoutFlow size="xl">
+            <LayoutFlow gap="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
                   The{' '}

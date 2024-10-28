@@ -20,12 +20,6 @@
   max-width: var(--rvo-layout-max-width-lg);
 }
 
-.rvo-max-width-layout:has(.rvo-progress-tracker) {
-  display: grid;
-  gap: var(--rvo-space-md);
-  grid-template-columns: 240px 1fr;
-}
-
 .rvo-max-width-layout-inline-padding--sm {
   padding-inline-end: var(--rvo-space-sm);
   padding-inline-start: var(--rvo-space-sm);

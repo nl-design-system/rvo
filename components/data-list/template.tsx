@@ -3,16 +3,16 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
+import DataListItem, { IDataListItemProps } from './data-list-item/template';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
-interface IDataListItem {
-  key: string;
-  value: string;
-}
 
-export interface IDataListProps {
-  items: IDataListItem[];
+export interface IDataListProps extends HTMLAttributes<HTMLDListElement> {
+  /** @uxpinignoreprop */
+  items?: IDataListItemProps[];
+  /** @uxpinpropname Data list items */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -24,14 +24,13 @@ export const argTypes = {
   },
 };
 
-export const DataList: React.FC<IDataListProps> = ({ items = defaultArgs.items }: IDataListProps) => (
-  <dl className={clsx('rvo-data-list')}>
-    {items.map(({ key, value }, index) => (
-      <React.Fragment key={index}>
-        <dt>{key}</dt>
-        <dd>{value}</dd>
-      </React.Fragment>
-    ))}
+export const DataList: React.FC<IDataListProps> = ({
+  items = defaultArgs.items,
+  children,
+  ...props
+}: IDataListProps) => (
+  <dl className={clsx('rvo-data-list')} {...props}>
+    {children || items?.map((itemContent, index) => <DataListItem key={index} {...itemContent} />)}
   </dl>
 );
 

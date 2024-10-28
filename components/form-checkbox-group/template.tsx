@@ -29,6 +29,11 @@ export const argTypes = {
       required: true,
     },
   },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
   children: {
     table: {
       disable: true,
