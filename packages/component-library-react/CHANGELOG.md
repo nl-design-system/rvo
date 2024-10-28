@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-react
 
+## 1.2.0
+
+### Minor Changes
+
+- c029d6a: Renamed url to link in BreadcrumbItem
+- c029d6a: Renamed size prop to gap in LayoutFlow
+- c029d6a: Added DataListItem component to include in DataList
+
+### Patch Changes
+
+- c029d6a: Fixed callback events (eg onChange, onFocus) for field components
+
 ## 1.1.0
 
 ### Minor Changes
