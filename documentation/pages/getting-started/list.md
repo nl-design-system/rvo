@@ -4,13 +4,9 @@ Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op
 
 ## Controle Desk Controle Register (CDCR)
 
-**Status**: In ontwerp  
+**Status**: In ontwerp (gebruikt Figma bibliotheek)  
 **Techniek**: HTML/CSS  
 **Gebruikt libraries en code(\*)**: Onbekend
-
-**Status**: In ontwerp  
-**Techniek**: React  
-**Gebruikt libraries en code(\*)**: Ja
 
 ## CMOR (Centrale Mijn Omgeving RVO)
 
@@ -42,6 +38,12 @@ Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op
 **Techniek**: HTML/CSS  
 **Gebruikt libraries en code(\*)**: Ja
 
+## [Europese subsidies](https://europese-subsidies.rvo.nl/nl)
+
+**Status**: Live  
+**Techniek**: HTML/CSS  
+**Gebruikt libraries en code(\*)**: Ja
+
 ## rvo.nl
 
 **Status**: In ontwerp  
@@ -50,13 +52,13 @@ Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op
 
 ## TripleForms
 
-**Status**: Live
-**Techniek**: HTML/CSS
+**Status**: Live  
+**Techniek**: HTML/CSS  
 **Gebruikt libraries en code(\*)**: Nee
 
 ## Veenweide
 
-**Status**: In ontwerp  
+**Status**: In ontwerp (gebruikt Figma bibliotheek)  
 **Techniek**: Onbekend  
 **Gebruikt libraries en code(\*)**: Onbekend
 
@@ -70,6 +72,18 @@ Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op
 
 **Status**: In ontwerp
 **Techniek**: HTML/CSS  
+**Gebruikt libraries en code(\*)**: Nee
+
+## Werken bij RVO
+
+**Status**: In ontwerp (gebruikt Figma bibliotheek)  
+**Techniek**: React  
+**Gebruikt libraries en code(\*)**: Onbekend
+
+## Regelmaatje (Android/iOS app)
+
+**Status**: Live  
+**Techniek**:[Android](https://play.google.com/store/apps/details?id=nl.rvo.regelmaatje) en [iOS](https://apps.apple.com/nl/app/regelmaatje/id6450216454)  
 **Gebruikt libraries en code(\*)**: Nee
 
 \* Er zijn twee manieren om aan te sluiten op ROOS. Door gebruik te maken van de aangeboden libraries en code (aanbevolen) of om handmatig updates en wijzigingen door te voeren.
