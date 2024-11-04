@@ -4,9 +4,7 @@ import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig from './config/navigationConfig';
 
-// TODO: Add includeList
-// const includeList = ['**/*.docusaurus.{md,mdx}'];
-const includeList = ['**/getting-started/*.docusaurus.{md,mdx}'];
+const includeList = ['**/*.docusaurus.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 
 const config: Config = {
