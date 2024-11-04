@@ -11,6 +11,18 @@ import MenuBarItem from '../menubar/menubar-item/template';
 import { IMenuBarItem } from '../menubar/template';
 import './index.scss';
 
+export interface IMobileMenuBarProps {
+  size?: 'sm' | 'md' | 'lg';
+  items?: IMenuBarItem[];
+  useIcons?: boolean;
+  iconPlacement?: 'before' | 'after';
+  deltaForActiveItem?: boolean;
+  children?: React.ReactNode;
+  submenuItems?: IMenuBarItem[];
+  isOpen?: boolean;
+  horizontalRule?: boolean;
+}
+
 export const argTypes = {
   size: {
     options: ['sm', 'md', 'lg'],
@@ -39,18 +51,6 @@ export const argTypes = {
     control: 'boolean',
   },
 };
-
-export interface IMobileMenuBarProps {
-  size: 'sm' | 'md' | 'lg';
-  items: IMenuBarItem[];
-  useIcons: boolean;
-  iconPlacement?: 'before' | 'after';
-  deltaForActiveItem?: boolean;
-  children?: React.ReactNode;
-  submenuItems: IMenuBarItem[];
-  isOpen: boolean;
-  horizontalRule?: boolean;
-}
 
 export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   size = defaultArgs.size,

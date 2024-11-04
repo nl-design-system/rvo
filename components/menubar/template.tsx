@@ -21,8 +21,8 @@ export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
   direction?: 'horizontal' | 'vertical';
   /** @uxpinignoreprop */
-  items: IMenuBarItem[];
-  useIcons: boolean;
+  items?: IMenuBarItem[];
+  useIcons?: boolean;
   iconPlacement?: 'before' | 'after';
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   maxWidthInlinePadding?: 'none' | 'sm' | 'md' | 'lg';
