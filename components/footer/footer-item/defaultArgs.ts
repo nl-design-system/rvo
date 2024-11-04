@@ -1,6 +1,6 @@
 import { IFooterItemProps } from './template';
 
 export const defaultArgs: IFooterItemProps = {
-  children: 'Footer item',
+  children: undefined,
   link: '#',
 };

@@ -68,7 +68,8 @@ const navbar: Navbar = {
 };
 
 const footer: Footer = {
-  links: [{ title: "<em style='font-weight: var(--rvo-font-weight-normal);'>Wij helpen u graag vooruit!</em>" }],
+  links: [],
+  style: 'light',
 };
 
 const navigationConfig = {

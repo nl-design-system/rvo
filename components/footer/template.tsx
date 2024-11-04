@@ -18,12 +18,12 @@ interface IFooterItem {
 
 interface IFooterColumn {
   label?: string;
-  items: IFooterItem[];
+  items?: IFooterItem[];
 }
 
 export interface IFooterProps {
   /** @uxpinignoreprop */
-  columns: IFooterColumn[];
+  columns?: IFooterColumn[];
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   /** @uxpinpropname Footer columns */
   children?: ReactNode | undefined;
