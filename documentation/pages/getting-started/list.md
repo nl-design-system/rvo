@@ -1,6 +1,6 @@
 # Overzicht van websites en applicaties die aangesloten zijn op ROOS
 
-Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op ROOS. Is jouw website of applicatie ook aangesloten op ROOS maar nog niet opgenomen in dit overzicht? Stuur dan een mail naar <robert.roose@rvo.nl> of <designsystem@rvo.nl>.
+Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op ROOS. Is jouw website of applicatie ook aangesloten op ROOS maar nog niet opgenomen in dit overzicht? Stuur dan een mail naar [robert.roose@rvo.nl](mailto:robert.roose@rvo.nl) of [designsystem@rvo.nl].
 
 ## Controle Desk Controle Register (CDCR)
 

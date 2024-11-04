@@ -1,6 +1,6 @@
 # Veelgestelde vragen over ROOS
 
-Deze vragen zijn beantwoord door mij, Robert Roose, Design Lead bij de Rijksdienst voor Ondernemend Nederland (RVO). Staat jouw vraag er niet bij? Stuur dan een mail naar <robert.roose@rvo.nl> of <designsystem@rvo.nl>.
+Deze vragen zijn beantwoord door mij, Robert Roose, Design Lead bij de Rijksdienst voor Ondernemend Nederland (RVO). Staat jouw vraag er niet bij? Stuur dan een mail naar [robert.roose@rvo.nl](mailto:robert.roose@rvo.nl) of [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 
 ## Wat is een Design System?
 
@@ -64,7 +64,7 @@ Als jouw website of applicatie een specifiek component of patroon nodig heeft ku
 
 In de regel worden er alleen componenten en patronen opgenomen in ROOS die door meer dan één applicatie of website gebruikt worden. Hiermee voorkomen we dat ROOS vol komt te staan met specifieke componenten en patronen die niet voor iedereen bruikbaar zijn.
 
-Als een component of patroon zo uniek is dat het nergens anders binnen de organisatie gebruikt wordt dan kun je deze binnen de eigen website of applicatie ontwerpen en ontwikkelen. Dit wordt dan gedaan in de 'geest van' ROOS en hierbij kun je hulp vragen van een designer van RVO. Mail dan het verzoek naar <robert.roose@rvo.nl> of <designsystem@rvo.nl>.
+Als een component of patroon zo uniek is dat het nergens anders binnen de organisatie gebruikt wordt dan kun je deze binnen de eigen website of applicatie ontwerpen en ontwikkelen. Dit wordt dan gedaan in de 'geest van' ROOS en hierbij kun je hulp vragen van een designer van RVO. Mail dan het verzoek naar [robert.roose@rvo.nl](mailto:robert.roose@rvo.nl) of [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 
 ## Heb je ROOS naar jezelf vernoemd?
 
