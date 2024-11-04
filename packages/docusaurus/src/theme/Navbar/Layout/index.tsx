@@ -23,6 +23,8 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
           description: 'The ARIA label for the main navigation',
         })}
         className={clsx(
+          'navbar',
+          styles.navbar,
           'navbar--fixed-top',
           hideOnScroll && [styles.navbarHideable, !isNavbarVisible && styles.navbarHidden],
           {

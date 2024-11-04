@@ -1,3 +1,11 @@
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+  box-shadow: none;
+  display: block;
+  height: auto;
+  padding: 0;
+}
+
 .navbarHideable {
   transition: transform var(--ifm-transition-fast) ease;
 }

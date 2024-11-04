@@ -21,7 +21,7 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }: Props) {
         styles.sidebar,
         hideOnScroll && styles.sidebarWithHideableNavbar,
         isHidden && styles.sidebarHidden,
-        'rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg',
+        'rvo-sidebar-layout__sidebar rvo-max-width-layout--md rvo-sidebar-layout__sidebar--bg',
       )}
     >
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
