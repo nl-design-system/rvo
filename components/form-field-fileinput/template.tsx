@@ -16,7 +16,7 @@ export const FileInputField: React.FC<IFileInputFieldProps> = (args: IFileInputF
   const fileInputArgs = extractArgs(args, fileInputArgTypes);
   return (
     <Field {...fieldArgs}>
-      <FileInput {...fileInputArgs} aria-describedby={fieldArgs.helperTextId?.length ? fieldArgs.helperTextId : null} />
+      <FileInput {...fileInputArgs} aria-describedby={fieldArgs.helperTextId} />
     </Field>
   );
 };

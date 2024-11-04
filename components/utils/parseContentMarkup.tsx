@@ -3,7 +3,7 @@ import validateHTML from './validateHTML';
 
 // Parse provided content markup (either as a string, HTML string, React node or React children)
 const parseContentMarkup = (
-  content,
+  content: string | React.ReactNode,
   props: React.ComponentProps<any> | undefined = undefined,
 ): string | React.ReactNode => {
   if (typeof content === 'string' && content.length && validateHTML(content)) {

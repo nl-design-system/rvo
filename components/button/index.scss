@@ -1,7 +1,7 @@
 /* stylelint-disable scss/no-global-function-names */
 @use "../../proprietary/design-tokens/dist/index.scss" as tokens;
 @import "../../node_modules/@utrecht/components/button/css/mixin";
-@import "../layout-column-row/index";
+@import "../layout-flow/index";
 
 // Don't wrap label, don't shrink
 .utrecht-button {

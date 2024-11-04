@@ -4,27 +4,37 @@
  */
 import clsx from 'clsx';
 import './index.scss';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 
 export interface ISelectOption {
   value: string;
   label: string;
   selected?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLSelectElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLSelectElement>) => void;
 }
 
-export interface ISelectProps {
+export interface ISelectProps extends HTMLAttributes<HTMLSelectElement> {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   options?: ISelectOption[];
+  onFocus?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLSelectElement>) => void;
+  /**
+   * @uxpinbind onChange 0.target.value
+   */
+  currentSelection?: number | null;
 }
 
 export const argTypes = {
@@ -47,6 +57,31 @@ export const argTypes = {
       required: true,
     },
   },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Select: React.FC<ISelectProps> = ({
@@ -61,9 +96,9 @@ export const Select: React.FC<ISelectProps> = ({
   <div className="rvo-select-wrapper">
     <select
       id={id}
-      aria-invalid={invalid || null}
-      disabled={disabled || null}
-      required={required || null}
+      aria-invalid={invalid || undefined}
+      disabled={disabled || undefined}
+      required={required || undefined}
       className={clsx('utrecht-select', 'utrecht-select--html-select', {
         'utrecht-select--disabled': disabled,
         'utrecht-select--focus': focus,
@@ -73,11 +108,12 @@ export const Select: React.FC<ISelectProps> = ({
       })}
       {...otherProps}
     >
-      {options.map(({ label, selected, value }) => (
-        <option key={value} selected={selected || null} defaultValue={value || null}>
-          {label}
-        </option>
-      ))}
+      {options &&
+        options.map(({ label, selected, value }) => (
+          <option key={value} selected={selected || undefined} defaultValue={value || undefined}>
+            {label}
+          </option>
+        ))}
     </select>
   </div>
 );

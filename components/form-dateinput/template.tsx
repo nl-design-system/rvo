@@ -4,29 +4,34 @@
  */
 import { Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import '../form-textinput/index.scss';
 import { defaultArgs } from './defaultArgs';
 
-export interface IDateInputProps {
+export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
   readOnly?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
   placeholder?: string;
+  /** @uxpinpropname Value (yyyy-mm-dd format)> */
   value?: string;
+  /** @uxpinpropname Min (yyyy-mm-dd format)> */
   min?: string;
+  /** @uxpinpropname Max (yyyy-mm-dd format)> */
   max?: string;
   step?: number;
   size?: string;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInput?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
 }
 
 export const argTypes = {
@@ -65,6 +70,36 @@ export const argTypes = {
     options: ['sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const DateInput: React.FC<IDateInputProps> = ({
@@ -92,10 +127,10 @@ export const DateInput: React.FC<IDateInputProps> = ({
       readOnly && 'utrecht-textbox--readonly',
       required && 'utrecht-textbox--required',
     ),
-    disabled: disabled || null,
-    'aria-invalid': invalid || null,
-    required: required || null,
-    readOnly: readOnly || null,
+    disabled: disabled || undefined,
+    'aria-invalid': invalid || undefined,
+    required: required || undefined,
+    readOnly: readOnly || undefined,
     defaultValue: value,
     ...(min && { min }),
     ...(max && { max }),

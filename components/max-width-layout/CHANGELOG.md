@@ -1,5 +1,11 @@
 # `@nl-rvo/max-width-layout`
 
+## 1.1.0
+
+### Minor Changes
+
+- c029d6a: Removed grid styling when layout contains progress tracker
+
 ## 1.0.0
 
 ### Major Changes

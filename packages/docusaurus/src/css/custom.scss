@@ -141,3 +141,35 @@ code {
 .markdown table td.rvo-table-cell--numeric {
   text-align: end;
 }
+
+// Fix table width on webkit
+
+table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+// Disable schrijfwijzer submenu items until issue is fixed
+
+.theme-doc-sidebar-item-link-level-2 a[href="#korte-teksten"],
+.theme-doc-sidebar-item-link-level-2 a[href="#scanbaar"],
+.theme-doc-sidebar-item-link-level-2 a[href="#tussenkopjes"],
+.theme-doc-sidebar-item-link-level-2 a[href="#opsommingen"],
+.theme-doc-sidebar-item-link-level-2 a[href="#tabellen"],
+.theme-doc-sidebar-item-link-level-2 a[href="#links"],
+.theme-doc-sidebar-item-link-level-2 a[href="#begrippen-en-voorbeeldzinnen"],
+.theme-doc-sidebar-item-link-level-2 a[href="#ouderwetse-woorden"],
+.theme-doc-sidebar-item-link-level-2 a[href="#introduction"],
+.theme-doc-sidebar-item-link-level-2 a[href="#guidelines-in-short"],
+.theme-doc-sidebar-item-link-level-2 a[href="#language"],
+.theme-doc-sidebar-item-link-level-2 a[href="#tone-of-voice"],
+.theme-doc-sidebar-item-link-level-2 a[href="#style-spelling-grammar"],
+.theme-doc-sidebar-item-link-level-2 a[href="#structure-lay-out-format"],
+.theme-doc-sidebar-item-link-level-2 a[href="#tools-resources"],
+.theme-doc-sidebar-item-link-level-2 a[href="#frequently-used"],
+.theme-doc-sidebar-item-link-level-2 a[href="#foutmeldingsteksten"],
+.theme-doc-sidebar-item-link-level-2 a[href="#links-naar-e-mailadressen"],
+.theme-doc-sidebar-item-link-level-2 a[href="#teksten-op-knoppen-in-formulieren"] {
+  display: none;
+}

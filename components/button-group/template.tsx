@@ -4,16 +4,20 @@
  */
 import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Button, IButtonProps } from '../button/template';
-import '../layout-column-row/index.scss';
+import '../layout-flow/index.scss';
 import './index.scss';
 
 export interface IButtonGroupProps {
+  /** @uxpinignoreprop */
   buttonsLeft?: IButtonProps[];
+  /** @uxpinignoreprop */
   buttonsRight?: IButtonProps[];
   fullWidth?: boolean;
+  /** @uxpinpropname Buttons */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -35,14 +39,19 @@ export const argTypes = {
       required: false,
     },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
+export const ButtonGroup: React.FC<IButtonGroupProps> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
   children,
   fullWidth = defaultArgs.fullWidth,
-}: PropsWithChildren<IButtonGroupProps>) => {
+}: IButtonGroupProps) => {
   return (
     <UtrechtButtonGroup
       className={clsx({
@@ -51,11 +60,11 @@ export const ButtonGroup: React.FC<PropsWithChildren<IButtonGroupProps>> = ({
     >
       {children}
       {!children &&
-        buttonsLeft.map((buttonProps, index) => {
+        buttonsLeft?.map((buttonProps, index) => {
           return <Button key={index} {...buttonProps} />;
         })}
       {!children &&
-        buttonsRight.map((buttonProps, index) => (
+        buttonsRight?.map((buttonProps, index) => (
           <Button key={index} {...buttonProps} className="utrecht-button-group__align-right" />
         ))}
     </UtrechtButtonGroup>

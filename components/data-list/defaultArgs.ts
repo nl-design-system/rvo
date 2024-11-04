@@ -3,15 +3,15 @@ import { IDataListProps } from './template';
 export const defaultArgs: IDataListProps = {
   items: [
     {
-      key: 'Voornaam',
+      label: 'Voornaam',
       value: 'Mees',
     },
     {
-      key: 'Achternaam',
+      label: 'Achternaam',
       value: 'de Vos',
     },
     {
-      key: 'Adres',
+      label: 'Adres',
       value: 'Tweede Kamer der Staten-Generaal\nPostbus 20018\n2500 EA Den Haag',
     },
   ],

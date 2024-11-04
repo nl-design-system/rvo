@@ -1,5 +1,11 @@
 # `@nl-rvo/form-radio-button-group`
 
+## 1.0.1
+
+### Patch Changes
+
+- c029d6a: Fixed callback events (eg onChange, onFocus) for field components
+
 ## 1.0.0
 
 ### Major Changes

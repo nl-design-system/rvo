@@ -5,32 +5,37 @@
 import './index.scss';
 import { Textarea, Textbox } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { HTMLAttributes, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 
-export interface ITextInputProps {
+export interface ITextInputProps extends HTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
+  /** @uxpinignoreprop */
   key?: string;
+  /** @uxpinignoreprop */
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   readOnly?: boolean;
   required?: boolean;
-  inputType?: string;
+  inputType?: 'text' | 'textarea';
   placeholder?: string;
   value?: string;
-  validation?: string;
+  validation?: 'text' | 'number' | 'currency';
   prefix?: string;
   suffix?: string;
-  size?: string;
-  maxLength?: number | null;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  maxLength?: number | undefined;
+  /** @uxpinpropname Max length indicator (textarea) */
   maxLengthIndicator?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInput?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onInput?: (event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onInvalid?: (event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 export const argTypes = {
@@ -76,6 +81,36 @@ export const argTypes = {
   },
   maxLengthIndicator: {
     control: 'boolean',
+  },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
   },
 };
 
@@ -148,7 +183,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
         <Textarea {...props} className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])} />
         <span className="utrecht-textbox-remaining-chars">
-          Nog {maxLength - currentValue.length} teken{maxLength - currentValue.length > 1 && 's'} over
+          Nog {maxLength - (currentValue?.length || 0)} teken{maxLength - (currentValue?.length || 0) > 1 && 's'} over
         </span>
       </div>
     );

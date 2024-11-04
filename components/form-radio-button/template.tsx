@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IRadioButtonProps {
+export interface IRadioButtonProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   name?: string;
   label: string;
@@ -15,19 +15,22 @@ export interface IRadioButtonProps {
    * @uxpinbind onChange 0.target.checked
    */
   checked?: boolean;
+  /** @uxpinpropname Show hover */
   hover?: boolean;
   disabled?: boolean;
   active?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
   /** @uxpinignoreprop */
-  onUpdateGroup?: (event) => void;
+  onUpdateGroup?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const argTypes = {
@@ -41,6 +44,41 @@ export const argTypes = {
   focus: { control: 'boolean' },
   invalid: { control: 'boolean' },
   required: { control: 'boolean' },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
+  },
+  onUpdateGroup: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const RadioButton: React.FC<IRadioButtonProps> = ({
@@ -63,9 +101,9 @@ export const RadioButton: React.FC<IRadioButtonProps> = ({
       id={id}
       name={name}
       type="radio"
-      checked={checked || null}
-      disabled={disabled || null}
-      required={required || null}
+      checked={checked || undefined}
+      disabled={disabled || undefined}
+      required={required || undefined}
       className={clsx(
         'utrecht-radio-button',
         checked && 'utrecht-radio-button--checked',

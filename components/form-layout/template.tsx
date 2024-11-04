@@ -3,25 +3,34 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-import React, { PropsWithChildren } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface IFormLayoutProps {
+export interface IFormLayoutProps extends HTMLAttributes<HTMLDivElement> {
+  /** @uxpinignoreprop */
   content: string;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
   content: {
     control: 'text',
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const FormLayout: React.FC<PropsWithChildren<IFormLayoutProps>> = ({
-  content,
-  children,
-}: PropsWithChildren<IFormLayoutProps>) => {
-  return <div className="rvo-form-layout">{children || parseContentMarkup(content)}</div>;
+export const FormLayout: React.FC<IFormLayoutProps> = ({ content, children, ...props }: IFormLayoutProps) => {
+  return (
+    <div className="rvo-form-layout" {...props}>
+      {parseContentMarkup(children || content)}
+    </div>
+  );
 };
 
 export default FormLayout;

@@ -3,17 +3,23 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import { parseChildren } from '../utils/parseChildren';
 
 export interface IListProps {
   type: 'unordered' | 'ordered';
+  /** @uxpinignoreprop */
   items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+  /** @uxpinpropname Unordered bullet type */
   bulletType: 'disc' | 'none' | 'icon';
+  /** @uxpinpropname Unordered bullet icon */
   bulletIcon: 'option-1' | 'option-2' | 'option-3';
   noMargin: boolean;
   noPadding: boolean;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -47,6 +53,11 @@ export const argTypes = {
   noPadding: {
     control: 'boolean',
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const List: React.FC<IListProps> = ({
@@ -56,6 +67,7 @@ export const List: React.FC<IListProps> = ({
   bulletIcon = defaultArgs.bulletIcon,
   noMargin = defaultArgs.noMargin,
   noPadding = defaultArgs.noPadding,
+  children = defaultArgs.children,
 }: IListProps) => {
   const ListTag = type === 'unordered' ? 'ul' : 'ol';
   const listClassName = clsx(
@@ -71,9 +83,9 @@ export const List: React.FC<IListProps> = ({
 
   return (
     <ListTag className={listClassName}>
-      {items.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
+      {children
+        ? React.Children.map(parseChildren(children), (child, index) => <li key={index}>{child}</li>)
+        : items.map((itemContent, index) => <li key={index}>{itemContent}</li>)}
     </ListTag>
   );
 };

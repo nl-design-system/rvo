@@ -3,23 +3,26 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
-export interface IFileInputProps {
+export interface IFileInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   disabled?: boolean;
+  /** @uxpinpropname Has focus */
   focus?: boolean;
+  /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
+  /** @uxpinpropname accept (file type specifiers */
   accept?: string;
   multiple?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onChange?: (event) => void;
-  onClick?: (event) => void;
-  onInvalid?: (event) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
 }
 
 export const argTypes = {
@@ -41,6 +44,36 @@ export const argTypes = {
   },
   multiple: {
     control: 'boolean',
+  },
+  onFocus: {
+    table: {
+      disable: true,
+    },
+  },
+  onBlur: {
+    table: {
+      disable: true,
+    },
+  },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
+  onInvalid: {
+    table: {
+      disable: true,
+    },
   },
 };
 
@@ -64,10 +97,10 @@ export const FileInput: React.FC<IFileInputProps> = ({
       invalid && 'rvo-file-input--invalid',
       required && 'rvo-file-input--required',
     )}
-    disabled={disabled || null}
-    aria-invalid={invalid || null}
-    accept={(accept.length && accept) || null}
-    multiple={multiple || null}
+    disabled={disabled || undefined}
+    aria-invalid={invalid || undefined}
+    accept={accept || undefined}
+    multiple={multiple || undefined}
     {...otherProps}
   />
 );

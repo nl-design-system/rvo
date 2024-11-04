@@ -2,12 +2,6 @@
 const path = require('path');
 
 module.exports = {
-  entry: ['./src/index.js'],
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
-    publicPath: '/',
-  },
   resolve: {
     modules: [
       path.resolve(__dirname, 'node_modules'),
@@ -35,28 +29,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-            },
-          },
-        ],
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/inline',
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/',
-            },
-          },
-        ],
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/inline',
       },
       {
         test: /\.(s*)css$/,

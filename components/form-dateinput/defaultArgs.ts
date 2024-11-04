@@ -8,8 +8,8 @@ export const defaultArgs: IDateInputProps = {
   invalid: false,
   required: false,
   value: '',
-  min: null,
-  max: null,
-  step: null,
+  min: undefined,
+  max: undefined,
+  step: undefined,
   size: 'sm',
 };

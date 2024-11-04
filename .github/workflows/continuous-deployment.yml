@@ -119,10 +119,12 @@ jobs:
   publish-uxpin:
     runs-on: ubuntu-latest
     needs: install
+    if: github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')
     steps:
       - name: Checkout branch
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
         with:
+          ref: refs/heads/master
           fetch-depth: 0
 
       - name: Install pnpm
@@ -139,7 +141,6 @@ jobs:
 
       - name: Push to UXPin
         continue-on-error: true
-        if: "github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'skip ci')"
         run: pnpm install && pnpm exec uxpin-merge push --token ${{ secrets.UXPIN_TOKEN }}
         working-directory: uxpin-merge
 

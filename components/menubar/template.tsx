@@ -3,14 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { JSX, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Icon } from '../icon/template';
 import { IconType } from '../icon/types';
-import Link from '../link/template';
-import MaxWidthLayout from '../max-width-layout/template';
+import { Icon, Link, MaxWidthLayout } from '../index';
 import './index.scss';
-
 export interface IMenuBarItem {
   label: string;
   icon?: IconType;
@@ -23,13 +20,16 @@ export interface IMenuBarItem {
 export interface IMenuBarProps {
   size: 'sm' | 'md' | 'lg';
   direction?: 'horizontal' | 'vertical';
+  /** @uxpinignoreprop */
   items: IMenuBarItem[];
   useIcons: boolean;
   iconPlacement?: 'before' | 'after';
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
+  maxWidthInlinePadding?: 'none' | 'sm' | 'md' | 'lg';
   type?: 'primary' | 'sub' | 'sub-grid';
   deltaForActiveItem?: boolean;
-  children?: React.ReactNode;
+  /** @uxpinpropname MenuBar items */
+  children?: ReactNode | undefined;
   horizontalRule?: boolean;
   linkColor?: 'donkerblauw' | 'hemelblauw' | 'logoblauw' | 'grijs-700' | 'zwart';
   useBackgroundColor?: boolean;
@@ -61,6 +61,10 @@ export const argTypes = {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  maxWidthInlinePadding: {
+    options: ['none', 'sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
   type: {
     options: ['primary', 'sub', 'sub-grid'],
     control: { type: 'radio' },
@@ -77,6 +81,11 @@ export const argTypes = {
   },
   useBackgroundColor: {
     control: 'boolean',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
   },
 };
 
@@ -95,10 +104,18 @@ export const parseMenuItem = ({
   linkColor = defaultArgs.linkColor,
   useDivider = false,
   ...otherProps
+}: IMenuBarItem & {
+  key?: string;
+  type?: IMenuBarProps['type'];
+  useIcon: IMenuBarProps['useIcons'];
+  size: IMenuBarProps['size'];
+  iconPlacement: IMenuBarProps['iconPlacement'];
+  deltaForActiveItem: IMenuBarProps['deltaForActiveItem'];
+  linkColor?: IMenuBarProps['linkColor'];
 }) => {
   // Parse delta for active menu items
-  let itemMarkup;
-  let deltaMarkup;
+  let itemMarkup: JSX.Element | null = null;
+  let deltaMarkup: JSX.Element | null = null;
   if (active !== undefined && type === 'primary' && deltaForActiveItem) {
     deltaMarkup = <Icon icon={(active ? 'delta-omlaag' : 'delta-omhoog') as any} size="xs" color="wit" />;
   }
@@ -162,6 +179,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   useIcons = defaultArgs.useIcons,
   iconPlacement = defaultArgs.iconPlacement,
   maxWidth = defaultArgs.maxWidth,
+  maxWidthInlinePadding = defaultArgs.maxWidthInlinePadding,
   type = defaultArgs.type,
   deltaForActiveItem = defaultArgs.deltaForActiveItem,
   horizontalRule = defaultArgs.horizontalRule,
@@ -172,28 +190,28 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   let itemsMarkup = null;
 
   if (!children) {
-    // Left items
-    itemsMarkup = items
-      .filter((item) => item.align !== 'right')
-      .map((item, index) =>
-        parseMenuItem({
-          key: `${item.label}--${index}`,
-          label: item.label,
-          icon: item.icon,
-          active: item.active,
-          link: item.link,
-          useIcon: useIcons,
-          size,
-          iconPlacement,
-          deltaForActiveItem,
-          useDivider: item.useDivider,
-          linkColor,
-        }),
-      );
-
-    // Right items
-    itemsMarkup.push(
-      items
+    itemsMarkup = [
+      // Left items
+      ...items
+        .filter((item) => item.align !== 'right')
+        .map((item, index) =>
+          parseMenuItem({
+            key: `${item.label}--${index}`,
+            label: item.label,
+            icon: item.icon,
+            active: item.active,
+            link: item.link,
+            useIcon: useIcons,
+            size,
+            type,
+            iconPlacement,
+            deltaForActiveItem,
+            useDivider: item.useDivider,
+            linkColor,
+          }),
+        ),
+      // Right items
+      ...items
         .filter((item) => item.align === 'right')
         .map((item, index) =>
           parseMenuItem({
@@ -203,17 +221,31 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
             active: item.active,
             link: item.link,
             useIcon: useIcons,
-            align: index === 0 && 'right',
+            align: index === 0 ? 'right' : 'left',
             size,
+            type,
             iconPlacement,
             deltaForActiveItem,
             useDivider: item.useDivider,
             linkColor,
           }),
         ),
-    );
+    ];
   } else {
-    itemsMarkup = children;
+    let isAlignRightSet = false;
+    itemsMarkup = React.Children.map(children, (child, index) => {
+      // Only set align right prop for the first item that has align = right
+      const isAlignRight = (child as any).props.align === 'right';
+      if (isAlignRight && !isAlignRightSet) {
+        isAlignRightSet = true;
+      }
+
+      return React.cloneElement(child as React.ReactElement, {
+        key: index,
+        align: isAlignRightSet ? 'right' : 'left',
+        ...(child as any).props,
+      });
+    });
   }
 
   const navMarkup = (
@@ -235,7 +267,9 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
       )}
     >
       {direction === 'horizontal' && maxWidth !== 'none' ? (
-        <MaxWidthLayout size={maxWidth}>{navMarkup}</MaxWidthLayout>
+        <MaxWidthLayout size={maxWidth} inlinePadding={maxWidthInlinePadding}>
+          {navMarkup}
+        </MaxWidthLayout>
       ) : (
         navMarkup
       )}

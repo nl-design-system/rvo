@@ -1,5 +1,11 @@
 # `@nl-rvo/data-list`
 
+## 1.1.0
+
+### Minor Changes
+
+- c029d6a: Added DataListItem component to include in DataList
+
 ## 1.0.0
 
 ### Major Changes

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
@@ -11,6 +11,8 @@ export interface IGridProps {
   gap?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   columns?: 'one' | 'two' | 'three' | 'four' | 'five' | 'six';
   layout?: '1fr' | '2fr1fr' | '1fr2fr';
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -26,14 +28,19 @@ export const argTypes = {
     options: ['1fr', '2fr1fr', '1fr2fr'],
     control: { type: 'radio' },
   },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const Grid: React.FC<PropsWithChildren<IGridProps>> = ({
+export const Grid: React.FC<IGridProps> = ({
   gap = defaultArgs.gap,
   columns = defaultArgs.columns,
   layout = defaultArgs.layout,
   children,
-}: PropsWithChildren<IGridProps>) => {
+}: IGridProps) => {
   return (
     <div className="rvo-layout-grid-container">
       <div

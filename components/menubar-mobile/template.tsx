@@ -2,12 +2,13 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
+import Button from '../button/template';
 import { Icon } from '../icon/template';
-import { IMenuBarItem, parseMenuItem } from '../menubar/template';
+import MenuBarItem from '../menubar/menubar-item/template';
+import { IMenuBarItem } from '../menubar/template';
 import './index.scss';
 
 export const argTypes = {
@@ -67,34 +68,35 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     itemsMarkup = items.map((item, index) => {
       return (
         <React.Fragment key={index}>
-          {parseMenuItem({
-            key: item.label,
-            label: item.label,
-            icon: item.icon,
-            active: item.active,
-            link: item.link,
-            useIcon: useIcons,
-            size,
-            iconPlacement,
-            deltaForActiveItem,
-            useDivider: item.useDivider,
-          })}
+          <MenuBarItem
+            key={`${item.label}--${index}`}
+            label={item.label}
+            icon={item.icon}
+            active={item.active}
+            link={item.link}
+            useIcons={useIcons}
+            size={size}
+            iconPlacement={iconPlacement}
+            deltaForActiveItem={deltaForActiveItem}
+            useDivider={item.useDivider}
+          />
+
           {item.active &&
             submenuItems.map((submenuItem, index) => (
               <React.Fragment key={index}>
-                {parseMenuItem({
-                  key: `${item.label}--${index}`,
-                  label: submenuItem.label,
-                  icon: submenuItem.icon,
-                  active: undefined,
-                  link: submenuItem.link,
-                  useIcon: useIcons,
-                  size,
-                  iconPlacement,
-                  type: 'sub',
-                  deltaForActiveItem,
-                  useDivider: item.useDivider,
-                })}
+                <MenuBarItem
+                  key={`${submenuItem.label}--${index}`}
+                  label={submenuItem.label}
+                  icon={submenuItem.icon}
+                  active={undefined}
+                  link={submenuItem.link}
+                  useIcons={useIcons}
+                  size={size}
+                  iconPlacement={iconPlacement}
+                  type="sub"
+                  deltaForActiveItem={deltaForActiveItem}
+                  useDivider={item.useDivider}
+                />
               </React.Fragment>
             ))}
         </React.Fragment>
@@ -123,10 +125,10 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
       )}
       aria-expanded={isOpen}
     >
-      <UtrechtButton className={clsx('rvo-mobile-menu__toggle')} onClick={onClick}>
+      <Button kind="subtle" className={clsx('rvo-mobile-menu__toggle')} onClick={onClick}>
         <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
         Menu
-      </UtrechtButton>
+      </Button>
       {isOpen && (
         <div className={clsx('rvo-topnav__background')} onClick={onClick}>
           <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)} onClick={(e) => e.stopPropagation()}>

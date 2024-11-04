@@ -4,14 +4,14 @@
  */
 import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon/template';
 import { IconType } from '../icon/types';
-import '../layout-column-row/index.scss';
+import '../layout-flow/index.scss';
 import './index.scss';
 
-export interface IButtonProps {
+export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
   label?: string | ReactNode;
@@ -27,9 +27,12 @@ export interface IButtonProps {
   fullWidth?: boolean;
   className?: string;
   alignToRightInGroup?: boolean;
-  onFocus?: (event) => void;
-  onBlur?: (event) => void;
-  onClick?: (event) => void;
+  /** @uxpinpropname On Focus */
+  onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+  /** @uxpinpropname On Blur */
+  onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+  /** @uxpinpropname On Click */
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const argTypes = {
@@ -70,6 +73,11 @@ export const argTypes = {
   iconAriaLabel: { control: 'text' },
   fullWidth: {
     control: 'boolean',
+  },
+  alignToRightInGroup: {
+    table: {
+      disable: true,
+    },
   },
 };
 
@@ -123,7 +131,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'xs' && 'utrecht-button--rvo-xs',
         size === 'sm' && 'utrecht-button--rvo-sm',
         size === 'md' && 'utrecht-button--rvo-md',
-        alignToRightInGroup && 'rvo-button-group__align-right',
+        alignToRightInGroup && 'utrecht-button-group__align-right',
         fullWidth && 'utrecht-button--rvo-full-width',
       )}
       disabled={disabled || undefined}

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren, useCallback, useRef } from 'react';
+import React, { ReactNode, useCallback, useRef } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Checkbox, ICheckboxProps } from '../form-checkbox/template';
 import './index.scss';
@@ -12,11 +12,13 @@ export interface ICheckboxGroupProps {
   invalid?: boolean;
   /** @uxpinignoreprop */
   options?: ICheckboxProps[];
-  onChange?: (event) => void;
+  onChange?: (currentGroupSelection: ICheckboxProps[]) => void;
   /**
    * @uxpinbind onChange 0
    */
   currentSelection?: number[];
+  /** @uxpinpropname Checkboxes */
+  children?: ReactNode | undefined;
 }
 
 export const argTypes = {
@@ -27,14 +29,24 @@ export const argTypes = {
       required: true,
     },
   },
+  onChange: {
+    table: {
+      disable: true,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
-export const CheckboxGroup: React.FC<PropsWithChildren<ICheckboxGroupProps>> = ({
+export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
   onChange,
   children,
-}: PropsWithChildren<ICheckboxGroupProps>) => {
+}: ICheckboxGroupProps) => {
   const checkboxGroupRef = useRef<HTMLDivElement>(null);
   const onUpdateGroup = useCallback(() => {
     if (checkboxGroupRef.current) {

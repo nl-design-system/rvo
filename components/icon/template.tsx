@@ -2,13 +2,14 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+// @ts-ignore
 import iconList from '@nl-rvo/assets/icons/index.js';
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { IconType } from '../icon/types';
 import './index.scss';
-export interface IIconProps {
+export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   icon: IconType;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   color?: '' | 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700';
@@ -19,8 +20,10 @@ export interface IIconProps {
 
 export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700'];
 
-export const toProperCase = (inputString) =>
-  inputString.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()).replace(/_/g, ' ');
+export const toProperCase = (inputString: string) =>
+  inputString
+    .replace(/\w\S*/g, (txt: string) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
+    .replace(/_/g, ' ');
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { STATUS, ...iconListWithoutStatus } = iconList;
@@ -61,7 +64,7 @@ export const argTypes = {
   },
 };
 
-export const Icon: React.FC<IIconProps | HTMLSpanElement> = ({
+export const Icon: React.FC<IIconProps> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,

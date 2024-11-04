@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from '../form-field/template';
 import {
   IRadioButtonGroupProps,
@@ -15,9 +15,7 @@ export interface IRadioButtonFieldProps extends IFieldProps, IRadioButtonGroupPr
 
 export const argTypes = { ...fieldArgTypes, ...radioButtonArgTypes };
 
-export const RadioButtonField: React.FC<PropsWithChildren<IRadioButtonFieldProps>> = (
-  args: PropsWithChildren<IRadioButtonFieldProps>,
-) => {
+export const RadioButtonField: React.FC<IRadioButtonFieldProps> = (args: IRadioButtonFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes);
   const radioButtonArgs = extractArgs(args, radioButtonArgTypes);
   return (
