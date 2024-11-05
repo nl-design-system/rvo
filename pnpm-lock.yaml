@@ -7823,6 +7823,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -8146,9 +8147,6 @@ packages:
     resolution: {integrity: sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==}
     hasBin: true
 
-  flatted@3.2.9:
-    resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
-
   flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
 
@@ -8467,10 +8465,6 @@ packages:
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
-
-  globals@13.19.0:
-    resolution: {integrity: sha512-dkQ957uSRWHw7CFXLUtUHQI3g3aWApYhfNR2O6jn/907riyTYKVBmxYVROkBcY614FSSeSJh7Xm7SrUWCxvJMQ==}
-    engines: {node: '>=8'}
 
   globals@13.24.0:
     resolution: {integrity: sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==}
@@ -13819,9 +13813,6 @@ packages:
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
-  tslib@2.7.0:
-    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-
   tsutils@3.21.0:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
@@ -17577,7 +17568,7 @@ snapshots:
       react-dev-utils: 12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1)
       terser-webpack-plugin: 5.3.10(webpack@5.96.1)
       tslib: 2.6.2
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.90.3))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
       webpack: 5.96.1
       webpackbar: 6.0.1(webpack@5.96.1)
     transitivePeerDependencies:
@@ -17697,7 +17688,7 @@ snapshots:
       '@slorber/remark-comment': 1.0.0
       escape-html: 1.0.3
       estree-util-value-to-estree: 3.2.1
-      file-loader: 6.2.0(webpack@5.96.1)
+      file-loader: 6.2.0(webpack@5.90.3)
       fs-extra: 11.2.0
       image-size: 1.0.2
       mdast-util-mdx: 3.0.0
@@ -17713,7 +17704,7 @@ snapshots:
       tslib: 2.6.2
       unified: 11.0.4
       unist-util-visit: 5.0.0
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.90.3))(webpack@5.90.3)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.90.3)
       vfile: 6.0.1
       webpack: 5.90.3(webpack-cli@5.1.4)
     transitivePeerDependencies:
@@ -18258,7 +18249,7 @@ snapshots:
       resolve-pathname: 3.0.0
       shelljs: 0.8.5
       tslib: 2.6.2
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.90.3))(webpack@5.90.3)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.90.3)
       utility-types: 3.11.0
       webpack: 5.90.3(webpack-cli@5.1.4)
     optionalDependencies:
@@ -18438,10 +18429,10 @@ snapshots:
   '@eslint/eslintrc@2.1.4':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.4
+      debug: 4.3.7
       espree: 9.6.1
-      globals: 13.19.0
-      ignore: 5.3.0
+      globals: 13.24.0
+      ignore: 5.3.2
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2
@@ -18500,7 +18491,7 @@ snapshots:
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
-      debug: 4.3.4
+      debug: 4.3.7
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -19187,15 +19178,13 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/cache@2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)':
+  '@parcel/cache@2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))':
     dependencies:
       '@parcel/core': 2.12.0(@swc/helpers@0.5.13)
       '@parcel/fs': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)
       '@parcel/logger': 2.12.0
       '@parcel/utils': 2.12.0
       lmdb: 2.8.5
-    transitivePeerDependencies:
-      - '@swc/helpers'
 
   '@parcel/codeframe@2.12.0':
     dependencies:
@@ -19255,7 +19244,7 @@ snapshots:
   '@parcel/core@2.12.0(@swc/helpers@0.5.13)':
     dependencies:
       '@mischnic/json-sourcemap': 0.1.1
-      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)
+      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))
       '@parcel/diagnostic': 2.12.0
       '@parcel/events': 2.12.0
       '@parcel/fs': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)
@@ -19670,7 +19659,7 @@ snapshots:
 
   '@parcel/types@2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)':
     dependencies:
-      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)
+      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))
       '@parcel/diagnostic': 2.12.0
       '@parcel/fs': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)
       '@parcel/package-manager': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)
@@ -23065,7 +23054,7 @@ snapshots:
   camel-case@4.1.2:
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   camelcase-keys@6.2.2:
     dependencies:
@@ -23095,7 +23084,7 @@ snapshots:
   capital-case@1.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
       upper-case-first: 2.0.2
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
@@ -23156,7 +23145,7 @@ snapshots:
       path-case: 3.0.4
       sentence-case: 3.0.4
       snake-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   char-regex@1.0.2: {}
 
@@ -23463,7 +23452,7 @@ snapshots:
   constant-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
       upper-case: 2.0.2
 
   constants-browserify@1.0.0: {}
@@ -24251,7 +24240,7 @@ snapshots:
   dot-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   dot-prop@6.0.1:
     dependencies:
@@ -24822,7 +24811,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.3
-      debug: 4.3.4
+      debug: 4.3.7
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -24834,9 +24823,9 @@ snapshots:
       file-entry-cache: 6.0.1
       find-up: 5.0.0
       glob-parent: 6.0.2
-      globals: 13.19.0
+      globals: 13.24.0
       graphemer: 1.4.0
-      ignore: 5.3.0
+      ignore: 5.3.2
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
@@ -24854,8 +24843,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.12.1
-      acorn-jsx: 5.3.2(acorn@8.12.1)
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
@@ -25266,7 +25255,7 @@ snapshots:
 
   flat-cache@3.0.4:
     dependencies:
-      flatted: 3.2.9
+      flatted: 3.3.1
       rimraf: 3.0.2
 
   flat-cache@5.0.0:
@@ -25275,8 +25264,6 @@ snapshots:
       keyv: 4.5.4
 
   flat@5.0.2: {}
-
-  flatted@3.2.9: {}
 
   flatted@3.3.1: {}
 
@@ -25615,10 +25602,6 @@ snapshots:
 
   globals@11.12.0: {}
 
-  globals@13.19.0:
-    dependencies:
-      type-fest: 0.20.2
-
   globals@13.24.0:
     dependencies:
       type-fest: 0.20.2
@@ -25910,7 +25893,7 @@ snapshots:
   header-case@2.0.4:
     dependencies:
       capital-case: 1.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   highlight.js@10.7.3: {}
 
@@ -28587,7 +28570,7 @@ snapshots:
   no-case@3.0.4:
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   node-abort-controller@3.0.1: {}
 
@@ -29127,7 +29110,7 @@ snapshots:
   param-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   parcel@2.12.0(@swc/helpers@0.5.13)(postcss@8.4.47)(relateurl@0.2.7)(terser@5.33.0)(typescript@5.5.2):
     dependencies:
@@ -29232,7 +29215,7 @@ snapshots:
   pascal-case@3.1.2:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   pascalcase@0.1.1: {}
 
@@ -29245,7 +29228,7 @@ snapshots:
   path-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   path-exists@3.0.0: {}
 
@@ -31187,9 +31170,9 @@ snapshots:
 
   sass@1.71.1:
     dependencies:
-      chokidar: 3.5.3
+      chokidar: 3.6.0
       immutable: 4.1.0
-      source-map-js: 1.0.2
+      source-map-js: 1.2.1
 
   sax@1.2.4: {}
 
@@ -31287,7 +31270,7 @@ snapshots:
   sentence-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
       upper-case-first: 2.0.2
 
   serialize-javascript@6.0.2:
@@ -31471,7 +31454,7 @@ snapshots:
   snake-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.7.0
+      tslib: 2.6.2
 
   snapdragon-node@2.1.1:
     dependencies:
@@ -32340,8 +32323,6 @@ snapshots:
 
   tslib@2.6.2: {}
 
-  tslib@2.7.0: {}
-
   tsutils@3.21.0(typescript@5.5.2):
     dependencies:
       tslib: 1.14.1
@@ -32720,7 +32701,16 @@ snapshots:
     optionalDependencies:
       file-loader: 6.2.0(webpack@5.90.3)
 
-  url-loader@4.1.1(file-loader@6.2.0(webpack@5.90.3))(webpack@5.96.1):
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.90.3):
+    dependencies:
+      loader-utils: 2.0.4
+      mime-types: 2.1.35
+      schema-utils: 3.3.0
+      webpack: 5.90.3(webpack-cli@5.1.4)
+    optionalDependencies:
+      file-loader: 6.2.0(webpack@5.96.1)
+
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1):
     dependencies:
       loader-utils: 2.0.4
       mime-types: 2.1.35

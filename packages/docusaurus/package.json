@@ -33,24 +33,24 @@
   "devDependencies": {
     "@docusaurus/core": "3.6.0",
     "@docusaurus/eslint-plugin": "3.6.0",
+    "@docusaurus/module-type-aliases": "3.6.0",
+    "@docusaurus/plugin-content-docs": "3.6.0",
     "@docusaurus/preset-classic": "3.6.0",
     "@docusaurus/theme-classic": "3.6.0",
     "@docusaurus/theme-common": "3.6.0",
-    "@docusaurus/module-type-aliases": "3.6.0",
     "@docusaurus/tsconfig": "3.6.0",
     "@docusaurus/types": "3.6.0",
-    "@docusaurus/plugin-content-docs": "3.6.0",
-    "docusaurus-plugin-sass": "0.2.5",
-    "typescript": "5.5.2",
+    "@mdx-js/react": "3.0.0",
     "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/component-library-css": "workspace:*",
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
-    "@nl-rvo/component-library-css": "workspace:*",
-    "@mdx-js/react": "3.0.0",
     "clsx": "2.1.0",
+    "docusaurus-plugin-sass": "0.2.5",
     "prism-react-renderer": "2.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "typescript": "5.5.2"
   },
   "browserslist": {
     "production": [

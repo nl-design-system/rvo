@@ -1,13 +1,13 @@
 @media (min-width: 997px) {
   .menu {
     flex-grow: 1;
-    padding-block: 0.5rem;
-    padding-inline: 0.5rem;
+    padding-block: 0;
+    padding-inline: 0;
   }
   @supports (scrollbar-gutter: stable) {
     .menu {
-      padding-block: 0.5rem;
-      padding-inline: 0.5rem;
+      padding-block: 0;
+      padding-inline: 0;
       scrollbar-gutter: stable;
     }
   }

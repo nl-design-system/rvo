@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig from './config/navigationConfig';
+import sidebarItemsGenerator from './config/sidebarItemsGenerator';
 
 const includeList = ['**/*.docusaurus.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
@@ -27,9 +28,8 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'default',
-        // TODO: Add sidebarPath
-        // sidebarPath: require.resolve('./config/docsSidebarConfig.js'),
-        // sidebarItemsGenerator,
+        sidebarPath: require.resolve('./config/docsSidebarConfig.js'),
+        sidebarItemsGenerator,
         path: path.resolve(__dirname, '../../documentation/pages'),
         routeBasePath: '/',
         editUrl: undefined,

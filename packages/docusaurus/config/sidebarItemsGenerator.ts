@@ -1,5 +1,5 @@
-const toProperCase = (string) => {
-  const parsedString = string.replace(/-/g, ' ').replace();
+const toProperCase = (string: string): string => {
+  const parsedString = string.replace(/-/g, ' ');
   return parsedString.charAt(0).toUpperCase() + parsedString.slice(1);
 };
 
@@ -40,7 +40,7 @@ const addSidebarItem = (arrayToAddItem, doc) => {
   arrayToAddItem.push(sidebarItem);
 };
 
-module.exports = async ({ item, docs }) => {
+const sidebarItemsGenerator = async ({ item, docs }) => {
   let processedDocs = docs;
 
   // Filter docs by dirname (if present)
@@ -85,3 +85,5 @@ module.exports = async ({ item, docs }) => {
   }, []);
   return sidebarItems;
 };
+
+export default sidebarItemsGenerator;
