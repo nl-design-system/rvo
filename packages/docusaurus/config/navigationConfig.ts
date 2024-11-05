@@ -37,7 +37,7 @@ const navbar: Navbar = {
     },
     {
       type: 'doc',
-      docId: 'best-practices/overzicht-en-navigatie',
+      docId: 'best-practices/informatiebehoefte-per-doelgroep',
       position: 'left' as const,
       label: 'Best practices',
     },
