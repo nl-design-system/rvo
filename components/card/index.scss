@@ -170,7 +170,12 @@
     display: flex;
     flex: 1;
     gap: var(--rvo-space-xs);
+    height: 100%;
     justify-content: space-between;
+
+    .rvo-card__content {
+      align-self: flex-start;
+    }
 
     .rvo-icon--sm {
       min-height: var(--rvo-size-sm);
