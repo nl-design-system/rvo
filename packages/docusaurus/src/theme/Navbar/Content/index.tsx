@@ -26,6 +26,8 @@ export default function NavbarContent(): JSX.Element {
           if (itemSection === currentPage) {
             active = true;
           }
+        } else if (currentPage === '' && item.label === 'ROOS') {
+          active = true;
         }
 
         const menuItemProps = {
