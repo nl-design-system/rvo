@@ -1,6 +1,6 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Button, Card, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/components';
+import { Button, Card, Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/components';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import styles from './index.module.css';
@@ -25,7 +25,7 @@ export default function Home(): JSX.Element {
       </header>
       <main>
         <MaxWidthLayout size="lg" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
-          <section className={styles.articleGrid}>
+          <Grid columns="three" gap="3xl">
             <Card
               title="Huisstijl"
               background="none"
@@ -104,7 +104,7 @@ export default function Home(): JSX.Element {
               een e-mail naar&nbsp;
               <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
             </Card>
-          </section>
+          </Grid>
         </MaxWidthLayout>
       </main>
     </Layout>
