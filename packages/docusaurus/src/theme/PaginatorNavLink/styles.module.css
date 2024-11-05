@@ -1,0 +1,11 @@
+.pagination-nav__sublabel {
+  font-size: var(--rvo-font-size-sm);
+  color: var(--rvo-color-grijs-600);
+}
+
+.pagination-nav__label {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
