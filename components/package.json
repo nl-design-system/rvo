@@ -27,7 +27,7 @@
     "@types/mdx": "2.0.11",
     "clsx": "2.1.0",
     "css-loader": "6.10.0",
-    "css-minimizer-webpack-plugin": "6.0.0",
+    "css-minimizer-webpack-plugin": "7.0.0",
     "event-hooks-webpack-plugin": "2.3.0",
     "glob": "10.3.10",
     "macro": "link:@emotion/styled/macro",
