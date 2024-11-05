@@ -40,7 +40,7 @@ export default function DocSidebarDesktopContent({ path, sidebar, className }: P
       )}
     >
       <ul
-        className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list', 'rvo-layout-column', 'rvo-layout-gap--md')}
+        className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list', 'rvo-layout-column', 'rvo-layout-gap--sm')}
       >
         <DocSidebarItems items={sidebar} activePath={path} level={1} />
       </ul>
