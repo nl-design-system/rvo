@@ -31,7 +31,7 @@ html.docs-wrapper.plugin-docs {
   --ifm-h4-vertical-rhythm-top: 1;
   --ifm-h5-vertical-rhythm-top: 1;
   --ifm-h6-vertical-rhythm-top: 1;
-  --ifm-navbar-height: 0;
+  --ifm-navbar-height: 48px;
   --ifm-spacing-horizontal: 0;
   --ifm-table-border-width: 0;
   --ifm-table-cell-padding: 0;
@@ -117,7 +117,6 @@ code {
 }
 
 // Fix logo
-
 .rvo-header {
   margin-inline-end: 0 !important;
   margin-inline-start: 0 !important;
@@ -144,7 +143,6 @@ code {
 }
 
 // Fix table width on webkit
-
 table {
   display: table;
   table-layout: fixed;
@@ -173,4 +171,10 @@ table {
 .theme-doc-sidebar-item-link-level-2 a[href="#links-naar-e-mailadressen"],
 .theme-doc-sidebar-item-link-level-2 a[href="#teksten-op-knoppen-in-formulieren"] {
   display: none;
+}
+
+@media (min-width: 997px) {
+  main > .container .row {
+    gap: var(--rvo-space-xl);
+  }
 }
