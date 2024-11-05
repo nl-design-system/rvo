@@ -3,11 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Heading from '../heading/template';
 import MaxWidthLayout from '../max-width-layout/template';
 import './index.scss';
+import parseContentMarkup from '../utils/parseContentMarkup';
 
 export interface IHeroProps {
   image?: string;
@@ -17,6 +18,10 @@ export interface IHeroProps {
   size?: 'sm' | 'md' | 'lg';
   /** @uxpinignoreprop */
   className?: string;
+  /** @uxpinpropname Content */
+  children?: ReactNode | undefined;
+  /** @uxpinignoreprop */
+  content?: string | React.ReactNode;
 }
 
 export const argTypes = {
@@ -39,6 +44,14 @@ export const argTypes = {
   className: {
     control: 'text',
   },
+  content: {
+    control: 'text',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Hero: React.FC<IHeroProps> = ({
@@ -48,11 +61,16 @@ export const Hero: React.FC<IHeroProps> = ({
   subtitle = defaultArgs.subtitle,
   size = defaultArgs.size,
   className = defaultArgs.className,
+  content = defaultArgs.content,
+  children,
   ...props
 }: IHeroProps) => {
   const getImageSrc = (image: string) => {
     return image.startsWith('http') ? image : `images/www/${image}`;
   };
+
+  // Parse content markup (either a string, HTML string, React node or children)
+  const contentMarkup: string | ReactNode = parseContentMarkup(children || content);
 
   return (
     <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...props}>
@@ -63,6 +81,7 @@ export const Hero: React.FC<IHeroProps> = ({
         {title}
         <span className="rvo-hero__subtitle">{subtitle}</span>
       </Heading>
+      {contentMarkup}
     </MaxWidthLayout>
   );
 };
