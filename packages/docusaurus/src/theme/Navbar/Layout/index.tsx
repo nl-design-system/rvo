@@ -35,7 +35,7 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
         )}
       >
         <div className={styles.menubar}>
-          <MenuBar size="md" maxWidth="md" linkColor="logoblauw" maxWidthInlinePadding="md">
+          <MenuBar size="md" maxWidth="lg" linkColor="logoblauw" maxWidthInlinePadding="md">
             {children}
           </MenuBar>
         </div>
