@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
                 Huisstijl
               </Heading>
               De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS.
-              <Link href={useBaseUrl('/design-tokens/kleur')}>Bekijk de huisstijl</Link>
+              <Link href={useBaseUrl('/design-tokens/kleuren')}>Bekijk de huisstijl</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2" noMargins={true}>
