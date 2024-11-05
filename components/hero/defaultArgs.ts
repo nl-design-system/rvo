@@ -5,4 +5,5 @@ export const defaultArgs: IHeroProps = {
   imageAlt: '',
   title: 'Rijksdienst voor Ondernemend Nederland',
   subtitle: 'Wij helpen u graag vooruit!',
+  content: '',
 };

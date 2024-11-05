@@ -10,13 +10,13 @@ import Link from '../link/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ICardProps extends HTMLAttributes<HTMLDivElement> {
-  background: 'none' | 'color' | 'image';
+export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
+  background?: 'none' | 'color' | 'image';
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;
   padding?: 'sm' | 'md' | 'lg' | 'xl';
   outline?: boolean;
-  title?: string;
+  title?: string | ReactNode;
   link?: string;
   fullCardLink?: boolean;
   image?: string;
@@ -132,7 +132,7 @@ export const Card: React.FC<ICardProps> = ({
 
       <ContentContainer {...contentContainerProps}>
         <div className="rvo-card__content">
-          {title && title.length > 0 && (
+          {title && (
             <h3 className="utrecht-heading-3">
               {link && link.length > 0 ? (
                 <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>

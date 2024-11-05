@@ -9,7 +9,7 @@ import { parseChildren } from '../utils/parseChildren';
 
 export interface IItemListProps {
   /** @uxpinignoreprop */
-  items: string[];
+  items: string[] | ReactNode[];
   /** @uxpinpropname Items */
   children?: ReactNode | undefined;
 }

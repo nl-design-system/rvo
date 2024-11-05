@@ -1,0 +1,28 @@
+---
+title: Header opbouw
+hide_title: true
+slug: header-opbouw
+sidebar_position: 2
+---
+
+import { Header, MenuBar, MenuBarItem } from "../../../../components";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Header opbouw
+
+Een header bestaat uit:
+
+- Links een menu item naar de home met de titel van desbetreffende regeling/website indien van toepassing
+- Rechts altijd een uitloggen button als de gebruiker is ingelogd
+- Rechts de naam van de klant (evt. met relatienummer patroon) die verwijst naar een profielpagina
+
+<ComponentExample>
+  <div>
+    <Header />
+    <MenuBar>
+      <MenuBarItem icon="home" label="CMOR" />
+      <MenuBarItem icon="user" label="Boer Overveen B.V." align="right" />
+      <MenuBarItem icon="versleutelen" label="Uitloggen" align="left" />
+    </MenuBar>
+  </div>
+</ComponentExample>

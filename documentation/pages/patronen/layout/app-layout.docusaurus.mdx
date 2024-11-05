@@ -1,0 +1,35 @@
+---
+title: Applicatie layout
+hide_title: true
+slug: applicatie-layout
+sidebar_position: 1
+---
+
+import { Breadcrumbs, Header, MaxWidthLayout, MenuBar } from "../../../../components";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Applicatie layout
+
+<ComponentExample>
+  <div>
+    <Header />
+    <MenuBar maxWidth="lg" />
+    <MaxWidthLayout className="rvo-layout-column rvo-layout-gap--sm rvo-layout-margin-vertical--lg">
+      <Breadcrumbs /># Pagina
+      <p>Content</p>
+    </MaxWidthLayout>
+  </div>
+</ComponentExample>
+
+De algemene layout van een applicatie is het eerste herkenningspunt voor de bezoeker.
+Het is daarom van groot belang dat de layout van een applicatie die met ROOS is ontworpen herkenbaar wordt opgebouwd.
+
+- Begin altijd met het Header component. Hiermee wordt de Rijksoverheid 'ribbon' getoond over de gehele breedte van de pagina.
+- Toon vervolgens altijd de Menubar.
+- Kies voor small, medium of large. Dit bepaalt de maximale breedte van de items in de Menubar.
+- Zorg dat de gebruiker altijd kan uitloggen met de meest rechtse knop.
+- Toon onder de Menubar de content van de pagina.
+- Zorg dat de breedte van de content gelijk is aan de breedte van de menubar items.
+- Voeg hiervoor de MaxWidthLayout classes toe aan de container en kies voor small, medium of large, bijvoorbeeld:
+  `rvo-max-width-layout rvo-max-width-layout--lg`
+- Als er sprake is van een navigatie-pad, toon deze dan altijd als eerste in de content.

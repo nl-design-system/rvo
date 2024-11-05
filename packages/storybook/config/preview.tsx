@@ -56,7 +56,7 @@ const parameters = {
         'Introductie',
         'Aan de slag',
         'Huisstijl',
-        ['Color', 'Font', 'Size', 'Space'],
+        ['Kleuren', 'Lettertype', 'Grootte', 'Ruimte', 'Border radius'],
         'Componenten',
         "Pagina's",
         ['Templates', 'Voorbeelden', 'Experimenteel'],

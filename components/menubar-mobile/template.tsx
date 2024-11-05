@@ -11,6 +11,18 @@ import MenuBarItem from '../menubar/menubar-item/template';
 import { IMenuBarItem } from '../menubar/template';
 import './index.scss';
 
+export interface IMobileMenuBarProps {
+  size?: 'sm' | 'md' | 'lg';
+  items?: IMenuBarItem[];
+  useIcons?: boolean;
+  iconPlacement?: 'before' | 'after';
+  deltaForActiveItem?: boolean;
+  children?: React.ReactNode;
+  submenuItems?: IMenuBarItem[];
+  isOpen?: boolean;
+  horizontalRule?: boolean;
+}
+
 export const argTypes = {
   size: {
     options: ['sm', 'md', 'lg'],
@@ -40,18 +52,6 @@ export const argTypes = {
   },
 };
 
-export interface IMobileMenuBarProps {
-  size: 'sm' | 'md' | 'lg';
-  items: IMenuBarItem[];
-  useIcons: boolean;
-  iconPlacement?: 'before' | 'after';
-  deltaForActiveItem?: boolean;
-  children?: React.ReactNode;
-  submenuItems: IMenuBarItem[];
-  isOpen: boolean;
-  horizontalRule?: boolean;
-}
-
 export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   size = defaultArgs.size,
   items = defaultArgs.items,
@@ -64,7 +64,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   children,
 }: IMobileMenuBarProps) => {
   let itemsMarkup;
-  if (!children) {
+  if (!children && items) {
     itemsMarkup = items.map((item, index) => {
       return (
         <React.Fragment key={index}>
@@ -82,6 +82,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
           />
 
           {item.active &&
+            submenuItems &&
             submenuItems.map((submenuItem, index) => (
               <React.Fragment key={index}>
                 <MenuBarItem

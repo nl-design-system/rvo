@@ -11,7 +11,7 @@ import { Link } from '../link/template';
 import './index.scss';
 import parseContentMarkup from '../utils/parseContentMarkup';
 
-export interface IHeadingProps {
+export interface IHeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   /** @uxpinignoreprop */
   textContent?: string | ReactNode;

@@ -1,7 +1,3 @@
-.heroContainer {
-  background-color: var(--rvo-color-lichtblauw-150);
-}
-
 .hero {
   padding-block: var(--rvo-space-2xl);
   padding-inline: var(--rvo-space-md);

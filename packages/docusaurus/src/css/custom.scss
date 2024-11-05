@@ -1,3 +1,5 @@
+@import "@nl-rvo/component-library-css";
+
 /* stylelint-disable custom-property-pattern */
 
 /**
@@ -11,14 +13,14 @@ html {
   line-height: 1.5;
 }
 
-:root {
+html.docs-wrapper.plugin-docs {
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
   --doc-sidebar-hidden-width: 0px;
   --doc-sidebar-width: 240px;
   --ifm-container-width: 1100px;
   --ifm-list-item-margin: 0px;
-  --ifm-leading: 0.5rem;
+  --ifm-leading: 1rem;
   --ifm-h1-vertical-rhythm-bottom: 1;
   --ifm-h2-vertical-rhythm-bottom: 1;
   --ifm-h3-vertical-rhythm-bottom: 1;
@@ -31,7 +33,7 @@ html {
   --ifm-h4-vertical-rhythm-top: 1;
   --ifm-h5-vertical-rhythm-top: 1;
   --ifm-h6-vertical-rhythm-top: 1;
-  --ifm-navbar-height: 0;
+  --ifm-navbar-height: 48px;
   --ifm-spacing-horizontal: 0;
   --ifm-table-border-width: 0;
   --ifm-table-cell-padding: 0;
@@ -49,6 +51,36 @@ html {
   --ifm-menu-color-background-hover: none;
   --ifm-code-border-radius: 0;
   --ifm-pre-padding: 0;
+  --ifm-paragraph-margin-bottom: 0;
+
+  // Fix MD headings
+  h1 {
+    @extend .utrecht-heading-1;
+  }
+
+  h2 {
+    @extend .utrecht-heading-2;
+  }
+
+  h3 {
+    @extend .utrecht-heading-3;
+  }
+
+  h4 {
+    @extend .utrecht-heading-4;
+  }
+
+  h5 {
+    @extend .utrecht-heading-5;
+  }
+
+  h6 {
+    @extend .utrecht-heading-6;
+  }
+
+  article a {
+    @extend .rvo-link;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -67,12 +99,13 @@ html {
   margin-block-start: 0 !important;
 }
 
-.pagination-nav {
-  display: none;
+.pagination-nav .pagination-nav__link {
+  border: none;
+  padding: 0;
 }
 
-.markdown > h1:first-child {
-  margin-block-start: 0;
+.markdown header > h1:first-child {
+  margin-block-start: var(--rvo-space-xs);
 }
 
 .markdown blockquote {
@@ -84,6 +117,10 @@ html {
   padding-block: 12px;
   padding-inline: 12px;
   text-align: start;
+}
+
+.markdown p {
+  margin-bottom: var(--ifm-leading);
 }
 
 p,
@@ -116,7 +153,6 @@ code {
 }
 
 // Fix logo
-
 .rvo-header {
   margin-inline-end: 0 !important;
   margin-inline-start: 0 !important;
@@ -143,7 +179,6 @@ code {
 }
 
 // Fix table width on webkit
-
 table {
   display: table;
   table-layout: fixed;
@@ -172,4 +207,16 @@ table {
 .theme-doc-sidebar-item-link-level-2 a[href="#links-naar-e-mailadressen"],
 .theme-doc-sidebar-item-link-level-2 a[href="#teksten-op-knoppen-in-formulieren"] {
   display: none;
+}
+
+@media (min-width: 997px) {
+  main > .container .row {
+    gap: var(--rvo-space-xl);
+  }
+}
+
+aside.theme-doc-sidebar-container {
+  background-color: var(--rvo-sidebar-layout-sidebar-background-color);
+  border: none;
+  min-height: calc(100vh - 244px);
 }

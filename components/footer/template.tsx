@@ -18,12 +18,12 @@ interface IFooterItem {
 
 interface IFooterColumn {
   label?: string;
-  items: IFooterItem[];
+  items?: IFooterItem[];
 }
 
 export interface IFooterProps {
   /** @uxpinignoreprop */
-  columns: IFooterColumn[];
+  columns?: IFooterColumn[];
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   /** @uxpinpropname Footer columns */
   children?: ReactNode | undefined;
@@ -58,9 +58,9 @@ export const Footer: React.FC<IFooterProps> = ({
         )}
       >
         {children ||
-          columns.map((column, columnIndex) => (
+          columns?.map((column, columnIndex) => (
             <FooterColumn key={columnIndex} label={parseContentMarkup(column.label) as string}>
-              {column.items.map((item, itemIndex) => {
+              {column.items?.map((item, itemIndex) => {
                 return (
                   <FooterItem key={itemIndex} link={item.link}>
                     {item.content}

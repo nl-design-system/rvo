@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ILayoutFlowProps {
+export interface ILayoutFlowProps extends HTMLAttributes<HTMLDivElement> {
   gap?: '0' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;

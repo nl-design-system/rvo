@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Logo } from '../logo/template';
 import './index.scss';
 
-export interface IHeaderProps extends PropsWithChildren {
+export interface IHeaderProps extends HTMLAttributes<HTMLDivElement> {
   title?: string;
   subtitle?: string;
   /** @uxpinignoreprop */
