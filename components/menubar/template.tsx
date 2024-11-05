@@ -189,7 +189,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
 }: IMenuBarProps) => {
   let itemsMarkup = null;
 
-  if (!children) {
+  if (!children && items) {
     itemsMarkup = [
       // Left items
       ...items

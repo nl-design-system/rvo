@@ -64,7 +64,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   children,
 }: IMobileMenuBarProps) => {
   let itemsMarkup;
-  if (!children) {
+  if (!children && items) {
     itemsMarkup = items.map((item, index) => {
       return (
         <React.Fragment key={index}>
@@ -82,6 +82,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
           />
 
           {item.active &&
+            submenuItems &&
             submenuItems.map((submenuItem, index) => (
               <React.Fragment key={index}>
                 <MenuBarItem
