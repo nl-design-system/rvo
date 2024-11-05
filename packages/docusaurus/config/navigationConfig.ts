@@ -5,17 +5,15 @@ const navbar: Navbar = {
   hideOnScroll: false,
   logo: {
     src: 'img/logo.svg',
-    href:
-      process.env.NODE_ENV === 'development'
-        ? 'http://localhost:3000/rvo/docs'
-        : 'https://nl-design-system.github.io/rvo/docs',
+    href: process.env.NODE_ENV === 'development' ? '/' : 'https://nl-design-system.github.io/rvo/docs',
   },
   items: [
+    { href: '/', label: 'ROOS', position: 'left', prependBaseUrlToHref: true },
     {
       type: 'doc',
       docId: 'aan-de-slag/introductie',
       position: 'left' as const,
-      label: 'ROOS',
+      label: 'Aan de slag',
     },
     {
       type: 'doc',
