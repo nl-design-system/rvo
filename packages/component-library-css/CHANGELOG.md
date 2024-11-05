@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.3.1
+
+### Patch Changes
+
+- 71f92dd: 5f65632: Added container queries to Grid
+
 ## 1.3.0
 
 ### Minor Changes
