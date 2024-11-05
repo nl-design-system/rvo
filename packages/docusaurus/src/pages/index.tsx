@@ -13,7 +13,7 @@ export default function Home(): JSX.Element {
       <header>
         <div className={clsx(styles.heroContainer)}>
           <MaxWidthLayout size="lg" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
-            <Heading>Het design system van RVO</Heading>
+            <Heading noMargins={true}>Het design system van RVO</Heading>
             <p className={styles.heroParagraph}>
               ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland.
             </p>
@@ -27,22 +27,30 @@ export default function Home(): JSX.Element {
         <MaxWidthLayout size="lg" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
           <section className={styles.articleGrid}>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
-              <Heading type="h2">Huisstijl</Heading>
+              <Heading type="h2" noMargins={true}>
+                Huisstijl
+              </Heading>
               <p>De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS</p>
               <Link href={useBaseUrl('/design-tokens/kleur')}>Bekijk de huisstijl</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
-              <Heading type="h2">Componenten</Heading>
+              <Heading type="h2" noMargins={true}>
+                Componenten
+              </Heading>
               <p>Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl</p>
               <Link href={useBaseUrl('/componenten/accordion')}>Bekijk de componenten</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
-              <Heading type="h2">Patronen</Heading>
+              <Heading type="h2" noMargins={true}>
+                Patronen
+              </Heading>
               <p>Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren</p>
               <Link href={useBaseUrl('/patronen/layout/applicatie-layout')}>Bekijk de patronen</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
-              <Heading type="h2">Voor designers</Heading>
+              <Heading type="h2" noMargins={true}>
+                Voor designers
+              </Heading>
               <p>Ben je een designer en wil je ROOS gebruiken? Gebruik dan ons Figma bestand</p>
               <Link
                 href="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0"
@@ -53,7 +61,9 @@ export default function Home(): JSX.Element {
               </Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
-              <Heading type="h2">Voor developers</Heading>
+              <Heading type="h2" noMargins={true}>
+                Voor developers
+              </Heading>
               <p>Ben je een developer en wil je ROOS gebruiken? Ga dan naar onze Storybook omgeving</p>
               <Link
                 href={
@@ -68,7 +78,9 @@ export default function Home(): JSX.Element {
               </Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
-              <Heading type="h2">Hulp nodig?</Heading>
+              <Heading type="h2" noMargins={true}>
+                Hulp nodig?
+              </Heading>
               <p>
                 Kom je er niet uit? We vinden het altijd leuk als iemand ons Design System wil gebruiken, dus stuur ons
                 een e-mail

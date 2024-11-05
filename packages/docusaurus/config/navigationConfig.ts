@@ -17,7 +17,7 @@ const navbar: Navbar = {
     },
     {
       type: 'doc',
-      docId: 'design-tokens/kleur',
+      docId: 'design-tokens/kleuren',
       position: 'left' as const,
       label: 'Huisstijl',
     },
