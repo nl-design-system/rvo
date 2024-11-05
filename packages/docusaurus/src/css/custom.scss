@@ -210,3 +210,9 @@ table {
     gap: var(--rvo-space-xl);
   }
 }
+
+aside.theme-doc-sidebar-container {
+  background-color: var(--rvo-sidebar-layout-sidebar-background-color);
+  border: none;
+  min-height: calc(100vh - 244px);
+}
