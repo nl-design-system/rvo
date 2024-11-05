@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
             <p className={styles.heroParagraph}>
               ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland.
             </p>
-            <Link href={useBaseUrl('/getting-started/introduction')}>
+            <Link href={useBaseUrl('/aan-de-slag/introductie')}>
               <Button>Aan de slag met ROOS</Button>
             </Link>
           </MaxWidthLayout>
@@ -29,17 +29,17 @@ export default function Home(): JSX.Element {
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2">Huisstijl</Heading>
               <p>De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS</p>
-              <Link href={useBaseUrl('/design-tokens/color')}>Bekijk de huisstijl</Link>
+              <Link href={useBaseUrl('/design-tokens/kleur')}>Bekijk de huisstijl</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2">Componenten</Heading>
               <p>Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl</p>
-              <Link href={useBaseUrl('/components/accordion')}>Bekijk de componenten</Link>
+              <Link href={useBaseUrl('/componenten/accordion')}>Bekijk de componenten</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2">Patronen</Heading>
               <p>Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren</p>
-              <Link href={useBaseUrl('/patterns/layout/app-layout')}>Bekijk de patronen</Link>
+              <Link href={useBaseUrl('/patronen/layout/applicatie-layout')}>Bekijk de patronen</Link>
             </div>
             <div className={clsx('rvo-layout-column', 'rvo-layout-gap--sm')}>
               <Heading type="h2">Voor designers</Heading>

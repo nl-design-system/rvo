@@ -13,31 +13,31 @@ const navbar: Navbar = {
   items: [
     {
       type: 'doc',
-      docId: 'getting-started/introduction',
+      docId: 'aan-de-slag/introductie',
       position: 'left' as const,
       label: 'ROOS',
     },
     {
       type: 'doc',
-      docId: 'design-tokens/color',
+      docId: 'design-tokens/kleur',
       position: 'left' as const,
       label: 'Huisstijl',
     },
     {
       type: 'doc',
-      docId: 'components/accordion',
+      docId: 'componenten/accordion',
       position: 'left' as const,
       label: 'Componenten',
     },
     {
       type: 'doc',
-      docId: 'patterns/layout/app-layout',
+      docId: 'patronen/layout/applicatie-layout',
       position: 'left' as const,
       label: 'Patronen',
     },
     {
       type: 'doc',
-      docId: 'best-practices/overview-and-navigation',
+      docId: 'best-practices/overzicht-en-navigatie',
       position: 'left' as const,
       label: 'Best practices',
     },
