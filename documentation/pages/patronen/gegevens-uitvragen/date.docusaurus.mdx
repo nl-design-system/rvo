@@ -5,7 +5,7 @@ slug: datum
 sidebar_position: 4
 ---
 
-import { DateInputField, Heading, Link } from "../../../../components";
+import { DateInputField, Link } from "../../../../components";
 import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
 
 # Datum uitvragen
@@ -14,21 +14,25 @@ import ComponentExample from "../../../../packages/docusaurus/src/components/Com
   <DateInputField />
 </ComponentExample>
 
-<Heading type="h2">Het vragen naar data van documenten en passen</Heading>
+## Het vragen naar data van documenten en passen
+
 Wanneer je om een datum vraagt precies zoals het op een paspoort, creditcard of ander document staat, laat de velden dan
 overeenkomen met het originele formaat. Dit maakt het gemakkelijker voor gebruikers om de datum nauwkeurig over te nemen.
 
-<Heading type="h2">Het vragen naar niet-precieze data</Heading>
+## Het vragen naar niet-precieze data
+
 Laat gebruikers een datum bij benadering invoeren wanneer je ze vraagt om informatie die ze mogelijk niet weten of zich moeilijk
 kunnen herinneren. Laat gebruikers bijvoorbeeld "december 2017" invoeren voor een veld dat zegt "de datum waarop je je paspoort
 bent kwijtgeraakt".
 
-<Heading type="h2">Het vragen naar relatieve data</Heading>
+## Het vragen naar relatieve data
+
 Het kan voorkomen dat je om data vraagt die relatief zijn ten opzichte van de huidige datum of een andere datum - dit is
 bijvoorbeeld gebruikelijk als een gebruiker een herinnering instelt. Laat gebruikers in dit geval relatieve data invoeren
 of selecteren, zoals "morgen" of "1 dag eerder". Als de dag van de week belangrijk is, toon deze dan ook.
 
-<Heading type="h2">Gebruikers helpen bij het kiezen van een datum</Heading>
+## Gebruikers helpen bij het kiezen van een datum
+
 Gebruikers moeten mogelijk een datum uit een selectie kiezen, bijvoorbeeld om een afspraak te boeken. Om dit te doen, kun
 je data presenteren in een kalenderformaat met behulp van een kalenderbedieningselement. Gebruikers krijgen meestal één maand
 aan data tegelijk te zien en kunnen door maanden en jaren bladeren. Gebruik alleen een kalenderbedieningselement als gebruikers
@@ -37,7 +41,8 @@ en de datum in verhouding tot andere data moeten kunnen zien. Maak nooit een kal
 van JavaScript als de enige invoeroptie. Laat gebruikers de datum ook in een tekstinvoer invoeren en de bedieningselement
 gebruiken.
 
-<Heading type="h2">Onderzoek naar dit patroon</Heading>
+## Onderzoek naar dit patroon
+
 <Link href="https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/">
   Lees een blogpost over het vragen naar geboortedata.
 </Link>
