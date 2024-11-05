@@ -77,6 +77,10 @@ html.docs-wrapper.plugin-docs {
   h6 {
     @extend .utrecht-heading-6;
   }
+
+  article a {
+    @extend .rvo-link;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
