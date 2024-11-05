@@ -1,6 +1,12 @@
 # `@nl-rvo/footer`
 
-## 0.0.1
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
+## 1.0.1
 
 ### Patch Changes
 
