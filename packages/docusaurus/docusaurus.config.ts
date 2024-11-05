@@ -38,6 +38,20 @@ const config: Config = {
         exclude: excludeList,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'components',
+        path: path.resolve(__dirname, '../../components'),
+        routeBasePath: 'componenten',
+        editUrl: undefined,
+        breadcrumbs: false,
+        sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
+        sidebarItemsGenerator,
+        include: includeList,
+        exclude: excludeList,
+      },
+    ],
   ],
   presets: [
     [
