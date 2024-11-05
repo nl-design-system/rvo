@@ -1,5 +1,11 @@
 # `@nl-rvo/grid`
 
+## 1.2.0
+
+### Minor Changes
+
+- 5f65632: Added container queries to Grid component
+
 ## 1.1.0
 
 ### Minor Changes

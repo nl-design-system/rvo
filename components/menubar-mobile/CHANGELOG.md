@@ -1,5 +1,11 @@
 # `@nl-rvo/menubar-mobile`
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f65632: Made props like items and size in mobile MenuBar optional
+
 ## 1.0.0
 
 ### Major Changes

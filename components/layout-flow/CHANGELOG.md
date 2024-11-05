@@ -1,5 +1,11 @@
 # `@nl-rvo/layout-flow`
 
+## 1.1.1
+
+### Patch Changes
+
+- 5f65632: Added HTML div attributes to LayoutFlow type
+
 ## 1.1.0
 
 ### Minor Changes

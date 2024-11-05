@@ -1,5 +1,11 @@
 # `@nl-rvo/header`
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f65632: Extended Header type with div html attributes
+
 ## 1.0.0
 
 ### Major Changes

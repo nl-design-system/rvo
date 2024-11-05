@@ -1,5 +1,11 @@
 # `@nl-rvo/heading`
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f65632: Extended Heading type with HTML heading attributes
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,15 +1,21 @@
 # `@nl-rvo/footer`
 
+## 0.0.1
+
+### Patch Changes
+
+- 5f65632: Made Footer columns and items props optional
+
 ## Pre-releases
 
-*@nl-rvo/component-library-css@1.0.0-alpha.290*:
+_@nl-rvo/component-library-css@1.0.0-alpha.290_:
 Updated snippet to put column labels outside of menu item list
 
-*@nl-rvo/component-library-css@1.0.0-alpha.284*:
+_@nl-rvo/component-library-css@1.0.0-alpha.284_:
 Added option for MaxWidthLayout (add `rvo-footer--sm`, `rvo-footer--md` or `rvo-footer--lg` to the footer) and full-width background (add a div with `.rvo-footer-bg` around the footer)
 
-*@nl-rvo/component-library-css@1.0.0-alpha.279*:
+_@nl-rvo/component-library-css@1.0.0-alpha.279_:
 Removed MaxWidthLayout element
 
-*@nl-rvo/component-library-css@1.0.0-alpha.179*:
+_@nl-rvo/component-library-css@1.0.0-alpha.179_:
 Added component
