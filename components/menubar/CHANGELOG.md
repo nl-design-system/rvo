@@ -1,5 +1,11 @@
 # `@nl-rvo/menubar`
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f65632: Made items and useIcons props in MenuBar optional
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,12 @@
 # `@nl-rvo/card`
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f65632: Add support for children in Card component
+- 5f65632: Add support for React JSX in Card title prop
+
 ## 1.0.0
 
 ### Major Changes
