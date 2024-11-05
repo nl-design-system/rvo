@@ -13,7 +13,7 @@ const config: Config = {
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   favicon: 'img/favicon.ico',
   url: 'https://nl-design-system.github.io',
-  baseUrl: '/',
+  baseUrl: '/rvo/docs/',
   organizationName: 'nl-rvo',
   projectName: 'rvo',
   onBrokenLinks: 'throw',
