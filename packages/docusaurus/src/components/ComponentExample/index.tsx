@@ -33,7 +33,7 @@ const ComponentExample = ({ children, minHeight }) => {
   }
 
   return (
-    <div className={styles.componentExample}>
+    <div className={clsx(styles.componentExample, 'component-example')}>
       <div className={styles.componentContainer} style={{ minHeight }}>
         {children}
       </div>

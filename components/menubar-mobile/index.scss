@@ -63,7 +63,7 @@
     position: fixed;
     top: 0;
     width: var(--rvo-mobile-menu-topnav-width);
-    z-index: 2;
+    z-index: 999;
   }
 
   .rvo-topnav__background::before {
@@ -75,7 +75,7 @@
     position: var(--rvo-mobile-menu-bg-position, static);
     top: var(--rvo-mobile-menu-bg-top);
     width: var(--rvo-mobile-menu-bg-width);
-    z-index: 2;
+    z-index: 998;
   }
 
   .rvo-mobile-menu__open-icon,

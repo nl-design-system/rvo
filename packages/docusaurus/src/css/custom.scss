@@ -54,31 +54,31 @@ html.docs-wrapper.plugin-docs {
   --ifm-paragraph-margin-bottom: 0;
 
   // Fix MD headings
-  h1 {
+  h1:not(.component-example h1) {
     @extend .utrecht-heading-1;
   }
 
-  h2 {
+  h2:not(.component-example h2) {
     @extend .utrecht-heading-2;
   }
 
-  h3 {
+  h3:not(.component-example h3) {
     @extend .utrecht-heading-3;
   }
 
-  h4 {
+  h4:not(.component-example h4) {
     @extend .utrecht-heading-4;
   }
 
-  h5 {
+  h5:not(.component-example h5) {
     @extend .utrecht-heading-5;
   }
 
-  h6 {
+  h6:not(.component-example h6) {
     @extend .utrecht-heading-6;
   }
 
-  article a {
+  article a:not(article .component-example a) {
     @extend .rvo-link;
   }
 }
