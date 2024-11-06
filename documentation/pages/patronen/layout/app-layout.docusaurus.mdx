@@ -5,7 +5,7 @@ slug: applicatie-layout
 sidebar_position: 1
 ---
 
-import { Breadcrumbs, Header, MaxWidthLayout, MenuBar } from "../../../../components";
+import { Breadcrumbs, Header, Heading, MaxWidthLayout, MenuBar } from "../../../../components";
 import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
 
 # Applicatie layout
@@ -15,7 +15,8 @@ import ComponentExample from "../../../../packages/docusaurus/src/components/Com
     <Header />
     <MenuBar maxWidth="lg" />
     <MaxWidthLayout className="rvo-layout-column rvo-layout-gap--sm rvo-layout-margin-vertical--lg">
-      <Breadcrumbs /># Pagina
+      <Breadcrumbs />
+      <Heading>Pagina</Heading>
       <p>Content</p>
     </MaxWidthLayout>
   </div>

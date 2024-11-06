@@ -20,7 +20,7 @@ addons.register('docusaurus', () => {
 
       // If docusaurus link is defined, update the link to point it to the component page in docusaurus
       if (docusaurusParameter && docusaurusParameter.link) {
-        url = `${url}components/${docusaurusParameter.link}`;
+        url = `${url}componenten/${docusaurusParameter.link}`;
       }
 
       return (

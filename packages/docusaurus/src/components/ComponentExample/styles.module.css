@@ -4,6 +4,10 @@
   border-width: 1px;
   width: 100%;
   margin-block-end: var(--rvo-space-xl);
+
+  p {
+    margin: 0;
+  }
 }
 
 .infoContainer {
