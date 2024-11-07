@@ -1,5 +1,12 @@
 # `@nl-rvo/margin-helpers`
 
+## 1.0.1
+
+### Patch Changes
+
+- 1b33d50: Added custom margin/padding helpers
+- 1b33d50: Added helper classes for padding and margin
+
 ## 1.0.0
 
 ### Major Changes

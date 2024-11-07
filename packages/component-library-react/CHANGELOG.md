@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-react
 
+## 1.2.2
+
+### Patch Changes
+
+- 1b33d50: Added custom margin/padding helpers
+- 1b33d50: Added helpers for padding and margin
+
 ## 1.2.1
 
 ### Patch Changes
