@@ -82,7 +82,7 @@ const generatePageNumbers = (
   return pages;
 };
 
-const generatePageNumber = (pageNumber: number, active?: number, onPageChange?: (page: number) => void) => (
+const generatePageNumber = (pageNumber: number, active?: number, onChange?: (page: number) => void) => (
   <li
     key={pageNumber}
     className={clsx('rvo-pagination__item', active === pageNumber && 'rvo-pagination__item--active')}
@@ -91,7 +91,7 @@ const generatePageNumber = (pageNumber: number, active?: number, onPageChange?: 
       href="#"
       onClick={(e) => {
         e.preventDefault();
-        onPageChange?.(pageNumber);
+        onChange?.(pageNumber);
       }}
     >
       {pageNumber}
