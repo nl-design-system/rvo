@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 1.2.3
+
+### Patch Changes
+
+- 4d9854a: Changed classnames for padding/margin helpers (--sm suffix instead of -sm)
+
 ## 1.2.2
 
 ### Patch Changes

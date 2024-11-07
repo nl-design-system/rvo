@@ -1,5 +1,11 @@
 # `@nl-rvo/padding-helpers`
 
+## 1.0.2
+
+### Patch Changes
+
+- 4d9854a: Changed classnames for padding/margin helpers (--sm suffix instead of -sm)
+
 ## 1.0.1
 
 ### Patch Changes
