@@ -14,7 +14,7 @@ import {
   // MobileMenuBar,
   StatusIcon,
 } from '@nl-rvo/components';
-import '../../../../components/text-helpers/index.scss';
+import '@nl-rvo/components/helpers-text/index.scss';
 
 const ZaakClean = () => {
   return (

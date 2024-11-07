@@ -1,5 +1,5 @@
 import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
-import '../../../../components/text-helpers/index.scss';
+import '@nl-rvo/components/helpers-text/index.scss';
 
 const DocumentenClean = () => {
   return (

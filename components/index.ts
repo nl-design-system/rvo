@@ -58,5 +58,6 @@ export { StatusIndicator } from './status-indicator/template';
 export { Table } from './table/template';
 export { Tabs } from './tabs/template';
 export { Tag } from './tag/template';
-export { TextHelpers } from './text-helpers/template';
+export { TextHelpers } from './helpers-text/template';
+export { MarginHelpers } from './helpers-margin/template';
 export { Toggle } from './toggle/template';
