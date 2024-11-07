@@ -17,47 +17,98 @@ export const PaddingHelpers: React.FC = () => {
         <p>De volgende helperklassen kunnen optioneel worden gebruikt voor paddings aan alle kanten:</p>
         <BorderedBox>
           <div className="rvo-padding-2xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-2xs</strong>: Box met 2xs padding aan alle kanten
+            <strong>class="rvo-padding-2xs"</strong>
+            <br />
+            Box met 2xs padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-xs</strong>: Box met xs padding aan alle kanten
+            <strong>class="rvo-padding-xs"</strong>
+            <br />
+            Box met xs padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-sm" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-sm</strong>: Box met sm padding aan alle kanten
+            <strong>class="rvo-padding-sm"</strong>
+            <br />
+            Box met sm padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-md</strong>: Box met md padding aan alle kanten
+            <strong>class="rvo-padding-md"</strong>
+            <br />
+            Box met md padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-lg" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-lg</strong>: Box met lg padding aan alle kanten
+            <strong>class="rvo-padding-lg"</strong>
+            <br />
+            Box met lg padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-xl</strong>: Box met xl padding aan alle kanten
+            <strong>class="rvo-padding-xl"</strong>
+            <br />
+            Box met xl padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-2xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-2xl</strong>: Box met 2xl padding aan alle kanten
+            <strong>class="rvo-padding-2xl"</strong>
+            <br />
+            Box met 2xl padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-3xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-3xl</strong>: Box met 3xl padding aan alle kanten
+            <strong>class="rvo-padding-3xl"</strong>
+            <br />
+            Box met 3xl padding aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-4xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-4xl</strong>: Box met 4xl padding aan alle kanten
+            <strong>class="rvo-padding-4xl"</strong>
+            <br />
+            Box met 4xl padding aan alle kanten
+          </div>
+        </BorderedBox>
+        <BorderedBox>
+          <div
+            className="rvo-padding-custom"
+            style={{ '--space': '40px', backgroundColor: 'var(--rvo-color-grijs-200)' } as React.CSSProperties}
+          >
+            <strong>
+              class="rvo-padding-custom"
+              <br />
+              style="--space: 40px;"
+            </strong>
+            <br />
+            Box met hardcoded 40px padding aan alle kanten
+          </div>
+        </BorderedBox>
+        <BorderedBox>
+          <div
+            className="rvo-padding-custom"
+            style={
+              {
+                '--space': 'calc(var(--rvo-space-md) + var(--rvo-space-xl))',
+                backgroundColor: 'var(--rvo-color-grijs-200)',
+              } as React.CSSProperties
+            }
+          >
+            <strong>
+              class="rvo-padding-custom"
+              <br />
+              style="--space: calc(var(--rvo-space-md) + var(--rvo-space-xl));"
+            </strong>
+            <br />
+            Box met 40px padding aan alle kanten (berekend met behulp van --rvo-space tokens)
           </div>
         </BorderedBox>
       </LayoutFlow>
@@ -68,22 +119,50 @@ export const PaddingHelpers: React.FC = () => {
         </p>
         <BorderedBox>
           <div className="rvo-padding-inline-start-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-inline-start-md</strong>: Box met md padding aan de linkerkant
+            <strong>class="rvo-padding-inline-start-md"</strong>
+            <br />
+            Box met md padding aan de linkerkant
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-inline-end-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-inline-end-md</strong>: Box met md padding aan de rechterkant
+            <strong>class="rvo-padding-inline-end-md"</strong>
+            <br />
+            Box met md padding aan de rechterkant
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-block-start-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-block-start-md</strong>: Box met md padding aan de bovenkant
+            <strong>class="rvo-padding-block-start-md"</strong>
+            <br />
+            Box met md padding aan de bovenkant
           </div>
         </BorderedBox>
         <BorderedBox>
           <div className="rvo-padding-block-end-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>rvo-padding-block-end-md</strong>: Box met md padding aan de onderkant
+            <strong>class="rvo-padding-block-end-md"</strong>
+            <br />
+            Box met md padding aan de onderkant
+          </div>
+        </BorderedBox>
+        <BorderedBox>
+          <div
+            className="rvo-padding-block-start-custom rvo-padding-inline-start-custom"
+            style={
+              {
+                '--space-block-start': '40px',
+                '--space-inline-start': '40px',
+                backgroundColor: 'var(--rvo-color-grijs-200)',
+              } as React.CSSProperties
+            }
+          >
+            <strong>
+              class="rvo-padding-block-start-custom rvo-padding-inline-start-custom"
+              <br />
+              style="--space-block-start: 40px; --space-inline-start: 40px;
+            </strong>
+            <br />
+            Box met 40px custom padding aan de linker en bovenkant.
           </div>
         </BorderedBox>
       </LayoutFlow>

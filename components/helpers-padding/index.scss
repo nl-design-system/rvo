@@ -3,6 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+/* stylelint-disable custom-property-pattern */
+
 .rvo-padding-3xs {
   padding-block-end: var(--rvo-space-3xs);
   padding-block-start: var(--rvo-space-3xs);
@@ -231,4 +233,27 @@
 
 .rvo-padding-inline-end-4xl {
   padding-inline-end: var(--rvo-space-4xl);
+}
+
+.rvo-padding-custom {
+  padding-block-end: var(--space);
+  padding-block-start: var(--space);
+  padding-inline-end: var(--space);
+  padding-inline-start: var(--space);
+}
+
+.rvo-padding-block-end-custom {
+  padding-block-end: var(--space-block-end);
+}
+
+.rvo-padding-block-start-custom {
+  padding-block-start: var(--space-block-start);
+}
+
+.rvo-padding-inline-end-custom {
+  padding-inline-end: var(--space-inline-end);
+}
+
+.rvo-padding-inline-start-custom {
+  padding-inline-start: var(--space-inline-start);
 }

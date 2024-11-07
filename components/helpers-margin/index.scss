@@ -2,6 +2,9 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+
+/* stylelint-disable custom-property-pattern */
+
 .rvo-margin-3xs {
   margin-block-end: var(--rvo-space-3xs);
   margin-block-start: var(--rvo-space-3xs);
@@ -230,4 +233,27 @@
 
 .rvo-margin-inline-end-4xl {
   margin-inline-end: var(--rvo-space-4xl);
+}
+
+.rvo-margin-custom {
+  margin-block-end: var(--space);
+  margin-block-start: var(--space);
+  margin-inline-end: var(--space);
+  margin-inline-start: var(--space);
+}
+
+.rvo-margin-block-end-custom {
+  margin-block-end: var(--space-block-end);
+}
+
+.rvo-margin-block-start-custom {
+  margin-block-start: var(--space-block-start);
+}
+
+.rvo-margin-inline-end-custom {
+  margin-inline-end: var(--space-inline-end);
+}
+
+.rvo-margin-inline-start-custom {
+  margin-inline-start: var(--space-inline-start);
 }
