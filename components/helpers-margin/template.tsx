@@ -12,79 +12,79 @@ const BorderedBox: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 export const MarginHelpers: React.FC = () => {
   return (
-    <LayoutFlow className="rvo-margin-sm">
+    <LayoutFlow className="rvo-margin--sm">
       <LayoutFlow>
         <p>De volgende helperklassen kunnen optioneel worden gebruikt voor margins aan alle kanten:</p>
         <BorderedBox>
-          <div className="rvo-margin-2xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-2xs"</strong>
+          <div className="rvo-margin--2xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--2xs"</strong>
             <br />
             Box met 2xs margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-xs"</strong>
+          <div className="rvo-margin--xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--xs"</strong>
             <br />
             Box met xs margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-sm" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-sm"</strong>
+          <div className="rvo-margin--sm" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--sm"</strong>
             <br />
             Box met sm margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-md"</strong>
+          <div className="rvo-margin--md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--md"</strong>
             <br />
             Box met md margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-lg" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-lg"</strong>
+          <div className="rvo-margin--lg" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--lg"</strong>
             <br />
             Box met lg margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-xl"</strong>
+          <div className="rvo-margin--xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--xl"</strong>
             <br />
             Box met xl margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-2xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-2xl"</strong>
+          <div className="rvo-margin--2xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--2xl"</strong>
             <br />
             Box met 2xl margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-3xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-3xl"</strong>
+          <div className="rvo-margin--3xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--3xl"</strong>
             <br />
             Box met 3xl margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-4xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-4xl"</strong>
+          <div className="rvo-margin--4xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--4xl"</strong>
             <br />
             Box met 4xl margin aan alle kanten
           </div>
         </BorderedBox>
         <BorderedBox>
           <div
-            className="rvo-margin-custom"
+            className="rvo-margin--custom"
             style={{ '--space': '40px', backgroundColor: 'var(--rvo-color-grijs-200)' } as React.CSSProperties}
           >
             <strong>
-              class="rvo-margin-custom"
+              class="rvo-margin--custom"
               <br />
               style="--space: 40px;"
             </strong>
@@ -94,7 +94,7 @@ export const MarginHelpers: React.FC = () => {
         </BorderedBox>
         <BorderedBox>
           <div
-            className="rvo-margin-custom"
+            className="rvo-margin--custom"
             style={
               {
                 '--space': 'calc(var(--rvo-space-md) + var(--rvo-space-xl))',
@@ -103,7 +103,7 @@ export const MarginHelpers: React.FC = () => {
             }
           >
             <strong>
-              class="rvo-margin-custom"
+              class="rvo-margin--custom"
               <br />
               style="--space: calc(var(--rvo-space-md) + var(--rvo-space-xl));"
             </strong>
@@ -118,36 +118,36 @@ export const MarginHelpers: React.FC = () => {
           2xl en 3xl aan een kant:
         </p>
         <BorderedBox>
-          <div className="rvo-margin-inline-start-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-inline-start-md"</strong>
+          <div className="rvo-margin-inline-start--md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin-inline-start--md"</strong>
             <br />
             Box met md margin aan de linkerkant
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-inline-end-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-inline-end-md"</strong>
+          <div className="rvo-margin-inline-end--md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin-inline-end--md"</strong>
             <br />
             Box met md margin aan de rechterkant
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-block-start-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-block-start-md"</strong>
+          <div className="rvo-margin-block-start--md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin-block-start--md"</strong>
             <br />
             Box met md margin aan de bovenkant
           </div>
         </BorderedBox>
         <BorderedBox>
-          <div className="rvo-margin-block-end-md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
-            <strong>class="rvo-margin-block-end-md"</strong>
+          <div className="rvo-margin-block-end--md" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin-block-end--md"</strong>
             <br />
             Box met md margin aan de onderkant
           </div>
         </BorderedBox>
         <BorderedBox>
           <div
-            className="rvo-margin-block-start-custom rvo-margin-inline-start-custom"
+            className="rvo-margin-block-start--custom rvo-margin-inline-start--custom"
             style={
               {
                 '--space-block-start': '40px',
@@ -157,7 +157,7 @@ export const MarginHelpers: React.FC = () => {
             }
           >
             <strong>
-              class="rvo-margin-block-start-custom rvo-margin-inline-start-custom"
+              class="rvo-margin-block-start--custom rvo-margin-inline-start--custom"
               <br />
               style="--space-block-start: 40px; --space-inline-start: 40px;
             </strong>
