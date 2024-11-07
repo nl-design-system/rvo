@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-css
 
+## 1.4.0
+
+### Minor Changes
+
+- 1b33d50: Added Toggle component and helpers for margin and padding
+
+### Patch Changes
+
+- 1b33d50: Added custom margin/padding helpers
+
 ## 1.3.1
 
 ### Patch Changes
