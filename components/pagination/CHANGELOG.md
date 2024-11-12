@@ -1,5 +1,11 @@
 # `@nl-rvo/pagination`
 
+## 1.0.1
+
+### Patch Changes
+
+- fc69881: Added aria-current attribute to active page link
+
 ## 1.0.0
 
 ### Major Changes

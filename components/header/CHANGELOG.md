@@ -1,5 +1,11 @@
 # `@nl-rvo/header`
 
+## 1.0.2
+
+### Patch Changes
+
+- fc69881: Added min-height to Header wrapper
+
 ## 1.0.1
 
 ### Patch Changes
