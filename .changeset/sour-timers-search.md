@@ -1,6 +1,6 @@
 ---
 "@nl-rvo/design-tokens": minor
-"@nl-rvo/exapandable-content": minor
+"@nl-rvo/expandable-content": minor
 ---
 
 Renamed expandable-text to expandable-content
