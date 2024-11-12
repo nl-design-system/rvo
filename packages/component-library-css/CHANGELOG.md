@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.5.0
+
+### Minor Changes
+
+- c76d2fc: Split text/textarea input components into a separate text input component and textarea component
+
 ## 1.4.1
 
 ### Patch Changes

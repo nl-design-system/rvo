@@ -1,5 +1,11 @@
 # `@nl-rvo/form-field-textarea`
 
+## 1.1.0
+
+### Minor Changes
+
+- c76d2fc: Split text/textarea input components into a separate text input component and textarea component
+
 ## 1.0.1
 
 ### Patch Changes
