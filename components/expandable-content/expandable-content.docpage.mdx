@@ -1,13 +1,13 @@
 import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
 import documentation from "./README.md";
-import * as ExpandableTextStories from "./expandable-text.stories";
+import * as ExpandableContentStories from "./expandable-content.stories";
 import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 
-<Meta of={ExpandableTextStories} name="Documentatie" />
+<Meta of={ExpandableContentStories} name="Documentatie" />
 
 <Title />
-<Canvas of={ExpandableTextStories.Default} layout="padded" />
+<Canvas of={ExpandableContentStories.Default} layout="padded" />
 <Controls />
 
 ## Documentatie

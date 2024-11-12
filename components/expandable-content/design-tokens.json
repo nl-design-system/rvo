@@ -1,6 +1,6 @@
 {
   "rvo": {
-    "expandable-text": {
+    "expandable-content": {
       "padding-block-end": {
         "css": {
           "syntax": "<length>",

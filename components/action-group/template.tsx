@@ -18,6 +18,7 @@ export interface IActionGroupProps {
   fullWidth?: boolean;
   /** @uxpinpropname Buttons */
   children?: ReactNode | undefined;
+  className?: string;
 }
 
 export const argTypes = {
@@ -51,12 +52,16 @@ export const ActionGroup: React.FC<IActionGroupProps> = ({
   buttonsRight = defaultArgs.buttonsRight,
   children,
   fullWidth = defaultArgs.fullWidth,
+  className,
 }: IActionGroupProps) => {
   return (
     <ButtonGroup
-      className={clsx({
-        'rvo-action-group--full-width': fullWidth,
-      })}
+      className={clsx(
+        {
+          'rvo-action-group--full-width': fullWidth,
+        },
+        className,
+      )}
     >
       {children}
       {!children &&

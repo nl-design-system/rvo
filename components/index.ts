@@ -8,7 +8,7 @@ export { ActionGroup } from './action-group/template';
 export { Card } from './card/template';
 export { DataList } from './data-list/template';
 export { DataListItem } from './data-list/data-list-item/template';
-export { ExpandableText } from './expandable-text/template';
+export { ExpandableContent } from './expandable-content/template';
 export { Footer } from './footer/template';
 export { FooterColumn } from './footer/footer-column/template';
 export { FooterItem } from './footer/footer-item/template';

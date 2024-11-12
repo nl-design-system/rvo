@@ -1,0 +1,86 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rvo-expandable-content {
+  background: none;
+  padding-block-end: var(--rvo-expandable-content-padding-block-end);
+  padding-block-start: var(--rvo-expandable-content-padding-block-start);
+  padding-inline-start: 0;
+}
+
+.rvo-expandable-content__summary {
+  color: var(--rvo-expandable-content-summary-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: var(--rvo-expandable-content-summary-font-weight);
+  gap: var(--rvo-expandable-content-summary-gap);
+  line-height: var(--rvo-expendable-text-summary-line-height);
+  list-style: none;
+}
+
+.rvo-expandable-content__summary .rvo-icon {
+  --utrecht-icon-color: var(--rvo-expandable-content-summary-icon-background-color);
+
+  margin-block-start: 3px;
+  min-width: var(--rvo-expandable-content-summary-icon-min-width);
+}
+
+.rvo-expandable-content__summary:hover {
+  text-decoration: underline;
+}
+
+.rvo-expandable-content__summary::-webkit-details-marker,
+.rvo-expandable-content__summary::marker {
+  display: none;
+}
+
+.rvo-expandable-content__summary::after {
+  background-color: var(--rvo-expandable-content-summary-icon-background-color);
+  content: "";
+  height: 16px;
+  margin-block-start: 3px;
+  -webkit-mask-image: var(--rvo-icon-delta-omlaag);
+  mask-image: var(--rvo-icon-delta-omlaag);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  min-width: 10px;
+  width: 10px;
+}
+
+.rvo-expandable-content[open] .rvo-expandable-content__summary::after {
+  -webkit-mask-image: var(--rvo-icon-delta-omhoog);
+  mask-image: var(--rvo-icon-delta-omhoog);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.rvo-expandable-content__details {
+  display: block;
+  margin-inline-start: var(--rvo-expandable-content-details-margin-inline-start);
+  padding-block-end: var(--rvo-expandable-content-details-padding-block-end);
+  padding-block-start: var(--rvo-expandable-content-details-padding-block-start);
+}
+
+.rvo-expandable-content--subtle .rvo-expandable-content__summary {
+  color: var(--rvo-expandable-content-subtle-summary-color);
+  font-weight: var(--rvo-expandable-content-subtle-summary-font-weight);
+  gap: var(--rvo-expandable-content-subtle-summary-gap);
+  line-height: var(--rvo-expendable-text-summary-line-height);
+}
+
+.rvo-expandable-content--subtle .rvo-expandable-content__summary .rvo-icon {
+  --utrecht-icon-color: var(--rvo-expandable-content-subtle-summary-icon-background-color);
+}
+
+.rvo-expandable-content--subtle .rvo-expandable-content__summary::after {
+  background-color: var(--rvo-expandable-content-subtle-summary-icon-background-color);
+}

@@ -5,7 +5,7 @@
 import { FormField } from '@utrecht/component-library-react';
 import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { ExpandableText } from '../expandable-text/template';
+import { ExpandableContent } from '../expandable-content/template';
 import { Feedback } from '../form-feedback/template';
 import { Label } from '../form-field-label/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
@@ -84,7 +84,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   if (expandableHelperText) {
     helperTextMarkup = (
       <div className="utrecht-form-field-description">
-        <ExpandableText title={expandableHelperTextTitle ?? ''}>{parseContentMarkup(helperText)}</ExpandableText>
+        <ExpandableContent title={expandableHelperTextTitle ?? ''}>{parseContentMarkup(helperText)}</ExpandableContent>
       </div>
     );
   }
