@@ -14,7 +14,9 @@
 }
 
 .rvo-header__logo-wrapper {
+  line-height: 0;
   margin-inline-start: calc(50% - 20px);
+  min-height: 124px;
 }
 
 @media (min-width: 495px) {
