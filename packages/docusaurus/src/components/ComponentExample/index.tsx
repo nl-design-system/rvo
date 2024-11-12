@@ -1,5 +1,5 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { ExpandableText } from '@nl-rvo/components';
+import { ExpandableContent } from '@nl-rvo/components';
 import { Link } from '@nl-rvo/components';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
@@ -38,7 +38,7 @@ const ComponentExample = ({ children, minHeight }) => {
         {children}
       </div>
       <div className={clsx(styles.infoContainer, 'rvo-layout-row')}>
-        <ExpandableText title="Voorbeeld HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
+        <ExpandableContent title="Voorbeeld HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
         <Link
           className={styles.openInNewTabLink}
           content="Open in nieuwe tab"

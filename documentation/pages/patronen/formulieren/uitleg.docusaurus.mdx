@@ -5,7 +5,7 @@ slug: uitleg
 sidebar_position: 3
 ---
 
-import { Fieldset, FileInputField, FormLayout, TextInputField } from "../../../../components";
+import { Fieldset, FileInputField, FormLayout, TextareaField } from "../../../../components";
 import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
 
 ## Uitleg
@@ -16,7 +16,7 @@ import ComponentExample from "../../../../packages/docusaurus/src/components/Com
   <FormLayout>
     <Fieldset legend="Uw aanvraag">
       <FileInputField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is." />
-      <TextInputField label="Uw vraag" inputType="textarea" helperText="Beschrijf beknopt wat uw vraag is." />
+      <TextareaField label="Uw vraag" helperText="Beschrijf beknopt wat uw vraag is." />
     </Fieldset>
   </FormLayout>
 </ComponentExample>

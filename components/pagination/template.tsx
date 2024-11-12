@@ -93,6 +93,7 @@ const generatePageNumber = (pageNumber: number, active?: number, onChange?: (pag
         e.preventDefault();
         onChange?.(pageNumber);
       }}
+      aria-current={active === pageNumber ? 'page' : undefined}
     >
       {pageNumber}
     </Link>

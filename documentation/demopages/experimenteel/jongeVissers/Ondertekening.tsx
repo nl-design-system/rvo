@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   Fieldset,
   Header,
   Heading,
@@ -122,7 +122,7 @@ const Ondertekening = () => {
                     </p>
                     <Heading type="h2" textContent="Ondertekening"></Heading>
                     <p>Ondertekening m.b.v. TAN is alleen noodzakelijker voor klanten.</p>
-                    <ButtonGroup>
+                    <ActionGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
                         onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
@@ -135,7 +135,7 @@ const Ondertekening = () => {
                       >
                         Opslaan en verder
                       </a>
-                    </ButtonGroup>
+                    </ActionGroup>
                   </LayoutFlow>
                 </form>
               </LayoutFlow>

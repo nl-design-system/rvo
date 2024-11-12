@@ -1,10 +1,10 @@
 import {
   Accordion,
+  ActionGroup,
   Alert,
   Button,
-  ButtonGroup,
   Card,
-  ExpandableText,
+  ExpandableContent,
   Footer,
   Grid,
   Header,
@@ -109,7 +109,7 @@ const OverzichtClean = () => {
                 <LayoutFlow gap="xs">
                   <Heading type="h2" textContent="Nog te starten" noMargins={true} />
                   <LayoutFlow gap="md">
-                    <ExpandableText
+                    <ExpandableContent
                       title="Wij vragen u onderstaande aanvragen op tijd te regelen"
                       content="Extra uitleg over bovenstaande opmerking."
                       subtle={true}
@@ -118,14 +118,14 @@ const OverzichtClean = () => {
                       <Alert heading="Mijn Percelen" kind="info">
                         <LayoutFlow gap="sm">
                           Uiterlijk 4 september 2024
-                          <ButtonGroup>
+                          <ActionGroup>
                             <Button kind="primary" size="sm">
                               Percelen registreren
                             </Button>
                             <Button kind="secondary" size="sm">
                               Meer info
                             </Button>
-                          </ButtonGroup>
+                          </ActionGroup>
                         </LayoutFlow>
                       </Alert>
                     </Grid>
@@ -396,7 +396,7 @@ const OverzichtClean = () => {
                 <div className="rvo-contact-options">
                   <Heading type="h2" textContent="Neem contact op" />
                   <p className="rvo-paragraph">Staat uw vraag er niet bij? Neem dan contact met ons op.</p>
-                  <ButtonGroup>
+                  <ActionGroup>
                     <Button kind="secondary" showIcon="after" icon="communicatie">
                       Stel uw vraag via onze chat
                     </Button>
@@ -404,7 +404,7 @@ const OverzichtClean = () => {
                     <Button kind="secondary" showIcon="after" icon="externe-link">
                       Geef uw mening
                     </Button>
-                  </ButtonGroup>
+                  </ActionGroup>
                 </div>
               </Grid>
             </LayoutFlow>

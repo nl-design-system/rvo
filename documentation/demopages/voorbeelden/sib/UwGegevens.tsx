@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Alert,
-  ButtonGroup,
   Fieldset,
   Footer,
   Header,
@@ -240,14 +240,14 @@ const UwGegevens = () => {
                   <li>mij klaar staat over mijn aanvraag Ik ben voldoende bereikbaar via dit e-mailadres</li>
                 </ul>
               </Alert>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

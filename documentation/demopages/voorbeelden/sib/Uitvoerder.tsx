@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   Fieldset,
   FileInputField,
   Footer,
@@ -10,6 +10,7 @@ import {
   MobileMenuBar,
   ProgressTracker,
   RadioButtonField,
+  TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/index.scss';
@@ -223,10 +224,7 @@ const Uitvoerder = () => {
                 <TextInputField label="Telefoonnummer" size="md"></TextInputField>
                 <TextInputField label="E-mailadres"></TextInputField>
                 <TextInputField label="Wat is de website (URL) van de opgegeven coach?"></TextInputField>
-                <TextInputField
-                  inputType="textarea"
-                  label="Waarom heeft u voor de opgegeven coach gekozen?"
-                ></TextInputField>
+                <TextareaField label="Waarom heeft u voor de opgegeven coach gekozen?"></TextareaField>
               </Fieldset>
               <Fieldset legend="Curriculum Vitae (CV) coach">
                 <p className="rvo-text rvo-text--no-margins">
@@ -246,14 +244,14 @@ const Uitvoerder = () => {
                   warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
                 ></FileInputField>
               </Fieldset>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

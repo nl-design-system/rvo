@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   Fieldset,
   Footer,
   Header,
@@ -217,14 +217,14 @@ const UwOnderneming = () => {
                   helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
                 ></TextInputField>
               </Fieldset>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

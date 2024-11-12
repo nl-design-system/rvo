@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   CheckboxField,
   Fieldset,
   Footer,
@@ -9,7 +9,7 @@ import {
   MenuBar,
   MobileMenuBar,
   ProgressTracker,
-  TextInputField,
+  TextareaField,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/index.scss';
 
@@ -207,10 +207,7 @@ const Mvo = () => {
                     { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
                   ]}
                 ></CheckboxField>
-                <TextInputField
-                  inputType="textarea"
-                  label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?"
-                ></TextInputField>
+                <TextareaField label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?" />
               </Fieldset>
 
               <div>
@@ -235,14 +232,8 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <TextInputField
-                  inputType="textarea"
-                  label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? "
-                ></TextInputField>
-                <TextInputField
-                  inputType="textarea"
-                  label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?"
-                ></TextInputField>
+                <TextareaField label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? " />
+                <TextareaField label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?" />
               </Fieldset>
               <div>
                 <Heading type="h2" noMargins={true}>
@@ -275,14 +266,14 @@ const Mvo = () => {
                   ]}
                 ></CheckboxField>
               </Fieldset>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

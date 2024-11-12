@@ -8,7 +8,7 @@ import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon/template';
 import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
-export interface IExpandableTextProps {
+export interface IExpandableContentProps {
   title: string;
   /** @uxpinignoreprop */
   content?: string | ReactNode;
@@ -38,20 +38,23 @@ export const argTypes = {
   },
 };
 
-export const ExpandableText: React.FC<IExpandableTextProps> = ({
+export const ExpandableContent: React.FC<IExpandableContentProps> = ({
   title = defaultArgs.title,
   content = defaultArgs.content,
   open = defaultArgs.open,
   subtle = defaultArgs.subtle,
   children,
-}: IExpandableTextProps) => {
+}: IExpandableContentProps) => {
   // Parse content markup (either a string, HTML string, React node or children)
   let contentMarkup: string | React.ReactNode = parseContentMarkup(children || content, {
-    className: 'rvo-expandable-text__details',
+    className: 'rvo-expandable-content__details',
   });
   return (
-    <details className={clsx('rvo-expandable-text', subtle && 'rvo-expandable-text--subtle')} open={open || undefined}>
-      <summary className="rvo-expandable-text__summary">
+    <details
+      className={clsx('rvo-expandable-content', subtle && 'rvo-expandable-content--subtle')}
+      open={open || undefined}
+    >
+      <summary className="rvo-expandable-content__summary">
         <Icon color="hemelblauw" size="md" icon="info" />
         {title}
       </summary>
@@ -60,4 +63,4 @@ export const ExpandableText: React.FC<IExpandableTextProps> = ({
   );
 };
 
-export default ExpandableText;
+export default ExpandableContent;

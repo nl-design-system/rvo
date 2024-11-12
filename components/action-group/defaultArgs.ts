@@ -1,4 +1,4 @@
-import { IButtonGroupProps } from './template';
+import { IActionGroupProps } from './template';
 
 const defaultButtonsLeft = [
   {
@@ -16,7 +16,7 @@ const defaultButtonsRight = [
   },
 ];
 
-export const defaultArgs: IButtonGroupProps = {
+export const defaultArgs: IActionGroupProps = {
   buttonsLeft: defaultButtonsLeft,
   buttonsRight: defaultButtonsRight,
 };

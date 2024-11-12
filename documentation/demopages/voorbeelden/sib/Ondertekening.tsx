@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Alert,
-  ButtonGroup,
   CheckboxField,
   Fieldset,
   Footer,
@@ -259,14 +259,14 @@ const Ondertekening = () => {
                   ]}
                 ></CheckboxField>
               </Fieldset>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="#"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verzenden
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

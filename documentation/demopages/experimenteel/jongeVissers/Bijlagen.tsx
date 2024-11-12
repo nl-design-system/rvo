@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   CheckboxField,
   Fieldset,
   FileInputField,
@@ -168,7 +168,7 @@ const Bijlagen = () => {
                       ></FileInputField>
                     </Fieldset>
 
-                    <ButtonGroup>
+                    <ActionGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
                         onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
@@ -181,7 +181,7 @@ const Bijlagen = () => {
                       >
                         Opslaan en verder
                       </a>
-                    </ButtonGroup>
+                    </ActionGroup>
                   </LayoutFlow>
                 </form>
               </LayoutFlow>

@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Alert,
-  ButtonGroup,
   Fieldset,
   Footer,
   Header,
@@ -254,14 +254,14 @@ const SIBstartpagina = () => {
                   088 042 42 42
                 </a>
               </Alert>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Start aanvraag
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

@@ -1,4 +1,4 @@
-# `@nl-rvo/exapandable-text`
+# `@nl-rvo/expandable-content`
 
 ## 1.0.0
 

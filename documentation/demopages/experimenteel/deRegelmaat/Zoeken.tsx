@@ -1,4 +1,4 @@
-import { ButtonGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
+import { ActionGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 
@@ -32,7 +32,7 @@ const Zoeken = () => {
                 ]}
               ></SelectField>
             </Fieldset>
-            <ButtonGroup>
+            <ActionGroup>
               <a
                 onClick={linkTo("Demo pagina's/de Regelmaat/Maatregelen")}
                 className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
@@ -43,7 +43,7 @@ const Zoeken = () => {
               >
                 Zoeken
               </a>
-            </ButtonGroup>
+            </ActionGroup>
             <ul className="rvo-app-menu">
               <li className="rvo-app-menu-item">
                 <a

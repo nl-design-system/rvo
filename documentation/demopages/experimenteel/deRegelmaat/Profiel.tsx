@@ -1,4 +1,4 @@
-import { ButtonGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
+import { ActionGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 
@@ -237,7 +237,7 @@ const Profiel = () => {
                 ]}
               ></CheckboxField>
             </div>
-            <ButtonGroup>
+            <ActionGroup>
               <a
                 onClick={linkTo("Demo pagina's/de Regelmaat/Maatregelen")}
                 className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
@@ -248,7 +248,7 @@ const Profiel = () => {
               >
                 Opslaan
               </a>
-            </ButtonGroup>
+            </ActionGroup>
             <ul className="rvo-app-menu">
               <li className="rvo-app-menu-item">
                 <a onClick={linkTo("Demo pagina's/de Regelmaat/Zoeken")} className="rvo-app-menu-item-link">

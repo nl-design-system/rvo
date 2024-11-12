@@ -2,12 +2,12 @@
   "version": "1.0.0",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/button-group",
-  "description": "Button group component",
+  "name": "@nl-rvo/expandable-content",
+  "description": "Expandable content component",
   "keywords": [
     "nl-design-system",
     "css",
-    "button-group"
+    "expandable-content"
   ],
   "private": true,
   "publishConfig": {
@@ -16,6 +16,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/button-group"
+    "directory": "components/expandable-content"
   }
 }

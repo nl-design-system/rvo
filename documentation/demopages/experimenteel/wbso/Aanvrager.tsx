@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Button,
-  ButtonGroup,
   Fieldset,
   Header,
   Heading,
@@ -140,7 +140,7 @@ const Aanvrager = () => {
                       <SelectField label="Maand aanvang" options={[{ value: '1', label: 'Januari' }]}></SelectField>
                     </Fieldset>
                   </LayoutFlow>
-                  <ButtonGroup>
+                  <ActionGroup>
                     <Button
                       kind="secondary"
                       size="md"
@@ -167,7 +167,7 @@ const Aanvrager = () => {
                     >
                       Opslaan en verder
                     </Button>
-                  </ButtonGroup>
+                  </ActionGroup>
                 </LayoutFlow>
               </form>
             </LayoutFlow>
