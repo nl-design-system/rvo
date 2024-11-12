@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.3.0
+
+### Minor Changes
+
+- fc69881: Renamed expandable-text to expandable-content
+
 ## 1.2.1
 
 ### Patch Changes

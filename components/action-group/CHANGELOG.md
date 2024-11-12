@@ -1,5 +1,11 @@
 # `@nl-rvo/button-group`
 
+## 1.1.0
+
+### Minor Changes
+
+- fc69881: Renamed ButtonGroup to ActionGroup
+
 ## 1.0.0
 
 ### Major Changes

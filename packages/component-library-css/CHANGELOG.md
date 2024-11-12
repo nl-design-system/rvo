@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.6.0
+
+### Minor Changes
+
+- fc69881: Added min-height to Header, renamed ButtonGroup to ActionGroup, renamed ExpandableText to ExpandableContent, add aria label to current page in Pagination
+
 ## 1.5.0
 
 ### Minor Changes
