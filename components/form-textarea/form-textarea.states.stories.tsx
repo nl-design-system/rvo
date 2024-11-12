@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { argTypes, Textarea } from './template';
 
 export default {
-  title: 'Componenten/Form/Text area/States',
+  title: 'Componenten/Form/Textarea/States',
   component: Textarea,
   argTypes: argTypes,
 
