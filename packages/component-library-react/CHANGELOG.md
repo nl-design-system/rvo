@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 1.3.0
+
+### Minor Changes
+
+- c76d2fc: Split text/textarea input components into a separate text input component and textarea component
+
 ## 1.2.3
 
 ### Patch Changes
