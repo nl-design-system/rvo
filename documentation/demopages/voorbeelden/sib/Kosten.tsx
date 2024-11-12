@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   Fieldset,
   FileInputField,
   Footer,
@@ -192,14 +192,14 @@ const Kosten = () => {
                   warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
                 ></FileInputField>
               </Fieldset>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

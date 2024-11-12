@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Button,
-  ButtonGroup,
   Header,
   Heading,
   LayoutFlow,
@@ -69,7 +69,7 @@ const VoordatUStart = () => {
               </div>
               <form>
                 <LayoutFlow row={false} gap="md">
-                  <ButtonGroup>
+                  <ActionGroup>
                     <Button
                       kind="warning-subtle"
                       size="sm"
@@ -96,7 +96,7 @@ const VoordatUStart = () => {
                     >
                       Start aanvraag
                     </Button>
-                  </ButtonGroup>
+                  </ActionGroup>
                 </LayoutFlow>
               </form>
             </LayoutFlow>

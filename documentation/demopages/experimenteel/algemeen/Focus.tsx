@@ -1,7 +1,7 @@
 import {
   Accordion,
+  ActionGroup,
   Button,
-  ButtonGroup,
   CheckboxField,
   Fieldset,
   FileInputField,
@@ -13,6 +13,7 @@ import {
   MenuBar,
   RadioButtonField,
   SelectField,
+  TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
 import '../../common/focus.scss';
@@ -96,7 +97,7 @@ const Focus = () => {
                     <TextInputField label="Text disabled" disabled={true} />
                     <TextInputField label="Text disabled with value" disabled={true} value="Value" />
                     <TextInputField label="Number" validation="number" />
-                    <TextInputField label="Textarea" inputType="textarea" />
+                    <TextareaField label="Textarea" />
                   </Fieldset>
 
                   <Fieldset legend="Options">
@@ -214,7 +215,7 @@ const Focus = () => {
                     </div>
                   </Fieldset>
 
-                  <ButtonGroup>
+                  <ActionGroup>
                     <Button
                       kind="primary"
                       size="md"
@@ -241,7 +242,7 @@ const Focus = () => {
                     >
                       Secondary action
                     </Button>
-                  </ButtonGroup>
+                  </ActionGroup>
                 </form>
               </LayoutFlow>
             </div>

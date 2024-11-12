@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Button,
-  ButtonGroup,
   CheckboxField,
   Fieldset,
   FileInputField,
@@ -12,6 +12,7 @@ import {
   MenuBar,
   RadioButtonField,
   SelectField,
+  TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
 import { defaultFooterItems } from '../common/defaultFooterItems';
@@ -83,7 +84,7 @@ const Formulier = () => {
                           <TextInputField label="Text disabled" disabled={true} />
                           <TextInputField label="Text disabled with value" disabled={true} value="Value" />
                           <TextInputField label="Number" validation="number" />
-                          <TextInputField label="Textarea" inputType="textarea" />
+                          <TextareaField label="Textarea" />
                         </Fieldset>
 
                         <Fieldset legend="Options">
@@ -201,7 +202,7 @@ const Formulier = () => {
                           </div>
                         </Fieldset>
                       </div>
-                      <ButtonGroup>
+                      <ActionGroup>
                         <Button
                           kind="primary"
                           size="md"
@@ -228,7 +229,7 @@ const Formulier = () => {
                         >
                           Secondary action
                         </Button>
-                      </ButtonGroup>
+                      </ActionGroup>
                     </LayoutFlow>
                   </form>
                 </LayoutFlow>

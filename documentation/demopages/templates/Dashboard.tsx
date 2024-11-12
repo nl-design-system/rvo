@@ -1,7 +1,7 @@
 import {
+  ActionGroup,
   Alert,
   Button,
-  ButtonGroup,
   Card,
   Footer,
   Grid,
@@ -91,14 +91,14 @@ const Dashboard = () => {
                       <Alert heading="Notificatie titel" kind="info">
                         <LayoutFlow gap="sm">
                           Notificatie tekst
-                          <ButtonGroup>
+                          <ActionGroup>
                             <Button kind="primary" size="sm">
                               Primary button
                             </Button>
                             <Button kind="secondary" size="sm">
                               Secondary button
                             </Button>
-                          </ButtonGroup>
+                          </ActionGroup>
                         </LayoutFlow>
                       </Alert>
                     </Grid>

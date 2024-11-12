@@ -5,7 +5,7 @@ slug: formulieren-opbouw
 sidebar_position: 3
 ---
 
-import { Button, ButtonGroup, Fieldset, FormLayout, TextInputField } from "../../../../components";
+import { ActionGroup, Button, Fieldset, FormLayout, TextInputField } from "../../../../components";
 import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
 
 # Formulieren
@@ -41,9 +41,9 @@ Daarnaast is het van belang dat formulieren op de correct manier worden opgebouw
       <TextInputField label="Plaats" />
     </Fieldset>
     <br />
-    <ButtonGroup>
+    <ActionGroup>
       <Button kind="secondary">Opslaan en sluiten</Button>
       <Button className="rvo-button-group__align-right">Opslaan en verder</Button>
-    </ButtonGroup>
+    </ActionGroup>
   </FormLayout>
 </ComponentExample>

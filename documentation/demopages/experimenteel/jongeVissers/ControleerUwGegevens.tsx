@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   Header,
   Heading,
   LayoutFlow,
@@ -107,7 +107,7 @@ const ControleerGegevens = () => {
                 </div>
                 <form>
                   <LayoutFlow gap="md">
-                    <ButtonGroup>
+                    <ActionGroup>
                       <a
                         className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
                         onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
@@ -120,7 +120,7 @@ const ControleerGegevens = () => {
                       >
                         Opslaan en verder
                       </a>
-                    </ButtonGroup>
+                    </ActionGroup>
                   </LayoutFlow>
                 </form>
               </LayoutFlow>

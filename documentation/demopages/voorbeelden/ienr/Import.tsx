@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   DateInputField,
   Fieldset,
   Footer,
@@ -139,14 +139,14 @@ const Import = () => {
                       ></TextInputField>
                     </Fieldset>
 
-                    <ButtonGroup>
+                    <ActionGroup>
                       <a
                         href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-importgegevens--default&viewMode=story"
                         className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                       >
                         Opslaan en gegevens runderen invoeren
                       </a>
-                    </ButtonGroup>
+                    </ActionGroup>
                   </LayoutFlow>
                 </LayoutFlow>
               </LayoutFlow>

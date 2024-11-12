@@ -1,8 +1,8 @@
 import {
+  ActionGroup,
   Alert,
   Breadcrumbs,
   Button,
-  ButtonGroup,
   Footer,
   Grid,
   Header,
@@ -98,14 +98,14 @@ const ZaakClean = () => {
                     <Alert heading="Actie nodig" kind="warning">
                       <LayoutFlow gap="sm">
                         Voer de actie direct uit of bekijk de actie voor meer informatie over wat u moet doen.
-                        <ButtonGroup>
+                        <ActionGroup>
                           <Button kind="primary" size="sm">
                             Actie uitvoeren
                           </Button>
                           <Button kind="secondary" size="sm">
                             Bekijk de actie
                           </Button>
-                        </ButtonGroup>
+                        </ActionGroup>
                       </LayoutFlow>
                     </Alert>
                     <Grid columns="two" gap="4xl" layout="2fr1fr">

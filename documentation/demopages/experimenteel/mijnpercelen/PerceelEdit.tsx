@@ -1,7 +1,7 @@
 import {
+  ActionGroup,
   Alert,
   Button,
-  ButtonGroup,
   CheckboxField,
   DateInputField,
   Heading,
@@ -288,9 +288,9 @@ const PerceelEdit = () => {
                       </LayoutFlow>
                     </fieldset>
                   </div>
-                  <ButtonGroup>
+                  <ActionGroup>
                     <Button kind="primary">Opslaan</Button>
-                  </ButtonGroup>
+                  </ActionGroup>
                 </LayoutFlow>
               </div>
             </div>

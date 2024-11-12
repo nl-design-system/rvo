@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Button,
-  ButtonGroup,
   Fieldset,
   Header,
   Heading,
@@ -72,7 +72,7 @@ const VormvrijeAanvraag = () => {
                       ></RadioButtonField>
                     </Fieldset>
                   </LayoutFlow>
-                  <ButtonGroup>
+                  <ActionGroup>
                     <Button
                       kind="secondary"
                       size="md"
@@ -99,7 +99,7 @@ const VormvrijeAanvraag = () => {
                     >
                       Opslaan en verder
                     </Button>
-                  </ButtonGroup>
+                  </ActionGroup>
                 </LayoutFlow>
               </form>
             </LayoutFlow>

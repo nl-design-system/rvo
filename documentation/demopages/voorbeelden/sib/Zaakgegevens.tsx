@@ -1,5 +1,5 @@
 import {
-  ButtonGroup,
+  ActionGroup,
   DateInputField,
   Fieldset,
   Footer,
@@ -10,6 +10,7 @@ import {
   MobileMenuBar,
   ProgressTracker,
   RadioButtonField,
+  TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/index.scss';
@@ -204,7 +205,7 @@ const Zaakgegevens = () => {
                     { id: 'bedrag B', label: 'Nee' },
                   ]}
                 ></RadioButtonField>
-                <TextInputField label="Welke kansen ziet u in dit land?" inputType="textarea"></TextInputField>
+                <TextareaField label="Welke kansen ziet u in dit land?"></TextareaField>
                 <RadioButtonField
                   name="actief"
                   label="Bent u al actief in dit doelland?"
@@ -240,14 +241,14 @@ const Zaakgegevens = () => {
                   ]}
                 ></RadioButtonField>
               </Fieldset>
-              <ButtonGroup>
+              <ActionGroup>
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story"
                   className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
                 >
                   Opslaan en verder gaan
                 </a>
-              </ButtonGroup>
+              </ActionGroup>
             </LayoutFlow>
           </main>
         </LayoutFlow>

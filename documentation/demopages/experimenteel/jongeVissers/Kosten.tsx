@@ -1,6 +1,6 @@
 import {
+  ActionGroup,
   Button,
-  ButtonGroup,
   Header,
   Heading,
   Icon,
@@ -229,7 +229,7 @@ const Kosten = () => {
                     </p>
                   </div>
                 </div>
-                <ButtonGroup>
+                <ActionGroup>
                   <a
                     className="utrecht-button utrecht-button--secondary-action rvo-layout-row rvo-layout-gap--md utrecht-button--rvo-md rvo-link--no-underline"
                     onClick={linkTo("Demo pagina's/Mijn RVO/Zaak")}
@@ -242,7 +242,7 @@ const Kosten = () => {
                   >
                     Opslaan en verder
                   </a>
-                </ButtonGroup>
+                </ActionGroup>
               </LayoutFlow>
             </div>
           </main>

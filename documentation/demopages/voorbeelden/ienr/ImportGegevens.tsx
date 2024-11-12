@@ -1,7 +1,7 @@
 import {
   Accordion,
+  ActionGroup,
   Button,
-  ButtonGroup,
   DateInputField,
   Fieldset,
   Footer,
@@ -170,10 +170,10 @@ const ImportGegevens = () => {
                           <TextInputField label="Oorspr. ID, niet EU land"></TextInputField>
                         </LayoutFlow>
                       </Fieldset>
-                      <ButtonGroup>
+                      <ActionGroup>
                         <Button>Opslaan</Button>
                         <Button kind="secondary">Opslaan en rij toevoegen</Button>
-                      </ButtonGroup>
+                      </ActionGroup>
                     </LayoutFlow>
                   </LayoutFlow>
                 </LayoutFlow>
