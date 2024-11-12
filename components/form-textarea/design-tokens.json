@@ -1,0 +1,42 @@
+{
+  "rvo": {
+    "textbox": {
+      "outline-offset": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "invalid-focus": {
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "outline-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "sm": {
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "md": {
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

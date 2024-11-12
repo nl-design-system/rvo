@@ -1,6 +1,6 @@
-import { ITextInputProps } from './template';
+import { ITextareaProps } from './template';
 
-export const defaultArgs: ITextInputProps = {
+export const defaultArgs: ITextareaProps = {
   id: 'field',
   disabled: false,
   focus: false,
@@ -9,9 +9,6 @@ export const defaultArgs: ITextInputProps = {
   required: false,
   placeholder: '',
   value: '',
-  validation: 'text',
-  prefix: '',
-  suffix: '',
-  size: 'lg',
   maxLength: undefined,
+  maxLengthIndicator: true,
 };

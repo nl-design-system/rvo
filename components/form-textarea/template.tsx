@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import { Textbox } from '@utrecht/component-library-react';
+import { Textarea as UtrechtTextarea } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 
-export interface ITextInputProps extends HTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
+export interface ITextareaProps extends HTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
   /** @uxpinignoreprop */
   key?: string;
   /** @uxpinignoreprop */
@@ -22,11 +22,9 @@ export interface ITextInputProps extends HTMLAttributes<HTMLInputElement | HTMLT
   required?: boolean;
   placeholder?: string;
   value?: string;
-  validation?: 'text' | 'number' | 'currency';
-  prefix?: string;
-  suffix?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg';
   maxLength?: number | undefined;
+  /** @uxpinpropname Max length indicator (textarea) */
+  maxLengthIndicator?: boolean;
   onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
@@ -52,25 +50,18 @@ export const argTypes = {
   required: {
     control: 'boolean',
   },
+
   placeholder: {
     control: 'text',
   },
   value: {
     control: 'text',
   },
-  validation: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
-  prefix: {
-    control: 'text',
-  },
-  suffix: {
-    control: 'text',
-  },
-  size: {
-    options: ['xs', 'sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
   maxLength: {
     control: 'number',
+  },
+  maxLengthIndicator: {
+    control: 'boolean',
   },
   onFocus: {
     table: {
@@ -104,7 +95,7 @@ export const argTypes = {
   },
 };
 
-export const TextInput: React.FC<ITextInputProps> = ({
+export const Textarea: React.FC<ITextareaProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
@@ -113,13 +104,10 @@ export const TextInput: React.FC<ITextInputProps> = ({
   required = defaultArgs.required,
   placeholder = defaultArgs.placeholder,
   value = defaultArgs.value,
-  validation = defaultArgs.validation,
-  prefix = defaultArgs.prefix,
-  suffix = defaultArgs.suffix,
-  size = defaultArgs.size,
   maxLength = defaultArgs.maxLength,
+  maxLengthIndicator = defaultArgs.maxLengthIndicator,
   ...otherProps
-}: ITextInputProps) => {
+}: ITextareaProps) => {
   const props = {
     id,
     disabled,
@@ -128,36 +116,37 @@ export const TextInput: React.FC<ITextInputProps> = ({
     readOnly,
     placeholder,
     defaultValue: value,
-    ...((validation === 'number' || validation === 'currency') && {
-      inputMode: 'numeric' as any,
-      pattern: validation === 'currency' ? '[0-9.,]*' : '[0-9]*',
-    }),
     maxLength,
     ...otherProps,
   };
 
-  const inputMarkup = (
-    <Textbox
-      {...props}
-      className={clsx(
-        size === 'xs' && 'utrecht-textbox--xs',
-        size === 'sm' && 'utrecht-textbox--sm',
-        size === 'md' && 'utrecht-textbox--md',
-        focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'],
-      )}
-    />
-  );
-  if (prefix || suffix) {
+  const [currentValue, setCurrentValue] = useState(value);
+
+  if (maxLength && maxLengthIndicator) {
+    // Override onChange
+    props.onChange = (event) => {
+      otherProps.onChange?.(event);
+      setCurrentValue(event.target.value);
+    };
     return (
-      <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
-        {prefix}
-        {inputMarkup}
-        {suffix}
+      <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
+        <UtrechtTextarea
+          {...props}
+          className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])}
+        />
+        <span className="utrecht-textbox-remaining-chars">
+          Nog {maxLength - (currentValue?.length || 0)} teken{maxLength - (currentValue?.length || 0) > 1 && 's'} over
+        </span>
       </div>
     );
   } else {
-    return inputMarkup;
+    return (
+      <UtrechtTextarea
+        {...props}
+        className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])}
+      />
+    );
   }
 };
 
-export default TextInput;
+export default Textarea;
