@@ -4,7 +4,7 @@ export { Alert } from './alert/template';
 export { Breadcrumbs } from './breadcrumbs/template';
 export { BreadcrumbsItem } from './breadcrumbs/breadcrumbs-item/template';
 export { Button } from './button/template';
-export { ButtonGroup } from './button-group/template';
+export { ActionGroup } from './action-group/template';
 export { Card } from './card/template';
 export { DataList } from './data-list/template';
 export { DataListItem } from './data-list/data-list-item/template';

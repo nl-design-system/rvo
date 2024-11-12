@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import { ButtonGroup as UtrechtButtonGroup } from '@utrecht/component-library-react';
+import { ButtonGroup } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -10,7 +10,7 @@ import { Button, IButtonProps } from '../button/template';
 import '../layout-flow/index.scss';
 import './index.scss';
 
-export interface IButtonGroupProps {
+export interface IActionGroupProps {
   /** @uxpinignoreprop */
   buttonsLeft?: IButtonProps[];
   /** @uxpinignoreprop */
@@ -46,16 +46,16 @@ export const argTypes = {
   },
 };
 
-export const ButtonGroup: React.FC<IButtonGroupProps> = ({
+export const ActionGroup: React.FC<IActionGroupProps> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
   children,
   fullWidth = defaultArgs.fullWidth,
-}: IButtonGroupProps) => {
+}: IActionGroupProps) => {
   return (
-    <UtrechtButtonGroup
+    <ButtonGroup
       className={clsx({
-        'utrecht-button-group--rvo-full-width': fullWidth,
+        'rvo-action-group--full-width': fullWidth,
       })}
     >
       {children}
@@ -65,10 +65,10 @@ export const ButtonGroup: React.FC<IButtonGroupProps> = ({
         })}
       {!children &&
         buttonsRight?.map((buttonProps, index) => (
-          <Button key={index} {...buttonProps} className="utrecht-button-group__align-right" />
+          <Button key={index} {...buttonProps} className="rvo-action-group--align-right" />
         ))}
-    </UtrechtButtonGroup>
+    </ButtonGroup>
   );
 };
 
-export default ButtonGroup;
+export default ActionGroup;
