@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 1.4.1
+
+### Patch Changes
+
+- 0a14f60: Added Hero content box as a separate div and class (not h1)
+
 ## 1.4.0
 
 ### Minor Changes
