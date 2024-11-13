@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.3.1
+
+### Patch Changes
+
+- 0a14f60: Added Hero content box as a separate div and class (not h1)
+
 ## 1.3.0
 
 ### Minor Changes
