@@ -55,6 +55,8 @@ const parameters = {
       order: [
         'Introductie',
         'Aan de slag',
+        'Aan de slag (React)',
+        'Veelgestelde vragen',
         'Huisstijl',
         ['Kleuren', 'Lettertype', 'Grootte', 'Ruimte', 'Border radius'],
         'Componenten',
