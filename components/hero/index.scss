@@ -7,20 +7,24 @@
   margin-inline-start: auto;
   position: relative;
 
-  .rvo-hero__title {
-    background-color: var(--rvo-hero-title-background-color);
-    border-start-end-radius: var(--rvo-hero-title-border-start-end-radius);
+  .rvo-hero__content {
+    background-color: var(--rvo-hero-box-background-color);
+    border-start-end-radius: var(--rvo-hero-box-border-start-end-radius);
     bottom: 0;
-    color: var(--rvo-hero-title-color);
-    font-weight: var(--rvo-hero-title-font-weight);
     margin-block-end: 0;
-    max-width: 500px;
-    padding-block-end: var(--rvo-hero-title-padding-block-end);
-    padding-block-start: var(--rvo-hero-title-padding-block-start);
-    padding-inline-end: var(--rvo-hero-title-padding-inline-end);
-    padding-inline-start: var(--rvo-hero-title-padding-inline-start);
+    max-width: var(--rvo-hero-box-max-width);
+    padding-block-end: var(--rvo-hero-box-padding-block-end);
+    padding-block-start: var(--rvo-hero-box-padding-block-start);
+    padding-inline-end: var(--rvo-hero-box-padding-inline-end);
+    padding-inline-start: var(--rvo-hero-box-padding-inline-start);
     position: absolute;
     z-index: 1;
+  }
+
+  .rvo-hero__title,
+  .rvo-hero__subtitle {
+    color: var(--rvo-hero-title-color);
+    font-weight: var(--rvo-hero-title-font-weight);
   }
 
   .rvo-hero__subtitle {

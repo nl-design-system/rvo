@@ -77,11 +77,13 @@ export const Hero: React.FC<IHeroProps> = ({
       <div className="rvo-hero__image-container">
         {image && <img src={getImageSrc(image)} className="rvo-hero__image" alt={imageAlt} />}
       </div>
-      <Heading type="h1" className="rvo-hero__title">
-        {title}
+      <div className="rvo-hero__content">
+        <Heading type="h1" className="rvo-hero__title" noMargins={true}>
+          {title}
+        </Heading>
         <span className="rvo-hero__subtitle">{subtitle}</span>
-      </Heading>
-      {contentMarkup}
+        {contentMarkup}
+      </div>
     </MaxWidthLayout>
   );
 };
