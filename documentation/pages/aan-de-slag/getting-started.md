@@ -16,9 +16,11 @@ Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.
 
 De aanbevolen manier om de libraries te gebruiken is met behulp van NPM:
 
-`npm install --save-dev --save-exact @nl-rvo/design-tokens@1.0.0-alpha.89`
-`npm install --save-dev --save-exact @nl-rvo/component-library-css@1.0.0-alpha.145`
-`npm install --save-dev --save-exact @nl-rvo/assets@1.0.0-alpha.80`
+```shell
+npm install --save-dev --save-exact @nl-rvo/design-tokens@1.3.0
+npm install --save-dev --save-exact @nl-rvo/component-library-css@1.6.0
+npm install --save-dev --save-exact @nl-rvo/assets@1.0.0-alpha.360
+```
 
 > Let op: Gebruik altijd exacte versie-nummers. Op deze manier blijft alles foutloos werken en kun je zelf testen op 'breaking changes' voor het upgraden naar een nieuwe release.
 
@@ -58,6 +60,10 @@ Als de Design Tokens, Components en Assets libraries zijn toegevoegd kun je het 
 ## CSS 'Components' gebruiken
 
 Nu kunnen code snippets van componenten direct uit Storybook worden gekopieerd. Omdat het hier gaat om puur CSS styling is er verder geen bindende javascript functionaliteit of manier om componenten te gebruiken. Je kunt dus zelf de componenten naar wens combineren en waar nodig javascript functionaliteit toevoegen. Let wel op dat je de principes van het design system intact houdt.
+
+## Toestemming voor gebruik van assets
+
+Wanneer je de huisstijl assets wil gebruiken dien je voor toestemming contact opnemen met de huisstijl coördinator van RVO via [rijksbredehuisstijl@rvo.nl](mailto:rijksbredehuisstijl@rvo.nl).
 
 ## Bijdragen
 
