@@ -7,7 +7,7 @@
           "inherits": true
         }
       },
-      "title": {
+      "box": {
         "background-color": {
           "css": {
             "syntax": "<color>",
@@ -20,15 +20,9 @@
             "inherits": true
           }
         },
-        "color": {
+        "max-width": {
           "css": {
-            "syntax": "<color>",
-            "inherits": true
-          }
-        },
-        "font-weight": {
-          "css": {
-            "syntax": "<*>",
+            "syntax": "<length>",
             "inherits": true
           }
         },
@@ -53,6 +47,20 @@
         "padding-inline-start": {
           "css": {
             "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "title": {
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "font-weight": {
+          "css": {
+            "syntax": "<*>",
             "inherits": true
           }
         }
