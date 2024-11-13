@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.6.1
+
+### Patch Changes
+
+- 0a14f60: Added Hero content box as a separate div and class (not h1)
+
 ## 1.6.0
 
 ### Minor Changes
