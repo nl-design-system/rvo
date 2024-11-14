@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.7.0
+
+### Minor Changes
+
+- 9b0300b: Added scrollable content component
+
 ## 1.6.1
 
 ### Patch Changes
