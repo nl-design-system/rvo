@@ -1,0 +1,18 @@
+---
+title: Scrollable content
+hide_title: false
+slug: .
+---
+
+import Documentation from "./README.md";
+import { defaultArgs } from "./defaultArgs";
+import ScrollableContent from "./template";
+import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+
+<ComponentExample>
+  <ScrollableContent height={defaultArgs.height} useStyleAttribute={true}>
+    {defaultArgs.content}
+  </ScrollableContent>
+</ComponentExample>
+
+<Documentation />
