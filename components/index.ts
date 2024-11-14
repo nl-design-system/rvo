@@ -53,6 +53,7 @@ export { MobileMenuBar } from './menubar-mobile/template';
 export { Pagination } from './pagination/template';
 export { ProgressTracker } from './progress-tracker/template';
 export { ProgressTrackerStep } from './progress-tracker/progress-tracker-step/template';
+export { ScrollableContent } from './scrollable-content/template';
 export { SidebarLayout } from './sidebar-layout/template';
 export { SkipLink } from './skip-link/template';
 export { StatusIcon } from './status-icon/template';
