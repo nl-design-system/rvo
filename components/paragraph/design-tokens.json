@@ -1,0 +1,48 @@
+{
+  "rvo": {
+    "paragraph": {
+      "sm": {
+        "font-size": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "line-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "md": {
+        "font-size": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "line-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "lg": {
+        "font-size": {
+          "css": {
+            "syntax": "<*>",
+            "inherits": true
+          }
+        },
+        "line-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

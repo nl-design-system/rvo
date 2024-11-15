@@ -1,0 +1,20 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as ParagraphStories from "./paragraph.stories";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
+
+<Meta of={ParagraphStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={ParagraphStories.Default} layout="padded" />
+<Controls />
+
+# Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

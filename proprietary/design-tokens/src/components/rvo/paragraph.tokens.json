@@ -1,0 +1,18 @@
+{
+  "rvo": {
+    "paragraph": {
+      "sm": {
+        "font-size": { "value": "{rvo.font-size.sm}" },
+        "line-height": { "value": "{rvo.line-height.sm}" }
+      },
+      "md": {
+        "font-size": { "value": "{rvo.font-size.md}" },
+        "line-height": { "value": "{rvo.line-height.md}" }
+      },
+      "lg": {
+        "font-size": { "value": "{rvo.font-size.lg}" },
+        "line-height": { "value": "{rvo.line-height.lg}" }
+      }
+    }
+  }
+}
