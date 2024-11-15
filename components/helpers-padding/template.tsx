@@ -16,6 +16,20 @@ export const PaddingHelpers: React.FC = () => {
       <LayoutFlow>
         <p>De volgende helperklassen kunnen optioneel worden gebruikt voor paddings aan alle kanten:</p>
         <BorderedBox>
+          <div className="rvo-padding--none" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-padding--none"</strong>
+            <br />
+            Box zonder padding aan alle kanten, padding kan dus hiermee worden verwijderd van elementen.
+          </div>
+        </BorderedBox>
+        <BorderedBox>
+          <div className="rvo-padding--3xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-padding--3xs"</strong>
+            <br />
+            Box met 3xs padding aan alle kanten
+          </div>
+        </BorderedBox>
+        <BorderedBox>
           <div className="rvo-padding--2xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
             <strong>class="rvo-padding--2xs"</strong>
             <br />

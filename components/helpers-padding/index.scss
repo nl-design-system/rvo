@@ -4,6 +4,28 @@
  */
 
 /* stylelint-disable custom-property-pattern */
+.rvo-padding--none {
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.rvo-padding-block-start--none {
+  padding-block-start: 0;
+}
+
+.rvo-padding-block-end--none {
+  padding-block-end: 0;
+}
+
+.rvo-padding-inline-start--none {
+  padding-inline-start: 0;
+}
+
+.rvo-padding-inline-end--none {
+  padding-inline-end: 0;
+}
 
 .rvo-padding--3xs {
   padding-block-end: var(--rvo-space-3xs);
