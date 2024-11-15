@@ -10,7 +10,7 @@
       },
       "optional": {
         "color": {},
-        "content": { "value": "' (optioneel)'" },
+        "content": { "value": "' (niet verplicht)'" },
         "font-size": { "value": "{rvo.font-size.xs}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" }
       },
