@@ -16,6 +16,20 @@ export const MarginHelpers: React.FC = () => {
       <LayoutFlow>
         <p>De volgende helperklassen kunnen optioneel worden gebruikt voor margins aan alle kanten:</p>
         <BorderedBox>
+          <div className="rvo-margin--none" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--none"</strong>
+            <br />
+            Box zonder margin aan alle kanten, margin kan dus hiermee worden verwijderd van elementen.
+          </div>
+        </BorderedBox>
+        <BorderedBox>
+          <div className="rvo-margin--3xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--3xs"</strong>
+            <br />
+            Box met 3xs margin aan alle kanten
+          </div>
+        </BorderedBox>
+        <BorderedBox>
           <div className="rvo-margin--2xs" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
             <strong>class="rvo-margin--2xs"</strong>
             <br />
