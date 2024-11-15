@@ -10,7 +10,7 @@ Een label bestaat uit:
 
 - Labeltekst
 - Indicator of het formulierveld verplicht is
-- Indicator of het formulierveld optioneel is
+- Indicator of het formulierveld niet verplicht is
 
 ## Richtlijnen
 
