@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 1.5.0
+
+### Minor Changes
+
+- 9b0300b: Added scrollable content component
+
 ## 1.4.1
 
 ### Patch Changes
