@@ -1,5 +1,11 @@
 # `@nl-rvo/layout-flow`
 
+## 1.1.2
+
+### Patch Changes
+
+- 3962dc6: Added 3xs gap to LayoutFlow
+
 ## 1.1.1
 
 ### Patch Changes

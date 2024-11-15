@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.4.0
+
+### Minor Changes
+
+- aa230ad: Added paragraph component
+
 ## 1.3.2
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @nl-rvo/component-library-css
 
+## 1.8.0
+
+### Minor Changes
+
+- aa230ad: Added paragraph component
+
+### Patch Changes
+
+- 3962dc6: Added 3xs gap to LayoutFlow
+- 3962dc6: Fixed gap property and added 3xs gap to Grid
+
 ## 1.7.0
 
 ### Minor Changes

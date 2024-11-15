@@ -1,5 +1,16 @@
 # @nl-rvo/uxpin-merge
 
+## 1.1.0
+
+### Minor Changes
+
+- aa230ad: Added paragraph component
+
+### Patch Changes
+
+- Updated dependencies [aa230ad]
+  - @nl-rvo/design-tokens@1.4.0
+
 ## 1.0.5
 
 ### Patch Changes

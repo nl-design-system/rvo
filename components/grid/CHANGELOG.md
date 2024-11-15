@@ -1,5 +1,11 @@
 # `@nl-rvo/grid`
 
+## 1.2.1
+
+### Patch Changes
+
+- 3962dc6: Fixed gap property and added 3xs gap to Grid
+
 ## 1.2.0
 
 ### Minor Changes
