@@ -1,5 +1,11 @@
 # `@nl-rvo/margin-helpers`
 
+## 1.1.0
+
+### Minor Changes
+
+- 8d5d1a4: Added --none modifier to margin and padding helpers, included helpers in ThemeProvider (React package) by default
+
 ## 1.0.2
 
 ### Patch Changes
