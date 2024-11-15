@@ -51,6 +51,7 @@ export { MenuBar } from './menubar/template';
 export { MenuBarItem } from './menubar/menubar-item/template';
 export { MobileMenuBar } from './menubar-mobile/template';
 export { Pagination } from './pagination/template';
+export { Paragraph } from './paragraph/template';
 export { ProgressTracker } from './progress-tracker/template';
 export { ProgressTrackerStep } from './progress-tracker/progress-tracker-step/template';
 export { ScrollableContent } from './scrollable-content/template';

@@ -38,6 +38,7 @@ module.exports = {
           '../../components/horizontal-rule/template.tsx',
           '../../components/item-list/template.tsx',
           '../../components/ordered-unordered-list/template.tsx',
+          '../../components/paragraph/template.tsx',
           '../../components/pagination/template.tsx',
           '../../components/tabs/template.tsx',
           '../../components/tabs/tab-item/template.tsx',
