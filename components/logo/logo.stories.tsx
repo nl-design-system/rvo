@@ -9,7 +9,7 @@ const meta: Meta<typeof Logo> = {
   argTypes,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'logo',

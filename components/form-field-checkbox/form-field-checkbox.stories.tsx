@@ -8,7 +8,7 @@ const meta: Meta<typeof CheckboxField> = {
   args: defaultArgs,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'form-field-checkbox',

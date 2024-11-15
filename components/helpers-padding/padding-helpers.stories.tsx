@@ -6,7 +6,7 @@ const meta: Meta<typeof PaddingHelpers> = {
   component: PaddingHelpers,
   parameters: {
     status: {
-      type: 'HIDDEN',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'helpers-padding',

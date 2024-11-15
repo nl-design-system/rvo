@@ -6,7 +6,7 @@ const meta: Meta<typeof Hr> = {
   component: Hr,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'horizontal-rule',

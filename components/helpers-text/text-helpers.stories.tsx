@@ -6,7 +6,7 @@ const meta: Meta<typeof TextHelpers> = {
   component: TextHelpers,
   parameters: {
     status: {
-      type: 'HIDDEN',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'helpers-text',
