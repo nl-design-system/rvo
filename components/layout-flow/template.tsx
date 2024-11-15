@@ -9,7 +9,7 @@ import parseContentMarkup from '../utils/parseContentMarkup';
 import './index.scss';
 
 export interface ILayoutFlowProps extends HTMLAttributes<HTMLDivElement> {
-  gap?: '0' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  gap?: '0' | '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   row?: boolean;
   wrap?: boolean;
   alignItems?: '' | 'start' | 'center' | 'end';
@@ -22,7 +22,7 @@ export interface ILayoutFlowProps extends HTMLAttributes<HTMLDivElement> {
 
 export const argTypes = {
   gap: {
-    options: ['0', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
+    options: ['0', '3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
   row: {
