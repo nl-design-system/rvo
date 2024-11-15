@@ -83,16 +83,20 @@
   gap: 0;
 }
 
-.rvo-layout-gap--2xs {
+.rvo-layout-gap--3xs {
   gap: var(--rvo-space-3xs);
 }
 
-.rvo-layout-gap--xs {
+.rvo-layout-gap--2xs {
   gap: var(--rvo-space-2xs);
 }
 
-.rvo-layout-gap--sm {
+.rvo-layout-gap--xs {
   gap: var(--rvo-space-xs);
+}
+
+.rvo-layout-gap--sm {
+  gap: var(--rvo-space-sm);
 }
 
 .rvo-layout-gap--md {

@@ -6,9 +6,10 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+import '../layout-flow/index.scss';
 
 export interface IGridProps {
-  gap?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   columns?: 'one' | 'two' | 'three' | 'four' | 'five' | 'six';
   layout?: '1fr' | '2fr1fr' | '1fr2fr';
   /** @uxpinpropname Content */
@@ -17,7 +18,7 @@ export interface IGridProps {
 
 export const argTypes = {
   gap: {
-    options: ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
+    options: ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
     control: { type: 'radio' },
   },
   columns: {
