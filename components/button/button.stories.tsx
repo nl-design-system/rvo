@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
   argTypes,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'button',

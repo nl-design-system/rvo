@@ -8,7 +8,7 @@ const meta: Meta<typeof Select> = {
   args: defaultArgs,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'form-select',

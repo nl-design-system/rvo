@@ -6,7 +6,7 @@ const meta: Meta<typeof MarginHelpers> = {
   component: MarginHelpers,
   parameters: {
     status: {
-      type: 'HIDDEN',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'helpers-margin',

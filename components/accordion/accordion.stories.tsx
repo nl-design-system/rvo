@@ -9,7 +9,7 @@ const meta: Meta<typeof Accordion> = {
   argTypes,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'accordion',

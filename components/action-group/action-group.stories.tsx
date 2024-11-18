@@ -8,7 +8,7 @@ const meta: Meta<typeof ActionGroup> = {
   args: defaultArgs,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'action-group',

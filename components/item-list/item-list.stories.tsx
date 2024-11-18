@@ -8,7 +8,7 @@ const meta: Meta<typeof ItemList> = {
   args: defaultArgs,
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'PRODUCTION',
     },
     docusaurus: {
       link: 'item-list',
