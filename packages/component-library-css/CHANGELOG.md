@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 1.9.0
+
+### Minor Changes
+
+- 217b379: Include .rvo-theme styling by default
+
 ## 1.8.0
 
 ### Minor Changes
