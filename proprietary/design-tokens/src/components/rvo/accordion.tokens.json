@@ -6,6 +6,9 @@
       },
       "border-color": { "value": "{rvo.color.hemelblauw-300}" },
       "item": {
+        "title": {
+          "color": { "value": "{rvo.color.hemelblauw}" }
+        },
         "icon": {
           "padding-block-start": { "value": "{rvo.space.sm}" }
         },
