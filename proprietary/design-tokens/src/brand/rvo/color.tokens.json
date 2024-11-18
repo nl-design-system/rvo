@@ -1,40 +1,40 @@
 {
   "rvo": {
     "color": {
-      "logoblauw": {
+      "hemelblauw": {
         "value": "#154273"
       },
-      "logoblauw-150": {
+      "hemelblauw-150": {
         "value": "#DCE3EA"
       },
-      "logoblauw-300": {
+      "hemelblauw-300": {
         "value": "#B9C7D5"
       },
-      "logoblauw-450": {
+      "hemelblauw-450": {
         "value": "#95AAC0"
       },
-      "logoblauw-600": {
+      "hemelblauw-600": {
         "value": "#738EAB"
       },
-      "logoblauw-750": {
+      "hemelblauw-750": {
         "value": "#409CD5"
       },
-      "hemelblauw": {
+      "logoblauw": {
         "value": "#007BC7"
       },
-      "hemelblauw-150": {
+      "logoblauw-150": {
         "value": "#D9EBF7"
       },
-      "hemelblauw-300": {
+      "logoblauw-300": {
         "value": "#B3D7EE"
       },
-      "hemelblauw-450": {
+      "logoblauw-450": {
         "value": "#8CC4E6"
       },
-      "hemelblauw-600": {
+      "logoblauw-600": {
         "value": "#66B0DD"
       },
-      "hemelblauw-750": {
+      "logoblauw-750": {
         "value": "#507196"
       },
       "lichtblauw": {
