@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.4.1
+
+### Patch Changes
+
+- c6c0a45: Added Accordion item title color as a design token
+
 ## 1.4.0
 
 ### Minor Changes
