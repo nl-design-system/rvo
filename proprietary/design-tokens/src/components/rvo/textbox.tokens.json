@@ -10,10 +10,16 @@
         "width": { "value": "{rvo.space.3xl}" }
       },
       "sm": {
-        "width": { "value": "{rvo.space.4xl}" }
+        "width": { "value": "calc({rvo.space.4xl} + {rvo.space.xs})" }
       },
       "md": {
         "width": { "value": "calc({rvo.space.4xl} * 2)" }
+      },
+      "lg": {
+        "width": { "value": "calc({rvo.space.4xl} * 4)" }
+      },
+      "max": {
+        "width": { "value": "100%" }
       }
     }
   }

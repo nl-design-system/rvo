@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Card } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Card } from './src/template';
 
 const meta: Meta<typeof Card> = {
   title: 'Componenten/Card/Examples',
@@ -19,6 +19,8 @@ export default meta;
 
 type Story = StoryObj<typeof Card>;
 
+const Container = ({ children }) => <div style={{ width: '500px' }}>{children}</div>;
+
 export const Default: Story = {
   name: 'Standard',
   args: {
@@ -26,6 +28,11 @@ export const Default: Story = {
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
     content: 'content',
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const Outline: Story = {
@@ -36,6 +43,11 @@ export const Outline: Story = {
     outline: true,
     content: 'content',
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const ColoredBackground: Story = {
@@ -48,6 +60,11 @@ export const ColoredBackground: Story = {
     outline: true,
     content: 'content',
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const InvertedColors: Story = {
@@ -61,6 +78,11 @@ export const InvertedColors: Story = {
     content: 'content',
     invertedColors: true,
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const FullCardLink: Story = {
@@ -72,6 +94,11 @@ export const FullCardLink: Story = {
     outline: true,
     content: 'content',
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const CardWithImageSm: Story = {
@@ -80,11 +107,16 @@ export const CardWithImageSm: Story = {
     ...defaultArgs,
     fullCardLink: true,
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
-    image: 'home.jpg',
+    image: 'images/www/home.jpg',
     imageSize: 'sm',
     outline: true,
     content: 'content',
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const CardWithImageMd: Story = {
@@ -93,11 +125,16 @@ export const CardWithImageMd: Story = {
     ...defaultArgs,
     fullCardLink: true,
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
-    image: 'home.jpg',
+    image: 'images/www/home.jpg',
     imageSize: 'md',
     outline: true,
     content: 'content',
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };
 
 export const ImageBackground: Story = {
@@ -107,9 +144,14 @@ export const ImageBackground: Story = {
     fullCardLink: true,
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
     background: 'image',
-    backgroundImage: 'mobiel.webp',
+    backgroundImage: 'images/www/mobiel.webp',
     outline: false,
     content: 'content',
     invertedColors: true,
   },
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
 };

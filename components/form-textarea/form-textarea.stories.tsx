@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Textarea } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Textarea } from './src/template';
 
 const meta: Meta<typeof Textarea> = {
   title: 'Componenten/Form/Textarea',
@@ -19,4 +19,4 @@ export default meta;
 
 type Story = StoryObj<typeof Textarea>;
 
-export const Default: Story = { args: defaultArgs, name: 'Textarea' };
+export const Default: Story = { args: { ...defaultArgs, maxLength: 300, maxLengthIndicator: true }, name: 'Textarea' };

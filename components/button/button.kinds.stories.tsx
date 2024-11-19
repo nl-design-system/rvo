@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Button } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Button } from './src/template';
 
 export default {
   title: 'Componenten/Button/Kinds',

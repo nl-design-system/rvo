@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { SidebarLayout } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { SidebarLayout } from './src/template';
 
 const meta: Meta<typeof SidebarLayout> = {
   title: 'Componenten/Layout/Sidebar layout',

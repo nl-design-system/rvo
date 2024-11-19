@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { SkipLink } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { SkipLink } from './src/template';
 
 const meta: Meta<typeof SkipLink> = {
   title: 'Componenten/Skip link',

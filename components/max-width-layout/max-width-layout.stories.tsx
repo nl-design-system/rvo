@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { MaxWidthLayout } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { MaxWidthLayout } from './src/template';
 
 const meta: Meta<typeof MaxWidthLayout> = {
   title: 'Componenten/Layout/Max width layout',

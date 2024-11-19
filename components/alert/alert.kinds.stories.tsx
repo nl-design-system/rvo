@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { Alert, argTypes } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Alert, argTypes } from './src/template';
 
 export default {
   title: 'Componenten/Alert/Kinds',

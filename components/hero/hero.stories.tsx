@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Hero } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Hero } from './src/template';
 
 const meta: Meta<typeof Hero> = {
   title: 'Componenten/Hero',
@@ -20,6 +20,6 @@ export default meta;
 type Story = StoryObj<typeof Hero>;
 
 export const Default: Story = {
-  args: defaultArgs,
+  args: { ...defaultArgs, image: 'images/www/home.jpg' },
   name: 'Hero',
 };

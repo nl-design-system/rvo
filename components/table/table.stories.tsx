@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Table } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Table } from './src/template';
 
 const meta: Meta<typeof Table> = {
   title: 'Componenten/Table',

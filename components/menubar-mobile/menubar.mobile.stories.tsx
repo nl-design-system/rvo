@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { MobileMenuBar } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { MobileMenuBar } from './src/template';
 
 const meta: Meta<typeof MobileMenuBar> = {
   title: 'Componenten/Mobile Menubar',
@@ -19,4 +19,14 @@ export default meta;
 
 type Story = StoryObj<typeof MobileMenuBar>;
 
-export const Default: Story = { args: defaultArgs, name: 'Mobile Menubar' };
+const Container = ({ children }) => <div style={{ minHeight: '500px' }}>{children}</div>;
+
+export const Default: Story = {
+  args: defaultArgs,
+  name: 'Mobile Menubar',
+  render: (args) => (
+    <Container>
+      <MobileMenuBar {...args} />
+    </Container>
+  ),
+};

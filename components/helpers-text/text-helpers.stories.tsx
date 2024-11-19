@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TextHelpers } from './template';
+import { TextHelpers } from './src/template';
 
 const meta: Meta<typeof TextHelpers> = {
   title: 'Componenten/Helper classes/Text',

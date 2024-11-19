@@ -1,4 +1,4 @@
-import { argTypes, MenuBarWithSubmenu } from './template';
+import { argTypes, MenuBarWithSubmenu } from './src/template';
 
 export default {
   title: 'Componenten/Menubar/Submenu',

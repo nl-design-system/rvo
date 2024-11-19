@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Textarea } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Textarea } from './src/template';
 
 export default {
   title: 'Componenten/Form/Textarea/States',

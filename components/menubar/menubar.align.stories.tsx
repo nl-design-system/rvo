@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, MenuBar } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, MenuBar } from './src/template';
 
 export default {
   title: 'Componenten/Menubar/Align to right',

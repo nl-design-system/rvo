@@ -18,9 +18,6 @@
     "url": "git@github.com:nl-design-system/rvo.git",
     "directory": "components"
   },
-  "scripts": {
-    "clean": "rimraf dist/"
-  },
   "devDependencies": {
     "@nl-rvo/assets": "1.0.0-alpha.360",
     "@nl-rvo/design-tokens": "workspace:*",

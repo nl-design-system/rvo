@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Link } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Link } from './src/template';
 
 export default {
   title: 'Componenten/Link/States',

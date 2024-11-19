@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Label } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Label } from './src/template';
 
 const meta: Meta<typeof Label> = {
   title: 'Componenten/Form/Label',

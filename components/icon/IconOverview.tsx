@@ -4,9 +4,15 @@
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
 import React from 'react';
-import { Icon, iconColors, toProperCase } from './template';
+import { Icon, iconColors, toProperCase } from './src/template';
 
-export const IconOverview: React.FC = () => {
+export const IconOverview: React.FC = ({
+  includeNavigation = true,
+  downloadable = true,
+}: {
+  includeNavigation: boolean;
+  downloadable: boolean;
+}) => {
   return (
     <div
       style={{
@@ -14,35 +20,37 @@ export const IconOverview: React.FC = () => {
         marginBlockEnd: '4em',
       }}
     >
-      <div
-        style={{
-          position: 'sticky',
-          top: 0,
-          display: 'flex',
-          gap: '1em',
-          zIndex: 10,
-          paddingBlockStart: '1em',
-          paddingBlockEnd: '1em',
-          background: 'white',
-        }}
-      >
-        <label htmlFor="categories">Ga direct naar categorie:</label>
-        <select
-          name="categories"
-          id="categories"
-          onChange={(event) => {
-            const category = document.getElementById(event.target.value);
-            category.scrollIntoView();
+      {includeNavigation && (
+        <div
+          style={{
+            position: 'sticky',
+            top: 0,
+            display: 'flex',
+            gap: '1em',
+            zIndex: 10,
+            paddingBlockStart: '1em',
+            paddingBlockEnd: '1em',
+            background: 'white',
           }}
         >
-          {Object.keys(iconList).map((categoryName) => (
-            <option key={categoryName} value={categoryName}>
-              {toProperCase(categoryName)}
-            </option>
-          ))}
-        </select>
-      </div>
-      <span>Je kunt iconen downloaden door erop te klikken.</span>
+          <label htmlFor="categories">Ga direct naar categorie:</label>
+          <select
+            name="categories"
+            id="categories"
+            onChange={(event) => {
+              const category = document.getElementById(event.target.value);
+              category.scrollIntoView();
+            }}
+          >
+            {Object.keys(iconList).map((categoryName) => (
+              <option key={categoryName} value={categoryName}>
+                {toProperCase(categoryName)}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+      {downloadable && <span>Je kunt iconen downloaden door erop te klikken.</span>}
 
       {Object.entries(iconList).map(([categoryName, categoryIcons]) => {
         return (
@@ -68,8 +76,8 @@ export const IconOverview: React.FC = () => {
                 return (
                   <a
                     key={`${categoryName}-${parsedIconName}`}
-                    download={`${parsedIconName}.svg`}
-                    href={iconDownloadURL}
+                    download={downloadable ? `${parsedIconName}.svg` : undefined}
+                    href={downloadable ? iconDownloadURL : undefined}
                     title={parsedIconName}
                     style={{
                       display: 'flex',

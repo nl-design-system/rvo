@@ -1,4 +1,4 @@
-import { argTypes, MobileMenuBar } from './template';
+import { argTypes, MobileMenuBar } from './src/template';
 
 export default {
   title: 'Componenten/Mobile Menubar',

@@ -2,12 +2,12 @@
   "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/form-timeinput",
-  "description": "Form timeinput component",
+  "name": "@nl-rvo/form-field-timeinput",
+  "description": "Form field timeinput component",
   "keywords": [
     "nl-design-system",
     "css",
-    "form-timeinput"
+    "form-field-timeinput"
   ],
   "private": true,
   "publishConfig": {
@@ -16,6 +16,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/form-timeinput"
+    "directory": "components/form-field-timeinput"
   }
 }

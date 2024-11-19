@@ -1,4 +1,4 @@
-import { argTypes, Paragraph } from './template';
+import { argTypes, Paragraph } from './src/template';
 
 export default {
   title: 'Componenten/Paragraph/Colors',

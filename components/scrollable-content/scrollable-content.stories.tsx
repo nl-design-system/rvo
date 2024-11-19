@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { ScrollableContent } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { ScrollableContent } from './src/template';
 
 const meta: Meta<typeof ScrollableContent> = {
   title: 'Componenten/Scrollable content',

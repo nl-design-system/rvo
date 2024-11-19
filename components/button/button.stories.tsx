@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Button } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Button } from './src/template';
 
 const meta: Meta<typeof Button> = {
   title: 'Componenten/Button',

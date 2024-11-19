@@ -1,6 +1,6 @@
-@import "../../../../components/helpers-text";
-@import "../../../../components/helpers-margin";
-@import "../../../../components/helpers-padding";
+@import "../../../../components/helpers-text/src";
+@import "../../../../components/helpers-margin/src";
+@import "../../../../components/helpers-padding/src";
 
 .rvo-theme {
   background-color: var(--rvo-document-background-color);
