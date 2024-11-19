@@ -1,4 +1,4 @@
-# `@nl-rvo/form-field-radio-button`
+# `@nl-rvo/css-form-field-radio-button`
 
 ## 1.0.0
 

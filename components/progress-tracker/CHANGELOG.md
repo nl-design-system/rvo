@@ -1,4 +1,4 @@
-# `@nl-rvo/progress-tracker`
+# `@nl-rvo/css-progress-tracker`
 
 ## 1.0.0
 

@@ -1,4 +1,4 @@
-# `@nl-rvo/paragraph`
+# `@nl-rvo/css-paragraph`
 
 ## 1.1.0
 

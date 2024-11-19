@@ -1,4 +1,4 @@
-# `@nl-rvo/link`
+# `@nl-rvo/css-link`
 
 ## 1.0.0
 

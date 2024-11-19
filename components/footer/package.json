@@ -2,8 +2,8 @@
   "version": "0.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/footer",
-  "description": "Footer component",
+  "name": "@nl-rvo/css-footer",
+  "description": "Footer CSS component",
   "keywords": [
     "nl-design-system",
     "css",

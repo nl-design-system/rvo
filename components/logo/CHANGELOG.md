@@ -1,4 +1,4 @@
-# `@nl-rvo/logo`
+# `@nl-rvo/css-logo`
 
 ## 1.0.0
 

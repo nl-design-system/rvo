@@ -1,4 +1,4 @@
-# `@nl-rvo/grid`
+# `@nl-rvo/css-grid`
 
 ## 1.2.1
 

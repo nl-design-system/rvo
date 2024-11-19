@@ -1,13 +1,13 @@
 {
-  "version": "1.1.0",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/padding-helpers",
-  "description": "Padding helpers",
+  "name": "@nl-rvo/css-helpers-padding",
+  "description": "CSS Helpers for padding",
   "keywords": [
     "nl-design-system",
     "css",
-    "padding-helpers"
+    "helpers-padding"
   ],
   "private": true,
   "publishConfig": {
@@ -16,6 +16,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/padding-helpers"
+    "directory": "components/helpers-padding"
   }
 }

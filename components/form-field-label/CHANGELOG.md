@@ -1,4 +1,4 @@
-# `@nl-rvo/form-field-label`
+# `@nl-rvo/css-form-field-label`
 
 ## 1.0.0
 

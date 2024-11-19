@@ -1,4 +1,4 @@
-# `@nl-rvo/form-checkbox-group`
+# `@nl-rvo/css-form-checkbox-group`
 
 ## 1.0.1
 

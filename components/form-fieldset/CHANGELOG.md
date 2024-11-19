@@ -1,4 +1,4 @@
-# `@nl-rvo/form-fieldset`
+# `@nl-rvo/css-form-fieldset`
 
 ## 1.0.1
 

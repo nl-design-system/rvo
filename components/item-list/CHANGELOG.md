@@ -1,4 +1,4 @@
-# `@nl-rvo/item-list`
+# `@nl-rvo/css-item-list`
 
 ## 1.0.1
 

@@ -1,4 +1,4 @@
-# `@nl-rvo/button-group`
+# `@nl-rvo/css-action-group`
 
 ## 1.1.0
 

@@ -1,4 +1,4 @@
-# `@nl-rvo/margin-helpers`
+# `@nl-rvo/css-helpers-margin`
 
 ## 1.1.0
 

@@ -1,4 +1,4 @@
-# `@nl-rvo/padding-helpers`
+# `@nl-rvo/css-helpers-padding`
 
 ## 1.1.0
 

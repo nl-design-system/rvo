@@ -1,4 +1,4 @@
-# `@nl-rvo/tag`
+# `@nl-rvo/css-tag`
 
 ## 1.0.0
 

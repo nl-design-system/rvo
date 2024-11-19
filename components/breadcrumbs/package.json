@@ -2,8 +2,8 @@
   "version": "1.2.0",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/breadcrumbs",
-  "description": "Breadcrumbs component",
+  "name": "@nl-rvo/css-breadcrumbs",
+  "description": "Breadcrumbs CSS component",
   "keywords": [
     "nl-design-system",
     "css",

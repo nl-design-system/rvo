@@ -1,4 +1,4 @@
-# `@nl-rvo/form-layout`
+# `@nl-rvo/css-form-layout`
 
 ## 1.0.0
 

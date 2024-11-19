@@ -1,4 +1,4 @@
-# `@nl-rvo/toggle`
+# `@nl-rvo/css-toggle`
 
 ## 1.0.0
 

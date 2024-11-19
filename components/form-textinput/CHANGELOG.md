@@ -1,4 +1,4 @@
-# `@nl-rvo/form-textinput`
+# `@nl-rvo/css-form-textinput`
 
 ## 1.1.0
 

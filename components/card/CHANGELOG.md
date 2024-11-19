@@ -1,4 +1,4 @@
-# `@nl-rvo/card`
+# `@nl-rvo/css-card`
 
 ## 1.0.1
 

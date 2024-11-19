@@ -1,4 +1,4 @@
-# `@nl-rvo/ordered-unordered-list`
+# `@nl-rvo/css-ordered-unordered-list`
 
 ## 1.0.0
 

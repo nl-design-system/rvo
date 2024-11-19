@@ -1,4 +1,4 @@
-# `@nl-rvo/hero`
+# `@nl-rvo/css-hero`
 
 ## 1.0.1
 

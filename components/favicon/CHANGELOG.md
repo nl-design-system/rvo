@@ -1,4 +1,4 @@
-# `@nl-rvo/favicon`
+# `@nl-rvo/css-favicon`
 
 ## 1.0.0
 

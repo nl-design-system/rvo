@@ -1,4 +1,4 @@
-# `@nl-rvo/menubar-mobile`
+# `@nl-rvo/css-menubar-mobile`
 
 ## 1.0.1
 

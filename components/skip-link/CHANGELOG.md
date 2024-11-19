@@ -1,4 +1,4 @@
-# `@nl-rvo/skip-link`
+# `@nl-rvo/css-skip-link`
 
 ## 1.0.0
 

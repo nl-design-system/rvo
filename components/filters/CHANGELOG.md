@@ -1,4 +1,4 @@
-# @nl-rvo/filters
+# `@nl-rvo/css-filters`
 
 ## 1.0.0
 

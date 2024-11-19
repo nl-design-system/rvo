@@ -1,4 +1,4 @@
-# `@nl-rvo/form-field-textarea`
+# `@nl-rvo/css-form-field-textarea`
 
 ## 1.1.0
 

@@ -1,4 +1,4 @@
-# `@nl-rvo/form-feedback`
+# `@nl-rvo/css-form-feedback`
 
 ## 1.0.0
 

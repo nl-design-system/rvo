@@ -1,4 +1,4 @@
-# `@nl-rvo/pagination`
+# `@nl-rvo/css-pagination`
 
 ## 1.0.1
 

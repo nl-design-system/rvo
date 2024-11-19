@@ -1,4 +1,4 @@
-# `@nl-rvo/alert`
+# `@nl-rvo/css-alert`
 
 ## 1.0.0
 

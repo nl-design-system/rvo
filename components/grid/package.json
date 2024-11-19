@@ -1,9 +1,9 @@
 {
-  "version": "1.2.1",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/grid",
-  "description": "Grid component",
+  "name": "@nl-rvo/css-grid",
+  "description": "Grid CSS component",
   "keywords": [
     "nl-design-system",
     "css",

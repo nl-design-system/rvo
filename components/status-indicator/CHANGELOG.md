@@ -1,4 +1,4 @@
-# `@nl-rvo/status-indicator`
+# `@nl-rvo/css-status-indicator`
 
 ## 1.0.0
 

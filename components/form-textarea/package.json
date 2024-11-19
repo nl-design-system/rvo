@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/form-textarea",
-  "description": "Form textarea component",
+  "name": "@nl-rvo/css-form-textarea",
+  "description": "Form textarea CSS component",
   "keywords": [
     "nl-design-system",
     "css",

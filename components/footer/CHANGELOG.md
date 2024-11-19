@@ -1,4 +1,4 @@
-# `@nl-rvo/footer`
+# `@nl-rvo/css-footer`
 
 ## 1.0.0
 

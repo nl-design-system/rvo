@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/button-css",
+  "name": "@nl-rvo/css-button",
   "description": "Button CSS component",
   "keywords": [
     "nl-design-system",
