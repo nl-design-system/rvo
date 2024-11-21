@@ -2,10 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import TextInput from '@nl-rvo/components/form-textinput/src/template';
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
+import TextInput from '../../form-textinput/src/template';
 import '../../form-textinput/src/index.scss';
 
 export interface ITimeInputProps extends HTMLAttributes<HTMLInputElement> {

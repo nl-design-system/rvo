@@ -33,7 +33,7 @@ export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
-  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
+  onInvalid?: (event: React.InvalidEvent<EventTarget & HTMLInputElement>) => void;
 }
 
 export const argTypes = {
