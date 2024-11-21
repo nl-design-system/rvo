@@ -1,5 +1,13 @@
 # @nl-rvo/uxpin-merge
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies [083aef3]
+- Updated dependencies [083aef3]
+  - @nl-rvo/design-tokens@1.4.2
+
 ## 1.1.1
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @nl-rvo/design-tokens
 
+## 1.4.2
+
+### Patch Changes
+
+- 083aef3: Made warning button hover text color black
+- 083aef3: Fixed switchup between 'hemelblauw' and 'logoblauw' colors
+
 ## 1.4.1
 
 ### Patch Changes

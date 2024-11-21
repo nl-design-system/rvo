@@ -1,24 +1,6 @@
 {
   "rvo": {
     "color": {
-      "logoblauw": {
-        "value": "#154273"
-      },
-      "logoblauw-150": {
-        "value": "#DCE3EA"
-      },
-      "logoblauw-300": {
-        "value": "#B9C7D5"
-      },
-      "logoblauw-450": {
-        "value": "#95AAC0"
-      },
-      "logoblauw-600": {
-        "value": "#738EAB"
-      },
-      "logoblauw-750": {
-        "value": "#409CD5"
-      },
       "hemelblauw": {
         "value": "#007BC7"
       },
@@ -35,6 +17,24 @@
         "value": "#66B0DD"
       },
       "hemelblauw-750": {
+        "value": "#409CD5"
+      },
+      "logoblauw": {
+        "value": "#154273"
+      },
+      "logoblauw-150": {
+        "value": "#DCE3EA"
+      },
+      "logoblauw-300": {
+        "value": "#B9C7D5"
+      },
+      "logoblauw-450": {
+        "value": "#95AAC0"
+      },
+      "logoblauw-600": {
+        "value": "#738EAB"
+      },
+      "logoblauw-750": {
         "value": "#507196"
       },
       "lichtblauw": {
@@ -110,7 +110,7 @@
         "value": "#6BA549"
       },
       "donkergeel": {
-        "value": "#ffb612"
+        "value": "#FFB612"
       },
       "donkergeel-150": {
         "value": "#FFF4DB"
