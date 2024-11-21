@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Tabs } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Tabs } from './src/template';
 
 const meta: Meta<typeof Tabs> = {
   title: 'Componenten/Tabs',

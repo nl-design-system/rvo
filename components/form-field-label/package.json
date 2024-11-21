@@ -1,9 +1,9 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/form-field-label",
-  "description": "Form field label component",
+  "name": "@nl-rvo/css-form-field-label",
+  "description": "Form field label CSS component",
   "keywords": [
     "nl-design-system",
     "css",

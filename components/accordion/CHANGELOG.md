@@ -1,4 +1,4 @@
-# `@nl-rvo/accordion`
+# `@nl-rvo/css-accordion`
 
 ## 1.0.1
 

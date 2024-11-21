@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Fieldset as FieldsetComponent } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Fieldset as FieldsetComponent } from './src/template';
 
 export default {
   title: 'Componenten/Form/Fieldset/States',

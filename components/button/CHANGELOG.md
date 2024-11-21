@@ -1,4 +1,4 @@
-# `@nl-rvo/button`
+# `@nl-rvo/css-button`
 
 ## 1.0.0
 

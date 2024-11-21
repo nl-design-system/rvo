@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Footer } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Footer } from './src/template';
 
 const meta: Meta<typeof Footer> = {
   title: 'Componenten/Footer',

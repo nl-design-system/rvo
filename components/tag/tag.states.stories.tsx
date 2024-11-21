@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Tag } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Tag } from './src/template';
 
 export default {
   title: 'Componenten/Tag/States',

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { RadioButton } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { RadioButton } from './src/template';
 
 const meta: Meta<typeof RadioButton> = {
   title: 'Componenten/Form/Radio button',

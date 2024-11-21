@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, RadioButton } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, RadioButton } from './src/template';
 
 export default {
   title: 'Componenten/Form/Radio button/States',

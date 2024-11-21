@@ -11,7 +11,7 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
-import '@nl-rvo/components/helpers-text/index.scss';
+import '@nl-rvo/components/helpers-text/src/index.scss';
 
 const Import = () => {
   return (

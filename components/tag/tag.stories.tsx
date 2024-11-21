@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Tag } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Tag } from './src/template';
 
 const meta: Meta<typeof Tag> = {
   title: 'Componenten/Tag',

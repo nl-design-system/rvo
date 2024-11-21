@@ -1,4 +1,4 @@
-# `@nl-rvo/form-field-fileinput`
+# `@nl-rvo/css-form-field-fileinput`
 
 ## 1.0.1
 

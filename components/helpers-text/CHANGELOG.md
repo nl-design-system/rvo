@@ -1,4 +1,4 @@
-# `@nl-rvo/text-helpers`
+# `@nl-rvo/helpers-text`
 
 ## 1.0.0
 

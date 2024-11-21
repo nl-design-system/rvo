@@ -1,4 +1,4 @@
-# `@nl-rvo/max-width-layout`
+# `@nl-rvo/css-max-width-layout`
 
 ## 1.1.0
 

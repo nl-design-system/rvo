@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Hr } from './template';
+import { Hr } from './src/template';
 
 const meta: Meta<typeof Hr> = {
   title: 'Componenten/Horizontal rule',

@@ -1,4 +1,4 @@
-# `@nl-rvo/menubar`
+# `@nl-rvo/css-menubar`
 
 ## 1.0.1
 

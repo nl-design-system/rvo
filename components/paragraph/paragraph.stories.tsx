@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Paragraph } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Paragraph } from './src/template';
 
 const meta: Meta<typeof Paragraph> = {
   title: 'Componenten/Paragraph',

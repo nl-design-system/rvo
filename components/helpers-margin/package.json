@@ -1,13 +1,13 @@
 {
-  "version": "1.1.0",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/margin-helpers",
-  "description": "Margin helpers",
+  "name": "@nl-rvo/css-helpers-margin",
+  "description": "CSS Helpers for margin",
   "keywords": [
     "nl-design-system",
     "css",
-    "margin-helpers"
+    "helpers-margin"
   ],
   "private": true,
   "publishConfig": {
@@ -16,6 +16,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/margin-helpers"
+    "directory": "components/helpers-margin"
   }
 }

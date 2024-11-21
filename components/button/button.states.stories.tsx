@@ -1,4 +1,4 @@
-import { AllButtonKinds, argTypes } from './template';
+import { AllButtonKinds, argTypes } from './src/template';
 
 export default {
   title: 'Componenten/Button/States',

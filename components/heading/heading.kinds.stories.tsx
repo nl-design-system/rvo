@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Heading } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Heading } from './src/template';
 
 export default {
   title: 'Componenten/Heading/Kinds',

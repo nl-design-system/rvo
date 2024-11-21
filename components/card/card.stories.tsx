@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Card } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Card } from './src/template';
 
 const meta: Meta<typeof Card> = {
   title: 'Componenten/Card',
@@ -19,4 +19,14 @@ export default meta;
 
 type Story = StoryObj<typeof Card>;
 
-export const Default: Story = { args: defaultArgs, name: 'Card' };
+const Container = ({ children }) => <div style={{ width: '500px' }}>{children}</div>;
+
+export const Default: Story = {
+  args: { ...defaultArgs, outline: true },
+  name: 'Card',
+  render: (args) => (
+    <Container>
+      <Card {...args} />
+    </Container>
+  ),
+};

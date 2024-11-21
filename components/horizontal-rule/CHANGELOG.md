@@ -1,4 +1,4 @@
-# `@nl-rvo/horizontal-rule`
+# `@nl-rvo/css-horizontal-rule`
 
 ## 1.0.0
 

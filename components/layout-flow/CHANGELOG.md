@@ -1,4 +1,4 @@
-# `@nl-rvo/layout-flow`
+# `@nl-rvo/css-layout-flow`
 
 ## 1.1.2
 

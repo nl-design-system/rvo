@@ -1,4 +1,4 @@
-# `@nl-rvo/table`
+# `@nl-rvo/css-table`
 
 ## 1.0.0
 

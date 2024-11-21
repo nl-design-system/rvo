@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { List } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { List } from './src/template';
 
 const meta: Meta<typeof List> = {
   title: 'Componenten/Ordered & unordered list',

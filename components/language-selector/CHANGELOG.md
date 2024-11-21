@@ -1,4 +1,4 @@
-# @nl-rvo/language-selector
+# `@nl-rvo/css-language-selector`
 
 ## 1.0.0
 

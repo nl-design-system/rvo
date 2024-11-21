@@ -1,6 +1,6 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, MenuBar } from './template';
-import { IconType } from '../icon/types';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, MenuBar } from './src/template';
+import { IconType } from '../icon/src/types';
 
 export default {
   title: 'Componenten/Menubar/Divider',

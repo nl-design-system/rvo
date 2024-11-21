@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Toggle } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Toggle } from './src/template';
 
 export default {
   title: 'Componenten/Toggle/States',

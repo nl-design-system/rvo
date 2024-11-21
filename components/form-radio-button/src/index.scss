@@ -1,0 +1,62 @@
+/* stylelint-disable no-descending-specificity */
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "../../layout-flow/src";
+
+.rvo-radio-button {
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
+}
+
+// Overrides
+.utrecht-radio-button {
+  align-self: flex-start;
+  flex: 24px 0 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+.utrecht-radio-button:checked,
+.utrecht-radio-button--checked {
+  background: var(--rvo-radio-button-checked-background);
+}
+
+// Disabled state
+.utrecht-radio-button--disabled,
+.utrecht-radio-button:disabled {
+  background: none;
+  border-color: var(--utrecht-radio-button-disabled-border-color);
+  + .rvo-radio-button__label {
+    color: var(--rvo-radio-button-label-disabled-color);
+  }
+}
+
+.utrecht-radio-button:not(
+    :disabled,
+    [aria-disabled="true"],
+    .utrecht-radio-button--disabled,
+    .utrecht-radio-button--invalid
+  ) {
+  // Hover state
+  &.utrecht-radio-button:hover,
+  &.rvo-radio-button--hover,
+  + .rvo-radio-button__label:hover {
+    border-color: var(--rvo-radio-button-hover-border-color);
+  }
+
+  // Focus state
+  &:focus,
+  &:focus-visible,
+  &.utrecht-radio-button--focus-visible {
+    outline-color: var(--utrecht-focus-outline-color);
+    outline-offset: var(--utrecht-focus-outline-offset);
+    outline-style: var(--utrecht-focus-outline-style);
+    outline-width: var(--utrecht-focus-outline-width);
+  }
+}

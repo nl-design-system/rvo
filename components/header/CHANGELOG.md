@@ -1,4 +1,4 @@
-# `@nl-rvo/header`
+# `@nl-rvo/css-header`
 
 ## 1.0.2
 

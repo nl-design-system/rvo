@@ -1,4 +1,4 @@
-# `@nl-rvo/scrollable-content`
+# `@nl-rvo/css-scrollable-content`
 
 ## 1.1.0
 

@@ -1,4 +1,4 @@
-# `@nl-rvo/form-field-dateinput`
+# `@nl-rvo/css-form-field-dateinput`
 
 ## 1.0.1
 

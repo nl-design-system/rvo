@@ -1,0 +1,140 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "../../layout-flow/src";
+
+.rvo-link {
+  background-color: var(--rvo-link-background-color);
+  color: var(--rvo-link-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: var(--rvo-link-font-weight);
+  text-decoration-line: var(--rvo-link-text-decoration);
+  text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
+  text-underline-offset: var(--rvo-link-text-underline-offset);
+}
+
+.rvo-link.rvo-link--normal,
+.rvo-link.rvo-link--normal:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal:active,
+.rvo-link.rvo-link--normal.rvo-link--active,
+.rvo-link.rvo-link--normal:focus,
+.rvo-link.rvo-link--normal:focus-visible,
+.rvo-link.rvo-link--normal.rvo-link--focus {
+  font-weight: var(--rvo-font-weight-normal);
+}
+
+.rvo-link--no-underline:not(:focus, :hover, .rvo-link--hover, .rvo-link--focus) {
+  text-decoration: none;
+}
+
+.rvo-link--with-icon {
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
+}
+
+// Hover
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  background-color: var(--rvo-link-hover-background-color);
+  color: var(--rvo-link-hover-color);
+  font-weight: var(--rvo-link-hover-font-weight);
+  text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
+}
+
+.rvo-link--logoblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  color: var(--rvo-color-logoblauw);
+}
+
+// Active
+.rvo-link:active,
+.rvo-link--active {
+  background-color: var(--rvo-link-active-background-color);
+  color: var(--rvo-link-active-color);
+  font-weight: var(--rvo-link-active-font-weight);
+  text-decoration-thickness: var(--rvo-link-active-text-decoration-thickness);
+}
+
+.rvo-link--logoblauw:active {
+  color: var(--rvo-color-logoblauw);
+}
+
+// Focus
+.rvo-link:focus,
+.rvo-link:focus-visible,
+.rvo-link--focus {
+  color: var(--rvo-link-focus-color);
+  font-weight: var(--rvo-link-focus-font-weight);
+  outline: none;
+  text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
+}
+
+// Icon
+.rvo-link__icon {
+  background-color: var(--rvo-link-icon-background-color);
+}
+
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon,
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon {
+  background-color: var(--rvo-link-hover-icon-background-color);
+}
+
+.rvo-link:active .rvo-link__icon,
+.rvo-link--active .rvo-link__icon {
+  background-color: var(--rvo-link-active-icon-background-color);
+}
+
+.rvo-link:focus .rvo-link__icon,
+.rvo-link:focus-visible .rvo-link__icon,
+.rvo-link--focus .rvo-link__icon {
+  background-color: var(--rvo-link-focus-icon-background-color);
+}
+
+.rvo-link--donkerblauw {
+  color: var(--rvo-color-donkerblauw);
+}
+
+.rvo-link--logoblauw {
+  color: var(--rvo-color-logoblauw);
+}
+
+.rvo-link--zwart {
+  color: var(--rvo-color-zwart);
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+    color: var(--rvo-color-donkerblauw);
+  }
+}
+
+.rvo-link--wit {
+  color: var(--rvo-color-wit);
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+    color: var(--rvo-color-grijs-100);
+  }
+}
+
+.rvo-link--grijs-700 {
+  color: var(--rvo-color-grijs-700);
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+    color: var(--rvo-color-donkerblauw);
+  }
+}
+
+.rvo-link--full-container::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

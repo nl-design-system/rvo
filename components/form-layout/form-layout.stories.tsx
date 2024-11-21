@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { FormLayout } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { FormLayout } from './src/template';
 
 const meta: Meta<typeof FormLayout> = {
   title: 'Componenten/Form/Form layout',

@@ -4,8 +4,9 @@ hide_title: false
 slug: .
 ---
 
+import { IconOverview } from "./IconOverview";
 import Documentation from "./README.md";
-import Icon from "./template.tsx";
+import Icon from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
 <ComponentExample>
@@ -13,3 +14,5 @@ import ComponentExample from "../../packages/docusaurus/src/components/Component
 </ComponentExample>
 
 <Documentation />
+
+<IconOverview includeNavigation={false} downloadable={false} />

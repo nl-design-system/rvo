@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { DateInputField } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { DateInputField } from './src/template';
 
 const meta: Meta<typeof DateInputField> = {
   title: 'Componenten/Form/Date input field',

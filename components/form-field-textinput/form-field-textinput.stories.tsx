@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { TextInputField } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { TextInputField } from './src/template';
 
 const meta: Meta<typeof TextInputField> = {
   title: 'Componenten/Form/Text input field',

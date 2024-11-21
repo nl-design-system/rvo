@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/text-helpers",
-  "description": "Text helpers",
+  "name": "@nl-rvo/css-helpers-text",
+  "description": "CSS Helpers for text",
   "keywords": [
     "nl-design-system",
     "css",
-    "text-helpers"
+    "helpers-text"
   ],
   "private": true,
   "publishConfig": {
@@ -16,6 +16,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/text-helpers"
+    "directory": "components/helpers-text"
   }
 }

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { Fieldset } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { Fieldset } from './src/template';
 
 const meta: Meta<typeof Fieldset> = {
   title: 'Componenten/Form/Fieldset',

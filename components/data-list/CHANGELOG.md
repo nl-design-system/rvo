@@ -1,4 +1,4 @@
-# `@nl-rvo/data-list`
+# `@nl-rvo/css-data-list`
 
 ## 1.1.0
 

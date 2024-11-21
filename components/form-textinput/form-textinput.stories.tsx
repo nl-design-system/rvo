@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { TextInput } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { TextInput } from './src/template';
 
 const meta: Meta<typeof TextInput> = {
   title: 'Componenten/Form/Text input',

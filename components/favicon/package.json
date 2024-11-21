@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/favicon",
-  "description": "Favicon component",
+  "name": "@nl-rvo/css-favicon",
+  "description": "Favicon CSS component",
   "keywords": [
     "nl-design-system",
     "css",

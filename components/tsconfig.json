@@ -15,6 +15,7 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
+      "@nl-rvo/components/*": ["./*"],
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
       "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
       "react-dom/server": ["../packages/storybook/node_modules/react-dom/server"],

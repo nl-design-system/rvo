@@ -5,11 +5,12 @@ slug: .
 ---
 
 import Documentation from "./README.md";
-import Favicon from "./template.tsx";
+import Favicon from "./src/template";
+import FavIconUrl from "../../documentation/demopages/common/favicon.ico";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
 <ComponentExample>
-  <Favicon />
+  <Favicon src={FavIconUrl} />
 </ComponentExample>
 
 <Documentation />

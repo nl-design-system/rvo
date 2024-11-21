@@ -1,4 +1,4 @@
-# `@nl-rvo/form-timeinput`
+# `@nl-rvo/css-form-timeinput`
 
 ## 1.0.1
 

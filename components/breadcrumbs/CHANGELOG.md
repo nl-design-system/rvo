@@ -1,4 +1,4 @@
-# `@nl-rvo/breadcrumbs`
+# `@nl-rvo/css-breadcrumbs`
 
 ## 1.2.0
 

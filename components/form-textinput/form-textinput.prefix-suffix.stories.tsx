@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, TextInput } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, TextInput } from './src/template';
 
 export default {
   title: 'Componenten/Form/Text input/Prefix Suffix',

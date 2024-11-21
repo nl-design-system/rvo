@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { ProgressTracker } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { ProgressTracker } from './src/template';
 
 const meta: Meta<typeof ProgressTracker> = {
   title: 'Componenten/Progress Tracker',

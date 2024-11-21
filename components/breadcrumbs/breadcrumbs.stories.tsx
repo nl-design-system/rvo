@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { argTypes, Breadcrumbs } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, Breadcrumbs } from './src/template';
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Componenten/Breadcrumbs',

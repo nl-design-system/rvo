@@ -1,4 +1,4 @@
-# `@nl-rvo/icon`
+# `@nl-rvo/css-icon`
 
 ## 1.0.0
 

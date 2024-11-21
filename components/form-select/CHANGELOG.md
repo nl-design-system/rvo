@@ -1,4 +1,4 @@
-# `@nl-rvo/form-select`
+# `@nl-rvo/css-form-select`
 
 ## 1.0.1
 

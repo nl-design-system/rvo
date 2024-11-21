@@ -13,7 +13,7 @@ import {
   TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
-import '@nl-rvo/components/helpers-text/index.scss';
+import '@nl-rvo/components/helpers-text/src/index.scss';
 
 const Uitvoerder = () => {
   return (

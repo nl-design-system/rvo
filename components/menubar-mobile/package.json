@@ -2,8 +2,8 @@
   "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/menubar-mobile",
-  "description": "Menubar mobile component",
+  "name": "@nl-rvo/css-menubar-mobile",
+  "description": "Menubar mobile CSS component",
   "keywords": [
     "nl-design-system",
     "css",

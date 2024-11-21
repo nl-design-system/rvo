@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './defaultArgs';
-import { DataList } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { DataList } from './src/template';
 
 const meta: Meta<typeof DataList> = {
   title: 'Componenten/Data list',

@@ -1,4 +1,4 @@
-# `@nl-rvo/sidebar-layout`
+# `@nl-rvo/css-sidebar-layout`
 
 ## 1.1.0
 

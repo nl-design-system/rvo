@@ -1,4 +1,4 @@
-import { argTypes, Table } from './template';
+import { argTypes, Table } from './src/template';
 
 export default {
   title: 'Componenten/Table/Column sorting',

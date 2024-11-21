@@ -1,4 +1,4 @@
-# `@nl-rvo/expandable-content`
+# `@nl-rvo/css-expandable-content`
 
 ## 1.1.0
 

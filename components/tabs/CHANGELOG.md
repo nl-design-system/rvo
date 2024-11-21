@@ -1,4 +1,4 @@
-# `@nl-rvo/tabs`
+# `@nl-rvo/css-tabs`
 
 ## 1.0.0
 

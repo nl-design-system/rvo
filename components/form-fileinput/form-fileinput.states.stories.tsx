@@ -1,5 +1,5 @@
-import { defaultArgs } from './defaultArgs';
-import { argTypes, FileInput } from './template';
+import { defaultArgs } from './src/defaultArgs';
+import { argTypes, FileInput } from './src/template';
 
 export default {
   title: 'Componenten/Form/File input/States',

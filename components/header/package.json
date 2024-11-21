@@ -1,9 +1,9 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/header",
-  "description": "Header component",
+  "name": "@nl-rvo/css-header",
+  "description": "Header CSS component",
   "keywords": [
     "nl-design-system",
     "css",

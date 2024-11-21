@@ -2,8 +2,8 @@
   "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/form-checkbox",
-  "description": "Checkbox component",
+  "name": "@nl-rvo/css-form-checkbox",
+  "description": "Checkbox CSS component",
   "keywords": [
     "nl-design-system",
     "css",

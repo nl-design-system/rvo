@@ -1,9 +1,9 @@
 {
-  "version": "1.1.2",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
-  "name": "@nl-rvo/layout-flow",
-  "description": "Layout column row component",
+  "name": "@nl-rvo/css-layout-flow",
+  "description": "Layout column row CSS component",
   "keywords": [
     "nl-design-system",
     "css",
