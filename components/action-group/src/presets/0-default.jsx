@@ -1,4 +1,4 @@
-import Button from '../../button/template';
+import Button from '../../../button/src/template';
 import { defaultArgs } from '../defaultArgs';
 import ActionGroup from '../template';
 
