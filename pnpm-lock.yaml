@@ -169,11 +169,23 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
-  components/action-group: {}
+  components/action-group:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/alert: {}
+  components/alert:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/breadcrumbs: {}
+  components/breadcrumbs:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
   components/button:
     devDependencies:
@@ -181,127 +193,351 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
-  components/card: {}
+  components/card:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/data-list: {}
+  components/data-list:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/expandable-content: {}
+  components/expandable-content:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
   components/favicon: {}
 
   components/filters: {}
 
-  components/footer: {}
+  components/footer:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
   components/form: {}
 
-  components/form-checkbox: {}
+  components/form-checkbox:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-checkbox-group: {}
+  components/form-checkbox-group:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-dateinput: {}
+  components/form-dateinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-feedback: {}
+  components/form-feedback:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field: {}
+  components/form-field:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-checkbox: {}
+  components/form-field-checkbox:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-dateinput: {}
+  components/form-field-dateinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-fileinput: {}
+  components/form-field-fileinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-label: {}
+  components/form-field-label:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-radio-button: {}
+  components/form-field-radio-button:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-select: {}
+  components/form-field-select:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-textarea: {}
+  components/form-field-textarea:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-textinput: {}
+  components/form-field-textinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-field-timeinput: {}
+  components/form-field-timeinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-fieldset: {}
+  components/form-fieldset:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-fileinput: {}
+  components/form-fileinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-layout: {}
+  components/form-layout:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-radio-button: {}
+  components/form-radio-button:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-radio-button-group: {}
+  components/form-radio-button-group:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-select: {}
+  components/form-select:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-textarea: {}
+  components/form-textarea:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-textinput: {}
+  components/form-textinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/form-timeinput: {}
+  components/form-timeinput:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/grid: {}
+  components/grid:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/header: {}
+  components/header:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/heading: {}
+  components/heading:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/helpers-margin: {}
+  components/helpers-margin:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/helpers-padding: {}
+  components/helpers-padding:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/helpers-text: {}
+  components/helpers-text:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/hero: {}
+  components/hero:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/horizontal-rule: {}
+  components/horizontal-rule:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/icon: {}
+  components/icon:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/item-list: {}
+  components/item-list:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
   components/language-selector: {}
 
-  components/layout-flow: {}
+  components/layout-flow:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/link: {}
+  components/link:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/logo: {}
+  components/logo:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/max-width-layout: {}
+  components/max-width-layout:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/menubar: {}
+  components/menubar:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/menubar-mobile: {}
+  components/menubar-mobile:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
   components/modal: {}
 
-  components/ordered-unordered-list: {}
+  components/ordered-unordered-list:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/pagination: {}
+  components/pagination:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/paragraph: {}
+  components/paragraph:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/progress-tracker: {}
+  components/progress-tracker:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/scrollable-content: {}
+  components/scrollable-content:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/sidebar-layout: {}
+  components/sidebar-layout:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/skip-link: {}
+  components/skip-link:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/status-icon: {}
+  components/status-icon:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/status-indicator: {}
+  components/status-indicator:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/table: {}
+  components/table:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/tabs: {}
+  components/tabs:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/tag: {}
+  components/tag:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
-  components/toggle: {}
+  components/toggle:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
 
   documentation:
     devDependencies:
@@ -17627,7 +17863,7 @@ snapshots:
       react-dev-utils: 12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1)
       terser-webpack-plugin: 5.3.10(webpack@5.96.1)
       tslib: 2.6.2
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.0))(webpack@5.96.1)
       webpack: 5.96.1(webpack-cli@5.1.4)
       webpackbar: 6.0.1(webpack@5.96.1)
     transitivePeerDependencies:
@@ -17747,7 +17983,7 @@ snapshots:
       '@slorber/remark-comment': 1.0.0
       escape-html: 1.0.3
       estree-util-value-to-estree: 3.2.1
-      file-loader: 6.2.0(webpack@5.96.0)
+      file-loader: 6.2.0(webpack@5.96.1)
       fs-extra: 11.2.0
       image-size: 1.0.2
       mdast-util-mdx: 3.0.0
@@ -17763,7 +17999,7 @@ snapshots:
       tslib: 2.6.2
       unified: 11.0.4
       unist-util-visit: 5.0.0
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.0))(webpack@5.96.1)
       vfile: 6.0.1
       webpack: 5.96.1(webpack-cli@5.1.4)
     transitivePeerDependencies:
@@ -18308,7 +18544,7 @@ snapshots:
       resolve-pathname: 3.0.0
       shelljs: 0.8.5
       tslib: 2.6.2
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.0))(webpack@5.96.1)
       utility-types: 3.11.0
       webpack: 5.96.1(webpack-cli@5.1.4)
     optionalDependencies:
@@ -25259,6 +25495,7 @@ snapshots:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
       webpack: 5.96.0
+    optional: true
 
   file-loader@6.2.0(webpack@5.96.1):
     dependencies:
@@ -33121,6 +33358,15 @@ snapshots:
   urix@0.1.0: {}
 
   url-join@4.0.1: {}
+
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.0))(webpack@5.96.1):
+    dependencies:
+      loader-utils: 2.0.4
+      mime-types: 2.1.35
+      schema-utils: 3.3.0
+      webpack: 5.96.1(webpack-cli@5.1.4)
+    optionalDependencies:
+      file-loader: 6.2.0(webpack@5.96.0)
 
   url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1):
     dependencies:
