@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.4.3
+
+### Patch Changes
+
+- e86c11d: Added proper textbox size (xs/sm/md/lg/max)
+
 ## 1.4.2
 
 ### Patch Changes
