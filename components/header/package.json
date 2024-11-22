@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
   "name": "@nl-rvo/css-header",
@@ -9,13 +9,26 @@
     "css",
     "header"
   ],
-  "private": true,
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "design-tokens.json",
+    "*.md"
+  ],
+  "main": "dist/index.css",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
     "directory": "components/header"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*"
   }
 }

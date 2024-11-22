@@ -9,13 +9,26 @@
     "css",
     "action-group"
   ],
-  "private": true,
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "design-tokens.json",
+    "*.md"
+  ],
+  "main": "dist/index.css",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
     "directory": "components/action-group"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*"
   }
 }
