@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
-import '../../layout-flow/src/index.scss';
 
 export interface IGridProps {
   gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';

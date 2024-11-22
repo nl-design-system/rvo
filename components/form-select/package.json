@@ -30,5 +30,8 @@
   },
   "devDependencies": {
     "@nl-rvo/build-utils-css": "workspace:*"
+  },
+  "dependencies": {
+    "@utrecht/select-css": "1.6.0"
   }
 }

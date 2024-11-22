@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import Heading from '../../heading/src/template';
 import Icon from '../../icon/src/template';
 import Link from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
@@ -129,7 +130,7 @@ export const Card: React.FC<ICardProps> = ({
       <ContentContainer {...contentContainerProps}>
         <div className="rvo-card__content">
           {title && (
-            <h3 className="utrecht-heading-3">
+            <Heading type="h3">
               {link && link.length > 0 ? (
                 <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
                   {parseContentMarkup(title)}
@@ -137,7 +138,7 @@ export const Card: React.FC<ICardProps> = ({
               ) : (
                 <>{parseContentMarkup(title)}</>
               )}
-            </h3>
+            </Heading>
           )}
           {contentMarkup}
         </div>
