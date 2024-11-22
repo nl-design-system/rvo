@@ -1,9 +1,9 @@
-@import "@utrecht/heading-1-css";
-@import "@utrecht/heading-2-css";
-@import "@utrecht/heading-3-css";
-@import "@utrecht/heading-4-css";
-@import "@utrecht/heading-5-css";
-@import "@utrecht/heading-6-css";
+@import "~@utrecht/heading-1-css";
+@import "~@utrecht/heading-2-css";
+@import "~@utrecht/heading-3-css";
+@import "~@utrecht/heading-4-css";
+@import "~@utrecht/heading-5-css";
+@import "~@utrecht/heading-6-css";
 
 .utrecht-heading-1 {
   margin-block-end: var(--utrecht-heading-1-margin-block-end);
