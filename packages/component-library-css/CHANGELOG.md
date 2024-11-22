@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 2.0.0
+
+### Major Changes
+
+- e86c11d: Fixed card/hero image src, fixed card image sizes, fixed text/date/time input sizes (xs, sm, md, lg, max), date input prefix+suffix props, fixed optional/required field label margin, added callback for Toggle
+
 ## 1.9.0
 
 ### Minor Changes
