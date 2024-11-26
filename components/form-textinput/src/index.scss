@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "~@utrecht/textbox-css/dist/index.css";
+@use "~@utrecht/textbox-css/dist/index.css" as *;
 
 .utrecht-textbox {
   height: 45px;

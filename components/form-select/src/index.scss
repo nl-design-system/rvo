@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "~@utrecht/select-css/dist/index.css";
+@use "~@utrecht/select-css/dist/index.css" as *;
 
 .rvo-select-wrapper {
   position: relative;

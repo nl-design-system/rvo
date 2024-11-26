@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "../../layout-flow/src";
-@import "../../link/src";
+@use "../../layout-flow/src" as *;
+@use "../../link/src" as *;
 
 .rvo-accordion .rvo-accordion__item[open] {
   border-left-color: var(--rvo-accordion-border-color);

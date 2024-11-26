@@ -17,6 +17,28 @@ function getPackageDir(filepath) {
   }
 }
 
+const webpackStyleImporter = {
+  findFileUrl(url, { _containingUrl }) {
+    // Handle ~ imports
+    if (url.startsWith('~')) {
+      const normalizedUrl = url.slice(1); // Remove the ~ prefix
+      try {
+        // Extract the base path by removing everything from /src
+        const basePath = _containingUrl.pathname.split('/src')[0];
+        // Construct the resolved path
+        const resolvedPath = path.join(basePath, 'node_modules', normalizedUrl);
+
+        return new URL(`file://${resolvedPath}`);
+      } catch (error) {
+        console.warn(`Warning: Could not resolve ${url}`);
+        return null;
+      }
+    }
+    // Let Sass handle regular imports
+    return null;
+  },
+};
+
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
@@ -50,7 +72,20 @@ const config: StorybookConfig = {
     const scssRule = config.module.rules.find(
       (rule: any) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/',
     ) as any;
-    scssRule.use = ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'];
+    scssRule.use = [
+      'style-loader',
+      'css-loader',
+      {
+        loader: 'sass-loader',
+        options: {
+          sassOptions: {
+            api: 'modern',
+            implementation: 'sass-embedded',
+            importers: [webpackStyleImporter],
+          },
+        },
+      },
+    ];
 
     // Put assets in predicatable location to make them downloadable
     const svgRule = config.module.rules.find((rule: any) => rule.type === 'asset/resource') as any;
@@ -59,6 +94,7 @@ const config: StorybookConfig = {
       const filepath = path.dirname(pathData.filename).match(/(?<=assets\/).*/)[0];
       return `static/${filepath}/[name][ext][query]`;
     };
+
     return {
       ...config,
       performance: {

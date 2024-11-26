@@ -14,7 +14,7 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   return (
     <>
-      <Header link={logo.href} />
+      {logo && logo.href && <Header link={logo.href} />}
       <nav
         ref={navbarRef}
         aria-label={translate({
@@ -35,14 +35,14 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
         )}
       >
         <div className={styles.menubar}>
-          <MenuBar size="md" maxWidth="lg" linkColor="logoblauw" maxWidthInlinePadding="md">
-            {children}
-          </MenuBar>
+          {children && (
+            <MenuBar size="md" maxWidth="lg" linkColor="logoblauw" maxWidthInlinePadding="md">
+              {children}
+            </MenuBar>
+          )}
         </div>
         {!mobileSidebar.disabled && (
-          <div className={styles.menubarMobile}>
-            <MobileMenuBar>{children}</MobileMenuBar>
-          </div>
+          <div className={styles.menubarMobile}>{children && <MobileMenuBar>{children}</MobileMenuBar>}</div>
         )}
       </nav>
     </>

@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "../../layout-flow/src";
+@use "../../layout-flow/src";
 
 .rvo-form-feedback {
   line-height: var(--rvo-form-feedback-line-height);
