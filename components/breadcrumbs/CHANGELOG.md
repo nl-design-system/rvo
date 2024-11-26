@@ -4,6 +4,12 @@
 
 ### Minor Changes
 
+- 0cdf4eb: Remove utrecht-components-css reference and include utrecht css per component when needed
+
+## 1.2.0
+
+### Minor Changes
+
 - c029d6a: Renamed url to link in BreadcrumbItem
 
 ## 1.1.0
