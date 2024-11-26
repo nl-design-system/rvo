@@ -2,8 +2,9 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
-@import "../../layout-flow/src";
+@use "~@utrecht/form-field-css/dist/index.css" as *;
+@use "~@utrecht/form-field-description-css/dist/index.css" as *;
+@use "../../layout-flow/src" as *;
 
 .rvo-form-field {
   clear: both;

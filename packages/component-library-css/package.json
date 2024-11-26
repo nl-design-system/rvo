@@ -8,6 +8,9 @@
     "rvo",
     "nl-design-system"
   ],
+  "files": [
+    "dist/"
+  ],
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -19,15 +22,23 @@
   },
   "devDependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
-    "@utrecht/component-library-css": "3.0.1-alpha.22",
-    "node-sass-package-importer": "5.3.3",
+    "@types/mdx": "2.0.11",
+    "clsx": "2.1.0",
+    "cssnano": "7.0.6",
     "rimraf": "5.0.5",
+    "rollup": "4.22.4",
+    "rollup-plugin-filesize": "10.0.0",
+    "rollup-plugin-postcss": "4.0.2",
     "sass": "1.71.1"
   },
+  "type": "module",
   "scripts": {
-    "prebuild": "npm run clean",
-    "build": "sass src/:dist/ --load-path=./node_modules/ --load-path=../../node_modules/ --no-source-map --style=compressed",
+    "build": "rimraf dist && rollup -c",
+    "build:watch": "rollup -c --watch",
     "clean": "rimraf dist/"
   },
-  "main": "dist/index.css"
+  "main": "dist/index.css",
+  "dependencies": {
+    "modern-normalize": "3.0.1"
+  }
 }

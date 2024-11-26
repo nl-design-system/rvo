@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
-import '../../form-textinput/src/index.scss';
 import { defaultArgs } from './defaultArgs';
 import TextInput from '../../form-textinput/src/template';
 

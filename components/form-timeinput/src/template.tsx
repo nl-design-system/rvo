@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import TextInput from '../../form-textinput/src/template';
-import '../../form-textinput/src/index.scss';
 
 export interface ITimeInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;

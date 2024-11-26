@@ -5,7 +5,6 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
-import '../../ordered-unordered-list/src/index.scss';
 import TabItem, { ITabItemProps } from './tab-item/template';
 
 export interface ITabsProps {

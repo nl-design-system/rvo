@@ -2,6 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "~@utrecht/icon/dist/index.css" as *;
+
 .rvo-icon {
   background-color: var(--utrecht-icon-color, currentColor);
 }

@@ -1,3 +1,10 @@
+@use "~@utrecht/heading-1-css/dist/index.css" as *;
+@use "~@utrecht/heading-2-css/dist/index.css" as *;
+@use "~@utrecht/heading-3-css/dist/index.css" as *;
+@use "~@utrecht/heading-4-css/dist/index.css" as *;
+@use "~@utrecht/heading-5-css/dist/index.css" as *;
+@use "~@utrecht/heading-6-css/dist/index.css" as *;
+
 .utrecht-heading-1 {
   margin-block-end: var(--utrecht-heading-1-margin-block-end);
   margin-block-start: var(--utrecht-heading-1-margin-block-start);

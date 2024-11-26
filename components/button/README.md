@@ -1,6 +1,6 @@
 # Button
 
-## Wanneer gebruik je component
+## Wanneer gebruik je het component
 
 Nog aan te vullen
 

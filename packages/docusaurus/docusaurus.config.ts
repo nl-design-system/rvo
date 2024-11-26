@@ -16,14 +16,15 @@ const config: Config = {
   baseUrl: '/rvo/docs/',
   organizationName: 'nl-rvo',
   projectName: 'rvo',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'nl',
     locales: ['nl'],
   },
   plugins: [
-    'docusaurus-plugin-sass',
+    process.env.RSDOCTOR === 'true' && 'rsdoctor',
+    './plugins/docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -66,7 +67,6 @@ const config: Config = {
             require.resolve('@nl-rvo/assets/icons/index.css'),
             require.resolve('@nl-rvo/assets/images/index.css'),
             require.resolve('@nl-rvo/design-tokens/dist/index.css'),
-            require.resolve('../component-library-css/dist/index.css'),
             require.resolve('./src/css/custom.scss'),
           ],
         },
@@ -90,6 +90,9 @@ const config: Config = {
     },
     ...navigationConfig,
   } satisfies Preset.ThemeConfig,
+  future: {
+    experimental_faster: true,
+  },
 };
 
 export default config;

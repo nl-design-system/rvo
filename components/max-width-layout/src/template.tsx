@@ -49,7 +49,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
 }: IMaxWidthLayoutProps) => {
   let parsedContent = parseContentMarkup(children || content);
 
-  if (typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
+  if (!children && typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
     let maxWidth;
     switch (size) {
       case 'sm':

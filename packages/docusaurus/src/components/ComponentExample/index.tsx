@@ -1,6 +1,5 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { ExpandableContent } from '@nl-rvo/components';
-import { Link } from '@nl-rvo/components';
+import { ExpandableContent, Link } from '@nl-rvo/components';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
 import prettierBabel from 'prettier/parser-babel';

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "../../layout-flow/src";
+@use "../../layout-flow/src";
 
 .rvo-tag {
   border-radius: var(--rvo-tag-border-radius);

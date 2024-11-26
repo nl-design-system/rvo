@@ -31,5 +31,9 @@
   },
   "devDependencies": {
     "@nl-rvo/build-utils-css": "workspace:*"
+  },
+  "dependencies": {
+    "@utrecht/button-css": "2.1.0",
+    "@utrecht/focus-ring-css": "2.2.0"
   }
 }
