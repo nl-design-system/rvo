@@ -36,10 +36,12 @@ Een tabel bestaat uit:
 - Tekst in een cell begint met een hoofdletter
 - Data in een cell bevat geen meeteenheid. Die zet je in de header.
 - Wees consistent in het gebruik van decimalen.
+- De sortering wordt toegepast op alle items en over alle pagina’s als er paginering is
+- Kolommen die gesorteerd kunnen worden hebben een sorteer icoon.
 
 ## Rijkshuisstijl
 
-De Rijkshuisstijl kent geen specifieke voorschiften wat betreft tabellen.
+De Rijkshuisstijl kent geen specifieke voorschriften wat betreft tabellen.
 
 ## Bronnen
 

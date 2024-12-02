@@ -58,14 +58,6 @@ Hopelijk nooit. ROOS is constant aan verandering onderhevig omdat we nieuwe inzi
 
 Nu. Als je gebruik maakt van de beschikbare libraries en code lift je automatisch mee met alle verbeteringen die er doorgevoerd worden.
 
-## Wat als ik een component of patroon nodig heb dat niet in ROOS bestaat?
-
-Als jouw website of applicatie een specifiek component of patroon nodig heeft kun je deze vraag het beste uitzetten in onze community op het [#ROOS kanaal in Mattermost](https://matter.dtnr.nl/signup_user_complete/?id=jpmrorwwefnqfn5oufsw4i6t8e&md=link&sbr=su). Het kan bijvoorbeeld zijn dat een ander bouwteam tegen hetzelfde probleem aanliep en dit heeft opgelost. Als dat het geval is kan er gekeken worden of het component of patroon opgenomen moet worden in ROOS.
-
-In de regel worden er alleen componenten en patronen opgenomen in ROOS die door meer dan één applicatie of website gebruikt worden. Hiermee voorkomen we dat ROOS vol komt te staan met specifieke componenten en patronen die niet voor iedereen bruikbaar zijn.
-
-Als een component of patroon zo uniek is dat het nergens anders binnen de organisatie gebruikt wordt dan kun je deze binnen de eigen website of applicatie ontwerpen en ontwikkelen. Dit wordt dan gedaan in de 'geest van' ROOS en hierbij kun je hulp vragen van een designer van RVO. Mail dan het verzoek naar [robert.roose@rvo.nl](mailto:robert.roose@rvo.nl) of [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
-
 ## Heb je ROOS naar jezelf vernoemd?
 
 Dit is eigenlijk de allermeest gestelde vraag. Maar nee, ik heb ROOS niet naar mezelf vernoemd :) De naam ROOS is gekozen na een prijsvraag op het intranet van RVO.
