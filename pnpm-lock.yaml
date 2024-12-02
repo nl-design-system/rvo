@@ -234,8 +234,8 @@ importers:
   components/form-field:
     dependencies:
       '@utrecht/form-field-css':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/form-field-description-css':
         specifier: 1.5.0
         version: 1.5.0
@@ -6008,8 +6008,8 @@ packages:
   '@utrecht/focus-ring-css@2.2.0':
     resolution: {integrity: sha512-cF2p+SljV/+n+ColcFR6TQjE1tUK/pGbpp4Y8jin/EXvMUMCYEZY8gZWPk2XpHgOKETQTvH0q21zkCfjVDgJqw==}
 
-  '@utrecht/form-field-css@1.4.0':
-    resolution: {integrity: sha512-082bSuONi97jX7d9Th/vjif58enBUPdr5QCH37o4C3zDgz65WJWxsSpi+vL/SmwXWJBvhAwnVSCqMYyLCZ1DKw==}
+  '@utrecht/form-field-css@1.5.0':
+    resolution: {integrity: sha512-PGqIYHYlqQKuADgIIQF4niS6XO1VeUv6OWrWDrLbFw0JkKtNwU9Y3ALtb5mSmgXAKOUHEtI7scwFqOxYgKztsw==}
 
   '@utrecht/form-field-description-css@1.5.0':
     resolution: {integrity: sha512-LGImfd2xFuNPvycIQzwtTg2UIAo9T06MI/KoTbchB56lPzXLmictzfn2rGDzZuaemWTwkxqKUzorLXqdonZ22Q==}
@@ -22342,7 +22342,7 @@ snapshots:
 
   '@utrecht/focus-ring-css@2.2.0': {}
 
-  '@utrecht/form-field-css@1.4.0': {}
+  '@utrecht/form-field-css@1.5.0': {}
 
   '@utrecht/form-field-description-css@1.5.0': {}
 
