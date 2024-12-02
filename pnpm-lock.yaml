@@ -818,8 +818,8 @@ importers:
         specifier: 11.11.0
         version: 11.11.0(@emotion/react@11.11.4(@types/react@18.3.7)(react@18.2.0))(@types/react@18.3.7)(react@18.2.0)
       '@etchteam/storybook-addon-status':
-        specifier: 4.2.4
-        version: 4.2.4(@types/react-dom@18.0.9)(@types/react@18.3.7)
+        specifier: 5.0.0
+        version: 5.0.0
       '@mdx-js/react':
         specifier: 3.1.0
         version: 3.1.0(@types/react@18.3.7)(react@18.2.0)
@@ -3262,8 +3262,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@etchteam/storybook-addon-status@4.2.4':
-    resolution: {integrity: sha512-WkSz82WPqcqOBjB6MkLED4kIZU6jX61skBDh+/D8cedvSEQnPhQVMfxO0fnnzwhDsbqR7IXpPQPGx3hHPpi54A==}
+  '@etchteam/storybook-addon-status@5.0.0':
+    resolution: {integrity: sha512-0Dg94xQ3T+rYTi6ekFkaH0XU9k0IQOqidiSmwN47Oqw4u1qjxK6m7wV3j7C0deLEuf4U4PrAcsDfDjyehKne2A==}
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2':
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
@@ -4927,9 +4927,6 @@ packages:
 
   '@storybook/client-logger@7.0.27':
     resolution: {integrity: sha512-t4F0ByHP4MNiyVI5sgqtxSccr4RmPAqTr/h6CeGLJKWzUYobBV5hwKUd/qlfwdjev2u9C7AdLFPBKVcHX5PteA==}
-
-  '@storybook/client-logger@7.0.9':
-    resolution: {integrity: sha512-EJnXWvpTFEj462ixZbDouTN9X/FinRgaKKN6zXdhSSZUnm5PcZBtnoX5S+982z3LiAjdNIuAdZE/4vwBIAF88A==}
 
   '@storybook/client-logger@7.6.17':
     resolution: {integrity: sha512-6WBYqixAXNAXlSaBWwgljWpAu10tPRBJrcFvx2gPUne58EeMM20Gi/iHYBz2kMCY+JLAgeIH7ZxInqwO8vDwiQ==}
@@ -18561,20 +18558,9 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@etchteam/storybook-addon-status@4.2.4(@types/react-dom@18.0.9)(@types/react@18.3.7)':
+  '@etchteam/storybook-addon-status@5.0.0':
     dependencies:
-      '@storybook/api': 7.6.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/client-logger': 7.0.9
-      '@storybook/components': 7.6.17(@types/react-dom@18.0.9)(@types/react@18.3.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/core-events': 7.6.17
-      '@storybook/manager-api': 7.6.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/theming': 7.6.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       lodash: 4.17.21
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
 
@@ -20950,10 +20936,6 @@ snapshots:
       global: 4.4.0
 
   '@storybook/client-logger@7.0.27':
-    dependencies:
-      '@storybook/global': 5.0.0
-
-  '@storybook/client-logger@7.0.9':
     dependencies:
       '@storybook/global': 5.0.0
 
