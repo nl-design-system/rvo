@@ -131,7 +131,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'xs' && 'utrecht-button--rvo-xs',
         size === 'sm' && 'utrecht-button--rvo-sm',
         size === 'md' && 'utrecht-button--rvo-md',
-        alignToRightInGroup && 'utrecht-button-group__align-right',
+        alignToRightInGroup && 'rvo-action-group--align-right',
         fullWidth && 'utrecht-button--rvo-full-width',
       )}
       disabled={disabled || undefined}
