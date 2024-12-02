@@ -13,7 +13,7 @@ export interface IScrollableContentProps extends HTMLAttributes<HTMLDivElement> 
   height?: number;
   useAsMinimumHeight?: boolean;
   /** @uxpinignoreprop */
-  content: string;
+  content?: string;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   disableScroll?: boolean;

@@ -1,0 +1,118 @@
+{
+  "rvo": {
+    "dialog": {
+      "padding-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "padding-inline-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "centered-dialog": {
+        "max-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "min-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "sm": {
+          "width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        },
+        "md": {
+          "width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        },
+        "lg": {
+          "width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        },
+        "xl": {
+          "width": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        }
+      },
+      "drawer": {
+        "min-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "max-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "action-group": {
+        "margin-block-start": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "outline-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "background": {
+        "bg-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

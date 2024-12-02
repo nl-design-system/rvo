@@ -183,6 +183,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/dialog:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/expandable-content:
     devDependencies:
       '@nl-rvo/build-utils-css':
@@ -453,8 +459,6 @@ importers:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-
-  components/modal: {}
 
   components/ordered-unordered-list:
     devDependencies:

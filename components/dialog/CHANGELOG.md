@@ -1,4 +1,4 @@
-# @nl-rvo/modal
+# `@nl-rvo/css-dialog`
 
 ## 1.0.0
 
