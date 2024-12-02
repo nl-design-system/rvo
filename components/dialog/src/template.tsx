@@ -3,13 +3,28 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode, useCallback, useEffect, useState } from 'react';
+import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Heading from '../../heading/src/template';
 import { Icon } from '../../icon/src/template';
 import Link from '../../link/src/template';
 import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
+
+interface DialogContextType {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const DialogContext = createContext<DialogContextType | undefined>(undefined);
+
+export const useDialog = () => {
+  const context = useContext(DialogContext);
+  if (!context) {
+    throw new Error('useDialog must be used within Dialog component');
+  }
+  return context;
+};
 
 export interface IDialogProps {
   title?: string;
@@ -86,7 +101,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   actionGroup,
   onClose,
   content = defaultArgs.content,
-  isOpen: isOpenArg = defaultArgs.isOpen,
+  isOpen: isOpenProp = defaultArgs.isOpen,
   titleLink = defaultArgs.titleLink,
   type = defaultArgs.type,
   isModal = defaultArgs.isModal,
@@ -96,16 +111,24 @@ export const Dialog: React.FC<IDialogProps> = ({
   ariaLabel = defaultArgs.ariaLabel,
 }: IDialogProps) => {
   const contentMarkup = parseContentMarkup(children ?? content);
-  const [isOpen, setIsOpen] = useState(isOpenArg);
+  const [isOpen, setIsOpen] = useState(isOpenProp);
 
-  const onClickClose = useCallback(() => {
+  const handleClose = useCallback(() => {
     setIsOpen(false);
     onClose?.();
-  }, []);
+  }, [onClose]);
 
   useEffect(() => {
-    setIsOpen(isOpenArg);
-  }, [isOpenArg]);
+    setIsOpen(isOpenProp);
+  }, [isOpenProp]);
+
+  const contextValue = useMemo(
+    () => ({
+      isOpen,
+      onClose: handleClose,
+    }),
+    [isOpen, handleClose],
+  );
 
   const renderDialogContent = () => (
     <div
@@ -120,7 +143,7 @@ export const Dialog: React.FC<IDialogProps> = ({
       aria-expanded={isOpen}
       aria-label={ariaLabel}
     >
-      <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={onClickClose} />
+      <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={handleClose} />
       {titleLink ? (
         <Link href={titleLink} color="zwart">
           {title && <Heading>{title}</Heading>}
@@ -134,14 +157,16 @@ export const Dialog: React.FC<IDialogProps> = ({
   );
 
   return (
-    isOpen &&
-    (isModal ? (
-      <div className={clsx('rvo-dialog__background')} onClick={onClickClose}>
-        {renderDialogContent()}
-      </div>
-    ) : (
-      renderDialogContent()
-    ))
+    <DialogContext.Provider value={contextValue}>
+      {isOpen &&
+        (isModal ? (
+          <div className={clsx('rvo-dialog__background')} onClick={handleClose}>
+            {renderDialogContent()}
+          </div>
+        ) : (
+          renderDialogContent()
+        ))}
+    </DialogContext.Provider>
   );
 };
 
