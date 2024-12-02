@@ -12,7 +12,7 @@ import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
 interface DialogContextType {
-  isOpen: boolean;
+  isOpen: boolean | undefined;
   onClose: () => void;
 }
 
