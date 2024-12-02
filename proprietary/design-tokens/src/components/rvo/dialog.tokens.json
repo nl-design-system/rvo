@@ -28,7 +28,7 @@
         "border-bottom-color": { "value": "{rvo.color.grijs-200}" }
       },
       "drawer": {
-        "min-width": { "value": "220px" },
+        "min-width": { "value": "250px" },
         "max-width": { "value": "360px" },
         "width": { "value": "fit-content" }
       },

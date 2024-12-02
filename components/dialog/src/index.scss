@@ -1,5 +1,6 @@
 // Dialog
 .rvo-dialog {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding-block-end: var(--rvo-dialog-padding-block-end);
