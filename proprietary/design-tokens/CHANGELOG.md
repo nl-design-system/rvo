@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.4.4
+
+### Patch Changes
+
+- 19e94e5: Add max-width design token for Dialog component (drawer variants)
+
 ## 1.4.3
 
 ### Patch Changes

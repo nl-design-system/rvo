@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-css
 
+## 2.2.0
+
+### Minor Changes
+
+- 19e94e5: Added Dialog/modal component
+
+### Patch Changes
+
+- 19e94e5: Fix alignToRight className for Button component (when using it in a ActionGroup)
+
 ## 2.1.0
 
 ### Minor Changes
