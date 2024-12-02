@@ -20,6 +20,8 @@ export interface IDialogProps {
   backgroundColor?: 'wit' | 'grijs-200';
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
+  /** @uxpinpropname Action group content */
+  actionGroup?: ReactNode | undefined;
   /** @uxpinignoreprop */
   content?: string;
   isOpen?: boolean;
@@ -56,6 +58,11 @@ export const argTypes = {
       disable: true,
     },
   },
+  actionGroup: {
+    table: {
+      disable: true,
+    },
+  },
   content: {
     control: 'text',
   },
@@ -76,6 +83,7 @@ export const argTypes = {
 export const Dialog: React.FC<IDialogProps> = ({
   children,
   title,
+  actionGroup,
   content = defaultArgs.content,
   isOpen: isOpenArg = defaultArgs.isOpen,
   titleLink = defaultArgs.titleLink,
@@ -119,6 +127,10 @@ export const Dialog: React.FC<IDialogProps> = ({
         <Heading>{title}</Heading>
       )}
       <div className="rvo-dialog__content">{contentMarkup}</div>
+      {actionGroup && <div className="rvo-dialog__action-group">{actionGroup}</div>}
+      <div className="rvo-dialog__action-group">
+        <button>test</button>
+      </div>
     </div>
   );
 

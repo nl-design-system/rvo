@@ -29,6 +29,7 @@
       },
       "drawer": {
         "min-width": { "value": "220px" },
+        "max-width": { "value": "360px" },
         "width": { "value": "fit-content" }
       },
 

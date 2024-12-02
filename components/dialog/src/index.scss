@@ -26,6 +26,7 @@
 .rvo-dialog--drawer-left {
   height: 100vh;
   left: 0;
+  max-width: var(--rvo-dialog-drawer-max-width);
   min-width: var(--rvo-dialog-drawer-min-width);
   position: fixed;
   top: 0;
@@ -35,6 +36,7 @@
 
 .rvo-dialog--drawer-right {
   height: 100vh;
+  max-width: var(--rvo-dialog-drawer-max-width);
   min-width: var(--rvo-dialog-drawer-min-width);
   position: fixed;
   right: 0;
@@ -69,6 +71,11 @@
 
   align-self: flex-end;
   cursor: pointer;
+}
+
+// Action group
+.rvo-dialog__action-group {
+  width: 100%;
 }
 
 // Dialog background colors
