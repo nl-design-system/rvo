@@ -128,9 +128,6 @@ export const Dialog: React.FC<IDialogProps> = ({
       )}
       <div className="rvo-dialog__content">{contentMarkup}</div>
       {actionGroup && <div className="rvo-dialog__action-group">{actionGroup}</div>}
-      <div className="rvo-dialog__action-group">
-        <button>test</button>
-      </div>
     </div>
   );
 
