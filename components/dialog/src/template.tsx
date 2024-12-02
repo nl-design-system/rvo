@@ -84,6 +84,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   children,
   title,
   actionGroup,
+  onClose,
   content = defaultArgs.content,
   isOpen: isOpenArg = defaultArgs.isOpen,
   titleLink = defaultArgs.titleLink,
@@ -97,8 +98,9 @@ export const Dialog: React.FC<IDialogProps> = ({
   const contentMarkup = parseContentMarkup(children ?? content);
   const [isOpen, setIsOpen] = useState(isOpenArg);
 
-  const onClick = useCallback(() => {
+  const onClickClose = useCallback(() => {
     setIsOpen(false);
+    onClose?.();
   }, []);
 
   useEffect(() => {
@@ -118,7 +120,7 @@ export const Dialog: React.FC<IDialogProps> = ({
       aria-expanded={isOpen}
       aria-label={ariaLabel}
     >
-      <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={onClick} />
+      <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={onClickClose} />
       {titleLink ? (
         <Link href={titleLink} color="zwart">
           {title && <Heading>{title}</Heading>}
@@ -134,7 +136,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   return (
     isOpen &&
     (isModal ? (
-      <div className={clsx('rvo-dialog__background')} onClick={onClick}>
+      <div className={clsx('rvo-dialog__background')} onClick={onClickClose}>
         {renderDialogContent()}
       </div>
     ) : (
