@@ -1,5 +1,11 @@
 # `@nl-rvo/css-scrollable-content`
 
+## 1.2.1
+
+### Patch Changes
+
+- 19e94e5: Made content property optional for ScrollableContent
+
 ## 1.2.0
 
 ### Minor Changes

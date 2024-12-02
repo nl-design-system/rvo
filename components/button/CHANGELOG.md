@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 1.1.1
+
+### Patch Changes
+
+- 19e94e5: Fix alignToRight className for Button component (when using it in a ActionGroup)
+
 ## 1.1.0
 
 ### Minor Changes
