@@ -8,6 +8,7 @@ export { ActionGroup } from './action-group/src/template';
 export { Card } from './card/src/template';
 export { DataList } from './data-list/src/template';
 export { DataListItem } from './data-list/src/data-list-item/template';
+export { Dialog } from './dialog/src/template';
 export { ExpandableContent } from './expandable-content/src/template';
 export { Footer } from './footer/src/template';
 export { FooterColumn } from './footer/src/footer-column/template';
