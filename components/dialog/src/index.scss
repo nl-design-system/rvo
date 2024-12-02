@@ -11,12 +11,15 @@
 
 // Dialog types
 .rvo-dialog--centered-dialog {
+  @extend .rvo-dialog--centered-dialog--sm;
+
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   left: 50%;
   max-height: var(--rvo-dialog-centered-dialog-max-height);
+  max-width: 100%;
   min-height: var(--rvo-dialog-centered-dialog-min-height);
   position: fixed;
   top: 50%;
@@ -76,6 +79,7 @@
 
 // Action group
 .rvo-dialog__action-group {
+  margin-block-start: var(--rvo-dialog-action-group-margin-block-start);
   width: 100%;
 }
 
@@ -84,27 +88,27 @@
   background-color: var(--rvo-color-wit);
 }
 
+.rvo-dialog--outline {
+  border: 1px solid var(--rvo-dialog-outline-color);
+}
+
 .rvo-dialog--grijs-200 {
   background-color: var(--rvo-color-grijs-200);
 }
 
 // Centered dialog sizes
 .rvo-dialog--centered-dialog--sm {
-  max-width: var(--rvo-dialog-centered-dialog-sm-max-width);
-  width: var(--rvo-dialog-centered-dialog-sm-max-width);
+  width: var(--rvo-dialog-centered-dialog-sm-width);
 }
 
 .rvo-dialog--centered-dialog--md {
-  max-width: var(--rvo-dialog-centered-dialog-md-max-width);
-  width: var(--rvo-dialog-centered-dialog-md-max-width);
+  width: var(--rvo-dialog-centered-dialog-md-width);
 }
 
 .rvo-dialog--centered-dialog--lg {
-  max-width: var(--rvo-dialog-centered-dialog-lg-max-width);
-  width: var(--rvo-dialog-centered-dialog-lg-max-width);
+  width: var(--rvo-dialog-centered-dialog-lg-width);
 }
 
 .rvo-dialog--centered-dialog--xl {
-  max-width: var(--rvo-dialog-centered-dialog-xl-max-width);
-  width: var(--rvo-dialog-centered-dialog-xl-max-width);
+  width: var(--rvo-dialog-centered-dialog-xl-width);
 }
