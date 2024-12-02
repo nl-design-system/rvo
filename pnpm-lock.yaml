@@ -829,8 +829,8 @@ importers:
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
       '@storybook/addon-a11y':
-        specifier: 7.6.17
-        version: 7.6.17
+        specifier: 8.4.6
+        version: 8.4.6(storybook@7.6.17(encoding@0.1.13))
       '@storybook/addon-essentials':
         specifier: 7.6.17
         version: 7.6.17(@types/react-dom@18.0.9)(@types/react@18.3.7)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -4762,8 +4762,10 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@storybook/addon-a11y@7.6.17':
-    resolution: {integrity: sha512-UYHJAKQpJMCu4X4O/325UqozYrkhPn2VyQdwPgC+uiOKZvrtni4uRbpOspeyjC0wXH1tDbY8WZvxwvwQryYkpA==}
+  '@storybook/addon-a11y@8.4.6':
+    resolution: {integrity: sha512-Z6x/yfStplSROgmBTtiJ8LJgTqPgzW3Q7KXi+l+KoZ0pht6Nz9cYfcyygLCaftBk1ZaL7SDDIrjCP0H1NwfYiQ==}
+    peerDependencies:
+      storybook: ^8.4.6
 
   '@storybook/addon-actions@7.6.17':
     resolution: {integrity: sha512-TBphs4v6LRfyTpFo/WINF0TkMaE3rrNog7wW5mbz6n0j8o53kDN4o9ZEcygSL5zQX43CAaghQTeDCss7ueG7ZQ==}
@@ -4788,6 +4790,11 @@ packages:
 
   '@storybook/addon-highlight@7.6.17':
     resolution: {integrity: sha512-R1yBPUUqGn+60aJakn8q+5Zt34E/gU3n3VmgPdryP0LJUdZ5q1/RZShoVDV+yYQ40htMH6oaCv3OyyPzFAGJ6A==}
+
+  '@storybook/addon-highlight@8.4.6':
+    resolution: {integrity: sha512-m8wedbqDMbwkP99dNHkHAiAUkx5E7FEEEyLPX1zfkhZWOGtTkavXHH235SGp50zD75LQ6eC/BvgegrzxSQa9Wg==}
+    peerDependencies:
+      storybook: ^8.4.6
 
   '@storybook/addon-links@7.6.17':
     resolution: {integrity: sha512-iFUwKObRn0EKI0zMETsil2p9a/81rCuSMEWECsi+khkCAs1FUnD2cT6Ag5ydcNcBXsdtdfDJdtXQrkw+TSoStQ==}
@@ -20433,10 +20440,11 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@storybook/addon-a11y@7.6.17':
+  '@storybook/addon-a11y@8.4.6(storybook@7.6.17(encoding@0.1.13))':
     dependencies:
-      '@storybook/addon-highlight': 7.6.17
+      '@storybook/addon-highlight': 8.4.6(storybook@7.6.17(encoding@0.1.13))
       axe-core: 4.6.0
+      storybook: 7.6.17(encoding@0.1.13)
 
   '@storybook/addon-actions@7.6.17':
     dependencies:
@@ -20522,6 +20530,11 @@ snapshots:
   '@storybook/addon-highlight@7.6.17':
     dependencies:
       '@storybook/global': 5.0.0
+
+  '@storybook/addon-highlight@8.4.6(storybook@7.6.17(encoding@0.1.13))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      storybook: 7.6.17(encoding@0.1.13)
 
   '@storybook/addon-links@7.6.17(react@18.2.0)':
     dependencies:
