@@ -31,7 +31,7 @@
     "@mui/x-date-pickers": "7.23.0",
     "@nl-rvo/assets": "1.0.0-alpha.360",
     "@nl-rvo/design-tokens": "workspace:*",
-    "@utrecht/design-tokens": "1.0.0-alpha.635",
+    "@utrecht/design-tokens": "2.3.0",
     "apexcharts": "4.1.0",
     "babel-loader": "9.1.3",
     "css-loader": "6.10.0",
