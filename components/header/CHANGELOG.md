@@ -1,5 +1,11 @@
 # `@nl-rvo/css-header`
 
+## 1.2.1
+
+### Patch Changes
+
+- bcca9d4: Set width of logo wrapper in Header component to 100%
+
 ## 1.2.0
 
 ### Minor Changes
