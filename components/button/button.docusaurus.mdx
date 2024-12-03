@@ -7,9 +7,32 @@ slug: .
 import Documentation from "./README.md";
 import Button from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+import Heading from "../heading/src/template";
+
+<Heading type="h2">Kinds</Heading>
+
+Primary button:
 
 <ComponentExample>
   <Button />
+</ComponentExample>
+
+Secondary button:
+
+<ComponentExample>
+  <Button kind="secondary" />
+</ComponentExample>
+
+Tertiary button:
+
+<ComponentExample>
+  <Button kind="tertiary" />
+</ComponentExample>
+
+Quaternary button:
+
+<ComponentExample>
+  <Button kind="quaternary" />
 </ComponentExample>
 
 <Documentation />
