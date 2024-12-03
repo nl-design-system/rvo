@@ -7,11 +7,11 @@ import {
 import { Collapsible, ThemeClassNames, useCollapsible, usePrevious, useThemeConfig } from '@docusaurus/theme-common';
 import { isSamePath } from '@docusaurus/theme-common/internal';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { Heading } from '@nl-rvo/components';
+import { Heading, Link } from '@nl-rvo/components';
 import type { Props } from '@theme/DocSidebarItem/Category';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import clsx from 'clsx';
-import { type ComponentProps, useEffect, useMemo } from 'react';
+import { type ComponentProps, MouseEvent, useEffect, useMemo } from 'react';
 
 // If we navigate to a category and it becomes active, it should automatically
 // expand itself
@@ -130,6 +130,29 @@ export default function DocSidebarItemCategory({ item, onItemClick, activePath, 
     }
   }, [collapsible, expandedItem, index, setCollapsed, autoCollapseCategories]);
 
+  const sharedProps = {
+    className: clsx({
+      'menu__link--sublist': collapsible,
+      'menu__link--sublist-caret': !href && collapsible,
+      'menu__link--active': isActive,
+    }),
+    onClick: collapsible
+      ? (e: MouseEvent) => {
+          onItemClick?.(item);
+          if (href) {
+            updateCollapsed(false);
+          } else {
+            e.preventDefault();
+            updateCollapsed();
+          }
+        }
+      : () => {
+          onItemClick?.(item);
+        },
+    ariaCurrent: isCurrentPage ? 'page' : 'false',
+    ariaExpanded: collapsible && !href ? !collapsed : undefined,
+  };
+
   return (
     <li
       className={clsx(
@@ -147,36 +170,22 @@ export default function DocSidebarItemCategory({ item, onItemClick, activePath, 
           'menu__list-item-collapsible--active': isCurrentPage,
         })}
       >
-        <Heading
-          className={clsx({
-            'menu__link--sublist': collapsible,
-            'menu__link--sublist-caret': !href && collapsible,
-            'menu__link--active': isActive,
-          })}
-          type="h3"
-          onClick={
-            collapsible
-              ? (e) => {
-                  onItemClick?.(item);
-                  if (href) {
-                    updateCollapsed(false);
-                  } else {
-                    e.preventDefault();
-                    updateCollapsed();
-                  }
-                }
-              : () => {
-                  onItemClick?.(item);
-                }
-          }
-          aria-current={isCurrentPage ? 'page' : undefined}
-          role={collapsible && !href ? 'button' : undefined}
-          aria-expanded={collapsible && !href ? !collapsed : undefined}
-          link={collapsible ? undefined : hrefWithSSRFallback}
-          noMargins={true}
-        >
-          {label}
-        </Heading>
+        {hrefWithSSRFallback ? (
+          <Link
+            {...sharedProps}
+            noUnderline={!isCurrentPage}
+            color="grijs-700"
+            weight={isCurrentPage ? 'bold' : 'normal'}
+            className={clsx('menu__link', sharedProps.className)}
+            href={hrefWithSSRFallback}
+          >
+            {label}
+          </Link>
+        ) : (
+          <Heading {...sharedProps} type="h3" role={collapsible && !href ? 'button' : undefined} noMargins={true}>
+            {label}
+          </Heading>
+        )}
         {href && collapsible && (
           <CollapseButton
             collapsed={collapsed}
@@ -188,16 +197,17 @@ export default function DocSidebarItemCategory({ item, onItemClick, activePath, 
           />
         )}
       </div>
-
-      <Collapsible lazy as="ul" className="menu__list" collapsed={collapsed}>
-        <DocSidebarItems
-          items={items}
-          tabIndex={collapsed ? -1 : 0}
-          onItemClick={onItemClick}
-          activePath={activePath}
-          level={level + 1}
-        />
-      </Collapsible>
+      {(!hrefWithSSRFallback || (hrefWithSSRFallback && isCurrentPage)) && (
+        <Collapsible lazy as="ul" className="menu__list" collapsed={collapsed}>
+          <DocSidebarItems
+            items={items}
+            tabIndex={collapsed ? -1 : 0}
+            onItemClick={onItemClick}
+            activePath={activePath}
+            level={level + 1}
+          />
+        </Collapsible>
+      )}
     </li>
   );
 }

@@ -153,6 +153,19 @@ code {
   }
 }
 
+.theme-doc-sidebar-item-category .rvo-link.rvo-link--no-underline:hover {
+  text-decoration: underline;
+}
+
+.theme-doc-sidebar-item-category
+  .menu__list-item-collapsible--active
+  ~ .menu__list
+  .theme-doc-sidebar-item-link
+  .rvo-link {
+  color: var(--rvo-color-grijs-500);
+  margin-inline-start: var(--rvo-space-xs);
+}
+
 // Fix logo
 .rvo-header {
   margin-inline-end: 0 !important;

@@ -19,7 +19,8 @@ const findOrAddCategory = (itemList, categoryName) => {
 
 const addSidebarItem = (arrayToAddItem, doc) => {
   let sidebarItem;
-  if (!doc.frontMatter.anchors) {
+
+  if (!doc.frontMatter.sidebar_anchors) {
     sidebarItem = { type: 'doc', id: doc.id, label: doc.title };
   } else {
     sidebarItem = {
@@ -30,13 +31,16 @@ const addSidebarItem = (arrayToAddItem, doc) => {
         id: doc.id,
       },
       collapsible: false,
-      items: doc.frontMatter.anchors.map((anchorItem) => ({
-        type: 'link',
-        href: `#${anchorItem.anchor}`,
-        label: anchorItem.label,
-      })),
+      items: doc.frontMatter.sidebar_anchors.map((anchorItem) => {
+        return {
+          type: 'link',
+          href: `#${anchorItem.anchor}`,
+          label: anchorItem.label,
+        };
+      }),
     };
   }
+
   arrayToAddItem.push(sidebarItem);
 };
 
