@@ -5,7 +5,7 @@ import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import DocItemContent from '@theme/DocItem/Content';
 import DocItemFooter from '@theme/DocItem/Footer';
 import type { Props } from '@theme/DocItem/Layout';
-import DocItemPaginator from '@theme/DocItem/Paginator';
+// import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocVersionBadge from '@theme/DocVersionBadge';
@@ -50,7 +50,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
             <DocItemContent>{children}</DocItemContent>
             <DocItemFooter />
           </article>
-          <DocItemPaginator />
+          {/* <DocItemPaginator /> */}
         </div>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
