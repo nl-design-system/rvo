@@ -8,7 +8,7 @@ const navbar: Navbar = {
     href: process.env.NODE_ENV === 'development' ? '/' : 'https://nl-design-system.github.io/rvo/docs',
   },
   items: [
-    { href: '/', label: 'ROOS', position: 'left', prependBaseUrlToHref: true },
+    { href: '/rvo/docs', label: 'ROOS', position: 'left', prependBaseUrlToHref: true },
     {
       type: 'doc',
       docId: 'aan-de-slag/introductie',
