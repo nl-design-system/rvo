@@ -1,5 +1,18 @@
 # @nl-rvo/component-library-react
 
+## 2.2.2
+
+### Patch Changes
+
+- f966df8: Set width of logo wrapper in Header component to 100%
+- f966df8: Fixed subitem rendering in mobile Menubar
+
+## 2.2.1
+
+### Patch Changes
+
+- bcca9d4: Set width of logo wrapper in Header component to 100%
+
 ## 2.2.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.4.5
+
+### Patch Changes
+
+- f966df8: Fixed subitem rendering in mobile Menubar
+
 ## 1.4.4
 
 ### Patch Changes
