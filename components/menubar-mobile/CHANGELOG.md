@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.2.1
+
+### Patch Changes
+
+- f966df8: Fixed subitem rendering in mobile Menubar
+
 ## 1.2.0
 
 ### Minor Changes
