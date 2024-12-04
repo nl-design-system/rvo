@@ -65,9 +65,18 @@ export default function NavbarContent(): JSX.Element {
                   } else if (section.type === 'category') {
                     return (
                       <React.Fragment key={`${section.label}-${index}`}>
-                        {section.items.map((item, index) => (
+                        <MenuBarItem
+                          key={`${section.label}}`}
+                          label={section.label}
+                          link={section.href}
+                          type="sub"
+                          active={section.href.indexOf(location) > -1}
+                          useIcons={false}
+                          linkColor="logoblauw"
+                        />
+                        {/* {section.items.map((item, index) => (
                           <MenuBarItem
-                            key={`${item.label}-${index}`}
+                            key={`${item.label}-item-${index}`}
                             label={item.label}
                             link={item.href}
                             type="sub"
@@ -75,7 +84,7 @@ export default function NavbarContent(): JSX.Element {
                             useIcons={false}
                             linkColor="logoblauw"
                           />
-                        ))}
+                        ))} */}
                       </React.Fragment>
                     );
                   } else {

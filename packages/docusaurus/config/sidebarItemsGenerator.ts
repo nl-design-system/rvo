@@ -87,6 +87,7 @@ const sidebarItemsGenerator = async ({ item, docs }) => {
     }
     return currentSidebarItemList;
   }, []);
+
   return sidebarItems;
 };
 
