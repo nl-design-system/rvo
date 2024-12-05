@@ -1,5 +1,12 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.2.2
+
+### Patch Changes
+
+- 8fccd6c: Fixed subitem rendering in mobile Menubar
+- 8fccd6c: Fixed z-index for close button in mobile Menubar
+
 ## 1.2.1
 
 ### Patch Changes
