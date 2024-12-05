@@ -11,7 +11,7 @@ export default function Preview(): JSX.Element {
 
   const deserializedMarkup = deserialize(decodeURIComponent(search.slice(1)), { components: Components });
   return (
-    <Components.MaxWidthLayout size="lg" className={styles.componentContainer}>
+    <Components.MaxWidthLayout size="md" className={styles.componentContainer}>
       {deserializedMarkup}
     </Components.MaxWidthLayout>
   );

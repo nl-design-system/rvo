@@ -123,6 +123,7 @@
 
         &.rvo-topnav__item--active .rvo-topnav__link {
           padding-inline-start: var(--rvo-mobile-menu-submenu-link-active-padding-inline-start);
+          z-index: 1000;
 
           // &::before {
           //   background-color: var(--rvo-mobile-menu-item-active-indicator-background-color);

@@ -1,4 +1,5 @@
 .docMainContainer {
+  background-color: var(--rvo-color-wit);
   display: flex;
   padding-block-end: var(--rvo-space-xl);
   padding-block-start: var(--rvo-space-xl);
