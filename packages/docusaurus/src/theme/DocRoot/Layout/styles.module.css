@@ -4,6 +4,13 @@
 }
 
 .docsWrapper {
+  background: linear-gradient(
+    to right,
+    var(--rvo-color-grijs-100),
+    var(--rvo-color-grijs-100) 50%,
+    var(--rvo-color-wit) 50%,
+    var(--rvo-color-wit)
+  );
   display: flex;
 }
 
