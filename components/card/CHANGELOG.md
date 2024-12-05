@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.2.1
+
+### Patch Changes
+
+- c419eb5: Fix link in Card component
+
 ## 1.2.0
 
 ### Minor Changes

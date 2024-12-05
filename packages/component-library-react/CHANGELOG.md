@@ -1,5 +1,14 @@
 # @nl-rvo/component-library-react
 
+## 2.2.3
+
+### Patch Changes
+
+- 8fccd6c: Set width of logo wrapper in Header component to 100%
+- 8fccd6c: Fixed subitem rendering in mobile Menubar
+- c419eb5: Fix link in Card component
+- 8fccd6c: Fixed z-index for close button in mobile Menubar
+
 ## 2.2.2
 
 ### Patch Changes
