@@ -33,12 +33,12 @@ const navbar: Navbar = {
       position: 'left' as const,
       label: 'Patronen',
     },
-    {
-      type: 'doc',
-      docId: 'best-practices/informatiebehoefte-per-doelgroep',
-      position: 'left' as const,
-      label: 'Best practices',
-    },
+    // {
+    //   type: 'doc',
+    //   docId: 'best-practices/informatiebehoefte-per-doelgroep',
+    //   position: 'left' as const,
+    //   label: 'Best practices',
+    // },
     {
       type: 'doc',
       docId: 'schrijfwijzer/waarom-deze-schrijfwijzer',
