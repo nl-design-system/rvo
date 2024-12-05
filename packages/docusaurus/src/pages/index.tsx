@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
     <Layout title={siteConfig.title} description={siteConfig.title}>
       <header>
         <div className={clsx(styles.heroContainer)}>
-          <MaxWidthLayout size="lg" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
+          <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
             <Heading noMargins={true}>Het design system van RVO</Heading>
             <p className={styles.heroParagraph}>
               ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland.
@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
         </div>
       </header>
       <main>
-        <MaxWidthLayout size="lg" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
+        <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
           <Grid columns="three" gap="3xl">
             <Card
               title="Huisstijl"
