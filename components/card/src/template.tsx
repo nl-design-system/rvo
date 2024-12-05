@@ -120,7 +120,6 @@ export const Card: React.FC<ICardProps> = ({
           <img src={backgroundImage} className="rvo-card__background-image" />
         </div>
       )}
-
       {image && image.length > 0 && (
         <div className={clsx('rvo-card__image-container')}>
           <img src={image} className="rvo-card__image" />
@@ -132,7 +131,7 @@ export const Card: React.FC<ICardProps> = ({
           {title && (
             <Heading type="h3">
               {link && link.length > 0 ? (
-                <Link href="#" className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
+                <Link href={link} className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
                   {parseContentMarkup(title)}
                 </Link>
               ) : (
