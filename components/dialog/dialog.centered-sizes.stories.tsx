@@ -21,7 +21,6 @@ export const DialogCenteredSmall = {
   name: 'Small',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     centeredDialogSize: 'sm',
     content: 'Dialog content',
@@ -33,7 +32,6 @@ export const DialogCenteredMedium = {
   name: 'Medium',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     centeredDialogSize: 'md',
     content: 'Dialog content',
@@ -45,7 +43,6 @@ export const DialogCenteredLarge = {
   name: 'Large',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     centeredDialogSize: 'lg',
     content: 'Dialog content',
@@ -57,7 +54,6 @@ export const DialogCenteredExtraLarge = {
   name: 'Extra large',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     centeredDialogSize: 'xl',
     content: 'Dialog content',

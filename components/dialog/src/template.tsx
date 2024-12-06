@@ -5,9 +5,7 @@
 import clsx from 'clsx';
 import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
-import Heading from '../../heading/src/template';
 import { Icon } from '../../icon/src/template';
-import Link from '../../link/src/template';
 import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
@@ -27,8 +25,6 @@ export const useDialog = () => {
 };
 
 export interface IDialogProps {
-  title?: string;
-  titleLink?: string;
   type?: 'centered-dialog' | 'drawer-left' | 'drawer-right';
   isModal?: boolean;
   centeredDialogSize?: 'sm' | 'md' | 'lg' | 'xl';
@@ -47,12 +43,6 @@ export interface IDialogProps {
 }
 
 export const argTypes = {
-  title: {
-    control: 'text',
-  },
-  titleLink: {
-    control: 'text',
-  },
   type: {
     options: ['centered-dialog', 'drawer-left', 'drawer-right'],
     control: { type: 'radio' },
@@ -97,12 +87,10 @@ export const argTypes = {
 
 export const Dialog: React.FC<IDialogProps> = ({
   children,
-  title,
   actionGroup,
   onClose,
   content = defaultArgs.content,
   isOpen: isOpenProp = defaultArgs.isOpen,
-  titleLink = defaultArgs.titleLink,
   type = defaultArgs.type,
   isModal = defaultArgs.isModal,
   centeredDialogSize = defaultArgs.centeredDialogSize,
@@ -145,13 +133,6 @@ export const Dialog: React.FC<IDialogProps> = ({
       aria-label={ariaLabel}
     >
       <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={handleClose} />
-      {titleLink ? (
-        <Link href={titleLink} color="zwart">
-          {title && <Heading>{title}</Heading>}
-        </Link>
-      ) : (
-        <Heading>{title}</Heading>
-      )}
       <div className="rvo-dialog__content">{contentMarkup}</div>
       {actionGroup && <div className="rvo-dialog__action-group">{actionGroup}</div>}
     </div>

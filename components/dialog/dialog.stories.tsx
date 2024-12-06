@@ -26,7 +26,7 @@ export const Default: Story = {
   name: 'Dialog',
   render: (args) => (
     <Container>
-      <Dialog {...args} />
+      <Dialog {...args}>Dialog content</Dialog>
     </Container>
   ),
 };
