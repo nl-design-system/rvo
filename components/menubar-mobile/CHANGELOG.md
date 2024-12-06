@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.3.0
+
+### Minor Changes
+
+- c56b5ac: Used a Dialog component in mobile Menubar (so include dialog css when updating)
+
 ## 1.2.2
 
 ### Patch Changes
