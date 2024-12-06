@@ -13,7 +13,7 @@ export default function DocRootLayout({ children }: Props): JSX.Element {
   return (
     <div className={styles.docsWrapper}>
       <BackToTopButton />
-      <div className={clsx(styles.docPage, 'rvo-max-width-layout', 'rvo-max-width-layout--lg')}>
+      <div className={clsx(styles.docPage, 'rvo-max-width-layout', 'rvo-max-width-layout--md')}>
         {sidebar && (
           <DocRootLayoutSidebar
             sidebar={sidebar.items}

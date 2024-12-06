@@ -70,21 +70,10 @@ export default function NavbarContent(): JSX.Element {
                           label={section.label}
                           link={section.href}
                           type="sub"
-                          active={section.href.indexOf(location) > -1}
+                          active={section.href && section.href.indexOf(location) > -1}
                           useIcons={false}
                           linkColor="logoblauw"
                         />
-                        {/* {section.items.map((item, index) => (
-                          <MenuBarItem
-                            key={`${item.label}-item-${index}`}
-                            label={item.label}
-                            link={item.href}
-                            type="sub"
-                            active={item.href.indexOf(location) > -1}
-                            useIcons={false}
-                            linkColor="logoblauw"
-                          />
-                        ))} */}
                       </React.Fragment>
                     );
                   } else {
