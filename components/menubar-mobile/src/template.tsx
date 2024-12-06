@@ -132,7 +132,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
         Menu
       </Button>
       <Dialog type="drawer-left" isOpen={isOpen} isModal={true} onClose={onClick} backgroundColor="grijs-200">
-        <MenuBar size={size} direction="vertical" horizontalRule={false}>
+        <MenuBar size={size ?? defaultArgs.size ?? 'md'} direction="vertical" horizontalRule={false}>
           {itemsMarkup}
         </MenuBar>
       </Dialog>
