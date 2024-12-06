@@ -21,7 +21,6 @@ export const DialogCenteredWhite = {
   name: 'Wit',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     backgroundColor: 'wit',
     content: 'Dialog content',
@@ -33,7 +32,6 @@ export const DialogCenteredGray200 = {
   name: 'Grijs-200',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     backgroundColor: 'grijs-200',
     content: 'Dialog content',

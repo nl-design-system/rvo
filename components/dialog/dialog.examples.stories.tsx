@@ -23,7 +23,6 @@ export const DialogNonModal = {
   name: 'Non-modal dialog',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     isModal: false,
     content: 'Dialog content',
@@ -35,7 +34,6 @@ export const DialogWithActionGroup = {
   name: 'With action group',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     backgroundColor: 'grijs-200',
     content: 'Dialog content',

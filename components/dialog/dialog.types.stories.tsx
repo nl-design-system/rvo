@@ -21,7 +21,6 @@ export const DialogCentered = {
   name: 'Centered dialog',
 
   args: {
-    title: 'Dialog title',
     type: 'centered-dialog',
     content: 'Dialog content',
   },
@@ -32,7 +31,6 @@ export const DialogDrawerLeft = {
   name: 'Drawer left',
 
   args: {
-    title: 'Dialog title',
     type: 'drawer-left',
     content: 'Dialog content',
   },
@@ -43,7 +41,6 @@ export const DialogDrawerRight = {
   name: 'Drawer right',
 
   args: {
-    title: 'Dialog title',
     type: 'drawer-right',
     content: 'Dialog content',
   },

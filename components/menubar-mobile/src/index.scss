@@ -48,54 +48,8 @@
     @extend .rvo-layout-gap--sm;
   }
 
-  .rvo-topnav {
-    background-color: var(--rvo-mobile-menu-topnav-background-color);
-    display: flex;
-    flex-direction: column;
-    height: var(--rvo-mobile-menu-topnav-height);
-    left: 0;
-    min-width: var(--rvo-mobile-menu-topnav-min-width);
-    overflow-y: auto;
-    padding-block-end: var(--rvo-mobile-menu-topnav-padding-block-end);
-    padding-block-start: var(--rvo-mobile-menu-topnav-padding-block-start);
-    padding-inline-end: var(--rvo-mobile-menu-topnav-padding-inline-end);
-    padding-inline-start: var(--rvo-mobile-menu-topnav-padding-inline-start);
-    position: fixed;
-    top: 0;
-    width: var(--rvo-mobile-menu-topnav-width);
-    z-index: 999;
-  }
-
-  .rvo-topnav__background::before {
-    background-color: var(--rvo-mobile-menu-bg-background-color);
-    content: "";
-    display: block;
-    height: var(--rvo-mobile-menu-bg-height);
-    left: var(--rvo-mobile-menu-bg-left);
-    position: var(--rvo-mobile-menu-bg-position, static);
-    top: var(--rvo-mobile-menu-bg-top);
-    width: var(--rvo-mobile-menu-bg-width);
-    z-index: 998;
-  }
-
-  .rvo-mobile-menu__open-icon,
-  .rvo-mobile-menu__close-icon {
+  .rvo-mobile-menu__open-icon {
     --utrecht-icon-color: var(--rvo-mobile-menu-toggle-icon-color);
-  }
-
-  &.rvo-mobile-menu--open {
-    .rvo-mobile-menu__close-icon {
-      align-self: flex-end;
-      cursor: pointer;
-      position: fixed;
-      top: var(--rvo-mobile-menu-topnav-padding-block-start);
-    }
-  }
-
-  &.rvo-mobile-menu--sm.rvo-mobile-menu--open {
-    .rvo-mobile-menu__close-icon {
-      margin-inline-start: calc(var(--rvo-space-md) * -1);
-    }
   }
 
   .rvo-topnav__list {

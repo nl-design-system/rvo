@@ -34,27 +34,9 @@
         "width": {},
         "align-self": { "value": "flex-end" }
       },
-      "topnav": {
-        "background-color": { "value": "{rvo.color.grijs-200}" },
-        "min-width": { "value": "220px" },
-        "width": { "value": "fit-content" },
-        "height": { "value": "100vh" },
-        "padding-block-start": { "value": "{rvo.space.2xl}" },
-        "padding-block-end": {},
-        "padding-inline-end": { "value": "{rvo.space.2xl}" },
-        "padding-inline-start": { "value": "{rvo.space.2xl}" }
-      },
-      "bg": {
-        "background-color": { "value": "rgba(0,0,0,0.35)" },
-        "position": { "value": "fixed" },
-        "width": { "value": "100vw" },
-        "height": { "value": "100vh" },
-        "left": { "value": "0" },
-        "top": { "value": "0" }
-      },
       "list": {
         "align-items": { "value": "flex-start" },
-        "margin-block-start": { "value": "{rvo.space.lg}" },
+        "margin-block-start": { "value": "{rvo.space.2xl}" },
         "margin-block-end": { "value": "0" },
         "flex-direction": { "value": "column" },
         "gap": { "value": "{rvo.space.lg}" }
