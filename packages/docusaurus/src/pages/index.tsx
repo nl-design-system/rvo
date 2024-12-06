@@ -13,9 +13,11 @@ export default function Home(): JSX.Element {
       <header>
         <div className={clsx(styles.heroContainer)}>
           <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
-            <Heading noMargins={true}>Het design system van RVO</Heading>
+            <Heading noMargins={true}>ROOS: Het design system van RVO</Heading>
             <p className={styles.heroParagraph}>
-              ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland.
+              ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland. ROOS
+              is een <strong>gebruiksvriendelijke</strong> en <strong>toegankelijke</strong> vertaling van de
+              gemoderniseerde Rijkshuisstijl.
             </p>
             <Link href={useBaseUrl('/aan-de-slag/introductie')}>
               <Button>Aan de slag met ROOS</Button>
@@ -25,13 +27,14 @@ export default function Home(): JSX.Element {
       </header>
       <main>
         <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
-          <Grid columns="three" gap="3xl">
+          <Grid columns="three" gap="xl">
             <Card
               title="Huisstijl"
               background="none"
               link={useBaseUrl('/design-tokens/kleuren')}
               outline={true}
               fullCardLink={true}
+              padding="lg"
             >
               De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS.
             </Card>
@@ -41,6 +44,7 @@ export default function Home(): JSX.Element {
               link={useBaseUrl('/componenten/accordion')}
               outline={true}
               fullCardLink={true}
+              padding="lg"
             >
               Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl.
             </Card>
@@ -50,6 +54,7 @@ export default function Home(): JSX.Element {
               link={useBaseUrl('/patronen/layout/applicatie-layout')}
               outline={true}
               fullCardLink={true}
+              padding="lg"
             >
               Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
             </Card>
@@ -64,6 +69,7 @@ export default function Home(): JSX.Element {
               link="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0"
               outline={true}
               fullCardLink={true}
+              padding="lg"
             >
               Ben je een designer en wil je ROOS gebruiken? Gebruik dan ons Figma bestand.
             </Card>
@@ -82,6 +88,7 @@ export default function Home(): JSX.Element {
               }
               outline={true}
               fullCardLink={true}
+              padding="lg"
             >
               Ben je een developer en wil je ROOS gebruiken? Ga dan naar onze Storybook omgeving.
             </Card>
@@ -99,6 +106,7 @@ export default function Home(): JSX.Element {
               }
               outline={true}
               fullCardLink={true}
+              padding="lg"
             >
               Kom je er niet uit? We vinden het altijd leuk als iemand ons Design System wil gebruiken, dus stuur ons
               een e-mail naar&nbsp;
