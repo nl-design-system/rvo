@@ -1,5 +1,16 @@
 # @nl-rvo/design-tokens
 
+## 1.5.0
+
+### Minor Changes
+
+- c56b5ac: Used a Dialog component in mobile Menubar (so include dialog css when updating)
+
+### Patch Changes
+
+- 8a742a2: Reverted Dialog padding to md
+- c56b5ac: Set default padding of Dialog to 2xl, and only flex content if there is an action group
+
 ## 1.4.6
 
 ### Patch Changes
