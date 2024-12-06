@@ -6,9 +6,10 @@ import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Button from '../../button/src/template';
+import Dialog from '../../dialog/src/template';
 import { Icon } from '../../icon/src/template';
 import MenuBarItem from '../../menubar/src/menubar-item/template';
-import { IMenuBarItem } from '../../menubar/src/template';
+import MenuBar, { IMenuBarItem } from '../../menubar/src/template';
 import './index.scss';
 
 export interface IMobileMenuBarProps {
@@ -130,14 +131,11 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
         <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
         Menu
       </Button>
-      {isOpen && (
-        <div className={clsx('rvo-topnav__background')} onClick={onClick}>
-          <nav className={clsx(`rvo-topnav rvo-topnav--${size}`)} onClick={(e) => e.stopPropagation()}>
-            <Icon icon="kruis" size="md" className="rvo-mobile-menu__close-icon" onClick={onClick} />
-            <ul className={clsx('rvo-topnav__list', 'rvo-topnav__list--vertical')}>{itemsMarkup}</ul>
-          </nav>
-        </div>
-      )}
+      <Dialog type="drawer-left" isOpen={isOpen} isModal={true} onClose={onClick} backgroundColor="grijs-200">
+        <MenuBar size={size} direction="vertical" horizontalRule={false}>
+          {itemsMarkup}
+        </MenuBar>
+      </Dialog>
     </div>
   );
 };
