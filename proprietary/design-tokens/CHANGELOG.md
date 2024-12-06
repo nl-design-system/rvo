@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.5.1
+
+### Patch Changes
+
+- 7b74d2d: Reverted Dialog padding to md
+
 ## 1.5.0
 
 ### Minor Changes
