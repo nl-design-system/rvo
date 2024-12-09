@@ -6,6 +6,7 @@
 
 .rvo-icon {
   background-color: var(--utrecht-icon-color, currentColor);
+  min-width: var(--utrecht-icon-size);
 }
 
 .rvo-icon--xs {
