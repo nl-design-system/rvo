@@ -1,5 +1,11 @@
 # `@nl-rvo/css-icon`
 
+## 1.2.1
+
+### Patch Changes
+
+- 8dd0fe7: Added min-width to icon class to enforce its size
+
 ## 1.2.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.3.0
+
+### Minor Changes
+
+- 8dd0fe7: Added optional pay-off and secondary menu (first menu columns are now called primary-menu)
+
 ## 1.2.0
 
 ### Minor Changes
