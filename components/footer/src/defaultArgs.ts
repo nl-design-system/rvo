@@ -1,6 +1,6 @@
 import { IFooterProps } from './template';
 
-const defaultColumns = [
+const defaultPrimaryMenu = [
   {
     label: 'RVO',
     items: [
@@ -39,7 +39,18 @@ const defaultColumns = [
   },
 ];
 
+const defaultSecondaryMenu = [
+  { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
+  { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
+  { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
+  { content: 'Toegankelijkheid', link: 'https://www.rvo.nl/onderwerpen/toegankelijkheid' },
+  { content: 'Proclaimer', link: 'https://www.rvo.nl/onderwerpen/proclaimer' },
+  { content: 'Kwetsbaarheid melden', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
+];
+
 export const defaultArgs: IFooterProps = {
-  columns: defaultColumns,
+  primaryMenu: defaultPrimaryMenu,
+  secondaryMenu: defaultSecondaryMenu,
   maxWidth: 'lg',
+  payOff: 'We helpen u graag vooruit!',
 };

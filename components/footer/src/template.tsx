@@ -8,6 +8,8 @@ import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import FooterColumn from './footer-column/template';
 import FooterItem from './footer-item/template';
+import HorizontalRule from '../../horizontal-rule/src/template';
+import Link from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
@@ -23,14 +25,23 @@ interface IFooterColumn {
 
 export interface IFooterProps {
   /** @uxpinignoreprop */
-  columns?: IFooterColumn[];
+  primaryMenu?: IFooterColumn[];
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   /** @uxpinpropname Footer columns */
   children?: ReactNode | undefined;
+  payOff?: string;
+  /** @uxpinpropname Secondary menu items */
+  secondaryMenu?: IFooterItem[];
 }
 
 export const argTypes = {
-  columns: {
+  primaryMenu: {
+    type: {
+      name: 'array',
+      required: true,
+    },
+  },
+  secondaryMenu: {
     type: {
       name: 'array',
       required: true,
@@ -40,11 +51,24 @@ export const argTypes = {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
+  payOff: {
+    type: {
+      name: 'string',
+      required: false,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
 };
 
 export const Footer: React.FC<IFooterProps> = ({
-  columns = defaultArgs.columns,
+  primaryMenu = defaultArgs.primaryMenu,
   maxWidth = defaultArgs.maxWidth,
+  payOff = defaultArgs.payOff,
+  secondaryMenu = defaultArgs.secondaryMenu,
   children,
 }: IFooterProps) => {
   return (
@@ -57,18 +81,35 @@ export const Footer: React.FC<IFooterProps> = ({
           maxWidth === 'lg' && 'rvo-footer--lg',
         )}
       >
-        {children ||
-          columns?.map((column, columnIndex) => (
-            <FooterColumn key={columnIndex} label={parseContentMarkup(column.label) as string}>
-              {column.items?.map((item, itemIndex) => {
+        <div className="rvo-footer__primary-menu-container">
+          {children ||
+            primaryMenu?.map((column, columnIndex) => (
+              <FooterColumn key={columnIndex} label={parseContentMarkup(column.label) as string}>
+                {column.items?.map((item, itemIndex) => {
+                  return (
+                    <FooterItem key={itemIndex} link={item.link}>
+                      {item.content}
+                    </FooterItem>
+                  );
+                })}
+              </FooterColumn>
+            ))}
+        </div>
+        {payOff && <div className="rvo-footer__payoff">{payOff}</div>}
+        {secondaryMenu && (
+          <>
+            <HorizontalRule />
+            <div className="rvo-footer__secondary-menu-container">
+              {secondaryMenu.map((item, itemIndex) => {
                 return (
-                  <FooterItem key={itemIndex} link={item.link}>
+                  <Link key={itemIndex} color="wit" href={item.link} noUnderline={true} weight="normal">
                     {item.content}
-                  </FooterItem>
+                  </Link>
                 );
               })}
-            </FooterColumn>
-          ))}
+            </div>
+          </>
+        )}
       </UtrechtPageFooter>
     </div>
   );
