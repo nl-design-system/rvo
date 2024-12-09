@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-react
 
+## 2.4.0
+
+### Minor Changes
+
+- 8dd0fe7: Added optional pay-off and secondary menu (first menu columns are now called primary-menu)
+
+### Patch Changes
+
+- 8dd0fe7: Added min-width to icon class to enforce its size
+
 ## 2.3.0
 
 ### Minor Changes
