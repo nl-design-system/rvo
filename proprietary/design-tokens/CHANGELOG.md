@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.5.2
+
+### Patch Changes
+
+- 6451d00: Fixed quaternary color for button
+
 ## 1.5.1
 
 ### Patch Changes

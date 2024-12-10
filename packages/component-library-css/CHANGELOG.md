@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-css
 
+## 2.4.2
+
+### Patch Changes
+
+- 8e0a35f: Made table description optional
+
+## 2.4.1
+
+### Patch Changes
+
+- 6451d00: Fixed quaternary color for button
+
 ## 2.4.0
 
 ### Minor Changes
