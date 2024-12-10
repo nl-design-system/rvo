@@ -56,6 +56,7 @@ const parameters = {
         'Introductie',
         'Aan de slag',
         'Aan de slag (React)',
+        'Laatste package versies',
         'Veelgestelde vragen',
         'Huisstijl',
         ['Kleuren', 'Lettertype', 'Grootte', 'Ruimte', 'Border radius'],

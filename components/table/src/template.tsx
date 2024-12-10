@@ -17,7 +17,7 @@ export interface ITableColumnProps {
 }
 
 export interface ITableProps {
-  description: string;
+  description?: string;
   columns: ITableColumnProps[];
   rows: string[][];
 }
@@ -41,14 +41,14 @@ export const argTypes = {
 };
 
 export const Table: React.FC<ITableProps> = ({
-  description = defaultArgs.description,
+  description,
   columns = defaultArgs.columns,
   rows = defaultArgs.rows,
 }: ITableProps) => {
   return (
     <div className="rvo-table--responsive">
       <table className="rvo-table">
-        <caption className="rvo-caption">{description}</caption>
+        {description && <caption className="rvo-caption">{description}</caption>}
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
             {columns.map((column, index) => {
