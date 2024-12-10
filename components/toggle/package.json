@@ -1,7 +1,7 @@
 {
   "version": "1.2.0",
   "author": "Community for NL Design System",
-  "license": "EUPL-1.2",
+  "license": "CC0-1.0",
   "name": "@nl-rvo/css-toggle",
   "description": "Toggle CSS component",
   "keywords": [

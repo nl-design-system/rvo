@@ -2,7 +2,7 @@
   "version": "1.0.0-alpha.0",
   "author": "Community for NL Design System",
   "description": "RVO design system based on the NL Design System architecture",
-  "license": "EUPL-1.2",
+  "license": "CC0-1.0",
   "name": "@nl-rvo/design-system",
   "private": true,
   "keywords": [
