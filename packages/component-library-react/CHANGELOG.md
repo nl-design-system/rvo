@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 2.4.1
+
+### Patch Changes
+
+- 6451d00: Fixed quaternary color for button
+
 ## 2.4.0
 
 ### Minor Changes
