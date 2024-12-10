@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-css
 
+## 2.4.3
+
+### Patch Changes
+
+- 07b0344: Added min-width to max-width-layout to ensure it fits correctly in other layout containers
+- 1c0c2da: Made table description optional
+
 ## 2.4.2
 
 ### Patch Changes
