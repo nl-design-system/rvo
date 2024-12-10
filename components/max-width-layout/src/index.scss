@@ -10,14 +10,17 @@
 
 .rvo-max-width-layout--sm {
   max-width: var(--rvo-layout-max-width-sm);
+  min-width: var(--rvo-layout-max-width-sm);
 }
 
 .rvo-max-width-layout--md {
   max-width: var(--rvo-layout-max-width-md);
+  min-width: var(--rvo-layout-max-width-md);
 }
 
 .rvo-max-width-layout--lg {
   max-width: var(--rvo-layout-max-width-lg);
+  min-width: var(--rvo-layout-max-width-lg);
 }
 
 .rvo-max-width-layout-inline-padding--sm {
