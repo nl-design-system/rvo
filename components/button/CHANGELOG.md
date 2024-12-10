@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 1.1.2
+
+### Patch Changes
+
+- 6451d00: Fixed quaternary color for button
+
 ## 1.1.1
 
 ### Patch Changes
