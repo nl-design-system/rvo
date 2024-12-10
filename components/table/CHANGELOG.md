@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.2.1
+
+### Patch Changes
+
+- 8e0a35f: Made table description optional
+
 ## 1.2.0
 
 ### Minor Changes

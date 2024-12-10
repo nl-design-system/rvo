@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 2.4.2
+
+### Patch Changes
+
+- 8e0a35f: Made table description optional
+
 ## 2.4.1
 
 ### Patch Changes
