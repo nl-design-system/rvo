@@ -1,5 +1,11 @@
 # `@nl-rvo/css-max-width-layout`
 
+## 1.2.1
+
+### Patch Changes
+
+- 07b0344: Added min-width to max-width-layout to ensure it fits correctly in other layout containers
+
 ## 1.2.0
 
 ### Minor Changes
