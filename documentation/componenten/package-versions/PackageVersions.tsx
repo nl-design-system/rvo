@@ -23,35 +23,30 @@ const PackageVersions: React.FC = ({ packages }: { packages: string[] }) => {
   const [publishDates, setPublishDates] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
-    const fetchVersions = async () => {
-      const versionData: { [key: string]: string } = {};
-      const descriptionData: { [key: string]: string } = {};
-      const dateData: { [key: string]: string } = {};
+    packages.forEach(async (pkg) => {
+      try {
+        const response = await fetch(`https://registry.npmjs.org/${pkg}`);
+        const data = (await response.json()) as NpmRegistryResponse;
+        const latestVersion = data['dist-tags'].latest;
 
-      for (const pkg of packages) {
-        try {
-          const response = await fetch(`https://registry.npmjs.org/${pkg}`);
-          const data = (await response.json()) as NpmRegistryResponse;
-          const latestVersion = data['dist-tags'].latest;
-
-          versionData[pkg] = latestVersion;
-          descriptionData[pkg] = data.versions[latestVersion]?.description || 'No description available';
-          dateData[pkg] = data.time?.[latestVersion]
+        setVersions((prev) => ({ ...prev, [pkg]: latestVersion }));
+        setDescriptions((prev) => ({
+          ...prev,
+          [pkg]: data.versions[latestVersion]?.description || 'No description available',
+        }));
+        setPublishDates((prev) => ({
+          ...prev,
+          [pkg]: data.time?.[latestVersion]
             ? new Date(data.time[latestVersion]).toLocaleDateString('nl-NL')
-            : 'No date available';
-        } catch (error) {
-          console.error(`Failed to fetch version for ${pkg}:`, error);
-          versionData[pkg] = 'N/A';
-          descriptionData[pkg] = 'N/A';
-          dateData[pkg] = 'N/A';
-        }
+            : 'No date available',
+        }));
+      } catch (error) {
+        console.error(`Failed to fetch version for ${pkg}:`, error);
+        setVersions((prev) => ({ ...prev, [pkg]: 'N/A' }));
+        setDescriptions((prev) => ({ ...prev, [pkg]: 'N/A' }));
+        setPublishDates((prev) => ({ ...prev, [pkg]: 'N/A' }));
       }
-      setVersions(versionData);
-      setDescriptions(descriptionData);
-      setPublishDates(dateData);
-    };
-
-    fetchVersions();
+    });
   }, [packages]);
 
   return (
