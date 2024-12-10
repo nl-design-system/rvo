@@ -1,5 +1,5 @@
 /**
- * @license EUPL-1.2
+ * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
 import { Button as UtrechtButton } from '@utrecht/component-library-react';

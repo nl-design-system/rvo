@@ -1,5 +1,5 @@
 /**
- * @license EUPL-1.2
+ * @license CC0-1.0
  */
 import { Markdown } from '@storybook/blocks';
 import { HTMLAttributes, PropsWithChildren } from 'react';
