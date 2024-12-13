@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
+import { SortAscendingIcon, SortDescendingIcon } from './icons';
 import { Button } from '../../button/src/template';
 import validateHTML from '../../utils/validateHTML';
 import './index.scss';
@@ -52,14 +53,15 @@ export const Table: React.FC<ITableProps> = ({
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
             {columns.map((column, index) => {
-              let icon: string;
-              if (column.sortDirection === 'ASC') {
-                icon = 'delta-omhoog';
-              } else if (column.sortDirection === 'DESC') {
-                icon = 'delta-omlaag';
-              } else {
-                icon = '';
-              }
+              const getSortIcon = () => {
+                if (column.sortDirection === 'ASC') {
+                  return <SortAscendingIcon className="rvo--table-header__sorting-icon" />;
+                }
+                if (column.sortDirection === 'DESC') {
+                  return <SortDescendingIcon className="rvo--table-header__sorting-icon" />;
+                }
+                return undefined;
+              };
 
               return (
                 <th
@@ -68,15 +70,18 @@ export const Table: React.FC<ITableProps> = ({
                   className={clsx(
                     'rvo-table-header',
                     column.sortable && 'rvo-table-header--sortable',
-                    column.sortable &&
-                      column.sortDirection &&
-                      column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
                     column.type === 'numeric' && 'rvo-table-header--numeric',
                   )}
                 >
-                  {column.label}
-                  {column.sortable && column.sortDirection && column.sortDirection.length > 0 && (
-                    <Button kind="tertiary" showIcon="before" icon={icon as any} label="" size="sm" />
+                  {column.sortable ? (
+                    <div className="rvo-table-header__sortable-container">
+                      {column.label}
+                      <Button kind="tertiary" size="sm" className="rvo-table-header__sortable-button">
+                        {getSortIcon()}
+                      </Button>
+                    </div>
+                  ) : (
+                    column.label
                   )}
                 </th>
               );
