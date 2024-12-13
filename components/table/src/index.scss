@@ -48,6 +48,7 @@
 }
 
 .rvo--table-header__sorting-icon {
+  display: flex;
   height: var(--rvo-icon-md-height);
   width: var(--rvo-icon-md-width);
 }
