@@ -61,6 +61,7 @@ const parameters = {
         'Huisstijl',
         ['Kleuren', 'Lettertype', 'Grootte', 'Ruimte', 'Border radius'],
         'Componenten',
+        'Layout',
         "Pagina's",
         ['Templates', 'Voorbeelden', 'Experimenteel'],
         'Prototypes',

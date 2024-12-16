@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { MaxWidthLayout } from './src/template';
 
 const meta: Meta<typeof MaxWidthLayout> = {
-  title: 'Componenten/Layout/Max width layout',
+  title: 'Layout/Max width layout',
   component: MaxWidthLayout,
   args: defaultArgs,
   parameters: {

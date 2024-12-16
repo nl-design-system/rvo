@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { Grid } from './src/template';
 
 const meta: Meta<typeof Grid> = {
-  title: 'Componenten/Layout/Grid',
+  title: 'Layout/Grid',
   component: Grid,
   args: defaultArgs,
   parameters: {
