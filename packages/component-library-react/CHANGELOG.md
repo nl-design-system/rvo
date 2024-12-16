@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 2.5.5
+
+### Patch Changes
+
+- 994e9a3: Removed hover underline from full card title link
+
 ## 2.5.4
 
 ### Patch Changes

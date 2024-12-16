@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.2.2
+
+### Patch Changes
+
+- 994e9a3: Removed hover underline from full card title link
+
 ## 1.2.1
 
 ### Patch Changes
