@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.2.1
+
+### Patch Changes
+
+- de80995: Moved remaining characters indicator in TextArea to the left
+
 ## 1.2.0
 
 ### Minor Changes

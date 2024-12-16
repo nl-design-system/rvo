@@ -1,5 +1,11 @@
 # `@nl-rvo/css-max-width-layout`
 
+## 1.2.2
+
+### Patch Changes
+
+- de80995: Made centered content in max-width-layout optional
+
 ## 1.2.1
 
 ### Patch Changes
