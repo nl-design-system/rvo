@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { Textarea } from './src/template';
 
 const meta: Meta<typeof Textarea> = {
-  title: 'Componenten/Form/Textarea',
+  title: 'Componenten/Textarea',
   component: Textarea,
   args: defaultArgs,
   parameters: {

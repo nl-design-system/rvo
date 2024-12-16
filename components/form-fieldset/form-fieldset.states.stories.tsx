@@ -2,7 +2,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { argTypes, Fieldset as FieldsetComponent } from './src/template';
 
 export default {
-  title: 'Componenten/Form/Fieldset/States',
+  title: 'Componenten/Fieldset/States',
   component: FieldsetComponent,
   argTypes: argTypes,
 

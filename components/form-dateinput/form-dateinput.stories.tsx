@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { DateInput } from './src/template';
 
 const meta: Meta<typeof DateInput> = {
-  title: 'Componenten/Form/Date input',
+  title: 'Componenten/Date input',
   component: DateInput,
   args: defaultArgs,
   parameters: {

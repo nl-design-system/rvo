@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { RadioButton } from './src/template';
 
 const meta: Meta<typeof RadioButton> = {
-  title: 'Componenten/Form/Radio button',
+  title: 'Componenten/Radio button',
   component: RadioButton,
   args: defaultArgs,
   parameters: {

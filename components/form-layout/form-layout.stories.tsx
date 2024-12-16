@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { FormLayout } from './src/template';
 
 const meta: Meta<typeof FormLayout> = {
-  title: 'Componenten/Form/Form layout',
+  title: 'Componenten/Form layout',
   component: FormLayout,
   args: defaultArgs,
   parameters: {

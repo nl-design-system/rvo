@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { Checkbox } from './src/template';
 
 const meta: Meta<typeof Checkbox> = {
-  title: 'Componenten/Form/Checkbox',
+  title: 'Componenten/Checkbox',
   component: Checkbox,
   args: defaultArgs,
   parameters: {

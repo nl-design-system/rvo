@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { TimeInput } from './src/template';
 
 const meta: Meta<typeof TimeInput> = {
-  title: 'Componenten/Form/Time input',
+  title: 'Componenten/Time input',
   component: TimeInput,
   args: defaultArgs,
   parameters: {

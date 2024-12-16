@@ -2,7 +2,7 @@ import { defaultArgs } from './defaultArgs';
 import { argTypes, Checkbox } from './template';
 
 export default {
-  title: 'Componenten/Form/Checkbox/States',
+  title: 'Componenten/Checkbox/States',
   component: Checkbox,
   argTypes: argTypes,
 

@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { Fieldset } from './src/template';
 
 const meta: Meta<typeof Fieldset> = {
-  title: 'Componenten/Form/Fieldset',
+  title: 'Componenten/Fieldset',
   component: Fieldset,
   args: defaultArgs,
   parameters: {

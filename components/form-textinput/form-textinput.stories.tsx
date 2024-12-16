@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { TextInput } from './src/template';
 
 const meta: Meta<typeof TextInput> = {
-  title: 'Componenten/Form/Text input',
+  title: 'Componenten/Text input',
   component: TextInput,
   args: defaultArgs,
   parameters: {

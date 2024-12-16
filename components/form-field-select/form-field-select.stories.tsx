@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { SelectField } from './src/template';
 
 const meta: Meta<typeof SelectField> = {
-  title: 'Componenten/Form/Select field',
+  title: 'Componenten/Select field',
   component: SelectField,
   args: defaultArgs,
   parameters: {

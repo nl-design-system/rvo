@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { TextInputField } from './src/template';
 
 const meta: Meta<typeof TextInputField> = {
-  title: 'Componenten/Form/Text input field',
+  title: 'Componenten/Text input field',
   component: TextInputField,
   args: defaultArgs,
   parameters: {
