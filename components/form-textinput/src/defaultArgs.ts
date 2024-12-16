@@ -2,6 +2,7 @@ import { ITextInputProps } from './template';
 
 export const defaultArgs: ITextInputProps = {
   id: 'field',
+  type: 'text',
   disabled: false,
   focus: false,
   invalid: false,
@@ -9,7 +10,6 @@ export const defaultArgs: ITextInputProps = {
   required: false,
   placeholder: '',
   value: '',
-  validation: 'text',
   prefix: '',
   suffix: '',
   size: 'lg',
