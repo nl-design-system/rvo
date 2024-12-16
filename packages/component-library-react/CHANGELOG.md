@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 2.5.0
+
+### Minor Changes
+
+- 6c75ec9: Improved Table styling
+
 ## 2.4.3
 
 ### Patch Changes

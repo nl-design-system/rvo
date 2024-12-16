@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.3.0
+
+### Minor Changes
+
+- 6c75ec9: Improved Table styling
+
 ## 1.2.2
 
 ### Patch Changes

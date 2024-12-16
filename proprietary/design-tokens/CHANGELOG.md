@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.6.0
+
+### Minor Changes
+
+- 6c75ec9: Improved Table styling
+
 ## 1.5.2
 
 ### Patch Changes
