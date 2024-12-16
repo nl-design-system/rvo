@@ -102,16 +102,6 @@ export const Table: React.FC<ITableProps> = ({
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
             {internalColumns.map((column, index) => {
-              const getSortIcon = () => {
-                if (column.sortDirection === 'ASC') {
-                  return <SortAscendingIcon className="rvo--table-header__sorting-icon" />;
-                }
-                if (column.sortDirection === 'DESC') {
-                  return <SortDescendingIcon className="rvo--table-header__sorting-icon" />;
-                }
-                return undefined;
-              };
-
               return (
                 <th
                   key={index}
@@ -126,7 +116,12 @@ export const Table: React.FC<ITableProps> = ({
                 >
                   <div className="rvo-table-header__sortable-container">
                     {column.label}
-                    {column.sortable && getSortIcon()}
+                    {column.sortable && column.sortDirection === 'ASC' && (
+                      <SortAscendingIcon className="rvo--table-header__sorting-icon" />
+                    )}
+                    {column.sortable && column.sortDirection === 'DESC' && (
+                      <SortDescendingIcon className="rvo--table-header__sorting-icon" />
+                    )}
                   </div>
                 </th>
               );
