@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 2.5.1
+
+### Patch Changes
+
+- 7777c3b: Added native input types
+
 ## 2.5.0
 
 ### Minor Changes
