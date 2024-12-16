@@ -54,9 +54,12 @@ const sidebarItemsGenerator = async ({ item, docs }) => {
     });
   }
 
-  // Order docs by sidebar position
+  // Order docs by sidebar position and then alphabetically
   processedDocs = processedDocs.sort((a, b) => {
-    return a.sidebarPosition - b.sidebarPosition;
+    if (a.sidebarPosition !== b.sidebarPosition) {
+      return a.sidebarPosition - b.sidebarPosition;
+    }
+    return a.title.localeCompare(b.title);
   });
 
   // Remove the homepage from the sidebar
