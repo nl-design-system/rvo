@@ -5,4 +5,5 @@ export const defaultArgs: IMaxWidthLayoutProps = {
   content: 'Deze gecentreerde layout container heeft een maximale breedte van {maxWidth}.',
   centered: true,
   inlinePadding: 'none',
+  useAsMinWidthToo: true,
 };
