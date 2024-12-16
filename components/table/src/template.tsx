@@ -3,13 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { HTMLAttributes, useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { SortAscendingIcon, SortDescendingIcon } from './icons';
 import validateHTML from '../../utils/validateHTML';
 import './index.scss';
 
-export interface ITableColumnProps {
+export interface ITableColumnProps extends HTMLAttributes<HTMLDivElement> {
   label: string;
   type?: 'numeric';
   sortable?: boolean;
@@ -64,6 +64,7 @@ export const Table: React.FC<ITableProps> = ({
   columns = defaultArgs.columns,
   rows = defaultArgs.rows,
   onSort,
+  ...props
 }: ITableProps) => {
   const [internalColumns, setInternalColumns] = useState(columns);
   const [internalRows, setInternalRows] = useState(rows);
@@ -96,7 +97,7 @@ export const Table: React.FC<ITableProps> = ({
   );
 
   return (
-    <div className="rvo-table--responsive">
+    <div className="rvo-table--responsive" {...props}>
       <table className="rvo-table">
         {description && <caption className="rvo-caption">{description}</caption>}
         <thead className="rvo-table-head">
