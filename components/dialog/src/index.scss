@@ -1,5 +1,6 @@
 // Dialog
 .rvo-dialog {
+  border: none;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@
 .rvo-dialog--drawer-left {
   height: 100vh;
   left: 0;
+  margin: initial;
   max-width: var(--rvo-dialog-drawer-max-width);
   min-width: var(--rvo-dialog-drawer-min-width);
   position: fixed;
@@ -40,6 +42,7 @@
 
 .rvo-dialog--drawer-right {
   height: 100vh;
+  margin: initial;
   max-width: var(--rvo-dialog-drawer-max-width);
   min-width: var(--rvo-dialog-drawer-min-width);
   position: fixed;

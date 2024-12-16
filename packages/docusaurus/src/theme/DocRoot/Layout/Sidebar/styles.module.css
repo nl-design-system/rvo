@@ -20,11 +20,4 @@
     cursor: pointer;
     width: var(--doc-sidebar-hidden-width);
   }
-
-  .sidebarViewport {
-    top: var(--ifm-navbar-height);
-    position: sticky;
-    height: 100%;
-    max-height: calc(100vh - 137px);
-  }
 }
