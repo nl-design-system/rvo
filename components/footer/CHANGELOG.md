@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.3.1
+
+### Patch Changes
+
+- 7c8114c: Allow for empty pay-off in Footer component
+
 ## 1.3.0
 
 ### Minor Changes
