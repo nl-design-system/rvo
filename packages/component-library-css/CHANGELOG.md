@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-css
 
+## 2.5.3
+
+### Patch Changes
+
+- de80995: Moved remaining characters indicator in TextArea to the left
+- de80995: Made centered content in max-width-layout optional
+
 ## 2.5.2
 
 ### Patch Changes
