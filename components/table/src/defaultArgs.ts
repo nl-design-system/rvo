@@ -3,10 +3,10 @@ import { ITableProps } from './template';
 export const defaultArgs: ITableProps = {
   description: 'Table description.',
   columns: [
-    { label: 'Title' },
+    { label: 'Title', sortable: true },
     { label: 'Text', sortable: true, sortDirection: 'ASC' },
-    { label: 'Price ($)', type: 'numeric' },
-    { label: 'Link' },
+    { label: 'Price ($)', sortable: true, type: 'numeric' },
+    { label: 'Link', sortable: true },
   ],
   rows: [
     ['Title value 1', 'Text value 1', '57', '<a href="#" class="rvo-link">Link 1</a>'],

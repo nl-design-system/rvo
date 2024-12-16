@@ -3,23 +3,25 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { HTMLAttributes, useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Button } from '../../button/src/template';
+import { SortAscendingIcon, SortDescendingIcon } from './icons';
 import validateHTML from '../../utils/validateHTML';
 import './index.scss';
 
-export interface ITableColumnProps {
+export interface ITableColumnProps extends HTMLAttributes<HTMLDivElement> {
   label: string;
   type?: 'numeric';
   sortable?: boolean;
   sortDirection?: 'ASC' | 'DESC' | '';
+  key?: string;
 }
 
 export interface ITableProps {
   description?: string;
   columns: ITableColumnProps[];
   rows: string[][];
+  onSort?: (columnIndex: number, direction: 'ASC' | 'DESC' | '') => void;
 }
 
 export const argTypes = {
@@ -40,27 +42,67 @@ export const argTypes = {
   },
 };
 
+const sortData = (rows: string[][], columnIndex: number, direction: 'ASC' | 'DESC' | '', type?: string): string[][] => {
+  if (!direction) return rows;
+
+  return [...rows].sort((a, b) => {
+    const aValue = a[columnIndex];
+    const bValue = b[columnIndex];
+
+    if (type === 'numeric') {
+      const aNum = parseFloat(aValue);
+      const bNum = parseFloat(bValue);
+      return direction === 'ASC' ? aNum - bNum : bNum - aNum;
+    }
+
+    return direction === 'ASC' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+  });
+};
+
 export const Table: React.FC<ITableProps> = ({
   description,
   columns = defaultArgs.columns,
   rows = defaultArgs.rows,
+  onSort,
+  ...props
 }: ITableProps) => {
+  const [internalColumns, setInternalColumns] = useState(columns);
+  const [internalRows, setInternalRows] = useState(rows);
+
+  useEffect(() => {
+    setInternalColumns(columns);
+    setInternalRows(rows);
+  }, [columns, rows]);
+
+  const handleSort = useCallback(
+    (columnIndex: number) => {
+      const newColumns = [...internalColumns];
+      const currentDirection = newColumns[columnIndex].sortDirection || '';
+      const newDirection: 'ASC' | 'DESC' | '' =
+        currentDirection === '' ? 'ASC' : currentDirection === 'ASC' ? 'DESC' : '';
+
+      // Reset all other columns
+      newColumns.forEach((col, i) => {
+        if (i !== columnIndex) {
+          col.sortDirection = '';
+        }
+      });
+
+      newColumns[columnIndex].sortDirection = newDirection;
+      setInternalColumns(newColumns);
+      setInternalRows(sortData(rows, columnIndex, newDirection, columns[columnIndex].type));
+      onSort?.(columnIndex, newDirection);
+    },
+    [internalColumns, rows, columns, onSort],
+  );
+
   return (
-    <div className="rvo-table--responsive">
+    <div className="rvo-table--responsive" {...props}>
       <table className="rvo-table">
         {description && <caption className="rvo-caption">{description}</caption>}
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
-            {columns.map((column, index) => {
-              let icon: string;
-              if (column.sortDirection === 'ASC') {
-                icon = 'delta-omhoog';
-              } else if (column.sortDirection === 'DESC') {
-                icon = 'delta-omlaag';
-              } else {
-                icon = '';
-              }
-
+            {internalColumns.map((column, index) => {
               return (
                 <th
                   key={index}
@@ -68,29 +110,32 @@ export const Table: React.FC<ITableProps> = ({
                   className={clsx(
                     'rvo-table-header',
                     column.sortable && 'rvo-table-header--sortable',
-                    column.sortable &&
-                      column.sortDirection &&
-                      column.sortDirection.length > 1 && ['rvo-layout-row', 'rvo-layout-gap--sm'],
                     column.type === 'numeric' && 'rvo-table-header--numeric',
                   )}
+                  onClick={column.sortable ? () => handleSort(index) : undefined}
+                  style={column.sortable ? { cursor: 'pointer' } : undefined}
                 >
-                  {column.label}
-                  {column.sortable && column.sortDirection && column.sortDirection.length > 0 && (
-                    <Button kind="tertiary" showIcon="before" icon={icon as any} label="" size="sm" />
-                  )}
+                  <div className="rvo-table-header__sortable-container">
+                    {column.label}
+                    {column.sortable && column.sortDirection === 'ASC' && (
+                      <SortAscendingIcon className="rvo--table-header__sorting-icon" />
+                    )}
+                    {column.sortable && column.sortDirection === 'DESC' && (
+                      <SortDescendingIcon className="rvo--table-header__sorting-icon" />
+                    )}
+                  </div>
                 </th>
               );
             })}
           </tr>
         </thead>
         <tbody className="rvo-table-body">
-          {rows.map((row, rowIndex) => (
+          {internalRows.map((row, rowIndex) => (
             <tr key={rowIndex} className="rvo-table-row">
-              {columns.map((column, columnIndex) => {
+              {internalColumns.map((column, columnIndex) => {
                 const cellValue = row[columnIndex];
                 const cellClassNames = clsx('rvo-table-cell', column.type === 'numeric' && 'rvo-table-cell--numeric');
 
-                // Parse cell markup (value is either string, HTML string or React node)
                 let cellMarkup = (
                   <td key={columnIndex} className={cellClassNames}>
                     {cellValue}

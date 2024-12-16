@@ -5,6 +5,7 @@
 .rvo-table {
   border-collapse: collapse;
   border-spacing: 0;
+  table-layout: fixed;
   width: 100%;
 }
 
@@ -21,6 +22,9 @@
 
 .rvo-table-header {
   background-color: var(--rvo-table-header-background-color);
+  border-bottom-color: var(--rvo-table-header-border-bottom-color);
+  border-bottom-style: var(--rvo-table-header-border-bottom-style);
+  border-bottom-width: var(--rvo-table-header-border-bottom-width);
   color: var(--rvo-table-header-color);
   font-weight: var(--rvo-table-header-font-weight);
   padding-block-end: var(--rvo-table-header-padding-block-end);
@@ -28,6 +32,26 @@
   padding-inline-end: var(--rvo-table-header-padding-inline-end);
   padding-inline-start: var(--rvo-table-header-padding-inline-start);
   text-align: start;
+}
+
+.rvo-table-header__sortable-container {
+  align-items: center;
+  display: flex;
+  gap: var(--rvo-space-sm);
+}
+
+.rvo-table-header__sortable-button {
+  min-inline-size: 0;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.rvo--table-header__sorting-icon {
+  display: flex;
+  height: var(--rvo-icon-md-height);
+  width: var(--rvo-icon-md-width);
 }
 
 .rvo-table-header--sortable:hover {
