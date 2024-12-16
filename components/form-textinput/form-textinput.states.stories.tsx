@@ -2,7 +2,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { argTypes, TextInput } from './src/template';
 
 export default {
-  title: 'Componenten/Form/Text input/States',
+  title: 'Componenten/Text input/States',
   component: TextInput,
   argTypes: argTypes,
 

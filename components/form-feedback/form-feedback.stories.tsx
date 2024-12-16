@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { Feedback } from './src/template';
 
 const meta: Meta<typeof Feedback> = {
-  title: 'Componenten/Form/Feedback',
+  title: 'Componenten/Feedback',
   component: Feedback,
   args: defaultArgs,
   parameters: {

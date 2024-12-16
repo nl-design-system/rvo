@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { LayoutFlow } from './src/template';
 
 const meta: Meta<typeof LayoutFlow> = {
-  title: 'Componenten/Layout/Layout flow',
+  title: 'Layout/Flow',
   component: LayoutFlow,
   args: defaultArgs,
   parameters: {

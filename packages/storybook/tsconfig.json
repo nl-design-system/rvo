@@ -16,6 +16,7 @@
     "paths": {
       "@nl-rvo/design-tokens/*": ["../../proprietary/design-tokens/*"],
       "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
+      "@nl-rvo/components/*": ["../../components/*"],
       "@docusaurus/components/*": ["../docusaurus/src/components/*"]
     }
   },

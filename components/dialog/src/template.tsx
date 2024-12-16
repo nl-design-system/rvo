@@ -24,7 +24,7 @@ export const useDialog = () => {
   return context;
 };
 
-export interface IDialogProps {
+export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElement>, 'className'> {
   type?: 'centered-dialog' | 'drawer-left' | 'drawer-right';
   isModal?: boolean;
   centeredDialogSize?: 'sm' | 'md' | 'lg' | 'xl';
@@ -97,6 +97,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   backgroundColor = defaultArgs.backgroundColor,
   className = defaultArgs.className,
   ariaLabel = defaultArgs.ariaLabel,
+  ...props
 }: IDialogProps) => {
   const contentMarkup = parseContentMarkup(children ?? content);
   const [isOpen, setIsOpen] = useState(isOpenProp);
@@ -119,7 +120,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   );
 
   const renderDialogContent = () => (
-    <div
+    <dialog
       className={clsx(
         'rvo-dialog',
         `rvo-dialog--${backgroundColor}`,
@@ -132,11 +133,12 @@ export const Dialog: React.FC<IDialogProps> = ({
       onClick={(e) => e.stopPropagation()}
       aria-expanded={isOpen}
       aria-label={ariaLabel}
+      {...props}
     >
       <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={handleClose} />
       <div className="rvo-dialog__content">{contentMarkup}</div>
       {actionGroup && <div className="rvo-dialog__action-group">{actionGroup}</div>}
-    </div>
+    </dialog>
   );
 
   return (

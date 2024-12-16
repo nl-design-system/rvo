@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { SidebarLayout } from './src/template';
 
 const meta: Meta<typeof SidebarLayout> = {
-  title: 'Componenten/Layout/Sidebar layout',
+  title: 'Layout/Sidebar layout',
   component: SidebarLayout,
   args: defaultArgs,
   parameters: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MarginHelpers } from './src/template';
 
 const meta: Meta<typeof MarginHelpers> = {
-  title: 'Componenten/Helper classes/Margin',
+  title: 'Helper classes/Margin',
   component: MarginHelpers,
   parameters: {
     status: {

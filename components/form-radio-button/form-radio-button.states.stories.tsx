@@ -2,7 +2,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { argTypes, RadioButton } from './src/template';
 
 export default {
-  title: 'Componenten/Form/Radio button/States',
+  title: 'Componenten/Radio button/States',
   component: RadioButton,
   argTypes: argTypes,
 

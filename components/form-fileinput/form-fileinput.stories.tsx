@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { FileInput } from './src/template';
 
 const meta: Meta<typeof FileInput> = {
-  title: 'Componenten/Form/File input',
+  title: 'Componenten/File input',
   component: FileInput,
   args: defaultArgs,
   parameters: {

@@ -135,7 +135,8 @@ export const Textarea: React.FC<ITextareaProps> = ({
           className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])}
         />
         <span className="utrecht-textbox-remaining-chars">
-          Nog {maxLength - (currentValue?.length || 0)} teken{maxLength - (currentValue?.length || 0) > 1 && 's'} over
+          Nog <strong>{maxLength - (currentValue?.length || 0)}</strong> teken
+          {maxLength - (currentValue?.length || 0) > 1 && 's'} over
         </span>
       </div>
     );

@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { Label } from './src/template';
 
 const meta: Meta<typeof Label> = {
-  title: 'Componenten/Form/Label',
+  title: 'Componenten/Label',
   component: Label,
   args: defaultArgs,
   parameters: {

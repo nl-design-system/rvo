@@ -2,7 +2,7 @@ import { defaultArgs } from './src/defaultArgs';
 import { argTypes, FileInput } from './src/template';
 
 export default {
-  title: 'Componenten/Form/File input/States',
+  title: 'Componenten/File input/States',
   component: FileInput,
   argTypes: argTypes,
 
