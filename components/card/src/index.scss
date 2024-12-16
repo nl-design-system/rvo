@@ -148,10 +148,6 @@
     display: block;
     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
-
     &::after {
       content: "";
       cursor: pointer;
