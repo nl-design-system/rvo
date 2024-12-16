@@ -98,7 +98,7 @@ export const Footer: React.FC<IFooterProps> = ({
         {payOff && payOff.length > 0 && <div className="rvo-footer__payoff">{payOff}</div>}
         {secondaryMenu && (
           <>
-            {(primaryMenu.length > 0 || (payOff && payOff.length > 0)) && <HorizontalRule />}
+            {((primaryMenu && primaryMenu.length > 0) || (payOff && payOff.length > 0)) && <HorizontalRule />}
             <div className="rvo-footer__secondary-menu-container">
               {secondaryMenu.map((item, itemIndex) => {
                 return (
