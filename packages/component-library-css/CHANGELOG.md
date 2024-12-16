@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 2.5.2
+
+### Patch Changes
+
+- 7c8114c: Allow for empty pay-off in Footer component
+
 ## 2.5.1
 
 ### Patch Changes
