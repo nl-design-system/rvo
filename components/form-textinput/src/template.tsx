@@ -13,6 +13,7 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   key?: string;
   /** @uxpinignoreprop */
   id?: string;
+  type?: 'text' | 'password' | 'email' | 'tel' | 'url' | 'search' | 'number' | 'date' | 'time' | 'datetime-local';
   disabled?: boolean;
   /** @uxpinpropname Has focus */
   focus?: boolean;
@@ -22,7 +23,7 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   required?: boolean;
   placeholder?: string;
   value?: string;
-  validation?: 'text' | 'number' | 'currency';
+  validation?: 'none' | 'currency';
   prefix?: string;
   suffix?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'max';
@@ -37,6 +38,10 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
 
 export const argTypes = {
   id: { control: 'text' },
+  type: {
+    options: ['text', 'password', 'email', 'tel', 'url', 'search', 'number', 'date', 'time', 'datetime-local'],
+    control: { type: 'select' },
+  },
   disabled: {
     control: 'boolean',
   },
@@ -58,7 +63,7 @@ export const argTypes = {
   value: {
     control: 'text',
   },
-  validation: { options: ['text', 'number', 'currency'], control: { type: 'radio' } },
+  validation: { options: ['none', 'currency'], control: { type: 'radio' } },
   prefix: {
     control: 'text',
   },
@@ -106,6 +111,7 @@ export const argTypes = {
 
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
+  type = defaultArgs.type,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
@@ -122,15 +128,16 @@ export const TextInput: React.FC<ITextInputProps> = ({
 }: ITextInputProps) => {
   const props = {
     id,
+    type,
     disabled,
     invalid,
     required,
     readOnly,
     placeholder,
     defaultValue: value,
-    ...((validation === 'number' || validation === 'currency') && {
+    ...(validation === 'currency' && {
       inputMode: 'numeric' as any,
-      pattern: validation === 'currency' ? '[0-9.,]*' : '[0-9]*',
+      pattern: '[0-9.,]*',
     }),
     maxLength,
     ...otherProps,
