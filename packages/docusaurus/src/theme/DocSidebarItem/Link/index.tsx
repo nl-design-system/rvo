@@ -5,6 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Link } from '@nl-rvo/components';
 import type { Props } from '@theme/DocSidebarItem/Link';
 import clsx from 'clsx';
+import styles from './styles.module.css';
 
 export default function DocSidebarItemLink({ item, onItemClick, activePath, level, ...props }: Props): JSX.Element {
   const { href, label, className } = item;
@@ -32,6 +33,7 @@ export default function DocSidebarItemLink({ item, onItemClick, activePath, leve
         {...props}
         showIcon={!isInternalLink ? 'after' : 'no'}
         icon={!isInternalLink ? 'externe-link' : undefined}
+        className={styles['sidebar-link']}
       >
         {label}
       </Link>

@@ -1,0 +1,4 @@
+.sidebar-link:hover,
+.sidebar-link:focus {
+  color: var(--rvo-color-grijs-700) !important;
+}
