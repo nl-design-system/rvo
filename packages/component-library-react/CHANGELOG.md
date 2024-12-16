@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 2.5.4
+
+### Patch Changes
+
+- 103e6af: Fixed Dialog border and margin
+
 ## 2.5.3
 
 ### Patch Changes

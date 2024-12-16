@@ -1,5 +1,11 @@
 # `@nl-rvo/css-dialog`
 
+## 1.3.2
+
+### Patch Changes
+
+- 103e6af: Fixed Dialog border and margin
+
 ## 1.3.1
 
 ### Patch Changes
