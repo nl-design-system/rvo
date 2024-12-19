@@ -17,7 +17,7 @@
       },
       "subtitle": {
         "font-size": { "value": "{rvo.font-size.lg}" },
-        "font-style": { "value": "italic" },
+        "font-style": { "value": "normal" },
         "font-weight": { "value": "{rvo.font-weight.normal}" },
         "line-height": { "value": "{rvo.line-height.md}" }
       }
