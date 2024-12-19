@@ -10,7 +10,7 @@ import './index.scss';
 export interface IGridProps {
   gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   columns?: 'one' | 'two' | 'three' | 'four' | 'five' | 'six';
-  layout?: '1fr' | '2fr1fr' | '1fr2fr';
+  division?: string;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
@@ -24,9 +24,9 @@ export const argTypes = {
     options: ['one', 'two', 'three', 'four', 'five', 'six'],
     control: { type: 'radio' },
   },
-  layout: {
-    options: ['1fr', '2fr1fr', '1fr2fr'],
-    control: { type: 'radio' },
+  division: {
+    control: 'text',
+    placeholder: '2fr 1fr',
   },
   children: {
     table: {
@@ -38,7 +38,7 @@ export const argTypes = {
 export const Grid: React.FC<IGridProps> = ({
   gap = defaultArgs.gap,
   columns = defaultArgs.columns,
-  layout = defaultArgs.layout,
+  division,
   children,
 }: IGridProps) => {
   return (
@@ -48,8 +48,15 @@ export const Grid: React.FC<IGridProps> = ({
           'rvo-layout-grid',
           `rvo-layout-gap--${gap}`,
           `rvo-layout-grid-columns--${columns}`,
-          `rvo-layout-grid-layout--${layout}`,
+          division && 'rvo-layout-grid--division',
         )}
+        style={
+          division
+            ? ({
+                '--division': division,
+              } as React.CSSProperties)
+            : undefined
+        }
       >
         {children || (
           <>

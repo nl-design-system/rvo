@@ -1,3 +1,9 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+/* stylelint-disable custom-property-pattern */
 .rvo-layout-grid {
   display: grid;
 }
@@ -21,14 +27,6 @@
   .rvo-layout-grid-columns--six,
   .rvo-layout-grid-columns--five {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .rvo-layout-grid-columns--two.rvo-layout-grid-layout--2fr1fr {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .rvo-layout-grid-columns--two.rvo-layout-grid-layout--1fr2fr {
-    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -85,4 +83,8 @@
   .rvo-layout-grid-columns--six {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+.rvo-layout-grid--division {
+  grid-template-columns: var(--division);
 }
