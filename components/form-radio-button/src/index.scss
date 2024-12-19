@@ -52,7 +52,6 @@
   }
 
   // Focus state
-  &:focus,
   &:focus-visible,
   &.utrecht-radio-button--focus-visible {
     outline-color: var(--utrecht-focus-outline-color);
