@@ -3,7 +3,7 @@
 /**
 * @license CC0-1.0
 */
-@use "../node_modules/modern-normalize/modern-normalize.css" as *;
+@use "./base.scss" as *;
 @use "../../../components/accordion/src" as *;
 @use "../../../components/alert/src" as *;
 @use "../../../components/breadcrumbs/src" as *;
@@ -54,12 +54,3 @@
 @use "../../../components/helpers-text/src" as *;
 @use "../../../components/helpers-margin/src" as *;
 @use "../../../components/helpers-padding/src" as *;
-
-.rvo-theme {
-  background-color: var(--utrecht-document-background-color);
-  color: var(--utrecht-document-color);
-  font-family: var(--utrecht-document-font-family);
-  font-size: var(--utrecht-document-font-size);
-  font-weight: var(--utrecht-document-font-weight);
-  line-height: var(--utrecht-document-line-height);
-}
