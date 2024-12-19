@@ -14,13 +14,13 @@ npm install --save-dev --save-exact @nl-rvo/component-library-css
 
 Je kunt kiezen om in één keer de hele library in te laden of alleen de componenten die je nodig hebt.
 
-## Hele library laden
+### Hele library laden
 
 ```html
 <link rel="stylesheet" href="@nl-rvo/component-library-css/dist/index.min.css" />
 ```
 
-## Individuele componenten laden
+### Individuele componenten laden
 
 ```html
 <link rel="stylesheet" href="@nl-rvo/component-library-css/dist/components/accordion.min.css" />
