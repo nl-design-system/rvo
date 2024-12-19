@@ -1,5 +1,21 @@
 # @nl-rvo/component-library-css
 
+## 4.0.0
+
+### Major Changes
+
+- 6299e11: Added division property and --division variable to use instead of the layout prop
+
+### Minor Changes
+
+- 6299e11: Added individual component CSS files to enable loading of individual components and reduce bundle size
+- 6299e11: Added option for 7-12 columns in Grid component
+
+### Patch Changes
+
+- 6299e11: Removed focus outline when selecting a Radio button
+- 6299e11: Removed fixed height and added font size to FileInput component
+
 ## 3.0.0
 
 ### Major Changes

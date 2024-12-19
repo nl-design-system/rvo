@@ -1,5 +1,15 @@
 # `@nl-rvo/css-grid`
 
+## 3.0.0
+
+### Major Changes
+
+- 6299e11: Added division property and --division variable to use instead of the layout prop
+
+### Minor Changes
+
+- 6299e11: Added option for 7-12 columns in Grid component
+
 ## 2.0.0
 
 ### Major Changes

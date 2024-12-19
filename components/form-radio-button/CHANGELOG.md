@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-radio-button`
 
+## 1.2.2
+
+### Patch Changes
+
+- 6299e11: Removed focus outline when selecting a Radio button
+
 ## 1.2.1
 
 ### Patch Changes
