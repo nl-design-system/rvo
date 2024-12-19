@@ -1,5 +1,26 @@
 # @nl-rvo/component-library-react
 
+## 3.0.0
+
+### Major Changes
+
+- a498e7d: Added division property and --division variable to use instead of the layout prop
+
+### Minor Changes
+
+- a498e7d: Added option for 7-12 columns in Grid component
+
+### Patch Changes
+
+- a498e7d: Removed focus outline when selecting a Radio button
+- a498e7d: Removed fixed height and added font size to FileInput component
+
+## 2.5.5
+
+### Patch Changes
+
+- 994e9a3: Removed hover underline from full card title link
+
 ## 2.5.4
 
 ### Patch Changes

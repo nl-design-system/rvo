@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-fileinput`
 
+## 1.2.1
+
+### Patch Changes
+
+- a498e7d: Removed fixed height and added font size to FileInput component
+
 ## 1.2.0
 
 ### Minor Changes
