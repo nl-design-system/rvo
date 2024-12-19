@@ -9,8 +9,20 @@ import './index.scss';
 
 export interface IGridProps {
   gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
-  columns?: 'one' | 'two' | 'three' | 'four' | 'five' | 'six';
-  layout?: '1fr' | '2fr1fr' | '1fr2fr';
+  columns?:
+    | 'one'
+    | 'two'
+    | 'three'
+    | 'four'
+    | 'five'
+    | 'six'
+    | 'seven'
+    | 'eight'
+    | 'nine'
+    | 'ten'
+    | 'eleven'
+    | 'twelve';
+  division?: string;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
@@ -21,12 +33,12 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   columns: {
-    options: ['one', 'two', 'three', 'four', 'five', 'six'],
+    options: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'],
     control: { type: 'radio' },
   },
-  layout: {
-    options: ['1fr', '2fr1fr', '1fr2fr'],
-    control: { type: 'radio' },
+  division: {
+    control: 'text',
+    placeholder: '2fr 1fr',
   },
   children: {
     table: {
@@ -38,9 +50,30 @@ export const argTypes = {
 export const Grid: React.FC<IGridProps> = ({
   gap = defaultArgs.gap,
   columns = defaultArgs.columns,
-  layout = defaultArgs.layout,
+  division,
   children,
 }: IGridProps) => {
+  const getColumnCount = (columnName: string | undefined): number => {
+    if (!columnName) {
+      return 1;
+    }
+    const columnMap: { [key: string]: number } = {
+      one: 1,
+      two: 2,
+      three: 3,
+      four: 4,
+      five: 5,
+      six: 6,
+      seven: 7,
+      eight: 8,
+      nine: 9,
+      ten: 10,
+      eleven: 11,
+      twelve: 12,
+    };
+    return columnMap[columnName];
+  };
+
   return (
     <div className="rvo-layout-grid-container">
       <div
@@ -48,19 +81,20 @@ export const Grid: React.FC<IGridProps> = ({
           'rvo-layout-grid',
           `rvo-layout-gap--${gap}`,
           `rvo-layout-grid-columns--${columns}`,
-          `rvo-layout-grid-layout--${layout}`,
+          division && 'rvo-layout-grid--division',
         )}
+        style={
+          division
+            ? ({
+                '--division': division,
+              } as React.CSSProperties)
+            : undefined
+        }
       >
-        {children || (
-          <>
-            <div>Element A</div>
-            <div>Element B</div>
-            <div>Element C</div>
-            <div>Element D</div>
-            <div>Element E</div>
-            <div>Element F</div>
-          </>
-        )}
+        {children ||
+          Array.from({ length: getColumnCount(columns) }, (_, index) => (
+            <div key={index}>Element {String.fromCharCode(65 + index)}</div>
+          ))}
       </div>
     </div>
   );
