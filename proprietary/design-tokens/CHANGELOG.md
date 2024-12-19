@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.6.2
+
+### Patch Changes
+
+- 6299e11: Made Hero subtitle normal instead of italic
+
 ## 1.6.1
 
 ### Patch Changes
