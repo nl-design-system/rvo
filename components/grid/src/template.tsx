@@ -53,7 +53,10 @@ export const Grid: React.FC<IGridProps> = ({
   division,
   children,
 }: IGridProps) => {
-  const getColumnCount = (columnName: string): number => {
+  const getColumnCount = (columnName: string | undefined): number => {
+    if (!columnName) {
+      return 1;
+    }
     const columnMap: { [key: string]: number } = {
       one: 1,
       two: 2,
