@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Home from './Home';
 
 const meta: Meta<typeof Home> = {
-  title: "Pagina's/Experimenteel/www/Home",
+  title: "Pagina's/Voorbeelden/www/Home",
   component: Home,
   parameters: {
     status: {
