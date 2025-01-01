@@ -37,7 +37,7 @@
     "@storybook/addon-essentials": "7.6.17",
     "@storybook/addon-links": "7.6.17",
     "@storybook/api": "7.6.17",
-    "@storybook/blocks": "7.6.17",
+    "@storybook/blocks": "8.4.7",
     "@storybook/cli": "7.6.17",
     "@storybook/components": "7.6.17",
     "@storybook/core-events": "7.6.17",
