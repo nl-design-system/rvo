@@ -313,8 +313,8 @@ importers:
   components/form-textarea:
     dependencies:
       '@utrecht/textarea-css':
-        specifier: 2.1.0
-        version: 2.1.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/textbox-css':
         specifier: 1.4.0
         version: 1.4.0
@@ -6036,8 +6036,8 @@ packages:
   '@utrecht/select-css@1.6.0':
     resolution: {integrity: sha512-Jw2N3ApB/NdxpNxCsAaiAjFweaS/mLhodqs0Enrndjg+EpShSTK+E/3qPgbsZsaXaRzdmq7q2fQ46z0NZ7hi2A==}
 
-  '@utrecht/textarea-css@2.1.0':
-    resolution: {integrity: sha512-xtpdSPb3lB27/KABf4PNiHqDC1IBtYKWS5zS9e4SheuXirs1LsNXo5R3Zrjp2dSYxRyX25xEMNEiicT3WYX9IA==}
+  '@utrecht/textarea-css@2.2.0':
+    resolution: {integrity: sha512-OFqAtwMpkRd+ME8Z9IIQiDd0rgrog88yOTgkQTTjWnKFzxDaq64CvY4SF78vzfco3cxMb4JqBPy4F7VOq55Kqw==}
 
   '@utrecht/textbox-css@1.4.0':
     resolution: {integrity: sha512-NSo9mxLsUJIctjwmalkbvJGozvuoQPjgImP4ns8FvV57DRWNlMfEVlMOZFsFoWm1MHm+GRIytapTCdvYQ7Y/Yw==}
@@ -22378,7 +22378,7 @@ snapshots:
 
   '@utrecht/select-css@1.6.0': {}
 
-  '@utrecht/textarea-css@2.1.0': {}
+  '@utrecht/textarea-css@2.2.0': {}
 
   '@utrecht/textbox-css@1.4.0': {}
 

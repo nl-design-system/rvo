@@ -32,7 +32,7 @@
     "@nl-rvo/build-utils-css": "workspace:*"
   },
   "dependencies": {
-    "@utrecht/textarea-css": "2.1.0",
+    "@utrecht/textarea-css": "2.2.0",
     "@utrecht/textbox-css": "1.4.0"
   }
 }
