@@ -959,8 +959,8 @@ importers:
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
       '@utrecht/design-tokens':
-        specifier: 2.3.0
-        version: 2.3.0
+        specifier: 2.4.0
+        version: 2.4.0
       apexcharts:
         specifier: 4.1.0
         version: 4.1.0
@@ -5940,8 +5940,8 @@ packages:
   '@utrecht/components@7.4.0':
     resolution: {integrity: sha512-LWFJjJ7TF0eaoWq5TGrg7rNYnG+G5yIEJhuiwFlbICwSx2n+gZVbAE1dAW8YG2mGqveXZk38hBC2FWNE1tj1BQ==}
 
-  '@utrecht/design-tokens@2.3.0':
-    resolution: {integrity: sha512-qIW8OD+sDkH3e6P1aZas4lyOOmg46R6KZ64lCDGrjJ3l5MSkumPd5KBBuoSDcaDRrsyEEmx50Fm6YrZB4cT6Qw==}
+  '@utrecht/design-tokens@2.4.0':
+    resolution: {integrity: sha512-TPLbXIgNOmoNbl6eTibBGkJ8sIH/8C77Bgot0LyLBe95/CQMCy9t172uB8C2SrtTKBsrxJwQhIUkHZ3YCGPvyA==}
 
   '@utrecht/focus-ring-css@2.2.0':
     resolution: {integrity: sha512-cF2p+SljV/+n+ColcFR6TQjE1tUK/pGbpp4Y8jin/EXvMUMCYEZY8gZWPk2XpHgOKETQTvH0q21zkCfjVDgJqw==}
@@ -22270,7 +22270,7 @@ snapshots:
     dependencies:
       clsx: 2.1.1
 
-  '@utrecht/design-tokens@2.3.0': {}
+  '@utrecht/design-tokens@2.4.0': {}
 
   '@utrecht/focus-ring-css@2.2.0': {}
 
