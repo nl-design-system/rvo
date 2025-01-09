@@ -200,8 +200,8 @@ importers:
   components/footer:
     dependencies:
       '@utrecht/page-footer-css':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -6027,8 +6027,8 @@ packages:
   '@utrecht/icon@1.2.0':
     resolution: {integrity: sha512-jzVFG06ayqMtXZZrsj6AYnkxFaKqDwA0EMKccNxeGI51EVbaU6TJDgTf696P5vHl+3np70OonACNJyzDKGaLbQ==}
 
-  '@utrecht/page-footer-css@2.0.0':
-    resolution: {integrity: sha512-0iCoUc1aOyfuW/i3oH4aUbUUx9LCpgwsPxsxGJBsadHO4rXdzl4EeXeBxOWMX1eX7nA/A8I7V9EEhmsv3xy/IQ==}
+  '@utrecht/page-footer-css@2.1.0':
+    resolution: {integrity: sha512-wwYJEDGtwy3a2xxSHCLCiNXfsNc7xzp8d+G23uRKLoN2EHt+tE5TP0Qdm+bXFmltbDEsX+Q7bRnPN4wAkMP/fg==}
 
   '@utrecht/radio-button-css@1.5.0':
     resolution: {integrity: sha512-N99LvKxLMl5l/fc++rAUohmNJ4FR6zJrQnA4aFN0GXRcOrL2/MDgoUnvfyo3AMoEQWjA/NNGfL32Whqk3ec2fg==}
@@ -22372,7 +22372,7 @@ snapshots:
 
   '@utrecht/icon@1.2.0': {}
 
-  '@utrecht/page-footer-css@2.0.0': {}
+  '@utrecht/page-footer-css@2.1.0': {}
 
   '@utrecht/radio-button-css@1.5.0': {}
 
