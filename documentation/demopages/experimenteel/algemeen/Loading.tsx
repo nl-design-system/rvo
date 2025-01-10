@@ -34,7 +34,9 @@ const Loading = () => {
           </div>
           <div className="rvo-loading-canvas">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <Alert kind="error">Helaas konden de bestanden niet geladen worden</Alert>
+            <Alert kind="error" padding="xs">
+              Helaas konden de bestanden niet geladen worden
+            </Alert>
             <LayoutFlow row={true} gap="xs">
               <Button size="xs">Probeer het opnieuw</Button>
               <Button size="xs" kind="secondary">
