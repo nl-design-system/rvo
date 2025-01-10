@@ -1,4 +1,4 @@
-import { Button, Heading, Icon, LayoutFlow, StatusIcon } from '@nl-rvo/components';
+import { Alert, Button, Heading, Icon, LayoutFlow, StatusIcon } from '@nl-rvo/components';
 import '../../common/loading.scss';
 
 const Loading = () => {
@@ -14,18 +14,35 @@ const Loading = () => {
         <LayoutFlow>
           <div className="rvo-loading-canvas rvo-loading-canvas-animate">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--grijs-500 rvo-paragraph--sm rvo-paragraph--no-spacing">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
               De bestanden worden geladen...
             </p>
           </div>
           <div className="rvo-loading-canvas">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--grijs-500 rvo-paragraph--sm rvo-paragraph--no-spacing">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
               <LayoutFlow row={true} gap="xs">
-                <StatusIcon type="waarschuwing" size="sm"></StatusIcon>Helaas konden de bestanden niet geladen worden.
+                <StatusIcon type="foutmelding" size="sm"></StatusIcon>Helaas konden de bestanden niet geladen worden.
               </LayoutFlow>
             </p>
-            <Button size="xs">Probeer het opnieuw</Button>
+            <LayoutFlow row={true} gap="xs">
+              <Button size="xs">Probeer het opnieuw</Button>
+              <Button size="xs" kind="secondary">
+                Probleem melden
+              </Button>
+            </LayoutFlow>
+          </div>
+          <div className="rvo-loading-canvas">
+            <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
+            <Alert kind="error" padding="xs">
+              Helaas konden de bestanden niet geladen worden
+            </Alert>
+            <LayoutFlow row={true} gap="xs">
+              <Button size="xs">Probeer het opnieuw</Button>
+              <Button size="xs" kind="secondary">
+                Probleem melden
+              </Button>
+            </LayoutFlow>
           </div>
         </LayoutFlow>
       </main>
