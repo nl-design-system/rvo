@@ -18,6 +18,20 @@ const Loading = () => {
               De bestanden worden geladen...
             </p>
           </div>
+          <div className="rvo-loading-canvas rvo-loading-canvas-animate">
+            <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
+              <LayoutFlow row={true} gap="xs">
+                <StatusIcon type="waarschuwing" size="sm"></StatusIcon>Het laden duurt langer dan verwacht...
+              </LayoutFlow>
+            </p>
+            <LayoutFlow row={true} gap="xs">
+              <Button size="xs">Probeer het opnieuw</Button>
+              <Button size="xs" kind="secondary">
+                Probleem melden
+              </Button>
+            </LayoutFlow>
+          </div>
           <div className="rvo-loading-canvas">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
             <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
