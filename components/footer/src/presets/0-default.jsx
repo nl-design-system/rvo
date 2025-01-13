@@ -5,7 +5,7 @@ import Footer from '../template';
 
 export default (
   <Footer uxpId="footer" {...defaultArgs}>
-    <FooterColumn uxpId="footerColumn0" label="RVO">
+    {/* <FooterColumn uxpId="footerColumn0" label="RVO">
       <FooterItem uxpId="footerItem0" link="#">
         Over ons
       </FooterItem>
@@ -60,6 +60,6 @@ export default (
       <FooterItem uxpId="footerItem14" link="#">
         Proclaimer
       </FooterItem>
-    </FooterColumn>
+    </FooterColumn> */}
   </Footer>
 );

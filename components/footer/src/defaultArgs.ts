@@ -1,4 +1,4 @@
-import { IFooterProps } from './template';
+import { FooterInterface } from './template';
 
 const defaultPrimaryMenu = [
   {
@@ -48,7 +48,7 @@ const defaultSecondaryMenu = [
   { content: 'Kwetsbaarheid melden', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
 ];
 
-export const defaultArgs: IFooterProps = {
+export const defaultArgs: FooterInterface = {
   primaryMenu: defaultPrimaryMenu,
   secondaryMenu: defaultSecondaryMenu,
   maxWidth: 'lg',
