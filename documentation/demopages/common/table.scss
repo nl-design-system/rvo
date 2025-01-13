@@ -12,3 +12,8 @@
 .rvo-table-cell {
   border-bottom-color: var(--rvo-color-grijs-300);
 }
+
+.rvo-table-row.rvo-card:hover,
+.rvo-table-row.rvo-card:focus {
+  background-color: var(--rvo-color-grijs-100);
+}
