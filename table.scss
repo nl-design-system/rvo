@@ -1,0 +1,19 @@
+.rvo-table-header {
+  background-color: var(--rvo-color-grijs-100);
+  color: var(--rvo-color-zwart);
+  font-weight: var(--rvo-font-weight-bold);
+}
+
+.rvo-table-header--active-sort {
+  text-decoration: underline;
+}
+
+.rvo-table-header,
+.rvo-table-cell {
+  border-bottom-color: var(--rvo-color-grijs-300);
+}
+
+.rvo-table-row.rvo-card:hover,
+.rvo-table-row.rvo-card:focus {
+  background-color: var(--rvo-color-grijs-100);
+}
