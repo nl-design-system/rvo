@@ -1,4 +1,4 @@
-import { Alert, Button, Heading, Icon, LayoutFlow, StatusIcon } from '@nl-rvo/components';
+import { Button, Heading, Icon, LayoutFlow, StatusIcon } from '@nl-rvo/components';
 import '../../common/loading.scss';
 
 const Loading = () => {
@@ -14,18 +14,18 @@ const Loading = () => {
         <LayoutFlow>
           <div className="rvo-loading-canvas rvo-loading-canvas-animate">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-start--2xs">
               De bestanden worden geladen...
             </p>
           </div>
           <div className="rvo-loading-canvas rvo-loading-canvas-animate">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-end--sm rvo-margin-block-start--2xs">
               <LayoutFlow row={true} gap="xs">
                 <StatusIcon type="waarschuwing" size="sm"></StatusIcon>Het laden duurt langer dan verwacht...
               </LayoutFlow>
             </p>
-            <LayoutFlow row={true} gap="xs">
+            <LayoutFlow row={true} gap="md">
               <Button size="xs">Probeer het opnieuw</Button>
               <Button size="xs" kind="secondary">
                 Probleem melden
@@ -34,24 +34,12 @@ const Loading = () => {
           </div>
           <div className="rvo-loading-canvas">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-paragraph--no-spacing">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-end--sm rvo-margin-block-start--2xs">
               <LayoutFlow row={true} gap="xs">
                 <StatusIcon type="foutmelding" size="sm"></StatusIcon>Helaas konden de bestanden niet geladen worden.
               </LayoutFlow>
             </p>
-            <LayoutFlow row={true} gap="xs">
-              <Button size="xs">Probeer het opnieuw</Button>
-              <Button size="xs" kind="secondary">
-                Probleem melden
-              </Button>
-            </LayoutFlow>
-          </div>
-          <div className="rvo-loading-canvas">
-            <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <Alert kind="error" padding="xs">
-              Helaas konden de bestanden niet geladen worden
-            </Alert>
-            <LayoutFlow row={true} gap="xs">
+            <LayoutFlow row={true} gap="md">
               <Button size="xs">Probeer het opnieuw</Button>
               <Button size="xs" kind="secondary">
                 Probleem melden
