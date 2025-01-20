@@ -14,13 +14,13 @@ const Loading = () => {
         <LayoutFlow>
           <div className="rvo-loading-canvas rvo-loading-canvas-animate">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-start--2xs">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-start--sm">
               De bestanden worden geladen...
             </p>
           </div>
           <div className="rvo-loading-canvas rvo-loading-canvas-animate">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-end--sm rvo-margin-block-start--2xs">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-end--sm rvo-margin-block-start--sm">
               <LayoutFlow row={true} gap="xs">
                 <StatusIcon type="waarschuwing" size="sm"></StatusIcon>Het laden duurt langer dan verwacht...
               </LayoutFlow>
@@ -34,7 +34,7 @@ const Loading = () => {
           </div>
           <div className="rvo-loading-canvas">
             <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700"></Icon>
-            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-end--sm rvo-margin-block-start--2xs">
+            <p className="rvo-loading-text rvo-paragraph rvo-paragraph--sm rvo-margin-block-end--sm rvo-margin-block-start--sm">
               <LayoutFlow row={true} gap="xs">
                 <StatusIcon type="foutmelding" size="sm"></StatusIcon>Helaas konden de bestanden niet geladen worden.
               </LayoutFlow>

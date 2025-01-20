@@ -17,3 +17,7 @@
 .rvo-table-row.rvo-card:focus {
   background-color: var(--rvo-color-grijs-100);
 }
+
+.rvo-table-header--numeric .rvo-table-header__sortable-container {
+  justify-content: flex-end;
+}
