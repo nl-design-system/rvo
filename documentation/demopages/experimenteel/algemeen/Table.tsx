@@ -45,7 +45,7 @@ const Table = () => {
                       </div>
                     </th>
                     <th scope="col" className="rvo-table-header rvo-table-header--sortable rvo-table-header--numeric">
-                      <div className="rvo-table-header__sortable-container">Price ($)</div>
+                      Price ($)
                     </th>
                     <th scope="col" className="rvo-table-header rvo-table-header--sortable">
                       <div className="rvo-table-header__sortable-container">Link</div>
