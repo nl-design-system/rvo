@@ -5,7 +5,9 @@
 }
 
 .rvo-table-header--active-sort {
-  text-decoration: underline;
+  text-decoration-line: var(--rvo-link-text-decoration);
+  text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
+  text-underline-offset: var(--rvo-link-text-underline-offset);
 }
 
 .rvo-table-header,
@@ -16,4 +18,8 @@
 .rvo-table-row.rvo-card:hover,
 .rvo-table-row.rvo-card:focus {
   background-color: var(--rvo-color-grijs-100);
+}
+
+.rvo-table-header--numeric .rvo-table-header__sortable-container {
+  justify-content: flex-end;
 }
