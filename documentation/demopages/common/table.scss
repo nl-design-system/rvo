@@ -5,7 +5,9 @@
 }
 
 .rvo-table-header--active-sort {
-  text-decoration: underline;
+  text-decoration-line: var(--rvo-link-text-decoration);
+  text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
+  text-underline-offset: var(--rvo-link-text-underline-offset);
 }
 
 .rvo-table-header,
