@@ -107,7 +107,10 @@ const DocumentenClean = () => {
               <div>
                 <LayoutFlow gap="xl">
                   <Tabs
-                    tabs={[{ label: 'Mijn ontvangen documenten' }, { label: 'Mijn verstuurde documenten' }]}
+                    tabs={[
+                      { label: 'Mijn ontvangen documenten', href: '#' },
+                      { label: 'Mijn verstuurde documenten', href: '#' },
+                    ]}
                     activeTab={0}
                   />
                   <Grid columns="four">
