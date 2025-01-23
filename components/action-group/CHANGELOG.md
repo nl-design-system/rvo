@@ -1,5 +1,11 @@
 # `@nl-rvo/css-action-group`
 
+## 1.2.1
+
+### Patch Changes
+
+- ebc6d8e: Removed rvo class `.rvo-button-group__align-right` causing position issues with the second button. Added parameter `position` allowing action groups to be placed left or right. Default this is the left position
+
 ## 1.2.0
 
 ### Minor Changes
