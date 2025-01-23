@@ -16,6 +16,7 @@ export interface IActionGroupProps {
   /** @uxpinignoreprop */
   buttonsRight?: IButtonProps[];
   fullWidth?: boolean;
+  position?: 'left' | 'right';
   /** @uxpinpropname Buttons */
   children?: ReactNode | undefined;
   className?: string;
@@ -53,12 +54,14 @@ export const ActionGroup: React.FC<IActionGroupProps> = ({
   children,
   fullWidth = defaultArgs.fullWidth,
   className,
+  position = defaultArgs.position,
 }: IActionGroupProps) => {
   return (
     <ButtonGroup
       className={clsx(
         {
           'rvo-action-group--full-width': fullWidth,
+          'rvo-action-groul--position-right': position === 'right',
         },
         className,
       )}
@@ -68,10 +71,7 @@ export const ActionGroup: React.FC<IActionGroupProps> = ({
         buttonsLeft?.map((buttonProps, index) => {
           return <Button key={index} {...buttonProps} />;
         })}
-      {!children &&
-        buttonsRight?.map((buttonProps, index) => (
-          <Button key={index} {...buttonProps} className="rvo-action-group--align-right" />
-        ))}
+      {!children && buttonsRight?.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
     </ButtonGroup>
   );
 };
