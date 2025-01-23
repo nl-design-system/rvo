@@ -1,0 +1,35 @@
+---
+title: Counter Badge
+hide_title: false
+hide_table_of_contents: true
+slug: .
+---
+
+import Documentation from "./README.md";
+import CounterBadge from "./src/template";
+import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+import Heading from "../heading/src/template";
+
+<Heading type="h2">Display of the count</Heading>
+
+Below 99:
+{(() => {
+const props = { count: 42 };
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Above 99:
+{(() => {
+const props = { count: 120 };
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+<Documentation />
