@@ -11,7 +11,6 @@
   font-family: var(--rvo-logo-font-family);
   font-weight: var(--rvo-logo-font-weight);
   gap: 10px;
-  max-width: 206px;
 }
 
 .rvo-logo__emblem {
@@ -45,7 +44,6 @@
 @media (min-width: 495px) {
   .rvo-logo {
     gap: 11px;
-    max-width: 270px;
   }
 
   .rvo-logo__emblem {
@@ -71,7 +69,6 @@
 @media (min-width: 650px) {
   .rvo-logo {
     gap: 12px;
-    max-width: 324px;
   }
 
   .rvo-logo__emblem {
