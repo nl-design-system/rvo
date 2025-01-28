@@ -1,4 +1,7 @@
-Gebruik ellipsen (…) om eventuele overgeslagen pagina's te vervangen. Bijvoorbeeld:
+## Richtlijnen
+
+- Lijn de pagination altijd links uit met de bovenstaande content waarvoor de pagination actief is. Dit zorgt ervoor dat mensen met kokervisie de pagination makkelijk kunnen ontdekken.
+- Gebruik ellipsen (…) om eventuele overgeslagen pagina's te vervangen. Bijvoorbeeld:
 
 [1] 2 … 10
 
@@ -15,6 +18,8 @@ Gebruik ellipsen (…) om eventuele overgeslagen pagina's te vervangen. Bijvoorb
 1 … 98 [99] 100
 
 1 … 99 [100]
+
+## Voor ontwikkelaars
 
 De functie voor deze logica kan als volgt worden geschreven:
 
