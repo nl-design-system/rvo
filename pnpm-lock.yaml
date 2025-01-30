@@ -177,6 +177,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/counter-badge:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/data-list:
     devDependencies:
       '@nl-rvo/build-utils-css':

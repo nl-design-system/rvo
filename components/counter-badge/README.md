@@ -1,4 +1,4 @@
-## Wanneer gebruik je het component
+### Wanneer gebruik je het component
 
 Het doel van de Counter Badge is een getal te tonen en de gebruiker te informeren. Voorbeelding hiervan zijn bijvoorbeeld:
 

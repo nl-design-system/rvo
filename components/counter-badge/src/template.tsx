@@ -1,11 +1,12 @@
 import { HTMLAttributes } from 'react';
+import React from 'react';
 import './index.scss';
 
 export interface ICounterBadge extends HTMLAttributes<HTMLSpanElement> {
   count: number;
 }
 
-export const CounterBadge = (props: ICounterBadge) => {
+export const CounterBadge: React.FC<ICounterBadge> = (props: ICounterBadge) => {
   const { count = 0, ...rest } = props;
 
   return (

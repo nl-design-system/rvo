@@ -1,4 +1,5 @@
 import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
 import * as CounterBadgeStories from "./counter-badge.stories";
 import documentation from "./README.md";
 import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
@@ -10,7 +11,15 @@ import { Changelog, Readme } from "../../packages/storybook/config/storybook-blo
 ### Preview
 
 <Canvas of={CounterBadgeStories.Default} layout="padded" />
-### Controls
+### Parameters
 <Controls />
 
+Dit component heeft maar één parameters, `count`. Als `count` leeg blijft valt hij automatisch terug naar `0`.
+
+## Documentatie
+
 <Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />
