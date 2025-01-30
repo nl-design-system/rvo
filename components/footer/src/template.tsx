@@ -5,19 +5,18 @@
 import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { Heading } from '../../heading/src/template';
 import HorizontalRule from '../../horizontal-rule/src/template';
 import Link from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-interface FooterItemInterface {
+export interface FooterItemInterface {
   content: string | ReactNode;
   link?: string;
 }
 
-interface FooterColumnInterface {
+export interface FooterColumnInterface {
   orientation?: 'vertical' | 'horizontal';
   label?: string;
   items?: FooterItemInterface[];
@@ -34,41 +33,11 @@ export interface FooterInterface {
   secondaryMenu?: FooterItemInterface[];
 }
 
-export const argTypes = {
-  primaryMenu: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  secondaryMenu: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  maxWidth: {
-    options: ['none', 'sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
-  payOff: {
-    type: {
-      name: 'string',
-      required: false,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Footer: React.FC<FooterInterface> = ({
-  primaryMenu = defaultArgs.primaryMenu,
-  maxWidth = defaultArgs.maxWidth,
-  payOff = defaultArgs.payOff,
-  secondaryMenu = defaultArgs.secondaryMenu,
+  primaryMenu,
+  maxWidth,
+  payOff,
+  secondaryMenu,
   children,
 }: FooterInterface) => {
   return (
@@ -92,12 +61,17 @@ export const Footer: React.FC<FooterInterface> = ({
                     className="rvo-footer__column-title"
                   />
                 )}
-                <ul className="rvo-footer__menu">
+                <ul
+                  className={clsx(
+                    'rvo-footer__menu',
+                    column.orientation === 'horizontal' && 'rvo-footer__menu--horizontal',
+                  )}
+                >
                   {column.items?.map((item, itemIndex) => (
                     <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
                       <Link
                         href={item.link}
-                        showIcon="before"
+                        showIcon={column.orientation === 'horizontal' ? 'no' : 'before'}
                         icon="delta-naar-rechts"
                         iconSize="sm"
                         iconColor="wit"

@@ -8,7 +8,6 @@
 
 .rvo-footer {
   background-color: var(--utrecht-page-footer-background-color);
-
   display: flex;
   flex-direction: column;
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
@@ -85,6 +84,10 @@
     a {
       color: var(--rvo-footer-column-itemlink-color);
       font-weight: var(--rvo-footer-column-itemlink-font-weight);
+    }
+
+    &--horizontal {
+      flex-direction: row;
     }
   }
 

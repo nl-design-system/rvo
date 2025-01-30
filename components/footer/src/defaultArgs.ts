@@ -1,13 +1,14 @@
-import { FooterInterface } from './template';
+import { FooterColumnInterface, FooterInterface, FooterItemInterface } from './template';
 
-const defaultPrimaryMenu = [
+const defaultPrimaryMenu: FooterColumnInterface[] = [
   {
     label: 'RVO',
+    orientation: 'horizontal',
     items: [
-      { content: 'Over ons', link: '#' },
-      { content: 'Contact', link: '#' },
-      { content: 'Pers', link: '#' },
-      { content: 'Zaken regelen bij RVO', link: '#' },
+      { content: '<div>Social 1</div>', link: '#' },
+      { content: '<div>Social 2</div>', link: '#' },
+      { content: '<div>Social 3</div>', link: '#' },
+      { content: '<div>Social 4</div>', link: '#' },
     ],
   },
   {
@@ -39,7 +40,7 @@ const defaultPrimaryMenu = [
   },
 ];
 
-const defaultSecondaryMenu = [
+const defaultSecondaryMenu: FooterItemInterface[] = [
   { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
   { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
   { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
