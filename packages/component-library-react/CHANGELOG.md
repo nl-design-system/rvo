@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.0.1
+
+### Patch Changes
+
+- e0aff8b: All button types have a underscore added to the hover event
+
 ## 4.0.0
 
 ### Major Changes
