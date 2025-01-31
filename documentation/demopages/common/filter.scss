@@ -18,7 +18,6 @@
   .rvo-filter-wrapper > .rvo-layout-row {
     align-items: baseline;
     display: grid;
-    gap: var(--rvo-space-xl);
 
     @media (min-width: 800px) {
       grid-template-columns: 300px 2fr;

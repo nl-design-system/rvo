@@ -61,7 +61,7 @@ const Subsidiewijzer = () => {
           />
 
           <div className="rvo-filter-wrapper rvo-max-width-layout rvo-max-width-layout--md">
-            <LayoutFlow row={true}>
+            <LayoutFlow row={true} gap="2xl">
               <div className="rvo-filter">
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
@@ -70,7 +70,7 @@ const Subsidiewijzer = () => {
                     </summary>
 
                     <form className="rvo-form">
-                      <LayoutFlow gap="xl">
+                      <LayoutFlow gap="2xl">
                         <TextInputField label="Zoek subsidies en financiering" value="wbso"></TextInputField>
 
                         <details open className="rvo-collapsible-filter">
@@ -421,7 +421,6 @@ const Subsidiewijzer = () => {
               <div className="rvo-results">
                 <Heading type="h1" mixedBoldAndNormal={true} noMargins={true}>
                   <strong>Subsidie- en financieringswijzer</strong>{' '}
-                  <span className="rvo-text rvo-text--subtle rvo-text--md">166 resultaten</span>
                 </Heading>
                 <LayoutFlow>
                   <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg rvo-paragraph--no-spacing">
@@ -432,7 +431,7 @@ const Subsidiewijzer = () => {
                       Lees meer over onze Subsidie- en financieringswijzer
                     </a>
                   </p>
-                  <LayoutFlow>
+                  <LayoutFlow gap="xl">
                     <LayoutFlow gap="2xs">
                       <LayoutFlow row={true} gap="sm" wrap={true}>
                         <strong className="rvo-results-active-filters">Actieve filters</strong>
@@ -474,28 +473,33 @@ const Subsidiewijzer = () => {
                         </div>
                       </LayoutFlow>
                     </LayoutFlow>
-                    <div className="rvo-inline-sort">
-                      <SelectField
-                        label="Sorteer resultaten op"
-                        options={[
-                          {
-                            value: 'Meest relevant',
-                            label: 'Meest relevant',
-                          },
-                          {
-                            value: 'Meest recente openingsdatum',
-                            label: 'Meest recente openingsdatum',
-                          },
-                          {
-                            value: 'Van A tot Z',
-                            label: 'Van A tot Z',
-                          },
-                        ]}
-                      ></SelectField>
-                    </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <LayoutFlow gap="2xs" row={true} justifyContent="space-between">
+                      <div className="rvo-results">
+                        <strong>166</strong> resultaten
+                      </div>
+                      <div className="rvo-inline-sort">
+                        <SelectField
+                          label="Sorteer resultaten op"
+                          options={[
+                            {
+                              value: 'Meest relevant',
+                              label: 'Meest relevant',
+                            },
+                            {
+                              value: 'Meest recente openingsdatum',
+                              label: 'Meest recente openingsdatum',
+                            },
+                            {
+                              value: 'Van A tot Z',
+                              label: 'Van A tot Z',
+                            },
+                          ]}
+                        ></SelectField>
+                      </div>
+                    </LayoutFlow>
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -505,19 +509,15 @@ const Subsidiewijzer = () => {
                             </a>
                           </h3>
                           <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
+                            <LayoutFlow gap="xs" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
+                              <strong>Open voor aanvragen</strong> vanaf 2 januari 2024 tot en met 27 september 2024
                             </LayoutFlow>
-                            <span>
-                              Programma waarmee Nederlandse bedrijven in een publiek-private samenwerking hun
-                              internationale ambities kunnen realiseren.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">
-                              Aanvragen vanaf 2 januari 2024 tot en met 27 september 2024.
-                            </em>
                           </div>
+                          <span>
+                            Programma waarmee Nederlandse bedrijven in een publiek-private samenwerking hun
+                            internationale ambities kunnen realiseren.
+                          </span>
                         </div>
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
@@ -526,9 +526,9 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -537,20 +537,15 @@ const Subsidiewijzer = () => {
                               Borgstelling MKB-kredieten (BMKB)
                             </a>
                           </h3>
-                          <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
-                              <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
-                            </LayoutFlow>
-                            <span>
-                              Borgstelling voor mkb inclusief starters, om een lening te verkrijgen voor investeringen.
-                              Ook voor investeerders die het mkb willen ondersteunen.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">
-                              Aanvragen tot 1 juli 2027. Bedrijven vragen niet zelf aan. Dit gaat via financiers.
-                            </em>
-                          </div>
+
+                          <LayoutFlow gap="sm" row={true}>
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <strong>Open voor aanvragen </strong> tot 1 juli 2027.
+                          </LayoutFlow>
+                          <span>
+                            Borgstelling voor mkb inclusief starters, om een lening te verkrijgen voor investeringen.
+                            Ook voor investeerders die het mkb willen ondersteunen.
+                          </span>
                         </div>
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
@@ -559,9 +554,9 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -570,20 +565,15 @@ const Subsidiewijzer = () => {
                               Eurostars: subsidie internationale marktgerichte R&D
                             </a>
                           </h3>
-                          <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
-                              <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
-                            </LayoutFlow>
-                            <span>
-                              Subsidie voor mkb-ondernemers die samen met Europese partners marktgerichte, nieuwe
-                              technologieën ontwikkelen.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">
-                              Aanvragen voor call 7: internationale aanvraag: 12 juli 2024 tot en met 12 september 2024.
-                            </em>
-                          </div>
+
+                          <LayoutFlow gap="sm" row={true}>
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <strong>Open voor aanvragen</strong> 12 juli 2024 tot en met 12 september 2024
+                          </LayoutFlow>
+                          <span>
+                            Subsidie voor mkb-ondernemers die samen met Europese partners marktgerichte, nieuwe
+                            technologieën ontwikkelen.
+                          </span>
                         </div>
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
@@ -592,9 +582,9 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -603,19 +593,17 @@ const Subsidiewijzer = () => {
                               Eureka: programma internationale marktgerichte R&D
                             </a>
                           </h3>
-                          <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
-                              <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
-                            </LayoutFlow>
-                            <span>
-                              Financiering voor bedrijven en organisaties die met marktgerichte R&D bijdragen aan
-                              economische groei en aan strategische en maatschappelijke oplossingen.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">Periode van indienen verschilt per call.</em>
-                          </div>
+
+                          <LayoutFlow gap="sm" row={true}>
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <strong>Open voor aanvragen</strong> Periode van indienen verschilt per call.
+                          </LayoutFlow>
+                          <span>
+                            Financiering voor bedrijven en organisaties die met marktgerichte R&D bijdragen aan
+                            economische groei en aan strategische en maatschappelijke oplossingen.
+                          </span>
                         </div>
+
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
                           role="img"
@@ -623,9 +611,9 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -634,20 +622,15 @@ const Subsidiewijzer = () => {
                               Groeifaciliteit
                             </a>
                           </h3>
-                          <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
-                              <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
-                            </LayoutFlow>
-                            <span>
-                              Garantstelling voor financiers om risicodragende financieringen te verstrekken aan
-                              ondernemers.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">
-                              Aanvragen vanaf 1 januari 2020 tot en met 31 december 2024.
-                            </em>
-                          </div>
+
+                          <LayoutFlow gap="sm" row={true}>
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <strong>Open voor aanvragen</strong> 1 januari 2020 tot en met 31 december 2024
+                          </LayoutFlow>
+                          <span>
+                            Garantstelling voor financiers om risicodragende financieringen te verstrekken aan
+                            ondernemers.
+                          </span>
                         </div>
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
@@ -656,9 +639,9 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -667,20 +650,15 @@ const Subsidiewijzer = () => {
                               Garantie Ondernemingsfinanciering (GO)
                             </a>
                           </h3>
-                          <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
-                              <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
-                            </LayoutFlow>
-                            <span>
-                              Garantstelling voor (middel)grote ondernemingen die krediet nodig hebben. De GO geeft
-                              banken een 50% staatsgarantie op middelgrote en grote leningen.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">
-                              Aanvragen vanaf 1 januari 2022 tot en met 13 juni 2025.
-                            </em>
-                          </div>
+
+                          <LayoutFlow gap="sm" row={true}>
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <strong>Open voor aanvragen</strong> 1 januari 2022 tot en met 13 juni 2025
+                          </LayoutFlow>
+                          <span>
+                            Garantstelling voor (middel)grote ondernemingen die krediet nodig hebben. De GO geeft banken
+                            een 50% staatsgarantie op middelgrote en grote leningen.
+                          </span>
                         </div>
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
@@ -689,9 +667,9 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <div className="rvo-card rvo-card--outline rvo-card--padding-sm">
+                    <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
+                        <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
                           <h3 className="rvo-heading--no-margins utrecht-heading-3">
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
@@ -700,22 +678,17 @@ const Subsidiewijzer = () => {
                               Subsidieregeling praktijkleren
                             </a>
                           </h3>
-                          <div className="rvo-project-details">
-                            <LayoutFlow gap="sm" row={true}>
-                              <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-                              <strong>Open voor aanvragen</strong>
-                            </LayoutFlow>
-                            <span>
-                              Subsidie voor ondernemers die een praktijk- of werkleerplaats aanbieden. De subsidie is
-                              een tegemoetkoming in de kosten die een werkgever maakt voor de begeleiding van een
-                              leerling of student. Hierdoor krijgen ondernemers beter opgeleid personeel en zijn
-                              studenten beter voorbereid op de arbeidsmarkt.
-                            </span>
-                            <br />
-                            <em className="rvo-text--italized">
-                              Aanvragen vanaf 3 juni 2024 tot en met 17 september 2024.
-                            </em>
-                          </div>
+
+                          <LayoutFlow gap="sm" row={true}>
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <strong>Open voor aanvragen</strong> 3 juni 2024 tot en met 17 september 2024
+                          </LayoutFlow>
+                          <span>
+                            Subsidie voor ondernemers die een praktijk- of werkleerplaats aanbieden. De subsidie is een
+                            tegemoetkoming in de kosten die een werkgever maakt voor de begeleiding van een leerling of
+                            student. Hierdoor krijgen ondernemers beter opgeleid personeel en zijn studenten beter
+                            voorbereid op de arbeidsmarkt.
+                          </span>
                         </div>
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
