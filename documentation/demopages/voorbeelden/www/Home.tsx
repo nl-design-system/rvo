@@ -1,4 +1,15 @@
-import { Footer, Header, Heading, Hero, Icon, Link, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Hero,
+  Icon,
+  LayoutFlow,
+  Link,
+  MenuBar,
+  MobileMenuBar,
+} from '@nl-rvo/components';
 import React, { useEffect, useState } from 'react';
 
 const Home = () => {
@@ -43,7 +54,7 @@ const Home = () => {
         <Hero size="lg" image="images/www/home.jpg" />
       </div>
       <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-layout--wrap rvo-margin-block-end--xl rvo-margin-block-start--xl">
+        <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-layout--wrap rvo-margin-block-end--2xl rvo-margin-block-start--xl">
           Snel naar{' '}
           <a
             className="rvo-link rvo-link--no-underline rvo-layout-column rvo-layout-align-content-center rvo-layout-row rvo-layout-gap--2xs"
@@ -233,7 +244,7 @@ const Home = () => {
         </div>
         {/* <hr className="rvo-hr" /> */}
 
-        <div className="rvo-overzichten rvo-margin-block-start--2xl ">
+        <div className="rvo-overzichten rvo-margin-block-start--3xl ">
           <h2 className="utrecht-heading-2">Overzichten voor ondernemend Nederland</h2>
           <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
             <div className="rvo-card rvo-card--full-colour--hemelblauw">
@@ -281,7 +292,7 @@ const Home = () => {
 
         {/* <hr className="rvo-hr" /> */}
 
-        <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--2xl rvo-margin-block-end--xl">
+        <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--3xl rvo-margin-block-end--3xl">
           <div className="">
             <Heading type="h2" textContent="Evenementen" />
             <div className="rvo-layout-grid rvo-layout-gap--md">
@@ -444,6 +455,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="rvo-feedback rvo-margin-block-start--3xl">
+          <LayoutFlow row={true} wrap={true} gap="sm" justifyContent="center">
+            <Icon icon="tekstballon-met-hart" size="2xl" />
+            <em className="rvo-text--xl">Bent u tevreden over deze pagina?</em>
+            <span className="rvo-rhs-update-component">
+              <Button kind="secondary">Geef uw mening</Button>
+            </span>
+          </LayoutFlow>
+        </div>
 
         {/* <div className="rvo-cards">
           <LayoutFlow gap="md">
@@ -518,15 +538,7 @@ const Home = () => {
           </LayoutFlow>
         </div> */}
         {/* <div className="rvo-feedback">
-          <LayoutFlow row={true} wrap={true} gap="sm">
-            <Icon icon="tekstballon-met-hart" size="2xl" />
-            <em>Bent u tevreden over deze pagina?</em>
-            <span className="rvo-rhs-update-component">
-              <Button kind="secondary" size="sm">
-                Geef uw mening
-              </Button>
-            </span>
-          </LayoutFlow>
+          
         </div> */}
       </main>
       {/* <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
