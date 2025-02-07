@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.1.0
+
+### Minor Changes
+
+- 37945cc: Added css for the use of a counter badge
+
 ## 4.0.1
 
 ### Patch Changes
