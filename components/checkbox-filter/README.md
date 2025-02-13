@@ -1,0 +1,1 @@
+Dit component wordt voornamelijk gebruikt op een zoekpagina. De filters die je kun toepassen bij het zoeken kun je hierin verwerken door `options` mee te sturen. Je kan filters als de lijst van filter te veel is, maar dit is een optioneele boolean. De onChange functies voor de checkboxes en het inputveld zul je in je eigen omgevingen moeten afhandelen.
