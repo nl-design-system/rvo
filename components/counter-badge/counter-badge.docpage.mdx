@@ -1,0 +1,24 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as CounterBadgeStories from "./counter-badge.stories";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
+
+<Meta of={CounterBadgeStories} name="Documentatie" />
+<Title />
+
+### Preview
+
+<Canvas of={CounterBadgeStories.Default} layout="padded" />
+### Parameters
+<Controls />
+
+Dit component heeft maar één parameters, `count`. Als `count` leeg blijft valt hij automatisch terug naar `0`.
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

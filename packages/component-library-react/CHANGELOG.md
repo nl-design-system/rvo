@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.1.0
+
+### Minor Changes
+
+- 37945cc: Added new component: Counter Badge
+
 ## 4.0.1
 
 ### Patch Changes
