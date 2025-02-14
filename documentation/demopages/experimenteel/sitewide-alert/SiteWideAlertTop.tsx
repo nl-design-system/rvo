@@ -18,10 +18,21 @@ import {
 const SiteWideAlertTop = () => {
   return (
     <body className="rvo-theme">
-      <Header />
-      <div className="rvo-max-width-layout rvo-max-width-layout--sm">
-        <Alert kind="error">Momenteel is er een storing waardoor het niet mogelijk is om in te loggen met DigiD.</Alert>
+      <div className="rvo-alert rvo-alert--error rvo-alert--padding-md">
+        <span
+          className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
+          role="img"
+          aria-label="Foutmelding"
+        ></span>
+        <div className="rvo-alert-text">
+          <div>
+            <div>Het is momenteel niet mogelijk om met DigiD in te loggen.</div>
+          </div>
+        </div>
       </div>
+
+      <Header />
+
       <MenuBar
         items={[
           {
