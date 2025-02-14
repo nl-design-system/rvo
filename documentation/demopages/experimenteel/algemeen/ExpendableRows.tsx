@@ -1,9 +1,10 @@
-import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { ExpandableContent, Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
+import '../../common/style.scss';
 
-const DocumentenClean = () => {
+const ExpendableRows = () => {
   return (
-    <body className="rvo-theme rvo-responsive">
+    <body className="rvo-theme rvo-responsive rvo-demo-page-expandable-tr">
       <Header />
       {/* <MobileMenuBar
         iconPlacement="before"
@@ -126,42 +127,51 @@ const DocumentenClean = () => {
                       </tr>
                     </thead>
                     <tbody className="rvo-table-body">
-                      <tr className="rvo-table-row rvo-card">
+                      <tr className="rvo-table-row">
                         <td className="rvo-table-cell">Title value 1</td>
                         <td className="rvo-table-cell">Text value 1</td>
                         <td className="rvo-table-cell rvo-table-cell--numeric">57</td>
                         <td className="rvo-table-cell">
-                          <a href="#" className="rvo-link rvo-card__link rvo-card__full-card-link">
+                          <a href="#" className="rvo-link">
                             Link 1
                           </a>
                         </td>
                       </tr>
-                      <tr className="rvo-table-row rvo-card">
+                      <tr className="rvo-table-row rvo-table-row--expandable">
+                        <td colSpan={4} className="rvo-table-cell">
+                          <ExpandableContent
+                            title="Meer informatie"
+                            content="Hier meer informatie over de bovenstaande tabel rij"
+                          />
+                        </td>
+                      </tr>
+
+                      <tr className="rvo-table-row">
                         <td className="rvo-table-cell">Title value 2</td>
                         <td className="rvo-table-cell">Text value 2</td>
                         <td className="rvo-table-cell rvo-table-cell--numeric">12.50</td>
                         <td className="rvo-table-cell">
-                          <a href="#" className="rvo-link rvo-card__link rvo-card__full-card-link">
+                          <a href="#" className="rvo-link">
                             Link 2
                           </a>
                         </td>
                       </tr>
-                      <tr className="rvo-table-row rvo-card">
+                      <tr className="rvo-table-row">
                         <td className="rvo-table-cell">Title value 3</td>
                         <td className="rvo-table-cell">Text value 3</td>
                         <td className="rvo-table-cell rvo-table-cell--numeric">90</td>
                         <td className="rvo-table-cell">
-                          <a href="#" className="rvo-link rvo-card__link rvo-card__full-card-link">
+                          <a href="#" className="rvo-link">
                             Link 3
                           </a>
                         </td>
                       </tr>
-                      <tr className="rvo-table-row rvo-card">
+                      <tr className="rvo-table-row">
                         <td className="rvo-table-cell">Title value 4</td>
                         <td className="rvo-table-cell">Text value 4</td>
                         <td className="rvo-table-cell rvo-table-cell--numeric">1.50</td>
                         <td className="rvo-table-cell">
-                          <a href="#" className="rvo-link rvo-card__link rvo-card__full-card-link">
+                          <a href="#" className="rvo-link">
                             Link 4
                           </a>
                         </td>
@@ -179,4 +189,4 @@ const DocumentenClean = () => {
   );
 };
 
-export default DocumentenClean;
+export default ExpendableRows;

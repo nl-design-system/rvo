@@ -40,6 +40,10 @@
   gap: var(--rvo-space-sm);
 }
 
+.rvo-table-header__sortable-container--numeric {
+  justify-content: end;
+}
+
 .rvo-table-header__sortable-button {
   min-inline-size: 0;
   padding-block-end: 0;
@@ -52,6 +56,11 @@
   display: flex;
   height: var(--rvo-icon-md-height);
   width: var(--rvo-icon-md-width);
+}
+
+.rvo-table-header--active-sort {
+  text-decoration: var(--_rvo-table-header-color, underline);
+  text-underline-offset: 30%;
 }
 
 .rvo-table-header--sortable:hover {

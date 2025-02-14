@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-react
 
+## 4.2.1
+
+### Patch Changes
+
+- ba6a672: Fixed table header issues and design tokens updated
+
+## 4.2.0
+
+### Minor Changes
+
+- 1dee453: Added a new componont to be used, the loader.
+
 ## 4.1.0
 
 ### Minor Changes
