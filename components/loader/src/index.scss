@@ -1,25 +1,25 @@
 .rvo-loader {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: var(--rvo-color-grijs-050);
+  display: flex;
   flex-direction: column;
   gap: var(--rvo-space-sm);
+  justify-content: center;
+  min-height: 200px;
   padding-block-end: var(--rvo-space-md);
   padding-block-start: var(--rvo-space-md);
   padding-inline-end: var(--rvo-space-md);
   padding-inline-start: var(--rvo-space-md);
-  min-height: 200px;
-  background-color: var(--rvo-color-grijs-050);
 
   &--overlay {
+    height: 100%;
     position: absolute;
     width: 100%;
-    height: 100%;
   }
 
   &__icon {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
 
     &--animated {
@@ -30,17 +30,17 @@
   }
 
   &__warning {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     gap: var(--rvo-space-xs);
+    justify-content: center;
   }
 
   &__actions {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     gap: var(--rvo-space-md);
+    justify-content: center;
   }
 }
 
