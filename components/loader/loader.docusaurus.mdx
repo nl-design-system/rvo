@@ -1,0 +1,75 @@
+---
+title: Loader
+hide_title: false
+hide_table_of_contents: true
+slug: .
+---
+
+import Documentation from "./README.md";
+import Loader from "./src/template";
+import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+
+## Standard component:
+
+<ComponentExample storyName="componenten-loader--default">
+  <Loader />
+</ComponentExample>
+
+## Loader met status:
+
+{(() => {
+const props = { status: { type: 'waarschuwing', text: 'Het laden duurt iets langer dan verwacht' } };
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <Loader {...props} />
+</ComponentExample>
+); })()}
+
+## Loader Overlay
+
+{(() => {
+const props = { overlay: true };
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <div style={{ position: "relative", width: 500, height: 500 }}>
+    <Loader {...props} />
+  </div>
+</ComponentExample>
+); })()}
+
+## Loader met acties:
+
+{(() => {
+const props = {
+primaryAction: { label: 'Probeer het opnieuw' },
+secondaryAction: { label: 'Probleem melden' }
+};
+
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <Loader {...props} />
+</ComponentExample>
+); })()}
+
+## Loader met status en acties
+
+{(() => {
+const props = {
+status: { type: 'waarschuwing', text: 'Het laden duurt iets langer dan verwacht' },
+primaryAction: { label: 'Probeer het opnieuw' },
+secondaryAction: { label: 'Probleem melden' }
+};
+
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <Loader {...props} />
+</ComponentExample>
+); })()}
+
+## Documentatie
+
+<Documentation />

@@ -436,6 +436,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/loader:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/logo:
     devDependencies:
       '@nl-rvo/build-utils-css':

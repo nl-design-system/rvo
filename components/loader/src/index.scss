@@ -1,0 +1,55 @@
+.rvo-loader {
+  align-items: center;
+  background-color: var(--rvo-color-grijs-050);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rvo-space-sm);
+  justify-content: center;
+  min-height: 200px;
+  padding-block-end: var(--rvo-space-md);
+  padding-block-start: var(--rvo-space-md);
+  padding-inline-end: var(--rvo-space-md);
+  padding-inline-start: var(--rvo-space-md);
+
+  &--overlay {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &--animated {
+      animation-duration: 3000ms;
+      animation-iteration-count: infinite;
+      animation-name: rvo-rotate;
+    }
+  }
+
+  &__warning {
+    align-items: center;
+    display: flex;
+    gap: var(--rvo-space-xs);
+    justify-content: center;
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    gap: var(--rvo-space-md);
+    justify-content: center;
+  }
+}
+
+@keyframes rvo-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
