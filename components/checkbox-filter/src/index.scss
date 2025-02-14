@@ -1,5 +1,15 @@
 .rvo-checkbox-filter {
+  max-width: 450px;
+
+  &__icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
   &__label {
+    position: relative;
     color: var(--rvo-color-logoblauw);
     cursor: pointer;
     display: flex;
@@ -13,4 +23,8 @@
     margin-block-end: var(--rvo-space-xs);
     margin-block-start: var(--rvo-space-2xs);
   }
+}
+
+.rvo-checkbox-filter[open] .rvo-checkbox-filter__icon {
+  transform: translateY(-50%) rotate(0deg);
 }

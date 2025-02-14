@@ -1,10 +1,10 @@
-import CheckboxField from '@nl-rvo/components/form-field-checkbox/src/template';
-import './index.scss';
-import TextInputField from '@nl-rvo/components/form-field-textinput/src/template';
-import Link from '@nl-rvo/components/link/src/template';
 import React, { HTMLAttributes, useState } from 'react';
-// eslint-disable-next-line import/order
-import { ICheckboxProps } from '@nl-rvo/components/form-checkbox/src/template';
+import { ICheckboxProps } from '../../form-checkbox/src/template';
+import CheckboxField from '../../form-field-checkbox/src/template';
+import TextInputField from '../../form-field-textinput/src/template';
+import Icon from '../../icon/src/template';
+import Link from '../../link/src/template';
+import './index.scss';
 
 export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
   label: string;
@@ -54,7 +54,10 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
 
   return (
     <details open className="rvo-checkbox-filter" {...rest}>
-      <summary className="rvo-checkbox-filter__label">{label}</summary>
+      <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" />
+      <summary className="rvo-checkbox-filter__label">
+        {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="logoblauw" />
+      </summary>
       {showInputField && <TextInputField placeholder={inputFieldPlaceholder} onChange={inputFieldOnChange} label=" " />}
       <div className="rvo-checkbox-filter__checkbox-container">
         <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
