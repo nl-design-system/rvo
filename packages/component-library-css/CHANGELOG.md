@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.2.2
+
+### Patch Changes
+
+- 221a118: Import loader css
+
 ## 4.2.1
 
 ### Patch Changes
