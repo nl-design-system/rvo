@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.2.1
+
+### Patch Changes
+
+- ba6a672: Fixed table header issues and design tokens updated
+
 ## 4.2.0
 
 ### Minor Changes
