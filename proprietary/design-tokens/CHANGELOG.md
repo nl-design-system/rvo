@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.6.3
+
+### Patch Changes
+
+- ba6a672: Fixed table header issues and design tokens updated
+
 ## 1.6.2
 
 ### Patch Changes
