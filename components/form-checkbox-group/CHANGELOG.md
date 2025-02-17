@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox-group`
 
+## 1.2.2
+
+### Patch Changes
+
+- 9fffd1e: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
+
 ## 1.2.1
 
 ### Patch Changes

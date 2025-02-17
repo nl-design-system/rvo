@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.0
+
+### Minor Changes
+
+- 9fffd1e: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
+
 ## 4.3.0
 
 ### Minor Changes
