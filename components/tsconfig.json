@@ -23,6 +23,5 @@
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
     }
   },
-  "include": ["**/*", "counter-badge/src/template.tsx"],
   "exclude": ["**/node_modules"]
 }
