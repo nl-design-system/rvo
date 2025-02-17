@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useState } from 'react';
+import React, { HTMLAttributes, useEffect, useState } from 'react';
 import { ICheckboxProps } from '../../form-checkbox/src/template';
 import CheckboxField from '../../form-field-checkbox/src/template';
 import TextInputField from '../../form-field-textinput/src/template';
@@ -31,12 +31,14 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     showLessText = 'Toon minder',
     ...rest
   } = props;
-  const clonedOptions = [...options];
+  const [visibleItems, setVisibleItems] = useState([]);
 
-  const [visibleItems, setVisibleItems] = useState(
-    options?.length > limit ? clonedOptions.splice(0, limit) : clonedOptions,
-  );
   const [toggleShow, setToggleShow] = useState(false);
+
+  useEffect(() => {
+    const clonedOptions = [...options];
+    setVisibleItems(options?.length > limit && !toggleShow ? clonedOptions.splice(0, limit) : clonedOptions);
+  }, [options]);
 
   const toggleShowClick = (e) => {
     e.preventDefault();

@@ -177,6 +177,19 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/checkbox-filter:
+    dependencies:
+      '@utrecht/button-css':
+        specifier: 2.1.0
+        version: 2.1.0
+      '@utrecht/focus-ring-css':
+        specifier: 2.2.0
+        version: 2.2.0
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/counter-badge:
     devDependencies:
       '@nl-rvo/build-utils-css':

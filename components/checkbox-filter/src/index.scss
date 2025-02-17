@@ -3,13 +3,12 @@
 
   &__icon {
     position: absolute;
-    right: 8px;
+    right: var(--rvo-space-xs);
     top: 50%;
     transform: translateY(-50%) rotate(180deg);
   }
 
   &__label {
-    position: relative;
     color: var(--rvo-color-logoblauw);
     cursor: pointer;
     display: flex;
@@ -17,6 +16,7 @@
     font-weight: var(--rvo-font-weight-bold);
     gap: var(--rvo-space-xs);
     list-style: none;
+    position: relative;
   }
 
   &__checkbox-container {
