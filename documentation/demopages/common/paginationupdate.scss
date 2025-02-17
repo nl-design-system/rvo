@@ -1,4 +1,8 @@
 .rvo-pagination-update {
+  .rvo-pagination {
+    justify-content: flex-start;
+  }
+
   .rvo-pagination .rvo-pagination__item .rvo-link {
     font-weight: var(--rvo-font-weight-bold);
     text-decoration: none;
