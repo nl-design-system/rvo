@@ -32,7 +32,6 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     ...rest
   } = props;
   const [visibleItems, setVisibleItems] = useState([]);
-
   const [toggleShow, setToggleShow] = useState(false);
 
   useEffect(() => {
