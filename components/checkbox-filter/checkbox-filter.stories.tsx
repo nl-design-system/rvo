@@ -77,28 +77,7 @@ export default meta;
 
 type Story = StoryObj<typeof CheckBoxFilter>;
 
-export const Default: Story = {
-  args: defaultArgs,
-  name: 'Checkbox Filter',
-  render: function Render(args) {
-    let testData = [...inputOptions];
-
-    const [{ options }, updateArgs] = useArgs();
-
-    function onSelect(selectedOptions) {
-      const updatedData = testData.map((item, index) => {
-        if (selectedOptions.indexOf(index) >= 0) {
-          return { checked: true, ...item };
-        }
-
-        return item;
-      });
-      updateArgs({ options: [...updatedData] });
-    }
-
-    return <CheckBoxFilter options={[...options]} {...args} optionsOnChange={onSelect} />;
-  },
-};
+export const Default: Story = { args: defaultArgs, name: 'Checkbox Filter' };
 
 export const CheckboxFilterInputField: Story = {
   args: inputArgs,
