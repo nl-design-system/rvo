@@ -55,11 +55,12 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
 
   return (
     <details open className="rvo-checkbox-filter" {...rest}>
-      <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" />
       <summary className="rvo-checkbox-filter__label">
         {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="logoblauw" />
       </summary>
-      {showInputField && <TextInputField placeholder={inputFieldPlaceholder} onChange={inputFieldOnChange} label=" " />}
+      {showInputField && (
+        <TextInputField placeholder={inputFieldPlaceholder} onChange={inputFieldOnChange} label=" " size="max" />
+      )}
       <div className="rvo-checkbox-filter__checkbox-container">
         <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
       </div>
