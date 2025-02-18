@@ -111,11 +111,18 @@ export const Table: React.FC<ITableProps> = ({
                     'rvo-table-header',
                     column.sortable && 'rvo-table-header--sortable',
                     column.type === 'numeric' && 'rvo-table-header--numeric',
+                    (column.sortDirection === 'ASC' || column.sortDirection === 'DESC') &&
+                      'rvo-table-header--active-sort',
                   )}
                   onClick={column.sortable ? () => handleSort(index) : undefined}
                   style={column.sortable ? { cursor: 'pointer' } : undefined}
                 >
-                  <div className="rvo-table-header__sortable-container">
+                  <div
+                    className={clsx(
+                      'rvo-table-header__sortable-container',
+                      column.type === 'numeric' && 'rvo-table-header__sortable-container--numeric',
+                    )}
+                  >
                     {column.label}
                     {column.sortable && column.sortDirection === 'ASC' && (
                       <SortAscendingIcon className="rvo--table-header__sorting-icon" />

@@ -1,120 +1,60 @@
-import { Footer, Header, Heading, Hero, Icon, Link, MenuBar } from '@nl-rvo/components';
-// import '../../common/rhs-update.scss';
-// import '../../common/www.scss';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Hero,
+  Icon,
+  LayoutFlow,
+  Link,
+  MenuBar,
+  MobileMenuBar,
+} from '@nl-rvo/components';
+import React, { useEffect, useState } from 'react';
 
 const Home = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1020);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <body className="rvo-theme">
       <Header />
-
-      {/* <div className="rvo-responsive-menu-wrapper">
-            <details className="rvo-responsive-menu">
-              <summary className="rvo-responsive-menu-toggle">
-                <Icon icon="menu" size="lg" /> Menu
-              </summary>
-              <div className="rvo-sidebar-menu">
-                <MenuBar
-                  items={[
-                    {
-                      label: 'Home',
-                      active: true,
-                      link: '#',
-                    },
-                    {
-                      label: 'Onderwerpen',
-                      link: '#',
-                    },
-                    {
-                      label: 'Subsidie- en financieringswijzer',
-                      link: '#',
-                    },
-                    {
-                      label: 'Over ons',
-                      link: '#',
-                    },
-                    {
-                      label: 'Contact',
-                      link: '#',
-                    },
-                    {
-                      label: 'Mijn RVO',
-                      link: '#',
-                      icon: 'user',
-                    },
-                    {
-                      label: 'English',
-                      icon: 'wereldbol',
-                      link: '#',
-                    },
-                    {
-                      label: 'Zoeken',
-                      icon: 'zoek',
-                      link: '#',
-                    },
-                  ]}
-                  size="lg"
-                  useIcons={true}
-                  iconPlacement="before"
-                  maxWidth="lg"
-                  horizontalRule={false}
-                />
-              </div>
-            </details>
-          </div> */}
-
-      <MenuBar
-        items={[
-          {
-            label: 'Home',
-            active: true,
-            link: '#',
-          },
-          {
-            label: 'Onderwerpen',
-            link: '#',
-          },
-          {
-            label: 'Subsidie- en financieringswijzer',
-            link: '#',
-          },
-          {
-            label: 'Over ons',
-            link: '#',
-          },
-          {
-            label: 'Contact',
-            link: '#',
-          },
-          {
-            align: 'right',
-            label: 'Mijn RVO',
-            link: '#',
-            active: true,
-            icon: 'user',
-          },
-          {
-            align: 'right',
-            label: 'English',
-            icon: 'wereldbol',
-            link: '#',
-          },
-          {
-            align: 'right',
-            label: 'Zoeken',
-            icon: 'zoek',
-            link: '#',
-          },
-        ]}
-        size="lg"
-        useIcons={true}
-        iconPlacement="before"
-        maxWidth="lg"
-        horizontalRule={false}
-      />
-
-      <Hero size="lg" image="images/www/home.jpg" />
-      <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl">
-        <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-margin-block-end--xl rvo-margin-block-start--xl">
+      <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        {isDesktop ? (
+          <MenuBar
+            items={[
+              { label: 'Home', active: true, link: '#' },
+              { label: 'Onderwerpen', link: '#' },
+              { label: 'Subsidie- en financieringswijzer', link: '#' },
+              { label: 'Over ons', link: '#' },
+              { label: 'Contact', link: '#' },
+              { align: 'right', label: 'Mijn RVO', link: '#', active: true, icon: 'user' },
+              { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
+              { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
+            ]}
+            size="lg"
+            useIcons={true}
+            iconPlacement="before"
+            maxWidth="lg"
+            horizontalRule={false}
+          />
+        ) : (
+          <MobileMenuBar />
+        )}
+      </div>
+      <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        <Hero size="lg" image="images/www/home.jpg" />
+      </div>
+      <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-layout--wrap rvo-margin-block-end--2xl rvo-margin-block-start--xl">
           Snel naar{' '}
           <a
             className="rvo-link rvo-link--no-underline rvo-layout-column rvo-layout-align-content-center rvo-layout-row rvo-layout-gap--2xs"
@@ -304,7 +244,7 @@ const Home = () => {
         </div>
         {/* <hr className="rvo-hr" /> */}
 
-        <div className="rvo-overzichten rvo-margin-block-start--2xl ">
+        <div className="rvo-overzichten rvo-margin-block-start--3xl ">
           <h2 className="utrecht-heading-2">Overzichten voor ondernemend Nederland</h2>
           <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
             <div className="rvo-card rvo-card--full-colour--hemelblauw">
@@ -352,7 +292,7 @@ const Home = () => {
 
         {/* <hr className="rvo-hr" /> */}
 
-        <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--2xl">
+        <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--3xl rvo-margin-block-end--3xl">
           <div className="">
             <Heading type="h2" textContent="Evenementen" />
             <div className="rvo-layout-grid rvo-layout-gap--md">
@@ -432,6 +372,98 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="rvo-uitgelicht rvo-margin-block-end--md">
+          <h2 className="utrecht-heading-2">Uitgelicht</h2>
+          <div className="rvo-layout-grid-container rvo-margin-block-end--md">
+            <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
+              <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
+                <div className="rvo-card__image-container">
+                  <img
+                    src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-12%2FProjectenboek-MIEK-en-Projectprocedure-2024.jpg%3Fitok%3DI7uP9ni9&w=750&q=85"
+                    className="rvo-card__image"
+                  />
+                </div>
+
+                <div className="rvo-card__content">
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
+                      Energieprojecten in Nederland
+                    </a>
+                  </h3>
+                  In Nederland wordt hard gewerkt aan de verbouwing van ons energiesysteem. Daarvoor is nieuwe
+                  energie-infrastructuur nodig, op land en op zee. We voorkomen daarmee netcongestie in de toekomst en
+                  we kunnen alle duurzame energie vervoeren. Daarom werken we aan ruim 60 grote energieprojecten door
+                  het hele land. Bekijk ze in ons jaaroverzicht.
+                </div>
+              </div>
+              <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
+                <div className="rvo-card__image-container">
+                  <img
+                    src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-06%2FCultuurverschillen_blok.png%3Fitok%3D5hnBoB9g&w=750&q=85"
+                    className="rvo-card__image"
+                  />
+                </div>
+
+                <div className="rvo-card__content">
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
+                      Cultuurverschillen bij internationaal ondernemen
+                    </a>
+                  </h3>
+                  Iedere ondernemer die zakendoet over de grens krijgt ermee te maken. Bekijk de praktische tips van
+                  onze adviseurs, het ambassadenetwerk en cultuurexperts waarmee wij samenwerken. Een goede
+                  voorbereiding kan doorslaggevend zijn voor uw succes.
+                </div>
+              </div>
+              <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
+                <div className="rvo-card__image-container">
+                  <img
+                    src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-10%2FRWS20210909JV09-1920.jpg%3Fitok%3DGQh170Uc&w=750&q=85"
+                    className="rvo-card__image"
+                  />
+                </div>
+
+                <div className="rvo-card__content">
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
+                      10 jaar DEI+: Honderden innovaties voor de toekomst
+                    </a>
+                  </h3>
+                  Met de DEI+ demonstreren en testen ondernemers hun ideeën voor energie- en klimaatinnovatie. Alle
+                  DEI+-projecten droegen bij aan het verminderen van het gebruik van fossiele brandstoffen, het
+                  verbeteren van energie-efficiëntie en het inzetten van hernieuwbare energiebronnen.
+                </div>
+              </div>
+              <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
+                <div className="rvo-card__image-container">
+                  <img
+                    src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-11%2FDuurzame%2520glastuinbouw.jpg%3Fitok%3D7TUACyBz&w=750&q=85"
+                    className="rvo-card__image"
+                  />
+                </div>
+
+                <div className="rvo-card__content">
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
+                      Veranderingen voor agrarische ondernemers in 2025
+                    </a>
+                  </h3>
+                  Bent u agrarisch ondernemer? Het kan zijn dat er voor de regelingen die u gebruikt iets verandert in
+                  2025. Deze veranderingen vindt u nu in ons overzicht.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="rvo-feedback rvo-margin-block-start--3xl">
+          <LayoutFlow row={true} wrap={true} gap="sm" justifyContent="center">
+            <Icon icon="tekstballon-met-hart" size="2xl" />
+            <em className="rvo-text--xl">Bent u tevreden over deze pagina?</em>
+            <span className="rvo-rhs-update-component">
+              <Button kind="secondary">Geef uw mening</Button>
+            </span>
+          </LayoutFlow>
+        </div>
 
         {/* <div className="rvo-cards">
           <LayoutFlow gap="md">
@@ -506,15 +538,7 @@ const Home = () => {
           </LayoutFlow>
         </div> */}
         {/* <div className="rvo-feedback">
-          <LayoutFlow row={true} wrap={true} gap="sm">
-            <Icon icon="tekstballon-met-hart" size="2xl" />
-            <em>Bent u tevreden over deze pagina?</em>
-            <span className="rvo-rhs-update-component">
-              <Button kind="secondary" size="sm">
-                Geef uw mening
-              </Button>
-            </span>
-          </LayoutFlow>
+          
         </div> */}
       </main>
       {/* <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">

@@ -6,6 +6,7 @@ export { BreadcrumbsItem } from './breadcrumbs/src/breadcrumbs-item/template';
 export { Button } from './button/src/template';
 export { ActionGroup } from './action-group/src/template';
 export { Card } from './card/src/template';
+export { CounterBadge } from './counter-badge/src/template';
 export { DataList } from './data-list/src/template';
 export { DataListItem } from './data-list/src/data-list-item/template';
 export { Dialog } from './dialog/src/template';

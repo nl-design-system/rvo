@@ -1,5 +1,35 @@
 # @nl-rvo/component-library-react
 
+## 4.3.0
+
+### Minor Changes
+
+- 6284f7a: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
+
+## 4.2.1
+
+### Patch Changes
+
+- ba6a672: Fixed table header issues and design tokens updated
+
+## 4.2.0
+
+### Minor Changes
+
+- 1dee453: Added a new componont to be used, the loader.
+
+## 4.1.0
+
+### Minor Changes
+
+- 37945cc: Added new component: Counter Badge
+
+## 4.0.1
+
+### Patch Changes
+
+- e0aff8b: All button types have a underscore added to the hover event
+
 ## 4.0.0
 
 ### Major Changes

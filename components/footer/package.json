@@ -32,6 +32,6 @@
     "@nl-rvo/build-utils-css": "workspace:*"
   },
   "dependencies": {
-    "@utrecht/page-footer-css": "2.0.0"
+    "@utrecht/page-footer-css": "2.1.0"
   }
 }

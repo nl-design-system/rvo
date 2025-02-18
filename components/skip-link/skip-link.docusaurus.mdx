@@ -1,17 +1,22 @@
 ---
-title: Skip-link
+title: Skip link
 hide_title: false
 hide_table_of_contents: true
 slug: .
 ---
 
 import Documentation from "./README.md";
-import SkipLink from "./src/template.tsx";
+import SkipLink from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
-<ComponentExample minHeight={95}>
+{(() => {
+const props = { minHeight: 95 };
+return (
+
+<ComponentExample storyName="componenten-skip-link--default" args={props}>
   <SkipLink />
 </ComponentExample>
+); })()}
 
 <br />
 Klik op de lege ruimte in het voorbeeld en druk op TAB om de skip-link te tonen.

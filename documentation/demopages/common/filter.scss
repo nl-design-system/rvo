@@ -11,10 +11,13 @@
     padding-inline-start: var(--rvo-space-md);
   }
 
+  .utrecht-form-fieldset {
+    background-color: var(--rvo-color-lichtblauw-150);
+  }
+
   .rvo-filter-wrapper > .rvo-layout-row {
     align-items: baseline;
     display: grid;
-    gap: var(--rvo-space-xl);
 
     @media (min-width: 800px) {
       grid-template-columns: 300px 2fr;
@@ -93,10 +96,6 @@
   .rvo-collapsible-filter[open] > .rvo-collapsible-filter-label::after {
     -webkit-mask-image: var(--rvo-icon-delta-omlaag);
     mask-image: var(--rvo-icon-delta-omlaag);
-  }
-
-  .rvo-project-details {
-    font-size: var(--rvo-font-size-sm);
   }
 
   .rvo-filter .rvo-hr {

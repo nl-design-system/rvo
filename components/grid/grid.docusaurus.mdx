@@ -1,5 +1,5 @@
 ---
-title: Grid layout
+title: Grid
 hide_title: false
 hide_table_of_contents: true
 slug: .
@@ -9,8 +9,13 @@ import Documentation from "./README.md";
 import Grid from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
-<ComponentExample>
-  <Grid gap="md" />
+{(() => {
+const props = { columns: "three" };
+return (
+
+<ComponentExample storyName="layout-grid--default" args={props}>
+  <Grid {...props} />
 </ComponentExample>
+); })()}
 
 <Documentation />

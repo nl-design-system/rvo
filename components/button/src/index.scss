@@ -7,13 +7,19 @@
 .utrecht-button {
   flex-shrink: 0;
   text-wrap: nowrap;
+
+  &--hover:not(:disabled),
+  &:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
+    text-decoration: underline;
+    text-underline-offset: 30%;
+  }
 }
 
 // Subtle button
 .utrecht-button--subtle.utrecht-button--hover:not(:disabled),
 .utrecht-button--subtle.utrecht-button-link--hover:not(:disabled),
 .utrecht-button--subtle:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
-  text-decoration: var(--utrecht-button-subtle-hover-text-decoration, underline);
+  text-decoration: var(--_utrecht-button-appearance-hover-color, underline);
   text-underline-offset: 30%;
 }
 

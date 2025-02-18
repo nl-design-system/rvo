@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "author": "Community for NL Design System",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/css-loader",
+  "description": "Loader CSS component",
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "link"
+  ],
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "design-tokens.json",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/loader"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*"
+  }
+}

@@ -14,26 +14,38 @@ import Heading from "../heading/src/template";
 
 Primary button:
 
-<ComponentExample>
+<ComponentExample storyName="componenten-button--default">
   <Button />
 </ComponentExample>
 
 Secondary button:
+{(() => {
+const props = { kind: "secondary" };
+return (
 
-<ComponentExample>
-  <Button kind="secondary" />
+<ComponentExample storyName="componenten-button--default">
+  <Button {...props} />
 </ComponentExample>
+); })()}
 
 Tertiary button:
+{(() => {
+const props = { kind: "tertiary" };
+return (
 
-<ComponentExample>
-  <Button kind="tertiary" />
+<ComponentExample storyName="componenten-button--default" args={props}>
+  <Button {...props} />
 </ComponentExample>
+); })()}
 
 Quaternary button:
+{(() => {
+const props = { kind: "quaternary" };
+return (
 
-<ComponentExample>
-  <Button kind="quaternary" />
+<ComponentExample storyName="componenten-button--default" args={props}>
+  <Button {...props} />
 </ComponentExample>
+); })()}
 
 <Documentation />

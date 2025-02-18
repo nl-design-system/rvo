@@ -19,4 +19,5 @@ const defaultButtonsRight = [
 export const defaultArgs: IActionGroupProps = {
   buttonsLeft: defaultButtonsLeft,
   buttonsRight: defaultButtonsRight,
+  position: 'left',
 };

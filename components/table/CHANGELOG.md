@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.3.1
+
+### Patch Changes
+
+- ba6a672: Fixed table header issues and design tokens updated
+
 ## 1.3.0
 
 ### Minor Changes

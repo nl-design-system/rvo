@@ -74,7 +74,13 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
           />
         ))) ||
         options?.map((option) => (
-          <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
+          <Checkbox
+            key={option.id}
+            id={option.id}
+            label={option.label}
+            checked={option.checked}
+            onUpdateGroup={onUpdateGroup}
+          />
         ))}
     </div>
   );

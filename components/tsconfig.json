@@ -23,6 +23,5 @@
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
     }
   },
-  "include": ["**/*"],
   "exclude": ["**/node_modules"]
 }

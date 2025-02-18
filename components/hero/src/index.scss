@@ -38,9 +38,9 @@
 
 .rvo-hero__image-container {
   line-height: 0;
-  max-height: 300px;
+  min-height: 300px;
   overflow: hidden;
-  padding-block-end: 25%;
+  padding-block-end: 20%;
 
   @media (min-width: 540px) {
     max-height: 500px;
