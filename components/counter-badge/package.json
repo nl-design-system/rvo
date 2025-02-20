@@ -3,7 +3,7 @@
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
   "name": "@nl-rvo/counter-badge",
-  "description": "Counter Badge CSS component",
+  "description": "Counter badge CSS component",
   "keywords": [
     "nl-design-system",
     "nl-rvo",
@@ -14,6 +14,7 @@
   "files": [
     "src/index.scss",
     "dist/",
+    "design-tokens.json",
     "*.md"
   ],
   "main": "dist/index.css",
