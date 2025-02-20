@@ -6,7 +6,7 @@ const argTypes = { count: { control: 'number' } };
 const defaultArgs = { count: 20 };
 
 const meta: Meta<typeof CounterBadge> = {
-  title: 'Componenten/Counter Badge',
+  title: 'Componenten/Counter badge',
   component: CounterBadge,
   args: defaultArgs,
   argTypes,
@@ -23,4 +23,4 @@ export default meta;
 
 type Story = StoryObj<typeof CounterBadge>;
 
-export const Default: Story = { args: defaultArgs, name: 'Counter Badge' };
+export const Default: Story = { args: defaultArgs, name: 'Counter badge' };
