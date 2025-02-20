@@ -9,7 +9,7 @@
         "background-color": { "value": "{rvo.color.grijs-100}" },
         "border-bottom-width": { "value": "{rvo.size.3xs}" },
         "border-bottom-style": { "value": "solid" },
-        "border-bottom-color": { "value": "{rvo.color.grijs-500}" },
+        "border-bottom-color": { "value": "{rvo.color.grijs-300}" },
         "color": { "value": "{rvo.color.zwart}" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
         "padding-block-end": { "value": "{rvo.space.xs}" },
