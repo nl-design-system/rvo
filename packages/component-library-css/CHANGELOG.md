@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.4.3
+
+### Patch Changes
+
+- 1f2d97b: Breadcrumd alignment set to baseline
+
 ## 4.4.2
 
 ### Patch Changes
