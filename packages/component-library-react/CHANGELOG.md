@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.2
+
+### Patch Changes
+
+- 4bcd28e: Change height of input and select fields from 45px to 48px
+
 ## 4.4.1
 
 ### Patch Changes
