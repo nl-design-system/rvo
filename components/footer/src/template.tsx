@@ -5,104 +5,100 @@
 import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
-import FooterColumn from './footer-column/template';
-import FooterItem from './footer-item/template';
+import { Heading } from '../../heading/src/template';
 import HorizontalRule from '../../horizontal-rule/src/template';
 import Link from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-interface IFooterItem {
-  content: string;
+export interface FooterItemInterface {
+  content: string | ReactNode;
   link?: string;
 }
 
-interface IFooterColumn {
+export interface FooterColumnInterface {
+  orientation?: 'vertical' | 'horizontal';
   label?: string;
-  items?: IFooterItem[];
+  items?: FooterItemInterface[];
 }
 
-export interface IFooterProps {
+export interface FooterInterface {
   /** @uxpinignoreprop */
-  primaryMenu?: IFooterColumn[];
+  primaryMenu?: FooterColumnInterface[];
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   /** @uxpinpropname Footer columns */
-  children?: ReactNode | undefined;
+  children?: ReactNode;
   payOff?: string;
   /** @uxpinpropname Secondary menu items */
-  secondaryMenu?: IFooterItem[];
+  secondaryMenu?: FooterItemInterface[];
 }
 
-export const argTypes = {
-  primaryMenu: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  secondaryMenu: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  maxWidth: {
-    options: ['none', 'sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
-  payOff: {
-    type: {
-      name: 'string',
-      required: false,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
-export const Footer: React.FC<IFooterProps> = ({
-  primaryMenu = defaultArgs.primaryMenu,
-  maxWidth = defaultArgs.maxWidth,
-  payOff = defaultArgs.payOff,
-  secondaryMenu = defaultArgs.secondaryMenu,
+export const Footer: React.FC<FooterInterface> = ({
+  primaryMenu,
+  maxWidth,
+  payOff,
+  secondaryMenu,
   children,
-}: IFooterProps) => {
+}: FooterInterface) => {
   return (
-    <div className="rvo-footer-bg">
-      <UtrechtPageFooter
+    <UtrechtPageFooter className="rvo-footer">
+      <div
         className={clsx(
-          'rvo-footer',
-          maxWidth === 'sm' && 'rvo-footer--sm',
-          maxWidth === 'md' && 'rvo-footer--md',
-          maxWidth === 'lg' && 'rvo-footer--lg',
+          'rvo-footer__container',
+          maxWidth === 'sm' && 'rvo-footer__container--sm',
+          maxWidth === 'md' && 'rvo-footer__container--md',
+          maxWidth === 'lg' && 'rvo-footer__container--lg',
         )}
       >
-        <div className="rvo-footer__primary-menu-container">
+        <div className="rvo-footer__menu-container">
           {children ||
             primaryMenu?.map((column, columnIndex) => (
-              <FooterColumn key={columnIndex} label={parseContentMarkup(column.label) as string}>
-                {column.items?.map((item, itemIndex) => {
-                  return (
-                    <FooterItem key={itemIndex} link={item.link}>
-                      {item.content}
-                    </FooterItem>
-                  );
-                })}
-              </FooterColumn>
+              <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
+                {column && column.label.length > 0 && (
+                  <Heading
+                    type="h3"
+                    textContent={parseContentMarkup(column.label)}
+                    className="rvo-footer__column-title"
+                  />
+                )}
+                <ul
+                  className={clsx(
+                    'rvo-footer__menu',
+                    column.orientation === 'horizontal' && 'rvo-footer__menu--horizontal',
+                  )}
+                >
+                  {column.items?.map((item, itemIndex) => (
+                    <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
+                      <Link
+                        href={item.link}
+                        showIcon={column.orientation === 'horizontal' ? 'no' : 'before'}
+                        icon="delta-naar-rechts"
+                        iconSize="sm"
+                        iconColor="wit"
+                        noUnderline={true}
+                      >
+                        {parseContentMarkup(item.content)}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
         </div>
         {payOff && payOff.length > 0 && <div className="rvo-footer__payoff">{payOff}</div>}
         {secondaryMenu && (
           <>
             {((primaryMenu && primaryMenu.length > 0) || (payOff && payOff.length > 0)) && <HorizontalRule />}
-            <div className="rvo-footer__secondary-menu-container">
+            <div className="rvo-footer__menu-container rvo-footer__menu-container--small">
               {secondaryMenu.map((item, itemIndex) => {
                 return (
-                  <Link key={itemIndex} color="wit" href={item.link} noUnderline={true} weight="normal">
+                  <Link
+                    key={`secondary-menu-item-${itemIndex}`}
+                    color="wit"
+                    href={item.link}
+                    noUnderline={true}
+                    weight="normal"
+                  >
                     {item.content}
                   </Link>
                 );
@@ -110,8 +106,8 @@ export const Footer: React.FC<IFooterProps> = ({
             </div>
           </>
         )}
-      </UtrechtPageFooter>
-    </div>
+      </div>
+    </UtrechtPageFooter>
   );
 };
 

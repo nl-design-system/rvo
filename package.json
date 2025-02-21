@@ -74,7 +74,7 @@
     "prepare": "husky",
     "prettier": "prettier --list-different --write .",
     "publish": "changeset publish",
-    "storybook": "pnpm run build && pnpm run --filter @nl-rvo/storybook storybook",
+    "storybook": "pnpm run --filter @nl-rvo/storybook storybook",
     "docusaurus": "pnpm run build && pnpm run --filter @nl-rvo/docusaurus start",
     "serve": "pnpm --filter @nl-rvo/design-system-website exec http-server dist",
     "serve-docusaurus": "pnpm --filter @nl-rvo/docusaurus exec http-server build",
