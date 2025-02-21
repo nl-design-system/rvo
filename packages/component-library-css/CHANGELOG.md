@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-css
 
+## 4.4.1
+
+### Patch Changes
+
+- 3840c9d: Updated styling issues for the accordion component
+- defcc74: Counterbadge updated to implement design tokens
+
 ## 4.4.0
 
 ### Minor Changes
