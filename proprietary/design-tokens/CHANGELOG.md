@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.7.1
+
+### Patch Changes
+
+- 97006ea: Updated the design tokens for subtle warning buttons
+
 ## 1.7.0
 
 ### Minor Changes
