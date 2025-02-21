@@ -1,5 +1,11 @@
 # `@nl-rvo/css-breadcrumbs`
 
+## 1.2.1
+
+### Patch Changes
+
+- 1f2d97b: Breadcrumd alignment set to baseline
+
 ## 1.2.0
 
 ### Minor Changes

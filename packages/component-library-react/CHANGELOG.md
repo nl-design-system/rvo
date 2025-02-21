@@ -1,5 +1,24 @@
 # @nl-rvo/component-library-react
 
+## 4.4.3
+
+### Patch Changes
+
+- 1f2d97b: Breadcrumd alignment set to baseline
+
+## 4.4.2
+
+### Patch Changes
+
+- 4bcd28e: Change height of input and select fields from 45px to 48px
+
+## 4.4.1
+
+### Patch Changes
+
+- 3840c9d: Updated styling issues for the accordion component
+- defcc74: Counterbadge updated to implement design tokens
+
 ## 4.4.0
 
 ### Minor Changes

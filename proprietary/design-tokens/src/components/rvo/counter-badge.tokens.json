@@ -1,0 +1,9 @@
+{
+  "rvo": {
+    "counter-badge": {
+      "background-color": { "value": "{rvo.color.hemelblauw-300}" },
+      "color": { "value": "{rvo.color.zwart}" },
+      "border-radius": { "value": "24px" }
+    }
+  }
+}
