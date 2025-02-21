@@ -31,12 +31,16 @@ export const AccordionItem: React.FC<IAccordionItemProps> = ({
   return (
     <details className="rvo-accordion__item" {...(open ? { open } : {})}>
       <summary className="rvo-accordion__item-summary">
-        <Heading type="h3" noMargins={true} className="rvo-accordion__item-title" mixedBoldAndNormal={true}>
+        <div className="rvo-accordion__item-icon">
           <Icon icon="delta-omlaag" size="md" color="hemelblauw" className="rvo-accordion__item-icon--closed" />
           <Icon icon="delta-omhoog" size="md" color="hemelblauw" className="rvo-accordion__item-icon--open" />
-          {title}
-        </Heading>
-        <span className="rvo-accordion-teaser">{teaserMarkup}</span>
+        </div>
+        <div className="rvo-accordion__item-title-container">
+          <Heading type="h3" noMargins={true} className="rvo-accordion__item-title" mixedBoldAndNormal={true}>
+            {title}
+          </Heading>
+          <div className="rvo-accordion-teaser">{teaserMarkup}</div>
+        </div>
       </summary>
       <div className="rvo-accordion__content">{contentMarkup}</div>
     </details>
