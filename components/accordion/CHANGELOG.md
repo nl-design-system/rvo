@@ -1,5 +1,11 @@
 # `@nl-rvo/css-accordion`
 
+## 1.0.2
+
+### Patch Changes
+
+- 3840c9d: Updated styling issues for the accordion component
+
 ## 1.0.1
 
 ### Patch Changes
