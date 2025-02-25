@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.1
+
+### Patch Changes
+
+- 31d574f: Minor Issue with Checkbox Filter and correctly export it to react package
+
 ## 3.0.0
 
 ### Major Changes

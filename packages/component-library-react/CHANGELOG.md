@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.4
+
+### Patch Changes
+
+- 31d574f: Minor Issue with Checkbox Filter and correctly export it to react package
+
 ## 4.4.3
 
 ### Patch Changes
