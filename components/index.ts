@@ -15,6 +15,7 @@ export { Footer } from './footer/src/template';
 export { FooterColumn } from './footer/src/footer-column/template';
 export { FooterItem } from './footer/src/footer-item/template';
 export { Checkbox } from './form-checkbox/src/template';
+export { CheckBoxFilter } from './checkbox-filter/src/template';
 export { CheckboxGroup } from './form-checkbox-group/src/template';
 export { Feedback } from './form-feedback/src/template';
 export { Field } from './form-field/src/template';

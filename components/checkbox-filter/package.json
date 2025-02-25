@@ -8,7 +8,8 @@
     "nl-design-system",
     "nl-rvo",
     "css",
-    "button"
+    "checkbox",
+    "filter"
   ],
   "files": [
     "src/index.scss",

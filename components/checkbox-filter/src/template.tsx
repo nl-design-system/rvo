@@ -36,20 +36,22 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
 
   useEffect(() => {
     const clonedOptions = [...options];
-    setVisibleItems(options?.length > limit && !toggleShow ? clonedOptions.splice(0, limit) : clonedOptions);
+    setVisibleItems(
+      options?.length > limit && !toggleShow ? (clonedOptions.splice(0, limit) as []) : (clonedOptions as []),
+    );
   }, [options]);
 
-  const toggleShowClick = (e) => {
+  const toggleShowClick = (e: any) => {
     e.preventDefault();
 
     const tempArray = [...options];
 
     if (toggleShow === false) {
       setToggleShow(true);
-      setVisibleItems(tempArray);
+      setVisibleItems(tempArray as []);
     } else {
       setToggleShow(false);
-      setVisibleItems(tempArray.splice(0, limit));
+      setVisibleItems(tempArray.splice(0, limit) as []);
     }
   };
 
