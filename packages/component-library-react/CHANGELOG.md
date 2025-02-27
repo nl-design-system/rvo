@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.5
+
+### Patch Changes
+
+- 0bc641f: Tag component now prioratizes the icon parameter instead of the type when displaying an icon
+
 ## 4.4.4
 
 ### Patch Changes
