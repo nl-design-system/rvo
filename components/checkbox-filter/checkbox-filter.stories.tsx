@@ -27,25 +27,25 @@ const argTypes = {
 };
 
 const inputOptions = [
-  { id: 'Agro en visserij', label: 'Agro en visserij', checked: false },
-  { id: 'Biotechnologie', label: 'Biotechnologie', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1651', label: 'Agro en visserij', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1652', label: 'Biotechnologie', checked: false },
   {
-    id: 'Bosbouw en hout(bewerkings)industrie',
+    id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1653',
     label: 'Bosbouw en hout(bewerkings)industrie',
     checked: false,
   },
-  { id: 'Bouw en infrastructuur', label: 'Bouw en infrastructuur', checked: false },
-  { id: 'Chemie en kunststoffen', label: 'Chemie en kunststoffen', checked: false },
-  { id: 'Chemische industrie', label: 'Chemische industrie', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1654', label: 'Bouw en infrastructuur', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1655', label: 'Chemie en kunststoffen', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1656', label: 'Chemische industrie', checked: false },
   {
-    id: 'Consumentengoederen en detailhandel',
+    id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1657',
     label: 'Consumentengoederen en detailhandel',
     checked: false,
   },
-  { id: 'Creatieve industrie', label: 'Creatieve industrie', checked: false },
-  { id: 'Dienstensector', label: 'Dienstensector', checked: false },
-  { id: 'Elektronica-industrie', label: 'Elektronica-industrie', checked: false },
-  { id: 'Energiesector', label: 'Energiesector', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1658', label: 'Creatieve industrie', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1659', label: 'Dienstensector', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1660', label: 'Elektronica-industrie', checked: false },
+  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1661', label: 'Energiesector', checked: false },
 ];
 
 const defaultArgs = {
