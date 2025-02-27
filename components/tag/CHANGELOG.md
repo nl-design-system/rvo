@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tag`
 
+## 1.2.1
+
+### Patch Changes
+
+- 0bc641f: Tag component now prioratizes the icon parameter instead of the type when displaying an icon
+
 ## 1.2.0
 
 ### Minor Changes
