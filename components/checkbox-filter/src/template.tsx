@@ -16,6 +16,7 @@ export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
   inputFieldOnChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   showMoreText?: string;
   showLessText?: string;
+  noFiltersText?: string;
 }
 
 export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter) => {
@@ -29,6 +30,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     optionsOnChange,
     showMoreText = 'Toon meer',
     showLessText = 'Toon minder',
+    noFiltersText = 'Geen filters beschikbaar',
     ...rest
   } = props;
   const [visibleItems, setVisibleItems] = useState([]);
@@ -64,7 +66,10 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
         <TextInputField placeholder={inputFieldPlaceholder} onChange={inputFieldOnChange} label=" " size="max" />
       )}
       <div className="rvo-checkbox-filter__checkbox-container">
-        <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
+        {visibleItems.length > 0 && (
+          <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
+        )}
+        {visibleItems.length === 0 && <p className="rvo-checkbox-filter__no-filter-text">{noFiltersText}</p>}
       </div>
       {options?.length > limit && (
         <Link

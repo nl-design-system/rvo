@@ -109,8 +109,8 @@ export const Select: React.FC<ISelectProps> = ({
       {...otherProps}
     >
       {options &&
-        options.map(({ label, selected, value }) => (
-          <option key={value} selected={selected || undefined} value={value}>
+        options.map(({ label, value }) => (
+          <option key={value} value={value}>
             {label}
           </option>
         ))}

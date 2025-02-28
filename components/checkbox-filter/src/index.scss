@@ -23,6 +23,11 @@
     margin-block-end: var(--rvo-space-xs);
     margin-block-start: var(--rvo-space-2xs);
   }
+
+  &__no-filter-text {
+    margin-block-end: var(--rvo-space-xs);
+    margin-block-start: var(--rvo-space-2xs);
+  }
 }
 
 .rvo-checkbox-filter[open] .rvo-checkbox-filter__icon {
