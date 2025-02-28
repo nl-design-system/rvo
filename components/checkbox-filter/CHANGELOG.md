@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.2
+
+### Patch Changes
+
+- 2759ed6: Checkbox Group returns Id in currentSelection
+
 ## 3.0.1
 
 ### Patch Changes
