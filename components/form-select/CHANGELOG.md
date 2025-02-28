@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-select`
 
+## 1.2.3
+
+### Patch Changes
+
+- 185af8a: removed selected parameter and make use of defaultValue and value
+
 ## 1.2.2
 
 ### Patch Changes

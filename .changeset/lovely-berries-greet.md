@@ -1,6 +1,0 @@
----
-"@nl-rvo/component-library-css": patch
-"@nl-rvo/component-library-react": patch
----
-
-Issues fixed with Checkbox Filter and Select field
