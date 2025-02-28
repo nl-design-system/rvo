@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox-group`
 
+## 1.2.3
+
+### Patch Changes
+
+- 2759ed6: Checkbox Group returns Id in currentSelection
+
 ## 1.2.2
 
 ### Patch Changes

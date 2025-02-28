@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.6
+
+### Patch Changes
+
+- 2759ed6: Checkbox Group returns Id in currentSelection
+
 ## 4.4.5
 
 ### Patch Changes
