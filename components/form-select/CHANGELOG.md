@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-select`
 
+## 1.2.2
+
+### Patch Changes
+
+- a0f95b0: Removed defaultValue from options and added value
+
 ## 1.2.1
 
 ### Patch Changes

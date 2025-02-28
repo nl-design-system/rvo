@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.7
+
+### Patch Changes
+
+- a0f95b0: Removed defaultValue from options and added value
+
 ## 4.4.6
 
 ### Patch Changes
