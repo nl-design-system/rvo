@@ -53,7 +53,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
       const allCheckboxElements = Array.from(checkboxGroupRef.current.getElementsByTagName('input'));
       const currentGroupSelection = allCheckboxElements.reduce((currentGroupSelection, checkbox) => {
         if ((checkbox as any).checked) {
-          currentGroupSelection.push(checkbox.id);
+          currentGroupSelection.push(checkbox.id as string);
         }
         return currentGroupSelection;
       }, []);
