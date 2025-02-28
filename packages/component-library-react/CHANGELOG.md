@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.9
+
+### Patch Changes
+
+- 4411bea: Pass defaultValue parameter to select component
+
 ## 4.4.8
 
 ### Patch Changes
