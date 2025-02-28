@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.4.4
+
+### Patch Changes
+
+- 185af8a: Issues fixed with Checkbox Filter and Select field
+
 ## 4.4.3
 
 ### Patch Changes

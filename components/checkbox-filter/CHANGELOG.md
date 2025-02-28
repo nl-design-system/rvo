@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.3
+
+### Patch Changes
+
+- 185af8a: If there are no options, show text there are no filters
+
 ## 3.0.2
 
 ### Patch Changes
