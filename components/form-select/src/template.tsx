@@ -110,7 +110,7 @@ export const Select: React.FC<ISelectProps> = ({
     >
       {options &&
         options.map(({ label, selected, value }) => (
-          <option key={value} selected={selected || undefined} defaultValue={value || undefined}>
+          <option key={value} selected={selected || undefined} value={value}>
             {label}
           </option>
         ))}
