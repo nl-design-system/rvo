@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-select`
 
+## 1.2.4
+
+### Patch Changes
+
+- 4411bea: Pass defaultValue parameter to select component
+
 ## 1.2.3
 
 ### Patch Changes
