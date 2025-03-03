@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.4.10
+
+### Patch Changes
+
+- e64cd5a: Fixes for checkboxfilter and select
+
 ## 4.4.9
 
 ### Patch Changes

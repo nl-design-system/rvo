@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field-select`
 
+## 1.1.1
+
+### Patch Changes
+
+- e64cd5a: Fixes for checkboxfilter and select
+
 ## 1.1.0
 
 ### Minor Changes
