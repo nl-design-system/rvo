@@ -34,7 +34,6 @@ export interface ISelectProps extends HTMLAttributes<HTMLSelectElement> {
   /**
    * @uxpinbind onChange 0.target.value
    */
-  currentSelection?: number | null;
   defaultValue?: string;
 }
 
@@ -83,6 +82,7 @@ export const argTypes = {
       disable: true,
     },
   },
+  defaultValue: { control: 'text' },
 };
 
 export const Select: React.FC<ISelectProps> = ({
