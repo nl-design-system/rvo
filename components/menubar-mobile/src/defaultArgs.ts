@@ -1,5 +1,5 @@
-import { IconType } from '../../icon/src/types';
 import { IMobileMenuBarProps } from './template';
+import { IconType } from '../../icon/src/types';
 
 export const defaultArgs: IMobileMenuBarProps = {
   size: 'md',
