@@ -23,7 +23,7 @@ module.exports = {
           '../../components/footer/src/footer-column/template.tsx',
           '../../components/footer/src/footer-item/template.tsx',
           '../../components/logo/src/template.tsx',
-          '../../components/menubar/src/template.tsx',
+          '../../components/menubar/src/menubar/template.tsx',
           '../../components/menubar/src/menubar-item/template.tsx',
           '../../components/menubar-mobile/src/template.tsx',
           '../../components/icon/src/template.tsx',
