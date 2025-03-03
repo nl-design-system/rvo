@@ -2195,3 +2195,14 @@
     }
   }
 }
+
+.rvo-demo-page-expandable-tr {
+  .rvo-table-row--expandable td {
+    border-top: 5px solid var(--rvo-color-wit);
+    margin-block-start: -8px;
+    padding-block-end: 0;
+    padding-block-start: 0;
+    position: relative;
+    top: -8px;
+  }
+}

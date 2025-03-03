@@ -121,10 +121,10 @@
           "border-width": { "value": "0" },
           "color": { "value": "{rvo.color.rood}" },
           "active": {
-            "color": { "value": "{rvo.color.donkerblauw}" }
+            "color": { "value": "{rvo.color.rood}" }
           },
           "hover": {
-            "color": { "value": "{rvo.color.donkerblauw}" }
+            "color": { "value": "{rvo.color.rood}" }
           },
           "disabled": {
             "color": { "value": "{rvo.color.grijs-300}" }

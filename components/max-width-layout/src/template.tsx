@@ -15,7 +15,6 @@ export interface IMaxWidthLayoutProps {
   content?: string;
   inlinePadding?: 'none' | 'sm' | 'md' | 'lg';
   centered?: boolean;
-  useAsMinWidthToo?: boolean;
   /** @uxpinignoreprop */
   className?: string | string[];
   /** @uxpinpropname Content */
@@ -29,9 +28,6 @@ export const argTypes = {
   },
   content: {
     control: 'text',
-  },
-  useAsMinWidthToo: {
-    control: 'boolean',
   },
   centered: {
     control: 'boolean',
@@ -52,7 +48,6 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
   content = defaultArgs.content,
   inlinePadding = defaultArgs.inlinePadding,
   centered = defaultArgs.centered,
-  useAsMinWidthToo = defaultArgs.useAsMinWidthToo,
   children,
   className = [],
   ...props
@@ -80,7 +75,6 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
       className={clsx(
         'rvo-max-width-layout',
         `rvo-max-width-layout--${size}`,
-        useAsMinWidthToo && `rvo-min-width-layout--${size}`,
         `rvo-max-width-layout-inline-padding--${inlinePadding}`,
         !centered && 'rvo-max-width-layout--uncentered',
         className,

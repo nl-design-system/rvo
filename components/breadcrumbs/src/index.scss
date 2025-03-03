@@ -6,19 +6,22 @@
 @use "../../layout-flow/src";
 
 .rvo-breadcrumbs {
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
+
+  align-items: baseline; // Override the align items coming from .rvo-layout-row
   list-style: none;
   margin-block-end: 0;
   margin-block-start: 0;
   padding-inline-end: 0;
   padding-inline-start: 0;
-
-  @extend .rvo-layout-row;
-  @extend .rvo-layout-gap--sm;
 }
 
 .rvo-breadcrumbs-item {
   @extend .rvo-layout-row;
   @extend .rvo-layout-gap--sm;
+
+  align-items: baseline; // Override the align items coming from .rvo-layout-row
 }
 
 .rvo-breadcrumbs--sm .rvo-breadcrumbs-item {

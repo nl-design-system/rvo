@@ -47,13 +47,17 @@ const Landingspagina = () => {
                     alt="Ondernemer bekijkt met collega de berichtenbox op een laptop."
                   />
                 </div>
-                <h1 className="utrecht-heading-1 rvo-hero__title">
-                  Berichtenbox voor bedrijven
-                  <span className="rvo-hero__subtitle">Alle overheidsberichten op één plek!</span>
+                <div className="rvo-hero__content">
+                  <h1 className="utrecht-heading-1 rvo-hero__title rvo-heading--no-margins">
+                    Berichtenbox voor bedrijven
+                  </h1>
+                  <span className="rvo-hero__subtitle rvo-margin-block-end--xs">
+                    Alle overheidsberichten op één plek!
+                  </span>
                   <Button kind="secondary" size="sm">
                     Inloggen met e-Herkenning
                   </Button>
-                </h1>
+                </div>
               </div>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
                 <LayoutFlow gap="2xl">
@@ -305,44 +309,7 @@ const Landingspagina = () => {
           </main>
         </LayoutFlow>
 
-        <Footer
-          columns={[
-            {
-              label: 'Over deze site',
-              items: [
-                { content: 'Privacy', link: '#' },
-                { content: 'Cookies en anti-spam', link: '#' },
-                { content: 'Toegankelijkheid', link: '#' },
-                { content: 'Proclaimer', link: '#' },
-              ],
-            },
-            {
-              label: 'Berichtenbox',
-              items: [
-                { content: 'Over Berichtenbox', link: '#' },
-                { content: 'Over veiligheid', link: '#' },
-                { content: 'Contact voor bedrijven', link: '#' },
-              ],
-            },
-
-            {
-              label: 'Account',
-              items: [
-                { content: 'Inloggen', link: '#' },
-                { content: 'Account aanmaken', link: '#' },
-                { content: 'Wachtwoord vergeten', link: '#' },
-              ],
-            },
-            {
-              label: 'Onze partners',
-              items: [
-                { content: 'Rijksdienst voor Ondernemend Nederland', link: '#' },
-                { content: 'Ondernemersplein', link: '#' },
-                { content: 'Kamer van Koophandel', link: '#' },
-              ],
-            },
-          ]}
-        />
+        <Footer />
       </LayoutFlow>
     </div>
   );

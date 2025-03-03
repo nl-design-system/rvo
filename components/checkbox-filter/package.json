@@ -1,0 +1,35 @@
+{
+  "version": "3.0.3",
+  "author": "Community for NL Design System",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/checkbox-filter",
+  "description": "Checkbox Filter CSS component",
+  "keywords": [
+    "nl-design-system",
+    "nl-rvo",
+    "css",
+    "checkbox",
+    "filter"
+  ],
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/checkbox-filter"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*"
+  }
+}

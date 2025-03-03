@@ -10,8 +10,13 @@ import Favicon from "./src/template";
 import FavIconUrl from "../../documentation/demopages/common/favicon.ico";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
+{(() => {
+const props = { src: FavIconUrl };
+return (
+
 <ComponentExample>
-  <Favicon src={FavIconUrl} />
+  <Favicon {...props} />
 </ComponentExample>
+); })()}
 
 <Documentation />

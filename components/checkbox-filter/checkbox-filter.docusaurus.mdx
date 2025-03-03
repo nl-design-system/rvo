@@ -1,0 +1,78 @@
+---
+title: Checkbox Filter
+hide_title: false
+hide_table_of_contents: true
+slug: .
+---
+
+import Documentation from "./README.md";
+import CheckboxFilter from "./src/template";
+import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+
+## Standard component:
+
+{(() => {
+const props = { label: 'Subsidies', options: [
+{ id: 'Agro en visserij', label: 'Agro en visserij' },
+{ id: 'Biotechnologie', label: 'Biotechnologie' },
+{
+id: 'Bosbouw en hout(bewerkings)industrie',
+label: 'Bosbouw en hout(bewerkings)industrie',
+},
+{ id: 'Bouw en infrastructuur', label: 'Bouw en infrastructuur' },
+{ id: 'Chemie en kunststoffen', label: 'Chemie en kunststoffen' },
+{ id: 'Chemische industrie', label: 'Chemische industrie' },
+{
+id: 'Consumentengoederen en detailhandel',
+label: 'Consumentengoederen en detailhandel',
+},
+{ id: 'Creatieve industrie', label: 'Creatieve industrie' },
+{ id: 'Dienstensector', label: 'Dienstensector' },
+{ id: 'Elektronica-industrie', label: 'Elektronica-industrie' },
+{ id: 'Energiesector', label: 'Energiesector' },
+] };
+
+return (
+
+<ComponentExample storyName="componenten-checkbox-filter--default">
+  <CheckboxFilter {...props} />
+</ComponentExample>
+); })()}
+
+## Checkbox filter met zoekveld:
+
+{(() => {
+const props = { label: 'Subsidies',
+showInputField: true,
+inputFieldPlaceholder: 'Zoek...' };
+
+const options = [
+{ id: 'Agro en visserij', label: 'Agro en visserij' },
+{ id: 'Biotechnologie', label: 'Biotechnologie' },
+{
+id: 'Bosbouw en hout(bewerkings)industrie',
+label: 'Bosbouw en hout(bewerkings)industrie',
+},
+{ id: 'Bouw en infrastructuur', label: 'Bouw en infrastructuur' },
+{ id: 'Chemie en kunststoffen', label: 'Chemie en kunststoffen' },
+{ id: 'Chemische industrie', label: 'Chemische industrie' },
+{
+id: 'Consumentengoederen en detailhandel',
+label: 'Consumentengoederen en detailhandel',
+},
+{ id: 'Creatieve industrie', label: 'Creatieve industrie' },
+{ id: 'Dienstensector', label: 'Dienstensector' },
+{ id: 'Elektronica-industrie', label: 'Elektronica-industrie' },
+{ id: 'Energiesector', label: 'Energiesector' },
+]
+
+return (
+
+<ComponentExample storyName="componenten-checkbox-filter--default">
+  <CheckboxFilter options={options} {...props} />
+</ComponentExample>
+); })()}
+
+## Documentatie
+
+<Documentation />

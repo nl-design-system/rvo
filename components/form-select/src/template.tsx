@@ -35,6 +35,7 @@ export interface ISelectProps extends HTMLAttributes<HTMLSelectElement> {
    * @uxpinbind onChange 0.target.value
    */
   currentSelection?: number | null;
+  defaultValue?: string;
 }
 
 export const argTypes = {
@@ -91,6 +92,7 @@ export const Select: React.FC<ISelectProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   options = defaultArgs.options,
+  defaultValue,
   ...otherProps
 }: ISelectProps) => (
   <div className="rvo-select-wrapper">
@@ -106,11 +108,12 @@ export const Select: React.FC<ISelectProps> = ({
         'utrecht-select--invalid': invalid,
         'utrecht-select--required': required,
       })}
+      defaultValue={defaultValue}
       {...otherProps}
     >
       {options &&
-        options.map(({ label, selected, value }) => (
-          <option key={value} selected={selected || undefined} defaultValue={value || undefined}>
+        options.map(({ label, value }) => (
+          <option key={value} value={value}>
             {label}
           </option>
         ))}

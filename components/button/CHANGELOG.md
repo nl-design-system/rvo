@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 1.1.3
+
+### Patch Changes
+
+- e0aff8b: Underline visible for all button types on hover
+
 ## 1.1.2
 
 ### Patch Changes

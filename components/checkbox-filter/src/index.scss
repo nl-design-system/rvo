@@ -1,0 +1,35 @@
+.rvo-checkbox-filter {
+  max-width: 450px;
+
+  &__icon {
+    position: absolute;
+    right: var(--rvo-space-xs);
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &__label {
+    color: var(--rvo-color-logoblauw);
+    cursor: pointer;
+    display: flex;
+    font-size: var(--rvo-font-size-lg);
+    font-weight: var(--rvo-font-weight-bold);
+    gap: var(--rvo-space-xs);
+    list-style: none;
+    position: relative;
+  }
+
+  &__checkbox-container {
+    margin-block-end: var(--rvo-space-xs);
+    margin-block-start: var(--rvo-space-2xs);
+  }
+
+  &__no-filter-text {
+    margin-block-end: var(--rvo-space-xs);
+    margin-block-start: var(--rvo-space-2xs);
+  }
+}
+
+.rvo-checkbox-filter[open] .rvo-checkbox-filter__icon {
+  transform: translateY(-50%) rotate(0deg);
+}

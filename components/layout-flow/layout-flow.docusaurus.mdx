@@ -10,16 +10,25 @@ import LayoutFlow from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
 Column:
+{(() => {
+const props = { gap: "lg" };
+return (
 
-<ComponentExample>
-  <LayoutFlow gap="lg" />
+<ComponentExample storyName="layout-flow--default" args={props}>
+  <LayoutFlow {...props} />
 </ComponentExample>
+); })()}
+
 <br />
 
 Row:
+{(() => {
+const props = { row: true, gap: "lg" };
+return (
 
-<ComponentExample>
-  <LayoutFlow row={true} gap="lg" />
+<ComponentExample storyName="layout-flow--default" args={props}>
+  <LayoutFlow {...props} />
 </ComponentExample>
+); })()}
 
 <Documentation />

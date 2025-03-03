@@ -6,14 +6,11 @@ slug: .
 ---
 
 import Documentation from "./README.md";
-import { defaultArgs } from "./src/defaultArgs";
 import ScrollableContent from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
-<ComponentExample>
-  <ScrollableContent height={defaultArgs.height} useStyleAttribute={true}>
-    {defaultArgs.content}
-  </ScrollableContent>
+<ComponentExample storyName="componenten-scrollable-content--default">
+  <ScrollableContent />
 </ComponentExample>
 
 <Documentation />

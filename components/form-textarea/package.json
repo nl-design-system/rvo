@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
   "name": "@nl-rvo/css-form-textarea",
@@ -32,7 +32,7 @@
     "@nl-rvo/build-utils-css": "workspace:*"
   },
   "dependencies": {
-    "@utrecht/textarea-css": "2.1.0",
+    "@utrecht/textarea-css": "2.2.0",
     "@utrecht/textbox-css": "1.4.0"
   }
 }

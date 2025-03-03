@@ -1,5 +1,100 @@
 # @nl-rvo/component-library-react
 
+## 4.4.9
+
+### Patch Changes
+
+- 4411bea: Pass defaultValue parameter to select component
+
+## 4.4.8
+
+### Patch Changes
+
+- 185af8a: Issues fixed with Checkbox Filter and Select field
+
+## 4.4.7
+
+### Patch Changes
+
+- a0f95b0: Removed defaultValue from options and added value
+
+## 4.4.6
+
+### Patch Changes
+
+- 2759ed6: Checkbox Group returns Id in currentSelection
+
+## 4.4.5
+
+### Patch Changes
+
+- 0bc641f: Tag component now prioratizes the icon parameter instead of the type when displaying an icon
+
+## 4.4.4
+
+### Patch Changes
+
+- 31d574f: Minor Issue with Checkbox Filter and correctly export it to react package
+
+## 4.4.3
+
+### Patch Changes
+
+- 1f2d97b: Breadcrumd alignment set to baseline
+
+## 4.4.2
+
+### Patch Changes
+
+- 4bcd28e: Change height of input and select fields from 45px to 48px
+
+## 4.4.1
+
+### Patch Changes
+
+- 3840c9d: Updated styling issues for the accordion component
+- defcc74: Counterbadge updated to implement design tokens
+
+## 4.4.0
+
+### Minor Changes
+
+- 9fffd1e: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
+
+### Patch Changes
+
+- 02380ff: Fixed issue with duplicate chevron and outbreaking inputfield
+
+## 4.3.0
+
+### Minor Changes
+
+- 6284f7a: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
+
+## 4.2.1
+
+### Patch Changes
+
+- ba6a672: Fixed table header issues and design tokens updated
+
+## 4.2.0
+
+### Minor Changes
+
+- 1dee453: Added a new componont to be used, the loader.
+
+## 4.1.0
+
+### Minor Changes
+
+- 37945cc: Added new component: Counter Badge
+
+## 4.0.1
+
+### Patch Changes
+
+- e0aff8b: All button types have a underscore added to the hover event
+
 ## 4.0.0
 
 ### Major Changes

@@ -13,6 +13,7 @@ import {
   MenuBar,
   // MobileMenuBar,
   StatusIcon,
+  Tabs,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
 
@@ -108,15 +109,16 @@ const ZaakClean = () => {
                         </ActionGroup>
                       </LayoutFlow>
                     </Alert>
-                    <Grid columns="two" gap="4xl" layout="2fr1fr">
+                    <Grid columns="two" gap="2xl" division="2fr 1fr">
                       <div>
                         <LayoutFlow gap="2xl">
-                          <div>
+                          <div className="rvo-card rvo-card--outline rvo-card--padding-xl">
                             <span className="rvo-text--subtle">Referentienummer</span>
                             <br />
                             <Heading type="h2" noMargins={true}>
                               ERTKV-309483
                             </Heading>
+                            <hr className="rvo-hr rvo-margin-block-end--md rvo-margin-block-start--sm"></hr>
                             <LayoutFlow gap="sm">
                               <p className="rvo-text--no-margins">
                                 Wilt u uw aanvraagformulier bekijken of iets regelen voor uw aanvraag?
@@ -125,11 +127,18 @@ const ZaakClean = () => {
                             </LayoutFlow>
                           </div>
                           {/* <hr className="rvo-hr"></hr> */}
-                          <div>
+                          <div className="rvo-card rvo-card--outline rvo-card--padding-xl">
                             <LayoutFlow>
                               <Heading type="h2" noMargins={true}>
                                 Documenten
                               </Heading>
+                              <Tabs
+                                tabs={[
+                                  { label: 'Mijn ontvangen documenten', href: '#' },
+                                  { label: 'Mijn verstuurde documenten', href: '#' },
+                                ]}
+                                activeTab={0}
+                              />
                               <div>
                                 <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
                                   <LayoutFlow gap="2xs">
@@ -164,10 +173,39 @@ const ZaakClean = () => {
                                   </Link>
                                 </LayoutFlow>
                               </div>
+                              <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
+                                Alle ecoregeling 2023 documenten
+                                <span
+                                  className="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
+                                  role="img"
+                                  aria-label="Pijl naar rechts"
+                                ></span>
+                              </a>
+                              <div className="rvo-alert rvo-alert--info rvo-alert--padding-md">
+                                <span
+                                  className="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
+                                  role="img"
+                                  aria-label="Info"
+                                ></span>
+                                <div className="rvo-alert-text">
+                                  <div>
+                                    <div>
+                                      <strong>Info</strong>
+                                      <br />
+                                      Ontbreekt er een document en wordt dit niet bijgewerkt binnen [tijd]? Neem dan
+                                      contact op met onze{' '}
+                                      <a href="#" className="rvo-link rvo-link--logoblauw">
+                                        klantenservice
+                                      </a>
+                                      .
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </LayoutFlow>
                           </div>
                           {/* <hr className="rvo-hr"></hr> */}
-                          <div>
+                          <div className="rvo-card rvo-card--outline rvo-card--padding-xl">
                             <Heading type="h2">Hulp nodig?</Heading>
                             <LayoutFlow>
                               <LayoutFlow gap="xs">
@@ -189,7 +227,7 @@ const ZaakClean = () => {
                       </div>
                       <div>
                         <LayoutFlow gap="2xl">
-                          <div>
+                          <div className="rvo-card rvo-card--outline rvo-card--padding-xl">
                             <LayoutFlow row={true} gap="xs">
                               <span className="rvo-text--subtle">Status</span>
                               <Icon icon="info" />
@@ -232,7 +270,7 @@ const ZaakClean = () => {
                               </div>
                             </div>
                           </div>
-                          <div>
+                          <div className="rvo-card rvo-card--outline rvo-card--padding-xl">
                             <Heading type="h2" noMargins={true}>
                               Details
                             </Heading>
@@ -249,6 +287,21 @@ const ZaakClean = () => {
                               </LayoutFlow>
                             </LayoutFlow>
                           </div>
+                          <div className="rvo-card rvo-card--outline rvo-card--padding-xl">
+                            <Heading type="h2">Oneens met de beslissing?</Heading>
+                            <LayoutFlow>
+                              <LayoutFlow gap="xs">
+                                <Button size="sm" kind="secondary" fullWidth={true}>
+                                  Maak bezwaar
+                                </Button>
+                              </LayoutFlow>
+                              <LayoutFlow gap="xs">
+                                <Button size="sm" kind="secondary" fullWidth={true} icon="externe-link">
+                                  Lees alles over bezwaar maken
+                                </Button>
+                              </LayoutFlow>
+                            </LayoutFlow>
+                          </div>
                         </LayoutFlow>
                       </div>
                     </Grid>
@@ -258,45 +311,7 @@ const ZaakClean = () => {
             </main>
           </LayoutFlow>
         </div>
-        <Footer
-          columns={[
-            {
-              label: 'RVO',
-              items: [
-                { content: 'Over ons', link: '#' },
-                { content: 'Contact', link: '#' },
-                { content: 'Pers', link: '#' },
-                { content: 'Zaken regelen bij RVO', link: '#' },
-              ],
-            },
-            {
-              label: 'Over deze site',
-              items: [
-                { content: 'Privacy', link: '#' },
-                { content: 'Cookies en anti-spam', link: '#' },
-                { content: 'Toegankelijkheid', link: '#' },
-                { content: 'Proclaimer', link: '#' },
-              ],
-            },
-            {
-              label: 'Snel naar',
-              items: [
-                { content: 'Onderwerpen A t/m Z', link: '#' },
-                { content: 'Klantenpanel', link: '#' },
-                { content: 'Documenten en publicaties', link: '#' },
-                { content: 'Overheidspublicaties en auteursrecht', link: '#' },
-              ],
-            },
-            {
-              label: 'Blijf op de hoogte',
-              items: [
-                { content: 'Social media', link: '#' },
-                { content: 'RSS', link: '#' },
-                { content: 'Gratis nieuwsbrief', link: '#' },
-              ],
-            },
-          ]}
-        />
+        <Footer />
       </LayoutFlow>
     </body>
   );

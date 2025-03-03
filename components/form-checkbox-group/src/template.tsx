@@ -16,7 +16,7 @@ export interface ICheckboxGroupProps {
   /**
    * @uxpinbind onChange 0
    */
-  currentSelection?: number[];
+  currentSelection?: string[];
   /** @uxpinpropname Checkboxes */
   children?: ReactNode | undefined;
 }
@@ -51,9 +51,9 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
   const onUpdateGroup = useCallback(() => {
     if (checkboxGroupRef.current) {
       const allCheckboxElements = Array.from(checkboxGroupRef.current.getElementsByTagName('input'));
-      const currentGroupSelection = allCheckboxElements.reduce((currentGroupSelection, checkbox, currentIndex) => {
+      const currentGroupSelection = allCheckboxElements.reduce((currentGroupSelection, checkbox) => {
         if ((checkbox as any).checked) {
-          (currentGroupSelection as number[]).push(currentIndex);
+          (currentGroupSelection as string[]).push(checkbox.id);
         }
         return currentGroupSelection;
       }, []);
@@ -74,7 +74,13 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
           />
         ))) ||
         options?.map((option) => (
-          <Checkbox key={option.id} id={option.id} label={option.label} checked={option.checked} />
+          <Checkbox
+            key={option.id}
+            id={option.id}
+            label={option.label}
+            checked={option.checked}
+            onUpdateGroup={onUpdateGroup}
+          />
         ))}
     </div>
   );

@@ -12,7 +12,7 @@ import './index.scss';
 
 export interface ITagProps {
   content: string;
-  type: 'default' | 'info' | 'warning' | 'error' | 'success';
+  type: 'default' | 'info' | 'bevestiging' | 'foutmelding' | 'waarschuwing';
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   showHover?: boolean;
@@ -30,7 +30,7 @@ export const argTypes = {
     control: 'text',
   },
   type: {
-    options: ['default', 'info', 'warning', 'error', 'success'],
+    options: ['default', 'info', 'bevestiging', 'foutmelding', 'waarschuwing'],
     control: { type: 'radio' },
   },
   showIcon: {
@@ -87,23 +87,21 @@ export const Tag: React.FC<ITagProps> = ({
   }
 
   let iconMarkup;
-  switch (type) {
-    default:
-    case 'default':
-      iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
-      break;
-    case 'info':
-      iconMarkup = Icon({ icon: 'info', size: 'xl', color: '', className: iconClassName });
-      break;
-    case 'warning':
-      iconMarkup = StatusIcon({ type: 'waarschuwing', size: 'lg', ignoreDefaultIconColor: true });
-      break;
-    case 'error':
-      iconMarkup = StatusIcon({ type: 'foutmelding', size: 'lg', ignoreDefaultIconColor: true });
-      break;
-    case 'success':
-      iconMarkup = StatusIcon({ type: 'bevestiging', size: 'lg', ignoreDefaultIconColor: true });
-      break;
+
+  if (icon) {
+    iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
+  } else {
+    switch (type) {
+      case 'info':
+      case 'waarschuwing':
+      case 'foutmelding':
+      case 'bevestiging':
+        iconMarkup = StatusIcon({ type: type, size: 'lg', ignoreDefaultIconColor: true });
+        break;
+      default:
+        iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
+        break;
+    }
   }
 
   const TagElement = link ? 'a' : 'div';
@@ -124,9 +122,9 @@ export const Tag: React.FC<ITagProps> = ({
         },
         type === 'default' && 'rvo-tag--default',
         type === 'info' && 'rvo-tag--info',
-        type === 'warning' && 'rvo-tag--warning',
-        type === 'error' && 'rvo-tag--error',
-        type === 'success' && 'rvo-tag--success',
+        type === 'waarschuwing' && 'rvo-tag--warning',
+        type === 'foutmelding' && 'rvo-tag--error',
+        type === 'bevestiging' && 'rvo-tag--success',
       )}
       onClick={onClick}
     >

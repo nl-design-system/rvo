@@ -6,12 +6,12 @@
     },
     "table": {
       "header": {
-        "background-color": { "value": "{rvo.color.grijs-200}" },
+        "background-color": { "value": "{rvo.color.grijs-100}" },
         "border-bottom-width": { "value": "{rvo.size.3xs}" },
         "border-bottom-style": { "value": "solid" },
-        "border-bottom-color": { "value": "{rvo.color.grijs-500}" },
-        "color": { "value": "{rvo.color.grijs-600}" },
-        "font-weight": { "value": "{rvo.font-weight.normal}" },
+        "border-bottom-color": { "value": "{rvo.color.grijs-300}" },
+        "color": { "value": "{rvo.color.zwart}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
         "padding-block-end": { "value": "{rvo.space.xs}" },
         "padding-block-start": { "value": "{rvo.space.xs}" },
         "padding-inline-end": { "value": "{rvo.space.md}" },
@@ -28,7 +28,7 @@
       "cell": {
         "border-bottom-width": { "value": "0.05rem" },
         "border-bottom-style": { "value": "solid" },
-        "border-bottom-color": { "value": "{rvo.color.grijs-500}" },
+        "border-bottom-color": { "value": "{rvo.color.grijs-300}" },
         "padding-block-end": { "value": "{rvo.space.xs}" },
         "padding-block-start": { "value": "{rvo.space.xs}" },
         "padding-inline-end": { "value": "{rvo.space.md}" },
