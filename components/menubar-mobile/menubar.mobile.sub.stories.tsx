@@ -1,8 +1,9 @@
-import { argTypes, MobileMenuBar } from './src/template';
+import MobileNavigationBar from './src/template';
+import { argTypes } from './src/argTypes';
 
 export default {
-  title: 'Componenten/Mobile Menubar',
-  component: MobileMenuBar,
+  title: 'Componenten/Mobile Menubar/nav',
+  component: MobileNavigationBar,
   argTypes: argTypes,
 
   parameters: {
@@ -17,7 +18,7 @@ export default {
 };
 
 export const MobileSubmenu = {
-  render: MobileMenuBar.bind({}),
+  render: MobileNavigationBar.bind({}),
   name: 'Mobile Submenu',
 
   args: {
@@ -33,32 +34,30 @@ export const MobileSubmenu = {
         label: 'Expanded menu item',
         icon: 'publicatie',
         link: '#',
-        active: true,
+        submenu: [
+          {
+            label: 'Klimaat & energie',
+            link: '#',
+            icon: 'milieu',
+          },
+          {
+            label: 'Landbouw',
+            link: '#',
+            icon: 'koe-met-tekst-co2',
+          },
+        ],
       },
       {
         label: 'Uitloggen',
         icon: 'versleutelen',
         link: '#',
-      },
-    ],
-
-    submenuItems: [
-      {
-        label: 'Submenu item',
-        link: '#',
-      },
-      {
-        label: 'Submenu item',
-        link: '#',
-      },
-      {
-        label: 'Submenu item',
-        link: '#',
+        useDivider: true,
       },
     ],
 
     useIcons: true,
     iconPlacement: 'before',
+    horizontalRule: true,
     isOpen: true,
   },
 };
