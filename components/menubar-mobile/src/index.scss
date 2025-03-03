@@ -1,4 +1,4 @@
-@use "../../../../layout-flow/src/" as layoutFlow;
+@use "../../layout-flow/src/" as layoutFlow;
 
 // Mobile
 .rvo-mobile-navbar {
@@ -63,31 +63,31 @@
   }
 
   .rvo-mobile-item__list {
+    align-items: var(--rvo-mobile-menu-list-align-items, flex-start);
     display: flex;
+    flex-direction: var(--rvo-mobile-menu-list-flex-direction, column);
     flex-wrap: wrap;
+    gap: var(--rvo-mobile-menu-list-gap);
     justify-content: normal;
     list-style-type: none;
-    padding-inline-start: 0;
-    align-items: var(--rvo-mobile-menu-list-align-items, flex-start);
-    flex-direction: var(--rvo-mobile-menu-list-flex-direction, column);
-    gap: var(--rvo-mobile-menu-list-gap);
     margin-block-start: var(--rvo-mobile-menu-list-margin-block-start);
+    padding-inline-start: 0;
   }
 
   .rvo-mobile-submenu__list {
-    gap: var(--rvo-space-sm);
     display: flex;
     flex-direction: var(--rvo-mobile-menu-list-flex-direction, column);
-    margin-top: var(--rvo-space-sm);
+    gap: var(--rvo-space-sm);
     list-style-type: none;
+    margin-top: var(--rvo-space-sm);
   }
 
   .rvo-mobilenav__link {
+    align-items: center;
+    color: var(--rvo-mobile-menu-item-link-color);
+    font-weight: var(--rvo-topnav-item-link-font-weight);
     gap: var(--rvo-space-sm);
     text-decoration-line: var(--rvo-topnav-item-link-text-decoration);
-    align-items: center;
-    font-weight: var(--rvo-topnav-item-link-font-weight);
-    color: var(--rvo-mobile-menu-item-link-color);
 
     &:hover {
       color: var(--rvo-mobile-menu-item-link-hover-color);

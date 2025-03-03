@@ -1,5 +1,6 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
+// eslint-disable-next-line import/order
 import SubMenu from '../submenu/template';
 import '../index.scss';
 import { Icon, Link } from '../../../index';
@@ -17,7 +18,7 @@ interface MenuBarItemProps extends IMenuBarItem {
   handleItemClick?: (event: React.MouseEvent) => void;
 }
 
-const MenuBarItem: React.FC<MenuBarItemProps> = ({
+export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   label,
   icon,
   link,

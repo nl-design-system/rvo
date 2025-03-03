@@ -3,10 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
-import { defaultArgs } from '../defaultArguments';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { IconType } from '../../../icon/src/types';
 import { MaxWidthLayout } from '../../../index';
+// eslint-disable-next-line import/order
+import { defaultArgs } from '../defaultArguments';
+
 import '../index.scss';
 
 import MenuBarItem from '../menubar-item/template';
@@ -37,7 +39,7 @@ export interface IMenuBarProps {
   grid?: boolean;
 }
 
-export const NavbarMenuBar: React.FC<IMenuBarProps> = ({
+export const MenuBar: React.FC<IMenuBarProps> = ({
   size = defaultArgs.size,
   direction = defaultArgs.direction,
   items = defaultArgs.items,
@@ -105,4 +107,4 @@ export const NavbarMenuBar: React.FC<IMenuBarProps> = ({
   );
 };
 
-export default NavbarMenuBar;
+export default MenuBar;

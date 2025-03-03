@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "../../../../layout-flow/src/" as layoutFlow;
+@use "../../layout-flow/src/" as layoutFlow;
 
 .rvo-navbar {
   font-family: var(--rvo-topnav-font-family);
@@ -42,8 +42,8 @@
   padding-inline-start: 0;
 
   &.rvo-navbar__list--vertical {
-    flex-direction: column;
     background-color: var(--rvo-topnav-submenu-background-color);
+    flex-direction: column;
 
     .rvo-navbar__item.rvo-navbar__item--align-right {
       margin-inline-start: 0;
@@ -135,9 +135,9 @@
 
 .rvo-navbar__horizontal {
   display: flex;
+  left: 0;
   position: absolute;
   width: 100%;
-  left: 0;
 }
 
 .rvo-navbar__vertical {
@@ -155,15 +155,14 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-//submenu layouts
+// submenu layouts
 .rvo-max-width-layout {
+  left: 0;
   margin-inline-end: auto;
   margin-inline-start: auto;
-  left: 0;
-  right: 0;
-  margin-right: auto;
   margin-left: auto;
-  // justify-self: anchor-center;
+  margin-right: auto;
+  right: 0;
 }
 
 .rvo-max-width-layout--sm {

@@ -1,9 +1,9 @@
-import MobileNavigationBar from './src/template';
 import { argTypes } from './src/argTypes';
+import MobileMenuBar from './src/template';
 
 export default {
   title: 'Componenten/Mobile Menubar/nav',
-  component: MobileNavigationBar,
+  component: MobileMenuBar,
   argTypes: argTypes,
 
   parameters: {
@@ -18,7 +18,7 @@ export default {
 };
 
 export const MobileSubmenu = {
-  render: MobileNavigationBar.bind({}),
+  render: MobileMenuBar.bind({}),
   name: 'Mobile Submenu',
 
   args: {

@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { IMenuBarItem } from '../../menubar/src/menubar/template';
-import { defaultArgs } from '../src/defaultArgs';
 import clsx from 'clsx';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Button from '../../button/src/template';
 import Dialog from '../../dialog/src/template';
 import { Icon, Link } from '../../index';
-import '../index.scss';
+import { IMenuBarItem } from '../../menubar/src/menubar/template';
+import { defaultArgs } from '../src/defaultArgs';
+import './index.scss';
 
 export interface IMobileMenuBarProps {
   size?: 'sm' | 'md' | 'lg';
@@ -18,7 +18,7 @@ export interface IMobileMenuBarProps {
   /** @uxpinignoreprop */
 }
 
-export const MobileNavigationBar: React.FC<IMobileMenuBarProps> = ({
+export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   size = defaultArgs.size,
   items = defaultArgs.items,
   useIcons = defaultArgs.useIcons,
@@ -133,4 +133,4 @@ export const MobileNavigationBar: React.FC<IMobileMenuBarProps> = ({
   );
 };
 
-export default MobileNavigationBar;
+export default MobileMenuBar;

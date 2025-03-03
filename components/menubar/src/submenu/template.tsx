@@ -1,8 +1,8 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
 import '../index.scss';
-import { IMenuBarItem } from '../menubar/template';
 import { Icon, Link } from '../../../index';
+import { IMenuBarItem } from '../menubar/template';
 
 export interface SubMenuProps {
   submenu: IMenuBarItem[];
@@ -17,7 +17,7 @@ export interface SubMenuProps {
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
 }
 
-const SubMenu: React.FC<SubMenuProps> = ({
+export const SubMenu: React.FC<SubMenuProps> = ({
   submenu,
   useIcons,
   size,
