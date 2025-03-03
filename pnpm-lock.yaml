@@ -19239,7 +19239,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/cache@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19248,8 +19247,6 @@ snapshots:
       '@parcel/logger': 2.13.3
       '@parcel/utils': 2.13.3
       lmdb: 2.8.5
-    transitivePeerDependencies:
-      - '@swc/helpers'
 
   '@parcel/codeframe@2.13.3':
     dependencies:
@@ -19260,7 +19257,6 @@ snapshots:
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/config-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.33.0)(typescript@5.5.2)':
     dependencies:
@@ -19378,7 +19374,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/node-resolver-core@3.4.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19403,7 +19398,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/optimizer-htmlnano@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.33.0)(typescript@5.5.2)':
     dependencies:
@@ -19415,7 +19409,6 @@ snapshots:
       posthtml: 0.16.6
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
       - cssnano
       - postcss
       - purgecss
@@ -19442,7 +19435,6 @@ snapshots:
       '@parcel/utils': 2.13.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/optimizer-swc@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))(@swc/helpers@0.5.13)':
     dependencies:
@@ -19481,7 +19473,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/packager-html@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19492,7 +19483,6 @@ snapshots:
       posthtml: 0.16.6
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/packager-js@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19506,14 +19496,12 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/packager-raw@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/packager-svg@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19523,21 +19511,18 @@ snapshots:
       posthtml: 0.16.6
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/packager-wasm@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/plugin@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
       '@parcel/types': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/profiler@2.13.3':
     dependencies:
@@ -19555,7 +19540,6 @@ snapshots:
       term-size: 2.2.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/reporter-dev-server@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19563,7 +19547,6 @@ snapshots:
       '@parcel/utils': 2.13.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/reporter-tracer@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19573,7 +19556,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/resolver-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19581,7 +19563,6 @@ snapshots:
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/runtime-browser-hmr@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19589,7 +19570,6 @@ snapshots:
       '@parcel/utils': 2.13.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/runtime-js@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19599,7 +19579,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/runtime-react-refresh@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19609,7 +19588,6 @@ snapshots:
       react-refresh: 0.14.2
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/runtime-service-worker@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19618,7 +19596,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/rust@2.13.3': {}
 
@@ -19638,7 +19615,6 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-css@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19651,7 +19627,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-html@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19666,7 +19641,6 @@ snapshots:
       srcset: 4.0.0
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-image@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19675,8 +19649,6 @@ snapshots:
       '@parcel/utils': 2.13.3
       '@parcel/workers': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
       nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - '@swc/helpers'
 
   '@parcel/transformer-js@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19699,7 +19671,6 @@ snapshots:
       json5: 2.2.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-postcss@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19713,7 +19684,6 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-posthtml@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19726,14 +19696,12 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-raw@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-react-refresh-wrap@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19742,7 +19710,6 @@ snapshots:
       react-refresh: 0.14.2
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/transformer-svg@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.13))':
     dependencies:
@@ -19756,7 +19723,6 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - '@parcel/core'
-      - '@swc/helpers'
 
   '@parcel/types-internal@2.13.3':
     dependencies:
