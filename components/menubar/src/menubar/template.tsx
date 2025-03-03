@@ -72,8 +72,8 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   }, []);
 
   const navMarkup = (
-    <nav className={clsx(`rvo-navbar rvo-navbar--${size}`)}>
-      <ul className={clsx('rvo-navbar__list', direction === 'vertical' && 'rvo-navbar__list--vertical')}>
+    <nav className={clsx(`rvo-menubar rvo-menubar--${size}`)}>
+      <ul className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__list--vertical')}>
         {items?.map((item, index) => (
           <MenuBarItem
             key={`${item.label}-${index}`}
@@ -96,7 +96,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   return (
     <div
       ref={menuBarRef}
-      className={clsx('rvo-navbar__background', horizontalRule && 'rvo-navbar__background--horizontal-rule')}
+      className={clsx('rvo-menubar__background', horizontalRule && 'rvo-menubar__background--horizontal-rule')}
     >
       {direction === 'horizontal' && maxWidth !== 'none' ? (
         <MaxWidthLayout size={maxWidth}>{children || navMarkup}</MaxWidthLayout>

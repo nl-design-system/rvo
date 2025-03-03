@@ -31,9 +31,9 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   if (!isSubmenuVisible) return null;
 
   const subMenuMarkup = submenu.map((subItem, index) => (
-    <li key={`${subItem.label}--${index}`} className="rvo-navbar__item">
+    <li key={`${subItem.label}--${index}`} className="rvo-menubar__item">
       <Link
-        className="rvo-navbar__link"
+        className="rvo-menubar__link"
         href={typeof subItem.link === 'string' ? subItem.link : undefined}
         onClick={typeof subItem.link === 'function' ? subItem.link : undefined}
         color={linkColor}
@@ -52,26 +52,28 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   return direction === 'horizontal' && maxWidth !== 'none' ? (
     <div
       className={clsx(
-        'rvo-navbar--submenu',
-        'rvo-navbar__background',
-        grid && direction === 'horizontal' && 'rvo-navbar__grid rvo-navbar--submenu-grid',
-        direction === 'horizontal' && 'rvo-navbar__horizontal',
+        'rvo-menubar--submenu',
+        'rvo-menubar__background',
+        grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
+        direction === 'horizontal' && 'rvo-menubar__horizontal',
         'rvo-max-width-layout',
         `rvo-max-width-layout--${maxWidth}`,
       )}
     >
-      <ul className={clsx('rvo-navbar__list')}>{subMenuMarkup}</ul>
+      <ul className={clsx('rvo-menubar__list')}>{subMenuMarkup}</ul>
     </div>
   ) : (
     <div
       className={clsx(
-        'rvo-navbar--submenu',
-        'rvo-navbar__background',
-        grid && direction === 'horizontal' && 'rvo-navbar__grid rvo-navbar--submenu-grid',
-        direction === 'horizontal' && 'rvo-navbar__horizontal',
+        'rvo-menubar--submenu',
+        'rvo-menubar__background',
+        grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
+        direction === 'horizontal' && 'rvo-menubar__horizontal',
       )}
     >
-      <ul className={clsx('rvo-navbar__list', direction === 'vertical' && 'rvo-navbar__vertical')}>{subMenuMarkup}</ul>
+      <ul className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__vertical')}>
+        {subMenuMarkup}
+      </ul>
     </div>
   );
 };

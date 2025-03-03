@@ -64,9 +64,12 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
 
       return (
         <React.Fragment key={index}>
-          <li className={clsx(item.useDivider && 'rvo-mobilenav__item--with-divider')} key={`${item.label}--${index}`}>
+          <li
+            className={clsx(item.useDivider && 'rvo-mobile-menu__item--with-divider')}
+            key={`${item.label}--${index}`}
+          >
             <Link
-              className={clsx('rvo-mobilenav__link', activeSubmenu === item.label && 'rvo-mobilenav__link--active')}
+              className={clsx('rvo-mobile-menu__link', activeSubmenu === item.label && 'rvo-mobile-menu__link--active')}
               {...(typeof item.link === 'function' ? { onClick: item.link } : { href: item.link })}
               onClick={(event) => {
                 event.preventDefault();
@@ -79,7 +82,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
             </Link>
 
             {item.submenu && activeSubmenu === item.label && (
-              <ul className={clsx('rvo-mobile-submenu__list')}>
+              <ul className={clsx('rvo-mobile-menu__submenu--list')}>
                 {item.submenu.map((subItem, subIndex) => {
                   const subIconMarkup =
                     useIcons && subItem.icon ? <Icon icon={subItem.icon} size={size as any} color="zwart" /> : null;
@@ -87,7 +90,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
                   return (
                     <li key={subIndex}>
                       <Link
-                        className="rvo-mobilenav__link"
+                        className="rvo-mobile-menu__link"
                         {...(typeof subItem.link === 'function' ? { onClick: subItem.link } : { href: subItem.link })}
                       >
                         {iconPlacement === 'before' && subIconMarkup}
@@ -111,21 +114,20 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
     <div
       ref={menuBarRef}
       className={clsx(
-        'rvo-mobile-navbar',
-        `rvo-mobile-navbar--${size}`,
-        `rvo-mobile-navbar--${isOpen ? 'open' : 'closed'}`,
-        horizontalRule && 'rvo-mobile-navbar--horizontal-rule',
+        'rvo-mobile-menu',
+        `rvo-mobile-menu--${size}`,
+        horizontalRule && 'rvo-mobile-menu--horizontal-rule',
       )}
       aria-expanded={isOpen}
     >
-      <Button kind="subtle" className={clsx('rvo-mobile-navbar__toggle')} onClick={onClick}>
-        <Icon icon="menu" size={size as any} className="rvo-mobile-navbar__open-icon" />
+      <Button kind="subtle" className={clsx('rvo-mobile-menu__toggle')} onClick={onClick}>
+        <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
         Menu
       </Button>
       <Dialog type="drawer-left" isOpen={isOpen} isModal={true} onClose={onClick} backgroundColor="grijs-200">
         <div ref={menuBarRef} className={clsx('rvo-navbar__background')}>
           <nav>
-            <ul className={clsx('rvo-mobile-item__list')}>{itemsMarkup}</ul>
+            <ul className={clsx('rvo-mobile-menu__list--item')}>{itemsMarkup}</ul>
           </nav>
         </div>
       </Dialog>

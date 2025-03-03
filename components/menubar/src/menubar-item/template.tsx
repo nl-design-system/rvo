@@ -42,18 +42,18 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   return (
     <li
       className={clsx(
-        'rvo-navbar__item',
-        active && 'rvo-navbar__item--active',
-        align === 'right' && 'rvo-navbar__item--align-right',
-        submenu && 'rvo-navbar__item--submenu',
-        useDivider && 'rvo-navbar__item--with-divider',
+        'rvo-menubar__item',
+        active && 'rvo-menubar__item--active',
+        align === 'right' && 'rvo-menubar__item--align-right',
+        submenu && 'rvo-menubar__item--submenu',
+        useDivider && 'rvo-menubar__item--with-divider',
       )}
       {...rest}
     >
       <Link
         className={clsx(
-          'rvo-navbar__link',
-          isSubmenuVisible && ['rvo-navbar__link--active', 'rvo-navbar--submenu', 'rvo-navbar__background'],
+          'rvo-menubar__link',
+          isSubmenuVisible && ['rvo-menubar__link--active', 'rvo-menubar--submenu', 'rvo-menubar__background'],
         )}
         {...(typeof link === 'function' ? { onClick: link } : { href: link })}
         color={linkColor}
