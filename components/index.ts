@@ -12,8 +12,6 @@ export { DataListItem } from './data-list/src/data-list-item/template';
 export { Dialog } from './dialog/src/template';
 export { ExpandableContent } from './expandable-content/src/template';
 export { Footer } from './footer/src/template';
-export { FooterColumn } from './footer/src/footer-column/template';
-export { FooterItem } from './footer/src/footer-item/template';
 export { Checkbox } from './form-checkbox/src/template';
 export { CheckBoxFilter } from './checkbox-filter/src/template';
 export { CheckboxGroup } from './form-checkbox-group/src/template';
