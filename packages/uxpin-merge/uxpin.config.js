@@ -20,8 +20,6 @@ module.exports = {
           '../../components/expandable-content/src/template.tsx',
           '../../components/header/src/template.tsx',
           '../../components/footer/src/template.tsx',
-          '../../components/footer/src/footer-column/template.tsx',
-          '../../components/footer/src/footer-item/template.tsx',
           '../../components/logo/src/template.tsx',
           '../../components/menubar/src/template.tsx',
           '../../components/menubar/src/menubar-item/template.tsx',
