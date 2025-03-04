@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Footer, FooterColumnInterface, FooterInterface, FooterItemInterface } from './src/template';
 import Icon from '../icon/src/template';
 
-const defaultFooterMenu: FooterColumnInterface[] = [
+export const defaultFooterMenu: FooterColumnInterface[] = [
   {
     label: 'RVO',
     orientation: 'horizontal',
@@ -42,7 +42,7 @@ const defaultFooterMenu: FooterColumnInterface[] = [
   },
 ];
 
-const defaultSecondaryFooterMenu: FooterItemInterface[] = [
+export const defaultSecondaryFooterMenu: FooterItemInterface[] = [
   { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
   { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
   { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
