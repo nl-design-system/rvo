@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar`
 
+## 1.3.0
+
+### Minor Changes
+
+- 61b89bc: Updated MenuBar and MobileMenu to support SubMenus properly
+
 ## 1.2.0
 
 ### Minor Changes

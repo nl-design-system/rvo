@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.5.0
+
+### Minor Changes
+
+- 61b89bc: Updated MenuBar and MobileMenu to support SubMenus properly
+
 ## 4.4.10
 
 ### Patch Changes
