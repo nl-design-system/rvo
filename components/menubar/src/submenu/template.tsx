@@ -1,0 +1,81 @@
+import clsx from 'clsx';
+import React from 'react';
+import '../index.scss';
+import { Icon, Link } from '../../../index';
+import { IMenuBarItem } from '../menubar/template';
+
+export interface SubMenuProps {
+  submenu: IMenuBarItem[];
+  useIcons: boolean;
+  size: 'sm' | 'md' | 'lg';
+  iconPlacement: 'before' | 'after';
+  linkColor?: string;
+  isSubmenuVisible?: boolean;
+  direction?: 'horizontal' | 'vertical';
+  grid?: boolean;
+  className?: string | string[];
+  maxWidth?: 'none' | 'sm' | 'md' | 'lg';
+}
+
+export const SubMenu: React.FC<SubMenuProps> = ({
+  submenu,
+  useIcons,
+  size,
+  iconPlacement,
+  linkColor,
+  isSubmenuVisible,
+  direction,
+  grid,
+  maxWidth,
+}) => {
+  if (!isSubmenuVisible) return null;
+
+  const subMenuMarkup = submenu.map((subItem, index) => (
+    <li key={`${subItem.label}--${index}`} className="rvo-menubar__item">
+      <Link
+        className="rvo-menubar__link"
+        href={typeof subItem.link === 'string' ? subItem.link : undefined}
+        onClick={typeof subItem.link === 'function' ? subItem.link : undefined}
+        color={linkColor}
+      >
+        {iconPlacement === 'before' && useIcons && subItem.icon && (
+          <Icon icon={subItem.icon} size={size as any} color="wit" />
+        )}
+        {subItem.label}
+        {iconPlacement === 'after' && useIcons && subItem.icon && (
+          <Icon icon={subItem.icon} size={size as any} color="wit" />
+        )}
+      </Link>
+    </li>
+  ));
+
+  return direction === 'horizontal' && maxWidth !== 'none' ? (
+    <div
+      className={clsx(
+        'rvo-menubar--submenu',
+        'rvo-menubar__background',
+        grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
+        direction === 'horizontal' && 'rvo-menubar__horizontal',
+        'rvo-max-width-layout',
+        `rvo-max-width-layout--${maxWidth}`,
+      )}
+    >
+      <ul className={clsx('rvo-menubar__list')}>{subMenuMarkup}</ul>
+    </div>
+  ) : (
+    <div
+      className={clsx(
+        'rvo-menubar--submenu',
+        'rvo-menubar__background',
+        grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
+        direction === 'horizontal' && 'rvo-menubar__horizontal',
+      )}
+    >
+      <ul className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__vertical')}>
+        {subMenuMarkup}
+      </ul>
+    </div>
+  );
+};
+
+export default SubMenu;

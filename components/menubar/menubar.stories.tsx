@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './src/defaultArgs';
-import { MenuBar } from './src/template';
+import { defaultArgs } from './src/defaultArguments';
+import MenuBar from './src/menubar/template';
 
 const meta: Meta<typeof MenuBar> = {
-  title: 'Componenten/Menubar',
+  title: 'Componenten/Menubar/Navbar',
   component: MenuBar,
   args: defaultArgs,
   parameters: {

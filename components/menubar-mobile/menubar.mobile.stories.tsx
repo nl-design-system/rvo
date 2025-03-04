@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './src/defaultArgs';
-import { MobileMenuBar } from './src/template';
+import MobileMenuBar from './src/template';
 
 const meta: Meta<typeof MobileMenuBar> = {
   title: 'Componenten/Mobile Menubar',
