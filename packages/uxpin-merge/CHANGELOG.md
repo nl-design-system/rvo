@@ -1,5 +1,11 @@
 # @nl-rvo/uxpin-merge
 
+## 1.3.0
+
+### Minor Changes
+
+- af62c22: Footer updated so ReactNode items can be added as an Footer item.
+
 ## 1.2.12
 
 ### Patch Changes

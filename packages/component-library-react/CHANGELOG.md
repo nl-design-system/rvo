@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.0
+
+### Minor Changes
+
+- af62c22: Upgraded the Footer Component to support horizontal layout per column and the use of ReactNode as content
+
 ## 4.5.0
 
 ### Minor Changes
