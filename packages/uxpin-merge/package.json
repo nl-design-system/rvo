@@ -41,7 +41,7 @@
     "react": "18.2.0",
     "react-apexcharts": "1.7.0",
     "react-credit-cards": "0.8.3",
-    "react-dom": "18.2.0",
+    "react-dom": "19.0.0",
     "style-loader": "3.3.4",
     "uuid": "9.0.1",
     "webpack": "5.96.1"
