@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.5.1
+
+### Patch Changes
+
+- af62c22: Footer menus support horizontal layout
+
 ## 4.5.0
 
 ### Minor Changes

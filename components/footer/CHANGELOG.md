@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.4.0
+
+### Minor Changes
+
+- af62c22: Upgraded the Footer Component to support horizontal layout per column and the use of ReactNode as content
+
 ## 1.3.1
 
 ### Patch Changes
