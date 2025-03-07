@@ -3,7 +3,7 @@ import { defaultArgs } from './src/defaultArguments';
 import MenuBar from './src/menubar/template';
 
 const meta: Meta<typeof MenuBar> = {
-  title: 'Componenten/Menubar/Navbar',
+  title: 'Componenten/Menubar',
   component: MenuBar,
   args: defaultArgs,
   parameters: {

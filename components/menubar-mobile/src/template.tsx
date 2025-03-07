@@ -61,6 +61,13 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   if (!children && items) {
     itemsMarkup = items.map((item, index) => {
       const iconMarkup = useIcons && item.icon ? <Icon icon={item.icon} size={size as any} color="zwart" /> : null;
+      const chevronMarkup = item.submenu ? (
+        activeSubmenu === item.label ? (
+          <Icon icon="delta-omhoog" size={size as any} color="zwart" />
+        ) : (
+          <Icon icon="delta-omlaag" size={size as any} color="zwart" />
+        )
+      ) : null;
 
       return (
         <React.Fragment key={index}>
@@ -70,15 +77,20 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
           >
             <Link
               className={clsx('rvo-mobile-menu__link', activeSubmenu === item.label && 'rvo-mobile-menu__link--active')}
-              {...(typeof item.link === 'function' ? { onClick: item.link } : { href: item.link })}
+              {...(typeof item.link === 'string' ? { href: item.link } : {})}
               onClick={(event) => {
                 event.preventDefault();
-                handleItemClick(item.label);
+                if (item.submenu) {
+                  handleItemClick?.(item.label);
+                } else if (typeof item.link === 'function') {
+                  item.link(event);
+                }
               }}
             >
               {iconPlacement === 'before' && iconMarkup}
               {item.label}
               {iconPlacement !== 'before' && iconMarkup}
+              {chevronMarkup}
             </Link>
 
             {item.submenu && activeSubmenu === item.label && (
@@ -91,7 +103,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
                     <li key={subIndex}>
                       <Link
                         className="rvo-mobile-menu__link"
-                        {...(typeof subItem.link === 'function' ? { onClick: subItem.link } : { href: subItem.link })}
+                        {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}
                       >
                         {iconPlacement === 'before' && subIconMarkup}
                         {subItem.label}

@@ -22,7 +22,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   label,
   icon,
   link,
-  align = 'left',
   active,
   useDivider,
   submenu,
@@ -38,13 +37,28 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   ...rest
 }) => {
   const iconMarkup = useIcons && icon ? <Icon icon={icon} size={size as any} color="wit" /> : null;
+  const chevronMarkup = submenu ? (
+    isSubmenuVisible ? (
+      <Icon icon="delta-omhoog" size={size as any} color="wit" />
+    ) : (
+      <Icon icon="delta-omlaag" size={size as any} color="wit" />
+    )
+  ) : null;
+
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    if (submenu) {
+      handleItemClick?.(event);
+    } else if (typeof link === 'function') {
+      link(event);
+    }
+  };
 
   return (
     <li
       className={clsx(
         'rvo-menubar__item',
         active && 'rvo-menubar__item--active',
-        align === 'right' && 'rvo-menubar__item--align-right',
         submenu && 'rvo-menubar__item--submenu',
         useDivider && 'rvo-menubar__item--with-divider',
       )}
@@ -55,20 +69,14 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           'rvo-menubar__link',
           isSubmenuVisible && ['rvo-menubar__link--active', 'rvo-menubar--submenu', 'rvo-menubar__background'],
         )}
-        {...(typeof link === 'function' ? { onClick: link } : { href: link })}
         color={linkColor}
-        onClick={(event) => {
-          if (submenu) {
-            event.preventDefault();
-            handleItemClick?.(event);
-          } else if (typeof link === 'function') {
-            link(event);
-          }
-        }}
+        {...(typeof link === 'string' ? { href: link } : {})}
+        onClick={handleClick}
       >
         {iconPlacement === 'before' && iconMarkup}
         {label}
         {iconPlacement !== 'before' && iconMarkup}
+        {chevronMarkup}
       </Link>
 
       {submenu && isSubmenuVisible && (

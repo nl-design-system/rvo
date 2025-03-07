@@ -52,6 +52,7 @@ export const defaultItems = [
       { label: 'Financiering', link: '#' },
     ],
   },
+  { label: 'Zoeken', link: '#', align: 'right' as const },
   { label: 'Uitloggen', link: '#', align: 'right' as const },
 ];
 
