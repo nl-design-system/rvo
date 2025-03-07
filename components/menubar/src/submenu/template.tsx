@@ -34,8 +34,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({
     <li key={`${subItem.label}--${index}`} className="rvo-menubar__item">
       <Link
         className="rvo-menubar__link"
-        href={typeof subItem.link === 'string' ? subItem.link : undefined}
-        onClick={typeof subItem.link === 'function' ? subItem.link : undefined}
+        {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}
         color={linkColor}
       >
         {iconPlacement === 'before' && useIcons && subItem.icon && (
@@ -56,11 +55,11 @@ export const SubMenu: React.FC<SubMenuProps> = ({
         'rvo-menubar__background',
         grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
         direction === 'horizontal' && 'rvo-menubar__horizontal',
-        'rvo-max-width-layout',
-        `rvo-max-width-layout--${maxWidth}`,
       )}
     >
-      <ul className={clsx('rvo-menubar__list')}>{subMenuMarkup}</ul>
+      <ul className={clsx('rvo-menubar__list', 'rvo-max-width-layout', `rvo-max-width-layout--${maxWidth}`)}>
+        {subMenuMarkup}
+      </ul>
     </div>
   ) : (
     <div

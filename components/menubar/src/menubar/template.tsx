@@ -71,24 +71,49 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     };
   }, []);
 
+  const leftItems = items?.filter((item) => item.align !== 'right') || [];
+  const rightItems = items?.filter((item) => item.align === 'right') || [];
+
   const navMarkup = (
     <nav className={clsx(`rvo-menubar rvo-menubar--${size}`)}>
       <ul className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__list--vertical')}>
-        {items?.map((item, index) => (
-          <MenuBarItem
-            key={`${item.label}-${index}`}
-            useIcons={useIcons ?? false}
-            size={size}
-            iconPlacement={iconPlacement ?? 'before'}
-            linkColor={linkColor}
-            isSubmenuVisible={activeSubmenu === item.label}
-            handleItemClick={() => handleItemClick(item.label)}
-            direction={direction}
-            grid={grid}
-            maxWidth={maxWidth}
-            {...item}
-          />
-        ))}
+        <div className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
+          {leftItems?.map((item, index) => (
+            <MenuBarItem
+              key={`${item.label}-${index}`}
+              useIcons={useIcons ?? false}
+              size={size}
+              iconPlacement={iconPlacement ?? 'before'}
+              linkColor={linkColor}
+              isSubmenuVisible={activeSubmenu === item.label}
+              handleItemClick={() => handleItemClick(item.label)}
+              direction={direction}
+              grid={grid}
+              maxWidth={maxWidth}
+              {...item}
+            />
+          ))}
+        </div>
+
+        {rightItems.length > 0 && (
+          <div className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
+            {rightItems?.map((item, index) => (
+              <MenuBarItem
+                key={`${item.label}-${index}`}
+                useIcons={useIcons ?? false}
+                size={size}
+                iconPlacement={iconPlacement ?? 'before'}
+                linkColor={linkColor}
+                isSubmenuVisible={activeSubmenu === item.label}
+                handleItemClick={() => handleItemClick(item.label)}
+                direction={direction}
+                grid={grid}
+                maxWidth={maxWidth}
+                {...item}
+              />
+            ))}
+          </div>
+        )}
       </ul>
     </nav>
   );
