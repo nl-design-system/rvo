@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.1
+
+### Patch Changes
+
+- 950ab7e: update menubar and menubar mobile styling issues
+
 ## 4.6.0
 
 ### Minor Changes

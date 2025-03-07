@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.5.2
+
+### Patch Changes
+
+- 950ab7e: update menubar and menubar mobile styling issues
+
 ## 4.5.1
 
 ### Patch Changes
