@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.4.1
+
+### Patch Changes
+
+- 950ab7e: update menubar and menubar mobile styling issues
+
 ## 1.4.0
 
 ### Minor Changes
