@@ -11,8 +11,12 @@ Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.
    b. [CSS voor individuele componenten (@nl-rvo/css-[component-naam])](https://www.npmjs.com/package/@nl-rvo/css-[component-naam]):
    Bevat de CSS styling van individuele ROOS componenten.
 
-3. [Assets](https://www.npmjs.com/package/@nl-rvo/assets):
+3. Assets:
    Bevat alle assets als icons, plaatjes, fonts e.d.
+
+## Toestemming voor gebruik van assets
+
+Wanneer je de rijkshuisstijl assets wil gebruiken kun je voor toestemming contact opnemen met de beheerders van het Design System ROOS: [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 
 ## Individuele of alle componenten inladen
 
@@ -20,24 +24,24 @@ Bepaal of je individuele componenten wilt inladen of alle componenten in één k
 
 ## Libraries installeren met NPM
 
-De aanbevolen manier om de libraries te gebruiken is met behulp van NPM:
+De aanbevolen manier om de libraries te gebruiken is met behulp van NPM.
+
+> Let op: in de code voorbeelden worden niet altijd de meest actuele versienummers getoond, controleer deze daarom zelf.
 
 ```shell
-npm install --save-dev --save-exact @nl-rvo/design-tokens@1.3.0
-npm install --save-dev --save-exact @nl-rvo/assets@1.0.0-alpha.360
+npm install --save-dev --save-exact @nl-rvo/design-tokens@1.7.1
 ```
 
 Inladen van individuele componenten:
 
 ```shell
-npm install --save-dev --save-exact @nl-rvo/css-button@1.0.0
-npm install --save-dev --save-exact @nl-rvo/css-breadcrumbs@1.0.0
+npm install --save-dev --save-exact @nl-rvo/css-footer@1.4.0
 ```
 
 Inladen van alle compontent in één keer:
 
 ```shell
-npm install --save-dev --save-exact @nl-rvo/component-library-css@1.6.0
+npm install --save-dev --save-exact @nl-rvo/component-library-css@4.5.2
 ```
 
 > Let op: Gebruik altijd exacte versie-nummers. Op deze manier blijft alles foutloos werken en kun je zelf testen op 'breaking changes' voor het upgraden naar een nieuwe release.
@@ -49,19 +53,18 @@ Het is mogelijk om de Design tokens en Components via open source CDN's als Unpc
 Inladen van individuele componenten:
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/design-tokens@1.4.3" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/css-button@1.0.0" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/css-breadcrumbs@1.0.0" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/design-tokens@1.7.1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/css-footer@1.4.0" />
 ```
 
-Inladen van alle compontent in één keer:
+Inladen van alle componenten in één keer:
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/design-tokens@1.4.3" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@1.6.0" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/design-tokens@1.7.1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@nl-rvo/component-library-css@4.5.2" />
 ```
 
-Er is alleen een nadeel. Helaas wordt op dit moment de Assets library nog niet gebruikt door de components als deze via CDN worden ingeladen. Dit betekent dat gebruikte icons, plaatjes e.d. in de components niet zichtbaar zijn.
+Helaas wordt op dit moment de Assets library nog niet gebruikt door de components als deze via CDN worden ingeladen. Dit betekent dat gebruikte icons, plaatjes e.d. in de components niet zichtbaar zijn.
 Het is wel mogelijk om assets in de Assets library direct te linken. Bijvoorbeeld:
 
 ```html
@@ -88,10 +91,6 @@ Nu kunnen code snippets van componenten direct uit Storybook worden gekopieerd. 
 ## Afhankelijkheden tussen components
 
 Let op: Sommige componenten zijn afhankelijk van andere componenten. Denk bijvoorbeeld aan het date input field component. Dit component is afhankelijk van het form-field component en het form-textinput component. Om het date input field component te kunnen gebruiken dien je dus ook deze componenten te laden. In de [Storybook omgeving](https://nl-design-system.github.io/rvo/) zie je in de documentatie van elk component onder het kopje 'Dependencies' welke ondersteunendecomponenten je dient in te laden om het betreffendecomponent te kunnen gebruiken.
-
-## Toestemming voor gebruik van assets
-
-Wanneer je de huisstijl assets wil gebruiken dien je voor toestemming contact opnemen met de huisstijl coördinator van RVO via [rijksbredehuisstijl@rvo.nl](mailto:rijksbredehuisstijl@rvo.nl).
 
 ## Bijdragen
 
