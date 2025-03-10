@@ -51,8 +51,8 @@ const Subsidiepagina = () => {
         )}
       </div>
 
-      <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-end--3xl rvo-padding-block-start--2xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <div className="rvo-margin-block-end--md">
+      <main className="rvo-padding-block-end--3xl rvo-padding-block-start--2xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        <div className="rvo-margin-block-end--md rvo-max-width-layout rvo-max-width-layout--sm ">
           <ol className="rvo-breadcrumbs rvo-breadcrumbs--md">
             <li className="rvo-breadcrumbs-item">
               <a className="rvo-link rvo-link--no-underline" href="#">
@@ -72,96 +72,97 @@ const Subsidiepagina = () => {
             </li>
           </ol>
         </div>
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm ">
+          <Heading type="h1">Fictieve subsidieregeling voor het stimuleren van bijen op het dak (FSSBD)</Heading>
+          <LayoutFlow gap="xs" row={true}>
+            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+            <strong>Open voor aanvragen </strong> tot 31 december 2025
+          </LayoutFlow>
+          <p>
+            <em>
+              Deze inhoud van deze pagina is gecontroleerd op <strong>22 januari 2025</strong>
+            </em>
+          </p>
 
-        <Heading type="h1">Fictieve subsidieregeling voor het stimuleren van bijen op het dak (FSSBD)</Heading>
-        <LayoutFlow gap="xs" row={true}>
-          <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
-          <strong>Open voor aanvragen </strong> tot 31 december 2025
-        </LayoutFlow>
-        <p>
-          <em>
-            Deze inhoud is geplaatst op <strong>17 april 2024</strong> en gecontroleerd op{' '}
-            <strong>22 januari 2025</strong>
-          </em>
-        </p>
-
-        <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
-          Wilt u het dak van uw huis of bedrijfspand geschikt maken voor bijen? Met deze subsidie krijgt u de kosten
-          vergoed voor uw bijvriendelijke dak. Zo helpt u de hoeveelheid bijen in Nederland én het klimaat. Uw dak ziet
-          er mooier uit en isoleert beter. Vraag net als 10.000 andere dakeigenaren nu subsidie bij ons aan.
-        </p>
-        <div className="utrecht-button-group">
-          <Button>Aanvragen</Button>
-          <Button kind="secondary">Uw aanvraag bekijken</Button>
+          <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
+            Wilt u het dak van uw huis of bedrijfspand geschikt maken voor bijen? Met deze subsidie krijgt u de kosten
+            vergoed voor uw bijvriendelijke dak. Zo helpt u de hoeveelheid bijen in Nederland én het klimaat. Uw dak
+            ziet er mooier uit en isoleert beter. Vraag net als 10.000 andere dakeigenaren nu subsidie bij ons aan.
+          </p>
+          <div className="utrecht-button-group">
+            <Button>Aanvragen</Button>
+            <Button kind="secondary">Uw aanvraag bekijken</Button>
+          </div>
         </div>
-
-        {/* <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
-          <div className="rvo-card__content">
-            <h3 className="utrecht-heading-3">Aanvraagperiode</h3>
-            <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
-              <div>
-                <Icon icon="kalender" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>Startdatum:</strong>
-                <br /> maandag 1 januari 2024
-                <br /> 09:00
+        <div className="rvo-custom-aanvraagperiode-budget rvo-max-width-layout rvo-max-width-layout--sm">
+          <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
+            <div className="rvo-card__content">
+              <h3 className="utrecht-heading-3">Aanvraagperiode</h3>
+              <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
+                <div>
+                  <Icon icon="kalender" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Startdatum:</strong>
+                  <br /> maandag 1 januari 2024
+                  <br /> 09:00
+                </div>
+                <div>
+                  <Icon icon="kalender-met-vinkje" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Einddatum:</strong>
+                  <br /> woensdag 31 december 2025 <br />
+                  17:00{' '}
+                </div>
               </div>
-              <div>
-                <Icon icon="kalender-met-vinkje" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>Einddatum:</strong>
-                <br /> woensdag 31 december 2025 <br />
-                17:00{' '}
+            </div>
+          </div>
+          <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
+            <div className="rvo-card__content">
+              <h3 className="utrecht-heading-3">Budget</h3>
+
+              <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
+                <div>
+                  <Icon icon="stapel-munten" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>U ontvangt maximaal:</strong>
+                  <br />€ 7.500
+                </div>
+                <div>
+                  <Icon icon="zak-met-geld" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Totaal budget:</strong>
+                  <br /> € 6.500.000
+                </div>
+                <div>
+                  <Icon icon="hand-met-rekening" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Verleend:</strong>
+                  <br /> € 3.500.000
+                </div>
+                <div>
+                  <Icon icon="circulaire-economie" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>In behandeling:</strong>
+                  <br /> € 1.000.000
+                </div>
+                <div>
+                  <Icon icon="loonheffingen" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Nog beschikbaar op 17 april 2024:</strong>
+                  <br /> 31% (€ 2.000.000)
+                </div>
+                <div>
+                  <Icon icon="info" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Aanvullende informatie:</strong>
+                  <br /> Het beschikbare budget kan nog veranderen als aanvragen worden afgewezen of ingetrokken. Dan
+                  komt er weer geld vrij.
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
-          <div className="rvo-card__content">
-            <h3 className="utrecht-heading-3">Budget</h3>
-
-            <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
-              <div>
-                <Icon icon="stapel-munten" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>U ontvangt maximaal:</strong>
-                <br />€ 7.500
-              </div>
-              <div>
-                <Icon icon="zak-met-geld" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>Totaal budget:</strong>
-                <br /> € 6.500.000
-              </div>
-              <div>
-                <Icon icon="hand-met-rekening" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>Verleend:</strong>
-                <br /> € 3.500.000
-              </div>
-              <div>
-                <Icon icon="circulaire-economie" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>In behandeling:</strong>
-                <br /> € 1.000.000
-              </div>
-              <div>
-                <Icon icon="loonheffingen" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>Nog beschikbaar op 17 april 2024:</strong>
-                <br /> 31% (€ 2.000.000)
-              </div>
-              <div>
-                <Icon icon="info" size="2xl" color="zwart"></Icon>
-                <br />
-                <strong>Aanvullende informatie:</strong>
-                <br /> Het beschikbare budget kan nog veranderen als aanvragen worden afgewezen of ingetrokken. Dan komt
-                er weer geld vrij.
-              </div>
-            </div>
-          </div>
-        </div> */}
-        <div className="rvo-margin-block-start--2xl">
+        {/* <div className="rvo-margin-block-start--2xl">
           <Heading type="h2">Budget en aanvraagperiode</Heading>
           <dl className="rvo-data-list">
             <dt>Startdatum</dt>
@@ -184,8 +185,8 @@ const Subsidiepagina = () => {
               geld vrij.
             </dd>
           </dl>
-        </div>
-        <div className="rvo-margin-block-start--2xl rvo-margin-block-end--xl">
+        </div> */}
+        <div className="rvo-margin-block-start--2xl rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2">Op deze pagina:</Heading>
           <div className="rvo-layout-grid rvo-layout-grid-columns--two rvo-layout-gap--md">
             <div>
@@ -226,38 +227,40 @@ const Subsidiepagina = () => {
             <div></div>
           </div>
         </div>
-        <Fieldset legend="Krijgt u subsidie?">
-          <p className="rvo-margin-block-end--lg rvo-margin-block-start--2xs">
-            Beantwoord maximaal 5 vragen en u ziet direct of u kans maakt op deze subsidie.
-          </p>
-          <RadioButtonField
-            name="subsidie"
-            label="Bent u eigenaar van het gebouw?"
-            options={[
-              { id: 'ja', label: 'Ja', checked: true },
-              { id: 'nee', label: 'Nee' },
-            ]}
-          />
-          <RadioButtonField
-            name="subsidie"
-            label="Heeft u toestemming van de VvE?"
-            options={[
-              { id: 'toestemming-ja', label: 'Ja', checked: true },
-              { id: 'toestemming-nee', label: 'Nee' },
-            ]}
-          />
-          <Heading type="h3" noMargins={true}>
-            U kunt subsidie aanvragen
-          </Heading>
-          <p className="rvo-paragraph--no-spacing">
-            Op basis van uw antwoorden komt u in aanmerking voor de FSSBD-subsidie.
-          </p>
-          <a href="#" className="rvo-link rvo-link--donkerblauw">
-            Lees hoe u subsidie aanvraagt
-          </a>
-        </Fieldset>
+        <div className="rvo-max-width-layout rvo-max-width-layout--sm">
+          <Fieldset legend="Krijgt u subsidie?">
+            <p className="rvo-margin-block-end--lg rvo-margin-block-start--2xs">
+              Beantwoord maximaal 5 vragen en u ziet direct of u kans maakt op deze subsidie.
+            </p>
+            <RadioButtonField
+              name="subsidie"
+              label="Bent u eigenaar van het gebouw?"
+              options={[
+                { id: 'ja', label: 'Ja', checked: true },
+                { id: 'nee', label: 'Nee' },
+              ]}
+            />
+            <RadioButtonField
+              name="subsidie"
+              label="Heeft u toestemming van de VvE?"
+              options={[
+                { id: 'toestemming-ja', label: 'Ja', checked: true },
+                { id: 'toestemming-nee', label: 'Nee' },
+              ]}
+            />
+            <Heading type="h3" noMargins={true}>
+              U kunt subsidie aanvragen
+            </Heading>
+            <p className="rvo-paragraph--no-spacing">
+              Op basis van uw antwoorden komt u in aanmerking voor de FSSBD-subsidie.
+            </p>
+            <a href="#" className="rvo-link rvo-link--donkerblauw">
+              Lees hoe u subsidie aanvraagt
+            </a>
+          </Fieldset>
+        </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Hoeveel subsidie krijgt u?
           </Heading>
@@ -267,7 +270,7 @@ const Subsidiepagina = () => {
           </Button>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Voorwaarden
           </Heading>
@@ -300,7 +303,7 @@ const Subsidiepagina = () => {
           </div>
         </div>
 
-        <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl">
+        <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Webinar: stap voor stap naar subsidie voor bijen op het dak
           </Heading>
@@ -314,7 +317,7 @@ const Subsidiepagina = () => {
           </Button>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Ervaringen van andere bedrijven
           </Heading>
@@ -323,7 +326,7 @@ const Subsidiepagina = () => {
           </p>
         </div>
 
-        <div className="rvo-quote">
+        <div className="rvo-quote  rvo-max-width-layout rvo-max-width-layout--sm ">
           <div className="rvo-card rvo-card--outline rvo-card--padding-md">
             <div className="rvo-card__content">
               <LayoutFlow>
@@ -347,62 +350,62 @@ const Subsidiepagina = () => {
           </div>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--lg ">
           <Heading type="h2">Subsidieproces in 4 stappen</Heading>
           <img src="https://www.rvo.nl/sites/default/files/2024-10/Fictieve%20infographic%20Bijen%20op%20het%20dak.svg" />
-          <div className="rvo-accordion">
-            <details className="rvo-accordion__item">
-              <summary className="rvo-accordion__item-summary">
-                <h3 className="rvo-accordion__item-title utrecht-heading-3 rvo-heading--no-margins rvo-heading--mixed">
-                  <span
-                    className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
-                    role="img"
-                    aria-label="Delta omlaag"
-                  ></span>
-                  <span
-                    className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
-                    role="img"
-                    aria-label="Delta omhoog"
-                  ></span>
-                  Uitgeschreven tekst
-                </h3>
-              </summary>
-              <div className="rvo-accordion__content rvo-margin-block-start--md">
-                {' '}
-                <Heading type="h3" noMargins={true}>
-                  Hoe vraagt u subsidie aan?
-                </Heading>{' '}
-                <p className="rvo-paragraph">We leggen het stap voor stap voor u uit.</p>
-                <Heading type="h4" noMargins={true}>
-                  Stap 1: uw aanvraag voorbereiden
-                </Heading>
-                <p className="rvo-paragraph">Verzamel alle documenten en gegevens die nodig zijn voor uw aanvraag.</p>{' '}
-                <Heading type="h4" noMargins={true}>
-                  Stap 2: aanvragen
-                </Heading>{' '}
-                <p className="rvo-paragraph">
-                  Vul het aanvraagformulier in via Mijn RVO. Binnen 13 weken ontvangt u ons besluit.
-                </p>
-                <Heading type="h4" noMargins={true}>
-                  Stap 3: Uw project uitvoeren
-                </Heading>{' '}
-                <p className="rvo-paragraph">
-                  Na goedkeuring ontvangt u het subsidiebedrag. U start met uw project en geeft ons jaarlijks de
-                  voortgang door.
-                </p>{' '}
-                <Heading type="h4" noMargins={true}>
-                  Stap 4: Vaststelling aanvragen
-                </Heading>{' '}
-                <p className="rvo-paragraph">
-                  Als uw project klaar is, vraagt u vaststelling aan via Mijn RVO. U geeft de gemaakte kosten aan ons
-                  door.
-                </p>
-              </div>
-            </details>
-          </div>
+        </div>
+        <div className="rvo-accordion  rvo-max-width-layout rvo-max-width-layout--sm ">
+          <details className="rvo-accordion__item">
+            <summary className="rvo-accordion__item-summary">
+              <h3 className="rvo-accordion__item-title utrecht-heading-3 rvo-heading--no-margins rvo-heading--mixed">
+                <span
+                  className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--closed"
+                  role="img"
+                  aria-label="Delta omlaag"
+                ></span>
+                <span
+                  className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--md rvo-icon--hemelblauw rvo-accordion__item-icon--open"
+                  role="img"
+                  aria-label="Delta omhoog"
+                ></span>
+                Uitgeschreven tekst
+              </h3>
+            </summary>
+            <div className="rvo-accordion__content rvo-margin-block-start--md">
+              {' '}
+              <Heading type="h3" noMargins={true}>
+                Hoe vraagt u subsidie aan?
+              </Heading>{' '}
+              <p className="rvo-paragraph">We leggen het stap voor stap voor u uit.</p>
+              <Heading type="h4" noMargins={true}>
+                Stap 1: uw aanvraag voorbereiden
+              </Heading>
+              <p className="rvo-paragraph">Verzamel alle documenten en gegevens die nodig zijn voor uw aanvraag.</p>{' '}
+              <Heading type="h4" noMargins={true}>
+                Stap 2: aanvragen
+              </Heading>{' '}
+              <p className="rvo-paragraph">
+                Vul het aanvraagformulier in via Mijn RVO. Binnen 13 weken ontvangt u ons besluit.
+              </p>
+              <Heading type="h4" noMargins={true}>
+                Stap 3: Uw project uitvoeren
+              </Heading>{' '}
+              <p className="rvo-paragraph">
+                Na goedkeuring ontvangt u het subsidiebedrag. U start met uw project en geeft ons jaarlijks de voortgang
+                door.
+              </p>{' '}
+              <Heading type="h4" noMargins={true}>
+                Stap 4: Vaststelling aanvragen
+              </Heading>{' '}
+              <p className="rvo-paragraph">
+                Als uw project klaar is, vraagt u vaststelling aan via Mijn RVO. U geeft de gemaakte kosten aan ons
+                door.
+              </p>
+            </div>
+          </details>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Uw aanvraag voorbereiden
           </Heading>
@@ -411,7 +414,7 @@ const Subsidiepagina = () => {
             u snel op weg.
           </p>
 
-          <ol className="rvo-ol rvo-ol--no-margin rvo-ol--no-padding">
+          <ol className="rvo-ol rvo-ol--no-margin rvo-ol--no-padding  rvo-max-width-layout rvo-max-width-layout--sm ">
             <li>
               Regel inloggegevens van{' '}
               <a href="#" className="rvo-link">
@@ -424,7 +427,7 @@ const Subsidiepagina = () => {
             <li>Maak een gedetailleerd projectvoorstel. Hoe u dit doet, ziet u in ons voorbeeld.</li>
             <li>Maak een overzicht van de kosten die u verwacht te maken. Ook dit vindt u in ons voorbeeld.</li>
           </ol>
-          <div className="rvo-margin-block-start--md">
+          <div className="rvo-margin-block-start--md  rvo-max-width-layout rvo-max-width-layout--sm ">
             <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
               <span
                 className="utrecht-icon rvo-icon rvo-icon-document-met-lijnen rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
@@ -436,7 +439,7 @@ const Subsidiepagina = () => {
           </div>
         </div>
 
-        <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl rvo-card--full-colour--grijs-100">
+        <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl rvo-card--full-colour--grijs-100  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Aanvragen
           </Heading>
@@ -450,7 +453,7 @@ const Subsidiepagina = () => {
           </Button>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Na uw aanvraag
           </Heading>
@@ -464,7 +467,7 @@ const Subsidiepagina = () => {
             </a>
           </p>
           <Heading type="h3">Uw aanvraag is goedgekeurd</Heading>
-          <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
+          <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding  rvo-max-width-layout rvo-max-width-layout--sm ">
             <li>
               U ontvangt binnen 8 weken na de beslissing het subsidiebedrag. U kunt dan direct starten met de uitvoering
               van uw projectvoorstel.
@@ -478,7 +481,7 @@ const Subsidiepagina = () => {
               goedgekeurd, is uw subsidieaanvraag afgerond.
             </li>
           </ul>
-          <div className="rvo-margin-block-start--md rvo-margin-block-end--lg">
+          <div className="rvo-margin-block-start--md rvo-margin-block-end--lg  rvo-max-width-layout rvo-max-width-layout--sm ">
             <div className=" utrecht-button-group">
               <Button kind="secondary" size="sm">
                 Voortgang doorgeven
@@ -489,7 +492,7 @@ const Subsidiepagina = () => {
             </div>
           </div>
           <Heading type="h3">Uw aanvraag is afgekeurd</Heading>
-          <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
+          <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding  rvo-max-width-layout rvo-max-width-layout--sm ">
             <li>
               We kunnen verschillende redenen hebben om uw aanvraag af te keuren. De reden leest u in de brief met het
               besluit. Heeft u hierover vragen? Neem contact met ons op via e-mail:{' '}
@@ -509,7 +512,7 @@ const Subsidiepagina = () => {
           </ul>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2">Veelgestelde vragen</Heading>
 
           <div className="rvo-accordion">
@@ -601,8 +604,8 @@ const Subsidiepagina = () => {
           </p>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
-          <Heading type="h2">Veelgestelde vragen</Heading>
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
+          <Heading type="h2">Meer informatie</Heading>
 
           <div className="rvo-accordion">
             <details className="rvo-accordion__item">
@@ -672,7 +675,7 @@ const Subsidiepagina = () => {
           </p>
         </div>
 
-        <div className="rvo-margin-block-start--2xl">
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Zie ook
           </Heading>
@@ -720,38 +723,47 @@ const Subsidiepagina = () => {
                 In Nederland wordt hard gewerkt aan de verbouwing van ons energiesysteem.
               </div>
             </div>
-            <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
-              <div className="rvo-card__image-container">
-                <img
-                  src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2023-10%2FCPNL%2520beeld%2520webpagna%25202400x1600.png%3Fitok%3DEiGTtN_K&w=640&q=85"
-                  className="rvo-card__image"
-                />
-              </div>
-
+            <div className="rvo-card rvo-card--outline rvo-card--padding-md">
               <div className="rvo-card__content">
-                <h3 className="utrecht-heading-3 rvo-heading--no-margins">
-                  <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
-                    Energie & Klimaat nieuws
-                  </a>
-                </h3>
-                Lees al het laatste nieuws over Energie & Klimaat.
+                <LayoutFlow>
+                  <span className="rvo-text--italic  rvo-text--xl">
+                    "Als start-up doen wij er alles aan om een gezonde, toekomstbestendige leefomgeving te maken. Deze
+                    subsidie voor bijen op het dak helpt ons hierbij."
+                  </span>
+                  <LayoutFlow row={true} gap="sm">
+                    <div className="rvo-quote__image">
+                      <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                    </div>
+                    <div className="rvo-quote__person">
+                      <LayoutFlow gap="0">
+                        <span className="rvo-text rvo-text--bold">Rosita van der Helm</span>
+                        <span className="rvo-text rvo-text--sm">Office manager bij Powerbod</span>
+                      </LayoutFlow>
+                    </div>
+                  </LayoutFlow>
+                </LayoutFlow>
               </div>
             </div>
-            <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
-              <div className="rvo-card__image-container">
-                <img
-                  src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2025-02%2FWCE%25202025%2520-Netwerkmiddag%2520-%2520Beeld%2520evenementenpagina.jpg%3Fitok%3D90WxgFv9&w=640&q=85"
-                  className="rvo-card__image"
-                />
-              </div>
-
+            <div className="rvo-card rvo-card--outline rvo-card--padding-md">
               <div className="rvo-card__content">
+                <Icon icon="nieuws" size="2xl" color="zwart"></Icon>
+                <br />
                 <h3 className="utrecht-heading-3 rvo-heading--no-margins">
-                  <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
-                    Energie & Klimaat evenementen
+                  <a className="rvo-link  rvo-link--no-underline" href="#">
+                    Energie & Klimaat Nieuws
                   </a>
                 </h3>
-                Bekijken alle evenementen over Energie & Klimaat.
+                Lees al het nieuws over Energie & Klimaat.
+                <br />
+                <br />
+                <Icon icon="kalender" size="2xl" color="zwart"></Icon>
+                <br />
+                <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <a className="rvo-link  rvo-link--no-underline" href="#">
+                    Energie & Klimaat Evenementen
+                  </a>
+                </h3>
+                Bekijk alle evenementen over Energie & Klimaat.
               </div>
             </div>
             <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
