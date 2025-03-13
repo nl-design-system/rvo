@@ -42,7 +42,7 @@
   padding-inline-start: 0;
 
   &.rvo-menubar__list--vertical {
-    background-color: var(--rvo-sidebar-layout-sidebar-background-color);
+    background-color: var(--rvo-topnav-submenu-background-color);
     flex-direction: column;
     justify-content: normal;
 
@@ -132,9 +132,9 @@
 
 // Submenu
 .rvo-menubar--submenu.rvo-menubar__background {
-  background-color: var(--rvo-sidebar-layout-sidebar-background-color);
+  background-color: var(--rvo-topnav-submenu-background-color);
   &:hover {
-    background-color: var(--rvo-sidebar-layout-sidebar-background-color);
+    background-color: var(--rvo-topnav-submenu-background-color);
   }
 }
 
