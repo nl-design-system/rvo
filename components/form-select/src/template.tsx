@@ -10,7 +10,6 @@ import { defaultArgs } from './defaultArgs';
 export interface ISelectOption {
   value: string;
   label: string;
-  selected?: boolean;
   onFocus?: (event: React.FocusEvent<HTMLSelectElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -35,6 +34,7 @@ export interface ISelectProps extends HTMLAttributes<HTMLSelectElement> {
    * @uxpinbind onChange 0.target.value
    */
   defaultValue?: string;
+  value?: string;
 }
 
 export const argTypes = {
@@ -83,6 +83,7 @@ export const argTypes = {
     },
   },
   defaultValue: { control: 'text' },
+  value: { control: 'text' },
 };
 
 export const Select: React.FC<ISelectProps> = ({
@@ -93,6 +94,8 @@ export const Select: React.FC<ISelectProps> = ({
   required = defaultArgs.required,
   options = defaultArgs.options,
   defaultValue,
+  value,
+  onChange,
   ...otherProps
 }: ISelectProps) => (
   <div className="rvo-select-wrapper">
@@ -109,6 +112,8 @@ export const Select: React.FC<ISelectProps> = ({
         'utrecht-select--required': required,
       })}
       defaultValue={defaultValue}
+      value={value}
+      onChange={onChange}
       {...otherProps}
     >
       {options &&
