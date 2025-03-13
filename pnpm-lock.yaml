@@ -328,8 +328,8 @@ importers:
         specifier: 2.2.0
         version: 2.2.0
       '@utrecht/textbox-css':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.5.0
+        version: 1.5.0
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -338,8 +338,8 @@ importers:
   components/form-textinput:
     dependencies:
       '@utrecht/textbox-css':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.5.0
+        version: 1.5.0
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -5983,8 +5983,8 @@ packages:
   '@utrecht/textarea-css@2.2.0':
     resolution: {integrity: sha512-OFqAtwMpkRd+ME8Z9IIQiDd0rgrog88yOTgkQTTjWnKFzxDaq64CvY4SF78vzfco3cxMb4JqBPy4F7VOq55Kqw==}
 
-  '@utrecht/textbox-css@1.4.0':
-    resolution: {integrity: sha512-NSo9mxLsUJIctjwmalkbvJGozvuoQPjgImP4ns8FvV57DRWNlMfEVlMOZFsFoWm1MHm+GRIytapTCdvYQ7Y/Yw==}
+  '@utrecht/textbox-css@1.5.0':
+    resolution: {integrity: sha512-30VUpY1FsJVveas9vxBLb/dEeTE2bWIdZ6TSGgMmfFF/Nyp1phUIxqN4jZBsAjw1pstbfYrMpLlcSSSDJTdtRQ==}
 
   '@uxpin/merge-cli@3.4.8':
     resolution: {integrity: sha512-PrLQW7jxvFdt9MNn8YbVcoYVUcW8jndifgn+QR4SkqDq697IJa1r7RZ3lSHBqD+z2hcGpM8qFJ7lMZv0zP13YA==}
@@ -22286,7 +22286,7 @@ snapshots:
 
   '@utrecht/textarea-css@2.2.0': {}
 
-  '@utrecht/textbox-css@1.4.0': {}
+  '@utrecht/textbox-css@1.5.0': {}
 
   '@uxpin/merge-cli@3.4.8(webpack-cli@5.1.4(webpack@5.96.1))(webpack@5.96.1(webpack-cli@5.1.4))':
     dependencies:
