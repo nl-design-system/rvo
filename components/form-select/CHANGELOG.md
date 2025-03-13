@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-select`
 
+## 1.2.6
+
+### Patch Changes
+
+- 642b1de: added value and onchange to select
+
 ## 1.2.5
 
 ### Patch Changes
