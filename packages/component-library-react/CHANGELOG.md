@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.2
+
+### Patch Changes
+
+- 5b63cf3: changes background colour for submenu
+
 ## 4.6.1
 
 ### Patch Changes
