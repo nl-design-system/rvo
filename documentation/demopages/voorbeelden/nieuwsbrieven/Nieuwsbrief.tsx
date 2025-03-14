@@ -92,7 +92,7 @@ const Nieuwsbrief = () => {
                 role="img"
                 aria-label="Pijl naar rechts"
               ></span>
-              Internationaal Ondernemen
+              Financiële steun bij circulaire projecten
             </a>
             <a
               className="rvo-link rvo-link--no-underline rvo-layout-column rvo-layout-align-content-center rvo-layout-row rvo-layout-gap--2xs"
@@ -103,18 +103,7 @@ const Nieuwsbrief = () => {
                 role="img"
                 aria-label="Pijl naar rechts"
               ></span>
-              Innovatief Ondernemen
-            </a>
-            <a
-              className="rvo-link rvo-link--no-underline rvo-layout-column rvo-layout-align-content-center rvo-layout-row rvo-layout-gap--2xs"
-              href="#"
-            >
-              <span
-                className="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                role="img"
-                aria-label="Pijl naar rechts"
-              ></span>
-              Agrarisch Ondernemen
+              Slimme gevel past zich vanzelf aan het weer aan
             </a>
           </div>
         </div>
