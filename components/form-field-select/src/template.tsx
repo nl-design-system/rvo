@@ -4,7 +4,8 @@
  */
 import React from 'react';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from '../../form-field/src/template';
-import { ISelectProps, Select, argTypes as selectArgTypes } from '../../form-select/src/template';
+import { argTypes as selectArgTypes } from '../../form-select/src/argTypes';
+import { ISelectProps, Select } from '../../form-select/src/template';
 import extractArgs from '../../utils/extractArgs';
 
 export interface ISelectFieldProps extends IFieldProps, ISelectProps {}
