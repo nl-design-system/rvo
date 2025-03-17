@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-select`
 
+## 1.2.7
+
+### Patch Changes
+
+- f1acd87: changeset voor release van select
+
 ## 1.2.6
 
 ### Patch Changes
