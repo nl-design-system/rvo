@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.4
+
+### Patch Changes
+
+- d7b023d: Make Loader usuable
+
 ## 4.6.3
 
 ### Patch Changes
