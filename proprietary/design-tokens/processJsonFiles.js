@@ -11,7 +11,6 @@ const fileDirectories = [
 ];
 
 function findAllByKeyAndReplace(object, key, replace) {
-  // eslint-disable-next-line consistent-return
   const looper = function (obj) {
     for (let k in obj) {
       if (k === key) {
@@ -47,7 +46,7 @@ fConsume();
 findAllByKeyAndReplace(figmaTokens, 'value', '$value');
 findAllByKeyAndReplace(figmaTokens, 'type', '$type');
 
-fs.writeFile('./figma/design.tokens.json', JSON.stringify(figmaTokens, null, 2), 'utf8', (err) => {
+fs.writeFile('./figma/figma.tokens.json', JSON.stringify(figmaTokens, null, 2), 'utf8', (err) => {
   if (err) {
     console.error('Error writing to file', err);
   } else {
