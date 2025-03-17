@@ -47,6 +47,7 @@ export { LayoutFlow } from './layout-flow/src/template';
 export { Link } from './link/src/template';
 export { List } from './ordered-unordered-list/src/template';
 export { Logo } from './logo/src/template';
+export { Loader } from './loader/src/template';
 export { MaxWidthLayout } from './max-width-layout/src/template';
 export { MenuBar } from './menubar/src/menubar/template';
 export { MenuBarItem } from './menubar/src/menubar-item/template';
