@@ -1,10 +1,10 @@
 import './index.scss';
-import Button, { IButtonProps } from '@nl-rvo/components/button/src/template';
-import StatusIcon from '@nl-rvo/components/status-icon/src/template';
 import clsx from 'clsx';
 import { HTMLAttributes } from 'react';
 import React from 'react';
+import Button, { IButtonProps } from '../../button/src/template';
 import { Icon } from '../../icon/src/template';
+import StatusIcon from '../../status-icon/src/template';
 
 export interface ILoader extends HTMLAttributes<HTMLDivElement> {
   animateLoader?: boolean;
