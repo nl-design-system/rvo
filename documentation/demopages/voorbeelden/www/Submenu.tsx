@@ -1,5 +1,6 @@
 import { Button, Footer, Header, Heading, Hero, Icon, LayoutFlow, Link, MobileMenuBar } from '@nl-rvo/components';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const Submenu = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -784,7 +785,7 @@ const Submenu = () => {
           </div>
         </MaxWidthLayout>
       </div> */}
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

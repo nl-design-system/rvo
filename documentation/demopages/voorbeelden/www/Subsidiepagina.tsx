@@ -11,7 +11,8 @@ import {
   MobileMenuBar,
   RadioButtonField,
 } from '@nl-rvo/components';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const Subsidiepagina = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -787,7 +788,7 @@ const Subsidiepagina = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

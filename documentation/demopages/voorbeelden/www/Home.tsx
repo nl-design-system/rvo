@@ -10,7 +10,8 @@ import {
   MenuBar,
   MobileMenuBar,
 } from '@nl-rvo/components';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const Home = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -640,7 +641,7 @@ const Home = () => {
           </div>
         </MaxWidthLayout>
       </div> */}
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

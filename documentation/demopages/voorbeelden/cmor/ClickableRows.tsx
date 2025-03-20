@@ -1,5 +1,6 @@
 import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const DocumentenClean = () => {
   return (
@@ -174,7 +175,7 @@ const DocumentenClean = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

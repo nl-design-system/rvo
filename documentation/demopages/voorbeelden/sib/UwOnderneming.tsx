@@ -12,6 +12,7 @@ import {
   TextInputField,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const UwOnderneming = () => {
   return (
@@ -24,7 +25,6 @@ const UwOnderneming = () => {
               iconPlacement="before"
               useIcons={true}
               isOpen={false}
-              submenuItems={[]}
               size="md"
               items={[
                 {
@@ -90,7 +90,6 @@ const UwOnderneming = () => {
               useIcons={true}
               iconPlacement="before"
               maxWidth="md"
-              type="sub"
             />
           </div>
 
@@ -207,13 +206,13 @@ const UwOnderneming = () => {
                 <TextInputField
                   label="Hoeveel medewerkers heeft uw onderneming?"
                   size="sm"
-                  validation="number"
+                  validation="none"
                 ></TextInputField>
                 <TextInputField label="Wat is de website van uw organisatie?"></TextInputField>
                 <TextInputField
                   label="SBI-code"
                   size="sm"
-                  validation="number"
+                  validation="none"
                   helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
                 ></TextInputField>
               </Fieldset>
@@ -228,45 +227,7 @@ const UwOnderneming = () => {
             </LayoutFlow>
           </main>
         </LayoutFlow>
-        <Footer
-          columns={[
-            {
-              label: 'RVO',
-              items: [
-                { content: 'Over ons', link: '#' },
-                { content: 'Contact', link: '#' },
-                { content: 'Pers', link: '#' },
-                { content: 'Zaken regelen bij RVO', link: '#' },
-              ],
-            },
-            {
-              label: 'Over deze site',
-              items: [
-                { content: 'Privacy', link: '#' },
-                { content: 'Cookies en anti-spam', link: '#' },
-                { content: 'Toegankelijkheid', link: '#' },
-                { content: 'Proclaimer', link: '#' },
-              ],
-            },
-            {
-              label: 'Snel naar',
-              items: [
-                { content: 'Onderwerpen A t/m Z', link: '#' },
-                { content: 'Klantenpanel', link: '#' },
-                { content: 'Documenten en publicaties', link: '#' },
-                { content: 'Overheidspublicaties en auteursrecht', link: '#' },
-              ],
-            },
-            {
-              label: 'Blijf op de hoogte',
-              items: [
-                { content: 'Social media', link: '#' },
-                { content: 'RSS', link: '#' },
-                { content: 'Gratis nieuwsbrief', link: '#' },
-              ],
-            },
-          ]}
-        />
+        <Footer primaryMenu={defaultFooterItems} />
       </LayoutFlow>
     </body>
   );

@@ -1,4 +1,5 @@
 import { Footer, Grid, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const Project = () => {
   return (
@@ -36,7 +37,7 @@ const Project = () => {
           />
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--md">
-            <Grid layout="2fr1fr" columns="two" gap="xl">
+            <Grid columns="two" gap="xl">
               <div>
                 <Heading>Legal Opinion OC DR Congo</Heading>
                 <LayoutFlow gap="sm">
@@ -361,45 +362,7 @@ const Project = () => {
             </table>
           </div>
         </LayoutFlow>
-        <Footer
-          columns={[
-            {
-              label: 'RVO',
-              items: [
-                { content: 'Over ons', link: '#' },
-                { content: 'Contact', link: '#' },
-                { content: 'Pers', link: '#' },
-                { content: 'Zaken regelen bij RVO', link: '#' },
-              ],
-            },
-            {
-              label: 'Over deze site',
-              items: [
-                { content: 'Privacy', link: '#' },
-                { content: 'Cookies en anti-spam', link: '#' },
-                { content: 'Toegankelijkheid', link: '#' },
-                { content: 'Proclaimer', link: '#' },
-              ],
-            },
-            {
-              label: 'Snel naar',
-              items: [
-                { content: 'Onderwerpen A t/m Z', link: '#' },
-                { content: 'Klantenpanel', link: '#' },
-                { content: 'Documenten en publicaties', link: '#' },
-                { content: 'Overheidspublicaties en auteursrecht', link: '#' },
-              ],
-            },
-            {
-              label: 'Blijf op de hoogte',
-              items: [
-                { content: 'Social media', link: '#' },
-                { content: 'RSS', link: '#' },
-                { content: 'Gratis nieuwsbrief', link: '#' },
-              ],
-            },
-          ]}
-        />
+        <Footer primaryMenu={defaultFooterItems} />
       </LayoutFlow>
     </body>
   );

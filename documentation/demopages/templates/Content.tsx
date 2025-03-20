@@ -74,7 +74,7 @@ const Content = () => {
           </main>
         </LayoutFlow>
 
-        <Footer columns={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} />
       </LayoutFlow>
     </div>
   );

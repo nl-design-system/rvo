@@ -1,6 +1,7 @@
 import { ExpandableContent, Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
 import '../../common/style.scss';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const ExpendableRows = () => {
   return (
@@ -184,7 +185,7 @@ const ExpendableRows = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

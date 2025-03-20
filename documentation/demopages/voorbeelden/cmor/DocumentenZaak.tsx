@@ -11,6 +11,7 @@ import {
   Tabs,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const DocumentenZaak = () => {
   return (
@@ -234,7 +235,7 @@ const DocumentenZaak = () => {
             </main>
           </LayoutFlow>
         </div>
-        <Footer />
+        <Footer primaryMenu={defaultFooterItems} />
       </LayoutFlow>
     </body>
   );
