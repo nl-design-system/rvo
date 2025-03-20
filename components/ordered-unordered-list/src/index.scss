@@ -22,6 +22,7 @@
     display: inline-block;
     height: var(--rvo-list-icon-size);
     margin-inline-end: var(--rvo-list-icon-gap);
+    min-width: var(--rvo-list-icon-size);
     width: var(--rvo-list-icon-size);
   }
 }
