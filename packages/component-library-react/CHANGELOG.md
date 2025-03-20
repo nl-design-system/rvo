@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.6
+
+### Patch Changes
+
+- 8ad586f: Fixed issue with full-card-link not applying proper styling
+
 ## 4.6.5
 
 ### Patch Changes

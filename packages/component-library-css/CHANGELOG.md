@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.5.4
+
+### Patch Changes
+
+- 8ad586f: Fixed issue with full-card-link not applying proper styling
+
 ## 4.5.3
 
 ### Patch Changes
