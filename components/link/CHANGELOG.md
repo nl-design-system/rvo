@@ -1,5 +1,11 @@
 # `@nl-rvo/css-link`
 
+## 1.2.1
+
+### Patch Changes
+
+- 8ad586f: Fixed issue with full-card-link not applying proper styling
+
 ## 1.2.0
 
 ### Minor Changes
