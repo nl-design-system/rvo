@@ -47,7 +47,6 @@ export const argTypes = {
   indeterminate: { control: 'boolean' },
   invalid: { control: 'boolean' },
   required: { control: 'boolean' },
-  value: { control: 'text' },
   helperTextId: { control: 'text' },
   onFocus: {
     table: {
@@ -98,7 +97,6 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   indeterminate = defaultArgs.indeterminate,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
-  value = defaultArgs.value,
   helperTextId = defaultArgs.helperTextId,
   onChange,
   onUpdateGroup,
@@ -127,7 +125,6 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       checked={checked || undefined}
       disabled={disabled || undefined}
       required={required || undefined}
-      value={value || ''}
       onChange={(event) => {
         onChange?.(event);
         onUpdateGroup?.(event);
