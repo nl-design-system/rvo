@@ -145,7 +145,7 @@ export const Link: React.FC<ILinkProps> = ({
       color === 'zwart' && 'rvo-link--zwart',
       color === 'grijs-700' && 'rvo-link--grijs-700',
       weight === 'normal' && 'rvo-link--normal',
-      fullContainerLink && 'rvo-link--full-container',
+      fullContainerLink && 'rvo-link--full-card-link',
     ),
     ...otherProps,
   };

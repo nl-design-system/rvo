@@ -76,11 +76,6 @@
     &.rvo-card--active {
       border-color: var(--rvo-card-outline-hover-border-color);
     }
-
-    &:has(.rvo-card__full-card-link):hover,
-    &:has(.rvo-card__full-card-link):focus {
-      border-color: var(--rvo-card-outline-hover-border-color);
-    }
   }
 
   &.rvo-card--with-image {
@@ -189,4 +184,9 @@
   .rvo-card__image {
     object-fit: cover;
   }
+}
+
+.rvo-card__full-card-link:hover,
+.rvo-card__full-card-link:focus {
+  border-color: var(--rvo-card-outline-hover-border-color);
 }
