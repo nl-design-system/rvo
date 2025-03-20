@@ -111,6 +111,7 @@ export const Card: React.FC<ICardProps> = ({
         hasBackgroundImage && 'rvo-card--with-background-image',
         invertedColors && 'rvo-card--inverted-colors',
         className,
+        fullCardLink && 'rvo-card__full-card-link',
       )}
       onClick={onClick}
       {...props}
