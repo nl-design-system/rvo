@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.2.1
+
+### Patch Changes
+
+- 9585d9e: Removed value from checkbox interface to make the input field controlled
+
 ## 1.2.0
 
 ### Minor Changes
