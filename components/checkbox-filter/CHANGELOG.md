@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.5
+
+### Patch Changes
+
+- 9585d9e: Removed value from checkbox interface to make the input field controlled
+
 ## 3.0.4
 
 ### Patch Changes
