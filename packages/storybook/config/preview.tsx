@@ -54,6 +54,7 @@ const addonStatus = {
 const parameters = {
   options: {
     storySort: {
+      method: 'alphabetical',
       order: [
         'Introductie',
         'Aan de slag',
