@@ -14,6 +14,7 @@ import {
   StatusIcon,
   Tag,
 } from '@nl-rvo/components';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const SiteWideAlertTop = () => {
   return (
@@ -282,7 +283,7 @@ const SiteWideAlertTop = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

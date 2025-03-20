@@ -266,7 +266,7 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
-      <Footer columns={defaultFooterItems} />
+      <Footer primaryMenu={defaultFooterItems} />
     </body>
   );
 };

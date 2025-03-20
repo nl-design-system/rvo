@@ -12,6 +12,7 @@ import {
   TextInputField,
 } from '@nl-rvo/components';
 import '../../common/filter.scss';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const Subsidiewijzer = () => {
   return (
@@ -704,7 +705,7 @@ const Subsidiewijzer = () => {
             </LayoutFlow>
           </div>
         </LayoutFlow>
-        <Footer />
+        <Footer primaryMenu={defaultFooterItems} />
       </LayoutFlow>
     </body>
   );

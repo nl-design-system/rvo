@@ -83,7 +83,7 @@ const Formulier = () => {
                           />
                           <TextInputField label="Text disabled" disabled={true} />
                           <TextInputField label="Text disabled with value" disabled={true} value="Value" />
-                          <TextInputField label="Number" validation="number" />
+                          <TextInputField label="Number" validation="none" />
                           <TextareaField label="Textarea" />
                         </Fieldset>
 
@@ -237,7 +237,7 @@ const Formulier = () => {
             </main>
           </LayoutFlow>
 
-          <Footer columns={defaultFooterItems} />
+          <Footer primaryMenu={defaultFooterItems} />
         </LayoutFlow>
       </LayoutFlow>
     </div>

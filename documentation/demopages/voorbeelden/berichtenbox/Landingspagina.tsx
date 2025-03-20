@@ -1,4 +1,5 @@
 import { Accordion, Button, Footer, Grid, Header, Heading, Icon, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 
 const Landingspagina = () => {
   return (
@@ -309,7 +310,7 @@ const Landingspagina = () => {
           </main>
         </LayoutFlow>
 
-        <Footer />
+        <Footer primaryMenu={defaultFooterItems} />
       </LayoutFlow>
     </div>
   );
