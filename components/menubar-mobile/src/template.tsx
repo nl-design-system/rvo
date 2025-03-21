@@ -77,15 +77,19 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
           >
             <Link
               className={clsx('rvo-mobile-menu__link', activeSubmenu === item.label && 'rvo-mobile-menu__link--active')}
-              {...(typeof item.link === 'string' ? { href: item.link } : {})}
-              onClick={(event) => {
-                event.preventDefault();
-                if (item.submenu) {
-                  handleItemClick?.(item.label);
-                } else if (typeof item.link === 'function') {
-                  item.link(event);
-                }
-              }}
+              {...(item.submenu || typeof item.link === 'function'
+                ? {
+                    onClick: (event) => {
+                      event.preventDefault();
+                      if (item.submenu) {
+                        handleItemClick?.(item.label);
+                      } else if (typeof item.link === 'function') {
+                        item.link(event);
+                      }
+                    },
+                    role: 'button',
+                  }
+                : { href: item.link as string })}
             >
               {iconPlacement === 'before' && iconMarkup}
               {item.label}
