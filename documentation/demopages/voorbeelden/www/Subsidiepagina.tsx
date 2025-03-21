@@ -13,6 +13,7 @@ import {
 } from '@nl-rvo/components';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Subsidiepagina = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -788,7 +789,7 @@ const Subsidiepagina = () => {
         </div>
       </div>
 
-      <Footer primaryMenu={defaultFooterItems} />
+      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
 };

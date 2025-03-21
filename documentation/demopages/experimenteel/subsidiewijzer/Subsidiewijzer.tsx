@@ -13,6 +13,7 @@ import {
 } from '@nl-rvo/components';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Subsidiewijzer = () => {
   return (
@@ -705,7 +706,7 @@ const Subsidiewijzer = () => {
             </LayoutFlow>
           </div>
         </LayoutFlow>
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </body>
   );

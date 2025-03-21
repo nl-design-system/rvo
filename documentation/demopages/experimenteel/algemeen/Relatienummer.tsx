@@ -1,6 +1,7 @@
 import { Footer, Header, Heading, LayoutFlow } from '@nl-rvo/components';
 import '../../common/relatienummer.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Relatienummer = () => {
   return (
@@ -86,7 +87,7 @@ const Relatienummer = () => {
             </p>
           </main>
 
-          <Footer primaryMenu={defaultFooterItems} />
+          <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
     </div>

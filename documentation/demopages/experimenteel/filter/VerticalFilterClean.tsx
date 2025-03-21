@@ -13,6 +13,7 @@ import {
   TextInputField,
 } from '@nl-rvo/components';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const VerticalFilterClean = () => {
   return (
@@ -538,7 +539,7 @@ const VerticalFilterClean = () => {
             </Grid>
           </div>
         </LayoutFlow>
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </body>
   );
