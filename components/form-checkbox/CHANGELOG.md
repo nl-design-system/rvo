@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.2.2
+
+### Patch Changes
+
+- 8b3276d: Removed value parameter from checkbox component
+
 ## 1.2.1
 
 ### Patch Changes

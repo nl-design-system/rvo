@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.6
+
+### Patch Changes
+
+- 8b3276d: Removed value parameter from checkbox component
+
 ## 3.0.5
 
 ### Patch Changes

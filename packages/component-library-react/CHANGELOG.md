@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.7
+
+### Patch Changes
+
+- 8b3276d: Removed value parameter from checkbox component
+
 ## 4.6.6
 
 ### Patch Changes
