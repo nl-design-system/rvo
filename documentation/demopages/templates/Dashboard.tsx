@@ -14,6 +14,7 @@ import {
   StatusIcon,
   Tag,
 } from '@nl-rvo/components';
+import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../common/defaultFooterItems';
 
 const Dashboard = () => {
@@ -266,7 +267,7 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
-      <Footer primaryMenu={defaultFooterItems} />
+      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
 };

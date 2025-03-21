@@ -1,5 +1,6 @@
 import { Accordion, Button, Footer, Grid, Header, Heading, Icon, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Landingspagina = () => {
   return (
@@ -310,7 +311,7 @@ const Landingspagina = () => {
           </main>
         </LayoutFlow>
 
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </div>
   );

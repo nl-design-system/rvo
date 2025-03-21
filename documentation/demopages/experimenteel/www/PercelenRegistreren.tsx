@@ -2,6 +2,7 @@ import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const PercelenRegistreren = () => {
   return (
@@ -238,7 +239,7 @@ const PercelenRegistreren = () => {
           </LayoutFlow>
         </main>
 
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </div>
     </body>
   );

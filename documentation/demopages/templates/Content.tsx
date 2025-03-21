@@ -1,4 +1,5 @@
 import { Footer, Header, Heading, Hero, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../common/defaultFooterItems';
 
 const Content = () => {
@@ -74,7 +75,7 @@ const Content = () => {
           </main>
         </LayoutFlow>
 
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </div>
   );

@@ -12,6 +12,7 @@ import {
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const DocumentenZaak = () => {
   return (
@@ -235,7 +236,7 @@ const DocumentenZaak = () => {
             </main>
           </LayoutFlow>
         </div>
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </body>
   );

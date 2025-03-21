@@ -1,6 +1,7 @@
 import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/tabs.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Tabs = () => {
   return (
@@ -76,7 +77,7 @@ const Tabs = () => {
             </div>
           </main>
 
-          <Footer primaryMenu={defaultFooterItems} />
+          <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
     </div>

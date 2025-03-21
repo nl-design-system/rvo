@@ -1,6 +1,7 @@
 import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Home = () => {
   return (
@@ -110,7 +111,7 @@ const Home = () => {
             </LayoutFlow>
           </main>
         </LayoutFlow>
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </body>
   );

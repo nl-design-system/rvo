@@ -15,6 +15,7 @@ import {
   TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
+import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../common/defaultFooterItems';
 
 const Formulier = () => {
@@ -237,7 +238,7 @@ const Formulier = () => {
             </main>
           </LayoutFlow>
 
-          <Footer primaryMenu={defaultFooterItems} />
+          <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
     </div>

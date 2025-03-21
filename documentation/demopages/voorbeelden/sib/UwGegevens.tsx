@@ -14,6 +14,7 @@ import {
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const UwGegevens = () => {
   return (
@@ -250,7 +251,7 @@ const UwGegevens = () => {
             </LayoutFlow>
           </main>
         </LayoutFlow>
-        <Footer primaryMenu={defaultFooterItems} />
+        <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </LayoutFlow>
     </body>
   );

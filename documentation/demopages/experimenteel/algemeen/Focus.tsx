@@ -18,6 +18,7 @@ import {
 } from '@nl-rvo/components';
 import '../../common/focus.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Focus = () => {
   return (
@@ -249,7 +250,7 @@ const Focus = () => {
             </div>
           </main>
 
-          <Footer primaryMenu={defaultFooterItems} />
+          <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
     </div>

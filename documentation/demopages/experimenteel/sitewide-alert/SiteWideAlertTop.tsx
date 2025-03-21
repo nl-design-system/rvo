@@ -15,6 +15,7 @@ import {
   Tag,
 } from '@nl-rvo/components';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const SiteWideAlertTop = () => {
   return (
@@ -283,7 +284,7 @@ const SiteWideAlertTop = () => {
           </div>
         </div>
       </main>
-      <Footer primaryMenu={defaultFooterItems} />
+      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
 };

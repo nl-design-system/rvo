@@ -1,5 +1,6 @@
 import { Footer, Header, Heading, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
 const Report = () => {
@@ -162,7 +163,7 @@ const Report = () => {
             </div>
           </LayoutFlow>
 
-          <Footer primaryMenu={defaultFooterItems} />
+          <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
     </div>
