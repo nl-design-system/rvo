@@ -24,7 +24,6 @@ export interface ICheckboxProps extends HTMLAttributes<HTMLInputElement> {
   /** @uxpinpropname Is invalid */
   invalid?: boolean;
   required?: boolean;
-  value?: string;
   helperTextId?: string;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;

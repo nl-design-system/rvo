@@ -12,6 +12,5 @@ export const defaultArgs: ICheckboxProps = {
   indeterminate: false,
   invalid: false,
   required: false,
-  value: '',
   helperTextId: '',
 };
