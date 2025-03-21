@@ -46,10 +46,11 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   ) : null;
 
   const handleClick = (event: React.MouseEvent) => {
-    event.preventDefault();
     if (submenu) {
+      event.preventDefault();
       handleItemClick?.(event);
     } else if (typeof link === 'function') {
+      event.preventDefault();
       link(event);
     }
   };
@@ -70,8 +71,9 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           isSubmenuVisible && ['rvo-menubar__link--active', 'rvo-menubar--submenu', 'rvo-menubar__background'],
         )}
         color={linkColor}
-        {...(typeof link === 'string' ? { href: link } : {})}
-        onClick={handleClick}
+        {...(submenu || typeof link === 'function'
+          ? { onClick: handleClick, role: 'button' }
+          : { href: link as string })}
       >
         {iconPlacement === 'before' && iconMarkup}
         {label}

@@ -77,7 +77,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   const navMarkup = (
     <nav className={clsx(`rvo-menubar rvo-menubar--${size}`)}>
       <ul className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__list--vertical')}>
-        <div className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
+        <ul className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
           {leftItems?.map((item, index) => (
             <MenuBarItem
               key={`${item.label}-${index}`}
@@ -93,10 +93,10 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
               {...item}
             />
           ))}
-        </div>
+        </ul>
 
         {rightItems.length > 0 && (
-          <div className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
+          <ul className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
             {rightItems?.map((item, index) => (
               <MenuBarItem
                 key={`${item.label}-${index}`}
@@ -112,7 +112,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
                 {...item}
               />
             ))}
-          </div>
+          </ul>
         )}
       </ul>
     </nav>
