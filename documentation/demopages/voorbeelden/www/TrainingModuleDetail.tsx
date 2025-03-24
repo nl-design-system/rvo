@@ -56,6 +56,38 @@ const TrainingModuleDetail = () => {
           </div>
         </div>
         <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
+          <ol className="rvo-breadcrumbs rvo-breadcrumbs--md">
+            <li className="rvo-breadcrumbs-item">
+              <a
+                className="rvo-link rvo-link--no-underline"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training--default&viewMode=story"
+              >
+                IMVO Trainingmodules
+              </a>
+            </li>
+            <li className="rvo-breadcrumbs-item">
+              <span
+                className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
+                role="img"
+                aria-label="Delta naar rechts"
+              ></span>
+              <a
+                className="rvo-link rvo-link--no-underline"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module--default&viewMode=story"
+              >
+                Module 1
+              </a>
+            </li>
+
+            <li className="rvo-breadcrumbs-item">
+              <span
+                className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
+                role="img"
+                aria-label="Delta naar rechts"
+              ></span>
+              <span className="rvo-breadcrumb-current-page">IMVO</span>
+            </li>
+          </ol>
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Bedrijven in Nederland kopen producten en grondstoffen vanuit de hele wereld. Denk bijvoorbeeld aan gewassen
             zoals katoen en cacao of aan mijnbouwproducten zoals mica. Via de handel met bedrijven aan de andere kant

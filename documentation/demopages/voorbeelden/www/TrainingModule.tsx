@@ -58,6 +58,25 @@ const TrainingModule = () => {
           </div>
         </div>
         <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
+          <ol className="rvo-breadcrumbs rvo-breadcrumbs--md">
+            <li className="rvo-breadcrumbs-item">
+              <a
+                className="rvo-link rvo-link--no-underline"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training--default&viewMode=story"
+              >
+                IMVO Trainingmodules
+              </a>
+            </li>
+
+            <li className="rvo-breadcrumbs-item">
+              <span
+                className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
+                role="img"
+                aria-label="Delta naar rechts"
+              ></span>
+              <span className="rvo-breadcrumb-current-page">Module 1</span>
+            </li>
+          </ol>
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg ">
             Je leert wat Internationaal Maatschappelijk Verantwoord Ondernemen is, hoe je ‘gepaste zorgvuldigheid’
             toepast en wat dit concreet betekent voor jouw bedrijf.
