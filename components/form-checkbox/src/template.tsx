@@ -122,8 +122,8 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       className="rvo-checkbox__input"
       type="checkbox"
       checked={checked}
-      disabled
-      required
+      disabled={disabled || undefined}
+      required={required || undefined}
       onChange={(event) => {
         onChange?.(event);
         onUpdateGroup?.(event);
