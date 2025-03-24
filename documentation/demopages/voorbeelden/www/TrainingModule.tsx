@@ -71,7 +71,7 @@ const TrainingModule = () => {
                 icon="pijl-naar-rechts"
                 showIcon="before"
                 noUnderline={true}
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-detailpagina--default&viewMode=story>"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-detailpagina--default&viewMode=story"
               >
                 Internationaal Maatschappelijk Verantwoord Ondernemen
               </Link>
@@ -84,7 +84,12 @@ const TrainingModule = () => {
               <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
                 IMVO voor verschillende functies in het bedrijf
               </Link>
-              <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
+              <Link
+                icon="pijl-naar-rechts"
+                showIcon="before"
+                noUnderline={true}
+                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-test--default&viewMode=story"
+              >
                 Test je kennis!
               </Link>
             </LayoutFlow>
