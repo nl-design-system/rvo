@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.8
+
+### Patch Changes
+
+- 569401b: Checkbox checked cant be undefined
+
 ## 4.6.7
 
 ### Patch Changes

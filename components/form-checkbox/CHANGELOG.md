@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.2.3
+
+### Patch Changes
+
+- 569401b: Checkbox checked cant be undefined
+
 ## 1.2.2
 
 ### Patch Changes
