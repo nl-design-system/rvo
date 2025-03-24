@@ -1,6 +1,8 @@
 import { Footer, Header, MenuBar, MobileMenuBar } from '@nl-rvo/components';
 import { Fieldset } from '@utrecht/component-library-react';
 import React, { useEffect, useState } from 'react';
+import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const TrainingModuleTest = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -455,7 +457,7 @@ const TrainingModuleTest = () => {
         </div>
       </main>
 
-      <Footer />
+      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
 };
