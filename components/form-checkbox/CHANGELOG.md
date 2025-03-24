@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.2.4
+
+### Patch Changes
+
+- c6acde0: Revert coding issue in checkbox
+
 ## 1.2.3
 
 ### Patch Changes
