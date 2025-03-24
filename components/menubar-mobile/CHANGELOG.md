@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.4.2
+
+### Patch Changes
+
+- 1b40bde: adjusted navigation and html structure
+
 ## 1.4.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.5.5
+
+### Patch Changes
+
+- 1b40bde: adjusted navigation and html structure
+
 ## 4.5.4
 
 ### Patch Changes
