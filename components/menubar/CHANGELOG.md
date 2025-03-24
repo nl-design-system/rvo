@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar`
 
+## 1.3.3
+
+### Patch Changes
+
+- 1b40bde: adjusted navigation and html structure
+
 ## 1.3.2
 
 ### Patch Changes

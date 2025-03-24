@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.10
+
+### Patch Changes
+
+- 1b40bde: adjusted navigation and html structure
+
 ## 4.6.9
 
 ### Patch Changes
