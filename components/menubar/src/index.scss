@@ -53,9 +53,13 @@
 
   .rvo-menubar__group--flex {
     display: flex;
+    list-style-type: none;
+    padding: 0;
+    text-align-last: left;
 
     &.rvo-menubar__group--vertical {
       display: block;
+      text-align-last: left;
     }
   }
 
@@ -97,6 +101,12 @@
       }
     }
   }
+}
+
+.rvo-menubar__ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 // Divider
