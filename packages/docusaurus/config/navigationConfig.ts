@@ -5,7 +5,7 @@ const navbar: Navbar = {
   hideOnScroll: false,
   logo: {
     src: 'img/logo.svg',
-    href: process.env.NODE_ENV === 'development' ? '/' : 'https://nl-design-system.github.io/rvo/docs',
+    href: process.env.NODE_ENV === 'development' ? '/rvo/docs' : 'https://nl-design-system.github.io/rvo/docs',
   },
   items: [
     { href: '/rvo/docs', label: 'ROOS', position: 'left', prependBaseUrlToHref: true },
