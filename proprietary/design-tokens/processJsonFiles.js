@@ -1,14 +1,6 @@
 const fs = require('fs');
 
-let figmaTokens = { rvo: {}, utrecht: {} };
-
-const fileDirectories = [
-  './src/brand/rvo',
-  './src/common/rvo',
-  './src/common/utrecht',
-  './src/components/rvo',
-  './src/components/utrecht',
-];
+let figmaTokens = {};
 
 function findAllByKeyAndReplace(object, key, replace) {
   const looper = function (obj) {
@@ -25,19 +17,66 @@ function findAllByKeyAndReplace(object, key, replace) {
 }
 
 const fConsume = () => {
-  fileDirectories.forEach((directory) => {
+  // brand
+  const brandFiles = fs.readdirSync('./src/brand/rvo');
+
+  brandFiles.forEach((file) => {
+    let rawData = fs.readFileSync(`./src/brand/rvo/${file}`);
+    let readable = JSON.parse(rawData);
+    const brandTokens = {};
+
+    if (readable.rvo) {
+      brandTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
+    }
+    if (readable.utrecht) {
+      brandTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
+    }
+
+    figmaTokens.brand = { ...brandTokens };
+  });
+
+  // common
+  const commonDirectories = ['./src/common/rvo', './src/common/utrecht'];
+
+  commonDirectories.forEach((directory) => {
     const files = fs.readdirSync(directory);
 
     files.forEach((file) => {
       let rawData = fs.readFileSync(`${directory}/${file}`);
       let readable = JSON.parse(rawData);
+      const commonTokens = {};
 
       if (readable.rvo) {
-        figmaTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
+        commonTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
       }
       if (readable.utrecht) {
-        figmaTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
+        commonTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
       }
+
+      figmaTokens.common = { ...commonTokens };
+    });
+  });
+
+  // components
+  const componentDirectories = ['./src/components/rvo', './src/components/utrecht'];
+
+  componentDirectories.forEach((directory) => {
+    const files = fs.readdirSync(directory);
+
+    files.forEach((file) => {
+      let rawData = fs.readFileSync(`${directory}/${file}`);
+      let readable = JSON.parse(rawData);
+      const componentName = file.split('.');
+      const componentTokens = {};
+
+      if (readable.rvo) {
+        componentTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
+      }
+      if (readable.utrecht) {
+        componentTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
+      }
+
+      figmaTokens[`components/${componentName[0]}`] = { ...componentTokens };
     });
   });
 };
