@@ -1806,6 +1806,47 @@
     }
   }
 
+  /* @AUTOCOMPLETE */
+
+  .rvo-autocomplete-dropdown {
+    border: 1px solid var(--rvo-color-logoblauw);
+    border-end-end-radius: 2px;
+    border-end-start-radius: 2px;
+    border-radius: var(--rvo-border-radius-sm);
+    border-start-end-radius: 0;
+    border-start-start-radius: 0;
+    border-top: 0;
+    padding-block-end: var(--rvo-space-sm);
+    padding-inline-end: var(--rvo-space-sm);
+    padding-inline-start: var(--rvo-space-sm);
+
+    h3 {
+      font-size: var(--rvo-font-size-lg);
+    }
+  }
+
+  .rvo-autocomplete-dropdown-suggestions,
+  .rvo-autocomplete-dropdown-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rvo-autocomplete-focus-border {
+    background-color: var(--rvo-color-wit);
+    border: 2px solid var(--rvo-color-hemelblauw);
+    border-radius: var(--rvo-border-radius-sm);
+    border-start-end-radius: 0;
+    border-start-start-radius: 0;
+    border-top: 0;
+    margin-block-start: -12px;
+    margin-inline-end: -2px;
+    margin-inline-start: -1px;
+    position: relative;
+    top: -4px;
+    z-index: 1;
+  }
+
   /* @NIEUWE RIJKSHUISSTIJL */
 
   &.rvo-rhs-nieuw {
