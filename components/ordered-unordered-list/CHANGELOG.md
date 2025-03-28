@@ -1,5 +1,11 @@
 # `@nl-rvo/css-ordered-unordered-list`
 
+## 1.2.1
+
+### Patch Changes
+
+- 79d45ab: Unordered list icon has a min-width so it's always displayed over multiple lines
+
 ## 1.2.0
 
 ### Minor Changes
