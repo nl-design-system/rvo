@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.11
+
+### Patch Changes
+
+- 79d45ab: Unordered list icon has a min-width so it's always displayed over multiple lines
+
 ## 4.6.10
 
 ### Patch Changes

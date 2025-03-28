@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.5.6
+
+### Patch Changes
+
+- 79d45ab: Unordered list icon has a min-width so it's always displayed over multiple lines
+
 ## 4.5.5
 
 ### Patch Changes
