@@ -30,7 +30,11 @@ Ontwerpt schermen met bestaande componenten en patronen en vult dit aan met nieu
 
 ### Design Engineer
 
-Maakt klikbare prototypes van de schermen die ontworpen zijn door de UI/UX Designer.
+Maakt klikbare prototypes van de schermen die ontworpen zijn door de UI/UX Designer. Deze rol wordt momenteel ingevuld door de Design System Lead.
+
+### Design System Lead
+
+Ondersteunt designers en developers in het werken met ROOS. Organiseert bijeenkomsten waar designers en developers input kunnen leveren op ROOS of vragen kunnen stellen. De Design System Lead prioriteert de backlog op basis van de gedeelde behoefte van de aangesloten applicaties en websites.
 
 ### Klantonderzoeker
 
