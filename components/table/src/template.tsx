@@ -115,7 +115,6 @@ export const Table: React.FC<ITableProps> = ({
                       'rvo-table-header--active-sort',
                   )}
                   onClick={column.sortable ? () => handleSort(index) : undefined}
-                  style={column.sortable ? { cursor: 'pointer' } : undefined}
                 >
                   <div
                     className={clsx(
