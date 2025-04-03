@@ -9,7 +9,6 @@
 .rvo-footer {
   background-color: var(--utrecht-page-footer-background-color);
   display: flex;
-  flex-direction: column;
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
 
@@ -22,17 +21,20 @@
   &__container {
     &--sm {
       @extend .rvo-max-width-layout;
-      @extend .rvo-max-width-layout--sm;
+
+      width: var(--rvo-layout-max-width-sm);
     }
 
     &--md {
       @extend .rvo-max-width-layout;
-      @extend .rvo-max-width-layout--md;
+
+      width: var(--rvo-layout-max-width-md);
     }
 
     &--lg {
       @extend .rvo-max-width-layout;
-      @extend .rvo-max-width-layout--lg;
+
+      width: var(--rvo-layout-max-width-lg);
     }
   }
 
@@ -44,27 +46,41 @@
   }
 
   &__menu-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: var(--rvo-footer-column-gap);
-    justify-content: flex-start;
+    grid-template-columns: repeat(1, 1fr);
     overflow: hidden;
+    padding-block-end: var(--rvo-footer-column-padding-block-end);
+    padding-block-start: var(--rvo-footer-column-padding-block-start);
 
-    &--small {
-      gap: var(--rvo-space-lg);
+    @media (min-width: 552px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 780px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--sm {
+      @media (min-width: 780px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &--secondary {
       margin-block-end: var(--rvo-space-lg);
       margin-block-start: var(--rvo-space-lg);
+      padding-block-end: 0;
+      padding-block-start: 0;
+      row-gap: var(--rvo-space-lg);
     }
   }
 
   &__column {
     flex: 1 0;
-    padding-block-end: var(--rvo-footer-column-padding-block-end);
-    padding-block-start: var(--rvo-footer-column-padding-block-start);
   }
 
   &__column-title {
-    // color: var(--rvo-footer-column-label-color);
     margin-block-end: var(--rvo-footer-column-label-margin-block-end);
     margin-block-start: var(--rvo-footer-column-label-margin-block-start);
     padding-block-end: var(--rvo-footer-column-item-gap);
