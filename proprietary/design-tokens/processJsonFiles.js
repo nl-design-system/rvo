@@ -19,24 +19,27 @@ function findAllByKeyAndReplace(object, key, replace) {
 const fConsume = () => {
   // brand
   const brandFiles = fs.readdirSync('./src/brand/rvo');
+  const brandTokens = {};
 
   brandFiles.forEach((file) => {
     let rawData = fs.readFileSync(`./src/brand/rvo/${file}`);
     let readable = JSON.parse(rawData);
-    const brandTokens = {};
 
     if (readable.rvo) {
-      brandTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
+      brandTokens.rvo = { ...readable.rvo, ...brandTokens.rvo };
     }
     if (readable.utrecht) {
-      brandTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
+      brandTokens.utrecht = { ...readable.utrecht, ...brandTokens.utrecht };
     }
-
-    figmaTokens.brand = { ...brandTokens };
   });
+
+  console.log('brandTokens', brandTokens);
+
+  figmaTokens.brand = { ...brandTokens };
 
   // common
   const commonDirectories = ['./src/common/rvo', './src/common/utrecht'];
+  let commonTokens = {};
 
   commonDirectories.forEach((directory) => {
     const files = fs.readdirSync(directory);
@@ -44,18 +47,17 @@ const fConsume = () => {
     files.forEach((file) => {
       let rawData = fs.readFileSync(`${directory}/${file}`);
       let readable = JSON.parse(rawData);
-      const commonTokens = {};
 
       if (readable.rvo) {
-        commonTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
+        commonTokens.rvo = { ...readable.rvo, ...commonTokens.rvo };
       }
       if (readable.utrecht) {
-        commonTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
+        commonTokens.utrecht = { ...readable.utrecht, ...commonTokens.utrecht };
       }
-
-      figmaTokens.common = { ...commonTokens };
     });
   });
+
+  figmaTokens.common = { ...commonTokens };
 
   // components
   const componentDirectories = ['./src/components/rvo', './src/components/utrecht'];
@@ -70,10 +72,10 @@ const fConsume = () => {
       const componentTokens = {};
 
       if (readable.rvo) {
-        componentTokens.rvo = { ...readable.rvo, ...figmaTokens.rvo };
+        componentTokens.rvo = { ...readable.rvo, ...componentTokens.rvo };
       }
       if (readable.utrecht) {
-        componentTokens.utrecht = { ...readable.utrecht, ...figmaTokens.utrecht };
+        componentTokens.utrecht = { ...readable.utrecht, ...componentTokens.utrecht };
       }
 
       figmaTokens[`components/${componentName[0]}`] = { ...componentTokens };
