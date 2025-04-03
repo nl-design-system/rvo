@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 let figmaTokens = {};
+let tokenSetOrder = ['brand', 'common'];
 
 function findAllByKeyAndReplace(object, key, replace) {
   const looper = function (obj) {
@@ -32,8 +33,6 @@ const fConsume = () => {
       brandTokens.utrecht = { ...readable.utrecht, ...brandTokens.utrecht };
     }
   });
-
-  console.log('brandTokens', brandTokens);
 
   figmaTokens.brand = { ...brandTokens };
 
@@ -78,9 +77,17 @@ const fConsume = () => {
         componentTokens.utrecht = { ...readable.utrecht, ...componentTokens.utrecht };
       }
 
+      tokenSetOrder.push(`components/${componentName[0]}`);
+
       figmaTokens[`components/${componentName[0]}`] = { ...componentTokens };
     });
   });
+
+  // theme
+  figmaTokens[`$themes`] = [];
+
+  // metaData
+  figmaTokens[`$metadata`] = { tokenSetOrder };
 };
 
 fConsume();
