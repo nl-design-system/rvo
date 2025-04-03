@@ -19,7 +19,7 @@ export default meta;
 
 type Story = StoryObj<typeof Card>;
 
-const Container = ({ children }) => <div style={{ width: '500px' }}>{children}</div>;
+const Container = ({ children }) => <div>{children}</div>;
 
 export const Default: Story = {
   args: { ...defaultArgs, outline: true },
