@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.7.2
+
+### Patch Changes
+
+- d3ab80f: Fix designtoken figma generator
+
 ## 1.7.1
 
 ### Patch Changes
