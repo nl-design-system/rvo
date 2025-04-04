@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.5.0
+
+### Minor Changes
+
+- 7a7e91a: Updated Footer component to display as a grid instead of flexbox. Added extra styling to make it usable on smaller screen devices
+
 ## 1.4.0
 
 ### Minor Changes
