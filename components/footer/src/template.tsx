@@ -50,46 +50,55 @@ export const Footer: React.FC<FooterInterface> = ({
           maxWidth === 'lg' && 'rvo-footer__container--lg',
         )}
       >
-        <div className="rvo-footer__menu-container">
-          {children ||
-            primaryMenu?.map((column, columnIndex) => (
-              <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
-                {column && column.label && (
-                  <Heading
-                    type="h3"
-                    textContent={parseContentMarkup(column.label)}
-                    className="rvo-footer__column-title"
-                  />
-                )}
-                <ul
-                  className={clsx(
-                    'rvo-footer__menu',
-                    column.orientation === 'horizontal' && 'rvo-footer__menu--horizontal',
-                  )}
-                >
-                  {column.items?.map((item, itemIndex) => (
-                    <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
-                      <Link
-                        href={item.link}
-                        showIcon={column.orientation === 'horizontal' ? 'no' : 'before'}
-                        icon="delta-naar-rechts"
-                        iconSize="sm"
-                        iconColor="wit"
-                        noUnderline={true}
-                      >
-                        {parseContentMarkup(item.content)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-        </div>
+        {children ||
+          (primaryMenu && (
+            <div className={clsx('rvo-footer__menu-container', maxWidth === 'sm' && 'rvo-footer__menu-container--sm')}>
+              {children ||
+                primaryMenu?.map((column, columnIndex) => (
+                  <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
+                    {column && column.label && (
+                      <Heading
+                        type="h3"
+                        textContent={parseContentMarkup(column.label)}
+                        className="rvo-footer__column-title"
+                      />
+                    )}
+                    <ul
+                      className={clsx(
+                        'rvo-footer__menu',
+                        column.orientation === 'horizontal' && 'rvo-footer__menu--horizontal',
+                      )}
+                    >
+                      {column.items?.map((item, itemIndex) => (
+                        <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
+                          <Link
+                            href={item.link}
+                            showIcon={column.orientation === 'horizontal' ? 'no' : 'before'}
+                            icon="delta-naar-rechts"
+                            iconSize="sm"
+                            iconColor="wit"
+                            noUnderline={true}
+                          >
+                            {parseContentMarkup(item.content)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+            </div>
+          ))}
         {payOff && payOff.length > 0 && <div className="rvo-footer__payoff">{payOff}</div>}
         {secondaryMenu && (
           <>
             {((primaryMenu && primaryMenu.length > 0) || (payOff && payOff.length > 0)) && <HorizontalRule />}
-            <div className="rvo-footer__menu-container rvo-footer__menu-container--small">
+            <div
+              className={clsx(
+                'rvo-footer__menu-container',
+                'rvo-footer__menu-container--secondary',
+                maxWidth === 'sm' && 'rvo-footer__menu-container--sm',
+              )}
+            >
               {secondaryMenu.map((item, itemIndex) => {
                 return (
                   <Link
