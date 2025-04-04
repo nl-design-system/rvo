@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.12
+
+### Patch Changes
+
+- 7a7e91a: Updated Footer component to display as a grid instead of flexbox. Added extra styling to make it usable on smaller screen devices
+
 ## 4.6.11
 
 ### Patch Changes
