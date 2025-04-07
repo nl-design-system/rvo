@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { CSSProperties, PropsWithChildren, useMemo } from 'react';
+import React, { CSSProperties, useMemo } from 'react';
 import './index.scss';
 
 type SkeletonCSSProperties = {
@@ -39,7 +39,7 @@ export interface ISkeletonProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 const isDefined = <T,>(value: T | undefined): value is T => value !== undefined;
 
-export const Skeleton: React.FC<PropsWithChildren<ISkeletonProps>> = ({
+export const Skeleton: React.FC<ISkeletonProps> = ({
   variant,
   animation,
   color = 'grijs-100',
