@@ -42,7 +42,7 @@ const isDefined = <T,>(value: T | undefined): value is T => value !== undefined;
 export const Skeleton: React.FC<ISkeletonProps> = ({
   variant,
   animation,
-  color = 'grijs-100',
+  color = 'grijs-200',
   className,
   ...otherProps
 }: ISkeletonProps) => {

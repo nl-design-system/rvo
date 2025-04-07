@@ -11,7 +11,7 @@ $rvo-color-vars: (
 ) !default;
 
 .rvo-skeleton {
-  --rvo-skeleton-color: var(--rvo-color-grijs-300);
+  --rvo-skeleton-color: var(--rvo-color-grijs-200);
   --rvo-skeleton-animation-duration: 2000ms;
 
   background-color: var(--rvo-skeleton-color);
