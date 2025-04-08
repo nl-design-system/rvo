@@ -82,7 +82,7 @@ const Subsidiepagina = () => {
           </LayoutFlow>
           <p>
             <em>
-              Deze inhoud van deze pagina is gecontroleerd op <strong>22 januari 2025</strong>
+              De inhoud van deze pagina is gecontroleerd op <strong>22 januari 2025</strong>
             </em>
           </p>
 
@@ -99,7 +99,7 @@ const Subsidiepagina = () => {
         <div className="rvo-custom-aanvraagperiode-budget rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
             <div className="rvo-card__content">
-              <h3 className="utrecht-heading-3">Aanvraagperiode</h3>
+              <h3 className="utrecht-heading-3">Aanvraagperiode en budget</h3>
               <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
                 <div>
                   <Icon icon="kalender" size="2xl" color="zwart"></Icon>
@@ -117,10 +117,9 @@ const Subsidiepagina = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
+
             <div className="rvo-card__content">
-              <h3 className="utrecht-heading-3">Budget</h3>
+              <h3 className="utrecht-heading-3"></h3>
 
               <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
                 <div>
