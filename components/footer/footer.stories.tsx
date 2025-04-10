@@ -58,10 +58,41 @@ const defaultArgs: FooterInterface = {
   payOff: 'We helpen u graag vooruit!',
 };
 
+const argTypes = {
+  primaryMenu: {
+    control: {
+      name: 'object',
+      required: true,
+    },
+  },
+  secondaryMenu: {
+    control: {
+      name: 'object',
+      required: true,
+    },
+  },
+  maxWidth: {
+    options: ['none', 'sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
+  payOff: {
+    control: {
+      name: 'string',
+      required: false,
+    },
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+};
+
 const meta: Meta<typeof Footer> = {
   title: 'Componenten/Footer',
   component: Footer,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
