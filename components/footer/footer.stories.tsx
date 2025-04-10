@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Footer, FooterColumnInterface, FooterInterface, FooterItemInterface } from './src/template';
 import Icon from '../icon/src/template';
 
-export const defaultFooterMenu: FooterColumnInterface[] = [
+const defaultFooterMenu: FooterColumnInterface[] = [
   {
     label: 'RVO',
     orientation: 'horizontal',
@@ -42,7 +42,7 @@ export const defaultFooterMenu: FooterColumnInterface[] = [
   },
 ];
 
-export const defaultSecondaryFooterMenu: FooterItemInterface[] = [
+const defaultSecondaryFooterMenu: FooterItemInterface[] = [
   { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
   { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
   { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
@@ -56,36 +56,6 @@ const defaultArgs: FooterInterface = {
   secondaryMenu: defaultSecondaryFooterMenu,
   maxWidth: 'lg',
   payOff: 'We helpen u graag vooruit!',
-};
-
-export const argTypes = {
-  primaryMenu: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  secondaryMenu: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  maxWidth: {
-    options: ['none', 'sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
-  payOff: {
-    type: {
-      name: 'string',
-      required: false,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
 };
 
 const meta: Meta<typeof Footer> = {
