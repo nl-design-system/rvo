@@ -34,7 +34,7 @@
       @extend .rvo-max-width-layout--lg;
     }
 
-    width: calc(100vw - 36px);
+    width: calc(100vw - #{var(--rvo-font-size-3xl)});
   }
 
   &__payoff {
