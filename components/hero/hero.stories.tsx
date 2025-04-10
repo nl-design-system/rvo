@@ -1,11 +1,48 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './src/defaultArgs';
-import { Hero } from './src/template';
+import { Hero, IHeroProps } from './src/template';
+
+const argTypes = {
+  image: {
+    control: { type: 'object' },
+  },
+  imageAlt: {
+    control: { type: 'text' },
+  },
+  title: {
+    control: 'text',
+  },
+  subtitle: {
+    control: 'text',
+  },
+  size: {
+    options: ['sm', 'md', 'lg'],
+    control: { type: 'radio' },
+  },
+  className: {
+    control: 'text',
+  },
+  content: {
+    control: 'text',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+};
+
+const defaultArgs: IHeroProps = {
+  image: { src: '', alt: '' },
+  title: 'Rijksdienst voor Ondernemend Nederland',
+  subtitle: 'Wij helpen u graag vooruit!',
+  content: '',
+};
 
 const meta: Meta<typeof Hero> = {
   title: 'Componenten/Hero',
   component: Hero,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -26,4 +63,12 @@ export const Default: Story = {
     // customImage: <img src="images/www/nieuwsbrief.webp" />,
   },
   name: 'Hero',
+};
+
+export const CustomImageHero: Story = {
+  args: {
+    ...defaultArgs,
+    image: <img src="images/www/nieuwsbrief.webp" />,
+  },
+  name: 'Hero - Custom image',
 };
