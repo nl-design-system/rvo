@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { cloneElement, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Heading from '../../heading/src/template';
 import MaxWidthLayout from '../../max-width-layout/src/template';
@@ -11,8 +11,8 @@ import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IHeroProps {
-  image?: string;
-  imageAlt?: string;
+  image?: HTMLImageElement;
+  customImage?: React.JSX.Element;
   title?: string;
   subtitle?: string;
   size?: 'sm' | 'md' | 'lg';
@@ -56,7 +56,7 @@ export const argTypes = {
 
 export const Hero: React.FC<IHeroProps> = ({
   image = defaultArgs.image,
-  imageAlt = defaultArgs.imageAlt,
+  customImage,
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
   size = defaultArgs.size,
@@ -68,11 +68,20 @@ export const Hero: React.FC<IHeroProps> = ({
   // Parse content markup (either a string, HTML string, React node or children)
   const contentMarkup: string | ReactNode = parseContentMarkup(children || content);
 
+  const returnImage = () => {
+    if (React.isValidElement(customImage)) {
+      const newElement = cloneElement(customImage, {
+        className: customImage.props.className + ' rvo-hero__image',
+      } as any);
+      return newElement;
+    }
+
+    return <img src={image.src} className="rvo-hero__image" alt={image.alt} />;
+  };
+
   return (
     <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...props}>
-      <div className="rvo-hero__image-container">
-        {image && <img src={image} className="rvo-hero__image" alt={imageAlt} />}
-      </div>
+      <div className="rvo-hero__image-container">{returnImage()}</div>
       <div className="rvo-hero__content">
         <Heading type="h1" className="rvo-hero__title" noMargins={true}>
           {title}

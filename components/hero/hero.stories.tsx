@@ -20,6 +20,10 @@ export default meta;
 type Story = StoryObj<typeof Hero>;
 
 export const Default: Story = {
-  args: { ...defaultArgs, image: 'images/www/home.jpg' },
+  args: {
+    ...defaultArgs,
+    image: { src: 'images/www/home.jpg', alt: 'homepage image' },
+    customImage: <img src="images/www/nieuwsbrief.webp" />,
+  },
   name: 'Hero',
 };
