@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.13
+
+### Patch Changes
+
+- 72cde9a: Remove inline styling for table header
+
 ## 4.6.12
 
 ### Patch Changes

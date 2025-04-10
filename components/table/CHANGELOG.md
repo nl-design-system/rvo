@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.3.2
+
+### Patch Changes
+
+- 72cde9a: Remove inline styling for table header
+
 ## 1.3.1
 
 ### Patch Changes
