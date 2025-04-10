@@ -6,6 +6,7 @@
       "padding-inline-end": { "value": "{rvo.space.lg}" },
       "padding-inline-start": { "value": "{rvo.space.lg}" },
       "column-gap": { "value": "{rvo.space.3xl}" },
+      "column-gap-mobile": { "value": "{rvo.space.2xl}" },
       "column": {
         "item-gap": { "value": "{rvo.space.xs}" },
         "margin-block-end": { "value": "0" },
