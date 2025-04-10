@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.14
+
+### Patch Changes
+
+- 061c377: Removed position relative from card with link indicator
+
 ## 4.6.13
 
 ### Patch Changes
