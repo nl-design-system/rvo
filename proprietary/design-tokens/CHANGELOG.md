@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.7.4
+
+### Patch Changes
+
+- 8ebb0f5: Added a designtoken for footer mobile gap
+
 ## 1.7.3
 
 ### Patch Changes
