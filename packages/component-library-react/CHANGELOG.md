@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.15
+
+### Patch Changes
+
+- 8ebb0f5: Hover on secondary menu items in footer resolved and remove grid display from secondary footer menu
+
 ## 4.6.14
 
 ### Patch Changes

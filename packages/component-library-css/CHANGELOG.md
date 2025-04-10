@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.5.9
+
+### Patch Changes
+
+- 8ebb0f5: Hover on secondary menu items in footer resolved and remove grid display from secondary footer menu
+
 ## 4.5.8
 
 ### Patch Changes
