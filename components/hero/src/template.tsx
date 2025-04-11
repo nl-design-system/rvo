@@ -29,19 +29,19 @@ export const Hero: React.FC<IHeroProps> = (props: IHeroProps) => {
   // Parse content markup (either a string, HTML string, React node or children)
   const contentMarkup: string | ReactNode = parseContentMarkup(children || content);
 
-  const returnImage = () => {
+  const renderImage = () => {
     if (React.isValidElement(image)) {
       return <span className="rvo-hero__custom-image-wrapper">{image}</span>;
     }
 
-    if (isOfType(image, 'src')) return <img src={image.src} className="rvo-hero__image" alt={image.alt} />;
+    if (isOfType(image, 'src') && image.src) return <img src={image.src} className="rvo-hero__image" alt={image.alt} />;
 
     return null;
   };
 
   return (
     <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...rest}>
-      <div className="rvo-hero__image-container">{returnImage()}</div>
+      <div className="rvo-hero__image-container">{renderImage()}</div>
       <div className="rvo-hero__content">
         <Heading type="h1" className="rvo-hero__title" noMargins={true}>
           {title}
