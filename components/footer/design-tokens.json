@@ -31,6 +31,12 @@
           "inherits": true
         }
       },
+      "column-gap-mobile": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
       "column": {
         "item-gap": {
           "css": {
