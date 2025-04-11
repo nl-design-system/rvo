@@ -37,7 +37,7 @@ const Content = () => {
       />
       <LayoutFlow gap="3xl">
         <LayoutFlow gap="xl">
-          <Hero image="images/www/home.jpg" />
+          <Hero image={{ src: 'images/www/home.jpg', alt: '' }} />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
             <Heading type="h1">H1 heading</Heading>
             <p className="rvo-text--lg">

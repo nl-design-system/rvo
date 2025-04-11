@@ -9,8 +9,13 @@ import Documentation from "./README.md";
 import Hero from "./src/template";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
+{(() => {
+const props = { image: { src: 'images/www/home.jpg', alt: 'homepage image' } };
+return (
+
 <ComponentExample storyName="componenten-hero--default">
-  <Hero />
+  <Hero {...props} />
 </ComponentExample>
+); })()}
 
 <Documentation />
