@@ -2,13 +2,13 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
+import { isDefined } from '@nl-rvo/components/utils/guards';
 import clsx from 'clsx';
-import React, { CSSProperties, useMemo } from 'react';
+import React, { CSSProperties } from 'react';
 import './index.scss';
 
 type SkeletonCSSProperties = {
-  '--rvo-skeleton-color'?: string;
-  '--rvo-skeleton-animation-duration'?: string;
+  '--rvo-animation-duration'?: string;
 } & CSSProperties;
 
 export interface ISkeletonProps extends React.HTMLAttributes<HTMLSpanElement> {
@@ -37,35 +37,23 @@ export interface ISkeletonProps extends React.HTMLAttributes<HTMLSpanElement> {
   className?: string;
 }
 
-const isDefined = <T,>(value: T | undefined): value is T => value !== undefined;
+export const Skeleton: React.FC<ISkeletonProps> = (props: ISkeletonProps) => {
+  const { variant, animation, color = 'grijs-200', duration, width, height, className, style, ...otherProps } = props;
 
-export const Skeleton: React.FC<ISkeletonProps> = ({
-  variant,
-  animation,
-  color = 'grijs-200',
-  className,
-  ...otherProps
-}: ISkeletonProps) => {
-  const { width, height, duration, ...spanProps } = otherProps;
-
-  const styleProps: SkeletonCSSProperties = {
-    width,
-    height,
-    '--rvo-skeleton-animation-duration': duration,
-  };
-
-  const classes: string = clsx('rvo-skeleton', className, {
-    [`rvo-skeleton--${variant}`]: isDefined(variant),
-    [`rvo-skeleton--${animation}`]: isDefined(animation),
-    [`rvo-skeleton--${color}`]: isDefined(color),
-  });
-  const style: CSSProperties = useMemo(
-    () => Object.fromEntries(Object.entries(styleProps).filter(([, value]) => isDefined(value))),
-    [styleProps],
-  );
+  const inlineStyle: SkeletonCSSProperties = { width, height, '--rvo-animation-duration': duration };
 
   return (
-    <span style={{ ...style, ...spanProps.style }} className={classes} {...spanProps}>
+    <span
+      className={clsx(
+        className,
+        'rvo-skeleton',
+        isDefined(variant) && `rvo-skeleton--${variant}`,
+        isDefined(animation) && `rvo-skeleton--${animation}`,
+        isDefined(color) && `rvo-skeleton--${color}`,
+      )}
+      style={{ ...style, ...inlineStyle }}
+      {...otherProps}
+    >
       &zwnj;
     </span>
   );
