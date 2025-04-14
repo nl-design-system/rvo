@@ -1,5 +1,11 @@
 # @nl-rvo/documentation
 
+## 1.0.1
+
+### Patch Changes
+
+- 82d7db9: Updated the Documentation for the Hero Component
+
 ## 1.0.0
 
 ### Minor Changes
