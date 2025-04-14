@@ -1,1 +1,1 @@
-Documentatie voor hero
+Het Hero component wordt altijd bovenaan een pagina geplaatst. De afbeelding die je wilt tonen kun je doen door middel van een object van `{src: string, alt: string}` of door een html `<img />` item mee te sturen.

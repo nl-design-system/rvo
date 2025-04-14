@@ -65,7 +65,10 @@ const Nieuwsbrief = () => {
 
         <Hero
           size="lg"
-          image="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-05%2FParticulier01.png%3Fitok%3D445OIaw-&w=640&q=85"
+          image={{
+            src: 'https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-05%2FParticulier01.png%3Fitok%3D445OIaw-&w=640&q=85',
+            alt: '',
+          }}
           title="Duurzaam ondernemen"
           subtitle=""
         />
