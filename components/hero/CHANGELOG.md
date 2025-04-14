@@ -1,5 +1,11 @@
 # `@nl-rvo/css-hero`
 
+## 1.3.0
+
+### Minor Changes
+
+- 82d7db9: Added support to use img as a acceptable param for the hero image.
+
 ## 1.2.0
 
 ### Minor Changes

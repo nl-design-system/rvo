@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.6.16
+
+### Patch Changes
+
+- 82d7db9: Added support to use img as a acceptable param for the hero image.
+
 ## 4.6.15
 
 ### Patch Changes
