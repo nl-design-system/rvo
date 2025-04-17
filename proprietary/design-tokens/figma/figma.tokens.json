@@ -1493,6 +1493,9 @@
         "column-gap": {
           "$value": "{rvo.space.3xl}"
         },
+        "column-gap-mobile": {
+          "$value": "{rvo.space.2xl}"
+        },
         "column": {
           "item-gap": {
             "$value": "{rvo.space.xs}"

@@ -1,5 +1,29 @@
 # @nl-rvo/component-library-react
 
+## 4.6.16
+
+### Patch Changes
+
+- 82d7db9: Added support to use img as a acceptable param for the hero image.
+
+## 4.6.15
+
+### Patch Changes
+
+- 8ebb0f5: Hover on secondary menu items in footer resolved and remove grid display from secondary footer menu
+
+## 4.6.14
+
+### Patch Changes
+
+- 061c377: Removed position relative from card with link indicator
+
+## 4.6.13
+
+### Patch Changes
+
+- 72cde9a: Remove inline styling for table header
+
 ## 4.6.12
 
 ### Patch Changes

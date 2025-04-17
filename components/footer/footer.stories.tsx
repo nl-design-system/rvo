@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Footer, FooterColumnInterface, FooterInterface, FooterItemInterface } from './src/template';
 import Icon from '../icon/src/template';
 
-export const defaultFooterMenu: FooterColumnInterface[] = [
+const defaultFooterMenu: FooterColumnInterface[] = [
   {
     label: 'RVO',
     orientation: 'horizontal',
@@ -42,7 +42,7 @@ export const defaultFooterMenu: FooterColumnInterface[] = [
   },
 ];
 
-export const defaultSecondaryFooterMenu: FooterItemInterface[] = [
+const defaultSecondaryFooterMenu: FooterItemInterface[] = [
   { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
   { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
   { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
@@ -58,16 +58,16 @@ const defaultArgs: FooterInterface = {
   payOff: 'We helpen u graag vooruit!',
 };
 
-export const argTypes = {
+const argTypes = {
   primaryMenu: {
-    type: {
-      name: 'array',
+    control: {
+      name: 'object',
       required: true,
     },
   },
   secondaryMenu: {
-    type: {
-      name: 'array',
+    control: {
+      name: 'object',
       required: true,
     },
   },
@@ -76,7 +76,7 @@ export const argTypes = {
     control: { type: 'radio' },
   },
   payOff: {
-    type: {
+    control: {
       name: 'string',
       required: false,
     },
@@ -92,6 +92,7 @@ const meta: Meta<typeof Footer> = {
   title: 'Componenten/Footer',
   component: Footer,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',

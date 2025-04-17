@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.2.4
+
+### Patch Changes
+
+- 061c377: Removed position relative from card with link indicator
+
 ## 1.2.3
 
 ### Patch Changes
