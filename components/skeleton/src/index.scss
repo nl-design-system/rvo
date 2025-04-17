@@ -1,0 +1,63 @@
+@use "mixins" as *;
+
+.rvo-skeleton {
+  --rvo-animation-duration: 2000ms;
+
+  background-color: var(--rvo-color-grijs-200);
+  border-radius: var(--rvo-border-radius-md);
+  display: block;
+  width: 100%;
+}
+
+@include rvo-skeleton-colors(
+  (
+    hemelblauw: --rvo-color-hemelblauw,
+    lichtblauw: --rvo-color-lichtblauw,
+    donkerblauw: --rvo-color-donkerblauw,
+    grijs-100: --rvo-color-grijs-100,
+    grijs-200: --rvo-color-grijs-200,
+    grijs-300: --rvo-color-grijs-300,
+    grijs-400: --rvo-color-grijs-400,
+    grijs-500: --rvo-color-grijs-500,
+    grijs-600: --rvo-color-grijs-600,
+  )
+);
+
+.rvo-skeleton--circular {
+  border-radius: 50%;
+}
+
+.rvo-skeleton--shimmer {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    animation: rvo-shimmer var(--rvo-animation-duration) ease-in-out infinite;
+    background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 50%), transparent);
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.rvo-skeleton--pulse {
+  animation: rvo-pulse var(--rvo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes rvo-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rvo-pulse {
+  50% {
+    opacity: 50%;
+  }
+}

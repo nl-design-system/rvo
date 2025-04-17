@@ -1,0 +1,7 @@
+@mixin rvo-skeleton-colors($colors) {
+  @each $name, $var in $colors {
+    .rvo-skeleton--#{$name} {
+      background-color: var($var);
+    }
+  }
+}
