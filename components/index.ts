@@ -59,7 +59,6 @@ export { ProgressTracker } from './progress-tracker/src/template';
 export { ProgressTrackerStep } from './progress-tracker/src/progress-tracker-step/template';
 export { ScrollableContent } from './scrollable-content/src/template';
 export { SidebarLayout } from './sidebar-layout/src/template';
-export { Skeleton } from './skeleton/src/template';
 export { SkipLink } from './skip-link/src/template';
 export { StatusIcon } from './status-icon/src/template';
 export { StatusIndicator } from './status-indicator/src/template';
