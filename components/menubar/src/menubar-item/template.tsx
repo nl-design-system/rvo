@@ -22,7 +22,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   label,
   icon,
   link,
-  active,
   useDivider,
   submenu,
   useIcons,
@@ -59,17 +58,14 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
     <li
       className={clsx(
         'rvo-menubar__item',
-        active && 'rvo-menubar__item--active',
         submenu && 'rvo-menubar__item--submenu',
         useDivider && 'rvo-menubar__item--with-divider',
+        isSubmenuVisible && ['rvo-menubar--submenu'],
       )}
       {...rest}
     >
       <Link
-        className={clsx(
-          'rvo-menubar__link',
-          isSubmenuVisible && ['rvo-menubar__link--active', 'rvo-menubar--submenu', 'rvo-menubar__background'],
-        )}
+        className={clsx('rvo-menubar__link', isSubmenuVisible && ['rvo-menubar__link--active'])}
         color={linkColor}
         {...(submenu || typeof link === 'function'
           ? { onClick: handleClick, role: 'button' }
