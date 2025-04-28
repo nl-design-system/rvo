@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 4.7.0
+
+### Minor Changes
+
+- 4a66507: Nieuw component genaamd Skeleton loader
+
 ## 4.6.16
 
 ### Patch Changes
