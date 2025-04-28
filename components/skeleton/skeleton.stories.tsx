@@ -51,7 +51,7 @@ const meta: Meta<typeof Skeleton> = {
       type: 'PRODUCTION',
     },
     docusaurus: {
-      link: 'loader',
+      link: 'skeleton',
     },
   },
 };
