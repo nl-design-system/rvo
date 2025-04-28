@@ -2,9 +2,9 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import { isDefined } from '@nl-rvo/components/utils/guards';
 import clsx from 'clsx';
 import React, { CSSProperties } from 'react';
+import { isDefined } from '../../utils/guards';
 import './index.scss';
 
 type SkeletonCSSProperties = {
