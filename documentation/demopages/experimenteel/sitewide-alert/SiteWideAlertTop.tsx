@@ -21,7 +21,10 @@ const SiteWideAlertTop = () => {
   return (
     <body className="rvo-theme">
       <div className="rvo-alert rvo-alert--error rvo-alert--padding-md">
-        <div className="rvo-alert-max-width rvo-max-width-layout rvo-max-width-layout--lg rvo-layout-row rvo-layout-gap--sm">
+        <div
+          className="rvo-alert-max-width rvo-max-width-layout rvo-max-width-layout--lg rvo-layout-row rvo-layout-gap--sm"
+          style={{ width: '100%' }}
+        >
           <span
             className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
             role="img"
