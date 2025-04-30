@@ -21,14 +21,16 @@ const SiteWideAlertTop = () => {
   return (
     <body className="rvo-theme">
       <div className="rvo-alert rvo-alert--error rvo-alert--padding-md">
-        <span
-          className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
-          role="img"
-          aria-label="Foutmelding"
-        ></span>
-        <div className="rvo-alert-text">
-          <div>
-            <div>Het is momenteel niet mogelijk om met DigiD in te loggen.</div>
+        <div className="rvo-alert-max-width rvo-max-width-layout rvo-max-width-layout--lg rvo-layout-row rvo-layout-gap--sm">
+          <span
+            className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
+            role="img"
+            aria-label="Foutmelding"
+          ></span>
+          <div className="rvo-alert-text">
+            <div>
+              <div>Het is momenteel niet mogelijk om met DigiD in te loggen.</div>
+            </div>
           </div>
         </div>
       </div>
