@@ -23,6 +23,13 @@
           "focus": {
             "background-color": { "value": "{rvo.color.grijs-200}" }
           }
+        },
+        "size": {
+          "xs": { "value": "5%" },
+          "sm": { "value": "10%" },
+          "md": { "value": "25%" },
+          "lg": { "value": "50%" },
+          "xl": { "value": "75%" }
         }
       },
       "cell": {

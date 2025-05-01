@@ -75,6 +75,28 @@
               }
             }
           }
+        },
+        "size": {
+          "xs": {
+            "syntax": "<length>",
+            "inherits": true
+          },
+          "sm": {
+            "syntax": "<length>",
+            "inherits": true
+          },
+          "md": {
+            "syntax": "<length>",
+            "inherits": true
+          },
+          "lg": {
+            "syntax": "<length>",
+            "inherits": true
+          },
+          "xl": {
+            "syntax": "<length>",
+            "inherits": true
+          }
         }
       },
       "cell": {
