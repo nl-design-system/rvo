@@ -10,6 +10,10 @@
  */
 
 /* You can override the default Infima variables here. */
+* {
+  box-sizing: content-box;
+}
+
 html {
   line-height: 1.5;
 }
