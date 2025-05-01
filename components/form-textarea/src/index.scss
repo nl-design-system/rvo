@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../layout-flow/src";
 @use "~@utrecht/textarea-css/dist/index.css" as *;
 @use "~@utrecht/textbox-css/dist/index.css" as *;
 
@@ -46,5 +47,5 @@ textarea.utrecht-textbox {
 }
 
 .utrecht-textbox-remaining-chars {
-  align-self: flex-start;
+  align-self: flex-end;
 }
