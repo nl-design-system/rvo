@@ -92,7 +92,6 @@
       }
 
       &:focus {
-        font-weight: var(--rvo-topnav-item-active-font-weight) !important;
         text-decoration-line: var(--rvo-topnav-item-link-focus-text-decoration);
       }
 
@@ -133,10 +132,10 @@
 
 // Active link
 .rvo-menubar__link--active {
-  font-weight: var(--rvo-topnav-item-active-font-weight) !important;
+  text-decoration-line: var(--rvo-topnav-item-link-focus-text-decoration);
 
   &:hover {
-    font-weight: var(--rvo-topnav-item-active-font-weight);
+    text-decoration-line: var(--rvo-topnav-item-link-focus-text-decoration);
   }
 }
 
