@@ -31,7 +31,10 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   if (!isSubmenuVisible) return null;
 
   const subMenuMarkup = submenu.map((subItem, index) => (
-    <li key={`${subItem.label}--${index}`} className="rvo-menubar__item">
+    <li
+      key={`${subItem.label}--${index}`}
+      className={clsx('rvo-menubar__item rvo-menubar__item--submenu', !grid && 'rvo-menubar__item--grid')}
+    >
       <Link
         className="rvo-menubar__link"
         {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}

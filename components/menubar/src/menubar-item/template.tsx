@@ -58,9 +58,8 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
     <li
       className={clsx(
         'rvo-menubar__item',
-        submenu && 'rvo-menubar__item--submenu',
         useDivider && 'rvo-menubar__item--with-divider',
-        isSubmenuVisible && ['rvo-menubar--submenu'],
+        isSubmenuVisible && ['rvo-menubar__item--submenu-visible'],
       )}
       {...rest}
     >
