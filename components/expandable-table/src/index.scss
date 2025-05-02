@@ -1,0 +1,72 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rvo-table {
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.rvo-expandable-table {
+  --rvo-expandable-table-row-border-color: var(--rvo-color-hemelblauw-300);
+  --rvo-expandable-table-row-padding-block-start: var(--rvo-space-md);
+  --rvo-expandable-table-row-padding-inline-start: var(--rvo-space-md);
+}
+
+.rvo-table--responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.rvo-caption {
+  font-size: var(--rvo-caption-font-size);
+  padding-block-end: var(--rvo-caption-padding-block-end);
+  text-align: start;
+}
+
+.rvo-table-header {
+  background-color: var(--rvo-table-header-background-color);
+  border-bottom-color: var(--rvo-table-header-border-bottom-color);
+  border-bottom-style: var(--rvo-table-header-border-bottom-style);
+  border-bottom-width: var(--rvo-table-header-border-bottom-width);
+  color: var(--rvo-table-header-color);
+  font-weight: var(--rvo-table-header-font-weight);
+  padding-block-end: var(--rvo-table-header-padding-block-end);
+  padding-block-start: var(--rvo-table-header-padding-block-start);
+  padding-inline-end: var(--rvo-table-header-padding-inline-end);
+  padding-inline-start: var(--rvo-table-header-padding-inline-start);
+  text-align: start;
+}
+
+.rvo-table-cell {
+  border-bottom-color: var(--rvo-table-cell-border-bottom-color);
+  border-bottom-style: var(--rvo-table-cell-border-bottom-style);
+  border-bottom-width: var(--rvo-table-cell-border-bottom-width);
+  padding-block-end: var(--rvo-table-cell-padding-block-end);
+  padding-block-start: var(--rvo-table-cell-padding-block-start);
+  padding-inline-end: var(--rvo-table-cell-padding-inline-end);
+  padding-inline-start: var(--rvo-table-cell-padding-inline-start);
+}
+
+.rvo-expandable-table-row--open td {
+  border-bottom: 0;
+}
+
+.rvo-expandable-table-row td:first-child {
+  border-left: 6px solid transparent;
+}
+
+.rvo-table-header:first-child,
+.rvo-table-cell:first-child {
+  width: 16px;
+}
+
+.rvo-expandable-table-row--open td:first-child,
+.rvo-expandable-table-row--details td:first-child {
+  border-left: 6px solid var(--rvo-expandable-table-row-border-color);
+}
+
+.rvo-expandable-table-cell {
+  padding: var(--rvo-expandable-table-row-padding-block-start);
+}
