@@ -59,12 +59,12 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
       className={clsx(
         'rvo-menubar__item',
         useDivider && 'rvo-menubar__item--with-divider',
-        isSubmenuVisible && ['rvo-menubar__item--submenu-visible'],
+        isSubmenuVisible && 'rvo-menubar__item--submenu-visible',
       )}
       {...rest}
     >
       <Link
-        className={clsx('rvo-menubar__link', isSubmenuVisible && ['rvo-menubar__link--active'])}
+        className={clsx('rvo-menubar__link', isSubmenuVisible && 'rvo-menubar__link--active')}
         color={linkColor}
         {...(submenu || typeof link === 'function'
           ? { onClick: handleClick, role: 'button' }
