@@ -13,7 +13,7 @@ const PaginationUpdate = () => {
             <Heading type="h1" textContent="Pagination Update" />
             <p>Een visuele update van het Pagination component</p>
             <LayoutFlow gap="xl">
-              <nav className="rvo-pagination">
+              <nav className="rvo-pagination" aria-label="Pagination">
                 <div className="rvo-pagination__prev">
                   <a className="rvo-link rvo-link--with-icon" href="#">
                     <span
