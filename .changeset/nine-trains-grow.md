@@ -5,4 +5,4 @@
 "@nl-rvo/component-library-react": patch
 ---
 
-fix menubar and mobile menu active and hover shift
+fix menubar shifts and submenu placement when grid is turned off
