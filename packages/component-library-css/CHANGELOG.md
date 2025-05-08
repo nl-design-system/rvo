@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-css
 
+## 4.6.1
+
+### Patch Changes
+
+- e353f8e: Styling van Skeleton component toegevoegd aan @nl-rvo/component-library-css
+
+## 4.6.0
+
+### Minor Changes
+
+- 4a66507: Nieuw component genaamd Skeleton loader
+
 ## 4.5.10
 
 ### Patch Changes
