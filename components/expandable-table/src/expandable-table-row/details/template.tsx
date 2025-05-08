@@ -5,9 +5,10 @@
 import React, { ReactElement } from 'react';
 
 export type DetailsType = ReactElement<IDetailsProps>;
+
 export interface IDetailsProps {
   className?: string;
-  children: any;
+  children?: any;
 }
 
 export const Details: React.FC<IDetailsProps> = ({ children, className, ...otherProps }: IDetailsProps) => {

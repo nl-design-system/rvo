@@ -13,7 +13,7 @@ export interface IExpandableTableProps extends HTMLAttributes<HTMLTableElement> 
   tableDescription?: string;
   /** Aanvullende classes **/
   className?: string;
-  /** Children mogen alleen TableHead en **/
+  /** Children mogen alleen TableHead en TableBody zijn **/
   children?: TableHeadType | TableBodyType | (TableHeadType | TableBodyType)[];
 }
 

@@ -1,3 +1,5 @@
 ## Richtlijnen
 
-- Gebruik expandable Table bij een table wanneer er extra informatie getoond moet worden die niet in de helper text past.
+- De ExpandableTable biedt de mogelijkheid uitklapbare rijen toe te voegen waar extra informatie die niet in de helper
+  text passen te kunnen tonen. De table kan overigens ook gebruikt worden als een normale tabel zonder rijen met extra
+  informatie.

@@ -5,14 +5,15 @@
 import Icon from '@nl-rvo/components/icon/src/template';
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactElement, useState } from 'react';
-import { DetailsType } from '../expandable-table-row/details/template';
-import { ITableCellProps, TableCell, TableCellType } from '../table-cell/template';
+import { TableCell, TableCellType } from '../table-cell/template';
 import { TableRow } from '../table-row/template';
+import { DetailsType } from './details/template';
 
 export type ExpandableTableRowType = ReactElement<IExpandableTableRowProps>;
+
 export interface IExpandableTableRowProps extends HTMLAttributes<HTMLTableRowElement> {
   className?: string;
-  children: (TableCellType | DetailsType)[];
+  children?: TableCellType | TableCellType[] | DetailsType;
 }
 
 export const ExpandableTableRow: React.FC<IExpandableTableRowProps> = ({
@@ -24,10 +25,30 @@ export const ExpandableTableRow: React.FC<IExpandableTableRowProps> = ({
   const toggleExpand = () => setIsOpen(!isOpen);
 
   const tableCells: TableCellType[] = React.Children.toArray(children).filter(
-    (child): child is TableCellType => React.isValidElement<ITableCellProps>(child) && child.type === TableCell,
+    (child): child is TableCellType =>
+      React.isValidElement(child) && child.type && (child.type as any).displayName === 'TableCell',
   );
 
-  const details = React.Children.toArray(children).find((child: any) => child?.type?.displayName === 'Details');
+  const details: DetailsType = React.Children.toArray(children).find(
+    (child): child is DetailsType =>
+      React.isValidElement(child) && child.type && (child.type as any).displayName === 'Details',
+  );
+
+  const toggleCell: TableCellType = (
+    <TableCell>
+      <div className="rvo-table-row-icon" onClick={toggleExpand} style={{ cursor: 'pointer' }}>
+        <Icon
+          icon={`delta-${isOpen ? 'omhoog' : 'omlaag'}`}
+          size="md"
+          color="hemelblauw"
+          className={`rvo-expandable-table-row-icon--${isOpen ? 'open' : 'closed'}`}
+          aria-expanded={isOpen}
+        />
+      </div>
+    </TableCell>
+  );
+
+  const cellsWithToggle: TableCellType[] = [toggleCell, ...tableCells];
 
   const columnCount = tableCells.length;
 
@@ -37,18 +58,7 @@ export const ExpandableTableRow: React.FC<IExpandableTableRowProps> = ({
         className={clsx('rvo-expandable-table-row', isOpen ? 'rvo-expandable-table-row--open' : '', className)}
         isExpandable={true}
       >
-        <TableCell>
-          <div className="rvo-table-row-icon" onClick={toggleExpand} style={{ cursor: 'pointer' }}>
-            <Icon
-              icon={`delta-${isOpen ? 'omhoog' : 'omlaag'}`}
-              size="md"
-              color="hemelblauw"
-              className={`rvo-expandable-table-row-icon--${isOpen ? 'open' : 'closed'}`}
-              aria-expanded={isOpen}
-            />
-          </div>
-        </TableCell>
-        {tableCells}
+        {cellsWithToggle}
       </TableRow>
       {details && (
         <TableRow

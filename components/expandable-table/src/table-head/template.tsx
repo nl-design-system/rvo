@@ -8,9 +8,10 @@ import { ExpandableTableRowType } from '../expandable-table-row/template';
 import { TableRowType } from '../table-row/template';
 
 export type TableHeadType = ReactElement<ITableHeadProps>;
+
 export interface ITableHeadProps extends HTMLAttributes<HTMLTableSectionElement> {
   className?: string;
-  children: TableRowType | ExpandableTableRowType;
+  children?: TableRowType | ExpandableTableRowType;
 }
 
 export const TableHead: React.FC<ITableHeadProps> = ({ children, className, ...otherProps }: ITableHeadProps) => {
