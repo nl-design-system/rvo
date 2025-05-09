@@ -208,20 +208,3 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
-
-// submenu layouts
-.rvo-max-width-layout {
-  width: 100%;
-}
-
-.rvo-max-width-layout--sm {
-  max-width: 608px;
-}
-
-.rvo-max-width-layout--md {
-  max-width: 912px;
-}
-
-.rvo-max-width-layout--lg {
-  max-width: 1280px;
-}
