@@ -13,13 +13,12 @@ const PaginationUpdate = () => {
             <Heading type="h1" textContent="Pagination Update" />
             <p>Een visuele update van het Pagination component</p>
             <LayoutFlow gap="xl">
-              <nav className="rvo-pagination">
+              <nav className="rvo-pagination" aria-label="Pagination">
                 <div className="rvo-pagination__prev">
-                  <a className="rvo-link rvo-link--with-icon" aria-label="Delta naar links" href="#">
+                  <a className="rvo-link rvo-link--with-icon" href="#">
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
                       role="img"
-                      aria-label="Delta naar links"
                     ></span>
                     Vorige
                   </a>
@@ -52,12 +51,11 @@ const PaginationUpdate = () => {
                   </li>
                 </ul>
                 <div className="rvo-pagination__next">
-                  <a className="rvo-link rvo-link--with-icon" aria-label="Delta naar rechts" href="#">
+                  <a className="rvo-link rvo-link--with-icon" href="#">
                     Volgende
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
                       role="img"
-                      aria-label="Delta naar rechts"
                     ></span>
                   </a>
                 </div>
@@ -80,23 +78,21 @@ const PaginationUpdate = () => {
                   </li>
                 </ul>
                 <div className="rvo-pagination__next">
-                  <a className="rvo-link rvo-link--with-icon" aria-label="Delta naar rechts" href="#">
+                  <a className="rvo-link rvo-link--with-icon" href="#">
                     Volgende
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
                       role="img"
-                      aria-label="Delta naar rechts"
                     ></span>
                   </a>
                 </div>
               </nav>
               <nav className="rvo-pagination">
                 <div className="rvo-pagination__prev">
-                  <a className="rvo-link rvo-link--with-icon" aria-label="Delta naar links" href="#">
+                  <a className="rvo-link rvo-link--with-icon" href="#">
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
                       role="img"
-                      aria-label="Delta naar links"
                     ></span>
                     Vorige
                   </a>
