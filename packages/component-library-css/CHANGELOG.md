@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.6.4
+
+### Patch Changes
+
+- 8fcf59c: Added width 100% to layout types and update linked components using this class
+
 ## 4.6.3
 
 ### Patch Changes
