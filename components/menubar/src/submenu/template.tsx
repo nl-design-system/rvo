@@ -31,7 +31,10 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   if (!isSubmenuVisible) return null;
 
   const subMenuMarkup = submenu.map((subItem, index) => (
-    <li key={`${subItem.label}--${index}`} className="rvo-menubar__item">
+    <li
+      key={`${subItem.label}--${index}`}
+      className={clsx('rvo-menubar__item rvo-menubar__item--submenu', !grid && 'rvo-menubar__item--grid')}
+    >
       <Link
         className="rvo-menubar__link"
         {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}
@@ -52,12 +55,18 @@ export const SubMenu: React.FC<SubMenuProps> = ({
     <div
       className={clsx(
         'rvo-menubar--submenu',
-        'rvo-menubar__background',
         grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
         direction === 'horizontal' && 'rvo-menubar__horizontal',
       )}
     >
-      <ul className={clsx('rvo-menubar__list', 'rvo-max-width-layout', `rvo-max-width-layout--${maxWidth}`)}>
+      <ul
+        className={clsx(
+          'rvo-menubar__list',
+          'rvo-menubar__list--item',
+          'rvo-max-width-layout',
+          `rvo-max-width-layout--${maxWidth}`,
+        )}
+      >
         {subMenuMarkup}
       </ul>
     </div>
@@ -65,12 +74,17 @@ export const SubMenu: React.FC<SubMenuProps> = ({
     <div
       className={clsx(
         'rvo-menubar--submenu',
-        'rvo-menubar__background',
         grid && direction === 'horizontal' && 'rvo-menubar__grid rvo-menubar--submenu-grid',
         direction === 'horizontal' && 'rvo-menubar__horizontal',
       )}
     >
-      <ul className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__vertical')}>
+      <ul
+        className={clsx(
+          'rvo-menubar__list',
+          'rvo-menubar__list--item',
+          direction === 'vertical' && 'rvo-menubar__vertical',
+        )}
+      >
         {subMenuMarkup}
       </ul>
     </div>
