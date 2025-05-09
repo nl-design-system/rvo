@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "../../max-width-layout/src";
+@use "../../max-width-layout/src" as *;
 @use "~@utrecht/page-footer-css/dist/index.css" as *;
 
 .rvo-footer {
@@ -21,21 +21,20 @@
   &__container {
     &--sm {
       @extend .rvo-max-width-layout;
-
-      width: var(--rvo-layout-max-width-sm);
+      @extend .rvo-max-width-layout--sm;
     }
 
     &--md {
       @extend .rvo-max-width-layout;
-
-      width: var(--rvo-layout-max-width-md);
+      @extend .rvo-max-width-layout--md;
     }
 
     &--lg {
       @extend .rvo-max-width-layout;
-
-      width: var(--rvo-layout-max-width-lg);
+      @extend .rvo-max-width-layout--lg;
     }
+
+    // width: calc(100vw - #{var(--rvo-font-size-3xl)});
   }
 
   &__payoff {
@@ -47,13 +46,14 @@
 
   &__menu-container {
     display: grid;
-    gap: var(--rvo-footer-column-gap);
+    gap: var(--rvo-footer-column-gap-mobile);
     grid-template-columns: repeat(1, 1fr);
     overflow: hidden;
     padding-block-end: var(--rvo-footer-column-padding-block-end);
     padding-block-start: var(--rvo-footer-column-padding-block-start);
 
     @media (min-width: 552px) {
+      gap: var(--rvo-footer-column-gap);
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -68,11 +68,29 @@
     }
 
     &--secondary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--rvo-space-lg);
       margin-block-end: var(--rvo-space-lg);
       margin-block-start: var(--rvo-space-lg);
       padding-block-end: 0;
       padding-block-start: 0;
-      row-gap: var(--rvo-space-lg);
+    }
+
+    .rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+    .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+      color: var(--rvo-footer-column-itemlink-hover-color);
+      font-weight: var(--rvo-footer-column-itemlink-hover-font-weight);
+      text-decoration: underline;
+    }
+
+    .rvo-link:focus,
+    .rvo-link:focus-visible,
+    .rvo-link--focus {
+      background-color: var(--rvo-footer-column-itemlink-focus-background-color);
+      color: var(--rvo-footer-column-itemlink-focus-color);
+      font-weight: var(--rvo-footer-column-itemlink-focus-font-weight);
+      text-decoration: underline;
     }
   }
 
@@ -104,24 +122,6 @@
 
     &--horizontal {
       flex-direction: row;
-    }
-  }
-
-  &__menu-item {
-    .rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-    .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
-      color: var(--rvo-footer-column-itemlink-hover-color);
-      font-weight: var(--rvo-footer-column-itemlink-hover-font-weight);
-      text-decoration: underline;
-    }
-
-    .rvo-link:focus,
-    .rvo-link:focus-visible,
-    .rvo-link--focus {
-      background-color: var(--rvo-footer-column-itemlink-focus-background-color);
-      color: var(--rvo-footer-column-itemlink-focus-color);
-      font-weight: var(--rvo-footer-column-itemlink-focus-font-weight);
-      text-decoration: underline;
     }
   }
 }

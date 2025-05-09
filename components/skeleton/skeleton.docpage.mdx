@@ -1,14 +1,17 @@
 import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
 import documentation from "./README.md";
-import * as HeroStories from "./hero.stories";
+import * as SkeletonStories from "./skeleton.stories";
 import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 
-<Meta of={HeroStories} name="Documentatie" />
+<Meta of={SkeletonStories} name="Documentatie" />
 
 <Title />
 
-<Canvas of={HeroStories.Default} layout="padded" />
+## Preview
+
+<Canvas of={SkeletonStories.Default} layout="padded" />
+## Parameters
 <Controls />
 
 ## Documentatie
@@ -18,9 +21,3 @@ import { Changelog, Readme } from "../../packages/storybook/config/storybook-blo
 ## Changelog
 
 <Changelog markdown={changeLog} />
-
-## Dependencies
-
-_@nl-rvo/assets/images_
-_@nl-rvo/css-heading_
-_@nl-rvo/css-max-width-layout_

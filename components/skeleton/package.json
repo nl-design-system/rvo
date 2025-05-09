@@ -1,13 +1,13 @@
 {
-  "version": "1.3.0",
+  "version": "1.0.1",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
-  "name": "@nl-rvo/css-hero",
-  "description": "Hero CSS component",
+  "name": "@nl-rvo/skeleton",
+  "description": "Skeleton component",
   "keywords": [
     "nl-design-system",
     "css",
-    "hero"
+    "skeleton"
   ],
   "files": [
     "src/index.scss",
@@ -26,7 +26,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/hero"
+    "directory": "components/loader"
   },
   "devDependencies": {
     "@nl-rvo/build-utils-css": "workspace:*"

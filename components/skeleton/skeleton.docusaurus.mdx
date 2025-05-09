@@ -1,21 +1,20 @@
 ---
-title: Hero
+title: Skeleton
 hide_title: false
 hide_table_of_contents: true
 slug: .
 ---
 
 import Documentation from "./README.md";
-import Hero from "./src/template";
+import Skeleton from "./src/template.tsx";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
 
-{(() => {
-const props = { image: { src: 'images/www/home.jpg', alt: 'homepage image' } };
-return (
+## Standard component:
 
-<ComponentExample storyName="componenten-hero--default">
-  <Hero {...props} />
+<ComponentExample storyName="componenten-skeleton--default">
+  <Skeleton />
 </ComponentExample>
-); })()}
+
+## Documentatie
 
 <Documentation />

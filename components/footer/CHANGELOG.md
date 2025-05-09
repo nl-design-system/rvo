@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.5.1
+
+### Patch Changes
+
+- 8ebb0f5: Hover on secondary menu items in footer resolved and remove grid display from secondary footer menu
+
 ## 1.5.0
 
 ### Minor Changes

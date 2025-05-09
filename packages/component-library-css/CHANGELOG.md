@@ -1,5 +1,35 @@
 # @nl-rvo/component-library-css
 
+## 4.6.1
+
+### Patch Changes
+
+- e353f8e: Styling van Skeleton component toegevoegd aan @nl-rvo/component-library-css
+
+## 4.6.0
+
+### Minor Changes
+
+- 4a66507: Nieuw component genaamd Skeleton loader
+
+## 4.5.10
+
+### Patch Changes
+
+- 82d7db9: Added support to use img as a acceptable param for the hero image.
+
+## 4.5.9
+
+### Patch Changes
+
+- 8ebb0f5: Hover on secondary menu items in footer resolved and remove grid display from secondary footer menu
+
+## 4.5.8
+
+### Patch Changes
+
+- 061c377: Removed position relative from card with link indicator
+
 ## 4.5.7
 
 ### Patch Changes
