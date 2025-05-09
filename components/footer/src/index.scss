@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "../../max-width-layout/src";
+@use "../../max-width-layout/src" as *;
 @use "~@utrecht/page-footer-css/dist/index.css" as *;
 
 .rvo-footer {
@@ -33,8 +33,6 @@
       @extend .rvo-max-width-layout;
       @extend .rvo-max-width-layout--lg;
     }
-
-    width: calc(100vw - #{var(--rvo-font-size-3xl)});
   }
 
   &__payoff {
