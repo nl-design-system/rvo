@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-css
 
+## 4.6.3
+
+### Patch Changes
+
+- 22e4bed: Allign textarea remaining character to the right, instead of the left
+
+## 4.6.2
+
+### Patch Changes
+
+- 20cbb12: fix menubar shifts and submenu placement when grid is turned off
+
 ## 4.6.1
 
 ### Patch Changes

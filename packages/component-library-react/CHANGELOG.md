@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-react
 
+## 4.7.2
+
+### Patch Changes
+
+- 22e4bed: Allign textarea remaining character to the right, instead of the left
+
+## 4.7.1
+
+### Patch Changes
+
+- 20cbb12: fix menubar shifts and submenu placement when grid is turned off
+
 ## 4.7.0
 
 ### Minor Changes
