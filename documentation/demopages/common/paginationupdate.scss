@@ -35,9 +35,13 @@
   .rvo-pagination__next {
     display: flex;
 
-    .rvo-link:not(:hover),
-    .rvo-link:not(:focus) {
+    .rvo-link {
       text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 }

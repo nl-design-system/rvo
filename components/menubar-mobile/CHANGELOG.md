@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.4.3
+
+### Patch Changes
+
+- 20cbb12: fix menubar shifts and submenu placement when grid is turned off
+
 ## 1.4.2
 
 ### Patch Changes

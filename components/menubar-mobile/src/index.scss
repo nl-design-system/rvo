@@ -97,10 +97,6 @@
   }
 
   .rvo-mobile-menu__link--active {
-    font-weight: var(--rvo-topnav-item-active-font-weight);
-
-    &:hover {
-      font-weight: var(--rvo-topnav-item-active-font-weight) !important;
-    }
+    text-shadow: 0 0 0.5px currentColor;
   }
 }

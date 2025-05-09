@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.2.3
+
+### Patch Changes
+
+- 22e4bed: Allign textarea remaining character to the right, instead of the left
+
 ## 1.2.2
 
 ### Patch Changes

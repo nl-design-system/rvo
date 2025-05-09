@@ -1,5 +1,17 @@
 # `@nl-rvo/css-menubar`
 
+## 1.3.5
+
+### Patch Changes
+
+- 8fcf59c: Added width 100% to layout types and update linked components using this class
+
+## 1.3.4
+
+### Patch Changes
+
+- 20cbb12: fix menubar shifts and submenu placement when grid is turned off
+
 ## 1.3.3
 
 ### Patch Changes

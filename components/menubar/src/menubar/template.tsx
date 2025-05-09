@@ -18,7 +18,6 @@ export interface IMenuBarItem {
   icon?: IconType;
   link: string | ((event: React.MouseEvent) => void);
   align?: 'left' | 'right';
-  active?: boolean;
   useDivider?: boolean;
   submenu?: IMenuBarItem[];
 }
