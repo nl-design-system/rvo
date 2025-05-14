@@ -8,11 +8,12 @@ slug: .
 import Documentation from "./README.md";
 import ExpandableTable from "./src/template.tsx";
 import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+import { defaultArgs } from "./src/defaultArgs";
 
 ## Standard component:
 
 <ComponentExample storyName="componenten-expandable-table--default">
-  <ExpandableTable />
+  <ExpandableTable {...defaultArgs}>{defaultArgs.children}</ExpandableTable>
 </ComponentExample>
 
 ## Documentatie

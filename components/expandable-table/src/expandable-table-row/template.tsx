@@ -6,8 +6,8 @@ import Icon from '@nl-rvo/components/icon/src/template';
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactElement, useState } from 'react';
 import { TableCell, TableCellType } from '../table-cell/template';
-import { TableRow } from '../table-row/template';
-import { DetailsType } from './details/template';
+import TableRow from '../table-row/template';
+import { Details, DetailsType } from './details/template';
 
 export type ExpandableTableRowType = ReactElement<IExpandableTableRowProps>;
 
@@ -25,13 +25,11 @@ export const ExpandableTableRow: React.FC<IExpandableTableRowProps> = ({
   const toggleExpand = () => setIsOpen(!isOpen);
 
   const tableCells: TableCellType[] = React.Children.toArray(children).filter(
-    (child): child is TableCellType =>
-      React.isValidElement(child) && child.type && (child.type as any).displayName === 'TableCell',
+    (child): child is TableCellType => React.isValidElement(child) && child.type === TableCell,
   );
 
   const details: DetailsType = React.Children.toArray(children).find(
-    (child): child is DetailsType =>
-      React.isValidElement(child) && child.type && (child.type as any).displayName === 'Details',
+    (child): child is DetailsType => React.isValidElement(child) && child.type === Details,
   );
 
   const toggleCell: TableCellType = (
