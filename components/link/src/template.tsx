@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+import { Root, Slottable } from '@radix-ui/react-slot';
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -32,6 +33,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   target?: string;
   /** @uxpinpropname Content */
   children?: React.ReactNode;
+  asChild?: boolean;
 }
 
 export const argTypes = {
@@ -110,6 +112,7 @@ export const Link: React.FC<ILinkProps> = ({
   fullContainerLink = defaultArgs.fullContainerLink,
   className,
   children,
+  asChild = false,
   ...otherProps
 }: ILinkProps) => {
   // Parse icon markup
@@ -149,12 +152,17 @@ export const Link: React.FC<ILinkProps> = ({
     ),
     ...otherProps,
   };
+
+  const Component = asChild ? Root : 'a';
+
+  const linkProps = asChild ? {} : { href };
+
   return (
-    <a {...props} href={href}>
+    <Component {...props} {...linkProps}>
       {showIcon === 'before' && iconMarkup}
-      {children || content}
+      <Slottable>{children || content}</Slottable>
       {showIcon === 'after' && iconMarkup}
-    </a>
+    </Component>
   );
 };
 
