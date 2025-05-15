@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar`
 
+## 1.3.6
+
+### Patch Changes
+
+- d9727b9: Added width 100% to layout types and update linked components using this class
+
 ## 1.3.5
 
 ### Patch Changes
