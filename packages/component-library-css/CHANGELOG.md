@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-css
 
+## 4.7.0
+
+### Minor Changes
+
+- d9727b9: Table columns now have a optional size field allowing for default set widths
+
+### Patch Changes
+
+- d9727b9: Added width 100% to layout types and update linked components using this class
+
 ## 4.6.4
 
 ### Patch Changes
