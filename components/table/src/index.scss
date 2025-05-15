@@ -2,6 +2,8 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../../packages/component-library-css/src/collections/sizes.scss" as *;
+
 .rvo-table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -85,4 +87,10 @@
 .rvo-table-cell--numeric,
 .rvo-table-header--numeric {
   text-align: end;
+}
+
+@each $size in $rvo-sizes {
+  .rvo-table-header--#{$size} {
+    width: var(--rvo-table-header-size-#{$size});
+  }
 }

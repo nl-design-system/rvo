@@ -4,6 +4,7 @@
 * @license CC0-1.0
 */
 @use "./base.scss" as *;
+@use "./collections/sizes.scss" as *;
 @use "../../../components/accordion/src" as *;
 @use "../../../components/alert/src" as *;
 @use "../../../components/breadcrumbs/src" as *;
