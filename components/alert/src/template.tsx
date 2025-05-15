@@ -21,6 +21,7 @@ export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'conte
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   onClose?: (event: SyntheticEvent<HTMLButtonElement>) => void;
+  layout?: 'sm' | 'md' | 'lg';
 }
 
 export const argTypes = {
@@ -61,6 +62,7 @@ export const Alert: React.FC<IAlertProps> = ({
   padding = defaultArgs.padding,
   onClose,
   children,
+  layout,
   ...props
 }: IAlertProps) => {
   // State to control the visibility of the alert
@@ -97,21 +99,31 @@ export const Alert: React.FC<IAlertProps> = ({
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
 
   return (
-    <div className={clsx('rvo-alert', `rvo-alert--${kind}`, padding && `rvo-alert--padding-${padding}`)} {...props}>
-      {iconMarkup}
-      <div className="rvo-alert-text">
-        {heading && heading !== '' && <strong>{heading}</strong>}
-        <div>{contentMarkup}</div>
-      </div>
-      {closable && (
-        <Button
-          kind="subtle"
-          className="rvo-button__close"
-          label={<Icon icon="kruis" size="md" />}
-          aria-label="Sluiten"
-          onClick={handleClose}
-        />
+    <div
+      className={clsx(
+        'rvo-alert',
+        `rvo-alert--${kind}`,
+        padding && `rvo-alert--padding-${padding}`,
+        layout && 'rvo-alert--layout',
       )}
+      {...props}
+    >
+      <div className={clsx('rvo-alert__container', layout && `rvo-max-width-layout--${layout}`)}>
+        {iconMarkup}
+        <div className="rvo-alert-text">
+          {heading && heading !== '' && <strong>{heading}</strong>}
+          <div>{contentMarkup}</div>
+        </div>
+        {closable && (
+          <Button
+            kind="subtle"
+            className="rvo-button__close"
+            label={<Icon icon="kruis" size="md" />}
+            aria-label="Sluiten"
+            onClick={handleClose}
+          />
+        )}
+      </div>
     </div>
   );
 };

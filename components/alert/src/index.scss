@@ -2,11 +2,9 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../max-width-layout/src" as *;
 
 .rvo-alert {
-  align-items: flex-start;
-  display: flex;
-  gap: var(--rvo-alert-gap);
   padding-block-end: var(--rvo-alert-padding-block-end);
   padding-block-start: var(--rvo-alert-padding-block-start);
   padding-inline-end: var(--rvo-alert-padding-inline-end);
@@ -53,6 +51,12 @@
   padding-block-start: var(--rvo-alert-padding-2xl-padding-block-start);
   padding-inline-end: var(--rvo-alert-padding-2xl-padding-inline-end);
   padding-inline-start: var(--rvo-alert-padding-2xl-padding-inline-start);
+}
+
+.rvo-alert__container {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--rvo-alert-gap);
 }
 
 .rvo-alert p:first-child {
@@ -111,4 +115,9 @@
 
 .rvo-alert .rvo-link--logoblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
   color: var(--rvo-color-logoblauw);
+}
+
+.rvo-alert--layout {
+  display: flex;
+  justify-content: center;
 }
