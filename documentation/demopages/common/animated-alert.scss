@@ -1,0 +1,74 @@
+.rvo-demo-page--animated-alert {
+  .rvo-alert--animated-pop {
+    animation: rvo-alert-pop 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @keyframes rvo-alert-pop {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .rvo-alert--animated-slide {
+    animation: rvo-alert-slide 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @keyframes rvo-alert-slide {
+      0% {
+        opacity: 80%;
+        transform: translateX(-10px);
+      }
+
+      40% {
+        opacity: 100%;
+        transform: translateX(2px);
+      }
+
+      60% {
+        transform: translateX(-2px);
+      }
+
+      100% {
+        opacity: 100%;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .rvo-alert--animated-wiggle {
+    animation: rvo-alert-wiggle 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @keyframes rvo-alert-wiggle {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      20% {
+        transform: rotate(-2deg);
+      }
+
+      40% {
+        transform: rotate(1.5deg);
+      }
+
+      60% {
+        transform: rotate(-1deg);
+      }
+
+      80% {
+        transform: rotate(0.5deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
