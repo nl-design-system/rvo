@@ -47,8 +47,7 @@ export const Fieldset: React.FC<IFieldsetProps> = ({
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children
         ? parseContentMarkup(children)
-        : fields &&
-          fields.map((fieldProps) => <TextInputField key={fieldProps.id} fieldId={fieldProps.id} {...fieldProps} />)}
+        : fields && fields.map((fieldProps) => <TextInputField key={fieldProps.id} {...fieldProps} />)}
     </FieldsetUtrecht>
   );
 };
