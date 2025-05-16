@@ -207,6 +207,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/expandable-table:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/favicon: {}
 
   components/footer:
