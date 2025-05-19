@@ -1,20 +1,4 @@
-import {
-  ActionGroup,
-  Button,
-  CheckboxField,
-  Fieldset,
-  FileInputField,
-  Footer,
-  Header,
-  Heading,
-  LayoutFlow,
-  Link,
-  MenuBar,
-  RadioButtonField,
-  SelectField,
-  TextareaField,
-  TextInputField,
-} from '@nl-rvo/components';
+import { ActionGroup, Button, Fieldset, Footer, Header, LayoutFlow, MenuBar, TextInputField } from '@nl-rvo/components';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import '../../common/animated-alert.scss';
@@ -54,15 +38,9 @@ const AnimatedAlert = () => {
           <LayoutFlow gap="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
               <div className="rvo-form">
-                <LayoutFlow gap="sm">
+                <LayoutFlow gap="2xl">
+                  {/* Pop Alert + Form */}
                   <div>
-                    <Link content="Terug" href="#" showIcon="before" icon="terug" noUnderline={true} />
-                    <Heading type="h1">Formulier template</Heading>
-                    <p className="rvo-text--lg">
-                      <span className="rvo-text--bold">Voorbeeld van een paragraaf met grote tekst</span>. Deze
-                      paragraaf kan gebruikt worden als introductie voor het formulier. Door wie moet het formulier
-                      ingevuld worden en waar moet de klant rekening mee houden.
-                    </p>
                     <div className="rvo-alert rvo-alert--error rvo-alert--padding-md rvo-alert--animated-pop rvo-margin-block-end--md">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
@@ -71,10 +49,31 @@ const AnimatedAlert = () => {
                       ></span>
                       <div className="rvo-alert-text">
                         <div>
-                          <div>This alerts pops!</div>
+                          <div>Vul een geldige gebruikersnaam in. Alleen letters en cijfers zijn toegestaan.</div>
                         </div>
                       </div>
                     </div>
+                    <form>
+                      <div className="rvo-margin-block-end--md">
+                        <Fieldset legend="Keyboard inputs">
+                          <LayoutFlow>
+                            <TextInputField
+                              label="Gebruikersnaam"
+                              errorText="Gebruikersnaam mag geen speciale tekens bevatten."
+                              invalid={true}
+                            />
+                          </LayoutFlow>
+                        </Fieldset>
+                      </div>
+                      <ActionGroup>
+                        <Button kind="primary" size="md">
+                          Verstuur
+                        </Button>
+                      </ActionGroup>
+                    </form>
+                  </div>
+                  {/* Wiggle Alert + Form */}
+                  <div>
                     <div className="rvo-alert rvo-alert--error rvo-alert--padding-md rvo-alert--animated-wiggle rvo-margin-block-end--md">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
@@ -83,10 +82,31 @@ const AnimatedAlert = () => {
                       ></span>
                       <div className="rvo-alert-text">
                         <div>
-                          <div>This alerts wiggles!</div>
+                          <div>Het e-mailadres is ongeldig. Controleer het formaat en probeer het opnieuw.</div>
                         </div>
                       </div>
                     </div>
+                    <form>
+                      <div className="rvo-margin-block-end--md">
+                        <Fieldset legend="Keyboard inputs">
+                          <LayoutFlow>
+                            <TextInputField
+                              label="E-mailadres"
+                              errorText="Voer een geldig e-mailadres in, bijvoorbeeld naam@domein.nl."
+                              invalid={true}
+                            />
+                          </LayoutFlow>
+                        </Fieldset>
+                      </div>
+                      <ActionGroup>
+                        <Button kind="primary" size="md">
+                          Verstuur
+                        </Button>
+                      </ActionGroup>
+                    </form>
+                  </div>
+                  {/* Slide Alert + Form */}
+                  <div>
                     <div className="rvo-alert rvo-alert--error rvo-alert--padding-md rvo-alert--animated-slide rvo-margin-block-end--md">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
@@ -95,185 +115,34 @@ const AnimatedAlert = () => {
                       ></span>
                       <div className="rvo-alert-text">
                         <div>
-                          <div>This alerts wiggles!</div>
+                          <div>Het wachtwoord is te kort. Gebruik minimaal 8 tekens.</div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <form>
-                    <LayoutFlow>
-                      <div>
+                    <form>
+                      <div className="rvo-margin-block-end--md">
                         <Fieldset legend="Keyboard inputs">
-                          <TextInputField label="Text" />
-                          <TextInputField
-                            label="Text with helper text"
-                            helperText="This is a helper text which can be used for instructions."
-                          />
-                          <TextInputField label="Text" />
-                          <TextInputField label="Text with an error" errorText="This is an error" invalid={true} />
-                          <TextInputField label="Text with a warning" warningText="This is a warning" />
-                          <TextInputField
-                            label="Text with expandable helper text"
-                            helperText="This is a helper text which can be used for instructions."
-                            expandableHelperText={true}
-                            expandableHelperTextTitle="Expandable helper text"
-                          />
-                          <TextInputField label="Text disabled" disabled={true} />
-                          <TextInputField label="Text disabled with value" disabled={true} value="Value" />
-                          <TextInputField label="Number" validation="none" />
-                          <TextareaField label="Textarea" />
-                        </Fieldset>
-
-                        <Fieldset legend="Options">
-                          <RadioButtonField
-                            name="radio-buttons"
-                            label="Radio buttons"
-                            helperText="This is an helper text"
-                            options={[
-                              { id: 'optionA', label: 'Option A' },
-                              { id: 'optionB', label: 'Option B' },
-                              { id: 'optionC', label: 'Option C' },
-                              { id: 'optionD', label: 'Option D' },
-                            ]}
-                          ></RadioButtonField>
-                          <RadioButtonField
-                            name="radio-buttons-error"
-                            label="Radio buttons invalid"
-                            errorText="This is an error"
-                            invalid={true}
-                            options={[
-                              { id: 'optionA-error', label: 'Option A' },
-                              { id: 'optionB-error', label: 'Option B' },
-                              { id: 'optionC-error', label: 'Option C' },
-                              { id: 'optionD-error', label: 'Option D' },
-                            ]}
-                          ></RadioButtonField>
-
-                          <RadioButtonField
-                            name="radio-buttons-warning"
-                            label="Radio buttons with warning"
-                            warningText="This is a warning"
-                            options={[
-                              { id: 'optionA-warning', label: 'Option A' },
-                              { id: 'optionB-warning', label: 'Option B' },
-                              { id: 'optionC-warning', label: 'Option C' },
-                              { id: 'optionD-warning', label: 'Option D' },
-                            ]}
-                          ></RadioButtonField>
-
-                          <CheckboxField
-                            helperText="This is an helper text"
-                            label="Checkboxes"
-                            invalid={false}
-                            options={[
-                              { id: 'optionA-cb', label: 'Option A' },
-                              { id: 'optionB-cb', label: 'Option B' },
-                              { id: 'optionC-cb', label: 'Option C' },
-                              { id: 'optionD-cb', label: 'Option D' },
-                            ]}
-                          ></CheckboxField>
-
-                          <CheckboxField
-                            errorText="This is an error"
-                            label="Checkboxes with error"
-                            invalid={true}
-                            options={[
-                              { id: 'optionA-cb-error', label: 'Option A' },
-                              { id: 'optionB-cb-error', label: 'Option B' },
-                              { id: 'optionC-cb-error', label: 'Option C' },
-                              { id: 'optionD-cb-error', label: 'Option D' },
-                            ]}
-                          ></CheckboxField>
-
-                          <CheckboxField
-                            warningText="This is a warning"
-                            label="Checkboxes with a warning"
-                            invalid={false}
-                            options={[
-                              { id: 'optionA-cb-warning', label: 'Option A' },
-                              { id: 'optionB-cb-warning', label: 'Option B' },
-                              { id: 'optionC-cb-warning', label: 'Option C' },
-                              { id: 'optionD-cb-warning', label: 'Option D' },
-                            ]}
-                          ></CheckboxField>
-
-                          <SelectField
-                            label="Select"
-                            options={[
-                              { value: '1', label: 'Option #1' },
-                              { value: '2', label: 'Option #2' },
-                              { value: '3', label: 'Option #3' },
-                            ]}
-                          ></SelectField>
-                        </Fieldset>
-
-                        <Fieldset legend="Other">
-                          <FileInputField label="File" />
-                          <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                            <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
-                              <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">
-                                Date
-                              </label>
-                            </div>
-                            <input
-                              type="date"
-                              id="field"
-                              placeholder=""
-                              className="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--sm"
-                              value=""
+                          <LayoutFlow>
+                            <TextInputField
+                              label="Wachtwoord"
+                              errorText="Wachtwoord moet minimaal 8 tekens bevatten."
+                              invalid={true}
+                              type="password"
                             />
-                          </div>
-                          <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
-                            <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
-                              <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">
-                                Time
-                              </label>
-                            </div>
-                            <input
-                              type="time"
-                              id="field"
-                              placeholder=""
-                              className="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--sm"
-                              value=""
-                            />
-                          </div>
+                          </LayoutFlow>
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button
-                          kind="primary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
-                          Primary action
-                        </Button>
-                        <Button
-                          kind="secondary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
-                          Secondary action
+                        <Button kind="primary" size="md">
+                          Verstuur
                         </Button>
                       </ActionGroup>
-                    </LayoutFlow>
-                  </form>
+                    </form>
+                  </div>
                 </LayoutFlow>
               </div>
             </main>
           </LayoutFlow>
-
           <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
