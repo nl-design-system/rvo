@@ -161,3 +161,16 @@
     background-color: var(--_utrecht-button-appearance-focus-color, var(--_utrecht-button-focus-color));
   }
 }
+
+.utrecht-button--padding-none {
+  --utrecht-button-padding-block-end: 0;
+  --utrecht-button-padding-block-start: 0;
+  --utrecht-button-padding-inline-end: 0;
+  --utrecht-button-padding-inline-start: 0;
+}
+
+.utrecht-button--fit-content {
+  --utrecht-button-inline-size: auto;
+  --utrecht-button-min-inline-size: auto;
+  --utrecht-button-max-inline-size: auto;
+}

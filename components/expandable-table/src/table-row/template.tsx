@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import Button from '@nl-rvo/components/button/src/template';
+import Button, { IButtonProps } from '@nl-rvo/components/button/src/template';
 import TableCell from '@nl-rvo/components/expandable-table/src/table-cell/template';
 import Icon from '@nl-rvo/components/icon/src/template';
 import clsx from 'clsx';
@@ -29,10 +29,15 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
 
   const renderExpandableButton = (cell: TableCellType): TableCellType => {
     const { 'aria-controls': controls, className, ...cellProps } = cell.props;
+    const buttonProps: IButtonProps = {
+      className: 'utrecht-button--padding-none utrecht-button--fit-content',
+      'aria-controls': controls,
+      'aria-expanded': visible,
+    };
 
     return (
       <TableCell className={clsx('rvo-table-cell--fit-content', className)} {...cellProps}>
-        <Button kind="tertiary" aria-controls={controls} aria-expanded={visible} onClick={() => setVisible(!visible)}>
+        <Button kind="tertiary" size="xs" onClick={() => setVisible(!visible)} {...buttonProps}>
           <Icon icon={visible ? 'delta-omhoog' : 'delta-omlaag'} size="md" color="hemelblauw" />
         </Button>
       </TableCell>
