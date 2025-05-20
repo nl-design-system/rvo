@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.7.1
+
+### Patch Changes
+
+- 0157ba8: Text Area classes where not properly set in scss file
+
 ## 4.7.0
 
 ### Minor Changes

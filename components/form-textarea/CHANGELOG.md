@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.2.4
+
+### Patch Changes
+
+- 0157ba8: Text Area classes where not properly set in scss file
+
 ## 1.2.3
 
 ### Patch Changes
