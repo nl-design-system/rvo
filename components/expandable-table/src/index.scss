@@ -4,7 +4,7 @@
  */
 .rvo-table {
   border-spacing: 0;
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
 }
 
@@ -57,9 +57,9 @@
   border-left: 6px solid transparent;
 }
 
-.rvo-table-header:first-child,
-.rvo-table-cell:first-child {
-  width: 16px;
+.rvo-table-cell--fit-content {
+  min-width: fit-content;
+  width: 0;
 }
 
 .rvo-expandable-table-row--open td:first-child,

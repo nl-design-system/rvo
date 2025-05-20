@@ -2,33 +2,61 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
+import Button from '@nl-rvo/components/button/src/template';
+import TableCell from '@nl-rvo/components/expandable-table/src/table-cell/template';
+import Icon from '@nl-rvo/components/icon/src/template';
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactElement } from 'react';
-import { DetailsType } from '../expandable-table-row/details/template';
+import React, { HTMLAttributes, ReactElement, useState } from 'react';
 import { TableCellType } from '../table-cell/template';
 
 export type TableRowType = ReactElement<ITableRowProps>;
 
 export interface ITableRowProps extends HTMLAttributes<HTMLTableRowElement> {
-  isExpandable?: boolean;
-  isHeader?: boolean;
-  className?: string;
-  children?: TableCellType | TableCellType[] | DetailsType;
+  children?: TableCellType | TableCellType[];
+  expanded?: boolean;
 }
 
-export const TableRow: React.FC<ITableRowProps> = ({
-  isExpandable = false,
-  isHeader = false,
-  children,
-  className,
-  ...otherProps
-}: ITableRowProps) => {
+const Row: React.FC<ITableRowProps> = ({ children, className, ...otherProps }: ITableRowProps) => {
   return (
-    <tr className={clsx('rvo-table-row', 'rvo-expandable-table-row', className)} {...otherProps}>
-      {!isExpandable &&
-        (isHeader ? <th scope="col" className="rvo-table-header"></th> : <td className="rvo-table-cell"></td>)}
+    <tr className={clsx('rvo-table-row', className)} {...otherProps}>
       {children}
     </tr>
+  );
+};
+
+export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false, ...otherProps }: ITableRowProps) => {
+  const [visible, setVisible] = useState(expanded);
+
+  const renderExpandableButton = (cell: TableCellType): TableCellType => {
+    const { 'aria-controls': controls, className, ...cellProps } = cell.props;
+
+    return (
+      <TableCell className={clsx('rvo-table-cell--fit-content', className)} {...cellProps}>
+        <Button kind="tertiary" aria-controls={controls} aria-expanded={visible} onClick={() => setVisible(!visible)}>
+          <Icon icon={visible ? 'delta-omhoog' : 'delta-omlaag'} size="md" color="hemelblauw" />
+        </Button>
+      </TableCell>
+    );
+  };
+
+  const renderExpandableRow = (cell: TableCellType): TableRowType | undefined => {
+    const { 'aria-controls': id } = cell.props;
+
+    return cell.props.expandable ? (
+      <Row id={id} hidden={!visible} className="rvo-expandable-table-row">
+        <TableCell colSpan={Array.isArray(children) ? children.length : undefined}>{cell.props.children}</TableCell>
+      </Row>
+    ) : undefined;
+  };
+
+  const renderCell = (cell: TableCellType): TableCellType =>
+    cell.props.expandable ? renderExpandableButton(cell) : cell;
+
+  return (
+    <>
+      <Row {...otherProps}>{React.Children.map(children, renderCell)}</Row>
+      {React.Children.map(children, renderExpandableRow)}
+    </>
   );
 };
 
