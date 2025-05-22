@@ -28,6 +28,8 @@ export interface IFieldProps {
   children?: ReactNode | undefined;
 }
 
+export type FieldPropsWithoutFieldId = Omit<IFieldProps, 'fieldId'>;
+
 export const argTypes = {
   fieldId: {
     control: 'text',
