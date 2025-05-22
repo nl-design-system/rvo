@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import Button, { IButtonProps } from '@nl-rvo/components/button/src/template';
-import TableCell from '@nl-rvo/components/expandable-table/src/table-cell/template';
+import TableCell, { ITableCellProps } from '@nl-rvo/components/expandable-table/src/table-cell/template';
 import Icon from '@nl-rvo/components/icon/src/template';
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactElement, useState } from 'react';
@@ -29,8 +29,21 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
 
   const isExpandable: boolean = !!React.Children.map(children, (child) => child).find((cell) => cell.props.expandable);
 
-  const renderExpandableButton = (cell: TableCellType): TableCellType => {
-    const { 'aria-controls': controls, className, ...cellProps } = cell.props;
+  const computeRowSpan = (cell: TableCellType, index: number): number | undefined =>
+    visible && index === 0 && cell.props.expandable ? 2 : undefined;
+
+  const computeCellSpan = (index: number): number | undefined => {
+    const count: number | undefined = Array.isArray(children) ? children.length : undefined;
+    return count && index === 0 ? count - 1 : count;
+  };
+
+  const renderExpandableButton = (cell: TableCellType, index: number): TableCellType => {
+    const { 'aria-controls': controls, className, ...otherProps } = cell.props;
+    const cellProps: ITableCellProps = {
+      className: clsx('rvo-table-cell--expandable-button', className),
+      rowSpan: computeRowSpan(cell, index),
+      ...otherProps,
+    };
     const buttonProps: IButtonProps = {
       className: 'utrecht-button--padding-none utrecht-button--fit-content',
       'aria-controls': controls,
@@ -38,12 +51,7 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
     };
 
     return (
-      <TableCell
-        rowSpan={visible ? 2 : 1}
-        valign="top"
-        className={clsx('rvo-table-cell--expandable-button', className)}
-        {...cellProps}
-      >
+      <TableCell {...cellProps}>
         <Button kind="tertiary" size="xs" onClick={() => setVisible(!visible)} {...buttonProps}>
           <Icon icon={visible ? 'delta-omhoog' : 'delta-omlaag'} size="md" color="hemelblauw" />
         </Button>
@@ -51,18 +59,18 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
     );
   };
 
-  const renderExpandableRow = (cell: TableCellType): TableRowType | undefined => {
+  const renderExpandableRow = (cell: TableCellType, index: number): TableRowType | undefined => {
     const { 'aria-controls': id } = cell.props;
 
     return cell.props.expandable ? (
       <Row id={id} hidden={!visible}>
-        <TableCell colSpan={Array.isArray(children) ? children.length : undefined}>{cell.props.children}</TableCell>
+        <TableCell colSpan={computeCellSpan(index)}>{cell.props.children}</TableCell>
       </Row>
     ) : undefined;
   };
 
-  const renderCell = (cell: TableCellType): TableCellType =>
-    cell.props.expandable ? renderExpandableButton(cell) : cell;
+  const renderCell = (cell: TableCellType, index: number): TableCellType =>
+    cell.props.expandable ? renderExpandableButton(cell, index) : cell;
 
   return (
     <>
