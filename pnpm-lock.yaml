@@ -178,10 +178,6 @@ importers:
         version: link:../../packages/build-utils-css
 
   components/card-experimental:
-    dependencies:
-      '@radix-ui/react-slot':
-        specifier: 1.2.2
-        version: 1.2.2(@types/react@18.2.65)(react@18.2.0)
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -453,10 +449,6 @@ importers:
         version: link:../../packages/build-utils-css
 
   components/link:
-    dependencies:
-      '@radix-ui/react-slot':
-        specifier: 1.2.2
-        version: 1.2.2(@types/react@18.2.65)(react@18.2.0)
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -3719,15 +3711,6 @@ packages:
       '@types/react':
         optional: true
 
-  '@radix-ui/react-compose-refs@1.1.2':
-    resolution: {integrity: sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==}
-    peerDependencies:
-      '@types/react': '*'
-      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
   '@radix-ui/react-context@1.0.1':
     resolution: {integrity: sha512-ebbrdFoYTcuZ0v4wG5tedGnp9tzcV8awzsxYph7gXUyvnNLuTIcCk1q17JEbnVhXAKG9oX3KtchwiMIAYp9NLg==}
     peerDependencies:
@@ -3919,15 +3902,6 @@ packages:
 
   '@radix-ui/react-slot@1.1.2':
     resolution: {integrity: sha512-YAKxaiGsSQJ38VzKH86/BPRC4rh+b1Jpa+JneA5LRE7skmLPNAyeG8kPJj/oo4STLvlrs8vkf/iYyc3A5stYCQ==}
-    peerDependencies:
-      '@types/react': '*'
-      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
-  '@radix-ui/react-slot@1.2.2':
-    resolution: {integrity: sha512-y7TBO4xN4Y94FvcWIOIh18fM4R1A8S4q1jhoz4PNzOoHsFcN8pogcFmZrTYAm4F9VRUrWP/Mw7xSKybIeRI+CQ==}
     peerDependencies:
       '@types/react': '*'
       react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
@@ -18975,12 +18949,6 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.2.65
 
-  '@radix-ui/react-compose-refs@1.1.2(@types/react@18.2.65)(react@18.2.0)':
-    dependencies:
-      react: 18.2.0
-    optionalDependencies:
-      '@types/react': 18.2.65
-
   '@radix-ui/react-context@1.0.1(@types/react@18.2.65)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.0
@@ -19170,13 +19138,6 @@ snapshots:
   '@radix-ui/react-slot@1.1.2(@types/react@18.2.65)(react@18.2.0)':
     dependencies:
       '@radix-ui/react-compose-refs': 1.1.1(@types/react@18.2.65)(react@18.2.0)
-      react: 18.2.0
-    optionalDependencies:
-      '@types/react': 18.2.65
-
-  '@radix-ui/react-slot@1.2.2(@types/react@18.2.65)(react@18.2.0)':
-    dependencies:
-      '@radix-ui/react-compose-refs': 1.1.2(@types/react@18.2.65)(react@18.2.0)
       react: 18.2.0
     optionalDependencies:
       '@types/react': 18.2.65

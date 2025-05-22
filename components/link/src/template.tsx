@@ -2,13 +2,17 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import { Root, Slottable } from '@radix-ui/react-slot';
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconColors, options as iconOptions } from '../../icon/src/template';
 import { IconType } from '../../icon/src/types';
 import './index.scss';
+
+type LinkStyleProps = {
+  className: string;
+} & Omit<React.HTMLAttributes<HTMLAnchorElement>, 'className'>;
+
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   /** @uxpinignoreprop */
   content?: string;
@@ -33,7 +37,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   target?: string;
   /** @uxpinpropname Content */
   children?: React.ReactNode;
-  asChild?: boolean;
+  LinkComponent?: React.ComponentType<{ href: string; children: React.ReactNode; linkProps: LinkStyleProps }>;
 }
 
 export const argTypes = {
@@ -112,7 +116,7 @@ export const Link: React.FC<ILinkProps> = ({
   fullContainerLink = defaultArgs.fullContainerLink,
   className,
   children,
-  asChild = false,
+  LinkComponent,
   ...otherProps
 }: ILinkProps) => {
   // Parse icon markup
@@ -131,7 +135,7 @@ export const Link: React.FC<ILinkProps> = ({
     ariaLabel: iconAriaLabel,
   });
 
-  const props = {
+  const props: LinkStyleProps = {
     className: clsx(
       'rvo-link',
       className,
@@ -153,16 +157,26 @@ export const Link: React.FC<ILinkProps> = ({
     ...otherProps,
   };
 
-  const Component = asChild ? Root : 'a';
+  const linkContent = (
+    <>
+      {showIcon === 'before' && iconMarkup}
+      {children || content}
+      {showIcon === 'after' && iconMarkup}
+    </>
+  );
 
-  const linkProps = asChild ? {} : { href };
+  if (LinkComponent && href) {
+    return (
+      <LinkComponent href={href} linkProps={props}>
+        {linkContent}
+      </LinkComponent>
+    );
+  }
 
   return (
-    <Component {...props} {...linkProps}>
-      {showIcon === 'before' && iconMarkup}
-      <Slottable>{children || content}</Slottable>
-      {showIcon === 'after' && iconMarkup}
-    </Component>
+    <a href={href} {...props}>
+      {linkContent}
+    </a>
   );
 };
 
