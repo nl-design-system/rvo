@@ -27,6 +27,8 @@ const Row: React.FC<ITableRowProps> = ({ children, className, ...otherProps }: I
 export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false, ...otherProps }: ITableRowProps) => {
   const [visible, setVisible] = useState(expanded);
 
+  const isExpandable: boolean = !!React.Children.map(children, (child) => child).find((cell) => cell.props.expandable);
+
   const renderExpandableButton = (cell: TableCellType): TableCellType => {
     const { 'aria-controls': controls, className, ...cellProps } = cell.props;
     const buttonProps: IButtonProps = {
@@ -36,7 +38,12 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
     };
 
     return (
-      <TableCell className={clsx('rvo-table-cell--fit-content', className)} {...cellProps}>
+      <TableCell
+        rowSpan={visible ? 2 : 1}
+        valign="top"
+        className={clsx('rvo-table-cell--expandable-button', className)}
+        {...cellProps}
+      >
         <Button kind="tertiary" size="xs" onClick={() => setVisible(!visible)} {...buttonProps}>
           <Icon icon={visible ? 'delta-omhoog' : 'delta-omlaag'} size="md" color="hemelblauw" />
         </Button>
@@ -48,7 +55,7 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
     const { 'aria-controls': id } = cell.props;
 
     return cell.props.expandable ? (
-      <Row id={id} hidden={!visible} className="rvo-expandable-table-row">
+      <Row id={id} hidden={!visible}>
         <TableCell colSpan={Array.isArray(children) ? children.length : undefined}>{cell.props.children}</TableCell>
       </Row>
     ) : undefined;
@@ -59,7 +66,12 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
 
   return (
     <>
-      <Row {...otherProps}>{React.Children.map(children, renderCell)}</Row>
+      <Row
+        className={clsx(isExpandable && 'rvo-expandable-table-row', visible && 'rvo-expandable-table-row--open')}
+        {...otherProps}
+      >
+        {React.Children.map(children, renderCell)}
+      </Row>
       {React.Children.map(children, renderExpandableRow)}
     </>
   );
