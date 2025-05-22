@@ -3,23 +3,23 @@ import React from 'react';
 import Link, { ILinkProps } from '../../../link/src/template';
 import { defaultArgs } from '../defaultArgs';
 
-export interface ICardLinkProps {
+export interface ICardLinkProps extends Pick<ILinkProps, 'href' | 'LinkComponent'> {
   children?: React.ReactNode;
   fullCardLink?: boolean;
   showLinkIndicator?: boolean;
 }
 
-const CardLink: React.FC<ICardLinkProps & Pick<ILinkProps, 'href' | 'asChild'>> = ({
+const CardLink: React.FC<ICardLinkProps> = ({
   href,
-  asChild,
   children,
   fullCardLink = defaultArgs.fullCardLink,
+  LinkComponent,
 }) => {
   return (
     <Link
-      asChild={asChild}
       className={clsx('rvo-card__link', { 'rvo-card__full-card-link': fullCardLink })}
       href={href}
+      LinkComponent={LinkComponent}
     >
       {children}
     </Link>

@@ -5,20 +5,20 @@
 
 import clsx from 'clsx';
 import React from 'react';
-import CardContent, { ICardContentProps } from './components/CardContent';
+import CardContent from './components/CardContent';
 import CardImage, { ICardImageProps } from './components/CardImage';
 import CardLink, { ICardLinkProps } from './components/CardLink';
-import CardTitle, { ICardTitleProps } from './components/CardTitle';
+import CardTitle from './components/CardTitle';
 import './index.scss';
 import { defaultArgs } from './defaultArgs';
 import Icon from '../../icon/src/template';
 import { filterComponents, getChildComponent, getChildComponentPropValue } from '../../utils/getChildComponent';
 
 interface CardComponents {
-  Content: React.FC<ICardContentProps>;
-  Image: React.FC<ICardImageProps>;
-  Link: React.FC<ICardLinkProps>;
-  Title: React.FC<ICardTitleProps>;
+  Content: typeof CardContent;
+  Image: typeof CardImage;
+  Link: typeof CardLink;
+  Title: typeof CardTitle;
 }
 
 export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
