@@ -1,5 +1,33 @@
 # @nl-rvo/component-library-css
 
+## 4.7.1
+
+### Patch Changes
+
+- 0157ba8: Text Area classes where not properly set in scss file
+
+## 4.7.0
+
+### Minor Changes
+
+- d9727b9: Table columns now have a optional size field allowing for default set widths
+
+### Patch Changes
+
+- d9727b9: Added width 100% to layout types and update linked components using this class
+
+## 4.6.4
+
+### Patch Changes
+
+- 8fcf59c: Added width 100% to layout types and update linked components using this class
+
+## 4.6.3
+
+### Patch Changes
+
+- 22e4bed: Allign textarea remaining character to the right, instead of the left
+
 ## 4.6.2
 
 ### Patch Changes

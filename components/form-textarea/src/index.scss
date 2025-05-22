@@ -2,49 +2,50 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../../layout-flow/src";
 @use "~@utrecht/textarea-css/dist/index.css" as *;
 @use "~@utrecht/textbox-css/dist/index.css" as *;
 
-.utrecht-textbox {
+.utrecht-textarea {
   height: 48px;
 }
 
-textarea.utrecht-textbox {
+textarea.utrecht-textarea {
   min-height: 96px;
   resize: vertical;
 }
 
-.utrecht-textbox:disabled,
-.utrecht-textbox[aria-disabled="true"],
-.utrecht-textbox.utrecht-textbox--disabled {
+.utrecht-textarea:disabled,
+.utrecht-textarea[aria-disabled="true"],
+.utrecht-textarea.utrecht-textarea--disabled {
   outline: none;
 }
 
-.utrecht-textbox:focus,
-.utrecht-textbox--focus {
+.utrecht-textarea:focus,
+.utrecht-textarea--focus {
   outline-offset: var(--rvo-textbox-outline-offset);
 }
 
-.utrecht-textbox--focus.utrecht-textbox--invalid,
-.utrecht-textbox:focus.utrecht-textbox--invalid,
-.utrecht-textbox--focus.utrecht-textbox:invalid,
-.utrecht-textbox:focus.utrecht-textbox:invalid {
+.utrecht-textarea--focus.utrecht-textarea--invalid,
+.utrecht-textarea:focus.utrecht-textarea--invalid,
+.utrecht-textarea--focus.utrecht-textarea:invalid,
+.utrecht-textarea:focus.utrecht-textarea:invalid {
   border-color: var(--rvo-textbox-invalid-focus-border-color);
   outline-color: var(--rvo-textbox-invalid-focus-outline-color);
 }
 
-.utrecht-textbox--xs {
+.utrecht-textarea--xs {
   width: var(--rvo-textbox-xs-width);
 }
 
-.utrecht-textbox--sm {
+.utrecht-textarea--sm {
   width: var(--rvo-textbox-sm-width);
 }
 
-.utrecht-textbox--md {
+.utrecht-textarea--md {
   width: var(--rvo-textbox-md-width);
 }
 
-.utrecht-textbox-remaining-chars {
-  align-self: flex-start;
+.utrecht-textarea-remaining-chars {
+  align-self: flex-end;
 }

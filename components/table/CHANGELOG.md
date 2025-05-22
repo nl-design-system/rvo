@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.4.0
+
+### Minor Changes
+
+- d9727b9: Table columns now have a optional size field allowing for default set widths
+
 ## 1.3.2
 
 ### Patch Changes

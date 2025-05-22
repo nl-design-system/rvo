@@ -14,6 +14,7 @@ export interface ITableColumnProps extends HTMLAttributes<HTMLDivElement> {
   type?: 'numeric';
   sortable?: boolean;
   sortDirection?: 'ASC' | 'DESC' | '';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   key?: string;
 }
 
@@ -113,6 +114,7 @@ export const Table: React.FC<ITableProps> = ({
                     column.type === 'numeric' && 'rvo-table-header--numeric',
                     (column.sortDirection === 'ASC' || column.sortDirection === 'DESC') &&
                       'rvo-table-header--active-sort',
+                    column.size && `rvo-table-header--${column.size}`,
                   )}
                   onClick={column.sortable ? () => handleSort(index) : undefined}
                 >

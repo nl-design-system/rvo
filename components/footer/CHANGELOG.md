@@ -1,5 +1,17 @@
 # `@nl-rvo/css-footer`
 
+## 1.5.3
+
+### Patch Changes
+
+- d9727b9: Added width 100% to layout types and update linked components using this class
+
+## 1.5.2
+
+### Patch Changes
+
+- 8fcf59c: Added width 100% to layout types and update linked components using this class
+
 ## 1.5.1
 
 ### Patch Changes

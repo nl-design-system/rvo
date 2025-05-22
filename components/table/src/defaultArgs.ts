@@ -3,7 +3,7 @@ import { ITableProps } from './template';
 export const defaultArgs: ITableProps = {
   description: 'Table description.',
   columns: [
-    { label: 'Title', sortable: true },
+    { label: 'Title', sortable: true, size: 'md' },
     { label: 'Text', sortable: true, sortDirection: 'ASC' },
     { label: 'Price ($)', sortable: true, type: 'numeric' },
     { label: 'Link', sortable: true },

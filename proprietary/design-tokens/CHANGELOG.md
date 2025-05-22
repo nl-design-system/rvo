@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.8.0
+
+### Minor Changes
+
+- d9727b9: Table columns now have a optional size field allowing for default set widths
+
 ## 1.7.4
 
 ### Patch Changes
