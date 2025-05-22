@@ -7,6 +7,19 @@ type BorderDesignTokensProps = {
 };
 
 export const BorderDesignTokens = ({ tokens }: BorderDesignTokensProps) => {
+  const renderBordertext = (borderName: string) => {
+    switch (borderName) {
+      case 'sm':
+        return 'Small';
+      case 'md':
+        return 'Medium';
+      case 'xl':
+        return 'Extra large';
+      default:
+        return 'not found';
+    }
+  };
+
   return (
     <div className="rvo-design-tokens__container">
       {tokens.map(({ path, attributes, value, name }) => {
@@ -24,7 +37,7 @@ export const BorderDesignTokens = ({ tokens }: BorderDesignTokensProps) => {
               />
             </div>
             <div className="rvo-design-tokens__column">
-              <strong>{attributes.item.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())}</strong>
+              <strong>{renderBordertext(attributes.item)}</strong>
               <div>{value}</div>
             </div>
             <code>{path2css(path)}</code>
