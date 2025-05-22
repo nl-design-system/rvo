@@ -13,6 +13,18 @@
     text-decoration: underline;
     text-underline-offset: 30%;
   }
+
+  &--icon-before {
+    .utrecht-icon {
+      margin-right: 4px;
+    }
+  }
+
+  &--icon-after {
+    .utrecht-icon {
+      margin-left: 4px;
+    }
+  }
 }
 
 // Subtle button
