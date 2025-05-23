@@ -20,7 +20,12 @@ export interface ITableProps extends HTMLAttributes<HTMLTableElement> {
   children?: TableChild | TableChild[];
 }
 
-export const Table: React.FC<ITableProps> = ({ caption, children, className, ...otherProps }: ITableProps) => {
+export const ExpandableTable: React.FC<ITableProps> = ({
+  caption,
+  children,
+  className,
+  ...otherProps
+}: ITableProps) => {
   return (
     <div role="region" className={clsx('rvo-table--responsive', className)} {...otherProps}>
       <table className="rvo-expandable-table">
@@ -31,4 +36,4 @@ export const Table: React.FC<ITableProps> = ({ caption, children, className, ...
   );
 };
 
-export default Table;
+export default ExpandableTable;

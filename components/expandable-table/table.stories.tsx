@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './src/defaultArgs';
-import Table from './src/template';
+import ExpandableTable from './src/template';
 
 const argTypes = {
   tableDescription: {
@@ -15,9 +15,9 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof Table> = {
+const meta: Meta<typeof ExpandableTable> = {
   title: 'Experimentele Componenten/ExpandableTable',
-  component: Table,
+  component: ExpandableTable,
   args: defaultArgs,
   argTypes,
   parameters: {
@@ -37,6 +37,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Table',
+  name: 'Expandable Table',
   args: defaultArgs,
 };
