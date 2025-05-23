@@ -10,23 +10,23 @@ export const defaultArgs: ITableProps = {
     <>
       <TableHead>
         <TableRow>
-          <TableCell header>Title</TableCell>
           <TableCell header />
+          <TableCell header>Title</TableCell>
           <TableCell header>Price</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         <TableRow id="foo">
-          <TableCell>Title value 1</TableCell>
           <TableCell aria-controls="first-title-descr" expandable>
             <h1>Expandable Titel</h1>
             <p>Meer content hier...</p>
           </TableCell>
+          <TableCell>Title value 1</TableCell>
           <TableCell>3,50</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell>Title value 2</TableCell>
           <TableCell />
+          <TableCell>Title value 2</TableCell>
           <TableCell>4,28</TableCell>
         </TableRow>
       </TableBody>
