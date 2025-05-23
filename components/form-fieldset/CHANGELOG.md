@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-fieldset`
 
+## 1.3.0
+
+### Minor Changes
+
+- ca618f4: The fieldId prop is no longer mandatory and the for attribute is now derived from the id prop instead.
+
 ## 1.2.0
 
 ### Minor Changes
