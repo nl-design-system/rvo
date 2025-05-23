@@ -1,8 +1,4 @@
 import { defaultArgs } from '../defaultArgs';
-import ExpandableTable from '../template';
+import Table from '../template';
 
-export default (
-  <ExpandableTable uxpId="expandableTable" {...defaultArgs}>
-    {defaultArgs.children}
-  </ExpandableTable>
-);
+export default <Table {...defaultArgs}>{defaultArgs.children}</Table>;

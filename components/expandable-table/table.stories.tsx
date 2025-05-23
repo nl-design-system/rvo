@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './src/defaultArgs';
-import ExpandableTable from './src/template';
+import Table from './src/template';
 
 const argTypes = {
   tableDescription: {
@@ -13,24 +13,22 @@ const argTypes = {
       type: 'text',
     },
   },
-  children: {
-    control: {
-      type: 'object',
-    },
-  },
 };
 
-const meta: Meta<typeof ExpandableTable> = {
-  title: 'Componenten/ExpandableTable',
-  component: ExpandableTable,
+const meta: Meta<typeof Table> = {
+  title: 'Experimentele Componenten/ExpandableTable',
+  component: Table,
   args: defaultArgs,
   argTypes,
   parameters: {
+    controls: {
+      exclude: ['children'],
+    },
     status: {
-      type: 'PRODUCTION',
+      type: 'WORK IN PROGRESS',
     },
     docusaurus: {
-      link: 'expandable-table',
+      link: 'table',
     },
   },
 };
@@ -39,6 +37,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Expandable Table',
+  name: 'Table',
   args: defaultArgs,
 };

@@ -5,32 +5,30 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { TableBodyType } from './table-body/template';
+import { TableFooterType } from './table-footer/template';
 import { TableHeadType } from './table-head/template';
 import './index.scss';
 
-export interface IExpandableTableProps extends HTMLAttributes<HTMLTableElement> {
+type TableChild = TableHeadType | TableBodyType | TableFooterType;
+
+export interface ITableProps extends HTMLAttributes<HTMLTableElement> {
   /** Omschrijving van de tabel **/
-  tableDescription?: string;
+  caption?: string;
   /** Aanvullende classes **/
   className?: string;
   /** Children mogen alleen TableHead en TableBody zijn **/
-  children?: TableHeadType | TableBodyType | (TableHeadType | TableBodyType)[];
+  children?: TableChild | TableChild[];
 }
 
-export const ExpandableTable: React.FC<IExpandableTableProps> = ({
-  tableDescription,
-  children,
-  className,
-  ...otherProps
-}: IExpandableTableProps) => {
+export const Table: React.FC<ITableProps> = ({ caption, children, className, ...otherProps }: ITableProps) => {
   return (
     <div role="region" className={clsx('rvo-table--responsive', className)} {...otherProps}>
-      <table className="rvo-table rvo-expandable-table">
-        <caption className="rvo-caption">{tableDescription}</caption>
+      <table className="rvo-expandable-table">
+        {caption && <caption className="rvo-caption">{caption}</caption>}
         {children}
       </table>
     </div>
   );
 };
 
-export default ExpandableTable;
+export default Table;

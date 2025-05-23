@@ -4,14 +4,12 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactElement } from 'react';
-import { ExpandableTableRowType } from '../expandable-table-row/template';
 import { TableRowType } from '../table-row/template';
 
 export type TableBodyType = ReactElement<ITableBodyProps>;
 
 export interface ITableBodyProps extends HTMLAttributes<HTMLTableSectionElement> {
-  className?: string;
-  children?: TableRowType | TableRowType[] | ExpandableTableRowType | ExpandableTableRowType[];
+  children?: TableRowType | TableRowType[];
 }
 
 export const TableBody: React.FC<ITableBodyProps> = ({ children, className, ...otherProps }: ITableBodyProps) => {

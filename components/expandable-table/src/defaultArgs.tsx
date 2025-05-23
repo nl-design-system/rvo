@@ -1,30 +1,34 @@
-import { ExpandableTableRowExample } from './expandable-table-row/example';
-import TableBody from './table-body/template';
-import TableCell from './table-cell/template';
-import TableHead from './table-head/template';
-import TableRow from './table-row/template';
-import { IExpandableTableProps } from './template';
+import TableBody from '@nl-rvo/components/expandable-table/src/table-body/template';
+import TableCell from '@nl-rvo/components/expandable-table/src/table-cell/template';
+import TableHead from '@nl-rvo/components/expandable-table/src/table-head/template';
+import TableRow from '@nl-rvo/components/expandable-table/src/table-row/template';
+import { ITableProps } from './template';
 
-export const defaultArgs: IExpandableTableProps = {
-  tableDescription: 'My table description',
+export const defaultArgs: ITableProps = {
+  caption: 'My table description',
   children: (
     <>
       <TableHead>
-        <TableRow isHeader>
-          <TableCell isHeader>Kolom A</TableCell>
-          <TableCell isHeader>Kolom B</TableCell>
-          <TableCell isHeader>Kolom C</TableCell>
-          <TableCell isHeader>Kolom D</TableCell>
+        <TableRow>
+          <TableCell header>Title</TableCell>
+          <TableCell header />
+          <TableCell header>Price</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        <TableRow>
-          <TableCell>Cell A1</TableCell>
-          <TableCell>Cell A2</TableCell>
-          <TableCell>Cell A3</TableCell>
-          <TableCell>Cell A4</TableCell>
+        <TableRow id="foo">
+          <TableCell>Title value 1</TableCell>
+          <TableCell aria-controls="first-title-descr" expandable>
+            <h1>Expandable Titel</h1>
+            <p>Meer content hier...</p>
+          </TableCell>
+          <TableCell>3,50</TableCell>
         </TableRow>
-        <ExpandableTableRowExample />
+        <TableRow>
+          <TableCell>Title value 2</TableCell>
+          <TableCell />
+          <TableCell>4,28</TableCell>
+        </TableRow>
       </TableBody>
     </>
   ),

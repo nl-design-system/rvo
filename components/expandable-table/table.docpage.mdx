@@ -1,16 +1,16 @@
 import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
 import documentation from "./README.md";
-import * as ExpandableTableStories from "./expandable-table.stories";
+import * as TableStories from "./table.stories";
 import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 
-<Meta of={ExpandableTableStories} name="Documentatie" />
+<Meta of={TableStories} name="Documentatie" />
 
 <Title />
 
 ## Preview
 
-<Canvas of={ExpandableTableStories.Default} layout="padded" />
+<Canvas of={TableStories.Default} layout="padded" />
 ## Parameters
 <Controls />
 
