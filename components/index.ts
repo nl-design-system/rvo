@@ -64,6 +64,7 @@ export { SkipLink } from './skip-link/src/template';
 export { StatusIcon } from './status-icon/src/template';
 export { StatusIndicator } from './status-indicator/src/template';
 export { Table } from './table/src/template';
+export { ExpandableTable } from './expandable-table/src/template';
 export { Tabs } from './tabs/src/template';
 export { Tag } from './tag/src/template';
 export { TextHelpers } from './helpers-text/src/template';
