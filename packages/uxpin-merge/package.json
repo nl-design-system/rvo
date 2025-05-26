@@ -48,8 +48,8 @@
   },
   "devDependencies": {
     "@babel/runtime": "7.24.0",
-    "@utrecht/component-library-css": "3.0.1-alpha.22",
-    "@utrecht/component-library-react": "3.0.1-alpha.22",
+    "@utrecht/component-library-css": "7.2.1",
+    "@utrecht/component-library-react": "10.1.0",
     "@uxpin/merge-cli": "3.4.8",
     "clsx": "2.1.0",
     "parcel": "2.13.3",
