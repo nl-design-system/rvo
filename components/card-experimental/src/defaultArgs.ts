@@ -2,7 +2,9 @@ import { ICardImageProps } from './components/CardImage';
 import { ICardLinkProps } from './components/CardLink';
 import { ICardProps } from './template';
 
-export const defaultArgs: ICardProps & ICardImageProps & ICardLinkProps = {
+export type CardArguments = ICardProps & ICardImageProps & ICardLinkProps;
+
+export const defaultArgs: CardArguments = {
   backgroundColor: 'none',
   backgroundImage: '',
   content: 'Content',
