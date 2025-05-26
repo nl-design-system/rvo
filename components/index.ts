@@ -6,7 +6,7 @@ export { BreadcrumbsItem } from './breadcrumbs/src/breadcrumbs-item/template';
 export { Button } from './button/src/template';
 export { ActionGroup } from './action-group/src/template';
 export { Card } from './card/src/template';
-export { Card as CardExperimental } from './card-experimental/src/template';
+export { CardExperimental } from './card-experimental/src/template';
 export { CounterBadge } from './counter-badge/src/template';
 export { DataList } from './data-list/src/template';
 export { DataListItem } from './data-list/src/data-list-item/template';
@@ -45,7 +45,10 @@ export { Icon } from './icon/src/template';
 export { ItemList } from './item-list/src/template';
 export { Label } from './form-field-label/src/template';
 export { LayoutFlow } from './layout-flow/src/template';
+
 export { Link } from './link/src/template';
+export * from './link/src/template';
+
 export { List } from './ordered-unordered-list/src/template';
 export { Logo } from './logo/src/template';
 export { Loader } from './loader/src/template';
