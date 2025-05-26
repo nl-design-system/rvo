@@ -2,10 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2022 Community for NL Design System
  */
-import Button, { IButtonProps } from '@nl-rvo/components/button/src/template';
-import Icon from '@nl-rvo/components/icon/src/template';
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactElement, useState } from 'react';
+import Button, { IButtonProps } from '../../../button/src/template';
+import Icon from '../../../icon/src/template';
 import TableCell, { ITableCellProps, TableCellType } from '../table-cell/template';
 
 export type TableRowType = ReactElement<ITableRowProps>;
@@ -26,7 +26,9 @@ const Row: React.FC<ITableRowProps> = ({ children, className, ...otherProps }: I
 export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false, ...otherProps }: ITableRowProps) => {
   const [visible, setVisible] = useState(expanded);
 
-  const isExpandable: boolean = !!React.Children.map(children, (child) => child).find((cell) => cell.props.expandable);
+  const isExpandable: boolean = React.Children.toArray(children).some(
+    (child): child is TableCellType => React.isValidElement(child) && !!child.props.expandable,
+  );
 
   const computeRowSpan = (cell: TableCellType, index: number): number | undefined =>
     visible && index === 0 && cell.props.expandable ? 2 : undefined;
@@ -73,15 +75,17 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
   const renderCell = (cell: TableCellType, index: number): TableCellType =>
     cell.props.expandable ? renderExpandableButton(cell, index) : cell;
 
+  const childArray = React.Children.toArray(children) as TableCellType[];
+
   return (
     <>
       <Row
         className={clsx(isExpandable && 'rvo-expandable-table-row', visible && 'rvo-expandable-table-row--open')}
         {...otherProps}
       >
-        {React.Children.map(children, renderCell)}
+        {childArray.map((child, index) => renderCell(child, index))}
       </Row>
-      {React.Children.map(children, renderExpandableRow)}
+      {childArray.map((child, index) => renderExpandableRow(child, index))}
     </>
   );
 };
