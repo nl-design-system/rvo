@@ -9,9 +9,15 @@ import { Icon, iconColors, options as iconOptions } from '../../icon/src/templat
 import { IconType } from '../../icon/src/types';
 import './index.scss';
 
-type LinkStyleProps = {
+export type LinkStyleProps = {
   className: string;
 } & Omit<React.HTMLAttributes<HTMLAnchorElement>, 'className'>;
+
+export type LinkCustomLinkComponentProps = {
+  children: React.ReactNode;
+  href: string;
+  linkProps: LinkStyleProps;
+};
 
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   /** @uxpinignoreprop */
@@ -37,7 +43,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   target?: string;
   /** @uxpinpropname Content */
   children?: React.ReactNode;
-  LinkComponent?: React.ComponentType<{ href: string; children: React.ReactNode; linkProps: LinkStyleProps }>;
+  LinkComponent?: React.ComponentType<LinkCustomLinkComponentProps>;
 }
 
 export const argTypes = {
