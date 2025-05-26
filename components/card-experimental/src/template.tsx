@@ -6,9 +6,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import CardContent from './components/CardContent';
+import CardHeader, { ICardHeaderProps } from './components/CardHeader';
 import CardImage, { ICardImageProps } from './components/CardImage';
-import CardLink, { ICardLinkProps } from './components/CardLink';
-import CardTitle from './components/CardTitle';
 import './index.scss';
 import { defaultArgs } from './defaultArgs';
 import Icon from '../../icon/src/template';
@@ -16,9 +15,8 @@ import { filterComponents, getChildComponent, getChildComponentPropValue } from 
 
 interface CardComponents {
   Content: typeof CardContent;
+  Header: typeof CardHeader;
   Image: typeof CardImage;
-  Link: typeof CardLink;
-  Title: typeof CardTitle;
 }
 
 export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -31,7 +29,7 @@ export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
   padding?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-export const Card: React.FC<ICardProps> & CardComponents = ({
+export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
   backgroundColor = defaultArgs.backgroundColor,
   backgroundImage = defaultArgs.backgroundImage,
   className = defaultArgs.className,
@@ -48,10 +46,11 @@ export const Card: React.FC<ICardProps> & CardComponents = ({
 
   const imageSize =
     getChildComponentPropValue<ICardImageProps>(CardImage, 'imageSize', children) ?? defaultArgs.imageSize;
+
   const hasFullCardLinkProp =
-    getChildComponentPropValue<ICardLinkProps>(CardLink, 'fullCardLink', children) ?? defaultArgs.fullCardLink;
+    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'fullCardLink', children) ?? defaultArgs.fullCardLink;
   const showLinkIndicator =
-    getChildComponentPropValue<ICardLinkProps>(CardLink, 'showLinkIndicator', children) ??
+    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'showLinkIndicator', children) ??
     defaultArgs.showLinkIndicator;
 
   const hasImage = !!cardImageComponent;
@@ -62,7 +61,7 @@ export const Card: React.FC<ICardProps> & CardComponents = ({
     if (hasFullCardLinkProp && showLinkIndicator) {
       return (
         <div className="rvo-card--with-link-indicator">
-          {children}
+          <div>{children}</div>
           <Icon
             ariaLabel="Delta naar rechts"
             className="rvo-card__link-indicator"
@@ -74,7 +73,7 @@ export const Card: React.FC<ICardProps> & CardComponents = ({
         </div>
       );
     }
-    return children;
+    return <div>{children}</div>;
   };
 
   return (
@@ -101,9 +100,8 @@ export const Card: React.FC<ICardProps> & CardComponents = ({
   );
 };
 
-Card.Content = CardContent;
-Card.Image = CardImage;
-Card.Link = CardLink;
-Card.Title = CardTitle;
+CardExperimental.Content = CardContent;
+CardExperimental.Header = CardHeader;
+CardExperimental.Image = CardImage;
 
-export default Card;
+export default CardExperimental;
