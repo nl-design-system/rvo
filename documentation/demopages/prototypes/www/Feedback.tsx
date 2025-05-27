@@ -18,31 +18,18 @@ const Feedback = () => {
   const [isContactQuestionVisible, setIsContactQuestionVisible] = useState(false);
   const [isEmailVisible, setIsEmailVisible] = useState(false);
   const [isNotFoundTextareaVisible, setIsNotFoundTextareaVisible] = useState(false);
-  const [isMakkelijkVisible, setIsMakkelijkVisible] = useState(false);
-  const [isHoeMakkelijkTextareaVisible, setIsHoeMakkelijkTextareaVisible] = useState(false);
   const [isInformatieGevondenIngevuld, setIsInformatieGevondenIngevuld] = useState(false);
 
   const handleRadioButtonChange = (event) => {
     setIsInformatieGevondenIngevuld(true);
-    if (event.target.value === 'Ja') {
-      setIsTextareaVisible(true);
-      setIsContactQuestionVisible(true);
-      setIsNotFoundTextareaVisible(false);
-      setIsMakkelijkVisible(true);
-    } else {
-      setIsTextareaVisible(true);
-      setIsContactQuestionVisible(true);
-      setIsEmailVisible(false);
+    if (event.target.value === 'Onvoldoende' || event.target.value === 'Redelijk') {
       setIsNotFoundTextareaVisible(true);
-      setIsMakkelijkVisible(false);
-    }
-  };
-
-  const handleMakkelijkRadioButtonChange = (event) => {
-    if (['Geen mening', 'Moeilijk', 'Heel moeilijk'].includes(event.target.value)) {
-      setIsHoeMakkelijkTextareaVisible(true);
+      setIsTextareaVisible(false);
+      setIsContactQuestionVisible(true);
     } else {
-      setIsHoeMakkelijkTextareaVisible(false);
+      setIsNotFoundTextareaVisible(false);
+      setIsTextareaVisible(true);
+      setIsContactQuestionVisible(true);
     }
   };
 
@@ -420,108 +407,70 @@ const Feedback = () => {
               >
                 <div className="rvo-form-field__label">
                   <label className="rvo-label" id="gevonden-label" htmlFor="gevonden">
-                    Heeft u de informatie gevonden die u zocht?
+                    Wat vindt u van deze pagina?
                   </label>
                 </div>
                 <div className="rvo-radio-button__group">
-                  <label className="rvo-radio-button" htmlFor="gevonden-ja">
+                  <label className="rvo-radio-button" htmlFor="gevonden-onvoldoende">
                     <input
-                      id="gevonden-ja"
+                      id="gevonden-onvoldoende"
                       name="gevonden"
                       type="radio"
                       className="utrecht-radio-button"
-                      value="Ja"
+                      value="Onvoldoende"
                       onChange={handleRadioButtonChange}
                     />
-                    Ja
+                    Onvoldoende
                   </label>
-                  <label className="rvo-radio-button" htmlFor="gevonden-nee">
+                  <label className="rvo-radio-button" htmlFor="gevonden-redelijk">
                     <input
-                      id="gevonden-nee"
+                      id="gevonden-redelijk"
                       name="gevonden"
                       type="radio"
                       className="utrecht-radio-button"
-                      value="Nee"
+                      value="Redelijk"
                       onChange={handleRadioButtonChange}
                     />
-                    Nee
+                    Redelijk
+                  </label>
+                  <label className="rvo-radio-button" htmlFor="gevonden-voldoende">
+                    <input
+                      id="gevonden-voldoende"
+                      name="gevonden"
+                      type="radio"
+                      className="utrecht-radio-button"
+                      value="Voldoende"
+                      onChange={handleRadioButtonChange}
+                    />
+                    Voldoende
+                  </label>
+                  <label className="rvo-radio-button" htmlFor="gevonden-goed">
+                    <input
+                      id="gevonden-goed"
+                      name="gevonden"
+                      type="radio"
+                      className="utrecht-radio-button"
+                      value="Goed"
+                      onChange={handleRadioButtonChange}
+                    />
+                    Goed
+                  </label>
+                  <label className="rvo-radio-button" htmlFor="gevonden-uitstekend">
+                    <input
+                      id="gevonden-uitstekend"
+                      name="gevonden"
+                      type="radio"
+                      className="utrecht-radio-button"
+                      value="Uitstekend"
+                      onChange={handleRadioButtonChange}
+                    />
+                    Uitstekend
                   </label>
                 </div>
               </div>
-              {isMakkelijkVisible && (
-                <div
-                  role="makkelijk"
-                  aria-labelledby="makkelijk-label"
-                  className="utrecht-form-field utrecht-form-field--text rvo-form-field"
-                >
-                  <div className="rvo-form-field__label">
-                    <label className="rvo-label" id="makkelijk-label" htmlFor="makkelijk">
-                      Hoe makkelijk was het om deze informatie te vinden?
-                    </label>
-                  </div>
-                  <div className="rvo-radio-button__group">
-                    <label className="rvo-radio-button" htmlFor="makkelijk-heel">
-                      <input
-                        id="makkelijk-heel"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Heel makkelijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Heel makkelijk
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-makkelijk">
-                      <input
-                        id="makkelijk-makkelijk"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Makkelijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Makkelijk
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-geen-mening">
-                      <input
-                        id="makkelijk-geen-mening"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Geen mening"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Geen mening
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-moeilijk">
-                      <input
-                        id="makkelijk-moeilijk"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Moeilijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Moeilijk
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-heel-moeilijk">
-                      <input
-                        id="makkelijk-heel-moeilijk"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Heel moeilijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Heel moeilijk
-                    </label>
-                  </div>
-                </div>
+              {isNotFoundTextareaVisible && (
+                <TextareaField label="Wat vindt u niet goed aan deze pagina?"></TextareaField>
               )}
-              {isHoeMakkelijkTextareaVisible && (
-                <TextareaField label="Hoe kunnen wij dit makkelijker maken?"></TextareaField>
-              )}
-              {isNotFoundTextareaVisible && <TextareaField label="Wat heeft u niet gevonden?"></TextareaField>}
               {isTextareaVisible && (
                 <TextareaField label="Wilt u verder nog iets delen over onze website?"></TextareaField>
               )}
