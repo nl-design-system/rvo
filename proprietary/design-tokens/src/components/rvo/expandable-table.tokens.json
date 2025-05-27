@@ -1,0 +1,9 @@
+{
+  "rvo": {
+    "expandable-table": {
+      "rvo": {
+        "border-color": { "value": "{rvo.color.hemelblauw-300}" }
+      }
+    }
+  }
+}

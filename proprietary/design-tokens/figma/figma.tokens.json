@@ -1439,6 +1439,17 @@
       }
     }
   },
+  "components/expandable-table": {
+    "rvo": {
+      "expandable-table": {
+        "rvo": {
+          "border-color": {
+            "$value": "{rvo.color.hemelblauw-300}"
+          }
+        }
+      }
+    }
+  },
   "components/file-input": {
     "rvo": {
       "file-input": {
@@ -3320,6 +3331,7 @@
       "components/dialog",
       "components/document",
       "components/expandable-content",
+      "components/expandable-table",
       "components/file-input",
       "components/footer",
       "components/form-feedback",

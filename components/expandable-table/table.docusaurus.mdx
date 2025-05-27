@@ -1,0 +1,21 @@
+---
+title: Expandable Table
+hide_title: false
+hide_table_of_contents: true
+slug: .
+---
+
+import Documentation from "./README.md";
+import { defaultArgs } from "./src/defaultArgs";
+import ExpandableTable from "./src/template.tsx";
+import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+
+## Standard component:
+
+<ComponentExample storyName="experimentele-componenten-expandabletable--documentatie">
+  <ExpandableTable {...defaultArgs}>{defaultArgs.children}</ExpandableTable>
+</ComponentExample>
+
+## Documentatie
+
+<Documentation />
