@@ -30,8 +30,6 @@
 
 .rvo-expandable-table-row {
   --rvo-expandable-table-row-border-color: var(--rvo-color-hemelblauw-300);
-  --rvo-expandable-table-row-padding-block-start: var(--rvo-space-md);
-  --rvo-expandable-table-row-padding-inline-start: var(--rvo-space-md);
 
   .rvo-table-cell--expandable-button {
     @extend .rvo-table-cell--fit-content;
