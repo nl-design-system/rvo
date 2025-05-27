@@ -1,6 +1,5 @@
 import {
   Button,
-  Checkbox,
   Fieldset,
   Header,
   Heading,
@@ -11,39 +10,16 @@ import {
   TextareaField,
   TextInputField,
 } from '@nl-rvo/components';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Feedback = () => {
-  const [isTextareaVisible, setIsTextareaVisible] = useState(false);
   const [isContactQuestionVisible, setIsContactQuestionVisible] = useState(false);
   const [isEmailVisible, setIsEmailVisible] = useState(false);
-  const [isNotFoundTextareaVisible, setIsNotFoundTextareaVisible] = useState(false);
-  const [isMakkelijkVisible, setIsMakkelijkVisible] = useState(false);
-  const [isHoeMakkelijkTextareaVisible, setIsHoeMakkelijkTextareaVisible] = useState(false);
   const [isInformatieGevondenIngevuld, setIsInformatieGevondenIngevuld] = useState(false);
 
-  const handleRadioButtonChange = (event) => {
+  const handleRadioButtonChange = () => {
     setIsInformatieGevondenIngevuld(true);
-    if (event.target.value === 'Ja') {
-      setIsTextareaVisible(true);
-      setIsContactQuestionVisible(true);
-      setIsNotFoundTextareaVisible(false);
-      setIsMakkelijkVisible(true);
-    } else {
-      setIsTextareaVisible(true);
-      setIsContactQuestionVisible(true);
-      setIsEmailVisible(false);
-      setIsNotFoundTextareaVisible(true);
-      setIsMakkelijkVisible(false);
-    }
-  };
-
-  const handleMakkelijkRadioButtonChange = (event) => {
-    if (['Geen mening', 'Moeilijk', 'Heel moeilijk'].includes(event.target.value)) {
-      setIsHoeMakkelijkTextareaVisible(true);
-    } else {
-      setIsHoeMakkelijkTextareaVisible(false);
-    }
+    setIsContactQuestionVisible(true);
   };
 
   const handleContactRadioButtonChange = (event) => {
@@ -420,110 +396,144 @@ const Feedback = () => {
               >
                 <div className="rvo-form-field__label">
                   <label className="rvo-label" id="gevonden-label" htmlFor="gevonden">
-                    Heeft u de informatie gevonden die u zocht?
+                    Wat vindt u van deze pagina?
                   </label>
                 </div>
                 <div className="rvo-radio-button__group">
-                  <label className="rvo-radio-button" htmlFor="gevonden-ja">
+                  <label className="rvo-radio-button" htmlFor="gevonden-onvoldoende">
                     <input
-                      id="gevonden-ja"
+                      id="gevonden-onvoldoende"
                       name="gevonden"
                       type="radio"
                       className="utrecht-radio-button"
-                      value="Ja"
+                      value="Onvoldoende"
                       onChange={handleRadioButtonChange}
                     />
-                    Ja
+                    Onvoldoende
                   </label>
-                  <label className="rvo-radio-button" htmlFor="gevonden-nee">
+                  <label className="rvo-radio-button" htmlFor="gevonden-redelijk">
                     <input
-                      id="gevonden-nee"
+                      id="gevonden-redelijk"
                       name="gevonden"
                       type="radio"
                       className="utrecht-radio-button"
-                      value="Nee"
+                      value="Redelijk"
                       onChange={handleRadioButtonChange}
                     />
-                    Nee
+                    Redelijk
+                  </label>
+                  <label className="rvo-radio-button" htmlFor="gevonden-voldoende">
+                    <input
+                      id="gevonden-voldoende"
+                      name="gevonden"
+                      type="radio"
+                      className="utrecht-radio-button"
+                      value="Voldoende"
+                      onChange={handleRadioButtonChange}
+                    />
+                    Voldoende
+                  </label>
+                  <label className="rvo-radio-button" htmlFor="gevonden-goed">
+                    <input
+                      id="gevonden-goed"
+                      name="gevonden"
+                      type="radio"
+                      className="utrecht-radio-button"
+                      value="Goed"
+                      onChange={handleRadioButtonChange}
+                    />
+                    Goed
+                  </label>
+                  <label className="rvo-radio-button" htmlFor="gevonden-uitstekend">
+                    <input
+                      id="gevonden-uitstekend"
+                      name="gevonden"
+                      type="radio"
+                      className="utrecht-radio-button"
+                      value="Uitstekend"
+                      onChange={handleRadioButtonChange}
+                    />
+                    Uitstekend
                   </label>
                 </div>
               </div>
-              {isMakkelijkVisible && (
-                <div
-                  role="makkelijk"
-                  aria-labelledby="makkelijk-label"
-                  className="utrecht-form-field utrecht-form-field--text rvo-form-field"
-                >
-                  <div className="rvo-form-field__label">
-                    <label className="rvo-label" id="makkelijk-label" htmlFor="makkelijk">
-                      Hoe makkelijk was het om deze informatie te vinden?
-                    </label>
+              {isInformatieGevondenIngevuld && (
+                <>
+                  <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
+                    <div className="rvo-form-field__label">
+                      <label className="rvo-label">Heeft u alle informatie gevonden die u nodig heeft?</label>
+                    </div>
+                    <div className="rvo-radio-button__group">
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="info-gevonden" value="1" className="utrecht-radio-button" /> Helemaal
+                        oneens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="info-gevonden" value="2" className="utrecht-radio-button" /> Oneens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="info-gevonden" value="3" className="utrecht-radio-button" /> Neutraal
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="info-gevonden" value="4" className="utrecht-radio-button" /> Eens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="info-gevonden" value="5" className="utrecht-radio-button" /> Helemaal
+                        eens
+                      </label>
+                    </div>
                   </div>
-                  <div className="rvo-radio-button__group">
-                    <label className="rvo-radio-button" htmlFor="makkelijk-heel">
-                      <input
-                        id="makkelijk-heel"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Heel makkelijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Heel makkelijk
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-makkelijk">
-                      <input
-                        id="makkelijk-makkelijk"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Makkelijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Makkelijk
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-geen-mening">
-                      <input
-                        id="makkelijk-geen-mening"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Geen mening"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Geen mening
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-moeilijk">
-                      <input
-                        id="makkelijk-moeilijk"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Moeilijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Moeilijk
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="makkelijk-heel-moeilijk">
-                      <input
-                        id="makkelijk-heel-moeilijk"
-                        name="makkelijk"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Heel moeilijk"
-                        onChange={handleMakkelijkRadioButtonChange}
-                      />
-                      Heel moeilijk
-                    </label>
+                  <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
+                    <div className="rvo-form-field__label">
+                      <label className="rvo-label">Was het makkelijk om de informatie te vinden?</label>
+                    </div>
+                    <div className="rvo-radio-button__group">
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="makkelijk-gevonden" value="1" className="utrecht-radio-button" />{' '}
+                        Helemaal oneens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="makkelijk-gevonden" value="2" className="utrecht-radio-button" />{' '}
+                        Oneens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="makkelijk-gevonden" value="3" className="utrecht-radio-button" />{' '}
+                        Neutraal
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="makkelijk-gevonden" value="4" className="utrecht-radio-button" /> Eens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="makkelijk-gevonden" value="5" className="utrecht-radio-button" />{' '}
+                        Helemaal eens
+                      </label>
+                    </div>
                   </div>
-                </div>
-              )}
-              {isHoeMakkelijkTextareaVisible && (
-                <TextareaField label="Hoe kunnen wij dit makkelijker maken?"></TextareaField>
-              )}
-              {isNotFoundTextareaVisible && <TextareaField label="Wat heeft u niet gevonden?"></TextareaField>}
-              {isTextareaVisible && (
-                <TextareaField label="Wilt u verder nog iets delen over onze website?"></TextareaField>
+                  <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
+                    <div className="rvo-form-field__label">
+                      <label className="rvo-label">Is de informatie duidelijk?</label>
+                    </div>
+                    <div className="rvo-radio-button__group">
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="duidelijk" value="1" className="utrecht-radio-button" /> Helemaal
+                        oneens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="duidelijk" value="2" className="utrecht-radio-button" /> Oneens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="duidelijk" value="3" className="utrecht-radio-button" /> Neutraal
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="duidelijk" value="4" className="utrecht-radio-button" /> Eens
+                      </label>
+                      <label className="rvo-radio-button">
+                        <input type="radio" name="duidelijk" value="5" className="utrecht-radio-button" /> Helemaal eens
+                      </label>
+                    </div>
+                  </div>
+                  <TextareaField label="Bedankt voor uw reactie. Hiermee helpt u ons de website te verbeteren. Heeft u verder nog tips voor ons?" />
+                </>
               )}
               {isContactQuestionVisible && (
                 <div
@@ -563,10 +573,13 @@ const Feedback = () => {
                 </div>
               )}
               {isEmailVisible && (
-                <div className="rvo-email">
-                  <TextInputField type="email" label="Uw e-mailadres" name="email"></TextInputField>
-                  <div className="rvo-padding-block-end--lg">
-                    <Checkbox name="klantenpanel" label="Ik wil mij aanmelden voor het klantenpanel."></Checkbox>
+                <div className="rvo-padding-block-end--lg">
+                  <div className="rvo-email">
+                    <TextInputField type="email" label="Uw e-mailadres" name="email" />
+                    <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="klantenpanel">
+                      <input id="klantenpanel" name="klantenpanel" className="rvo-checkbox__input" type="checkbox" />
+                      Ik wil mij aanmelden voor het klantenpanel.
+                    </label>
                   </div>
                 </div>
               )}
