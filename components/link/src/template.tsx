@@ -19,6 +19,8 @@ export type LinkCustomLinkComponentProps = {
   linkProps: LinkStyleProps;
 };
 
+export type LinkCustomLinkComponent = React.ComponentType<LinkCustomLinkComponentProps>;
+
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   /** @uxpinignoreprop */
   content?: string;
@@ -43,7 +45,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   target?: string;
   /** @uxpinpropname Content */
   children?: React.ReactNode;
-  LinkComponent?: React.ComponentType<LinkCustomLinkComponentProps>;
+  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const argTypes = {
