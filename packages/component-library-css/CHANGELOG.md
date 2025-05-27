@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-css
 
+## 4.8.0
+
+### Minor Changes
+
+- 0cffc4f: New experimental expandable table component
+
+### Patch Changes
+
+- aaef5c8: Layout property added to alert so you can showcase an alert as an full page alert
+
 ## 4.7.1
 
 ### Patch Changes
