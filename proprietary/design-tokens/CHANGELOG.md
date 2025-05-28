@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.9.0
+
+### Minor Changes
+
+- 0cffc4f: New experimental expandable table component
+
 ## 1.8.0
 
 ### Minor Changes
