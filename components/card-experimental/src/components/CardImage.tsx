@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import { defaultArgs } from '../defaultArgs';
 
 export interface ICardImageProps {
   imageAlt?: string;
@@ -9,7 +8,7 @@ export interface ICardImageProps {
   imageSrc: string;
 }
 
-const CardImage: React.FC<ICardImageProps> = ({ imageSrc = defaultArgs.imageSrc, className, imageAlt }) => {
+const CardImage: React.FC<ICardImageProps> = ({ imageSrc, className, imageAlt }) => {
   return (
     <div className={clsx('rvo-card__image-container', className)}>
       <img src={imageSrc} alt={imageAlt} className={clsx('rvo-card__image')} />

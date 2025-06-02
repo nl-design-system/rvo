@@ -9,7 +9,6 @@ import CardContent from './components/CardContent';
 import CardHeader, { ICardHeaderProps } from './components/CardHeader';
 import CardImage, { ICardImageProps } from './components/CardImage';
 import './index.scss';
-import { defaultArgs } from './defaultArgs';
 import Icon from '../../icon/src/template';
 import { filterComponents, getChildComponent, getChildComponentPropValue } from '../../utils/getChildComponent';
 
@@ -30,13 +29,13 @@ export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
-  backgroundColor = defaultArgs.backgroundColor,
-  backgroundImage = defaultArgs.backgroundImage,
-  className = defaultArgs.className,
-  invertedColors = defaultArgs.invertedColors,
-  onClick = defaultArgs.onClick,
-  outline = defaultArgs.outline,
-  padding = defaultArgs.padding,
+  backgroundColor = 'none',
+  backgroundImage = '',
+  className,
+  invertedColors = false,
+  onClick,
+  outline = false,
+  padding = 'sm',
   children,
 }) => {
   // the card image component
@@ -44,14 +43,12 @@ export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
   // all children except CardImage
   const otherComponents = filterComponents(CardImage, children);
 
-  const imageSize =
-    getChildComponentPropValue<ICardImageProps>(CardImage, 'imageSize', children) ?? defaultArgs.imageSize;
+  const imageSize = getChildComponentPropValue<ICardImageProps>(CardImage, 'imageSize', children) ?? 'md';
 
   const hasFullCardLinkProp =
-    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'fullCardLink', children) ?? defaultArgs.fullCardLink;
+    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'fullCardLink', children) ?? false;
   const showLinkIndicator =
-    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'showLinkIndicator', children) ??
-    defaultArgs.showLinkIndicator;
+    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'showLinkIndicator', children) ?? false;
 
   const hasImage = !!cardImageComponent;
   const hasBackgroundImage = backgroundImage && backgroundImage?.length > 0;

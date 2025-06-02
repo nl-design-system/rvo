@@ -1,6 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CardArguments, defaultArgs } from './src/defaultArgs';
-import { CardExperimental } from './src/template';
+import { ICardContentProps } from './src/components/CardContent';
+import { ICardHeaderProps } from './src/components/CardHeader';
+import { ICardImageProps } from './src/components/CardImage';
+import { CardExperimental, ICardProps } from './src/template';
+
+type CardArguments = ICardProps & ICardImageProps & ICardHeaderProps & ICardContentProps;
+
+const defaultArgs: CardArguments = {
+  backgroundColor: 'none',
+  backgroundImage: '',
+  content: 'Content',
+  fullCardLink: false,
+  href: '',
+  imageSize: 'md',
+  imageSrc: '',
+  invertedColors: false,
+  outline: false,
+  padding: 'sm',
+  showLinkIndicator: false,
+  title: 'Title',
+};
 
 const meta: Meta<typeof CardExperimental> = {
   title: 'Componenten/CardExperimental',
@@ -22,7 +41,7 @@ type Story = StoryObj<CardArguments>;
 const Container = ({ children }) => <div>{children}</div>;
 
 export const Default: Story = {
-  args: { ...defaultArgs, outline: true },
+  args: defaultArgs,
   name: 'CardExperimental',
   render: (args) => (
     <Container>
@@ -33,18 +52,20 @@ export const Default: Story = {
         outline={args.outline}
         padding={args.padding}
       >
-        {args.imageSrc && (
+        {args.imageSrc ? (
           <CardExperimental.Image imageSrc={args.imageSrc} imageSize={args.imageSize} imageAlt={args.imageAlt} />
-        )}
-        <CardExperimental.Header
-          href={args.href}
-          fullCardLink={args.fullCardLink}
-          showLinkIndicator={args.showLinkIndicator}
-          LinkComponent={args.LinkComponent}
-        >
-          {args.title}
-        </CardExperimental.Header>
-        <CardExperimental.Content>{args.content}</CardExperimental.Content>
+        ) : null}
+        {args.title ? (
+          <CardExperimental.Header
+            href={args.href}
+            fullCardLink={args.fullCardLink}
+            showLinkIndicator={args.showLinkIndicator}
+            LinkComponent={args.LinkComponent}
+          >
+            {args.title}
+          </CardExperimental.Header>
+        ) : null}
+        {args.content ? <CardExperimental.Content>{args.content}</CardExperimental.Content> : null}
       </CardExperimental>
     </Container>
   ),
