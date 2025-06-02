@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, options as iconOptions } from '../../icon/src/template';
 import { IconType } from '../../icon/src/types';
@@ -11,7 +11,7 @@ import { StatusIcon } from '../../status-icon/src/template';
 import './index.scss';
 
 export interface ITagProps {
-  content: string;
+  content: string | ReactNode;
   type: 'default' | 'info' | 'bevestiging' | 'foutmelding' | 'waarschuwing';
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
