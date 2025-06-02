@@ -7,11 +7,11 @@ import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Heading from '../../heading/src/template';
 import Icon from '../../icon/src/template';
-import Link from '../../link/src/template';
+import Link, { ILinkProps } from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
+export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, Pick<ILinkProps, 'LinkComponent'> {
   background?: 'none' | 'color' | 'image';
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;
@@ -90,6 +90,7 @@ export const Card: React.FC<ICardProps> = ({
   className = defaultArgs.className,
   children,
   onClick,
+  LinkComponent,
   ...props
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
@@ -132,7 +133,11 @@ export const Card: React.FC<ICardProps> = ({
           {title && (
             <Heading type="h3">
               {link && link.length > 0 ? (
-                <Link href={link} className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}>
+                <Link
+                  href={link}
+                  LinkComponent={LinkComponent}
+                  className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}
+                >
                   {parseContentMarkup(title)}
                 </Link>
               ) : (
