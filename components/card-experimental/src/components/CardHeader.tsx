@@ -3,8 +3,6 @@ import React from 'react';
 import Heading from '../../../heading/src/template';
 import Link, { ILinkProps } from '../../../link/src/template';
 import parseContentMarkup from '../../../utils/parseContentMarkup';
-import { defaultArgs } from '../defaultArgs';
-
 export interface ICardHeaderProps extends Pick<ILinkProps, 'href' | 'LinkComponent'> {
   children?: React.ReactNode;
   className?: string;
@@ -18,7 +16,7 @@ const CardHeader: React.FC<ICardHeaderProps> = ({
   children,
   href,
   LinkComponent,
-  fullCardLink = defaultArgs.fullCardLink,
+  fullCardLink = false,
   title,
 }) => {
   const parsedContent = parseContentMarkup(title ?? children);
