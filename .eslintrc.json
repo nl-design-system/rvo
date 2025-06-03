@@ -74,6 +74,13 @@
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "error"
       }
+    },
+    {
+      "files": ["*.mjs"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2020
+      }
     }
   ]
 }
