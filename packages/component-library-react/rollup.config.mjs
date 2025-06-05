@@ -8,7 +8,6 @@ import nodePolyfills from 'rollup-plugin-node-polyfills';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
-import fs from 'fs';
 
 const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8'));
 // rollup.config.js
@@ -21,60 +20,7 @@ export const outputGlobals = {
   'react-dom': 'ReactDOM',
 };
 
-const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
-const useStatements = indexContent
-  .split('\n')
-  .filter((line) => line.trim().startsWith('@use'))
-  .map((line) => {
-    const match = line.match(/@use "([^"]+)"/);
-    return match ? match[1] : null;
-  })
-  .filter((path) => path && !path.includes('node_modules'))
-  .map((componentPath) => {
-    // Convert paths like "../../../components/accordion/src" to just "accordion"
-    const parts = componentPath.split('/');
-    const componentIndex = parts.indexOf('components');
-    return componentIndex !== -1 ? parts[componentIndex + 1] : null;
-  })
-  .filter(Boolean);
-
-// Create individual component configurations
-const cssComponentBundles = useStatements.flatMap((component) => [
-  {
-    input: `../../components/${component}/src/index.scss`,
-    output: {
-      file: `dist/components/${component}/src/index.css`,
-      format: 'es',
-      sourcemap: true,
-    },
-    plugins: [
-      postcss({
-        extensions: ['.css', '.scss'],
-        extract: true,
-        minimize: false,
-      }),
-      filesize(),
-    ],
-  },
-  {
-    input: `../../components/${component}/src/index.scss`,
-    output: {
-      file: `dist/components/${component}/src/index.min.css`,
-      format: 'es',
-      sourcemap: true,
-    },
-    plugins: [
-      postcss({
-        extensions: ['.css', '.scss'],
-        extract: true,
-        minimize: true,
-      }),
-      filesize(),
-    ],
-  },
-]);
-
-const reactComponentBundles = [
+export default [
   {
     input: 'src/index.ts',
     output: [
@@ -93,15 +39,18 @@ const reactComponentBundles = [
     ],
     external: [/@babel\/runtime/, 'react-dom', 'react'],
     plugins: [
-      resolve(),
-      commonjs(),
-      typescript(),
       postcss({
-        inject: false,
+        extensions: ['.css', '.scss'],
+        minimize: true,
       }),
       peerDepsExternal({ includeDependencies: true }),
       nodeExternal(),
+      resolve({ browser: true }),
+      commonjs({
+        include: /node_modules/,
+      }),
       nodePolyfills(),
+      typescript({ includeDependencies: false }),
       babel({
         presets: ['@babel/preset-react'],
         babelHelpers: 'runtime',
@@ -114,5 +63,3 @@ const reactComponentBundles = [
     ],
   },
 ];
-
-export default [...cssComponentBundles, ...reactComponentBundles];
