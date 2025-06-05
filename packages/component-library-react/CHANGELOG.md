@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 5.0.1
+
+### Patch Changes
+
+- cd3906b: Revert rollup config
+
 ## 5.0.0
 
 ### Major Changes
