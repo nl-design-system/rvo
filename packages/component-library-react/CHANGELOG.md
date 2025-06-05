@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 5.0.0
+
+### Major Changes
+
+- c95cf1b: CSS is now working when importing an React Component.
+
 ## 4.9.0
 
 ### Minor Changes
