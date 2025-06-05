@@ -2,7 +2,6 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
 import fs from 'fs';
-import path from 'path';
 
 // Read and parse @use statements from index.scss
 const indexContent = fs.readFileSync('src/index.scss', 'utf-8');

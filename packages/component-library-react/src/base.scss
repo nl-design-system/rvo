@@ -1,0 +1,10 @@
+@use "../node_modules/modern-normalize/modern-normalize.css" as *;
+
+.rvo-theme {
+  background-color: var(--utrecht-document-background-color);
+  color: var(--utrecht-document-color);
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-document-font-size);
+  font-weight: var(--utrecht-document-font-weight);
+  line-height: var(--utrecht-document-line-height);
+}
