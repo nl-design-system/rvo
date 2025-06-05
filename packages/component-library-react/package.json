@@ -77,9 +77,10 @@
     "react-dom": "16 - 18"
   },
   "dependencies": {
+    "@babel/runtime": "7.24.0",
     "autoprefixer": "10.4.21",
     "cssnano": "7.0.6",
-    "sass": "1.89.1",
-    "@babel/runtime": "7.24.0"
+    "rollup-plugin-node-polyfills": "0.2.1",
+    "sass": "1.89.1"
   }
 }
