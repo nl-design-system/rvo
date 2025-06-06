@@ -13,14 +13,10 @@ import {
 import { useState } from 'react';
 
 const Feedback = () => {
-  const [isContactQuestionVisible, setIsContactQuestionVisible] = useState(false);
+  // const [isContactQuestionVisible, setIsContactQuestionVisible] = useState(false);
   const [isEmailVisible, setIsEmailVisible] = useState(false);
-  const [isInformatieGevondenIngevuld, setIsInformatieGevondenIngevuld] = useState(false);
-
-  const handleRadioButtonChange = () => {
-    setIsInformatieGevondenIngevuld(true);
-    setIsContactQuestionVisible(true);
-  };
+  const [hoveredStar, setHoveredStar] = useState(0);
+  const [selectedStar, setSelectedStar] = useState(0);
 
   const handleContactRadioButtonChange = (event) => {
     if (event.target.value === 'Ja') {
@@ -388,76 +384,35 @@ const Feedback = () => {
         <div className="rvo-feedback rvo-margin-block-start--2xl">
           <div className="rvo-feedback__form rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--md">
             <Fieldset legend="">
-              <Icon icon="tekstballon-met-hart" size="2xl" />
-              <div
-                role="gevonden"
-                aria-labelledby="gevonden-label"
-                className="utrecht-form-field utrecht-form-field--text rvo-form-field"
-              >
-                <div className="rvo-form-field__label">
-                  <label className="rvo-label" id="gevonden-label" htmlFor="gevonden">
-                    Wat vindt u van deze pagina?
-                  </label>
-                </div>
-                <div className="rvo-radio-button__group">
-                  <label className="rvo-radio-button" htmlFor="gevonden-onvoldoende">
-                    <input
-                      id="gevonden-onvoldoende"
-                      name="gevonden"
-                      type="radio"
-                      className="utrecht-radio-button"
-                      value="Onvoldoende"
-                      onChange={handleRadioButtonChange}
-                    />
-                    Onvoldoende
-                  </label>
-                  <label className="rvo-radio-button" htmlFor="gevonden-redelijk">
-                    <input
-                      id="gevonden-redelijk"
-                      name="gevonden"
-                      type="radio"
-                      className="utrecht-radio-button"
-                      value="Redelijk"
-                      onChange={handleRadioButtonChange}
-                    />
-                    Redelijk
-                  </label>
-                  <label className="rvo-radio-button" htmlFor="gevonden-voldoende">
-                    <input
-                      id="gevonden-voldoende"
-                      name="gevonden"
-                      type="radio"
-                      className="utrecht-radio-button"
-                      value="Voldoende"
-                      onChange={handleRadioButtonChange}
-                    />
-                    Voldoende
-                  </label>
-                  <label className="rvo-radio-button" htmlFor="gevonden-goed">
-                    <input
-                      id="gevonden-goed"
-                      name="gevonden"
-                      type="radio"
-                      className="utrecht-radio-button"
-                      value="Goed"
-                      onChange={handleRadioButtonChange}
-                    />
-                    Goed
-                  </label>
-                  <label className="rvo-radio-button" htmlFor="gevonden-uitstekend">
-                    <input
-                      id="gevonden-uitstekend"
-                      name="gevonden"
-                      type="radio"
-                      className="utrecht-radio-button"
-                      value="Uitstekend"
-                      onChange={handleRadioButtonChange}
-                    />
-                    Uitstekend
-                  </label>
-                </div>
+              <Heading type="h3">Wat vindt u van deze pagina?</Heading>
+              <div className="rvo-layout-row rvo-layout-align-content-center rvo-padding-block-end--md">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span
+                    key={star}
+                    className={`utrecht-icon rvo-icon rvo-icon-ster rvo-icon--xl ${
+                      hoveredStar >= star || selectedStar >= star ? 'rvo-icon--logoblauw' : 'rvo-icon--donkerblauw'
+                    }`}
+                    role="img"
+                    aria-label="Ster"
+                    tabIndex={0}
+                    onMouseEnter={() => setHoveredStar(star)}
+                    onMouseLeave={() => setHoveredStar(0)}
+                    onClick={() => setSelectedStar(star)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') setSelectedStar(star);
+                    }}
+                    style={{ cursor: 'pointer' }}
+                  ></span>
+                ))}
+                <span className="rvo-text rvo-margin-inline-start--xs">
+                  {(() => {
+                    const labels = [null, 'Onvoldoende', 'Redelijk', 'Voldoende', 'Goed', 'Uitstekend'];
+                    const active = hoveredStar || selectedStar;
+                    return labels[active] || '';
+                  })()}
+                </span>
               </div>
-              {isInformatieGevondenIngevuld && (
+              {selectedStar > 0 && (
                 <>
                   <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
                     <div className="rvo-form-field__label">
@@ -535,7 +490,7 @@ const Feedback = () => {
                   <TextareaField label="Bedankt voor uw reactie. Hiermee helpt u ons de website te verbeteren. Heeft u verder nog tips voor ons?" />
                 </>
               )}
-              {isContactQuestionVisible && (
+              {selectedStar > 0 && (
                 <div
                   role="contact-opnemen"
                   aria-labelledby="contact-opnemen-label"
@@ -572,7 +527,7 @@ const Feedback = () => {
                   </div>
                 </div>
               )}
-              {isEmailVisible && (
+              {selectedStar > 0 && isEmailVisible && (
                 <div className="rvo-padding-block-end--lg">
                   <div className="rvo-email">
                     <TextInputField type="email" label="Uw e-mailadres" name="email" />
@@ -583,7 +538,7 @@ const Feedback = () => {
                   </div>
                 </div>
               )}
-              {isInformatieGevondenIngevuld && <Button kind="primary">Verstuur feedback</Button>}
+              {selectedStar > 0 && <Button kind="primary">Verstuur feedback</Button>}
             </Fieldset>
           </div>
         </div>
