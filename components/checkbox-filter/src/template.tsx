@@ -9,7 +9,7 @@ import './index.scss';
 export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
   label: string;
   options: ICheckboxProps[];
-  optionsOnChange: (currentGroupSelection: ICheckboxProps[]) => void;
+  optionsOnChange: (currentGroupSelection: string[]) => void;
   limit?: number;
   showInputField?: boolean;
   inputFieldPlaceholder?: string;
