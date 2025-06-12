@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode, useCallback, useRef } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Checkbox, ICheckboxProps } from '../../form-checkbox/src/template';
 import './index.scss';
@@ -12,7 +12,7 @@ export interface ICheckboxGroupProps {
   invalid?: boolean;
   /** @uxpinignoreprop */
   options?: ICheckboxProps[];
-  onChange?: (currentGroupSelection: ICheckboxProps[]) => void;
+  onChange?: (currentGroupSelection: string[]) => void;
   /**
    * @uxpinbind onChange 0
    */
@@ -47,22 +47,25 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
   onChange,
   children,
 }: ICheckboxGroupProps) => {
-  const checkboxGroupRef = useRef<HTMLDivElement>(null);
-  const onUpdateGroup = useCallback(() => {
-    if (checkboxGroupRef.current) {
-      const allCheckboxElements = Array.from(checkboxGroupRef.current.getElementsByTagName('input'));
-      const currentGroupSelection = allCheckboxElements.reduce((currentGroupSelection, checkbox) => {
-        if ((checkbox as any).checked) {
-          (currentGroupSelection as string[]).push(checkbox.id);
-        }
-        return currentGroupSelection;
-      }, []);
-      onChange?.(currentGroupSelection);
+  const handleUpdateGroup = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    if (!options) {
+      onChange?.([]);
     }
-  }, [checkboxGroupRef]);
+
+    const { id, checked } = event.target;
+
+    const selectedOptions = options!
+      .filter((option) => (option.id === id ? checked : option.checked))
+      .map((option) => option.id)
+      .filter((id): id is string => typeof id === 'string');
+
+    if (selectedOptions) {
+      onChange?.(selectedOptions);
+    }
+  };
 
   return (
-    <div className={clsx('rvo-checkbox__group', invalid && 'rvo-radio-button__group--error')} ref={checkboxGroupRef}>
+    <div className={clsx('rvo-checkbox__group', invalid && 'rvo-radio-button__group--error')}>
       {(children &&
         React.Children.map(children, (child, index) => (
           <Checkbox
@@ -70,7 +73,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
             id={(child as any).props.id}
             label={(child as any).props.label}
             checked={(child as any).props.checked}
-            onUpdateGroup={onUpdateGroup}
+            onUpdateGroup={handleUpdateGroup}
           />
         ))) ||
         options?.map((option) => (
@@ -79,7 +82,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
             id={option.id}
             label={option.label}
             checked={option.checked}
-            onUpdateGroup={onUpdateGroup}
+            onUpdateGroup={handleUpdateGroup}
           />
         ))}
     </div>
