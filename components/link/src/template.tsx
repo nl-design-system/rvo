@@ -8,6 +8,19 @@ import { defaultArgs } from './defaultArgs';
 import { Icon, iconColors, options as iconOptions } from '../../icon/src/template';
 import { IconType } from '../../icon/src/types';
 import './index.scss';
+
+export type LinkStyleProps = {
+  className: string;
+} & Omit<React.HTMLAttributes<HTMLAnchorElement>, 'className'>;
+
+export type LinkCustomLinkComponentProps = {
+  children: React.ReactNode;
+  href: string;
+  linkProps: LinkStyleProps;
+};
+
+export type LinkCustomLinkComponent = React.ComponentType<LinkCustomLinkComponentProps>;
+
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   /** @uxpinignoreprop */
   content?: string;
@@ -32,6 +45,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   target?: string;
   /** @uxpinpropname Content */
   children?: React.ReactNode;
+  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const argTypes = {
@@ -110,6 +124,7 @@ export const Link: React.FC<ILinkProps> = ({
   fullContainerLink = defaultArgs.fullContainerLink,
   className,
   children,
+  LinkComponent,
   ...otherProps
 }: ILinkProps) => {
   // Parse icon markup
@@ -128,7 +143,7 @@ export const Link: React.FC<ILinkProps> = ({
     ariaLabel: iconAriaLabel,
   });
 
-  const props = {
+  const props: LinkStyleProps = {
     className: clsx(
       'rvo-link',
       className,
@@ -149,11 +164,26 @@ export const Link: React.FC<ILinkProps> = ({
     ),
     ...otherProps,
   };
-  return (
-    <a {...props} href={href}>
+
+  const linkContent = (
+    <>
       {showIcon === 'before' && iconMarkup}
       {children || content}
       {showIcon === 'after' && iconMarkup}
+    </>
+  );
+
+  if (LinkComponent && href) {
+    return (
+      <LinkComponent href={href} linkProps={props}>
+        {linkContent}
+      </LinkComponent>
+    );
+  }
+
+  return (
+    <a href={href} {...props}>
+      {linkContent}
     </a>
   );
 };
