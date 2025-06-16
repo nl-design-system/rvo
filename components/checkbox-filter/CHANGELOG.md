@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.7
+
+### Patch Changes
+
+- 5a08db9: derives checkbox state from specified options and using parent state as single source of thruth
+
 ## 3.0.6
 
 ### Patch Changes

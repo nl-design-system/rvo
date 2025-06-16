@@ -1,5 +1,16 @@
 # @nl-rvo/component-library-react
 
+## 5.1.0
+
+### Minor Changes
+
+- a0061d6: Allow for client side navigation via LinkComponent prop on Link and Card and added CardExperimental compound component
+
+### Patch Changes
+
+- 88c844c: allow the content prop to contain react nodes instead of strings
+- 5a08db9: derives checkbox state from specified options and using parent state as single source of thruth
+
 ## 5.0.1
 
 ### Patch Changes
