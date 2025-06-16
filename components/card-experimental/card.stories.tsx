@@ -22,7 +22,7 @@ const defaultArgs: CardArguments = {
 };
 
 const meta: Meta<typeof CardExperimental> = {
-  title: 'Componenten/CardExperimental',
+  title: 'Experimentele Componenten/CardExperimental',
   component: CardExperimental,
   args: defaultArgs,
   parameters: {
