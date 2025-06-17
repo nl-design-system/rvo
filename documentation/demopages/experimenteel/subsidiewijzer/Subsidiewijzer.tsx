@@ -32,7 +32,6 @@ const Subsidiewijzer = () => {
                 link: '#',
               },
               {
-                active: true,
                 label: 'Subsidies en financiering',
                 link: '#',
               },
@@ -196,7 +195,7 @@ const Subsidiewijzer = () => {
 
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">In het land</summary>
-                          <TextInputField label="Zoek land"></TextInputField>
+                          <TextInputField label="Typ land om te zoeken"></TextInputField>
                           <div className="rvo-collapsible-filter--scroll">
                             <CheckboxField
                               label=" "
