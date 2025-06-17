@@ -29,23 +29,20 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
 }: IMobileMenuBarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(isOpen);
 
-  let itemsMarkup;
-
-  if (!children && items) {
-    itemsMarkup = items.map((item, index) => {
-      return (
-        <MobileMenuItem
-          key={`menu-bar-item__${index}`}
-          item={item}
-          iconPlacement={iconPlacement}
-          useIcons={useIcons}
-          iconSize={size}
-        />
-      );
-    });
-  } else {
-    itemsMarkup = children;
-  }
+  let itemsMarkup =
+    !children && items
+      ? items.map((item, index) => {
+          return (
+            <MobileMenuItem
+              key={`menu-bar-item__${index}`}
+              item={item}
+              iconPlacement={iconPlacement}
+              useIcons={useIcons}
+              iconSize={size}
+            />
+          );
+        })
+      : children;
 
   return (
     <div
