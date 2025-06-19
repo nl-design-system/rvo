@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.8
+
+### Patch Changes
+
+- 6e5a78b: adds an inputFieldLabel prop for the text input field + fix UX where the user cannot remove client side filtering value because of missing text field
+
 ## 3.0.7
 
 ### Patch Changes
