@@ -363,7 +363,7 @@ const Feedback = () => {
         <div className="rvo-feedback rvo-margin-block-start--2xl">
           <div className="rvo-feedback__form rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--md">
             <Fieldset legend="">
-              <Heading type="h3">Wat vindt u van deze pagina?</Heading>
+              <Heading type="h3">Heeft deze informatie u geholpen?</Heading>
               <div className="rvo-layout-row rvo-layout-align-content-center rvo-padding-block-end--md">
                 {[1, 2, 3, 4, 5].map((star, idx) => (
                   <span
