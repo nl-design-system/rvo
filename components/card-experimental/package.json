@@ -1,13 +1,14 @@
 {
-  "version": "1.3.0",
+  "version": "0.1.0",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
-  "name": "@nl-rvo/css-card",
-  "description": "Card CSS component",
+  "name": "@nl-rvo/css-card-experimental",
+  "description": "Card Experimental CSS component",
   "keywords": [
     "nl-design-system",
     "css",
-    "card"
+    "card",
+    "experimental"
   ],
   "files": [
     "src/index.scss",

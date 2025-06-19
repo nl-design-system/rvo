@@ -1,5 +1,27 @@
 # @nl-rvo/component-library-react
 
+## 5.2.0
+
+### Minor Changes
+
+- a8cd259: Mobile menu code cleanup and splitting of menu items
+
+### Patch Changes
+
+- 9f3ff4d: pagination now has className prop and html atrributes props forwarded to the root element
+- 6e5a78b: adds an inputFieldLabel prop for the text input field + fix UX where the user cannot remove client side filtering value because of missing text field
+
+## 5.1.0
+
+### Minor Changes
+
+- a0061d6: Allow for client side navigation via LinkComponent prop on Link and Card and added CardExperimental compound component
+
+### Patch Changes
+
+- 88c844c: allow the content prop to contain react nodes instead of strings
+- 5a08db9: derives checkbox state from specified options and using parent state as single source of thruth
+
 ## 5.0.1
 
 ### Patch Changes

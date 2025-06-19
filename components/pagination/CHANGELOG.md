@@ -1,5 +1,11 @@
 # `@nl-rvo/css-pagination`
 
+## 1.2.1
+
+### Patch Changes
+
+- 9f3ff4d: pagination now has className prop and html atrributes props forwarded to the root element
+
 ## 1.2.0
 
 ### Minor Changes
