@@ -1,5 +1,16 @@
 # @nl-rvo/component-library-react
 
+## 5.2.0
+
+### Minor Changes
+
+- a8cd259: Mobile menu code cleanup and splitting of menu items
+
+### Patch Changes
+
+- 9f3ff4d: pagination now has className prop and html atrributes props forwarded to the root element
+- 6e5a78b: adds an inputFieldLabel prop for the text input field + fix UX where the user cannot remove client side filtering value because of missing text field
+
 ## 5.1.0
 
 ### Minor Changes
