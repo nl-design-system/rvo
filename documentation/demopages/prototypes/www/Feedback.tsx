@@ -1,30 +1,9 @@
-import {
-  Button,
-  Fieldset,
-  Header,
-  Heading,
-  Icon,
-  LayoutFlow,
-  Link,
-  MenuBar,
-  TextareaField,
-  TextInputField,
-} from '@nl-rvo/components';
+import { Button, Fieldset, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
 import { useState } from 'react';
 
 const Feedback = () => {
-  // const [isContactQuestionVisible, setIsContactQuestionVisible] = useState(false);
-  const [isEmailVisible, setIsEmailVisible] = useState(false);
   const [hoveredStar, setHoveredStar] = useState(0);
   const [selectedStar, setSelectedStar] = useState(0);
-
-  const handleContactRadioButtonChange = (event) => {
-    if (event.target.value === 'Ja') {
-      setIsEmailVisible(true);
-    } else {
-      setIsEmailVisible(false);
-    }
-  };
 
   return (
     <body className="rvo-theme">
@@ -386,14 +365,21 @@ const Feedback = () => {
             <Fieldset legend="">
               <Heading type="h3">Wat vindt u van deze pagina?</Heading>
               <div className="rvo-layout-row rvo-layout-align-content-center rvo-padding-block-end--md">
-                {[1, 2, 3, 4, 5].map((star) => (
+                {[1, 2, 3, 4, 5].map((star, idx) => (
                   <span
                     key={star}
-                    className={`utrecht-icon rvo-icon rvo-icon-ster rvo-icon--xl ${
-                      hoveredStar >= star || selectedStar >= star ? 'rvo-icon--logoblauw' : 'rvo-icon--donkerblauw'
-                    }`}
-                    role="img"
-                    aria-label="Ster"
+                    style={{
+                      display: 'inline-block',
+                      paddingBottom: '2px',
+                      borderBottom:
+                        hoveredStar >= star || selectedStar >= star
+                          ? '3px solid var(--rvo-color-logoblauw, #007BC7)'
+                          : '3px solid transparent',
+                      marginRight: idx < 4 ? '0' : '0', // geen ruimte tussen borders
+                      borderRight: idx < 4 ? 'none' : undefined, // geen border tussen sterren
+                      cursor: 'pointer',
+                      lineHeight: 0,
+                    }}
                     tabIndex={0}
                     onMouseEnter={() => setHoveredStar(star)}
                     onMouseLeave={() => setHoveredStar(0)}
@@ -401,8 +387,19 @@ const Feedback = () => {
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' || e.key === ' ') setSelectedStar(star);
                     }}
-                    style={{ cursor: 'pointer' }}
-                  ></span>
+                  >
+                    <span
+                      className={`utrecht-icon rvo-icon rvo-icon-ster rvo-icon--xl`}
+                      role="img"
+                      aria-label="Ster"
+                      style={{
+                        color:
+                          hoveredStar >= star || selectedStar >= star ? 'var(--rvo-color-groen, #009639)' : '#64748B',
+                        transition: 'color 0.2s',
+                        verticalAlign: 'middle',
+                      }}
+                    ></span>
+                  </span>
                 ))}
                 <span className="rvo-text rvo-margin-inline-start--xs">
                   {(() => {
@@ -412,129 +409,39 @@ const Feedback = () => {
                   })()}
                 </span>
               </div>
-              {selectedStar > 0 && (
-                <>
-                  <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
-                    <div className="rvo-form-field__label">
-                      <label className="rvo-label">Heeft u alle informatie gevonden die u nodig heeft?</label>
-                    </div>
-                    <div className="rvo-radio-button__group">
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="info-gevonden" value="1" className="utrecht-radio-button" /> Helemaal
-                        oneens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="info-gevonden" value="2" className="utrecht-radio-button" /> Oneens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="info-gevonden" value="3" className="utrecht-radio-button" /> Neutraal
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="info-gevonden" value="4" className="utrecht-radio-button" /> Eens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="info-gevonden" value="5" className="utrecht-radio-button" /> Helemaal
-                        eens
-                      </label>
-                    </div>
-                  </div>
-                  <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
-                    <div className="rvo-form-field__label">
-                      <label className="rvo-label">Was het makkelijk om de informatie te vinden?</label>
-                    </div>
-                    <div className="rvo-radio-button__group">
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="makkelijk-gevonden" value="1" className="utrecht-radio-button" />{' '}
-                        Helemaal oneens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="makkelijk-gevonden" value="2" className="utrecht-radio-button" />{' '}
-                        Oneens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="makkelijk-gevonden" value="3" className="utrecht-radio-button" />{' '}
-                        Neutraal
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="makkelijk-gevonden" value="4" className="utrecht-radio-button" /> Eens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="makkelijk-gevonden" value="5" className="utrecht-radio-button" />{' '}
-                        Helemaal eens
-                      </label>
-                    </div>
-                  </div>
-                  <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
-                    <div className="rvo-form-field__label">
-                      <label className="rvo-label">Is de informatie duidelijk?</label>
-                    </div>
-                    <div className="rvo-radio-button__group">
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="duidelijk" value="1" className="utrecht-radio-button" /> Helemaal
-                        oneens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="duidelijk" value="2" className="utrecht-radio-button" /> Oneens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="duidelijk" value="3" className="utrecht-radio-button" /> Neutraal
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="duidelijk" value="4" className="utrecht-radio-button" /> Eens
-                      </label>
-                      <label className="rvo-radio-button">
-                        <input type="radio" name="duidelijk" value="5" className="utrecht-radio-button" /> Helemaal eens
-                      </label>
-                    </div>
-                  </div>
-                  <TextareaField label="Bedankt voor uw reactie. Hiermee helpt u ons de website te verbeteren. Heeft u verder nog tips voor ons?" />
-                </>
-              )}
-              {selectedStar > 0 && (
-                <div
-                  role="contact-opnemen"
-                  aria-labelledby="contact-opnemen-label"
-                  className="utrecht-form-field utrecht-form-field--text rvo-form-field"
-                >
+              {(selectedStar === 1 || selectedStar === 2) && (
+                <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
                   <div className="rvo-form-field__label">
-                    <label className="rvo-label" id="contact-opnemen-label" htmlFor="contact-opnemen">
-                      Mogen wij contact met u opnemen over uw feedback?
+                    <label className="rvo-label" htmlFor="feedback-ontevreden">
+                      Dat vinden wij jammer. Wilt u ons vertellen waarom u ontevreden bent?
                     </label>
                   </div>
-                  <div className="rvo-radio-button__group">
-                    <label className="rvo-radio-button" htmlFor="contact-opnemen-ja">
-                      <input
-                        id="contact-opnemen-ja"
-                        name="contact-opnemen"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Ja"
-                        onChange={handleContactRadioButtonChange}
-                      />
-                      Ja
-                    </label>
-                    <label className="rvo-radio-button" htmlFor="contact-opnemen-nee">
-                      <input
-                        id="contact-opnemen-nee"
-                        name="contact-opnemen"
-                        type="radio"
-                        className="utrecht-radio-button"
-                        value="Nee"
-                        onChange={handleContactRadioButtonChange}
-                      />
-                      Nee
-                    </label>
+                  <div className="rvo-form-field__input">
+                    <textarea
+                      id="feedback-ontevreden"
+                      name="feedback-ontevreden"
+                      className="utrecht-textarea rvo-textarea"
+                      rows={4}
+                      style={{ width: '100%' }}
+                    />
                   </div>
                 </div>
               )}
-              {selectedStar > 0 && isEmailVisible && (
-                <div className="rvo-padding-block-end--lg">
-                  <div className="rvo-email">
-                    <TextInputField type="email" label="Uw e-mailadres" name="email" />
-                    <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="klantenpanel">
-                      <input id="klantenpanel" name="klantenpanel" className="rvo-checkbox__input" type="checkbox" />
-                      Ik wil mij aanmelden voor het klantenpanel.
+              {(selectedStar === 3 || selectedStar === 4 || selectedStar === 5) && (
+                <div className="utrecht-form-field rvo-form-field rvo-margin-block-end--md">
+                  <div className="rvo-form-field__label">
+                    <label className="rvo-label" htmlFor="feedback-tips">
+                      Dat horen wij graag. Heeft u verder nog tips voor ons?
                     </label>
+                  </div>
+                  <div className="rvo-form-field__input">
+                    <textarea
+                      id="feedback-tips"
+                      name="feedback-tips"
+                      className="utrecht-textarea rvo-textarea"
+                      rows={4}
+                      style={{ width: '100%' }}
+                    />
                   </div>
                 </div>
               )}
