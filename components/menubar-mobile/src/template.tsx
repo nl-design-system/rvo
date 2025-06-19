@@ -18,7 +18,7 @@ export interface IMobileMenuBarProps {
   /** @uxpinignoreprop */
 }
 
-export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
+export async function MobileMenuBar({
   size,
   items,
   useIcons,
@@ -26,7 +26,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   isOpen = false,
   horizontalRule,
   children,
-}: IMobileMenuBarProps) => {
+}: IMobileMenuBarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(isOpen);
 
   let itemsMarkup =
@@ -72,6 +72,6 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
       </Dialog>
     </div>
   );
-};
+}
 
 export default MobileMenuBar;
