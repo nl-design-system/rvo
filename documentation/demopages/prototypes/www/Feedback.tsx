@@ -1,9 +1,16 @@
 import { Button, Fieldset, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const Feedback = () => {
   const [hoveredStar, setHoveredStar] = useState(0);
   const [selectedStar, setSelectedStar] = useState(0);
+  const feedbackRef = useRef(null);
+
+  const handleFloatingButtonClick = () => {
+    if (feedbackRef.current) {
+      feedbackRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   return (
     <body className="rvo-theme">
@@ -360,7 +367,111 @@ const Feedback = () => {
           </ul>
         </div>
 
-        <div className="rvo-feedback rvo-margin-block-start--2xl">
+        <div
+          style={{
+            position: 'fixed',
+            right: '-36px',
+            top: '50%',
+            transform: 'translateY(-50%) rotate(-90deg)',
+            zIndex: 1000,
+            borderRadius: '0 0.5rem 0.5rem 0',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+            padding: 0,
+            background: 'transparent',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Button kind="primary" onClick={handleFloatingButtonClick}>
+            Geef feedback
+          </Button>
+        </div>
+
+        <div className="rvo-uitgelicht rvo-margin-block-end--3xl rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--lg">
+          <h2 className="utrecht-heading-2">Uitgelicht</h2>
+          <div className="rvo-layout-grid-container rvo-margin-block-end--md">
+            <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
+              <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
+                <div className="rvo-card__image-container">
+                  <img
+                    src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-12%2FProjectenboek-MIEK-en-Projectprocedure-2024.jpg%3Fitok%3DI7uP9ni9&w=750&q=85"
+                    className="rvo-card__image"
+                  />
+                </div>
+
+                <div className="rvo-card__content">
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
+                      Energieprojecten in Nederland
+                    </a>
+                  </h3>
+                  In Nederland wordt hard gewerkt aan de verbouwing van ons energiesysteem.
+                </div>
+              </div>
+              <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                <div className="rvo-card__content">
+                  <LayoutFlow>
+                    <span className="rvo-text--italic  rvo-text--xl">
+                      "Als start-up doen wij er alles aan om een gezonde, toekomstbestendige leefomgeving te maken. Deze
+                      subsidie voor bijen op het dak helpt ons hierbij."
+                    </span>
+                    <LayoutFlow row={true} gap="sm">
+                      <div className="rvo-quote__image">
+                        <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                      </div>
+                      <div className="rvo-quote__person">
+                        <LayoutFlow gap="0">
+                          <span className="rvo-text rvo-text--bold">Rosita van der Helm</span>
+                          <span className="rvo-text rvo-text--sm">Office manager bij Powerbod</span>
+                        </LayoutFlow>
+                      </div>
+                    </LayoutFlow>
+                  </LayoutFlow>
+                </div>
+              </div>
+              <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                <div className="rvo-card__content">
+                  <Icon icon="nieuws" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link  rvo-link--no-underline" href="#">
+                      Energie & Klimaat Nieuws
+                    </a>
+                  </h3>
+                  Lees al het nieuws over Energie & Klimaat.
+                  <br />
+                  <br />
+                  <Icon icon="kalender" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link  rvo-link--no-underline" href="#">
+                      Energie & Klimaat Evenementen
+                    </a>
+                  </h3>
+                  Bekijk alle evenementen over Energie & Klimaat.
+                </div>
+              </div>
+              <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
+                <div className="rvo-card__image-container">
+                  <img
+                    src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2022-11%2Fzonnepanelen%2520plaatsen%25201600x1066%2520-%2520gradient.jpg%3Fitok%3DFoy6rQAY&w=640&q=85"
+                    className="rvo-card__image"
+                  />
+                </div>
+
+                <div className="rvo-card__content">
+                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                    <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
+                      Energie & Klimaat Nieuwsbrief
+                    </a>
+                  </h3>
+                  Schrijf u in voor onze gratis nieuwsbrief over Energie & Klimaat.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ref={feedbackRef} className="rvo-feedback rvo-margin-block-start--2xl">
           <div className="rvo-feedback__form rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--md">
             <Fieldset legend="">
               <Heading type="h3">Heeft deze informatie u geholpen?</Heading>
