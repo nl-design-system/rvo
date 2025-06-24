@@ -15,14 +15,13 @@ Het component bestaat uit:
 
 ## Richtlijnen
 
-- Zorg ervoor dat de eerste actieve tab relevant is voor de meeste gebruikers.
-- Gebruik geen tabs als de gebruiker de content in de verschillende tabs in één overzicht moet kunnen zien en scannen.
-- Gebruik duidelijke titels van de tabs die aangeven welke content er in de sectie getoond wordt.
-- Gebruik tabs niet als vervanging van navigatie.
-- Tabs zijn niet geschikt wanneer een gebruiker secties met content met elkaar moet vergelijken.
-- Kijk eerst of de content versimpeld kan worden voordat er gebruik gemaakt wordt van tabs.
-- Onderzoek of het beter is om content op de te delen in verschillende pagina's.
-- Als er teveel tabs nodig zijn en er horizontaal een gebrek aan ruimte ontstaat kijk dan of een Accordion een betere oplossing is.
+- Gebruik tabs alleen als de content logisch op te delen is in duidelijk gelabelde secties.
+- Zorg dat de eerste tab het meest relevant is voor de meeste gebruikers.
+- Gebruik tabs niet als gebruikers alle content in één keer moeten kunnen zien, lezen of vergelijken.
+- Gebruik tabs niet als de totale hoeveelheid content de pagina traag maakt om te laden.
+- Gebruik tabs niet als vervanging van paginanavigatie.
+- Test eerst of de content zonder tabs duidelijk is. Overweeg of het beter is om de content te versimpelen, over meerdere pagina’s te verdelen, op één pagina te houden met kopjes, of een inhoudsopgave te gebruiken.
+- Gebruik tabs als gebruikers niet meer dan één sectie tegelijk hoeven te zien en snel willen wisselen.
 
 ## Rijkshuisstijl
 

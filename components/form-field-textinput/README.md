@@ -26,6 +26,8 @@ Mogelijke andere element bij het text input veld zijn:
 - Schrijf duidelijke labels. Vermijd jargon en complexe taal.
 - Gebruik geen placeholder tekst. Deze verdwijnt als de gebruiker begint met typen en ze worden niet door alle browsers ondersteunt. Maak gebruik van duidelijke labels en eventueel een helper text voor extra hints.
 - Geef het text input veld dezelfde grootte als de te verwachte input. Een postcode veld hoeft bijvoorbeeld niet groter te zijn de dan de 7 tekens die het maximaal kan bevatten.
+- Gebruik alleen `<input type="number">` als het veld bedoeld is voor een waarde waarmee rekenen, verhogen of verlagen logisch is (zoals een hoeveelheid, leeftijd of prijs).
+- Voor velden die uit cijfers bestaan maar geen echte getallen zijn (zoals postcode, telefoonnummer, 2FA-code, burgerservicenummer, creditcardnummer), gebruik `<input type="text" inputmode="numeric">`. Zo krijgen gebruikers een numeriek toetsenbord op mobiel, maar voorkom je onjuiste validatie en ongewenste spinner-knoppen.
 
 # Rijkshuisstijl
 
