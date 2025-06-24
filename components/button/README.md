@@ -11,6 +11,7 @@ Een button bestaat uit:
 
 ## Richtlijnen
 
+- Een button gebruik je om een actie uit te voeren. Om naar een andere pagina te verwijzen gebruik je het Link component.
 - Probeer maximaal één primaire button per pagina te gebruiken. Meerdere primaire buttons per pagina kan verwarrend zijn voor de gebruiker omdat er niet duidelijk is wat de focus is.
 - Gebruik de waarschuwing buttons alleen voor destructieve acties zoals het permanent verwijderen van een account. Zorg er bij dit soort acties ook voor dat deze eerst bevestigd moet worden voordat het daadwerkelijk uitgevoerd wordt.
 - Gebruik meer aanwijzingen dan alleen een rode kleur voor een destructieve actie omdat mensen die kleurenblind zijn het verschil niet goed zien. Denk bijvoorbeeld aan een prullenbak icoon of een duidelijke buttontekst.
