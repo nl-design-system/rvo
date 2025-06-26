@@ -2,8 +2,8 @@
   "version": "1.2.1",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
-  "name": "@nl-rvo/css-pagination",
-  "description": "Pagination CSS component",
+  "name": "@nl-rvo/css-page-number-navigation",
+  "description": "Page Number Navigation CSS component",
   "keywords": [
     "nl-design-system",
     "css",
@@ -26,7 +26,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/pagination"
+    "directory": "components/page-number-navigation"
   },
   "devDependencies": {
     "@nl-rvo/build-utils-css": "workspace:*"

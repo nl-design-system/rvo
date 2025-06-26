@@ -7,7 +7,7 @@ import {
   LayoutFlow,
   MenuBar,
   MobileMenuBar,
-  Pagination,
+  PageNumberNavigation,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -505,7 +505,7 @@ const Stallijst = () => {
                   </tbody>
                 </table>
               </div>
-              <Pagination numberOfPages={10} activePage={5}></Pagination>
+              <PageNumberNavigation numberOfPages={10} activePage={5} />
             </LayoutFlow>
           </div>
         </div>

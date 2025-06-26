@@ -7,7 +7,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  Pagination,
+  PageNumberNavigation,
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
@@ -698,7 +698,7 @@ const Subsidiewijzer = () => {
                         ></span>
                       </div>
                     </div>
-                    <Pagination numberOfPages={30} activePage={1} />
+                    <PageNumberNavigation numberOfPages={30} activePage={1} />
                   </LayoutFlow>
                 </LayoutFlow>
               </div>

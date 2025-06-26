@@ -4,35 +4,20 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode, useEffect, useMemo, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
 import Link from '../../link/src/template';
 import './index.scss';
 
-export interface IPaginationProps extends Omit<HTMLAttributes<HTMLElement>, 'onPageChange'> {
+export interface IPageNumberNavigation extends Omit<HTMLAttributes<HTMLElement>, 'onPageChange'> {
   activePage: number;
   className?: string;
   numberOfPages: number;
   onPageChange?: (currentPage: number) => void;
 }
 
-export const argTypes = {
-  numberOfPages: {
-    control: 'number',
-  },
-  activePage: {
-    control: 'number',
-  },
-  onPageChange: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 const generatePageNumbers = (
   totalPages: number,
   activePage: number,
-  onPageChange?: IPaginationProps['onPageChange'],
+  onPageChange?: IPageNumberNavigation['onPageChange'],
 ): ReactNode[] => {
   const pages: ReactNode[] = [];
 
@@ -85,16 +70,20 @@ const generatePageNumber = (pageNumber: number, active?: number, onPageChange?: 
     key={pageNumber}
     className={clsx('rvo-pagination__item', active === pageNumber && 'rvo-pagination__item--active')}
   >
-    <Link
-      href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        onPageChange?.(pageNumber);
-      }}
-      aria-current={active === pageNumber ? 'page' : undefined}
-    >
-      {pageNumber}
-    </Link>
+    {active === pageNumber ? (
+      <span aria-current={active === pageNumber ? 'page' : undefined}>{pageNumber}</span>
+    ) : (
+      <Link
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          onPageChange?.(pageNumber);
+        }}
+        aria-current={active === pageNumber ? 'page' : undefined}
+      >
+        {pageNumber}
+      </Link>
+    )}
   </li>
 );
 
@@ -106,13 +95,13 @@ const generateEllipses = (key: string) => {
   );
 };
 
-export const Pagination: React.FC<IPaginationProps> = ({
-  activePage = defaultArgs.activePage,
+export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
+  activePage,
   className,
-  numberOfPages = defaultArgs.numberOfPages,
+  numberOfPages,
   onPageChange,
   ...htmlAttributes
-}: IPaginationProps) => {
+}: IPageNumberNavigation) => {
   // Define internal active page state based on the activePage prop
   const [internalActivePage, setInternalActivePage] = useState(activePage);
 
@@ -175,4 +164,4 @@ export const Pagination: React.FC<IPaginationProps> = ({
   );
 };
 
-export default Pagination;
+export default PageNumberNavigation;
