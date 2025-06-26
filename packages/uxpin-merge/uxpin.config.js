@@ -37,7 +37,7 @@ module.exports = {
           '../../components/item-list/src/template.tsx',
           '../../components/ordered-unordered-list/src/template.tsx',
           '../../components/paragraph/src/template.tsx',
-          '../../components/pagination/src/template.tsx',
+          '../../components/page-number-navigation/src/template.tsx',
           '../../components/tabs/src/template.tsx',
           '../../components/tabs/src/tab-item/template.tsx',
           '../../components/toggle/src/template.tsx',

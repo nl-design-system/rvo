@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 .rvo-pagination {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: var(--rvo-pagination-gap);
@@ -10,6 +11,17 @@
 
   @media (min-width: 780px) {
     justify-content: flex-start;
+  }
+
+  &__prev,
+  &__next {
+    .rvo-link {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -23,13 +35,26 @@
 }
 
 .rvo-pagination__item {
+  font-weight: var(--rvo-font-weight-bold);
   list-style: none;
+  min-width: var(--rvo-size-xl);
+  padding-block-end: var(--rvo-space-sm);
+  padding-block-start: var(--rvo-space-sm);
+  padding-inline-end: var(--rvo-space-sm);
+  padding-inline-start: var(--rvo-space-sm);
+  text-align: center;
 
   .rvo-link {
     font-weight: var(--rvo-font-weight-regular);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.rvo-pagination__item--active {
-    font-weight: var(--rvo-font-weight-bold);
+    background-color: var(--rvo-color-grijs-100);
+    font-weight: var(--rvo-font-weight-normal);
   }
 }
