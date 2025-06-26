@@ -3,8 +3,8 @@
     "form-feedback": {
       "line-height": { "value": "{rvo.line-height.md}" },
       "warning": {
-        "color": {},
-        "font-weight": {}
+        "color": { "value": "{rvo.color.donkergeel}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" }
       },
       "error": {
         "color": { "value": "{rvo.color.rood}" },
