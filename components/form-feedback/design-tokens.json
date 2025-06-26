@@ -1,1 +1,30 @@
-{}
+{
+  "rvo": {
+    "form-feedback": {
+      "line-height": {
+        "syntax": "<length>",
+        "inherits": true
+      },
+      "error": {
+        "color": {
+          "syntax": "<length>",
+          "inherits": true
+        },
+        "font-weight": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "warning": {
+        "color": {
+          "syntax": "<length>",
+          "inherits": true
+        },
+        "font-weight": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}
