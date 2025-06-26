@@ -133,6 +133,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         size === 'md' && 'utrecht-button--rvo-md',
         alignToRightInGroup && 'rvo-action-group--align-right',
         fullWidth && 'utrecht-button--rvo-full-width',
+        showIcon !== 'no' && `utrecht-button--icon-${showIcon}`,
       )}
       disabled={disabled || undefined}
       appearance={appearance}
