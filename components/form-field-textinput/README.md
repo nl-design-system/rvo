@@ -28,6 +28,7 @@ Mogelijke andere element bij het text input veld zijn:
 - Geef het text input veld dezelfde grootte als de te verwachte input. Een postcode veld hoeft bijvoorbeeld niet groter te zijn de dan de 7 tekens die het maximaal kan bevatten.
 - Gebruik alleen `<input type="number">` als het veld bedoeld is voor een waarde waarmee rekenen, verhogen of verlagen logisch is (zoals een hoeveelheid, leeftijd of prijs).
 - Voor velden die uit cijfers bestaan maar geen echte getallen zijn (zoals postcode, telefoonnummer, 2FA-code, burgerservicenummer, creditcardnummer), gebruik `<input type="text" inputmode="numeric">`. Zo krijgen gebruikers een numeriek toetsenbord op mobiel, maar voorkom je onjuiste validatie en ongewenste spinner-knoppen.
+- Als een gebruiker een e-mailadres moet invoeren, bijvoorbeeld bij een registratie, laat deze dan niet dubbel invoeren ter controle. Uit onderzoek blijkt dat dit niet werkt en alleen maar frustratie oproept bij de gebruiker.
 
 # Rijkshuisstijl
 
@@ -36,3 +37,4 @@ Vanuit de Rijkshuisstijl zijn er geen specifieke richtlijnen wat betreft het tex
 # Bronnen
 
 - [The problem with placeholders and what to do instead](https://web.archive.org/web/20250511143112/https://adamsilver.io/blog/the-problem-with-placeholders-and-what-to-do-instead/)
+- [Why the Email Confirmation Field Must Die](https://web.archive.org/web/20250328104206/https://uxmovement.com/forms/why-the-email-confirmation-field-must-die/)

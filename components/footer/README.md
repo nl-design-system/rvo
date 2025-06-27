@@ -19,6 +19,7 @@ Een Footer bestaat uit:
   - Toegankelijkheid: verwijst naar de specifieke eigen toegankelijkheidsverklaring van de website of applicatie.
   - Proclaimer: verwijst naar de Proclaimer pagina op de website van RVO.
   - Kwetsbaarheid melden: verwijst naar de kwetsbaarheid melden pagina op de website van RVO.
+  - Webarchief: verwijst naar de archivering van de website of applicatie.
 
 ## Richtlijnen
 
