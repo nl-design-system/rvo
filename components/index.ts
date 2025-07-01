@@ -1,6 +1,7 @@
 export { Accordion } from './accordion/src/template';
 export { AccordionItem } from './accordion/src/accordion-item/template';
 export { Alert } from './alert/src/template';
+export { Autocomplete } from './form-autocomplete/src/template';
 export { Breadcrumbs } from './breadcrumbs/src/template';
 export { BreadcrumbsItem } from './breadcrumbs/src/breadcrumbs-item/template';
 export { Button } from './button/src/template';
