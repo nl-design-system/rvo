@@ -20,7 +20,7 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   title?: string | ReactNode;
   link?: string;
   fullCardLink?: boolean;
-  image?: string;
+  image?: ReactNode;
   imageSize?: 'sm' | 'md';
   showLinkIndicator?: boolean;
   invertedColors?: boolean;
@@ -104,8 +104,8 @@ export const Card: React.FC<ICardProps> = ({
     <div
       className={clsx(
         'rvo-card',
-        image && image.length > 0 && 'rvo-card--with-image',
-        image && image.length > 0 && imageSize && `rvo-card--with-image-${imageSize}`,
+        image && 'rvo-card--with-image',
+        image && imageSize && `rvo-card--with-image-${imageSize}`,
         outline && background !== 'image' && 'rvo-card--outline',
         (outline || background !== 'none') && `rvo-card--padding-${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
@@ -121,9 +121,15 @@ export const Card: React.FC<ICardProps> = ({
           <img src={backgroundImage} className="rvo-card__background-image" />
         </div>
       )}
-      {image && image.length > 0 && (
+      {image && (
         <div className={clsx('rvo-card__image-container')}>
-          <img src={image} className="rvo-card__image" />
+          {typeof image === 'string' ? (
+            <img src={image} className="rvo-card__image" />
+          ) : React.isValidElement(image) ? (
+            React.cloneElement<React.ImgHTMLAttributes<HTMLImageElement>>(image as React.ReactElement, {
+              className: clsx((image as any).props?.className, 'rvo-card__image'),
+            })
+          ) : null}
         </div>
       )}
 
