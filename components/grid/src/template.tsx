@@ -25,6 +25,7 @@ export interface IGridProps {
   division?: string;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
+  className?: string;
 }
 
 export const argTypes = {
@@ -52,6 +53,7 @@ export const Grid: React.FC<IGridProps> = ({
   columns = defaultArgs.columns,
   division,
   children,
+  className,
 }: IGridProps) => {
   const getColumnCount = (columnName: string | undefined): number => {
     if (!columnName) {
@@ -75,7 +77,7 @@ export const Grid: React.FC<IGridProps> = ({
   };
 
   return (
-    <div className="rvo-layout-grid-container">
+    <div className={clsx('rvo-layout-grid-container', className)}>
       <div
         className={clsx(
           'rvo-layout-grid',
