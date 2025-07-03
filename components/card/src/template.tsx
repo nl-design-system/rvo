@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import Heading from '../../heading/src/template';
+import Heading, { IHeadingProps } from '../../heading/src/template';
 import Icon from '../../icon/src/template';
 import Link, { ILinkProps } from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
@@ -15,22 +15,28 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   background?: 'none' | 'color' | 'image';
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   backgroundImage?: string;
-  padding?: 'sm' | 'md' | 'lg' | 'xl';
-  outline?: boolean;
-  title?: string | ReactNode;
-  link?: string;
-  fullCardLink?: boolean;
-  image?: ReactNode;
-  imageSize?: 'sm' | 'md';
-  showLinkIndicator?: boolean;
-  invertedColors?: boolean;
-  /** @uxpinignoreprop */
-  content?: string;
-  /** @uxpinignoreprop */
-  className?: string;
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
+  className?: string;
+  content?: string;
+  fullCardLink?: boolean;
+  headingClassName?: string;
+  headingProps?: Omit<IHeadingProps, 'children'>;
+  image?: ReactNode;
+  imageAlt?: string;
+  imageHeight?: string;
+  imageSize?: 'sm' | 'md';
+  imageWidth?: string;
+  inlineImage?: boolean;
+  invertedColors?: boolean;
+  layout?: 'column' | 'row';
+  link?: string;
+  linkClassName?: string;
+  linkProps?: Omit<ILinkProps, 'children'>;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+  outline?: boolean;
+  padding?: 'sm' | 'md' | 'lg' | 'xl';
+  showLinkIndicator?: boolean;
+  title?: string | ReactNode;
 }
 
 export const argTypes = {
@@ -78,19 +84,28 @@ export const Card: React.FC<ICardProps> = ({
   backgroundColor = defaultArgs.backgroundColor,
   backgroundImage = defaultArgs.backgroundImage,
   padding = defaultArgs.padding,
-  outline = defaultArgs.outline,
-  title = defaultArgs.title,
-  link = defaultArgs.link,
-  fullCardLink = defaultArgs.fullCardLink,
-  image = defaultArgs.image,
-  imageSize = defaultArgs.imageSize,
-  showLinkIndicator = defaultArgs.showLinkIndicator,
-  invertedColors = defaultArgs.invertedColors,
-  content = defaultArgs.content,
-  className = defaultArgs.className,
   children,
-  onClick,
+  className = defaultArgs.className,
+  content,
+  fullCardLink = defaultArgs.fullCardLink,
+  headingClassName,
+  headingProps = {},
+  image = defaultArgs.image,
+  imageAlt,
+  imageHeight,
+  imageSize = defaultArgs.imageSize,
+  imageWidth,
+  inlineImage = false,
+  invertedColors = defaultArgs.invertedColors,
+  layout = 'column',
+  link = defaultArgs.link,
+  linkClassName,
   LinkComponent,
+  linkProps = {},
+  onClick,
+  outline = defaultArgs.outline,
+  showLinkIndicator = defaultArgs.showLinkIndicator,
+  title = defaultArgs.title,
   ...props
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
@@ -100,12 +115,43 @@ export const Card: React.FC<ICardProps> = ({
   const ContentContainer = hasLinkIndicator ? 'div' : React.Fragment;
   const contentContainerProps = hasLinkIndicator ? { className: clsx('rvo-card--with-link-indicator') } : {};
 
+  const contentClass = clsx(
+    'rvo-card__content',
+    layout === 'row' ? 'rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md' : undefined,
+  );
+
+  const linkClasses = clsx(
+    'rvo-card__link',
+    linkClassName && linkClassName,
+    fullCardLink && 'rvo-card__full-card-link',
+  );
+
+  const imageContent =
+    typeof image === 'string' ? (
+      <img
+        alt={imageAlt || ''}
+        className={clsx('rvo-card__image', imageSize && `rvo-card-img--${imageSize}`)}
+        height={imageHeight || undefined}
+        src={image}
+        style={imageWidth || imageHeight ? { width: imageWidth, height: imageHeight } : undefined}
+        width={imageWidth || undefined}
+      />
+    ) : React.isValidElement(image) ? (
+      React.cloneElement<React.ImgHTMLAttributes<HTMLImageElement>>(image as React.ReactElement, {
+        alt: imageAlt || '',
+        className: clsx((image as any).props?.className, 'rvo-card__image', imageSize && `rvo-card-img--${imageSize}`),
+        height: imageHeight || (image as any).props?.height,
+        style: imageWidth || imageHeight ? { width: imageWidth, height: imageHeight } : (image as any).props?.style,
+        width: imageWidth || (image as any).props?.width,
+      })
+    ) : null;
+
   return (
     <div
       className={clsx(
         'rvo-card',
-        image && 'rvo-card--with-image',
-        image && imageSize && `rvo-card--with-image-${imageSize}`,
+        image && !inlineImage && 'rvo-card--with-image',
+        image && imageSize && !inlineImage && `rvo-card--with-image-${imageSize}`,
         outline && background !== 'image' && 'rvo-card--outline',
         (outline || background !== 'none') && `rvo-card--padding-${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
@@ -121,28 +167,22 @@ export const Card: React.FC<ICardProps> = ({
           <img src={backgroundImage} className="rvo-card__background-image" />
         </div>
       )}
-      {image && (
-        <div className={clsx('rvo-card__image-container')}>
-          {typeof image === 'string' ? (
-            <img src={image} className="rvo-card__image" />
-          ) : React.isValidElement(image) ? (
-            React.cloneElement<React.ImgHTMLAttributes<HTMLImageElement>>(image as React.ReactElement, {
-              className: clsx((image as any).props?.className, 'rvo-card__image'),
-            })
-          ) : null}
+      {/* Only render image container if not inlineImage */}
+      {image && !inlineImage && (
+        <div className={clsx('rvo-card__image-container', layout === 'row' && 'rvo-card__image-container--row')}>
+          {imageContent}
         </div>
       )}
 
       <ContentContainer {...contentContainerProps}>
-        <div className="rvo-card__content">
+        <div className={contentClass}>
+          {/* Render image inline if requested */}
+          {image && inlineImage && layout === 'row' && imageContent}
+
           {title && (
-            <Heading type="h3">
+            <Heading type="h3" className={headingClassName} {...headingProps}>
               {link && link.length > 0 ? (
-                <Link
-                  href={link}
-                  LinkComponent={LinkComponent}
-                  className={clsx('rvo-card__link', fullCardLink && 'rvo-card__full-card-link')}
-                >
+                <Link href={link} LinkComponent={LinkComponent} className={linkClasses} {...linkProps}>
                   {parseContentMarkup(title)}
                 </Link>
               ) : (
@@ -154,12 +194,12 @@ export const Card: React.FC<ICardProps> = ({
         </div>
         {hasLinkIndicator && (
           <Icon
-            icon="delta-naar-rechts"
-            size="sm"
-            color="hemelblauw"
             ariaLabel="Delta naar rechts"
-            role="img"
             className="rvo-card__link-indicator"
+            color="hemelblauw"
+            icon="delta-naar-rechts"
+            role="img"
+            size="sm"
           />
         )}
       </ContentContainer>
