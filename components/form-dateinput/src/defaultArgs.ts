@@ -7,7 +7,7 @@ export const defaultArgs: IDateInputProps = {
   readOnly: false,
   invalid: false,
   required: false,
-  value: '',
+  defaultValue: '',
   min: undefined,
   max: undefined,
   step: undefined,
