@@ -105,8 +105,8 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
     return (
       <>
         <span>{text.slice(0, index)}</span>
-        <span className="rvo-highlight">{text.slice(index, index + query.length)}</span>
-        <span>{text.slice(index + query.length)}</span>
+        <span>{text.slice(index, index + query.length)}</span>
+        <span className="rvo-autocomplete__highlight">{text.slice(index + query.length)}</span>
       </>
     );
   };
@@ -121,9 +121,16 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   ) => (
     <li
       key={key}
+      tabIndex={0}
+      role="option"
       onMouseDown={onClick}
-      onKeyDown={(e) => e.key === 'Enter' && onClick()}
-      className={clsx('rvo-autocomplete-item', isLink ? 'link' : 'keyword')}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      className={clsx('rvo-autocomplete__item', isLink ? 'link' : 'keyword')}
     >
       {customRenderer ||
         (isLink ? (
@@ -139,19 +146,22 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   const autocompleteSize = `rvo-autocomplete--${size}`;
 
   return (
-    <div className="rvo-autocomplete-wrapper" ref={wrapperRef}>
+    <>
       <TextInput
         {...rest}
         value={currentValue}
         onChange={handleChange}
-        className={clsx('rvo-autocomplete-textinput')}
+        className={clsx('rvo-autocomplete__textinput')}
+        data-dropdown-open={
+          showSuggestions && (filteredKeywords.length > 0 || filteredLinks.length > 0) ? 'true' : undefined
+        }
         size={size}
       />
 
       {showSuggestions && (filteredKeywords.length > 0 || filteredLinks.length > 0) && (
-        <div className={clsx(autocompleteSize, 'rvo-autocomplete-container')}>
-          <ul className="rvo-autocomplete-suggestions">
-            {filteredKeywords.length > 0 && <hr className="rvo-autocomplete-separator" />}
+        <div className={clsx(autocompleteSize, 'rvo-autocomplete__container')}>
+          <ul className="rvo-autocomplete__suggestions">
+            {filteredKeywords.length > 0 && <hr className="rvo-autocomplete__separator" />}
             {filteredKeywords.map((s) =>
               renderSuggestionItem(
                 `kw-${s.value}`,
@@ -163,7 +173,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
               ),
             )}
 
-            {filteredLinks.length > 0 && filteredKeywords.length > 0 && <hr className="rvo-autocomplete-separator" />}
+            {filteredLinks.length > 0 && filteredKeywords.length > 0 && <hr className="rvo-autocomplete__separator" />}
             {filteredLinks.map((s) =>
               renderSuggestionItem(
                 `link-${s.href}`,
@@ -177,7 +187,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

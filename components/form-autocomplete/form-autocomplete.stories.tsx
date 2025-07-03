@@ -39,6 +39,13 @@ const meta: Meta<typeof Autocomplete> = {
       link: 'autocomplete',
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ position: 'relative', height: '300px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 export default meta;
 
