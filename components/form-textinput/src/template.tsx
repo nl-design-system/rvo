@@ -117,19 +117,19 @@ export const argTypes = {
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   type = defaultArgs.type,
+  defaultValue,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
   placeholder = defaultArgs.placeholder,
-  value,
-  defaultValue,
   validation = defaultArgs.validation,
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
   maxLength = defaultArgs.maxLength,
+  value,
   ...otherProps
 }: ITextInputProps) => {
   const isControlled = value !== undefined;

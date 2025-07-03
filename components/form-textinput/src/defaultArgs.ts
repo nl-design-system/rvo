@@ -1,16 +1,17 @@
 import { ITextInputProps } from './template';
 
 export const defaultArgs: ITextInputProps = {
-  id: 'field',
-  type: 'text',
+  defaultValue: '',
   disabled: false,
   focus: false,
+  id: 'field',
   invalid: false,
-  readOnly: false,
-  required: false,
+  maxLength: undefined,
   placeholder: '',
   prefix: '',
-  suffix: '',
+  readOnly: false,
+  required: false,
   size: 'lg',
-  maxLength: undefined,
+  suffix: '',
+  type: 'text',
 };
