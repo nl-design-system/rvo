@@ -22,8 +22,6 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   readOnly?: boolean;
   required?: boolean;
   placeholder?: string;
-  defaultValue?: string;
-  value?: string;
   validation?: 'none' | 'currency';
   prefix?: string;
   suffix?: string;

@@ -5,11 +5,12 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
-import TextInput from '../../form-textinput/src/template';
+import TextInput, { ITextInputProps } from '../../form-textinput/src/template';
 
 export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
-  defaultValue?: string;
+  defaultValue?: ITextInputProps['defaultValue'];
+  /** @uxpinignoreprop */
   disabled?: boolean;
   /** @uxpinpropname Has focus */
   focus?: boolean;
@@ -19,7 +20,6 @@ export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   required?: boolean;
   placeholder?: string;
   /** @uxpinpropname Value (yyyy-mm-dd format)> */
-  value?: string;
   /** @uxpinpropname Min (yyyy-mm-dd format)> */
   min?: string;
   /** @uxpinpropname Max (yyyy-mm-dd format)> */
@@ -28,6 +28,7 @@ export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   prefix?: string;
   suffix?: string;
   size?: 'sm' | 'md' | 'lg' | 'max';
+  value?: ITextInputProps['value'];
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
