@@ -37,6 +37,9 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
 }
 
 export const argTypes = {
+  autoFocus: {
+    control: 'boolean',
+  },
   id: { control: 'text' },
   type: {
     options: ['text', 'password', 'email', 'tel', 'url', 'search', 'number', 'date', 'time', 'datetime-local'],
