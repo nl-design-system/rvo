@@ -9,7 +9,6 @@ export const defaultArgs: ITextInputProps = {
   readOnly: false,
   required: false,
   placeholder: '',
-  value: '',
   prefix: '',
   suffix: '',
   size: 'lg',

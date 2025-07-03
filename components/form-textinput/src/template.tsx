@@ -22,6 +22,7 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   readOnly?: boolean;
   required?: boolean;
   placeholder?: string;
+  defaultValue?: string;
   value?: string;
   validation?: 'none' | 'currency';
   prefix?: string;
@@ -44,6 +45,9 @@ export const argTypes = {
   type: {
     options: ['text', 'password', 'email', 'tel', 'url', 'search', 'number', 'date', 'time', 'datetime-local'],
     control: { type: 'select' },
+  },
+  defaultValue: {
+    control: 'text',
   },
   disabled: {
     control: 'boolean',
@@ -121,7 +125,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
   placeholder = defaultArgs.placeholder,
-  value = defaultArgs.value,
+  value,
+  defaultValue,
   validation = defaultArgs.validation,
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
@@ -129,7 +134,9 @@ export const TextInput: React.FC<ITextInputProps> = ({
   maxLength = defaultArgs.maxLength,
   ...otherProps
 }: ITextInputProps) => {
-  const props = {
+  const isControlled = value !== undefined;
+
+  const textBoxProps = {
     id,
     type,
     disabled,
@@ -137,7 +144,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
     required,
     readOnly,
     placeholder,
-    defaultValue: value,
+    value: isControlled ? value : undefined,
+    defaultValue: !isControlled ? defaultValue : undefined,
     ...(validation === 'currency' && {
       inputMode: 'numeric' as any,
       pattern: '[0-9.,]*',
@@ -148,7 +156,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
 
   const inputMarkup = (
     <Textbox
-      {...props}
+      {...textBoxProps}
       className={clsx(
         size === 'xs' && 'utrecht-textbox--xs',
         size === 'sm' && 'utrecht-textbox--sm',
