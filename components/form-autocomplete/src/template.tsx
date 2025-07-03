@@ -1,6 +1,6 @@
-import TextInput from '@nl-rvo/components/form-textinput/src/template';
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
+import { TextInput } from '../../form-textinput/src/template';
 import './index.scss';
 import { Link } from '../../link/src/template';
 
@@ -146,7 +146,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   const autocompleteSize = `rvo-autocomplete--${size}`;
 
   return (
-    <>
+    <div ref={wrapperRef}>
       <TextInput
         {...rest}
         value={currentValue}
@@ -187,7 +187,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
           </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
