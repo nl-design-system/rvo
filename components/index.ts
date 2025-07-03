@@ -57,7 +57,7 @@ export { MenuBar } from './menubar/src/menubar/template';
 export { MenuBarItem } from './menubar/src/menubar-item/template';
 export { MobileMenuBar } from './menubar-mobile/src/template';
 export { SubMenu } from './menubar/src/submenu/template';
-export { Pagination } from './pagination/src/template';
+export { PageNumberNavigation } from './page-number-navigation/src/template';
 export { Paragraph } from './paragraph/src/template';
 export { ProgressTracker } from './progress-tracker/src/template';
 export { ProgressTrackerStep } from './progress-tracker/src/progress-tracker-step/template';
