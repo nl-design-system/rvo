@@ -231,6 +231,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/form-autocomplete:
+    devDependencies:
+      '@nl-rvo/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/form-checkbox:
     devDependencies:
       '@nl-rvo/build-utils-css':
