@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-feedback`
 
+## 1.2.1
+
+### Patch Changes
+
+- fec3bba: Updated Feedback components design tokens and CSS
+
 ## 1.2.0
 
 ### Minor Changes

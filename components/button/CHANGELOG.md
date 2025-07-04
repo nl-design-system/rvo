@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 1.1.4
+
+### Patch Changes
+
+- f75e111: Added spacing between button icon and its content
+
 ## 1.1.3
 
 ### Patch Changes
