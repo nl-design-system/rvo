@@ -16,13 +16,13 @@
 
   &--icon-before {
     .utrecht-icon {
-      margin-right: 4px;
+      margin-inline-end: var(--rvo-space-sm);
     }
   }
 
   &--icon-after {
     .utrecht-icon {
-      margin-left: 4px;
+      margin-inline-start: var(--rvo-space-sm);
     }
   }
 }
