@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.0.9
+
+### Patch Changes
+
+- a9b161f: Added position relative to rov-checkbox\_\_input class
+
 ## 3.0.8
 
 ### Patch Changes

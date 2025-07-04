@@ -1,5 +1,19 @@
 # @nl-rvo/component-library-css
 
+## 4.9.0
+
+### Minor Changes
+
+- 31b847a: new component autocomplete
+
+### Patch Changes
+
+- 73efb89: Removed zero padding for first and last child menu items.
+- a255197: Pagination renamed to Page Number Navigation and updated CSS
+- f75e111: Added spacing between button icon and its content
+- fec3bba: Updated Feedback components design tokens and CSS
+- a9b161f: Added position relative to rov-checkbox\_\_input class
+
 ## 4.8.0
 
 ### Minor Changes

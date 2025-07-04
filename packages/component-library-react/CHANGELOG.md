@@ -1,5 +1,22 @@
 # @nl-rvo/component-library-react
 
+## 5.3.0
+
+### Minor Changes
+
+- 31b847a: new component autocomplete
+
+### Patch Changes
+
+- 73efb89: Removed zero padding for first and last child menu items.
+- b4affb0: Forwards className prop to Grid component
+- 78ca3b4: allow text- and date-input component to handle controlled and uncontrolled scenarios
+- a255197: Pagination renamed to Page Number Navigation and updated CSS
+- a6541cb: Renamed Layout parameter to maxWidth for Alert Component
+- f75e111: Added spacing between button icon and its content
+- fec3bba: Updated Feedback components design tokens and CSS
+- a9b161f: Added position relative to rov-checkbox\_\_input class
+
 ## 5.2.0
 
 ### Minor Changes

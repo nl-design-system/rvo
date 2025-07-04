@@ -1,5 +1,11 @@
 # `@nl-rvo/css-pagination`
 
+## 1.3.0
+
+### Minor Changes
+
+- a255197: Pagination renamed to Page Number Navigation and updated CSS
+
 ## 1.2.1
 
 ### Patch Changes
