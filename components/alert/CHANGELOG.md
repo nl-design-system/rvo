@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.3.1
+
+### Patch Changes
+
+- a6541cb: Renamed Layout parameter to maxWidth for Alert Component
+
 ## 1.3.0
 
 ### Minor Changes

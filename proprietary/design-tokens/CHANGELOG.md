@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.9.1
+
+### Patch Changes
+
+- fec3bba: Updated Feedback components design tokens and CSS
+
 ## 1.9.0
 
 ### Minor Changes

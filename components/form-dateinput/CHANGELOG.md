@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-dateinput`
 
+## 1.1.1
+
+### Patch Changes
+
+- 78ca3b4: allow text- and date-input component to handle controlled and uncontrolled scenarios
+
 ## 1.1.0
 
 ### Minor Changes

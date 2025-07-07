@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.2.5
+
+### Patch Changes
+
+- a9b161f: Added position relative to rov-checkbox\_\_input class
+
 ## 1.2.4
 
 ### Patch Changes
