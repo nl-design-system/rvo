@@ -13,7 +13,7 @@ export interface ITableColumnProps extends HTMLAttributes<HTMLDivElement> {
   label: string;
   type?: 'numeric';
   sortable?: boolean;
-  sortDirection?: 'ASC' | 'DESC' | '';
+  sortDirection?: 'ASC' | 'DESC';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   key?: string;
 }
@@ -70,11 +70,6 @@ export const Table: React.FC<ITableProps> = ({
   const [internalColumns, setInternalColumns] = useState(columns);
   const [internalRows, setInternalRows] = useState(rows);
 
-  enum SortDiction {
-    ASC = 'ascending',
-    DESC = 'decending',
-  }
-
   useEffect(() => {
     setInternalColumns(columns);
     setInternalRows(rows);
@@ -108,6 +103,8 @@ export const Table: React.FC<ITableProps> = ({
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
             {internalColumns.map((column, index) => {
+              const sortValue = column.sortDirection === 'ASC' ? 'ascending' : 'descending';
+
               return (
                 <th
                   key={index}
@@ -120,7 +117,7 @@ export const Table: React.FC<ITableProps> = ({
                       'rvo-table-header--active-sort',
                     column.size && `rvo-table-header--${column.size}`,
                   )}
-                  aria-sort={SortDiction[column.sortDirection] || 'none'}
+                  aria-sort={sortValue || 'none'}
                 >
                   <button
                     className={clsx(
