@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { SortAscendingIcon, SortDescendingIcon } from './icons';
+import { SortAscendingIcon, SortDefaultIcon, SortDescendingIcon } from './icons';
 import validateHTML from '../../utils/validateHTML';
 import './index.scss';
 
@@ -70,6 +70,11 @@ export const Table: React.FC<ITableProps> = ({
   const [internalColumns, setInternalColumns] = useState(columns);
   const [internalRows, setInternalRows] = useState(rows);
 
+  enum SortDiction {
+    ASC = 'ascending',
+    DESC = 'decending',
+  }
+
   useEffect(() => {
     setInternalColumns(columns);
     setInternalRows(rows);
@@ -79,13 +84,12 @@ export const Table: React.FC<ITableProps> = ({
     (columnIndex: number) => {
       const newColumns = [...internalColumns];
       const currentDirection = newColumns[columnIndex].sortDirection || '';
-      const newDirection: 'ASC' | 'DESC' | '' =
-        currentDirection === '' ? 'ASC' : currentDirection === 'ASC' ? 'DESC' : '';
+      const newDirection: 'ASC' | 'DESC' = currentDirection === 'ASC' ? 'DESC' : 'ASC';
 
       // Reset all other columns
       newColumns.forEach((col, i) => {
         if (i !== columnIndex) {
-          col.sortDirection = '';
+          col.sortDirection = undefined;
         }
       });
 
@@ -116,13 +120,16 @@ export const Table: React.FC<ITableProps> = ({
                       'rvo-table-header--active-sort',
                     column.size && `rvo-table-header--${column.size}`,
                   )}
-                  onClick={column.sortable ? () => handleSort(index) : undefined}
+                  aria-sort={SortDiction[column.sortDirection] || 'none'}
                 >
-                  <div
+                  <button
                     className={clsx(
                       'rvo-table-header__sortable-container',
                       column.type === 'numeric' && 'rvo-table-header__sortable-container--numeric',
                     )}
+                    type="button"
+                    data-index={index}
+                    onClick={column.sortable ? () => handleSort(index) : undefined}
                   >
                     {column.label}
                     {column.sortable && column.sortDirection === 'ASC' && (
@@ -131,7 +138,10 @@ export const Table: React.FC<ITableProps> = ({
                     {column.sortable && column.sortDirection === 'DESC' && (
                       <SortDescendingIcon className="rvo--table-header__sorting-icon" />
                     )}
-                  </div>
+                    {column.sortable && column.sortDirection === undefined && (
+                      <SortDefaultIcon className="rvo--table-header__sorting-icon" />
+                    )}
+                  </button>
                 </th>
               );
             })}
