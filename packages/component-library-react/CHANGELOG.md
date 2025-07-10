@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-react
 
+## 5.4.0
+
+### Minor Changes
+
+- 6318a72: extended Card with headingProps, linksProps, layout and inlineImage to better meet design requirements
+
+### Patch Changes
+
+- 796b8b6: ROOS-87: fixes fullCardLink prop
+
 ## 5.3.0
 
 ### Minor Changes
