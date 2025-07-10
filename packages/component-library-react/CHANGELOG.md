@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 5.4.1
+
+### Patch Changes
+
+- 9c2fbd9: Fixes relying on DOMParser to prevent hydration issues
+
 ## 5.4.0
 
 ### Minor Changes
