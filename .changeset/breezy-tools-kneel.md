@@ -3,4 +3,4 @@
 "@nl-rvo/component-library-react": patch
 ---
 
-adjustments in ordered and unordered list component props
+adjustmnent in ordered and unordered list component props
