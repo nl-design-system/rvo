@@ -9,15 +9,15 @@ import './index.scss';
 import { parseChildren } from '../../utils/parseChildren';
 
 export interface IListProps {
-  type: 'unordered' | 'ordered';
+  type?: 'unordered' | 'ordered';
   /** @uxpinignoreprop */
-  items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+  items: string[];
   /** @uxpinpropname Unordered bullet type */
-  bulletType: 'disc' | 'none' | 'icon';
+  bulletType?: 'disc' | 'none' | 'icon';
   /** @uxpinpropname Unordered bullet icon */
-  bulletIcon: 'option-1' | 'option-2' | 'option-3';
-  noMargin: boolean;
-  noPadding: boolean;
+  bulletIcon?: 'option-1' | 'option-2' | 'option-3';
+  noMargin?: boolean;
+  noPadding?: boolean;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
