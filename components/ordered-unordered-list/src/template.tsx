@@ -11,7 +11,7 @@ import { parseChildren } from '../../utils/parseChildren';
 export interface IListProps {
   type?: 'unordered' | 'ordered';
   /** @uxpinignoreprop */
-  items: string[];
+  items?: string[];
   /** @uxpinpropname Unordered bullet type */
   bulletType?: 'disc' | 'none' | 'icon';
   /** @uxpinpropname Unordered bullet icon */
