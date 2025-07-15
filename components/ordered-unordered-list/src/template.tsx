@@ -30,7 +30,7 @@ export const argTypes = {
   items: {
     type: {
       name: 'array',
-      required: true,
+      required: false,
     },
   },
   bulletType: {
@@ -85,7 +85,7 @@ export const List: React.FC<IListProps> = ({
     <ListTag className={listClassName}>
       {children
         ? React.Children.map(parseChildren(children), (child, index) => <li key={index}>{child}</li>)
-        : items.map((itemContent, index) => <li key={index}>{itemContent}</li>)}
+        : items?.map((itemContent, index) => <li key={index}>{itemContent}</li>)}
     </ListTag>
   );
 };
