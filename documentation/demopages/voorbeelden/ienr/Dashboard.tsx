@@ -29,7 +29,6 @@ const Dashboard = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
           },
           {
             label: 'Mijn dossier',
@@ -61,7 +60,6 @@ const Dashboard = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
             icon: 'user',
           },
         ]}
@@ -83,7 +81,6 @@ const Dashboard = () => {
                   label: 'Dashboard',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Houder en UBN',
@@ -117,7 +114,7 @@ const Dashboard = () => {
               </Heading>
               <LayoutFlow gap="md">
                 <LayoutFlow gap="xs">
-                  <Heading type="h2" textContent="Geselecteerde locatie" noMargins={true} />
+                  <Heading type="h2" title="Geselecteerde locatie" noMargins={true} />
                   <LayoutFlow gap="md">
                     <Grid columns="two">
                       <dl className="rvo-data-list">
@@ -156,7 +153,7 @@ const Dashboard = () => {
                 <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
-                      <Heading type="h2" textContent="Diersoorten" noMargins={true}></Heading>
+                      <Heading type="h2" title="Diersoorten" noMargins={true}></Heading>
                       <Button kind="secondary" size="xs">
                         Diersoorten wijzigen
                       </Button>

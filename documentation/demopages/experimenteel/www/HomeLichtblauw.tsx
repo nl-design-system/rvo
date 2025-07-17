@@ -20,7 +20,6 @@ const HomeLichtblauw = () => {
                   items={[
                     {
                       label: 'Home',
-                      active: true,
                       link: '#',
                     },
                     {
@@ -68,7 +67,6 @@ const HomeLichtblauw = () => {
             items={[
               {
                 label: 'Home',
-                active: true,
                 link: '#',
               },
               {
@@ -91,7 +89,6 @@ const HomeLichtblauw = () => {
                 align: 'right',
                 label: 'Mijn RVO',
                 link: '#',
-                active: true,
                 icon: 'user',
               },
               {
@@ -363,7 +360,7 @@ const HomeLichtblauw = () => {
               <div className="rvo-block-group">
                 <div className="rvo-content-items rvo-content-items--w-date">
                   <LayoutFlow gap="md">
-                    <Heading type="h2" textContent="Evenementen" />
+                    <Heading type="h2" title="Evenementen" />
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
                         <h3 className="utrecht-heading-3">
@@ -408,7 +405,7 @@ const HomeLichtblauw = () => {
 
                 <div className="rvo-content-items rvo-content-items--w-date">
                   <LayoutFlow gap="md">
-                    <Heading type="h2" textContent="Nieuws" />
+                    <Heading type="h2" title="Nieuws" />
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
                         <h3 className="utrecht-heading-3">

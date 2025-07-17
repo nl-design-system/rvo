@@ -22,7 +22,7 @@ const FooterDP = () => {
         />
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading textContent="Footer demo page"></Heading>
+            <Heading title="Footer demo page" type="h1"></Heading>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Eu nisl nunc mi ipsum faucibus. Tincidunt eget nullam non nisi est sit amet

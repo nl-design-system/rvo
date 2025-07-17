@@ -194,7 +194,7 @@ const Nieuwsbrief = () => {
         </div>
 
         <div className="">
-          <Heading type="h2" textContent="Agenda Duurzaam Ondernemen" />
+          <Heading type="h2" title="Agenda Duurzaam Ondernemen" />
           <div className="rvo-layout-grid rvo-layout-gap--md">
             <div className="rvo-content-item">
               <h3 className="utrecht-heading-3 rvo-heading--no-margins">
@@ -235,7 +235,7 @@ const Nieuwsbrief = () => {
           </div>
         </div>
         <div className="rvo-margin-block-start--xl">
-          <Heading type="h2" textContent="Actuele regelingen Duurzaam Ondernemen" />
+          <Heading type="h2" title="Actuele regelingen Duurzaam Ondernemen" />
           <div className="rvo-item-list rvo-padding-block-end--lg">
             <div className="rvo-item-list__item">
               <LayoutFlow row={true} justifyContent="space-between" alignItems="start">

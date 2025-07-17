@@ -64,7 +64,6 @@ const OverzichtClean = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
             icon: 'user',
           },
         ]}
@@ -86,7 +85,6 @@ const OverzichtClean = () => {
                   label: 'Overzicht',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Mijn dossier',
@@ -104,12 +102,12 @@ const OverzichtClean = () => {
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
-              <Heading type="h1" noMargins={true} mixedBoldAndNormal={true}>
+              <Heading type="h1" noMargins={true} fontWeightNormal={true}>
                 <strong>Overzicht</strong> van Boer Overveen B.V.
               </Heading>
               <LayoutFlow gap="md">
                 <LayoutFlow gap="xs">
-                  <Heading type="h2" textContent="Nog te starten" noMargins={true} />
+                  <Heading type="h2" title="Nog te starten" noMargins={true} />
                   <LayoutFlow gap="md">
                     <ExpandableContent
                       title="Wij vragen u onderstaande aanvragen op tijd te regelen"
@@ -139,7 +137,7 @@ const OverzichtClean = () => {
                 <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
-                      <Heading type="h2" textContent="Lopende aanvragen" noMargins={true}></Heading>
+                      <Heading type="h2" title="Lopende aanvragen" noMargins={true}></Heading>
                       <Tag type="info" showIcon="no" content="2 openstaande acties" />
                     </LayoutFlow>
                   </div>
@@ -240,7 +238,7 @@ const OverzichtClean = () => {
               <hr className="rvo-hr"></hr>
               <Grid gap="xl" columns="two">
                 <LayoutFlow gap="sm">
-                  <Heading type="h2" textContent="Start een nieuwe aanvraag" noMargins={true} />
+                  <Heading type="h2" title="Start een nieuwe aanvraag" noMargins={true} />
                   <span>Kies uit uw favorieten</span>
                   <LayoutFlow gap="sm">
                     <div className="rvo-item-list">
@@ -303,7 +301,7 @@ const OverzichtClean = () => {
                   </LayoutFlow>
                 </LayoutFlow>
                 <LayoutFlow gap="xs">
-                  <Heading type="h2" textContent="Snel naar" noMargins={true} />
+                  <Heading type="h2" title="Snel naar" noMargins={true} />
 
                   <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--none">
                     <li>
@@ -326,7 +324,7 @@ const OverzichtClean = () => {
               </Grid>
 
               <LayoutFlow gap="xs">
-                <Heading type="h2" textContent="Berichten" noMargins={true} />
+                <Heading type="h2" title="Berichten" noMargins={true} />
                 <LayoutFlow gap="sm">
                   <div className="rvo-item-list">
                     <div className="rvo-item-list__item">
@@ -362,7 +360,7 @@ const OverzichtClean = () => {
               </LayoutFlow>
               <Grid columns="two" gap="xl">
                 <div className="rvo-faq">
-                  <Heading type="h2" textContent="Veelgestelde vragen" />
+                  <Heading type="h2" title="Veelgestelde vragen" />
                   <LayoutFlow gap="sm">
                     <Accordion
                       items={[
@@ -396,7 +394,7 @@ const OverzichtClean = () => {
                 </div>
 
                 <div className="rvo-contact-options">
-                  <Heading type="h2" textContent="Neem contact op" />
+                  <Heading type="h2" title="Neem contact op" />
                   <p className="rvo-paragraph">Staat uw vraag er niet bij? Neem dan contact met ons op.</p>
                   <ActionGroup>
                     <Button kind="secondary" showIcon="after" icon="communicatie">

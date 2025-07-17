@@ -20,7 +20,6 @@ const PercelenRegistreren = () => {
                   items={[
                     {
                       label: 'Home',
-                      active: true,
                       link: '#',
                     },
                     {
@@ -68,7 +67,6 @@ const PercelenRegistreren = () => {
               items={[
                 {
                   label: 'Home',
-                  active: true,
                   link: '#',
                 },
                 {
@@ -91,7 +89,6 @@ const PercelenRegistreren = () => {
                   align: 'right',
                   label: 'Mijn RVO',
                   link: '#',
-                  active: true,
                   icon: 'user',
                 },
                 {
@@ -131,7 +128,7 @@ const PercelenRegistreren = () => {
               </p>
               <LayoutFlow gap="xl">
                 <div className="rvo-quick-links">
-                  <Heading type="h2" textContent="Op deze pagina" />
+                  <Heading type="h2" title="Op deze pagina" />
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
                       <Link

@@ -41,7 +41,7 @@ const Focus = () => {
         />
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading textContent="Focus indicator demo page"></Heading>
+            <Heading title="Focus indicator demo page" type="h1"></Heading>
             <p className="rvo-text rvo-text--no-margins">
               Deze pagina laat alle focus indicators zien van de verschillende componenten. Er is gekozen voor
               focus:visible omdat dit voldoende ondersteund wordt door grote browsers.
@@ -78,7 +78,7 @@ const Focus = () => {
               <LayoutFlow gap="sm">
                 <div className="rvo-form-intro">
                   <Link content="Terug" href="#" showIcon="before" icon="terug" />
-                  <Heading type="h1" textContent="Heading" />
+                  <Heading type="h1" title="Heading" />
                 </div>
                 <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
                   <Fieldset legend="Keyboard inputs">

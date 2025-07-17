@@ -57,11 +57,7 @@ export const Footer: React.FC<FooterInterface> = ({
                 primaryMenu?.map((column, columnIndex) => (
                   <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
                     {column && column.label && (
-                      <Heading
-                        type="h3"
-                        textContent={parseContentMarkup(column.label)}
-                        className="rvo-footer__column-title"
-                      />
+                      <Heading type="h3" title={column.label} className="rvo-footer__column-title" />
                     )}
                     <ul
                       className={clsx(

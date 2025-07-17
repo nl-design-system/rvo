@@ -77,13 +77,13 @@ const Bevestiging = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Bevestiging"></Heading>
+                  <Heading type="h1" title="Bevestiging"></Heading>
                   <p>
                     Wij hebben uw aanvraag verlenging Jonge Visser 2020 ontvangen op <strong>05-07-2022</strong>.<br />
                     Het zaaknummer dat wij hieraan hebben gegevens is <strong>192040000027</strong>. Gebruik dit nummer
                     als u met ons belt of digitale post wilt versturen.
                   </p>
-                  <Heading type="h2" textContent="Uw gegevens"></Heading>
+                  <Heading type="h2" title="Uw gegevens"></Heading>
                   <LayoutFlow gap="md">
                     <dl className="rvo-data">
                       <dt>Naam</dt>
