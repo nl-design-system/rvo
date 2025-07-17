@@ -146,7 +146,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   const autocompleteSize = `rvo-autocomplete--${size}`;
 
   return (
-    <div ref={wrapperRef}>
+    <div ref={wrapperRef} className={clsx(autocompleteSize, 'rvo-autocomplete__container')}>
       <TextInput
         {...rest}
         value={currentValue}
@@ -155,11 +155,10 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
         data-dropdown-open={
           showSuggestions && (filteredKeywords.length > 0 || filteredLinks.length > 0) ? 'true' : undefined
         }
-        size={size}
       />
 
       {showSuggestions && (filteredKeywords.length > 0 || filteredLinks.length > 0) && (
-        <div className={clsx(autocompleteSize, 'rvo-autocomplete__container')}>
+        <div>
           <ul className="rvo-autocomplete__suggestions">
             {filteredKeywords.length > 0 && <hr className="rvo-autocomplete__separator" />}
             {filteredKeywords.map((s) =>
