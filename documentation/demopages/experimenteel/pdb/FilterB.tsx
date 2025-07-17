@@ -434,7 +434,7 @@ const Filter = () => {
                 </Fieldset>
               </div>
               <div className="rvo-results">
-                <Heading type="h2" mixedBoldAndNormal={true} noMargins={true}>
+                <Heading type="h2" fontWeightNormal={true} noMargins={true}>
                   <strong>4817</strong> projects found
                 </Heading>
                 <LayoutFlow>

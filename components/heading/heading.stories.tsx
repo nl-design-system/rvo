@@ -36,7 +36,7 @@ const argTypes = {
   noMargins: {
     control: 'boolean',
   },
-  mixedBoldAndNormal: {
+  fontWeightNormal: {
     control: 'boolean',
   },
   children: {

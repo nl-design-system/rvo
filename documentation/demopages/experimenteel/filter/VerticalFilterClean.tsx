@@ -351,7 +351,7 @@ const VerticalFilterClean = () => {
                 </Fieldset>
               </div>
               <div className="rvo-results">
-                <Heading type="h1" mixedBoldAndNormal={true} noMargins={true}>
+                <Heading type="h1" fontWeightNormal={true} noMargins={true}>
                   <strong>Projects</strong> <span className="rvo-text rvo-text--subtle rvo-text--md">1487 results</span>
                 </Heading>
                 <LayoutFlow>

@@ -420,7 +420,7 @@ const Subsidiewijzer = () => {
                 </Fieldset>
               </div>
               <div className="rvo-results">
-                <Heading type="h1" mixedBoldAndNormal={true} noMargins={true}>
+                <Heading type="h1" fontWeightNormal={true} noMargins={true}>
                   <strong>Subsidie- en financieringswijzer</strong>{' '}
                 </Heading>
                 <LayoutFlow>
