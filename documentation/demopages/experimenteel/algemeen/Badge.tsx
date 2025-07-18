@@ -5,7 +5,7 @@ const Badge = () => {
   return (
     <div className="rvo-demo-page rvo-badge-demopage">
       <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
-        <Heading textContent="Badge demo page"></Heading>
+        <Heading title="Badge demo page" type="h2"></Heading>
         <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--md ">
           Dit is een experimentele demopagina om het badge component te testen. Een badge heeft een getal die aangeeft
           hoeveel items er beschikbaar zijn. Bijvoorbeeld hoeveel nieuwe berichten er zijn of hoeveel filters er

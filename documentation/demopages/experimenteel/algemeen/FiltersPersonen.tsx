@@ -26,7 +26,7 @@ const FiltersPersonen = () => {
               <LayoutFlow gap="xl">
                 <MaxWidthLayout size="sm">
                   <div className="rvo-intro">
-                    <Heading type="h1" textContent="Vind uw adviseur"></Heading>
+                    <Heading type="h1" title="Vind uw adviseur"></Heading>
                     <p>
                       Werkt u bij een innovatief technologisch bedrijf of kennisinstelling met internationale ambities?
                       Onze ervaren adviseurs kennen de mogelijkheden van internationale innovatieprogramma’s en
@@ -356,7 +356,7 @@ const FiltersPersonen = () => {
             <MaxWidthLayout size="lg">
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="RVO"></Heading>
+                  <Heading type="h3" title="RVO"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -377,7 +377,7 @@ const FiltersPersonen = () => {
               </ul>
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="Over deze site"></Heading>
+                  <Heading type="h3" title="Over deze site"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -398,7 +398,7 @@ const FiltersPersonen = () => {
               </ul>
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="Snel naar"></Heading>
+                  <Heading type="h3" title="Snel naar"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -419,7 +419,7 @@ const FiltersPersonen = () => {
               </ul>
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="Blijf op de hoogte"></Heading>
+                  <Heading type="h3" title="Blijf op de hoogte"></Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />

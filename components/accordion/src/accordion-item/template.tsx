@@ -36,7 +36,7 @@ export const AccordionItem: React.FC<IAccordionItemProps> = ({
           <Icon icon="delta-omhoog" size="md" color="hemelblauw" className="rvo-accordion__item-icon--open" />
         </div>
         <div className="rvo-accordion__item-title-container">
-          <Heading type="h3" noMargins={true} className="rvo-accordion__item-title" mixedBoldAndNormal={true}>
+          <Heading type="h3" noMargins={true} className="rvo-accordion__item-title" fontWeightNormal={true}>
             {title}
           </Heading>
           <div className="rvo-accordion-teaser">{teaserMarkup}</div>

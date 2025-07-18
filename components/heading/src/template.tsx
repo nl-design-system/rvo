@@ -3,175 +3,98 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
-import { Icon, iconNames as iconOptions } from '../../icon/src/template';
+import React, { createElement, ReactNode } from 'react';
+import { Icon } from '../../icon/src/template';
 import { IconType } from '../../icon/src/types';
 import { Link } from '../../link/src/template';
-import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
+import './index.scss';
 
 export interface IHeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  /** @uxpinignoreprop */
-  textContent?: string | ReactNode;
-  link?: string;
-  /** @uxpinpropname Content */
-  children?: ReactNode | undefined;
+  type: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  title?: string;
+  url?: string;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
   noMargins?: boolean;
   /** @uxpinignoreprop */
-  mixedBoldAndNormal?: boolean;
+  fontWeightNormal?: boolean;
+  children?: string | ReactNode;
   /** @uxpinignoreprop */
   className?: string;
 }
 
-export const argTypes = {
-  type: {
-    options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-    control: { type: 'select' },
-  },
-  textContent: {
-    control: 'text',
-  },
-  link: {
-    control: 'text',
-  },
-  showIcon: {
-    options: ['no', 'before', 'after'],
-    control: { type: 'radio' },
-  },
-  icon: {
-    control: { type: 'select' },
-    options: iconOptions,
-  },
-  iconAriaLabel: { control: 'text' },
-  noMargins: {
-    control: 'boolean',
-  },
-  mixedBoldAndNormal: {
-    control: 'boolean',
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Heading: React.FC<IHeadingProps> = ({
-  type = defaultArgs.type,
-  textContent = defaultArgs.textContent,
-  link = defaultArgs.link,
-  children,
-  showIcon = defaultArgs.showIcon,
-  icon = defaultArgs.icon,
-  iconAriaLabel = defaultArgs.iconAriaLabel,
-  noMargins = defaultArgs.noMargins,
-  mixedBoldAndNormal = defaultArgs.mixedBoldAndNormal,
+  type,
+  title,
+  url,
+  showIcon,
+  icon,
+  noMargins,
+  fontWeightNormal,
   className,
-  ...otherProps
+  children,
+  ...rest
 }: IHeadingProps) => {
-  let headingMarkup = parseContentMarkup(children || textContent);
-
-  const props = {
-    className: clsx(className, `utrecht-heading-${type?.replace('h', '')}`),
-    ...otherProps,
-  };
-
-  if (icon) {
-    let iconSize, gap;
-
-    switch (type) {
-      default:
-      case 'h1':
-        iconSize = 'xl' as const;
-        gap = 'sm' as const;
-        break;
-      case 'h2':
-        iconSize = 'xl' as const;
-        gap = 'sm' as const;
-        break;
-      case 'h3':
-        iconSize = 'lg' as const;
-        gap = 'xs' as const;
-        break;
-      case 'h4':
-        iconSize = 'lg' as const;
-        gap = 'xs' as const;
-        break;
-      case 'h5':
-        iconSize = 'md' as const;
-        gap = 'xs' as const;
-        break;
-      case 'h6':
-        iconSize = 'sm' as const;
-        gap = 'xs' as const;
-        break;
-    }
-
-    props.className += ` rvo-layout-row rvo-layout-gap--${gap}`;
-    const iconMarkup = <Icon icon={icon as any} size={iconSize} ariaLabel={iconAriaLabel} />;
-
-    if (showIcon === 'before') {
-      headingMarkup = (
-        <>
-          {iconMarkup}
-          {headingMarkup}
-        </>
-      );
-    }
-
-    if (showIcon === 'after') {
-      headingMarkup = (
-        <>
-          {headingMarkup}
-          {iconMarkup}
-        </>
-      );
-    }
-  }
-
-  if (noMargins) {
-    props.className += ` rvo-heading--no-margins`;
-  }
-
-  if (mixedBoldAndNormal) {
-    props.className += ` rvo-heading--mixed`;
-  }
+  let iconSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
 
   switch (type) {
     default:
     case 'h1':
-      headingMarkup = <h1 {...props}>{headingMarkup}</h1>;
-      break;
     case 'h2':
-      headingMarkup = <h2 {...props}>{headingMarkup}</h2>;
+      iconSize = 'xl' as const;
       break;
     case 'h3':
-      headingMarkup = <h3 {...props}>{headingMarkup}</h3>;
-      break;
     case 'h4':
-      headingMarkup = <h4 {...props}>{headingMarkup}</h4>;
+      iconSize = 'lg' as const;
       break;
     case 'h5':
-      headingMarkup = <h5 {...props}>{headingMarkup}</h5>;
-      break;
     case 'h6':
-      headingMarkup = <h6 {...props}>{headingMarkup}</h6>;
+      iconSize = 'md' as const;
       break;
   }
 
-  if (link && link.length) {
+  const renderHeading = () => {
+    const Tag = createElement(
+      type,
+      {
+        className: clsx(className, `utrecht-heading-${type?.replace('h', '')}`),
+        ...rest,
+      },
+      children ? parseContentMarkup(children) : title,
+    );
+
     return (
-      <Link href={link} noUnderline={true}>
-        {headingMarkup}
+      <div
+        className={clsx(
+          'rvo-heading',
+          noMargins && 'rvo-heading--no-margins',
+          `rvo-heading--margin-${type?.replace('h', '')}`,
+          'rvo-layout-row',
+          `rvo-layout-gap--${type === 'h1' || type === 'h2' ? 'sm' : 'xs'}`,
+          fontWeightNormal && 'rvo-heading--normal',
+        )}
+      >
+        {showIcon === 'before' && (
+          <Icon icon={icon as any} color="logoblauw" size={iconSize} ariaLabel={`${icon}-icon`} />
+        )}
+        {Tag}
+        {showIcon === 'after' && (
+          <Icon icon={icon as any} color="logoblauw" size={iconSize} ariaLabel={`${icon}-icon`} />
+        )}
+      </div>
+    );
+  };
+
+  if (url && url.length) {
+    return (
+      <Link href={url} noUnderline={true}>
+        {renderHeading()}
       </Link>
     );
   } else {
-    return headingMarkup;
+    return renderHeading();
   }
 };
 

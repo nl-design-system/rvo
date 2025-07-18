@@ -85,7 +85,7 @@ const Samenvatting = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Samenvatting"></Heading>
+                  <Heading type="h1" title="Samenvatting"></Heading>
                 </div>
                 <div className="rvo-table--responsive">
                   <table className="rvo-table">
