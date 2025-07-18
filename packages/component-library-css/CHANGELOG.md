@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.9.1
+
+### Patch Changes
+
+- d03ae36: autocomplete css fix and added input classname prop
+
 ## 4.9.0
 
 ### Minor Changes

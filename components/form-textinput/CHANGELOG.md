@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.3.1
+
+### Patch Changes
+
+- d03ae36: autocomplete css fix and added input classname prop
+
 ## 1.3.0
 
 ### Minor Changes
