@@ -1,5 +1,11 @@
 # `@nl-rvo/css-ordered-unordered-list`
 
+## 1.2.2
+
+### Patch Changes
+
+- e24ffcf: adjustmnent in ordered and unordered list component props
+
 ## 1.2.1
 
 ### Patch Changes

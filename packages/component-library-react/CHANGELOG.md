@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-react
 
+## 5.4.2
+
+### Patch Changes
+
+- e24ffcf: adjustmnent in ordered and unordered list component props
+- d03ae36: autocomplete css fix and added input classname prop
+
 ## 5.4.1
 
 ### Patch Changes
