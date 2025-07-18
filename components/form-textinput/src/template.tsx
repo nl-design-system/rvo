@@ -27,6 +27,7 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   suffix?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'max';
   maxLength?: number | undefined;
+  className?: string;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -129,6 +130,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
   maxLength = defaultArgs.maxLength,
+  className,
   value,
   ...otherProps
 }: ITextInputProps) => {
@@ -142,6 +144,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
     required,
     readOnly,
     placeholder,
+    className,
     value: isControlled ? value : undefined,
     defaultValue: !isControlled ? defaultValue : undefined,
     ...(validation === 'currency' && {
@@ -156,6 +159,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
     <Textbox
       {...textBoxProps}
       className={clsx(
+        className,
         size === 'xs' && 'utrecht-textbox--xs',
         size === 'sm' && 'utrecht-textbox--sm',
         size === 'md' && 'utrecht-textbox--md',

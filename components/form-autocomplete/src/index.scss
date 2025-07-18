@@ -6,10 +6,20 @@
 .rvo-autocomplete {
   &__textinput {
     box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+
+    &:focus {
+      border: var(--rvo-space-3xs) solid;
+      outline: none;
+    }
   }
 
   &__suggestions {
-    background: var(--utrecht-textbox-background-color);
+    background: var(--rvo-color-wit);
     border: var(--rvo-space-3xs) solid;
     border-color: var(--rvo-color-logoblauw);
     border-radius: var(--rvo-border-radius-sm);
@@ -18,21 +28,22 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-sizing: border-box;
-    left: 0;
     list-style: none;
     margin: 0;
     max-height: 300px;
+    max-width: 100%;
     outline: var(--rvo-textbox-invalid-focus-outline-color);
     outline-color: var(--utrecht-focus-outline-color);
     overflow-y: auto;
     padding: 0 var(--rvo-space-sm);
     position: absolute;
-    width: inherit;
+    width: 100%;
     z-index: 10;
   }
 
   &__container {
     box-sizing: border-box;
+    position: relative;
   }
 
   &__item {
@@ -79,12 +90,7 @@
   }
 }
 
-.utrecht-textbox:focus {
-  border: var(--rvo-space-3xs) solid;
-  outline: none;
-}
-
-.utrecht-textbox[data-dropdown-open="true"] {
+.rvo-autocomplete__textinput[data-dropdown-open="true"] {
   border-bottom: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
