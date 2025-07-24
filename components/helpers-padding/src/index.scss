@@ -257,6 +257,29 @@
   padding-inline-end: var(--rvo-space-4xl);
 }
 
+.rvo-padding--5xl {
+  padding-block-end: var(--rvo-space-5xl);
+  padding-block-start: var(--rvo-space-5xl);
+  padding-inline-end: var(--rvo-space-5xl);
+  padding-inline-start: var(--rvo-space-5xl);
+}
+
+.rvo-padding-block-start--5xl {
+  padding-block-start: var(--rvo-space-5xl);
+}
+
+.rvo-padding-block-end--5xl {
+  padding-block-end: var(--rvo-space-5xl);
+}
+
+.rvo-padding-inline-start--5xl {
+  padding-inline-start: var(--rvo-space-5xl);
+}
+
+.rvo-padding-inline-end--5xl {
+  padding-inline-end: var(--rvo-space-5xl);
+}
+
 .rvo-padding--custom {
   padding-block-end: var(--space);
   padding-block-start: var(--space);
