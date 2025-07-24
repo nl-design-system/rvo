@@ -20,7 +20,6 @@ const Landbouw = () => {
                   items={[
                     {
                       label: 'Home',
-                      active: true,
                       link: '#',
                     },
                     {
@@ -68,7 +67,6 @@ const Landbouw = () => {
             items={[
               {
                 label: 'Home',
-                active: true,
                 link: '#',
               },
               {
@@ -91,7 +89,6 @@ const Landbouw = () => {
                 align: 'right',
                 label: 'Mijn RVO',
                 link: '#',
-                active: true,
                 icon: 'user',
               },
               {
@@ -281,7 +278,7 @@ const Landbouw = () => {
 
               <div className="rvo-content-items rvo-content-items--w-date">
                 <LayoutFlow gap="md">
-                  <Heading type="h2" textContent="Nieuws" />
+                  <Heading type="h2" title="Nieuws" />
                   <div className="rvo-content-items-grid">
                     <div className="rvo-content-item">
                       <h3 className="utrecht-heading-3">
@@ -324,7 +321,7 @@ const Landbouw = () => {
 
               <div className="rvo-block-group">
                 <div className="rvo-quick-links">
-                  <Heading type="h2" textContent="Wegwijzers" />
+                  <Heading type="h2" title="Wegwijzers" />
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
                       <Link content="Veranderingen vanaf 1 januari 2024" target="#" noUnderline={true} />
@@ -344,7 +341,7 @@ const Landbouw = () => {
                   </ul>
                 </div>
                 <div className="rvo-quick-links">
-                  <Heading type="h2" textContent="Registraties" />
+                  <Heading type="h2" title="Registraties" />
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
                       <Link content="Wanneer doet u uw meldingen en registraties?" target="#" noUnderline={true} />

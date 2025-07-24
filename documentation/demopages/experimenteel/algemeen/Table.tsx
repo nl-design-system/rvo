@@ -10,7 +10,7 @@ const Table = () => {
       <MaxWidthLayout size="md">
         <main className="rvo-padding-block-start--md">
           <div>
-            <Heading type="h1" textContent="Table" />
+            <Heading type="h1" title="Table" />
             <div className="rvo-table--responsive rvo-margin-block-end--xl">
               <table className="rvo-table">
                 <caption className="rvo-caption">Table description.</caption>

@@ -90,7 +90,7 @@ const Datum = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Datum verleningsverzoek"></Heading>
+                  <Heading type="h1" title="Datum verleningsverzoek"></Heading>
                 </div>
                 <form>
                   <LayoutFlow gap="md">

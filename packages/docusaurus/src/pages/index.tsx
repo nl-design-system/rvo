@@ -13,7 +13,9 @@ export default function Home(): JSX.Element {
       <header>
         <div className={clsx(styles.heroContainer)}>
           <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
-            <Heading noMargins={true}>ROOS: Het design system van RVO</Heading>
+            <Heading type="h1" noMargins={true}>
+              ROOS: Het design system van RVO
+            </Heading>
             <p className={styles.heroParagraph}>
               ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland. ROOS
               is een <strong>gebruiksvriendelijke</strong> en <strong>toegankelijke</strong> vertaling van de

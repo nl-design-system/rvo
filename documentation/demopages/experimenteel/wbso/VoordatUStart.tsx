@@ -53,14 +53,14 @@ const VoordatUStart = () => {
             <LayoutFlow gap="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
-                <Heading type="h1" textContent="Voordat u start" />
-                <Heading type="h2" textContent="Dit heeft u nodig"></Heading>
+                <Heading type="h1" title="Voordat u start" />
+                <Heading type="h2" title="Dit heeft u nodig"></Heading>
                 <ul className="rvo-list">
                   <li className="rvo-ul-item">Recente gegevens</li>
                   <li className="rvo-ul-item">Kopie van uw paspoort</li>
                   <li className="rvo-ul-item">Uittreksel van het KVK register</li>
                 </ul>
-                <Heading type="h2" textContent="Hieraan moet u voldoen"></Heading>
+                <Heading type="h2" title="Hieraan moet u voldoen"></Heading>
                 <ul className="rvo-list">
                   <li className="rvo-ul-item">Ingeschreven bij de Kamer van Koophandel</li>
                   <li className="rvo-ul-item">Minimaal 50 S&O-werknemers</li>

@@ -55,7 +55,7 @@ const VormvrijeAanvraag = () => {
             <LayoutFlow gap="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
-                <Heading type="h1" textContent="Vormvrije aanvraag" />
+                <Heading type="h1" title="Vormvrije aanvraag" />
               </div>
               <form>
                 <LayoutFlow row={false} gap="md">
