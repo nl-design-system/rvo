@@ -12,6 +12,7 @@ const Home = () => {
           <MenuBar
             items={[
               {
+                active: true,
                 label: 'Home',
                 link: '/iframe.html?id=demo-pagina-s-projects-rvo-nl-home--default&viewMode=story',
               },

@@ -20,6 +20,7 @@ const Project = () => {
                 link: '#',
               },
               {
+                active: true,
                 label: 'Projects',
                 link: '/iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-filter--default',
               },
