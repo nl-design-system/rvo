@@ -1,17 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Heading, IHeadingProps } from './src/template';
+import { defaultArgs } from './src/defaultArgs';
+import { Heading } from './src/template';
 import { iconNames as iconOptions } from '../icon/src/template';
-
-const defaultArgs: IHeadingProps = {
-  type: 'h1',
-  title: 'Heading',
-  url: '',
-  showIcon: 'no',
-  icon: undefined,
-  iconAriaLabel: '',
-  noMargins: false,
-  fontWeightNormal: false,
-};
 
 const argTypes = {
   type: {
