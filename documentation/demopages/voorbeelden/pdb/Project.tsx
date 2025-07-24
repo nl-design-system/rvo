@@ -20,7 +20,6 @@ const Project = () => {
                 link: '#',
               },
               {
-                active: true,
                 label: 'Projects',
                 link: '/iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-filter--default',
               },
@@ -40,7 +39,7 @@ const Project = () => {
           <main className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--md">
             <Grid columns="two" gap="xl">
               <div>
-                <Heading>Legal Opinion OC DR Congo</Heading>
+                <Heading type="h1">Legal Opinion OC DR Congo</Heading>
                 <LayoutFlow gap="sm">
                   <LayoutFlow gap="xs">
                     <span className="rvo-text rvo-text--subtle">
