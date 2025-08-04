@@ -9,7 +9,7 @@ import './index.scss';
 
 export interface IExpandableContentProps {
   title: string;
-  open: boolean;
+  open?: boolean;
   subtle?: boolean;
   showIcon?: boolean;
   children: ReactNode | string;
@@ -17,7 +17,7 @@ export interface IExpandableContentProps {
 
 export const ExpandableContent: React.FC<IExpandableContentProps> = ({
   title,
-  open,
+  open = false,
   subtle,
   children,
   showIcon = false,
