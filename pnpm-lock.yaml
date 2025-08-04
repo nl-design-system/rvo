@@ -631,7 +631,7 @@ importers:
       rollup-plugin-postcss:
         specifier: 4.0.2
         version: 4.0.2(postcss@8.5.3)
-      sass:
+      sass-embedded:
         specifier: 1.71.1
         version: 1.71.1
 
@@ -1944,6 +1944,9 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@bufbuild/protobuf@1.10.1':
+    resolution: {integrity: sha512-wJ8ReQbHxsAfXhrf9ixl0aYbZorRuOWpBNzm8pL8ftmSxQx/wnJD5Eg861NwJU/czy2VXFIebCeZnZrI9rktIQ==}
 
   '@bufbuild/protobuf@2.2.5':
     resolution: {integrity: sha512-/g5EzJifw5GF8aren8wZ/G5oMuPoGeS6MQD3ca8ddcvdXR5UELUfdTZITCGNhNXynY/AYl3Z4plmxdj/tRl/hQ==}
@@ -12562,17 +12565,38 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
+  sass-embedded-android-arm64@1.71.1:
+    resolution: {integrity: sha512-a7wJ1MM6sBwcM/8vIvvnwc9spoeNimNeXZpN9baSV4Ylthmr4GkTYYtf96Z/XYLdG5KBgYlxMs5T3OgqafdUMg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [android]
+    hasBin: true
+
   sass-embedded-android-arm64@1.81.0:
     resolution: {integrity: sha512-I36P77/PKAHx6sqOmexO2iEY5kpsmQ1VxcgITZSOxPMQhdB6m4t3bTabfDuWQQmCrqqiNFtLQHeytB65bUqwiw==}
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [android]
 
+  sass-embedded-android-arm@1.71.1:
+    resolution: {integrity: sha512-Pq6TlRg9lIYsZDo9XNQZnSg6grQKzBG3ssdv0W1SnYS1BzGKwbg8XnlUA/pVxK76BKEm8i+0DA4y8cZ8A3tmpw==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm]
+    os: [android]
+    hasBin: true
+
   sass-embedded-android-arm@1.81.0:
     resolution: {integrity: sha512-NWEmIuaIEsGFNsIRa+5JpIpPJyZ32H15E85CNZqEIhhwWlk9UNw7vlOCmTH8MtabtnACwC/2NG8VyNa3nxKzUQ==}
     engines: {node: '>=14.0.0'}
     cpu: [arm]
     os: [android]
+
+  sass-embedded-android-ia32@1.71.1:
+    resolution: {integrity: sha512-tn3WZNdKQtr/DSzl4cQIDZkTO3JuuMxPvM/T+U7gBFyhU62NyF5wvwBnuh+BN3iaMowfkSknzCZCjyJDwnkDjw==}
+    engines: {node: '>=14.0.0'}
+    cpu: [ia32]
+    os: [android]
+    hasBin: true
 
   sass-embedded-android-ia32@1.81.0:
     resolution: {integrity: sha512-k8V1usXw30w1GVxvrteG1RzgYJzYQ9PfL2aeOqGdroBN7zYTD9VGJXTGcxA4IeeRxmRd7szVW2mKXXS472fh8g==}
@@ -12586,11 +12610,25 @@ packages:
     cpu: [riscv64]
     os: [android]
 
+  sass-embedded-android-x64@1.71.1:
+    resolution: {integrity: sha512-l72Pqxfb/pArpOLyWsuL9s8ODWupRGATWTPwUT/GjVdSQJO/lQL5DopXb55Cwh2T7t2G10e+uXTEMKz0qngoWQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [android]
+    hasBin: true
+
   sass-embedded-android-x64@1.81.0:
     resolution: {integrity: sha512-RQG0FxGQ1DERNyUDED8+BDVaLIjI+BNg8lVcyqlLZUrWY6NhzjwYEeiN/DNZmMmHtqDucAPNDcsdVUNQqsBy2A==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [android]
+
+  sass-embedded-darwin-arm64@1.71.1:
+    resolution: {integrity: sha512-3eZDAcJBwoG0Kyasa/EbaKt1Jn2y0GHvCd0Oas/VtMsYL+/6abiCO1l8YltdxER4jvuHUKE2Ow7J6T6sC+vVQQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
 
   sass-embedded-darwin-arm64@1.81.0:
     resolution: {integrity: sha512-gLKbsfII9Ppua76N41ODFnKGutla9qv0OGAas8gxe0jYBeAQFi/1iKQYdNtQtKi4mA9n5TQTqz+HHCKszZCoyA==}
@@ -12598,11 +12636,25 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
+  sass-embedded-darwin-x64@1.71.1:
+    resolution: {integrity: sha512-/9FtMPVdQalhsRCD9opNIlZqJKe7veCjWsdj0J9utbc2bNCTYswXNQtC/jWJTjE9/gQ0+w5zwg9+fQzltdYh1w==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [darwin]
+    hasBin: true
+
   sass-embedded-darwin-x64@1.81.0:
     resolution: {integrity: sha512-7uMOlT9hD2KUJCbTN2XcfghDxt/rc50ujjfSjSHjX1SYj7mGplkINUXvVbbvvaV2wt6t9vkGkCo5qNbeBhfwBg==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [darwin]
+
+  sass-embedded-linux-arm64@1.71.1:
+    resolution: {integrity: sha512-zUSmqeqcgTb3VjZggk9a9xB2ZGaAe/TYAi/vYRPNLY/f7dZSrsa9Ejo+LUm2aNl6V8hFzMz7BpoKsaRQJnb9GQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
 
   sass-embedded-linux-arm64@1.81.0:
     resolution: {integrity: sha512-jy4bvhdUmqbyw1jv1f3Uxl+MF8EU/Y/GDx4w6XPJm4Ds+mwH/TwnyAwsxxoBhWfnBnW8q2ADy039DlS5p+9csQ==}
@@ -12610,16 +12662,36 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  sass-embedded-linux-arm@1.71.1:
+    resolution: {integrity: sha512-l7NEn0gji6GTN+p00DP2zZl9SE501Zy5obTA3beiD6+vQy7lCEC6vpNi/ZrlC6eRmgY2OKSBB2lfW7KSej9Hkg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm]
+    os: [linux]
+    hasBin: true
+
   sass-embedded-linux-arm@1.81.0:
     resolution: {integrity: sha512-REqR9qM4RchCE3cKqzRy9Q4zigIV82SbSpCi/O4O3oK3pg2I1z7vkb3TiJsivusG/li7aqKZGmYOtAXjruGQDA==}
     engines: {node: '>=14.0.0'}
     cpu: [arm]
     os: [linux]
 
+  sass-embedded-linux-ia32@1.71.1:
+    resolution: {integrity: sha512-NvzSljfc/Kw9/0CSn91AsINV2nh8vxhFe2cKexPMwvAqv/etU84dJMfJejxPJ39PmMqT1KvC4G+Qt2+6Mpe7oQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [ia32]
+    os: [linux]
+    hasBin: true
+
   sass-embedded-linux-ia32@1.81.0:
     resolution: {integrity: sha512-ga/Jk4q5Bn1aC+iHJteDZuLSKnmBUiS3dEg1fnl/Z7GaHIChceKDJOw0zNaILRXI0qT2E1at9MwzoRaRA5Nn/g==}
     engines: {node: '>=14.0.0'}
     cpu: [ia32]
+    os: [linux]
+
+  sass-embedded-linux-musl-arm64@1.71.1:
+    resolution: {integrity: sha512-Agtf6BcYQ0mt+jVDcRcN7bDPrMAQOWMeX15NTlQH1rO8voObLo6ThVl2NUkiZyyVmu7a6YOrCxpGBVAK1cLGOg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
     os: [linux]
 
   sass-embedded-linux-musl-arm64@1.81.0:
@@ -12628,10 +12700,22 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  sass-embedded-linux-musl-arm@1.71.1:
+    resolution: {integrity: sha512-1O37K5EgSeQjCBizIF9xdZJw3mh5XYHOnsB4+65CLZg4ac84ragjFv9d9rYhwGs9QSgg1MoOv7VWnEIxQ8Pp9Q==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm]
+    os: [linux]
+
   sass-embedded-linux-musl-arm@1.81.0:
     resolution: {integrity: sha512-oWVUvQ4d5Kx1Md75YXZl5z1WBjc+uOhfRRqzkJ3nWc8tjszxJN+y/5EOJavhsNI3/2yoTt6eMXRTqDD9b0tWSQ==}
     engines: {node: '>=14.0.0'}
     cpu: [arm]
+    os: [linux]
+
+  sass-embedded-linux-musl-ia32@1.71.1:
+    resolution: {integrity: sha512-Cd5sJkt70bSlYEXUSj9mPMKZLzDL8LGcBKUIfQRrcBKjmzD2Va2eLq4Zati9Xzt54unuDp4bAUUTyvQmjLzFmA==}
+    engines: {node: '>=14.0.0'}
+    cpu: [ia32]
     os: [linux]
 
   sass-embedded-linux-musl-ia32@1.81.0:
@@ -12646,6 +12730,12 @@ packages:
     cpu: [riscv64]
     os: [linux]
 
+  sass-embedded-linux-musl-x64@1.71.1:
+    resolution: {integrity: sha512-uVfYms/lf4QVSvtQXkSm+Bq3wVsvkRMI30ca82rRwpwebxSaTbUr+uLnskh8QvbyfsbMyrzZQU0SCrO3uCua1A==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [linux]
+
   sass-embedded-linux-musl-x64@1.81.0:
     resolution: {integrity: sha512-ia6VCTeVDQtBSMktXRFza1AZCt8/6aUoujot6Ugf4KmdytQqPJIHxkHaGftm5xwi9WdrMGYS7zgolToPijR11A==}
     engines: {node: '>=14.0.0'}
@@ -12657,6 +12747,13 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [riscv64]
     os: [linux]
+
+  sass-embedded-linux-x64@1.71.1:
+    resolution: {integrity: sha512-7BXniYic16+MQx0InyH8OXburLPGMRYRWf0l/t/fRkNkUHWFl7NQPAX0yvj73c/PKOdaYEUY6isNB4OGUGtZHQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
 
   sass-embedded-linux-x64@1.81.0:
     resolution: {integrity: sha512-AMDeVY2T9WAnSFkuQcsOn5c29GRs/TuqnCiblKeXfxCSKym5uKdBl/N7GnTV6OjzoxiJBbkYKdVIaS5By7Gj4g==}
@@ -12670,17 +12767,35 @@ packages:
     cpu: [arm64]
     os: [win32]
 
+  sass-embedded-win32-ia32@1.71.1:
+    resolution: {integrity: sha512-ZDhL6hvekeKDkZ1wUj6wN0thrB/7wOO8HaQoagk+pKaHoa0Py7OLR/m9mQM8S13mZpUQduNsznmXV1fOss4GOg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [ia32]
+    os: [win32]
+    hasBin: true
+
   sass-embedded-win32-ia32@1.81.0:
     resolution: {integrity: sha512-HFfr/C+uLJGGTENdnssuNTmXI/xnIasUuEHEKqI+2J0FHCWT5cpz3PGAOHymPyJcZVYGUG/7gIxIx/d7t0LFYw==}
     engines: {node: '>=14.0.0'}
     cpu: [ia32]
     os: [win32]
 
+  sass-embedded-win32-x64@1.71.1:
+    resolution: {integrity: sha512-ecWP1TFUA9ujOuOTJfWC1iZsSZOdQy5OxIEHqoERxunyjwzkiTxfN8J7Y4bNQ5uwb4K0brxWyIM8Fq+UgDqcZA==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64, x64]
+    os: [win32]
+    hasBin: true
+
   sass-embedded-win32-x64@1.81.0:
     resolution: {integrity: sha512-wxj52jDcIAwWcXb7ShZ7vQYKcVUkJ+04YM9l46jDY+qwHzliGuorAUyujLyKTE9heGD3gShJ3wPPC1lXzq6v9A==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [win32]
+
+  sass-embedded@1.71.1:
+    resolution: {integrity: sha512-nOmqErO1zd1wjvTbDscLZZ3fv5JPeQfaKuo0UCjYm7qPbpQcycp0l3nFZHxovjLjCetJ9IrLOADdznFYKV0f1A==}
+    engines: {node: '>=16.0.0'}
 
   sass-embedded@1.81.0:
     resolution: {integrity: sha512-uZQ2Faxb1oWBHpeSSzjxnhClbMb3QadN0ql0ZFNuqWOLUxwaVhrMlMhPq6TDPbbfDUjihuwrMCuy695Bgna5RA==}
@@ -16114,6 +16229,8 @@ snapshots:
   '@base2/pretty-print-object@1.0.1': {}
 
   '@bcoe/v8-coverage@0.2.3': {}
+
+  '@bufbuild/protobuf@1.10.1': {}
 
   '@bufbuild/protobuf@2.2.5': {}
 
@@ -30831,10 +30948,19 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
+  sass-embedded-android-arm64@1.71.1:
+    optional: true
+
   sass-embedded-android-arm64@1.81.0:
     optional: true
 
+  sass-embedded-android-arm@1.71.1:
+    optional: true
+
   sass-embedded-android-arm@1.81.0:
+    optional: true
+
+  sass-embedded-android-ia32@1.71.1:
     optional: true
 
   sass-embedded-android-ia32@1.81.0:
@@ -30843,28 +30969,55 @@ snapshots:
   sass-embedded-android-riscv64@1.81.0:
     optional: true
 
+  sass-embedded-android-x64@1.71.1:
+    optional: true
+
   sass-embedded-android-x64@1.81.0:
+    optional: true
+
+  sass-embedded-darwin-arm64@1.71.1:
     optional: true
 
   sass-embedded-darwin-arm64@1.81.0:
     optional: true
 
+  sass-embedded-darwin-x64@1.71.1:
+    optional: true
+
   sass-embedded-darwin-x64@1.81.0:
+    optional: true
+
+  sass-embedded-linux-arm64@1.71.1:
     optional: true
 
   sass-embedded-linux-arm64@1.81.0:
     optional: true
 
+  sass-embedded-linux-arm@1.71.1:
+    optional: true
+
   sass-embedded-linux-arm@1.81.0:
+    optional: true
+
+  sass-embedded-linux-ia32@1.71.1:
     optional: true
 
   sass-embedded-linux-ia32@1.81.0:
     optional: true
 
+  sass-embedded-linux-musl-arm64@1.71.1:
+    optional: true
+
   sass-embedded-linux-musl-arm64@1.81.0:
     optional: true
 
+  sass-embedded-linux-musl-arm@1.71.1:
+    optional: true
+
   sass-embedded-linux-musl-arm@1.81.0:
+    optional: true
+
+  sass-embedded-linux-musl-ia32@1.71.1:
     optional: true
 
   sass-embedded-linux-musl-ia32@1.81.0:
@@ -30873,10 +31026,16 @@ snapshots:
   sass-embedded-linux-musl-riscv64@1.81.0:
     optional: true
 
+  sass-embedded-linux-musl-x64@1.71.1:
+    optional: true
+
   sass-embedded-linux-musl-x64@1.81.0:
     optional: true
 
   sass-embedded-linux-riscv64@1.81.0:
+    optional: true
+
+  sass-embedded-linux-x64@1.71.1:
     optional: true
 
   sass-embedded-linux-x64@1.81.0:
@@ -30885,11 +31044,43 @@ snapshots:
   sass-embedded-win32-arm64@1.81.0:
     optional: true
 
+  sass-embedded-win32-ia32@1.71.1:
+    optional: true
+
   sass-embedded-win32-ia32@1.81.0:
+    optional: true
+
+  sass-embedded-win32-x64@1.71.1:
     optional: true
 
   sass-embedded-win32-x64@1.81.0:
     optional: true
+
+  sass-embedded@1.71.1:
+    dependencies:
+      '@bufbuild/protobuf': 1.10.1
+      buffer-builder: 0.2.0
+      immutable: 4.3.7
+      rxjs: 7.8.2
+      supports-color: 8.1.1
+      varint: 6.0.0
+    optionalDependencies:
+      sass-embedded-android-arm: 1.71.1
+      sass-embedded-android-arm64: 1.71.1
+      sass-embedded-android-ia32: 1.71.1
+      sass-embedded-android-x64: 1.71.1
+      sass-embedded-darwin-arm64: 1.71.1
+      sass-embedded-darwin-x64: 1.71.1
+      sass-embedded-linux-arm: 1.71.1
+      sass-embedded-linux-arm64: 1.71.1
+      sass-embedded-linux-ia32: 1.71.1
+      sass-embedded-linux-musl-arm: 1.71.1
+      sass-embedded-linux-musl-arm64: 1.71.1
+      sass-embedded-linux-musl-ia32: 1.71.1
+      sass-embedded-linux-musl-x64: 1.71.1
+      sass-embedded-linux-x64: 1.71.1
+      sass-embedded-win32-ia32: 1.71.1
+      sass-embedded-win32-x64: 1.71.1
 
   sass-embedded@1.81.0:
     dependencies:
