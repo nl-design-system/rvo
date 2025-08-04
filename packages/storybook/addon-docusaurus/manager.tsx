@@ -33,6 +33,8 @@ addons.register('docusaurus', () => {
           rev={undefined}
           placeholder={undefined}
           title="Open documentatie in Docusaurus"
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           <Icons icon="document" style={{ width: '12px' }} />
         </IconButton>
