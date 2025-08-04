@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox-group`
 
+## 1.2.6
+
+### Patch Changes
+
+- 5a08db9: derives checkbox state from specified options and using parent state as single source of thruth
+
 ## 1.2.5
 
 ### Patch Changes

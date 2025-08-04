@@ -1,5 +1,21 @@
 # `@nl-rvo/css-card`
 
+## 1.4.0
+
+### Minor Changes
+
+- 6318a72: extended Card with headingProps, linksProps, layout and inlineImage to better meet design requirements
+
+### Patch Changes
+
+- 796b8b6: ROOS-87: fixes fullCardLink prop
+
+## 1.3.0
+
+### Minor Changes
+
+- a0061d6: Allow for client side navigation via LinkComponent prop on Link and Card and added CardExperimental compound component
+
 ## 1.2.4
 
 ### Patch Changes

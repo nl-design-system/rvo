@@ -5,10 +5,12 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
-import TextInput from '../../form-textinput/src/template';
+import TextInput, { ITextInputProps } from '../../form-textinput/src/template';
 
 export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
+  defaultValue?: ITextInputProps['defaultValue'];
+  /** @uxpinignoreprop */
   disabled?: boolean;
   /** @uxpinpropname Has focus */
   focus?: boolean;
@@ -18,7 +20,6 @@ export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   required?: boolean;
   placeholder?: string;
   /** @uxpinpropname Value (yyyy-mm-dd format)> */
-  value?: string;
   /** @uxpinpropname Min (yyyy-mm-dd format)> */
   min?: string;
   /** @uxpinpropname Max (yyyy-mm-dd format)> */
@@ -27,6 +28,7 @@ export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
   prefix?: string;
   suffix?: string;
   size?: 'sm' | 'md' | 'lg' | 'max';
+  value?: ITextInputProps['value'];
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -37,6 +39,10 @@ export interface IDateInputProps extends HTMLAttributes<HTMLInputElement> {
 
 export const argTypes = {
   id: { control: 'text' },
+  defaultValue: {
+    control: 'text',
+    description: 'Date value in "hh:mm:ss" format',
+  },
   disabled: {
     control: 'boolean',
   },
@@ -52,10 +58,7 @@ export const argTypes = {
   required: {
     control: 'boolean',
   },
-  value: {
-    control: 'text',
-    description: 'Date value in "hh:mm:ss" format',
-  },
+
   min: {
     control: 'text',
     description: 'Date value in "hh:mm:ss" format',
@@ -76,6 +79,10 @@ export const argTypes = {
   size: {
     options: ['sm', 'md', 'lg', 'max'],
     control: { type: 'radio' },
+  },
+  value: {
+    control: 'text',
+    description: 'Date value in "hh:mm:ss" format',
   },
   onFocus: {
     table: {
@@ -110,21 +117,23 @@ export const argTypes = {
 };
 
 export const DateInput: React.FC<IDateInputProps> = ({
-  id = defaultArgs.id,
+  defaultValue,
   disabled = defaultArgs.disabled,
+  id = defaultArgs.id,
   focus = defaultArgs.focus,
   readOnly = defaultArgs.readOnly,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
-  value = defaultArgs.value,
   min = defaultArgs.min,
   max = defaultArgs.max,
   step = defaultArgs.step,
   size = defaultArgs.size,
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
+  value,
   ...otherProps
 }: IDateInputProps) => {
+  const isControlled = value !== undefined;
   const props = {
     id,
     className: clsx(
@@ -140,7 +149,8 @@ export const DateInput: React.FC<IDateInputProps> = ({
     'aria-invalid': invalid || undefined,
     required: required || undefined,
     readOnly: readOnly || undefined,
-    defaultValue: value,
+    value: isControlled ? value : undefined,
+    defaultValue: !isControlled ? defaultValue : undefined,
     ...(min && { min }),
     ...(max && { max }),
     ...(step && { step }),

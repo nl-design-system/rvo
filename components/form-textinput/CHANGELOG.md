@@ -1,5 +1,21 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.3.1
+
+### Patch Changes
+
+- d03ae36: autocomplete css fix and added input classname prop
+
+## 1.3.0
+
+### Minor Changes
+
+- fc4fd08: allow autoFocus prop to be forwarded to TextInput
+
+### Patch Changes
+
+- 78ca3b4: allow text- and date-input component to handle controlled and uncontrolled scenarios
+
 ## 1.2.2
 
 ### Patch Changes

@@ -6,7 +6,7 @@ import {
   LayoutFlow,
   MenuBar,
   // MobileMenuBar,
-  Pagination,
+  PageNumberNavigation,
   Tabs,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
@@ -225,7 +225,7 @@ const Aanvragen = () => {
                       </tbody>
                     </table>
                   </div>
-                  <Pagination numberOfPages={5} activePage={3}></Pagination>
+                  <PageNumberNavigation numberOfPages={5} activePage={3} />
                   <div className="rvo-card rvo-card--padding-xl rvo-card--full-colour--grijs-100">
                     <div className="rvo-card__content">
                       <h3 className="utrecht-heading-4 rvo-heading--no-margins">

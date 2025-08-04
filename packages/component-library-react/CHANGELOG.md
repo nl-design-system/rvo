@@ -1,5 +1,90 @@
 # @nl-rvo/component-library-react
 
+## 5.4.2
+
+### Patch Changes
+
+- e24ffcf: adjustmnent in ordered and unordered list component props
+- d03ae36: autocomplete css fix and added input classname prop
+
+## 5.4.1
+
+### Patch Changes
+
+- 9c2fbd9: Fixes relying on DOMParser to prevent hydration issues
+
+## 5.4.0
+
+### Minor Changes
+
+- 6318a72: extended Card with headingProps, linksProps, layout and inlineImage to better meet design requirements
+
+### Patch Changes
+
+- 796b8b6: ROOS-87: fixes fullCardLink prop
+
+## 5.3.0
+
+### Minor Changes
+
+- 31b847a: new component autocomplete
+
+### Patch Changes
+
+- 73efb89: Removed zero padding for first and last child menu items.
+- b4affb0: Forwards className prop to Grid component
+- 78ca3b4: allow text- and date-input component to handle controlled and uncontrolled scenarios
+- a255197: Pagination renamed to Page Number Navigation and updated CSS
+- a6541cb: Renamed Layout parameter to maxWidth for Alert Component
+- f75e111: Added spacing between button icon and its content
+- fec3bba: Updated Feedback components design tokens and CSS
+- a9b161f: Added position relative to rov-checkbox\_\_input class
+
+## 5.2.0
+
+### Minor Changes
+
+- a8cd259: Mobile menu code cleanup and splitting of menu items
+
+### Patch Changes
+
+- 9f3ff4d: pagination now has className prop and html atrributes props forwarded to the root element
+- 6e5a78b: adds an inputFieldLabel prop for the text input field + fix UX where the user cannot remove client side filtering value because of missing text field
+
+## 5.1.0
+
+### Minor Changes
+
+- a0061d6: Allow for client side navigation via LinkComponent prop on Link and Card and added CardExperimental compound component
+
+### Patch Changes
+
+- 88c844c: allow the content prop to contain react nodes instead of strings
+- 5a08db9: derives checkbox state from specified options and using parent state as single source of thruth
+
+## 5.0.1
+
+### Patch Changes
+
+- cd3906b: Revert rollup config
+
+## 5.0.0
+
+### Major Changes
+
+- c95cf1b: CSS is now working when importing an React Component.
+
+## 4.9.0
+
+### Minor Changes
+
+- 0cffc4f: New experimental expandable table component
+- ca618f4: The fieldId prop is no longer mandatory and the for attribute is now derived from the id prop instead.
+
+### Patch Changes
+
+- aaef5c8: Layout property added to alert so you can showcase an alert as an full page alert
+
 ## 4.8.1
 
 ### Patch Changes

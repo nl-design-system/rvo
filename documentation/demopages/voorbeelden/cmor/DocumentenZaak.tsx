@@ -7,7 +7,7 @@ import {
   LayoutFlow,
   MenuBar,
   // MobileMenuBar,
-  Pagination,
+  PageNumberNavigation,
   Tabs,
 } from '@nl-rvo/components';
 import '@nl-rvo/components/helpers-text/src/index.scss';
@@ -222,7 +222,7 @@ const DocumentenZaak = () => {
                             </tbody>
                           </table>
                         </div>
-                        <Pagination numberOfPages={5} activePage={3}></Pagination>
+                        <PageNumberNavigation numberOfPages={5} activePage={3} />
                         <Alert heading="Info">
                           Ontbreekt er een document in dit overzicht? Documenten worden ieder [tijd] ingeladen vanuit de
                           onderliggende systemen. Indien het probleem blijft bestaan neem contact op met ons

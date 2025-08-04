@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar`
 
+## 1.3.7
+
+### Patch Changes
+
+- 73efb89: Removed zero padding for first and last child menu items.
+
 ## 1.3.6
 
 ### Patch Changes

@@ -11,12 +11,11 @@
   @extend .rvo-layout-gap--sm;
 }
 
-.rvo-form-feedback--warning {
-  color: var(--rvo-form-feedback-warning-color);
+.rvo-form-feedback.rvo-form-feedback--warning {
   font-weight: var(--rvo-form-feedback-warning-font-weight);
 }
 
-.rvo-form-feedback--error {
+.rvo-form-feedback.rvo-form-feedback--error {
   color: var(--rvo-form-feedback-error-color);
   font-weight: var(--rvo-form-feedback-error-font-weight);
 }

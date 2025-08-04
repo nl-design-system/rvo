@@ -4,334 +4,437 @@
       "font": {
         "sans-serif": {
           "font-family": {
+            "$type": "fontFamilies",
             "$value": "'RijksoverheidSansWebText'"
           }
         },
         "sans-serif-fallback": {
+          "$type": "fontFamilies",
           "font-family": {
             "$value": "'Verdana', 'Calibri', 'Arial', sans-serif"
           }
         },
         "serif": {
+          "$type": "fontFamilies",
           "font-family": {
             "$value": "'RijksoverheidSerifWeb'"
           }
         },
         "serif-fallback": {
           "font-family": {
+            "$type": "fontFamilies",
             "$value": "'Times New Roman', serif"
           }
         }
       },
       "font-size": {
         "2xs": {
+          "$type": "fontSizes",
           "$value": "0.625rem"
         },
         "xs": {
+          "$type": "fontSizes",
           "$value": "0.75rem"
         },
         "sm": {
+          "$type": "fontSizes",
           "$value": "0.875rem"
         },
         "md": {
+          "$type": "fontSizes",
           "$value": "1rem"
         },
         "lg": {
+          "$type": "fontSizes",
           "$value": "1.125rem"
         },
         "xl": {
+          "$type": "fontSizes",
           "$value": "1.25rem"
         },
         "2xl": {
+          "$type": "fontSizes",
           "$value": "1.5rem"
         },
         "3xl": {
+          "$type": "fontSizes",
           "$value": "2rem"
         },
         "4xl": {
+          "$type": "fontSizes",
           "$value": "3rem"
         }
       },
       "font-weight": {
         "normal": {
+          "$type": "fontWeights",
           "$value": "400"
         },
         "semibold": {
+          "$type": "fontWeights",
           "$value": "550"
         },
         "bold": {
+          "$type": "fontWeights",
           "$value": "700"
         },
         "extrabold": {
+          "$type": "fontWeights",
           "$value": "800"
         }
       },
       "line-height": {
         "sm": {
+          "$type": "lineHeights",
           "$value": "125%"
         },
         "md": {
+          "$type": "lineHeights",
           "$value": "150%"
         },
         "lg": {
+          "$type": "lineHeights",
           "$value": "175%"
         }
       },
       "space": {
         "3xs": {
-          "$value": "2px"
+          "$value": "2px",
+          "$type": "dimension"
         },
         "2xs": {
-          "$value": "4px"
+          "$value": "4px",
+          "$type": "dimension"
         },
         "xs": {
-          "$value": "8px"
+          "$value": "8px",
+          "$type": "dimension"
         },
         "sm": {
-          "$value": "12px"
+          "$value": "12px",
+          "$type": "dimension"
         },
         "md": {
-          "$value": "16px"
+          "$value": "16px",
+          "$type": "dimension"
         },
         "lg": {
-          "$value": "18px"
+          "$value": "18px",
+          "$type": "dimension"
         },
         "xl": {
-          "$value": "24px"
+          "$value": "24px",
+          "$type": "dimension"
         },
         "2xl": {
-          "$value": "32px"
+          "$value": "32px",
+          "$type": "dimension"
         },
         "3xl": {
-          "$value": "64px"
+          "$value": "64px",
+          "$type": "dimension"
         },
         "4xl": {
-          "$value": "128px"
+          "$value": "128px",
+          "$type": "dimension"
         }
       },
       "size": {
         "3xs": {
-          "$value": "2px"
+          "$value": "2px",
+          "$type": "dimension"
         },
         "2xs": {
-          "$value": "4px"
+          "$value": "4px",
+          "$type": "dimension"
         },
         "xs": {
-          "$value": "8px"
+          "$value": "8px",
+          "$type": "dimension"
         },
         "sm": {
-          "$value": "12px"
+          "$value": "12px",
+          "$type": "dimension"
         },
         "md": {
-          "$value": "16px"
+          "$value": "16px",
+          "$type": "dimension"
         },
         "lg": {
-          "$value": "18px"
+          "$value": "18px",
+          "$type": "dimension"
         },
         "xl": {
-          "$value": "24px"
+          "$value": "24px",
+          "$type": "dimension"
         },
         "2xl": {
-          "$value": "32px"
+          "$value": "32px",
+          "$type": "dimension"
         },
         "3xl": {
-          "$value": "64px"
+          "$value": "64px",
+          "$type": "dimension"
         },
         "4xl": {
-          "$value": "128px"
+          "$value": "128px",
+          "$type": "dimension"
         }
       },
       "color": {
         "hemelblauw": {
-          "$value": "#007BC7"
+          "$value": "#007BC7",
+          "$type": "color"
         },
         "hemelblauw-150": {
-          "$value": "#D9EBF7"
+          "$value": "#D9EBF7",
+          "$type": "color"
         },
         "hemelblauw-300": {
-          "$value": "#B3D7EE"
+          "$value": "#B3D7EE",
+          "$type": "color"
         },
         "hemelblauw-450": {
-          "$value": "#8CC4E6"
+          "$value": "#8CC4E6",
+          "$type": "color"
         },
         "hemelblauw-600": {
-          "$value": "#66B0DD"
+          "$value": "#66B0DD",
+          "$type": "color"
         },
         "hemelblauw-750": {
-          "$value": "#409CD5"
+          "$value": "#409CD5",
+          "$type": "color"
         },
         "logoblauw": {
-          "$value": "#154273"
+          "$value": "#154273",
+          "$type": "color"
         },
         "logoblauw-150": {
-          "$value": "#DCE3EA"
+          "$value": "#DCE3EA",
+          "$type": "color"
         },
         "logoblauw-300": {
-          "$value": "#B9C7D5"
+          "$value": "#B9C7D5",
+          "$type": "color"
         },
         "logoblauw-450": {
-          "$value": "#95AAC0"
+          "$value": "#95AAC0",
+          "$type": "color"
         },
         "logoblauw-600": {
-          "$value": "#738EAB"
+          "$value": "#738EAB",
+          "$type": "color"
         },
         "logoblauw-750": {
-          "$value": "#507196"
+          "$value": "#507196",
+          "$type": "color"
         },
         "lichtblauw": {
-          "$value": "#8FCAE7"
+          "$value": "#8FCAE7",
+          "$type": "color"
         },
         "lichtblauw-150": {
-          "$value": "#EEF7FC"
+          "$value": "#EEF7FC",
+          "$type": "color"
         },
         "lichtblauw-300": {
-          "$value": "#DEF0F8"
+          "$value": "#DEF0F8",
+          "$type": "color"
         },
         "lichtblauw-450": {
-          "$value": "#CCE7F4"
+          "$value": "#CCE7F4",
+          "$type": "color"
         },
         "lichtblauw-600": {
-          "$value": "#BCDFF1"
+          "$value": "#BCDFF1",
+          "$type": "color"
         },
         "lichtblauw-750": {
-          "$value": "#ABD7ED"
+          "$value": "#ABD7ED",
+          "$type": "color"
         },
         "donkerblauw": {
-          "$value": "#01689b"
+          "$value": "#01689b",
+          "$type": "color"
         },
         "donkerblauw-150": {
-          "$value": "#D9E9F0"
+          "$value": "#D9E9F0",
+          "$type": "color"
         },
         "donkerblauw-300": {
-          "$value": "#B3D2E1"
+          "$value": "#B3D2E1",
+          "$type": "color"
         },
         "donkerblauw-450": {
-          "$value": "#8CBBD2"
+          "$value": "#8CBBD2",
+          "$type": "color"
         },
         "donkerblauw-600": {
-          "$value": "#67A4C3"
+          "$value": "#67A4C3",
+          "$type": "color"
         },
         "donkerblauw-750": {
-          "$value": "#418EB4"
+          "$value": "#418EB4",
+          "$type": "color"
         },
         "oranje": {
-          "$value": "#E17000"
+          "$value": "#E17000",
+          "$type": "color"
         },
         "oranje-150": {
-          "$value": "#FBEAD9"
+          "$value": "#FBEAD9",
+          "$type": "color"
         },
         "oranje-300": {
-          "$value": "#F6D4B3"
+          "$value": "#F6D4B3",
+          "$type": "color"
         },
         "oranje-450": {
-          "$value": "#F1BF8C"
+          "$value": "#F1BF8C",
+          "$type": "color"
         },
         "oranje-600": {
-          "$value": "#EDA966"
+          "$value": "#EDA966",
+          "$type": "color"
         },
         "oranje-750": {
-          "$value": "#E89440"
+          "$value": "#E89440",
+          "$type": "color"
         },
         "groen": {
-          "$value": "#39870C"
+          "$value": "#39870C",
+          "$type": "color"
         },
         "groen-150": {
-          "$value": "#E2EDDB"
+          "$value": "#E2EDDB",
+          "$type": "color"
         },
         "groen-300": {
-          "$value": "#C4DBB7"
+          "$value": "#C4DBB7",
+          "$type": "color"
         },
         "groen-450": {
-          "$value": "#A6C991"
+          "$value": "#A6C991",
+          "$type": "color"
         },
         "groen-600": {
-          "$value": "#88B76D"
+          "$value": "#88B76D",
+          "$type": "color"
         },
         "groen-750": {
-          "$value": "#6BA549"
+          "$value": "#6BA549",
+          "$type": "color"
         },
         "donkergeel": {
-          "$value": "#FFB612"
+          "$value": "#FFB612",
+          "$type": "color"
         },
         "donkergeel-150": {
-          "$value": "#FFF4DB"
+          "$value": "#FFF4DB",
+          "$type": "color"
         },
         "donkergeel-300": {
-          "$value": "#FFE9B8"
+          "$value": "#FFE9B8",
+          "$type": "color"
         },
         "donkergeel-450": {
-          "$value": "#FFDE94"
+          "$value": "#FFDE94",
+          "$type": "color"
         },
         "donkergeel-600": {
-          "$value": "#FFD371"
+          "$value": "#FFD371",
+          "$type": "color"
         },
         "donkergeel-750": {
-          "$value": "#FFC84D"
+          "$value": "#FFC84D",
+          "$type": "color"
         },
         "rood": {
-          "$value": "#D51B1E"
+          "$value": "#D51B1E",
+          "$type": "color"
         },
         "rood-150": {
-          "$value": "#F9DFDD"
+          "$value": "#F9DFDD",
+          "$type": "color"
         },
         "rood-300": {
-          "$value": "#F3C0BC"
+          "$value": "#F3C0BC",
+          "$type": "color"
         },
         "rood-450": {
-          "$value": "#EC9F99"
+          "$value": "#EC9F99",
+          "$type": "color"
         },
         "rood-600": {
-          "$value": "#E68078"
+          "$value": "#E68078",
+          "$type": "color"
         },
         "rood-750": {
-          "$value": "#E06056"
+          "$value": "#E06056",
+          "$type": "color"
         },
         "grijs-050": {
-          "$value": "#F8FAFC"
+          "$value": "#F8FAFC",
+          "$type": "color"
         },
         "grijs-100": {
-          "$value": "#F1F5F9"
+          "$value": "#F1F5F9",
+          "$type": "color"
         },
         "grijs-200": {
-          "$value": "#E2E8F0"
+          "$value": "#E2E8F0",
+          "$type": "color"
         },
         "grijs-300": {
-          "$value": "#CBD5E1"
+          "$value": "#CBD5E1",
+          "$type": "color"
         },
         "grijs-400": {
-          "$value": "#94A3B8"
+          "$value": "#94A3B8",
+          "$type": "color"
         },
         "grijs-500": {
-          "$value": "#64748B"
+          "$value": "#64748B",
+          "$type": "color"
         },
         "grijs-600": {
-          "$value": "#475569"
+          "$value": "#475569",
+          "$type": "color"
         },
         "grijs-700": {
-          "$value": "#334155"
+          "$value": "#334155",
+          "$type": "color"
         },
         "grijs-800": {
-          "$value": "#1E293B"
+          "$value": "#1E293B",
+          "$type": "color"
         },
         "grijs-900": {
-          "$value": "#0F172A"
+          "$value": "#0F172A",
+          "$type": "color"
         },
         "zwart": {
-          "$value": "#000000"
+          "$value": "#000000",
+          "$type": "color"
         },
         "wit": {
-          "$value": "#FFFFFF"
+          "$value": "#FFFFFF",
+          "$type": "color"
         }
       },
       "border-radius": {
         "sm": {
-          "$value": "3px"
+          "$value": "3px",
+          "$type": "dimension"
         },
         "md": {
-          "$value": "5px"
+          "$value": "5px",
+          "$type": "dimension"
         },
         "xl": {
-          "$value": "10px"
+          "$value": "10px",
+          "$type": "dimension"
         }
       }
     }
@@ -1439,6 +1542,17 @@
       }
     }
   },
+  "components/expandable-table": {
+    "rvo": {
+      "expandable-table": {
+        "rvo": {
+          "border-color": {
+            "$value": "{rvo.color.hemelblauw-300}"
+          }
+        }
+      }
+    }
+  },
   "components/file-input": {
     "rvo": {
       "file-input": {
@@ -1567,8 +1681,12 @@
           "$value": "{rvo.line-height.md}"
         },
         "warning": {
-          "color": {},
-          "font-weight": {}
+          "color": {
+            "$value": "{rvo.color.donkergeel}"
+          },
+          "font-weight": {
+            "$value": "{rvo.font-weight.bold}"
+          }
         },
         "error": {
           "color": {
@@ -3320,6 +3438,7 @@
       "components/dialog",
       "components/document",
       "components/expandable-content",
+      "components/expandable-table",
       "components/file-input",
       "components/footer",
       "components/form-feedback",

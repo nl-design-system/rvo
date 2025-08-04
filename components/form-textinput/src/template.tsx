@@ -22,12 +22,12 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   readOnly?: boolean;
   required?: boolean;
   placeholder?: string;
-  value?: string;
   validation?: 'none' | 'currency';
   prefix?: string;
   suffix?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'max';
   maxLength?: number | undefined;
+  className?: string;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -37,10 +37,16 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
 }
 
 export const argTypes = {
+  autoFocus: {
+    control: 'boolean',
+  },
   id: { control: 'text' },
   type: {
     options: ['text', 'password', 'email', 'tel', 'url', 'search', 'number', 'date', 'time', 'datetime-local'],
     control: { type: 'select' },
+  },
+  defaultValue: {
+    control: 'text',
   },
   disabled: {
     control: 'boolean',
@@ -112,21 +118,25 @@ export const argTypes = {
 export const TextInput: React.FC<ITextInputProps> = ({
   id = defaultArgs.id,
   type = defaultArgs.type,
+  defaultValue,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
   placeholder = defaultArgs.placeholder,
-  value = defaultArgs.value,
   validation = defaultArgs.validation,
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
   maxLength = defaultArgs.maxLength,
+  className,
+  value,
   ...otherProps
 }: ITextInputProps) => {
-  const props = {
+  const isControlled = value !== undefined;
+
+  const textBoxProps = {
     id,
     type,
     disabled,
@@ -134,7 +144,9 @@ export const TextInput: React.FC<ITextInputProps> = ({
     required,
     readOnly,
     placeholder,
-    defaultValue: value,
+    className,
+    value: isControlled ? value : undefined,
+    defaultValue: !isControlled ? defaultValue : undefined,
     ...(validation === 'currency' && {
       inputMode: 'numeric' as any,
       pattern: '[0-9.,]*',
@@ -145,8 +157,9 @@ export const TextInput: React.FC<ITextInputProps> = ({
 
   const inputMarkup = (
     <Textbox
-      {...props}
+      {...textBoxProps}
       className={clsx(
+        className,
         size === 'xs' && 'utrecht-textbox--xs',
         size === 'sm' && 'utrecht-textbox--sm',
         size === 'md' && 'utrecht-textbox--md',

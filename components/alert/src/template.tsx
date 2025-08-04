@@ -21,7 +21,7 @@ export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'conte
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   onClose?: (event: SyntheticEvent<HTMLButtonElement>) => void;
-  layout?: 'sm' | 'md' | 'lg';
+  maxWidth?: 'sm' | 'md' | 'lg';
 }
 
 export const argTypes = {
@@ -62,7 +62,7 @@ export const Alert: React.FC<IAlertProps> = ({
   padding = defaultArgs.padding,
   onClose,
   children,
-  layout,
+  maxWidth,
   ...props
 }: IAlertProps) => {
   // State to control the visibility of the alert
@@ -104,11 +104,11 @@ export const Alert: React.FC<IAlertProps> = ({
         'rvo-alert',
         `rvo-alert--${kind}`,
         padding && `rvo-alert--padding-${padding}`,
-        layout && 'rvo-alert--layout',
+        maxWidth && 'rvo-alert--layout',
       )}
       {...props}
     >
-      <div className={clsx('rvo-alert__container', layout && `rvo-max-width-layout--${layout}`)}>
+      <div className={clsx('rvo-alert__container', maxWidth && `rvo-max-width-layout--${maxWidth}`)}>
         {iconMarkup}
         <div className="rvo-alert-text">
           {heading && heading !== '' && <strong>{heading}</strong>}

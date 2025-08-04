@@ -1,5 +1,11 @@
 # `@nl-rvo/css-grid`
 
+## 3.0.1
+
+### Patch Changes
+
+- b4affb0: Forwards className prop to Grid component
+
 ## 3.0.0
 
 ### Major Changes

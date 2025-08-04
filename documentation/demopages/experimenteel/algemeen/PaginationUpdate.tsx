@@ -13,13 +13,10 @@ const PaginationUpdate = () => {
             <Heading type="h1" textContent="Pagination Update" />
             <p>Een visuele update van het Pagination component</p>
             <LayoutFlow gap="xl">
-              <nav className="rvo-pagination" aria-label="Pagination">
+              <nav className="rvo-pagination" aria-label="Paginanummer navigatie">
                 <div className="rvo-pagination__prev">
                   <a className="rvo-link rvo-link--with-icon" href="#">
-                    <span
-                      className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                      role="img"
-                    ></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"></span>
                     Vorige
                   </a>
                 </div>
@@ -53,14 +50,11 @@ const PaginationUpdate = () => {
                 <div className="rvo-pagination__next">
                   <a className="rvo-link rvo-link--with-icon" href="#">
                     Volgende
-                    <span
-                      className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
-                      role="img"
-                    ></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"></span>
                   </a>
                 </div>
               </nav>
-              <nav className="rvo-pagination">
+              <nav className="rvo-pagination" aria-label="Paginanummer navigatie">
                 <ul className="rvo-pagination__list">
                   <li className="rvo-pagination__item rvo-pagination__item--active">
                     <span aria-current="page">1</span>
@@ -80,20 +74,14 @@ const PaginationUpdate = () => {
                 <div className="rvo-pagination__next">
                   <a className="rvo-link rvo-link--with-icon" href="#">
                     Volgende
-                    <span
-                      className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
-                      role="img"
-                    ></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"></span>
                   </a>
                 </div>
               </nav>
-              <nav className="rvo-pagination">
+              <nav className="rvo-pagination" aria-label="Paginanummer navigatie">
                 <div className="rvo-pagination__prev">
                   <a className="rvo-link rvo-link--with-icon" href="#">
-                    <span
-                      className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                      role="img"
-                    ></span>
+                    <span className="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"></span>
                     Vorige
                   </a>
                 </div>

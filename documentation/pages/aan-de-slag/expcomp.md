@@ -1,4 +1,4 @@
-Werk je aan een component dat nog niet in ROOS bestaat?
+## Werk je aan een component dat nog niet in ROOS bestaat?
 
 - Je kan er dan voor kiezen om het component in je eigen applicatie of website te ontwikkelen.
 - ROOS biedt ook de mogelijkheid om het experimentele component te ontwikkelen in de [GitHub codebase](https://github.com/nl-design-system/rvo). Toegang tot de codebase kan aangevraagd worden door een mail te sturen naar [designsystem@rvo.nl](mailto:designsystem@rvo.nl) of door contact op te nemen met het ROOS kernteam in [MatterMost](https://matter.dtnr.nl/signup_user_complete/?id=jpmrorwwefnqfn5oufsw4i6t8e&md=link&sbr=su).
@@ -8,5 +8,11 @@ Werk je aan een component dat nog niet in ROOS bestaat?
 - Maak het experimentele component in de basis zo gebruiksvriendelijk mogelijk door het te testen met klanten in gebruikersonderzoeken.
 - Laat het experimentele component zo vroeg mogelijk in het proces testen op toegankelijkheid door een expert.
 - Heeft het experimentele component zichzelf bewezen en denk je dat het een goede toevoeging is voor de generieke set componenten van ROOS? Neem dan contact op met het ROOS kernteam [MatterMost](https://matter.dtnr.nl/signup_user_complete/?id=jpmrorwwefnqfn5oufsw4i6t8e&md=link&sbr=su).
+
+## Wat gebeurt er als een Experimenteel component gepromoveerd wordt tot een officieel component?
+
+- We zorgen ervoor dat het experimentele component, in afstemming met de huidige afnemers van dit component, qua code voldoet aan de standaarden van een officieel component.
+- We kondigen aan dat, vanaf de volgende versie van ROOS, het experimentele component uitgefaseerd wordt. Vanaf dat moment wordt het officiële component gebruikt.
+- Omdat de code van het experimentele component en het officiële component gelijk zijn, hoeft alleen de naamgeving van het component aangepast te worden. Bijvoorbeeld: `CardExperimental` wordt `Card`.
 
 Heb je vragen of opmerkingen over dit proces? Stuur dan een e-mail naar [designsystem@rvo.nl](mailto:designsystem@rvo.nl).

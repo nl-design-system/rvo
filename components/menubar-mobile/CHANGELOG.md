@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.5.0
+
+### Minor Changes
+
+- a8cd259: Mobile menu code cleanup and splitting of menu items
+
 ## 1.4.3
 
 ### Patch Changes

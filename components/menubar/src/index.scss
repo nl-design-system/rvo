@@ -119,15 +119,6 @@
   background-color: var(--rvo-sidebar-layout-sidebar-background-color);
 }
 
-// menubar items first and last child direction horizontal
-.rvo-menubar__list > .rvo-menubar__group--flex:first-child > .rvo-menubar__item:first-child {
-  padding-inline-start: 0;
-}
-
-.rvo-menubar__list > .rvo-menubar__group--flex:last-child > .rvo-menubar__item:last-child {
-  padding-inline-end: 0;
-}
-
 // menubar items first and last child direction vertical
 .rvo-menubar__list.rvo-menubar__list--vertical
   > .rvo-menubar__group--flex.rvo-menubar__group--vertical

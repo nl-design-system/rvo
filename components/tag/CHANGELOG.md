@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tag`
 
+## 1.2.2
+
+### Patch Changes
+
+- 88c844c: allow the content prop to contain react nodes instead of strings
+
 ## 1.2.1
 
 ### Patch Changes
