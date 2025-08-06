@@ -11,18 +11,19 @@
     padding-block-start: var(--rvo-space-xl);
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
-  }
 
-  &.rvo-card--full-colour--wit {
-    background-color: var(--rvo-color-wit);
-  }
-
-  &.rvo-card--full-colour--grijs-100 {
-    background-color: var(--rvo-color-grijs-100);
-  }
-
-  &.rvo-card--full-colour--hemelblauw {
-    background-color: var(--rvo-color-hemelblauw);
+    &--wit {
+      background-color: var(--rvo-color-wit);
+    }
+    &--grijs-100 {
+      background-color: var(--rvo-color-grijs-100);
+    }
+    &--hemelblauw {
+      background-color: var(--rvo-color-hemelblauw);
+    }
+    &--lichtblauw-150 {
+      background-color: var(--rvo-color-lichtblauw-150);
+    }
   }
 
   &.rvo-card--inverted-colors {
@@ -38,36 +39,35 @@
     }
   }
 
-  &.rvo-card--padding-sm {
-    border-radius: var(--rvo-card-padding-sm-border-radius);
-    padding-block-end: var(--rvo-card-padding-sm-padding-block-end);
-    padding-block-start: var(--rvo-card-padding-sm-padding-block-start);
-    padding-inline-end: var(--rvo-card-padding-sm-padding-inline-end);
-    padding-inline-start: var(--rvo-card-padding-sm-padding-inline-start);
-  }
-
-  &.rvo-card--padding-md {
-    border-radius: var(--rvo-card-padding-md-border-radius);
-    padding-block-end: var(--rvo-card-padding-md-padding-block-end);
-    padding-block-start: var(--rvo-card-padding-md-padding-block-start);
-    padding-inline-end: var(--rvo-card-padding-md-padding-inline-end);
-    padding-inline-start: var(--rvo-card-padding-md-padding-inline-start);
-  }
-
-  &.rvo-card--padding-lg {
-    border-radius: var(--rvo-card-padding-lg-border-radius);
-    padding-block-end: var(--rvo-card-padding-lg-padding-block-end);
-    padding-block-start: var(--rvo-card-padding-lg-padding-block-start);
-    padding-inline-end: var(--rvo-card-padding-lg-padding-inline-end);
-    padding-inline-start: var(--rvo-card-padding-lg-padding-inline-start);
-  }
-
-  &.rvo-card--padding-xl {
-    border-radius: var(--rvo-card-padding-xl-border-radius);
-    padding-block-end: var(--rvo-card-padding-xl-padding-block-end);
-    padding-block-start: var(--rvo-card-padding-xl-padding-block-start);
-    padding-inline-end: var(--rvo-card-padding-xl-padding-inline-end);
-    padding-inline-start: var(--rvo-card-padding-xl-padding-inline-start);
+  &.rvo-card--padding {
+    &-sm {
+      border-radius: var(--rvo-card-padding-sm-border-radius);
+      padding-block-end: var(--rvo-card-padding-sm-padding-block-end);
+      padding-block-start: var(--rvo-card-padding-sm-padding-block-start);
+      padding-inline-end: var(--rvo-card-padding-sm-padding-inline-end);
+      padding-inline-start: var(--rvo-card-padding-sm-padding-inline-start);
+    }
+    &-md {
+      border-radius: var(--rvo-card-padding-md-border-radius);
+      padding-block-end: var(--rvo-card-padding-md-padding-block-end);
+      padding-block-start: var(--rvo-card-padding-md-padding-block-start);
+      padding-inline-end: var(--rvo-card-padding-md-padding-inline-end);
+      padding-inline-start: var(--rvo-card-padding-md-padding-inline-start);
+    }
+    &-lg {
+      border-radius: var(--rvo-card-padding-lg-border-radius);
+      padding-block-end: var(--rvo-card-padding-lg-padding-block-end);
+      padding-block-start: var(--rvo-card-padding-lg-padding-block-start);
+      padding-inline-end: var(--rvo-card-padding-lg-padding-inline-end);
+      padding-inline-start: var(--rvo-card-padding-lg-padding-inline-start);
+    }
+    &-xl {
+      border-radius: var(--rvo-card-padding-xl-border-radius);
+      padding-block-end: var(--rvo-card-padding-xl-padding-block-end);
+      padding-block-start: var(--rvo-card-padding-xl-padding-block-start);
+      padding-inline-end: var(--rvo-card-padding-xl-padding-inline-end);
+      padding-inline-start: var(--rvo-card-padding-xl-padding-inline-start);
+    }
   }
 
   &.rvo-card--outline {
