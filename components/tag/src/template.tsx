@@ -12,71 +12,68 @@ import './index.scss';
 export interface ITagProps {
   content: ReactNode;
   type?: 'info' | 'success' | 'error' | 'warning';
-  showIcon?: 'before' | 'after';
+  iconPlacement?: 'before' | 'after';
   icon?: IconType;
   /** @uxpinignoreprop */
   className?: string;
-  link?: string;
-  linkTarget?: '_blank' | '_self' | '_parent' | '_top';
+  url?: string;
+  urlTarget?: '_blank' | '_self' | '_parent' | '_top';
   onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>) => void;
 }
 
 export const Tag: React.FC<ITagProps> = ({
   content,
   type,
-  showIcon,
+  iconPlacement,
   icon,
   className,
-  link,
-  linkTarget = '_self',
+  url,
+  urlTarget = '_self',
   onClick,
 }: ITagProps) => {
   // Parse icon markup
   let iconMarkup;
+  enum typeName {
+    info = 'info',
+    warning = 'waarschuwing',
+    error = 'foutmelding',
+    success = 'bevestiging',
+  }
 
-  if (icon) {
-    iconMarkup = Icon({
-      icon: icon as any,
-      size: 'lg',
-      color: '',
-      className: showIcon !== undefined ? `rvo-link__icon--${showIcon}` : '',
-    });
-  } else {
-    switch (type) {
-      case 'info':
-        // case 'waarschuwing':
-        // case 'foutmelding':
-        // case 'bevestiging':
-        iconMarkup = StatusIcon({ type: type, size: 'lg', ignoreDefaultIconColor: true });
-        break;
-      default:
-        iconMarkup = Icon({
+  if (iconPlacement) {
+    iconMarkup = icon
+      ? Icon({
           icon: icon as any,
           size: 'lg',
           color: '',
-          className: showIcon !== undefined ? `rvo-link__icon--${showIcon}` : '',
+          className: iconPlacement !== undefined ? `rvo-link__icon--${iconPlacement}` : '',
+        })
+      : StatusIcon({
+          type: typeName[type as keyof typeof typeName],
+          size: 'lg',
+          ignoreDefaultIconColor: true,
         });
-        break;
-    }
   }
 
-  const TagElement = link ? 'a' : 'div';
+  const TagElement = url ? 'a' : 'div';
 
   return (
     <TagElement
-      {...(link ? { href: link } : {})}
-      target={linkTarget}
+      {...(url ? { href: url } : {})}
+      target={urlTarget}
       className={clsx(
         'rvo-tag',
+        url && 'rvo-tag--as-link',
+        onClick && 'rvo-tag--clickable',
         className,
-        showIcon && ['rvo-tag--with-icon'],
-        type !== undefined ? `rvo-tag--${type}` : 'rvo-tag--default',
+        iconPlacement && 'rvo-tag--with-icon',
+        type !== undefined && `rvo-tag--${type}`,
       )}
       onClick={onClick}
     >
-      {showIcon === 'before' && iconMarkup}
+      {iconPlacement === 'before' && iconMarkup}
       {content}
-      {showIcon === 'after' && iconMarkup}
+      {iconPlacement === 'after' && iconMarkup}
     </TagElement>
   );
 };

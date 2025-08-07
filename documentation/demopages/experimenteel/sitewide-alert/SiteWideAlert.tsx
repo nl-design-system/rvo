@@ -118,7 +118,7 @@ const SiteWideAlert = () => {
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Overzicht met cards" noMargins={true}></Heading>
-                      <Tag type="info" showIcon="no" content="Info tag" />
+                      <Tag type="info" content="Info tag" />
                     </LayoutFlow>
                   </div>
 

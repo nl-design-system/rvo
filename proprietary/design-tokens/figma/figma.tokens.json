@@ -2660,7 +2660,7 @@
         },
         "default": {
           "background-color": {
-            "$value": "{rvo.color.grijs-400}"
+            "$value": "{rvo.color.grijs-200}"
           },
           "color": {
             "$value": "{utrecht.document.color}"
@@ -2670,7 +2670,7 @@
           },
           "hover": {
             "background-color": {
-              "$value": "{rvo.color.grijs-300}"
+              "$value": "{rvo.color.grijs-100}"
             },
             "color": {
               "$value": "{utrecht.document.color}"
@@ -2681,7 +2681,7 @@
           },
           "active": {
             "background-color": {
-              "$value": "{rvo.color.grijs-200}"
+              "$value": "{rvo.color.grijs-100}"
             },
             "color": {
               "$value": "{utrecht.document.color}"

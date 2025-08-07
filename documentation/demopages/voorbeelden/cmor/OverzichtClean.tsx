@@ -140,7 +140,7 @@ const OverzichtClean = () => {
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
                       <Heading type="h2" textContent="Lopende aanvragen" noMargins={true}></Heading>
-                      <Tag type="info" showIcon="no" content="2 openstaande acties" />
+                      <Tag type="info" content="2 openstaande acties" />
                     </LayoutFlow>
                   </div>
 
