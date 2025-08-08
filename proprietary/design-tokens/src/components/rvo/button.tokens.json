@@ -5,46 +5,46 @@
         "background-color": { "value": "transparent" },
         "border-color": {},
         "border-width": { "value": "0" },
-        "color": { "value": "{rvo.color.hemelblauw}" },
+        "color": { "value": "red" },
         "font-weight": { "value": "{rvo.font-weight.bold}" },
         "active": {
-          "color": { "value": "{rvo.color.donkerblauw}" }
+          "color": { "value": "red" }
         },
         "hover": {
-          "color": { "value": "{rvo.color.donkerblauw}" },
+          "color": { "value": "red" },
           "text-decoration": { "value": "underline" }
         },
         "disabled": {
           "border-color": {},
           "background-color": { "value": "transparent" },
-          "color": { "value": "{rvo.color.grijs-300}" }
+          "color": { "value": "red" }
         },
         "focus": {
-          "color": { "value": "{rvo.color.hemelblauw}" }
+          "color": { "value": "red" }
         }
       },
       "rvo-quaternary-action": {
-        "background-color": { "value": "{rvo.color.groen}" },
-        "border-color": { "value": "{rvo.color.groen}" },
+        "background-color": { "value": "red" },
+        "border-color": { "value": "red" },
         "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.wit}" },
         "active": {
-          "background-color": { "value": "{rvo.color.groen-750}" },
-          "border-color": { "value": "{rvo.color.groen-750}" },
+          "background-color": { "value": "red" },
+          "border-color": { "value": "red" },
           "color": { "value": "{rvo.color.wit}" }
         },
         "hover": {
-          "background-color": { "value": "{rvo.color.groen-750}" },
-          "border-color": { "value": "{rvo.color.groen-750}" },
+          "background-color": { "value": "red" },
+          "border-color": { "value": "red" },
           "color": { "value": "{rvo.color.zwart}" }
         },
         "disabled": {
-          "border-color": { "value": "{rvo.color.grijs-200}" },
-          "background-color": { "value": "{rvo.color.grijs-200}" },
-          "color": { "value": "{rvo.color.grijs-300}" }
+          "border-color": { "value": "red" },
+          "background-color": { "value": "red" },
+          "color": { "value": "red" }
         },
         "focus": {
-          "background-color": { "value": "{rvo.color.groen}" },
+          "background-color": { "value": "red" },
           "border-color": {},
           "border-width": { "value": "0" },
           "color": { "value": "{rvo.color.wit}" }
