@@ -20,4 +20,4 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = { args: defaultArgs, name: 'Button' };
+export const Default: Story = { args: defaultArgs, name: 'My Button' };
