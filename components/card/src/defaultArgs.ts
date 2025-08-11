@@ -14,5 +14,5 @@ export const defaultArgs: ICardProps = {
   outline: false,
   padding: 'sm',
   showLinkIndicator: true,
-  title: 'Title',
+  title: '',
 };
