@@ -105,7 +105,7 @@ export const Card: React.FC<ICardProps> = ({
   onClick,
   outline = defaultArgs.outline,
   showLinkIndicator = defaultArgs.showLinkIndicator,
-  title = defaultArgs.title,
+  title,
   ...props
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
