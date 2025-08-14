@@ -1,11 +1,50 @@
 import { defaultArgs } from './src/defaultArgs';
-import { argTypes, Tag } from './src/template';
+import { Tag } from './src/template';
+import { options as iconOptions } from '../icon/src/template';
+
+const argTypes = {
+  content: {
+    control: 'text',
+  },
+  type: {
+    options: ['info', 'bevestiging', 'foutmelding', 'waarschuwing'],
+    control: { type: 'radio' },
+  },
+  showIcon: {
+    options: ['no', 'before', 'after'],
+    control: { type: 'select' },
+  },
+  icon: {
+    control: { type: 'select' },
+    options: iconOptions,
+  },
+  showHover: {
+    control: 'boolean',
+  },
+  active: {
+    control: 'boolean',
+  },
+  focus: {
+    control: 'boolean',
+  },
+  link: {
+    control: 'text',
+  },
+  linkTarget: {
+    options: ['_blank', '_self', '_parent', '_top'],
+    control: { type: 'radio' },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+};
 
 export default {
   title: 'Componenten/Tag/States',
   component: Tag,
-  argTypes: argTypes,
-
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
