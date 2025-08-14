@@ -38,7 +38,7 @@ const Breadcrumbs = () => {
               </ol>
             </div>
             <div className="rvo-content">
-              <Heading type="h1" title="Breadcrumbs example"></Heading>
+              <Heading type="h1">Breadcrumbs example</Heading>
               <p className="rvo-paragraph rvo-paragraph--md">
                 <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
                 ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
