@@ -38,12 +38,16 @@
 
 .rvo-table-header__sortable-container {
   align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
+  font-weight: var(--rvo-table-header-font-weight);
   gap: var(--rvo-space-sm);
 }
 
 .rvo-table-header__sortable-container--numeric {
-  justify-content: end;
+  float: right;
 }
 
 .rvo-table-header__sortable-button {
@@ -67,7 +71,6 @@
 
 .rvo-table-header--sortable:hover {
   background-color: var(--rvo-table-header-sortable-hover-background-color);
-  cursor: pointer;
 }
 
 .rvo-table-header--sortable:focus {
