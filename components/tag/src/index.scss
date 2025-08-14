@@ -31,16 +31,14 @@ $rvo-tag-status: "info", "warning", "success", "error";
   &--clickable {
     &:hover {
       --utrecht-icon-color: var(--rvo-tag-default-hover-icon-color);
-
-      background-color: var(--rvo-tag-default-hover-background-color);
-      color: var(--rvo-tag-default-hover-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-default-hover-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-default-hover-color);
     }
 
     &:active {
       --utrecht-icon-color: var(--rvo-tag-default-active-icon-color);
-
-      background-color: var(--rvo-tag-default-active-background-color);
-      color: var(--rvo-tag-default-active-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-default-active-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-default-active-color);
     }
   }
 
@@ -51,24 +49,21 @@ $rvo-tag-status: "info", "warning", "success", "error";
   @each $status in $rvo-tag-status {
     &--#{$status} {
       --utrecht-icon-color: var(--rvo-tag-#{$status}-icon-color);
-
-      background-color: var(--rvo-tag-#{$status}-background-color);
-      color: var(--rvo-tag-#{$status}-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-#{$status}-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-#{$status}-color);
     }
 
     &--as-link.rvo-tag--#{$status}:hover,
     &--clickable.rvo-tag--#{$status}:hover {
       --utrecht-icon-color: var(--rvo-tag-#{$status}-hover-icon-color);
-
-      background-color: var(--rvo-tag-#{$status}-hover-background-color);
-      color: var(--rvo-tag-#{$status}-hover-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-#{$status}-hover-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-#{$status}-hover-color);
     }
 
     &--as-link.rvo-tag--#{$status}:active {
       --utrecht-icon-color: var(--rvo-tag-#{$status}-active-icon-color);
-
-      background-color: var(--rvo-tag-#{$status}-active-background-color);
-      color: var(--rvo-tag-#{$status}-active-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-#{$status}-active-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-#{$status}-active-color);
     }
   }
 
