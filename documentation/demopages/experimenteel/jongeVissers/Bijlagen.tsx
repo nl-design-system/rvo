@@ -84,7 +84,7 @@ const Bijlagen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" title="Bijlagen"></Heading>
+                  <Heading type="h1">Bijlagen</Heading>
                   <ul>
                     <li>
                       U kunt alleen bijlagen versturen in PDF-formaat. Als u een ander type document wil versturen maakt

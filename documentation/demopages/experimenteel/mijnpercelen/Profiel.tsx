@@ -60,7 +60,7 @@ const Profiel = () => {
             />
           </div>
           <div className="rvo-main-mijn-percelen--profiel">
-            <Heading type="h1" title="Instellingen" />
+            <Heading type="h1">Instellingen</Heading>
             <LayoutFlow gap="md">
               <ul role="tablist" className="rvo-tabs">
                 <li role="presentation" className="rvo-tabs-item">

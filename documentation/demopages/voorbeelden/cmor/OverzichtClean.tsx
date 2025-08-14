@@ -107,7 +107,9 @@ const OverzichtClean = () => {
               </Heading>
               <LayoutFlow gap="md">
                 <LayoutFlow gap="xs">
-                  <Heading type="h2" title="Nog te starten" noMargins={true} />
+                  <Heading type="h2" noMargins={true}>
+                    Nog te starten
+                  </Heading>
                   <LayoutFlow gap="md">
                     <ExpandableContent
                       title="Wij vragen u onderstaande aanvragen op tijd te regelen"
@@ -137,7 +139,9 @@ const OverzichtClean = () => {
                 <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
-                      <Heading type="h2" title="Lopende aanvragen" noMargins={true}></Heading>
+                      <Heading type="h2" noMargins={true}>
+                        Lopende aanvragen
+                      </Heading>
                       <Tag type="info" showIcon="no" content="2 openstaande acties" />
                     </LayoutFlow>
                   </div>
@@ -238,7 +242,9 @@ const OverzichtClean = () => {
               <hr className="rvo-hr"></hr>
               <Grid gap="xl" columns="two">
                 <LayoutFlow gap="sm">
-                  <Heading type="h2" title="Start een nieuwe aanvraag" noMargins={true} />
+                  <Heading type="h2" noMargins={true}>
+                    Start een nieuwe aanvraag
+                  </Heading>
                   <span>Kies uit uw favorieten</span>
                   <LayoutFlow gap="sm">
                     <div className="rvo-item-list">
@@ -301,7 +307,9 @@ const OverzichtClean = () => {
                   </LayoutFlow>
                 </LayoutFlow>
                 <LayoutFlow gap="xs">
-                  <Heading type="h2" title="Snel naar" noMargins={true} />
+                  <Heading type="h2" noMargins={true}>
+                    Snel naar
+                  </Heading>
 
                   <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--none">
                     <li>
@@ -324,7 +332,9 @@ const OverzichtClean = () => {
               </Grid>
 
               <LayoutFlow gap="xs">
-                <Heading type="h2" title="Berichten" noMargins={true} />
+                <Heading type="h2" noMargins={true}>
+                  Berichten
+                </Heading>
                 <LayoutFlow gap="sm">
                   <div className="rvo-item-list">
                     <div className="rvo-item-list__item">
@@ -360,7 +370,7 @@ const OverzichtClean = () => {
               </LayoutFlow>
               <Grid columns="two" gap="xl">
                 <div className="rvo-faq">
-                  <Heading type="h2" title="Veelgestelde vragen" />
+                  <Heading type="h2">Veelgestelde vragen</Heading>
                   <LayoutFlow gap="sm">
                     <Accordion
                       items={[
@@ -394,7 +404,7 @@ const OverzichtClean = () => {
                 </div>
 
                 <div className="rvo-contact-options">
-                  <Heading type="h2" title="Neem contact op" />
+                  <Heading type="h2">Neem contact op</Heading>
                   <p className="rvo-paragraph">Staat uw vraag er niet bij? Neem dan contact met ons op.</p>
                   <ActionGroup>
                     <Button kind="secondary" showIcon="after" icon="communicatie">

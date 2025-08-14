@@ -278,7 +278,7 @@ const Landbouw = () => {
 
               <div className="rvo-content-items rvo-content-items--w-date">
                 <LayoutFlow gap="md">
-                  <Heading type="h2" title="Nieuws" />
+                  <Heading type="h2">Nieuws</Heading>
                   <div className="rvo-content-items-grid">
                     <div className="rvo-content-item">
                       <h3 className="utrecht-heading-3">
@@ -321,7 +321,7 @@ const Landbouw = () => {
 
               <div className="rvo-block-group">
                 <div className="rvo-quick-links">
-                  <Heading type="h2" title="Wegwijzers" />
+                  <Heading type="h2">Wegwijzers</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
                       <Link content="Veranderingen vanaf 1 januari 2024" target="#" noUnderline={true} />
@@ -341,7 +341,7 @@ const Landbouw = () => {
                   </ul>
                 </div>
                 <div className="rvo-quick-links">
-                  <Heading type="h2" title="Registraties" />
+                  <Heading type="h2">Registraties</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
                       <Link content="Wanneer doet u uw meldingen en registraties?" target="#" noUnderline={true} />

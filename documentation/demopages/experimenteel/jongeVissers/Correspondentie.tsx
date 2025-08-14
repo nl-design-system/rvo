@@ -89,7 +89,7 @@ const Correspondentie = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" title="Correspondentie"></Heading>
+                  <Heading type="h1">Correspondentie</Heading>
                 </div>
                 <form>
                   <LayoutFlow gap="md">

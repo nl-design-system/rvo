@@ -48,7 +48,7 @@ const Relatienummer = () => {
         </div>
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading type="h1" title="Relatienummer demopagina"></Heading>
+            <Heading type="h1">Footer demo page</Heading>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Eu nisl nunc mi ipsum faucibus. Tincidunt eget nullam non nisi est sit amet

@@ -440,7 +440,7 @@ const Submenu = () => {
 
         <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--3xl rvo-margin-block-end--3xl">
           <div className="">
-            <Heading type="h2" title="Evenementen" />
+            <Heading type="h2">Evenementen</Heading>
             <div className="rvo-layout-grid rvo-layout-gap--md">
               <div className="rvo-content-item">
                 <h3 className="utrecht-heading-3 rvo-heading--no-margins">
@@ -481,7 +481,7 @@ const Submenu = () => {
           </div>
 
           <div className="">
-            <Heading type="h2" title="Nieuws" />
+            <Heading type="h2">Nieuws</Heading>
             <div className="rvo-layout-grid rvo-layout-gap--md">
               <div className="rvo-content-item">
                 <h3 className="utrecht-heading-3 rvo-heading--no-margins">

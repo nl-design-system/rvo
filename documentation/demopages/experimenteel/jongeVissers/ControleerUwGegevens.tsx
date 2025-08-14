@@ -87,7 +87,7 @@ const ControleerGegevens = () => {
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <LayoutFlow gap="md">
-                    <Heading type="h1" title="Controleer uw gegevens"></Heading>
+                    <Heading type="h1">Controleer uw gegevens</Heading>
                     <LayoutFlow gap="sm">
                       <dl className="rvo-data">
                         <dt>BSN</dt>

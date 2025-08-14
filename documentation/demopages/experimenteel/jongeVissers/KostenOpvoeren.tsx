@@ -97,7 +97,7 @@ const KostenOpvoeren = () => {
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <LayoutFlow gap="md">
-                    <Heading type="h1" title="Kosten opvoeren"></Heading>
+                    <Heading type="h1">Kosten opvoeren</Heading>
                     <dl className="rvo-data">
                       <dt>Omschrijving van de investering</dt>
                       <dd>Aanschaf voertuig</dd>

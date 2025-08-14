@@ -157,7 +157,7 @@ const Percelen = () => {
                   <div className="rvo-cards rvo-cards--percelen">
                     <div className="rvo-card rvo-card--perceel rvo-card--outline">
                       <div className="rvo-card-perceel-title">
-                        <Heading type="h2" title="#21 Slootje bij de buren"></Heading>
+                        <Heading type="h2">#21 Slootje bij de buren</Heading>
                         <span className="rvo-card-perceel-hectare">1,3495 ha</span>
                       </div>
                       <div className="rvo-card-perceel-content">
@@ -181,7 +181,7 @@ const Percelen = () => {
                     </div>
                     <div className="rvo-card rvo-card--perceel rvo-card--outline">
                       <div className="rvo-card-perceel-title">
-                        <Heading type="h2" title="#22 Groot maisveld"></Heading>
+                        <Heading type="h2">#22 Groot maisveld</Heading>
                         <span className="rvo-card-perceel-hectare">2,395 ha</span>
                       </div>
                       <div className="rvo-card-perceel-content">
@@ -205,7 +205,7 @@ const Percelen = () => {
                     </div>
                     <div className="rvo-card rvo-card--perceel rvo-card--outline">
                       <div className="rvo-card-perceel-title">
-                        <Heading type="h2" title="#25 Akker aan de hoogstraat"></Heading>
+                        <Heading type="h2">#25 Akker aan de hoogstraat</Heading>
                         <span className="rvo-card-perceel-hectare">1,565 ha</span>
                       </div>
                       <div className="rvo-card-perceel-content">
@@ -226,7 +226,7 @@ const Percelen = () => {
                     </div>
                     <div className="rvo-card rvo-card--perceel rvo-card--active  rvo-card--outline">
                       <div className="rvo-card-perceel-title">
-                        <Heading type="h2" title="#433"></Heading>
+                        <Heading type="h2">#433</Heading>
                         <span className="rvo-card-perceel-hectare">0,225 ha</span>
                       </div>
                       <div className="rvo-card-perceel-content">

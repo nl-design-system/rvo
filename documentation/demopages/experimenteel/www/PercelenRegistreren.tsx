@@ -128,7 +128,7 @@ const PercelenRegistreren = () => {
               </p>
               <LayoutFlow gap="xl">
                 <div className="rvo-quick-links">
-                  <Heading type="h2" title="Op deze pagina" />
+                  <Heading type="h2">Op deze pagina</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
                       <Link

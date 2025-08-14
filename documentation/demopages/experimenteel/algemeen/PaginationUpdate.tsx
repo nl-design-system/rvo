@@ -10,7 +10,7 @@ const PaginationUpdate = () => {
       <MaxWidthLayout size="md">
         <main className="rvo-padding-block-start--md">
           <div>
-            <Heading type="h1" title="Pagination Update" />
+            <Heading type="h1">Pagination Update</Heading>
             <p>Een visuele update van het Pagination component</p>
             <LayoutFlow gap="xl">
               <nav className="rvo-pagination" aria-label="Paginanummer navigatie">

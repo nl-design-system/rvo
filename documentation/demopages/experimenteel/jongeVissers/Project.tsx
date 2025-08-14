@@ -97,7 +97,7 @@ const Project = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" title="Project vragen"></Heading>
+                  <Heading type="h1">Project vragen</Heading>
                 </div>
                 <form>
                   <LayoutFlow gap="md">

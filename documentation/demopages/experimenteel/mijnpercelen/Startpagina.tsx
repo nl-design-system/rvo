@@ -109,7 +109,7 @@ const Startpagina = () => {
                   <div className="rvo-content">
                     <LayoutFlow gap="xl">
                       <div className="rvo-intro">
-                        <Heading type="h1" title="Mijn Percelen"></Heading>
+                        <Heading type="h1">Mijn Percelen</Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--lg">
                           Hier registreert en wijzigt u de percelen die u in gebruik heeft. De perceelsgegevens zijn de
                           basis voor het aanvragen van subsidies en voor regelingen zoals de mestwetgeving. Daarom is
@@ -123,15 +123,15 @@ const Startpagina = () => {
                         </a>
                       </div>
                       <div className="rvo-instructions">
-                        <Heading type="h2" title="Voordat u begint" />
+                        <Heading type="h2">Voordat u begint</Heading>
                         <br />
-                        <Heading type="h3" title="Uw bouwplan voor 2024 opgeven"></Heading>
+                        <Heading type="h3">Uw bouwplan voor 2024 opgeven</Heading>
                         <p className="rvo-paragraph-spaced">
                           Wilt u alvast uw percelen voor 2024 opgeven? Klik op ‘Wijzigen’ en pas daarna de peildatum aan
                           naar 15-05-2024. Klik vervolgens op de knop ‘Percelen wijzigen’. U kunt dan starten met het
                           opgeven/bijwerken van uw gewaspercelen en landschapselementen voor 2024.
                         </p>
-                        <Heading type="h3" title="Landschapselementen registreren"></Heading>
+                        <Heading type="h3">Landschapselementen registreren</Heading>
                         <p className="rvo-paragraph-spaced">
                           Om landschapselementen te registreren gebruikt u verschillende nieuwe functies. Meer
                           informatie vindt u in het{' '}
@@ -141,7 +141,7 @@ const Startpagina = () => {
                           .
                         </p>
 
-                        <Heading type="h3" title="Privacy"></Heading>
+                        <Heading type="h3">Privacy</Heading>
                         <p className="rvo-paragraph-spaced">
                           Wij gaan zorgvuldig om met uw persoonsgegevens. Lees meer over ons{' '}
                           <a href="#" className="rvo-link">
@@ -165,7 +165,7 @@ const Startpagina = () => {
           <div className="rvo-main-mijn-percelen--sidebar">
             <LayoutFlow gap="md">
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
-                <Heading type="h4" title="Hulp"></Heading>
+                <Heading type="h4">Hulp</Heading>
                 <ul className="rvo-list rvo-list--unordered">
                   <li>
                     <a className="rvo-link rvo-link--no-underline" href="#">
@@ -181,7 +181,7 @@ const Startpagina = () => {
                 </ul>
               </div>
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
-                <Heading type="h4" title="Meekijken"></Heading>
+                <Heading type="h4">Meekijken</Heading>
                 <p className="rvo-paragraph-spaced">Wil onze medewerker meekijken?</p>
                 <div className="rvo-rhs-update-component">
                   <Button kind="secondary" size="sm">

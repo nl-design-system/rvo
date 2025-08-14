@@ -36,7 +36,7 @@ const Filters = () => {
               <LayoutFlow gap="xl">
                 <MaxWidthLayout size="sm">
                   <div className="rvo-intro">
-                    <Heading type="h1" title="Milieu- en Energielijst 2022"></Heading>
+                    <Heading type="h1">Milieu- en Energielijst 2022</Heading>
                     <p>
                       De Energielijst van de regeling Energie-investeringsaftrek (EIA) wordt ieder jaar geactualiseerd.
                       Er komen bedrijfsmiddelen bij, er gaan er enkele vanaf. En soms worden technische eisen
@@ -428,7 +428,7 @@ const Filters = () => {
             <MaxWidthLayout size="lg">
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" title="RVO"></Heading>
+                  <Heading type="h3">RVO</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -449,7 +449,7 @@ const Filters = () => {
               </ul>
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" title="Over deze site"></Heading>
+                  <Heading type="h3">Over deze site</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -470,7 +470,7 @@ const Filters = () => {
               </ul>
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" title="Snel naar"></Heading>
+                  <Heading type="h3">Snel naar</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -491,7 +491,7 @@ const Filters = () => {
               </ul>
               <ul className="rvo-footer-menu">
                 <li className="rvo-footer-menu-title">
-                  <Heading type="h3" title="Blijf op de hoogte"></Heading>
+                  <Heading type="h3">Blijf op de hoogte</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />

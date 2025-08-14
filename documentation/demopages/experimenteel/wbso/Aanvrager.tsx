@@ -57,8 +57,8 @@ const Aanvrager = () => {
             <LayoutFlow gap="md">
               <div className="rvo-form-intro">
                 <Link content="Terug" href="#" showIcon="before" icon="terug" />
-                <Heading type="h1" title="Aanvrager" />
-                <Heading type="h2" title="Bedrijfsgegevens (NHR)" />
+                <Heading type="h1">Aanvrager</Heading>
+                <Heading type="h2">Bedrijfsgegevens (NHR)</Heading>
                 <dl className="rvo-data">
                   <dt>KVK-nummer</dt>
                   <dd>35012085</dd>
@@ -69,7 +69,7 @@ const Aanvrager = () => {
                   <dt>RSIN</dt>
                   <dd>002230884</dd>
                 </dl>
-                <Heading type="h2" title="Bedrijfsgegevens" />
+                <Heading type="h2">Bedrijfsgegevens</Heading>
                 <dl className="rvo-data">
                   <dt>Website</dt>
                   <dd className="rvo-url">https://www.streetplanet.nl</dd>

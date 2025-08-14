@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div className="rvo-demo-page rvo-loading-demopage">
       <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
-        <Heading type="h1" title="Loading demo page"></Heading>
+        <Heading type="h1">Loading demo page</Heading>
         <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--md ">
           Dit is een experimentele demopagina om het loading component/patroon te testen. Het loading component/patroon
           geeft een visuele weergave van als er iets ingeladen moet worden en de gebruiker moet wachten voordat de

@@ -360,7 +360,7 @@ const HomePaars = () => {
               <div className="rvo-block-group">
                 <div className="rvo-content-items rvo-content-items--w-date">
                   <LayoutFlow gap="md">
-                    <Heading type="h2" title="Evenementen" />
+                    <Heading type="h2">Evenementen</Heading>
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
                         <h3 className="utrecht-heading-3">
@@ -405,7 +405,7 @@ const HomePaars = () => {
 
                 <div className="rvo-content-items rvo-content-items--w-date">
                   <LayoutFlow gap="md">
-                    <Heading type="h2" title="Nieuws" />
+                    <Heading type="h2">Nieuws</Heading>
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
                         <h3 className="utrecht-heading-3">
