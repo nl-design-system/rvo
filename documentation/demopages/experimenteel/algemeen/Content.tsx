@@ -10,7 +10,7 @@ const Content = () => {
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
         <main className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-content">
-            <Heading type="h1" textContent="Heading 1"></Heading>
+            <Heading type="h1" title="Heading 1"></Heading>
             <p className="rvo-paragraph rvo-paragraph--lg">
               <strong>Paragraph large.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
@@ -18,7 +18,7 @@ const Content = () => {
               <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
               instellingen, ambassades en lokale overheden.
             </p>
-            <Heading type="h2" textContent="Heading 2"></Heading>
+            <Heading type="h2" title="Heading 2"></Heading>
             <p className="rvo-paragraph rvo-paragraph--md">
               <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
@@ -26,7 +26,7 @@ const Content = () => {
               <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
               instellingen, ambassades en lokale overheden.
             </p>
-            <Heading type="h3" textContent="Heading 3"></Heading>
+            <Heading type="h3" title="Heading 3"></Heading>
 
             <p className="rvo-paragraph rvo-paragraph--sm">
               <strong>Paragraph small.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De

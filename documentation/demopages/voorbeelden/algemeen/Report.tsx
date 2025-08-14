@@ -12,7 +12,7 @@ const Report = () => {
         <LayoutFlow gap="3xl">
           <LayoutFlow gap="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-              <Heading textContent="A Green Sustainable and Safe Water Source" type="h1"></Heading>
+              <Heading title="A Green Sustainable and Safe Water Source" type="h1"></Heading>
               <p>
                 About twenty systems (GreenSource) for collecting water will be installed to provide twenty villages in
                 rural areas with drinking water. Water will be collected in basins (with artificial grass on top) and be
