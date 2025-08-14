@@ -1,28 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './src/defaultArgs';
 import { Heading } from './src/template';
-import { iconNames as iconOptions } from '../icon/src/template';
+import Icon from '../icon/src/template';
 
 const argTypes = {
   type: {
     options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
     control: { type: 'select' },
   },
-  title: {
-    control: 'text',
-  },
-  url: {
-    control: 'text',
-  },
-  showIcon: {
-    options: ['no', 'before', 'after'],
-    control: { type: 'radio' },
-  },
-  icon: {
-    control: { type: 'select' },
-    options: iconOptions,
-  },
-  iconAriaLabel: { control: 'text' },
   noMargins: {
     control: 'boolean',
   },
@@ -55,3 +40,25 @@ export default meta;
 type Story = StoryObj<typeof Heading>;
 
 export const Default: Story = { args: defaultArgs, name: 'Heading' };
+
+export const HeadingIconBefore: Story = {
+  args: defaultArgs,
+  name: 'Heading with Icon Before',
+  render: (args) => (
+    <Heading {...args}>
+      <Icon icon={'home'} />
+      Heading with Icon
+    </Heading>
+  ),
+};
+
+export const HeadingIconAfter: Story = {
+  args: defaultArgs,
+  name: 'Heading with Icon After',
+  render: (args) => (
+    <Heading {...args}>
+      Heading with Icon
+      <Icon icon={'home'} />
+    </Heading>
+  ),
+};
