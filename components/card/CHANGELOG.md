@@ -1,5 +1,16 @@
 # `@nl-rvo/css-card`
 
+## 1.5.0
+
+### Minor Changes
+
+- cf7f2bb: Change the color of the --utrecht-heading variable when the inverted mode is active.
+- 6f2b4c6: Add lichtblauw-150 as a new option for backgroundColor (card component)
+
+### Patch Changes
+
+- e905264: ROOS-140: Card no longer has a default title
+
 ## 1.4.0
 
 ### Minor Changes
