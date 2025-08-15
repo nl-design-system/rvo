@@ -1,5 +1,15 @@
 # @nl-rvo/design-tokens
 
+## 1.10.0
+
+### Minor Changes
+
+- cf7f2bb: Change the color of the --utrecht-heading variable when the inverted mode is active.
+
+### Patch Changes
+
+- 23ea461: button css fixes
+
 ## 1.9.1
 
 ### Patch Changes

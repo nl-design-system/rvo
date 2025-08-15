@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 1.1.5
+
+### Patch Changes
+
+- 23ea461: button css fixes
+
 ## 1.1.4
 
 ### Patch Changes

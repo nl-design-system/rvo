@@ -1,5 +1,11 @@
 # `@nl-rvo/css-accordion`
 
+## 1.1.0
+
+### Minor Changes
+
+- 3725b5d: deleted the grey prop inline with WCAG rules
+
 ## 1.0.2
 
 ### Patch Changes

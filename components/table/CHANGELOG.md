@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.5.0
+
+### Minor Changes
+
+- 6e7620a: Add 'overflow-wrap: break-word' to table cells.
+
 ## 1.4.0
 
 ### Minor Changes

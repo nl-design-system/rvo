@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tag`
 
+## 1.3.0
+
+### Minor Changes
+
+- 9775a8c: Tag Styling update with different default color and updated component and scss files
+
 ## 1.2.2
 
 ### Patch Changes
