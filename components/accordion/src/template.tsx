@@ -11,7 +11,6 @@ import { defaultArgs } from './defaultArgs';
 export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
   /** @uxpinignoreprop */
   items?: IAccordionItemProps[];
-  grijs?: boolean;
   /** @uxpinpropname Accordion items */
   children?: ReactNode | undefined;
 }
@@ -19,9 +18,6 @@ export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
 export const argTypes = {
   items: {
     control: 'object',
-  },
-  grijs: {
-    control: 'boolean',
   },
   children: {
     table: {
@@ -32,12 +28,11 @@ export const argTypes = {
 
 export const Accordion: React.FC<IAccordionProps> = ({
   items = defaultArgs.items,
-  grijs = defaultArgs.grijs,
   children,
   ...props
 }: IAccordionProps) => {
   return (
-    <div className={clsx('rvo-accordion', grijs && 'rvo-accordion--grijs')} {...props}>
+    <div className={clsx('rvo-accordion')} {...props}>
       {(children &&
         React.Children.map(children, (child, index) => <AccordionItem key={index} {...(child as any).props} />)) ||
         items?.map((itemProps, index) => <AccordionItem key={index} {...itemProps} />)}
