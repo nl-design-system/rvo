@@ -111,6 +111,11 @@
     background-color: var(--utrecht-document-color);
     min-width: var(--rvo-size-md);
   }
+
+  &:hover {
+    border-bottom: 2px solid var(--rvo-color-zwart);
+    border-radius: 0;
+  }
 }
 
 .rvo-alert .rvo-link--logoblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {

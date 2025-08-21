@@ -1,5 +1,5 @@
 {
-  "version": "4.9.0",
+  "version": "4.9.1",
   "author": "Community for NL Design System",
   "description": "Component library bundle for the RVO based on the NL Design System architecture",
   "license": "CC0-1.0",
@@ -22,14 +22,14 @@
   },
   "devDependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
-    "@types/mdx": "2.0.11",
-    "clsx": "2.1.0",
+    "@types/mdx": "2.0.12",
+    "clsx": "2.1.1",
     "cssnano": "7.0.6",
     "rimraf": "5.0.5",
-    "rollup": "4.28.0",
+    "rollup": "4.29.1",
     "rollup-plugin-filesize": "10.0.0",
     "rollup-plugin-postcss": "4.0.2",
-    "sass": "1.71.1"
+    "sass-embedded": "1.71.1"
   },
   "type": "module",
   "scripts": {

@@ -121,6 +121,7 @@ const VerticalFilter = () => {
                               },
                             ]}
                           ></SelectField>
+                          <Button />
                         </LayoutFlow>
 
                         <details open className="rvo-collapsible-filter">

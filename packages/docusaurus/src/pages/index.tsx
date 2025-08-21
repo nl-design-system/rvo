@@ -21,7 +21,11 @@ export default function Home(): JSX.Element {
               is een <strong>gebruiksvriendelijke</strong> en <strong>toegankelijke</strong> vertaling van de
               gemoderniseerde Rijkshuisstijl.
             </p>
-            <Link href={useBaseUrl('/aan-de-slag/introductie')}>
+            <Link
+              style={{ display: 'inline-block', width: 'max-content' }}
+              noUnderline={true}
+              href={useBaseUrl('/aan-de-slag/introductie')}
+            >
               <Button>Aan de slag met ROOS</Button>
             </Link>
           </MaxWidthLayout>

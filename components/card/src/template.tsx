@@ -13,7 +13,7 @@ import './index.scss';
 
 export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, Pick<ILinkProps, 'LinkComponent'> {
   background?: 'none' | 'color' | 'image';
-  backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
+  backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw' | 'lichtblauw-150';
   backgroundImage?: string;
   children?: ReactNode | undefined;
   className?: string;
@@ -105,7 +105,7 @@ export const Card: React.FC<ICardProps> = ({
   onClick,
   outline = defaultArgs.outline,
   showLinkIndicator = defaultArgs.showLinkIndicator,
-  title = defaultArgs.title,
+  title,
   ...props
 }: ICardProps) => {
   const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);

@@ -118,7 +118,7 @@ const SiteWideAlert = () => {
                       <Heading type="h2" noMargins={true}>
                         Overzicht met cards
                       </Heading>
-                      <Tag type="info" showIcon="no" content="Info tag" />
+                      <Tag type="info" content="Info tag" />
                     </LayoutFlow>
                   </div>
 

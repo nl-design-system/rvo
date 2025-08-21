@@ -1,4 +1,4 @@
-import { Button, Header, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Alert, Button, Header, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 
@@ -8,6 +8,11 @@ const Alerts = () => {
       <Header />
       <LayoutFlow gap="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
+
+        <Alert maxWidth="lg" kind="info" content="This is an example of a max width info alert." />
+        <Alert maxWidth="lg" kind="warning" content="This is an example a max width warning alert." />
+        <Alert maxWidth="lg" kind="error" content="This is an example a max width error alert." />
+        <Alert maxWidth="lg" kind="success" content="This is an example a max width success alert." />
 
         <MaxWidthLayout size="sm">
           <main>

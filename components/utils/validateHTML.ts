@@ -1,21 +1,15 @@
-export default (htmlString: string) => {
-  if (typeof window !== 'undefined') {
-    let htmlStringToParse = htmlString;
-    const containsHTML = /<[a-z][\s\S]*>/i.test(htmlString);
-    const containsJSX = /<([A-Z][\w]*)(\s*[^>]*)?\/?>/.test(htmlString);
+// Hydration-safe: avoids DOMParser, works the same on server and client
 
-    if (containsJSX) {
-      return false;
-    }
+const containsHTML = (htmlString: string) => /<[a-z][\s\S]*>/i.test(htmlString);
 
-    if (containsHTML) {
-      htmlStringToParse = `<div>${htmlString}</div>`;
-    }
+const containsJSX = (htmlString: string) => /<([A-Z][\w]*)(\s*[^>]*)?\/?>/.test(htmlString);
 
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlStringToParse, 'application/xml');
-    const errorNode = doc.querySelector('parsererror');
-    return errorNode === null ? true : false;
+const validateHTML = (htmlString: string): boolean => {
+  if (containsJSX(htmlString)) {
+    return false;
   }
-  return true;
+  // Only check for basic HTML structure, no parsing
+  return containsHTML(htmlString);
 };
+
+export default validateHTML;
