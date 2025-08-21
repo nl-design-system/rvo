@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.3.2
+
+### Patch Changes
+
+- 78a7fb2: add a bottom line when hovering on close button
+
 ## 1.3.1
 
 ### Patch Changes

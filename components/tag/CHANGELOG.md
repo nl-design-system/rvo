@@ -1,5 +1,16 @@
 # `@nl-rvo/css-tag`
 
+## 1.3.0
+
+### Minor Changes
+
+- 9775a8c: Tag Styling update with different default color and updated component and scss files
+- f12ce99: isPill property added to tag component
+
+### Patch Changes
+
+- d1f32d9: Update design token for tag
+
 ## 1.2.2
 
 ### Patch Changes
