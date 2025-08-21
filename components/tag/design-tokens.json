@@ -43,6 +43,12 @@
           "inherits": true
         }
       },
+      "pill-border-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
       "default": {
         "background-color": {
           "css": {
