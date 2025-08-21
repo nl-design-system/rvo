@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.4.0
+
+### Minor Changes
+
+- 895c4d9: Add max-width 100% to default utrecht-textbox
+
 ## 1.3.1
 
 ### Patch Changes

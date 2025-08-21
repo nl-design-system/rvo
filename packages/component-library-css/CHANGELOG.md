@@ -1,5 +1,22 @@
 # @nl-rvo/component-library-css
 
+## 4.10.0
+
+### Minor Changes
+
+- cf7f2bb: Change the color of the --utrecht-heading variable when the inverted mode is active.
+- 895c4d9: Add max-width 100% to default utrecht-textbox
+- 6e7620a: Add 'overflow-wrap: break-word' to table cells.
+- 3725b5d: deleted the grey prop inline with WCAG rules
+- 6f2b4c6: Add lichtblauw-150 as a new option for backgroundColor (card component)
+- 9775a8c: Tag Styling update with different default color and updated component and scss files
+- f12ce99: isPill property added to tag component
+
+### Patch Changes
+
+- 78a7fb2: add a bottom line when hovering on close button
+- 23ea461: button css fixes
+
 ## 4.9.1
 
 ### Patch Changes
