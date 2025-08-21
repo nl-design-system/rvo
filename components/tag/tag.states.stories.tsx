@@ -18,6 +18,9 @@ const argTypes = {
     control: { type: 'select' },
     options: iconOptions,
   },
+  isPill: {
+    control: 'boolean',
+  },
   showHover: {
     control: 'boolean',
   },

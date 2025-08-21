@@ -46,6 +46,10 @@ $rvo-tag-status: "info", "warning", "success", "error";
     cursor: pointer;
   }
 
+  &--pill {
+    border-radius: var(--rvo-tag-pill-border-radius);
+  }
+
   @each $status in $rvo-tag-status {
     &--#{$status} {
       --utrecht-icon-color: var(--rvo-tag-#{$status}-icon-color);
