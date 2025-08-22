@@ -93,6 +93,13 @@ export const MarginHelpers: React.FC = () => {
           </div>
         </BorderedBox>
         <BorderedBox>
+          <div className="rvo-margin--5xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-margin--5xl"</strong>
+            <br />
+            Box met 5xl margin aan alle kanten
+          </div>
+        </BorderedBox>
+        <BorderedBox>
           <div
             className="rvo-margin--custom"
             style={{ '--space': '40px', backgroundColor: 'var(--rvo-color-grijs-200)' } as React.CSSProperties}

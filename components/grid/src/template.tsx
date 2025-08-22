@@ -8,7 +8,7 @@ import { defaultArgs } from './defaultArgs';
 import './index.scss';
 
 export interface IGridProps {
-  gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
   columns?:
     | 'one'
     | 'two'
@@ -30,7 +30,7 @@ export interface IGridProps {
 
 export const argTypes = {
   gap: {
-    options: ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
+    options: ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
     control: { type: 'radio' },
   },
   columns: {

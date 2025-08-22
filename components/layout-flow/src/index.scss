@@ -123,6 +123,10 @@
   gap: var(--rvo-space-4xl);
 }
 
+.rvo-layout-gap--5xl {
+  gap: var(--rvo-space-5xl);
+}
+
 // Horizontal margin
 
 .rvo-layout-margin-horizontal--3xs {
@@ -165,6 +169,10 @@
   margin-inline: var(--rvo-space-4xl);
 }
 
+.rvo-layout-margin-horizontal--5xl {
+  margin-inline: var(--rvo-space-5xl);
+}
+
 // Vertical margin
 
 .rvo-layout-margin-vertical--3xs {
@@ -205,4 +213,8 @@
 
 .rvo-layout-margin-vertical--4xl {
   margin-block: var(--rvo-space-4xl);
+}
+
+.rvo-layout-margin-vertical--5xl {
+  margin-block: var(--rvo-space-5xl);
 }
