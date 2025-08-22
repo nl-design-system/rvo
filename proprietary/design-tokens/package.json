@@ -12,6 +12,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist/",
+    "figma/",
+    "*.md"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",

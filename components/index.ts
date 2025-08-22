@@ -72,6 +72,4 @@ export { Table } from './table/src/template';
 export { ExpandableTable } from './expandable-table/src/template';
 export { Tabs } from './tabs/src/template';
 export { Tag } from './tag/src/template';
-export { TextHelpers } from './helpers-text/src/template';
-export { MarginHelpers } from './helpers-margin/src/template';
 export { Toggle } from './toggle/src/template';

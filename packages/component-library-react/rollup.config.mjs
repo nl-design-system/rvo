@@ -8,11 +8,15 @@ import nodePolyfills from 'rollup-plugin-node-polyfills';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
+import path from 'node:path';
+import url from 'node:url';
 
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(__dirname, '..', '..');
 const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8'));
 // rollup.config.js
 /**
- * @type {import('rollup').RollupOptions}
+ * @type {import("rollup").RollupOptions}
  */
 
 export const outputGlobals = {
@@ -42,6 +46,14 @@ export default [
       postcss({
         extensions: ['.css', '.scss'],
         minimize: true,
+        use: [
+          [
+            'sass',
+            {
+              includePaths: ['node_modules', path.join(repoRoot, 'utilities'), path.join(repoRoot, 'components')],
+            },
+          ],
+        ],
       }),
       peerDepsExternal({ includeDependencies: true }),
       nodeExternal(),
