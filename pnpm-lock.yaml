@@ -564,6 +564,9 @@ importers:
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
+      '@nl-rvo/utilities':
+        specifier: workspace:*
+        version: link:../utilities
       clsx:
         specifier: 2.1.0
         version: 2.1.0
