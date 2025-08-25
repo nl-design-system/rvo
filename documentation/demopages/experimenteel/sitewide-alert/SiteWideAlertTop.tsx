@@ -45,7 +45,6 @@ const SiteWideAlertTop = () => {
           {
             label: 'Naam app/website',
             link: '#',
-            active: true,
           },
           {
             align: 'right',
@@ -83,7 +82,6 @@ const SiteWideAlertTop = () => {
                   label: 'Dashboard',
                   link: '#',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Menu item',
@@ -104,7 +102,7 @@ const SiteWideAlertTop = () => {
               <div className="rvo-layout-grid rvo-grid-layout--two-columns">
                 <div></div>
               </div>
-              <Heading type="h1" noMargins={true} mixedBoldAndNormal={true}>
+              <Heading type="h1" noMargins={true} fontWeightNormal={true}>
                 <strong>Overzicht</strong> van klantnaam
               </Heading>
               <LayoutFlow gap="md">
@@ -133,7 +131,9 @@ const SiteWideAlertTop = () => {
                 <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
-                      <Heading type="h2" textContent="Overzicht met cards" noMargins={true}></Heading>
+                      <Heading type="h2" noMargins={true}>
+                        Overzicht met cards
+                      </Heading>
                       <Tag type="info" content="Info tag" />
                     </LayoutFlow>
                   </div>
@@ -222,7 +222,9 @@ const SiteWideAlertTop = () => {
               <hr className="rvo-hr"></hr>
               <Grid gap="xl" columns="two">
                 <LayoutFlow gap="sm">
-                  <Heading type="h2" textContent="Item list" noMargins={true} />
+                  <Heading type="h2" noMargins={true}>
+                    Item list
+                  </Heading>
                   <span>Intro of uitleg</span>
                   <LayoutFlow gap="sm">
                     <div className="rvo-item-list">

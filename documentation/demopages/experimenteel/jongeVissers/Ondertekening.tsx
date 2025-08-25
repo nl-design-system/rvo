@@ -87,7 +87,7 @@ const Ondertekening = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Ondertekening"></Heading>
+                  <Heading type="h1">Ondertekening</Heading>
                 </div>
                 <form>
                   <LayoutFlow gap="md">
@@ -115,12 +115,12 @@ const Ondertekening = () => {
                         ]}
                       ></RadioButtonField>
                     </Fieldset>
-                    <Heading type="h2" textContent="Verklaring"></Heading>
+                    <Heading type="h2">Verklaring</Heading>
                     <p>
                       Ik verklaar dat ik voldoe aan de voorwaarden en dat dit formulier en de bijlagen naar waarheid
                       zijn ingevuld.
                     </p>
-                    <Heading type="h2" textContent="Ondertekening"></Heading>
+                    <Heading type="h2">Ondertekening</Heading>
                     <p>Ondertekening m.b.v. TAN is alleen noodzakelijker voor klanten.</p>
                     <ActionGroup>
                       <a
