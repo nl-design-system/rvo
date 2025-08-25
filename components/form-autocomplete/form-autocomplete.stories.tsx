@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Autocomplete, { AutocompleteProps } from './src/template';
+import Autocomplete, { IAutocompleteProps } from './src/template';
 
-const defaultArgs: AutocompleteProps = {
+const defaultArgs: IAutocompleteProps = {
   placeholder: 'Type to search...',
   size: 'lg',
   keywordSuggestions: [

@@ -35,7 +35,6 @@
     outline: var(--rvo-textbox-invalid-focus-outline-color);
     outline-color: var(--utrecht-focus-outline-color);
     overflow-y: auto;
-    padding: 0 var(--rvo-space-sm);
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -48,7 +47,20 @@
 
   &__item {
     cursor: pointer;
-    padding: var(--rvo-space-xs) 0;
+    padding: var(--rvo-space-xs) var(--rvo-space-sm);
+
+    &--active {
+      background: transparent;
+      box-shadow: inset 0 0 0 2px var(--rvo-focus, #3b82f6);
+      color: var(--rvo-text-900, #0b2a4a);
+      outline: none;
+
+      &:focus,
+      &[aria-selected="true"] {
+        box-shadow: inset 0 0 0 2px var(--rvo-focus, #3b82f6);
+        outline: none;
+      }
+    }
 
     &:hover,
     &:focus {
@@ -60,6 +72,10 @@
     & .rvo-autocomplete__highlight {
       font-weight: var(--rvo-font-weight-bold);
     }
+  }
+
+  &__section-header {
+    padding: var(--rvo-space-xs) var(--rvo-space-sm);
   }
 
   &__separator {
