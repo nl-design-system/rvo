@@ -1,10 +1,41 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './src/defaultArgs';
-import { ExpandableContent } from './src/template';
+import { ExpandableContent, IExpandableContentProps } from './src/template';
+
+const defaultArgs: IExpandableContentProps = {
+  title: 'Expandable content title',
+  children: 'Expandable content',
+  open: false,
+  subtle: false,
+  showIcon: true,
+};
+
+const argTypes = {
+  title: {
+    control: 'text',
+  },
+  content: {
+    control: 'text',
+  },
+  open: {
+    control: 'boolean',
+  },
+  showIcon: {
+    control: 'boolean',
+  },
+  subtle: {
+    control: 'boolean',
+  },
+  children: {
+    table: {
+      disable: true,
+    },
+  },
+};
 
 const meta: Meta<typeof ExpandableContent> = {
   title: 'Componenten/Expandable content',
   component: ExpandableContent,
+  argTypes,
   args: defaultArgs,
   parameters: {
     status: {
