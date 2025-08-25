@@ -1,0 +1,36 @@
+{
+  "version": "1.2.0",
+  "author": "Community for NL Design System",
+  "name": "@nl-rvo/utility-padding",
+  "license": "CC0-1.0",
+  "description": "Utility classes for paddings",
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "*.md"
+  ],
+  "keywords": [
+    "rvo",
+    "nl-design-system",
+    "css",
+    "utility-padding",
+    "utilities"
+  ],
+  "main": "dist/index.css",
+  "style": "src/index.scss",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "utilities/utility-padding"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*"
+  }
+}
