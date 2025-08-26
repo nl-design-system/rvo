@@ -62,6 +62,7 @@ export { PageNumberNavigation } from './page-number-navigation/src/template';
 export { Paragraph } from './paragraph/src/template';
 export { ProgressTracker } from './progress-tracker/src/template';
 export { ProgressTrackerStep } from './progress-tracker/src/progress-tracker-step/template';
+export { Qoute } from './qoute/src/template';
 export { ScrollableContent } from './scrollable-content/src/template';
 export { SidebarLayout } from './sidebar-layout/src/template';
 export { Skeleton } from './skeleton/src/template';

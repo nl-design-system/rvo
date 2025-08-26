@@ -2265,6 +2265,15 @@
       }
     }
   },
+  "components/qoute": {
+    "rvo": {
+      "qoute": {
+        "image-size": {
+          "$value": "64px"
+        }
+      }
+    }
+  },
   "components/radio-button": {
     "utrecht": {
       "radio-button": {
@@ -3460,6 +3469,7 @@
       "components/pagination",
       "components/paragraph",
       "components/progress-tracker",
+      "components/qoute",
       "components/radio-button",
       "components/select",
       "components/sidebar",
