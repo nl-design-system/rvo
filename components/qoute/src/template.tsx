@@ -2,18 +2,18 @@ import React from 'react';
 import { isOfType } from '../../utils/typeUtils';
 import './index.scss';
 
-type IQouteUserTypes = {
+type QouteUser = {
   name: string;
   role: string;
   image?: Pick<HTMLImageElement, 'src' | 'alt'> | React.JSX.Element;
 };
 
-export interface IQouteProps {
+export interface QouteProps {
   qoute: string;
-  user: IQouteUserTypes;
+  user: QouteUser;
 }
 
-export const Qoute: React.FC<IQouteProps> = ({ qoute, user }) => {
+export const Qoute: React.FC<QouteProps> = ({ qoute, user }) => {
   const renderImage = () => {
     if (!user) return null;
 
