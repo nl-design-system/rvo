@@ -2,15 +2,15 @@ import React from 'react';
 import { isOfType } from '../../utils/typeUtils';
 import './index.scss';
 
-interface IQouteUserProps {
+type IQouteUserTypes = {
   name: string;
   role: string;
   image?: Pick<HTMLImageElement, 'src' | 'alt'> | React.JSX.Element;
-}
+};
 
 export interface IQouteProps {
   qoute: string;
-  user: IQouteUserProps;
+  user: IQouteUserTypes;
 }
 
 export const Qoute: React.FC<IQouteProps> = ({ qoute, user }) => {
