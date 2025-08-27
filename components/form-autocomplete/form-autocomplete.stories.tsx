@@ -4,6 +4,8 @@ import Autocomplete, { IAutocompleteProps } from './src/template';
 const defaultArgs: IAutocompleteProps = {
   placeholder: 'Type to search...',
   size: 'lg',
+  renderLinksHeader: () => <div>Links</div>,
+  renderSuggestionsHeader: () => <div>Suggesties</div>,
   keywordSuggestions: [
     { value: 'boek' },
     { value: 'boer ' },
@@ -25,6 +27,7 @@ const defaultArgs: IAutocompleteProps = {
       href: 'https://www.rvo.nl/onderwerpen/bio-energie/vergisting-en-vergassing/monomestvergisten',
     },
   ],
+  value: 'boer',
 };
 
 const meta: Meta<typeof Autocomplete> = {
