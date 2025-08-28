@@ -1,0 +1,32 @@
+.rvo-qoute {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rvo-space-md);
+
+  &__qoute {
+    font-size: var(--rvo-font-size-xl);
+    font-style: italic;
+  }
+
+  &__user {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--rvo-space-sm);
+  }
+
+  &__image {
+    align-content: center;
+    border-radius: 50%;
+    display: flex;
+    height: var(--rvo-qoute-image-size);
+    justify-content: center;
+    overflow: hidden;
+    width: var(--rvo-qoute-image-size);
+  }
+
+  &__credentials {
+    display: flex;
+    flex-direction: column;
+  }
+}

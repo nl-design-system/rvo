@@ -1,0 +1,21 @@
+---
+title: Qoute
+hide_title: false
+hide_table_of_contents: true
+slug: .
+---
+
+import Documentation from "./README.md";
+import Qoute from "./src/template";
+import ComponentExample from "../../packages/docusaurus/src/components/ComponentExample";
+
+{(() => {
+const props = { qoute: 'Als start-up doen wij er alles aan om een gezonde, toekomstbestendige leefomgeving te maken. Deze subsidie voor bijen op het dak helpt ons hierbij', user: { name: 'Rosita van der Helm', role: 'Office manager bij Powerbod', image: { src: 'images/berichtenbox/profiel-foto-2.png', alt: 'Qoute image' }} };
+return (
+
+<ComponentExample storyName="componenten-qoute--default">
+  <Qoute {...props} />
+</ComponentExample>
+); })()}
+
+<Documentation />
