@@ -131,10 +131,14 @@
           "$type": "dimension"
         },
         "3xl": {
-          "$value": "64px",
+          "$value": "48px",
           "$type": "dimension"
         },
         "4xl": {
+          "$value": "64px",
+          "$type": "dimension"
+        },
+        "5xl": {
           "$value": "128px",
           "$type": "dimension"
         }
