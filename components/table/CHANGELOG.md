@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.6.0
+
+### Minor Changes
+
+- 8d7dddf: Table column headers are now buttons and be able to be read and interactived with through screenreaders
+
 ## 1.5.0
 
 ### Minor Changes

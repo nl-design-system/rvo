@@ -1,5 +1,14 @@
 # @nl-rvo/component-library-css
 
+## 4.11.0
+
+### Minor Changes
+
+- a0bc5a9: Paramater to make Expandable Content Icon optional and updated css
+- 2127a46: improved link rendering and WCAG, added debounced filtering and custom filtering
+- 8d7dddf: Table column headers are now buttons and be able to be read and interactived with through screenreaders
+- 68464fd: Added a new Qoute Component
+
 ## 4.10.0
 
 ### Minor Changes
