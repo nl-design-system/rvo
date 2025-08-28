@@ -527,7 +527,7 @@ const Feedback = () => {
                       Dat vinden wij jammer. Wilt u ons vertellen waarom u ontevreden bent?
                     </label>
                     <div className="utrecht-form-field-description" id="feedback-tips-helper">
-                      U kunt via dit formulier geen vragen aan ons stellen. Heeft u een vraag?{' '}
+                      U kunt via dit formulier geen vragen aan ons stellen. <br /> Heeft u een vraag?{' '}
                       <a href="https://www.rvo.nl/onderwerpen/contact" className="rvo-link rvo-link--donkerblauw">
                         Neem contact met ons op
                       </a>
