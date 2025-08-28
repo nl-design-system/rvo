@@ -104,7 +104,7 @@ const Home = () => {
           </a>
         </div>
         <div className="rvo-onderwerpen rvo-margin-block-end--md">
-          <h2 className="utrecht-heading-2">Onderwerpen</h2>
+          <Heading type="h2">Onderwerpen</Heading>
           <div className="rvo-layout-grid-container rvo-margin-block-end--md">
             <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
               <div className="rvo-card rvo-card--outline rvo-card--padding-md">
