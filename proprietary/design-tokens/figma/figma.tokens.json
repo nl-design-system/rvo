@@ -2658,6 +2658,9 @@
         "padding-inline-start-with-icon": {
           "$value": "{rvo.space.xs}"
         },
+        "pill-border-radius": {
+          "$value": "25px"
+        },
         "default": {
           "background-color": {
             "$value": "{rvo.color.grijs-200}"

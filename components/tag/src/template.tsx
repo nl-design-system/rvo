@@ -14,6 +14,7 @@ export interface ITagProps {
   type?: 'info' | 'success' | 'error' | 'warning';
   iconPlacement?: 'before' | 'after';
   icon?: IconType;
+  isPill?: boolean;
   /** @uxpinignoreprop */
   className?: string;
   url?: string;
@@ -30,6 +31,7 @@ export const Tag: React.FC<ITagProps> = ({
   url,
   urlTarget = '_self',
   onClick,
+  isPill,
 }: ITagProps) => {
   // Parse icon markup
   let iconMarkup;
@@ -68,6 +70,7 @@ export const Tag: React.FC<ITagProps> = ({
         className,
         iconPlacement && 'rvo-tag--with-icon',
         type !== undefined && `rvo-tag--${type}`,
+        isPill && 'rvo-tag--pill',
       )}
       onClick={onClick}
     >

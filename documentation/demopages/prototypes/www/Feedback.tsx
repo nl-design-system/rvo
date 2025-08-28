@@ -526,6 +526,13 @@ const Feedback = () => {
                     <label className="rvo-label" htmlFor="feedback-ontevreden">
                       Dat vinden wij jammer. Wilt u ons vertellen waarom u ontevreden bent?
                     </label>
+                    <div className="utrecht-form-field-description" id="feedback-tips-helper">
+                      U kunt via dit formulier geen vragen aan ons stellen. Heeft u een vraag?{' '}
+                      <a href="https://www.rvo.nl/onderwerpen/contact" className="rvo-link rvo-link--donkerblauw">
+                        Neem contact met ons op
+                      </a>
+                      .
+                    </div>
                   </div>
                   <div className="rvo-form-field__input">
                     <textarea
@@ -544,6 +551,13 @@ const Feedback = () => {
                     <label className="rvo-label" htmlFor="feedback-tips">
                       Dat horen wij graag. Heeft u verder nog tips voor ons?
                     </label>
+                    <div className="utrecht-form-field-description" id="feedback-tips-helper">
+                      U kunt via dit formulier geen vragen aan ons stellen. <br /> Heeft u een vraag?{' '}
+                      <a href="https://www.rvo.nl/onderwerpen/contact" className="rvo-link rvo-link--donkerblauw">
+                        Neem contact met ons op
+                      </a>
+                      .
+                    </div>
                   </div>
                   <div className="rvo-form-field__input">
                     <textarea

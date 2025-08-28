@@ -1,5 +1,17 @@
 # @nl-rvo/design-tokens
 
+## 1.10.0
+
+### Minor Changes
+
+- cf7f2bb: Change the color of the --utrecht-heading variable when the inverted mode is active.
+- f12ce99: isPill property added to tag component
+
+### Patch Changes
+
+- d1f32d9: Update design token for tag
+- 23ea461: button css fixes
+
 ## 1.9.1
 
 ### Patch Changes
