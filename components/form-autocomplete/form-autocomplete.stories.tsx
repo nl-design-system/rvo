@@ -27,7 +27,6 @@ const defaultArgs: IAutocompleteProps = {
       href: 'https://www.rvo.nl/onderwerpen/bio-energie/vergisting-en-vergassing/monomestvergisten',
     },
   ],
-  value: 'boer',
 };
 
 const meta: Meta<typeof Autocomplete> = {
