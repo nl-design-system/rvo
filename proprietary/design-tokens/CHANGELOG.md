@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.11.0
+
+### Minor Changes
+
+- 68464fd: Added a new Qoute Component
+
 ## 1.10.0
 
 ### Minor Changes

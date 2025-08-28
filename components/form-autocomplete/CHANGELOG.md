@@ -1,5 +1,11 @@
 # `@nl-rvo/autocomplete`
 
+## 1.2.0
+
+### Minor Changes
+
+- 2127a46: improved link rendering and WCAG, added debounced filtering and custom filtering
+
 ## 1.1.1
 
 ### Patch Changes
