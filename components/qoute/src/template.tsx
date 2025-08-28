@@ -8,12 +8,12 @@ type QouteUser = {
   image?: Pick<HTMLImageElement, 'src' | 'alt'> | React.JSX.Element;
 };
 
-export interface QouteProps {
+export interface IQouteProps {
   qoute: string;
   user: QouteUser;
 }
 
-export const Qoute: React.FC<QouteProps> = ({ qoute, user }) => {
+export const Qoute: React.FC<IQouteProps> = ({ qoute, user }: IQouteProps) => {
   const renderImage = () => {
     if (!user) return null;
 
