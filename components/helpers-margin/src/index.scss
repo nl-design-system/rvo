@@ -257,6 +257,29 @@
   margin-inline-end: var(--rvo-space-4xl);
 }
 
+.rvo-margin--5xl {
+  margin-block-end: var(--rvo-space-5xl);
+  margin-block-start: var(--rvo-space-5xl);
+  margin-inline-end: var(--rvo-space-5xl);
+  margin-inline-start: var(--rvo-space-5xl);
+}
+
+.rvo-margin-block-start--5xl {
+  margin-block-start: var(--rvo-space-5xl);
+}
+
+.rvo-margin-block-end--5xl {
+  margin-block-end: var(--rvo-space-5xl);
+}
+
+.rvo-margin-inline-start--5xl {
+  margin-inline-start: var(--rvo-space-5xl);
+}
+
+.rvo-margin-inline-end--5xl {
+  margin-inline-end: var(--rvo-space-5xl);
+}
+
 .rvo-margin--custom {
   margin-block-end: var(--space);
   margin-block-start: var(--space);
