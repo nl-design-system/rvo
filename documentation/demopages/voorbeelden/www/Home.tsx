@@ -33,12 +33,12 @@ const Home = () => {
         {isDesktop ? (
           <MenuBar
             items={[
-              { label: 'Home', active: true, link: '#' },
+              { label: 'Home', link: '#' },
               { label: 'Onderwerpen', link: '#' },
               { label: 'Subsidie- en financieringswijzer', link: '#' },
               { label: 'Over ons', link: '#' },
               { label: 'Contact', link: '#' },
-              { align: 'right', label: 'Mijn RVO', link: '#', active: true, icon: 'user' },
+              { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
               { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
               { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
             ]}
@@ -53,7 +53,7 @@ const Home = () => {
         )}
       </div>
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <Hero size="lg" image={{ src: 'images/www/home.jpg', alt: '' }} />
+        <Hero size="lg" image={{ src: 'images/www/home.jpg', alt: '' }} title="Heading" />
       </div>
       <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-layout--wrap rvo-margin-block-end--2xl rvo-margin-block-start--xl">
@@ -104,7 +104,7 @@ const Home = () => {
           </a>
         </div>
         <div className="rvo-onderwerpen rvo-margin-block-end--md">
-          <h2 className="utrecht-heading-2">Onderwerpen</h2>
+          <Heading type="h2">Onderwerpen</Heading>
           <div className="rvo-layout-grid-container rvo-margin-block-end--md">
             <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
               <div className="rvo-card rvo-card--outline rvo-card--padding-md">
@@ -296,7 +296,7 @@ const Home = () => {
 
         <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--3xl rvo-margin-block-end--3xl">
           <div className="">
-            <Heading type="h2" textContent="Evenementen" />
+            <Heading type="h2">Evenementen</Heading>
             <div className="rvo-layout-grid rvo-layout-gap--md">
               <div className="rvo-content-item">
                 <h3 className="utrecht-heading-3 rvo-heading--no-margins">
@@ -337,7 +337,7 @@ const Home = () => {
           </div>
 
           <div className="">
-            <Heading type="h2" textContent="Nieuws" />
+            <Heading type="h2">Nieuws</Heading>
             <div className="rvo-layout-grid rvo-layout-gap--md">
               <div className="rvo-content-item">
                 <h3 className="utrecht-heading-3 rvo-heading--no-margins">
