@@ -780,6 +780,10 @@
     gap: var(--rvo-space-4xl);
   }
 
+  .rvo-layout-spacer--5xl {
+    gap: var(--rvo-space-5xl);
+  }
+
   /* @RADIO BUTTON FIX > MOET DOORGEVOERD WORDEN IN RADIO BUTTON COMPONENT */
   .utrecht-radio-button,
   .rvo-checkbox__input {
