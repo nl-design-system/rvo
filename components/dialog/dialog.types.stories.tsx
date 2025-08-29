@@ -28,20 +28,20 @@ export const DialogCentered = {
 
 export const DialogDrawerLeft = {
   render: Dialog.bind({}),
-  name: 'Drawer left',
+  name: 'Position left',
 
   args: {
-    type: 'drawer-left',
+    type: 'position-left',
     content: 'Dialog content',
   },
 };
 
 export const DialogDrawerRight = {
   render: Dialog.bind({}),
-  name: 'Drawer right',
+  name: 'Position right',
 
   args: {
-    type: 'drawer-right',
+    type: 'position-right',
     content: 'Dialog content',
   },
 };
