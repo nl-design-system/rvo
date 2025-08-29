@@ -25,7 +25,7 @@
   // sizes
   @each $size in $rvo-paragraph-sizes {
     &--#{$size} {
-      --rvo-paragraph-line-height: var(--rvo-paragraph-#{$size});
+      --rvo-paragraph-line-height: var(--rvo-paragraph-#{$size}-line-height);
       --rvo-paragraph-font-size: var(--rvo-paragraph-#{$size}-font-size);
     }
   }
