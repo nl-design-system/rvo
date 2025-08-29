@@ -13,7 +13,7 @@ export interface IParagraphProps extends Omit<React.HTMLAttributes<HTMLParagraph
   content?: string | React.ReactNode;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
-  color?: 'logoblauw' | 'wit' | 'zwart' | 'grijs-500';
+  color?: 'logoblauw' | 'wit' | 'zwart' | 'grijs-500' | 'grijs-900';
   size?: 'sm' | 'md' | 'lg';
   noSpacing?: boolean;
 }
@@ -24,7 +24,7 @@ export const argTypes = {
   },
   color: {
     control: { type: 'select' },
-    options: ['logoblauw', 'wit', 'zwart', 'grijs-500'],
+    options: ['logoblauw', 'wit', 'zwart', 'grijs-500', 'grijs-900'],
   },
   size: {
     control: { type: 'select' },
@@ -56,13 +56,8 @@ export const Paragraph: React.FC<IParagraphProps> = ({
     <p
       className={clsx(
         'rvo-paragraph',
-        color === 'logoblauw' && 'rvo-paragraph--logoblauw',
-        color === 'wit' && 'rvo-paragraph--wit',
-        color === 'zwart' && 'rvo-paragraph--zwart',
-        color === 'grijs-500' && 'rvo-paragraph--grijs-500',
-        size === 'sm' && 'rvo-paragraph--sm',
-        size === 'md' && 'rvo-paragraph--md',
-        size === 'lg' && 'rvo-paragraph--lg',
+        color && 'rvo-paragraph--' + color,
+        size && 'rvo-paragraph--' + size,
         noSpacing && 'rvo-paragraph--no-spacing',
         className,
       )}

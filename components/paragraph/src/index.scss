@@ -3,38 +3,35 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rvo-paragraph--sm {
-  font-size: var(--rvo-paragraph-sm-font-size);
-  line-height: var(--rvo-paragraph-sm-line-height);
-}
+.rvo-paragraph {
+  $rvo-paragraph-sizes: sm, md, lg;
+  $rvo-paragraph-colors: zwart, wit, logoblauw, grijs-500, grijs-900;
 
-.rvo-paragraph--md {
-  font-size: var(--rvo-paragraph-md-font-size);
-  line-height: var(--rvo-paragraph-md-line-height);
-}
+  --rvo-paragraph-color: initial;
+  --rvo-paragraph-font-size: initial;
+  --rvo-paragraph-line-height: initial;
 
-.rvo-paragraph--lg {
-  font-size: var(--rvo-paragraph-lg-font-size);
-  line-height: var(--rvo-paragraph-lg-line-height);
-}
+  color: var(--rvo-paragraph-color);
+  font-size: var(--rvo-paragraph-font-size);
+  line-height: var(--rvo-paragraph-line-height);
 
-.rvo-paragraph--no-spacing {
-  margin-block-end: 0;
-  margin-block-start: 0;
-}
+  // colors
+  @each $color in $rvo-paragraph-colors {
+    &--#{$color} {
+      --rvo-paragraph-color: var(--rvo-color-#{$color});
+    }
+  }
 
-.rvo-paragraph--zwart {
-  color: var(--rvo-color-zwart);
-}
+  // sizes
+  @each $size in $rvo-paragraph-sizes {
+    &--#{$size} {
+      --rvo-paragraph-line-height: var(--rvo-paragraph-#{$size});
+      --rvo-paragraph-font-size: var(--rvo-paragraph-#{$size}-font-size);
+    }
+  }
 
-.rvo-paragraph--wit {
-  color: var(--rvo-color-wit);
-}
-
-.rvo-paragraph--logoblauw {
-  color: var(--rvo-color-logoblauw);
-}
-
-.rvo-paragraph--grijs-500 {
-  color: var(--rvo-color-grijs-500);
+  &--no-spacing {
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
 }
