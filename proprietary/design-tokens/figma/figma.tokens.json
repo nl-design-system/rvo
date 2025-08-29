@@ -131,10 +131,14 @@
           "$type": "dimension"
         },
         "3xl": {
-          "$value": "64px",
+          "$value": "48px",
           "$type": "dimension"
         },
         "4xl": {
+          "$value": "64px",
+          "$type": "dimension"
+        },
+        "5xl": {
           "$value": "128px",
           "$type": "dimension"
         }
@@ -2265,6 +2269,15 @@
       }
     }
   },
+  "components/qoute": {
+    "rvo": {
+      "qoute": {
+        "image-size": {
+          "$value": "64px"
+        }
+      }
+    }
+  },
   "components/radio-button": {
     "utrecht": {
       "radio-button": {
@@ -3460,6 +3473,7 @@
       "components/pagination",
       "components/paragraph",
       "components/progress-tracker",
+      "components/qoute",
       "components/radio-button",
       "components/select",
       "components/sidebar",

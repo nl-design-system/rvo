@@ -93,6 +93,13 @@ export const UtilityPadding: React.FC = () => {
           </div>
         </BorderedBox>
         <BorderedBox>
+          <div className="rvo-padding--5xl" style={{ backgroundColor: 'var(--rvo-color-grijs-200)' }}>
+            <strong>class="rvo-padding--5xl"</strong>
+            <br />
+            Box met 5xl padding aan alle kanten
+          </div>
+        </BorderedBox>
+        <BorderedBox>
           <div
             className="rvo-padding--custom"
             style={{ '--space': '40px', backgroundColor: 'var(--rvo-color-grijs-200)' } as React.CSSProperties}

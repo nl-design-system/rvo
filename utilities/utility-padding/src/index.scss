@@ -17,6 +17,7 @@ $rvo-spaces: (
   2xl: var(--#{$rvo-prefix}-space-2xl),
   3xl: var(--#{$rvo-prefix}-space-3xl),
   4xl: var(--#{$rvo-prefix}-space-4xl),
+  5xl: var(--#{$rvo-prefix}-space-5xl),
   custom: var(--space),
 ) !default;
 $rvo-directions: (

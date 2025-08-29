@@ -10,13 +10,13 @@
         "width": { "value": "{rvo.space.3xl}" }
       },
       "sm": {
-        "width": { "value": "calc({rvo.space.4xl} + {rvo.space.xs})" }
+        "width": { "value": "calc({rvo.space.5xl} + {rvo.space.xs})" }
       },
       "md": {
-        "width": { "value": "calc({rvo.space.4xl} * 2)" }
+        "width": { "value": "calc({rvo.space.5xl} * 2)" }
       },
       "lg": {
-        "width": { "value": "calc({rvo.space.4xl} * 4)" }
+        "width": { "value": "calc({rvo.space.5xl} * 4)" }
       },
       "max": {
         "width": { "value": "100%" }
