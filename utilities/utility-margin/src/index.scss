@@ -1,0 +1,56 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+/* stylelint-disable custom-property-pattern */
+$rvo-prefix: "rvo" !default;
+$rvo-spaces: (
+  none: 0,
+  3xs: var(--#{$rvo-prefix}-space-3xs),
+  2xs: var(--#{$rvo-prefix}-space-2xs),
+  xs: var(--#{$rvo-prefix}-space-xs),
+  sm: var(--#{$rvo-prefix}-space-sm),
+  md: var(--#{$rvo-prefix}-space-md),
+  lg: var(--#{$rvo-prefix}-space-lg),
+  xl: var(--#{$rvo-prefix}-space-xl),
+  2xl: var(--#{$rvo-prefix}-space-2xl),
+  3xl: var(--#{$rvo-prefix}-space-3xl),
+  4xl: var(--#{$rvo-prefix}-space-4xl),
+  5xl: var(--#{$rvo-prefix}-space-5xl),
+  custom: var(--space),
+) !default;
+$rvo-directions: (
+  block-start: margin-block-start,
+  block-end: margin-block-end,
+  inline-start: margin-inline-start,
+  inline-end: margin-inline-end,
+) !default;
+
+@each $name, $value in $rvo-spaces {
+  .#{$rvo-prefix}-margin--#{$name} {
+    margin-block-end: $value;
+    margin-block-start: $value;
+    margin-inline-end: $value;
+    margin-inline-start: $value;
+  }
+  @each $dir-name, $prop in $rvo-directions {
+    .#{$rvo-prefix}-margin-#{$dir-name}--#{$name} {
+      #{$prop}: $value;
+    }
+  }
+}
+
+// Extra overrides for custom with per-side values
+.#{$rvo-prefix}-margin-block-end--custom {
+  margin-block-end: var(--space-block-end);
+}
+.#{$rvo-prefix}-margin-block-start--custom {
+  margin-block-start: var(--space-block-start);
+}
+.#{$rvo-prefix}-margin-inline-end--custom {
+  margin-inline-end: var(--space-inline-end);
+}
+.#{$rvo-prefix}-margin-inline-start--custom {
+  margin-inline-start: var(--space-inline-start);
+}

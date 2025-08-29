@@ -2,6 +2,11 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
 import fs from 'fs';
+import path from 'node:path';
+import url from 'node:url';
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(__dirname, '..', '..');
 
 // Read and parse @use statements from index.scss
 const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
@@ -24,7 +29,7 @@ const useStatements = indexContent
 // Create individual component configurations
 const componentBundles = useStatements.flatMap((component) => [
   {
-    input: `../../components/${component}/src/index.scss`,
+    input: `${repoRoot}/components/${component}/src/index.scss`,
     output: {
       file: `dist/components/${component}.css`,
       format: 'es',
@@ -73,6 +78,9 @@ const mainBundles = [
         extensions: ['.css', '.scss'],
         extract: true,
         minimize: false,
+        use: {
+          sass: { includePaths: ['node_modules', path.join(repoRoot, 'utilities'), path.join(repoRoot, 'components')] },
+        },
       }),
       filesize(),
     ],
@@ -89,6 +97,9 @@ const mainBundles = [
         extensions: ['.css', '.scss'],
         extract: true,
         minimize: true,
+        use: {
+          sass: { includePaths: ['node_modules', path.join(repoRoot, 'utilities'), path.join(repoRoot, 'components')] },
+        },
         plugins: [
           cssnano({
             preset: ['default', { discardComments: { removeAll: true } }],

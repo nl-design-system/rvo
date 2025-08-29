@@ -60,6 +60,7 @@
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": [
+          "utilities/tsconfig.json",
           "components/tsconfig.json",
           "documentation/tsconfig.json",
           "packages/component-library-react/tsconfig.json",

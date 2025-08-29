@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "name": "@nl-rvo/utility-text",
+  "license": "CC0-1.0",
+  "description": "Utility classes for text colors",
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "*.md"
+  ],
+  "keywords": [
+    "rvo",
+    "nl-design-system",
+    "utilities"
+  ],
+  "main": "dist/index.css",
+  "style": "src/index.scss",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "utilities/utility-text"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*",
+    "@nl-rvo/design-tokens": "workspace:*",
+    "@nl-rvo/components": "workspace:*"
+  }
+}

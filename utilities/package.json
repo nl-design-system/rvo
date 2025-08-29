@@ -1,0 +1,28 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "All utility classes for the ROOS design system",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/utilities",
+  "keywords": [
+    "nl-design-system",
+    "rvo",
+    "utilities"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "utilities"
+  },
+  "devDependencies": {
+    "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/design-tokens": "workspace:*",
+    "@types/mdx": "2.0.11",
+    "clsx": "2.1.0",
+    "glob": "10.3.10"
+  }
+}

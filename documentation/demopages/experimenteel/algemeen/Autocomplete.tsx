@@ -1,5 +1,5 @@
 import { Footer, Header, MenuBar } from '@nl-rvo/components';
-import '@nl-rvo/components/helpers-text/src/index.scss';
+import '@nl-rvo/utility-text-types/src/index.scss';
 import '../../common/style.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';

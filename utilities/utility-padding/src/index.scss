@@ -1,0 +1,56 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+/* stylelint-disable custom-property-pattern */
+$rvo-prefix: "rvo" !default;
+$rvo-spaces: (
+  none: 0,
+  3xs: var(--#{$rvo-prefix}-space-3xs),
+  2xs: var(--#{$rvo-prefix}-space-2xs),
+  xs: var(--#{$rvo-prefix}-space-xs),
+  sm: var(--#{$rvo-prefix}-space-sm),
+  md: var(--#{$rvo-prefix}-space-md),
+  lg: var(--#{$rvo-prefix}-space-lg),
+  xl: var(--#{$rvo-prefix}-space-xl),
+  2xl: var(--#{$rvo-prefix}-space-2xl),
+  3xl: var(--#{$rvo-prefix}-space-3xl),
+  4xl: var(--#{$rvo-prefix}-space-4xl),
+  5xl: var(--#{$rvo-prefix}-space-5xl),
+  custom: var(--space),
+) !default;
+$rvo-directions: (
+  block-start: padding-block-start,
+  block-end: padding-block-end,
+  inline-start: padding-inline-start,
+  inline-end: padding-inline-end,
+) !default;
+
+@each $name, $value in $rvo-spaces {
+  .#{$rvo-prefix}-padding--#{$name} {
+    padding-block-end: $value;
+    padding-block-start: $value;
+    padding-inline-end: $value;
+    padding-inline-start: $value;
+  }
+  @each $dir-name, $prop in $rvo-directions {
+    .#{$rvo-prefix}-padding-#{$dir-name}--#{$name} {
+      #{$prop}: $value;
+    }
+  }
+}
+
+// Extra overrides for custom with per-side values
+.#{$rvo-prefix}-padding-block-end--custom {
+  padding-block-end: var(--space-block-end);
+}
+.#{$rvo-prefix}-padding-block-start--custom {
+  padding-block-start: var(--space-block-start);
+}
+.#{$rvo-prefix}-padding-inline-end--custom {
+  padding-inline-end: var(--space-inline-end);
+}
+.#{$rvo-prefix}-padding-inline-start--custom {
+  padding-inline-start: var(--space-inline-start);
+}

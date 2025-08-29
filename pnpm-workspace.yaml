@@ -1,6 +1,7 @@
 packages:
-  - "components/**"
-  - "documentation/"
-  - "packages/*"
   - "proprietary/*"
+  - "components/**"
+  - "utilities/**"
+  - "packages/*"
   - "uxpin-merge/"
+  - "documentation/"
