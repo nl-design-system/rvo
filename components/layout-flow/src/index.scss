@@ -23,18 +23,22 @@ $spaces: (
 // ----------------------------
 $directions: (
   column: (
+    align: stretch,
     display: flex,
     direction: column,
   ),
   column-inline: (
+    align: stretch,
     display: inline-flex,
     direction: column,
   ),
   row: (
+    align: center,
     display: flex,
     direction: row,
   ),
   row-inline: (
+    align: stretch,
     display: inline-flex,
     direction: row,
   ),
@@ -42,11 +46,12 @@ $directions: (
 
 @each $name, $props in $directions {
   .rvo-layout-#{$name} {
-    align-items: center; // default alignment
+    align-items: map.get($props, align);
     display: map.get($props, display);
     flex-direction: map.get($props, direction);
   }
 }
+
 // stylelint-disable scss/dollar-variable-first-in-block
 // ----------------------------
 // Alignment utilities
@@ -113,4 +118,5 @@ $alignments: (
     margin-block: $val;
   }
 }
+
 /* stylelint-enable scss/dollar-variable-pattern */
