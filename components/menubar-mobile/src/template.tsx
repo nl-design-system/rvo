@@ -58,7 +58,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
         Menu
       </Button>
       <Dialog
-        type="drawer-left"
+        type="position-left"
         isOpen={isMenuOpen}
         isModal={true}
         onClose={() => setIsMenuOpen(false)}
