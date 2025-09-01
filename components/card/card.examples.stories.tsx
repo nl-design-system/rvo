@@ -28,6 +28,7 @@ export const Default: Story = {
   name: 'Standard',
   args: {
     ...defaultArgs,
+    padding: 'none',
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
     content: 'content',
   },
