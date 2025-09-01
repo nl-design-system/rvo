@@ -2,6 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './src/defaultArgs';
 import { Card } from './src/template';
 
+// override some values.
+defaultArgs.padding = 'sm';
+
 const meta: Meta<typeof Card> = {
   title: 'Componenten/Card/Examples',
   component: Card,
