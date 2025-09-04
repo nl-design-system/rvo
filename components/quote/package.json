@@ -2,12 +2,12 @@
   "version": "0.0.0",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
-  "name": "@nl-rvo/css-qoute",
-  "description": "Qoute CSS component",
+  "name": "@nl-rvo/css-quote",
+  "description": "Quote CSS component",
   "keywords": [
     "nl-design-system",
     "css",
-    "qoute"
+    "quote"
   ],
   "files": [
     "src/index.scss",
@@ -26,7 +26,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/qoute"
+    "directory": "components/quote"
   },
   "devDependencies": {
     "@nl-rvo/build-utils-css": "workspace:*"
