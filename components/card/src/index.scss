@@ -38,6 +38,10 @@
     .rvo-card__link-indicator {
       --utrecht-icon-color: var(--rvo-card-inverted-color);
     }
+
+    h3 {
+      color: var(--rvo-card-inverted-color);
+    }
   }
 
   &.rvo-card--padding {

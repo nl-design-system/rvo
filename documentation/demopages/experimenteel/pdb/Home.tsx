@@ -12,7 +12,6 @@ const Home = () => {
           <MenuBar
             items={[
               {
-                active: true,
                 label: 'Home',
                 link: '/iframe.html?id=demo-pagina-s-projects-rvo-nl-home--default&viewMode=story',
               },
@@ -38,7 +37,9 @@ const Home = () => {
             maxWidth="md"
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading noMargins={true}>Project Database</Heading>
+            <Heading type="h1" noMargins={true}>
+              Project Database
+            </Heading>
             <LayoutFlow gap="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
