@@ -1,5 +1,11 @@
 # `@nl-rvo/css-expandable-content`
 
+## 1.3.0
+
+### Minor Changes
+
+- a0bc5a9: Paramater to make Expandable Content Icon optional and updated css
+
 ## 1.2.0
 
 ### Minor Changes
