@@ -514,7 +514,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
-  components/qoute:
+  components/quote:
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
