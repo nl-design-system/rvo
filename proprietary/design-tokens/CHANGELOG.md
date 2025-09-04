@@ -1,5 +1,17 @@
 # @nl-rvo/design-tokens
 
+## 1.11.0
+
+### Minor Changes
+
+- de17b9d: Added 48px option to sizes
+- bd606c5: Added 48px as an options for spacing
+- 68464fd: Added a new Quote Component
+
+### Patch Changes
+
+- c3a7f35: Update design-tokens
+
 ## 1.10.0
 
 ### Minor Changes
