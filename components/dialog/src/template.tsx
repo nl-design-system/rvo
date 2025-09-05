@@ -25,7 +25,7 @@ export const useDialog = () => {
 };
 
 export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElement>, 'className'> {
-  type?: 'centered-dialog' | 'drawer-left' | 'drawer-right';
+  type?: 'centered-dialog' | 'position-left' | 'position-right';
   isModal?: boolean;
   centeredDialogSize?: 'sm' | 'md' | 'lg' | 'xl';
   backgroundColor?: 'wit' | 'grijs-200';
@@ -44,7 +44,7 @@ export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElemen
 
 export const argTypes = {
   type: {
-    options: ['centered-dialog', 'drawer-left', 'drawer-right'],
+    options: ['centered-dialog', 'position-left', 'position-right'],
     control: { type: 'radio' },
   },
   isModal: {
