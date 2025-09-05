@@ -16,7 +16,7 @@ const defaultArgs: CardArguments = {
   imageSrc: '',
   invertedColors: false,
   outline: false,
-  padding: 'sm',
+  padding: 'none',
   showLinkIndicator: false,
   title: 'Title',
 };

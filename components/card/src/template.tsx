@@ -34,7 +34,7 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   linkProps?: Omit<ILinkProps, 'children'>;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
   outline?: boolean;
-  padding?: 'sm' | 'md' | 'lg' | 'xl';
+  padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
   showLinkIndicator?: boolean;
   title?: string | ReactNode;
 }
@@ -51,7 +51,7 @@ export const argTypes = {
   },
   backgroundImage: { if: { arg: 'background', eq: 'image' }, control: { type: 'text' } },
   padding: {
-    options: ['sm', 'md', 'lg'],
+    options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
   outline: { control: { type: 'boolean' } },
@@ -153,7 +153,7 @@ export const Card: React.FC<ICardProps> = ({
         image && !inlineImage && 'rvo-card--with-image',
         image && imageSize && !inlineImage && `rvo-card--with-image-${imageSize}`,
         outline && background !== 'image' && 'rvo-card--outline',
-        (outline || background !== 'none') && `rvo-card--padding-${padding}`,
+        padding && padding !== 'none' && `rvo-card--padding--${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,
         hasBackgroundImage && 'rvo-card--with-background-image',
         invertedColors && 'rvo-card--inverted-colors',

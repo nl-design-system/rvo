@@ -25,7 +25,7 @@ export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
   invertedColors?: boolean;
   outline?: boolean;
-  padding?: 'sm' | 'md' | 'lg' | 'xl';
+  padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
@@ -35,7 +35,7 @@ export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
   invertedColors = false,
   onClick,
   outline = false,
-  padding = 'sm',
+  padding = 'none',
   children,
 }) => {
   // the card image component
@@ -81,7 +81,7 @@ export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
         [`rvo-card--full-colour--${backgroundColor}`]: backgroundColor !== 'none',
         'rvo-card--with-image': hasImage,
         [`rvo-card--with-image-${imageSize}`]: hasImage && imageSize,
-        [`rvo-card--padding-${padding}`]: outline || backgroundImage,
+        [`rvo-card--padding--${padding}`]: padding && padding !== 'none',
         'rvo-card--inverted-colors': invertedColors,
       })}
       onClick={onClick}
