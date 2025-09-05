@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-react
 
+## 5.7.0
+
+### Minor Changes
+
+- f8b37b0: Improve breadcrumb alignment by adding flex wrap and introduce new CSS variables for better customization.
+- e6f04fe: Added `grijs-900` as a color option for the `paragraph` component.
+  Introduced new CSS variables (`--rvo-paragraph-color`, etc.) for improved customization.
+- c8632e5: Rename dialog drawer-right/left to position-right/left.
+  Introduced new CSS variables (`--rvo-dialog-background`, etc.) for improved customization.
+
 ## 5.6.1
 
 ### Patch Changes
