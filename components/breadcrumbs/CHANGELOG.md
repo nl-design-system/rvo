@@ -1,5 +1,11 @@
 # `@nl-rvo/css-breadcrumbs`
 
+## 1.3.0
+
+### Minor Changes
+
+- f8b37b0: Improve breadcrumb alignment by adding flex wrap and introduce new CSS variables for better customization.
+
 ## 1.2.1
 
 ### Patch Changes
