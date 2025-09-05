@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.11.1
+
+### Patch Changes
+
+- d850ddd: border-collapse CSS fix in expandable-table component
+
 ## 4.11.0
 
 ### Minor Changes

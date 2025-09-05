@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 5.6.1
+
+### Patch Changes
+
+- d850ddd: border-collapse CSS fix in expandable-table component
+
 ## 5.6.0
 
 ### Minor Changes
