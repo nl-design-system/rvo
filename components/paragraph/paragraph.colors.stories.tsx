@@ -47,3 +47,11 @@ export const Grijs500 = {
     color: 'grijs-500',
   },
 };
+
+export const Grijs900 = {
+  render: Paragraph.bind({}),
+  name: 'Grijs 900',
+  args: {
+    color: 'grijs-900',
+  },
+};
