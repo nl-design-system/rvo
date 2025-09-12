@@ -1,5 +1,12 @@
 # `@nl-rvo/css-dialog`
 
+## 1.4.0
+
+### Minor Changes
+
+- c8632e5: Rename dialog drawer-right/left to position-right/left.
+  Introduced new CSS variables (`--rvo-dialog-background`, etc.) for improved customization.
+
 ## 1.3.2
 
 ### Patch Changes
