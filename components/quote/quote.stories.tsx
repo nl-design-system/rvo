@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { IQouteProps, Qoute } from './src/template';
+import { IQuoteProps, Quote } from './src/template';
 
 const defaultArgs = {
-  qoute: 'Stories of imagination tend to upset those without one.',
+  quote: 'Stories of imagination tend to upset those without one.',
   user: {
     name: 'Terry Pratchett',
     role: 'Author',
@@ -11,23 +11,23 @@ const defaultArgs = {
       alt: 'Image of Terry Pratchett',
     },
   },
-} as IQouteProps;
+} as IQuoteProps;
 
-const meta: Meta<typeof Qoute> = {
-  title: 'Componenten/Qoute',
-  component: Qoute,
+const meta: Meta<typeof Quote> = {
+  title: 'Componenten/Quote',
+  component: Quote,
   args: {},
   parameters: {
     status: {
       type: 'PRODUCTION',
     },
     docusaurus: {
-      link: 'qoute',
+      link: 'quote',
     },
   },
 };
 export default meta;
 
-type Story = StoryObj<typeof Qoute>;
+type Story = StoryObj<typeof Quote>;
 
-export const Default: Story = { args: defaultArgs, name: 'Qoute' };
+export const Default: Story = { args: defaultArgs, name: 'Quote' };

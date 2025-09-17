@@ -51,7 +51,7 @@ export { ProgressTrackerStep } from './progress-tracker/src/progress-tracker-ste
 export { RadioButton } from './form-radio-button/src/template';
 export { RadioButtonField } from './form-field-radio-button/src/template';
 export { RadioButtonGroup } from './form-radio-button-group/src/template';
-export { Qoute } from './qoute/src/template';
+export { Quote } from './quote/src/template';
 export { ScrollableContent } from './scrollable-content/src/template';
 export { Select } from './form-select/src/template';
 export { SelectField } from './form-field-select/src/template';

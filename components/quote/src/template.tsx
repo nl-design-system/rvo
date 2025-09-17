@@ -2,18 +2,18 @@ import React from 'react';
 import { isOfType } from '../../utils/typeUtils';
 import './index.scss';
 
-type QouteUser = {
+type QuoteUser = {
   name: string;
   role: string;
   image?: Pick<HTMLImageElement, 'src' | 'alt'> | React.JSX.Element;
 };
 
-export interface IQouteProps {
-  qoute: string;
-  user: QouteUser;
+export interface IQuoteProps {
+  quote: string;
+  user: QuoteUser;
 }
 
-export const Qoute: React.FC<IQouteProps> = ({ qoute, user }: IQouteProps) => {
+export const Quote: React.FC<IQuoteProps> = ({ quote, user }: IQuoteProps) => {
   const renderImage = () => {
     if (!user) return null;
 
@@ -27,11 +27,11 @@ export const Qoute: React.FC<IQouteProps> = ({ qoute, user }: IQouteProps) => {
   };
 
   return (
-    <div className="rvo-qoute">
-      <span className="rvo-qoute__qoute">"{qoute}"</span>
-      <div className="rvo-qoute__user">
-        {user.image && <div className="rvo-qoute__image">{renderImage()}</div>}
-        <div className="rvo-qoute__credentials">
+    <div className="rvo-quote">
+      <span className="rvo-quote__quote">"{quote}"</span>
+      <div className="rvo-quote__user">
+        {user.image && <div className="rvo-quote__image">{renderImage()}</div>}
+        <div className="rvo-quote__credentials">
           <span className="rvo-text rvo-text--bold">{user.name}</span>
           <span className="rvo-text rvo-text--sm">{user.role}</span>
         </div>
@@ -40,4 +40,4 @@ export const Qoute: React.FC<IQouteProps> = ({ qoute, user }: IQouteProps) => {
   );
 };
 
-export default Qoute;
+export default Quote;

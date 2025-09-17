@@ -1,5 +1,11 @@
 # `@nl-rvo/css-layout-flow`
 
+## 1.3.0
+
+### Minor Changes
+
+- bd606c5: Added 48px as an options for spacing
+
 ## 1.2.0
 
 ### Minor Changes

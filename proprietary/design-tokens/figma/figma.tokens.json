@@ -177,10 +177,14 @@
           "$type": "dimension"
         },
         "3xl": {
-          "$value": "64px",
+          "$value": "48px",
           "$type": "dimension"
         },
         "4xl": {
+          "$value": "64px",
+          "$type": "dimension"
+        },
+        "5xl": {
           "$value": "128px",
           "$type": "dimension"
         }
@@ -2271,7 +2275,7 @@
   },
   "components/qoute": {
     "rvo": {
-      "qoute": {
+      "quote": {
         "image-size": {
           "$value": "64px"
         }

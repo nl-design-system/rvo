@@ -1,9 +1,9 @@
-.rvo-qoute {
+.rvo-quote {
   display: flex;
   flex-direction: column;
   gap: var(--rvo-space-md);
 
-  &__qoute {
+  &__quote {
     font-size: var(--rvo-font-size-xl);
     font-style: italic;
   }
@@ -19,10 +19,10 @@
     align-content: center;
     border-radius: 50%;
     display: flex;
-    height: var(--rvo-qoute-image-size);
+    height: var(--rvo-quote-image-size);
     justify-content: center;
     overflow: hidden;
-    width: var(--rvo-qoute-image-size);
+    width: var(--rvo-quote-image-size);
   }
 
   &__credentials {
