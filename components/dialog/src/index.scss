@@ -67,10 +67,10 @@
 }
 
 // positions
-.rvo-dialog--drawer-right, // @deprecated: position-right is the new renamed version.
-.rvo-dialog--drawer-left, // @deprecated: position-left is the new renamed version.
-.rvo-dialog--position-right,
-.rvo-dialog--position-left {
+.rvo-dialog--drawer-right, // @deprecated: inset-inline-end is the new renamed version.
+.rvo-dialog--drawer-left, // @deprecated: inset-inline-start is the new renamed version.
+.rvo-dialog--inset-inline-end,
+.rvo-dialog--inset-inline-start {
   height: 100vh;
   left: 0;
   margin: initial;
@@ -82,8 +82,8 @@
   z-index: 999;
 }
 
-.rvo-dialog--drawer-right, // @deprecated: position-right is the new renamed version.
-.rvo-dialog--position-right {
+.rvo-dialog--drawer-right, // @deprecated: inset-inline-end is the new renamed version.
+.rvo-dialog--inset-inline-end {
   left: unset;
   right: 0;
 }

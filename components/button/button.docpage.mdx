@@ -1,7 +1,8 @@
 import { Canvas, Controls, Meta, Title } from "@storybook/blocks";
 import changeLog from "./CHANGELOG.md";
-import documentation from "./README.mdx";
+import Documentation from "./README.mdx";
 import * as ButtonStories from "./button.stories";
+
 import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
 
 <Meta of={ButtonStories} name="Documentatie" />
@@ -12,7 +13,9 @@ import { Changelog, Readme } from "../../packages/storybook/config/storybook-blo
 
 ## Documentatie
 
-<Readme markdown={documentation} />
+<Readme>
+  <Documentation />
+</Readme>
 
 ## Changelog
 
