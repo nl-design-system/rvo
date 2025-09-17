@@ -108,8 +108,8 @@ const Aanvrager = () => {
                       ></RadioButtonField>
                     </Fieldset>
                     <Fieldset legend="Gegevens aanvrager in aanvraagperiode">
-                      <TextInputField label="Prognose totaal aantal werknemers" validation="number" />
-                      <TextInputField label="(Waarvan) eigen S&O-werknemers" validation="number" />
+                      <TextInputField label="Prognose totaal aantal werknemers" />
+                      <TextInputField label="(Waarvan) eigen S&O-werknemers" />
                     </Fieldset>
                     <Fieldset legend="S&O-uurloon">
                       <RadioButtonField

@@ -34,7 +34,6 @@ const PercelenTable = () => {
             items={[
               {
                 label: 'Mijn Percelen',
-                active: true,
                 link: '#',
               },
               { label: 'Uitloggen', link: '#', align: 'right' },

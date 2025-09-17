@@ -26,7 +26,6 @@ const Dashboard = () => {
           {
             label: 'Naam app/website',
             link: '#',
-            active: true,
           },
           {
             align: 'right',
@@ -64,7 +63,6 @@ const Dashboard = () => {
                   label: 'Dashboard',
                   link: '#',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Menu item',

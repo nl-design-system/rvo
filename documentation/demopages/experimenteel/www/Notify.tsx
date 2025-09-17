@@ -40,7 +40,6 @@ const Notify = () => {
                     {
                       label: 'Onderwerpen',
                       link: '#',
-                      active: true,
                     },
                     {
                       label: 'Subsidie- en financieringswijzer',
@@ -90,7 +89,6 @@ const Notify = () => {
               {
                 label: 'Onderwerpen',
                 link: '#',
-                active: true,
               },
               {
                 label: 'Subsidie- en financieringswijzer',

@@ -18,7 +18,6 @@ const DocumentenClean = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
           },
           {
             label: 'Mijn dossier',
@@ -46,7 +45,6 @@ const DocumentenClean = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
             icon: 'user',
           },
         ]}
@@ -78,7 +76,6 @@ const DocumentenClean = () => {
                   label: 'Mijn documenten',
                   link: '#',
                   icon: 'publicatie',
-                  active: true,
                 },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
                 { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },

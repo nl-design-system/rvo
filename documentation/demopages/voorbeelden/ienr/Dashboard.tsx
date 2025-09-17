@@ -29,7 +29,6 @@ const Dashboard = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
           },
           {
             label: 'Mijn dossier',
@@ -61,7 +60,7 @@ const Dashboard = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
+
             icon: 'user',
           },
         ]}
@@ -83,7 +82,6 @@ const Dashboard = () => {
                   label: 'Dashboard',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Houder en UBN',

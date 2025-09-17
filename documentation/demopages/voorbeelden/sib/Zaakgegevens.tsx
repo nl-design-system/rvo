@@ -34,7 +34,6 @@ const Zaakgegevens = () => {
                   label: 'Overzicht',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Mijn dossier',
@@ -85,7 +84,6 @@ const Zaakgegevens = () => {
                   align: 'right',
                   label: 'Opslaan en afsluiten',
                   link: '#',
-                  active: true,
                   icon: 'save',
                 },
               ]}

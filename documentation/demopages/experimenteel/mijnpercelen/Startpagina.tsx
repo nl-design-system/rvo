@@ -26,7 +26,6 @@ const Startpagina = () => {
               items={[
                 {
                   label: 'Home',
-                  active: true,
                   icon: 'home',
                   link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-startpagina--default&viewMode=story',
                 },

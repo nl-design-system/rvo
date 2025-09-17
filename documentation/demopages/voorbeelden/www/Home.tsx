@@ -33,12 +33,12 @@ const Home = () => {
         {isDesktop ? (
           <MenuBar
             items={[
-              { label: 'Home', active: true, link: '#' },
+              { label: 'Home', link: '#' },
               { label: 'Onderwerpen', link: '#' },
               { label: 'Subsidie- en financieringswijzer', link: '#' },
               { label: 'Over ons', link: '#' },
               { label: 'Contact', link: '#' },
-              { align: 'right', label: 'Mijn RVO', link: '#', active: true, icon: 'user' },
+              { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
               { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
               { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
             ]}
@@ -540,7 +540,7 @@ const Home = () => {
           </LayoutFlow>
         </div> */}
         {/* <div className="rvo-feedback">
-          
+
         </div> */}
       </main>
       {/* <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">

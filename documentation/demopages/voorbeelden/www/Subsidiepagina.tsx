@@ -36,7 +36,7 @@ const Subsidiepagina = () => {
             items={[
               { label: 'Home', link: '#' },
               { label: 'Onderwerpen', link: '#' },
-              { label: 'Subsidie- en financieringswijzer', active: true, link: '#' },
+              { label: 'Subsidie- en financieringswijzer', link: '#' },
               { label: 'Over ons', link: '#' },
               { label: 'Contact', link: '#' },
               { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },

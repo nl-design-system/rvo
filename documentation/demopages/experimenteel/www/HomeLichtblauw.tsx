@@ -20,7 +20,6 @@ const HomeLichtblauw = () => {
                   items={[
                     {
                       label: 'Home',
-                      active: true,
                       link: '#',
                     },
                     {
@@ -68,7 +67,6 @@ const HomeLichtblauw = () => {
             items={[
               {
                 label: 'Home',
-                active: true,
                 link: '#',
               },
               {
@@ -91,7 +89,6 @@ const HomeLichtblauw = () => {
                 align: 'right',
                 label: 'Mijn RVO',
                 link: '#',
-                active: true,
                 icon: 'user',
               },
               {

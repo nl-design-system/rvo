@@ -28,7 +28,6 @@ const Formulier = () => {
             {
               label: 'Naam app/website',
               link: '#',
-              active: true,
             },
             {
               label: 'Menu item',

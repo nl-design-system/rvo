@@ -36,7 +36,7 @@ const OverzichtClean = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
+
           },
           {
             label: 'Mijn dossier',
@@ -64,7 +64,7 @@ const OverzichtClean = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
+
             icon: 'user',
           },
         ]}
@@ -86,7 +86,6 @@ const OverzichtClean = () => {
                   label: 'Overzicht',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Mijn dossier',
@@ -111,11 +110,9 @@ const OverzichtClean = () => {
                 <LayoutFlow gap="xs">
                   <Heading type="h2" textContent="Nog te starten" noMargins={true} />
                   <LayoutFlow gap="md">
-                    <ExpandableContent
-                      title="Wij vragen u onderstaande aanvragen op tijd te regelen"
-                      content="Extra uitleg over bovenstaande opmerking."
-                      subtle={true}
-                    />
+                    <ExpandableContent title="Wij vragen u onderstaande aanvragen op tijd te regelen" subtle={true}>
+                      Extra uitleg over bovenstaande opmerking.
+                    </ExpandableContent>
                     <Grid columns="two">
                       <Alert heading="Mijn Percelen" kind="info">
                         <LayoutFlow gap="sm">

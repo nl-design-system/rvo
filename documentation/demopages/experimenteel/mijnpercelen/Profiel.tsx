@@ -38,7 +38,6 @@ const Profiel = () => {
                 {
                   label: 'Boer Overveen B.V',
                   link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-profiel--default&viewMode=story',
-                  active: true,
                   icon: 'user',
                 },
                 { label: 'Uitloggen', link: '#', align: 'right' },
@@ -53,7 +52,7 @@ const Profiel = () => {
         <main className="rvo-main--mijn-percelen rvo-main--mijn-percelen-sidebar-active rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-main-mijn-percelen--sidebar-menu">
             <MenuBar
-              items={[{ label: 'Instellingen', link: '#', icon: 'user', active: true }]}
+              items={[{ label: 'Instellingen', link: '#', icon: 'user' }]}
               size="md"
               useIcons={true}
               iconPlacement="before"
