@@ -24,5 +24,6 @@ Hieronder een overzicht van alle websites en applicaties die aangesloten zijn op
 | Veenweide                                                  | In ontwerp (gebruikt Figma bibliotheek) | Onbekend                                                                                                                                     | Onbekend      |
 | Werken bij RVO                                             | In ontwerp (gebruikt Figma bibliotheek) | React                                                                                                                                        | Onbekend      |
 | [I&R](https://dbriri.agro.nl)                              | In ontwerp                              | Angular                                                                                                                                      | Onbekend      |
+| Geoviewer                                                  | Live                                    | Onbekend                                                                                                                                     | Onbekend      |
 
 \* Er zijn twee manieren om aan te sluiten op ROOS. Door gebruik te maken van de aangeboden libraries en code (aanbevolen) of om handmatig updates en wijzigingen door te voeren.
