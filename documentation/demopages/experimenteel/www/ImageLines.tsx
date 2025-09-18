@@ -11,8 +11,8 @@ import {
   MobileMenuBar,
 } from '@nl-rvo/components';
 import { useEffect, useState } from 'react';
-import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const Home = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -27,7 +27,7 @@ const Home = () => {
   }, []);
 
   return (
-    <body className="rvo-theme">
+    <body className="rvo-theme rvo-image-lines">
       <Header />
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         {isDesktop ? (
