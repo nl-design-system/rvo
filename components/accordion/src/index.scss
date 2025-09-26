@@ -28,6 +28,11 @@
   margin-block-start: var(--rvo-accordion-item-icon-margin-block-start);
 }
 
+.rvo-accordion__item-summary h2 .rvo-icon,
+.rvo-accordion__item-summary h3 .rvo-icon {
+  --rvo-accordion-item-icon-margin-block-start: 0;
+}
+
 .rvo-accordion__item > .rvo-accordion__item-summary {
   cursor: pointer;
   display: flex;
