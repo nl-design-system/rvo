@@ -5,6 +5,7 @@
 
 // Don't wrap label, don't shrink
 .utrecht-button {
+  background-color: #f00 !important;
   flex-shrink: 0;
   text-wrap: nowrap;
 
