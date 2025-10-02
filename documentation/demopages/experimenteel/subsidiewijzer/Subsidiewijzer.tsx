@@ -67,7 +67,9 @@ const Subsidiewijzer = () => {
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
                     <summary className="rvo-collapsible-filter-label rvo-collapsible-filter-header">
-                      <h3 className="utrecht-heading-3 rvo-heading--no-margins">Filters</h3>
+                      <Heading type="h3" noMargins>
+                        Filters
+                      </Heading>
                     </summary>
 
                     <form className="rvo-form">
@@ -420,7 +422,7 @@ const Subsidiewijzer = () => {
                 </Fieldset>
               </div>
               <div className="rvo-results">
-                <Heading type="h1" mixedBoldAndNormal={true} noMargins={true}>
+                <Heading type="h1" fontWeightNormal={true} noMargins={true}>
                   <strong>Subsidie- en financieringswijzer</strong>{' '}
                 </Heading>
                 <LayoutFlow>
@@ -501,14 +503,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Partners for International Business (PIB)
                             </a>
-                          </h3>
+                          </Heading>
                           <div className="rvo-project-details">
                             <LayoutFlow gap="xs" row={true}>
                               <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
@@ -530,14 +532,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Borgstelling MKB-kredieten (BMKB)
                             </a>
-                          </h3>
+                          </Heading>
 
                           <LayoutFlow gap="sm" row={true}>
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
@@ -558,14 +560,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Eurostars: subsidie internationale marktgerichte R&D
                             </a>
-                          </h3>
+                          </Heading>
 
                           <LayoutFlow gap="sm" row={true}>
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
@@ -586,14 +588,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Eureka: programma internationale marktgerichte R&D
                             </a>
-                          </h3>
+                          </Heading>
 
                           <LayoutFlow gap="sm" row={true}>
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
@@ -615,14 +617,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Groeifaciliteit
                             </a>
-                          </h3>
+                          </Heading>
 
                           <LayoutFlow gap="sm" row={true}>
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
@@ -643,14 +645,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Garantie Ondernemingsfinanciering (GO)
                             </a>
-                          </h3>
+                          </Heading>
 
                           <LayoutFlow gap="sm" row={true}>
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
@@ -671,14 +673,14 @@ const Subsidiewijzer = () => {
                     <div className="rvo-card rvo-card--outline rvo-card--padding-lg">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content rvo-layout-column rvo-layout-gap--xs">
-                          <h3 className="rvo-heading--no-margins utrecht-heading-3">
+                          <Heading type="h3" noMargins>
                             <a
                               className="rvo-link rvo-card__link rvo-link--no-underline rvo-card__full-card-link"
                               href="iframe.html?args=&id=demo-pagina-s-projects-rvo-nl-project--default&viewMode=story"
                             >
                               Subsidieregeling praktijkleren
                             </a>
-                          </h3>
+                          </Heading>
 
                           <LayoutFlow gap="sm" row={true}>
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>

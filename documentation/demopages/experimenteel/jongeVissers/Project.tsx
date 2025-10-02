@@ -97,7 +97,7 @@ const Project = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Project vragen"></Heading>
+                  <Heading type="h1">Project vragen</Heading>
                 </div>
                 <form>
                   <LayoutFlow gap="md">
@@ -156,12 +156,18 @@ const Project = () => {
                           { id: 'vveub', label: 'Nee' },
                         ]}
                       ></RadioButtonField>
-                      <TextInputField label="Wat is dit EU-identificatienummer?"></TextInputField>
+                      <TextInputField label="Wat is dit EU-identificatienummer?" validation="currency"></TextInputField>
                       <TextInputField label="In welk land is het vaartuig dat u aanschaft geregistreerd in het EU-vlootregister?"></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
-                      <TextInputField label="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?"></TextInputField>
-                      <TextInputField label="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?"></TextInputField>
+                      <TextInputField
+                        label="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?"
+                        validation="currency"
+                      ></TextInputField>
+                      <TextInputField
+                        label="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?"
+                        validation="currency"
+                      ></TextInputField>
                     </Fieldset>
 
                     <Fieldset legend="">

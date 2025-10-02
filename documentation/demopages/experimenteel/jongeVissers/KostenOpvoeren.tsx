@@ -97,7 +97,7 @@ const KostenOpvoeren = () => {
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
                   <LayoutFlow gap="md">
-                    <Heading type="h1" textContent="Kosten opvoeren"></Heading>
+                    <Heading type="h1">Kosten opvoeren</Heading>
                     <dl className="rvo-data">
                       <dt>Omschrijving van de investering</dt>
                       <dd>Aanschaf voertuig</dd>
@@ -107,7 +107,10 @@ const KostenOpvoeren = () => {
                 <form>
                   <LayoutFlow gap="md">
                     <Fieldset legend="">
-                      <TextInputField label="Hoeveel kost het vissersvaartuig (exclusief btw)?"></TextInputField>
+                      <TextInputField
+                        label="Hoeveel kost het vissersvaartuig (exclusief btw)?"
+                        validation="currency"
+                      ></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <RadioButtonField
@@ -128,6 +131,7 @@ const KostenOpvoeren = () => {
                         helperText="Uitgebreide uitleg over de subsidie."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
+                        validation="currency"
                       ></TextInputField>
                     </Fieldset>
 

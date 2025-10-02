@@ -1,4 +1,4 @@
-import { Footer, Header, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, MenuBar, MobileMenuBar } from '@nl-rvo/components';
 import { Fieldset } from '@utrecht/component-library-react';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -123,7 +123,9 @@ const TrainingModuleTest = () => {
             />
           </div>
           <div className="rvo-hero__content">
-            <h1 className="rvo-hero__title utrecht-heading-1 rvo-heading--no-margins">Test je kennis</h1>
+            <Heading type="h1" className="rvo-hero__title" noMargins>
+              Test je kennis
+            </Heading>
           </div>
         </div>
         <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">

@@ -1,4 +1,4 @@
-import { Footer, Header, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/components';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -53,9 +53,9 @@ const TrainingModule = () => {
           </div>
           <div className="rvo-hero__content">
             <span className="rvo-text rvo-text--small rvo-paragraph--wit">MODULE 1</span>
-            <h1 className="rvo-hero__title utrecht-heading-1 rvo-heading--no-margins">
+            <Heading type="h1" className="rvo-hero__title" noMargins>
               Internationaal Maatschappelijk Verantwoord Ondernemen
-            </h1>
+            </Heading>
             <span className="rvo-hero__subtitle">Hoe doe je dat?</span>
           </div>
         </div>

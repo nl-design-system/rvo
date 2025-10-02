@@ -49,9 +49,9 @@ const Landingspagina = () => {
                   />
                 </div>
                 <div className="rvo-hero__content">
-                  <h1 className="utrecht-heading-1 rvo-hero__title rvo-heading--no-margins">
+                  <Heading type="h1" noMargins className="rvo_hero__title">
                     Berichtenbox voor bedrijven
-                  </h1>
+                  </Heading>
                   <span className="rvo-hero__subtitle rvo-margin-block-end--xs">
                     Alle overheidsberichten op één plek!
                   </span>

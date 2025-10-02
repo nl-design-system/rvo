@@ -1,4 +1,13 @@
-import { Button, Fieldset, Header, LayoutFlow, MaxWidthLayout, MenuBar, TextInputField } from '@nl-rvo/components';
+import {
+  Button,
+  Fieldset,
+  Header,
+  Heading,
+  LayoutFlow,
+  MaxWidthLayout,
+  MenuBar,
+  TextInputField,
+} from '@nl-rvo/components';
 import '../../common/style.scss';
 
 const SearchInNav = () => {
@@ -44,7 +53,7 @@ const SearchInNav = () => {
         <MaxWidthLayout size="sm">
           <main>
             <div className="rvo-content">
-              <h1 className="utrecht-heading-1">Search in Navigation</h1>
+              <Heading type="h1">Search in Navigation</Heading>
 
               <p className="rvo-paragraph rvo-paragraph--md">
                 This demopage demonstrates how a search element can be included in the navbar. As you can see this in

@@ -14,7 +14,7 @@ const Hero = () => {
         <MaxWidthLayout size="lg">
           <div className="rvo-hero-content">
             <div className="rvo-hero-text">
-              <Heading type="h1" textContent="Hero title" />
+              <Heading type="h1">Hero title</Heading>
               <p className="rvo-hero-description">
                 An additional paragraph that gives an introduction what this page is about in easy to understand
                 language.

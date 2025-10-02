@@ -49,7 +49,9 @@ const Filter = () => {
             maxWidth="md"
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading noMargins={true}>Projects</Heading>
+            <Heading type="h1" noMargins={true}>
+              Projects
+            </Heading>
             <LayoutFlow gap="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
@@ -81,7 +83,9 @@ const Filter = () => {
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
                     <summary className="rvo-collapsible-filter-label rvo-collapsible-filter-header">
-                      <h3 className="utrecht-heading-3 rvo-heading--no-margins">Filter projects</h3>
+                      <Heading type="h3" noMargins>
+                        Filter projects
+                      </Heading>
                     </summary>
 
                     <form className="rvo-form">
@@ -433,7 +437,7 @@ const Filter = () => {
                 </Fieldset>
               </div>
               <div className="rvo-results">
-                <Heading type="h2" mixedBoldAndNormal={true} noMargins={true}>
+                <Heading type="h2" fontWeightNormal={true} noMargins={true}>
                   <strong>4817</strong> projects found
                 </Heading>
                 <LayoutFlow>

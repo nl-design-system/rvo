@@ -225,9 +225,9 @@ const Aanvragen = () => {
                   <PageNumberNavigation numberOfPages={5} activePage={3} />
                   <div className="rvo-card rvo-card--padding-xl rvo-card--full-colour--grijs-100">
                     <div className="rvo-card__content">
-                      <h3 className="utrecht-heading-4 rvo-heading--no-margins">
+                      <Heading type="h3" noMargins>
                         Wilt u een nieuwe regeling aanvragen?
-                      </h3>
+                      </Heading>
                       <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--donkerblauw" href="#">
                         <span
                           className="utrecht-icon rvo-icon rvo-icon-plus rvo-icon--sm rvo-icon--donkerblauw rvo-link__icon--before"

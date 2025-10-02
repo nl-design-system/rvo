@@ -120,7 +120,7 @@ const PerceelEdit = () => {
                     Terug naar overzicht percelen
                   </a>
 
-                  <Heading type="h1" textContent="Wijzig perceelgegevens #433" />
+                  <Heading type="h1">Wijzig perceelgegevens #433</Heading>
                   <Alert
                     kind="warning"
                     content="Uw intekening is niet overal gelijk aan de topografische grenzen van het perceel. <a className='rvo-link' href='#surfaces'>Aanpassen</a>"
@@ -151,7 +151,7 @@ const PerceelEdit = () => {
                         ></SelectField>
                         <div className="rvo-surfaces">
                           <a id="surfaces"></a>
-                          <Heading type="h2" textContent="Welke oppervlakte wilt u opslaan?"></Heading>
+                          <Heading type="h2">Welke oppervlakte wilt u opslaan?</Heading>
                           <LayoutFlow gap="sm">
                             <div className="rvo-value-information">
                               <span className="rvo-value-information-label">De door u ingetekende oppervlakte</span>

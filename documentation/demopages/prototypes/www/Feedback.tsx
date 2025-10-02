@@ -62,7 +62,7 @@ const Feedback = () => {
         <div className="rvo-custom-aanvraagperiode-budget rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
             <div className="rvo-card__content">
-              <h3 className="utrecht-heading-3">Aanvraagperiode</h3>
+              <Heading type="h3">Aanvraagperiode</Heading>
               <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
                 <div>
                   <Icon icon="kalender" size="2xl" color="zwart"></Icon>
@@ -83,7 +83,7 @@ const Feedback = () => {
           </div>
           <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--xl">
             <div className="rvo-card__content">
-              <h3 className="utrecht-heading-3">Budget</h3>
+              <Heading type="h3">Budget</Heading>
 
               <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
                 <div>
@@ -388,7 +388,7 @@ const Feedback = () => {
         </div>
 
         <div className="rvo-uitgelicht rvo-margin-block-end--3xl rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--lg">
-          <h2 className="utrecht-heading-2">Uitgelicht</h2>
+          <Heading type="h2">Uitgelicht</Heading>
           <div className="rvo-layout-grid-container rvo-margin-block-end--md">
             <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -400,11 +400,11 @@ const Feedback = () => {
                 </div>
 
                 <div className="rvo-card__content">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Energieprojecten in Nederland
                     </a>
-                  </h3>
+                  </Heading>
                   In Nederland wordt hard gewerkt aan de verbouwing van ons energiesysteem.
                 </div>
               </div>
@@ -433,21 +433,21 @@ const Feedback = () => {
                 <div className="rvo-card__content">
                   <Icon icon="nieuws" size="2xl" color="zwart"></Icon>
                   <br />
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link  rvo-link--no-underline" href="#">
                       Energie & Klimaat Nieuws
                     </a>
-                  </h3>
+                  </Heading>
                   Lees al het nieuws over Energie & Klimaat.
                   <br />
                   <br />
                   <Icon icon="kalender" size="2xl" color="zwart"></Icon>
                   <br />
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link  rvo-link--no-underline" href="#">
                       Energie & Klimaat Evenementen
                     </a>
-                  </h3>
+                  </Heading>
                   Bekijk alle evenementen over Energie & Klimaat.
                 </div>
               </div>
@@ -460,11 +460,11 @@ const Feedback = () => {
                 </div>
 
                 <div className="rvo-card__content">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Energie & Klimaat Nieuwsbrief
                     </a>
-                  </h3>
+                  </Heading>
                   Schrijf u in voor onze gratis nieuwsbrief over Energie & Klimaat.
                 </div>
               </div>
@@ -576,7 +576,7 @@ const Feedback = () => {
         </div>
       </main>
       <div className="rvo-uitgelicht rvo-margin-block-end--3xl rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--lg">
-        <h2 className="utrecht-heading-2">Uitgelicht</h2>
+        <Heading type="h2">Uitgelicht</Heading>
         <div className="rvo-layout-grid-container rvo-margin-block-end--md">
           <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
             <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -588,11 +588,11 @@ const Feedback = () => {
               </div>
 
               <div className="rvo-card__content">
-                <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                <Heading type="h3" noMargins>
                   <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                     Energieprojecten in Nederland
                   </a>
-                </h3>
+                </Heading>
                 In Nederland wordt hard gewerkt aan de verbouwing van ons energiesysteem.
               </div>
             </div>
@@ -621,21 +621,21 @@ const Feedback = () => {
               <div className="rvo-card__content">
                 <Icon icon="nieuws" size="2xl" color="zwart"></Icon>
                 <br />
-                <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                <Heading type="h3" noMargins>
                   <a className="rvo-link  rvo-link--no-underline" href="#">
                     Energie & Klimaat Nieuws
                   </a>
-                </h3>
+                </Heading>
                 Lees al het nieuws over Energie & Klimaat.
                 <br />
                 <br />
                 <Icon icon="kalender" size="2xl" color="zwart"></Icon>
                 <br />
-                <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                <Heading type="h3" noMargins>
                   <a className="rvo-link  rvo-link--no-underline" href="#">
                     Energie & Klimaat Evenementen
                   </a>
-                </h3>
+                </Heading>
                 Bekijk alle evenementen over Energie & Klimaat.
               </div>
             </div>
@@ -648,11 +648,11 @@ const Feedback = () => {
               </div>
 
               <div className="rvo-card__content">
-                <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                <Heading type="h3" noMargins>
                   <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                     Energie & Klimaat Nieuwsbrief
                   </a>
-                </h3>
+                </Heading>
                 Schrijf u in voor onze gratis nieuwsbrief over Energie & Klimaat.
               </div>
             </div>

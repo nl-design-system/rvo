@@ -52,9 +52,9 @@ const Training = () => {
             />
           </div>
           <div className="rvo-hero__content">
-            <h1 className="rvo-hero__title utrecht-heading-1 rvo-heading--no-margins">
+            <Heading type="h1" className="rvo-hero__title" noMargins>
               Internationaal Maatschappelijk Verantwoord Ondernemen voor het MKB
-            </h1>
+            </Heading>
             <span className="rvo-hero__subtitle">
               Praktische tips voor het bestrijden van kinderarbeid, het ondersteunen goede arbeidsomstandigheden en het
               werken naar leefbare lonen en inkomens in toeleveringsketens.
@@ -82,14 +82,14 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 1:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a
                       className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline"
                       href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module--default&viewMode=story"
                     >
                       IMVO: Hoe doe je dat?
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -102,11 +102,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 2:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Zorg voor duidelijkheid
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -119,11 +119,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 3:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Ken je keten en duurzaamheidsrisico’s
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -136,11 +136,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 4:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Inzoomen op: Kinderarbeid
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -153,11 +153,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 5a:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Inzoomen op: Leefbaar inkomen
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -170,11 +170,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 5b:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Inzoomen op: Leefbaar loon
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -187,11 +187,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 6:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Inzoomen op: Goede arbeidsomstandigheden
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -204,11 +204,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 7:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Risico’s aanpakken
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -221,11 +221,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 8:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Controleer en monitor voortgang
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -238,11 +238,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 9:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Communiceer over resultaten
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
@@ -255,11 +255,11 @@ const Training = () => {
 
                 <div className="rvo-card__content">
                   Module 10:
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Neem verantwoordelijkheid
                     </a>
-                  </h3>
+                  </Heading>
                 </div>
               </div>
             </div>
