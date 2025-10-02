@@ -197,7 +197,7 @@ const Submenu = () => {
         )}
       </div>
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <Hero size="lg" image={{ src: 'images/www/home.jpg', alt: '' }} />
+        <Hero size="lg" title="Heading" image={{ src: 'images/www/home.jpg', alt: '' }} />
       </div>
       <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-layout--wrap rvo-margin-block-end--2xl rvo-margin-block-start--xl">
