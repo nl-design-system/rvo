@@ -1,0 +1,12 @@
+{
+  "rvo": {
+    "quote": {
+      "image-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}

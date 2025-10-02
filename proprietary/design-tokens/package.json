@@ -1,5 +1,5 @@
 {
-  "version": "1.10.0",
+  "version": "1.11.0",
   "author": "Community for NL Design System",
   "description": "RVO Rijkshuisstijl design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -12,6 +12,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist/",
+    "figma/",
+    "*.md"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",

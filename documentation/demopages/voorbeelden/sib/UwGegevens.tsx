@@ -12,7 +12,7 @@ import {
   RadioButtonField,
   TextInputField,
 } from '@nl-rvo/components';
-import '@nl-rvo/components/helpers-text/src/index.scss';
+import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
@@ -33,7 +33,6 @@ const UwGegevens = () => {
                   label: 'Overzicht',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Mijn dossier',
@@ -84,7 +83,6 @@ const UwGegevens = () => {
                   align: 'right',
                   label: 'Opslaan en afsluiten',
                   link: '#',
-                  active: true,
                   icon: 'save',
                 },
               ]}

@@ -32,7 +32,6 @@ const Oplossen = () => {
                 },
                 {
                   label: 'Mijn Percelen',
-                  active: true,
                   link: 'iframe.html?args=&id=pagina-s-experimenteel-mijn-percelen-percelen--default&viewMode=story',
                 },
                 {

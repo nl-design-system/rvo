@@ -1,5 +1,26 @@
 # @nl-rvo/component-library-css
 
+## 4.11.1
+
+### Patch Changes
+
+- d850ddd: border-collapse CSS fix in expandable-table component
+
+## 4.11.0
+
+### Minor Changes
+
+- a0bc5a9: Paramater to make Expandable Content Icon optional and updated css
+- 2127a46: improved link rendering and WCAG, added debounced filtering and custom filtering
+- de17b9d: Added 48px option to sizes
+- 8d7dddf: Table column headers are now buttons and be able to be read and interactived with through screenreaders
+- bd606c5: Added 48px as an options for spacing
+- 68464fd: Added a new Quote Component
+
+### Patch Changes
+
+- c3a7f35: Fixed typo in Quote component
+
 ## 4.10.0
 
 ### Minor Changes

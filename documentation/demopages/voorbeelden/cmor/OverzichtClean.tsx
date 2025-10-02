@@ -17,7 +17,7 @@ import {
   StatusIcon,
   Tag,
 } from '@nl-rvo/components';
-import '@nl-rvo/components/helpers-text/src/index.scss';
+import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
@@ -36,7 +36,7 @@ const OverzichtClean = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
+
           },
           {
             label: 'Mijn dossier',
@@ -111,11 +111,9 @@ const OverzichtClean = () => {
                     Nog te starten
                   </Heading>
                   <LayoutFlow gap="md">
-                    <ExpandableContent
-                      title="Wij vragen u onderstaande aanvragen op tijd te regelen"
-                      content="Extra uitleg over bovenstaande opmerking."
-                      subtle={true}
-                    />
+                    <ExpandableContent title="Wij vragen u onderstaande aanvragen op tijd te regelen" subtle={true}>
+                      Extra uitleg over bovenstaande opmerking.
+                    </ExpandableContent>
                     <Grid columns="two">
                       <Alert heading="Mijn Percelen" kind="info">
                         <LayoutFlow gap="sm">

@@ -12,7 +12,6 @@ const Content = () => {
           {
             label: 'Naam app/website',
             link: '#',
-            active: true,
           },
           {
             label: 'Menu item',

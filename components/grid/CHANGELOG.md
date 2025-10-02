@@ -1,5 +1,11 @@
 # `@nl-rvo/css-grid`
 
+## 3.1.0
+
+### Minor Changes
+
+- bd606c5: Added 48px as an options for spacing
+
 ## 3.0.1
 
 ### Patch Changes

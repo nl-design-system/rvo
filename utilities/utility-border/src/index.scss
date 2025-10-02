@@ -1,0 +1,16 @@
+@use "~@nl-rvo/design-tokens/dist/colors" as tokens;
+@use "sass:string";
+
+@each $name, $value in tokens.$colors {
+  /* stylelint-disable scss/dollar-variable-default */
+  $rvo-short-name: if(
+    string.index($name, "rvo-color-") == 1,
+    string.slice($name, string.length("rvo-color-") + 1),
+    $name
+  );
+  /* stylelint-enable scss/dollar-variable-default */
+
+  .rvo-border--#{$rvo-short-name} {
+    border-color: var(--#{$name}, #{$value}) !important;
+  }
+}

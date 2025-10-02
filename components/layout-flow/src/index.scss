@@ -1,208 +1,122 @@
-.rvo-layout-column {
-  display: flex;
-  flex-direction: column;
+@use "sass:map";
+/* stylelint-disable scss/dollar-variable-pattern */
+// ----------------------------
+// Spacing scale
+// ----------------------------
+$spaces: (
+  0: 0,
+  3xs: var(--rvo-space-3xs),
+  2xs: var(--rvo-space-2xs),
+  xs: var(--rvo-space-xs),
+  sm: var(--rvo-space-sm),
+  md: var(--rvo-space-md),
+  lg: var(--rvo-space-lg),
+  xl: var(--rvo-space-xl),
+  2xl: var(--rvo-space-2xl),
+  3xl: var(--rvo-space-3xl),
+  4xl: var(--rvo-space-4xl),
+  5xl: var(--rvo-space-5xl),
+);
+
+// ----------------------------
+// Flex directions
+// ----------------------------
+$directions: (
+  column: (
+    align: stretch,
+    display: flex,
+    direction: column,
+  ),
+  column-inline: (
+    align: stretch,
+    display: inline-flex,
+    direction: column,
+  ),
+  row: (
+    align: center,
+    display: flex,
+    direction: row,
+  ),
+  row-inline: (
+    align: stretch,
+    display: inline-flex,
+    direction: row,
+  ),
+);
+
+@each $name, $props in $directions {
+  .rvo-layout-#{$name} {
+    align-items: map.get($props, align);
+    display: map.get($props, display);
+    flex-direction: map.get($props, direction);
+  }
 }
 
-.rvo-layout-column-inline {
-  display: inline-flex;
-  flex-direction: column;
+// stylelint-disable scss/dollar-variable-first-in-block
+// ----------------------------
+// Alignment utilities
+// ----------------------------
+$alignments: (
+  align-items: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+  ),
+  align-content: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    space-between: space-between,
+  ),
+  justify-content: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    space-between: space-between,
+  ),
+  justify-items: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+  ),
+);
+// stylelint-enable scss/dollar-variable-first-in-block
+
+@each $prop, $map in $alignments {
+  @each $key, $val in $map {
+    .rvo-layout-#{$prop}-#{$key} {
+      #{$prop}: #{$val};
+    }
+  }
 }
 
-.rvo-layout-row {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.rvo-layout-row-inline {
-  display: inline-flex;
-  flex-direction: row;
-}
-
-.rvo-layout-align-items-start {
-  align-items: flex-start;
-}
-
-.rvo-layout-align-items-center {
-  align-items: center;
-}
-
-.rvo-layout-align-items-end {
-  align-items: flex-end;
-}
-
-.rvo-layout-align-content-start {
-  align-content: flex-start;
-}
-
-.rvo-layout-align-content-center {
-  align-content: center;
-}
-
-.rvo-layout-align-content-end {
-  align-content: flex-end;
-}
-
-.rvo-layout-align-content-space-between {
-  align-content: space-between;
-}
-
-.rvo-layout-justify-items-start {
-  justify-items: flex-start;
-}
-
-.rvo-layout-justify-items-center {
-  justify-items: center;
-}
-
-.rvo-layout-justify-items-end {
-  justify-items: flex-end;
-}
-
-.rvo-layout-justify-content-start {
-  justify-content: flex-start;
-}
-
-.rvo-layout-justify-content-center {
-  justify-content: center;
-}
-
-.rvo-layout-justify-content-end {
-  justify-content: flex-end;
-}
-
-.rvo-layout-justify-content-space-between {
-  justify-content: space-between;
-}
-
+// ----------------------------
+// Flex wrap
+// ----------------------------
 .rvo-layout--wrap {
   flex-wrap: wrap;
 }
 
-.rvo-layout-gap--0 {
-  gap: 0;
+// ----------------------------
+// Gap utilities
+// ----------------------------
+@each $key, $val in $spaces {
+  .rvo-layout-gap--#{$key} {
+    gap: $val;
+  }
 }
 
-.rvo-layout-gap--3xs {
-  gap: var(--rvo-space-3xs);
+// ----------------------------
+// Margin utilities
+// ----------------------------
+@each $key, $val in $spaces {
+  .rvo-layout-margin-horizontal--#{$key} {
+    margin-inline: $val;
+  }
+
+  .rvo-layout-margin-vertical--#{$key} {
+    margin-block: $val;
+  }
 }
 
-.rvo-layout-gap--2xs {
-  gap: var(--rvo-space-2xs);
-}
-
-.rvo-layout-gap--xs {
-  gap: var(--rvo-space-xs);
-}
-
-.rvo-layout-gap--sm {
-  gap: var(--rvo-space-sm);
-}
-
-.rvo-layout-gap--md {
-  gap: var(--rvo-space-md);
-}
-
-.rvo-layout-gap--lg {
-  gap: var(--rvo-space-lg);
-}
-
-.rvo-layout-gap--xl {
-  gap: var(--rvo-space-xl);
-}
-
-.rvo-layout-gap--2xl {
-  gap: var(--rvo-space-2xl);
-}
-
-.rvo-layout-gap--3xl {
-  gap: var(--rvo-space-3xl);
-}
-
-.rvo-layout-gap--4xl {
-  gap: var(--rvo-space-4xl);
-}
-
-// Horizontal margin
-
-.rvo-layout-margin-horizontal--3xs {
-  margin-inline: var(--rvo-space-3xs);
-}
-
-.rvo-layout-margin-horizontal--2xs {
-  margin-inline: var(--rvo-space-2xs);
-}
-
-.rvo-layout-margin-horizontal--xs {
-  margin-inline: var(--rvo-space-xs);
-}
-
-.rvo-layout-margin-horizontal--sm {
-  margin-inline: var(--rvo-space-sm);
-}
-
-.rvo-layout-margin-horizontal--md {
-  margin-inline: var(--rvo-space-md);
-}
-
-.rvo-layout-margin-horizontal--lg {
-  margin-inline: var(--rvo-space-lg);
-}
-
-.rvo-layout-margin-horizontal--xl {
-  margin-inline: var(--rvo-space-xl);
-}
-
-.rvo-layout-margin-horizontal--2xl {
-  margin-inline: var(--rvo-space-2xl);
-}
-
-.rvo-layout-margin-horizontal--3xl {
-  margin-inline: var(--rvo-space-3xl);
-}
-
-.rvo-layout-margin-horizontal--4xl {
-  margin-inline: var(--rvo-space-4xl);
-}
-
-// Vertical margin
-
-.rvo-layout-margin-vertical--3xs {
-  margin-block: var(--rvo-space-3xs);
-}
-
-.rvo-layout-margin-vertical--2xs {
-  margin-block: var(--rvo-space-2xs);
-}
-
-.rvo-layout-margin-vertical--xs {
-  margin-block: var(--rvo-space-xs);
-}
-
-.rvo-layout-margin-vertical--sm {
-  margin-block: var(--rvo-space-sm);
-}
-
-.rvo-layout-margin-vertical--md {
-  margin-block: var(--rvo-space-md);
-}
-
-.rvo-layout-margin-vertical--lg {
-  margin-block: var(--rvo-space-lg);
-}
-
-.rvo-layout-margin-vertical--xl {
-  margin-block: var(--rvo-space-xl);
-}
-
-.rvo-layout-margin-vertical--2xl {
-  margin-block: var(--rvo-space-2xl);
-}
-
-.rvo-layout-margin-vertical--3xl {
-  margin-block: var(--rvo-space-3xl);
-}
-
-.rvo-layout-margin-vertical--4xl {
-  margin-block: var(--rvo-space-4xl);
-}
+/* stylelint-enable scss/dollar-variable-pattern */

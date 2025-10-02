@@ -11,7 +11,7 @@ import {
   Tabs,
   TextInputField,
 } from '@nl-rvo/components';
-import '@nl-rvo/components/helpers-text/src/index.scss';
+import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
@@ -30,7 +30,7 @@ const Profiel = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
+
           },
           {
             label: 'Mijn dossier',
@@ -58,7 +58,7 @@ const Profiel = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
+
             icon: 'user',
           },
         ]}
@@ -93,7 +93,7 @@ const Profiel = () => {
                   icon: 'publicatie',
                 },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel ', link: '#', icon: 'user', active: true },
+                { label: 'Profiel ', link: '#', icon: 'user' },
               ]}
               size="md"
               useIcons={true}

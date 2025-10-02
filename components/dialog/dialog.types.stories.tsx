@@ -28,20 +28,18 @@ export const DialogCentered = {
 
 export const DialogDrawerLeft = {
   render: Dialog.bind({}),
-  name: 'Drawer left',
-
+  name: 'Inset inline start (position left)',
   args: {
-    type: 'drawer-left',
+    type: 'inset-inline-start',
     content: 'Dialog content',
   },
 };
 
 export const DialogDrawerRight = {
   render: Dialog.bind({}),
-  name: 'Drawer right',
-
+  name: 'Inset inline end (position right)',
   args: {
-    type: 'drawer-right',
+    type: 'inset-inline-end',
     content: 'Dialog content',
   },
 };

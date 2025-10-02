@@ -6,6 +6,10 @@
 @use "../../layout-flow/src" as *;
 @use "../../link/src" as *;
 
+.rvo-accordion {
+  --rvo-accordion-item-icon-margin-block-start: 6px;
+}
+
 .rvo-accordion .rvo-accordion__item[open] {
   border-left-color: var(--rvo-accordion-border-color);
 }
@@ -21,7 +25,12 @@
 
 .rvo-accordion__item-summary .rvo-icon {
   flex: 16px 0 0;
-  padding-block-start: var(--rvo-accordion-item-icon-padding-block-start);
+  margin-block-start: var(--rvo-accordion-item-icon-margin-block-start);
+}
+
+.rvo-accordion__item-summary h2 .rvo-icon,
+.rvo-accordion__item-summary h3 .rvo-icon {
+  --rvo-accordion-item-icon-margin-block-start: 0;
 }
 
 .rvo-accordion__item > .rvo-accordion__item-summary {

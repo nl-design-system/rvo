@@ -12,7 +12,6 @@ const Landingspagina = () => {
           {
             label: 'Berichtenbox voor bedrijven',
             link: '#',
-            active: true,
           },
           {
             label: 'Overheidsorganisatie?',

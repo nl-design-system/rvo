@@ -1,0 +1,32 @@
+.rvo-quote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rvo-space-md);
+
+  &__quote {
+    font-size: var(--rvo-font-size-xl);
+    font-style: italic;
+  }
+
+  &__user {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--rvo-space-sm);
+  }
+
+  &__image {
+    align-content: center;
+    border-radius: 50%;
+    display: flex;
+    height: var(--rvo-quote-image-size);
+    justify-content: center;
+    overflow: hidden;
+    width: var(--rvo-quote-image-size);
+  }
+
+  &__credentials {
+    display: flex;
+    flex-direction: column;
+  }
+}
