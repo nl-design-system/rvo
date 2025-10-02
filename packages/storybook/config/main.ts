@@ -1,8 +1,15 @@
 /* eslint-env node */
 import { StorybookConfig } from '@storybook/react-webpack5';
-const fs = require('fs');
-const path = require('path');
-function getPackageDir(filepath) {
+import fs from 'fs';
+import path from 'path';
+import remarkGfm from 'remark-gfm';
+
+/* set path */
+const docsPath = path.resolve(__dirname, '../../../documentation');
+const componentsPath = path.resolve(__dirname, '../../../components');
+const utilitiesPath = path.resolve(__dirname, '../../../utilities');
+
+function getPackageDir(filepath: string) {
   let currDir = path.dirname(require.resolve(filepath));
   // eslint-disable-next-line no-constant-condition
   while (true) {
@@ -40,28 +47,30 @@ const webpackStyleImporter = {
 };
 
 const config: StorybookConfig = {
+  framework: '@storybook/react-webpack5',
   core: {
     disableTelemetry: true,
   },
   stories: [
-    '../../../documentation/pages/**/*.docpage.mdx',
-    '../../../documentation/demopages/**/*.stories.@(jsx|tsx)',
-    '../../../components/**!(node_modules)/*.docpage.mdx',
-    '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
-    '../../../utilities/**!(node_modules)/*.docpage.mdx',
-    '../../../utilities/**!(node_modules)/*.stories.@(jsx|tsx)',
+    `${docsPath}/pages/**/*.docpage.mdx`,
+    `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
+    `${componentsPath}/**!(node_modules)/*.docpage.mdx`,
+    `${componentsPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
+    `${utilitiesPath}/**!(node_modules)/*.docpage.mdx`,
+    `${utilitiesPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
   ],
   features: {
     buildStoriesJson: false,
   },
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
-  },
   addons: [
     '../addon-docusaurus',
     '@etchteam/storybook-addon-status',
-    { name: '@storybook/addon-essentials', options: { actions: false } },
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        actions: false,
+      },
+    },
     '@storybook/addon-a11y',
     '@storybook/preset-scss',
     'storybook-addon-themes',
@@ -71,9 +80,9 @@ const config: StorybookConfig = {
   staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
   typescript: { check: true, checkOptions: {} },
   webpackFinal: async (config) => {
-    const scssRule = config.module.rules.find(
-      (rule: any) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/',
-    ) as any;
+    const rules = config.module?.rules || [];
+
+    const scssRule = rules.find((rule: any) => rule.test.toString().replace(/\\/g, '') === '/.s[ca]ss$/') as any;
     scssRule.use = [
       'style-loader',
       'css-loader',
@@ -89,18 +98,46 @@ const config: StorybookConfig = {
       },
     ];
 
-    // Put assets in predicatable location to make them downloadable
-    const svgRule = config.module.rules.find((rule: any) => rule.type === 'asset/resource') as any;
+    const mdxRules = (rules || []).filter((rule: any) => rule.test && String(rule.test).includes('mdx'));
+
+    mdxRules.forEach((rule: any) => {
+      (rule.use || []).forEach((u: any) => {
+        if (typeof u === 'object' && u.loader?.includes('@storybook/mdx2-csf')) {
+          u.options = {
+            ...u.options,
+            mdxCompileOptions: {
+              ...(u.options?.mdxCompileOptions || {}),
+              remarkPlugins: [
+                ...(u.options?.mdxCompileOptions?.remarkPlugins || []),
+                remarkGfm, // enable tables in MDX
+              ],
+            },
+          };
+        }
+      });
+    });
+
+    // Put assets in predictable location to make them downloadable
+    const svgRule = rules.find((rule: any) => rule.type === 'asset/resource') as any;
     delete svgRule.generator.filename;
     config.output.assetModuleFilename = (pathData) => {
       const filepath = path.dirname(pathData.filename).match(/(?<=assets\/).*/)[0];
       return `static/${filepath}/[name][ext][query]`;
     };
 
+    // add .md loader
+    rules.push({
+      test: /\.md$/,
+      type: 'asset/source',
+    });
     return {
       ...config,
       performance: {
         hints: false,
+      },
+      module: {
+        ...(config.module || {}),
+        rules,
       },
       resolve: {
         ...config.resolve,
@@ -115,7 +152,12 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: false,
-  },
+    mdxPluginOptions: {
+      mdxCompileOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    },
+  } as any,
 };
 
 export default config;

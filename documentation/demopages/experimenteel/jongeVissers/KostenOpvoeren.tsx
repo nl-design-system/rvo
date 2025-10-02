@@ -107,10 +107,7 @@ const KostenOpvoeren = () => {
                 <form>
                   <LayoutFlow gap="md">
                     <Fieldset legend="">
-                      <TextInputField
-                        label="Hoeveel kost het vissersvaartuig (exclusief btw)?"
-                        validation="number"
-                      ></TextInputField>
+                      <TextInputField label="Hoeveel kost het vissersvaartuig (exclusief btw)?"></TextInputField>
                     </Fieldset>
                     <Fieldset legend="">
                       <RadioButtonField
@@ -131,7 +128,6 @@ const KostenOpvoeren = () => {
                         helperText="Uitgebreide uitleg over de subsidie."
                         expandableHelperText={true}
                         expandableHelperTextTitle="Meer informatie"
-                        validation="number"
                       ></TextInputField>
                     </Fieldset>
 

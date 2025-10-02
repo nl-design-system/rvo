@@ -31,7 +31,7 @@ const DocumentenZaak = () => {
                 label: 'Overzicht',
                 link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                 icon: 'home',
-                active: true,
+
               },
               {
                 label: 'Mijn dossier',
@@ -60,7 +60,7 @@ const DocumentenZaak = () => {
                   align: 'right',
                   label: 'Boer Overveen B.V',
                   link: '#',
-                  active: true,
+
                   icon: 'user',
                 },
               ]}

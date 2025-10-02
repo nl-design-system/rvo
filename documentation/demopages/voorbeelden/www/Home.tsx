@@ -540,7 +540,7 @@ const Home = () => {
           </LayoutFlow>
         </div> */}
         {/* <div className="rvo-feedback">
-          
+
         </div> */}
       </main>
       {/* <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">

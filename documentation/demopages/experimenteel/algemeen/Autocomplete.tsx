@@ -26,7 +26,6 @@ const ExpendableRows = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
             icon: 'user',
           },
         ]}

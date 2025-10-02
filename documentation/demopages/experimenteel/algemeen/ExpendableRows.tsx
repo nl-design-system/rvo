@@ -19,7 +19,6 @@ const ExpendableRows = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
           },
           {
             label: 'Mijn dossier',
@@ -47,7 +46,6 @@ const ExpendableRows = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
             icon: 'user',
           },
         ]}
@@ -79,7 +77,6 @@ const ExpendableRows = () => {
                   label: 'Mijn documenten',
                   link: '#',
                   icon: 'publicatie',
-                  active: true,
                 },
                 { label: 'Mijn berichten', link: '#', icon: 'mail' },
                 { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
@@ -141,10 +138,9 @@ const ExpendableRows = () => {
                       </tr>
                       <tr className="rvo-table-row rvo-table-row--expandable">
                         <td colSpan={4} className="rvo-table-cell">
-                          <ExpandableContent
-                            title="Meer informatie"
-                            content="Hier meer informatie over de bovenstaande tabel rij"
-                          />
+                          <ExpandableContent title="Meer informatie">
+                            Hier meer informatie over de bovenstaande tabel rij
+                          </ExpandableContent>
                         </td>
                       </tr>
 

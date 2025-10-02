@@ -29,7 +29,6 @@ const Import = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
           },
           {
             label: 'Mijn dossier',
@@ -61,7 +60,7 @@ const Import = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
+
             icon: 'user',
           },
         ]}
@@ -93,7 +92,6 @@ const Import = () => {
                   label: 'Melden',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
                   icon: 'plus',
-                  active: true,
                 },
                 { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
                 {

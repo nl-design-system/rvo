@@ -27,7 +27,6 @@ const Stallijst = () => {
             label: 'Overzicht',
             link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
             icon: 'home',
-            active: true,
           },
           {
             label: 'Mijn dossier',
@@ -59,7 +58,7 @@ const Stallijst = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-            active: true,
+
             icon: 'user',
           },
         ]}
@@ -97,7 +96,6 @@ const Stallijst = () => {
                   label: 'Bekijken',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
                   icon: 'oog',
-                  active: true,
                 },
                 { label: 'Machtigen', link: '#', icon: 'refund' },
                 { label: 'Overzichten', link: '#', icon: 'opsomming' },

@@ -20,7 +20,7 @@ const PercelenRegistreren = () => {
                   items={[
                     {
                       label: 'Home',
-                      active: true,
+
                       link: '#',
                     },
                     {
@@ -68,7 +68,7 @@ const PercelenRegistreren = () => {
               items={[
                 {
                   label: 'Home',
-                  active: true,
+
                   link: '#',
                 },
                 {
@@ -91,7 +91,7 @@ const PercelenRegistreren = () => {
                   align: 'right',
                   label: 'Mijn RVO',
                   link: '#',
-                  active: true,
+
                   icon: 'user',
                 },
                 {

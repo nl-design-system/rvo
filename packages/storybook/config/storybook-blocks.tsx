@@ -3,6 +3,7 @@
  */
 import { Markdown } from '@storybook/blocks';
 import { HTMLAttributes, PropsWithChildren } from 'react';
+import React from 'react';
 
 export interface HTMLHeadingProps extends PropsWithChildren<HTMLAttributes<HTMLHeadingElement>> {
   level: number;
@@ -45,4 +46,21 @@ export const MarkdownBlock = ({ markdown, omitH1 = false, headingLevel = 1 }) =>
 
 export const Changelog = ({ markdown }) => <MarkdownBlock omitH1 headingLevel={2} markdown={markdown} />;
 
-export const Readme = ({ markdown }) => <MarkdownBlock omitH1 markdown={markdown} />;
+export const Readme = ({ markdown, children }) => {
+  if (markdown) return <MarkdownBlock omitH1 markdown={markdown} />;
+
+  if (children) {
+    // If children are pure text nodes → treat as markdown
+    const nodes = React.Children.toArray(children);
+    const allStrings = nodes.every((n) => typeof n === 'string');
+
+    if (allStrings) {
+      const text = nodes.join('');
+      return <Markdown>{text}</Markdown>;
+    }
+
+    // Otherwise: render JSX/MDX components normally
+    return <div className="sbdocs sbdocs-content">{children}</div>;
+  }
+  return null;
+};

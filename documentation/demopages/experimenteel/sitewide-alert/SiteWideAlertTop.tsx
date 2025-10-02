@@ -45,7 +45,6 @@ const SiteWideAlertTop = () => {
           {
             label: 'Naam app/website',
             link: '#',
-            active: true,
           },
           {
             align: 'right',
@@ -83,7 +82,6 @@ const SiteWideAlertTop = () => {
                   label: 'Dashboard',
                   link: '#',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Menu item',

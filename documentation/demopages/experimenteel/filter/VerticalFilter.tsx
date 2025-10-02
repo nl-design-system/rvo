@@ -33,7 +33,6 @@ const VerticalFilter = () => {
                 link: '#',
               },
               {
-                active: true,
                 label: 'Projects',
                 link: '#',
               },

@@ -20,7 +20,6 @@ const Home = () => {
                   items={[
                     {
                       label: 'Home',
-                      active: true,
                       link: '#',
                     },
                     {
@@ -68,7 +67,7 @@ const Home = () => {
             items={[
               {
                 label: 'Home',
-                active: true,
+
                 link: '#',
               },
               {
@@ -91,7 +90,7 @@ const Home = () => {
                 align: 'right',
                 label: 'Mijn RVO',
                 link: '#',
-                active: true,
+
                 icon: 'user',
               },
               {

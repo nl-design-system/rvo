@@ -1,6 +1,6 @@
 import { Footer, Header, MenuBar, MobileMenuBar } from '@nl-rvo/components';
 import { Fieldset } from '@utrecht/component-library-react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 

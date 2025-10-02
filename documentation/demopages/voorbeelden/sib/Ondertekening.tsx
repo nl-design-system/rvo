@@ -33,7 +33,6 @@ const Ondertekening = () => {
                   label: 'Overzicht',
                   link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
                   icon: 'home',
-                  active: true,
                 },
                 {
                   label: 'Mijn dossier',
@@ -84,7 +83,7 @@ const Ondertekening = () => {
                   align: 'right',
                   label: 'Opslaan en afsluiten',
                   link: '#',
-                  active: true,
+
                   icon: 'save',
                 },
               ]}

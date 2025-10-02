@@ -34,7 +34,6 @@ const Filter = () => {
                 link: '#',
               },
               {
-                active: true,
                 label: 'Projects',
                 link: '#',
               },
