@@ -83,7 +83,9 @@ const Filter = () => {
                 <Fieldset legend="">
                   <details open className="rvo-collapsible-filter">
                     <summary className="rvo-collapsible-filter-label rvo-collapsible-filter-header">
-                      <h3 className="utrecht-heading-3 rvo-heading--no-margins">Filter projects</h3>
+                      <Heading type="h3" noMargins>
+                        Filter projects
+                      </Heading>
                     </summary>
 
                     <form className="rvo-form">

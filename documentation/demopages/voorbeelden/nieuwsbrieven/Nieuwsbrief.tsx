@@ -122,11 +122,11 @@ const Nieuwsbrief = () => {
                 </div>
 
                 <div className="rvo-card__content">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Nieuwe subsidie helpt ondernemers bij netcongestie
                     </a>
-                  </h3>
+                  </Heading>
                   Heeft uw bedrijf last van het volle elektriciteitsnet? Vraag vanaf 1 april Flex-e aan. Met deze nieuwe
                   subsidie kunt u uw elektriciteitsgebruik flexibeler maken. Hierdoor kunt u mogelijk toch verder
                   groeien of verduurzamen, ook als het net vol is.
@@ -141,11 +141,11 @@ const Nieuwsbrief = () => {
                 </div>
 
                 <div className="rvo-card__content">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       SDE++-subsidie geeft meer tijd en hulp voor aanvraag
                     </a>
-                  </h3>
+                  </Heading>
                   De subsidie SDE++ opent dit jaar in oktober, een maand later dan normaal. Zo krijgen ondernemers meer
                   tijd om een aanvraag in te dienen. Ook bieden wij vooraf adviesgesprekken aan om hen te helpen met een
                   goede subsidieaanvraag.
@@ -160,11 +160,11 @@ const Nieuwsbrief = () => {
                 </div>
 
                 <div className="rvo-card__content">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       De vervolgstappen voor energieopslag in Nederland
                     </a>
-                  </h3>
+                  </Heading>
                   Welke rol kan energieopslag spelen om vraag en aanbod van energie beter op elkaar af te stemmen? En
                   hoe kunnen we daar nu al op inspelen? Dat onderzochten wij samen met andere partijen. Bekijk hoe we
                   dat deden en welke vervolgstappen we zetten.
@@ -179,11 +179,11 @@ const Nieuwsbrief = () => {
                 </div>
 
                 <div className="rvo-card__content">
-                  <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+                  <Heading type="h3" noMargins>
                     <a className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline" href="#">
                       Financiële steun bij circulaire projecten
                     </a>
-                  </h3>
+                  </Heading>
                   Wilt u als ondernemer of organisatie zuiniger omgaan met materialen of producten? Laat u inspireren en
                   ontdek de mogelijkheden tijdens onze online bijeenkomst op 19 maart 2025. Onderdeel van de Week van de
                   Circulaire Economie.
@@ -197,38 +197,38 @@ const Nieuwsbrief = () => {
           <Heading type="h2">Agenda Duurzaam Ondernemen</Heading>
           <div className="rvo-layout-grid rvo-layout-gap--md">
             <div className="rvo-content-item">
-              <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+              <Heading type="h3" noMargins>
                 <a className="rvo-link rvo-link--no-underline" href="#">
                   Webinar MOOI: Systeemintegratie
                 </a>
-              </h3>
+              </Heading>
               <span className="rvo-content-item-date rvo-paragraph--subtle">6 maart 2025</span>
               <em className="rvo-content-item-location rvo-paragraph--subtle">, online</em>
             </div>
             <div className="rvo-content-item">
-              <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+              <Heading type="h3" noMargins>
                 <a className="rvo-link rvo-link--no-underline" href="#">
                   Start online masterclassreeks CO2-reductie industrie voorjaar 2025
                 </a>
-              </h3>
+              </Heading>
               <span className="rvo-content-item-date rvo-paragraph--subtle">6 maart 2025</span>
               <em className="rvo-content-item-location rvo-paragraph--subtle">, online</em>
             </div>
             <div className="rvo-content-item">
-              <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+              <Heading type="h3" noMargins>
                 <a className="rvo-link rvo-link--no-underline" href="#">
                   HIER opgewekt 2025: voor en over lokale energie-initiatieven
                 </a>
-              </h3>
+              </Heading>
               <span className="rvo-content-item-date rvo-paragraph--subtle">11 maart 2025</span>
               <em className="rvo-content-item-location rvo-paragraph--subtle">, Apeldoorn</em>
             </div>
             <div className="rvo-content-item">
-              <h3 className="utrecht-heading-3 rvo-heading--no-margins">
+              <Heading type="h3" noMargins>
                 <a className="rvo-link rvo-link--no-underline" href="#">
                   Informatiebijeenkomst CEF Transport - Alternative Fuels Infrastructure Facility (AFIF)
                 </a>
-              </h3>
+              </Heading>
               <span className="rvo-content-item-date rvo-paragraph--subtle">12 maart 2025</span>
               <em className="rvo-content-item-location rvo-paragraph--subtle">, Den Haag</em>
             </div>
