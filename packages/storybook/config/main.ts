@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 /* set path */
 const docsPath = path.resolve(__dirname, '../../../documentation');
 const componentsPath = path.resolve(__dirname, '../../../components');
+const utilitiesPath = path.resolve(__dirname, '../../../utilities');
 
 function getPackageDir(filepath: string) {
   let currDir = path.dirname(require.resolve(filepath));
@@ -55,6 +56,8 @@ const config: StorybookConfig = {
     `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
     `${componentsPath}/**!(node_modules)/*.docpage.mdx`,
     `${componentsPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
+    `${utilitiesPath}/**!(node_modules)/*.docpage.mdx`,
+    `${utilitiesPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
   ],
   features: {
     buildStoriesJson: false,

@@ -1,0 +1,35 @@
+{
+  "version": "1.2.0",
+  "author": "Community for NL Design System",
+  "name": "@nl-rvo/utility-text-types",
+  "license": "CC0-1.0",
+  "description": "Utility classes for text types/sizes",
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "utilities",
+    "utility-text-types"
+  ],
+  "files": [
+    "src/index.scss",
+    "dist/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "style": "src/index.scss",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "utilities/utility-text-types"
+  },
+  "devDependencies": {
+    "@nl-rvo/build-utils-css": "workspace:*"
+  }
+}
