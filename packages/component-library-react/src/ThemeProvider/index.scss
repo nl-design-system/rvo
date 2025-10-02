@@ -1,6 +1,9 @@
-@use "../../../../components/helpers-text/src" as *;
-@use "../../../../components/helpers-margin/src" as *;
-@use "../../../../components/helpers-padding/src" as *;
+@use "utility-background/src" as *;
+@use "utility-border/src" as *;
+@use "utility-text/src" as *;
+@use "utility-text-types/src" as *;
+@use "utility-margin/src" as *;
+@use "utility-padding/src" as *;
 
 .rvo-theme {
   background-color: var(--rvo-document-background-color);

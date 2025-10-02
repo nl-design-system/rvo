@@ -10,9 +10,9 @@ import {
   Link,
   MaxWidthLayout,
   MenuBar,
-  TextHelpers,
   TextInputField,
 } from '@nl-rvo/components';
+import { UtilityTextTypes } from '@nl-rvo/utilities';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -378,8 +378,8 @@ const Notify = () => {
         <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
       </div>
       <div className="rvo-hide">
-        {/* Slechte manier om texthelpers beschikbaar te maken */}
-        <TextHelpers></TextHelpers>
+        {/* Slechte manier om UtilityTextTypes beschikbaar te maken */}
+        <UtilityTextTypes></UtilityTextTypes>
       </div>
     </body>
   );
