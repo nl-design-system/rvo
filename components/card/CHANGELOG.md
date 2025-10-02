@@ -1,5 +1,12 @@
 # `@nl-rvo/css-card`
 
+## 1.6.0
+
+### Minor Changes
+
+- 540d0f8: Changed default card padding to 0.
+  Introduced new CSS variables for cards to improve customization.
+
 ## 1.5.0
 
 ### Minor Changes
