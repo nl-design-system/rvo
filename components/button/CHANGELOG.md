@@ -1,5 +1,13 @@
 # `@nl-rvo/css-button`
 
+## 1.1.6
+
+### Patch Changes
+
+- 064091a: Fix some markdown error for alert and button component.
+  Updated @whitespace/storybook-addon-html to the latest version to remove warning messages during the build process.
+  Added remark-gfm dependency to enable rendering of tables inside Markdown.
+
 ## 1.1.5
 
 ### Patch Changes

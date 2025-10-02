@@ -1,5 +1,11 @@
 # `@nl-rvo/utility-margin`
 
+## 2.0.0
+
+### Major Changes
+
+- da7c279: Convert the margin helper into a utility to improve consistency.
+
 ## 1.2.0
 
 ### Minor Changes
