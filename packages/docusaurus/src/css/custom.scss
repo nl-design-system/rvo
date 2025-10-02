@@ -10,8 +10,10 @@
  */
 
 /* You can override the default Infima variables here. */
-* {
-  box-sizing: content-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {

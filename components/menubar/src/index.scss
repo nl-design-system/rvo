@@ -156,8 +156,6 @@
 
 // Active link
 .rvo-menubar__link--active {
-  text-shadow: 0 0 0.5px currentColor;
-
   &:focus {
     text-decoration-line: none;
     text-decoration-thickness: 0;

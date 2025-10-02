@@ -10,9 +10,13 @@ import '@nl-rvo/assets/fonts/index.css';
 import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
-import '@nl-rvo/components/helpers-margin/src/index.scss';
-import '@nl-rvo/components/helpers-text/src/index.scss';
-import '@nl-rvo/components/helpers-padding/src/index.scss';
+
+import '@nl-rvo/utility-background/src/index.scss';
+import '@nl-rvo/utility-border/src/index.scss';
+import '@nl-rvo/utility-text/src/index.scss';
+import '@nl-rvo/utility-text-types/src/index.scss';
+import '@nl-rvo/utility-margin/src/index.scss';
+import '@nl-rvo/utility-padding/src/index.scss';
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
@@ -64,7 +68,7 @@ const parameters = {
         'Brand (huisstijl)',
         ['Colour (kleuren)', 'Fonts (lettertype)', 'Size (grootte)', 'Space (ruimte)', 'Border radius (afronding)'],
         'Componenten',
-        'Helper classes',
+        'Utilities',
         'Layout',
         "Pagina's",
         ['Templates', 'Voorbeelden', 'Experimenteel'],

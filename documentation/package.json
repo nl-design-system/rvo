@@ -14,6 +14,7 @@
     "directory": "documentation"
   },
   "devDependencies": {
+    "@nl-rvo/utilities": "workspace:*",
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "clsx": "2.1.0",

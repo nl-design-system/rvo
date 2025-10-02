@@ -1,0 +1,18 @@
+import { Canvas, Meta, Title } from "@storybook/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as UtilityMarginStories from "./utility-margin.stories";
+import { Changelog, Readme } from "../../packages/storybook/config/storybook-blocks";
+
+<Meta of={UtilityMarginStories} name="Documentatie" />
+
+<Title />
+<Canvas of={UtilityMarginStories.Default} layout="padded" />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

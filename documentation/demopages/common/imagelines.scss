@@ -1,0 +1,34 @@
+.rvo-image-lines {
+  .rvo-hero__image-container,
+  .rvo-card__image-container,
+  .rvo-footer__container {
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      border: 1px solid #fff;
+      border-radius: 32px;
+      content: "";
+      display: block;
+      height: 50%;
+      position: absolute;
+      right: -25%;
+      top: -25%;
+      width: 50%;
+    }
+  }
+
+  .rvo-layout-grid .rvo-card:nth-child(2) {
+    .rvo-card__image-container::after {
+      right: -35%;
+      top: -15%;
+    }
+  }
+
+  .rvo-layout-grid .rvo-card:nth-child(3) {
+    .rvo-card__image-container::after {
+      right: -15%;
+      top: -15%;
+    }
+  }
+}

@@ -48,6 +48,8 @@ const config: StorybookConfig = {
     '../../../documentation/demopages/**/*.stories.@(jsx|tsx)',
     '../../../components/**!(node_modules)/*.docpage.mdx',
     '../../../components/**!(node_modules)/*.stories.@(jsx|tsx)',
+    '../../../utilities/**!(node_modules)/*.docpage.mdx',
+    '../../../utilities/**!(node_modules)/*.stories.@(jsx|tsx)',
   ],
   features: {
     buildStoriesJson: false,
