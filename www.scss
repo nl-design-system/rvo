@@ -14,7 +14,7 @@
 
   .utrecht-page-footer,
   .rvo-footer-bg,
-  .rvo-rhs-update .rvo-hero .utrecht-heading-1,
+  .rvo-rhs-update .rvo-hero .rvo-hero__content,
   .rvo-rhs-update .rvo-card.rvo-card--full-colour.rvo-card--hemelblauw,
   .utrecht-button--primary-action {
     background-color: var(--rvo-color-lichtblauw);
@@ -31,12 +31,17 @@
       background-color: var(--rvo-color-logoblauw);
     }
   }
+
+  .rvo-rhs-update .rvo-hero .rvo-hero__title,
+  .rvo-rhs-update .rvo-hero .rvo-hero__subtitle {
+    color: var(--rvo-color-logoblauw);
+  }
 }
 
 .rvo-lichtblauwhemelsblauw {
   .utrecht-page-footer,
   .rvo-footer-bg,
-  .rvo-rhs-update .rvo-hero .utrecht-heading-1,
+  .rvo-rhs-update .rvo-hero .rvo-hero__content,
   .rvo-rhs-update .rvo-card.rvo-card--full-colour.rvo-card--hemelblauw,
   .utrecht-button--primary-action {
     background-color: var(--rvo-color-lichtblauw);
@@ -53,6 +58,11 @@
     .rvo-icon {
       background-color: var(--rvo-color-logoblauw);
     }
+  }
+
+  .rvo-rhs-update .rvo-hero .rvo-hero__title,
+  .rvo-rhs-update .rvo-hero .rvo-hero__subtitle {
+    color: var(--rvo-color-logoblauw);
   }
 }
 
