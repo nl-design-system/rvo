@@ -121,10 +121,11 @@ const Stallijst = () => {
                     Download stallijst
                   </Button>
                 </LayoutFlow>
-                <h2 className="utrecht-heading-2 rvo-heading--no-margins rvo-heading--mixed">
-                  Er zijn &nbsp;
-                  <span className="rvo-text--bold">6</span> runderen geregistreerd
-                </h2>
+                <Heading type="h2" noMargins fontWeightNormal>
+                  Er zijn
+                  <span className="rvo-text--bold">6</span>
+                  runderen geregisteerd
+                </Heading>
               </div>
               <div className="rvo-accordion">
                 <details className="rvo-accordion__item">

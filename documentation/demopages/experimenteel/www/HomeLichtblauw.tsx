@@ -1,4 +1,15 @@
-import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Hero,
+  Icon,
+  LayoutFlow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+} from '@nl-rvo/components';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -111,21 +122,27 @@ const HomeLichtblauw = () => {
             horizontalRule={false}
           />
         </div>
-        <div className="rvo-hero rvo-max-width-layout--lg">
+        <Hero
+          image={{ src: 'images/www/home.jpg', alt: 'Hero image' }}
+          title="Rijksdienst voor Ondernemend Nederland"
+          subtitle="Wij helpen u graag vooruit!"
+          size="lg"
+        />
+        {/* <div className="rvo-hero rvo-max-width-layout--lg">
           <div className="rvo-hero-image">
             <img src="images/www/home.jpg" className="rvo-hero-img" />
           </div>
-          <h1 className="utrecht-heading-1">
+          <Heading type="h1">
             Rijksdienst voor Ondernemend Nederland
             <span className="rvo-heading-subtitle">Wij helpen u graag vooruit!</span>
-          </h1>
-        </div>
+          </Heading>
+        </div> */}
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-content--www rvo-content--home">
             <LayoutFlow gap="xl">
               <div className="rvo-cards">
                 <LayoutFlow gap="md">
-                  <h2 className="utrecht-heading-2">Onderwerpen</h2>
+                  <Heading type="h2">Onderwerpen</Heading>
 
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--w-icon rvo-card--outline">
@@ -133,11 +150,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="wereldbol" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Klimaat & Energie
                           </a>
-                        </h3>
+                        </Heading>
 
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Energie besparen en opwekken, duurzame mobiliteit, co2-reductie industrie...
@@ -149,11 +166,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="grootstedelijk" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Bouwen & Wonen
                           </a>
-                        </h3>
+                        </Heading>
 
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Energielabel, BENG, verduurzamen gebouwen en woningen, gebiedsontwikkeling..
@@ -165,11 +182,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="buitenlandse-handel" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Internationaal ondernemen
                           </a>
-                        </h3>
+                        </Heading>
 
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Landeninformatie, netwerken en contacten, financiering, handelsmissies...
@@ -181,11 +198,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="wereldbol-tussen-2-uitgestoken-handen" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Ont­wikkelings­samen­werking
                           </a>
-                        </h3>
+                        </Heading>
 
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Voedselzekerheid, humanitaire hulp, publiek-private partnerschappen...
@@ -197,14 +214,14 @@ const HomeLichtblauw = () => {
                         <Icon icon="tractor" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a
                             href="iframe.html?args=&id=pagina-s-experimenteel-www-landbouw--default&viewMode=story"
                             className="rvo-link rvo-link--full-click rvo-link--black"
                           >
                             Landbouw
                           </a>
-                        </h3>
+                        </Heading>
 
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Grond, mest, marktordening, gemeenschappelijk landbouwbeleid...
@@ -216,11 +233,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="vis" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Visserij
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Registraties, vergunningen, betalingen, EU-fonds maritieme zaken en visserij...
                         </p>
@@ -231,11 +248,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="eend-zwemmend-bij-riet" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Dier & natuur
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Registraties, vergunningen, betalingen, EU-fonds maritieme zaken en visserij...
                         </p>
@@ -246,11 +263,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="lamp" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Innovatie, Onderzoek & Onderwijs
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Octrooien, topsectoren, start-ups, research & development...
                         </p>
@@ -261,11 +278,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="grafiek" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Ondernemen & Bedrijfsvoering
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Financiering per bedrijfsfase, MVO, ICT en cyberveiligheid, transparant ondernemen...
                         </p>
@@ -276,11 +293,11 @@ const HomeLichtblauw = () => {
                         <Icon icon="stethoscoop" size="xl" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click rvo-link--black">
                             Gezondheid, Zorg & Welzijn
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--sm rvo-paragraph--subtle">
                           Wonen & zorg, health deals, zorg voor innoveren, Life Sciences & Health...
                         </p>
@@ -301,18 +318,18 @@ const HomeLichtblauw = () => {
 
               <div className="rvo-cards rvo-cards--overzichten">
                 <LayoutFlow gap="md">
-                  <h2 className="utrecht-heading-2">Overzichten voor ondernemend Nederland</h2>
+                  <Heading type="h2">Overzichten voor ondernemend Nederland</Heading>
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
                       <div className="rvo-card-img-container">
                         <img src="images/www/bedrijven.webp" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link--full-click">
                             Bedrijven
                           </a>
-                        </h3>
+                        </Heading>
                       </div>
                     </div>
                     <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
@@ -320,11 +337,11 @@ const HomeLichtblauw = () => {
                         <img src="images/www/particulieren.webp" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link--full-click">
                             Particulieren
                           </a>
-                        </h3>
+                        </Heading>
                       </div>
                     </div>
                     <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
@@ -332,11 +349,11 @@ const HomeLichtblauw = () => {
                         <img src="images/www/overheden.webp" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link--full-click">
                             Overheden
                           </a>
-                        </h3>
+                        </Heading>
                       </div>
                     </div>
                     <div className="rvo-card rvo-card--w-link rvo-card--full-colour rvo-card--hemelblauw rvo-card--w-img rvo-card--inverted-colours rvo-card--sm">
@@ -344,11 +361,11 @@ const HomeLichtblauw = () => {
                         <img src="images/www/kennisinstellingen.webp" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link--full-click">
                             Kennisinstellingen
                           </a>
-                        </h3>
+                        </Heading>
                       </div>
                     </div>
                   </div>
@@ -360,41 +377,41 @@ const HomeLichtblauw = () => {
               <div className="rvo-block-group">
                 <div className="rvo-content-items rvo-content-items--w-date">
                   <LayoutFlow gap="md">
-                    <Heading type="h2" textContent="Evenementen" />
+                    <Heading type="h2">Evenementen</Heading>
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Webinar Hoe schrijf ik een succesvolle Eurostars aanvraag?
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">18 januari 2024</span>
                         <em className="rvo-content-item-location rvo-paragraph--subtle">, online</em>
                       </div>
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Webinar versnellen woningbouw
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">18 januari 2024</span>
                         <em className="rvo-content-item-location rvo-paragraph--subtle">, online</em>
                       </div>
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Webinar: EU4Health werkprogramma 2024
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">18 januari 2024</span>
                         <em className="rvo-content-item-location rvo-paragraph--subtle">, online</em>
                       </div>
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Handelsmissie watertechnologie en duurzame kassenbouw naar de Golfregio
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">
                           2 maart 2024 t/m 7 maart 2024
                         </span>
@@ -405,38 +422,38 @@ const HomeLichtblauw = () => {
 
                 <div className="rvo-content-items rvo-content-items--w-date">
                   <LayoutFlow gap="md">
-                    <Heading type="h2" textContent="Nieuws" />
+                    <Heading type="h2">Nieuws</Heading>
                     <div className="rvo-content-items-grid">
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Samen de Baltische windenergiemarkt op: Nederlands cluster nog open voor extra bedrijven
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">8 december 2023</span>
                       </div>
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Eerste regionale woonzorgakkoord: vernieuwende samenwerking
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">8 december 2023</span>
                       </div>
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Nieuwe met nutriënten verontreinigde gebieden aangewezen
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">5 december 2023</span>
                       </div>
                       <div className="rvo-content-item">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a className="rvo-link rvo-link--no-underline" href="#">
                             Mestproductieplafond vanaf 2024 in lijn met derogatiebeschikking
                           </a>
-                        </h3>
+                        </Heading>
                         <span className="rvo-content-item-date rvo-paragraph--subtle">5 december 2023</span>
                       </div>
                     </div>
@@ -447,18 +464,18 @@ const HomeLichtblauw = () => {
 
               <div className="rvo-cards">
                 <LayoutFlow gap="md">
-                  <h2 className="utrecht-heading-2">Uitgelicht</h2>
+                  <Heading type="h2">Uitgelicht</Heading>
                   <div className="rvo-cards-grid">
                     <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                       <div className="rvo-card-img-container">
                         <img src="images/www/socialfund.webp" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click">
                             Social Sustainability Fund
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                           Wilt u in uw internationale waardeketen de sociale duurzaamheid vergroten? Dat kan door
                           inkomens en arbeidsomstandigheden te verbeteren en kinderarbeid te bestrijden. Vraag nu
@@ -471,11 +488,11 @@ const HomeLichtblauw = () => {
                         <img src="images/www/besparen.jpeg" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click">
                             Energie besparen
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                           Energie besparen is belangrijk voor het klimaat en uw portemonnee. Bedrijven en organisaties
                           kunnen een forse bijdrage leveren. Doe ook mee en bespaar flink op uw energiekosten.
@@ -487,11 +504,11 @@ const HomeLichtblauw = () => {
                         <img src="images/www/beursbezoek.jpeg" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click">
                             Subsidie voor groen beursbezoek
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                           Om klimaatverandering tegen te gaan, is vergroening nodig. Daarom kunt u nu ook subsidie
                           aanvragen om mee te doen aan een handelsmissie of beurs, die zich hierop richt.
@@ -504,11 +521,11 @@ const HomeLichtblauw = () => {
                         <img src="images/www/lbv.png" className="rvo-card-img" />
                       </div>
                       <div className="rvo-card-content">
-                        <h3 className="utrecht-heading-3">
+                        <Heading type="h3">
                           <a href="#" className="rvo-link rvo-link--full-click">
                             Lbv en Lbv-plus actueel
                           </a>
-                        </h3>
+                        </Heading>
                         <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                           De Landelijke beëindigingsregeling veehouderijlocaties (Lbv) en de Lbv-plus zijn sinds 3 juli
                           2023 open voor aanvragen. We houden bij hoeveel veehouders een aanvraag hebben gedaan.
@@ -536,18 +553,18 @@ const HomeLichtblauw = () => {
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
               <LayoutFlow gap="md">
-                <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
+                <Heading type="h2">Blijf op de hoogte</Heading>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
                     <div className="rvo-card-img-container">
                       <img src="images/www/mobiel.webp" className="rvo-card-img" />
                     </div>
                     <div className="rvo-card-content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a href="#" className="rvo-link rvo-link--full-click">
                           Volg ons op social media
                         </a>
-                      </h3>
+                      </Heading>
                       <br />
                       <span className="rvo-rhs-update-component">
                         <Button kind="primary" size="sm">
@@ -559,26 +576,26 @@ const HomeLichtblauw = () => {
                   <div className="rvo-card rvo-card--w-link  rvo-card--md">
                     <div className="rvo-card-content">
                       <LayoutFlow gap="sm">
-                        <h2 className="utrecht-heading-2">Over ons</h2>
+                        <Heading type="h2">Over ons</Heading>
                         <LayoutFlow gap="md">
                           <div className="rvo-card-content-item">
                             <Icon icon="laptop" size="2xl"></Icon>
-                            <h3 className="utrecht-heading-3">
+                            <Heading type="h3">
                               <a href="#" className="rvo-link rvo-link--no-underline">
                                 Zaken regelen bij RVO
                               </a>
-                            </h3>
+                            </Heading>
                             <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                               Alles over inloggen, machtigen, uw persoonsgegevens en onze rekeningnummers.
                             </p>
                           </div>
                           <div className="rvo-card-content-item">
                             <Icon icon="vrouw-met-laptop" size="2xl"></Icon>
-                            <h3 className="utrecht-heading-3">
+                            <Heading type="h3">
                               <a href="#" className="rvo-link rvo-link--no-underline">
                                 Werken bij RVO
                               </a>
-                            </h3>
+                            </Heading>
                             <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                               Leer onze organisatie kennen en vind vacatures.
                             </p>
@@ -589,11 +606,11 @@ const HomeLichtblauw = () => {
                   </div>
                   <div className="rvo-card rvo-card--w-link rvo-card--md">
                     <div className="rvo-card-content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a href="#" className="rvo-link rvo-link--full-click">
                           Zo kunnen we oneindig recyclen met onze nieuwe persmachine
                         </a>
-                      </h3>
+                      </Heading>
                       <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                         Financiële steun van MIA\Vamil hielp bij ontwikkeling proces om snijafval met een pers te
                         verwerken tot nieuwe grondstoffen.
@@ -613,11 +630,11 @@ const HomeLichtblauw = () => {
                       <img src="images/www/nieuwsbrief.webp" className="rvo-card-img" />
                     </div>
                     <div className="rvo-card-content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a href="#" className="rvo-link rvo-link--full-click">
                           Blijf scherp met onze gratis, wekelijkse nieuwsbrief
                         </a>
-                      </h3>
+                      </Heading>
                       <br />
                       <span className="rvo-rhs-update-component">
                         <Button kind="primary" size="sm">

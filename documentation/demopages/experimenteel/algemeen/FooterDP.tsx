@@ -22,7 +22,7 @@ const FooterDP = () => {
         />
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading textContent="Footer demo page"></Heading>
+            <Heading type="h1">Footer demo page</Heading>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Eu nisl nunc mi ipsum faucibus. Tincidunt eget nullam non nisi est sit amet
@@ -65,7 +65,9 @@ const FooterDP = () => {
             <footer className="utrecht-page-footer rvo-footer rvo-footer--lg">
               <div className="rvo-footer-columns">
                 <div className="rvo-footer-column">
-                  <h3 className="utrecht-heading-3 rvo-footer-menu-title">Optionele extra lijst</h3>
+                  <Heading type="h3" className="rvo-footer__column-title">
+                    Optionele extra lijst
+                  </Heading>
                   <ul className="rvo-footer-menu">
                     <li className="rvo-footer-menu-item">
                       <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
@@ -110,7 +112,9 @@ const FooterDP = () => {
                   </ul>
                 </div>
                 <div className="rvo-footer-column">
-                  <h3 className="utrecht-heading-3 rvo-footer-menu-title">Optionele extra lijst</h3>
+                  <Heading type="h3" className="rvo-footer__column-title">
+                    Optionele extra lijst
+                  </Heading>
                   <ul className="rvo-footer-menu">
                     <li className="rvo-footer-menu-item">
                       <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
@@ -155,7 +159,9 @@ const FooterDP = () => {
                   </ul>
                 </div>
                 <div className="rvo-footer-column">
-                  <h3 className="utrecht-heading-3 rvo-footer-menu-title">Optionele extra lijst</h3>
+                  <Heading type="h3" className="rvo-footer__column-title">
+                    Optionele extra lijst
+                  </Heading>
                   <ul className="rvo-footer-menu">
                     <li className="rvo-footer-menu-item">
                       <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
@@ -200,7 +206,9 @@ const FooterDP = () => {
                   </ul>
                 </div>
                 <div className="rvo-footer-column">
-                  <h3 className="utrecht-heading-3 rvo-footer-menu-title">Optionele extra lijst</h3>
+                  <Heading type="h3" className="rvo-footer__column-title">
+                    Optionele extra lijst
+                  </Heading>
                   <ul className="rvo-footer-menu">
                     <li className="rvo-footer-menu-item">
                       <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">

@@ -1,4 +1,4 @@
-import { Header, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import '../../common/style.scss';
 
 const SubmenuGrid = () => {
@@ -38,7 +38,7 @@ const SubmenuGrid = () => {
         </div>
         <main className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-content">
-            <h1 className="utrecht-heading-1">Default submenu</h1>
+            <Heading type="h1">Default submenu</Heading>
             <p className="rvo-paragraph rvo-paragraph--md">
               A submenu is expanded when a user clicks on an expandable menu item which label is followed by a downwards
               chevron. The submenu expands in place not overlapping existing content.

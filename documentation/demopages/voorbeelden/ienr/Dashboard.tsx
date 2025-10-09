@@ -60,7 +60,6 @@ const Dashboard = () => {
             align: 'right',
             label: 'Boer Overveen B.V',
             link: '#',
-
             icon: 'user',
           },
         ]}
@@ -115,7 +114,9 @@ const Dashboard = () => {
               </Heading>
               <LayoutFlow gap="md">
                 <LayoutFlow gap="xs">
-                  <Heading type="h2" textContent="Geselecteerde locatie" noMargins={true} />
+                  <Heading type="h2" noMargins={true}>
+                    Geselecteerde locatie
+                  </Heading>
                   <LayoutFlow gap="md">
                     <Grid columns="two">
                       <dl className="rvo-data-list">
@@ -154,7 +155,9 @@ const Dashboard = () => {
                 <LayoutFlow gap="md">
                   <div className="rvo-heading-w-tag">
                     <LayoutFlow row={true}>
-                      <Heading type="h2" textContent="Diersoorten" noMargins={true}></Heading>
+                      <Heading type="h2" noMargins={true}>
+                        Diersoorten
+                      </Heading>
                       <Button kind="secondary" size="xs">
                         Diersoorten wijzigen
                       </Button>

@@ -132,7 +132,9 @@ const Notify = () => {
 
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--sm rvo-main--w-line">
           <div className="rvo-content--www rvo-content--notify">
-            <h1 className="utrecht-heading-1 rvo-heading--no-margins">ISDE: Stand van zaken budget</h1>
+            <Heading type="h1" noMargins>
+              ISDE: Stand van zaken budget
+            </Heading>
 
             <p className="rvo-text--xl">
               Wilt u weten hoeveel budget er nog beschikbaar is voor de Investeringssubsidie duurzame energie en
@@ -278,18 +280,20 @@ const Notify = () => {
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
               <LayoutFlow gap="md">
-                <h2 className="utrecht-heading-2">Blijf op de hoogte</h2>
+                <Heading type="h2" noMargins>
+                  Blijf op de hoogte
+                </Heading>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
                     <div className="rvo-card-img-container">
                       <img src="images/www/mobiel.webp" className="rvo-card-img" />
                     </div>
                     <div className="rvo-card-content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a href="#" className="rvo-link rvo-link--full-click">
                           Volg ons op social media
                         </a>
-                      </h3>
+                      </Heading>
                       <br />
                       <span className="rvo-rhs-update-component">
                         <Button kind="primary" size="sm">
@@ -301,26 +305,26 @@ const Notify = () => {
                   <div className="rvo-card rvo-card--w-link  rvo-card--md">
                     <div className="rvo-card-content">
                       <LayoutFlow gap="sm">
-                        <h2 className="utrecht-heading-2">Over ons</h2>
+                        <Heading type="h2">Over ons</Heading>
                         <LayoutFlow gap="md">
                           <div className="rvo-card-content-item">
                             <Icon icon="laptop" size="2xl"></Icon>
-                            <h3 className="utrecht-heading-3">
+                            <Heading type="h3">
                               <a href="#" className="rvo-link rvo-link--no-underline">
                                 Zaken regelen bij RVO
                               </a>
-                            </h3>
+                            </Heading>
                             <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                               Alles over inloggen, machtigen, uw persoonsgegevens en onze rekeningnummers.
                             </p>
                           </div>
                           <div className="rvo-card-content-item">
                             <Icon icon="vrouw-met-laptop" size="2xl"></Icon>
-                            <h3 className="utrecht-heading-3">
+                            <Heading type="h3">
                               <a href="#" className="rvo-link rvo-link--no-underline">
                                 Werken bij RVO
                               </a>
-                            </h3>
+                            </Heading>
                             <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                               Leer onze organisatie kennen en vind vacatures.
                             </p>
@@ -331,11 +335,11 @@ const Notify = () => {
                   </div>
                   <div className="rvo-card rvo-card--w-link rvo-card--md">
                     <div className="rvo-card-content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a href="#" className="rvo-link rvo-link--full-click">
                           Zo kunnen we oneindig recyclen met onze nieuwe persmachine
                         </a>
-                      </h3>
+                      </Heading>
                       <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--subtle">
                         Financiële steun van MIA\Vamil hielp bij ontwikkeling proces om snijafval met een pers te
                         verwerken tot nieuwe grondstoffen.
@@ -355,11 +359,11 @@ const Notify = () => {
                       <img src="images/www/nieuwsbrief.webp" className="rvo-card-img" />
                     </div>
                     <div className="rvo-card-content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a href="#" className="rvo-link rvo-link--full-click">
                           Blijf scherp met onze gratis, wekelijkse nieuwsbrief
                         </a>
-                      </h3>
+                      </Heading>
                       <br />
                       <span className="rvo-rhs-update-component">
                         <Button kind="primary" size="sm">

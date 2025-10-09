@@ -36,7 +36,7 @@ const Filters = () => {
               <LayoutFlow gap="xl">
                 <MaxWidthLayout size="sm">
                   <div className="rvo-intro">
-                    <Heading type="h1" textContent="Milieu- en Energielijst 2022"></Heading>
+                    <Heading type="h1">Milieu- en Energielijst 2022</Heading>
                     <p>
                       De Energielijst van de regeling Energie-investeringsaftrek (EIA) wordt ieder jaar geactualiseerd.
                       Er komen bedrijfsmiddelen bij, er gaan er enkele vanaf. En soms worden technische eisen
@@ -427,8 +427,8 @@ const Filters = () => {
           <footer className="rvo-footer">
             <MaxWidthLayout size="lg">
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="RVO"></Heading>
+                <li className="rvo-footer__column-title">
+                  <Heading type="h3">RVO</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -448,8 +448,8 @@ const Filters = () => {
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="Over deze site"></Heading>
+                <li className="rvo-footer__column-title">
+                  <Heading type="h3">Over deze site</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -469,8 +469,8 @@ const Filters = () => {
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="Snel naar"></Heading>
+                <li className="rvo-footer__column-title">
+                  <Heading type="h3">Snel naar</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />
@@ -490,8 +490,8 @@ const Filters = () => {
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
-                  <Heading type="h3" textContent="Blijf op de hoogte"></Heading>
+                <li className="rvo-footer__column-title">
+                  <Heading type="h3">Blijf op de hoogte</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
                   <Icon icon="delta-naar-rechts" color="wit" size="sm" />

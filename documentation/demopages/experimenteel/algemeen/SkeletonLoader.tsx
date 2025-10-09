@@ -98,7 +98,7 @@ const SkeletonLoader = (props: ISkeletonLoaderProps) => {
   return (
     <div className="rvo-demo-page rvo-loading-demopage">
       <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
-        <Heading textContent="Skeleton demo page"></Heading>
+        <Heading type="h1">Skeleton demo page</Heading>
         <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--md ">
           Dit is een experimentele demopagina om het Skeleton component te testen. Dit component is één van de kleinste
           bouwblokken in ROOS en de werking van dit component wordt daarom met behulp van een skeleton loader

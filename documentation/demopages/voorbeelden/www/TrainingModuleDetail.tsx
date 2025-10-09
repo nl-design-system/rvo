@@ -52,9 +52,9 @@ const TrainingModuleDetail = () => {
             />
           </div>
           <div className="rvo-hero__content">
-            <h1 className="rvo-hero__title utrecht-heading-1 rvo-heading--no-margins">
+            <Heading type="h1" className="rvo-hero__title" noMargins>
               Internationaal Maatschappelijk Verantwoord Ondernemen
-            </h1>
+            </Heading>
           </div>
         </div>
         <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
@@ -157,7 +157,7 @@ const TrainingModuleDetail = () => {
         <div className="rvo-margin-block-start--md rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <div className="rvo-card rvo-card--padding-lg rvo-card--full-colour--grijs-100">
             <div className="rvo-card__content">
-              <h3 className="utrecht-heading-3">Handige hulpmiddelen</h3>
+              <Heading type="h3">Handige hulpmiddelen</Heading>
               <ul className="">
                 <li>
                   Verschillende bedrijven in de voedingsmiddelensector werkten samen aan de verduurzaming van hun
@@ -198,7 +198,7 @@ const TrainingModuleDetail = () => {
         <div className="rvo-margin-block-start--md rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <div className="rvo-card rvo-card--padding-lg rvo-card--outline">
             <div className="rvo-card__content">
-              <h3 className="utrecht-heading-3">Huiswerk opdracht</h3>
+              <Heading type="h3">Huiswerk opdracht</Heading>
               <p className="rvo-paragraph rvo-paragraph--no-margins">
                 Na deze opdracht heb je duidelijk in beeld in welke mate IMVO een rol speelt in jouw bedrijf.
               </p>
