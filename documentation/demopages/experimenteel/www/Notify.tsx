@@ -280,7 +280,9 @@ const Notify = () => {
           <MaxWidthLayout size="lg">
             <div className="rvo-cards">
               <LayoutFlow gap="md">
-                <Heading type="h2">Blijf op de hoogte</Heading>
+                <Heading type="h2" noMargins>
+                  Blijf op de hoogte
+                </Heading>
                 <div className="rvo-cards-grid">
                   <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
                     <div className="rvo-card-img-container">

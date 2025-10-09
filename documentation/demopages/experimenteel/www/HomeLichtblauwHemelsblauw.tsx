@@ -1,4 +1,15 @@
-import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Hero,
+  Icon,
+  LayoutFlow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+} from '@nl-rvo/components';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -111,16 +122,12 @@ const Home = () => {
             horizontalRule={false}
           />
         </div>
-        <div className="rvo-hero rvo-max-width-layout--lg">
-          <div className="rvo-hero-image">
-            <img src="images/www/home.jpg" className="rvo-hero-img" />
-          </div>
-          <Heading type="h1">
-            {' '}
-            Rijksdienst voor Ondernemend Nederland
-            <span className="rvo-heading-subtitle">Wij helpen u graag vooruit!</span>
-          </Heading>
-        </div>
+        <Hero
+          image={{ src: 'images/www/home.jpg', alt: 'Hero image' }}
+          title="Rijksdienst voor Ondernemend Nederland"
+          subtitle="Wij helpen u graag vooruit!"
+          size="lg"
+        />
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-content--www rvo-content--home">
             <LayoutFlow gap="xl">

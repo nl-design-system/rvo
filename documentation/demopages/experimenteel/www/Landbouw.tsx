@@ -1,4 +1,15 @@
-import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Hero,
+  Icon,
+  LayoutFlow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+} from '@nl-rvo/components';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -110,18 +121,13 @@ const Landbouw = () => {
             maxWidth="lg"
           />
         </div>
-        <div className="rvo-hero rvo-max-width-layout--lg">
-          <div className="rvo-hero-image">
-            <img src="images/www/landbouw.jpg" className="rvo-hero-img" />
-          </div>
-          <Heading type="h1">
-            Landbouw
-            <span className="rvo-heading-subtitle">
-              Alles over mest, GLB, uw percelen en dieren. Welke regels en subsidies zijn er? We maken u graag wegwijs
-              in alle mogelijkheden.
-            </span>
-          </Heading>
-        </div>
+        <Hero
+          image={{ src: 'images/www/landbouw.jpg', alt: 'Hero image' }}
+          title="Landbouw"
+          subtitle=" Alles over mest, GLB, uw percelen en dieren. Welke regels en subsidies zijn er? We maken u graag wegwijs
+              in alle mogelijkheden."
+          size="lg"
+        />
         <main className="rvo-main--www rvo-max-width-layout rvo-max-width-layout--lg rvo-main--w-line">
           <div className="rvo-content--www rvo-content--home">
             <LayoutFlow gap="xl">

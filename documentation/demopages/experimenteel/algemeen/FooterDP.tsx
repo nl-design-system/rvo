@@ -65,7 +65,7 @@ const FooterDP = () => {
             <footer className="utrecht-page-footer rvo-footer rvo-footer--lg">
               <div className="rvo-footer-columns">
                 <div className="rvo-footer-column">
-                  <Heading type="h3" className="rvo-footer-menu-title">
+                  <Heading type="h3" className="rvo-footer__column-title">
                     Optionele extra lijst
                   </Heading>
                   <ul className="rvo-footer-menu">
@@ -112,7 +112,7 @@ const FooterDP = () => {
                   </ul>
                 </div>
                 <div className="rvo-footer-column">
-                  <Heading type="h3" className="rvo-footer-menu-title">
+                  <Heading type="h3" className="rvo-footer__column-title">
                     Optionele extra lijst
                   </Heading>
                   <ul className="rvo-footer-menu">
@@ -159,7 +159,7 @@ const FooterDP = () => {
                   </ul>
                 </div>
                 <div className="rvo-footer-column">
-                  <Heading type="h3" className="rvo-footer-menu-title">
+                  <Heading type="h3" className="rvo-footer__column-title">
                     Optionele extra lijst
                   </Heading>
                   <ul className="rvo-footer-menu">
@@ -206,7 +206,7 @@ const FooterDP = () => {
                   </ul>
                 </div>
                 <div className="rvo-footer-column">
-                  <Heading type="h3" className="rvo-footer-menu-title">
+                  <Heading type="h3" className="rvo-footer__column-title">
                     Optionele extra lijst
                   </Heading>
                   <ul className="rvo-footer-menu">

@@ -122,8 +122,9 @@ const Stallijst = () => {
                   </Button>
                 </LayoutFlow>
                 <Heading type="h2" noMargins fontWeightNormal>
-                  Er zijn &nbsp;
+                  Er zijn
                   <span className="rvo-text--bold">6</span>
+                  runderen geregisteerd
                 </Heading>
               </div>
               <div className="rvo-accordion">

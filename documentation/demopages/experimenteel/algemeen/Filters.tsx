@@ -427,7 +427,7 @@ const Filters = () => {
           <footer className="rvo-footer">
             <MaxWidthLayout size="lg">
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
+                <li className="rvo-footer__column-title">
                   <Heading type="h3">RVO</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
@@ -448,7 +448,7 @@ const Filters = () => {
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
+                <li className="rvo-footer__column-title">
                   <Heading type="h3">Over deze site</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
@@ -469,7 +469,7 @@ const Filters = () => {
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
+                <li className="rvo-footer__column-title">
                   <Heading type="h3">Snel naar</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">
@@ -490,7 +490,7 @@ const Filters = () => {
                 </li>
               </ul>
               <ul className="rvo-footer-menu">
-                <li className="rvo-footer-menu-title">
+                <li className="rvo-footer__column-title">
                   <Heading type="h3">Blijf op de hoogte</Heading>
                 </li>
                 <li className="rvo-footer-menu-item">

@@ -296,7 +296,7 @@ const Home = () => {
 
         <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--two rvo-margin-block-start--3xl rvo-margin-block-end--3xl">
           <div className="">
-            <Heading type="h2" textContent="Evenementen" />
+            <Heading type="h2">Evenementen</Heading>
             <div className="rvo-layout-grid rvo-layout-gap--md">
               <div className="rvo-content-item">
                 <Heading type="h3" noMargins>
@@ -337,7 +337,7 @@ const Home = () => {
           </div>
 
           <div className="">
-            <Heading type="h2" textContent="Nieuws" />
+            <Heading type="h2">Nieuws</Heading>
             <div className="rvo-layout-grid rvo-layout-gap--md">
               <div className="rvo-content-item">
                 <Heading type="h3" noMargins>
