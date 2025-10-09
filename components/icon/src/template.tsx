@@ -12,13 +12,13 @@ import './index.scss';
 export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   icon: IconType;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
-  color?: '' | 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700' | 'logoblauw';
+  color?: '' | 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700' | 'lintblauw';
   className?: string;
   ariaLabel?: string;
   onClick?: (event: React.MouseEvent) => void;
 }
 
-export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700', 'logoblauw'];
+export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700', 'lintblauw'];
 
 export const toProperCase = (inputString: string) =>
   inputString
@@ -87,7 +87,7 @@ export const Icon: React.FC<IIconProps> = ({
         {
           'rvo-icon--hemelblauw': color === 'hemelblauw',
           'rvo-icon--donkerblauw': color === 'donkerblauw',
-          'rvo-icon--logoblauw': color === 'logoblauw',
+          'rvo-icon--lintblauw': color === 'lintblauw',
           'rvo-icon--wit': color === 'wit',
           'rvo-icon--zwart': color === 'zwart',
           'rvo-icon--grijs-700': color === 'grijs-700',

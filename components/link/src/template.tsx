@@ -25,13 +25,13 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   /** @uxpinignoreprop */
   content?: string;
   href?: string;
-  color?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
+  color?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
   weight?: 'normal' | 'bold';
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconSize?: 'sm' | 'md';
-  iconColor?: 'hemelblauw' | 'donkerblauw' | 'logoblauw' | 'wit' | 'zwart' | 'grijs-700';
+  iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconAriaLabel?: string;
   role?: string;
   hover?: boolean;
@@ -57,7 +57,7 @@ export const argTypes = {
   },
   color: {
     control: { type: 'select' },
-    options: ['hemelblauw', 'donkerblauw', 'logoblauw', 'wit', 'zwart', 'grijs-700'],
+    options: ['hemelblauw', 'donkerblauw', 'lintblauw', 'wit', 'zwart', 'grijs-700'],
   },
   weight: {
     control: { type: 'select' },
@@ -155,7 +155,7 @@ export const Link: React.FC<ILinkProps> = ({
       showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
       color === 'donkerblauw' && 'rvo-link--donkerblauw',
-      color === 'logoblauw' && 'rvo-link--logoblauw',
+      color === 'lintblauw' && 'rvo-link--lintblauw',
       color === 'wit' && 'rvo-link--wit',
       color === 'zwart' && 'rvo-link--zwart',
       color === 'grijs-700' && 'rvo-link--grijs-700',

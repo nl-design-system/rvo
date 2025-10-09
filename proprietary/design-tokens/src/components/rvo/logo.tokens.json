@@ -4,7 +4,7 @@
       "font-family": { "value": "{rvo.font.sans-serif.font-family}" },
       "font-size": { "value": "{rvo.size.md}" },
       "font-weight": { "value": "{rvo.font-weight.semibold}" },
-      "color": { "value": "{rvo.color.logoblauw}" },
+      "color": { "value": "{rvo.color.lintblauw}" },
       "emblem": {
         "background-color": { "value": "#154273" },
         "color": { "value": "{rvo.color.wit}" }

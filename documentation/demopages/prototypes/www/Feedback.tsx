@@ -484,7 +484,7 @@ const Feedback = () => {
                       paddingBottom: '2px',
                       borderBottom:
                         hoveredStar >= star || selectedStar >= star
-                          ? '3px solid var(--rvo-color-logoblauw, #007BC7)'
+                          ? '3px solid var(--rvo-color-lintblauw, #007BC7)'
                           : '3px solid transparent',
                       marginRight: idx < 4 ? '0' : '0', // geen ruimte tussen borders
                       borderRight: idx < 4 ? 'none' : undefined, // geen border tussen sterren

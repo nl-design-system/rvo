@@ -9,8 +9,8 @@
 }
 
 .rvo-lichtblauw {
-  --rvo-color-hemelblauw: var(--rvo-color-logoblauw);
-  --rvo-color-donkerblauw: var(--rvo-color-logoblauw);
+  --rvo-color-hemelblauw: var(--rvo-color-lintblauw);
+  --rvo-color-donkerblauw: var(--rvo-color-lintblauw);
 
   .utrecht-page-footer,
   .rvo-footer-bg,
@@ -18,23 +18,23 @@
   .rvo-rhs-update .rvo-card.rvo-card--full-colour.rvo-card--hemelblauw,
   .utrecht-button--primary-action {
     background-color: var(--rvo-color-lichtblauw);
-    color: var(--rvo-color-logoblauw);
+    color: var(--rvo-color-lintblauw);
 
     a,
     a:hover,
     a:focus,
     h3.rvo-footer-menu-title {
-      color: var(--rvo-color-logoblauw) !important;
+      color: var(--rvo-color-lintblauw) !important;
     }
 
     .rvo-icon {
-      background-color: var(--rvo-color-logoblauw);
+      background-color: var(--rvo-color-lintblauw);
     }
   }
 
   .rvo-rhs-update .rvo-hero .rvo-hero__title,
   .rvo-rhs-update .rvo-hero .rvo-hero__subtitle {
-    color: var(--rvo-color-logoblauw);
+    color: var(--rvo-color-lintblauw);
   }
 }
 
@@ -46,28 +46,28 @@
   .utrecht-button--primary-action {
     background-color: var(--rvo-color-lichtblauw);
     border-color: var(--rvo-color-lichtblauw);
-    color: var(--rvo-color-logoblauw);
+    color: var(--rvo-color-lintblauw);
 
     a,
     a:hover,
     a:focus,
     h3.rvo-footer-menu-title {
-      color: var(--rvo-color-logoblauw) !important;
+      color: var(--rvo-color-lintblauw) !important;
     }
 
     .rvo-icon {
-      background-color: var(--rvo-color-logoblauw);
+      background-color: var(--rvo-color-lintblauw);
     }
   }
 
   .rvo-rhs-update .rvo-hero .rvo-hero__title,
   .rvo-rhs-update .rvo-hero .rvo-hero__subtitle {
-    color: var(--rvo-color-logoblauw);
+    color: var(--rvo-color-lintblauw);
   }
 }
 
 .rvo-www {
-  --rvo-color-zwart: var(--rvo-color-logoblauw);
+  --rvo-color-zwart: var(--rvo-color-lintblauw);
 
   margin-block-end: 0;
   margin-block-start: 0;

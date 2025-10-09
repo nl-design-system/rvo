@@ -24,11 +24,11 @@ export const Zwart = {
   },
 };
 
-export const Logoblauw = {
+export const lintblauw = {
   render: Paragraph.bind({}),
-  name: 'Logoblauw',
+  name: 'lintblauw',
   args: {
-    color: 'logoblauw',
+    color: 'lintblauw',
   },
 };
 

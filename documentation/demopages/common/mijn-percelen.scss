@@ -331,7 +331,7 @@
 
   .rvo-fake-checkbox summary::before {
     background-color: var(--rvo-color-wit);
-    border: 1px solid var(--rvo-color-logoblauw);
+    border: 1px solid var(--rvo-color-lintblauw);
     border-radius: var(--rvo-border-radius-sm);
     content: "";
     display: block;
@@ -340,7 +340,7 @@
   }
 
   .rvo-fake-checkbox[open] summary::after {
-    background-color: var(--rvo-color-logoblauw);
+    background-color: var(--rvo-color-lintblauw);
     border-radius: var(--rvo-border-radius-sm);
     content: "";
     display: block;

@@ -64,6 +64,6 @@ export const defaultArgs: IMenuBarProps = {
   iconPlacement: 'before',
   maxWidth: 'none',
   horizontalRule: true,
-  linkColor: 'logoblauw',
+  linkColor: 'lintblauw',
   grid: true,
 };
