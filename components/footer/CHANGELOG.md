@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.6.0
+
+### Minor Changes
+
+- 6342755: Updated the Heading component inside these components
+
 ## 1.5.3
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.6.0
+
+### Minor Changes
+
+- c8632e5: Rename dialog drawer-right/left to position-right/left.
+  Introduced new CSS variables (`--rvo-dialog-background`, etc.) for improved customization.
+
 ## 1.5.0
 
 ### Minor Changes

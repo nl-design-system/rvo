@@ -1,5 +1,11 @@
 # `@nl-rvo/css-heading`
 
+## 2.0.0
+
+### Major Changes
+
+- 6342755: Heading Component code cleaned up. Removed build-in options for icons and link. Rvo-icons are still supported through styling
+
 ## 1.2.0
 
 ### Minor Changes
