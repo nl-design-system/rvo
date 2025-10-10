@@ -1,5 +1,23 @@
 # @nl-rvo/component-library-css
 
+## 4.12.0
+
+### Minor Changes
+
+- 7e1657d: Improve chevron position for accordion.
+- f8b37b0: Improve breadcrumb alignment by adding flex wrap and introduce new CSS variables for better customization.
+- 15586ac: Add missing form-textarea component to support `utrecht-textarea` class
+- 064091a: Rename position-right and -left to inset-inline-end and -start.
+- 6342755: Heading Component code cleaned up. Removed build-in options for icons and link. Rvo-icons are still supported through styling
+- e6f04fe: Added `grijs-900` as a color option for the `paragraph` component.
+  Introduced new CSS variables (`--rvo-paragraph-color`, etc.) for improved customization.
+- c8632e5: Rename dialog drawer-right/left to position-right/left.
+  Introduced new CSS variables (`--rvo-dialog-background`, etc.) for improved customization.
+- da7c279: Add utilities components and improve index.scss for readability.
+- 540d0f8: Changed default card padding to 0.
+  Introduced new CSS variables for cards to improve customization.
+- ad25307: Remove text-shadow on active menubar\_\_links.
+
 ## 4.11.1
 
 ### Patch Changes

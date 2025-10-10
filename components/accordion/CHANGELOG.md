@@ -1,5 +1,12 @@
 # `@nl-rvo/css-accordion`
 
+## 1.2.0
+
+### Minor Changes
+
+- 7e1657d: Improve chevron position for accordion.
+- 6342755: Updated the Heading component inside these components
+
 ## 1.1.0
 
 ### Minor Changes
