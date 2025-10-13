@@ -49,8 +49,8 @@
     "@nl-rvo/design-tokens": "workspace:*",
     "clsx": "2.1.0",
     "prism-react-renderer": "2.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "sass-embedded": "1.81.0",
     "sass-loader": "16.0.3",
     "typescript": "5.5.2"
