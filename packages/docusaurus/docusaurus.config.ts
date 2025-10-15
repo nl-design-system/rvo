@@ -67,7 +67,7 @@ const config: Config = {
             require.resolve('@nl-rvo/assets/icons/index.css'),
             require.resolve('@nl-rvo/assets/images/index.css'),
             require.resolve('@nl-rvo/design-tokens/dist/index.css'),
-            require.resolve('./src/css/custom.scss'),
+            require.resolve('./src/css/custom.min.css'),
           ],
         },
       } satisfies Preset.Options,

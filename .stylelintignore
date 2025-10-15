@@ -10,3 +10,4 @@ tmp
 
 # Ignore minified files
 *.min.js
+*.min.css
