@@ -12,7 +12,7 @@
 }
 
 .rvo-ul--icon li {
-  align-items: center;
+  align-items: start;
   display: flex;
   list-style-type: none;
 
@@ -21,6 +21,7 @@
     content: "";
     display: inline-block;
     height: var(--rvo-list-icon-size);
+    margin-block-start: var(--rvo-list-icon-size);
     margin-inline-end: var(--rvo-list-icon-gap);
     min-width: var(--rvo-list-icon-size);
     width: var(--rvo-list-icon-size);
