@@ -25,16 +25,13 @@ addons.register('docusaurus', () => {
 
       return (
         <IconButton
-          href={url}
-          target="_blank"
-          content={undefined}
-          autoFocus={undefined}
-          rel={undefined}
-          rev={undefined}
-          placeholder={undefined}
-          title="Open documentatie in Docusaurus"
+          {...({
+            href: url,
+            target: '_blank',
+            title: 'Open documentatie in Docusaurus',
+          } as any)}
         >
-          <Icons icon="document" style={{ width: '12px' }} />
+          <Icons icon="document" style={{ width: 12 }} />
         </IconButton>
       );
     },
