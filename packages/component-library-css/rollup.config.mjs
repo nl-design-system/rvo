@@ -10,7 +10,11 @@ const repoRoot = path.resolve(__dirname, '..', '..');
 
 // Read and parse @use statements from index.scss
 const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
-const useStatements = indexContent
+const useStatementsComponent = [];
+const useStatementsUtil = [];
+
+// Map imported css files
+indexContent
   .split('\n')
   .filter((line) => line.trim().startsWith('@use'))
   .map((line) => {
@@ -21,13 +25,17 @@ const useStatements = indexContent
   .map((componentPath) => {
     // Convert paths like "../../../components/accordion/src" to just "accordion"
     const parts = componentPath.split('/');
-    const componentIndex = parts.indexOf('components');
-    return componentIndex !== -1 ? parts[componentIndex + 1] : null;
-  })
-  .filter(Boolean);
+
+    // Util CSS
+    if (parts[0].indexOf('utility-') >= 0) {
+      useStatementsUtil.push(parts[0]);
+    }
+
+    if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
+  });
 
 // Create individual component configurations
-const componentBundles = useStatements.flatMap((component) => [
+const componentBundles = useStatementsComponent.flatMap((component) => [
   {
     input: `${repoRoot}/components/${component}/src/index.scss`,
     output: {
@@ -111,6 +119,26 @@ const mainBundles = [
   },
 ];
 
+// Util bundle configuration
+const utilBundle = useStatementsUtil.flatMap((utilitie) => [
+  {
+    input: `${repoRoot}/utilities/${utilitie}/src/index.scss`,
+    output: {
+      file: `dist/utilities/${utilitie}.css`,
+      format: 'es',
+      sourcemap: true,
+    },
+    plugins: [
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: true,
+        minimize: false,
+      }),
+      filesize(),
+    ],
+  },
+]);
+
 // Base bundle configuration
 const baseBundles = [
   {
@@ -152,4 +180,4 @@ const baseBundles = [
   },
 ];
 
-export default [...mainBundles, ...componentBundles, ...baseBundles];
+export default [...mainBundles, ...componentBundles, ...utilBundle, ...baseBundles];
