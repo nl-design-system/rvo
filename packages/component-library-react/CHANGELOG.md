@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 5.7.1
+
+### Patch Changes
+
+- 05af765: Update css rollup
+
 ## 5.7.0
 
 ### Minor Changes
