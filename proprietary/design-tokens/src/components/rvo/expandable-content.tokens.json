@@ -4,7 +4,7 @@
       "padding-block-end": { "value": "0" },
       "padding-block-start": { "value": "0" },
       "summary": {
-        "color": { "value": "{rvo.color.logoblauw}" },
+        "color": { "value": "{rvo.color.lintblauw}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" },
         "gap": { "value": "{rvo.space.2xs}" },
         "line-height": { "value": "{rvo.line-height.md}" },

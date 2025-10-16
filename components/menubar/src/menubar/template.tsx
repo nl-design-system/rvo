@@ -33,7 +33,7 @@ export interface IMenuBarProps {
   /** @uxpinpropname MenuBar items */
   children?: ReactNode | undefined;
   horizontalRule?: boolean;
-  linkColor?: 'donkerblauw' | 'hemelblauw' | 'logoblauw' | 'grijs-700' | 'zwart';
+  linkColor?: 'donkerblauw' | 'hemelblauw' | 'lintblauw' | 'grijs-700' | 'zwart';
   useBackgroundColor?: boolean;
   grid?: boolean;
 }

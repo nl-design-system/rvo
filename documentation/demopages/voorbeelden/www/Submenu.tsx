@@ -24,12 +24,12 @@ const Submenu = () => {
             <nav className="rvo-topnav rvo-topnav--lg">
               <ul className="rvo-topnav__list">
                 <li className="rvo-topnav__item rvo-topnav__item--active">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Home
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Onderwerpen
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--xs rvo-icon--wit"
@@ -39,22 +39,22 @@ const Submenu = () => {
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Subsidie- en financieringswijzer
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Over ons
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Contact
                   </a>
                 </li>
                 <li className="rvo-topnav__item rvo-topnav__item--active rvo-topnav__item--align-right">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-user rvo-icon--lg rvo-icon--wit"
                       role="img"
@@ -64,7 +64,7 @@ const Submenu = () => {
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-wereldbol rvo-icon--lg rvo-icon--wit"
                       role="img"
@@ -74,7 +74,7 @@ const Submenu = () => {
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     <span
                       className="utrecht-icon rvo-icon rvo-icon-zoek rvo-icon--lg rvo-icon--wit"
                       role="img"
@@ -89,7 +89,7 @@ const Submenu = () => {
               <nav className="rvo-topnav rvo-topnav--md">
                 <ul className="rvo-topnav__list">
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-blad-met-wereldbol rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -99,7 +99,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-grootstedelijk rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -109,7 +109,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-buitenlandse-handel rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -119,7 +119,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-wereldbol-tussen-2-uitgestoken-handen rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -129,7 +129,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-tractor rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -139,7 +139,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-vis rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -149,7 +149,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-eend-zwemmend-bij-riet rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -159,7 +159,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-lamp rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -169,7 +169,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-grafiek rvo-icon--xl rvo-icon--wit"
                         role="img"
@@ -179,7 +179,7 @@ const Submenu = () => {
                     </a>
                   </li>
                   <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                       <span
                         className="utrecht-icon rvo-icon rvo-icon-stethoscoop rvo-icon--xl rvo-icon--wit"
                         role="img"

@@ -106,7 +106,7 @@ const DocumentenZaak = () => {
                           <LayoutFlow row={true} alignItems="end">
                             {/* <TextInputField label="Beschikking"></TextInputField> */}
                             <a
-                              className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--logoblauw"
+                              className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--lintblauw"
                               href="#"
                             >
                               <span

@@ -244,11 +244,11 @@ const SIBstartpagina = () => {
               <Alert kind="info">
                 Extra toelichting bij vragen vindt u in het informatie icoon bij de vraag en in toelichtende teksten in
                 het formulier. Informatie over de regeling leest u op{' '}
-                <a href="#" className="rvo-link rvo-link--logoblauw">
+                <a href="#" className="rvo-link rvo-link--lintblauw">
                   de website
                 </a>{' '}
                 Heeft u vragen? Bel met RVO via{' '}
-                <a href="tel:088 042 42 42" className="rvo-link rvo-link--logoblauw">
+                <a href="tel:088 042 42 42" className="rvo-link rvo-link--lintblauw">
                   088 042 42 42
                 </a>
               </Alert>

@@ -13,7 +13,7 @@ export interface IParagraphProps extends Omit<React.HTMLAttributes<HTMLParagraph
   content?: string | React.ReactNode;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
-  color?: 'logoblauw' | 'wit' | 'zwart' | 'grijs-500' | 'grijs-900';
+  color?: 'lintblauw' | 'wit' | 'zwart' | 'grijs-500' | 'grijs-900';
   size?: 'sm' | 'md' | 'lg';
   noSpacing?: boolean;
 }
@@ -24,7 +24,7 @@ export const argTypes = {
   },
   color: {
     control: { type: 'select' },
-    options: ['logoblauw', 'wit', 'zwart', 'grijs-500', 'grijs-900'],
+    options: ['lintblauw', 'wit', 'zwart', 'grijs-500', 'grijs-900'],
   },
   size: {
     control: { type: 'select' },

@@ -196,7 +196,7 @@ const ZaakClean = () => {
                                       <br />
                                       Ontbreekt er een document en wordt dit niet bijgewerkt binnen [tijd]? Neem dan
                                       contact op met onze{' '}
-                                      <a href="#" className="rvo-link rvo-link--logoblauw">
+                                      <a href="#" className="rvo-link rvo-link--lintblauw">
                                         klantenservice
                                       </a>
                                       .
