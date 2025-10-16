@@ -24,9 +24,9 @@ export const Zwart = {
   },
 };
 
-export const lintblauw = {
+export const Lintblauw = {
   render: Paragraph.bind({}),
-  name: 'lintblauw',
+  name: 'Lintblauw',
   args: {
     color: 'lintblauw',
   },

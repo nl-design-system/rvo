@@ -337,7 +337,7 @@
 
 ### Minor Changes
 
-- 9fffd1e: Create a new component called called Checkbox Filter. Updated icon to support lintblauw color and form-checkbox-group to have a onChange parameter.
+- 9fffd1e: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
 
 ### Patch Changes
 
@@ -347,7 +347,7 @@
 
 ### Minor Changes
 
-- 6284f7a: Create a new component called called Checkbox Filter. Updated icon to support lintblauw color and form-checkbox-group to have a onChange parameter.
+- 6284f7a: Create a new component called called Checkbox Filter. Updated icon to support logoblauw color and form-checkbox-group to have a onChange parameter.
 
 ## 4.2.1
 
