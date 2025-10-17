@@ -1,11 +1,35 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultArgs } from './src/defaultArgs';
 import { Label } from './src/template';
+
+const argTypes = {
+  small: {
+    control: { type: 'boolean' },
+  },
+  type: {
+    options: ['none', 'optional', 'required'],
+    control: { type: 'select' },
+  },
+  id: {
+    table: {
+      disable: true,
+    },
+  },
+  htmlFor: {
+    table: {
+      disable: true,
+    },
+  },
+  parameters: {
+    table: {
+      disable: true,
+    },
+  },
+};
 
 const meta: Meta<typeof Label> = {
   title: 'Componenten/Label',
   component: Label,
-  args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -19,4 +43,7 @@ export default meta;
 
 type Story = StoryObj<typeof Label>;
 
-export const Default: Story = { args: defaultArgs, name: 'Label' };
+export const Default: Story = {
+  name: 'Label',
+  render: (args) => <Label {...args}>Field label</Label>,
+};

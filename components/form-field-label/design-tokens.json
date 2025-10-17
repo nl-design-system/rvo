@@ -33,19 +33,7 @@
           }
         }
       },
-      "optional": {
-        "color": {
-          "css": {
-            "syntax": "<color>",
-            "inherits": true
-          }
-        },
-        "content": {
-          "css": {
-            "syntax": "<string>",
-            "inherits": true
-          }
-        },
+      "after-field": {
         "font-size": {
           "css": {
             "syntax": "<length>",
@@ -59,28 +47,18 @@
           }
         }
       },
-      "required": {
-        "color": {
-          "css": {
-            "syntax": "<color>",
-            "inherits": true
-          }
-        },
+      "optional": {
         "content": {
           "css": {
             "syntax": "<string>",
             "inherits": true
           }
-        },
-        "font-size": {
+        }
+      },
+      "required": {
+        "content": {
           "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "font-weight": {
-          "css": {
-            "syntax": "<*>",
+            "syntax": "<string>",
             "inherits": true
           }
         }

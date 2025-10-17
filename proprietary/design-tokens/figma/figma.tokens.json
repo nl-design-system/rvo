@@ -1977,11 +1977,7 @@
             "$value": "{rvo.font-weight.normal}"
           }
         },
-        "optional": {
-          "color": {},
-          "content": {
-            "$value": "' (niet verplicht)'"
-          },
+        "after-field": {
           "font-size": {
             "$value": "{rvo.font-size.xs}"
           },
@@ -1989,18 +1985,14 @@
             "$value": "{rvo.font-weight.normal}"
           }
         },
-        "required": {
-          "color": {
-            "$value": "{rvo.color.rood}"
-          },
+        "optional": {
           "content": {
-            "$value": "' *'"
-          },
-          "font-size": {
-            "$value": "{rvo.font-size.xs}"
-          },
-          "font-weight": {
-            "$value": "{rvo.font-weight.normal}"
+            "$value": "' (niet verplicht)'"
+          }
+        },
+        "required": {
+          "content": {
+            "$value": "' (verplicht)'"
           }
         }
       }
