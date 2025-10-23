@@ -43,7 +43,9 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
         {children}
       </div>
       <div className={clsx(styles.infoContainer, 'rvo-layout-row')}>
-        <ExpandableContent title="Voorbeeld HTML" content={<CodeBlock language="html">{html}</CodeBlock>} />
+        <ExpandableContent title="Voorbeeld HTML">
+          <CodeBlock language="html">{html}</CodeBlock>
+        </ExpandableContent>
         {storyName && (
           <Link
             className={styles.openInNewTabLink}
