@@ -1,0 +1,45 @@
+---
+id: image
+title: Image
+description: Displays images responsively with optional rounded corners, captions, and performance controls.
+sidebar_label: Image
+---
+
+import { Image } from "./src/template";
+
+## Image
+
+The **Image** component displays responsive and accessible images with optional captions and design-token–driven corner rounding.
+
+Use this component whenever you display content imagery, hero banners, or illustrations that are part of the page content.
+
+---
+
+## Props
+
+| Prop            | Type                                                                                        | Default  | Description                                                            |
+| --------------- | ------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------------- |
+| `src`           | `string`                                                                                    | —        | The image source URL. **Required.**                                    |
+| `alt`           | `string`                                                                                    | —        | **Required for accessibility.** Descriptive alternative text.          |
+| `caption`       | `string`                                                                                    | —        | Optional caption displayed below the image.                            |
+| `radius`        | `'none'` \| `'all'` \| `'top-left'` \| `'top-right'` \| `'bottom-left'` \| `'bottom-right'` | `'none'` | Controls which corners are rounded.                                    |
+| `radiusSize`    | `'sm'` \| `'md'` \| `'lg'` \| `'xl'` \| `'2xl'`                                             | `'2xl'`  | Defines the rounding size. Ignored if `radius="none"`.                 |
+| `loading`       | `'lazy'` \| `'eager'`                                                                       | —        | Optional loading mode. Omitted unless explicitly set.                  |
+| `decoding`      | `'async'` \| `'sync'` \| `'auto'`                                                           | —        | Optional decoding strategy. Omitted unless explicitly set.             |
+| `fetchPriority` | `'high'` \| `'low'` \| `'auto'`                                                             | —        | Optional browser fetch priority hint. Omitted unless explicitly set.   |
+| `sources`       | `Array<{ srcSet: string, type?: string, media?: string }>`                                  | `[]`     | Optional responsive `<source>` definitions for use within `<picture>`. |
+| `className`     | `string`                                                                                    | —        | Optional custom class name for advanced styling.                       |
+
+---
+
+## Usage examples
+
+```tsx
+<Image
+  src="'images/www/beursbezoek.jpeg'"
+  alt="Voorbeeldafbeelding"
+  width=427
+  height=640
+/>
+
+```

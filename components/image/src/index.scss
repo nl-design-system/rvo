@@ -1,0 +1,80 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
+.rvo-image {
+  --rvo-image-width: auto;
+  --rvo-image-height: auto;
+  --rvo-image-max-width: 100%;
+  --rvo-image-object-fit: cover;
+  --rvo-image-object-position: center;
+  --rvo-image-border-radius: var(--rvo-border-radius-2xl, 4px);
+
+  display: block;
+  height: var(--rvo-image-height);
+  max-width: var(--rvo-image-max-width);
+  object-fit: var(--rvo-image-object-fit);
+  object-position: var(--rvo-image-object-position);
+  width: var(--rvo-image-width);
+
+  &--radius-size {
+    &-sm {
+      --rvo-image-border-radius: var(--rvo-border-radius-sm, 3px);
+    }
+
+    &-md {
+      --rvo-image-border-radius: var(--rvo-border-radius-md, 5px);
+    }
+
+    &-lg {
+      --rvo-image-border-radius: var(--rvo-border-radius-lg, 10px);
+    }
+
+    &-xl {
+      --rvo-image-border-radius: var(--rvo-border-radius-xl, 20px);
+    }
+
+    &-2xl {
+      --rvo-image-border-radius: var(--rvo-border-radius-2xl, 50px);
+    }
+  }
+
+  &--radius {
+    &-all {
+      border-radius: var(--rvo-image-border-radius);
+    }
+
+    &-top-left {
+      border-start-start-radius: var(--rvo-image-border-radius);
+    }
+
+    &-top-right {
+      border-start-end-radius: var(--rvo-image-border-radius);
+    }
+
+    &-bottom-right {
+      border-end-end-radius: var(--rvo-image-border-radius);
+    }
+
+    &-bottom-left {
+      border-end-start-radius: var(--rvo-image-border-radius);
+    }
+  }
+
+  &-wrapper {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__caption {
+    color: var(--rvo-color-text-secondary, #666);
+    font-size: var(--rvo-font-size-sm, 0.875rem);
+    margin-block-start: var(--rvo-spacing-xs, 0.25rem);
+  }
+
+  @media (min-width: 768px) {
+    --rvo-image-max-width: 90%;
+  }
+}

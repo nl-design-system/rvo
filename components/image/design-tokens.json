@@ -1,0 +1,15 @@
+{
+  "name": "@nl-rvo/css-image",
+  "description": "CSS custom properties used in the RVO Image component.",
+  "vars": {
+    "--rvo-image-width": "auto",
+    "--rvo-image-height": "auto",
+    "--rvo-image-max-width": "100%",
+    "--rvo-image-object-fit": "cover",
+    "--rvo-image-object-position": "center",
+    "--rvo-image-border-radius": "var(--rvo-border-radius-2xl, 4px)",
+    "--rvo-image-caption-font-size": "var(--rvo-font-size-sm, 0.875rem)",
+    "--rvo-image-caption-color": "var(--rvo-color-text-secondary, #666)",
+    "--rvo-image-caption-margin-block-start": "var(--rvo-spacing-xs, 0.25rem)"
+  }
+}
