@@ -5,41 +5,53 @@
 @use "~@utrecht/heading-5-css/dist/index.css" as *;
 @use "~@utrecht/heading-6-css/dist/index.css" as *;
 
-.utrecht-heading-1 {
-  margin-block-end: var(--utrecht-heading-1-margin-block-end);
-  margin-block-start: var(--utrecht-heading-1-margin-block-start);
+.rvo-heading {
+  align-items: center;
+  color: var(--rvo-color-lintblauw);
+  display: flex;
+
+  & .rvo-icon {
+    --utrecht-icon-color: var(--rvo-color-lintblauw);
+  }
+
+  &--normal {
+    font-weight: var(--rvo-font-weight-normal);
+  }
+
+  &--gap-xs {
+    gap: var(--rvo-space-xs);
+  }
+
+  &--gap-sm {
+    gap: var(--rvo-space-sm);
+  }
+
+  @for $i from 1 through 6 {
+    &--margin-#{$i} {
+      margin-block-end: var(--utrecht-heading-#{$i}-margin-block-end);
+      margin-block-start: var(--utrecht-heading-#{$i}-margin-block-start);
+    }
+  }
 }
 
-.utrecht-heading-2 {
-  margin-block-end: var(--utrecht-heading-2-margin-block-end);
-  margin-block-start: var(--utrecht-heading-2-margin-block-start);
+// If there is an RVO Icon available then override the sizes through these selectors
+h1.rvo-heading,
+h2.rvo-heading {
+  .rvo-icon {
+    --utrecht-icon-size: var(--rvo-icon-xl-width);
+  }
 }
 
-.utrecht-heading-3 {
-  margin-block-end: var(--utrecht-heading-3-margin-block-end);
-  margin-block-start: var(--utrecht-heading-3-margin-block-start);
+h3.rvo-heading,
+h4.rvo-heading {
+  .rvo-icon {
+    --utrecht-icon-size: var(--rvo-icon-lg-width);
+  }
 }
 
-.utrecht-heading-4 {
-  margin-block-end: var(--utrecht-heading-4-margin-block-end);
-  margin-block-start: var(--utrecht-heading-4-margin-block-start);
-}
-
-.utrecht-heading-5 {
-  margin-block-end: var(--utrecht-heading-5-margin-block-end);
-  margin-block-start: var(--utrecht-heading-5-margin-block-start);
-}
-
-.utrecht-heading-6 {
-  margin-block-end: var(--utrecht-heading-6-margin-block-end);
-  margin-block-start: var(--utrecht-heading-6-margin-block-start);
-}
-
-.rvo-heading--no-margins {
-  margin-block-end: 0;
-  margin-block-start: 0;
-}
-
-.rvo-heading--mixed {
-  font-weight: var(--rvo-font-weight-normal);
+h5.rvo-heading,
+h6.rvo-heading {
+  .rvo-icon {
+    --utrecht-icon-size: var(--rvo-icon-md-width);
+  }
 }

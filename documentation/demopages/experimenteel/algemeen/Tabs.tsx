@@ -24,7 +24,7 @@ const Tabs = () => {
         />
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading textContent="Tabs demo page"></Heading>
+            <Heading type="h1">Tabs demo page</Heading>
             <div className="rvo-tabs">
               <ul className="rvo-tabs-navigation rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2">
                 <li>

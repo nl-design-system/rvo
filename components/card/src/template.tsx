@@ -20,7 +20,7 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   content?: string;
   fullCardLink?: boolean;
   headingClassName?: string;
-  headingProps?: Omit<IHeadingProps, 'children'>;
+  headingProps?: IHeadingProps;
   image?: ReactNode;
   imageAlt?: string;
   imageHeight?: string;
@@ -89,7 +89,7 @@ export const Card: React.FC<ICardProps> = ({
   content,
   fullCardLink = defaultArgs.fullCardLink,
   headingClassName,
-  headingProps = {},
+  headingProps,
   image = defaultArgs.image,
   imageAlt,
   imageHeight,

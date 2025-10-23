@@ -62,7 +62,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
   return (
     <details open className="rvo-checkbox-filter" {...rest}>
       <summary className="rvo-checkbox-filter__label">
-        {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="logoblauw" />
+        {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>
       {showInputField && (
         <TextInputField
@@ -84,8 +84,8 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
           iconSize="md"
           showIcon="before"
           noUnderline
-          color="logoblauw"
-          iconColor="logoblauw"
+          color="lintblauw"
+          iconColor="lintblauw"
           onClick={(e) => toggleShowClick(e)}
         >
           {!toggleShow ? showMoreText : showLessText}

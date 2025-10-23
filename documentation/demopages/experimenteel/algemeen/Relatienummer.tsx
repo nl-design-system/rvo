@@ -13,24 +13,24 @@ const Relatienummer = () => {
             <nav className="rvo-topnav rvo-topnav--md">
               <ul className="rvo-topnav__list">
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Home
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Mijn aanvragen
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     Nieuwe aanvraag
                   </a>
                 </li>
 
                 <li className="rvo-topnav__item rvo-topnav__item--align-right">
                   <a
-                    className="rvo-link rvo-topnav__link rvo-link--logoblauw rvo-link--rn"
+                    className="rvo-link rvo-topnav__link rvo-link--lintblauw rvo-link--rn"
                     href="#"
                     title="Relatienummer: 43459823"
                   >
@@ -48,7 +48,7 @@ const Relatienummer = () => {
         </div>
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading textContent="Relatienummer demopagina"></Heading>
+            <Heading type="h1">Relatienummer demopagina</Heading>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Eu nisl nunc mi ipsum faucibus. Tincidunt eget nullam non nisi est sit amet

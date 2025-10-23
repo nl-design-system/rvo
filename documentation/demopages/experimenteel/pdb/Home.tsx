@@ -37,7 +37,9 @@ const Home = () => {
             maxWidth="md"
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
-            <Heading noMargins={true}>Project Database</Heading>
+            <Heading type="h1" noMargins={true}>
+              Project Database
+            </Heading>
             <LayoutFlow gap="xl">
               <div className="rvo-content">
                 <p className="rvo-text rvo-text--no-margins">
@@ -73,11 +75,11 @@ const Home = () => {
                 <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                   <div className="rvo-card--with-link-indicator">
                     <div className="rvo-card__content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
                           Programmes
                         </a>
-                      </h3>
+                      </Heading>
                       Find open data on development aid programmes executed by the Netherlands Enterprise Agency (RVO)
                       and funded by the Netherlands Ministry of Foreign Affairs e.a.
                     </div>
@@ -91,11 +93,11 @@ const Home = () => {
                 <div className="rvo-card rvo-card--outline rvo-card--padding-md">
                   <div className="rvo-card--with-link-indicator">
                     <div className="rvo-card__content">
-                      <h3 className="utrecht-heading-3">
+                      <Heading type="h3">
                         <a className="rvo-link rvo-card__link rvo-card__full-card-link" href="#">
                           Projects
                         </a>
-                      </h3>
+                      </Heading>
                       Find open data on development aid projects executed by the Netherlands Enterprise Agency (RVO) and
                       funded by the Netherlands Ministry of Foreign Affairs e.a.
                     </div>

@@ -89,7 +89,7 @@ const Kosten = () => {
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
-                  <Heading type="h1" textContent="Kosten en subsidies"></Heading>
+                  <Heading type="h1">Kosten en subsidies</Heading>
                 </div>
                 <div className="rvo-table--responsive">
                   <LayoutFlow gap="sm">
@@ -213,7 +213,7 @@ const Kosten = () => {
                     <Link content="Subsidie toevoegen" icon="plus" showIcon="before" href="#"></Link>
                   </LayoutFlow>
                 </div>
-                <Heading type="h2" textContent="Berekening"></Heading>
+                <Heading type="h2">Berekening</Heading>
                 <dl className="rvo-data">
                   <dt>Andere subsidies</dt>
                   <dd>€ 25.000,00</dd>

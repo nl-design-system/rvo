@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 1.12.0
+
+### Minor Changes
+
+- da7c279: Add a new StyleDictionary formatter to split RVO color variables into a single file colors.js and colors.scss.
+
 ## 1.11.0
 
 ### Minor Changes

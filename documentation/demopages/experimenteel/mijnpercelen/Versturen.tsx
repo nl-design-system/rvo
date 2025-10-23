@@ -110,12 +110,12 @@ const Versturen = () => {
                   <div className="rvo-content">
                     <LayoutFlow gap="xl">
                       <div className="rvo-info">
-                        <Heading type="h1" textContent="Controleren en versturen"></Heading>
+                        <Heading type="h1">Controleren en versturen</Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--lg">
                           Heeft u alle wijzigingen in uw percelen opgeslagen?
                         </p>
 
-                        <Heading type="h2" textContent="Controleer wijzigingen" />
+                        <Heading type="h2">Controleer wijzigingen</Heading>
                         <p className="rvo-paragraph-spaced rvo-paragraph rvo-paragraph--md">
                           Het systeem controleert de wijzigingen. Start de controle niet vanzelf?
                         </p>
@@ -127,7 +127,7 @@ const Versturen = () => {
                             Start controle
                           </a>
                         </p>
-                        <Heading type="h2" textContent="Verstuur wijzigingen"></Heading>
+                        <Heading type="h2">Verstuur wijzigingen</Heading>
                         <p className="rvo-paragraph-spaced">
                           <a href="#wijzigingen" className="rvo-link">
                             Bekijk hieronder de wijzigingen
@@ -141,11 +141,11 @@ const Versturen = () => {
                       <div className="rvo-gewijzigde-percelen">
                         <a id="wijzigingen"></a>
                         <LayoutFlow gap="sm">
-                          <Heading type="h3" textContent="Gewijzigde percelen"></Heading>
+                          <Heading type="h3">Gewijzigde percelen</Heading>
                           <div className="rvo-cards rvo-cards--percelen">
                             <div className="rvo-card rvo-card--perceel">
                               <div className="rvo-card-perceel-title">
-                                <Heading type="h2" textContent="#21 Slootje bij de buren"></Heading>
+                                <Heading type="h2">#21 Slootje bij de buren</Heading>
                                 <span className="rvo-card-perceel-hectare">
                                   <span className="rvo-value-line-through">1,2495 ha</span> <strong>1,3495 ha</strong>
                                 </span>
@@ -159,7 +159,7 @@ const Versturen = () => {
                             </div>
                             <div className="rvo-card rvo-card--perceel">
                               <div className="rvo-card-perceel-title">
-                                <Heading type="h2" textContent="#22 Groot maisveld"></Heading>
+                                <Heading type="h2">#22 Groot maisveld</Heading>
                                 <span className="rvo-card-perceel-hectare">2,395 ha</span>
                               </div>
                               <div className="rvo-card-perceel-content">
@@ -173,7 +173,7 @@ const Versturen = () => {
                             </div>
                             <div className="rvo-card rvo-card--perceel">
                               <div className="rvo-card-perceel-title">
-                                <Heading type="h2" textContent="#25 Akker aan de hoogstraat"></Heading>
+                                <Heading type="h2">#25 Akker aan de hoogstraat</Heading>
                                 <span className="rvo-card-perceel-hectare">1,565 ha</span>
                               </div>
                               <div className="rvo-card-perceel-content">
@@ -185,7 +185,7 @@ const Versturen = () => {
                             </div>
                             <div className="rvo-card rvo-card--perceel">
                               <div className="rvo-card-perceel-title">
-                                <Heading type="h2" textContent="#433"></Heading>
+                                <Heading type="h2">#433</Heading>
                                 <span className="rvo-card-perceel-hectare">
                                   <span className="rvo-value-line-through">1,100 ha</span> <strong>0,8495 ha</strong>
                                 </span>
@@ -209,7 +209,7 @@ const Versturen = () => {
           <div className="rvo-main-mijn-percelen--sidebar">
             <LayoutFlow gap="md">
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
-                <Heading type="h4" textContent="Hulp"></Heading>
+                <Heading type="h4">Hulp</Heading>
                 <ul className="rvo-list rvo-list--unordered">
                   <li>
                     <a className="rvo-link rvo-link--no-underline" href="#">
@@ -225,7 +225,7 @@ const Versturen = () => {
                 </ul>
               </div>
               <div className="rvo-info-block rvo-info-block--mijn-percelen-start">
-                <Heading type="h4" textContent="Meekijken"></Heading>
+                <Heading type="h4">Meekijken</Heading>
                 <p className="rvo-paragraph-spaced">Wil onze medewerker meekijken?</p>
                 <div className="rvo-rhs-update-component">
                   <Button kind="secondary" size="sm">

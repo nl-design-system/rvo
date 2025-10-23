@@ -1,4 +1,4 @@
-import { Accordion, Button, Footer, Grid, Header, Heading, Icon, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Accordion, Button, Footer, Grid, Header, Heading, Hero, Icon, LayoutFlow, MenuBar } from '@nl-rvo/components';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
@@ -41,24 +41,20 @@ const Landingspagina = () => {
           <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--md">
             <LayoutFlow gap="2xl">
               <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
-                <div className="rvo-hero__image-container">
-                  <img
-                    src="images/berichtenbox/berichtenbox-bedrijven.jpg"
-                    className="rvo-hero__image"
-                    alt="Ondernemer bekijkt met collega de berichtenbox op een laptop."
-                  />
-                </div>
-                <div className="rvo-hero__content">
-                  <h1 className="utrecht-heading-1 rvo-hero__title rvo-heading--no-margins">
-                    Berichtenbox voor bedrijven
-                  </h1>
+                <Hero
+                  image={{
+                    src: 'images/berichtenbox/berichtenbox-bedrijven.jpg',
+                    alt: 'Ondernemer bekijkt met collega de berichtenbox op een laptop.',
+                  }}
+                  title="Berichtenbox voor bedrijven"
+                >
                   <span className="rvo-hero__subtitle rvo-margin-block-end--xs">
                     Alle overheidsberichten op één plek!
                   </span>
                   <Button kind="secondary" size="sm">
                     Inloggen met e-Herkenning
                   </Button>
-                </div>
+                </Hero>
               </div>
               <div className="rvo-max-width-layout rvo-max-width-layout--md">
                 <LayoutFlow gap="2xl">

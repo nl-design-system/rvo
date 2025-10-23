@@ -905,7 +905,7 @@
 
   .rvo-tmp-filter .rvo-checkbox__group {
     background-color: var(--rvo-color-wit);
-    border: 1px solid var(--rvo-color-logoblauw);
+    border: 1px solid var(--rvo-color-lintblauw);
     border-end-end-radius: var(--rvo-border-radius-sm);
     border-end-start-radius: var(--rvo-border-radius-sm);
     border-top: 0;
@@ -1813,7 +1813,7 @@
   /* @AUTOCOMPLETE */
 
   .rvo-autocomplete-dropdown {
-    border: 1px solid var(--rvo-color-logoblauw);
+    border: 1px solid var(--rvo-color-lintblauw);
     border-end-end-radius: 2px;
     border-end-start-radius: 2px;
     border-radius: var(--rvo-border-radius-sm);
@@ -1857,12 +1857,12 @@
     .utrecht-heading-1,
     .utrecht-form-fieldset__legend,
     .utrecht-form-label {
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
     }
 
     .rvo-header__logo-link--new {
       align-items: flex-start;
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
       display: flex;
       font-size: var(--rvo-font-size-sm);
       font-weight: var(--rvo-font-weight-bold);
@@ -1900,7 +1900,7 @@
 
     .rvo-responsive-menu summary,
     .utrecht-topnav__link {
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
       font-size: var(--rvo-font-size-md);
       padding-block-end: var(--rvo-space-md);
       padding-block-start: 0;
@@ -1908,7 +1908,7 @@
       padding-inline-start: 0;
 
       .rvo-icon--wit {
-        background-color: var(--rvo-color-logoblauw);
+        background-color: var(--rvo-color-lintblauw);
       }
     }
 
@@ -1944,10 +1944,10 @@
     .utrecht-textarea,
     .utrecht-select,
     input[type="file"] {
-      border-color: var(--rvo-color-logoblauw);
+      border-color: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
       border-width: 1px;
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
     }
 
     .rvo-checkbox__input::before {
@@ -1957,7 +1957,7 @@
 
     .utrecht-radio-button,
     .rvo-checkbox__input {
-      border-color: var(--rvo-color-logoblauw);
+      border-color: var(--rvo-color-lintblauw);
       border-width: 1px;
     }
 
@@ -1973,7 +1973,7 @@
     .utrecht-select:focus,
     .rvo-file-input:focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled),
     .rvo-file-input--focus:not(:disabled, [aria-disabled="true"], .rvo-file-input--disabled) {
-      outline-color: var(--rvo-color-logoblauw);
+      outline-color: var(--rvo-color-lintblauw);
       outline-offset: 0;
       outline-width: 1px;
     }
@@ -1989,7 +1989,7 @@
     .utrecht-radio-button:checked,
     .rvo-radio-button:checked,
     .utrecht-radio-button--checked {
-      background: radial-gradient(circle, var(--rvo-color-logoblauw) 45%, var(--rvo-color-wit) 50%);
+      background: radial-gradient(circle, var(--rvo-color-lintblauw) 45%, var(--rvo-color-wit) 50%);
     }
 
     .rvo-checkbox__input::after {
@@ -1999,7 +1999,7 @@
 
     .rvo-checkbox__input:checked::before,
     .rvo-select-wrapper::before {
-      background: var(--rvo-color-logoblauw);
+      background: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
     }
 
@@ -2012,14 +2012,14 @@
     }
 
     .utrecht-button--primary-action {
-      background-color: var(--rvo-color-logoblauw);
+      background-color: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
     }
 
     .utrecht-button--secondary-action {
-      border-color: var(--rvo-color-logoblauw);
+      border-color: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
     }
 
     .rvo-max-width-layout--md,
@@ -2044,11 +2044,11 @@
     }
 
     .rvo-expandable-text__summary {
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
       font-weight: var(--rvo-font-weight-regular);
 
       &::after {
-        background-color: var(--rvo-color-logoblauw);
+        background-color: var(--rvo-color-lintblauw);
       }
 
       .rvo-icon {
