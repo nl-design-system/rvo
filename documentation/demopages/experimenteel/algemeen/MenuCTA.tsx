@@ -235,7 +235,7 @@ const MenuCTA = () => {
                           </a>
                         </li>
                       </ul>
-                      <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--md">
+                      <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--md rvo-padding-block-start--sm">
                         <a href="#" className="rvo-link rvo-menubar__link rvo-link--lintblauw">
                           <span
                             className="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--lg rvo-icon--wit"
