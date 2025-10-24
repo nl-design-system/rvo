@@ -1,5 +1,11 @@
 # `@nl-rvo/css-heading`
 
+## 2.1.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
 ## 2.0.0
 
 ### Major Changes
