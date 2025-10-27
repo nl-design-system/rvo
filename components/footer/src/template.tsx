@@ -5,7 +5,6 @@
 import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { Heading } from '../../heading/src/template';
 import HorizontalRule from '../../horizontal-rule/src/template';
 import Link from '../../link/src/template';
 import parseContentMarkup from '../../utils/parseContentMarkup';
@@ -56,11 +55,7 @@ export const Footer: React.FC<FooterInterface> = ({
               {children ||
                 primaryMenu?.map((column, columnIndex) => (
                   <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
-                    {column && column.label && (
-                      <Heading type="h3" className="rvo-footer__column-title">
-                        {column.label}
-                      </Heading>
-                    )}
+                    {column && column.label && <span className="rvo-footer__column-title">{column.label}</span>}
                     <ul
                       className={clsx(
                         'rvo-footer__menu',
