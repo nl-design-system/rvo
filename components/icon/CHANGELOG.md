@@ -1,5 +1,11 @@
 # `@nl-rvo/css-icon`
 
+## 1.3.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
 ## 1.2.3
 
 ### Patch Changes
