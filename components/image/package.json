@@ -16,6 +16,7 @@
     "*.md"
   ],
   "main": "dist/index.css",
+  "style": "dist/index.css",
   "publishConfig": {
     "access": "public"
   },

@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/component-library-css';
+import './index.scss';
 
 export interface IImageSource {
   srcSet: string;
@@ -17,10 +17,6 @@ export interface IImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   /** Required alt text for accessibility */
   alt: string;
-  /** Optional caption displayed below the image */
-  caption?: string;
-  /** Optional language code (applies only to <figure> when a caption is present) */
-  lang?: string;
   /** Corner rounding variant (token-based, RTL-safe) */
   radius?: 'none' | 'all' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   /** Border radius size — maps to design tokens */
@@ -44,14 +40,11 @@ export interface IImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 /**
  * Accessible, responsive Image component.
  * - Uses `<picture>` when `sources` are provided.
- * - Wraps in `<figure>` only if a caption is present.
  * - Supports both `radius` (which corners) and `radiusSize` (how much).
  * - Ignores `radiusSize` when `radius="none"`.
  */
 export const Image: React.FC<IImageProps> = ({
   alt,
-  caption,
-  lang,
   radius = 'none',
   radiusSize,
   sources = [],
@@ -85,29 +78,18 @@ export const Image: React.FC<IImageProps> = ({
     />
   );
 
-  const content =
-    sources.length > 0 ? (
-      <picture>
+  if (sources.length > 0) {
+    return (
+      <picture className="rvo-image-wrapper">
         {sources.map((source, index) => (
           <source key={index} {...source} />
         ))}
         {imgElement}
       </picture>
-    ) : (
-      imgElement
-    );
-
-  // Only render <figure> when a caption is present
-  if (caption) {
-    return (
-      <figure className={clsx('rvo-image-wrapper', className)} {...(lang ? { lang } : {})}>
-        {content}
-        <figcaption className="rvo-image__caption">{caption}</figcaption>
-      </figure>
     );
   }
 
-  return content;
+  return imgElement;
 };
 
 export default Image;

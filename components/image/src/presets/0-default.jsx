@@ -4,7 +4,7 @@
  */
 
 import { defaultArgs } from '../defaultArgs';
-import Image from '../template';
+import Image from '../index';
 
 /**
  * Default export for UXPin or design tool integration.

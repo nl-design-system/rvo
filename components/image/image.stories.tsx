@@ -4,7 +4,7 @@
  */
 import type { Meta, StoryObj } from '@storybook/react';
 import { defaultArgs } from './src/defaultArgs';
-import { Image } from './src/template';
+import { Image } from './src/index';
 
 const argTypes = {
   src: {
@@ -14,14 +14,6 @@ const argTypes = {
   alt: {
     control: 'text',
     description: 'Alternatieve tekst — verplicht voor toegankelijkheid.',
-  },
-  caption: {
-    control: 'text',
-    description: 'Optioneel bijschrift dat onder de afbeelding wordt weergegeven.',
-  },
-  lang: {
-    control: 'text',
-    description: 'Taalcode voor het bijschrift (alleen toegepast op `<figure>`).',
   },
   width: {
     control: { type: 'number' },
@@ -84,7 +76,7 @@ Een toegankelijke, responsieve **Image** component voor het NL Design System.
 
 - Gebruikt \`<picture>\` automatisch wanneer \`sources\` aanwezig zijn.
 - Rendert alleen \`loading\`, \`decoding\` of \`fetchPriority\` wanneer expliciet ingesteld.
-- Ondersteunt \`caption\`, \`radius\` en \`radiusSize\` tokens voor afgeronde hoeken.
+- Ondersteunt \`radius\` en \`radiusSize\` tokens voor afgeronde hoeken.
         `,
       },
     },
@@ -112,10 +104,10 @@ export const Default: Story = {
 };
 
 export const TopLeftRounded: Story = {
-  name: 'Afgerond (linksboven)',
+  name: 'Afgerond (rechtsboven)',
   args: {
     ...defaultArgs,
-    radius: 'top-left',
+    radius: 'top-right',
     radiusSize: '2xl',
   },
 };
@@ -129,13 +121,28 @@ export const BottomRightRounded: Story = {
   },
 };
 
-export const WithCaption: Story = {
-  name: 'Met bijschrift',
+export const ResponsiveSources: Story = {
+  name: 'Responsieve afbeelding',
   args: {
-    ...defaultArgs,
-    caption: 'Een bijschrift dat de afbeelding beschrijft.',
-    radius: 'bottom-right',
-    radiusSize: '2xl',
+    alt: 'Responsieve afbeelding',
+    sources: [
+      {
+        srcSet: 'images/www/beursbezoek-small.jpeg',
+        media: '(max-width: 600px)',
+      },
+      {
+        srcSet: 'images/www/beursbezoek.jpeg',
+        media: '(min-width: 601px)',
+      },
+    ],
+    src: 'images/www/beursbezoek.jpeg',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Voorbeeld van een `<picture>` element met verschillende bronnen per schermgrootte.',
+      },
+    },
   },
 };
 
@@ -146,12 +153,11 @@ export const PerformanceTuned: Story = {
     loading: 'eager',
     decoding: 'auto',
     fetchPriority: 'high',
-    caption: 'Hero-afbeelding met fetchPriority="high" voor snellere laadtijd.',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Voor hero- of boven-de-vouwafbeeldingen. Wordt vroeg geladen en heeft hogere ophaalprioriteit.',
+        story: 'Gebruik voor hero- of boven-de-vouwafbeeldingen. Wordt vroeg geladen en met hoge prioriteit opgehaald.',
       },
     },
   },
@@ -162,11 +168,8 @@ export const Decorative: Story = {
   args: {
     ...defaultArgs,
     alt: '',
-    caption: undefined,
     loading: 'lazy',
     fetchPriority: 'low',
-    radius: 'all',
-    radiusSize: 'md',
   },
   parameters: {
     docs: {

@@ -64,17 +64,7 @@
 
   &-wrapper {
     display: inline-block;
+    line-height: 0; /* removes white gap under inline-block images */
     margin: 0;
-    text-align: center;
-  }
-
-  &__caption {
-    color: var(--rvo-color-text-secondary, #666);
-    font-size: var(--rvo-font-size-sm, 0.875rem);
-    margin-block-start: var(--rvo-spacing-xs, 0.25rem);
-  }
-
-  @media (min-width: 768px) {
-    --rvo-image-max-width: 90%;
   }
 }
