@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.1.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
 ## 3.0.9
 
 ### Patch Changes
