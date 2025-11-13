@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/design-tokens/community-group/main/schemas/tokens.json",
+  "rvo-image": {
+    "description": "Design tokens for the RVO Image component.",
+    "tokens": {
+      "width": {
+        "value": "auto",
+        "type": "sizing",
+        "description": "Standaard afbeeldingsbreedte."
+      },
+      "height": {
+        "value": "auto",
+        "type": "sizing",
+        "description": "Standaard afbeeldingshoogte."
+      },
+      "max-width": {
+        "value": "100%",
+        "type": "sizing",
+        "description": "Maximale breedte van de afbeelding."
+      },
+      "object-fit": {
+        "value": "cover",
+        "type": "other",
+        "description": "Bepaalt hoe de afbeelding binnen zijn kader past."
+      },
+      "object-position": {
+        "value": "center",
+        "type": "other",
+        "description": "Bepaalt de positie van de afbeelding binnen zijn kader."
+      },
+      "border-radius": {
+        "value": "{rvo-border-radius.2xl}",
+        "type": "borderRadius",
+        "description": "Hoekafronding van de afbeelding. Wordt beïnvloed door radius-varianten."
+      }
+    }
+  }
+}

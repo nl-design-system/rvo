@@ -1,0 +1,39 @@
+---
+id: image
+title: Image
+description: Toegankelijke en responsieve afbeelding met optionele afgeronde hoeken en prestatie-optimalisaties.
+sidebar_label: Image
+---
+
+import { Image } from "./src/index";
+
+## Image
+
+De **Image**-component toont toegankelijke en responsieve afbeeldingen.  
+Ze ondersteunt afronding van hoeken op basis van design tokens en biedt instellingen voor laadmethode, decoding-strategie en prioriteit voor het ophalen van de afbeelding.
+
+Gebruik deze component voor inhoudelijke afbeeldingen, illustraties of hero-secties die deel uitmaken van de pagina-inhoud.
+
+---
+
+## Props
+
+| Prop            | Type                                                                                        | Default  | Beschrijving                                                                             |
+| --------------- | ------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------- |
+| `src`           | `string`                                                                                    | —        | De afbeeldingsbron (URL). **Verplicht.**                                                 |
+| `alt`           | `string`                                                                                    | —        | Alternatieve tekst voor toegankelijkheid. **Verplicht.**                                 |
+| `radius`        | `'none'` \| `'all'` \| `'top-left'` \| `'top-right'` \| `'bottom-left'` \| `'bottom-right'` | `'none'` | Bepaalt welke hoeken afgerond zijn.                                                      |
+| `radiusSize`    | `'sm'` \| `'md'` \| `'lg'` \| `'xl'` \| `'2xl'`                                             | `'2xl'`  | Bepaalt de grootte van de afgeronde hoeken. Genegeerd wanneer `radius="none"`.           |
+| `loading`       | `'lazy'` \| `'eager'`                                                                       | —        | Laadgedrag van de afbeelding. Alleen gerenderd als expliciet ingesteld.                  |
+| `decoding`      | `'async'` \| `'sync'` \| `'auto'`                                                           | —        | Decode-strategie. Alleen gerenderd als expliciet ingesteld.                              |
+| `fetchPriority` | `'high'` \| `'low'` \| `'auto'`                                                             | —        | Prioriteit voor het ophalen van de afbeelding. Alleen gerenderd als expliciet ingesteld. |
+| `sources`       | `Array<{ srcSet: string, type?: string, media?: string }>`                                  | `[]`     | Alternatieve bronnen voor gebruik binnen `<picture>` voor responsieve afbeeldingen.      |
+| `width`         | `number \| string`                                                                          | —        | Aanbevolen om lay-outverspringingen (CLS) te voorkomen.                                  |
+| `height`        | `number \| string`                                                                          | —        | Aanbevolen in combinatie met `width`.                                                    |
+| `className`     | `string`                                                                                    | —        | Optionele aangepaste classnaam voor geavanceerde stijlen.                                |
+
+---
+
+## Gebruik
+
+<Image src="images/www/beursbezoek.jpeg" alt="Bezoekers op een beurs" width={427} height={640} />
