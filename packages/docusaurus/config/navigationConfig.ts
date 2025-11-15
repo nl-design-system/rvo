@@ -29,7 +29,7 @@ const navbar: Navbar = {
     },
     {
       type: 'doc',
-      docId: 'patronen/paginas/basispagina',
+      docId: 'patronen/paginas/basis',
       position: 'left' as const,
       label: 'Patronen',
     },
