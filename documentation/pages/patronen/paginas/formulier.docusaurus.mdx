@@ -6,43 +6,25 @@ slug: formulieren-opbouw
 sidebar_position: 3
 ---
 
-import { ActionGroup, Button, Fieldset, FormLayout, TextInputField } from "../../../../components";
-import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+# Formulier
 
-# Formulieren
+Een Formulier wordt gebruikt om gegevens van een gebruiker te verzamelen en in te dienen.
 
-[Bekijk een voorbeeld van een formulier in een nieuwe tab](https://nl-design-system.github.io/rvo/iframe.html?args=&id=pagina-s-templates-formulier--default&viewMode=story).
+Bekijk een voorbeeld van een formulier in:
+
+- [Storybook](https://nl-design-system.github.io/rvo/?path=/story/pagina-s-templates-formulier--default)
+- [Een volledig scherm in Storybook](https://nl-design-system.github.io/rvo/iframe.html?args=&id=pagina-s-templates-formulier--default&viewMode=story).
 
 ## Opbouw
 
-- Gebruik FormLayout om de maximale breedte van het formulier te beperken.
-- Groupeer velden in Fieldsets.
+- Groepeer velden in een Fieldset.
 - Zorg dat elk veld een duidelijk, kort label erboven heeft.
 - Gebruik helper tekst voor aanvullende uitleg/instructies
-- Zorg dat de primaire actieknop rechts staat, en de secundaire actieknop links.
 
 ## Complexe formulieren
 
 - Gebruik voor complexe formulieren met veel velden meerdere stappen.
 - Probeer het aantal velden per stap te beperken. Begin met één stap per veld en voeg stappen samen als gebruikersonderzoeken uitwijzen dat dit wenselijk is.
 - Geef de gebruiker de mogelijkheid om de voortgang op te slaan wanneer een stap is afgerond.
-- Ga terug naar de laatste actieve stap wanneer een gebruiker een formulier tussentijdig afbreekt en daarna terug keert.
-- Toon een <a href="/rvo/docs/components/progress-tracker/" className="rvo-link">Progress tracker</a> zodat de gebruiker weet hoeveel stappen er zijn, welke stappen zijn afgerond en welke stap momenteel actief.
-
-<ComponentExample>
-  <FormLayout>
-    <Fieldset legend="Uw gegevens">
-      <TextInputField label="Voornaam" />
-      <TextInputField label="Achternaam" />
-    </Fieldset>
-    <Fieldset legend="Opleiding">
-      <TextInputField label="Naam instelling" />
-      <TextInputField label="Plaats" />
-    </Fieldset>
-    <br />
-    <ActionGroup>
-      <Button kind="secondary">Opslaan en sluiten</Button>
-      <Button className="rvo-button-group__align-right">Opslaan en verder</Button>
-    </ActionGroup>
-  </FormLayout>
-</ComponentExample>
+- Ga terug naar de laatste actieve stap wanneer een gebruiker een formulier tussentijds afbreekt en daarna terugkeert.
+- Toon een <a href="/rvo/docs/components/progress-tracker/" className="rvo-link">Progress tracker</a> zodat de gebruiker weet hoeveel stappen er zijn, welke stappen zijn afgerond en welke stap momenteel actief is.
