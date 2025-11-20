@@ -10,7 +10,7 @@ export interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
   id?: string;
   htmlFor?: string;
   small?: boolean;
-  type?: 'optional' | 'required';
+  type?: 'default' | 'optional' | 'required';
   className?: string;
 }
 
