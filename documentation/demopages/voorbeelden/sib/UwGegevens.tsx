@@ -201,10 +201,10 @@ const UwGegevens = () => {
                   <p className="rvo-text--sm rvo-text--no-margins">
                     <a
                       href="#"
-                      className="rvo-link rvo-link--logoblauw rvo-link--sm rvo-link--with-icon rvo-link--no-underline"
+                      className="rvo-link rvo-link--lintblauw rvo-link--sm rvo-link--with-icon rvo-link--no-underline"
                     >
                       <span
-                        className="utrecht-icon rvo-icon rvo-icon-ondernemingen rvo-icon--sm rvo-icon--logoblauw  rvo-link__icon--before"
+                        className="utrecht-icon rvo-icon rvo-icon-ondernemingen rvo-icon--sm rvo-icon--lintblauw  rvo-link__icon--before"
                         role="img"
                         aria-label="Ondernemingen"
                       ></span>

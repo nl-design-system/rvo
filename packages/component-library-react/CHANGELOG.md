@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-react
 
+## 5.8.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
+## 5.7.1
+
+### Patch Changes
+
+- 05af765: Update css rollup
+
 ## 5.7.0
 
 ### Minor Changes

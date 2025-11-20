@@ -3,75 +3,30 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
+import React, { HTMLAttributes } from 'react';
 import './index.scss';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
-  /** @uxpinignoreprop */
   id?: string;
-  /** @uxpinignoreprop */
   htmlFor?: string;
-  /** @uxpinignoreprop */
-  content?: string;
-  size?: 'sm' | 'md';
+  small?: boolean;
   type?: 'default' | 'optional' | 'required';
-  /** @uxpinignoreprop */
   className?: string;
-  /** @uxpinpropname Content */
-  children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  content: {
-    control: 'text',
-  },
-  size: {
-    options: ['sm', 'md'],
-    control: { type: 'radio' },
-  },
-  type: {
-    options: ['default', 'optional', 'required'],
-    control: { type: 'select' },
-  },
-  id: {
-    table: {
-      disable: true,
-    },
-  },
-  htmlFor: {
-    table: {
-      disable: true,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
-export const Label: React.FC<ILabelProps> = ({
-  content = defaultArgs.content,
-  size = defaultArgs.size,
-  type = defaultArgs.type,
-  className,
-  children,
-  ...otherProps
-}: ILabelProps) => {
+export const Label: React.FC<ILabelProps> = ({ small, type, className, children, ...otherProps }: ILabelProps) => {
   return (
     <label
       className={clsx(
         'rvo-label',
         className,
-        size === 'sm' && 'rvo-label--sm',
-        type === 'optional' && 'rvo-label--optional',
-        type === 'required' && 'rvo-label--required',
+        small && 'rvo-label--sm',
+        type && 'rvo-label--has-after-field',
+        (type === 'optional' || type === 'required') && `rvo-label--${type}`,
       )}
       {...otherProps}
     >
-      {parseContentMarkup(children || content)}
+      {children}
     </label>
   );
 };

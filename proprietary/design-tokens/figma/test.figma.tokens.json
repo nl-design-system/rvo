@@ -177,22 +177,22 @@
         "hemelblauw-750": {
           "$value": "#409CD5"
         },
-        "logoblauw": {
+        "lintblauw": {
           "$value": "#154273"
         },
-        "logoblauw-150": {
+        "lintblauw-150": {
           "$value": "#DCE3EA"
         },
-        "logoblauw-300": {
+        "lintblauw-300": {
           "$value": "#B9C7D5"
         },
-        "logoblauw-450": {
+        "lintblauw-450": {
           "$value": "#95AAC0"
         },
-        "logoblauw-600": {
+        "lintblauw-600": {
           "$value": "#738EAB"
         },
-        "logoblauw-750": {
+        "lintblauw-750": {
           "$value": "#507196"
         },
         "lichtblauw": {
@@ -1314,7 +1314,7 @@
         "checked": {
           "background-color": {
             "$type": "color",
-            "$value": "{rvo.color.logoblauw}"
+            "$value": "{rvo.color.lintblauw}"
           },
           "border-radius": {
             "$type": "borderRadius",
@@ -1324,7 +1324,7 @@
         "hover": {
           "background-color": {
             "$type": "color",
-            "$value": "{rvo.color.logoblauw}"
+            "$value": "{rvo.color.lintblauw}"
           },
           "border-color": {
             "$type": "color",
@@ -1596,7 +1596,7 @@
         "summary": {
           "color": {
             "$type": "color",
-            "$value": "{rvo.color.logoblauw}"
+            "$value": "{rvo.color.lintblauw}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -2276,7 +2276,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rvo.color.logoblauw}"
+          "$value": "{rvo.color.lintblauw}"
         },
         "emblem": {
           "background-color": {
@@ -3547,7 +3547,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rvo.color.logoblauw}"
+          "$value": "{rvo.color.lintblauw}"
         },
         "border-radius": {
           "$type": "borderRadius",
@@ -3558,7 +3558,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rvo.color.logoblauw}"
+          "$value": "{rvo.color.lintblauw}"
         },
         "font-family": {},
         "font-size": {
@@ -3610,7 +3610,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rvo.color.logoblauw}"
+            "$value": "{rvo.color.lintblauw}"
           },
           "border-width": {}
         },
@@ -3777,7 +3777,7 @@
       "page-footer": {
         "background-color": {
           "$type": "color",
-          "$value": "{rvo.color.logoblauw}"
+          "$value": "{rvo.color.lintblauw}"
         },
         "color": {
           "$type": "color",

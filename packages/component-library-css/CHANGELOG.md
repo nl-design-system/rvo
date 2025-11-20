@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-css
 
+## 4.13.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
+## 4.12.1
+
+### Patch Changes
+
+- 05af765: Update rollup configuration to export css per component and util file
+
 ## 4.12.0
 
 ### Minor Changes

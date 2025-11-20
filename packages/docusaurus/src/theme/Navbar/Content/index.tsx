@@ -16,7 +16,7 @@ export default function NavbarContent(): JSX.Element {
     align: item.position === 'right' ? 'right' : 'left',
     key: `${item.label}-${index}`,
     useIcons: false,
-    linkColor: 'logoblauw' as const,
+    linkColor: 'lintblauw' as const,
   }));
 
   return (

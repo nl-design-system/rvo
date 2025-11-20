@@ -40,7 +40,7 @@
 
   .rvo-rhs-update-component .rvo-logo {
     align-items: flex-start;
-    color: var(--rvo-color-logoblauw);
+    color: var(--rvo-color-lintblauw);
     display: inline-flex;
     font-family: "RijksOverheidSansWebText", "verdana", sans-serif;
     font-weight: 700;
@@ -321,14 +321,14 @@
     .utrecht-textarea,
     .utrecht-select,
     input[type="file"] {
-      border-color: var(--rvo-color-logoblauw);
+      border-color: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
       border-width: 1px;
-      color: var(--rvo-color-logoblauw);
+      color: var(--rvo-color-lintblauw);
     }
 
     .rvo-select-wrapper::before {
-      background: var(--rvo-color-logoblauw);
+      background: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
     }
 
@@ -339,7 +339,7 @@
 
     .utrecht-radio-button,
     .rvo-checkbox__input {
-      border-color: var(--rvo-color-logoblauw);
+      border-color: var(--rvo-color-lintblauw);
       border-width: 1px;
     }
 
@@ -354,14 +354,14 @@
 
     .rvo-checkbox__input:checked::before,
     .rvo-select-wrapper::before {
-      background: var(--rvo-color-logoblauw);
+      background: var(--rvo-color-lintblauw);
       border-radius: var(--rvo-border-radius-sm);
     }
 
     .utrecht-radio-button:checked,
     .rvo-radio-button:checked,
     .utrecht-radio-button--checked {
-      background: radial-gradient(circle, var(--rvo-color-logoblauw) 45%, var(--rvo-color-wit) 50%);
+      background: radial-gradient(circle, var(--rvo-color-lintblauw) 45%, var(--rvo-color-wit) 50%);
     }
   }
 
