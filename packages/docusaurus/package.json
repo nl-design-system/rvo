@@ -1,7 +1,7 @@
 {
   "name": "@nl-rvo/docusaurus",
   "author": "Community for NL Design System",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "Documentation website for the ROOS Design System",
   "license": "CC0-1.0",
   "keywords": [
@@ -20,15 +20,16 @@
   ],
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "pnpm run build:sass && docusaurus start",
+    "build": "pnpm run build:sass && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "build:sass": "sass src/scss/custom.scss src/css/custom.min.css --style=compressed --source-map --load-path=node_modules --load-path=src/scss"
   },
   "devDependencies": {
     "@docusaurus/core": "3.6.3",

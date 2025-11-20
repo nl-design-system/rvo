@@ -31,3 +31,4 @@ Heading ondersteund ook het gebruik van het `<Icon>` component dat aangeboden wo
 - Gebruik maximaal één h1.
 - Zorg ervoor dat de tekst in de heading duidelijk aangeeft waar de pagina of onderstaande tekst over gaat.
 - Bij het gebruik van een heading met zowel dikgedrukte als normale tekst kun je de class `utrecht-heading--mixed` gebruiken. Deze class zorgt ervoor dat de heading standaard niet dikgedrukt is zodat je delen van de tekst dikgedrukt kunt maken met `<strong>` elementen.
+- Sla geen heading niveau’s over. Na een of meerdere H2’s komen een of meerdere H3’s. Na een of meerdere H3’s komen een of meerdere H4’s, etc.

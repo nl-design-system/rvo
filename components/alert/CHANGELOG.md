@@ -1,5 +1,19 @@
 # `@nl-rvo/css-alert`
 
+## 1.4.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
+## 1.3.3
+
+### Patch Changes
+
+- 064091a: Fix some markdown error for alert and button component.
+  Updated @whitespace/storybook-addon-html to the latest version to remove warning messages during the build process.
+  Added remark-gfm dependency to enable rendering of tables inside Markdown.
+
 ## 1.3.2
 
 ### Patch Changes

@@ -1,0 +1,43 @@
+---
+title: Uitleg vragen
+hide_title: true
+hide_table_of_contents: true
+slug: uitleg
+sidebar_position: 3
+---
+
+import { Fieldset, FileInputField, FormLayout, TextareaField } from "@nl-rvo/components";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+## Uitleg
+
+- Zorg dat complexere velden zijn voorzien van een heldere uitleg.
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FileInputField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is." />
+      <TextareaField label="Uw vraag" helperText="Beschrijf beknopt wat uw vraag is." />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
+
+- Gebruik een 'expandable' helper tekst als een velden een langere uitleg nodig heeft.
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FileInputField
+        label="Upload uw document"
+        expandableHelperText={true}
+        expandableHelperTextTitle="Voorwaarden voor uw document"
+        helperText={
+          <ul>
+            <li>Zorg dat het document in PDF-formaat is.</li>
+            <li>Zorg dat het document al uw contactgegevens bevat.</li>
+          </ul>
+        }
+      />
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>

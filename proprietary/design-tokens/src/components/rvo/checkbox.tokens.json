@@ -22,11 +22,11 @@
         "outline-width": {}
       },
       "checked": {
-        "background-color": { "value": "{rvo.color.logoblauw}" },
+        "background-color": { "value": "{rvo.color.lintblauw}" },
         "border-radius": { "value": "{rvo.border-radius.sm}" }
       },
       "hover": {
-        "background-color": { "value": "{rvo.color.logoblauw}" },
+        "background-color": { "value": "{rvo.color.lintblauw}" },
         "border-color": { "value": "{rvo.color.hemelblauw}" }
       },
       "disabled": {

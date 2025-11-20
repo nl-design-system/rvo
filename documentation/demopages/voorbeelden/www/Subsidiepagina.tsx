@@ -80,12 +80,14 @@ const Subsidiepagina = () => {
             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
             <strong>Open voor aanvragen </strong> tot 31 december 2025
           </LayoutFlow>
+          <div className="rvo-padding-block-start--md">
+            <a href="#" className="rvo-link">
+              View this page in English
+            </a>{' '}
+          </div>
           <p>
-            <em>
-              De inhoud van deze pagina is gecontroleerd op <strong>22 januari 2025</strong>
-            </em>
+            <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em>
           </p>
-
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Wilt u het dak van uw huis of bedrijfspand geschikt maken voor bijen? Met deze subsidie krijgt u de kosten
             vergoed voor uw bijvriendelijke dak. Zo helpt u de hoeveelheid bijen in Nederland én het klimaat. Uw dak
@@ -673,6 +675,12 @@ const Subsidiepagina = () => {
           <p className="rvo-paragraph">
             <em>In opdracht van:</em>
             <br /> Ministerie van Klimaat en Groene Groei
+          </p>
+          <p className="rvo-paragraph rvo-paragraph--zwart">
+            Hoort bij:{' '}
+            <a href="#" className="rvo-link">
+              Duurzaamheid
+            </a>
           </p>
         </div>
 

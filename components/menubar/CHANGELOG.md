@@ -1,5 +1,17 @@
 # `@nl-rvo/css-menubar`
 
+## 1.5.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
+## 1.4.0
+
+### Minor Changes
+
+- ad25307: Remove text-shadow on active menubar\_\_links.
+
 ## 1.3.7
 
 ### Patch Changes
