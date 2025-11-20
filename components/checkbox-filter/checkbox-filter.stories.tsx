@@ -4,7 +4,7 @@ import { CheckBoxFilter } from './src/template';
 
 const argTypes = {
   label: {
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
   options: {
     control: { type: 'object' },
@@ -15,14 +15,14 @@ const argTypes = {
   showInputField: {
     control: { type: 'boolean' },
   },
-  inputFieldPlaceholder: {
-    control: { type: 'string' },
+  inputFieldLabel: {
+    control: { type: 'text' },
   },
   showMoreText: {
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
   showLessText: {
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
 };
 
@@ -55,7 +55,6 @@ const defaultArgs = {
 
 const inputArgs = {
   showInputField: true,
-  inputFieldPlaceholder: 'Zoeken...',
   ...defaultArgs,
 };
 
