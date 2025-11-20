@@ -8,17 +8,15 @@
         "font-size": { "value": "{rvo.font-size.sm}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" }
       },
-      "optional": {
-        "color": {},
-        "content": { "value": "' (niet verplicht)'" },
+      "after-field": {
         "font-size": { "value": "{rvo.font-size.xs}" },
         "font-weight": { "value": "{rvo.font-weight.normal}" }
       },
+      "optional": {
+        "content": { "value": "' (niet verplicht)'" }
+      },
       "required": {
-        "color": { "value": "{rvo.color.rood}" },
-        "content": { "value": "' *'" },
-        "font-size": { "value": "{rvo.font-size.xs}" },
-        "font-weight": { "value": "{rvo.font-weight.normal}" }
+        "content": { "value": "' (verplicht)'" }
       }
     }
   }
