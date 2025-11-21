@@ -57,19 +57,16 @@ export const Image: React.FC<IImageProps> = ({
   ...rest
 }) => {
   const hasRadius = radius && radius !== 'none';
-
-  const imgClass = clsx(
-    'rvo-image',
-    hasRadius && `rvo-image--radius-${radius}`,
-    hasRadius && `rvo-image--radius-size-${radiusSize ?? '2xl'}`,
-    className,
-  );
-
   const imgElement = (
     <img
       {...rest}
       alt={alt}
-      className={imgClass}
+      className={clsx(
+        'rvo-image',
+        hasRadius && `rvo-image--radius-${radius}`,
+        hasRadius && `rvo-image--radius-size-${radiusSize ?? '2xl'}`,
+        className,
+      )}
       {...(loading ? { loading } : {})}
       {...(decoding ? { decoding } : {})}
       {...(fetchPriority ? { fetchPriority } : {})}
@@ -80,7 +77,7 @@ export const Image: React.FC<IImageProps> = ({
 
   if (sources.length > 0) {
     return (
-      <picture className="rvo-image-wrapper">
+      <picture className="rvo-image__wrapper">
         {sources.map((source, index) => (
           <source key={index} {...source} />
         ))}
