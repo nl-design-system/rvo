@@ -13,6 +13,10 @@ const meta: Meta<typeof TextareaField> = {
     docusaurus: {
       link: 'form-field-textarea',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5909-2331&embed-host=share',
+    },
   },
 };
 export default meta;

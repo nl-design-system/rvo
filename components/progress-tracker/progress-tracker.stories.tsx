@@ -13,6 +13,10 @@ const meta: Meta<typeof ProgressTracker> = {
     docusaurus: {
       link: 'progress-tracker',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=253-4158&embed-host=share',
+    },
   },
 };
 export default meta;

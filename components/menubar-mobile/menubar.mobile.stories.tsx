@@ -43,6 +43,10 @@ const meta: Meta<typeof MobileMenuBar> = {
     docusaurus: {
       link: 'menubar-mobile',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2742-22&embed-host=share',
+    },
   },
 };
 export default meta;

@@ -13,6 +13,10 @@ const meta: Meta<typeof Paragraph> = {
     docusaurus: {
       link: 'paragraph',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=1274-18388&embed-host=share',
+    },
   },
 };
 export default meta;
