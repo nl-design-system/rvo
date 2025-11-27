@@ -1,5 +1,7 @@
-import { Fieldset, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Fieldset, Footer, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
 import '../../common/style.scss';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const FiltersPersonen = () => {
   return (
@@ -352,94 +354,7 @@ const FiltersPersonen = () => {
             </div>
           </main>
 
-          <footer className="rvo-footer">
-            <MaxWidthLayout size="lg">
-              <ul className="rvo-footer-menu">
-                <li className="rvo-footer__column-title">
-                  <Heading type="h3">RVO</Heading>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Over ons"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Contact"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Pers"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Zaken regelen bij RVO"></Link>
-                </li>
-              </ul>
-              <ul className="rvo-footer-menu">
-                <li className="rvo-footer__column-title">
-                  <Heading type="h3">Over deze site</Heading>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Privacy"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Cookies en anti-spam"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Toegankelijkheid"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Proclaimer"></Link>
-                </li>
-              </ul>
-              <ul className="rvo-footer-menu">
-                <li className="rvo-footer__column-title">
-                  <Heading type="h3">Snel naar</Heading>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Onderwerpen A t/m Z"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Klantenpanel"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Documenten en publicaties"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Overheidspublicaties en auteursrecht"></Link>
-                </li>
-              </ul>
-              <ul className="rvo-footer-menu">
-                <li className="rvo-footer__column-title">
-                  <Heading type="h3">Blijf op de hoogte</Heading>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Social media"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Higherlevel.nl ondernemersforum"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="RSS"></Link>
-                </li>
-                <li className="rvo-footer-menu-item">
-                  <Icon icon="delta-naar-rechts" color="wit" size="sm" />
-                  <Link href="#" content="Gratis nieuwsbrief"></Link>
-                </li>
-              </ul>
-            </MaxWidthLayout>
-          </footer>
+          <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
         </LayoutFlow>
       </LayoutFlow>
     </div>
