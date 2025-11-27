@@ -1,5 +1,12 @@
 # `@nl-rvo/css-ordered-unordered-list`
 
+## 1.3.0
+
+### Minor Changes
+
+- 1ad7499: Align list item markers (ul li) to the top when list content spans multiple lines.
+- 1ad7499: Introduce new css variables to modify ul-icon image and before margin for more flexibility.
+
 ## 1.2.2
 
 ### Patch Changes
