@@ -1,18 +1,19 @@
-# Image
+# Image component
 
-Het tonen van een afbeelding op een duurzame en toegankelijke manier.
+Een toegankelijke, responsieve afbeeldingcomponent voor het NL Design System. En het tonen van een afbeelding op een duurzame en toegankelijke manier.
 
-## Wanneer gebruik je image
+De **Image** component toont afbeeldingen op een consistente en toegankelijke manier, met optionele bijschriften, afgeronde hoeken op basis van design tokens en ondersteuning voor responsieve `<picture>`-bronnen.  
+Gebruik deze component voor contentafbeeldingen, hero-secties of illustraties die onderdeel zijn van de inhoudsstructuur.
 
-Als er een afbeelding getoond moet worden.
+---
 
-## Anatomie van image
+## Kenmerken
 
-Het component bestaat uit:
-
-- Afbeelding
-- Alt text
-- Afronding (niet verplicht)
+- Responsief: ondersteunt `<picture>` met meerdere bronformaten.
+- Toegankelijk: vereist `alt`-tekst en ondersteunt `caption` via `<figure>` en `<figcaption>`.
+- Design tokens: radius-groottes en spacing volgen het tokensysteem.
+- Prestatiegericht: optionele ondersteuning voor `loading`, `decoding` en `fetchPriority`.
+- Herbruikbaar: geschikt voor gebruik binnen elk project als zelfstandige React-component.
 
 ## Richtlijnen
 
@@ -23,3 +24,7 @@ Het component bestaat uit:
 - Stel de kwaliteit van rasterafbeeldingen (WebP, JPG en PNG) in op maximaal 85 procent. Dit maakt de bestandsgrootte kleiner, want alles boven 85 procent is voor het menselijk oog niet zichtbaar.
 - Geef elke afbeelding die belangrijk is om de inhoud te begrijpen een alt-tekst mee die de inhoud van de afbeelding duidelijk omschrijft voor gebruikers die een schermlezer gebruiken.
 - Als een afbeelding enkel decoratief is, geef de afbeelding wel een alt-attribuut mee, maar laat deze leeg.
+
+## Wanneer gebruik je image
+
+Als er een afbeelding getoond moet worden.
