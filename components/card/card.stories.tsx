@@ -16,6 +16,10 @@ const meta: Meta<typeof Card> = {
     docusaurus: {
       link: 'card',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-118&embed-host=share',
+    },
   },
 };
 export default meta;

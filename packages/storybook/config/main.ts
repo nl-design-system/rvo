@@ -76,6 +76,7 @@ const config: StorybookConfig = {
     'storybook-addon-themes',
     '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
+    '@storybook/addon-designs',
   ],
   staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
   typescript: { check: true, checkOptions: {} },

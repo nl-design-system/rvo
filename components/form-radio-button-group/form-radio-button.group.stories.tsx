@@ -13,6 +13,10 @@ const meta: Meta<typeof RadioButtonGroup> = {
     docusaurus: {
       link: 'form-radio-button-group',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=450-11252&embed-host=share',
+    },
   },
 };
 export default meta;

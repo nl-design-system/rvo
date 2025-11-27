@@ -33,6 +33,10 @@ const meta: Meta<typeof Heading> = {
     docusaurus: {
       link: 'heading',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=107-1382&embed-host=share',
+    },
   },
 };
 export default meta;

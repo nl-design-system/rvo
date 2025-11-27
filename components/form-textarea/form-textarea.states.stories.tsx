@@ -5,14 +5,16 @@ export default {
   title: 'Componenten/Textarea/States',
   component: Textarea,
   argTypes: argTypes,
-
   parameters: {
     status: {
       type: 'PRODUCTION',
     },
-
     docusaurus: {
       link: 'form-textarea',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5910-272&embed-host=share',
     },
   },
 };

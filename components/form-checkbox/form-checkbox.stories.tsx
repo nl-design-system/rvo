@@ -13,6 +13,10 @@ const meta: Meta<typeof Checkbox> = {
     docusaurus: {
       link: 'form-checkbox',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=131-3042&embed-host=share',
+    },
   },
 };
 export default meta;

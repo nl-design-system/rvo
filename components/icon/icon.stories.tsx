@@ -13,6 +13,10 @@ const meta: Meta<typeof Icon> = {
     docusaurus: {
       link: 'icon',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=50-13&embed-host=share',
+    },
   },
 };
 export default meta;

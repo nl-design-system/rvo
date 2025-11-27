@@ -32,6 +32,10 @@ const meta: Meta<typeof PageNumberNavigation> = {
     docusaurus: {
       link: 'page-number-navigation',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=220-4774&embed-host=share',
+    },
   },
 };
 export default meta;

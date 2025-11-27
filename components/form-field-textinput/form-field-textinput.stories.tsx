@@ -13,6 +13,10 @@ const meta: Meta<typeof TextInputField> = {
     docusaurus: {
       link: 'form-field-textinput',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=436-26520&embed-host=share',
+    },
   },
 };
 export default meta;

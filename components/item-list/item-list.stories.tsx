@@ -13,6 +13,10 @@ const meta: Meta<typeof ItemList> = {
     docusaurus: {
       link: 'item-list',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-2220&embed-host=share',
+    },
   },
 };
 export default meta;
