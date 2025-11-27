@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field-label`
 
+## 1.3.0
+
+### Minor Changes
+
+- cde2fed: Update Label component with new parameters and updated required text
+
 ## 1.2.0
 
 ### Minor Changes

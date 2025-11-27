@@ -1,6 +1,6 @@
 # Dialog
 
-Een dialoog verschijnt over de hoofd content van de pagina heen. Het doel is om de interactie met de gebruiker van de hoofd content te verplaatsen naar de dialoog. De hoofd content is slechts nog deels zichtbaar.Een dialog kan een modal zijn. In dat geval is interactie uitsluitend mogelijk in de dialoo.
+Een dialog verschijnt over de hoofd content van de pagina heen. Het doel is om de interactie met de gebruiker van de hoofd content te verplaatsen naar de dialoog. De hoofd content is slechts nog deels zichtbaar. Een dialog kent ook een modal variant waar de gebruiker geforceerd wordt de taak in de modal dialog uit te voeren.
 
 ## Wanneer gebruik je het component
 
@@ -11,6 +11,7 @@ Dialogs zijn bedoeld voor situaties waarin de normale taakuitvoering van de gebr
 Een dialog bestaat uit:
 
 - Een venster met daarin content die de aandacht van de gebruiker vereist
+- Een betekenisvolle kop (H2) die de taak beschrijft die de dialog bevat
 - Een knop om de dialoog te sluiten
 - Bij gebruik van de modal optie: Een achtergrondlaag die interactie met de hoofd content niet mogelijk maakt
 
@@ -31,7 +32,6 @@ Een dialog bestaat uit:
 - Het dialoogvenster moet altijd zichtbaar zijn, ongeacht scrollen, schermgrootte of wijzigingen in de oriëntatie.
 - Vermijd het overmatig gebruiken van dialoogvensters om elke beslissing in een taak onder de aandacht van de gebruiker te brengen. Teveel dialoogvensters kan bij een gebruiker de reactie opwekken om de dialoogvensters te negeren of weg te klikken.
 - Plaats geen essentiële en belangrijke informatie in een dialoogvenster. Door deze informatie min of meer te verstoppen in een dialoogvenster kunnen gebruikers deze informatie missen.
-- Geef dialoogvensters altijd een betekenisvolle kop (H2) en beschrijf de taak die de dialoog bevat.
 
 ## Rijkshuisstijl
 

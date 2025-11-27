@@ -1,5 +1,17 @@
 # @nl-rvo/design-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- cde2fed: Update Label design tokens
+
+## 2.0.0
+
+### Major Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
 ## 1.12.0
 
 ### Minor Changes

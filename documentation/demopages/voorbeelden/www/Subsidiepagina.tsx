@@ -80,10 +80,14 @@ const Subsidiepagina = () => {
             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
             <strong>Open voor aanvragen </strong> tot 31 december 2025
           </LayoutFlow>
+          <div className="rvo-padding-block-start--md">
+            <a href="#" className="rvo-link">
+              View this page in English
+            </a>{' '}
+          </div>
           <p>
             <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em>
           </p>
-
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Wilt u het dak van uw huis of bedrijfspand geschikt maken voor bijen? Met deze subsidie krijgt u de kosten
             vergoed voor uw bijvriendelijke dak. Zo helpt u de hoeveelheid bijen in Nederland én het klimaat. Uw dak
@@ -677,11 +681,6 @@ const Subsidiepagina = () => {
             <a href="#" className="rvo-link">
               Duurzaamheid
             </a>
-            <br />
-            View this page in English:{' '}
-            <a href="#" className="rvo-link">
-              Fictional subsidy scheme for stimulating bees (FSSBD)
-            </a>{' '}
           </p>
         </div>
 
