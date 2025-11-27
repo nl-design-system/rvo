@@ -1,12 +1,12 @@
 import './index.scss';
+
 import clsx from 'clsx';
-import { HTMLAttributes } from 'react';
 import React from 'react';
 import Button, { IButtonProps } from '../../button/src/template';
 import { Icon } from '../../icon/src/template';
 import StatusIcon from '../../status-icon/src/template';
 
-export interface ILoader extends HTMLAttributes<HTMLDivElement> {
+export interface ILoader {
   animateLoader?: boolean;
   overlay?: boolean;
   status?: ILoaderStatus;
@@ -19,11 +19,11 @@ export interface ILoaderStatus {
   text: string;
 }
 
-export const Loader: React.FC<ILoader> = (props: ILoader) => {
-  const { overlay, status, primaryAction, secondaryAction, animateLoader = true } = props;
+export const Loader: React.FC<ILoader & React.HTMLAttributes<HTMLDivElement>> = (props) => {
+  const { overlay, status, primaryAction, secondaryAction, animateLoader = true, ...rootElementProps } = props;
 
   return (
-    <div className={clsx('rvo-loader', overlay && 'rvo-loader--overlay')}>
+    <div className={clsx('rvo-loader', overlay && 'rvo-loader--overlay')} {...rootElementProps}>
       <span className={clsx('rvo-loader__icon', animateLoader && 'rvo-loader__icon--animated')}>
         <Icon icon="pijlen-in-cirkel-om-document" size="2xl" color="grijs-700" />
       </span>

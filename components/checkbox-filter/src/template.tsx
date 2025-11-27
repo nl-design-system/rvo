@@ -6,7 +6,7 @@ import Icon from '../../icon/src/template';
 import Link from '../../link/src/template';
 import './index.scss';
 
-export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
+export interface ICheckboxFilter {
   label: string;
   options: ICheckboxProps[];
   optionsOnChange: (currentGroupSelection: string[]) => void;
@@ -20,7 +20,9 @@ export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
   noFiltersText?: string;
 }
 
-export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter) => {
+export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetailsElement>> = (
+  props: ICheckboxFilter,
+) => {
   const {
     label,
     options,
@@ -33,7 +35,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     showMoreText = 'Toon meer',
     showLessText = 'Toon minder',
     noFiltersText = 'Geen filters beschikbaar',
-    ...rest
+    ...rootElementProps
   } = props;
   const [visibleItems, setVisibleItems] = useState([]);
   const [toggleShow, setToggleShow] = useState(false);
@@ -60,7 +62,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
   };
 
   return (
-    <details open className="rvo-checkbox-filter" {...rest}>
+    <details open className="rvo-checkbox-filter" {...rootElementProps}>
       <summary className="rvo-checkbox-filter__label">
         {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>

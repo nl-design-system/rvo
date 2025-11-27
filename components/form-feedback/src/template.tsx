@@ -30,21 +30,22 @@ export const argTypes = {
   },
 };
 
-export const Feedback: React.FC<IFeedbackProps> = ({
+export const Feedback: React.FC<IFeedbackProps & React.HTMLAttributes<HTMLDivElement>> = ({
   text = defaultArgs.text,
   type = defaultArgs.type,
   children,
-}: IFeedbackProps) => {
+  ...rootElementProps
+}) => {
   if (type === 'warning') {
     return (
-      <FormFieldDescription warning className="rvo-form-feedback rvo-form-feedback--warning">
+      <FormFieldDescription warning className="rvo-form-feedback rvo-form-feedback--warning" {...rootElementProps}>
         <StatusIcon type="waarschuwing" size="md" className="rvo-status-icon-waarschuwing" />
         {parseContentMarkup(children || text)}
       </FormFieldDescription>
     );
   } else {
     return (
-      <FormFieldDescription invalid className="rvo-form-feedback rvo-form-feedback--error">
+      <FormFieldDescription invalid className="rvo-form-feedback rvo-form-feedback--error" {...rootElementProps}>
         <StatusIcon type="foutmelding" size="md" className="rvo-status-icon-foutmelding" />
         {parseContentMarkup(children || text)}
       </FormFieldDescription>

@@ -53,7 +53,7 @@ export const argTypes = {
   },
 };
 
-export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
+export const SidebarLayout: React.FC<ISidebarLayoutProps & React.HTMLAttributes<HTMLElement>> = ({
   maxWidthLayoutSize = defaultArgs.maxWidthLayoutSize,
   sidebarPosition = defaultArgs.sidebarPosition,
   sidebarBackgroundColor = defaultArgs.sidebarBackgroundColor,
@@ -61,13 +61,16 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> = ({
   content = defaultArgs.content,
   children,
   className,
-}: ISidebarLayoutProps) => {
+  ...rootElementProps
+}) => {
   return (
     <main
       className={clsx(
         'rvo-sidebar-layout__container',
         sidebarPosition === 'right' && 'rvo-sidebar-layout__container--right',
+        className,
       )}
+      {...rootElementProps}
     >
       <div
         className={clsx(

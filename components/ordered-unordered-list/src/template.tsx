@@ -60,7 +60,7 @@ export const argTypes = {
   },
 };
 
-export const List: React.FC<IListProps> = ({
+export const List: React.FC<IListProps & React.HTMLAttributes<HTMLUListElement | HTMLOListElement>> = ({
   type = defaultArgs.type,
   items = defaultArgs.items,
   bulletType = defaultArgs.bulletType,
@@ -68,7 +68,8 @@ export const List: React.FC<IListProps> = ({
   noMargin = defaultArgs.noMargin,
   noPadding = defaultArgs.noPadding,
   children = defaultArgs.children,
-}: IListProps) => {
+  ...rootElementProps
+}) => {
   const ListTag = type === 'unordered' ? 'ul' : 'ol';
   const listClassName = clsx(
     type === 'unordered' && 'rvo-ul',
@@ -82,7 +83,7 @@ export const List: React.FC<IListProps> = ({
   );
 
   return (
-    <ListTag className={listClassName}>
+    <ListTag className={listClassName} {...rootElementProps}>
       {children
         ? React.Children.map(parseChildren(children), (child, index) => <li key={index}>{child}</li>)
         : items?.map((itemContent, index) => <li key={index}>{itemContent}</li>)}

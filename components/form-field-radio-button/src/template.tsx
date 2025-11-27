@@ -9,7 +9,7 @@ import {
   argTypes as radioButtonArgTypes,
   RadioButtonGroup,
 } from '../../form-radio-button-group/src/template';
-import extractArgs from '../../utils/extractArgs';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface IRadioButtonFieldProps extends IFieldProps, IRadioButtonGroupProps {}
 
@@ -18,8 +18,11 @@ export const argTypes = { ...fieldArgTypes, ...radioButtonArgTypes };
 export const RadioButtonField: React.FC<IRadioButtonFieldProps> = (args: IRadioButtonFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes);
   const radioButtonArgs = extractArgs(args, radioButtonArgTypes);
+
+  const fieldArgsWithOtherAttributes = extractOtherArgs(args, { ...fieldArgTypes, ...radioButtonArgTypes });
+
   return (
-    <Field {...fieldArgs}>
+    <Field {...fieldArgs} {...fieldArgsWithOtherAttributes}>
       <RadioButtonGroup {...radioButtonArgs}>{args.children}</RadioButtonGroup>
     </Field>
   );

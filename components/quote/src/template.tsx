@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { isOfType } from '../../utils/typeUtils';
 import './index.scss';
 
@@ -13,7 +13,7 @@ export interface IQuoteProps {
   user: QuoteUser;
 }
 
-export const Quote: React.FC<IQuoteProps> = ({ quote, user }: IQuoteProps) => {
+export const Quote: React.FC<IQuoteProps & HTMLAttributes<HTMLDivElement>> = ({ quote, user, ...rootElementProps }) => {
   const renderImage = () => {
     if (!user) return null;
 
@@ -27,7 +27,7 @@ export const Quote: React.FC<IQuoteProps> = ({ quote, user }: IQuoteProps) => {
   };
 
   return (
-    <div className="rvo-quote">
+    <div className="rvo-quote" {...rootElementProps}>
       <span className="rvo-quote__quote">"{quote}"</span>
       <div className="rvo-quote__user">
         {user.image && <div className="rvo-quote__image">{renderImage()}</div>}

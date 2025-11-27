@@ -33,15 +33,16 @@ export interface FooterInterface {
   secondaryMenu?: FooterItemInterface[];
 }
 
-export const Footer: React.FC<FooterInterface> = ({
+export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElement>> = ({
   primaryMenu,
   maxWidth,
   payOff,
   secondaryMenu,
   children,
+  ...rootElementProps
 }: FooterInterface) => {
   return (
-    <UtrechtPageFooter className="rvo-footer">
+    <UtrechtPageFooter className="rvo-footer" {...rootElementProps}>
       <div
         className={clsx(
           'rvo-footer__container',

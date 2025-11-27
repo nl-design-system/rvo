@@ -31,7 +31,8 @@ export const StatusIcon: React.FC<IStatusIconProps> = ({
   size = defaultArgs.size,
   className,
   ignoreDefaultIconColor,
-}: IStatusIconProps) => {
+  ...rootElementProps
+}) => {
   const iconName = type.toLowerCase().replace(/_/g, '-');
 
   let parsedClassName = '';
@@ -43,7 +44,15 @@ export const StatusIcon: React.FC<IStatusIconProps> = ({
     parsedClassName += ` ${className}`;
   }
 
-  return <Icon icon={iconName as any} size={size as any} color="" className={parsedClassName} />;
+  return (
+    <Icon
+      icon={iconName as any}
+      size={size as any}
+      color={'' as any}
+      className={parsedClassName}
+      {...rootElementProps}
+    />
+  );
 };
 
 export default StatusIcon;

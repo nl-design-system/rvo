@@ -9,14 +9,13 @@ import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
+
 export interface IMaxWidthLayoutProps {
   size?: 'sm' | 'md' | 'lg';
   /** @uxpinignoreprop */
   content?: string;
   inlinePadding?: 'none' | 'sm' | 'md' | 'lg';
   centered?: boolean;
-  /** @uxpinignoreprop */
-  className?: string | string[];
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
@@ -43,15 +42,15 @@ export const argTypes = {
   },
 };
 
-export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
+export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps & React.HTMLAttributes<HTMLDivElement>> = ({
   size = defaultArgs.size,
   content = defaultArgs.content,
   inlinePadding = defaultArgs.inlinePadding,
   centered = defaultArgs.centered,
   children,
-  className = [],
-  ...props
-}: IMaxWidthLayoutProps) => {
+  className,
+  ...rootElementProps
+}) => {
   let parsedContent = parseContentMarkup(children || content);
 
   if (!children && typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
@@ -79,7 +78,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps> = ({
         !centered && 'rvo-max-width-layout--uncentered',
         className,
       )}
-      {...props}
+      {...rootElementProps}
     >
       {parsedContent}
     </div>

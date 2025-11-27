@@ -60,12 +60,12 @@ const sortData = (rows: string[][], columnIndex: number, direction: 'ASC' | 'DES
   });
 };
 
-export const Table: React.FC<ITableProps> = ({
+export const Table: React.FC<ITableProps & React.HTMLAttributes<HTMLDivElement>> = ({
   description,
   columns = defaultArgs.columns,
   rows = defaultArgs.rows,
   onSort,
-  ...props
+  ...rootElementProps
 }: ITableProps) => {
   const [internalColumns, setInternalColumns] = useState(columns);
   const [internalRows, setInternalRows] = useState(rows);
@@ -97,7 +97,7 @@ export const Table: React.FC<ITableProps> = ({
   );
 
   return (
-    <div className="rvo-table--responsive" {...props}>
+    <div className="rvo-table--responsive" {...rootElementProps}>
       <table className="rvo-table">
         {description && <caption className="rvo-caption">{description}</caption>}
         <thead className="rvo-table-head">

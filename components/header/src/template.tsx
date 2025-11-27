@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Logo } from '../../logo/src/template';
 import './index.scss';
 
-export interface IHeaderProps extends HTMLAttributes<HTMLDivElement> {
+export interface IHeaderProps {
   title?: string;
   subtitle?: string;
   /** @uxpinignoreprop */
@@ -39,14 +39,15 @@ export const argTypes = {
   },
 };
 
-export const Header: React.FC<IHeaderProps> = ({
+export const Header: React.FC<IHeaderProps & React.HTMLAttributes<HTMLDivElement>> = ({
   link = defaultArgs.link,
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
   children,
   onClick,
-}: IHeaderProps) => (
-  <header className={clsx('rvo-header')}>
+  ...rootElementProps
+}) => (
+  <header className={clsx('rvo-header')} {...rootElementProps}>
     <div className="rvo-header__logo-wrapper" onClick={onClick}>
       {link ? (
         <a href={link} className="rvo-header__logo-link rvo-link rvo-link--no-underline">

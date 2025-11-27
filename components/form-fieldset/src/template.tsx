@@ -36,14 +36,15 @@ export const argTypes = {
   },
 };
 
-export const Fieldset: React.FC<IFieldsetProps> = ({
+export const Fieldset: React.FC<IFieldsetProps & React.HTMLAttributes<HTMLDivElement>> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,
   fields,
   children,
-}: IFieldsetProps) => {
+  ...rootElementProps
+}) => {
   return (
-    <FieldsetUtrecht disabled={disabled || undefined} className="rvo-form-fieldset">
+    <FieldsetUtrecht disabled={disabled || undefined} className="rvo-form-fieldset" {...rootElementProps}>
       {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
       {children
         ? parseContentMarkup(children)

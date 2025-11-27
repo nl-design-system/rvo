@@ -48,14 +48,15 @@ export const argTypes = {
   },
 };
 
-export const ActionGroup: React.FC<IActionGroupProps> = ({
+export const ActionGroup: React.FC<IActionGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,
   children,
   fullWidth = defaultArgs.fullWidth,
   className,
   position = defaultArgs.position,
-}: IActionGroupProps) => {
+  ...rootElementProps
+}) => {
   return (
     <ButtonGroup
       className={clsx(
@@ -65,6 +66,7 @@ export const ActionGroup: React.FC<IActionGroupProps> = ({
         },
         className,
       )}
+      {...rootElementProps}
     >
       {children}
       {!children &&

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { HTMLAttributes, useState } from 'react';
 import Button from '../../button/src/template';
 import Dialog from '../../dialog/src/template';
 import { Icon } from '../../index';
@@ -15,10 +15,9 @@ export interface IMobileMenuBarProps {
   children?: React.ReactNode;
   isOpen?: boolean;
   horizontalRule?: boolean;
-  /** @uxpinignoreprop */
 }
 
-export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
+export const MobileMenuBar: React.FC<IMobileMenuBarProps & HTMLAttributes<HTMLDivElement>> = ({
   size,
   items,
   useIcons,
@@ -26,7 +25,8 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
   isOpen = false,
   horizontalRule,
   children,
-}: IMobileMenuBarProps) => {
+  ...rootElementProps
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(isOpen);
 
   let itemsMarkup =
@@ -52,6 +52,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps> = ({
         horizontalRule && 'rvo-mobile-menu--horizontal-rule',
       )}
       aria-expanded={isOpen}
+      {...rootElementProps}
     >
       <Button kind="subtle" className={clsx('rvo-mobile-menu__toggle')} onClick={() => setIsMenuOpen(!isOpen)}>
         <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />

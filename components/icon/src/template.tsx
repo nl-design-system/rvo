@@ -9,6 +9,7 @@ import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { IconType } from './types';
 import './index.scss';
+
 export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   icon: IconType;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
@@ -64,13 +65,13 @@ export const argTypes = {
   },
 };
 
-export const Icon: React.FC<IIconProps> = ({
+export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,
   color = defaultArgs.color,
   ariaLabel = defaultArgs.ariaLabel,
   className,
-  ...props
+  ...rootElementProps
 }: IIconProps) => {
   let iconName = icon as string;
   if (icon.indexOf(' > ') > -1) {
@@ -99,7 +100,7 @@ export const Icon: React.FC<IIconProps> = ({
         ? ariaLabel
         : iconName.charAt(0).toUpperCase() + iconName.substr(1).toLowerCase()
       ).replace(/-/g, ' ')}
-      {...props}
+      {...rootElementProps}
     ></span>
   );
 };

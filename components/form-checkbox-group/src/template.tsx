@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Checkbox, ICheckboxProps } from '../../form-checkbox/src/template';
 import './index.scss';
@@ -41,11 +41,12 @@ export const argTypes = {
   },
 };
 
-export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
+export const CheckboxGroup: React.FC<ICheckboxGroupProps & HTMLAttributes<HTMLDivElement>> = ({
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
   onChange,
   children,
+  ...rootElementProps
 }: ICheckboxGroupProps) => {
   const handleUpdateGroup = (event: React.ChangeEvent<HTMLInputElement>): void => {
     if (!options) {
@@ -65,7 +66,7 @@ export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({
   };
 
   return (
-    <div className={clsx('rvo-checkbox__group', invalid && 'rvo-radio-button__group--error')}>
+    <div className={clsx('rvo-checkbox__group', invalid && 'rvo-radio-button__group--error')} {...rootElementProps}>
       {(children &&
         React.Children.map(children, (child, index) => (
           <Checkbox

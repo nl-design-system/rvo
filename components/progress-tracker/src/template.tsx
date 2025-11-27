@@ -28,12 +28,13 @@ export const argTypes = {
   },
 };
 
-export const ProgressTracker: React.FC<IProgressTrackerProps> = ({
+export const ProgressTracker: React.FC<IProgressTrackerProps & React.HTMLAttributes<HTMLDivElement>> = ({
   steps = defaultArgs.steps,
   children,
-}: IProgressTrackerProps) => {
+  ...rootElementProps
+}) => {
   return (
-    <div className="rvo-progress-tracker">
+    <div className="rvo-progress-tracker" {...rootElementProps}>
       {(children &&
         React.Children.map(children, (child, index) => (
           <ProgressTrackerStep key={index} {...(child as any).props} />
