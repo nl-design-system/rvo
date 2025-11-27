@@ -105,14 +105,24 @@
 .rvo-dialog__close-icon {
   --utrecht-icon-color: var(--rvo-mobile-menu-toggle-icon-color);
 
-  align-self: flex-end;
-  cursor: pointer;
-  position: absolute;
-  top: var(--rvo-dialog-padding-block-start);
+  margin-inline-end: var(--rvo-space-sm);
 }
 
 // Action group
 .rvo-dialog__action-group {
   margin-block-start: var(--rvo-dialog-action-group-margin-block-start);
   width: 100%;
+}
+
+.rvo-dialog__close {
+  align-items: center;
+  align-self: end;
+  cursor: pointer;
+  top: var(--rvo-dialog-padding-block-start);
+}
+
+.rvo-dialog__close-button {
+  font-size: inherit;
+  padding-block-start: 0;
+  padding-inline-end: 0;
 }
