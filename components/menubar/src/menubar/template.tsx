@@ -38,7 +38,7 @@ export interface IMenuBarProps {
   grid?: boolean;
 }
 
-export const MenuBar: React.FC<IMenuBarProps> = ({
+export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivElement>> = ({
   size = defaultArgs.size,
   direction = defaultArgs.direction,
   items = defaultArgs.items,
@@ -49,7 +49,8 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
   linkColor = defaultArgs.linkColor,
   grid = defaultArgs.grid,
   children,
-}: IMenuBarProps) => {
+  ...rootElementProps
+}) => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const menuBarRef = useRef<HTMLDivElement>(null);
 
@@ -125,6 +126,7 @@ export const MenuBar: React.FC<IMenuBarProps> = ({
     <div
       ref={menuBarRef}
       className={clsx('rvo-menubar__background', horizontalRule && 'rvo-menubar__background--horizontal-rule')}
+      {...rootElementProps}
     >
       {direction === 'horizontal' && maxWidth !== 'none' ? (
         <MaxWidthLayout size={maxWidth}>{children || navMarkup}</MaxWidthLayout>

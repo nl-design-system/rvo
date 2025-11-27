@@ -4,12 +4,12 @@
  */
 
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode, useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useRef } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-export interface IScrollableContentProps extends HTMLAttributes<HTMLDivElement> {
+export interface IScrollableContentProps {
   height?: number;
   useAsMinimumHeight?: boolean;
   /** @uxpinignoreprop */
@@ -45,15 +45,15 @@ export const argTypes = {
   },
 };
 
-export const ScrollableContent: React.FC<IScrollableContentProps> = ({
+export const ScrollableContent: React.FC<IScrollableContentProps & React.HTMLAttributes<HTMLDivElement>> = ({
   content,
   children,
   height = defaultArgs.height,
   useAsMinimumHeight = defaultArgs.useAsMinimumHeight,
   disableScroll = defaultArgs.disableScroll,
   useStyleAttribute = defaultArgs.useStyleAttribute,
-  ...props
-}: IScrollableContentProps) => {
+  ...rootElementProps
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export const ScrollableContent: React.FC<IScrollableContentProps> = ({
       }
     }
   }, [height, disableScroll, useStyleAttribute, useAsMinimumHeight]);
-  console.log(useStyleAttribute);
+
   return (
     <div
       ref={containerRef}
@@ -72,7 +72,7 @@ export const ScrollableContent: React.FC<IScrollableContentProps> = ({
       {...(useStyleAttribute === true
         ? { style: { maxHeight: `${height}px`, minHeight: useAsMinimumHeight ? `${height}px` : undefined } }
         : {})}
-      {...props}
+      {...rootElementProps}
     >
       {parseContentMarkup(children || content)}
     </div>

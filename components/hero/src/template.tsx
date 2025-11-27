@@ -15,16 +15,14 @@ export interface IHeroProps {
   title?: string;
   subtitle?: string;
   size?: 'sm' | 'md' | 'lg';
-  /** @uxpinignoreprop */
-  className?: string;
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   /** @uxpinignoreprop */
   content?: string | React.ReactNode;
 }
 
-export const Hero: React.FC<IHeroProps> = (props: IHeroProps) => {
-  const { image, title, subtitle, size, className, content, children, ...rest } = props;
+export const Hero: React.FC<IHeroProps & React.HTMLAttributes<HTMLDivElement>> = (props) => {
+  const { image, title, subtitle, size, className, content, children, ...rootElementProps } = props;
 
   // Parse content markup (either a string, HTML string, React node or children)
   const contentMarkup: string | ReactNode = parseContentMarkup(children || content);
@@ -40,7 +38,7 @@ export const Hero: React.FC<IHeroProps> = (props: IHeroProps) => {
   };
 
   return (
-    <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...rest}>
+    <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...rootElementProps}>
       <div className="rvo-hero__image-container">{renderImage()}</div>
       <div className="rvo-hero__content">
         <Heading type="h1" className="rvo-hero__title" noMargins={true}>

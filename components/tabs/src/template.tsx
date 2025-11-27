@@ -41,11 +41,12 @@ export const argTypes = {
   },
 };
 
-export const Tabs: React.FC<ITabsProps> = ({
+export const Tabs: React.FC<ITabsProps & React.HTMLAttributes<HTMLUListElement>> = ({
   tabs = defaultArgs.tabs,
   activeTab = defaultArgs.activeTab,
   onChange,
   children,
+  ...rootElementProps
 }: ITabsProps) => {
   const [currentTab, setCurrentTab] = useState(activeTab);
 
@@ -63,6 +64,7 @@ export const Tabs: React.FC<ITabsProps> = ({
       className="rvo-tabs rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2"
       role="tablist"
       aria-label="Tabs"
+      {...rootElementProps}
     >
       {(children &&
         React.Children.map(children, (child, index) => (
