@@ -13,6 +13,10 @@ export default {
     docusaurus: {
       link: 'paragraph',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2003-19389&embed-host=share',
+    },
   },
 };
 

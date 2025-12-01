@@ -11,6 +11,10 @@ const meta: Meta<typeof Hr> = {
     docusaurus: {
       link: 'horizontal-rule',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-2211&embed-host=share',
+    },
   },
 };
 export default meta;

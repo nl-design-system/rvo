@@ -44,6 +44,10 @@ const meta: Meta<typeof ExpandableContent> = {
     docusaurus: {
       link: 'expandable-content',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=105-1742&embed-host=share',
+    },
   },
 };
 export default meta;

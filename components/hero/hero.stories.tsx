@@ -50,6 +50,10 @@ const meta: Meta<typeof Hero> = {
     docusaurus: {
       link: 'hero',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5925-2130&embed-host=share',
+    },
   },
 };
 export default meta;
