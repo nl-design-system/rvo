@@ -440,8 +440,16 @@
           "$value": "5px",
           "$type": "dimension"
         },
-        "xl": {
+        "lg": {
           "$value": "10px",
+          "$type": "dimension"
+        },
+        "xl": {
+          "$value": "20px",
+          "$type": "dimension"
+        },
+        "2xl": {
+          "$value": "50px",
           "$type": "dimension"
         }
       }
