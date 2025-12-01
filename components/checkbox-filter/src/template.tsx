@@ -12,7 +12,6 @@ export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
   optionsOnChange: (currentGroupSelection: string[]) => void;
   limit?: number;
   showInputField?: boolean;
-  inputFieldPlaceholder?: string;
   inputFieldLabel?: string;
   inputFieldOnChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   showMoreText?: string;
@@ -26,8 +25,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     options,
     limit = 5,
     showInputField,
-    inputFieldLabel,
-    inputFieldPlaceholder,
+    inputFieldLabel = 'Zoeken',
     inputFieldOnChange,
     optionsOnChange,
     showMoreText = 'Toon meer',
@@ -64,14 +62,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
       <summary className="rvo-checkbox-filter__label">
         {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>
-      {showInputField && (
-        <TextInputField
-          placeholder={inputFieldPlaceholder}
-          onChange={inputFieldOnChange}
-          label={inputFieldLabel}
-          size="max"
-        />
-      )}
+      {showInputField && <TextInputField onChange={inputFieldOnChange} label={inputFieldLabel} size="max" />}
       <div className="rvo-checkbox-filter__checkbox-container">
         {visibleItems.length > 0 && (
           <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
