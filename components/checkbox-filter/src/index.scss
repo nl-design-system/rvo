@@ -16,6 +16,7 @@
     font-weight: var(--rvo-font-weight-bold);
     gap: var(--rvo-space-xs);
     list-style: none;
+    padding-inline-end: calc(#{var(--rvo-icon-md-width)} * 2);
     position: relative;
   }
 

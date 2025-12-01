@@ -13,6 +13,10 @@ const meta: Meta<typeof Tabs> = {
     docusaurus: {
       link: 'tabs',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=3669-2&embed-host=share',
+    },
   },
 };
 export default meta;

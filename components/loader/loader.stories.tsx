@@ -51,6 +51,10 @@ const meta: Meta<typeof Loader> = {
     docusaurus: {
       link: 'loader',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=6605-175&embed-host=share',
+    },
   },
 };
 export default meta;
