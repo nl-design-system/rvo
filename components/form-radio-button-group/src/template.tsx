@@ -48,13 +48,14 @@ export const argTypes = {
   },
 };
 
-export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
+export const RadioButtonGroup: React.FC<IRadioButtonGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({
   name = defaultArgs.name,
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,
   onChange,
   children,
-}: IRadioButtonGroupProps) => {
+  ...rootElementProps
+}) => {
   const radioGroupRef = useRef<HTMLDivElement>(null);
   const onUpdateGroup = useCallback(() => {
     if (radioGroupRef.current) {
@@ -65,7 +66,11 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
   }, [radioGroupRef]);
 
   return (
-    <div className={clsx('rvo-radio-button__group', invalid && 'rvo-radio-button__group--error')} ref={radioGroupRef}>
+    <div
+      className={clsx('rvo-radio-button__group', invalid && 'rvo-radio-button__group--error')}
+      ref={radioGroupRef}
+      {...rootElementProps}
+    >
       {(children &&
         React.Children.map(children, (child, index) => (
           <RadioButton

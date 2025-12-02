@@ -1,3 +1,4 @@
+import { HTMLAttributes } from 'react';
 import { IRadioButtonGroupProps } from './template';
 import { IRadioButtonProps } from '../../form-radio-button/src/template';
 
@@ -8,7 +9,7 @@ const defaultOptions: IRadioButtonProps[] = [
   { id: 'optionD', label: 'Option D' },
 ];
 
-export const defaultArgs: IRadioButtonGroupProps = {
+export const defaultArgs: IRadioButtonGroupProps & HTMLAttributes<HTMLDivElement> = {
   name: 'group',
   invalid: false,
   options: defaultOptions,

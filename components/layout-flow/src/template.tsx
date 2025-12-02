@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import './index.scss';
 
-export interface ILayoutFlowProps extends HTMLAttributes<HTMLDivElement> {
+export interface ILayoutFlowProps {
   gap?: '0' | '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
   row?: boolean;
   wrap?: boolean;
@@ -54,7 +54,7 @@ export const argTypes = {
   },
 };
 
-export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
+export const LayoutFlow: React.FC<ILayoutFlowProps & React.HTMLAttributes<HTMLDivElement>> = ({
   gap = defaultArgs.gap,
   row = defaultArgs.row,
   wrap = defaultArgs.wrap,
@@ -63,8 +63,8 @@ export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
   justifyItems = defaultArgs.justifyItems,
   justifyContent = defaultArgs.justifyContent,
   children,
-  ...props
-}: ILayoutFlowProps) => {
+  ...rootElementProps
+}) => {
   return (
     <div
       className={clsx(
@@ -77,7 +77,7 @@ export const LayoutFlow: React.FC<ILayoutFlowProps> = ({
         wrap && 'rvo-layout--wrap',
       )}
       {...(!children && { style: { height: '300px' } })}
-      {...props}
+      {...rootElementProps}
     >
       {parseContentMarkup(children) || (
         <>

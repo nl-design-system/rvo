@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { HTMLAttributes } from 'react';
 import { Hero, IHeroProps } from './src/template';
 
 const argTypes = {
@@ -31,7 +32,7 @@ const argTypes = {
   },
 };
 
-const defaultArgs: IHeroProps = {
+const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {
   image: { src: '', alt: '' },
   title: 'Rijksdienst voor Ondernemend Nederland',
   subtitle: 'Wij helpen u graag vooruit!',

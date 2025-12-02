@@ -28,8 +28,12 @@ export const argTypes = {
   },
 };
 
-export const ItemList: React.FC<IItemListProps> = ({ items = defaultArgs.items, children }: IItemListProps) => (
-  <ul className="rvo-item-list">
+export const ItemList: React.FC<IItemListProps & React.HTMLAttributes<HTMLUListElement>> = ({
+  items = defaultArgs.items,
+  children,
+  ...rootElementProps
+}: IItemListProps) => (
+  <ul className="rvo-item-list" {...rootElementProps}>
     {children
       ? React.Children.map(parseChildren(children), (child, index) => (
           <li key={index} className="rvo-item-list__item">

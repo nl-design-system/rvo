@@ -18,8 +18,9 @@ export const argTypes = {
   },
 };
 
-export const StatusIndicator: React.FC<IStatusIndicatorProps> = ({
+export const StatusIndicator: React.FC<IStatusIndicatorProps & React.HTMLAttributes<HTMLDivElement>> = ({
   color = defaultArgs.color,
-}: IStatusIndicatorProps) => <div className={clsx('rvo-status-indicator', `rvo-status-indicator--${color}`)} />;
+  ...rootElementProps
+}) => <div className={clsx('rvo-status-indicator', `rvo-status-indicator--${color}`)} {...rootElementProps} />;
 
 export default StatusIndicator;
