@@ -9,11 +9,11 @@ import TabItem, { ITabItemProps } from './tab-item/template';
 
 export interface ITabsProps {
   /** @uxpinignoreprop */
-  tabs: ITabItemProps[];
+  tabs?: ITabItemProps[];
   /**
    * @uxpinbind onChange 0
    */
-  activeTab: number;
+  activeTab?: number;
   onChange?: (activeTab: number) => void;
   /** @uxpinpropname Tab items */
   children?: ReactNode | undefined;
