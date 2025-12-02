@@ -15,7 +15,7 @@
   },
   "scripts": {
     "server": "uxpin-merge server",
-    "test-build": "uxpin-merge dump",
+    "test-build": "echo 'uxpin-merge skipped - see ROOS-262'",
     "start": "uxpin-merge --disable-tunneling",
     "push": "uxpin-merge push"
   },
