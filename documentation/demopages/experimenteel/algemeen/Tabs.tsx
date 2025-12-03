@@ -26,52 +26,191 @@ const Tabs = () => {
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">
             <Heading type="h1">Tabs demo page</Heading>
             <div className="rvo-tabs">
-              <ul className="rvo-tabs-navigation rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2">
-                <li>
+              <ul
+                className="rvo-tabs-ul rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2"
+                role="tablist"
+                aria-label="Tabs"
+              >
+                <li role="presentation" className="rvo-tabs__item rvo-tabs__item-active">
+                  Tab 1
+                </li>
+                <li role="presentation" className="rvo-tabs__item">
                   <a
-                    href="#section1"
-                    className="rvo-link rvo-link--no-underline rvo-tabs-navigation-link rvo-tabs-navigation-link--active"
+                    href="#tab-2"
+                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
                   >
-                    Section 1
+                    Tab 2
                   </a>
                 </li>
-                <li>
+                <li role="presentation" className="rvo-tabs__item">
                   <a
-                    href="#section2"
-                    className="rvo-link rvo-link--no-underline rvo-link--normal rvo-tabs-navigation-link"
+                    href="#tab-3"
+                    className="rvo-link rvo-tabs__item-link  rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
                   >
-                    Section 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#section3"
-                    className="rvo-link rvo-link--no-underline rvo-link--normal rvo-tabs-navigation-link"
-                  >
-                    Section 3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#section4"
-                    className="rvo-link rvo-link--no-underline rvo-link--normal rvo-tabs-navigation-link"
-                  >
-                    Section 4
+                    Tab 3
                   </a>
                 </li>
               </ul>
-              <div>
-                <Heading type="h2" noMargins={true}>
-                  Section 1
-                </Heading>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies,
-                  ante erat imperdiet velit, nec laoreet enim lacus a velit.{' '}
-                  <a href="#" className="rvo-link">
-                    Nam luctus
+              <div className="rvo-tabs__panel" id="tab-1">
+                <Heading type="h2">Tab 1</Heading>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                  ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+                  mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+                  Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
+                  ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+                </p>
+              </div>
+            </div>
+
+            <div className="rvo-margin-block-end--xl"></div>
+
+            <div className="rvo-tabs">
+              <ul
+                className="rvo-tabs-ul rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2"
+                role="tablist"
+                aria-label="Tabs"
+              >
+                <li role="presentation" className="rvo-tabs__item">
+                  <a
+                    href="#tab-1b"
+                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Tab 1
                   </a>
-                  , enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent
-                  non odio bibendum magna bibendum accumsan.
+                </li>
+                <li role="presentation" className="rvo-tabs__item rvo-tabs__item-active">
+                  Tab 2
+                </li>
+                <li role="presentation" className="rvo-tabs__item">
+                  <a
+                    href="#tab-3b"
+                    className="rvo-link rvo-tabs__item-link  rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Tab 3
+                  </a>
+                </li>
+              </ul>
+              <div className="rvo-tabs__panel" id="tab-2b">
+                <Heading type="h2">Tab 2</Heading>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                  ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+                  mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+                  Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
+                  ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+                </p>
+              </div>
+            </div>
+
+            <div className="rvo-margin-block-end--xl"></div>
+
+            <div className="rvo-tabs rvo-tabs--subtle">
+              <ul
+                className="rvo-tabs-ul rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2"
+                role="tablist"
+                aria-label="Tabs"
+              >
+                <li role="presentation" className="rvo-tabs__item rvo-tabs__item-active">
+                  Tab 1
+                </li>
+                <li role="presentation" className="rvo-tabs__item">
+                  <a
+                    href="#tab-2"
+                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Tab 2
+                  </a>
+                </li>
+                <li role="presentation" className="rvo-tabs__item">
+                  <a
+                    href="#tab-3"
+                    className="rvo-link rvo-tabs__item-link  rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Tab 3
+                  </a>
+                </li>
+              </ul>
+              <div className="rvo-tabs__panel" id="tab-1">
+                <Heading type="h2">Tab 1</Heading>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                  ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+                  mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+                  Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
+                  ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+                </p>
+              </div>
+            </div>
+
+            <div className="rvo-margin-block-end--xl"></div>
+
+            <div className="rvo-tabs rvo-tabs--subtle">
+              <ul
+                className="rvo-tabs-ul rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2"
+                role="tablist"
+                aria-label="Tabs"
+              >
+                <li role="presentation" className="rvo-tabs__item">
+                  <a
+                    href="#tab-1b"
+                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Tab 1
+                  </a>
+                </li>
+                <li role="presentation" className="rvo-tabs__item rvo-tabs__item-active">
+                  Tab 2
+                </li>
+                <li role="presentation" className="rvo-tabs__item">
+                  <a
+                    href="#tab-3b"
+                    className="rvo-link rvo-tabs__item-link  rvo-link--normal"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Tab 3
+                  </a>
+                </li>
+              </ul>
+              <div className="rvo-tabs__panel" id="tab-2b">
+                <Heading type="h2">Tab 2</Heading>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                  ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+                  mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <p className="rvo-paragraph rvo-paragraph--grijs-900 rvo-paragraph--md">
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+                  Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
+                  ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
                 </p>
               </div>
             </div>
