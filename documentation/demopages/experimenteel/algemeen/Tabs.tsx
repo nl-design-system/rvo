@@ -23,7 +23,7 @@ const Tabs = () => {
           iconPlacement="before"
         />
         <LayoutFlow gap="3xl">
-          <main className="rvo-max-width-layout rvo-max-width-layout--sm">
+          <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
             <Heading type="h1">Tabs demo page</Heading>
             <div className="rvo-tabs">
               <ul
@@ -37,7 +37,7 @@ const Tabs = () => {
                 <li role="presentation" className="rvo-tabs__item">
                   <a
                     href="#tab-2"
-                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    className="rvo-link rvo-tabs__item-link rvo-link--normal"
                     role="tab"
                     aria-selected="false"
                   >
@@ -82,7 +82,7 @@ const Tabs = () => {
                 <li role="presentation" className="rvo-tabs__item">
                   <a
                     href="#tab-1b"
-                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    className="rvo-link rvo-tabs__item-link  rvo-link--normal"
                     role="tab"
                     aria-selected="false"
                   >
@@ -133,7 +133,7 @@ const Tabs = () => {
                 <li role="presentation" className="rvo-tabs__item">
                   <a
                     href="#tab-2"
-                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    className="rvo-link rvo-tabs__item-link rvo-link--normal"
                     role="tab"
                     aria-selected="false"
                   >
@@ -178,7 +178,7 @@ const Tabs = () => {
                 <li role="presentation" className="rvo-tabs__item">
                   <a
                     href="#tab-1b"
-                    className="rvo-link rvo-tabs__item-link rvo-link--no-underline rvo-link--normal"
+                    className="rvo-link rvo-tabs__item-link  rvo-link--normal"
                     role="tab"
                     aria-selected="false"
                   >

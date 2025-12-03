@@ -1,27 +1,39 @@
 .rvo-tabs-demopage {
+  // Max width fix
+  .rvo-max-width-layout {
+    width: auto !important;
+  }
+
   .rvo-tabs {
     display: block;
   }
 
-  .rvo-tabs-ul {
-    display: inline-flex;
+  @media (min-width: 600px) {
+    .rvo-tabs-ul {
+      display: inline-flex;
+    }
   }
 
   .rvo-tabs-ul li.rvo-tabs__item {
-    background-color: var(--rvo-color-grijs-200);
-    margin-inline-start: var(--rvo-space-2xs);
+    @media (min-width: 600px) {
+      background-color: var(--rvo-color-grijs-200);
+      margin-inline-start: var(--rvo-space-2xs);
+    }
   }
 
   .rvo-tabs-ul li.rvo-tabs__item-active {
     background-color: var(--rvo-color-wit);
-    border: 1px solid var(--rvo-color-zwart);
-    border-bottom-color: var(--rvo-color-wit);
     font-weight: var(--rvo-font-weight-bold);
-    margin-block-end: -1px;
-    padding-block-end: var(--rvo-tabs-padding-block-end);
-    padding-block-start: var(--rvo-tabs-padding-block-start);
-    padding-inline-end: var(--rvo-tabs-padding-inline-end);
-    padding-inline-start: var(--rvo-tabs-padding-inline-start);
+
+    @media (min-width: 600px) {
+      border: 1px solid var(--rvo-color-zwart);
+      border-bottom-color: var(--rvo-color-wit);
+      margin-block-end: -1px;
+      padding-block-end: var(--rvo-tabs-padding-block-end);
+      padding-block-start: var(--rvo-tabs-padding-block-start);
+      padding-inline-end: var(--rvo-tabs-padding-inline-end);
+      padding-inline-start: var(--rvo-tabs-padding-inline-start);
+    }
   }
 
   .rvo-tabs--subtle .rvo-tabs-ul li.rvo-tabs__item-active {
@@ -33,6 +45,17 @@
     border-bottom: 0;
     color: var(--rvo-color-donkerblauw);
     text-decoration-line: underline;
+
+    @media (min-width: 600px) {
+      text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
+    }
+  }
+
+  .rvo-tabs-ul li.rvo-tabs__item .rvo-tabs__item-link:hover,
+  .rvo-tabs-ul li.rvo-tabs__item .rvo-tabs__item-link:focus {
+    @media (min-width: 600px) {
+      text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
+    }
   }
 
   .rvo-tabs-ul li.rvo-tabs__item:first-child {
@@ -48,11 +71,14 @@
   }
 
   .rvo-tabs__panel {
-    border: 1px solid var(--rvo-color-zwart);
-    padding-block-end: var(--rvo-space-md);
     padding-block-start: var(--rvo-space-md);
     padding-inline-end: var(--rvo-space-md);
     padding-inline-start: var(--rvo-space-md);
+
+    @media (min-width: 600px) {
+      border: 1px solid var(--rvo-color-zwart);
+      padding-block-end: var(--rvo-space-md);
+    }
   }
 
   .rvo-tabs--subtle .rvo-tabs__panel {
