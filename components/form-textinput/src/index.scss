@@ -5,8 +5,7 @@
 @use "~@utrecht/textbox-css/dist/index.css" as *;
 
 .utrecht-textbox {
-  height: 48px;
-  max-width: 100%;
+  --utrecht-pointer-target-min-size: 48px;
 }
 
 textarea.utrecht-textbox {
@@ -29,24 +28,25 @@ textarea.utrecht-textbox {
 .utrecht-textbox:focus.utrecht-textbox--invalid,
 .utrecht-textbox--focus.utrecht-textbox:invalid,
 .utrecht-textbox:focus.utrecht-textbox:invalid {
-  border-color: var(--rvo-textbox-invalid-focus-border-color);
+  --utrecht-textbox-border-color: var(--rvo-textbox-invalid-focus-border-color);
+
   outline-color: var(--rvo-textbox-invalid-focus-outline-color);
 }
 
 .utrecht-textbox--xs {
-  width: var(--rvo-textbox-xs-width);
+  --utrecht-textbox-max-inline-size: var(--rvo-textbox-xs-width);
 }
 
 .utrecht-textbox--sm {
-  width: var(--rvo-textbox-sm-width);
+  --utrecht-textbox-max-inline-size: var(--rvo-textbox-sm-width);
 }
 
 .utrecht-textbox--md {
-  width: var(--rvo-textbox-md-width);
+  --utrecht-textbox-max-inline-size: var(--rvo-textbox-md-width);
 }
 
 .utrecht-textbox--lg {
-  width: var(--rvo-textbox-lg-width);
+  --utrecht-textbox-max-inline-size: var(--rvo-textbox-lg-width);
 }
 
 .utrecht-textbox-remaining-chars {
