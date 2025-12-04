@@ -1,11 +1,8 @@
 lockfileVersion: '9.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
-
-overrides:
-  form-data@>=4.0.0 <4.0.4: '>=4.0.4'
 
 importers:
 
@@ -119,7 +116,7 @@ importers:
         version: 5.5.2
       webpack:
         specifier: 5.96.1
-        version: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+        version: 5.96.1(webpack-cli@5.1.4)
 
   components:
     devDependencies:
@@ -672,7 +669,7 @@ importers:
         version: 10.4.0
       '@testing-library/jest-dom':
         specifier: 6.4.2
-        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0))
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.11.27)(babel-plugin-macros@3.1.0))
       '@testing-library/react':
         specifier: 14.2.1
         version: 14.2.1(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -696,7 +693,7 @@ importers:
         version: 2.1.0
       jest:
         specifier: 29.7.0
-        version: 29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0)
+        version: 29.7.0(@types/node@20.11.27)(babel-plugin-macros@3.1.0)
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
@@ -774,37 +771,37 @@ importers:
     devDependencies:
       '@docusaurus/core':
         specifier: 3.6.3
-        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/eslint-plugin':
         specifier: 3.6.3
         version: 3.6.3(eslint@8.57.0)(typescript@5.5.2)
       '@docusaurus/faster':
         specifier: 3.6.3
-        version: 3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15)
+        version: 3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15)
       '@docusaurus/module-type-aliases':
         specifier: 3.6.3
-        version: 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@docusaurus/plugin-content-docs':
         specifier: 3.6.3
-        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/plugin-rsdoctor':
         specifier: 3.6.3
-        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)(webpack@5.96.1)
+        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       '@docusaurus/preset-classic':
         specifier: 3.6.3
-        version: 3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+        version: 3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.3)(typescript@5.5.2)
       '@docusaurus/theme-classic':
         specifier: 3.6.3
-        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+        version: 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/theme-common':
         specifier: 3.6.3
-        version: 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+        version: 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/tsconfig':
         specifier: 3.6.3
         version: 3.6.3
       '@docusaurus/types':
         specifier: 3.6.3
-        version: 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@mdx-js/react':
         specifier: 3.1.0
         version: 3.1.0(@types/react@18.2.65)(react@18.2.0)
@@ -837,7 +834,7 @@ importers:
         version: 1.81.0
       sass-loader:
         specifier: 16.0.3
-        version: 16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1)
+        version: 16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       typescript:
         specifier: 5.5.2
         version: 5.5.2
@@ -909,7 +906,7 @@ importers:
         version: 1.1.0
       '@storybook/preset-scss':
         specifier: 1.0.3
-        version: 1.0.3(css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1))(sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1))(style-loader@3.3.4(webpack@5.96.1))
+        version: 1.0.3(css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(style-loader@3.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))
       '@storybook/preview-api':
         specifier: 7.6.17
         version: 7.6.17
@@ -918,7 +915,7 @@ importers:
         version: 7.6.17(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.9.5)
       '@storybook/react-webpack5':
         specifier: 7.6.17
-        version: 7.6.17(@babel/core@7.24.0)(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1))(webpack-hot-middleware@2.26.1)
+        version: 7.6.17(@babel/core@7.24.0)(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(esbuild@0.18.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(webpack-hot-middleware@2.26.1)
       '@storybook/theming':
         specifier: 7.6.17
         version: 7.6.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -927,13 +924,13 @@ importers:
         version: 6.0.0(prettier@2.8.8)(react-syntax-highlighter@15.5.0(react@18.2.0))
       babel-loader:
         specifier: 9.1.3
-        version: 9.1.3(@babel/core@7.24.0)(webpack@5.96.1)
+        version: 9.1.3(@babel/core@7.24.0)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       babel-plugin-macros:
         specifier: 3.1.0
         version: 3.1.0
       css-loader:
         specifier: 6.10.0
-        version: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+        version: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       prettier:
         specifier: 2.8.8
         version: 2.8.8
@@ -957,7 +954,7 @@ importers:
         version: 1.81.0
       sass-loader:
         specifier: 16.0.3
-        version: 16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1)
+        version: 16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       storybook:
         specifier: 7.6.20
         version: 7.6.20(encoding@0.1.13)
@@ -966,7 +963,7 @@ importers:
         version: 6.1.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       style-loader:
         specifier: 3.3.4
-        version: 3.3.4(webpack@5.96.1)
+        version: 3.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       tslib:
         specifier: 2.8.1
         version: 2.8.1
@@ -975,7 +972,7 @@ importers:
         version: 4.9.5
       webpack:
         specifier: 5.96.1
-        version: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+        version: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
 
   packages/uxpin-merge:
     dependencies:
@@ -1020,7 +1017,7 @@ importers:
         version: 4.1.0
       babel-loader:
         specifier: 9.1.3
-        version: 9.1.3(@babel/core@7.26.10)(webpack@5.96.1)
+        version: 9.1.3(@babel/core@7.24.0)(webpack@5.96.1)
       css-loader:
         specifier: 6.10.0
         version: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
@@ -1053,7 +1050,7 @@ importers:
         version: 9.0.1
       webpack:
         specifier: 5.96.1
-        version: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+        version: 5.96.1(webpack-cli@5.1.4)
     devDependencies:
       '@babel/runtime':
         specifier: 7.24.0
@@ -1066,13 +1063,13 @@ importers:
         version: 3.0.1-alpha.22(date-fns@3.4.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@uxpin/merge-cli':
         specifier: 3.4.8
-        version: 3.4.8(webpack@5.96.1)
+        version: 3.4.8(webpack-cli@5.1.4)(webpack@5.96.1)
       clsx:
         specifier: 2.1.0
         version: 2.1.0
       parcel:
         specifier: 2.13.3
-        version: 2.13.3(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
+        version: 2.13.3(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
       resolve-url-loader:
         specifier: 5.0.0
         version: 5.0.0
@@ -3315,28 +3312,24 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@next/swc-linux-arm64-musl@14.2.33':
     resolution: {integrity: sha512-Bm+QulsAItD/x6Ih8wGIMfRJy4G73tu1HJsrccPW6AfqdZd0Sfm5Imhgkgq2+kly065rYMnCOxTBvmvFY1BKfg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@next/swc-linux-x64-gnu@14.2.33':
     resolution: {integrity: sha512-FnFn+ZBgsVMbGDsTqo8zsnRzydvsGV8vfiWwUo1LD8FTmPTdV+otGSWKc4LJec0oSexFnCYVO4hX8P8qQKaSlg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@next/swc-linux-x64-musl@14.2.33':
     resolution: {integrity: sha512-345tsIWMzoXaQndUTDv1qypDRiebFxGYx9pYkhwY4hBRaOLt8UGfiWKr9FSSHs25dFIf8ZqIFaPdy5MljdoawA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@next/swc-win32-arm64-msvc@14.2.33':
     resolution: {integrity: sha512-nscpt0G6UCTkrT2ppnJnFsYbPDQwmum4GNXYTeoTIdsmMydSKFz9Iny2jpaRupTb+Wl298+Rh82WKzt9LCcqSQ==}
@@ -3681,42 +3674,36 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm-musl@2.5.1':
     resolution: {integrity: sha512-6E+m/Mm1t1yhB8X412stiKFG3XykmgdIOqhjWj+VL8oHkKABfu/gjFj8DvLrYVHSBNC+/u5PeNrujiSQ1zwd1Q==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-arm64-glibc@2.5.1':
     resolution: {integrity: sha512-LrGp+f02yU3BN9A+DGuY3v3bmnFUggAITBGriZHUREfNEzZh/GO06FF5u2kx8x+GBEUYfyTGamol4j3m9ANe8w==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm64-musl@2.5.1':
     resolution: {integrity: sha512-cFOjABi92pMYRXS7AcQv9/M1YuKRw8SZniCDw0ssQb/noPkRzA+HBDkwmyOJYp5wXcsTrhxO0zq1U11cK9jsFg==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-x64-glibc@2.5.1':
     resolution: {integrity: sha512-GcESn8NZySmfwlTsIur+49yDqSny2IhPeZfXunQi48DMugKeZ7uy1FX83pO0X22sHntJ4Ub+9k34XQCX+oHt2A==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-x64-musl@2.5.1':
     resolution: {integrity: sha512-n0E2EQbatQ3bXhcH2D1XIAANAcTZkQICBPVaxMeaCVBtOpBZpWJuf7LwyWPSBDITb7In8mqQgJ7gH8CILCURXg==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-win32-arm64@2.5.1':
     resolution: {integrity: sha512-RFzklRvmc3PkjKjry3hLF9wD7ppR4AKcWNzH7kXR7GUe0Igb3Nz8fyPwtZCSquGrhU5HhUNDr/mKBqj7tqA2Vw==}
@@ -4315,115 +4302,96 @@ packages:
     resolution: {integrity: sha512-WXveUPKtfqtaNvpf0iOb0M6xC64GzUX/OowbqfiCSXTdi/jLlOmH0Ba94/OkiY2yTGTwteo4/dsHRfh5bDCZ+w==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-gnueabihf@4.29.1':
     resolution: {integrity: sha512-Py5vFd5HWYN9zxBv3WMrLAXY3yYJ6Q/aVERoeUFwiDGiMOWsMs7FokXihSOaT/PMWUty/Pj60XDQndK3eAfE6A==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.28.0':
     resolution: {integrity: sha512-yLc3O2NtOQR67lI79zsSc7lk31xjwcaocvdD1twL64PK1yNaIqCeWI9L5B4MFPAVGEVjH5k1oWSGuYX1Wutxpg==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm-musleabihf@4.29.1':
     resolution: {integrity: sha512-RiWpGgbayf7LUcuSNIbahr0ys2YnEERD4gYdISA06wa0i8RALrnzflh9Wxii7zQJEB2/Eh74dX4y/sHKLWp5uQ==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.28.0':
     resolution: {integrity: sha512-+P9G9hjEpHucHRXqesY+3X9hD2wh0iNnJXX/QhS/J5vTdG6VhNYMxJ2rJkQOxRUd17u5mbMLHM7yWGZdAASfcg==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-gnu@4.29.1':
     resolution: {integrity: sha512-Z80O+taYxTQITWMjm/YqNoe9d10OX6kDh8X5/rFCMuPqsKsSyDilvfg+vd3iXIqtfmp+cnfL1UrYirkaF8SBZA==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.28.0':
     resolution: {integrity: sha512-1xsm2rCKSTpKzi5/ypT5wfc+4bOGa/9yI/eaOLW0oMs7qpC542APWhl4A37AENGZ6St6GBMWhCCMM6tXgTIplw==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-musl@4.29.1':
     resolution: {integrity: sha512-fOHRtF9gahwJk3QVp01a/GqS4hBEZCV1oKglVVq13kcK3NeVlS4BwIFzOHDbmKzt3i0OuHG4zfRP0YoG5OF/rA==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loongarch64-gnu@4.29.1':
     resolution: {integrity: sha512-5a7q3tnlbcg0OodyxcAdrrCxFi0DgXJSoOuidFUzHZ2GixZXQs6Tc3CHmlvqKAmOs5eRde+JJxeIf9DonkmYkw==}
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.28.0':
     resolution: {integrity: sha512-zgWxMq8neVQeXL+ouSf6S7DoNeo6EPgi1eeqHXVKQxqPy1B2NvTbaOUWPn/7CfMKL7xvhV0/+fq/Z/J69g1WAQ==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.29.1':
     resolution: {integrity: sha512-9b4Mg5Yfz6mRnlSPIdROcfw1BU22FQxmfjlp/CShWwO3LilKQuMISMTtAu/bxmmrE6A902W2cZJuzx8+gJ8e9w==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.28.0':
     resolution: {integrity: sha512-VEdVYacLniRxbRJLNtzwGt5vwS0ycYshofI7cWAfj7Vg5asqj+pt+Q6x4n+AONSZW/kVm+5nklde0qs2EUwU2g==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.29.1':
     resolution: {integrity: sha512-G5pn0NChlbRM8OJWpJFMX4/i8OEU538uiSv0P6roZcbpe/WfhEO+AT8SHVKfp8qhDQzaz7Q+1/ixMy7hBRidnQ==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.28.0':
     resolution: {integrity: sha512-LQlP5t2hcDJh8HV8RELD9/xlYtEzJkm/aWGsauvdO2ulfl3QYRjqrKW+mGAIWP5kdNCBheqqqYIGElSRCaXfpw==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.29.1':
     resolution: {integrity: sha512-WM9lIkNdkhVwiArmLxFXpWndFGuOka4oJOZh8EP3Vb8q5lzdSCBuhjavJsw68Q9AKDGeOOIHYzYm4ZFvmWez5g==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.28.0':
     resolution: {integrity: sha512-Nl4KIzteVEKE9BdAvYoTkW19pa7LR/RBrT6F1dJCV/3pbjwDcaOq+edkP0LXuJ9kflW/xOK414X78r+K84+msw==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.29.1':
     resolution: {integrity: sha512-87xYCwb0cPGZFoGiErT1eDcssByaLX4fc0z2nRM6eMtV9njAfEE6OW3UniAoDhX4Iq5xQVpE6qO9aJbCFumKYQ==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.28.0':
     resolution: {integrity: sha512-eKpJr4vBDOi4goT75MvW+0dXcNUqisK4jvibY9vDdlgLx+yekxSm55StsHbxUsRxSTt3JEQvlr3cGDkzcSP8bw==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-x64-musl@4.29.1':
     resolution: {integrity: sha512-xufkSNppNOdVRCEC4WKvlR1FBDyqCSCpQeMMgv9ZyXqqtKBfkw1yfGMTUTs9Qsl6WQbJnsGboWCp7pJGkeMhKA==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.28.0':
     resolution: {integrity: sha512-Vi+WR62xWGsE/Oj+mD0FNAPY2MEox3cfyG0zLpotZdehPFXwz6lypkGs5y38Jd/NVSbOD02aVad6q6QYF7i8Bg==}
@@ -4503,25 +4471,21 @@ packages:
     resolution: {integrity: sha512-i4l+BpesuIIE4kq4tjar1uVFPcIODlBW/+yhxIx8iZlLpmHJGSs/+jlCJdg78DA67C75+HKxiSHjYM4mafrm5g==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-arm64-musl@1.3.1':
     resolution: {integrity: sha512-wDB5jYTLlKpiy6uzciazLLlaFrp/yRdLmXZRl3uYuoQYvmOHUV05F8kIchiR9FXlwwdXDZXcclvWrwg9DHKWEg==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-linux-x64-gnu@1.3.1':
     resolution: {integrity: sha512-RNxBFIHCg9xBKai3SKzAlr5G2/socYaqu97XexA+PCE5G0h+HxgYDq4b4lcZ58fJJGBk5vZqWOQTOT6BnXUpAg==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@1.3.1':
     resolution: {integrity: sha512-4YTtinpV/wphgSolMerIyXc+WUb6NjYy2Txt/OqwMI+yoDkAvd2+DSFVTbq9pYRG4j3PDbRTx1Pcf4cchJUWBA==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-win32-arm64-msvc@1.3.1':
     resolution: {integrity: sha512-URjt3mWPUbTbmdZwrZrFlFjovzKIJaFIS5CvsuXh4UYhdYZBUywgd5tmQ4kaM0XeqcQHStXpsObRz8g4oxCgJQ==}
@@ -5060,28 +5024,24 @@ packages:
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@swc/core-linux-arm64-musl@1.11.15':
     resolution: {integrity: sha512-G5orst6QzXyTXgOTnjrkYaLaK3emMXBWkQ7CDFyZNCGo6Fztn0vzYcCmr31Cvqs66BsM0sdGbcrBd5br8g/pJg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@swc/core-linux-x64-gnu@1.11.15':
     resolution: {integrity: sha512-T0iR9yUcGyo1yLudL73jKbPS4AYo2iAWWH2I9u7QYiRTXPduwkH0nETNr+nsWBsYdMu+H2g169rCiGhhx6FPHw==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@swc/core-linux-x64-musl@1.11.15':
     resolution: {integrity: sha512-2d8pHehwsHdQ71PRLeJ/XM69t5LCMzf1KZQDTVJTOSWRbuKGArtD+md5lVzTu458gt+JawdUgFdkdHtF7ke0AA==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@swc/core-win32-arm64-msvc@1.11.15':
     resolution: {integrity: sha512-Vz5xg03VdYftMvruvziV1doU7B64rQ8rw72bKf2+yflt1gU7BlLk4DPu2IZlUc0Xk8lrVcEDiheXATbHexKsmw==}
@@ -5142,28 +5102,24 @@ packages:
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@swc/html-linux-arm64-musl@1.11.16':
     resolution: {integrity: sha512-xBgIS7kelQxNmwvfb04BunDIf8tAW7zt1KZtSuxI/iQl4V+L6afO5MOa45MZxSwsLWh9miuRykwYTl7jU6mHXw==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@swc/html-linux-x64-gnu@1.11.16':
     resolution: {integrity: sha512-cEdadrodmVTsSErmYSuKzkzD9cg+zobBLfKUzGa0aHQ3kUPCQh8G84ez5c0h9ixh3DfG98cr24zBm3wq5Z/rFw==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@swc/html-linux-x64-musl@1.11.16':
     resolution: {integrity: sha512-8r2ZJDdU+ZI+/fz7ESNawtl76OepXtePPdE8lpiFwNjQ9/SblEP4MOQSpfCuqkS34tAm2j5GW+Zp6e9SEqGzHg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@swc/html-win32-arm64-msvc@1.11.16':
     resolution: {integrity: sha512-Bleu4r7a7AiTz9RL8anIm/i0WNfEymbGJeajG+7Ao7aXJiOlPrwD6GrstjDnK3Pfq+REfllMPPXZhrLSfVzIBg==}
@@ -5822,6 +5778,31 @@ packages:
   '@webassemblyjs/wast-printer@1.14.1':
     resolution: {integrity: sha512-kPSSXE6De1XOR820C90RIo2ogvZG+c3KiHzqUoO/F34Y2shGzesfqv7o57xrxovZJH/MetF5UjroJ/R/3isoiw==}
 
+  '@webpack-cli/configtest@2.1.1':
+    resolution: {integrity: sha512-wy0mglZpDSiSS0XHrVR+BAdId2+yxPSoJW8fsna3ZpYSlufjvxnP4YbKTCBZnNIcGN4r6ZPXV55X4mYExOfLmw==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      webpack: 5.x.x
+      webpack-cli: 5.x.x
+
+  '@webpack-cli/info@2.0.2':
+    resolution: {integrity: sha512-zLHQdI/Qs1UyT5UBdWNqsARasIA+AaF8t+4u2aS2nEpBQh2mWIVb8qAklq0eUENnC5mOItrIB4LiS9xMtph18A==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      webpack: 5.x.x
+      webpack-cli: 5.x.x
+
+  '@webpack-cli/serve@2.0.5':
+    resolution: {integrity: sha512-lqaoKnRYBdo1UgDX8uF24AfGMifWK19TxPmM5FHc2vAGxrJ/qtyUyFBWoY1tISZdelsQ5fBcOusifo5o5wSJxQ==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      webpack: 5.x.x
+      webpack-cli: 5.x.x
+      webpack-dev-server: '*'
+    peerDependenciesMeta:
+      webpack-dev-server:
+        optional: true
+
   '@whitespace/storybook-addon-html@6.0.0':
     resolution: {integrity: sha512-8fQ0UEHxrmbuwUKkEnCbUY3bi0CctlfeWcycdPg1pmt/SF5cHvcEbpMgamLVDNJt6/KVm/tv58/TvQDRC0Fn7g==}
     peerDependencies:
@@ -5937,6 +5918,11 @@ packages:
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
 
   ajv-keywords@3.5.2:
     resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
@@ -8933,6 +8919,10 @@ packages:
     resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
     engines: {node: '>= 0.10'}
 
+  interpret@3.1.1:
+    resolution: {integrity: sha512-6xwYfHbajpoF0xLW+iwLkhwgvLoZDfjYfoFNu8ftMoXINzwuymNLd9u/KmwtdT2GbR+/Cz66otEGEVVUHX9QLQ==}
+    engines: {node: '>=10.13.0'}
+
   invariant@2.2.4:
     resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
 
@@ -9743,28 +9733,24 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.29.3:
     resolution: {integrity: sha512-dxakOk66pf7KLS7VRYFO7B8WOJLecE5OPL2YOk52eriFd/yeyxt2Km5H0BjLfElokIaR+qWi33gB8MQLrdAY3A==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.29.3:
     resolution: {integrity: sha512-ySZTNCpbfbK8rqpKJeJR2S0g/8UqqV3QnzcuWvpI60LWxnFN91nxpSSwCbzfOXkzKfar9j5eOuOplf+klKtINg==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.29.3:
     resolution: {integrity: sha512-3pVZhIzW09nzi10usAXfIGTTSTYQ141dk88vGFNCgawIzayiIzZQxEcxVtIkdvlEq2YuFsL9Wcj/h61JHHzuFQ==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.29.3:
     resolution: {integrity: sha512-VRnkAvtIkeWuoBJeGOTrZxsNp4HogXtcaaLm8agmbYtLDOhQdpgxW6NjZZjDXbvGF+eOehGulXZ3C1TiwHY4QQ==}
@@ -12590,6 +12576,10 @@ packages:
     resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
     engines: {node: '>= 0.10'}
 
+  rechoir@0.8.0:
+    resolution: {integrity: sha512-/vxpCXddiX8NGfGO/mTafwjq4aFa/71pvamip0++IQk3zG8cbCj0fifNPrjjF1XMXUne91jL9OoxmdykoEtifQ==}
+    engines: {node: '>= 10.13.0'}
+
   recma-build-jsx@1.0.0:
     resolution: {integrity: sha512-8GtdyqaBcDfva+GUKDr3nev3VpKAhup1+RvkMvUxURHpW7QyIvk9F5wz7Vzo06CEMSilw6uArgRqhpiUcWp8ew==}
 
@@ -13102,7 +13092,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: glibc
 
   sass-embedded-linux-arm@1.71.1:
     resolution: {integrity: sha512-l7NEn0gji6GTN+p00DP2zZl9SE501Zy5obTA3beiD6+vQy7lCEC6vpNi/ZrlC6eRmgY2OKSBB2lfW7KSej9Hkg==}
@@ -13122,7 +13111,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: glibc
 
   sass-embedded-linux-ia32@1.71.1:
     resolution: {integrity: sha512-NvzSljfc/Kw9/0CSn91AsINV2nh8vxhFe2cKexPMwvAqv/etU84dJMfJejxPJ39PmMqT1KvC4G+Qt2+6Mpe7oQ==}
@@ -13154,7 +13142,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: musl
 
   sass-embedded-linux-musl-arm@1.71.1:
     resolution: {integrity: sha512-1O37K5EgSeQjCBizIF9xdZJw3mh5XYHOnsB4+65CLZg4ac84ragjFv9d9rYhwGs9QSgg1MoOv7VWnEIxQ8Pp9Q==}
@@ -13173,7 +13160,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: musl
 
   sass-embedded-linux-musl-ia32@1.71.1:
     resolution: {integrity: sha512-Cd5sJkt70bSlYEXUSj9mPMKZLzDL8LGcBKUIfQRrcBKjmzD2Va2eLq4Zati9Xzt54unuDp4bAUUTyvQmjLzFmA==}
@@ -13198,7 +13184,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [riscv64]
     os: [linux]
-    libc: musl
 
   sass-embedded-linux-musl-x64@1.71.1:
     resolution: {integrity: sha512-uVfYms/lf4QVSvtQXkSm+Bq3wVsvkRMI30ca82rRwpwebxSaTbUr+uLnskh8QvbyfsbMyrzZQU0SCrO3uCua1A==}
@@ -13217,7 +13202,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: musl
 
   sass-embedded-linux-riscv64@1.81.0:
     resolution: {integrity: sha512-KbxSsqu4tT1XbhZfJV/5NfW0VtJIGlD58RjqJqJBi8Rnjrx29/upBsuwoDWtsPV/LhoGwwU1XkSa9Q1ifCz4fQ==}
@@ -13230,7 +13214,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [riscv64]
     os: [linux]
-    libc: glibc
 
   sass-embedded-linux-x64@1.71.1:
     resolution: {integrity: sha512-7BXniYic16+MQx0InyH8OXburLPGMRYRWf0l/t/fRkNkUHWFl7NQPAX0yvj73c/PKOdaYEUY6isNB4OGUGtZHQ==}
@@ -13250,7 +13233,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: glibc
 
   sass-embedded-unknown-all@1.93.2:
     resolution: {integrity: sha512-7VnaOmyewcXohiuoFagJ3SK5ddP9yXpU0rzz+pZQmS1/+5O6vzyFCUoEt3HDRaLctH4GT3nUGoK1jg0ae62IfQ==}
@@ -13394,6 +13376,9 @@ packages:
   schema-utils@4.3.0:
     resolution: {integrity: sha512-Gf9qqc58SpCA/xdziiHz35F4GNIWYWZrEshUc/G/r5BnLph6xpKuLeoJoQuj5WfBIx/eQLf+hmVPYHaxJu7V2g==}
     engines: {node: '>= 10.13.0'}
+
+  search-insights@2.17.3:
+    resolution: {integrity: sha512-RQPdCYTa8A68uM2jwxoY842xDhvx3E5LFL1LxvxCNMev4o5mLuokczhzjAgGwUZBAmOKZknArSxLKmXtIi2AxQ==}
 
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -14724,6 +14709,23 @@ packages:
     engines: {node: '>= 10.13.0'}
     hasBin: true
 
+  webpack-cli@5.1.4:
+    resolution: {integrity: sha512-pIDJHIEI9LR0yxHXQ+Qh95k2EvXpWzZ5l+d+jIo+RdSm9MiHfzazIxwwni/p7+x4eJZuvG1AJwgC4TNQ7NRgsg==}
+    engines: {node: '>=14.15.0'}
+    hasBin: true
+    peerDependencies:
+      '@webpack-cli/generators': '*'
+      webpack: 5.x.x
+      webpack-bundle-analyzer: '*'
+      webpack-dev-server: '*'
+    peerDependenciesMeta:
+      '@webpack-cli/generators':
+        optional: true
+      webpack-bundle-analyzer:
+        optional: true
+      webpack-dev-server:
+        optional: true
+
   webpack-dev-middleware@5.3.4:
     resolution: {integrity: sha512-BVdTqhhs+0IfoeAf7EoH5WE+exCmqGerHfDM0IL096Px60Tq2Mn9MAbnaGUe6HiMa41KMCYF19gyzZmBcq/o4Q==}
     engines: {node: '>= 12.13.0'}
@@ -15045,18 +15047,19 @@ snapshots:
 
   '@adobe/css-tools@4.4.2': {}
 
-  '@algolia/autocomplete-core@1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)':
+  '@algolia/autocomplete-core@1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-plugin-algolia-insights': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)
+      '@algolia/autocomplete-plugin-algolia-insights': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)(search-insights@2.17.3)
       '@algolia/autocomplete-shared': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
 
-  '@algolia/autocomplete-plugin-algolia-insights@1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)':
+  '@algolia/autocomplete-plugin-algolia-insights@1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)(search-insights@2.17.3)':
     dependencies:
       '@algolia/autocomplete-shared': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)
+      search-insights: 2.17.3
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
@@ -17172,9 +17175,9 @@ snapshots:
 
   '@docsearch/css@3.9.0': {}
 
-  '@docsearch/react@3.9.0(@algolia/client-search@5.23.0)(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@docsearch/react@3.9.0(@algolia/client-search@5.23.0)(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-core': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)
+      '@algolia/autocomplete-core': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)(search-insights@2.17.3)
       '@algolia/autocomplete-preset-algolia': 1.17.9(@algolia/client-search@5.23.0)(algoliasearch@5.23.0)
       '@docsearch/css': 3.9.0
       algoliasearch: 5.23.0
@@ -17182,10 +17185,11 @@ snapshots:
       '@types/react': 18.2.65
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      search-insights: 2.17.3
     transitivePeerDependencies:
       - '@algolia/client-search'
 
-  '@docusaurus/babel@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/babel@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -17198,7 +17202,7 @@ snapshots:
       '@babel/runtime-corejs3': 7.27.0
       '@babel/traverse': 7.27.0
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       babel-plugin-dynamic-import-node: 2.3.3
       fs-extra: 11.3.0
       tslib: 2.8.1
@@ -17213,35 +17217,35 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/bundler@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/bundler@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
       '@babel/core': 7.26.10
-      '@docusaurus/babel': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/babel': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/cssnano-preset': 3.6.3
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      babel-loader: 9.2.1(@babel/core@7.26.10)(webpack@5.96.1)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      babel-loader: 9.2.1(@babel/core@7.26.10)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       clean-css: 5.3.3
-      copy-webpack-plugin: 11.0.0(webpack@5.96.1)
-      css-loader: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      css-minimizer-webpack-plugin: 5.0.1(clean-css@5.3.3)(webpack@5.96.1)
+      copy-webpack-plugin: 11.0.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      css-loader: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      css-minimizer-webpack-plugin: 5.0.1(clean-css@5.3.3)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       cssnano: 6.1.2(postcss@8.4.49)
-      file-loader: 6.2.0(webpack@5.96.1)
+      file-loader: 6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       html-minifier-terser: 7.2.0
-      mini-css-extract-plugin: 2.9.2(webpack@5.96.1)
-      null-loader: 4.0.1(webpack@5.96.1)
+      mini-css-extract-plugin: 2.9.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      null-loader: 4.0.1(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       postcss: 8.4.49
-      postcss-loader: 7.3.4(postcss@8.4.49)(typescript@5.5.2)(webpack@5.96.1)
+      postcss-loader: 7.3.4(postcss@8.4.49)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       postcss-preset-env: 10.1.5(postcss@8.4.49)
-      react-dev-utils: 12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1)
-      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1)
+      react-dev-utils: 12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       tslib: 2.8.1
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
-      webpackbar: 6.0.1(webpack@5.96.1)
+      webpackbar: 6.0.1(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
     optionalDependencies:
-      '@docusaurus/faster': 3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15)
+      '@docusaurus/faster': 3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15)
     transitivePeerDependencies:
       - '@parcel/css'
       - '@rspack/core'
@@ -17260,15 +17264,15 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/core@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/core@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/babel': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/bundler': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/babel': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/bundler': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/mdx-loader': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/mdx-loader': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@mdx-js/react': 3.1.0(@types/react@18.2.65)(react@18.2.0)
       boxen: 6.2.1
       chalk: 4.1.2
@@ -17284,17 +17288,17 @@ snapshots:
       eval: 0.1.8
       fs-extra: 11.3.0
       html-tags: 3.3.1
-      html-webpack-plugin: 5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      html-webpack-plugin: 5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       leven: 3.1.0
       lodash: 4.17.21
       p-map: 4.0.0
       prompts: 2.4.2
       react: 18.2.0
-      react-dev-utils: 12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1)
+      react-dev-utils: 12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       react-dom: 18.2.0(react@18.2.0)
       react-helmet-async: 1.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-loadable: '@docusaurus/react-loadable@6.0.0(react@18.2.0)'
-      react-loadable-ssr-addon-v5-slorber: 1.0.1(@docusaurus/react-loadable@6.0.0(react@18.2.0))(webpack@5.96.1)
+      react-loadable-ssr-addon-v5-slorber: 1.0.1(@docusaurus/react-loadable@6.0.0(react@18.2.0))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       react-router: 5.3.4(react@18.2.0)
       react-router-config: 5.1.1(react-router@5.3.4(react@18.2.0))(react@18.2.0)
       react-router-dom: 5.3.4(react@18.2.0)
@@ -17306,7 +17310,7 @@ snapshots:
       update-notifier: 6.0.2
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
       webpack-bundle-analyzer: 4.10.2
-      webpack-dev-server: 4.15.2(webpack@5.96.1)
+      webpack-dev-server: 4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       webpack-merge: 6.0.1
     transitivePeerDependencies:
       - '@docusaurus/faster'
@@ -17344,15 +17348,15 @@ snapshots:
       - supports-color
       - typescript
 
-  '@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15)':
+  '@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15)':
     dependencies:
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
       '@swc/core': 1.11.15(@swc/helpers@0.5.15)
       '@swc/html': 1.11.16
       browserslist: 4.24.4
       lightningcss: 1.29.3
-      swc-loader: 0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1)
+      swc-loader: 0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       tslib: 2.8.1
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
     transitivePeerDependencies:
@@ -17367,16 +17371,16 @@ snapshots:
       chalk: 4.1.2
       tslib: 2.8.1
 
-  '@docusaurus/mdx-loader@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/mdx-loader@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       '@slorber/remark-comment': 1.0.0
       escape-html: 1.0.3
       estree-util-value-to-estree: 3.3.2
-      file-loader: 6.2.0(webpack@5.96.1)
+      file-loader: 6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       fs-extra: 11.3.0
       image-size: 1.2.0
       mdast-util-mdx: 3.0.0
@@ -17392,7 +17396,7 @@ snapshots:
       tslib: 2.8.1
       unified: 11.0.5
       unist-util-visit: 5.0.0
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       vfile: 6.0.3
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
     transitivePeerDependencies:
@@ -17404,9 +17408,9 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/module-type-aliases@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@docusaurus/module-type-aliases@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/history': 4.7.11
       '@types/react': 18.2.65
       '@types/react-router-config': 5.0.11
@@ -17423,17 +17427,17 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/plugin-content-blog@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-content-blog@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/mdx-loader': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/mdx-loader': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       cheerio: 1.0.0-rc.12
       feed: 4.2.2
       fs-extra: 11.3.0
@@ -17467,17 +17471,17 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/mdx-loader': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/module-type-aliases': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/mdx-loader': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/module-type-aliases': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@types/react-router-config': 5.0.11
       combine-promises: 1.2.0
       fs-extra: 11.3.0
@@ -17509,13 +17513,13 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-content-pages@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-content-pages@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/mdx-loader': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/mdx-loader': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       fs-extra: 11.3.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -17542,11 +17546,11 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-debug@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-debug@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       fs-extra: 11.3.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -17573,11 +17577,11 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-google-analytics@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-google-analytics@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.8.1
@@ -17602,11 +17606,11 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-google-gtag@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-google-gtag@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@types/gtag.js': 0.0.12
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -17632,11 +17636,11 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-google-tag-manager@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-google-tag-manager@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.8.1
@@ -17661,13 +17665,13 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-rsdoctor@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)(webpack@5.96.1)':
+  '@docusaurus/plugin-rsdoctor@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@rsdoctor/rspack-plugin': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/webpack-plugin': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@rsdoctor/rspack-plugin': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/webpack-plugin': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.8.1
@@ -17693,14 +17697,14 @@ snapshots:
       - webpack
       - webpack-cli
 
-  '@docusaurus/plugin-sitemap@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/plugin-sitemap@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       fs-extra: 11.3.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -17727,21 +17731,21 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/preset-classic@3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/preset-classic@3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.3)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-content-blog': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-content-pages': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-debug': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-google-analytics': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-google-gtag': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-google-tag-manager': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-sitemap': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/theme-classic': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/theme-search-algolia': 3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-blog': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-pages': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-debug': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-google-analytics': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-google-gtag': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-google-tag-manager': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-sitemap': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/theme-classic': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/theme-search-algolia': 3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.3)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
@@ -17773,21 +17777,21 @@ snapshots:
       '@types/react': 18.2.65
       react: 18.2.0
 
-  '@docusaurus/theme-classic@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/theme-classic@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/mdx-loader': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/module-type-aliases': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/plugin-content-blog': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/plugin-content-pages': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/mdx-loader': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/module-type-aliases': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/plugin-content-blog': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-pages': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/theme-translations': 3.6.3
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@mdx-js/react': 3.1.0(@types/react@18.2.65)(react@18.2.0)
       clsx: 2.1.1
       copy-text-to-clipboard: 3.2.0
@@ -17824,13 +17828,13 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/theme-common@3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/theme-common@3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
-      '@docusaurus/mdx-loader': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/module-type-aliases': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/mdx-loader': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/module-type-aliases': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/history': 4.7.11
       '@types/react': 18.2.65
       '@types/react-router-config': 5.0.11
@@ -17850,16 +17854,16 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/theme-search-algolia@3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/theme-search-algolia@3.6.3(@algolia/client-search@5.23.0)(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@types/react@18.2.65)(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.3)(typescript@5.5.2)':
     dependencies:
-      '@docsearch/react': 3.9.0(@algolia/client-search@5.23.0)(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docsearch/react': 3.9.0(@algolia/client-search@5.23.0)(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.17.3)
+      '@docusaurus/core': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/plugin-content-docs': 3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/theme-common': 3.6.3(@docusaurus/plugin-content-docs@3.6.3(@docusaurus/faster@3.6.3(@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/helpers@0.5.15))(@mdx-js/react@3.1.0(@types/react@18.2.65)(react@18.2.0))(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(eslint@8.57.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2))(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       '@docusaurus/theme-translations': 3.6.3
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-validation': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-validation': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
       algoliasearch: 4.24.0
       algoliasearch-helper: 3.24.3(algoliasearch@4.24.0)
       clsx: 2.1.1
@@ -17901,7 +17905,7 @@ snapshots:
 
   '@docusaurus/tsconfig@3.6.3': {}
 
-  '@docusaurus/types@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@docusaurus/types@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       '@types/history': 4.7.11
@@ -17922,9 +17926,9 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/utils-common@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@docusaurus/utils-common@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -17936,11 +17940,11 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/utils-validation@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/utils-validation@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/utils': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       fs-extra: 11.3.0
       joi: 17.13.3
       js-yaml: 4.1.0
@@ -17957,14 +17961,14 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/utils@3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
+  '@docusaurus/utils@3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.2)':
     dependencies:
       '@docusaurus/logger': 3.6.3
-      '@docusaurus/types': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@docusaurus/utils-common': 3.6.3(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/types': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@docusaurus/utils-common': 3.6.3(@swc/core@1.11.15(@swc/helpers@0.5.15))(acorn@8.14.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@svgr/webpack': 8.1.0(typescript@5.5.2)
       escape-string-regexp: 4.0.0
-      file-loader: 6.2.0(webpack@5.96.1)
+      file-loader: 6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       fs-extra: 11.3.0
       github-slugger: 1.5.0
       globby: 11.1.0
@@ -17977,7 +17981,7 @@ snapshots:
       resolve-pathname: 3.0.0
       shelljs: 0.8.5
       tslib: 2.8.1
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       utility-types: 3.11.0
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
     transitivePeerDependencies:
@@ -18962,14 +18966,14 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/config-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)':
+  '@parcel/config-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)':
     dependencies:
       '@parcel/bundler-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/compressor-raw': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/core': 2.13.3(@swc/helpers@0.5.15)
       '@parcel/namer-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/optimizer-css': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
-      '@parcel/optimizer-htmlnano': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
+      '@parcel/optimizer-htmlnano': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
       '@parcel/optimizer-image': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/optimizer-svgo': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/optimizer-swc': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
@@ -19103,12 +19107,12 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/optimizer-htmlnano@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)':
+  '@parcel/optimizer-htmlnano@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)':
     dependencies:
       '@parcel/diagnostic': 2.13.3
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/utils': 2.13.3
-      htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
+      htmlnano: 2.1.1(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
       nullthrows: 1.1.1
       posthtml: 0.16.6
     transitivePeerDependencies:
@@ -19528,7 +19532,7 @@ snapshots:
 
   '@pkgr/core@0.2.0': {}
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.16(react-refresh@0.14.2)(type-fest@4.39.0)(webpack-dev-server@4.15.2(webpack@5.96.1))(webpack-hot-middleware@2.26.1)(webpack@5.96.1)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.16(react-refresh@0.14.2)(type-fest@4.39.0)(webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(webpack-hot-middleware@2.26.1)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.41.0
@@ -19538,10 +19542,10 @@ snapshots:
       react-refresh: 0.14.2
       schema-utils: 4.3.0
       source-map: 0.7.4
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
     optionalDependencies:
       type-fest: 4.39.0
-      webpack-dev-server: 4.15.2(webpack@5.96.1)
+      webpack-dev-server: 4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       webpack-hot-middleware: 2.26.1
 
   '@pnpm/config.env-replace@1.1.0': {}
@@ -20097,12 +20101,12 @@ snapshots:
 
   '@rsdoctor/client@0.4.13': {}
 
-  '@rsdoctor/core@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/core@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
-      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/sdk': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/sdk': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       axios: 1.8.4(debug@4.4.0)
       enhanced-resolve: 5.12.0
       filesize: 10.1.6
@@ -20120,10 +20124,10 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  '@rsdoctor/graph@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/graph@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
-      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       lodash.unionby: 4.8.0
       socket.io: 4.8.1
       source-map: 0.7.4
@@ -20134,13 +20138,13 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  '@rsdoctor/rspack-plugin@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/rspack-plugin@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
-      '@rsdoctor/core': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/sdk': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@rsdoctor/core': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/sdk': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
       lodash: 4.17.21
     transitivePeerDependencies:
@@ -20150,12 +20154,12 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  '@rsdoctor/sdk@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/sdk@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
       '@rsdoctor/client': 0.4.13
-      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       '@types/fs-extra': 11.0.4
       body-parser: 1.20.3
       cors: 2.8.5
@@ -20175,7 +20179,7 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  '@rsdoctor/types@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/types@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
       '@types/connect': 3.4.38
       '@types/estree': 1.0.5
@@ -20185,10 +20189,10 @@ snapshots:
     optionalDependencies:
       '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
 
-  '@rsdoctor/utils@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/utils@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
       '@babel/code-frame': 7.25.7
-      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       '@types/estree': 1.0.5
       acorn: 8.14.1
       acorn-import-assertions: 1.9.0(acorn@8.14.1)
@@ -20209,13 +20213,13 @@ snapshots:
       - supports-color
       - webpack
 
-  '@rsdoctor/webpack-plugin@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)':
+  '@rsdoctor/webpack-plugin@0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))':
     dependencies:
-      '@rsdoctor/core': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/sdk': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      '@rsdoctor/core': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/graph': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/sdk': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/types': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+      '@rsdoctor/utils': 0.4.13(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       fs-extra: 11.3.0
       lodash: 4.17.21
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
@@ -20586,7 +20590,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@storybook/builder-webpack5@7.6.17(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(typescript@4.9.5)':
+  '@storybook/builder-webpack5@7.6.17(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(esbuild@0.18.20)(typescript@4.9.5)':
     dependencies:
       '@babel/core': 7.24.0
       '@storybook/channels': 7.6.17
@@ -20600,30 +20604,30 @@ snapshots:
       '@swc/core': 1.11.15(@swc/helpers@0.5.15)
       '@types/node': 18.19.85
       '@types/semver': 7.7.0
-      babel-loader: 9.1.3(@babel/core@7.24.0)(webpack@5.96.1)
+      babel-loader: 9.1.3(@babel/core@7.24.0)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
       cjs-module-lexer: 1.4.3
       constants-browserify: 1.0.0
-      css-loader: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      css-loader: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       es-module-lexer: 1.6.0
       express: 4.21.2
-      fork-ts-checker-webpack-plugin: 8.0.0(typescript@4.9.5)(webpack@5.96.1)
+      fork-ts-checker-webpack-plugin: 8.0.0(typescript@4.9.5)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       fs-extra: 11.3.0
-      html-webpack-plugin: 5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
+      html-webpack-plugin: 5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       magic-string: 0.30.17
       path-browserify: 1.0.1
       process: 0.11.10
       semver: 7.7.1
-      style-loader: 3.3.4(webpack@5.96.1)
-      swc-loader: 0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1)
-      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1)
+      style-loader: 3.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
+      swc-loader: 0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
+      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       ts-dedent: 2.2.0
       url: 0.11.4
       util: 0.12.5
       util-deprecate: 1.0.2
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
-      webpack-dev-middleware: 6.1.3(webpack@5.96.1)
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+      webpack-dev-middleware: 6.1.3(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       webpack-hot-middleware: 2.26.1
       webpack-virtual-modules: 0.5.0
     optionalDependencies:
@@ -21114,16 +21118,16 @@ snapshots:
 
   '@storybook/postinstall@7.6.17': {}
 
-  '@storybook/preset-react-webpack@7.6.17(@babel/core@7.24.0)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1))(webpack-hot-middleware@2.26.1)':
+  '@storybook/preset-react-webpack@7.6.17(@babel/core@7.24.0)(@swc/core@1.11.15(@swc/helpers@0.5.15))(encoding@0.1.13)(esbuild@0.18.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(webpack-hot-middleware@2.26.1)':
     dependencies:
       '@babel/preset-flow': 7.25.9(@babel/core@7.24.0)
       '@babel/preset-react': 7.23.3(@babel/core@7.24.0)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.16(react-refresh@0.14.2)(type-fest@4.39.0)(webpack-dev-server@4.15.2(webpack@5.96.1))(webpack-hot-middleware@2.26.1)(webpack@5.96.1)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.16(react-refresh@0.14.2)(type-fest@4.39.0)(webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(webpack-hot-middleware@2.26.1)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       '@storybook/core-webpack': 7.6.17(encoding@0.1.13)
       '@storybook/docs-tools': 7.6.17(encoding@0.1.13)
       '@storybook/node-logger': 7.6.17
       '@storybook/react': 7.6.17(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.9.5)
-      '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@4.9.5)(webpack@5.96.1)
+      '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@4.9.5)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
       '@types/node': 18.19.85
       '@types/semver': 7.7.0
       babel-plugin-add-react-displayname: 0.0.5
@@ -21134,7 +21138,7 @@ snapshots:
       react-dom: 18.2.0(react@18.2.0)
       react-refresh: 0.14.2
       semver: 7.7.1
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
     optionalDependencies:
       '@babel/core': 7.24.0
       typescript: 4.9.5
@@ -21152,11 +21156,11 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@storybook/preset-scss@1.0.3(css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1))(sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1))(style-loader@3.3.4(webpack@5.96.1))':
+  '@storybook/preset-scss@1.0.3(css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(style-loader@3.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))':
     dependencies:
-      css-loader: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1)
-      sass-loader: 16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1)
-      style-loader: 3.3.4(webpack@5.96.1)
+      css-loader: 6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
+      sass-loader: 16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
+      style-loader: 3.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
 
   '@storybook/preview-api@7.6.17':
     dependencies:
@@ -21194,7 +21198,7 @@ snapshots:
 
   '@storybook/preview@7.6.17': {}
 
-  '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@4.9.5)(webpack@5.96.1)':
+  '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@4.9.5)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))':
     dependencies:
       debug: 4.4.0
       endent: 2.1.0
@@ -21204,7 +21208,7 @@ snapshots:
       react-docgen-typescript: 2.2.2(typescript@4.9.5)
       tslib: 2.8.1
       typescript: 4.9.5
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
     transitivePeerDependencies:
       - supports-color
 
@@ -21213,10 +21217,10 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@storybook/react-webpack5@7.6.17(@babel/core@7.24.0)(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1))(webpack-hot-middleware@2.26.1)':
+  '@storybook/react-webpack5@7.6.17(@babel/core@7.24.0)(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/core@1.11.15(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(esbuild@0.18.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(webpack-hot-middleware@2.26.1)':
     dependencies:
-      '@storybook/builder-webpack5': 7.6.17(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(typescript@4.9.5)
-      '@storybook/preset-react-webpack': 7.6.17(@babel/core@7.24.0)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1))(webpack-hot-middleware@2.26.1)
+      '@storybook/builder-webpack5': 7.6.17(@rspack/core@1.3.1(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(encoding@0.1.13)(esbuild@0.18.20)(typescript@4.9.5)
+      '@storybook/preset-react-webpack': 7.6.17(@babel/core@7.24.0)(@swc/core@1.11.15(@swc/helpers@0.5.15))(encoding@0.1.13)(esbuild@0.18.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(type-fest@4.39.0)(typescript@4.9.5)(webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)))(webpack-hot-middleware@2.26.1)
       '@storybook/react': 7.6.17(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@4.9.5)
       '@types/node': 18.19.85
       react: 18.2.0
@@ -21601,7 +21605,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0))':
+  '@testing-library/jest-dom@6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.11.27)(babel-plugin-macros@3.1.0))':
     dependencies:
       '@adobe/css-tools': 4.4.2
       '@babel/runtime': 7.24.0
@@ -21614,7 +21618,7 @@ snapshots:
     optionalDependencies:
       '@jest/globals': 29.7.0
       '@types/jest': 29.5.12
-      jest: 29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0)
+      jest: 29.7.0(@types/node@20.11.27)(babel-plugin-macros@3.1.0)
 
   '@testing-library/react@14.2.1(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -22209,7 +22213,7 @@ snapshots:
 
   '@utrecht/textbox-css@1.4.0': {}
 
-  '@uxpin/merge-cli@3.4.8(webpack@5.96.1)':
+  '@uxpin/merge-cli@3.4.8(webpack-cli@5.1.4)(webpack@5.96.1)':
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.24.0)
@@ -22255,7 +22259,8 @@ snapshots:
       tslib: 1.14.1
       typescript: 4.4.2
       uuid: 3.4.0
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.96.1)
       webpack-merge: 4.2.2
       webpack-virtual-modules: 0.5.0
     transitivePeerDependencies:
@@ -22345,6 +22350,21 @@ snapshots:
     dependencies:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
+
+  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.96.1)':
+    dependencies:
+      webpack: 5.96.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.96.1)
+
+  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.96.1)':
+    dependencies:
+      webpack: 5.96.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.96.1)
+
+  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.96.1)':
+    dependencies:
+      webpack: 5.96.1(webpack-cli@5.1.4)
+      webpack-cli: 5.1.4(webpack@5.96.1)
 
   '@whitespace/storybook-addon-html@6.0.0(prettier@2.8.8)(react-syntax-highlighter@15.5.0(react@18.2.0))':
     dependencies:
@@ -22447,8 +22467,8 @@ snapshots:
     dependencies:
       ajv: 6.12.6
 
-  ajv-formats@2.1.1:
-    dependencies:
+  ajv-formats@2.1.1(ajv@8.17.1):
+    optionalDependencies:
       ajv: 8.17.1
 
   ajv-keywords@3.5.2(ajv@6.12.6):
@@ -22777,23 +22797,23 @@ snapshots:
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(webpack-cli@5.1.4)
+
+  babel-loader@9.1.3(@babel/core@7.24.0)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      '@babel/core': 7.24.0
+      find-cache-dir: 4.0.0
+      schema-utils: 4.3.0
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
 
   babel-loader@9.1.3(@babel/core@7.24.0)(webpack@5.96.1):
     dependencies:
       '@babel/core': 7.24.0
       find-cache-dir: 4.0.0
       schema-utils: 4.3.0
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(webpack-cli@5.1.4)
 
-  babel-loader@9.1.3(@babel/core@7.26.10)(webpack@5.96.1):
-    dependencies:
-      '@babel/core': 7.26.10
-      find-cache-dir: 4.0.0
-      schema-utils: 4.3.0
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
-
-  babel-loader@9.2.1(@babel/core@7.26.10)(webpack@5.96.1):
+  babel-loader@9.2.1(@babel/core@7.26.10)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@babel/core': 7.26.10
       find-cache-dir: 4.0.0
@@ -23612,7 +23632,7 @@ snapshots:
 
   copy-text-to-clipboard@3.2.0: {}
 
-  copy-webpack-plugin@11.0.0(webpack@5.96.1):
+  copy-webpack-plugin@11.0.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       fast-glob: 3.3.3
       glob-parent: 6.0.2
@@ -23705,22 +23725,6 @@ snapshots:
       - babel-plugin-macros
       - supports-color
       - ts-node
-    optional: true
-
-  create-jest@29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0):
-    dependencies:
-      '@jest/types': 29.6.3
-      chalk: 4.1.2
-      exit: 0.1.2
-      graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0)
-      jest-util: 29.7.0
-      prompts: 2.4.2
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
 
   cross-spawn@5.1.0:
     dependencies:
@@ -23782,7 +23786,21 @@ snapshots:
       postcss-selector-parser: 7.1.0
       postcss-value-parser: 4.2.0
 
-  css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1):
+  css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-modules-extract-imports: 3.1.0(postcss@8.4.49)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.4.49)
+      postcss-modules-scope: 3.2.1(postcss@8.4.49)
+      postcss-modules-values: 4.0.0(postcss@8.4.49)
+      postcss-value-parser: 4.2.0
+      semver: 7.7.1
+    optionalDependencies:
+      '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+
+  css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.49)
       postcss: 8.4.49
@@ -23796,7 +23814,21 @@ snapshots:
       '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
 
-  css-minimizer-webpack-plugin@5.0.1(clean-css@5.3.3)(webpack@5.96.1):
+  css-loader@6.10.0(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-modules-extract-imports: 3.1.0(postcss@8.4.49)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.4.49)
+      postcss-modules-scope: 3.2.1(postcss@8.4.49)
+      postcss-modules-values: 4.0.0(postcss@8.4.49)
+      postcss-value-parser: 4.2.0
+      semver: 7.7.1
+    optionalDependencies:
+      '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
+      webpack: 5.96.1(webpack-cli@5.1.4)
+
+  css-minimizer-webpack-plugin@5.0.1(clean-css@5.3.3)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       cssnano: 6.1.2(postcss@8.4.49)
@@ -24006,6 +24038,41 @@ snapshots:
       postcss-svgo: 7.0.1(postcss@8.4.38)
       postcss-unique-selectors: 7.0.3(postcss@8.4.38)
 
+  cssnano-preset-default@7.0.6(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      css-declaration-sorter: 7.2.0(postcss@8.4.49)
+      cssnano-utils: 5.0.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-calc: 10.1.1(postcss@8.4.49)
+      postcss-colormin: 7.0.2(postcss@8.4.49)
+      postcss-convert-values: 7.0.4(postcss@8.4.49)
+      postcss-discard-comments: 7.0.3(postcss@8.4.49)
+      postcss-discard-duplicates: 7.0.1(postcss@8.4.49)
+      postcss-discard-empty: 7.0.0(postcss@8.4.49)
+      postcss-discard-overridden: 7.0.0(postcss@8.4.49)
+      postcss-merge-longhand: 7.0.4(postcss@8.4.49)
+      postcss-merge-rules: 7.0.4(postcss@8.4.49)
+      postcss-minify-font-values: 7.0.0(postcss@8.4.49)
+      postcss-minify-gradients: 7.0.0(postcss@8.4.49)
+      postcss-minify-params: 7.0.2(postcss@8.4.49)
+      postcss-minify-selectors: 7.0.4(postcss@8.4.49)
+      postcss-normalize-charset: 7.0.0(postcss@8.4.49)
+      postcss-normalize-display-values: 7.0.0(postcss@8.4.49)
+      postcss-normalize-positions: 7.0.0(postcss@8.4.49)
+      postcss-normalize-repeat-style: 7.0.0(postcss@8.4.49)
+      postcss-normalize-string: 7.0.0(postcss@8.4.49)
+      postcss-normalize-timing-functions: 7.0.0(postcss@8.4.49)
+      postcss-normalize-unicode: 7.0.2(postcss@8.4.49)
+      postcss-normalize-url: 7.0.0(postcss@8.4.49)
+      postcss-normalize-whitespace: 7.0.0(postcss@8.4.49)
+      postcss-ordered-values: 7.0.1(postcss@8.4.49)
+      postcss-reduce-initial: 7.0.2(postcss@8.4.49)
+      postcss-reduce-transforms: 7.0.0(postcss@8.4.49)
+      postcss-svgo: 7.0.1(postcss@8.4.49)
+      postcss-unique-selectors: 7.0.3(postcss@8.4.49)
+    optional: true
+
   cssnano-preset-default@7.0.6(postcss@8.5.6):
     dependencies:
       browserslist: 4.24.4
@@ -24056,6 +24123,11 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
+  cssnano-utils@5.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+    optional: true
+
   cssnano-utils@5.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -24085,6 +24157,13 @@ snapshots:
       cssnano-preset-default: 7.0.6(postcss@8.4.38)
       lilconfig: 3.1.3
       postcss: 8.4.38
+
+  cssnano@7.0.6(postcss@8.4.49):
+    dependencies:
+      cssnano-preset-default: 7.0.6(postcss@8.4.49)
+      lilconfig: 3.1.3
+      postcss: 8.4.49
+    optional: true
 
   cssnano@7.0.6(postcss@8.5.6):
     dependencies:
@@ -25203,11 +25282,18 @@ snapshots:
     dependencies:
       flat-cache: 3.2.0
 
-  file-loader@6.2.0(webpack@5.96.1):
+  file-loader@6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+
+  file-loader@6.2.0(webpack@5.96.1):
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.3.0
+      webpack: 5.96.1(webpack-cli@5.1.4)
+    optional: true
 
   file-system-cache@2.3.0:
     dependencies:
@@ -25354,7 +25440,7 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  fork-ts-checker-webpack-plugin@6.5.3(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1):
+  fork-ts-checker-webpack-plugin@6.5.3(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@babel/code-frame': 7.26.2
       '@types/json-schema': 7.0.15
@@ -25374,7 +25460,7 @@ snapshots:
     optionalDependencies:
       eslint: 8.57.0
 
-  fork-ts-checker-webpack-plugin@8.0.0(typescript@4.9.5)(webpack@5.96.1):
+  fork-ts-checker-webpack-plugin@8.0.0(typescript@4.9.5)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
     dependencies:
       '@babel/code-frame': 7.26.2
       chalk: 4.1.2
@@ -25389,7 +25475,7 @@ snapshots:
       semver: 7.7.1
       tapable: 2.2.1
       typescript: 4.9.5
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
 
   form-data-encoder@2.1.4: {}
 
@@ -26017,7 +26103,18 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  html-webpack-plugin@5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1):
+  html-webpack-plugin@5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      '@types/html-minifier-terser': 6.1.0
+      html-minifier-terser: 6.1.0
+      lodash: 4.17.21
+      pretty-error: 4.0.0
+      tapable: 2.2.1
+    optionalDependencies:
+      '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+
+  html-webpack-plugin@5.6.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
@@ -26028,14 +26125,14 @@ snapshots:
       '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
 
-  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2):
+  htmlnano@2.1.1(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2):
     dependencies:
       cosmiconfig: 9.0.0(typescript@5.5.2)
       posthtml: 0.16.6
       timsort: 0.3.0
     optionalDependencies:
-      cssnano: 7.0.6(postcss@8.5.6)
-      postcss: 8.5.6
+      cssnano: 7.0.6(postcss@8.4.49)
+      postcss: 8.4.49
       relateurl: 0.2.7
       svgo: 3.3.2
       terser: 5.39.0
@@ -26278,6 +26375,8 @@ snapshots:
       side-channel: 1.1.0
 
   interpret@1.4.0: {}
+
+  interpret@3.1.1: {}
 
   invariant@2.2.4:
     dependencies:
@@ -26733,26 +26832,6 @@ snapshots:
       - babel-plugin-macros
       - supports-color
       - ts-node
-    optional: true
-
-  jest-cli@29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0):
-    dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)
-      '@jest/test-result': 29.7.0
-      '@jest/types': 29.6.3
-      chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0)
-      exit: 0.1.2
-      import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0)
-      jest-util: 29.7.0
-      jest-validate: 29.7.0
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
 
   jest-config@29.7.0(@types/node@20.11.27)(babel-plugin-macros@3.1.0):
     dependencies:
@@ -26780,36 +26859,6 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 20.11.27
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-
-  jest-config@29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0):
-    dependencies:
-      '@babel/core': 7.24.0
-      '@jest/test-sequencer': 29.7.0
-      '@jest/types': 29.6.3
-      babel-jest: 29.7.0(@babel/core@7.24.0)
-      chalk: 4.1.2
-      ci-info: 3.9.0
-      deepmerge: 4.3.1
-      glob: 7.2.3
-      graceful-fs: 4.2.11
-      jest-circus: 29.7.0(babel-plugin-macros@3.1.0)
-      jest-environment-node: 29.7.0
-      jest-get-type: 29.6.3
-      jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
-      jest-runner: 29.7.0
-      jest-util: 29.7.0
-      jest-validate: 29.7.0
-      micromatch: 4.0.8
-      parse-json: 5.2.0
-      pretty-format: 29.7.0
-      slash: 3.0.0
-      strip-json-comments: 3.1.1
-    optionalDependencies:
-      '@types/node': 22.13.16
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -27056,19 +27105,6 @@ snapshots:
       '@jest/types': 29.6.3
       import-local: 3.2.0
       jest-cli: 29.7.0(@types/node@20.11.27)(babel-plugin-macros@3.1.0)
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
-    optional: true
-
-  jest@29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0):
-    dependencies:
-      '@jest/core': 29.7.0(babel-plugin-macros@3.1.0)
-      '@jest/types': 29.6.3
-      import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@22.13.16)(babel-plugin-macros@3.1.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -28681,7 +28717,7 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  mini-css-extract-plugin@2.9.2(webpack@5.96.1):
+  mini-css-extract-plugin@2.9.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       schema-utils: 4.3.0
       tapable: 2.2.1
@@ -29113,7 +29149,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  null-loader@4.0.1(webpack@5.96.1):
+  null-loader@4.0.1(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
@@ -29408,9 +29444,9 @@ snapshots:
       dot-case: 3.0.4
       tslib: 2.8.1
 
-  parcel@2.13.3(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2):
+  parcel@2.13.3(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2):
     dependencies:
-      '@parcel/config-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
+      '@parcel/config-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(cssnano@7.0.6(postcss@8.4.49))(postcss@8.4.49)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.39.0)(typescript@5.5.2)
       '@parcel/core': 2.13.3(@swc/helpers@0.5.15)
       '@parcel/diagnostic': 2.13.3
       '@parcel/events': 2.13.3
@@ -29649,6 +29685,13 @@ snapshots:
       postcss-selector-parser: 7.1.0
       postcss-value-parser: 4.2.0
 
+  postcss-calc@10.1.1(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-selector-parser: 7.1.0
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-calc@10.1.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29731,6 +29774,15 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  postcss-colormin@7.0.2(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      caniuse-api: 3.0.0
+      colord: 2.9.3
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-colormin@7.0.2(postcss@8.5.6):
     dependencies:
       browserslist: 4.24.4
@@ -29762,6 +29814,13 @@ snapshots:
       browserslist: 4.24.4
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-convert-values@7.0.4(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-convert-values@7.0.4(postcss@8.5.6):
     dependencies:
@@ -29816,6 +29875,12 @@ snapshots:
       postcss: 8.4.38
       postcss-selector-parser: 6.1.2
 
+  postcss-discard-comments@7.0.3(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-selector-parser: 6.1.2
+    optional: true
+
   postcss-discard-comments@7.0.3(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29837,6 +29902,11 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
+  postcss-discard-duplicates@7.0.1(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+    optional: true
+
   postcss-discard-duplicates@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29857,6 +29927,11 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
+  postcss-discard-empty@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+    optional: true
+
   postcss-discard-empty@7.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29876,6 +29951,11 @@ snapshots:
   postcss-discard-overridden@7.0.0(postcss@8.4.38):
     dependencies:
       postcss: 8.4.38
+
+  postcss-discard-overridden@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+    optional: true
 
   postcss-discard-overridden@7.0.0(postcss@8.5.6):
     dependencies:
@@ -29940,7 +30020,7 @@ snapshots:
     optionalDependencies:
       postcss: 8.5.6
 
-  postcss-loader@7.3.4(postcss@8.4.49)(typescript@5.5.2)(webpack@5.96.1):
+  postcss-loader@7.3.4(postcss@8.4.49)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       cosmiconfig: 8.3.6(typescript@5.5.2)
       jiti: 1.21.7
@@ -29987,6 +30067,13 @@ snapshots:
       postcss-value-parser: 4.2.0
       stylehacks: 7.0.4(postcss@8.4.38)
 
+  postcss-merge-longhand@7.0.4(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+      stylehacks: 7.0.4(postcss@8.4.49)
+    optional: true
+
   postcss-merge-longhand@7.0.4(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30025,6 +30112,15 @@ snapshots:
       postcss: 8.4.38
       postcss-selector-parser: 6.1.2
 
+  postcss-merge-rules@7.0.4(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      caniuse-api: 3.0.0
+      cssnano-utils: 5.0.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-selector-parser: 6.1.2
+    optional: true
+
   postcss-merge-rules@7.0.4(postcss@8.5.6):
     dependencies:
       browserslist: 4.24.4
@@ -30052,6 +30148,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-minify-font-values@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-minify-font-values@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30085,6 +30187,14 @@ snapshots:
       cssnano-utils: 5.0.0(postcss@8.4.38)
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-minify-gradients@7.0.0(postcss@8.4.49):
+    dependencies:
+      colord: 2.9.3
+      cssnano-utils: 5.0.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-minify-gradients@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30121,6 +30231,14 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  postcss-minify-params@7.0.2(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      cssnano-utils: 5.0.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-minify-params@7.0.2(postcss@8.5.6):
     dependencies:
       browserslist: 4.24.4
@@ -30148,6 +30266,13 @@ snapshots:
       cssesc: 3.0.0
       postcss: 8.4.38
       postcss-selector-parser: 6.1.2
+
+  postcss-minify-selectors@7.0.4(postcss@8.4.49):
+    dependencies:
+      cssesc: 3.0.0
+      postcss: 8.4.49
+      postcss-selector-parser: 6.1.2
+    optional: true
 
   postcss-minify-selectors@7.0.4(postcss@8.5.6):
     dependencies:
@@ -30244,6 +30369,11 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
+  postcss-normalize-charset@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+    optional: true
+
   postcss-normalize-charset@7.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30267,6 +30397,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-display-values@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-display-values@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30293,6 +30429,12 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-positions@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-positions@7.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30317,6 +30459,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-repeat-style@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-repeat-style@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30343,6 +30491,12 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-string@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-string@7.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30367,6 +30521,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-timing-functions@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-timing-functions@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30397,6 +30557,13 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-unicode@7.0.2(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-unicode@7.0.2(postcss@8.5.6):
     dependencies:
       browserslist: 4.24.4
@@ -30425,6 +30592,12 @@ snapshots:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-url@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-url@7.0.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30449,6 +30622,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-whitespace@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-whitespace@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30482,6 +30661,13 @@ snapshots:
       cssnano-utils: 5.0.0(postcss@8.4.38)
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-ordered-values@7.0.1(postcss@8.4.49):
+    dependencies:
+      cssnano-utils: 5.0.0(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-ordered-values@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30604,6 +30790,13 @@ snapshots:
       caniuse-api: 3.0.0
       postcss: 8.4.38
 
+  postcss-reduce-initial@7.0.2(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      caniuse-api: 3.0.0
+      postcss: 8.4.49
+    optional: true
+
   postcss-reduce-initial@7.0.2(postcss@8.5.6):
     dependencies:
       browserslist: 4.24.4
@@ -30629,6 +30822,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+
+  postcss-reduce-transforms@7.0.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-reduce-transforms@7.0.0(postcss@8.5.6):
     dependencies:
@@ -30697,6 +30896,13 @@ snapshots:
       postcss-value-parser: 4.2.0
       svgo: 3.3.2
 
+  postcss-svgo@7.0.1(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-value-parser: 4.2.0
+      svgo: 3.3.2
+    optional: true
+
   postcss-svgo@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30722,6 +30928,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-selector-parser: 6.1.2
+
+  postcss-unique-selectors@7.0.3(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+      postcss-selector-parser: 6.1.2
+    optional: true
 
   postcss-unique-selectors@7.0.3(postcss@8.5.6):
     dependencies:
@@ -31007,7 +31219,7 @@ snapshots:
       prop-types: 15.8.1
       react: 18.2.0
 
-  react-dev-utils@12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1):
+  react-dev-utils@12.0.1(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@babel/code-frame': 7.26.2
       address: 1.2.2
@@ -31018,7 +31230,7 @@ snapshots:
       escape-string-regexp: 4.0.0
       filesize: 8.0.7
       find-up: 5.0.0
-      fork-ts-checker-webpack-plugin: 6.5.3(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1)
+      fork-ts-checker-webpack-plugin: 6.5.3(eslint@8.57.0)(typescript@5.5.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       global-modules: 2.0.0
       globby: 11.1.0
       gzip-size: 6.0.0
@@ -31123,7 +31335,7 @@ snapshots:
     dependencies:
       react: 18.2.0
 
-  react-loadable-ssr-addon-v5-slorber@1.0.1(@docusaurus/react-loadable@6.0.0(react@18.2.0))(webpack@5.96.1):
+  react-loadable-ssr-addon-v5-slorber@1.0.1(@docusaurus/react-loadable@6.0.0(react@18.2.0))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@babel/runtime': 7.24.0
       react-loadable: '@docusaurus/react-loadable@6.0.0(react@18.2.0)'
@@ -31299,6 +31511,10 @@ snapshots:
       tslib: 2.8.1
 
   rechoir@0.6.2:
+    dependencies:
+      resolve: 1.22.10
+
+  rechoir@0.8.0:
     dependencies:
       resolve: 1.22.10
 
@@ -32115,9 +32331,18 @@ snapshots:
       '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
       sass: 1.93.2
       sass-embedded: 1.93.2
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(webpack-cli@5.1.4)
 
-  sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1):
+  sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      neo-async: 2.6.2
+    optionalDependencies:
+      '@rspack/core': 1.3.1(@swc/helpers@0.5.15)
+      sass: 1.93.2
+      sass-embedded: 1.81.0
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+
+  sass-loader@16.0.3(@rspack/core@1.3.1(@swc/helpers@0.5.15))(sass-embedded@1.81.0)(sass@1.93.2)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
@@ -32177,8 +32402,10 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
       ajv: 8.17.1
-      ajv-formats: 2.1.1
+      ajv-formats: 2.1.1(ajv@8.17.1)
       ajv-keywords: 5.1.0(ajv@8.17.1)
+
+  search-insights@2.17.3: {}
 
   section-matter@1.0.0:
     dependencies:
@@ -32801,9 +33028,13 @@ snapshots:
 
   style-inject@0.3.0: {}
 
+  style-loader@3.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+
   style-loader@3.3.4(webpack@5.96.1):
     dependencies:
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(webpack-cli@5.1.4)
 
   style-to-js@1.1.10:
     dependencies:
@@ -32844,6 +33075,13 @@ snapshots:
       browserslist: 4.24.4
       postcss: 8.4.38
       postcss-selector-parser: 6.1.2
+
+  stylehacks@7.0.4(postcss@8.4.49):
+    dependencies:
+      browserslist: 4.24.4
+      postcss: 8.4.49
+      postcss-selector-parser: 6.1.2
+    optional: true
 
   stylehacks@7.0.4(postcss@8.5.6):
     dependencies:
@@ -32994,7 +33232,13 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
 
-  swc-loader@0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1):
+  swc-loader@0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      '@swc/core': 1.11.15(@swc/helpers@0.5.15)
+      '@swc/counter': 0.1.3
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+
+  swc-loader@0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@swc/core': 1.11.15(@swc/helpers@0.5.15)
       '@swc/counter': 0.1.3
@@ -33082,7 +33326,19 @@ snapshots:
 
   term-size@2.2.1: {}
 
-  terser-webpack-plugin@5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1):
+  terser-webpack-plugin@5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      jest-worker: 27.5.1
+      schema-utils: 4.3.0
+      serialize-javascript: 6.0.2
+      terser: 5.39.0
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+    optionalDependencies:
+      '@swc/core': 1.11.15(@swc/helpers@0.5.15)
+      esbuild: 0.18.20
+
+  terser-webpack-plugin@5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
@@ -33092,6 +33348,15 @@ snapshots:
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
     optionalDependencies:
       '@swc/core': 1.11.15(@swc/helpers@0.5.15)
+
+  terser-webpack-plugin@5.3.14(webpack@5.96.1):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      jest-worker: 27.5.1
+      schema-utils: 4.3.0
+      serialize-javascript: 6.0.2
+      terser: 5.39.0
+      webpack: 5.96.1(webpack-cli@5.1.4)
 
   terser@5.39.0:
     dependencies:
@@ -33200,7 +33465,7 @@ snapshots:
       semver: 7.7.1
       source-map: 0.7.4
       typescript: 5.5.2
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(webpack-cli@5.1.4)
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -33564,12 +33829,21 @@ snapshots:
 
   url-join@4.0.1: {}
 
-  url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1):
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       loader-utils: 2.0.4
       mime-types: 2.1.35
       schema-utils: 3.3.0
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+    optionalDependencies:
+      file-loader: 6.2.0(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
+
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1):
+    dependencies:
+      loader-utils: 2.0.4
+      mime-types: 2.1.35
+      schema-utils: 3.3.0
+      webpack: 5.96.1(webpack-cli@5.1.4)
     optionalDependencies:
       file-loader: 6.2.0(webpack@5.96.1)
 
@@ -33779,7 +34053,34 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  webpack-dev-middleware@5.3.4(webpack@5.96.1):
+  webpack-cli@5.1.4(webpack@5.96.1):
+    dependencies:
+      '@discoveryjs/json-ext': 0.5.7
+      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4)(webpack@5.96.1)
+      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4)(webpack@5.96.1)
+      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4)(webpack@5.96.1)
+      colorette: 2.0.20
+      commander: 10.0.1
+      cross-spawn: 7.0.6
+      envinfo: 7.14.0
+      fastest-levenshtein: 1.0.16
+      import-local: 3.2.0
+      interpret: 3.1.1
+      rechoir: 0.8.0
+      webpack: 5.96.1(webpack-cli@5.1.4)
+      webpack-merge: 5.10.0
+
+  webpack-dev-middleware@5.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
+    dependencies:
+      colorette: 2.0.20
+      memfs: 3.5.3
+      mime-types: 2.1.35
+      range-parser: 1.2.1
+      schema-utils: 4.3.0
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+    optional: true
+
+  webpack-dev-middleware@5.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
@@ -33788,7 +34089,7 @@ snapshots:
       schema-utils: 4.3.0
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
 
-  webpack-dev-middleware@6.1.3(webpack@5.96.1):
+  webpack-dev-middleware@6.1.3(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
@@ -33796,9 +34097,9 @@ snapshots:
       range-parser: 1.2.1
       schema-utils: 4.3.0
     optionalDependencies:
-      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
 
-  webpack-dev-server@4.15.2(webpack@5.96.1):
+  webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -33828,7 +34129,48 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 5.3.4(webpack@5.96.1)
+      webpack-dev-middleware: 5.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
+      ws: 8.18.1
+    optionalDependencies:
+      webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+    optional: true
+
+  webpack-dev-server@4.15.2(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
+    dependencies:
+      '@types/bonjour': 3.5.13
+      '@types/connect-history-api-fallback': 1.5.4
+      '@types/express': 4.17.21
+      '@types/serve-index': 1.9.4
+      '@types/serve-static': 1.15.7
+      '@types/sockjs': 0.3.36
+      '@types/ws': 8.18.1
+      ansi-html-community: 0.0.8
+      bonjour-service: 1.3.0
+      chokidar: 3.6.0
+      colorette: 2.0.20
+      compression: 1.8.0
+      connect-history-api-fallback: 2.0.0
+      default-gateway: 6.0.3
+      express: 4.21.2
+      graceful-fs: 4.2.11
+      html-entities: 2.6.0
+      http-proxy-middleware: 2.0.7(@types/express@4.17.21)
+      ipaddr.js: 2.2.0
+      launch-editor: 2.10.0
+      open: 8.4.2
+      p-retry: 4.6.2
+      rimraf: 3.0.2
+      schema-utils: 4.3.0
+      selfsigned: 2.4.1
+      serve-index: 1.9.1
+      sockjs: 0.3.24
+      spdy: 4.0.2
+      webpack-dev-middleware: 5.3.4(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       ws: 8.18.1
     optionalDependencies:
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))
@@ -33888,7 +34230,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1)
+      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15)))
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     transitivePeerDependencies:
@@ -33896,7 +34238,69 @@ snapshots:
       - esbuild
       - uglify-js
 
-  webpackbar@6.0.1(webpack@5.96.1):
+  webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20):
+    dependencies:
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.7
+      '@webassemblyjs/ast': 1.14.1
+      '@webassemblyjs/wasm-edit': 1.14.1
+      '@webassemblyjs/wasm-parser': 1.14.1
+      acorn: 8.14.1
+      browserslist: 4.24.4
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.18.1
+      es-module-lexer: 1.6.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.0
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 3.3.0
+      tapable: 2.2.1
+      terser-webpack-plugin: 5.3.14(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20)(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))(esbuild@0.18.20))
+      watchpack: 2.4.2
+      webpack-sources: 3.2.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+
+  webpack@5.96.1(webpack-cli@5.1.4):
+    dependencies:
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.7
+      '@webassemblyjs/ast': 1.14.1
+      '@webassemblyjs/wasm-edit': 1.14.1
+      '@webassemblyjs/wasm-parser': 1.14.1
+      acorn: 8.14.1
+      browserslist: 4.24.4
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.18.1
+      es-module-lexer: 1.6.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.0
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 3.3.0
+      tapable: 2.2.1
+      terser-webpack-plugin: 5.3.14(webpack@5.96.1)
+      watchpack: 2.4.2
+      webpack-sources: 3.2.3
+    optionalDependencies:
+      webpack-cli: 5.1.4(webpack@5.96.1)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+
+  webpackbar@6.0.1(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.15))):
     dependencies:
       ansi-escapes: 4.3.2
       chalk: 4.1.2
