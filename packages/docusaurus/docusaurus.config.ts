@@ -17,7 +17,6 @@ const config: Config = {
   organizationName: 'nl-rvo',
   projectName: 'rvo',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'nl',
     locales: ['nl'],
