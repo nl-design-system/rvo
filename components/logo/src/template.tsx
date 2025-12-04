@@ -6,10 +6,10 @@ import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import './index.scss';
+
 export interface ILogoProps {
   title?: string;
   subtitle?: string;
-  /** @uxpinignoreprop */
   className?: string;
 }
 
@@ -25,13 +25,14 @@ export const argTypes = {
   },
 };
 
-export const Logo: React.FC<ILogoProps> = ({
+export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> = ({
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
   className,
-}: ILogoProps) => {
+  ...rootElementProps
+}) => {
   return (
-    <div className={clsx('rvo-logo', className)}>
+    <div className={clsx('rvo-logo', className)} {...rootElementProps}>
       <div className="rvo-logo__emblem">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 44 88" role="img">
           <title>Logo Rijksoverheid</title>

@@ -14,6 +14,10 @@ const meta: Meta<typeof Logo> = {
     docusaurus: {
       link: 'logo',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=107-5162&embed-host=share',
+    },
   },
 };
 export default meta;

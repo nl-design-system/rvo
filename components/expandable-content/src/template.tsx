@@ -15,13 +15,14 @@ export interface IExpandableContentProps {
   children: ReactNode | string;
 }
 
-export const ExpandableContent: React.FC<IExpandableContentProps> = ({
+export const ExpandableContent: React.FC<IExpandableContentProps & React.HTMLAttributes<HTMLDetailsElement>> = ({
   title,
   open = false,
   subtle,
   children,
   showIcon = false,
-}: IExpandableContentProps) => (
+  ...rootElementProps
+}) => (
   <details
     className={clsx(
       'rvo-expandable-content',
@@ -29,6 +30,7 @@ export const ExpandableContent: React.FC<IExpandableContentProps> = ({
       showIcon && 'rvo-expandable-content--with-icon',
     )}
     open={open}
+    {...rootElementProps}
   >
     <summary className="rvo-expandable-content__summary">
       {showIcon && <Icon color="hemelblauw" size="md" icon="info" />}

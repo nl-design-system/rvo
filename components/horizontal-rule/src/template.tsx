@@ -5,8 +5,10 @@
 import React from 'react';
 import './index.scss';
 
-interface IHrProps extends React.HTMLAttributes<HTMLHRElement> {}
+interface IHrProps {}
 
-export const Hr: React.FC<IHrProps> = (props: IHrProps) => <hr className="rvo-hr" {...props} />;
+export const Hr: React.FC<IHrProps & React.HTMLAttributes<HTMLHRElement>> = (props) => (
+  <hr className="rvo-hr" {...props} />
+);
 
 export default Hr;

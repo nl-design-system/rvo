@@ -1,3 +1,4 @@
+import { HTMLAttributes } from 'react';
 import { ICheckboxGroupProps } from './template';
 import { ICheckboxProps } from '../../form-checkbox/src/template';
 
@@ -8,7 +9,7 @@ const defaultOptions: ICheckboxProps[] = [
   { id: 'optionD', label: 'Option D' },
 ];
 
-export const defaultArgs: ICheckboxGroupProps = {
+export const defaultArgs: ICheckboxGroupProps & HTMLAttributes<HTMLDivElement> = {
   invalid: false,
   options: defaultOptions,
 };

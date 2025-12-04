@@ -1,5 +1,5 @@
 import { useParameter } from '@storybook/api';
-import { IconButton, Icons } from '@storybook/components';
+import { Icons } from '@storybook/components';
 import { addons, types } from '@storybook/manager-api';
 // @ts-expect-error
 import React from 'react';
@@ -24,15 +24,15 @@ addons.register('docusaurus', () => {
       }
 
       return (
-        <IconButton
-          {...({
-            href: url,
-            target: '_blank',
-            title: 'Open documentatie in Docusaurus',
-          } as any)}
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open documentatie in Docusaurus"
+          className="rvo-docs-button"
         >
-          <Icons icon="document" style={{ width: 12 }} />
-        </IconButton>
+          <Icons icon="document" style={{ width: '12px' }} />
+        </a>
       );
     },
   });

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { HTMLAttributes } from 'react';
 import { Hero, IHeroProps } from './src/template';
 
 const argTypes = {
@@ -31,7 +32,7 @@ const argTypes = {
   },
 };
 
-const defaultArgs: IHeroProps = {
+const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {
   image: { src: '', alt: '' },
   title: 'Rijksdienst voor Ondernemend Nederland',
   subtitle: 'Wij helpen u graag vooruit!',
@@ -49,6 +50,10 @@ const meta: Meta<typeof Hero> = {
     },
     docusaurus: {
       link: 'hero',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5925-2130&embed-host=share',
     },
   },
 };

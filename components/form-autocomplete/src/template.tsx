@@ -24,7 +24,6 @@ export type AutocompleteKeywordFilter = (
 ) => AutocompleteKeywordSuggestion[];
 
 export interface IAutocompleteProps {
-  className?: string;
   defaultValue?: string;
   keywordSuggestions?: AutocompleteKeywordSuggestion[];
   linkSuggestions?: AutocompleteLinkSuggestion[];
@@ -48,7 +47,7 @@ export interface IAutocompleteProps {
 
 const FILTER_DEBOUNCE_MS = 150;
 
-export const Autocomplete: React.FC<IAutocompleteProps> = ({
+export const Autocomplete: React.FC<IAutocompleteProps & React.HTMLAttributes<HTMLDivElement>> = ({
   className,
   defaultValue = '',
   filterKeywords = defaultKeywordFilter,
@@ -66,7 +65,7 @@ export const Autocomplete: React.FC<IAutocompleteProps> = ({
   renderLinksHeader,
   size,
   value,
-  ...rest
+  ...rootElementProps
 }) => {
   const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>(defaultValue);
@@ -355,9 +354,13 @@ export const Autocomplete: React.FC<IAutocompleteProps> = ({
   const firstLinkIndex = mergedOptions.findIndex((o) => o.type === 'link');
 
   return (
-    <div ref={wrapperRef} className={clsx(`rvo-autocomplete--${size}`, 'rvo-autocomplete__container')}>
+    <div
+      ref={wrapperRef}
+      className={clsx(`rvo-autocomplete--${size}`, 'rvo-autocomplete__container', className)}
+      {...rootElementProps}
+    >
       <TextInput
-        {...rest}
+        {...rootElementProps}
         aria-controls="rvo-autocomplete-listbox"
         aria-expanded={showSuggestions && hasItemsToRender}
         autoComplete="off"

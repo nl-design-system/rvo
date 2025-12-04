@@ -11,6 +11,10 @@ const meta: Meta<typeof UtilityTextTypes> = {
     docusaurus: {
       link: 'utility-text-types',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=43-226&embed-host=share',
+    },
   },
 };
 export default meta;

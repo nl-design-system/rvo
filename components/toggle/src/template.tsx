@@ -67,7 +67,7 @@ export const argTypes = {
   },
 };
 
-export const Toggle: React.FC<IToggleProps> = ({
+export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> = ({
   content = defaultArgs.content,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
@@ -79,7 +79,8 @@ export const Toggle: React.FC<IToggleProps> = ({
   linkTarget = '_self',
   onToggle,
   children,
-}: IToggleProps) => {
+  ...rootElementProps
+}) => {
   const [isActive, setIsActive] = useState(active);
 
   useEffect(() => {
@@ -116,6 +117,7 @@ export const Toggle: React.FC<IToggleProps> = ({
         'rvo-toggle--focus': focus,
         'rvo-toggle--hover': link,
       })}
+      {...rootElementProps}
     >
       {showIcon === 'before' && iconMarkup}
       {parseContentMarkup(children || content)}

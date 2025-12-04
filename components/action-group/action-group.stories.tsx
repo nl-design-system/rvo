@@ -13,10 +13,17 @@ const meta: Meta<typeof ActionGroup> = {
     docusaurus: {
       link: 'action-group',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=4207-18737&embed-host=share',
+    },
   },
 };
 export default meta;
 
 type Story = StoryObj<typeof ActionGroup>;
 
-export const Default: Story = { args: defaultArgs, name: 'Action group' };
+export const Default: Story = {
+  args: defaultArgs,
+  name: 'Action group',
+};
