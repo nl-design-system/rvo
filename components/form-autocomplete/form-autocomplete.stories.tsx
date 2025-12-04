@@ -40,6 +40,10 @@ const meta: Meta<typeof Autocomplete> = {
     docusaurus: {
       link: 'autocomplete',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=844-18717&embed-host=share',
+    },
   },
   decorators: [
     (Story) => (
@@ -53,4 +57,7 @@ export default meta;
 
 type Story = StoryObj<typeof Autocomplete>;
 
-export const Default: Story = { args: defaultArgs, name: 'Autocomplete' };
+export const Default: Story = {
+  args: defaultArgs,
+  name: 'Autocomplete',
+};

@@ -14,10 +14,17 @@ const meta: Meta<typeof Breadcrumbs> = {
     docusaurus: {
       link: 'breadcrumbs',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=373-9578&embed-host=share',
+    },
   },
 };
 export default meta;
 
 type Story = StoryObj<typeof Breadcrumbs>;
 
-export const Default: Story = { args: defaultArgs, name: 'Breadcrumbs' };
+export const Default: Story = {
+  args: defaultArgs,
+  name: 'Breadcrumbs',
+};

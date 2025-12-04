@@ -101,11 +101,11 @@ const Subsidiewijzer = () => {
                             ]}
                           ></CheckboxField>
                           <a
-                            className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--logoblauw"
+                            className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--lintblauw"
                             href="#"
                           >
                             <span
-                              className="utrecht-icon rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--logoblauw rvo-link__icon--before"
+                              className="utrecht-icon rvo-icon rvo-icon-plus rvo-icon--md rvo-icon--lintblauw rvo-link__icon--before"
                               role="img"
                               aria-label="Plus"
                             ></span>

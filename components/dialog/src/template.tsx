@@ -5,6 +5,7 @@
 import clsx from 'clsx';
 import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
+import Button from '../../button/src/template';
 import { Icon } from '../../icon/src/template';
 import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
@@ -135,7 +136,12 @@ export const Dialog: React.FC<IDialogProps> = ({
       aria-label={ariaLabel}
       {...props}
     >
-      <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" onClick={handleClose} />
+      <div className="rvo-dialog__close" onClick={handleClose}>
+        <Button kind="subtle" className="rvo-dialog__close-button">
+          <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" />
+          Sluiten
+        </Button>
+      </div>
       <div className="rvo-dialog__content">{contentMarkup}</div>
       {actionGroup && <div className="rvo-dialog__action-group">{actionGroup}</div>}
     </dialog>

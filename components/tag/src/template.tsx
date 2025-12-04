@@ -15,14 +15,14 @@ export interface ITagProps {
   iconPlacement?: 'before' | 'after';
   icon?: IconType;
   isPill?: boolean;
-  /** @uxpinignoreprop */
-  className?: string;
   url?: string;
   urlTarget?: '_blank' | '_self' | '_parent' | '_top';
   onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>) => void;
+  className?: string;
+  [key: string]: any; // Allow additional props
 }
 
-export const Tag: React.FC<ITagProps> = ({
+export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
   content,
   type,
   iconPlacement,
@@ -32,7 +32,8 @@ export const Tag: React.FC<ITagProps> = ({
   urlTarget = '_self',
   onClick,
   isPill,
-}: ITagProps) => {
+  ...rootElementProps
+}) => {
   // Parse icon markup
   let iconMarkup;
   enum typeName {
@@ -73,6 +74,7 @@ export const Tag: React.FC<ITagProps> = ({
         isPill && 'rvo-tag--pill',
       )}
       onClick={onClick}
+      {...rootElementProps}
     >
       {iconPlacement === 'before' && iconMarkup}
       {content}

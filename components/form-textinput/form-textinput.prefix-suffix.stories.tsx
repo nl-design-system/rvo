@@ -5,14 +5,16 @@ export default {
   title: 'Componenten/Text input/Prefix Suffix',
   component: TextInput,
   argTypes: argTypes,
-
   parameters: {
     status: {
       type: 'PRODUCTION',
     },
-
     docusaurus: {
       link: 'form-textinput',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=1313-17903&embed-host=share',
     },
   },
 };

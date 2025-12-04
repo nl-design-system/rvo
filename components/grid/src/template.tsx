@@ -48,13 +48,14 @@ export const argTypes = {
   },
 };
 
-export const Grid: React.FC<IGridProps> = ({
+export const Grid: React.FC<IGridProps & React.HTMLAttributes<HTMLDivElement>> = ({
   gap = defaultArgs.gap,
   columns = defaultArgs.columns,
   division,
   children,
   className,
-}: IGridProps) => {
+  ...rootElementProps
+}) => {
   const getColumnCount = (columnName: string | undefined): number => {
     if (!columnName) {
       return 1;
@@ -77,7 +78,7 @@ export const Grid: React.FC<IGridProps> = ({
   };
 
   return (
-    <div className={clsx('rvo-layout-grid-container', className)}>
+    <div className={clsx('rvo-layout-grid-container', className)} {...rootElementProps}>
       <div
         className={clsx(
           'rvo-layout-grid',

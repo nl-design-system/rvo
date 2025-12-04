@@ -1,5 +1,54 @@
 # @nl-rvo/component-library-react
 
+## 5.10.1
+
+### Patch Changes
+
+- 5f0f46a: Card Component padding default is changes from none to md
+
+## 5.10.0
+
+### Minor Changes
+
+- 70cc0a0: Update `react` and `react-dom` to `18.3.1`
+- 99b3741: Replaced the Heading elements in the Footer with span elements and updated rvo_footer\_\_column-title styling
+- ebe26f1: Introduce a new `image` component.
+- 70cc0a0: Update dependencies `@utrecht/component-library-css@3.0.1-alpha.22` and `@utrecht/component-library-react@3.0.1-alpha.22` to stable versions `8.0.0` and `4.2.0`.
+- 70cc0a0: Replace utrecht-textbox height and width:
+
+  - Replaced fixed height with --utrecht-pointer-target-min-size variable.
+  - Removed hardcoded width definitions and replace it with the variable --utrecht-textbox-max-inline-size.
+
+### Patch Changes
+
+- 70cc0a0: Patch `next` version to `14.2.33`
+- a5bfa65: Added padding to Checkbox Filter input field so the text doesn't overlap the chevron
+- 6c8b7fb: mobile menu changes
+- 26edcb3: ROOS-254: Forwards HTMLAttributes to root element for components that did not already implement this
+- 70cc0a0: Remove unused `@utrecht/components` dependency.
+- ebe26f1: Update autoprefixer and sass-embedded.
+- 0b89c27: Removed placeholder field from Checkbox Filter Component
+
+## 5.9.0
+
+### Minor Changes
+
+- 1ad7499: Align list item markers (ul li) to the top when list content spans multiple lines.
+- cde2fed: Update Label component with new parameters and updated required text
+- 1ad7499: Introduce new css variables to modify ul-icon image and before margin for more flexibility.
+
+## 5.8.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
+## 5.7.1
+
+### Patch Changes
+
+- 05af765: Update css rollup
+
 ## 5.7.0
 
 ### Minor Changes

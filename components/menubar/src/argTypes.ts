@@ -24,10 +24,6 @@ export const argTypes = {
     options: ['none', 'sm', 'md', 'lg'],
     control: { type: 'radio' },
   },
-  maxWidthInlinePadding: {
-    options: ['none', 'sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
   type: {
     options: ['primary', 'sub', 'sub-grid'],
     control: { type: 'radio' },
@@ -39,7 +35,7 @@ export const argTypes = {
     control: 'boolean',
   },
   linkColor: {
-    options: ['donkerblauw', 'hemelblauw', 'logoblauw', 'grijs-700', 'zwart'],
+    options: ['donkerblauw', 'hemelblauw', 'lintblauw', 'grijs-700', 'zwart'],
     control: { type: 'radio' },
   },
   useBackgroundColor: {

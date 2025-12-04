@@ -58,7 +58,7 @@ export const argTypes = {
   },
 };
 
-export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
+export const Field: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttributes<HTMLDivElement>> = ({
   fieldId = defaultArgs.fieldId,
   label = defaultArgs.label,
   labelSize = defaultArgs.labelSize,
@@ -71,6 +71,7 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   errorText = defaultArgs.errorText,
   children,
   className,
+  ...rootElementProps
 }) => {
   let helperTextMarkup: React.ReactNode;
   // Parse default helper text markup (strings or react node)
@@ -94,9 +95,14 @@ export const Field: React.FC<PropsWithChildren<IFieldProps>> = ({
   const fieldLabelId = `${fieldId}-label`;
 
   return (
-    <FormField className="rvo-form-field" role="group" aria-labelledby={fieldLabelId}>
+    <FormField className="rvo-form-field" role="group" aria-labelledby={fieldLabelId} {...rootElementProps}>
       <div className="rvo-form-field__label">
-        <Label id={fieldLabelId} size={labelSize} type={labelType as any} htmlFor={fieldId}>
+        <Label
+          id={fieldLabelId}
+          small={labelSize === 'sm'}
+          type={labelType as 'default' | 'optional' | 'required'}
+          htmlFor={fieldId}
+        >
           {label}
         </Label>
         {helperTextMarkup}

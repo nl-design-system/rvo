@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.6.1
+
+### Patch Changes
+
+- 5f0f46a: Card Component padding default is changes from none to md
+
 ## 1.6.0
 
 ### Minor Changes

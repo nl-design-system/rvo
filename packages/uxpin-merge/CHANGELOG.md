@@ -1,5 +1,29 @@
 # @nl-rvo/uxpin-merge
 
+## 1.4.0
+
+### Minor Changes
+
+- 70cc0a0: Update `react` and `react-dom` to `18.3.1`
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+
+## 1.3.11
+
+### Patch Changes
+
+- Updated dependencies [cde2fed]
+  - @nl-rvo/design-tokens@2.0.1
+
+## 1.3.10
+
+### Patch Changes
+
+- Updated dependencies [dae7f09]
+  - @nl-rvo/design-tokens@2.0.0
+
 ## 1.3.9
 
 ### Patch Changes

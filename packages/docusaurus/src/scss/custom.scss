@@ -9,6 +9,23 @@
  * work well for content-centric websites.
  */
 
+/* Fallback CSS custom properties in case design tokens don't load */
+:root {
+  --rvo-space-xs: 8px;
+  --rvo-space-sm: 12px;
+  --rvo-space-md: 16px;
+  --rvo-space-lg: 24px;
+  --rvo-space-xl: 32px;
+  --rvo-space-2xs: 4px;
+  --rvo-color-hemelblauw: #007bc7;
+  --rvo-color-donkerblauw: #154273;
+  --rvo-color-lichtblauw: #8fcae7;
+  --rvo-color-wit: #ffffff;
+  --rvo-color-zwart: #000000;
+  --rvo-color-grijs-700: #595959;
+  --rvo-sidebar-layout-sidebar-background-color: #f7f7f7;
+}
+
 /* You can override the default Infima variables here. */
 *,
 *::before,

@@ -1,5 +1,17 @@
 # `@nl-rvo/css-footer`
 
+## 1.8.0
+
+### Minor Changes
+
+- 99b3741: Replaced the Heading elements in the Footer with span elements and updated rvo_footer\_\_column-title styling
+
+## 1.7.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
 ## 1.6.0
 
 ### Minor Changes

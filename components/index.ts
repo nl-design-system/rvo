@@ -33,6 +33,7 @@ export { Heading } from './heading/src/template';
 export { Hero } from './hero/src/template';
 export { Hr } from './horizontal-rule/src/template';
 export { Icon } from './icon/src/template';
+export { Image } from './image/src';
 export { ItemList } from './item-list/src/template';
 export { Label } from './form-field-label/src/template';
 export { LayoutFlow } from './layout-flow/src/template';

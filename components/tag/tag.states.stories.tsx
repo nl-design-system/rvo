@@ -52,9 +52,12 @@ export default {
     status: {
       type: 'PRODUCTION',
     },
-
     docusaurus: {
       link: 'tag',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=263-3553&embed-host=share',
     },
   },
 };

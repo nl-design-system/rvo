@@ -13,6 +13,10 @@ export default {
     docusaurus: {
       link: 'paragraph',
     },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=605-19508&embed-host=share',
+    },
   },
 };
 
@@ -24,11 +28,11 @@ export const Zwart = {
   },
 };
 
-export const Logoblauw = {
+export const Lintblauw = {
   render: Paragraph.bind({}),
-  name: 'Logoblauw',
+  name: 'Lintblauw',
   args: {
-    color: 'logoblauw',
+    color: 'lintblauw',
   },
 };
 

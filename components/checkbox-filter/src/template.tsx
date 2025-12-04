@@ -6,13 +6,12 @@ import Icon from '../../icon/src/template';
 import Link from '../../link/src/template';
 import './index.scss';
 
-export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
+export interface ICheckboxFilter {
   label: string;
   options: ICheckboxProps[];
   optionsOnChange: (currentGroupSelection: string[]) => void;
   limit?: number;
   showInputField?: boolean;
-  inputFieldPlaceholder?: string;
   inputFieldLabel?: string;
   inputFieldOnChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   showMoreText?: string;
@@ -20,20 +19,21 @@ export interface ICheckboxFilter extends HTMLAttributes<HTMLDetailsElement> {
   noFiltersText?: string;
 }
 
-export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter) => {
+export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetailsElement>> = (
+  props: ICheckboxFilter,
+) => {
   const {
     label,
     options,
     limit = 5,
     showInputField,
-    inputFieldLabel,
-    inputFieldPlaceholder,
+    inputFieldLabel = 'Zoeken',
     inputFieldOnChange,
     optionsOnChange,
     showMoreText = 'Toon meer',
     showLessText = 'Toon minder',
     noFiltersText = 'Geen filters beschikbaar',
-    ...rest
+    ...rootElementProps
   } = props;
   const [visibleItems, setVisibleItems] = useState([]);
   const [toggleShow, setToggleShow] = useState(false);
@@ -60,18 +60,11 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
   };
 
   return (
-    <details open className="rvo-checkbox-filter" {...rest}>
+    <details open className="rvo-checkbox-filter" {...rootElementProps}>
       <summary className="rvo-checkbox-filter__label">
-        {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="logoblauw" />
+        {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>
-      {showInputField && (
-        <TextInputField
-          placeholder={inputFieldPlaceholder}
-          onChange={inputFieldOnChange}
-          label={inputFieldLabel}
-          size="max"
-        />
-      )}
+      {showInputField && <TextInputField onChange={inputFieldOnChange} label={inputFieldLabel} size="max" />}
       <div className="rvo-checkbox-filter__checkbox-container">
         {visibleItems.length > 0 && (
           <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
@@ -84,8 +77,8 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
           iconSize="md"
           showIcon="before"
           noUnderline
-          color="logoblauw"
-          iconColor="logoblauw"
+          color="lintblauw"
+          iconColor="lintblauw"
           onClick={(e) => toggleShowClick(e)}
         >
           {!toggleShow ? showMoreText : showLessText}

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import BreadcrumbsItem from './breadcrumbs-item/template';
 import { defaultArgs } from './defaultArgs';
 import '../../layout-flow/src/index.scss';
@@ -15,7 +15,7 @@ export interface IBreadcrumbsItem {
   link?: string;
 }
 
-export interface IBreadcrumbProps extends HTMLAttributes<HTMLDivElement> {
+export interface IBreadcrumbProps {
   /** @uxpinignoreprop */
   items?: IBreadcrumbsItem[];
   size?: 'sm' | 'md' | 'lg';
@@ -42,13 +42,14 @@ const parseDividerMarkup = (index: number, maxLength: number) => {
   return index > 0 && index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
 };
 
-export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
+export const Breadcrumbs: React.FC<IBreadcrumbProps & React.HTMLAttributes<HTMLOListElement>> = ({
   items = defaultArgs.items,
   size = defaultArgs.size,
   children,
-}: IBreadcrumbProps) => {
+  ...rootElementProps
+}) => {
   return (
-    <ol className={clsx('rvo-breadcrumbs', size && `rvo-breadcrumbs--${size}`)}>
+    <ol className={clsx('rvo-breadcrumbs', size && `rvo-breadcrumbs--${size}`)} {...rootElementProps}>
       {(children &&
         React.Children.map(children, (child, index) => {
           return (

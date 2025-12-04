@@ -4,11 +4,11 @@
  */
 import './index.scss';
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { AccordionItem, IAccordionItemProps } from './accordion-item/template';
 import { defaultArgs } from './defaultArgs';
 
-export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
+export interface IAccordionProps {
   /** @uxpinignoreprop */
   items?: IAccordionItemProps[];
   /** @uxpinpropname Accordion items */
@@ -26,11 +26,11 @@ export const argTypes = {
   },
 };
 
-export const Accordion: React.FC<IAccordionProps> = ({
+export const Accordion: React.FC<IAccordionProps & React.HTMLAttributes<HTMLDivElement>> = ({
   items = defaultArgs.items,
   children,
   ...props
-}: IAccordionProps) => {
+}) => {
   return (
     <div className={clsx('rvo-accordion')} {...props}>
       {(children &&

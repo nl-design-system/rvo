@@ -4,7 +4,7 @@ import { CheckBoxFilter } from './src/template';
 
 const argTypes = {
   label: {
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
   options: {
     control: { type: 'object' },
@@ -15,14 +15,14 @@ const argTypes = {
   showInputField: {
     control: { type: 'boolean' },
   },
-  inputFieldPlaceholder: {
-    control: { type: 'string' },
+  inputFieldLabel: {
+    control: { type: 'text' },
   },
   showMoreText: {
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
   showLessText: {
-    control: { type: 'string' },
+    control: { type: 'text' },
   },
 };
 
@@ -55,7 +55,6 @@ const defaultArgs = {
 
 const inputArgs = {
   showInputField: true,
-  inputFieldPlaceholder: 'Zoeken...',
   ...defaultArgs,
 };
 
@@ -70,6 +69,10 @@ const meta: Meta<typeof CheckBoxFilter> = {
     },
     docusaurus: {
       link: 'data-list',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=9166-1240&embed-host=share',
     },
   },
 };

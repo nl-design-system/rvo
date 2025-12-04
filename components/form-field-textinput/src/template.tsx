@@ -5,17 +5,20 @@
 import React from 'react';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../../form-field/src/template';
 import { ITextInputProps, TextInput, argTypes as textInputArgTypes } from '../../form-textinput/src/template';
-import extractArgs from '../../utils/extractArgs';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface ITextInputFieldProps extends FieldPropsWithoutFieldId, ITextInputProps {}
 
 export const argTypes = { ...fieldArgTypes, ...textInputArgTypes };
 
-export const TextInputField: React.FC<ITextInputFieldProps> = (args: ITextInputFieldProps) => {
+export const TextInputField: React.FC<ITextInputFieldProps & React.HTMLAttributes<HTMLInputElement>> = (args) => {
   const fieldArgs = extractArgs(args, fieldArgTypes) as FieldPropsWithoutFieldId;
   const textInputArgs = extractArgs(args, textInputArgTypes) as ITextInputProps;
+
+  const fieldArgsWithOtherAttributes = extractOtherArgs(args, { ...fieldArgTypes, ...textInputArgTypes });
+
   return (
-    <Field {...fieldArgs} fieldId={textInputArgs.id}>
+    <Field {...fieldArgs} fieldId={textInputArgs.id} {...fieldArgsWithOtherAttributes}>
       <TextInput {...textInputArgs} aria-describedby={fieldArgs.helperTextId} />
     </Field>
   );

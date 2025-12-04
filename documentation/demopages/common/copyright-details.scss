@@ -1,0 +1,35 @@
+.rvo-theme-copyright-details {
+  .rvo-expandable-content--overlay-on-image {
+    line-height: 1.5;
+    padding-block: var(--rvo-space-xs);
+    padding-inline: var(--rvo-space-sm);
+    position: absolute;
+    z-index: 2;
+  }
+
+  div:has(.rvo-expandable-content--overlay-on-image) {
+    position: relative;
+  }
+
+  .rvo-expandable-content--overlay-on-image-end-start {
+    inset-block-start: 0;
+    inset-inline-end: 0;
+  }
+
+  .rvo-expandable-content--overlay-on-image-end-end {
+    inset-block-end: 0;
+    inset-inline-end: 0;
+  }
+
+  .rvo-expandable-content--grijs-300 {
+    background-color: var(--rvo-color-grijs-300);
+  }
+
+  .rvo-expandable-content--border-end-start-radius {
+    border-end-start-radius: var(--rvo-border-radius-md);
+  }
+
+  .rvo-expandable-content--border-start-start-radius {
+    border-start-start-radius: var(--rvo-border-radius-md);
+  }
+}

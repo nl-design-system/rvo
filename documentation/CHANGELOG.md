@@ -1,5 +1,17 @@
 # @nl-rvo/documentation
 
+## 1.2.1
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+
+## 1.2.0
+
+### Minor Changes
+
+- dae7f09: design token and css name changes from logoblauw to lintblauw
+
 ## 1.1.0
 
 ### Minor Changes

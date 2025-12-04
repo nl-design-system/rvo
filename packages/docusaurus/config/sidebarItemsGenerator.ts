@@ -1,4 +1,15 @@
 const toProperCase = (string: string): string => {
+  // Specifieke vertalingen voor Nederlandse labels
+  const translations = {
+    pages: "Pagina's",
+    'ask-users-for': 'Gebruikers vragen om',
+    'help-users-to': 'Gebruikers helpen om',
+  };
+
+  if (translations[string]) {
+    return translations[string];
+  }
+
   const parsedString = string.replace(/-/g, ' ');
   return parsedString.charAt(0).toUpperCase() + parsedString.slice(1);
 };

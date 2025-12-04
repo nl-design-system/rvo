@@ -35,7 +35,7 @@ export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
   invertedColors = false,
   onClick,
   outline = false,
-  padding = 'none',
+  padding = 'md',
   children,
 }) => {
   // the card image component
