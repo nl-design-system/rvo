@@ -1,5 +1,28 @@
 # @nl-rvo/component-library-react
 
+## 5.10.0
+
+### Minor Changes
+
+- 70cc0a0: Update `react` and `react-dom` to `18.3.1`
+- 99b3741: Replaced the Heading elements in the Footer with span elements and updated rvo_footer\_\_column-title styling
+- ebe26f1: Introduce a new `image` component.
+- 70cc0a0: Update dependencies `@utrecht/component-library-css@3.0.1-alpha.22` and `@utrecht/component-library-react@3.0.1-alpha.22` to stable versions `8.0.0` and `4.2.0`.
+- 70cc0a0: Replace utrecht-textbox height and width:
+
+  - Replaced fixed height with --utrecht-pointer-target-min-size variable.
+  - Removed hardcoded width definitions and replace it with the variable --utrecht-textbox-max-inline-size.
+
+### Patch Changes
+
+- 70cc0a0: Patch `next` version to `14.2.33`
+- a5bfa65: Added padding to Checkbox Filter input field so the text doesn't overlap the chevron
+- 6c8b7fb: mobile menu changes
+- 26edcb3: ROOS-254: Forwards HTMLAttributes to root element for components that did not already implement this
+- 70cc0a0: Remove unused `@utrecht/components` dependency.
+- ebe26f1: Update autoprefixer and sass-embedded.
+- 0b89c27: Removed placeholder field from Checkbox Filter Component
+
 ## 5.9.0
 
 ### Minor Changes

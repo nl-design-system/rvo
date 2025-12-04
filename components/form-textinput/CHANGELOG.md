@@ -1,5 +1,18 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.5.0
+
+### Minor Changes
+
+- 70cc0a0: Replace utrecht-textbox height and width:
+
+  - Replaced fixed height with --utrecht-pointer-target-min-size variable.
+  - Removed hardcoded width definitions and replace it with the variable --utrecht-textbox-max-inline-size.
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+
 ## 1.4.0
 
 ### Minor Changes
