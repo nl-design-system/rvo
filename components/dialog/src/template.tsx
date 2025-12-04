@@ -2,10 +2,10 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import Button from '@nl-rvo/components/button/src/template';
 import clsx from 'clsx';
 import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
+import Button from '../../button/src/template';
 import { Icon } from '../../icon/src/template';
 import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
