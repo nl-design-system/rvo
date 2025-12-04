@@ -1,5 +1,12 @@
 # @nl-rvo/checkbox-filter
 
+## 3.1.1
+
+### Patch Changes
+
+- a5bfa65: Added padding to Checkbox Filter input field so the text doesn't overlap the chevron
+- 0b89c27: Removed placeholder field from Checkbox Filter Component
+
 ## 3.1.0
 
 ### Minor Changes

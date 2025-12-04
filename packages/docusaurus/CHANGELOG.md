@@ -1,5 +1,17 @@
 # @nl-rvo/docusaurus
 
+## 0.3.0
+
+### Minor Changes
+
+- 70cc0a0: Update `react` and `react-dom` to `18.3.1`
+- ebe26f1: Introduce a new `image` component.
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+- 70cc0a0: Fix `Voorbeeld HTML` functionallity.
+
 ## 0.2.0
 
 ### Minor Changes

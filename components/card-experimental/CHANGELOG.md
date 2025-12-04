@@ -1,5 +1,11 @@
 # @nl-rvo/card-experimental
 
+## 0.2.1
+
+### Patch Changes
+
+- 5f0f46a: Card Component padding default is changes from none to md
+
 ## 0.2.0
 
 ### Minor Changes

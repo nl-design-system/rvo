@@ -12,7 +12,7 @@ export const defaultArgs: ICardProps = {
   link: '',
   LinkComponent: undefined,
   outline: false,
-  padding: 'none',
+  padding: 'md',
   showLinkIndicator: true,
   title: '',
 };
