@@ -1,5 +1,15 @@
 # @nl-rvo/uxpin-merge
 
+## 1.4.0
+
+### Minor Changes
+
+- 70cc0a0: Update `react` and `react-dom` to `18.3.1`
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+
 ## 1.3.11
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "name": "@nl-rvo/docusaurus",
   "author": "Community for NL Design System",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Documentation website for the ROOS Design System",
   "license": "CC0-1.0",
   "keywords": [

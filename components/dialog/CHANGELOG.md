@@ -1,5 +1,11 @@
 # `@nl-rvo/css-dialog`
 
+## 1.4.1
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+
 ## 1.4.0
 
 ### Minor Changes
