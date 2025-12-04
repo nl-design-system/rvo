@@ -17,7 +17,6 @@ const config: Config = {
   organizationName: 'nl-rvo',
   projectName: 'rvo',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'nl',
     locales: ['nl'],
@@ -92,6 +91,9 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   future: {
     experimental_faster: true,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
   },
 };
 
