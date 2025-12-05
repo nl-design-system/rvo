@@ -6,6 +6,10 @@
 
   .rvo-tabs {
     display: block;
+
+    @media (min-width: 600px) {
+      border-bottom: 1px solid var(--rvo-color-zwart);
+    }
   }
 
   @media (min-width: 600px) {
@@ -77,8 +81,13 @@
 
     @media (min-width: 600px) {
       border: 1px solid var(--rvo-color-zwart);
+      border-bottom-width: 0;
       padding-block-end: var(--rvo-space-md);
     }
+  }
+
+  .rvo-tabs--subtle {
+    border-bottom-color: var(--rvo-color-grijs-400);
   }
 
   .rvo-tabs--subtle .rvo-tabs__panel {
