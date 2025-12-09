@@ -20,16 +20,15 @@
   ],
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "pnpm run build:sass && docusaurus start",
-    "build": "pnpm run build:sass && docusaurus build",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc",
-    "build:sass": "sass src/scss/custom.scss src/css/custom.min.css --style=compressed --source-map --load-path=node_modules --load-path=src/scss"
+    "typecheck": "tsc"
   },
   "devDependencies": {
     "@docusaurus/core": "3.9.2",
