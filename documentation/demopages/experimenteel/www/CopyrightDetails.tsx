@@ -47,16 +47,9 @@ const CopyrightDetails = () => {
           <div className="rvo-hero__image-container">
             <img src="images/www/home.jpg" className="rvo-hero__image" alt="homepage image" />
           </div>
-          <details className="rvo-expandable-content rvo-expandable-content--with-icon rvo-expandable-content--overlay-on-image rvo-expandable-content--grijs-300 rvo-expandable-content--border-end-start-radius rvo-expandable-content--overlay-on-image-end-start">
-            <summary className="rvo-expandable-content__summary">
-              <span
-                className="utrecht-icon rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"
-                role="img"
-                aria-label="Info"
-              ></span>
-              Copyright foto
-            </summary>
-            <div className="rvo-expandable-content__details">© Ferry Otto Graaf</div>
+          <details className="rvo-expandable-content rvo-expandable-content--with-icon rvo-expandable-content--overlay-on-image rvo-expandable-content--grijs-300 rvo-expandable-content--border-end-start-radius rvo-expandable-content--overlay-on-image-end-start rvo-expandable-content--copyright-details">
+            <summary className="rvo-expandable-content__summary">©</summary>
+            <div className="rvo-expandable-content__details">Ferry Otto Graaf</div>
           </details>
           <div className="rvo-hero__content">
             <h1 className="utrecht-heading-1 rvo-heading rvo-heading--gap-sm rvo-hero__title">
@@ -396,16 +389,9 @@ const CopyrightDetails = () => {
             <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
               <div className="rvo-card rvo-card--with-image rvo-card--with-image-md rvo-card--outline rvo-card--padding-xl">
                 <div className="rvo-card__image-container">
-                  <details className="rvo-expandable-content rvo-expandable-content--with-icon rvo-expandable-content--overlay-on-image rvo-expandable-content--grijs-300 rvo-expandable-content--border-start-start-radius rvo-expandable-content--overlay-on-image-end-end">
-                    <summary className="rvo-expandable-content__summary">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-info rvo-icon--md rvo-icon--hemelblauw"
-                        role="img"
-                        aria-label="Info"
-                      ></span>
-                      Copyright foto
-                    </summary>
-                    <div className="rvo-expandable-content__details">© Ferry Otto Graaf</div>
+                  <details className="rvo-expandable-content rvo-expandable-content--with-icon rvo-expandable-content--overlay-on-image rvo-expandable-content--grijs-300 rvo-expandable-content--border-start-start-radius rvo-expandable-content--overlay-on-image-end-end rvo-expandable-content--copyright-details">
+                    <summary className="rvo-expandable-content__summary">©</summary>
+                    <div className="rvo-expandable-content__details">Ferry Otto Graaf</div>
                   </details>
                   <img
                     src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-12%2FProjectenboek-MIEK-en-Projectprocedure-2024.jpg%3Fitok%3DI7uP9ni9&w=750&q=85"

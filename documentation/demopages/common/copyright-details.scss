@@ -32,4 +32,13 @@
   .rvo-expandable-content--border-start-start-radius {
     border-start-start-radius: var(--rvo-border-radius-md);
   }
+
+  .rvo-expandable-content--copyright-details .rvo-expandable-content__summary::after {
+    display: none;
+  }
+
+  .rvo-expandable-content--copyright-details .rvo-expandable-content__details {
+    display: inline;
+    margin-inline-start: var(--rvo-space-xs);
+  }
 }
