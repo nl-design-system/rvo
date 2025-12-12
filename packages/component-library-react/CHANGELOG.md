@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 5.10.2
+
+### Patch Changes
+
+- 77773e1: ROOS-269: fix dialog content height and made dialog close label configurable
+
 ## 5.10.1
 
 ### Patch Changes
