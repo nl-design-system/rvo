@@ -41,6 +41,7 @@ export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElemen
   /** @uxpinignoreprop */
   className?: string | string[];
   ariaLabel?: string;
+  closeButtonLabel?: string;
 }
 
 export const argTypes = {
@@ -98,6 +99,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   backgroundColor = defaultArgs.backgroundColor,
   className = defaultArgs.className,
   ariaLabel = defaultArgs.ariaLabel,
+  closeButtonLabel = 'Sluiten',
   ...props
 }: IDialogProps) => {
   const contentMarkup = parseContentMarkup(children ?? content);
@@ -139,7 +141,7 @@ export const Dialog: React.FC<IDialogProps> = ({
       <div className="rvo-dialog__close" onClick={handleClose}>
         <Button kind="subtle" className="rvo-dialog__close-button">
           <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" />
-          Sluiten
+          {closeButtonLabel}
         </Button>
       </div>
       <div className="rvo-dialog__content">{contentMarkup}</div>

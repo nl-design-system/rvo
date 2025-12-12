@@ -57,12 +57,9 @@
 
   // dialog content
   &__content {
+    flex: 1;
+    overflow-y: auto;
     width: 100%;
-
-    &--with-action-group {
-      flex: 1;
-      overflow-y: auto;
-    }
   }
 }
 
