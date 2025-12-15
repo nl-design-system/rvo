@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.15.1
+
+### Patch Changes
+
+- 77773e1: ROOS-269: fix dialog content height and made dialog close label configurable
+
 ## 4.15.0
 
 ### Minor Changes

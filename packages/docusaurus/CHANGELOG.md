@@ -1,5 +1,15 @@
 # @nl-rvo/docusaurus
 
+## 0.4.0
+
+### Minor Changes
+
+- a3030c1: - Revert custom.css compiler/file.
+  - Update ExampleCollapse component to show the html code of each docusaurus page.
+  - CSS improvements for logo and menu.
+- a3030c1: Replace `custom.scss` with `custom.css` in `docusaurus.config.ts` to ensure the stylesheet loads correctly.
+- fd88ca3: upgrade docusaurus to 3.9.2
+
 ## 0.3.0
 
 ### Minor Changes
