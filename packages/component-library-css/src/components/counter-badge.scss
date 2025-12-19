@@ -1,0 +1,9 @@
+.rvo-badge {
+  background-color: var(--rvo-counter-badge-background-color);
+  border-radius: var(--rvo-counter-badge-border-radius);
+  color: var(--rvo-counter-badge-color);
+  display: inline-block;
+  padding-inline-end: var(--rvo-space-xs);
+  padding-inline-start: var(--rvo-space-xs);
+  text-align: center;
+}

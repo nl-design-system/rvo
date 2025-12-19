@@ -71,5 +71,8 @@
   "peerDependencies": {
     "react": "16 - 18",
     "react-dom": "16 - 18"
+  },
+  "dependencies": {
+    "@nl-rvo/component-library-css/counter-badge-css": "workspace:*"
   }
 }
