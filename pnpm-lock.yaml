@@ -330,8 +330,8 @@ importers:
   components/form-radio-button:
     dependencies:
       '@utrecht/radio-button-css':
-        specifier: 1.5.0
-        version: 1.5.0
+        specifier: 2.0.1
+        version: 2.0.1
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -3210,7 +3210,7 @@ packages:
   '@mui/base@5.0.0-beta.39':
     resolution: {integrity: sha512-puyUptF7VJ+9/dMIRLF+DLR21cWfvejsA6OnatfJfqFp8aMhya7xQtvYLEfCch6ahvFZvNC9FFEGGR+qkgFjUg==}
     engines: {node: '>=12.0.0'}
-    deprecated: This package has been replaced by @base-ui-components/react
+    deprecated: This package has been replaced by @base-ui/react
     peerDependencies:
       '@types/react': ^17.0.0 || ^18.0.0
       react: 18.3.1
@@ -6203,11 +6203,11 @@ packages:
   '@utrecht/preserve-data-css@1.3.1':
     resolution: {integrity: sha512-O4TdW3df2AJGHunXB5AzEGDi8u8RsdmSbhyVMO5XeVIjiCVztajiyXnRqfuFX7+OA0EZ5E3NUSjPuXnSEJnkQA==}
 
-  '@utrecht/radio-button-css@1.5.0':
-    resolution: {integrity: sha512-N99LvKxLMl5l/fc++rAUohmNJ4FR6zJrQnA4aFN0GXRcOrL2/MDgoUnvfyo3AMoEQWjA/NNGfL32Whqk3ec2fg==}
-
   '@utrecht/radio-button-css@1.6.1':
     resolution: {integrity: sha512-AQVGKD100iVjBan4mIx/QOBflgZUdZpNVRxrrCE8eXwgzXCSGlg++Veqx9Z+88vH38CEl+evQynVBdssIydVAA==}
+
+  '@utrecht/radio-button-css@2.0.1':
+    resolution: {integrity: sha512-NY+z6f/3ChyrCl5gW1D5SJtsxEqsVbr26VZ7UEwFmPo55eFjn0qON3llklD0hl+2lRA5SMIZwoOARFMXrILSAA==}
 
   '@utrecht/radio-button-react@1.0.4':
     resolution: {integrity: sha512-pUcep0QygWwWAmdc44A3xI46ohZxIS7THjCQrJaO7EshTXfUOG8gqRkOaKmfTFLUjIENBCIIxVWWFI+hGAxRFA==}
@@ -15382,6 +15382,7 @@ packages:
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
@@ -23139,9 +23140,9 @@ snapshots:
 
   '@utrecht/preserve-data-css@1.3.1': {}
 
-  '@utrecht/radio-button-css@1.5.0': {}
-
   '@utrecht/radio-button-css@1.6.1': {}
+
+  '@utrecht/radio-button-css@2.0.1': {}
 
   '@utrecht/radio-button-react@1.0.4(@babel/runtime@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
