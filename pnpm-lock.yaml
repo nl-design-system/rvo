@@ -402,8 +402,8 @@ importers:
         specifier: 1.3.0
         version: 1.3.0
       '@utrecht/heading-4-css':
-        specifier: 1.3.0
-        version: 1.3.0
+        specifier: 2.0.1
+        version: 2.0.1
       '@utrecht/heading-5-css':
         specifier: 1.3.0
         version: 1.3.0
@@ -3210,7 +3210,7 @@ packages:
   '@mui/base@5.0.0-beta.39':
     resolution: {integrity: sha512-puyUptF7VJ+9/dMIRLF+DLR21cWfvejsA6OnatfJfqFp8aMhya7xQtvYLEfCch6ahvFZvNC9FFEGGR+qkgFjUg==}
     engines: {node: '>=12.0.0'}
-    deprecated: This package has been replaced by @base-ui-components/react
+    deprecated: This package has been replaced by @base-ui/react
     peerDependencies:
       '@types/react': ^17.0.0 || ^18.0.0
       react: 18.3.1
@@ -6066,11 +6066,11 @@ packages:
   '@utrecht/heading-3-css@1.5.1':
     resolution: {integrity: sha512-oxVgWdaTLTRp2y1Sxhcu2xwDqaF0SEhjzlsuTylG6TI4r/fbTpenCcAjuDceUEkCmlIUKERpKgdJVuajmbJpRg==}
 
-  '@utrecht/heading-4-css@1.3.0':
-    resolution: {integrity: sha512-o5aMsyo5pDOZ4k+1GeaFlC1LvTt7iKi/NjI6wdk3cn1VpsafmvC9ypwA5el5QB1m6EtJEGsSvievixZfOFvXpw==}
-
   '@utrecht/heading-4-css@1.5.1':
     resolution: {integrity: sha512-KJNOoZ8cFCz/glrsc9n5FM5vsiHtMQsOe1ekxGzHMmE38aTrdZ5L81bvKeWbzztvbpxXm5DzT+tS5DqvVYJ93g==}
+
+  '@utrecht/heading-4-css@2.0.1':
+    resolution: {integrity: sha512-SYqZNsG6RWf702kPorffcRFFb8igFX4uUSRUEGxLS8WjrHWWtXqX5DOivbpj+kNA9hbTF8WGhYWWLQeToA3hBg==}
 
   '@utrecht/heading-5-css@1.3.0':
     resolution: {integrity: sha512-f2ZhthrMfuht/DL7hVtRpZSmx1mdP15NomR5ENMqHL2L+CqQWitTLiYxHxVftHm9OcHJCXpuQ1c8wSpUojUk8g==}
@@ -15382,6 +15382,7 @@ packages:
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
@@ -23043,9 +23044,9 @@ snapshots:
 
   '@utrecht/heading-3-css@1.5.1': {}
 
-  '@utrecht/heading-4-css@1.3.0': {}
-
   '@utrecht/heading-4-css@1.5.1': {}
+
+  '@utrecht/heading-4-css@2.0.1': {}
 
   '@utrecht/heading-5-css@1.3.0': {}
 
