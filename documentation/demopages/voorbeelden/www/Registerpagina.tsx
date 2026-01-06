@@ -48,7 +48,7 @@ const Registerpagina = () => {
           <p>
             <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em>
           </p>
-          <dl className="rvo-data-list">
+          {/* <dl className="rvo-data-list">
             <dt>Orde</dt>
             <dd>Artiodactyla</dd>
             <dt>Familie</dt>
@@ -57,7 +57,7 @@ const Registerpagina = () => {
             <dd>F</dd>
             <dt>Gedomesticeerd</dt>
             <dd>Nee</dd>
-          </dl>
+          </dl> */}
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Dit dier staat niet op de huis- en hobbydierenlijst. Hieronder leest u de beoordeling over dit dier.
           </p>
