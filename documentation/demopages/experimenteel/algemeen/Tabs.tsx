@@ -25,7 +25,7 @@ const Tabs = () => {
         <LayoutFlow gap="3xl">
           <main className="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
             <Heading type="h1">Tabs demo page</Heading>
-            <div className="rvo-tabs">
+            {/* <div className="rvo-tabs">
               <ul
                 className="rvo-tabs-ul rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--icon rvo-ul--icon-option-2"
                 role="tablist"
@@ -69,7 +69,7 @@ const Tabs = () => {
                   ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
                 </p>
               </div>
-            </div>
+            </div> 
 
             <div className="rvo-margin-block-end--xl"></div>
 
@@ -117,7 +117,7 @@ const Tabs = () => {
                   ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
                 </p>
               </div>
-            </div>
+            </div>*/}
 
             <div className="rvo-margin-block-end--xl"></div>
 
