@@ -5,13 +5,13 @@
 @use "../../layout-flow/src";
 
 textarea.rvo-textarea {
-  border-width: 1px;
+  block-size: initial;
   border-radius: 3px;
   border-style: solid;
-  block-size: initial;
+  border-width: 1px;
   box-sizing: border-box;
-  min-height: 96px;
   min-block-size: 96px;
+  min-height: 96px;
   resize: vertical;
 
   &[aria-disabled="true"],

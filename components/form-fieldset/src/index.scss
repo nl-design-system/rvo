@@ -19,13 +19,13 @@
 }
 
 .rvo-form-fieldset__legend {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 150%;
   margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
   margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
-  font-weight: 700;
-  font-size: 1.25rem;
   padding-inline-end: 0;
   padding-inline-start: 0;
-  line-height: 150%;
 }
 
 .rvo-form-fieldset .rvo-form-field:last-child {
