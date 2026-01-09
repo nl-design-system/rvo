@@ -24,11 +24,10 @@
     "@storybook/addon-designs": "7.0.0",
     "@storybook/theming": "7.6.17",
     "@types/node": "20.11.27",
-    "@types/react": "18.3.1",
+    "@types/react": "19.2.3",
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
     "@utrecht/component-library-css": "8.0.0",
-    "@utrecht/component-library-react": "4.2.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
@@ -53,7 +52,9 @@
     "stylelint-config-standard-scss": "15.0.1",
     "stylelint-order": "6.0.4",
     "typescript": "5.5.2",
-    "webpack": "5.96.1"
+    "webpack": "5.96.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "scripts": {
     "build": "pnpm run --recursive build",
@@ -88,15 +89,7 @@
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs"
   },
   "dependencies": {
-    "http-server": "14.1.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "http-server": "14.1.1"
   },
-  "pnpm": {
-    "overrides": {
-      "react": "18.3.1",
-      "react-dom": "18.3.1"
-    }
-  },
-  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }

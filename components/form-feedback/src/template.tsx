@@ -2,7 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import { FormFieldDescription } from '@utrecht/component-library-react';
 import React, { ReactNode } from 'react';
 import './index.scss';
 import { defaultArgs } from './defaultArgs';
@@ -38,17 +37,17 @@ export const Feedback: React.FC<IFeedbackProps & React.HTMLAttributes<HTMLDivEle
 }) => {
   if (type === 'warning') {
     return (
-      <FormFieldDescription warning className="rvo-form-feedback rvo-form-feedback--warning" {...rootElementProps}>
+      <div className="rvo-form-feedback rvo-form-feedback--warning" {...rootElementProps}>
         <StatusIcon type="waarschuwing" size="md" className="rvo-status-icon-waarschuwing" />
         {parseContentMarkup(children || text)}
-      </FormFieldDescription>
+      </div>
     );
   } else {
     return (
-      <FormFieldDescription invalid className="rvo-form-feedback rvo-form-feedback--error" {...rootElementProps}>
+      <div className="rvo-form-feedback rvo-form-feedback--error" {...rootElementProps}>
         <StatusIcon type="foutmelding" size="md" className="rvo-status-icon-foutmelding" />
         {parseContentMarkup(children || text)}
-      </FormFieldDescription>
+      </div>
     );
   }
 };

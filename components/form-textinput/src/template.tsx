@@ -3,12 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import { Textbox, TextboxProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 
-export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
+export interface ITextInputProps {
   /** @uxpinignoreprop */
   key?: string;
   /** @uxpinignoreprop */
@@ -34,6 +33,8 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
   onInvalid?: (event: React.InvalidEvent<EventTarget & HTMLInputElement>) => void;
+  defaultValue?: string;
+  value?: string;
 }
 
 export const argTypes = {
@@ -156,10 +157,12 @@ export const TextInput: React.FC<ITextInputProps> = ({
   };
 
   const inputMarkup = (
-    <Textbox
+    <input
       {...textBoxProps}
+      type="text"
       className={clsx(
         className,
+        'utrecht-textbox',
         size === 'xs' && 'utrecht-textbox--xs',
         size === 'sm' && 'utrecht-textbox--sm',
         size === 'md' && 'utrecht-textbox--md',

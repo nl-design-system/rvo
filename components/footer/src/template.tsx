@@ -2,7 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import { PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import HorizontalRule from '../../horizontal-rule/src/template';
@@ -41,7 +40,7 @@ export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElem
   ...rootElementProps
 }: FooterInterface) => {
   return (
-    <UtrechtPageFooter className="rvo-footer" {...rootElementProps}>
+    <footer className="rvo-footer" {...rootElementProps}>
       <div
         className={clsx(
           'rvo-footer__container',
@@ -110,7 +109,7 @@ export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElem
           </>
         )}
       </div>
-    </UtrechtPageFooter>
+    </footer>
   );
 };
 

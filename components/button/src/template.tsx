@@ -2,7 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
-import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -118,32 +117,23 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   }
 
   return (
-    <UtrechtButton
+    <button
       className={clsx(
         className,
-        kind === 'tertiary' && 'utrecht-button--rvo-tertiary-action',
-        kind === 'quaternary' && 'utrecht-button--rvo-quaternary-action',
-        active && 'utrecht-button--active',
-        busy && 'utrecht-button--busy',
-        hover && 'utrecht-button--hover',
-        focus && 'utrecht-button--focus',
-        focusVisible && 'utrecht-button--focus-visible',
-        size === 'xs' && 'utrecht-button--rvo-xs',
-        size === 'sm' && 'utrecht-button--rvo-sm',
-        size === 'md' && 'utrecht-button--rvo-md',
-        alignToRightInGroup && 'rvo-action-group--align-right',
+        'utrecht-button',
+        `utrecht-button--${kind}-action`,
+        size && `'utrecht-button--rvo-${size}`,
         fullWidth && 'utrecht-button--rvo-full-width',
         showIcon !== 'no' && `utrecht-button--icon-${showIcon}`,
+        appearance && `utrecht-button--${appearance}`,
       )}
       disabled={disabled || undefined}
-      appearance={appearance}
-      hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : undefined}
       {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
       {children || label}
       {showIcon === 'after' && iconMarkup}
-    </UtrechtButton>
+    </button>
   );
 };
 

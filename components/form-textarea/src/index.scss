@@ -3,49 +3,48 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 @use "../../layout-flow/src";
-@use "~@utrecht/textarea-css/dist/index.css" as *;
-@use "~@utrecht/textbox-css/dist/index.css" as *;
 
-.utrecht-textarea {
-  height: 48px;
-}
-
-textarea.utrecht-textarea {
+textarea.rvo-textarea {
+  border-width: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  block-size: initial;
+  box-sizing: border-box;
   min-height: 96px;
+  min-block-size: 96px;
   resize: vertical;
+
+  &[aria-disabled="true"],
+  &:disabled {
+    outline: none;
+  }
+
+  &--invalid {
+    border-color: var(--rvo-textbox-invalid-focus-border-color);
+  }
+
+  &:focus {
+    outline-offset: var(--rvo-color-lintblauw);
+
+    .rvo-textarea--invalid {
+      border-color: var(--rvo-textbox-invalid-focus-border-color);
+      outline-color: var(--rvo-textbox-invalid-focus-outline-color);
+    }
+  }
+
+  &--xs {
+    width: var(--rvo-textbox-xs-width);
+  }
+
+  &--sm {
+    width: var(--rvo-textbox-sm-width);
+  }
+
+  &--md {
+    width: var(--rvo-textbox-md-width);
+  }
 }
 
-.utrecht-textarea:disabled,
-.utrecht-textarea[aria-disabled="true"],
-.utrecht-textarea.utrecht-textarea--disabled {
-  outline: none;
-}
-
-.utrecht-textarea:focus,
-.utrecht-textarea--focus {
-  outline-offset: var(--rvo-textbox-outline-offset);
-}
-
-.utrecht-textarea--focus.utrecht-textarea--invalid,
-.utrecht-textarea:focus.utrecht-textarea--invalid,
-.utrecht-textarea--focus.utrecht-textarea:invalid,
-.utrecht-textarea:focus.utrecht-textarea:invalid {
-  border-color: var(--rvo-textbox-invalid-focus-border-color);
-  outline-color: var(--rvo-textbox-invalid-focus-outline-color);
-}
-
-.utrecht-textarea--xs {
-  width: var(--rvo-textbox-xs-width);
-}
-
-.utrecht-textarea--sm {
-  width: var(--rvo-textbox-sm-width);
-}
-
-.utrecht-textarea--md {
-  width: var(--rvo-textbox-md-width);
-}
-
-.utrecht-textarea-remaining-chars {
+.rvo-textarea__remaining-chars {
   align-self: flex-end;
 }
