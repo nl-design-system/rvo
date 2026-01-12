@@ -33,8 +33,8 @@ export interface ITextInputProps {
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
   onInvalid?: (event: React.InvalidEvent<EventTarget & HTMLInputElement>) => void;
-  defaultValue?: string;
-  value?: string;
+  defaultValue?: string | number | readonly string[];
+  value?: string | number | readonly string[];
 }
 
 export const argTypes = {
@@ -171,6 +171,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       )}
     />
   );
+
   if (prefix || suffix) {
     return (
       <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
@@ -179,9 +180,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
         {suffix}
       </div>
     );
-  } else {
-    return inputMarkup;
   }
+  return inputMarkup;
 };
 
 export default TextInput;

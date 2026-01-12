@@ -5,7 +5,6 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
-import TextInput from '../../form-textinput/src/template';
 
 export interface ITimeInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
@@ -123,34 +122,47 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
   prefix = defaultArgs.prefix,
   suffix = defaultArgs.suffix,
   size = defaultArgs.size,
+  className,
   ...otherProps
 }: ITimeInputProps) => {
-  const props = {
-    id,
-    className: clsx(
-      'utrecht-textbox',
-      'utrecht-textbox--html-input',
-      disabled && 'utrecht-textbox--disabled',
-      focus && 'utrecht-textbox--focus utrecht-textbox--focus-visible',
-      invalid && 'utrecht-textbox--invalid',
-      readOnly && 'utrecht-textbox--readonly',
-      required && 'utrecht-textbox--required',
-    ),
-    disabled: disabled || undefined,
-    'aria-invalid': invalid || undefined,
-    required: required || undefined,
-    readOnly: readOnly || undefined,
-    defaultValue: value,
-    ...(min && { min }),
-    ...(max && { max }),
-    ...(step && { step }),
-    ...(size && { size }),
-    ...(prefix && { prefix }),
-    ...(suffix && { suffix }),
-    ...otherProps,
-  };
+  const inputMarkup = (
+    <input
+      {...otherProps}
+      id={id}
+      type="time"
+      className={clsx(
+        className,
+        'utrecht-textbox',
+        'utrecht-textbox--html-input',
+        disabled && 'utrecht-textbox--disabled',
+        focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'],
+        invalid && 'utrecht-textbox--invalid',
+        readOnly && 'utrecht-textbox--readonly',
+        required && 'utrecht-textbox--required',
+        size && `utrecht-textbox--${size}`,
+      )}
+      disabled={disabled || undefined}
+      aria-invalid={invalid || undefined}
+      required={required || undefined}
+      readOnly={readOnly || undefined}
+      defaultValue={value}
+      min={min || undefined}
+      max={max || undefined}
+      step={step || undefined}
+    />
+  );
 
-  return <TextInput type="time" {...props} />;
+  if (prefix || suffix) {
+    return (
+      <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
+        {prefix}
+        {inputMarkup}
+        {suffix}
+      </div>
+    );
+  }
+
+  return inputMarkup;
 };
 
 export default TimeInput;
