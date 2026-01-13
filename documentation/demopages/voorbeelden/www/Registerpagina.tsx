@@ -65,25 +65,30 @@ const Registerpagina = () => {
 
         <div className="rvo-margin-block-start--2xl rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2">Op deze pagina:</Heading>
-
-          <div>
-            <LayoutFlow gap="2xs">
-              <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
-                Algemene informatie
-              </Link>
-              <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
-                Risicoklasse F
-              </Link>
-              <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
-                Samenvatting beoordeling van de steenbok
-              </Link>
-              <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
-                Beoordeling per risicofactor
-              </Link>
-              <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
-                Verwijzingen
-              </Link>
-            </LayoutFlow>
+          <div className="rvo-layout-grid rvo-layout-grid-columns--two rvo-layout-gap--md">
+            <div>
+              <LayoutFlow gap="2xs">
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                  Algemene informatie
+                </Link>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                  Risicoklasse F
+                </Link>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                  Samenvatting beoordeling
+                </Link>
+              </LayoutFlow>
+            </div>
+            <div>
+              <LayoutFlow gap="2xs">
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                  Beoordeling per risicofactor
+                </Link>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                  Verwijzingen
+                </Link>
+              </LayoutFlow>
+            </div>
 
             <div></div>
           </div>
