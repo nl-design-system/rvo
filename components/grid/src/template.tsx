@@ -23,6 +23,7 @@ export interface IGridProps {
     | 'eleven'
     | 'twelve';
   division?: string;
+  marginEnd?: 'none' | '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
   /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   className?: string;
@@ -41,6 +42,10 @@ export const argTypes = {
     control: 'text',
     placeholder: '2fr 1fr',
   },
+  marginBlockEnd: {
+    options: ['none', '3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'],
+    control: { type: 'radio' },
+  },
   children: {
     table: {
       disable: true,
@@ -52,6 +57,7 @@ export const Grid: React.FC<IGridProps & React.HTMLAttributes<HTMLDivElement>> =
   gap = defaultArgs.gap,
   columns = defaultArgs.columns,
   division,
+  marginEnd,
   children,
   className,
   ...rootElementProps
@@ -78,7 +84,10 @@ export const Grid: React.FC<IGridProps & React.HTMLAttributes<HTMLDivElement>> =
   };
 
   return (
-    <div className={clsx('rvo-layout-grid-container', className)} {...rootElementProps}>
+    <div
+      className={clsx('rvo-layout-grid-container', marginEnd && `rvo-margin-block-end--${marginEnd}`, className)}
+      {...rootElementProps}
+    >
       <div
         className={clsx(
           'rvo-layout-grid',
