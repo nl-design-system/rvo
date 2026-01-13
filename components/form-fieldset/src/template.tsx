@@ -2,12 +2,12 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ITextInputFieldProps, TextInputField } from '../../form-field-textinput/src/template';
 import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import clsx from 'clsx';
 export interface IFieldsetProps {
   legend?: string;
   disabled?: boolean;

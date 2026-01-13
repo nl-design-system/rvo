@@ -14,18 +14,12 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
   label?: string | ReactNode;
-  active?: boolean;
-  busy?: boolean;
-  focus?: boolean;
-  focusVisible?: boolean;
-  hover?: boolean;
   disabled?: boolean;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
   fullWidth?: boolean;
   className?: string;
-  alignToRightInGroup?: boolean;
   /** @uxpinpropname On Focus */
   onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Blur */
@@ -46,18 +40,6 @@ export const argTypes = {
   label: {
     control: 'text',
   },
-  busy: {
-    control: 'boolean',
-  },
-  focus: {
-    control: 'boolean',
-  },
-  focusVisible: {
-    control: 'boolean',
-  },
-  hover: {
-    control: 'boolean',
-  },
   disabled: {
     control: 'boolean',
   },
@@ -73,22 +55,12 @@ export const argTypes = {
   fullWidth: {
     control: 'boolean',
   },
-  alignToRightInGroup: {
-    table: {
-      disable: true,
-    },
-  },
 };
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   kind = defaultArgs.kind,
   size = defaultArgs.size,
-  active = defaultArgs.active,
-  busy = defaultArgs.busy,
   disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
-  focusVisible = defaultArgs.focusVisible,
-  hover = defaultArgs.hover,
   label = defaultArgs.label,
   children,
   showIcon = defaultArgs.showIcon,
@@ -96,7 +68,6 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   iconAriaLabel = defaultArgs.iconAriaLabel,
   fullWidth = defaultArgs.fullWidth,
   className,
-  alignToRightInGroup,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon as any} size={size} ariaLabel={iconAriaLabel} />;
