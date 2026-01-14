@@ -86,6 +86,7 @@
   padding-block-start: var(--rvo-table-cell-padding-block-start);
   padding-inline-end: var(--rvo-table-cell-padding-inline-end);
   padding-inline-start: var(--rvo-table-cell-padding-inline-start);
+  vertical-align: baseline;
 }
 
 .rvo-table-cell--numeric,
