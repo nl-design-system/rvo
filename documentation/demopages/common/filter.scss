@@ -1,4 +1,16 @@
 .rvo-filter-body {
+  .rvo-max-width-layout--md {
+    width: auto;
+  }
+
+  .rvo-menubar {
+    display: none;
+
+    @media (min-width: 800px) {
+      display: block;
+    }
+  }
+
   main,
   .rvo-filter-wrapper {
     padding-inline-end: var(--rvo-space-md);
@@ -13,11 +25,17 @@
 
   .utrecht-form-fieldset {
     background-color: var(--rvo-color-lichtblauw-150);
+    padding-block-end: 0;
+
+    .rvo-form {
+      padding-block-end: var(--rvo-space-lg);
+    }
   }
 
   .rvo-filter-wrapper > .rvo-layout-row {
     align-items: baseline;
     display: grid;
+    grid-template-columns: 1fr;
 
     @media (min-width: 800px) {
       grid-template-columns: 300px 2fr;
@@ -41,7 +59,7 @@
     }
 
     .rvo-collapsible-filter-label::after {
-      background-color: var(--rvo-expandable-text-summary-icon-background-color);
+      background-color: var(--rvo-color-lintblauw);
       content: "";
       display: inline-block;
       height: 16px;

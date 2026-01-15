@@ -11,11 +11,54 @@ import {
   SelectField,
   TextInputField,
 } from '@nl-rvo/components';
+import { useEffect } from 'react';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Subsidiewijzer = () => {
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 800;
+      const details = document.querySelectorAll('.rvo-filter .rvo-collapsible-filter');
+      const filterElement = document.querySelector('.rvo-filter');
+      const resultsElement = document.querySelector('.rvo-results');
+      const introP = resultsElement?.querySelector('p.rvo-paragraph');
+      const layoutRow = document.querySelector('.rvo-filter-wrapper > .rvo-layout-row');
+
+      // Handle open state for details
+      details.forEach((detail) => {
+        if (isMobile) {
+          detail.removeAttribute('open');
+        } else {
+          detail.setAttribute('open', '');
+        }
+      });
+
+      // Reposition filter on mobile
+      if (isMobile && filterElement && introP && resultsElement) {
+        // Insert filter after intro paragraph
+        introP.parentElement?.insertBefore(filterElement, introP.nextElementSibling);
+      } else if (!isMobile && filterElement && layoutRow) {
+        // Move back to original position
+        if (layoutRow && filterElement.parentElement !== layoutRow) {
+          layoutRow.insertBefore(filterElement, layoutRow.firstChild);
+        }
+      }
+    };
+
+    // Add a small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <body className="rvo-theme rvo-filter-body">
       <Header link="#" />
