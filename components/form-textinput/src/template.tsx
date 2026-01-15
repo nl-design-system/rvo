@@ -35,6 +35,9 @@ export interface ITextInputProps {
   onInvalid?: (event: React.InvalidEvent<EventTarget & HTMLInputElement>) => void;
   defaultValue?: string | number | readonly string[];
   value?: string | number | readonly string[];
+  autoComplete?: string;
+  onKeyDown?: (event: React.FormEvent<HTMLInputElement>) => void;
+  role?: string;
 }
 
 export const argTypes = {
