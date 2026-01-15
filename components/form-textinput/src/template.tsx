@@ -36,7 +36,7 @@ export interface ITextInputProps {
   defaultValue?: string | number | readonly string[];
   value?: string | number | readonly string[];
   autoComplete?: string;
-  onKeyDown?: (event: React.FormEvent<HTMLInputElement>) => void;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   role?: string;
 }
 
