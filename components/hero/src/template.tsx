@@ -15,17 +15,14 @@ export interface IHeroProps {
   title?: string;
   subtitle?: string;
   size?: 'sm' | 'md' | 'lg';
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
-  /** @uxpinignoreprop */
-  content?: string | React.ReactNode;
 }
 
 export const Hero: React.FC<IHeroProps & React.HTMLAttributes<HTMLDivElement>> = (props) => {
-  const { image, title, subtitle, size, className, content, children, ...rootElementProps } = props;
+  const { image, title, subtitle, size, className, children, ...rootElementProps } = props;
 
   // Parse content markup (either a string, HTML string, React node or children)
-  const contentMarkup: string | ReactNode = parseContentMarkup(children || content);
+  const contentMarkup: string | ReactNode = parseContentMarkup(children);
 
   const renderImage = () => {
     if (React.isValidElement(image)) {
