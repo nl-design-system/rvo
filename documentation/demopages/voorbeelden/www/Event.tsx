@@ -90,13 +90,23 @@ const Event = () => {
                   <Icon icon="locatiemarker" size="2xl" color="zwart"></Icon>
                   <br />
                   <strong>Locatie:</strong>
-                  <br /> NBC Congrescentrum
+                  <br />
+                  NBC Congrescentrum
                   <br />
                   Blokhoeve 1
                   <br />
                   3438 LC Nieuwegein
                   <br />
                   NL
+                  <br />
+                  <a
+                    href="https://www.openstreetmap.org/?mlat=52.0331&mlon=5.1067&zoom=17"
+                    className="rvo-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Bekijk op kaart
+                  </a>
                 </div>
               </div>
             </div>
