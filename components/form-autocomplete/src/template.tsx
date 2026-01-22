@@ -365,7 +365,7 @@ export const Autocomplete: React.FC<IAutocompleteProps & React.HTMLAttributes<HT
         aria-expanded={showSuggestions && hasItemsToRender}
         autoComplete="off"
         aria-activedescendant={highlightedIndex >= 0 ? getOptionId(highlightedIndex) : undefined}
-        className={(clsx('rvo-autocomplete__textinput'), className)}
+        className={clsx('rvo-autocomplete__textinput', className)}
         data-dropdown-open={showSuggestions && hasItemsToRender ? 'true' : undefined}
         onChange={handleChange}
         onKeyDown={handleInputKeyDown}

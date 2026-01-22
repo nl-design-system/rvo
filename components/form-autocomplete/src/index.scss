@@ -12,6 +12,10 @@
     white-space: nowrap;
     width: 100%;
 
+    &::placeholder {
+      color: var(--rvo-color-lintblauw);
+    }
+
     &:focus {
       border: var(--rvo-space-3xs) solid;
       outline: none;

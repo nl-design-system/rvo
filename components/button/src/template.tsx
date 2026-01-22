@@ -91,12 +91,12 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
     <button
       className={clsx(
         className,
-        'utrecht-button',
-        `utrecht-button--${kind}-action`,
-        size && `'utrecht-button--rvo-${size}`,
-        fullWidth && 'utrecht-button--rvo-full-width',
-        showIcon !== 'no' && `utrecht-button--icon-${showIcon}`,
-        appearance && `utrecht-button--${appearance}`,
+        'rvo-button',
+        `rvo-button--${kind}`,
+        size && `rvo-button--size-${size}`,
+        fullWidth && 'rvo-button--full-width',
+        showIcon !== 'no' && `rvo-button--icon-${showIcon}`,
+        appearance && `rvo-button--${appearance}`,
       )}
       disabled={disabled || undefined}
       {...otherProps}
@@ -107,28 +107,5 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
     </button>
   );
 };
-
-export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
-  <div>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="primary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="secondary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="tertiary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="quaternary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="warning-subtle" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="warning" />
-    </p>
-  </div>
-);
 
 export default Button;

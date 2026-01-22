@@ -162,7 +162,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   const inputMarkup = (
     <input
       {...textBoxProps}
-      type="text"
+      type={type}
       className={clsx(
         className,
         'utrecht-textbox',

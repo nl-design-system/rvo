@@ -848,6 +848,9 @@
           "$value": "{rvo.font-size.lg}"
         },
         "font-weight": {},
+        "height": {
+          "$value": "48px"
+        },
         "inline-size": {},
         "letter-spacing": {},
         "line-height": {

@@ -11,6 +11,7 @@
       "hover-color": { "value": "{rvo.color.hemelblauw}" },
       "font-size": { "value": "{rvo.font-size.lg}" },
       "font-weight": {},
+      "height": { "value": "48px" },
       "inline-size": {},
       "letter-spacing": {},
       "line-height": { "value": "24px" },
