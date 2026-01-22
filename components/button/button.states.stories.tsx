@@ -1,8 +1,8 @@
-import { AllButtonKinds, argTypes } from './src/template';
+import { argTypes, Button } from './src/template';
 
 export default {
   title: 'Componenten/Button/States',
-  component: AllButtonKinds,
+  component: Button,
   argTypes: argTypes,
 
   parameters: {
@@ -20,8 +20,31 @@ export default {
   },
 };
 
+const allButtons = (buttonArgs) => (
+  <div>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="primary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="secondary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="tertiary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="quaternary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="warning-subtle" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="warning" />
+    </p>
+  </div>
+);
+
 export const Hover = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'Hover',
 
   args: {
@@ -31,7 +54,7 @@ export const Hover = {
 };
 
 export const Active = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'Active',
 
   args: {
@@ -41,7 +64,7 @@ export const Active = {
 };
 
 export const Focus = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'Focus',
 
   args: {
@@ -51,7 +74,7 @@ export const Focus = {
 };
 
 export const FocusVisible = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'Focus visible',
 
   args: {
@@ -62,7 +85,7 @@ export const FocusVisible = {
 };
 
 export const Disabled = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'Disabled',
 
   args: {
@@ -72,7 +95,7 @@ export const Disabled = {
 };
 
 export const Busy = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'Busy',
 
   args: {
