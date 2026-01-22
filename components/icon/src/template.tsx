@@ -44,7 +44,7 @@ export const iconNames = options.map((option) => {
   if (iconName.indexOf(' > ') > -1) {
     iconName = iconName.split(' > ')[1];
   }
-  return iconName.toLowerCase().replace(/_/g, '-');
+  return decodeURIComponent(iconName).toLowerCase().replace(/\s+/g, '-');
 });
 
 export const argTypes = {
