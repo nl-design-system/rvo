@@ -16,6 +16,9 @@ textarea.utrecht-textbox {
 .utrecht-textbox:disabled,
 .utrecht-textbox[aria-disabled="true"],
 .utrecht-textbox.utrecht-textbox--disabled {
+  background-color: var(--utrecht-form-control-disabled-background-color);
+  color: var(--utrecht-form-control-disabled-color);
+  cursor: not-allowed;
   outline: none;
 }
 

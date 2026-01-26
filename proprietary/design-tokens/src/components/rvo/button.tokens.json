@@ -2,11 +2,9 @@
   "rvo": {
     "button": {
       "background-color": {},
-      "border-bottom-color": {},
-      "border-bottom-width": {},
-      "border-color": {},
+      "border-color": { "value": "{rvo.color.hemelblauw}" },
       "border-radius": { "value": "{rvo.border-radius.sm}" },
-      "color": {},
+      "color": { "value": "{rvo.color.wit}" },
       "hover-color": { "value": "{rvo.color.hemelblauw}" },
       "font-size": { "value": "{rvo.font-size.lg}" },
       "font-weight": {},
@@ -30,6 +28,7 @@
         "border-color": { "value": "{rvo.color.hemelblauw}" },
         "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.wit}" },
+        "font-weight": {},
         "active": {
           "background-color": { "value": "{rvo.color.donkerblauw}" },
           "border-color": { "value": "{rvo.color.donkerblauw}" }
@@ -148,6 +147,7 @@
         "border-color": {},
         "border-width": { "value": "0px" },
         "color": { "value": "{rvo.color.rood}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
         "active": {
           "color": { "value": "{rvo.color.rood}" }
         },

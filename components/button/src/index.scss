@@ -9,6 +9,7 @@ $rvo-button-sizes: (xs, sm, md) !default;
   background-color: var(--rvo-button-background-color);
   border-color: var(--rvo-button-border-color);
   border-radius: var(--rvo-button-border-radius);
+  border-style: solid;
   border-width: var(--rvo-button-border-width);
   box-sizing: border-box;
   color: var(--rvo-button-color);
@@ -57,6 +58,8 @@ $rvo-button-sizes: (xs, sm, md) !default;
       --rvo-button-color: var(--rvo-button-#{$name}-color);
       --rvo-button-border-color: var(--rvo-button-#{$name}-border-color);
       --rvo-button-border-width: var(--rvo-button-#{$name}-border-width);
+
+      font-weight: var(--rvo-button-#{$name}-font-weight);
 
       .utrecht-icon.rvo-icon {
         background-color: var(--rvo-button-#{$name}-color);
