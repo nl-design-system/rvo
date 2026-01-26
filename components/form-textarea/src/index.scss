@@ -3,6 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 @use "../../layout-flow/src";
+@use "~@utrecht/textarea-css/dist/index.css" as *;
 
 textarea.rvo-textarea {
   block-size: initial;
@@ -20,14 +21,30 @@ textarea.rvo-textarea {
     outline: none;
   }
 
-  &--invalid {
-    border-color: var(--rvo-textbox-invalid-focus-border-color);
-  }
-
   &:focus {
-    outline-offset: var(--rvo-color-lintblauw);
+    outline-offset: var(--rvo-textbox-outline-offset);
 
     .rvo-textarea--invalid {
+      border-color: var(--rvo-textbox-invalid-focus-border-color);
+      outline-color: var(--rvo-textbox-invalid-focus-outline-color);
+    }
+  }
+
+  &:focus-visible {
+    --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
+      var(--utrecht-focus-inverse-outline-color, transparent);
+
+    box-shadow: var(--_utrecht-focus-ring-box-shadow);
+    outline-color: var(--utrecht-focus-outline-color, revert);
+    outline-style: var(--utrecht-focus-outline-style, revert);
+    outline-width: var(--utrecht-focus-outline-width, revert);
+  }
+
+  &--invalid {
+    border-color: var(--utrecht-form-control-invalid-border-color);
+    border-width: var(--utrecht-form-control-invalid-border-width);
+
+    &:focus {
       border-color: var(--rvo-textbox-invalid-focus-border-color);
       outline-color: var(--rvo-textbox-invalid-focus-outline-color);
     }

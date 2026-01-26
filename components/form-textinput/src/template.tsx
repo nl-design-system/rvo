@@ -144,10 +144,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
     id,
     type,
     disabled,
-    invalid,
-    required,
-    readOnly,
     placeholder,
+    readOnly,
     className,
     value: isControlled ? value : undefined,
     defaultValue: !isControlled ? defaultValue : undefined,
@@ -163,6 +161,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
     <input
       {...textBoxProps}
       type={type}
+      aria-invalid={invalid}
+      aria-required={required}
       className={clsx(
         className,
         'utrecht-textbox',
