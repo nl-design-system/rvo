@@ -18,6 +18,9 @@ textarea.rvo-textarea {
 
   &[aria-disabled="true"],
   &:disabled {
+    background-color: var(--utrecht-form-control-disabled-background-color);
+    color: var(--utrecht-form-control-disabled-color);
+    cursor: not-allowed;
     outline: none;
   }
 
