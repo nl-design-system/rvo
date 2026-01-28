@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-css
 
+## 4.16.0
+
+### Minor Changes
+
+- 09b1d14: Change vertical alignment to `baseline` for `.rvo-table-cell`.
+
+### Patch Changes
+
+- 9b2eeb1: ROOS-282: adds end margin to the grid container to meet current designs
+
 ## 4.15.1
 
 ### Patch Changes
