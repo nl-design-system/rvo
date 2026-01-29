@@ -31,7 +31,7 @@ $rvo-button-sizes: (xs, sm, md) !default;
 
   &--icon-before {
     .utrecht-icon {
-      margin-inline-end: var(--rvo-space-sm);
+      margin-inline-end: var(--utrecht-button-icon-before-gap);
     }
   }
 
