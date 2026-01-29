@@ -130,13 +130,13 @@ export const Table: React.FC<ITableProps & React.HTMLAttributes<HTMLDivElement>>
                   >
                     {column.label}
                     {column.sortable && column.sortDirection === 'ASC' && (
-                      <SortAscendingIcon className="rvo--table-header__sorting-icon" />
+                      <SortAscendingIcon className="rvo-table-header__sorting-icon" />
                     )}
                     {column.sortable && column.sortDirection === 'DESC' && (
-                      <SortDescendingIcon className="rvo--table-header__sorting-icon" />
+                      <SortDescendingIcon className="rvo-table-header__sorting-icon" />
                     )}
                     {column.sortable && column.sortDirection === undefined && (
-                      <SortDefaultIcon className="rvo--table-header__sorting-icon" />
+                      <SortDefaultIcon className="rvo-table-header__sorting-icon" />
                     )}
                   </button>
                 </th>
