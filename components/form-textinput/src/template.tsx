@@ -38,6 +38,9 @@ export interface ITextInputProps {
   autoComplete?: string;
   onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   role?: string;
+  min?: string;
+  max?: string;
+  step?: number;
 }
 
 export const argTypes = {

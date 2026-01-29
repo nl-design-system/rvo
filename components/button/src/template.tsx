@@ -18,6 +18,7 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
+  busy?: boolean;
   fullWidth?: boolean;
   className?: string;
   /** @uxpinpropname On Focus */
@@ -68,6 +69,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   iconAriaLabel = defaultArgs.iconAriaLabel,
   fullWidth = defaultArgs.fullWidth,
   className,
+  busy,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon as any} size={size} ariaLabel={iconAriaLabel} />;
@@ -98,6 +100,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         showIcon !== 'no' && `rvo-button--icon-${showIcon}`,
         appearance && `rvo-button--${appearance}`,
       )}
+      aria-busy={busy}
       disabled={disabled || undefined}
       {...otherProps}
     >

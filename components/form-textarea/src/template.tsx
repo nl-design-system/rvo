@@ -137,6 +137,7 @@ export const Textarea: React.FC<ITextareaProps> = ({
             invalid && 'rvo-textarea--invalid',
             focus && ['rvo-textarea--focus', 'rvo-textarea--focus-visible'],
           )}
+          aria-invalid={invalid}
         />
         <span className="rvo-textarea__remaining-chars">
           Nog <strong>{maxLength - (currentValue?.length || 0)}</strong> teken
@@ -155,6 +156,7 @@ export const Textarea: React.FC<ITextareaProps> = ({
 
           focus && ['rvo-textarea--focus', 'rvo-textarea--focus-visible'],
         )}
+        aria-invalid={invalid}
       />
     );
   }

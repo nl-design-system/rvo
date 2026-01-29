@@ -94,7 +94,12 @@ export const Field: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttribut
   const fieldLabelId = `${fieldId}-label`;
 
   return (
-    <div className="rvo-form-field" role="group" aria-labelledby={fieldLabelId} {...rootElementProps}>
+    <div
+      className="utrecht-form-field utrecht-form-field--text rvo-form-field"
+      role="group"
+      aria-labelledby={fieldLabelId}
+      {...rootElementProps}
+    >
       <div className="rvo-form-field__label">
         <Label
           id={fieldLabelId}

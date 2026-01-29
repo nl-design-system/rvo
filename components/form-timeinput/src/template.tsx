@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
+import TextInput from '@nl-rvo/components/form-textinput/src/template';
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -10,7 +11,6 @@ export interface ITimeInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;
   disabled?: boolean;
   /** @uxpinpropname Has focus */
-  focus?: boolean;
   readOnly?: boolean;
   /** @uxpinpropname Is invalid */
   invalid?: boolean;
@@ -111,7 +111,6 @@ export const argTypes = {
 export const TimeInput: React.FC<ITimeInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
   readOnly = defaultArgs.readOnly,
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
@@ -126,21 +125,12 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
   ...otherProps
 }: ITimeInputProps) => {
   const inputMarkup = (
-    <input
+    <TextInput
       {...otherProps}
+      className={className}
       id={id}
       type="time"
-      className={clsx(
-        className,
-        'utrecht-textbox',
-        'utrecht-textbox--html-input',
-        disabled && 'utrecht-textbox--disabled',
-        focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'],
-        invalid && 'utrecht-textbox--invalid',
-        readOnly && 'utrecht-textbox--readonly',
-        required && 'utrecht-textbox--required',
-        size && `utrecht-textbox--${size}`,
-      )}
+      size={size}
       disabled={disabled || undefined}
       aria-invalid={invalid || undefined}
       required={required || undefined}

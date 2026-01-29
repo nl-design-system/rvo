@@ -850,7 +850,9 @@
         "height": {
           "$value": "48px"
         },
-        "inline-size": {},
+        "inline-size": {
+          "$value": "auto"
+        },
         "letter-spacing": {},
         "line-height": {
           "$value": "24px"
@@ -859,6 +861,9 @@
         "margin-block-start": {},
         "margin-inline-end": {},
         "margin-inline-start": {},
+        "max-inline-size": {
+          "$value": "fit-content"
+        },
         "min-block-size": {
           "$value": "48px"
         },
