@@ -39,7 +39,7 @@
     "html-validate": "8.15.0",
     "husky": "9.1.7",
     "lint-staged": "15.2.2",
-    "markdownlint-cli": "0.43.0",
+    "markdownlint-cli": "0.47.0",
     "normalize.css": "8.0.1",
     "npm-check-updates": "19.0.0",
     "npm-package-json-lint": "7.1.0",
@@ -98,5 +98,5 @@
       "react-dom": "18.3.1"
     }
   },
-  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
+  "packageManager": "pnpm@10.28.2"
 }
