@@ -1,8 +1,8 @@
-import { AllButtonKinds, argTypes } from './src/template';
+import { argTypes, Button } from './src/template';
 
 export default {
   title: 'Componenten/Button/Icons',
-  component: AllButtonKinds,
+  component: Button,
   argTypes: argTypes,
 
   parameters: {
@@ -20,8 +20,31 @@ export default {
   },
 };
 
+const allButtons = (buttonArgs) => (
+  <div>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="primary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="secondary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="tertiary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="quaternary" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="warning-subtle" />
+    </p>
+    <p>
+      <Button label="Button" {...buttonArgs} kind="warning" />
+    </p>
+  </div>
+);
+
 export const WithIconBefore = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'With icon before',
 
   args: {
@@ -31,7 +54,7 @@ export const WithIconBefore = {
 };
 
 export const WithIconAfter = {
-  render: AllButtonKinds.bind({}),
+  render: allButtons,
   name: 'With icon after',
 
   args: {

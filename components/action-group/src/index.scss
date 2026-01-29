@@ -2,18 +2,17 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "~@utrecht/button-group-css/dist/index.css" as *;
 
-.utrecht-button-group {
+.rvo-action-group {
+  align-items: baseline;
+  break-inside: avoid;
+  display: flex;
   flex-wrap: wrap;
+  gap: var(--rvo-space-md);
 }
 
-.rvo-action-groul--position-right {
+.rvo-action-group--position-right {
   justify-content: flex-end;
-}
-
-.rvo-action-group--align-right {
-  margin-inline-start: auto;
 }
 
 .rvo-action-group--full-width {

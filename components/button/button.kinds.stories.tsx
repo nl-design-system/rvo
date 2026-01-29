@@ -22,7 +22,7 @@ export default {
 };
 
 export const Primary = {
-  render: Button.bind({}),
+  render: Button,
   name: 'Primary',
 
   args: {
@@ -32,7 +32,7 @@ export const Primary = {
 };
 
 export const Secondary = {
-  render: Button.bind({}),
+  render: Button,
   name: 'Secondary',
 
   args: {
@@ -42,7 +42,7 @@ export const Secondary = {
 };
 
 export const Tertiary = {
-  render: Button.bind({}),
+  render: Button,
   name: 'Tertiary',
 
   args: {
@@ -52,7 +52,7 @@ export const Tertiary = {
 };
 
 export const Quaternary = {
-  render: Button.bind({}),
+  render: Button,
   name: 'Quaternary',
 
   args: {
@@ -62,7 +62,7 @@ export const Quaternary = {
 };
 
 export const WarningSubtle = {
-  render: Button.bind({}),
+  render: Button,
   name: 'Warning subtle',
 
   args: {
@@ -72,7 +72,7 @@ export const WarningSubtle = {
 };
 
 export const Warning = {
-  render: Button.bind({}),
+  render: Button,
   name: 'Warning',
 
   args: {
