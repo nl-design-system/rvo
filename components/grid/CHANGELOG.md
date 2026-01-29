@@ -1,5 +1,11 @@
 # `@nl-rvo/css-grid`
 
+## 3.1.1
+
+### Patch Changes
+
+- 9b2eeb1: ROOS-282: adds end margin to the grid container to meet current designs
+
 ## 3.1.0
 
 ### Minor Changes

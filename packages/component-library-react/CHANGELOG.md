@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-react
 
+## 5.11.0
+
+### Minor Changes
+
+- ebc334a: Version bump for babel dependencies
+- 669bc7f: Modify icon names for button component, replace spaces for hyphens.
+- 00a912a: Remove content option for hero component.
+
+### Patch Changes
+
+- 9b2eeb1: ROOS-282: adds end margin to the grid container to meet current designs
+
 ## 5.10.2
 
 ### Patch Changes

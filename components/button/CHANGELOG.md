@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 1.2.0
+
+### Minor Changes
+
+- 3a6a613: Add correct icon before/after margins.
+
 ## 1.1.6
 
 ### Patch Changes

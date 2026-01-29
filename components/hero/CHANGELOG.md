@@ -1,5 +1,11 @@
 # `@nl-rvo/css-hero`
 
+## 1.4.0
+
+### Minor Changes
+
+- 00a912a: Remove content option for hero component.
+
 ## 1.3.0
 
 ### Minor Changes
