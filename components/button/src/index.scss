@@ -5,6 +5,9 @@
 
 // Don't wrap label, don't shrink
 .utrecht-button {
+  --utrecht-button-icon-after-gap: var(--rvo-space-sm, 8px);
+  --utrecht-button-icon-before-gap: var(--rvo-space-sm, 8px);
+
   flex-shrink: 0;
   text-wrap: nowrap;
 
@@ -16,13 +19,13 @@
 
   &--icon-before {
     .utrecht-icon {
-      margin-inline-end: var(--rvo-space-sm);
+      margin-inline-end: var(--utrecht-button-icon-before-gap);
     }
   }
 
   &--icon-after {
     .utrecht-icon {
-      margin-inline-start: var(--rvo-space-sm);
+      margin-inline-start: var(--utrecht-button-icon-after-gap);
     }
   }
 }
@@ -55,6 +58,8 @@
 .utrecht-button--rvo-xs {
   --utrecht-button-font-size: var(--utrecht-button-rvo-xs-font-size);
   --utrecht-button-font-weight: var(--utrecht-button-rvo-xs-font-weight);
+  --utrecht-button-icon-after-gap: var(--rvo-space-xs);
+  --utrecht-button-icon-before-gap: var(--rvo-space-xs);
   --utrecht-button-min-block-size: var(--utrecht-button-rvo-xs-min-block-size);
   --utrecht-button-padding-block-end: var(--utrecht-button-rvo-xs-padding-block-end);
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-xs-padding-block-start);
@@ -62,11 +67,13 @@
   --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-xs-padding-inline-start);
 
   @extend .rvo-layout-row-inline;
-  @extend .rvo-layout-gap--xs;
+  @extend .rvo-layout-gap--sm;
 }
 
 .utrecht-button--rvo-sm {
   --utrecht-button-font-size: var(--utrecht-button-rvo-sm-font-size);
+  --utrecht-button-icon-after-gap: var(--rvo-space-xs);
+  --utrecht-button-icon-before-gap: var(--rvo-space-xs);
   --utrecht-button-min-block-size: var(--utrecht-button-rvo-sm-min-block-size);
   --utrecht-button-padding-block-end: var(--utrecht-button-rvo-sm-padding-block-end);
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-sm-padding-block-start);
@@ -79,6 +86,8 @@
 
 .utrecht-button--rvo-md {
   --utrecht-button-font-size: var(--utrecht-button-rvo-md-font-size);
+  --utrecht-button-icon-after-gap: var(--rvo-space-sm);
+  --utrecht-button-icon-before-gap: var(--rvo-space-sm);
   --utrecht-button-min-block-size: var(--utrecht-button-rvo-md-min-block-size);
   --utrecht-button-padding-block-end: var(--utrecht-button-rvo-md-padding-block-end);
   --utrecht-button-padding-block-start: var(--utrecht-button-rvo-md-padding-block-start);
