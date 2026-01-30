@@ -2636,6 +2636,15 @@
           },
           "padding-inline-end": {
             "$value": "{rvo.space.md}"
+          },
+          "border-color": {
+            "$value": "{rvo.color.grijs-400}"
+          },
+          "border-style": {
+            "$value": "solid"
+          },
+          "border-width": {
+            "$value": "1px"
           }
         },
         "focus": {

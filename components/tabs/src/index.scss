@@ -77,7 +77,7 @@
 
   &__panel {
     background-color: var(--rvo-tabs-active-background);
-    border: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
+    border: var(--rvo-tabs-panel-border-width) var(--rvo-tabs-panel-border-style) var(--rvo-tabs-panel-border-color);
     padding-block: var(--rvo-tabs-panel-padding-block);
     padding-inline: var(--rvo-tabs-panel-padding-inline);
     position: relative;
