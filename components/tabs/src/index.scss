@@ -84,7 +84,7 @@
     z-index: 1;
 
     &:focus-visible {
-      outline: var(--rvo-tabs-focus-width) var(--rvo-tabs-border-style) var(--rvo-tabs-focus-color);
+      border: var(--rvo-tabs-panel-border-width) var(--rvo-tabs-panel-border-style) var(--rvo-tabs-panel-border-color);
       outline-offset: var(--rvo-tabs-focus-offset);
     }
   }
