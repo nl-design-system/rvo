@@ -68,11 +68,24 @@ $rvo-button-sizes: (xs, sm, md) !default;
       &:active {
         --rvo-button-background-color: var(--rvo-button-#{$name}-active-background-color);
         --rvo-button-border-color: var(--rvo-button-#{$name}-active-border-color);
+        --rvo-button-color: var(--rvo-button-#{$name}-active-color);
+
+        .utrecht-icon {
+          background-color: var(--rvo-button-#{$name}-active-color);
+        }
       }
 
       &:focus {
         --rvo-button-background-color: var(--rvo-button-#{$name}-focus-background-color);
         --rvo-button-border-color: var(--rvo-button-#{$name}-focus-border-color);
+      }
+
+      &:focus-visible {
+        box-shadow: var(--_utrecht-focus-ring-box-shadow);
+        outline-color: var(--utrecht-focus-outline-color, revert);
+        outline-offset: var(--utrecht-focus-outline-offset, revert);
+        outline-style: var(--utrecht-focus-outline-style, revert);
+        outline-width: var(--utrecht-focus-outline-width, revert);
       }
 
       &:hover {
@@ -91,6 +104,10 @@ $rvo-button-sizes: (xs, sm, md) !default;
         --rvo-button-background-color: var(--rvo-button-#{$name}-disabled-background-color);
         --rvo-button-border-color: var(--rvo-button-#{$name}-disabled-border-color);
         --rvo-button-color: var(--rvo-button-#{$name}-disabled-color);
+
+        .utrecht-icon {
+          background-color: var(--rvo-button-#{$name}-disabled-color) !important;
+        }
       }
     }
   }

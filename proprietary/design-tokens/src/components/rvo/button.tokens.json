@@ -177,6 +177,7 @@
           "color": { "value": "{rvo.color.zwart}" }
         },
         "disabled": {
+          "background-color": { "value": "{rvo.color.grijs-200}" },
           "color": { "value": "{rvo.color.grijs-300}" }
         },
         "focus": {

@@ -1186,6 +1186,9 @@
             }
           },
           "disabled": {
+            "background-color": {
+              "$value": "{rvo.color.grijs-200}"
+            },
             "color": {
               "$value": "{rvo.color.grijs-300}"
             }
