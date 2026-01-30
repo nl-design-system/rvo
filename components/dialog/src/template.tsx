@@ -129,7 +129,7 @@ export const Dialog: React.FC<IDialogProps> = ({
         `rvo-dialog--${backgroundColor}`,
         !isModal && backgroundColor === 'wit' && 'rvo-dialog--outline',
         `rvo-dialog--${type}`,
-        actionGroup && 'rvo-dialog__content--with-action-group',
+        !!actionGroup && 'rvo-dialog__content--with-action-group',
         type === 'centered-dialog' && `rvo-dialog--centered-dialog--${centeredDialogSize}`,
         className,
       )}

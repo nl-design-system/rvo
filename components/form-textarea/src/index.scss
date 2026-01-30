@@ -4,48 +4,69 @@
  */
 @use "../../layout-flow/src";
 @use "~@utrecht/textarea-css/dist/index.css" as *;
-@use "~@utrecht/textbox-css/dist/index.css" as *;
 
-.utrecht-textarea {
-  height: 48px;
-}
-
-textarea.utrecht-textarea {
+textarea.rvo-textarea {
+  block-size: initial;
+  border-color: var(--rvo-color-lintblauw);
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-block-size: 96px;
   min-height: 96px;
   resize: vertical;
+
+  &[aria-disabled="true"],
+  &:disabled {
+    background-color: var(--utrecht-form-control-disabled-background-color);
+    color: var(--utrecht-form-control-disabled-color);
+    cursor: not-allowed;
+    outline: none;
+  }
+
+  &:focus {
+    outline-offset: var(--rvo-textbox-outline-offset);
+
+    .rvo-textarea--invalid {
+      border-color: var(--rvo-textbox-invalid-focus-border-color);
+      outline-color: var(--rvo-textbox-invalid-focus-outline-color);
+    }
+  }
+
+  &:focus-visible {
+    --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
+      var(--utrecht-focus-inverse-outline-color, transparent);
+
+    box-shadow: var(--_utrecht-focus-ring-box-shadow);
+    outline-color: var(--utrecht-focus-outline-color, revert);
+    outline-style: var(--utrecht-focus-outline-style, revert);
+    outline-width: var(--utrecht-focus-outline-width, revert);
+  }
+
+  &--invalid {
+    border-color: var(--utrecht-form-control-invalid-border-color);
+    border-width: var(--utrecht-form-control-invalid-border-width);
+
+    &:focus {
+      border-color: var(--rvo-textbox-invalid-focus-border-color);
+      outline-color: var(--rvo-textbox-invalid-focus-outline-color);
+    }
+  }
+
+  &--xs {
+    width: var(--rvo-textbox-xs-width);
+  }
+
+  &--sm {
+    width: var(--rvo-textbox-sm-width);
+  }
+
+  &--md {
+    width: var(--rvo-textbox-md-width);
+  }
 }
 
-.utrecht-textarea:disabled,
-.utrecht-textarea[aria-disabled="true"],
-.utrecht-textarea.utrecht-textarea--disabled {
-  outline: none;
-}
-
-.utrecht-textarea:focus,
-.utrecht-textarea--focus {
-  outline-offset: var(--rvo-textbox-outline-offset);
-}
-
-.utrecht-textarea--focus.utrecht-textarea--invalid,
-.utrecht-textarea:focus.utrecht-textarea--invalid,
-.utrecht-textarea--focus.utrecht-textarea:invalid,
-.utrecht-textarea:focus.utrecht-textarea:invalid {
-  border-color: var(--rvo-textbox-invalid-focus-border-color);
-  outline-color: var(--rvo-textbox-invalid-focus-outline-color);
-}
-
-.utrecht-textarea--xs {
-  width: var(--rvo-textbox-xs-width);
-}
-
-.utrecht-textarea--sm {
-  width: var(--rvo-textbox-sm-width);
-}
-
-.utrecht-textarea--md {
-  width: var(--rvo-textbox-md-width);
-}
-
-.utrecht-textarea-remaining-chars {
+.rvo-textarea__remaining-chars {
   align-self: flex-end;
 }
