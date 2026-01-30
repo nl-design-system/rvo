@@ -1,24 +1,16 @@
 .rvo-tabs {
-  --rvo-tabs-background: var(--rvo-color-wit, #fff);
-  --rvo-tabs-border-color: var(--rvo-color-grijs-400, #94a3b8);
-  --rvo-tabs-border-width: 1px;
-  --rvo-tabs-focus: var(--rvo-color-hemelblauw, #007bc7);
-  --rvo-tabs-focus-offset: var(--utrecht-focus-outline-offset, 3px);
-  --rvo-tabs-focus-width: var(--utrecht-focus-outline-width, 2px);
-  --rvo-tabs-font-size: var(--rvo-font-size-md, 1rem);
-  --rvo-tabs-gap: var(--rvo-space-2xs, 4px);
   --rvo-tabs-padding-block: var(--rvo-tabs-padding-block-start, 8px) var(--rvo-tabs-padding-block-end, 8px);
   --rvo-tabs-padding-inline: var(--rvo-tabs-padding-inline-start, 16px) var(--rvo-tabs-padding-inline-end, 16px);
-  --rvo-tabs-panel-padding-block: var(--rvo-tabs-padding-inline);
-  --rvo-tabs-panel-padding-inline: var(--rvo-tabs-padding-inline);
-  --rvo-tabs-tab-bg: var(--rvo-color-grijs-200, #e2e8f0);
-  --rvo-tabs-tab-link: var(--rvo-color-donkerblauw, #01689b);
+  --rvo-tabs-panel-padding-block: var(--rvo-tabs-panel-padding-block-start, 8px)
+    var(--rvo-tabs-panel-padding-block-end, 8px);
+  --rvo-tabs-panel-padding-inline: var(--rvo-tabs-panel-padding-inline-start, 16px)
+    var(--rvo-tabs-panel-padding-inline-end, 16px);
 
   font-size: var(--rvo-tabs-font-size);
 
   &__tablist {
     align-items: flex-end;
-    border-bottom: var(--rvo-tabs-border-width) solid var(--rvo-tabs-border-color);
+    border-bottom: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
     display: flex;
     gap: var(--rvo-tabs-gap);
     margin-block: calc(var(--rvo-tabs-border-width) * -1);
@@ -27,12 +19,13 @@
 
   &__item, // Deprecated from v1.
   &__tab {
+    align-items: center;
     appearance: none;
-    background-color: var(--rvo-tabs-tab-bg);
-    border: var(--rvo-tabs-border-width) solid transparent;
+    background-color: var(--rvo-tabs-background);
+    border: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) transparent;
     border-block-end: none;
     border-block-end-color: var(--rvo-tabs-border-color);
-    color: var(--rvo-tabs-tab-link);
+    color: var(--rvo-tabs-color);
     column-gap: 0.5rem;
     cursor: pointer;
     display: inline-flex;
@@ -52,7 +45,7 @@
     }
 
     &:focus-visible {
-      outline: var(--rvo-tabs-focus-width) solid var(--rvo-tabs-focus);
+      outline: var(--rvo-tabs-focus-width) var(--rvo-tabs-border-style) var(--rvo-tabs-focus-color);
       outline-offset: var(--rvo-tabs-focus-offset);
       z-index: 3;
     }
@@ -63,16 +56,15 @@
     }
 
     &--active {
-      background-color: var(--rvo-tabs-background);
+      background-color: var(--rvo-tabs-active-background);
       border-color: var(--rvo-tabs-border-color);
-      color: #111;
-      font-weight: 700;
-      padding-block: var(--rvo-tabs-padding-block-start) var(--rvo-tabs-padding-block-end);
+      color: var(--rvo-tabs-active-color);
+      font-weight: var(--rvo-tabs-active-font-weight);
       text-decoration: none;
       z-index: 2;
 
       &:hover {
-        background-color: var(--rvo-tabs-background);
+        background-color: var(--rvo-tabs-active-background);
       }
     }
 
@@ -84,31 +76,31 @@
   }
 
   &__panel {
-    background-color: var(--rvo-tabs-background);
-    border: var(--rvo-tabs-border-width) solid var(--rvo-tabs-border-color);
+    background-color: var(--rvo-tabs-active-background);
+    border: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
     padding-block: var(--rvo-tabs-panel-padding-block);
     padding-inline: var(--rvo-tabs-panel-padding-inline);
     position: relative;
     z-index: 1;
 
     &:focus-visible {
-      outline: var(--rvo-tabs-focus-width) solid var(--rvo-tabs-focus);
+      outline: var(--rvo-tabs-focus-width) var(--rvo-tabs-border-style) var(--rvo-tabs-focus-color);
       outline-offset: var(--rvo-tabs-focus-offset);
     }
   }
 
   // util
-  .rvo-tabs--sm {
+  &--sm {
     --rvo-tabs-font-size: var(--rvo-font-size-sm, 0.875rem);
     --rvo-tabs-gap: var(--rvo-space-2xs, 4px);
   }
 
-  .rvo-tabs--md {
+  &--md {
     --rvo-tabs-font-size: var(--rvo-font-size-md, 1rem);
     --rvo-tabs-gap: var(--rvo-space-xs, 4px);
   }
 
-  .rvo-tabs--lg {
+  &--lg {
     --rvo-tabs-font-size: var(--rvo-font-size-lg, 1.125rem);
     --rvo-tabs-gap: var(--rvo-space-xs, 8px);
   }

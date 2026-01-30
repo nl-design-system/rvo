@@ -96,18 +96,17 @@ export const Tabs = ({
     if (items && items.length > 0) return items;
 
     if (tabs && tabs.length > 0) {
-      return tabs.map((t) => ({
+      return tabs.map((t, index) => ({
         label: t.label,
         before: t.before,
         after: t.after,
         panel: t.panel ?? t.content ?? null,
         disabled: t.disabled,
-        id: t.id,
+        id: t.id ?? `${reactId}-${index}`,
       }));
     }
-
     return [];
-  }, [items, tabs]);
+  }, [items, tabs, reactId]);
 
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
@@ -171,13 +170,12 @@ export const Tabs = ({
       >
         {normalizedItems.map((item, index) => {
           const selected = index === selectedIndex;
-          const id = item.id ?? `${reactId}-${index}`;
 
           return (
             <button
-              key={id}
+              key={item.id}
               ref={(el) => (tabRefs.current[index] = el)}
-              id={`tab-${id}`}
+              id={`tab-${item.id}`}
               type="button"
               role="tab"
               className={clsx(
@@ -186,7 +184,7 @@ export const Tabs = ({
                 item.disabled && 'rvo-tabs__tab--disabled',
               )}
               aria-selected={selected}
-              aria-controls={`panel-${id}`}
+              aria-controls={`panel-${item.id}`}
               tabIndex={selected ? 0 : -1}
               disabled={item.disabled}
               onClick={() => selectTab(index)}
@@ -201,17 +199,15 @@ export const Tabs = ({
 
       {normalizedItems.map((item, index) => {
         const selected = index === selectedIndex;
-        const id = item.id ?? `${reactId}-${index}`;
-
         return (
           <div
-            key={id}
-            id={`panel-${id}`}
+            key={item.id}
+            id={`panel-${item.id}`}
             className="rvo-tabs__panel"
             role="tabpanel"
-            aria-labelledby={`tab-${id}`}
+            aria-labelledby={`tab-${item.id}`}
             hidden={!selected}
-            tabIndex={0}
+            tabIndex={selected ? 0 : -1}
           >
             {item.panel}
           </div>
