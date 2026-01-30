@@ -32,7 +32,8 @@
         "font-weight": {},
         "active": {
           "background-color": { "value": "{rvo.color.donkerblauw}" },
-          "border-color": { "value": "{rvo.color.donkerblauw}" }
+          "border-color": { "value": "{rvo.color.donkerblauw}" },
+          "color": { "value": "{rvo.color.wit}" }
         },
         "focus": {
           "background-color": { "value": "{rvo.color.hemelblauw}" },
