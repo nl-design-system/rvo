@@ -1,0 +1,41 @@
+# Releases van ROOS packages
+
+In dit document zal worden beschreven de stappen die we ondernemen voor het releasen van de packages.
+
+## Packages
+
+Voor ROOS hebben wij de volgende packages die gebruikt kunnen worden:
+
+- @nl-rvo/component-library-react
+- @nl-rvo/component-library-css
+- @nl-rvo/design-tokens
+
+Ook bieden wij voor elke component een eigen package aan.
+
+## Changesets
+
+Werk je aan een update of maak je een nieuwe component? Vergeet dan niet om een changeset aan te maken met behulp van `pnpm changeset` in de terminal.
+Een changeset om de aanpassing live te krijgen. Is hij niet aanwezig, dan gaat hij niet mee met de release.
+Daarnaast worden de files `package.json` en `CHANGELOG.md` ook aangepast met de informatie die je meegeeft in je changeset.
+
+Als je klaar bent met je changes dan moet je ook de nodige packages meenemen in een changeset, anders worden je aanpassingen niet meegegeven in de packages.
+Maar, wanneer moet je welke package meenemen in je changeset?
+
+- @nl-rvo/component-library-react: Als je aanpassingen hebt verricht op een React component, ongeacht als het bug-fix of kleinschallige update. Dan moet je dit pakket ook mee updaten
+- @nl-rvo/component-library-css: Heb je changes aangebracht in de SCSS files, dan deze package ook meenemen in je changeset.
+- @nl-rvo/design-tokens: Als er design tokens zijn toegeveogd of verwijderd. Deze nieuwe tokens kunnen dan zowel in componenten als er buiten gebruikt worden.
+
+Vergeet bij het updaten van de componenten en packages dat je correcte versies selecteerd; aldus Major, Minor of Patch.
+Als je niet weet welke versie je moet kiezen dan kun je dit altijd bespreken met je mede-developers.
+
+## Release Pipeline
+
+Als een Pull Request op Github, met een changeset, wordt gemerged dan zal er automatisch een release branch worden aangemaakt of worden geupdate.
+Deze PR zal altijd `docs(release): design system packages` als naam hebben. In deze PR bevat alle updates van branches waarin een changeset aanwezig was.
+Controleer altijd de changes en als deze overeenkomen met wat is doorgezet door andere developers. Na approval kan deze PR gemerged worden.
+Als de pipeline succesvol is gebuild, dan zijn de packages geupdate.
+
+## Patch notes and update in Mattermost
+
+Updates worden gecommuniceerd in het ROOS kanaal op Mattermost. Deze patch notes moeten handmatig uitschrijven worden op basis van de changes in de release branch.
+Vergeet niet te melden naar welke versies de packages nu zijn.
