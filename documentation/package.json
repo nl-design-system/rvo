@@ -17,8 +17,8 @@
     "@nl-rvo/utilities": "workspace:*",
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
-    "clsx": "2.1.0",
-    "html-react-parser": "5.1.8"
+    "clsx": "2.1.1",
+    "html-react-parser": "5.2.15"
   },
   "scripts": {
     "lint": "tsc --noEmit --project tsconfig.json"
