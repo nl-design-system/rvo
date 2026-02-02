@@ -2,7 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
-import { ButtonGroup } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -58,12 +57,11 @@ export const ActionGroup: React.FC<IActionGroupProps & React.HTMLAttributes<HTML
   ...rootElementProps
 }) => {
   return (
-    <ButtonGroup
+    <div
       className={clsx(
-        {
-          'rvo-action-group--full-width': fullWidth,
-          'rvo-action-groul--position-right': position === 'right',
-        },
+        'rvo-action-group',
+        fullWidth && 'rvo-action-group--full-width',
+        position === 'right' && 'rvo-action-group--position-right',
         className,
       )}
       {...rootElementProps}
@@ -74,7 +72,7 @@ export const ActionGroup: React.FC<IActionGroupProps & React.HTMLAttributes<HTML
           return <Button key={index} {...buttonProps} />;
         })}
       {!children && buttonsRight?.map((buttonProps, index) => <Button key={index} {...buttonProps} />)}
-    </ButtonGroup>
+    </div>
   );
 };
 

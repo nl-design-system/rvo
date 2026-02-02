@@ -1,5 +1,4 @@
 import { Footer, Header, Heading, MenuBar, MobileMenuBar } from '@nl-rvo/components';
-import { Fieldset } from '@utrecht/component-library-react';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -163,7 +162,7 @@ const TrainingModuleTest = () => {
               </li>
             </ol>
           </div>
-          <Fieldset>
+          <div className="utrecht-field-set">
             <div
               role="vraag-1"
               aria-labelledby="vraag-1-label"
@@ -455,7 +454,7 @@ const TrainingModuleTest = () => {
                 </p>
               </div>
             )}
-          </Fieldset>
+          </div>
         </div>
       </main>
 

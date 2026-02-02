@@ -1,185 +1,128 @@
 /* stylelint-disable scss/no-global-function-names */
 @use "../../layout-flow/src";
-@use "~@utrecht/button-css/dist/index.css" as *;
-@use "~@utrecht/button-css/src/mixin" as *;
 
-// Don't wrap label, don't shrink
-.utrecht-button {
-  --utrecht-button-icon-after-gap: var(--rvo-space-sm, 8px);
-  --utrecht-button-icon-before-gap: var(--rvo-space-sm, 8px);
+$rvo-button-kinds: (primary, secondary, tertiary, quaternary, subtle, warning, warning-subtle) !default;
+$rvo-button-sizes: (xs, sm, md) !default;
 
+.rvo-button {
+  align-items: center;
+  background-color: var(--rvo-button-background-color);
+  border-color: var(--rvo-button-border-color);
+  border-radius: var(--rvo-button-border-radius);
+  border-style: solid;
+  border-width: var(--rvo-button-border-width);
+  box-sizing: border-box;
+  color: var(--rvo-button-color);
+  display: flex;
   flex-shrink: 0;
+  font: var(--rvo-font-sans-serif-font-family);
+  font-size: var(--rvo-button-font-size);
+  gap: 0;
+  inline-size: var(--rvo-button-inline-size);
+  justify-content: center;
+  line-height: var(--rvo-button-line-height);
+  max-inline-size: var(--rvo-button-max-inline-size);
+  min-block-size: var(--rvo-button-min-block-size);
+  padding-block-end: var(--rvo-button-padding-block-end);
+  padding-block-start: var(--rvo-button-padding-block-start);
+  padding-inline-end: var(--rvo-button-padding-inline-end);
+  padding-inline-start: var(--rvo-button-padding-inline-start);
   text-wrap: nowrap;
-
-  &--hover:not(:disabled),
-  &:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
-    text-decoration: underline;
-    text-underline-offset: 30%;
-  }
 
   &--icon-before {
     .utrecht-icon {
-      margin-inline-end: var(--utrecht-button-icon-before-gap);
+      margin-inline-end: var(--rvo-space-sm);
     }
   }
 
   &--icon-after {
     .utrecht-icon {
-      margin-inline-start: var(--utrecht-button-icon-after-gap);
+      margin-inline-start: var(--rvo-space-sm);
     }
   }
-}
 
-// Subtle button
-.utrecht-button--subtle.utrecht-button--hover:not(:disabled),
-.utrecht-button--subtle.utrecht-button-link--hover:not(:disabled),
-.utrecht-button--subtle:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
-  text-decoration: var(--_utrecht-button-appearance-hover-color, underline);
-  text-underline-offset: 30%;
-}
-
-// Tertiary action
-@include utrecht-button-appearance("utrecht-button", "rvo-tertiary-action");
-
-.utrecht-button--rvo-tertiary-action.utrecht-button--hover:not(:disabled),
-.utrecht-button--rvo-tertiary-action.utrecht-button-link--hover:not(:disabled),
-.utrecht-button--rvo-tertiary-action:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
-  text-decoration: var(--utrecht-button-rvo-tertiary-action-hover-text-decoration, underline);
-  text-underline-offset: 30%;
-}
-
-// Quaternary action
-@include utrecht-button-appearance("utrecht-button", "rvo-quaternary-action");
-
-// Warning
-@include utrecht-button-appearance("utrecht-button", "subtle-warning");
-
-// Sizes
-.utrecht-button--rvo-xs {
-  --utrecht-button-font-size: var(--utrecht-button-rvo-xs-font-size);
-  --utrecht-button-font-weight: var(--utrecht-button-rvo-xs-font-weight);
-  --utrecht-button-icon-after-gap: var(--rvo-space-xs);
-  --utrecht-button-icon-before-gap: var(--rvo-space-xs);
-  --utrecht-button-min-block-size: var(--utrecht-button-rvo-xs-min-block-size);
-  --utrecht-button-padding-block-end: var(--utrecht-button-rvo-xs-padding-block-end);
-  --utrecht-button-padding-block-start: var(--utrecht-button-rvo-xs-padding-block-start);
-  --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-xs-padding-inline-end);
-  --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-xs-padding-inline-start);
-
-  @extend .rvo-layout-row-inline;
-  @extend .rvo-layout-gap--sm;
-}
-
-.utrecht-button--rvo-sm {
-  --utrecht-button-font-size: var(--utrecht-button-rvo-sm-font-size);
-  --utrecht-button-icon-after-gap: var(--rvo-space-xs);
-  --utrecht-button-icon-before-gap: var(--rvo-space-xs);
-  --utrecht-button-min-block-size: var(--utrecht-button-rvo-sm-min-block-size);
-  --utrecht-button-padding-block-end: var(--utrecht-button-rvo-sm-padding-block-end);
-  --utrecht-button-padding-block-start: var(--utrecht-button-rvo-sm-padding-block-start);
-  --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-sm-padding-inline-end);
-  --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-sm-padding-inline-start);
-
-  @extend .rvo-layout-row-inline;
-  @extend .rvo-layout-gap--sm;
-}
-
-.utrecht-button--rvo-md {
-  --utrecht-button-font-size: var(--utrecht-button-rvo-md-font-size);
-  --utrecht-button-icon-after-gap: var(--rvo-space-sm);
-  --utrecht-button-icon-before-gap: var(--rvo-space-sm);
-  --utrecht-button-min-block-size: var(--utrecht-button-rvo-md-min-block-size);
-  --utrecht-button-padding-block-end: var(--utrecht-button-rvo-md-padding-block-end);
-  --utrecht-button-padding-block-start: var(--utrecht-button-rvo-md-padding-block-start);
-  --utrecht-button-padding-inline-end: var(--utrecht-button-rvo-md-padding-inline-end);
-  --utrecht-button-padding-inline-start: var(--utrecht-button-rvo-md-padding-inline-start);
-
-  @extend .rvo-layout-row-inline;
-  @extend .rvo-layout-gap--md;
-}
-
-// Full width
-.utrecht-button--rvo-full-width {
-  --utrecht-button-inline-size: 100%;
-  --utrecht-button-max-inline-size: 100%;
-}
-
-// Override primary icon colors
-.utrecht-button--primary-action,
-.utrecht-button--secondary-action,
-.utrecht-button--rvo-tertiary-action,
-.utrecht-button--rvo-quaternary-action,
-.utrecht-button--subtle,
-.utrecht-button--warning {
-  .utrecht-icon.rvo-icon {
-    background-color: var(--_utrecht-button-appearance-color, var(--_utrecht-button-color));
+  &--full-width {
+    --rvo-button-inline-size: 100%;
+    --rvo-button-max-inline-size: 100%;
   }
-}
 
-.utrecht-button--subtle.utrecht-button--warning {
-  .utrecht-icon.rvo-icon {
-    --_utrecht-button-appearance-color: var(
-      --utrecht-button-subtle-warning-color,
-      --utrecht-button-appearance-color,
-      var(--_utrecht-button-color)
-    );
+  &:hover:not(:disabled, [aria-disabled="true"]) {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 30%;
   }
-}
 
-.utrecht-button--primary-action:hover,
-.utrecht-button--primary-action.utrecht-button--hover,
-.utrecht-button--secondary-action:hover,
-.utrecht-button--secondary-action.utrecht-button--hover,
-.utrecht-button--rvo-tertiary-action:hover,
-.utrecht-button--rvo-tertiary-action.utrecht-button--hover,
-.utrecht-button--rvo-quaternary-action:hover,
-.utrecht-button--rvo-quaternary-action.utrecht-button--hover,
-.utrecht-button--subtle:hover,
-.utrecht-button--subtle.utrecht-button--hover,
-.utrecht-button--warning:hover,
-.utrecht-button--warning.utrecht-button--hover {
-  .utrecht-icon.rvo-icon {
-    background-color: var(--_utrecht-button-appearance-hover-color, var(--_utrecht-button-hover-color));
+  @each $name in $rvo-button-kinds {
+    &--#{$name} {
+      --rvo-button-background-color: var(--rvo-button-#{$name}-background-color);
+      --rvo-button-color: var(--rvo-button-#{$name}-color);
+      --rvo-button-border-color: var(--rvo-button-#{$name}-border-color);
+      --rvo-button-border-width: var(--rvo-button-#{$name}-border-width);
+
+      font-weight: var(--rvo-button-#{$name}-font-weight);
+
+      .utrecht-icon.rvo-icon {
+        background-color: var(--rvo-button-#{$name}-color);
+      }
+
+      &:active {
+        --rvo-button-background-color: var(--rvo-button-#{$name}-active-background-color);
+        --rvo-button-border-color: var(--rvo-button-#{$name}-active-border-color);
+        --rvo-button-color: var(--rvo-button-#{$name}-active-color);
+
+        .utrecht-icon {
+          background-color: var(--rvo-button-#{$name}-active-color);
+        }
+      }
+
+      &:focus {
+        --rvo-button-background-color: var(--rvo-button-#{$name}-focus-background-color);
+        --rvo-button-border-color: var(--rvo-button-#{$name}-focus-border-color);
+      }
+
+      &:focus-visible {
+        box-shadow: var(--_utrecht-focus-ring-box-shadow);
+        outline-color: var(--utrecht-focus-outline-color, revert);
+        outline-offset: var(--utrecht-focus-outline-offset, revert);
+        outline-style: var(--utrecht-focus-outline-style, revert);
+        outline-width: var(--utrecht-focus-outline-width, revert);
+      }
+
+      &:hover {
+        --rvo-button-background-color: var(--rvo-button-#{$name}-hover-background-color);
+        --rvo-button-color: var(--rvo-button-#{$name}-hover-color);
+        --rvo-button-border-color: var(--rvo-button-#{$name}-hover-border-color);
+
+        text-decoration-color: var(--rvo-button-#{$name}-hover-color);
+
+        .utrecht-icon.rvo-icon {
+          background-color: var(--rvo-button-#{$name}-hover-color);
+        }
+      }
+
+      &:disabled {
+        --rvo-button-background-color: var(--rvo-button-#{$name}-disabled-background-color);
+        --rvo-button-border-color: var(--rvo-button-#{$name}-disabled-border-color);
+        --rvo-button-color: var(--rvo-button-#{$name}-disabled-color);
+
+        .utrecht-icon {
+          background-color: var(--rvo-button-#{$name}-disabled-color) !important;
+        }
+      }
+    }
   }
-}
 
-.utrecht-button--primary-action:disabled,
-.utrecht-button--primary-action.utrecht-button--disabled,
-.utrecht-button--secondary-action:disabled,
-.utrecht-button--secondary-action.utrecht-button--disabled,
-.utrecht-button--rvo-tertiary-action:disabled,
-.utrecht-button--rvo-tertiary-action.utrecht-button--disabled,
-.utrecht-button--rvo-quaternary-action:disabled,
-.utrecht-button--rvo-quaternary-action.utrecht-button--disabled,
-.utrecht-button--subtle:disabled,
-.utrecht-button--subtle.utrecht-button--disabled,
-.utrecht-button--warning:disabled,
-.utrecht-button--warning.utrecht-button--disabled {
-  .utrecht-icon.rvo-icon {
-    background-color: var(--_utrecht-button-appearance-disabled-color, var(--_utrecht-button-disabled-color));
-  }
-}
+  @each $name in $rvo-button-sizes {
+    &--size-#{$name} {
+      --rvo-button-font-size: var(--rvo-button-size-#{$name}-font-size);
+      --rvo-button-min-block-size: var(--rvo-button-size-#{$name}-min-block-size);
+      --rvo-button-padding-block-start: var(--rvo-button-size-#{$name}-padding-block-start);
+      --rvo-button-padding-block-end: var(--rvo-button-size-#{$name}-padding-block-end);
+      --rvo-button-padding-inline-start: var(--rvo-button-size-#{$name}-padding-inline-start);
+      --rvo-button-padding-inline-end: var(--rvo-button-size-#{$name}-padding-inline-end);
 
-.utrecht-button--primary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--secondary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--rvo-tertiary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--rvo-quaternary-action:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--subtle:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--warning:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--active {
-  .utrecht-icon.rvo-icon {
-    background-color: var(--_utrecht-button-appearance-active-color, var(--_utrecht-button-active-color));
-  }
-}
-
-.utrecht-button--primary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--secondary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--rvo-tertiary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--rvo-quaternary-action:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--subtle:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--warning:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--focus {
-  .utrecht-icon.rvo-icon {
-    background-color: var(--_utrecht-button-appearance-focus-color, var(--_utrecht-button-focus-color));
+      @extend .rvo-layout-row-inline;
+      @extend .rvo-layout-gap--sm;
+    }
   }
 }

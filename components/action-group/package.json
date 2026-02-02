@@ -30,8 +30,5 @@
   },
   "devDependencies": {
     "@nl-rvo/build-utils-css": "workspace:*"
-  },
-  "dependencies": {
-    "@utrecht/button-group-css": "1.3.1"
   }
 }
