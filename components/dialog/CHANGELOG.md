@@ -1,5 +1,11 @@
 # `@nl-rvo/css-dialog`
 
+## 1.4.3
+
+### Patch Changes
+
+- 5442d67: Updated ActionGroup check for Dialogs
+
 ## 1.4.2
 
 ### Patch Changes

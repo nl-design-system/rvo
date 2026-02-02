@@ -1,5 +1,28 @@
 # @nl-rvo/component-library-css
 
+## 4.16.0
+
+### Minor Changes
+
+- 5442d67: Updates to several components using `.rvo-` prefix instead of `.utrecht-`. Affect components are:
+
+  - Button
+  - Action Group
+  - Fieldset
+  - Textarea
+
+  Smaller fixes to the following CSS
+
+  - Footer payoff color added
+  - Autocomplete placeholder color added
+
+- 09b1d14: Change vertical alignment to `baseline` for `.rvo-table-cell`.
+- 3a6a613: Add correct icon before/after margins.
+
+### Patch Changes
+
+- 9b2eeb1: ROOS-282: adds end margin to the grid container to meet current designs
+
 ## 4.15.1
 
 ### Patch Changes

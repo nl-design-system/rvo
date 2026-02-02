@@ -1,5 +1,12 @@
 # `@nl-rvo/css-action-group`
 
+## 1.3.0
+
+### Minor Changes
+
+- 5442d67: Remove third party ButtonGroup component and replaced this with a div.
+  Renamed class .utrecht-button-group to .rvo-button-group and added additional changes to the CSS of the Action Group Component.
+
 ## 1.2.1
 
 ### Patch Changes

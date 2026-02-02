@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.3.0
+
+### Minor Changes
+
+- 5442d67: Removed third party component imports and updated CSS to be inline with the original designs
+
 ## 1.2.4
 
 ### Patch Changes
