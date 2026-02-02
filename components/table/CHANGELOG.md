@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.7.0
+
+### Minor Changes
+
+- 09b1d14: Change vertical alignment to `baseline` for `.rvo-table-cell`.
+
 ## 1.6.0
 
 ### Minor Changes

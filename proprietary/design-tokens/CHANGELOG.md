@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 2.1.0
+
+### Minor Changes
+
+- 5442d67: Update Button Design tokens
+
 ## 2.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.5.0
+
+### Minor Changes
+
+- 5442d67: Icon on Alert button updated with new parameters. CSS now targets .rvo-button instead of .utrecht-button
+
 ## 1.4.0
 
 ### Minor Changes
