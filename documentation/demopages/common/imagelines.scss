@@ -1,4 +1,5 @@
 .rvo-image-lines {
+
   .rvo-hero__image-container,
   .rvo-card__image-container,
   .rvo-footer__container {
@@ -15,10 +16,18 @@
     }
   }
 
+  .rvo-hero .rvo-hero__content {
+    background-color: var(--rvo-color-lichtblauw);
+  }
+
+  .rvo-hero .rvo-hero__title {
+    color: var(--rvo-color-lintblauw);
+  }
+
   .rvo-hero__image-container::after {
     border-bottom-left-radius: 32px;
     right: -50%;
-    top: -25%;
+    top: -50%;
   }
 
   .rvo-layout-grid .rvo-card:nth-child(odd) {

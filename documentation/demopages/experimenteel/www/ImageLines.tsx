@@ -53,7 +53,11 @@ const Home = () => {
         )}
       </div>
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <Hero size="lg" title="Heading" image={{ src: 'images/www/home.jpg', alt: '' }} />
+        <Hero
+          size="lg"
+          title="Rijksdienst voor Ondernemend Nederland"
+          image={{ src: 'images/www/home.jpg', alt: '' }}
+        />
       </div>
       <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         <div className="rvo-snel-naar rvo-text--xl rvo-layout-row rvo-layout-gap--md rvo-layout--wrap rvo-margin-block-end--2xl rvo-margin-block-start--xl">
@@ -461,9 +465,7 @@ const Home = () => {
           <LayoutFlow row={true} wrap={true} gap="sm" justifyContent="center">
             <Icon icon="tekstballon-met-hart" size="2xl" />
             <em className="rvo-text--xl">Bent u tevreden over deze pagina?</em>
-            <span className="rvo-rhs-update-component">
-              <Button kind="secondary">Geef uw mening</Button>
-            </span>
+            <Button kind="secondary">Geef uw mening</Button>
           </LayoutFlow>
         </div>
 
