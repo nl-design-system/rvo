@@ -1,5 +1,4 @@
 .rvo-image-lines {
-
   .rvo-hero__image-container,
   .rvo-card__image-container,
   .rvo-footer__container {
@@ -25,24 +24,24 @@
   }
 
   .rvo-hero__image-container::after {
-    border-bottom-left-radius: 32px;
-    right: -50%;
-    top: -50%;
+    border-end-start-radius: 32px;
+    inset-block-start: -50%;
+    inset-inline-end: -50%;
   }
 
   .rvo-layout-grid .rvo-card:nth-child(odd) {
     .rvo-card__image-container::after {
-      border-bottom-left-radius: 32px;
-      bottom: 50%;
-      left: 50%;
+      border-end-start-radius: 32px;
+      inset-block-end: 50%;
+      inset-inline-start: 50%;
     }
   }
 
   .rvo-layout-grid .rvo-card:nth-child(even) {
     .rvo-card__image-container::after {
-      border-top-right-radius: 32px;
-      right: 50%;
-      top: 50%;
+      border-start-end-radius: 32px;
+      inset-block-start: 50%;
+      inset-inline-end: 50%;
     }
   }
 }
