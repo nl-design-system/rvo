@@ -47,29 +47,26 @@ const webpackStyleImporter = {
 };
 
 const config: StorybookConfig = {
-  framework: '@storybook/react-webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
   core: {
     disableTelemetry: true,
   },
   stories: [
     `${docsPath}/pages/**/*.docpage.mdx`,
     `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
-    `${componentsPath}/**!(node_modules)/*.docpage.mdx`,
-    `${componentsPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
-    `${utilitiesPath}/**!(node_modules)/*.docpage.mdx`,
-    `${utilitiesPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
+    `${componentsPath}/**/*.docpage.mdx`,
+    `${componentsPath}/**/*.stories.@(jsx|tsx)`,
+    `${utilitiesPath}/**/*.docpage.mdx`,
+    `${utilitiesPath}/**/*.stories.@(jsx|tsx)`,
   ],
-  features: {
-    buildStoriesJson: false,
-  },
+
   addons: [
-    '../addon-docusaurus',
-    '@etchteam/storybook-addon-status',
     {
       name: '@storybook/addon-essentials',
-      options: {
-        actions: false,
-      },
+      options: { actions: false },
     },
     '@storybook/addon-a11y',
     '@storybook/preset-scss',
@@ -77,9 +74,17 @@ const config: StorybookConfig = {
     '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
     '@storybook/addon-designs',
+    '@storybook/addon-webpack5-compiler-babel',
+    '@chromatic-com/storybook',
   ],
+
   staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
-  typescript: { check: true, checkOptions: {} },
+  typescript: {
+    check: true,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript', // or false
+  },
+
   webpackFinal: async (config) => {
     const rules = config.module?.rules || [];
 

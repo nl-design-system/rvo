@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import { colorTokens } from '@nl-rvo/design-tokens/dist/colors.js'; // auto-generated
+import { colorTokens } from '@nl-rvo/design-tokens/dist/colors'; // auto-generated
 
 export const UtilityBorder = () => {
   return (
