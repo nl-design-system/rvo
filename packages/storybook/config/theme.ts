@@ -1,5 +1,5 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
-import { create } from '@storybook/theming/create';
+import { create } from 'storybook/theming';
 
 // For more info on Storybook theming and an overview of all options:
 // https://storybook.js.org/docs/react/configure/theming

@@ -1,7 +1,7 @@
 /**
  * @license CC0-1.0
  */
-import { Markdown } from '@storybook/blocks';
+import { Markdown } from '@storybook/addon-docs/blocks';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 import React from 'react';
 

@@ -51,34 +51,33 @@ const config: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {},
   },
+
   core: {
     disableTelemetry: true,
+    disableWhatsNewNotifications: true,
   },
+
   stories: [
     `${docsPath}/pages/**/*.docpage.mdx`,
     `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
-    `${componentsPath}/**/*.docpage.mdx`,
-    `${componentsPath}/**/*.stories.@(jsx|tsx)`,
-    `${utilitiesPath}/**/*.docpage.mdx`,
-    `${utilitiesPath}/**/*.stories.@(jsx|tsx)`,
+    `${componentsPath}/**!(node_modules)/*.docpage.mdx`,
+    `${componentsPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
+    `${utilitiesPath}/**!(node_modules)/*.docpage.mdx`,
+    `${utilitiesPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
   ],
-
   addons: [
-    {
-      name: '@storybook/addon-essentials',
-      options: { actions: false },
-    },
     '@storybook/addon-a11y',
     '@storybook/preset-scss',
     'storybook-addon-themes',
-    '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
     '@storybook/addon-designs',
     '@storybook/addon-webpack5-compiler-babel',
     '@chromatic-com/storybook',
+    '@storybook/addon-docs',
   ],
 
   staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
+
   typescript: {
     check: true,
     checkOptions: {},
@@ -156,8 +155,9 @@ const config: StorybookConfig = {
       },
     };
   },
+
   docs: {
-    autodocs: false,
+    autodocs: true,
     mdxPluginOptions: {
       mdxCompileOptions: {
         remarkPlugins: [remarkGfm],
