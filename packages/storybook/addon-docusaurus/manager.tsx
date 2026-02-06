@@ -1,7 +1,5 @@
 import { DocumentIcon } from '@storybook/icons';
-import React from 'react';
 import { addons, types } from 'storybook/manager-api';
-// @ts-expect-error
 import { useParameter } from 'storybook/preview-api';
 
 addons.register('docusaurus', () => {
