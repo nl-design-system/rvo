@@ -89,7 +89,7 @@ const Event = () => {
         <div className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-card rvo-card--outline rvo-card--full-colour--grijs-100 rvo-card--padding-lg rvo-margin-block-start--xl">
             <div className="rvo-card__content">
-              <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
+              <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two ">
                 <div>
                   <Icon icon="kalender" size="2xl" color="zwart"></Icon>
                   <br />
