@@ -63,7 +63,7 @@ export { StatusIcon } from './status-icon/src/template';
 export { StatusIndicator } from './status-indicator/src/template';
 export { SubMenu } from './menubar/src/submenu/template';
 export { Table } from './table/src/template';
-export { Tabs } from './tabs/src/template';
+export { Tabs } from './tabs/src';
 export { Tag } from './tag/src/template';
 export { Textarea } from './form-textarea/src/template';
 export { TextareaField } from './form-field-textarea/src/template';
