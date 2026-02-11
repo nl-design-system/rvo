@@ -8,40 +8,73 @@ import Heading from '../../heading/src/template';
 import MaxWidthLayout from '../../max-width-layout/src/template';
 import './index.scss';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import { isOfType } from '../../utils/typeUtils';
+
+type HeroImage =
+  | {
+      src: string;
+      alt?: string;
+      loading?: 'eager' | 'lazy';
+      fetchPriority?: 'high' | 'low' | 'auto';
+      decoding?: 'async' | 'sync' | 'auto';
+      width?: number;
+      height?: number;
+      srcSet?: string;
+      sizes?: string;
+    }
+  | React.ReactElement<React.ImgHTMLAttributes<HTMLImageElement>>;
 
 export interface IHeroProps {
-  image?: Pick<HTMLImageElement, 'src' | 'alt'> | React.JSX.Element;
+  image: HeroImage;
   title?: string;
   subtitle?: string;
   size?: 'sm' | 'md' | 'lg';
   children?: ReactNode | undefined;
 }
 
-export const Hero: React.FC<IHeroProps & React.HTMLAttributes<HTMLDivElement>> = (props) => {
+type HeroProps = IHeroProps & React.HTMLAttributes<HTMLDivElement>;
+
+export const Hero: React.FC<HeroProps> = (props) => {
   const { image, title, subtitle, size, className, children, ...rootElementProps } = props;
 
   // Parse content markup (either a string, HTML string, React node or children)
   const contentMarkup: string | ReactNode = parseContentMarkup(children);
-
   const renderImage = () => {
     if (React.isValidElement(image)) {
       return <span className="rvo-hero__custom-image-wrapper">{image}</span>;
     }
 
-    if (isOfType(image, 'src') && image.src) return <img src={image.src} className="rvo-hero__image" alt={image.alt} />;
+    if (!image.src.trim()) throw new Error('Hero: image.src must be a non-empty string.');
 
-    return null;
+    const loading = image.loading ?? 'eager';
+    const fetchPriority = image.fetchPriority ?? (loading === 'eager' ? 'high' : 'auto');
+    const decoding = image.decoding ?? 'async';
+
+    return (
+      <img
+        src={image.src}
+        alt={image.alt ?? ''}
+        className="rvo-hero__image"
+        loading={loading}
+        fetchPriority={fetchPriority}
+        decoding={decoding}
+        width={image.width}
+        height={image.height}
+        srcSet={image.srcSet}
+        sizes={image.sizes}
+      />
+    );
   };
 
   return (
     <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...rootElementProps}>
       <div className="rvo-hero__image-container">{renderImage()}</div>
       <div className="rvo-hero__content">
-        <Heading type="h1" className="rvo-hero__title" noMargins={true}>
-          {title}
-        </Heading>
-        <span className="rvo-hero__subtitle">{subtitle}</span>
+        {title && (
+          <Heading type="h1" className="rvo-hero__title" noMargins={true}>
+            {title}
+          </Heading>
+        )}
+        {subtitle && <span className="rvo-hero__subtitle">{subtitle}</span>}
         {contentMarkup}
       </div>
     </MaxWidthLayout>

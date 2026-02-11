@@ -6,9 +6,6 @@ const argTypes = {
   image: {
     control: { type: 'object' },
   },
-  imageAlt: {
-    control: { type: 'text' },
-  },
   title: {
     control: 'text',
   },
@@ -68,7 +65,7 @@ export const Default: Story = {
 export const CustomImageHero: Story = {
   args: {
     ...defaultArgs,
-    image: <img src="images/www/nieuwsbrief.webp" />,
+    image: <img src="images/www/nieuwsbrief.webp" alt="" />,
   },
   name: 'Hero - Custom image',
 };
