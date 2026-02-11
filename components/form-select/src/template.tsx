@@ -26,6 +26,7 @@ export interface ISelectProps extends HTMLAttributes<HTMLSelectElement> {
   invalid?: boolean;
   required?: boolean;
   options?: ISelectOption[];
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'max';
   onFocus?: (event: React.FocusEvent<HTMLSelectElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -44,12 +45,13 @@ export const Select: React.FC<ISelectProps> = ({
   invalid = defaultArgs.invalid,
   required = defaultArgs.required,
   options = defaultArgs.options,
+  size = defaultArgs.size,
   defaultValue,
   value,
   onChange,
   ...otherProps
 }: ISelectProps) => (
-  <div className="rvo-select-wrapper">
+  <div className={clsx('rvo-select-wrapper', size && size !== 'max' && `rvo-select--${size}`)}>
     <select
       id={id}
       aria-invalid={invalid || undefined}
