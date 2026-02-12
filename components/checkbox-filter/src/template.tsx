@@ -28,7 +28,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
     options,
     limit = 5,
     showInputField,
-    inputFieldLabel = 'Zoeken',
+    inputFieldLabel = 'Zoek in lijst',
     inputFieldOnChange,
     optionsOnChange,
     showMoreText = 'Toon meer',
