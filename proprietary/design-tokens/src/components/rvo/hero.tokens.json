@@ -20,6 +20,19 @@
         "font-style": { "value": "normal" },
         "font-weight": { "value": "{rvo.font-weight.normal}" },
         "line-height": { "value": "{rvo.line-height.md}" }
+      },
+      "kind": {
+        "wonderline": {
+          "background-color": { "value": "{rvo.color.lichtblauw}" },
+          "color": { "value": "{rvo.color.lintblauw}" }
+        }
+      },
+      "image-line": {
+        "border-width": { "value": "2px" },
+        "border-style": { "value": "solid" },
+        "border-color": { "value": "{rvo.color.wit}" },
+        "border-radius": { "value": "32px" },
+        "inset": { "value": "-50%" }
       }
     }
   }

@@ -24,6 +24,10 @@ const argTypes = {
       disable: true,
     },
   },
+  kind: {
+    options: ['none', 'wonderline'],
+    control: { type: 'radio' },
+  },
 };
 
 const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {
