@@ -1,5 +1,11 @@
 # `@nl-rvo/css-hero`
 
+## 1.5.0
+
+### Minor Changes
+
+- fac57b8: Make image required and enable the props: fetchPriority, width, height, loading, sizes and srcSet.
+
 ## 1.4.0
 
 ### Minor Changes

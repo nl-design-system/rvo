@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-react
 
+## 6.1.0
+
+### Minor Changes
+
+- fac57b8: Make image required and enable the props: fetchPriority, width, height, loading, sizes and srcSet.
+- 24190d1: Add size for form-select and form-field-select.
+
+### Patch Changes
+
+- f606906: Checkbox filters have a new parameter to initialize closed if needed f.e. mobile users
+- 961dc70: Update placeholder text.
+
 ## 6.0.0
 
 ### Major Changes

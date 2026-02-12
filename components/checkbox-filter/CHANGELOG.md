@@ -1,5 +1,12 @@
 # @nl-rvo/checkbox-filter
 
+## 3.1.2
+
+### Patch Changes
+
+- 961dc70: Update placeholder text.
+- f606906: Checkbox filters have a new parameter to initialize closed if needed f.e. mobile users
+
 ## 3.1.1
 
 ### Patch Changes
