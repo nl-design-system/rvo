@@ -24,6 +24,10 @@ const argTypes = {
   showLessText: {
     control: { type: 'text' },
   },
+  initialCollapseState: {
+    control: { type: 'select' },
+    options: ['expanded', 'collapsed'],
+  },
 };
 
 const inputOptions = [

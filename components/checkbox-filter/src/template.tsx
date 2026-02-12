@@ -17,6 +17,7 @@ export interface ICheckboxFilter {
   showMoreText?: string;
   showLessText?: string;
   noFiltersText?: string;
+  initialCollapseState?: 'expanded' | 'collapsed';
 }
 
 export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetailsElement>> = (
@@ -33,6 +34,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
     showMoreText = 'Toon meer',
     showLessText = 'Toon minder',
     noFiltersText = 'Geen filters beschikbaar',
+    initialCollapseState = 'expanded',
     ...rootElementProps
   } = props;
   const [visibleItems, setVisibleItems] = useState([]);
@@ -60,7 +62,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
   };
 
   return (
-    <details open className="rvo-checkbox-filter" {...rootElementProps}>
+    <details open={initialCollapseState === 'expanded'} className="rvo-checkbox-filter" {...rootElementProps}>
       <summary className="rvo-checkbox-filter__label">
         {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>
