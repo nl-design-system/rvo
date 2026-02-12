@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-css
 
+## 4.17.0
+
+### Minor Changes
+
+- 24190d1: Add size for form-select and form-field-select.
+
+### Patch Changes
+
+- f606906: Delete maxwidth from Checkbox Filter for scalability
+
 ## 4.16.0
 
 ### Minor Changes
