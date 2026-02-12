@@ -65,7 +65,7 @@ export const Default: Story = {
 export const CustomImageHero: Story = {
   args: {
     ...defaultArgs,
-    image: <img src="images/www/nieuwsbrief.webp" alt="" />,
+    image: <img src="images/www/nieuwsbrief.webp" alt="newsletter" />,
   },
   name: 'Hero - Custom image',
 };

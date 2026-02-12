@@ -12,7 +12,7 @@ import parseContentMarkup from '../../utils/parseContentMarkup';
 type HeroImage =
   | {
       src: string;
-      alt?: string;
+      alt: string;
       loading?: 'eager' | 'lazy';
       fetchPriority?: 'high' | 'low' | 'auto';
       decoding?: 'async' | 'sync' | 'auto';
@@ -45,6 +45,8 @@ export const Hero: React.FC<HeroProps> = (props) => {
 
     if (!image.src.trim()) throw new Error('Hero: image.src must be a non-empty string.');
 
+    if (!image.alt.trim()) throw new Error('Hero: image.alt must be a non-empty string.');
+
     const loading = image.loading ?? 'eager';
     const fetchPriority = image.fetchPriority ?? (loading === 'eager' ? 'high' : 'auto');
     const decoding = image.decoding ?? 'async';
@@ -52,7 +54,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
     return (
       <img
         src={image.src}
-        alt={image.alt ?? ''}
+        alt={image.alt}
         className="rvo-hero__image"
         loading={loading}
         fetchPriority={fetchPriority}
@@ -68,15 +70,17 @@ export const Hero: React.FC<HeroProps> = (props) => {
   return (
     <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...rootElementProps}>
       <div className="rvo-hero__image-container">{renderImage()}</div>
-      <div className="rvo-hero__content">
-        {title && (
-          <Heading type="h1" className="rvo-hero__title" noMargins={true}>
-            {title}
-          </Heading>
-        )}
-        {subtitle && <span className="rvo-hero__subtitle">{subtitle}</span>}
-        {contentMarkup}
-      </div>
+      {(title || subtitle || contentMarkup) && (
+        <div className="rvo-hero__content">
+          {title && (
+            <Heading type="h1" className="rvo-hero__title" noMargins={true}>
+              {title}
+            </Heading>
+          )}
+          {subtitle && <span className="rvo-hero__subtitle">{subtitle}</span>}
+          {contentMarkup}
+        </div>
+      )}
     </MaxWidthLayout>
   );
 };
