@@ -167,7 +167,7 @@ export const Decorative: Story = {
   name: 'Decoratief (lage prioriteit)',
   args: {
     ...defaultArgs,
-    alt: '',
+    alt: 'deco',
     loading: 'lazy',
     fetchPriority: 'low',
   },

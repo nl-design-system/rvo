@@ -56,7 +56,7 @@ const Home = () => {
         <Hero
           size="lg"
           title="Rijksdienst voor Ondernemend Nederland"
-          image={{ src: 'images/www/home.jpg', alt: '' }}
+          image={{ src: 'images/www/home.jpg', alt: 'home' }}
         />
       </div>
       <main className="rvo-max-width-layout rvo-max-width-layout--lg rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
@@ -542,7 +542,7 @@ const Home = () => {
           </LayoutFlow>
         </div> */}
         {/* <div className="rvo-feedback">
-          
+
         </div> */}
       </main>
       {/* <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">
