@@ -21,58 +21,59 @@
 
 ## Voor ontwikkelaars
 
-De functie voor deze logica kan als volgt worden geschreven:
+De logica voor het genereren van paginanummers met ellipsen kan als volgt worden geïmplementeerd.
 
 ```js
-const generatePageNumberMarkup = () => "";
-const generateEllipsisMarkup = () => "";
+const generatePageNumberMarkup = (page, activePage) => {
+  return page === activePage ? `[${page}]` : `${page}`;
+};
+
+const generateEllipsisMarkup = () => "…";
 
 const generatePageNumbers = (totalPages, activePage) => {
   const pages = [];
+  const windowSize = 5;
 
-  // Always add the first page
-  pages.push(generatePageNumberMarkup(1, activePage));
+  const addRange = (from, to) => {
+    for (let i = from; i <= to; i++) {
+      pages.push(generatePageNumberMarkup(i, activePage));
+    }
+  };
 
-  // Add ellipses if the active page is more than 4
-  if (activePage > 4) {
+  // Toon alle pagina's als het totaal klein is
+  if (totalPages <= windowSize) {
+    addRange(1, totalPages);
+    return pages;
+  }
+
+  // Begin van de paginering
+  // Voorbeeld: [1] 2 3 4 5 … 100
+  if (activePage <= 4) {
+    addRange(1, 5);
     pages.push(generateEllipsisMarkup());
-  }
-  if (activePage === 4) {
-    pages.push(generatePageNumberMarkup(2, activePage));
-  }
-
-  // Add the page before the active page if it's more than 2
-  if (activePage > 2) {
-    pages.push(generatePageNumberMarkup(activePage - 1, activePage));
-  }
-
-  // Add the active page if it's not the first or last page
-  if (activePage > 1 && activePage < totalPages) {
-    pages.push(generatePageNumberMarkup(activePage, activePage));
-  }
-
-  // Add the page after the active page if it's less than total pages minus 1 and not the last page
-  if (activePage < totalPages - 1 && activePage !== totalPages - 2) {
-    pages.push(generatePageNumberMarkup(activePage + 1, activePage));
-  }
-
-  // Add ellipses if the active page is less than the total pages minus 3
-  if (activePage < totalPages - 3) {
-    pages.push(generateEllipsisMarkup());
-  }
-
-  // Add the second last page if the active page is less than the total pages minus 1 and greater than or equal to total pages minus 3
-  if (activePage < totalPages - 1 && activePage >= totalPages - 3) {
-    pages.push(generatePageNumberMarkup(totalPages - 1, activePage));
-  }
-
-  // Always add the last page
-  if (totalPages !== 1) {
     pages.push(generatePageNumberMarkup(totalPages, activePage));
+    return pages;
   }
+
+  // Einde van de paginering
+  // Voorbeeld: 1 … 96 97 98 [99] 100
+  if (activePage >= totalPages - 3) {
+    pages.push(generatePageNumberMarkup(1, activePage));
+    pages.push(generateEllipsisMarkup());
+    addRange(totalPages - 4, totalPages);
+    return pages;
+  }
+
+  // Midden van de paginering
+  // Voorbeeld: 1 … 4 [5] 6 … 100
+  pages.push(generatePageNumberMarkup(1, activePage));
+  pages.push(generateEllipsisMarkup());
+  addRange(activePage - 1, activePage + 1);
+  pages.push(generateEllipsisMarkup());
+  pages.push(generatePageNumberMarkup(totalPages, activePage));
 
   return pages;
 };
 
-generatePageNumbers(5, 30);
+generatePageNumbers(100, 1);
 ```
