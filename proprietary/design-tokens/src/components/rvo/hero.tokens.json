@@ -22,7 +22,7 @@
         "line-height": { "value": "{rvo.line-height.md}" }
       },
       "kind": {
-        "wonderline": {
+        "lichtblauw": {
           "background-color": { "value": "{rvo.color.lichtblauw}" },
           "color": { "value": "{rvo.color.lintblauw}" }
         }

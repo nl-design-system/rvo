@@ -39,13 +39,13 @@
   &--lichtblauw {
     .rvo-hero {
       &__content {
-        background-color: var(--rvo-hero-kind-wonderline-background-color);
-        color: var(--rvo-hero-kind-wonderline-color);
+        background-color: var(--rvo-hero-kind-lichtblauw-background-color);
+        color: var(--rvo-hero-kind-lichtblauw-color);
       }
 
       &__title,
       &__subtitle {
-        color: var(--rvo-hero-kind-wonderline-color);
+        color: var(--rvo-hero-kind-lichtblauw-color);
       }
     }
   }

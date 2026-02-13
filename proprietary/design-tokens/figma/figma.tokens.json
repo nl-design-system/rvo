@@ -2033,7 +2033,7 @@
           }
         },
         "kind": {
-          "wonderline": {
+          "lichtblauw": {
             "background-color": {
               "$value": "{rvo.color.lichtblauw}"
             },
