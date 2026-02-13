@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.9.0
+
+### Minor Changes
+
+- 5442d67: Removed third party Footer Component to use default footer html tag. Added correct color to `.rvo-footer__payoff` in CSS.
+
 ## 1.8.0
 
 ### Minor Changes

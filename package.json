@@ -28,7 +28,6 @@
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
     "@utrecht/component-library-css": "8.0.0",
-    "@utrecht/component-library-react": "4.2.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
@@ -53,7 +52,9 @@
     "stylelint-config-standard-scss": "15.0.1",
     "stylelint-order": "6.0.4",
     "typescript": "5.5.2",
-    "webpack": "5.96.1"
+    "webpack": "5.96.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "scripts": {
     "build": "pnpm run --recursive build",
@@ -88,14 +89,12 @@
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs"
   },
   "dependencies": {
-    "http-server": "14.1.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "http-server": "14.1.1"
   },
   "pnpm": {
     "overrides": {
-      "react": "18.3.1",
-      "react-dom": "18.3.1"
+      "markdownlint": "0.36.1",
+      "markdownlint-cli": "0.43.0"
     }
   },
   "packageManager": "pnpm@10.28.2"

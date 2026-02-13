@@ -1,7 +1,7 @@
 {
   "rvo": {
     "button": {
-      "tertiary-action": {
+      "tertiary": {
         "background-color": {
           "css": {
             "syntax": "<color>",
@@ -65,7 +65,7 @@
           }
         }
       },
-      "quaternary-action": {
+      "quaternary": {
         "background-color": {
           "css": {
             "syntax": "<color>",
@@ -165,7 +165,7 @@
           }
         }
       },
-      "warning-subtle-action": {
+      "warning-subtle": {
         "background-color": {
           "css": {
             "syntax": "<color>",
@@ -229,7 +229,7 @@
           }
         }
       },
-      "warning-action": {
+      "warning": {
         "background-color": {
           "css": {
             "syntax": "<color>",

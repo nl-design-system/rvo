@@ -2,7 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
-import { Button as UtrechtButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -15,18 +14,13 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
   label?: string | ReactNode;
-  active?: boolean;
-  busy?: boolean;
-  focus?: boolean;
-  focusVisible?: boolean;
-  hover?: boolean;
   disabled?: boolean;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
+  busy?: boolean;
   fullWidth?: boolean;
   className?: string;
-  alignToRightInGroup?: boolean;
   /** @uxpinpropname On Focus */
   onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Blur */
@@ -47,18 +41,6 @@ export const argTypes = {
   label: {
     control: 'text',
   },
-  busy: {
-    control: 'boolean',
-  },
-  focus: {
-    control: 'boolean',
-  },
-  focusVisible: {
-    control: 'boolean',
-  },
-  hover: {
-    control: 'boolean',
-  },
   disabled: {
     control: 'boolean',
   },
@@ -74,22 +56,12 @@ export const argTypes = {
   fullWidth: {
     control: 'boolean',
   },
-  alignToRightInGroup: {
-    table: {
-      disable: true,
-    },
-  },
 };
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   kind = defaultArgs.kind,
   size = defaultArgs.size,
-  active = defaultArgs.active,
-  busy = defaultArgs.busy,
   disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
-  focusVisible = defaultArgs.focusVisible,
-  hover = defaultArgs.hover,
   label = defaultArgs.label,
   children,
   showIcon = defaultArgs.showIcon,
@@ -97,7 +69,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   iconAriaLabel = defaultArgs.iconAriaLabel,
   fullWidth = defaultArgs.fullWidth,
   className,
-  alignToRightInGroup,
+  busy,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon as any} size={size} ariaLabel={iconAriaLabel} />;
@@ -118,56 +90,25 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   }
 
   return (
-    <UtrechtButton
+    <button
       className={clsx(
         className,
-        kind === 'tertiary' && 'utrecht-button--rvo-tertiary-action',
-        kind === 'quaternary' && 'utrecht-button--rvo-quaternary-action',
-        active && 'utrecht-button--active',
-        busy && 'utrecht-button--busy',
-        hover && 'utrecht-button--hover',
-        focus && 'utrecht-button--focus',
-        focusVisible && 'utrecht-button--focus-visible',
-        size === 'xs' && 'utrecht-button--rvo-xs',
-        size === 'sm' && 'utrecht-button--rvo-sm',
-        size === 'md' && 'utrecht-button--rvo-md',
-        alignToRightInGroup && 'rvo-action-group--align-right',
-        fullWidth && 'utrecht-button--rvo-full-width',
-        showIcon !== 'no' && `utrecht-button--icon-${showIcon}`,
+        'rvo-button',
+        `rvo-button--${kind}`,
+        size && `rvo-button--size-${size}`,
+        fullWidth && 'rvo-button--full-width',
+        showIcon !== 'no' && `rvo-button--icon-${showIcon}`,
+        appearance && `rvo-button--${appearance}`,
       )}
+      aria-busy={busy}
       disabled={disabled || undefined}
-      appearance={appearance}
-      hint={kind === 'warning' || kind === 'warning-subtle' ? 'warning' : undefined}
       {...otherProps}
     >
       {showIcon === 'before' && iconMarkup}
       {children || label}
       {showIcon === 'after' && iconMarkup}
-    </UtrechtButton>
+    </button>
   );
 };
-
-export const AllButtonKinds: React.FC<IButtonProps> = (buttonArgs) => (
-  <div>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="primary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="secondary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="tertiary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="quaternary" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="warning-subtle" />
-    </p>
-    <p>
-      <Button label="Button" {...buttonArgs} kind="warning" />
-    </p>
-  </div>
-);
 
 export default Button;

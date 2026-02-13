@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import { FieldsetLegend, Fieldset as FieldsetUtrecht } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ITextInputFieldProps, TextInputField } from '../../form-field-textinput/src/template';
@@ -44,12 +44,17 @@ export const Fieldset: React.FC<IFieldsetProps & React.HTMLAttributes<HTMLDivEle
   ...rootElementProps
 }) => {
   return (
-    <FieldsetUtrecht disabled={disabled || undefined} className="rvo-form-fieldset" {...rootElementProps}>
-      {legend && <FieldsetLegend>{legend}</FieldsetLegend>}
+    <div
+      className={clsx('rvo-form-fieldset', disabled && 'rvo-form-fieldset--disabled')}
+      role="group"
+      {...rootElementProps}
+    >
+      {legend && <legend className="rvo-form-fieldset__legend">{legend}</legend>}
       {children
         ? parseContentMarkup(children)
-        : fields && fields.map((fieldProps) => <TextInputField key={fieldProps.id} {...fieldProps} />)}
-    </FieldsetUtrecht>
+        : fields &&
+          fields.map((fieldProps) => <TextInputField key={fieldProps.id} {...fieldProps} disabled={disabled} />)}
+    </div>
   );
 };
 

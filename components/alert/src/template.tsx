@@ -118,7 +118,7 @@ export const Alert: React.FC<IAlertProps> = ({
           <Button
             kind="subtle"
             className="rvo-button__close"
-            label={<Icon icon="kruis" size="md" />}
+            label={<Icon icon="kruis" size="sm" color="zwart" />}
             aria-label="Sluiten"
             onClick={handleClose}
           />

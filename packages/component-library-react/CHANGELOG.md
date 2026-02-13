@@ -1,5 +1,45 @@
 # @nl-rvo/component-library-react
 
+## 6.1.0
+
+### Minor Changes
+
+- fac57b8: Make image required and enable the props: fetchPriority, width, height, loading, sizes and srcSet.
+- 24190d1: Add size for form-select and form-field-select.
+
+### Patch Changes
+
+- f606906: Checkbox filters have a new parameter to initialize closed if needed f.e. mobile users
+- 961dc70: Update placeholder text.
+
+## 6.0.0
+
+### Major Changes
+
+- 5442d67: Added Support for React 19.
+
+  Removed third party component imports from the following Components:
+
+  - Action Group
+  - Button
+  - Datalist
+  - Footer
+  - Form Feedback
+  - Form Field
+  - Form Fieldset
+  - Form Textarea
+  - Form Textinput
+
+### Minor Changes
+
+- ebc334a: Version bump for babel dependencies
+- 669bc7f: Modify icon names for button component, replace spaces for hyphens.
+- 00a912a: Remove content option for hero component.
+
+### Patch Changes
+
+- 9b2eeb1: ROOS-282: adds end margin to the grid container to meet current designs
+
 ## 5.10.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 ## Pre-releases
 
+## 1.2.0
+
+### Minor Changes
+
+- 5442d67: Fixed Issues with the isExpandable check
+
 ## 1.1.1
 
 ### Patch Changes

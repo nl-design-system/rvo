@@ -1,5 +1,29 @@
 # `@nl-rvo/css-button`
 
+## 2.0.0
+
+### Major Changes
+
+- 5442d67: Removed third party Button Component to use own button setup and updated clasnames.
+  Removed the following parameters which where used through Storybook or no longer required:
+
+  - active
+  - busy
+  - focus
+  - focusVisible
+  - hover
+  - alignToRightInGroup
+
+  Using new classname for button: `rvo-button` instead of `utrecht-button`. All other class names using the previous classnames have also been updated with the classname prefix.
+  Removed allButtons export from Component, as this is only used in Storybook Stories.
+
+  Style Changes:
+  No direct changes in the display of the Compnent, but the naming convension of the Component has been updated to use `.rvo-button` as prefix, instead of `.utrecht-button`.
+
+### Minor Changes
+
+- 3a6a613: Add correct icon before/after margins.
+
 ## 1.1.6
 
 ### Patch Changes

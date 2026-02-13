@@ -6,9 +6,6 @@ const argTypes = {
   image: {
     control: { type: 'object' },
   },
-  imageAlt: {
-    control: { type: 'text' },
-  },
   title: {
     control: 'text',
   },
@@ -22,9 +19,6 @@ const argTypes = {
   className: {
     control: 'text',
   },
-  content: {
-    control: 'text',
-  },
   children: {
     table: {
       disable: true,
@@ -36,7 +30,6 @@ const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {
   image: { src: '', alt: '' },
   title: 'Rijksdienst voor Ondernemend Nederland',
   subtitle: 'Wij helpen u graag vooruit!',
-  content: '',
 };
 
 const meta: Meta<typeof Hero> = {
@@ -72,7 +65,7 @@ export const Default: Story = {
 export const CustomImageHero: Story = {
   args: {
     ...defaultArgs,
-    image: <img src="images/www/nieuwsbrief.webp" />,
+    image: <img src="images/www/nieuwsbrief.webp" alt="newsletter" />,
   },
   name: 'Hero - Custom image',
 };

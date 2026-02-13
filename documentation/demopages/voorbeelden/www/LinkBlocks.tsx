@@ -46,7 +46,7 @@ const LinkBlocks = () => {
           size="lg"
           image={{
             src: 'https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2024-03%2FUrk%2520windmolens%2520Klimaat%2520en%2520energie.jpg%3Fitok%3Dtq-sOBAR&w=3840&q=85',
-            alt: '',
+            alt: 'next',
           }}
           title="Klimaat & Energie"
           subtitle="Wilt u verduurzamen? Wij helpen u met advies, netwerken, kennis, subsidies en financiering. Zodat u plannen kunt maken, investeren en vernieuwen. Zo werken we samen aan een duurzaam en economisch sterk Nederland."
@@ -594,7 +594,7 @@ const LinkBlocks = () => {
           </LayoutFlow>
         </div> */}
         {/* <div className="rvo-feedback">
-          
+
         </div> */}
       </main>
       {/* <div className="rvo-section rvo-section--www rvo-section--coloured-bg rvo-section--grijs-3">

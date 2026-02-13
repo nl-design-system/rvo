@@ -3,12 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import { Textbox, TextboxProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 
-export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
+export interface ITextInputProps {
   /** @uxpinignoreprop */
   key?: string;
   /** @uxpinignoreprop */
@@ -34,6 +33,14 @@ export interface ITextInputProps extends Omit<TextboxProps, 'size'> {
   onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
   onInvalid?: (event: React.InvalidEvent<EventTarget & HTMLInputElement>) => void;
+  defaultValue?: string | number | readonly string[];
+  value?: string | number | readonly string[];
+  autoComplete?: string;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+  role?: string;
+  min?: string;
+  max?: string;
+  step?: number;
 }
 
 export const argTypes = {
@@ -140,10 +147,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
     id,
     type,
     disabled,
-    invalid,
-    required,
-    readOnly,
     placeholder,
+    readOnly,
     className,
     value: isControlled ? value : undefined,
     defaultValue: !isControlled ? defaultValue : undefined,
@@ -156,10 +161,14 @@ export const TextInput: React.FC<ITextInputProps> = ({
   };
 
   const inputMarkup = (
-    <Textbox
+    <input
       {...textBoxProps}
+      type={type}
+      aria-invalid={invalid}
+      aria-required={required}
       className={clsx(
         className,
+        'utrecht-textbox',
         size === 'xs' && 'utrecht-textbox--xs',
         size === 'sm' && 'utrecht-textbox--sm',
         size === 'md' && 'utrecht-textbox--md',
@@ -168,6 +177,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       )}
     />
   );
+
   if (prefix || suffix) {
     return (
       <div className={clsx('rvo-layout-row', 'rvo-layout-gap--md')}>
@@ -176,9 +186,8 @@ export const TextInput: React.FC<ITextInputProps> = ({
         {suffix}
       </div>
     );
-  } else {
-    return inputMarkup;
   }
+  return inputMarkup;
 };
 
 export default TextInput;
