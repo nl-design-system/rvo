@@ -66,8 +66,10 @@
       cursor: pointer;
       display: flex;
       font-family: inherit;
+      font-size: inherit;
       font-weight: var(--rvo-table-header-font-weight);
       gap: var(--rvo-space-sm);
+      padding-inline: 0;
 
       &--numeric {
         float: right;
