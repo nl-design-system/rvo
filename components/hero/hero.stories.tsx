@@ -25,9 +25,10 @@ const argTypes = {
     },
   },
   kind: {
-    options: ['none', 'wonderline'],
+    options: ['none', 'lichtblauw'],
     control: { type: 'radio' },
   },
+  showLine: { control: 'boolean' },
 };
 
 const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {

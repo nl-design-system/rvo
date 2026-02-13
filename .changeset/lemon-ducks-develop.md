@@ -2,4 +2,4 @@
 "@nl-rvo/css-hero": minor
 ---
 
-Added new parameter; kind. With this you can change the appearance of the Hero Component. Only kind currently available is 'wonderline'
+Added two new parameter; kind and showLine. With this you can change the appearance of the Hero Component. Only kind currently available is 'lichtblauw'
