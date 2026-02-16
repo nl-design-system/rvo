@@ -1120,6 +1120,9 @@
             }
           },
           "hover": {
+            "color": {
+              "$value": "{rvo.color.zwart}"
+            },
             "text-decoration": {
               "$value": "underline"
             }
