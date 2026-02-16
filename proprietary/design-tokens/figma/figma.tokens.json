@@ -1385,6 +1385,23 @@
           "overlay-opacity": {
             "$value": "50%"
           }
+        },
+        "image-line": {
+          "border-width": {
+            "$value": "2px"
+          },
+          "border-style": {
+            "$value": "solid"
+          },
+          "border-color": {
+            "$value": "{rvo.color.wit}"
+          },
+          "border-radius": {
+            "$value": "32px"
+          },
+          "inset": {
+            "$value": "-50%"
+          }
         }
       }
     }
