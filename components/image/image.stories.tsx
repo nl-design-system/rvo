@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2025 Community for NL Design System
  */
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { defaultArgs } from './src/defaultArgs';
 import { Image } from './src/index';
 

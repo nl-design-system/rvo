@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ExpendableRows from './ExpendableRows';
 
 const meta: Meta<typeof ExpendableRows> = {

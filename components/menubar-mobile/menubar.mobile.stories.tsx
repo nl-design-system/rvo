@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import MobileMenuBar, { IMobileMenuBarProps } from './src/template';
 import { IconType } from '../icon/src/types';
 

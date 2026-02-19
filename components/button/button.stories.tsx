@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { defaultArgs } from './src/defaultArgs';
 import { argTypes, Button } from './src/template';
 

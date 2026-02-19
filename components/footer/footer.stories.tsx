@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Footer, FooterColumnInterface, FooterInterface, FooterItemInterface } from './src/template';
 import Icon from '../icon/src/template';
 

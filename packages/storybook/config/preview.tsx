@@ -1,8 +1,8 @@
-import { useArgs } from '@storybook/preview-api';
-import { Preview, StoryContext, StoryFn } from '@storybook/react';
+import type { Decorator, Preview } from '@storybook/react-webpack5';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import * as ReactDOMServer from 'react-dom/server';
+import { useArgs } from 'storybook/preview-api';
 import './preview.scss';
 import theme from './theme';
 
@@ -88,7 +88,7 @@ const parameters = {
     source: {
       state: 'open',
       language: 'html',
-      transform: (src, storyContext) => {
+      transform: (src: any, storyContext: { args: any; originalStoryFn: (arg0: any, arg1: any) => any }) => {
         // Ensure valid HTML in the Preview source
         let currentStoryArgs = storyContext.args;
         if (storyContext.originalStoryFn) {
@@ -111,7 +111,7 @@ const parameters = {
     removeEmptyComments: true,
   },
   viewport: {
-    viewports: {
+    options: {
       Chromatic: {
         name: 'Chromatic',
         styles: {
@@ -144,17 +144,23 @@ const parameters = {
   },
 };
 
-const decorators = [
-  // Add the updateArgs function to the component props
-  (storyFn: StoryFn, context: StoryContext) => {
-    const [, updateArgs] = useArgs();
-    return storyFn({ ...context.args, updateArgs }, context);
-  },
-];
+const withUpdateArgs: Decorator = (Story, context) => {
+  const [, updateArgs] = useArgs();
+
+  return (
+    <Story
+      {...context}
+      parameters={{
+        ...context.parameters,
+        updateArgs,
+      }}
+    />
+  );
+};
 
 const preview: Preview = {
   parameters,
-  decorators,
+  decorators: [withUpdateArgs],
 };
 
 export default preview;
