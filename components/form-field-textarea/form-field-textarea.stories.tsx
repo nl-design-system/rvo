@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { HTMLAttributes } from 'react';
 import { defaultArgs } from './src/defaultArgs';
 import { ITextareaFieldProps, TextareaField } from './src/template';

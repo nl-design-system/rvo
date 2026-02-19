@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ControleerUwGegevens from './ControleerUwGegevens';
 
 const meta: Meta<typeof ControleerUwGegevens> = {

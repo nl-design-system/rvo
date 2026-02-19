@@ -1,8 +1,6 @@
-import { useParameter } from '@storybook/api';
-import { Icons } from '@storybook/components';
-import { addons, types } from '@storybook/manager-api';
-// @ts-expect-error
-import React from 'react';
+import { DocumentIcon } from '@storybook/icons';
+import { addons, types } from 'storybook/manager-api';
+import { useParameter } from 'storybook/preview-api';
 
 addons.register('docusaurus', () => {
   addons.add('docusaurus', {
@@ -31,7 +29,7 @@ addons.register('docusaurus', () => {
           title="Open documentatie in Docusaurus"
           className="rvo-docs-button"
         >
-          <Icons icon="document" style={{ width: '12px' }} />
+          <DocumentIcon style={{ width: '12px' }} />
         </a>
       );
     },
