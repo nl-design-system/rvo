@@ -141,6 +141,7 @@
           "color": { "value": "{rvo.color.grijs-300}" }
         },
         "hover": {
+          "color": { "value": "{rvo.color.zwart}" },
           "text-decoration": { "value": "underline" }
         }
       },
