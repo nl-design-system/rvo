@@ -171,6 +171,12 @@
   background-color: var(--rvo-sidebar-layout-sidebar-background-color);
   margin-block-start: var(--rvo-topnav-item-link-padding-block-start);
 
+  & > .rvo-menubar__list {
+    box-sizing: border-box;
+    padding-inline-end: var(--rvo-topnav-submenu-padding-inline-end);
+    padding-inline-start: var(--rvo-topnav-submenu-padding-inline-start);
+  }
+
   &:hover {
     background-color: var(--rvo-sidebar-layout-sidebar-background-color);
   }
