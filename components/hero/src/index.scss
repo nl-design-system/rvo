@@ -35,6 +35,20 @@
     font-weight: var(--rvo-hero-subtitle-font-weight);
     line-height: var(--rvo-hero-subtitle-line-height);
   }
+
+  &--lichtblauw {
+    .rvo-hero {
+      &__content {
+        background-color: var(--rvo-hero-kind-lichtblauw-background-color);
+        color: var(--rvo-hero-kind-lichtblauw-color);
+      }
+
+      &__title,
+      &__subtitle {
+        color: var(--rvo-hero-kind-lichtblauw-color);
+      }
+    }
+  }
 }
 
 .rvo-hero__image-container {
@@ -53,6 +67,26 @@
 
   @media (min-width: 780px) {
     border-end-end-radius: var(--rvo-hero-border-end-end-radius);
+  }
+
+  &--lined {
+    &::after {
+      border-color: var(--rvo-hero-image-line-border-color);
+      border-end-start-radius: var(--rvo-hero-image-line-border-radius);
+      border-style: var(--rvo-hero-image-line-border-style);
+      border-width: var(--rvo-hero-image-line-border-width);
+      content: "";
+      display: block;
+      height: 100%;
+      inset-block-start: calc(#{var(--rvo-hero-image-line-inset)} + -25%);
+      inset-inline-end: var(--rvo-hero-image-line-inset);
+      position: absolute;
+      width: 100%;
+
+      @media (min-width: 540px) {
+        inset-block-start: var(--rvo-hero-image-line-inset);
+      }
+    }
   }
 }
 

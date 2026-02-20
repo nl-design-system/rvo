@@ -29,12 +29,14 @@ export interface IHeroProps {
   subtitle?: string;
   size?: 'sm' | 'md' | 'lg';
   children?: ReactNode | undefined;
+  kind?: 'lichtblauw';
+  showLine?: boolean;
 }
 
 type HeroProps = IHeroProps & React.HTMLAttributes<HTMLDivElement>;
 
 export const Hero: React.FC<HeroProps> = (props) => {
-  const { image, title, subtitle, size, className, children, ...rootElementProps } = props;
+  const { image, title, subtitle, size, className, children, kind, showLine, ...rootElementProps } = props;
 
   // Parse content markup (either a string, HTML string, React node or children)
   const contentMarkup: string | ReactNode = parseContentMarkup(children);
@@ -68,8 +70,14 @@ export const Hero: React.FC<HeroProps> = (props) => {
   };
 
   return (
-    <MaxWidthLayout size={size} className={clsx('rvo-hero', className)} {...rootElementProps}>
-      <div className="rvo-hero__image-container">{renderImage()}</div>
+    <MaxWidthLayout
+      size={size}
+      className={clsx('rvo-hero', kind && `rvo-hero--${kind}`, className)}
+      {...rootElementProps}
+    >
+      <div className={clsx('rvo-hero__image-container', showLine && 'rvo-hero__image-container--lined')}>
+        {renderImage()}
+      </div>
       {(title || subtitle || contentMarkup) && (
         <div className="rvo-hero__content">
           {title && (
