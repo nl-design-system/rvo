@@ -1,5 +1,11 @@
 # `@nl-rvo/css-grid`
 
+## 3.1.2
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 3.1.1
 
 ### Patch Changes
