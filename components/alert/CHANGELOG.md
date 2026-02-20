@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.5.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.5.0
 
 ### Minor Changes
