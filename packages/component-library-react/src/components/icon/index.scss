@@ -1,0 +1,66 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "~@utrecht/icon/dist/index.css" as *;
+
+.rvo-icon {
+  background-color: var(--utrecht-icon-color, currentColor);
+  min-width: var(--utrecht-icon-size);
+}
+
+.rvo-icon--xs {
+  --utrecht-icon-size: var(--rvo-icon-xs-width);
+}
+
+.rvo-icon--sm {
+  --utrecht-icon-size: var(--rvo-icon-sm-width);
+}
+
+.rvo-icon--md {
+  --utrecht-icon-size: var(--rvo-icon-md-width);
+}
+
+.rvo-icon--lg {
+  --utrecht-icon-size: var(--rvo-icon-lg-width);
+}
+
+.rvo-icon--xl {
+  --utrecht-icon-size: var(--rvo-icon-xl-width);
+}
+
+.rvo-icon--2xl {
+  --utrecht-icon-size: var(--rvo-icon-2xl-width);
+}
+
+.rvo-icon--3xl {
+  --utrecht-icon-size: var(--rvo-icon-3xl-width);
+}
+
+.rvo-icon--4xl {
+  --utrecht-icon-size: var(--rvo-icon-4xl-width);
+}
+
+.rvo-icon--wit {
+  --utrecht-icon-color: var(--rvo-color-wit);
+}
+
+.rvo-icon--hemelblauw {
+  --utrecht-icon-color: var(--rvo-color-hemelblauw);
+}
+
+.rvo-icon--donkerblauw {
+  --utrecht-icon-color: var(--rvo-color-donkerblauw);
+}
+
+.rvo-icon--lintblauw {
+  --utrecht-icon-color: var(--rvo-color-lintblauw);
+}
+
+.rvo-icon--zwart {
+  --utrecht-icon-color: var(--rvo-color-zwart);
+}
+
+.rvo-icon--grijs-700 {
+  --utrecht-icon-color: var(--rvo-color-grijs-700);
+}

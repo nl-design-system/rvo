@@ -4,7 +4,11 @@
  */
 
 // Components by RVO (included wrapped components from NL Design System community)
+
 export * from '../../../components';
+
+export * from './components/accordion';
+export * from './components/quote';
 
 // ThemeProvider
 export { default as ThemeProvider } from './ThemeProvider';

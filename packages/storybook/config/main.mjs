@@ -17,6 +17,8 @@ const config = (() => {
   const componentsPath = path.resolve(__dirname, '../../../components');
   const utilitiesPath = path.resolve(__dirname, '../../../utilities');
 
+  const storiesPath = path.resolve(__dirname, '../../storybook-react');
+
   function getPackageDir(filepath) {
     let currDir = path.dirname(require.resolve(filepath));
     while (true) {
@@ -62,6 +64,8 @@ const config = (() => {
       `${componentsPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
       `${utilitiesPath}/**!(node_modules)/*.docpage.mdx`,
       `${utilitiesPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
+      `${storiesPath}/**!(node_modules)/**/*.stories.@(jsx|tsx)`,
+      `${storiesPath}/**!(node_modules)/**/*.docpage.mdx`,
     ],
 
     addons: [

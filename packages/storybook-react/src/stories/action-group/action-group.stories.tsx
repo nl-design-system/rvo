@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from './src/defaultArgs';
-import { ActionGroup } from './src/template';
+import { ActionGroup } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/action-group/defaultArgs';
 
 const meta: Meta<typeof ActionGroup> = {
   title: 'Componenten/Action group',

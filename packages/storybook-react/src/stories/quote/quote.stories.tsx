@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { IQuoteProps, Quote } from './src/template';
+import { IQuoteProps, Quote } from '@nl-rvo/component-library-react';
 
 const defaultArgs = {
   quote: 'Stories of imagination tend to upset those without one.',

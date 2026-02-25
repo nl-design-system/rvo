@@ -1,0 +1,41 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rvo-breadcrumbs {
+  --rvo-breadcrumbs-gap: var(--rvo-space-2xs, 4px) var(--rvo-space-sm, 12px);
+  --rvo-breadcrumbs-item-gap: var(--rvo-space-sm, 12px);
+  --rvo-breadcrumbs-font-size: inherit;
+
+  align-items: baseline; // Override the align items coming from .rvo-layout-row
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: var(--rvo-breadcrumbs-font-size);
+  gap: var(--rvo-breadcrumbs-gap);
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+
+  &--sm {
+    --rvo-breadcrumbs-font-size: var(--rvo-breadcrumbs-sm-font-size);
+  }
+
+  &--md {
+    --rvo-breadcrumbs-font-size: var(--rvo-breadcrumbs-md-font-size);
+  }
+
+  &--lg {
+    --rvo-breadcrumbs-font-size: var(--rvo-breadcrumbs-lg-font-size);
+  }
+}
+
+.rvo-breadcrumbs-item {
+  align-items: baseline; // Override the align items coming from .rvo-layout-row
+  display: flex;
+  flex-direction: row;
+  gap: var(--rvo-breadcrumbs-item-gap);
+}

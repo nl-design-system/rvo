@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-alpha.38",
+  "author": "Community for NL Design System",
+  "description": "Base components for the RVO design system based on the NL Design System architecture",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/storybook-react",
+  "keywords": [
+    "nl-design-system",
+    "rvo",
+    "ROOS"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components"
+  },
+  "devDependencies": {
+    "@nl-rvo/component-library-react": "workspace:*"
+  }
+}

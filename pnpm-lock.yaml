@@ -964,6 +964,12 @@ importers:
         specifier: 5.105.0
         version: 5.105.0(esbuild@0.18.20)
 
+  packages/storybook-react:
+    devDependencies:
+      '@nl-rvo/component-library-react':
+        specifier: workspace:*
+        version: link:../component-library-react
+
   packages/uxpin-merge:
     dependencies:
       '@date-io/date-fns':

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from './src/defaultArgs';
-import { Accordion, argTypes } from './src/template';
+import { Accordion, argTypes } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/accordion/defaultArgs';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Componenten/Accordion',
