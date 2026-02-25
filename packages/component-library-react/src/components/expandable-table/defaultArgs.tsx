@@ -1,7 +1,7 @@
-import TableBody from '@nl-rvo/components/expandable-table/src/table-body/template';
-import TableCell from '@nl-rvo/components/expandable-table/src/table-cell/template';
-import TableHead from '@nl-rvo/components/expandable-table/src/table-head/template';
-import TableRow from '@nl-rvo/components/expandable-table/src/table-row/template';
+import TableBody from './table-body';
+import TableCell from './table-cell';
+import TableHead from './table-head';
+import TableRow from './table-row';
 import { ITableProps } from './';
 
 export const defaultArgs: ITableProps = {

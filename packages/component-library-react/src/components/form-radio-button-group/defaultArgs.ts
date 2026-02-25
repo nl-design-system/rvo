@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 import { IRadioButtonGroupProps } from './';
-import { IRadioButtonProps } from '../../form-radio-button/src';
+import { IRadioButtonProps } from '../form-radio-button';
 
 const defaultOptions: IRadioButtonProps[] = [
   { id: 'optionA', label: 'Option A' },

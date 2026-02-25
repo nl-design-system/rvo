@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { ReactNode } from 'react';
-import '../../../max-width-layout/src/index.scss';
+import '@nl-rvo/css-max-width-layout/dist/index.css';
 import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { defaultArgs } from '../defaultArgs';
 import '@nl-rvo/css-sidebar-layout/dist/index.css';

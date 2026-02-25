@@ -54,7 +54,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps & React.HTMLAttribute
   let parsedContent = parseContentMarkup(children || content);
 
   if (!children && typeof parsedContent === 'string' && parsedContent.indexOf('{maxWidth}') > -1) {
-    let maxWidth;
+    let maxWidth = '';
     switch (size) {
       case 'sm':
         maxWidth = designTokens.rvoLayoutMaxWidthSm;
