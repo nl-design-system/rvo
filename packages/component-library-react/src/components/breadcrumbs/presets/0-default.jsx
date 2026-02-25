@@ -1,4 +1,4 @@
-import BreadcrumbsItem from '../breadcrumbs-item/template';
+import BreadcrumbsItem from '../breadcrumbs-item';
 import { defaultArgs } from '../defaultArgs';
 import Breadcrumbs from '../template';
 

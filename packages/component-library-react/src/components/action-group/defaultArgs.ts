@@ -1,4 +1,4 @@
-import { IActionGroupProps } from './template';
+import { IActionGroupProps } from './';
 
 const defaultButtonsLeft = [
   {

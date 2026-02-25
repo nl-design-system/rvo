@@ -1,4 +1,4 @@
-import { IAlertProps } from './template';
+import { IAlertProps } from './';
 
 export const defaultArgs: IAlertProps = {
   kind: 'info',

@@ -1,6 +1,5 @@
 import React, { HTMLAttributes } from 'react';
 import { isOfType } from '../../utils/typeUtils';
-
 import '@nl-rvo/css-quote/dist/index.css';
 
 type QuoteUser = {
@@ -29,7 +28,7 @@ export const Quote: React.FC<IQuoteProps & HTMLAttributes<HTMLDivElement>> = ({ 
 
   return (
     <div className="rvo-quote" {...rootElementProps}>
-      <span className="rvo-quote__quote">"{quote}"</span>c
+      <span className="rvo-quote__quote">"{quote}"</span>
       <div className="rvo-quote__user">
         {user.image && <div className="rvo-quote__image">{renderImage()}</div>}
         <div className="rvo-quote__credentials">

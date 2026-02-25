@@ -1,4 +1,4 @@
-// import { iconNames as iconOptions } from '../icon/template';
+// import { iconNames as iconOptions } from '../icon';
 import { IButtonProps } from './';
 
 export const defaultArgs: IButtonProps = {
