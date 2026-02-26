@@ -1,5 +1,11 @@
 # @nl-rvo/counter-badge
 
+## 1.0.3
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.0.2
 
 ### Patch Changes

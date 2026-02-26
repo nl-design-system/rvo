@@ -1,5 +1,11 @@
 # `@nl-rvo/css-horizontal-rule`
 
+## 1.2.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.0
 
 ### Minor Changes

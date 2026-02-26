@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.6.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.6.0
 
 ### Minor Changes

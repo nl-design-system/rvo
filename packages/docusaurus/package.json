@@ -43,7 +43,7 @@
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
     "@mdx-js/react": "3.1.0",
-    "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/assets": "1.0.0",
     "@nl-rvo/component-library-css": "workspace:*",
     "@nl-rvo/components": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
