@@ -122,7 +122,7 @@ importers:
     devDependencies:
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
-        version: 1.0.0-alpha.360
+        version: link:../proprietary/assets
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
@@ -806,7 +806,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
-        version: 1.0.0-alpha.360
+        version: link:../../proprietary/assets
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
@@ -866,7 +866,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
-        version: 1.0.0-alpha.360
+        version: link:../../proprietary/assets
       '@nl-rvo/component-library-css':
         specifier: file:../component-library-css
         version: link:../component-library-css
@@ -995,7 +995,7 @@ importers:
         version: 7.23.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@mui/material@5.15.13(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.17.1(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(date-fns@3.4.0)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
-        version: 1.0.0-alpha.360
+        version: link:../../proprietary/assets
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -1076,6 +1076,12 @@ importers:
         specifier: 4.1.1
         version: 4.1.1(file-loader@6.2.0(webpack@5.96.1))(webpack@5.96.1)
 
+  proprietary/assets:
+    devDependencies:
+      sass:
+        specifier: ^1.69.7
+        version: 1.97.2
+
   proprietary/design-tokens:
     devDependencies:
       chokidar-cli:
@@ -1095,7 +1101,7 @@ importers:
     devDependencies:
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
-        version: 1.0.0-alpha.360
+        version: link:../proprietary/assets
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
@@ -3896,9 +3902,6 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
-
-  '@nl-rvo/assets@1.0.0-alpha.360':
-    resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -19586,8 +19589,6 @@ snapshots:
 
   '@next/swc-win32-x64-msvc@14.2.33':
     optional: true
-
-  '@nl-rvo/assets@1.0.0-alpha.360': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
