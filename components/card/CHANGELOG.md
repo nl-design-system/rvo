@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.6.2
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.6.1
 
 ### Patch Changes

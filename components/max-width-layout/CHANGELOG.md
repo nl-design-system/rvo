@@ -1,5 +1,11 @@
 # `@nl-rvo/css-max-width-layout`
 
+## 1.2.5
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field-label`
 
+## 1.3.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.3.0
 
 ### Minor Changes

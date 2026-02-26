@@ -1,5 +1,11 @@
 # `@nl-rvo/css-scrollable-content`
 
+## 1.2.2
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.1
 
 ### Patch Changes

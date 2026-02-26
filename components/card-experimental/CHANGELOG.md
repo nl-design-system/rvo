@@ -1,5 +1,11 @@
 # @nl-rvo/card-experimental
 
+## 0.2.2
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 0.2.1
 
 ### Patch Changes
