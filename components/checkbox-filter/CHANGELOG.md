@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.1.3
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 3.1.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox-group`
 
+## 1.2.7
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.6
 
 ### Patch Changes

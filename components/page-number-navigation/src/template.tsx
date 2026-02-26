@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode, useEffect, useMemo, useState } from 'react';
+import React, { HTMLAttributes, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import Link from '../../link/src/template';
 import './index.scss';
 
@@ -20,51 +20,46 @@ const generatePageNumbers = (
   onPageChange?: IPageNumberNavigation['onPageChange'],
 ): ReactNode[] => {
   const pages: ReactNode[] = [];
+  const windowSize = 5;
 
-  // Always add the first page
-  pages.push(generatePageNumber(1, activePage, onPageChange));
+  // helper
+  const addRange = (from: number, to: number) => {
+    for (let p = from; p <= to; p++) {
+      pages.push(generatePageNumber(p, activePage, onPageChange));
+    }
+  };
 
-  // Add ellipses if the active page is more than 4
-  if (activePage > 4) {
-    pages.push(generateEllipses('ellipses-1'));
-  }
-  if (activePage === 4) {
-    pages.push(generatePageNumber(2, activePage, onPageChange));
-  }
-
-  // Add the page before the active page if it's more than 2
-  if (activePage > 2) {
-    pages.push(generatePageNumber(activePage - 1, activePage, onPageChange));
+  if (totalPages <= windowSize) {
+    // 1..N
+    addRange(1, totalPages);
+    return pages;
   }
 
-  // Add the active page if it's not the first or last page
-  if (activePage > 1 && activePage < totalPages) {
-    pages.push(generatePageNumber(activePage, activePage, onPageChange));
-  }
-
-  // Add the page after the active page if it's less than total pages minus 1 and not the last page
-  if (activePage < totalPages - 1 && activePage !== totalPages - 2) {
-    pages.push(generatePageNumber(activePage + 1, activePage, onPageChange));
-  }
-
-  // Add ellipses if the active page is less than the total pages minus 3
-  if (activePage < totalPages - 3) {
-    pages.push(generateEllipses('ellipses-2'));
-  }
-
-  // Add the second last page if the active page is less than the total pages minus 1 and greater than or equal to total pages minus 3
-  if (activePage < totalPages - 1 && activePage >= totalPages - 3) {
-    pages.push(generatePageNumber(totalPages - 1, activePage, onPageChange));
-  }
-
-  // Always add the last page
-  if (totalPages !== 1) {
+  // Begin: 1 2 3 4 5 ... last
+  if (activePage <= 3) {
+    addRange(1, 5);
+    pages.push(generateEllipses('ellipses-end'));
     pages.push(generatePageNumber(totalPages, activePage, onPageChange));
+    return pages;
   }
+
+  // Eind: 1 ... last-4 last-3 last-2 last-1 last
+  if (activePage >= totalPages - 2) {
+    pages.push(generatePageNumber(1, activePage, onPageChange));
+    pages.push(generateEllipses('ellipses-start'));
+    addRange(totalPages - 4, totalPages);
+    return pages;
+  }
+
+  // Midden: 1 ... p-1 p p+1 ... last
+  pages.push(generatePageNumber(1, activePage, onPageChange));
+  pages.push(generateEllipses('ellipses-start'));
+  addRange(activePage - 1, activePage + 1);
+  pages.push(generateEllipses('ellipses-end'));
+  pages.push(generatePageNumber(totalPages, activePage, onPageChange));
 
   return pages;
 };
-
 const generatePageNumber = (pageNumber: number, active?: number, onPageChange?: (page: number) => void) => (
   <li
     key={pageNumber}
@@ -101,11 +96,9 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
   numberOfPages,
   onPageChange,
   ...htmlAttributes
-}: IPageNumberNavigation) => {
-  // Define internal active page state based on the activePage prop
+}) => {
   const [internalActivePage, setInternalActivePage] = useState(activePage);
 
-  // Update the internal active page state when the activePage prop changes
   useEffect(() => {
     setInternalActivePage(activePage);
   }, [activePage]);
@@ -120,11 +113,13 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
     return null;
   }
 
-  // Define a function to handle page changes
-  const handlePageChange = (newPage: number) => {
-    setInternalActivePage(newPage);
-    onPageChange?.(newPage);
-  };
+  const handlePageChange = useCallback(
+    (newPage: number) => {
+      setInternalActivePage(newPage);
+      onPageChange?.(newPage);
+    },
+    [onPageChange],
+  );
 
   const pageNumbers = useMemo(
     () => generatePageNumbers(numberOfPages, internalActivePage, handlePageChange),
@@ -139,21 +134,29 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
             aria-label="Delta naar links"
             href="#"
             icon="delta-naar-links"
-            onClick={() => handlePageChange(internalActivePage - 1)}
+            onClick={(e) => {
+              e.preventDefault();
+              handlePageChange(internalActivePage - 1);
+            }}
             showIcon="before"
           >
             Vorige
           </Link>
         </div>
       )}
+
       <ul className="rvo-pagination__list">{pageNumbers}</ul>
+
       {numberOfPages > 1 && internalActivePage < numberOfPages && (
         <div className="rvo-pagination__next">
           <Link
             aria-label="Delta naar rechts"
             href="#"
             icon="delta-naar-rechts"
-            onClick={() => handlePageChange(internalActivePage + 1)}
+            onClick={(e) => {
+              e.preventDefault();
+              handlePageChange(internalActivePage + 1);
+            }}
             showIcon="after"
           >
             Volgende

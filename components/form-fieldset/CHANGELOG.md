@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-fieldset`
 
+## 1.4.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.4.0
 
 ### Minor Changes

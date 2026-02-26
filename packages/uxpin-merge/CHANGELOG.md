@@ -1,5 +1,12 @@
 # @nl-rvo/uxpin-merge
 
+## 1.4.2
+
+### Patch Changes
+
+- Updated dependencies [1a11008]
+  - @nl-rvo/assets@1.0.0
+
 ## 1.4.1
 
 ### Patch Changes

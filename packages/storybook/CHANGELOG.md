@@ -1,5 +1,11 @@
 # @nl-rvo/storybook
 
+## 2.0.0
+
+### Major Changes
+
+- 11eb258: update storybook from v7 to v10.2.7
+
 ## 1.2.0
 
 ### Minor Changes

@@ -181,6 +181,37 @@
   .rvo-card__image {
     object-fit: cover;
   }
+
+  &.rvo-card__image-lined {
+    .rvo-card__image-container {
+      position: relative;
+
+      &::after {
+        border-color: var(--rvo-card-image-line-border-color);
+        border-style: var(--rvo-card-image-line-border-style);
+        border-width: var(--rvo-card-image-line-border-width);
+        content: "";
+        display: block;
+        height: 100%;
+        inset-block-start: var(--rvo-card-image-line-inset);
+        inset-inline-end: var(--rvo-card-image-line-inset);
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    &--top-right .rvo-card__image-container::after {
+      --rvo-card-image-line-inset: -50%;
+
+      border-end-start-radius: var(--rvo-card-image-line-border-radius);
+    }
+
+    &--bottom-left .rvo-card__image-container::after {
+      --rvo-card-image-line-inset: 50%;
+
+      border-start-end-radius: var(--rvo-card-image-line-border-radius);
+    }
+  }
 }
 
 .rvo-card__full-card-link:hover,
