@@ -1,0 +1,34 @@
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as FormFieldCheckboxStories from "@nl-rvo/storybook-react/src/stories/form-field-checkbox/form-field-checkbox.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+import fieldDocumentation from "../form-field/README.md";
+
+<Meta of={FormFieldCheckboxStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormFieldCheckboxStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+<Markdown>{fieldDocumentation}</Markdown>
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
+_@nl-rvo/css-expandable-content_
+_@nl-rvo/css-form-feedback_
+_@nl-rvo/css-form-field_
+_@nl-rvo/css-form-field-label_
+_@nl-rvo/css-form-checkbox-group_
+_@nl-rvo/css-icon_

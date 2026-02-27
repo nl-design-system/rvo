@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as TableStories from "@nl-rvo/storybook-react/src/stories/expandable-table/table.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={TableStories} name="Documentatie" />
+
+<Title />
+
+## Preview
+
+<Canvas of={TableStories.Default} layout="padded" />
+## Parameters
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

@@ -1,0 +1,20 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "@nl-rvo/css-quote/CHANGELOG.md?raw";
+import documentation from "@nl-rvo/css-quote/README.md?raw";
+import * as QuoteStories from "@nl-rvo/storybook-react/src/stories/quote/quote.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={QuoteStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={QuoteStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

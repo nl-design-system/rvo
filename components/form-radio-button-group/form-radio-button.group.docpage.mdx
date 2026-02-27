@@ -1,0 +1,25 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as FormRadioButtonGroupStories from "@nl-rvo/storybook-react/src/stories/form-radio-button-group/form-radio-button.group.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={FormRadioButtonGroupStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormRadioButtonGroupStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/css-form-radio-button_

@@ -1,0 +1,20 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as ListStories from "@nl-rvo/storybook-react/src/stories/ordered-unordered-list/ordered-unordered-list.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={ListStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={ListStories.Default} layout="padded" />
+<Controls />
+
+# Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

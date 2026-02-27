@@ -1,0 +1,24 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as LinkStories from "@nl-rvo/storybook-react/src/stories/link/link.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={LinkStories} name="Documentatie" />
+
+<Title />
+<Canvas of={LinkStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
+_@nl-rvo/css-icon_

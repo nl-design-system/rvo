@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as MenubarMobileStories from "@nl-rvo/storybook-react/src/stories/menubar-mobile/menubar.mobile.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={MenubarMobileStories} name="Documentatie" />
+
+<Title />
+<Canvas of={MenubarMobileStories.Default} layout="fullscreen" className="autoHeight" />
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
+_@nl-rvo/css-icon_
+_@nl-rvo/css-button_
+_@nl-rvo/css-dialog_
+_@nl-rvo/css-menubar_

@@ -85,4 +85,4 @@ export * from './components/link';
 export * from './components/form-autocomplete';
 
 // ThemeProvider
-export { default as ThemeProvider } from './ThemeProvider';
+export * from './ThemeProvider';

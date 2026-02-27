@@ -1,0 +1,22 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as SkipLinkStories from "@nl-rvo/storybook-react/src/stories/skip-link/skip-link.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={SkipLinkStories} name="Documentatie" />
+
+<Title />
+
+Druk op TAB om de skip link knop te tonen.
+
+<Canvas of={SkipLinkStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

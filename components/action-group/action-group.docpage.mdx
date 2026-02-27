@@ -1,0 +1,24 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "./CHANGELOG.md";
+import documentation from "./README.md";
+import * as ActionGroupStories from "@nl-rvo/storybook-react/src/stories/action-group/action-group.stories";
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+
+<Meta of={ActionGroupStories} name="Documentatie" />
+
+<Title />
+<Canvas of={ActionGroupStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/css-button_
+_@nl-rvo/css-layout-flow_
