@@ -21,6 +21,7 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   busy?: boolean;
   fullWidth?: boolean;
   className?: string;
+  type?: 'submit' | 'reset' | 'button' | undefined;
   /** @uxpinpropname On Focus */
   onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Blur */
