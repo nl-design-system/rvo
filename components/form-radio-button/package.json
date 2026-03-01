@@ -32,6 +32,6 @@
     "@nl-rvo/build-utils-css": "workspace:*"
   },
   "dependencies": {
-    "@utrecht/radio-button-css": "1.5.0"
+    "@utrecht/radio-button-css": "2.0.1"
   }
 }
