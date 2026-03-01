@@ -382,8 +382,8 @@ importers:
   components/heading:
     dependencies:
       '@utrecht/heading-1-css':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 2.0.1
+        version: 2.0.1
       '@utrecht/heading-2-css':
         specifier: 1.4.0
         version: 1.4.0
@@ -5920,11 +5920,11 @@ packages:
   '@utrecht/form-toggle-css@1.5.1':
     resolution: {integrity: sha512-WV8sXe/Jt4Ol/0ynjbFkqdMbDQQBY7JBmEHPQJJkoRmfS9SU9EgPbGcZjH2e8++lumXQiKxc1WddWcnJAT77Eg==}
 
-  '@utrecht/heading-1-css@1.4.0':
-    resolution: {integrity: sha512-YNBWZKdRfR1xuvg+QZy7MM5dwRpnNc78Rcz4u1Opmeocuhm2QwocJuSCI3BjS/AUNaS8s6DC8S6a3HIA3jGAQw==}
-
   '@utrecht/heading-1-css@1.5.1':
     resolution: {integrity: sha512-ihsXPIhPKW9CXlgnPJQxeuF05wQhxPIDEqStGarn89EnBDon9KCMzoiUEA19UiX06XBs8rv3pAduw2qfFX9wnQ==}
+
+  '@utrecht/heading-1-css@2.0.1':
+    resolution: {integrity: sha512-P040ieAAdOi/hjQYfwzywS1Jbi4LgR1we4vpAYMIK63WUtozvs+9GPDvBsRYxQXBcLD4FOkkvkNZbDHnIzTkzQ==}
 
   '@utrecht/heading-2-css@1.4.0':
     resolution: {integrity: sha512-4hLk0FcRE0asB0ZXmK2/JVId/3ywFSljwybuW1c2W/sa+rEfEZZE+l8+vtuG6JiY30omJpxQ+RjxltRi+pH8UQ==}
@@ -22201,9 +22201,9 @@ snapshots:
 
   '@utrecht/form-toggle-css@1.5.1': {}
 
-  '@utrecht/heading-1-css@1.4.0': {}
-
   '@utrecht/heading-1-css@1.5.1': {}
+
+  '@utrecht/heading-1-css@2.0.1': {}
 
   '@utrecht/heading-2-css@1.4.0': {}
 
