@@ -262,8 +262,8 @@ importers:
   components/form-field:
     dependencies:
       '@utrecht/form-field-css':
-        specifier: 1.5.0
-        version: 1.5.0
+        specifier: 2.0.1
+        version: 2.0.1
       '@utrecht/form-field-description-css':
         specifier: 1.5.0
         version: 1.5.0
@@ -806,7 +806,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
@@ -866,7 +866,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/component-library-css':
         specifier: file:../component-library-css
         version: link:../component-library-css
@@ -995,7 +995,7 @@ importers:
         version: 7.23.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@mui/material@5.15.13(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.17.1(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(date-fns@3.4.0)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -3903,6 +3903,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@nl-rvo/assets@1.0.0':
+    resolution: {integrity: sha512-YEhM9bzgtsTFU1rbDhjm9oraHHCdeC9DqhiB473y4/NYaaENW8eP7ZCJYcEdG4ax/1tyDoC5e0FSkZNIgz4gJA==}
+
   '@nl-rvo/assets@1.0.0-alpha.360':
     resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
 
@@ -5865,11 +5868,11 @@ packages:
       react: '18'
       react-dom: '18'
 
-  '@utrecht/form-field-css@1.5.0':
-    resolution: {integrity: sha512-PGqIYHYlqQKuADgIIQF4niS6XO1VeUv6OWrWDrLbFw0JkKtNwU9Y3ALtb5mSmgXAKOUHEtI7scwFqOxYgKztsw==}
-
   '@utrecht/form-field-css@1.5.1':
     resolution: {integrity: sha512-EILCtMcMk3LgTT5pUjna0vKA5S77Av1+fgqgfApEWU7y0wcC8UcYdD7Ujl3goJShhO02Fo7AYM3befJQgYBtuQ==}
+
+  '@utrecht/form-field-css@2.0.1':
+    resolution: {integrity: sha512-POiAK/I92tjXHwzBnLCA0BChQWPH0aF0BkF0qB8+Ouc+omkOcvMBmQrz2hgEpEa1W7kenXh/YkL7+/uB9fq0qw==}
 
   '@utrecht/form-field-description-css@1.5.0':
     resolution: {integrity: sha512-LGImfd2xFuNPvycIQzwtTg2UIAo9T06MI/KoTbchB56lPzXLmictzfn2rGDzZuaemWTwkxqKUzorLXqdonZ22Q==}
@@ -19593,6 +19596,8 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.33':
     optional: true
 
+  '@nl-rvo/assets@1.0.0': {}
+
   '@nl-rvo/assets@1.0.0-alpha.360': {}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -22155,9 +22160,9 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/form-field-css@1.5.0': {}
-
   '@utrecht/form-field-css@1.5.1': {}
+
+  '@utrecht/form-field-css@2.0.1': {}
 
   '@utrecht/form-field-description-css@1.5.0': {}
 
