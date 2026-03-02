@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 2.0.2
+
+### Patch Changes
+
+- 8e4ad8b: Update Button component with type parameter
+
 ## 2.0.1
 
 ### Patch Changes

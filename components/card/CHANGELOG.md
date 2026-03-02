@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.7.0
+
+### Minor Changes
+
+- 8f77b41: New option for image (overlay) lines.
+
 ## 1.6.2
 
 ### Patch Changes

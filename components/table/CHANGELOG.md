@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.8.0
+
+### Minor Changes
+
+- 13f0d9c: Update scss and fix right font for wrapped button insde <th>.
+
 ## 1.7.1
 
 ### Patch Changes

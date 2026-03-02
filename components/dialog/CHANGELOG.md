@@ -1,5 +1,11 @@
 # `@nl-rvo/css-dialog`
 
+## 1.4.5
+
+### Patch Changes
+
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
 ## 1.4.4
 
 ### Patch Changes

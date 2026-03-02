@@ -1,5 +1,12 @@
 # @nl-rvo/design-tokens
 
+## 2.2.0
+
+### Minor Changes
+
+- 8f77b41: New option for image (overlay) lines.
+- a8c9e6f: Hero tokens expanded with kind option and lined design
+
 ## 2.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.3.2
+
+### Patch Changes
+
+- c780f1e: Aligned TextArea character counter to the left
+
 ## 1.3.1
 
 ### Patch Changes
