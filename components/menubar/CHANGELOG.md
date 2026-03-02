@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar`
 
+## 1.5.2
+
+### Patch Changes
+
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
 ## 1.5.1
 
 ### Patch Changes

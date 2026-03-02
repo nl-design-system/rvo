@@ -1,5 +1,11 @@
 # `@nl-rvo/css-pagination`
 
+## 1.4.0
+
+### Minor Changes
+
+- 8b8710c: Update page number navigation: always show 5 items from page 1 and 5 items before the last page (with ellipses between ranges when needed).
+
 ## 1.3.1
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @nl-rvo/component-library-react
 
+## 6.2.0
+
+### Minor Changes
+
+- 8f77b41: New option for image (overlay) lines.
+- a8c9e6f: Updated Hero component with the support of the kind and showLine parameter
+- 8b8710c: Update page number navigation: always show 5 items from page 1 and 5 items before the last page (with ellipses between ranges when needed).
+
+### Patch Changes
+
+- 8e4ad8b: Update Button component with type parameter
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+- c780f1e: Aligned TextArea character counter to the left
+
 ## 6.1.0
 
 ### Minor Changes
