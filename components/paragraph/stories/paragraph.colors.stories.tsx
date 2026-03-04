@@ -22,7 +22,6 @@ export default {
 
 export const Zwart = {
   render: Paragraph.bind({}),
-  name: 'Zwart',
   args: {
     color: 'zwart',
   },
@@ -30,7 +29,6 @@ export const Zwart = {
 
 export const Lintblauw = {
   render: Paragraph.bind({}),
-  name: 'Lintblauw',
   args: {
     color: 'lintblauw',
   },
@@ -38,7 +36,6 @@ export const Lintblauw = {
 
 export const Wit = {
   render: Paragraph.bind({}),
-  name: 'Wit',
   args: {
     color: 'wit',
   },
@@ -46,7 +43,6 @@ export const Wit = {
 
 export const Grijs500 = {
   render: Paragraph.bind({}),
-  name: 'Grijs 500',
   args: {
     color: 'grijs-500',
   },
@@ -54,7 +50,6 @@ export const Grijs500 = {
 
 export const Grijs900 = {
   render: Paragraph.bind({}),
-  name: 'Grijs 900',
   args: {
     color: 'grijs-900',
   },

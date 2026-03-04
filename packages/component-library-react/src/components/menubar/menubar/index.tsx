@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
-import { IconType } from '../../icon/types';
 import { MaxWidthLayout } from '../../../index';
+import { IconType } from '../../icon/types';
 // eslint-disable-next-line import/order
 import { defaultArgs } from '../defaultArguments';
 

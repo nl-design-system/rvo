@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/menubar/defaultArguments';
 import { MenuBar } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/menubar/defaultArguments';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof MenuBar> = {
   title: 'Componenten/Menubar',

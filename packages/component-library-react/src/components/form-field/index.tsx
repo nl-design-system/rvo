@@ -4,10 +4,10 @@
  */
 import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import { ExpandableContent } from '../expandable-content';
 import { Feedback } from '../form-feedback';
 import { Label } from '../form-field-label';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/form-field.css';
 
 export interface IFieldProps {

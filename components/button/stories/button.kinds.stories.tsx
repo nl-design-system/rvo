@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/button/defaultArgs';
 import { argTypes, Button } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/button/defaultArgs';
 
 export default {
   title: 'Componenten/Button/Kinds',
@@ -23,7 +23,6 @@ export default {
 
 export const Primary = {
   render: Button,
-  name: 'Primary',
 
   args: {
     ...defaultArgs,
@@ -33,7 +32,6 @@ export const Primary = {
 
 export const Secondary = {
   render: Button,
-  name: 'Secondary',
 
   args: {
     ...defaultArgs,
@@ -43,7 +41,6 @@ export const Secondary = {
 
 export const Tertiary = {
   render: Button,
-  name: 'Tertiary',
 
   args: {
     ...defaultArgs,
@@ -53,7 +50,6 @@ export const Tertiary = {
 
 export const Quaternary = {
   render: Button,
-  name: 'Quaternary',
 
   args: {
     ...defaultArgs,
@@ -73,7 +69,6 @@ export const WarningSubtle = {
 
 export const Warning = {
   render: Button,
-  name: 'Warning',
 
   args: {
     ...defaultArgs,

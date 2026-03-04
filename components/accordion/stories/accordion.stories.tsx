@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Accordion, argTypes } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/accordion/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Componenten/Accordion',
@@ -8,9 +8,7 @@ const meta: Meta<typeof Accordion> = {
   args: defaultArgs,
   argTypes,
   parameters: {
-    status: {
-      type: 'PRODUCTION',
-    },
+    status: 'PRODUCTION',
     docusaurus: {
       link: 'accordion',
     },

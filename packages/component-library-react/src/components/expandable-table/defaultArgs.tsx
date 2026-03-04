@@ -1,8 +1,8 @@
+import { ITableProps } from './';
 import TableBody from './table-body';
 import TableCell from './table-cell';
 import TableHead from './table-head';
 import TableRow from './table-row';
-import { ITableProps } from './';
 
 export const defaultArgs: ITableProps = {
   caption: 'My table description',

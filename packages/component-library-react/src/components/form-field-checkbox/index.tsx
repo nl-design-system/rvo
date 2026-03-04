@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { argTypes as checkboxArgTypes, CheckboxGroup, ICheckboxGroupProps } from '../form-checkbox-group';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from '../form-field';
-import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface ICheckboxFieldProps extends IFieldProps, ICheckboxGroupProps {}
 

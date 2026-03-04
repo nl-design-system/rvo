@@ -5,8 +5,8 @@
 import React, { ReactNode } from 'react';
 import '@nl-rvo/component-library-css/dist/components/form-feedback.css';
 import { defaultArgs } from './defaultArgs';
-import { StatusIcon } from '../status-icon';
 import parseContentMarkup from '../../utils/parseContentMarkup';
+import { StatusIcon } from '../status-icon';
 
 export interface IFeedbackProps {
   /** @uxpinignoreprop */

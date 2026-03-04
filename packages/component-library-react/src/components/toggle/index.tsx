@@ -5,10 +5,10 @@
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import { Icon, iconOptions } from '../icon';
 import { IconType } from '../icon/types';
 import '@nl-rvo/component-library-css/dist/components/toggle.css';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IToggleProps {
   /** @uxpinignoreprop */

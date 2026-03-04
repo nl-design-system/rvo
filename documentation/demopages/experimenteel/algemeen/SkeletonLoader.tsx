@@ -1,4 +1,4 @@
-import { Card, Grid, Heading, LayoutFlow, StatusIcon, Skeleton } from '@nl-rvo/component-library-react';
+import { Card, Grid, Heading, LayoutFlow, Skeleton, StatusIcon } from '@nl-rvo/component-library-react';
 import '../../common/loading.scss';
 import { useEffect, useState } from 'react';
 

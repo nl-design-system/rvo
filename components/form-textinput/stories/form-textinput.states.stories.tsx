@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textinput/defaultArgs';
 import { argTypes, TextInput } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textinput/defaultArgs';
 
 export default {
   title: 'Componenten/Text input/States',
@@ -21,7 +21,6 @@ export default {
 
 export const Invalid = {
   render: TextInput.bind({}),
-  name: 'Invalid',
 
   args: {
     ...defaultArgs,
@@ -31,7 +30,6 @@ export const Invalid = {
 
 export const Focus = {
   render: TextInput.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,
@@ -41,7 +39,6 @@ export const Focus = {
 
 export const Disabled = {
   render: TextInput.bind({}),
-  name: 'Disabled',
 
   args: {
     ...defaultArgs,

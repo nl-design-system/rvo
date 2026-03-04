@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, useState } from 'react';
+import { Icon } from '../../index';
 import Button from '../button';
 import Dialog from '../dialog';
-import { Icon } from '../../index';
 import { MobileMenuItem } from './menu-item';
 import { IMenuBarItem } from '../menubar/menubar';
 import '@nl-rvo/component-library-css/dist/components/menubar-mobile.css';

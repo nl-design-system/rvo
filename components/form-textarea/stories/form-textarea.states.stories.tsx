@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textarea/defaultArgs';
 import { argTypes, Textarea } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textarea/defaultArgs';
 
 export default {
   title: 'Componenten/Textarea/States',
@@ -21,7 +21,6 @@ export default {
 
 export const Invalid = {
   render: Textarea.bind({}),
-  name: 'Invalid',
 
   args: {
     ...defaultArgs,
@@ -31,7 +30,6 @@ export const Invalid = {
 
 export const Focus = {
   render: Textarea.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,
@@ -41,7 +39,6 @@ export const Focus = {
 
 export const Disabled = {
   render: Textarea.bind({}),
-  name: 'Disabled',
 
   args: {
     ...defaultArgs,

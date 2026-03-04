@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/link/defaultArgs';
 import { argTypes, Link } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/link/defaultArgs';
 
 export default {
   title: 'Componenten/Link/States',
@@ -23,7 +23,6 @@ export default {
 
 export const Hover = {
   render: Link.bind({}),
-  name: 'Hover',
 
   args: {
     ...defaultArgs,
@@ -34,7 +33,6 @@ export const Hover = {
 
 export const Active = {
   render: Link.bind({}),
-  name: 'Active',
 
   args: {
     ...defaultArgs,
@@ -45,7 +43,6 @@ export const Active = {
 
 export const Focus = {
   render: Link.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,

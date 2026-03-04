@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-fieldset/defaultArgs';
 import { argTypes, Fieldset as FieldsetComponent } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-fieldset/defaultArgs';
 
 export default {
   title: 'Componenten/Fieldset/States',
@@ -23,7 +23,6 @@ export default {
 
 export const Disabled = {
   render: FieldsetComponent.bind({}),
-  name: 'Disabled',
 
   args: {
     ...defaultArgs,

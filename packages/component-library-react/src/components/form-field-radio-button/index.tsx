@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from '../form-field';
 import { IRadioButtonGroupProps, argTypes as radioButtonArgTypes, RadioButtonGroup } from '../form-radio-button-group';
-import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface IRadioButtonFieldProps extends IFieldProps, IRadioButtonGroupProps {}
 

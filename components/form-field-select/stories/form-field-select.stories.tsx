@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-select/defaultArgs';
 import { SelectField } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-select/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof SelectField> = {
   title: 'Componenten/Select field',

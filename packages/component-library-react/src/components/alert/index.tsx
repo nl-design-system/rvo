@@ -5,10 +5,10 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode, SyntheticEvent, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import { Button } from '../button';
 import { Icon } from '../icon';
 import { StatusIcon } from '../status-icon';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/alert.css';
 
 export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {

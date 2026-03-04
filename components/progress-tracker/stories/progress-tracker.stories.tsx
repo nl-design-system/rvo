@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/progress-tracker/defaultArgs';
 import { ProgressTracker } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/progress-tracker/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof ProgressTracker> = {
   title: 'Componenten/Progress Tracker',

@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-textinput/defaultArgs';
 import { TextInputField } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-textinput/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof TextInputField> = {
   title: 'Componenten/Text input field',

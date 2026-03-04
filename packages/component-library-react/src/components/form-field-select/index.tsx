@@ -3,10 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
-import { argTypes as selectArgTypes } from '../form-select/argTypes';
-import { ISelectProps, Select } from '../form-select';
 import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
+import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
+import { ISelectProps, Select } from '../form-select';
+import { argTypes as selectArgTypes } from '../form-select/argTypes';
 
 export interface ISelectFieldProps extends FieldPropsWithoutFieldId, ISelectProps {}
 

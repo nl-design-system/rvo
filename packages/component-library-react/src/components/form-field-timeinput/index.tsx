@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
 import { ITimeInputProps, TimeInput, argTypes as timeInputArgTypes } from '../form-timeinput';
-import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface ITimeInputFieldProps extends FieldPropsWithoutFieldId, ITimeInputProps {}
 

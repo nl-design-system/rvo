@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-checkbox/defaultArgs';
 import { argTypes, Checkbox } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-checkbox/defaultArgs';
 
 export default {
   title: 'Componenten/Checkbox/States',
@@ -19,7 +19,6 @@ export default {
 
 export const Hover = {
   render: Checkbox.bind({}),
-  name: 'Hover',
 
   args: {
     ...defaultArgs,
@@ -29,7 +28,6 @@ export const Hover = {
 
 export const Checked = {
   render: Checkbox.bind({}),
-  name: 'Checked',
 
   args: {
     ...defaultArgs,
@@ -39,7 +37,6 @@ export const Checked = {
 
 export const Indeterminate = {
   render: Checkbox.bind({}),
-  name: 'Indeterminate',
 
   args: {
     ...defaultArgs,
@@ -50,7 +47,6 @@ export const Indeterminate = {
 
 export const Disabled = {
   render: Checkbox.bind({}),
-  name: 'Disabled',
 
   args: {
     ...defaultArgs,
@@ -60,7 +56,6 @@ export const Disabled = {
 
 export const Active = {
   render: Checkbox.bind({}),
-  name: 'Active',
 
   args: {
     ...defaultArgs,
@@ -70,7 +65,6 @@ export const Active = {
 
 export const Focus = {
   render: Checkbox.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,

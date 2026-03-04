@@ -5,8 +5,8 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
-import Link, { ILinkProps } from '../../link';
 import { IBreadcrumbsItem } from '../';
+import Link, { ILinkProps } from '../../link';
 
 export interface IBreadcrumbsItemProps extends IBreadcrumbsItem, HTMLAttributes<HTMLSpanElement | HTMLAllCollection> {
   onClick?: ILinkProps['onClick'];

@@ -1,7 +1,7 @@
-import { argTypes, Button } from '@nl-rvo/component-library-react';
+import { Alert, argTypes, Button } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/alert/defaultArgs';
 
-export const AllAlertKinds = (args: IAlertProps) => (
+export const AllAlertKinds = (args) => (
   <div className="rvo-layout-column rvo-layout-gap--md">
     <Alert {...args} kind="info" />
     <Alert {...args} kind="warning" />
@@ -9,7 +9,7 @@ export const AllAlertKinds = (args: IAlertProps) => (
     <Alert {...args} kind="success" />
   </div>
 );
-ExpandableTable;
+
 export default {
   title: 'Componenten/Alert/Examples',
   component: AllAlertKinds,

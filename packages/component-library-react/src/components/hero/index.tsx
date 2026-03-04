@@ -4,10 +4,10 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import Heading from '../heading';
 import MaxWidthLayout from '../max-width-layout';
 import '@nl-rvo/component-library-css/dist/components/hero.css';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 
 type HeroImage =
   | {

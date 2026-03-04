@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes, ReactNode, useEffect, useMemo, useState } from 'react';
+import React, { HTMLAttributes, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import Link from '../link';
 import '@nl-rvo/component-library-css/dist/components/page-number-navigation.css';
 

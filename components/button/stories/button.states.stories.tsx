@@ -45,7 +45,6 @@ const allButtons = (buttonArgs) => (
 
 export const Hover = {
   render: allButtons,
-  name: 'Hover',
 
   args: {
     hover: true,
@@ -55,7 +54,6 @@ export const Hover = {
 
 export const Active = {
   render: allButtons,
-  name: 'Active',
 
   args: {
     active: true,
@@ -65,7 +63,6 @@ export const Active = {
 
 export const Focus = {
   render: allButtons,
-  name: 'Focus',
 
   args: {
     focus: true,
@@ -86,7 +83,6 @@ export const FocusVisible = {
 
 export const Disabled = {
   render: allButtons,
-  name: 'Disabled',
 
   args: {
     disabled: true,
@@ -96,7 +92,6 @@ export const Disabled = {
 
 export const Busy = {
   render: allButtons,
-  name: 'Busy',
 
   args: {
     busy: true,

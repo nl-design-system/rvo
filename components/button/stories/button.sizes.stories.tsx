@@ -55,7 +55,6 @@ export const ExtraSmall = {
 
 export const Small = {
   render: allButtons,
-  name: 'Small',
 
   args: {
     kind: 'primary',
@@ -65,7 +64,6 @@ export const Small = {
 
 export const Medium = {
   render: allButtons,
-  name: 'Medium',
 
   args: {
     kind: 'primary',

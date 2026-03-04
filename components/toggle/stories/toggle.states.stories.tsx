@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/toggle/defaultArgs';
 import { argTypes, Toggle } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/toggle/defaultArgs';
 
 export default {
   title: 'Componenten/Toggle/States',
@@ -21,7 +21,6 @@ export default {
 
 export const Hover = {
   render: Toggle.bind({}),
-  name: 'Hover',
 
   args: {
     ...defaultArgs,
@@ -32,7 +31,6 @@ export const Hover = {
 
 export const Active = {
   render: Toggle.bind({}),
-  name: 'Active',
 
   args: {
     ...defaultArgs,
@@ -43,7 +41,6 @@ export const Active = {
 
 export const Focus = {
   render: Toggle.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,

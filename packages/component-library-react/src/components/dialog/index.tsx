@@ -5,10 +5,10 @@
 import clsx from 'clsx';
 import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import Button from '../button';
 import { Icon } from '../icon';
 import '@nl-rvo/component-library-css/dist/components/dialog.css';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 
 interface DialogContextType {
   isOpen: boolean | undefined;

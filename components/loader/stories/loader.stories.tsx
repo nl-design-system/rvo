@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { IButtonProps, ILoaderStatus, Loader } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const argTypes = {
   animateLoader: {
@@ -73,7 +73,6 @@ export const LoaderWithStatus: Story = {
 
 export const LoaderOverlay: Story = {
   args: { overlay: true, ...defaultArgs },
-  name: 'Loader Overlay',
 };
 
 export const LoaderWithActions: Story = {

@@ -1,10 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-
+import { CardExperimental, ICardProps } from '@nl-rvo/component-library-react';
 import { ICardContentProps } from '@nl-rvo/component-library-react/src/components/card-experimental/components/CardContent';
 import { ICardHeaderProps } from '@nl-rvo/component-library-react/src/components/card-experimental/components/CardHeader';
 import { ICardImageProps } from '@nl-rvo/component-library-react/src/components/card-experimental/components/CardImage';
-
-import { CardExperimental, ICardProps } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 type CardArguments = ICardProps & ICardImageProps & ICardHeaderProps & ICardContentProps;
 

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { UtilityBorder } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const meta: Meta<typeof UtilityBorder> = {
   title: 'Utilities/Colors/Border-color',

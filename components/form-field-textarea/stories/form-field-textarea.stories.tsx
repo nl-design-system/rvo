@@ -1,7 +1,7 @@
+import { ITextareaFieldProps, TextareaField } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-textarea/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { HTMLAttributes } from 'react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-textarea/defaultArgs';
-import { ITextareaFieldProps, TextareaField } from '@nl-rvo/component-library-react';
 
 const meta: Meta<typeof TextareaField> = {
   title: 'Componenten/Textarea field',

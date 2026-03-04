@@ -5,12 +5,12 @@
 
 import clsx from 'clsx';
 import React from 'react';
+import Icon from '../icon';
 import CardContent from './components/CardContent';
 import CardHeader, { ICardHeaderProps } from './components/CardHeader';
 import CardImage, { ICardImageProps } from './components/CardImage';
-import '@nl-rvo/css-card-experimental/dist/index.css';
-import Icon from '../icon';
 import { filterComponents, getChildComponent, getChildComponentPropValue } from '../../utils/getChildComponent';
+import '@nl-rvo/css-card-experimental/dist/index.css';
 
 interface CardComponents {
   Content: typeof CardContent;

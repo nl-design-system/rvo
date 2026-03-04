@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-fileinput/defaultArgs';
 import { argTypes, FileInput } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-fileinput/defaultArgs';
 
 export default {
   title: 'Componenten/File input/States',
@@ -21,7 +21,6 @@ export default {
 
 export const Invalid = {
   render: FileInput.bind({}),
-  name: 'Invalid',
 
   args: {
     ...defaultArgs,
@@ -31,7 +30,6 @@ export const Invalid = {
 
 export const Focus = {
   render: FileInput.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,
@@ -41,7 +39,6 @@ export const Focus = {
 
 export const Disabled = {
   render: FileInput.bind({}),
-  name: 'Disabled',
 
   args: {
     ...defaultArgs,
@@ -51,7 +48,6 @@ export const Disabled = {
 
 export const Required = {
   render: FileInput.bind({}),
-  name: 'Required',
 
   args: {
     ...defaultArgs,

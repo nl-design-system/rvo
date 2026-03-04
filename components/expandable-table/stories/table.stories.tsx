@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/expandable-table/defaultArgs';
 import { ExpandableTable } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/expandable-table/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const argTypes = {
   tableDescription: {

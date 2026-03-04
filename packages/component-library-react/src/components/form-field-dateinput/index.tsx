@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { DateInput, argTypes as dateInputArgTypes, IDateInputProps } from '../form-dateinput';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
-import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface IDateInputFieldProps extends FieldPropsWithoutFieldId, IDateInputProps {}
 

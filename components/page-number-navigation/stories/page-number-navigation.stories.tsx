@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { IPageNumberNavigation, PageNumberNavigation } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-export const defaultArgs: IPageNumberNavigation = {
+export const DefaultArgs: IPageNumberNavigation = {
   numberOfPages: 30,
   activePage: 10,
 };
 
-export const argTypes = {
+export const ArgTypes = {
   numberOfPages: {
     control: 'number',
   },
@@ -23,8 +23,8 @@ export const argTypes = {
 const meta: Meta<typeof PageNumberNavigation> = {
   title: 'Componenten/Page Number Navigation',
   component: PageNumberNavigation,
-  args: defaultArgs,
-  argTypes,
+  args: DefaultArgs,
+  ArgTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -42,4 +42,4 @@ export default meta;
 
 type Story = StoryObj<typeof PageNumberNavigation>;
 
-export const Default: Story = { args: defaultArgs, name: 'PageNumberNavigation' };
+export const Default: Story = { args: DefaultArgs, name: 'PageNumberNavigation' };

@@ -1,5 +1,5 @@
-import RadioButton from '../form-radio-button';
 import { defaultArgs } from '../defaultArgs';
+import RadioButton from '../form-radio-button';
 import RadioButtonGroup from '../template';
 
 export default (

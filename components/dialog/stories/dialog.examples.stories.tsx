@@ -1,4 +1,4 @@
-import { ActionGroup, Button, argTypes, Dialog } from '@nl-rvo/component-library-react';
+import { ActionGroup, argTypes, Button, Dialog } from '@nl-rvo/component-library-react';
 
 export default {
   title: 'Componenten/Dialog/Examples',

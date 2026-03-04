@@ -5,10 +5,10 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import Heading, { IHeadingProps } from '../heading';
 import Icon from '../icon';
 import Link, { ILinkProps } from '../link';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/card.css';
 
 export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, Pick<ILinkProps, 'LinkComponent'> {

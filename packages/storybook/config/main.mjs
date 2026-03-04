@@ -67,12 +67,13 @@ const config = (() => {
     addons: [
       '@storybook/addon-a11y',
       '@storybook/preset-scss',
-      'storybook-addon-themes',
+      '@storybook/addon-themes',
       '@storybook/addon-links',
       '@storybook/addon-designs',
       '@storybook/addon-webpack5-compiler-babel',
       '@chromatic-com/storybook',
       '@storybook/addon-docs',
+      '@etchteam/storybook-addon-status',
     ],
 
     staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],

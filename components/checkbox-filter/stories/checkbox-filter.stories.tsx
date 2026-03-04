@@ -1,6 +1,6 @@
+import { CheckBoxFilter } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { useArgs } from 'storybook/preview-api';
-import { CheckBoxFilter } from '@nl-rvo/component-library-react';
 
 const argTypes = {
   label: {

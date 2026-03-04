@@ -2,9 +2,9 @@
  * @license CC0-1.0
  * Copyright (c) 2025 Community for NL Design System
  */
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/image/defaultArgs';
 import { Image } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/image/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const argTypes = {
   src: {
@@ -89,7 +89,6 @@ type Story = StoryObj<typeof Image>;
 /* === STORIES === */
 
 export const Default: Story = {
-  name: 'Default',
   args: {
     ...defaultArgs,
     radius: 'none',

@@ -5,9 +5,9 @@ hide_table_of_contents: true
 slug: .
 ---
 
-import Documentation from "../README.md";
-import CheckboxFilter from "@nl-rvo/component-library-react";
+import { CheckBoxFilter } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
+import Documentation from "../README.md";
 
 ## Standard component:
 
@@ -35,7 +35,7 @@ label: 'Consumentengoederen en detailhandel',
 return (
 
 <ComponentExample storyName="componenten-checkbox-filter--default">
-  <CheckboxFilter {...props} />
+  <CheckBoxFilter {...props} />
 </ComponentExample>
 ); })()}
 
@@ -69,7 +69,7 @@ label: 'Consumentengoederen en detailhandel',
 return (
 
 <ComponentExample storyName="componenten-checkbox-filter--default">
-  <CheckboxFilter options={options} {...props} />
+  <CheckBoxFilter options={options} {...props} />
 </ComponentExample>
 ); })()}
 

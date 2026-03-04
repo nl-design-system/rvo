@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-radio-button/defaultArgs';
 import { argTypes, RadioButton } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-radio-button/defaultArgs';
 
 export default {
   title: 'Componenten/Radio button/States',
@@ -21,7 +21,6 @@ export default {
 
 export const Hover = {
   render: RadioButton.bind({}),
-  name: 'Hover',
 
   args: {
     ...defaultArgs,
@@ -31,7 +30,6 @@ export const Hover = {
 
 export const Checked = {
   render: RadioButton.bind({}),
-  name: 'Checked',
 
   args: {
     ...defaultArgs,
@@ -41,7 +39,6 @@ export const Checked = {
 
 export const Disabled = {
   render: RadioButton.bind({}),
-  name: 'Disabled',
 
   args: {
     ...defaultArgs,
@@ -51,7 +48,6 @@ export const Disabled = {
 
 export const Active = {
   render: RadioButton.bind({}),
-  name: 'Active',
 
   args: {
     ...defaultArgs,
@@ -61,7 +57,6 @@ export const Active = {
 
 export const Focus = {
   render: RadioButton.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,

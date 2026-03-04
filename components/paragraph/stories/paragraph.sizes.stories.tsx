@@ -22,7 +22,6 @@ export default {
 
 export const Small = {
   render: Paragraph.bind({}),
-  name: 'Small',
   args: {
     size: 'sm',
   },
@@ -30,7 +29,6 @@ export const Small = {
 
 export const Medium = {
   render: Paragraph.bind({}),
-  name: 'Medium',
   args: {
     size: 'md',
   },
@@ -38,7 +36,6 @@ export const Medium = {
 
 export const Large = {
   render: Paragraph.bind({}),
-  name: 'Large',
   args: {
     size: 'lg',
   },

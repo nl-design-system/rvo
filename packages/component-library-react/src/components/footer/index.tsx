@@ -4,9 +4,9 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import HorizontalRule from '../horizontal-rule';
 import Link from '../link';
-import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/footer.css';
 
 export interface FooterItemInterface {

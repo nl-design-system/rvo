@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/grid/defaultArgs';
 import { argTypes, Grid } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/grid/defaultArgs';
 
 export default {
   title: 'Layout/Grid/Using divisions',

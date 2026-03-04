@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { ExpandableContent, IExpandableContentProps } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const defaultArgs: IExpandableContentProps = {
   title: 'Expandable content title',

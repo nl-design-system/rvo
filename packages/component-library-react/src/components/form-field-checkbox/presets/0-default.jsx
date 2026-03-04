@@ -1,5 +1,5 @@
-import Checkbox from '../form-checkbox';
 import { defaultArgs } from '../defaultArgs';
+import Checkbox from '../form-checkbox';
 import CheckboxField from '../template';
 
 export default (

@@ -5,9 +5,10 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
+import parseContentMarkup from '../../utils/parseContentMarkup';
 import { ITextInputFieldProps, TextInputField } from '../form-field-textinput';
 import '@nl-rvo/component-library-css/dist/components/form-fieldset.css';
-import parseContentMarkup from '../../utils/parseContentMarkup';
+
 export interface IFieldsetProps {
   legend?: string;
   disabled?: boolean;

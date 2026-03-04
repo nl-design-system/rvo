@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Autocomplete, IAutocompleteProps } from '@nl-rvo/component-library-react';
+import { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const defaultArgs: IAutocompleteProps = {
   placeholder: '',

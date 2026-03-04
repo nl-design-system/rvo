@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/card/defaultArgs';
 import { Card } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/card/defaultArgs';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 // override some values.
 defaultArgs.padding = 'sm';
@@ -44,7 +44,6 @@ export const Default: Story = {
 };
 
 export const Outline: Story = {
-  name: 'Outline',
   args: {
     ...defaultArgs,
     title: 'Investeringssubsidie duurzame energie en energiebesparing',

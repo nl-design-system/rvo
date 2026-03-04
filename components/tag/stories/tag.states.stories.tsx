@@ -1,6 +1,6 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/tag/defaultArgs';
 import { Tag } from '@nl-rvo/component-library-react';
 import { iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/tag/defaultArgs';
 
 const argTypes = {
   content: {
@@ -64,7 +64,6 @@ export default {
 
 export const Hover = {
   render: Tag.bind({}),
-  name: 'Hover',
 
   args: {
     ...defaultArgs,
@@ -75,7 +74,6 @@ export const Hover = {
 
 export const Active = {
   render: Tag.bind({}),
-  name: 'Active',
 
   args: {
     ...defaultArgs,
@@ -86,7 +84,6 @@ export const Active = {
 
 export const Focus = {
   render: Tag.bind({}),
-  name: 'Focus',
 
   args: {
     ...defaultArgs,

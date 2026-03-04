@@ -20,7 +20,6 @@ export default {
 
 export const Default = {
   render: Table.bind({}),
-  name: 'Default',
 
   args: {
     description: 'Table with default column types.',
@@ -45,7 +44,6 @@ export const Default = {
 
 export const Numeric = {
   render: Table.bind({}),
-  name: 'Numeric',
 
   args: {
     description: 'Table with a numeric price column',

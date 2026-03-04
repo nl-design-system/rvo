@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
+import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
 import { ITextInputProps, TextInput, argTypes as textInputArgTypes } from '../form-textinput';
-import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 
 export interface ITextInputFieldProps extends FieldPropsWithoutFieldId, ITextInputProps {}
 

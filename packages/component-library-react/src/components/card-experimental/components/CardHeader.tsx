@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import Heading from '../../heading';
 import Link, { ILinkProps } from '../../link';
-import parseContentMarkup from '../../../utils/parseContentMarkup';
 export interface ICardHeaderProps extends Pick<ILinkProps, 'href' | 'LinkComponent'> {
   children?: React.ReactNode;
   className?: string;

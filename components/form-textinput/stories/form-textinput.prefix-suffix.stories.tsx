@@ -1,5 +1,5 @@
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textinput/defaultArgs';
 import { argTypes, TextInput } from '@nl-rvo/component-library-react';
+import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textinput/defaultArgs';
 
 export default {
   title: 'Componenten/Text input/Prefix Suffix',
@@ -21,7 +21,6 @@ export default {
 
 export const Prefix = {
   render: TextInput.bind({}),
-  name: 'Prefix',
 
   args: {
     ...defaultArgs,
@@ -32,7 +31,6 @@ export const Prefix = {
 
 export const Suffix = {
   render: TextInput.bind({}),
-  name: 'Suffix',
 
   args: {
     ...defaultArgs,

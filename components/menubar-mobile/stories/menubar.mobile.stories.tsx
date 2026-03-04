@@ -1,7 +1,7 @@
+import { IconType, IMobileMenuBarProps, MobileMenuBar } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { MobileMenuBar, IconType, IMobileMenuBarProps } from '@nl-rvo/component-library-react';
 
-export const defaultArgs: IMobileMenuBarProps = {
+export const DefaultArgs: IMobileMenuBarProps = {
   size: 'md',
   items: [
     { label: 'Home', icon: 'home' as IconType, link: '#' },
@@ -34,7 +34,7 @@ export const defaultArgs: IMobileMenuBarProps = {
 const meta: Meta<typeof MobileMenuBar> = {
   title: 'Componenten/Mobile Menubar',
   component: MobileMenuBar,
-  args: defaultArgs,
+  args: DefaultArgs,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -55,7 +55,7 @@ type Story = StoryObj<typeof MobileMenuBar>;
 const Container = ({ children }) => <div style={{ minHeight: '500px' }}>{children}</div>;
 
 export const Default: Story = {
-  args: defaultArgs,
+  args: DefaultArgs,
   name: 'Mobile Menubar',
   render: (args) => (
     <Container>
