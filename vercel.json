@@ -7,5 +7,14 @@
     "env": {
       "DOCUSAURUS_BASE_URL": "/docs/"
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/docs/assets/fonts/:file+",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }

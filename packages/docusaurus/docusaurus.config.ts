@@ -12,8 +12,10 @@ const config: Config = {
   title: 'ROOS Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   favicon: 'img/favicon.ico',
-  url: process.env.DOCUSAURUS_URL || 'https://nl-design-system.github.io',
-  baseUrl: process.env.DOCUSAURUS_BASE_URL || '/rvo/docs/',
+  url: process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : process.env.DOCUSAURUS_URL || 'https://nl-design-system.github.io',
+  baseUrl: process.env.VERCEL ? '/docs/' : process.env.DOCUSAURUS_BASE_URL || '/rvo/docs/',
   organizationName: 'nl-rvo',
   projectName: 'rvo',
   onBrokenLinks: 'warn',
