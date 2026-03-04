@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-max-width-layout/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/max-width-layout.css';
 
 export interface IMaxWidthLayoutProps {
   size?: 'sm' | 'md' | 'lg';

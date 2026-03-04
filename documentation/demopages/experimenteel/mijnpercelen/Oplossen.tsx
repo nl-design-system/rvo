@@ -1,4 +1,4 @@
-import { Button, Icon, LayoutFlow, Link, MenuBar, RadioButtonField } from '@nl-rvo/components';
+import { Button, Icon, LayoutFlow, Link, MenuBar, RadioButtonField } from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 

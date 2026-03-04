@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-layout-flow/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
 
 export interface ILayoutFlowProps {
   gap?: '0' | '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ITextInputFieldProps, TextInputField } from '../form-field-textinput';
-import '@nl-rvo/css-form-fieldset/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-fieldset.css';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 export interface IFieldsetProps {
   legend?: string;

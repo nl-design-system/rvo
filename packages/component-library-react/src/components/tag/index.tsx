@@ -7,7 +7,7 @@ import React, { ReactNode } from 'react';
 import { Icon } from '../icon';
 import { IconType } from '../icon/types';
 import { StatusIcon } from '../status-icon';
-import '@nl-rvo/css-tag/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/tag.css';
 
 export interface ITagProps {
   content: ReactNode;

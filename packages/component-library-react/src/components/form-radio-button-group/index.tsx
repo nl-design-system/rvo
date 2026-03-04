@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useCallback, useRef } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { IRadioButtonProps, RadioButton } from '../form-radio-button';
-import '@nl-rvo/css-form-radio-button-group/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-radio-button-group.css';
 
 export interface IRadioButtonGroupProps {
   name?: string;

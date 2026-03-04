@@ -7,7 +7,7 @@ import React, { ReactNode } from 'react';
 import HorizontalRule from '../horizontal-rule';
 import Link from '../link';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-footer/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/footer.css';
 
 export interface FooterItemInterface {
   content: string | ReactNode;

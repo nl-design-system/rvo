@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@nl-rvo/css-progress-tracker/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/progress-tracker.css';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { IProgressTrackerStepProps, ProgressTrackerStep } from './progress-tracker-step';

@@ -1,4 +1,4 @@
-import { Heading, Icon, Link } from '@nl-rvo/components';
+import { Heading, Icon, Link } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 

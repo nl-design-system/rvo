@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-status-indicator/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/status-indicator.css';
 
 export interface IStatusIndicatorProps {
   color: 'groen' | 'groen-300' | 'oranje' | 'oranje-300' | 'rood' | 'rood-300' | 'hemelblauw' | 'hemelblauw-300';

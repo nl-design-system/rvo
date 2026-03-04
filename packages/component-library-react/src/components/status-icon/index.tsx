@@ -5,7 +5,7 @@
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon';
-import '@nl-rvo/css-status-icon/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/status-icon.css';
 
 export interface IStatusIconProps {
   type: 'info' | 'bevestiging' | 'foutmelding' | 'waarschuwing';

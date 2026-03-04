@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@nl-rvo/css-accordion/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/accordion.css';
 
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';

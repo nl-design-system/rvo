@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 import React from 'react';
-import '@nl-rvo/css-counter-badge/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/counter-badge.css';
 
 export interface ICounterBadge extends HTMLAttributes<HTMLSpanElement> {
   count: number;

@@ -1,4 +1,4 @@
-import { Button, Heading, Icon, LayoutFlow, StatusIcon } from '@nl-rvo/components';
+import { Button, Heading, Icon, LayoutFlow, StatusIcon } from '@nl-rvo/component-library-react';
 import '../../common/loading.scss';
 
 const Loading = () => {

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Checkbox, ICheckboxProps } from '../form-checkbox';
-import '@nl-rvo/css-form-checkbox-group/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-checkbox-group.css';
 
 export interface ICheckboxGroupProps {
   invalid?: boolean;

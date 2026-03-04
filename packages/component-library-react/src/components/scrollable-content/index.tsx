@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useEffect, useRef } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-scrollable-content/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/scrollable-content.css';
 
 export interface IScrollableContentProps {
   height?: number;

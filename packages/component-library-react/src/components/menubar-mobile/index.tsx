@@ -5,7 +5,7 @@ import Dialog from '../dialog';
 import { Icon } from '../../index';
 import { MobileMenuItem } from './menu-item';
 import { IMenuBarItem } from '../menubar/menubar';
-import '@nl-rvo/css-menubar-mobile/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/menubar-mobile.css';
 
 export interface IMobileMenuBarProps {
   size?: 'sm' | 'md' | 'lg';

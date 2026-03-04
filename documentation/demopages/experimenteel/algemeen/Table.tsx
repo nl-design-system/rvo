@@ -1,4 +1,4 @@
-import { Header, Heading, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, MaxWidthLayout, MenuBar } from '@nl-rvo/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../../common/table.scss';
 

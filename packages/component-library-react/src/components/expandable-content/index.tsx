@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { Icon } from '../icon';
-import '@nl-rvo/css-expandable-content/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/expandable-content.css';
 
 export interface IExpandableContentProps {
   title: string;

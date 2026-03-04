@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-form-fileinput/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-fileinput.css';
 
 export interface IFileInputProps extends HTMLAttributes<HTMLInputElement> {
   id?: string;

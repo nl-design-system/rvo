@@ -4,7 +4,8 @@
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
 import React from 'react';
-import { Icon, iconColors, toProperCase } from './src/template';
+import { Icon } from '@nl-rvo/component-library-react';
+import { iconColors, toProperCase } from '@nl-rvo/component-library-react/src/components/icon';
 
 export const IconOverview: React.FC = ({
   includeNavigation = true,

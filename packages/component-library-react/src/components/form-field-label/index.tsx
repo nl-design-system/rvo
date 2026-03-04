@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
-import '@nl-rvo/css-form-field-label/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-field-label.css';
 
 export interface ILabelProps extends HTMLAttributes<HTMLLabelElement> {
   id?: string;

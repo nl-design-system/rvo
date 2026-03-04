@@ -9,7 +9,7 @@ import Heading, { IHeadingProps } from '../heading';
 import Icon from '../icon';
 import Link, { ILinkProps } from '../link';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-card/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/card.css';
 
 export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>, Pick<ILinkProps, 'LinkComponent'> {
   background?: 'none' | 'color' | 'image';

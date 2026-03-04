@@ -5,7 +5,7 @@
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 import Link from '../link';
-import '@nl-rvo/css-skip-link/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/skip-link.css';
 
 export interface ISkipLinkProps {
   textContent?: string;

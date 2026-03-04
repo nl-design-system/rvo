@@ -13,7 +13,7 @@ import {
   MenuBar,
   StatusIcon,
   Tag,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../common/defaultFooterItems';
 

@@ -126,12 +126,12 @@ importers:
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
+      '@nl-rvo/documentation':
+        specifier: workspace:*
+        version: link:../documentation
       '@nl-rvo/storybook':
         specifier: workspace:*
         version: link:../packages/storybook
-      '@nl-rvo/storybook-react':
-        specifier: workspace:*
-        version: link:../packages/storybook-react
       '@types/mdx':
         specifier: 2.0.11
         version: 2.0.11
@@ -578,15 +578,12 @@ importers:
 
   documentation:
     devDependencies:
-      '@nl-rvo/components':
+      '@nl-rvo/component-library-react':
         specifier: workspace:*
-        version: link:../components
+        version: link:../packages/component-library-react
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../proprietary/design-tokens
-      '@nl-rvo/utilities':
-        specifier: workspace:*
-        version: link:../utilities
       clsx:
         specifier: 2.1.0
         version: 2.1.0
@@ -641,6 +638,13 @@ importers:
         version: 1.71.1
 
   packages/component-library-react:
+    dependencies:
+      '@nl-rvo/component-library-css':
+        specifier: workspace:*
+        version: link:../component-library-css
+      '@nl-rvo/css-card-experimental':
+        specifier: workspace:*
+        version: link:../../components/card-experimental
     devDependencies:
       '@babel/core':
         specifier: 7.28.5
@@ -657,6 +661,9 @@ importers:
       '@babel/runtime':
         specifier: 7.28.6
         version: 7.28.6
+      '@nl-rvo/design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/design-tokens
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.28.5)(@types/babel__core@7.20.5)(rollup@4.28.0)
@@ -816,12 +823,18 @@ importers:
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
-      '@nl-rvo/components':
+      '@nl-rvo/component-library-react':
         specifier: workspace:*
-        version: link:../../components
+        version: link:../component-library-react
+      '@nl-rvo/css-heading':
+        specifier: workspace:*
+        version: link:../../components/heading
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
+      '@nl-rvo/documentation':
+        specifier: workspace:*
+        version: link:../../documentation
       clsx:
         specifier: 2.1.0
         version: 2.1.0
@@ -969,12 +982,6 @@ importers:
       webpack:
         specifier: 5.105.0
         version: 5.105.0(esbuild@0.18.20)
-
-  packages/storybook-react:
-    devDependencies:
-      '@nl-rvo/component-library-react':
-        specifier: workspace:*
-        version: link:../component-library-react
 
   packages/uxpin-merge:
     dependencies:
@@ -1138,6 +1145,9 @@ importers:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@nl-rvo/component-library-react':
+        specifier: workspace:*
+        version: link:../../packages/component-library-react
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -1147,21 +1157,27 @@ importers:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@nl-rvo/component-library-react':
+        specifier: workspace:*
+        version: link:../../packages/component-library-react
 
   utilities/utility-padding:
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@nl-rvo/component-library-react':
+        specifier: workspace:*
+        version: link:../../packages/component-library-react
 
   utilities/utility-text:
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@nl-rvo/components':
+      '@nl-rvo/component-library-react':
         specifier: workspace:*
-        version: link:../../components
+        version: link:../../packages/component-library-react
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -1171,6 +1187,9 @@ importers:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@nl-rvo/component-library-react':
+        specifier: workspace:*
+        version: link:../../packages/component-library-react
 
 packages:
 

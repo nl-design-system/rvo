@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react';
 import { isOfType } from '../../utils/typeUtils';
-import '@nl-rvo/css-quote/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/quote.css';
 
 type QuoteUser = {
   name: string;

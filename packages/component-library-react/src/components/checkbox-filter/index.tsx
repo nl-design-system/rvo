@@ -4,7 +4,7 @@ import CheckboxField from '../form-field-checkbox';
 import TextInputField from '../form-field-textinput';
 import Icon from '../icon';
 import Link from '../link';
-import '@nl-rvo/css-checkbox-filter/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/checkbox-filter.css';
 
 export interface ICheckboxFilter {
   label: string;

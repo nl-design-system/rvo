@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-image/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/image.css';
 
 export interface IImageSource {
   srcSet: string;

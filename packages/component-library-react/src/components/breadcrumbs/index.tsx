@@ -6,8 +6,8 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import BreadcrumbsItem from './breadcrumbs-item';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-layout-flow/dist/index.css';
-import '@nl-rvo/css-breadcrumbs/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
+import '@nl-rvo/component-library-css/dist/components/breadcrumbs.css';
 import Icon from '../icon';
 
 export interface IBreadcrumbsItem {

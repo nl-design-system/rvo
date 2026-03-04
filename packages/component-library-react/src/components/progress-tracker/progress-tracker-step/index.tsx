@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ILinkProps, Link } from '../../link';
-import '@nl-rvo/css-progress-tracker/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/progress-tracker.css';
 
 export interface IProgressTrackerStepProps {
   state: 'start' | 'incomplete' | 'doing' | 'completed' | 'disabled' | 'end';

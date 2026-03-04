@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-paragraph/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/paragraph.css';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IParagraphProps extends Omit<React.HTMLAttributes<HTMLParagraphElement>, 'content'> {

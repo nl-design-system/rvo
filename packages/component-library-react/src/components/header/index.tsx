@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Logo } from '../logo';
-import '@nl-rvo/css-header/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/header.css';
 
 export interface IHeaderProps {
   title?: string;

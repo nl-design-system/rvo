@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { TextInput } from '../form-textinput';
 import { Link } from '../link';
-import '@nl-rvo/css-form-autocomplete/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-autocomplete.css';
 
 export type AutocompleteKeywordSuggestion = {
   value: string;

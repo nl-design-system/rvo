@@ -9,7 +9,7 @@ import { MaxWidthLayout } from '../../../index';
 // eslint-disable-next-line import/order
 import { defaultArgs } from '../defaultArguments';
 
-import '@nl-rvo/css-menubar/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/menubar.css';
 
 import MenuBarItem from '../menubar-item';
 

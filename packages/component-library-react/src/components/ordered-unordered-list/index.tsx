@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-ordered-unordered-list/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/ordered-unordered-list.css';
 import { parseChildren } from '../../utils/parseChildren';
 
 export interface IListProps {

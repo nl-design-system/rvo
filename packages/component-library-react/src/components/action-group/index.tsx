@@ -6,8 +6,8 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Button, IButtonProps } from '../button/';
-import '@nl-rvo/css-layout-flow/dist/index.css';
-import '@nl-rvo/css-action-group/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
+import '@nl-rvo/component-library-css/dist/components/action-group.css';
 
 export interface IActionGroupProps {
   /** @uxpinignoreprop */

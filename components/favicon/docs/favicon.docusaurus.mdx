@@ -1,0 +1,22 @@
+---
+title: Favicon
+hide_title: false
+hide_table_of_contents: true
+slug: .
+---
+
+import Documentation from "../README.md";
+import Favicon from "@nl-rvo/component-library-react";
+import FavIconUrl from "../../../documentation/demopages/common/favicon.ico";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+{(() => {
+const props = { src: FavIconUrl };
+return (
+
+<ComponentExample>
+  <Favicon {...props} />
+</ComponentExample>
+); })()}
+
+<Documentation />

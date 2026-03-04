@@ -5,7 +5,7 @@
 
 import React, { ReactNode } from 'react';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-form-layout/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-layout.css';
 
 export interface IFormLayoutProps {
   /** @uxpinignoreprop */

@@ -9,7 +9,7 @@ import { Button } from '../button';
 import { Icon } from '../icon';
 import { StatusIcon } from '../status-icon';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-alert/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/alert.css';
 
 export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {
   kind?: 'info' | 'warning' | 'error' | 'success';
@@ -127,14 +127,5 @@ export const Alert: React.FC<IAlertProps> = ({
     </div>
   );
 };
-
-export const AllAlertKinds: React.FC<IAlertProps> = (alertArgs) => (
-  <div className="rvo-layout-column rvo-layout-gap--md">
-    <Alert {...alertArgs} kind="info" />
-    <Alert {...alertArgs} kind="warning" />
-    <Alert {...alertArgs} kind="error" />
-    <Alert {...alertArgs} kind="success" />
-  </div>
-);
 
 export default Alert;

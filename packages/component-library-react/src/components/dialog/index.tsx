@@ -7,7 +7,7 @@ import React, { createContext, ReactNode, useCallback, useContext, useEffect, us
 import { defaultArgs } from './defaultArgs';
 import Button from '../button';
 import { Icon } from '../icon';
-import '@nl-rvo/css-dialog/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/dialog.css';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
 interface DialogContextType {

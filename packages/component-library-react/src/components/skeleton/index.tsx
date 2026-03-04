@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { CSSProperties } from 'react';
 import { isDefined } from '../../utils/guards';
-import '@nl-rvo/css-skeleton/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/skeleton.css';
 
 type SkeletonCSSProperties = {
   '--rvo-animation-duration'?: string;

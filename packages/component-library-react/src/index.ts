@@ -84,5 +84,13 @@ export { Toggle } from './components/toggle';
 export * from './components/link';
 export * from './components/form-autocomplete';
 
+// utilities
+export { UtilityBackground } from './utilities/utility-background';
+export { UtilityBorder } from './utilities/utility-border';
+export { UtilityText } from './utilities/utility-text';
+export { UtilityPadding } from './utilities/utility-padding';
+export { UtilityMargin } from './utilities/utility-margin';
+export { UtilityTextTypes } from './utilities/utility-text-types';
+
 // ThemeProvider
 export * from './ThemeProvider';

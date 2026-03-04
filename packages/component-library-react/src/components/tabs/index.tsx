@@ -4,7 +4,7 @@
  */
 import React, { ReactNode, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-tabs/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/tabs.css';
 import TabItem, { ITabItemProps } from './tab-item';
 
 export interface ITabsProps {

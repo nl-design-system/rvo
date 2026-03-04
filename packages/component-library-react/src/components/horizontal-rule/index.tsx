@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import '@nl-rvo/css-horizontal-rule/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/horizontal-rule.css';
 
 interface IHrProps {}
 

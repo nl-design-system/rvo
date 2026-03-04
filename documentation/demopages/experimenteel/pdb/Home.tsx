@@ -1,4 +1,4 @@
-import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';

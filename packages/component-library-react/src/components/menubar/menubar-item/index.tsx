@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 // eslint-disable-next-line import/order
 import SubMenu from '../submenu';
-import '@nl-rvo/css-menubar/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/menubar.css';
 import { Icon, Link } from '../../../index';
 import { IMenuBarItem } from '../menubar';
 

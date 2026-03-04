@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import '@nl-rvo/css-form-select/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-select.css';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
 

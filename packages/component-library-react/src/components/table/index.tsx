@@ -7,7 +7,7 @@ import React, { HTMLAttributes, useCallback, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { SortAscendingIcon, SortDefaultIcon, SortDescendingIcon } from './icons';
 import validateHTML from '../../utils/validateHTML';
-import '@nl-rvo/css-table/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/table.css';
 
 export interface ITableColumnProps extends HTMLAttributes<HTMLDivElement> {
   label: string;

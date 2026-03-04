@@ -5,9 +5,9 @@
 // @ts-ignore
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import '@nl-rvo/css-max-width-layout/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/max-width-layout.css';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-sidebar-layout/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/sidebar-layout.css';
 import SidebarLayoutBar from './sidebar-layout-bar';
 import SidebarLayoutContent from './sidebar-layout-content';
 import parseContentMarkup from '../../utils/parseContentMarkup';

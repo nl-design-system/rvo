@@ -15,7 +15,16 @@ StyleDictionary.registerFormat({
     return `// AUTO-GENERATED — DO NOT EDIT.
 export const colorTokens = [
 ${entries.join(',\n')}
-] as const;
+];
+`;
+  },
+});
+
+StyleDictionary.registerFormat({
+  name: 'typescript/color-token-array-dts',
+  formatter: () => {
+    return `// AUTO-GENERATED — DO NOT EDIT.
+export declare const colorTokens: readonly (readonly [string, string])[];
 `;
   },
 });
@@ -42,6 +51,10 @@ module.exports = {
           destination: 'colors.js',
           format: 'javascript/color-token-array',
           filter: (token) => token.type === 'color',
+        },
+        {
+          destination: 'colors.d.ts',
+          format: 'typescript/color-token-array-dts',
         },
       ],
     },

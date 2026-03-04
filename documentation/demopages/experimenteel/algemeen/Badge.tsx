@@ -1,4 +1,4 @@
-import { Heading } from '@nl-rvo/components';
+import { Heading } from '@nl-rvo/component-library-react';
 import '../../common/badge.scss';
 
 const Badge = () => {

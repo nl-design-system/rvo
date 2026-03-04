@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-grid/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/grid.css';
 
 export interface IGridProps {
   gap?: '3xs' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';

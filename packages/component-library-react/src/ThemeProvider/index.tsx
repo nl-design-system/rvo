@@ -1,11 +1,11 @@
 import { FC, PropsWithChildren } from 'react';
 import './index.css';
-import '@nl-rvo/utility-background/dist/index.css';
-import '@nl-rvo/utility-border/dist/index.css';
-import '@nl-rvo/utility-margin/dist/index.css';
-import '@nl-rvo/utility-padding/dist/index.css';
-import '@nl-rvo/utility-text/dist/index.css';
-import '@nl-rvo/utility-text-types/dist/index.css';
+import '@nl-rvo/component-library-css/dist/utilities/utility-background.css';
+import '@nl-rvo/component-library-css/dist/utilities/utility-border.css';
+import '@nl-rvo/component-library-css/dist/utilities/utility-margin.css';
+import '@nl-rvo/component-library-css/dist/utilities/utility-padding.css';
+import '@nl-rvo/component-library-css/dist/utilities/utility-text.css';
+import '@nl-rvo/component-library-css/dist/utilities/utility-text-types.css';
 
 const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   return <div className="rvo-theme">{children}</div>;

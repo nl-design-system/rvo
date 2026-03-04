@@ -2,7 +2,7 @@ import isInternalUrl from '@docusaurus/isInternalUrl';
 import { isActiveSidebarItem } from '@docusaurus/plugin-content-docs/client';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Link } from '@nl-rvo/components';
+import { Link } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/DocSidebarItem/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';

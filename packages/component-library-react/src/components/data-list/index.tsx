@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import DataListItem, { IDataListItemProps } from './data-list-item';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-data-list/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/data-list.css';
 
 export interface IDataListProps {
   /** @uxpinignoreprop */

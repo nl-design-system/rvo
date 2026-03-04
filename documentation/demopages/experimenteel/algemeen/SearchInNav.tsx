@@ -7,7 +7,7 @@ import {
   MaxWidthLayout,
   MenuBar,
   TextInputField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 
 const SearchInNav = () => {

@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode, useEffect, useMemo, useState } from 'react';
 import Link from '../link';
-import '@nl-rvo/css-page-number-navigation/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/page-number-navigation.css';
 
 export interface IPageNumberNavigation extends Omit<HTMLAttributes<HTMLElement>, 'onPageChange'> {
   activePage: number;

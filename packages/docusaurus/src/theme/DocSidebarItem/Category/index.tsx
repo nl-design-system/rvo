@@ -7,7 +7,7 @@ import {
 import { Collapsible, ThemeClassNames, useCollapsible, usePrevious, useThemeConfig } from '@docusaurus/theme-common';
 import { isSamePath } from '@docusaurus/theme-common/internal';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { Heading, Link } from '@nl-rvo/components';
+import { Heading, Link } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/DocSidebarItem/Category';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import clsx from 'clsx';

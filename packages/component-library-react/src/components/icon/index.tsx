@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
 import { IconType } from './types';
-import '@nl-rvo/css-icon/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/icon.css';
 
 export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   icon: IconType;
@@ -29,7 +29,7 @@ export const toProperCase = (inputString: string) =>
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { STATUS, ...iconListWithoutStatus } = iconList;
 
-export const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {
+export const iconOptions = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {
   if (typeof iconList[categoryOrIconName] === 'object') {
     return Object.keys(iconList[categoryOrIconName]).map((iconName) =>
       toProperCase(`${categoryOrIconName} > ${iconName}`),
@@ -39,7 +39,7 @@ export const options = Object.keys(iconListWithoutStatus).flatMap((categoryOrIco
   }
 });
 
-export const iconNames = options.map((option) => {
+export const iconNames = iconOptions.map((option) => {
   let iconName = option;
   if (iconName.indexOf(' > ') > -1) {
     iconName = iconName.split(' > ')[1];
@@ -50,7 +50,7 @@ export const iconNames = options.map((option) => {
 export const argTypes = {
   icon: {
     control: { type: 'select' },
-    options: options,
+    options: iconOptions,
   },
   size: {
     options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],

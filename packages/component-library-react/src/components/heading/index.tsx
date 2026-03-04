@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { createElement, ReactNode } from 'react';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/css-heading/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/heading.css';
 
 export interface IHeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   type: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

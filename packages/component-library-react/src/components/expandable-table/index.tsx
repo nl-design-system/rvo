@@ -7,7 +7,7 @@ import React, { HTMLAttributes } from 'react';
 import { TableBodyType } from './table-body';
 import { TableFooterType } from './table-footer';
 import { TableHeadType } from './table-head';
-import '@nl-rvo/css-expandable-table/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/expandable-table.css';
 
 type TableChild = TableHeadType | TableBodyType | TableFooterType;
 

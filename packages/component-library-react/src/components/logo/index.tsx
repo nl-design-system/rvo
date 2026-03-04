@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-logo/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/logo.css';
 
 export interface ILogoProps {
   title?: string;

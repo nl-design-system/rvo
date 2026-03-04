@@ -5,9 +5,9 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Icon, iconColors, options as iconOptions } from '../icon';
+import { Icon, iconColors, iconOptions } from '../icon';
 import { IconType } from '../icon/types';
-import '@nl-rvo/css-link/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/link.css';
 
 export type LinkStyleProps = {
   className: string;

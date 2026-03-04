@@ -4,7 +4,7 @@
  */
 import React, { ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/css-item-list/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/item-list.css';
 import { parseChildren } from '../../utils/parseChildren';
 
 export interface IItemListProps {

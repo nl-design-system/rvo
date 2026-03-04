@@ -1,4 +1,4 @@
-import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/tabs.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -69,7 +69,7 @@ const Tabs = () => {
                   ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
                 </p>
               </div>
-            </div> 
+            </div>
 
             <div className="rvo-margin-block-end--xl"></div>
 

@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@nl-rvo/css-form-textinput/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/form-textinput.css';
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';

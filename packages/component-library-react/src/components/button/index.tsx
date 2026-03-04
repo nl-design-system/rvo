@@ -7,8 +7,8 @@ import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { Icon, iconNames as iconOptions } from '../icon';
 import { IconType } from '../icon/types';
-import '@nl-rvo/css-layout-flow/dist/index.css';
-import '@nl-rvo/css-button/dist/index.css';
+import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
+import '@nl-rvo/component-library-css/dist/components/button.css';
 export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';

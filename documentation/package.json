@@ -14,8 +14,7 @@
     "directory": "documentation"
   },
   "devDependencies": {
-    "@nl-rvo/utilities": "workspace:*",
-    "@nl-rvo/components": "workspace:*",
+    "@nl-rvo/component-library-react": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "clsx": "2.1.0",
     "html-react-parser": "5.1.8"
