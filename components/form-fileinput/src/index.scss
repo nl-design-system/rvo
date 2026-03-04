@@ -10,6 +10,12 @@
   font-family: var(--utrecht-form-control-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-form-control-font-size, var(--utrecht-document-font-size));
   font-weight: var(--rvo-file-input-font-weight);
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 30%;
+  }
 }
 
 .rvo-file-input {

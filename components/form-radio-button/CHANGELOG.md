@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-radio-button`
 
+## 1.2.3
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.2
 
 ### Patch Changes

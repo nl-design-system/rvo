@@ -24,6 +24,7 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   image?: ReactNode;
   imageAlt?: string;
   imageHeight?: string;
+  imageLine?: 'none' | 'top-right' | 'bottom-left';
   imageSize?: 'sm' | 'md';
   imageWidth?: string;
   inlineImage?: boolean;
@@ -64,6 +65,10 @@ export const argTypes = {
     options: ['sm', 'md'],
     control: { type: 'radio' },
   },
+  imageLine: {
+    options: ['none', 'top-right', 'bottom-left'],
+    control: { type: 'radio' },
+  },
   showLinkIndicator: { control: { type: 'boolean' } },
   invertedColors: { control: { type: 'boolean' } },
   content: { control: { type: 'text' } },
@@ -93,6 +98,7 @@ export const Card: React.FC<ICardProps> = ({
   image = defaultArgs.image,
   imageAlt,
   imageHeight,
+  imageLine,
   imageSize = defaultArgs.imageSize,
   imageWidth,
   inlineImage = false,
@@ -152,6 +158,7 @@ export const Card: React.FC<ICardProps> = ({
         'rvo-card',
         image && !inlineImage && 'rvo-card--with-image',
         image && imageSize && !inlineImage && `rvo-card--with-image-${imageSize}`,
+        image && imageLine && imageLine !== 'none' && ['rvo-card__image-lined', `rvo-card__image-lined--${imageLine}`],
         outline && background !== 'image' && 'rvo-card--outline',
         padding && padding !== 'none' && `rvo-card--padding--${padding}`,
         background === 'color' && backgroundColor !== 'none' && `rvo-card--full-colour--${backgroundColor}`,

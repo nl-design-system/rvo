@@ -43,7 +43,7 @@
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
     "@mdx-js/react": "3.1.0",
-    "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/assets": "1.0.0",
     "@nl-rvo/component-library-css": "workspace:*",
     "@nl-rvo/component-library-react": "workspace:*",
     "@nl-rvo/documentation": "workspace:*",
@@ -71,5 +71,8 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "dependencies": {
+    "docusaurus-plugin-matomo": "0.0.8"
   }
 }

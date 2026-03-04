@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.9.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.9.0
 
 ### Minor Changes

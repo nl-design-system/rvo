@@ -1,5 +1,11 @@
 # `@nl-rvo/utility-text-types`
 
+## 2.0.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 2.0.0
 
 ### Major Changes

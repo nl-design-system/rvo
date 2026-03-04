@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Autocomplete, IAutocompleteProps } from '@nl-rvo/component-library-react';
 
 const defaultArgs: IAutocompleteProps = {
-  placeholder: 'Type to search...',
+  placeholder: '',
   size: 'lg',
   renderLinksHeader: () => <div>Links</div>,
   renderSuggestionsHeader: () => <div>Suggesties</div>,
