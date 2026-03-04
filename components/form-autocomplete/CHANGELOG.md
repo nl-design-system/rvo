@@ -1,5 +1,11 @@
 # `@nl-rvo/autocomplete`
 
+## 1.4.2
+
+### Patch Changes
+
+- 52ccf80: Remove placeholder from story.
+
 ## 1.4.1
 
 ### Patch Changes
