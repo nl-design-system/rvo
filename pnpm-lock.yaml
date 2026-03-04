@@ -767,6 +767,10 @@ importers:
         version: 5.0.5
 
   packages/docusaurus:
+    dependencies:
+      docusaurus-plugin-matomo:
+        specifier: 0.0.8
+        version: 0.0.8(@docusaurus/core@3.9.2(@docusaurus/faster@3.9.2(@docusaurus/types@3.9.2(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@swc/helpers@0.5.17))(@mdx-js/react@3.1.0(@types/react@18.3.1)(react@18.3.1))(@rspack/core@1.6.6(@swc/helpers@0.5.17))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2))
     devDependencies:
       '@docusaurus/core':
         specifier: 3.9.2
@@ -806,7 +810,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
@@ -866,7 +870,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/component-library-css':
         specifier: file:../component-library-css
         version: link:../component-library-css
@@ -995,7 +999,7 @@ importers:
         version: 7.23.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@mui/material@5.15.13(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.17.1(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(date-fns@3.4.0)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -3902,6 +3906,9 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
+
+  '@nl-rvo/assets@1.0.0':
+    resolution: {integrity: sha512-YEhM9bzgtsTFU1rbDhjm9oraHHCdeC9DqhiB473y4/NYaaENW8eP7ZCJYcEdG4ax/1tyDoC5e0FSkZNIgz4gJA==}
 
   '@nl-rvo/assets@1.0.0-alpha.360':
     resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
@@ -7841,6 +7848,12 @@ packages:
   doctrine@3.0.0:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
+
+  docusaurus-plugin-matomo@0.0.8:
+    resolution: {integrity: sha512-YSaDdjxI7uN1FuNLSGrQy4BmDEXwwyL6vac7GfmS7wFBLck/Ias5jHqENPBHXe36m2cYzyesGPQL1EsS9vanwA==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      '@docusaurus/core': ^2.0.0-alpha.56 || ^3.0.0
 
   dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
@@ -19593,6 +19606,8 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.33':
     optional: true
 
+  '@nl-rvo/assets@1.0.0': {}
+
   '@nl-rvo/assets@1.0.0-alpha.360': {}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -24488,6 +24503,10 @@ snapshots:
   doctrine@3.0.0:
     dependencies:
       esutils: 2.0.3
+
+  docusaurus-plugin-matomo@0.0.8(@docusaurus/core@3.9.2(@docusaurus/faster@3.9.2(@docusaurus/types@3.9.2(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@swc/helpers@0.5.17))(@mdx-js/react@3.1.0(@types/react@18.3.1)(react@18.3.1))(@rspack/core@1.6.6(@swc/helpers@0.5.17))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)):
+    dependencies:
+      '@docusaurus/core': 3.9.2(@docusaurus/faster@3.9.2(@docusaurus/types@3.9.2(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@swc/helpers@0.5.17))(@mdx-js/react@3.1.0(@types/react@18.3.1)(react@18.3.1))(@rspack/core@1.6.6(@swc/helpers@0.5.17))(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
 
   dom-accessibility-api@0.5.16: {}
 
