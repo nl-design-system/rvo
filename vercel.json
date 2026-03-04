@@ -3,7 +3,9 @@
   "outputDirectory": "packages/design-system-website/dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,
-  "env": {
-    "DOCUSAURUS_BASE_URL": "/docs/"
+  "build": {
+    "env": {
+      "DOCUSAURUS_BASE_URL": "/docs/"
+    }
   }
 }
