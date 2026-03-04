@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm --filter @nl-rvo/storybook build && pnpm --filter @nl-rvo/docusaurus build && pnpm --filter @nl-rvo/design-system-website generate",
+  "buildCommand": "pnpm run build && pnpm --filter @nl-rvo/design-system-website generate",
   "outputDirectory": "packages/design-system-website/dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null
