@@ -1,5 +1,11 @@
 # `@nl-rvo/css-hero`
 
+## 1.6.0
+
+### Minor Changes
+
+- a8c9e6f: Added two new parameter; kind and showLine. With this you can change the appearance of the Hero Component. Only kind currently available is 'lichtblauw'
+
 ## 1.5.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field-fileinput`
 
+## 1.2.2
+
+### Patch Changes
+
+- 0d1c470: Added a hover state to the file-selector-button for the File Input Component
+
 ## 1.2.1
 
 ### Patch Changes
