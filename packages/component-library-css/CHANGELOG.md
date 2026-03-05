@@ -1,5 +1,20 @@
 # @nl-rvo/component-library-css
 
+## 4.18.0
+
+### Minor Changes
+
+- 13f0d9c: Update scss and fix right font for wrapped button insde <th>.
+- 8f77b41: New option for image (overlay) lines.
+- a8c9e6f: Hero component styling updated to support kind classnames and image-container now has a lined modifier class
+
+### Patch Changes
+
+- cc69b9b: Menu items and submenu items now have similar padding sizes to one another.
+- 0d1c470: Added a hover state to the file-selector-button for the File Input Component
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+- c780f1e: Aligned TextArea character counter to the left
+
 ## 4.17.0
 
 ### Minor Changes
