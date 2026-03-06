@@ -1,5 +1,11 @@
 # @nl-rvo/storybook
 
+## 2.0.1
+
+### Patch Changes
+
+- 781d278: Added viewport fix for firefox
+
 ## 2.0.0
 
 ### Major Changes
