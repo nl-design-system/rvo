@@ -35,7 +35,7 @@ export const iconOptions = Object.keys(iconListWithoutStatus).flatMap((categoryO
       toProperCase(`${categoryOrIconName} > ${iconName}`),
     );
   } else {
-    return toProperCase(iconList[categoryOrIconName].replace('.svg', ''));
+    return toProperCase(iconList[categoryOrIconName].toString().replace('.svg', ''));
   }
 });
 

@@ -93,4 +93,4 @@ export { UtilityMargin } from './utilities/utility-margin';
 export { UtilityTextTypes } from './utilities/utility-text-types';
 
 // ThemeProvider
-export * from './ThemeProvider';
+export { ThemeProvider } from './ThemeProvider';
