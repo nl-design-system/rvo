@@ -1,4 +1,4 @@
-import { Footer, Header, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Footer, Header, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import '../../common/animated-alert.scss';

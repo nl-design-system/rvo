@@ -15,11 +15,11 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@nl-rvo/utilities/*": ["./*"],
+      "@nl-rvo/components/*": ["./*"],
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
       "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
+      "@nl-rvo/documentation/*": ["../documentation/*"],
       "react-dom/server": ["../packages/storybook/node_modules/react-dom/server"],
-      "@docusaurus/components/*": ["../packages/docusaurus/src/components/*"],
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]
     }
   },

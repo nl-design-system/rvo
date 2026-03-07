@@ -9,7 +9,7 @@ import {
   Link,
   MaxWidthLayout,
   MenuBar,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';

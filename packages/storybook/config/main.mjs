@@ -58,21 +58,22 @@ const config = (() => {
     stories: [
       `${docsPath}/pages/**/*.docpage.mdx`,
       `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
-      `${componentsPath}/**!(node_modules)/*.docpage.mdx`,
-      `${componentsPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
-      `${utilitiesPath}/**!(node_modules)/*.docpage.mdx`,
-      `${utilitiesPath}/**!(node_modules)/*.stories.@(jsx|tsx)`,
+      `${componentsPath}/*/docs/*.docpage.mdx`,
+      `${componentsPath}/*/stories/*.stories.@(jsx|tsx)`,
+      `${utilitiesPath}/*/docs/*.docpage.mdx`,
+      `${utilitiesPath}/*/stories/*.stories.@(jsx|tsx)`,
     ],
 
     addons: [
       '@storybook/addon-a11y',
       '@storybook/preset-scss',
-      'storybook-addon-themes',
+      '@storybook/addon-themes',
       '@storybook/addon-links',
       '@storybook/addon-designs',
       '@storybook/addon-webpack5-compiler-babel',
       '@chromatic-com/storybook',
       '@storybook/addon-docs',
+      '@etchteam/storybook-addon-status',
     ],
 
     staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],

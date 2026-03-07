@@ -1,4 +1,14 @@
-import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Icon,
+  LayoutFlow,
+  Link,
+  MenuBar,
+  MobileMenuBar,
+} from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import '../../common/copyright-details.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';

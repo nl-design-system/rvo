@@ -1,4 +1,4 @@
-import { Alert, Button, Header, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Alert, Button, Header, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 

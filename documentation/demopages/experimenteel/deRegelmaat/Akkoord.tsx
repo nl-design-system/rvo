@@ -1,4 +1,4 @@
-import { ActionGroup, Heading } from '@nl-rvo/components';
+import { ActionGroup, Heading } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 

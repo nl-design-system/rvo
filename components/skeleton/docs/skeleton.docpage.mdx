@@ -1,0 +1,23 @@
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "../CHANGELOG.md";
+import documentation from "../README.md";
+import * as SkeletonStories from "../stories/skeleton.stories";
+
+<Meta of={SkeletonStories} name="Documentatie" />
+
+<Title />
+
+## Preview
+
+<Canvas of={SkeletonStories.Default} layout="padded" />
+## Parameters
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

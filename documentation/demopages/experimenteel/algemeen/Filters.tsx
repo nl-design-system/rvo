@@ -9,7 +9,7 @@ import {
   MaxWidthLayout,
   MenuBar,
   TextInputField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';

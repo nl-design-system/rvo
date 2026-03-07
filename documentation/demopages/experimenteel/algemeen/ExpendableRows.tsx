@@ -1,4 +1,4 @@
-import { ExpandableContent, Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { ExpandableContent, Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import '../../common/style.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';

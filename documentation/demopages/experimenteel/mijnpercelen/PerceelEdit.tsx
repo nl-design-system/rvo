@@ -10,7 +10,7 @@ import {
   MenuBar,
   SelectField,
   TextInputField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 

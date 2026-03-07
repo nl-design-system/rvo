@@ -1,4 +1,4 @@
-import { Table } from '@nl-rvo/components';
+import { Table } from '@nl-rvo/component-library-react';
 import React, { useEffect, useState } from 'react';
 
 interface NpmRegistryResponse {

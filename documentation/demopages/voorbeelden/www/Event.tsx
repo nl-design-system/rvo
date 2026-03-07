@@ -1,4 +1,13 @@
-import { Button, Footer, Header, Heading, Icon, LayoutFlow, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Heading,
+  Icon,
+  LayoutFlow,
+  MenuBar,
+  MobileMenuBar,
+} from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
