@@ -262,8 +262,8 @@ importers:
   components/form-field:
     dependencies:
       '@utrecht/form-field-css':
-        specifier: 1.5.0
-        version: 1.5.0
+        specifier: 2.0.1
+        version: 2.0.1
       '@utrecht/form-field-description-css':
         specifier: 1.5.0
         version: 1.5.0
@@ -5872,11 +5872,11 @@ packages:
       react: '18'
       react-dom: '18'
 
-  '@utrecht/form-field-css@1.5.0':
-    resolution: {integrity: sha512-PGqIYHYlqQKuADgIIQF4niS6XO1VeUv6OWrWDrLbFw0JkKtNwU9Y3ALtb5mSmgXAKOUHEtI7scwFqOxYgKztsw==}
-
   '@utrecht/form-field-css@1.5.1':
     resolution: {integrity: sha512-EILCtMcMk3LgTT5pUjna0vKA5S77Av1+fgqgfApEWU7y0wcC8UcYdD7Ujl3goJShhO02Fo7AYM3befJQgYBtuQ==}
+
+  '@utrecht/form-field-css@2.0.1':
+    resolution: {integrity: sha512-POiAK/I92tjXHwzBnLCA0BChQWPH0aF0BkF0qB8+Ouc+omkOcvMBmQrz2hgEpEa1W7kenXh/YkL7+/uB9fq0qw==}
 
   '@utrecht/form-field-description-css@1.5.0':
     resolution: {integrity: sha512-LGImfd2xFuNPvycIQzwtTg2UIAo9T06MI/KoTbchB56lPzXLmictzfn2rGDzZuaemWTwkxqKUzorLXqdonZ22Q==}
@@ -22170,9 +22170,9 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/form-field-css@1.5.0': {}
-
   '@utrecht/form-field-css@1.5.1': {}
+
+  '@utrecht/form-field-css@2.0.1': {}
 
   '@utrecht/form-field-description-css@1.5.0': {}
 
