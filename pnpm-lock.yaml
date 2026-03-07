@@ -166,8 +166,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       '@utrecht/focus-ring-css':
-        specifier: 2.2.0
-        version: 2.2.0
+        specifier: 3.0.1
+        version: 3.0.1
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -5859,8 +5859,8 @@ packages:
   '@utrecht/figure-css@1.5.1':
     resolution: {integrity: sha512-KzkIIyGo3wAYXFkDeBV+S2m6InKqPLUpVy8EjBPRTB8WexiLfDKpYf1gAVhgbL+236fB30yWLkzukGO/AAUFBw==}
 
-  '@utrecht/focus-ring-css@2.2.0':
-    resolution: {integrity: sha512-cF2p+SljV/+n+ColcFR6TQjE1tUK/pGbpp4Y8jin/EXvMUMCYEZY8gZWPk2XpHgOKETQTvH0q21zkCfjVDgJqw==}
+  '@utrecht/focus-ring-css@3.0.1':
+    resolution: {integrity: sha512-0dVPsdbc2glPNJe6rYl7DwSXUkohcdR5zLrObk2WY3DzSvHgKZGliHy2PBYg2LoZrPXrTaLEsttivtGt68tjww==}
 
   '@utrecht/form-css@1.5.1':
     resolution: {integrity: sha512-jRec11YkKtPmbLpW7bjkqHTb9XTCxB4VBxFMurCqpQJ+ISni0CKTBhGTCfZGLhWsNEVLpuIuL0UxhFNyE/ZS+w==}
@@ -22154,7 +22154,7 @@ snapshots:
 
   '@utrecht/figure-css@1.5.1': {}
 
-  '@utrecht/focus-ring-css@2.2.0': {}
+  '@utrecht/focus-ring-css@3.0.1': {}
 
   '@utrecht/form-css@1.5.1': {}
 
