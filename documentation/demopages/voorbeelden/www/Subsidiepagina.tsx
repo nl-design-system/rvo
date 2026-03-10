@@ -93,7 +93,7 @@ const Subsidiepagina = () => {
             vergoed voor uw bijvriendelijke dak. Zo helpt u de hoeveelheid bijen in Nederland én het klimaat. Uw dak
             ziet er mooier uit en isoleert beter. Vraag net als 10.000 andere dakeigenaren nu subsidie bij ons aan.
           </p>
-          <div className="utrecht-button-group">
+          <div className="rvo-action-group">
             <Button>Aanvragen</Button>
             <Button kind="secondary">Uw aanvraag bekijken</Button>
           </div>
@@ -485,7 +485,7 @@ const Subsidiepagina = () => {
             </li>
           </ul>
           <div className="rvo-margin-block-start--md rvo-margin-block-end--lg  rvo-max-width-layout rvo-max-width-layout--sm ">
-            <div className=" utrecht-button-group">
+            <div className=" rvo-action-group">
               <Button kind="secondary" size="sm">
                 Voortgang doorgeven
               </Button>

@@ -1523,7 +1523,7 @@
     .rvo-topnav__background,
     .rvo-progress-tracker,
     .rvo-form-intro > .rvo-link,
-    .utrecht-button-group,
+    .rvo-action-group,
     .rvo-icon {
       display: none;
     }
@@ -1641,7 +1641,7 @@
     text-decoration: none;
   }
 
-  .rvo-app--profiel .utrecht-button-group {
+  .rvo-app--profiel .rvo-action-group {
     justify-content: space-between;
     padding-block-start: var(--rvo-space-md);
   }
