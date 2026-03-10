@@ -23,7 +23,6 @@ const config: Config = {
   },
   plugins: [
     process.env.RSDOCTOR === 'true' && 'rsdoctor',
-    'docusaurus-plugin-matomo',
     './plugins/docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-docs',
@@ -101,12 +100,6 @@ const config: Config = {
         content: `frame-ancestors 'none'; object-src 'none'; base-uri 'none'; default-src 'self'; media-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://statistiek.rvo.nl; style-src 'unsafe-inline' 'self'; connect-src 'self' https://*.algolia.net https://*.algolianet.com https://statistiek.rvo.nl; frame-src 'self' https://nl-design-system.github.io; font-src 'self';`,
       },
     ],
-    matomo: {
-      matomoUrl: 'https://matomo.roose.digital/',
-      siteId: '10',
-      phpLoader: 'matomo.php',
-      jsLoader: 'matomo.js',
-    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
