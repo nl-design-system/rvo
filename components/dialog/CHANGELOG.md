@@ -1,5 +1,23 @@
 # `@nl-rvo/css-dialog`
 
+## 1.4.5
+
+### Patch Changes
+
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
+## 1.4.4
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.4.3
+
+### Patch Changes
+
+- 5442d67: Updated ActionGroup check for Dialogs
+
 ## 1.4.2
 
 ### Patch Changes

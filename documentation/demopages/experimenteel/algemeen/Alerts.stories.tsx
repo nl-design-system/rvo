@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Alerts from './Alerts';
 
 const meta: Meta<typeof Alerts> = {

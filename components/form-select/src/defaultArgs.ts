@@ -11,6 +11,7 @@ export const defaultArgs: ISelectProps = {
   disabled: false,
   focus: false,
   invalid: false,
+  size: 'max',
   required: false,
   options: defaultOptions,
 };

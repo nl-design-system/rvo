@@ -1,5 +1,17 @@
 # `@nl-rvo/css-form-field-textarea`
 
+## 1.2.2
+
+### Patch Changes
+
+- c780f1e: Aligned TextArea character counter to the left
+
+## 1.2.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.0
 
 ### Minor Changes

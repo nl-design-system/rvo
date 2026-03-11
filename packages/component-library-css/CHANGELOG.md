@@ -1,5 +1,53 @@
 # @nl-rvo/component-library-css
 
+## 4.18.0
+
+### Minor Changes
+
+- 13f0d9c: Update scss and fix right font for wrapped button insde <th>.
+- 8f77b41: New option for image (overlay) lines.
+- a8c9e6f: Hero component styling updated to support kind classnames and image-container now has a lined modifier class
+
+### Patch Changes
+
+- cc69b9b: Menu items and submenu items now have similar padding sizes to one another.
+- 0d1c470: Added a hover state to the file-selector-button for the File Input Component
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+- c780f1e: Aligned TextArea character counter to the left
+
+## 4.17.0
+
+### Minor Changes
+
+- 24190d1: Add size for form-select and form-field-select.
+
+### Patch Changes
+
+- f606906: Delete maxwidth from Checkbox Filter for scalability
+
+## 4.16.0
+
+### Minor Changes
+
+- 5442d67: Updates to several components using `.rvo-` prefix instead of `.utrecht-`. Affect components are:
+
+  - Button
+  - Action Group
+  - Fieldset
+  - Textarea
+
+  Smaller fixes to the following CSS
+
+  - Footer payoff color added
+  - Autocomplete placeholder color added
+
+- 09b1d14: Change vertical alignment to `baseline` for `.rvo-table-cell`.
+- 3a6a613: Add correct icon before/after margins.
+
+### Patch Changes
+
+- 9b2eeb1: ROOS-282: adds end margin to the grid container to meet current designs
+
 ## 4.15.1
 
 ### Patch Changes

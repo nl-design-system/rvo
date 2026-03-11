@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { ICardContentProps } from './src/components/CardContent';
 import { ICardHeaderProps } from './src/components/CardHeader';
 import { ICardImageProps } from './src/components/CardImage';

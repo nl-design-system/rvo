@@ -7,6 +7,7 @@ export const defaultArgs: ICardProps = {
   content: 'Content',
   fullCardLink: false,
   image: '',
+  imageLine: 'none',
   imageSize: 'md',
   invertedColors: false,
   link: '',

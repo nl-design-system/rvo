@@ -1,5 +1,23 @@
 # `@nl-rvo/css-table`
 
+## 1.8.0
+
+### Minor Changes
+
+- 13f0d9c: Update scss and fix right font for wrapped button insde <th>.
+
+## 1.7.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.7.0
+
+### Minor Changes
+
+- 09b1d14: Change vertical alignment to `baseline` for `.rvo-table-cell`.
+
 ## 1.6.0
 
 ### Minor Changes

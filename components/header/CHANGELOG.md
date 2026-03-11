@@ -1,5 +1,11 @@
 # `@nl-rvo/css-header`
 
+## 1.2.4
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.3
 
 ### Patch Changes

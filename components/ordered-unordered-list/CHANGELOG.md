@@ -1,5 +1,17 @@
 # `@nl-rvo/css-ordered-unordered-list`
 
+## 1.3.2
+
+### Patch Changes
+
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
+## 1.3.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.3.0
 
 ### Minor Changes

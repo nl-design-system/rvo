@@ -83,5 +83,6 @@
         "ecmaVersion": 2020
       }
     }
-  ]
+  ],
+  "extends": ["plugin:storybook/recommended"]
 }

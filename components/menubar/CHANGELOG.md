@@ -1,5 +1,18 @@
 # `@nl-rvo/css-menubar`
 
+## 1.5.2
+
+### Patch Changes
+
+- cc69b9b: Menu items and submenu items now have similar padding sizes to one another.
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
+## 1.5.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.5.0
 
 ### Minor Changes

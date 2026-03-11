@@ -26,9 +26,12 @@ const Row: React.FC<ITableRowProps> = ({ children, className, ...otherProps }: I
 export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false, ...otherProps }: ITableRowProps) => {
   const [visible, setVisible] = useState(expanded);
 
-  const isExpandable: boolean = React.Children.toArray(children).some(
-    (child): child is TableCellType => React.isValidElement(child) && !!child.props.expandable,
-  );
+  const isExpandable = React.Children.toArray(children).some((child) => {
+    if (!React.isValidElement(child)) return false;
+
+    const props = child.props as { expandable?: boolean };
+    return !!props.expandable;
+  });
 
   const computeRowSpan = (cell: TableCellType, index: number): number | undefined =>
     visible && index === 0 && cell.props.expandable ? 2 : undefined;

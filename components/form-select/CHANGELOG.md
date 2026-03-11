@@ -1,5 +1,17 @@
 # `@nl-rvo/css-form-select`
 
+## 1.3.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.3.0
+
+### Minor Changes
+
+- 24190d1: Add size for form-select and form-field-select.
+
 ## 1.2.7
 
 ### Patch Changes

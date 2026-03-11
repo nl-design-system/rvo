@@ -2,7 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import { FormField } from '@utrecht/component-library-react';
 import React, { PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
 import { ExpandableContent } from '../../expandable-content/src/template';
@@ -95,7 +94,12 @@ export const Field: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttribut
   const fieldLabelId = `${fieldId}-label`;
 
   return (
-    <FormField className="rvo-form-field" role="group" aria-labelledby={fieldLabelId} {...rootElementProps}>
+    <div
+      className="utrecht-form-field utrecht-form-field--text rvo-form-field"
+      role="group"
+      aria-labelledby={fieldLabelId}
+      {...rootElementProps}
+    >
       <div className="rvo-form-field__label">
         <Label
           id={fieldLabelId}
@@ -110,6 +114,6 @@ export const Field: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttribut
         {warningText && <Feedback text={warningText} type="warning" />}
       </div>
       {(className && <div className={className}>{parseContentMarkup(children)}</div>) || parseContentMarkup(children)}
-    </FormField>
+    </div>
   );
 };

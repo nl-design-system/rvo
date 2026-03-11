@@ -55,7 +55,7 @@ const Home = () => {
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         <Hero
           size="lg"
-          image={{ src: 'images/www/home.jpg', alt: '' }}
+          image={{ src: 'images/www/home.jpg', alt: 'home' }}
           title="Rijksdienst voor Ondernemend Nederland"
           subtitle="Wij helpen u graag vooruit!"
         />

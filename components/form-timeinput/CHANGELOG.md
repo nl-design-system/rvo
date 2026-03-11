@@ -1,5 +1,17 @@
 # `@nl-rvo/css-form-timeinput`
 
+## 1.2.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.2.0
+
+### Minor Changes
+
+- 5442d67: Removed third party component imports and updated CSS to be inline with the original designs
+
 ## 1.1.0
 
 ### Minor Changes

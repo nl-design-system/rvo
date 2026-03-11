@@ -1,13 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { HTMLAttributes } from 'react';
 import { Hero, IHeroProps } from './src/template';
 
 const argTypes = {
   image: {
     control: { type: 'object' },
-  },
-  imageAlt: {
-    control: { type: 'text' },
   },
   title: {
     control: 'text',
@@ -27,6 +24,11 @@ const argTypes = {
       disable: true,
     },
   },
+  kind: {
+    options: ['none', 'lichtblauw'],
+    control: { type: 'radio' },
+  },
+  showLine: { control: 'boolean' },
 };
 
 const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {
@@ -68,7 +70,7 @@ export const Default: Story = {
 export const CustomImageHero: Story = {
   args: {
     ...defaultArgs,
-    image: <img src="images/www/nieuwsbrief.webp" />,
+    image: <img src="images/www/nieuwsbrief.webp" alt="newsletter" />,
   },
   name: 'Hero - Custom image',
 };

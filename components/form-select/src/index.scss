@@ -5,58 +5,79 @@
 
 @use "~@utrecht/select-css/dist/index.css" as *;
 
-.rvo-select-wrapper {
-  position: relative;
-}
+// rvo-select
+.rvo-select {
+  &-wrapper {
+    position: relative;
+    width: var(--utrecht-select-max-inline-size);
 
-.rvo-select-wrapper::before {
-  background-color: var(--rvo-select-icon-background-color);
-  border-radius: var(--rvo-border-radius-sm);
-  content: "";
-  display: block;
-  height: 32px;
-  pointer-events: none;
-  position: absolute;
-  right: 7px;
-  top: 7px;
-  width: 32px;
-}
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 32px;
+      pointer-events: none;
+      position: absolute;
+    }
 
-.rvo-select-wrapper::after {
-  background-color: var(--rvo-select-icon-color);
-  content: "";
-  display: block;
-  height: 32px;
-  -webkit-mask-image: var(--rvo-icon-delta-omlaag);
-  mask-image: var(--rvo-icon-delta-omlaag);
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  pointer-events: none;
-  position: absolute;
-  right: 16px;
-  top: 7px;
-  width: 13px;
+    &::before {
+      background-color: var(--rvo-select-icon-background-color);
+      border-radius: var(--rvo-border-radius-sm);
+      right: 7px;
+      top: 7px;
+      width: 32px;
+    }
+
+    &::after {
+      background-color: var(--rvo-select-icon-color);
+      -webkit-mask-image: var(--rvo-icon-delta-omlaag);
+      mask-image: var(--rvo-icon-delta-omlaag);
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100%;
+      mask-size: 100%;
+      right: 16px;
+      top: 7px;
+      width: 13px;
+    }
+  }
+
+  &--xs {
+    --utrecht-select-max-inline-size: var(--rvo-textbox-xs-width);
+  }
+
+  &--sm {
+    --utrecht-select-max-inline-size: var(--rvo-textbox-sm-width);
+  }
+
+  &--md {
+    --utrecht-select-max-inline-size: var(--rvo-textbox-md-width);
+  }
+
+  &--lg {
+    --utrecht-select-max-inline-size: var(--rvo-textbox-lg-width);
+  }
 }
 
 // Overrides
 .utrecht-select {
+  --utrecht-select-max-inline-size: 100%;
+
   appearance: none;
   height: 48px;
   padding-block-end: var(--rvo-select-padding-block-end);
   padding-block-start: var(--rvo-select-padding-block-start);
   padding-inline-end: var(--rvo-select-padding-inline-end);
   padding-inline-start: var(--rvo-select-padding-inline-start);
-  width: 100%;
-}
+  width: var(--utrecht-select-max-inline-size);
 
-.utrecht-select:disabled {
-  opacity: 100%;
-}
+  &:disabled {
+    opacity: 100%;
+  }
 
-.utrecht-select:focus {
-  outline-offset: var(--rvo-select-outline-offset);
+  &:focus {
+    outline-offset: var(--rvo-select-outline-offset);
+  }
 }

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ScreenshotsUitgangspositie from './ScreenshotsUitgangspositie';
 
 const meta: Meta<typeof ScreenshotsUitgangspositie> = {

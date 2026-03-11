@@ -1,5 +1,17 @@
 # `@nl-rvo/css-form-fileinput`
 
+## 1.2.4
+
+### Patch Changes
+
+- 0d1c470: Added a hover state to the file-selector-button for the File Input Component
+
+## 1.2.3
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
 ## 1.2.2
 
 ### Patch Changes

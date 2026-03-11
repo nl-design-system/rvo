@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import './index.scss';
-import { Textarea as UtrechtTextarea } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { HTMLAttributes, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
@@ -130,11 +129,17 @@ export const Textarea: React.FC<ITextareaProps> = ({
     };
     return (
       <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
-        <UtrechtTextarea
+        <textarea
           {...props}
-          className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])}
+          className={clsx(
+            'rvo-textarea',
+            'rvo-textarea--html-textarea',
+            invalid && 'rvo-textarea--invalid',
+            focus && ['rvo-textarea--focus', 'rvo-textarea--focus-visible'],
+          )}
+          aria-invalid={invalid}
         />
-        <span className="utrecht-textbox-remaining-chars">
+        <span className="rvo-textarea__remaining-chars">
           Nog <strong>{maxLength - (currentValue?.length || 0)}</strong> teken
           {maxLength - (currentValue?.length || 0) > 1 && 's'} over
         </span>
@@ -142,9 +147,16 @@ export const Textarea: React.FC<ITextareaProps> = ({
     );
   } else {
     return (
-      <UtrechtTextarea
+      <textarea
         {...props}
-        className={clsx(focus && ['utrecht-textbox--focus', 'utrecht-textbox--focus-visible'])}
+        className={clsx(
+          'rvo-textarea',
+          'rvo-textarea--html-textarea',
+          invalid && 'rvo-textarea--invalid',
+
+          focus && ['rvo-textarea--focus', 'rvo-textarea--focus-visible'],
+        )}
+        aria-invalid={invalid}
       />
     );
   }

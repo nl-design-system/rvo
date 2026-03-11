@@ -18,6 +18,9 @@ export const argTypes = {
       required: true,
     },
   },
+  size: {
+    control: 'text',
+  },
   onFocus: {
     table: {
       disable: true,

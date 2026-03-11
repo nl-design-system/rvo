@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field`
 
+## 1.5.0
+
+### Minor Changes
+
+- 5442d67: Removed third party component imports and updated CSS to be inline with the original designs
+
 ## 1.4.0
 
 ### Minor Changes

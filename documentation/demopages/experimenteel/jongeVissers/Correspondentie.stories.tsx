@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Correspondentie from './Correspondentie';
 
 const meta: Meta<typeof Correspondentie> = {

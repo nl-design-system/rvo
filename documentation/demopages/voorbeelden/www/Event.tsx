@@ -1,4 +1,4 @@
-import { Button, Footer, Header, Heading, Hero, Icon, LayoutFlow, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import { Button, Footer, Header, Heading, Icon, LayoutFlow, MenuBar, MobileMenuBar } from '@nl-rvo/components';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -60,17 +60,11 @@ const Event = () => {
             </li>
           </ol>
         </div>
-        <Hero
-          size="lg"
-          image={{
-            src: 'https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2023-09%2Fevenement.jpg%3Fitok%3DBp-oTBdK&w=1920&q=85',
-            alt: '',
-          }}
-          title="Bijeenkomst intermediairs Duurzaam Wonen"
-          subtitle="Informatiebijeenkomst Europese programma’s
-            voor duurzame oplossingen"
-        />
+
         <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm ">
+          <Heading type="h1" noMargins={true}>
+            Bijeenkomst intermediairs Duurzaam Wonen
+          </Heading>
           <p>
             <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em>
           </p>
@@ -79,13 +73,25 @@ const Event = () => {
             natuur en mobiliteit? Laat u inspireren en informeren tijdens de informatiebijeenkomst Europese programma’s
             voor duurzame oplossingen.
           </p>
+          <Button kind="primary" size="md">
+            Aanmelden
+          </Button>
+        </div>
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--md rvo-margin-block-start--xl">
+          <img
+            src="https://www.rvo.nl/_next/image?url=%2Ffiles%2Ffile%2Fstyles%2Fcontent%2Fpublic%2F2023-09%2Fevenement.jpg%3Fitok%3DBp-oTBdK&w=1920&q=85"
+            alt="Voorbeeldafbeelding"
+            className="rvo-image rvo-image--radius-all rvo-image--radius-size-md"
+            width="912"
+            height="640"
+          />
         </div>
         <div className="rvo-max-width-layout rvo-max-width-layout--sm">
-          <div className="rvo-card rvo-card--full-colour--hemelblauw rvo-card--inverted-colors rvo-card--padding-lg rvo-margin-block-start--xl">
+          <div className="rvo-card rvo-card--outline rvo-card--full-colour--grijs-100 rvo-card--padding-lg rvo-margin-block-start--xl">
             <div className="rvo-card__content">
-              <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two rvo-margin-block-end--lg">
+              <div className="rvo-layout-grid rvo-layout-gap--md rvo-layout-grid-columns--two ">
                 <div>
-                  <Icon icon="kalender" size="2xl" color="wit"></Icon>
+                  <Icon icon="kalender" size="2xl" color="zwart"></Icon>
                   <br />
                   <strong>Datum:</strong>
                   <br /> maandag 1 januari 2027
@@ -94,7 +100,14 @@ const Event = () => {
                   <br /> 09:00 - 17:00{' '}
                 </div>
                 <div>
-                  <Icon icon="locatiemarker" size="2xl" color="wit"></Icon>
+                  <Icon icon="toegangspas" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Deelname:</strong>
+                  <br /> Deelname is gratis
+                  <br /> Aanmelden tot 21 januari, 12:00 uur{' '}
+                </div>
+                <div>
+                  <Icon icon="locatiemarker" size="2xl" color="zwart"></Icon>
                   <br />
                   <strong>Locatie:</strong>
                   <br />
@@ -108,51 +121,40 @@ const Event = () => {
                   <br />
                   <a
                     href="https://www.openstreetmap.org/?mlat=52.0331&mlon=5.1067&zoom=17"
-                    className="rvo-link rvo-link--wit"
+                    className="rvo-link rvo-link--donkerblauw"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Bekijk op kaart
+                    Bekijk op OpenStreetMap
                   </a>
+                  <br />
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=52.0331,5.1067"
+                    className="rvo-link rvo-link--donkerblauw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Bekijk op Google Maps
+                  </a>
+                  <br />
+                  <a
+                    href="https://maps.apple.com/?ll=52.0331,5.1067"
+                    className="rvo-link rvo-link--donkerblauw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Bekijk op Apple Maps
+                  </a>
+                </div>
+                <div>
+                  <Icon icon="kring-3-personen-torso" size="2xl" color="zwart"></Icon>
+                  <br />
+                  <strong>Organisatoren:</strong>
+                  <br />
+                  Rijksdienst voor Ondernemend Nederland
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="rvo-max-width-layout rvo-max-width-layout--sm rvo-layout-column rvo-layout-gap--md rvo-margin-block-start--lg">
-          <div>
-            <Icon icon="toegangspas" size="2xl" color="zwart"></Icon>
-            <br />
-            <strong>Deelname:</strong>
-            <br /> Deelname is gratis
-            <br /> Aanmelden tot 21 januari, 12:00 uur{' '}
-          </div>
-          <div>
-            <Icon icon="kring-3-personen-torso" size="2xl" color="zwart"></Icon>
-            <br />
-            <strong>Organisatoren:</strong>
-            <br />
-            Rijksdienst voor Ondernemend Nederland
-          </div>
-          <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl rvo-card--full-colour--grijs-100  rvo-max-width-layout rvo-max-width-layout--sm ">
-            <Heading type="h2" noMargins={true}>
-              Aanmelden
-            </Heading>
-            <p className="rvo-paragraph">
-              U kunt zich aanmelden via het{' '}
-              <a href="#" className="rvo-link rvo-link--donkerblauw">
-                online aanmeldformulier
-              </a>
-              . U ontvangt binnenkort een mail met uitnodiging. Wij gaan zorgvuldig om met uw persoonsgegevens. Lees
-              meer over ons{' '}
-              <a href="#" className="rvo-link rvo-link--donkerblauw">
-                privacybeleid
-              </a>
-              .
-            </p>
-            <Button kind="primary" size="md">
-              Aanmelden
-            </Button>
           </div>
         </div>
 
