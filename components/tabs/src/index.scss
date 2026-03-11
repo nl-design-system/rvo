@@ -1,10 +1,12 @@
 .rvo-tabs {
-  --rvo-tabs-padding-block: var(--rvo-tabs-padding-block-start, 8px) var(--rvo-tabs-padding-block-end, 8px);
-  --rvo-tabs-padding-inline: var(--rvo-tabs-padding-inline-start, 16px) var(--rvo-tabs-padding-inline-end, 16px);
-  --rvo-tabs-panel-padding-block: var(--rvo-tabs-panel-padding-block-start, 8px)
-    var(--rvo-tabs-panel-padding-block-end, 8px);
-  --rvo-tabs-panel-padding-inline: var(--rvo-tabs-panel-padding-inline-start, 16px)
-    var(--rvo-tabs-panel-padding-inline-end, 16px);
+  --rvo-tabs-padding-block: var(--rvo-tabs-padding-block-start, --rvo-space-xs)
+    var(--rvo-tabs-padding-block-end, --rvo-space-xs);
+  --rvo-tabs-padding-inline: var(--rvo-tabs-padding-inline-start, --rvo-space-md)
+    var(--rvo-tabs-padding-inline-end, --rvo-space-md);
+  --rvo-tabs-panel-padding-block: var(--rvo-tabs-panel-padding-block-start, --rvo-space-xs)
+    var(--rvo-tabs-panel-padding-block-end, --rvo-space-xs);
+  --rvo-tabs-panel-padding-inline: var(--rvo-tabs-panel-padding-inline-start, --rvo-space-md)
+    var(--rvo-tabs-panel-padding-inline-end, --rvo-space-md);
 
   font-size: var(--rvo-tabs-font-size);
 
@@ -15,6 +17,17 @@
     gap: var(--rvo-tabs-gap);
     margin-block: calc(var(--rvo-tabs-border-width) * -1);
     padding-inline: 0;
+    position: relative;
+
+    &::after {
+      border-block-end: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
+      bottom: calc(var(--rvo-tabs-border-width) * -1);
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: 2;
+    }
   }
 
   &__item, // Deprecated from v1.
@@ -26,7 +39,7 @@
     border-block-end: none;
     border-block-end-color: var(--rvo-tabs-border-color);
     color: var(--rvo-tabs-color);
-    column-gap: 0.5rem;
+    column-gap: var(--rvo-tabs-gap);
     cursor: pointer;
     display: inline-flex;
     font: inherit;
@@ -61,7 +74,7 @@
       color: var(--rvo-tabs-active-color);
       font-weight: var(--rvo-tabs-active-font-weight);
       text-decoration: none;
-      z-index: 2;
+      z-index: 3;
 
       &:hover {
         background-color: var(--rvo-tabs-active-background);
@@ -78,6 +91,7 @@
   &__panel {
     background-color: var(--rvo-tabs-active-background);
     border: var(--rvo-tabs-panel-border-width) var(--rvo-tabs-panel-border-style) var(--rvo-tabs-panel-border-color);
+    border-top: 0;
     padding-block: var(--rvo-tabs-panel-padding-block);
     padding-inline: var(--rvo-tabs-panel-padding-inline);
     position: relative;
@@ -91,17 +105,17 @@
 
   // util
   &--sm {
-    --rvo-tabs-font-size: var(--rvo-font-size-sm, 0.875rem);
-    --rvo-tabs-gap: var(--rvo-space-2xs, 4px);
+    --rvo-tabs-font-size: var(--rvo-font-size-sm, --rvo-space-sm);
+    --rvo-tabs-gap: var(--rvo-space-2xs, --rvo-space-2xs);
   }
 
   &--md {
-    --rvo-tabs-font-size: var(--rvo-font-size-md, 1rem);
-    --rvo-tabs-gap: var(--rvo-space-xs, 4px);
+    --rvo-tabs-font-size: var(--rvo-font-size-md, --rvo-space-md);
+    --rvo-tabs-gap: var(--rvo-space-xs, --rvo-space-xs);
   }
 
   &--lg {
-    --rvo-tabs-font-size: var(--rvo-font-size-lg, 1.125rem);
-    --rvo-tabs-gap: var(--rvo-space-xs, 8px);
+    --rvo-tabs-font-size: var(--rvo-font-size-lg, --rvo-space-lg);
+    --rvo-tabs-gap: var(--rvo-space-xs, --rvo-space-xs);
   }
 }
