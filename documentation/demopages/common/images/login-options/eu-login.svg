@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Dark blue circular background -->
+  <circle cx="24" cy="24" r="24" fill="#003399"/>
+  <!-- 12 EU stars arranged in a circle -->
+  <g fill="#FFCC00">
+    <circle cx="24" cy="7"  r="1.8"/>
+    <circle cx="31.5" cy="9.3" r="1.8"/>
+    <circle cx="37.1" cy="15" r="1.8"/>
+    <circle cx="39.5" cy="22.5" r="1.8"/>
+    <circle cx="37.1" cy="30" r="1.8"/>
+    <circle cx="31.5" cy="35.7" r="1.8"/>
+    <circle cx="24" cy="38" r="1.8"/>
+    <circle cx="16.5" cy="35.7" r="1.8"/>
+    <circle cx="10.9" cy="30" r="1.8"/>
+    <circle cx="8.5" cy="22.5" r="1.8"/>
+    <circle cx="10.9" cy="15" r="1.8"/>
+    <circle cx="16.5" cy="9.3" r="1.8"/>
+  </g>
+  <!-- "A" letter in center representing eIDAS -->
+  <text x="24" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">A</text>
+</svg>
