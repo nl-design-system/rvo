@@ -1,4 +1,12 @@
-import { Fieldset, Footer, Header, Heading, LayoutFlow, MenuBar, TextInputField } from '@nl-rvo/components';
+import {
+  Fieldset,
+  Footer,
+  Header,
+  Heading,
+  LayoutFlow,
+  MenuBar,
+  TextInputField,
+} from '@nl-rvo/component-library-react';
 import { useState } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';

@@ -1,4 +1,4 @@
-import { Button, Header, Heading, Hero, Icon, LayoutFlow, Link } from '@nl-rvo/components';
+import { Button, Header, Heading, Hero, Icon, LayoutFlow, Link } from '@nl-rvo/component-library-react';
 
 const Nieuwsbrief = () => {
   return (

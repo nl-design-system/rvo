@@ -1,6 +1,6 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Button, Card, Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/components';
+import { Button, Card, Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import styles from './index.module.css';

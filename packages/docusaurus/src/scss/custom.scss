@@ -1,5 +1,5 @@
-@use "@nl-rvo/components/heading/dist" as *;
-@use "@nl-rvo/components/link/dist" as *;
+@use "@nl-rvo/css-heading/src" as *;
+@import url("@nl-rvo/component-library-css/dist/components/link.min.css");
 
 /* stylelint-disable custom-property-pattern */
 

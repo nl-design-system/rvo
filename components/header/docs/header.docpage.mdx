@@ -1,0 +1,24 @@
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "../CHANGELOG.md";
+import documentation from "../README.md";
+import * as HeaderStories from "../stories/header.stories";
+
+<Meta of={HeaderStories} name="Documentatie" />
+
+<Title />
+<Canvas of={HeaderStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/assets/images_
+_@nl-rvo/css-logo_

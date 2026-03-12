@@ -14,7 +14,7 @@ import {
   SelectField,
   TextareaField,
   TextInputField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../common/defaultFooterItems';
 

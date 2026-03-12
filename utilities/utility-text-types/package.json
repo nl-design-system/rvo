@@ -30,6 +30,7 @@
     "directory": "utilities/utility-text-types"
   },
   "devDependencies": {
-    "@nl-rvo/build-utils-css": "workspace:*"
+    "@nl-rvo/build-utils-css": "workspace:*",
+    "@nl-rvo/component-library-react": "workspace:*"
   }
 }

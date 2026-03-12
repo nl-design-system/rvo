@@ -1,5 +1,5 @@
 import { useLocation } from '@docusaurus/router';
-import * as Components from '@nl-rvo/components';
+import * as Components from '@nl-rvo/component-library-react';
 import styles from './preview.module.css';
 import { deserialize } from '../utils/react-serialize';
 

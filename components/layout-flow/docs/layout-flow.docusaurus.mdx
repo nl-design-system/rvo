@@ -1,0 +1,34 @@
+---
+title: Layout flow
+hide_title: false
+hide_table_of_contents: true
+slug: /layout-flow
+---
+
+import { LayoutFlow } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+import Documentation from "../README.md";
+
+Column:
+{(() => {
+const props = { gap: "lg" };
+return (
+
+<ComponentExample storyName="layout-flow--default" args={props}>
+  <LayoutFlow {...props} />
+</ComponentExample>
+); })()}
+
+<br />
+
+Row:
+{(() => {
+const props = { row: true, gap: "lg" };
+return (
+
+<ComponentExample storyName="layout-flow--default" args={props}>
+  <LayoutFlow {...props} />
+</ComponentExample>
+); })()}
+
+<Documentation />

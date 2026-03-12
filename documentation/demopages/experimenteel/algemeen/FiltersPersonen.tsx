@@ -1,4 +1,14 @@
-import { Fieldset, Footer, Header, Heading, Icon, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import {
+  Fieldset,
+  Footer,
+  Header,
+  Heading,
+  Icon,
+  LayoutFlow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+} from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';

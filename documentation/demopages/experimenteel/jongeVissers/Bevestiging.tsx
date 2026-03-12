@@ -1,4 +1,12 @@
-import { Header, Heading, LayoutFlow, Link, MaxWidthLayout, MenuBar, ProgressTracker } from '@nl-rvo/components';
+import {
+  Header,
+  Heading,
+  LayoutFlow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+  ProgressTracker,
+} from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
 import '../../common/style.scss';

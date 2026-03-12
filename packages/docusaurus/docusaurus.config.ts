@@ -5,7 +5,6 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig from './config/navigationConfig';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
 
-const includeList = ['**/*.docusaurus.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 
 const config: Config = {
@@ -34,7 +33,7 @@ const config: Config = {
         routeBasePath: '/',
         editUrl: undefined,
         breadcrumbs: false,
-        include: includeList,
+        include: ['**/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },
     ],
@@ -48,7 +47,7 @@ const config: Config = {
         breadcrumbs: false,
         sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
         sidebarItemsGenerator,
-        include: includeList,
+        include: ['*/docs/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },
     ],

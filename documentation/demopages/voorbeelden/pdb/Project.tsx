@@ -1,4 +1,4 @@
-import { Footer, Grid, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
+import { Footer, Grid, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 

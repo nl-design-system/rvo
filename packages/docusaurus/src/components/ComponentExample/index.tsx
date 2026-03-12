@@ -1,5 +1,5 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { ExpandableContent, Link } from '@nl-rvo/components';
+import { ExpandableContent, Link } from '@nl-rvo/component-library-react';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
 import espreeParser from 'prettier/parser-espree';
