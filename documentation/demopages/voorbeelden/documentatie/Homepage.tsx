@@ -14,7 +14,7 @@ import {
   Link,
   MaxWidthLayout,
   MenuBar,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Homepage = () => {
