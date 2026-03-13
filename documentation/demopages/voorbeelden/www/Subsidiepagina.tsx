@@ -10,7 +10,7 @@ import {
   MenuBar,
   MobileMenuBar,
   RadioButtonField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -86,14 +86,17 @@ const Subsidiepagina = () => {
             </a>{' '}
           </div>
           <p>
-            <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em>
+            <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em> —{' '}
+            <a href="#wijzigingen" className="rvo-link">
+              Bekijk alle wijzigingen
+            </a>
           </p>
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Wilt u het dak van uw huis of bedrijfspand geschikt maken voor bijen? Met deze subsidie krijgt u de kosten
             vergoed voor uw bijvriendelijke dak. Zo helpt u de hoeveelheid bijen in Nederland én het klimaat. Uw dak
             ziet er mooier uit en isoleert beter. Vraag net als 10.000 andere dakeigenaren nu subsidie bij ons aan.
           </p>
-          <div className="utrecht-button-group">
+          <div className="rvo-action-group">
             <Button>Aanvragen</Button>
             <Button kind="secondary">Uw aanvraag bekijken</Button>
           </div>
@@ -485,7 +488,7 @@ const Subsidiepagina = () => {
             </li>
           </ul>
           <div className="rvo-margin-block-start--md rvo-margin-block-end--lg  rvo-max-width-layout rvo-max-width-layout--sm ">
-            <div className=" utrecht-button-group">
+            <div className=" rvo-action-group">
               <Button kind="secondary" size="sm">
                 Voortgang doorgeven
               </Button>
@@ -698,6 +701,37 @@ const Subsidiepagina = () => {
               Zonne-energie op gebouwen
             </a>
           </p>
+        </div>
+
+        <div id="wijzigingen" className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm">
+          <Heading type="h2" noMargins={true}>
+            Wijzigingen aan deze pagina
+          </Heading>
+          <div className="rvo-margin-block-start--sm">
+            <LayoutFlow gap="md">
+              <div>
+                <span className="rvo-text rvo-text--bold">10 maart 2026</span>
+                <p className="rvo-paragraph--no-spacing">
+                  Aanvraagperiode verlengd tot 31 december 2025 vanwege het hoge volume aan ingediende aanvragen en de
+                  beschikbaarheid van resterende budgetruimte.
+                </p>
+              </div>
+              <div>
+                <span className="rvo-text rvo-text--bold">15 september 2024</span>
+                <p className="rvo-paragraph--no-spacing">
+                  Maximale subsidiebedrag per aanvraag verhoogd van € 5.000 naar € 7.500. Tevens zijn de voorwaarden
+                  voor erkende bijenteeltcursussen verduidelijkt.
+                </p>
+              </div>
+              <div>
+                <span className="rvo-text rvo-text--bold">1 januari 2024</span>
+                <p className="rvo-paragraph--no-spacing">
+                  Pagina gepubliceerd. De FSSBD-subsidieregeling is met ingang van 1 januari 2024 opengesteld voor
+                  aanvragen.
+                </p>
+              </div>
+            </LayoutFlow>
+          </div>
         </div>
 
         <div className="rvo-feedback rvo-margin-block-start--3xl">

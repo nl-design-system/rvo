@@ -1,0 +1,34 @@
+---
+title: Counter Badge
+hide_title: false
+hide_table_of_contents: true
+slug: /counter-badge
+---
+
+import { CounterBadge, Heading } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+import Documentation from "../README.md";
+
+<Heading type="h2">Display of the count</Heading>
+
+Below 99:
+{(() => {
+const props = { count: 42 };
+return (
+
+<ComponentExample storyName="componenten-counter-badge--default">
+  <CounterBadge {...props} />
+</ComponentExample>
+); })()}
+
+Above 99:
+{(() => {
+const props = { count: 120 };
+return (
+
+<ComponentExample storyName="componenten-counter-badge--default">
+  <CounterBadge {...props} />
+</ComponentExample>
+); })()}
+
+<Documentation />

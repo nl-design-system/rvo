@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "Community for NL Design System",
   "description": "RVO Rijkshuisstijl design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -26,7 +26,7 @@
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
-    "build:style-dictionary": "style-dictionary build --config ./src/style-dictionary.config.js",
+    "build:style-dictionary": "style-dictionary build --config src/style-dictionary.config.js",
     "build:figma-tokens": "node processJsonFiles.js",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build:style-dictionary' './src/**/*.tokens.json'"

@@ -1,0 +1,25 @@
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import changeLog from "../CHANGELOG.md";
+import Documentation from "../README.mdx";
+import * as ButtonStories from "../stories/button.stories";
+
+<Meta of={ButtonStories} name="Documentatie" />
+
+<Title />
+<Canvas of={ButtonStories.Default} layout="padded" />
+<Controls />
+
+## Documentatie
+
+<Readme>
+  <Documentation />
+</Readme>
+
+## Changelog
+
+<Changelog markdown={changeLog} />
+
+## Dependencies
+
+_@nl-rvo/css-icon_

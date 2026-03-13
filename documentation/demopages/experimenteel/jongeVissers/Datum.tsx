@@ -9,7 +9,7 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
 import '../../common/style.scss';

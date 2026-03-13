@@ -1,5 +1,23 @@
 # `@nl-rvo/css-dialog`
 
+## 1.5.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.4.5
+
+### Patch Changes
+
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
 ## 1.4.4
 
 ### Patch Changes

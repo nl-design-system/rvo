@@ -1,7 +1,7 @@
 {
   "name": "@nl-rvo/docusaurus",
   "author": "Community for NL Design System",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Documentation website for the ROOS Design System",
   "license": "CC0-1.0",
   "keywords": [
@@ -45,7 +45,9 @@
     "@mdx-js/react": "3.1.0",
     "@nl-rvo/assets": "1.0.0",
     "@nl-rvo/component-library-css": "workspace:*",
-    "@nl-rvo/components": "workspace:*",
+    "@nl-rvo/component-library-react": "workspace:*",
+    "@nl-rvo/documentation": "workspace:*",
+    "@nl-rvo/css-heading": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "clsx": "2.1.0",
     "prism-react-renderer": "2.3.0",

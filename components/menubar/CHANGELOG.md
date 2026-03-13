@@ -1,5 +1,24 @@
 # `@nl-rvo/css-menubar`
 
+## 1.6.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.5.2
+
+### Patch Changes
+
+- cc69b9b: Menu items and submenu items now have similar padding sizes to one another.
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
 ## 1.5.1
 
 ### Patch Changes

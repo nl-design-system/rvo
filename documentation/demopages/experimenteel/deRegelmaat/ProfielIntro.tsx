@@ -1,4 +1,4 @@
-import { ActionGroup, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/components';
+import { ActionGroup, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 

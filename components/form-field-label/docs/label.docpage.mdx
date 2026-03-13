@@ -1,0 +1,24 @@
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+import { Canvas, Controls, Markdown, Meta, Title } from "@storybook/addon-docs/blocks";
+import fieldDocumentation from "../../form-field/README.md";
+import changeLog from "../CHANGELOG.md";
+import documentation from "../README.md";
+import * as LabelStories from "../stories/label.stories";
+
+<Meta of={LabelStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={LabelStories.Default} layout="padded" />
+
+<Controls />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+<Markdown>{fieldDocumentation}</Markdown>
+
+## Changelog
+
+<Changelog markdown={changeLog} />

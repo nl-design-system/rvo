@@ -1,5 +1,37 @@
 # @nl-rvo/component-library-react
 
+## 7.0.0
+
+### Major Changes
+
+- fa36e07: - Replaced `.scss` imports with `.css` imports.
+  - Separated component styles from shared CSS components.
+  - Removed Sass from `package.json`.
+  - Updated `ThemeProvider` to use `.css` instead of `.scss`.
+  - Modified Rollup config to emit CSS files into the correct output folder.
+
+### Patch Changes
+
+- Updated dependencies [fa36e07]
+  - @nl-rvo/component-library-css@4.19.0
+  - @nl-rvo/css-card-experimental@0.3.0
+
+## 6.2.0
+
+### Minor Changes
+
+- 8f77b41: New option for image (overlay) lines.
+- a8c9e6f: Updated Hero component with the support of the kind and showLine parameter
+- 8b8710c: Update page number navigation: always show 5 items from page 1 and 5 items before the last page (with ellipses between ranges when needed).
+
+### Patch Changes
+
+- cc69b9b: Menu items and submenu items now have similar padding sizes to one another.
+- 8e4ad8b: Update Button component with type parameter
+- 0d1c470: Added a hover state to the file-selector-button for the File Input Component
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+- c780f1e: Aligned TextArea character counter to the left
+
 ## 6.1.0
 
 ### Minor Changes

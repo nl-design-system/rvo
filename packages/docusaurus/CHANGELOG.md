@@ -1,5 +1,12 @@
 # @nl-rvo/docusaurus
 
+## 0.5.0
+
+### Minor Changes
+
+- fa36e07: - Update all components links to the right package "component-library-react"
+  - Change some SCSS imports to CSS.
+
 ## 0.4.0
 
 ### Minor Changes

@@ -1,4 +1,4 @@
-import { Button, Icon, LayoutFlow, Link, MenuBar, RadioButtonField } from '@nl-rvo/components';
+import { Button, Icon, LayoutFlow, Link, MenuBar, RadioButtonField } from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 
@@ -179,7 +179,7 @@ const Oplossen = () => {
                               <strong>#17</strong> Hoogweg hek (2,025ha) <Link content="Bekijk" noUnderline={true} />
                             </label>
                           </div>
-                          <div className="utrecht-button-group">
+                          <div className="rvo-action-group">
                             <Button kind="warning" size="xs">
                               -0,044 ha afknippen
                             </Button>
@@ -247,7 +247,7 @@ const Oplossen = () => {
                               <strong>#17</strong> Hoogweg hek (2,025ha) <Link content="Bekijk" noUnderline={true} />
                             </label>
                           </div>
-                          <div className="utrecht-button-group">
+                          <div className="rvo-action-group">
                             <Button kind="primary" size="xs">
                               -0,044 ha toevoegen
                             </Button>
@@ -259,7 +259,7 @@ const Oplossen = () => {
                       </LayoutFlow>
                     </fieldset>
                   </div>
-                  <div className="utrecht-button-group">
+                  <div className="rvo-action-group">
                     <Button kind="primary">Versturen</Button>
                     <Button kind="secondary">Percelen wijzigen</Button>
                   </div>

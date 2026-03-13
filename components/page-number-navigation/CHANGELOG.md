@@ -1,5 +1,23 @@
 # `@nl-rvo/css-pagination`
 
+## 1.5.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.4.0
+
+### Minor Changes
+
+- 8b8710c: Update page number navigation: always show 5 items from page 1 and 5 items before the last page (with ellipses between ranges when needed).
+
 ## 1.3.1
 
 ### Patch Changes

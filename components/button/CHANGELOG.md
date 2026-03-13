@@ -1,5 +1,23 @@
 # `@nl-rvo/css-button`
 
+## 2.1.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 2.0.2
+
+### Patch Changes
+
+- 8e4ad8b: Update Button component with type parameter
+
 ## 2.0.1
 
 ### Patch Changes

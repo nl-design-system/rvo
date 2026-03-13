@@ -1,4 +1,4 @@
-import { Button, Header, MaxWidthLayout } from '@nl-rvo/components';
+import { Button, Header, MaxWidthLayout } from '@nl-rvo/component-library-react';
 
 const MenuCTA = () => {
   return (

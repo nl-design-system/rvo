@@ -858,6 +858,7 @@
     > .rvo-expandable-area-toggle .rvo-icon-delta-omlaag {
       display: none;
     }
+
     > .rvo-expandable-area-toggle .rvo-icon-delta-omhoog {
       display: block;
     }
@@ -954,7 +955,7 @@
 
   // GENERAL FIXES
 
-  .utrecht-button-group {
+  .rvo-action-group {
     flex-wrap: wrap;
   }
 
@@ -980,6 +981,7 @@
     margin-block-start: 3px;
     min-width: 10px;
   }
+
   .rvo-expandable-text__details {
     padding-inline-start: 20px;
   }
