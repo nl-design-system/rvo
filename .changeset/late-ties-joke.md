@@ -1,5 +1,5 @@
 ---
-"@nl-rvo/component-library-react": minor
+"@nl-rvo/component-library-react": patch
 "@nl-rvo/storybook": minor
 ---
 
