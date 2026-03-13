@@ -23,8 +23,11 @@ sidebar_anchors:
     label: WCAG
 ---
 
-import { Icon } from "../../../components/icon/src/template";
 import { Card } from "../../../components/card/src/template";
+import { Icon } from "../../../components/icon/src/template";
+import evenementImg from "./evenement.png";
+import illustratieImg from "./illustratie.PNG";
+import thumbnailImg from "./thumbnail.png";
 
 # Beeldkwaliteit
 
@@ -168,7 +171,7 @@ De thumbnail bestaat uit 4 onderdelen:
     </li>
   </ol>
   <img
-    src={require("./thumbnail.png").default}
+    src={thumbnailImg}
     alt="Voorbeeld van een RVO-videothumbnail met de vier elementen: playlistnaam, afzender, videotitel en reeksstijl"
     style={{ width: "100%", height: "auto" }}
   />
@@ -207,7 +210,7 @@ Illustraties en animaties worden vormgegeven in de rijksbrede illustratiestijl v
     </li>
   </ul>
   <img
-    src={require("./illustratie.PNG").default}
+    src={illustratieImg}
     alt="Voorbeeld van een illustratie in de rijksbrede illustratiestijl met personages in een natuurlijke houding en actie"
     style={{ width: "100%", height: "auto" }}
   />
@@ -261,7 +264,7 @@ Uitleg- of positioneringsvideo's bevatten grafische elementen om complexe boodsc
       style={{ overflow: "hidden", minHeight: "200px", display: "flex", alignItems: "center" }}
     >
       <img
-        src={require("./illustratie.PNG").default}
+        src={illustratieImg}
         alt="Voorbeeld van een illustratie in de rijksbrede illustratiestijl met personages in een natuurlijke houding en actie"
         style={{ width: "100%", height: "auto", display: "block" }}
       />
@@ -285,7 +288,7 @@ Uitleg- of positioneringsvideo's bevatten grafische elementen om complexe boodsc
       style={{ overflow: "hidden", minHeight: "200px", display: "flex", alignItems: "center" }}
     >
       <img
-        src={require("./evenement.png").default}
+        src={evenementImg}
         alt="Voorbeeldfoto van evenementfotografie: mensen in actie en onderlinge interactie tijdens een bijeenkomst"
         style={{ width: "100%", height: "auto", display: "block" }}
       />
