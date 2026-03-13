@@ -5,17 +5,28 @@
 import React from 'react';
 import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
-import { ITimeInputProps, TimeInput, argTypes as timeInputArgTypes } from '../form-timeinput';
+import { ITimeInputProps, TimeInput } from '../form-timeinput';
+import { defaultArgs as timeInputDefaultArgs } from '../form-timeinput/defaultArgs';
+
+const timeInputArgTypes = {
+  ...Object.fromEntries(Object.keys(timeInputDefaultArgs).map((key) => [key, {}])),
+  defaultValue: {},
+  value: {},
+  onFocus: {},
+  onBlur: {},
+  onChange: {},
+  onClick: {},
+  onInput: {},
+  onInvalid: {},
+};
 
 export interface ITimeInputFieldProps extends FieldPropsWithoutFieldId, ITimeInputProps {}
-
-export const argTypes = { ...fieldArgTypes, ...timeInputArgTypes };
 
 export const TimeInputField: React.FC<ITimeInputFieldProps> = (args: ITimeInputFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes) as FieldPropsWithoutFieldId;
   const timeInputArgs = extractArgs(args, timeInputArgTypes) as ITimeInputProps;
 
-  const fieldArgsWithOtherAttributes = extractOtherArgs(args, { ...fieldArgTypes, timeInputArgTypes });
+  const fieldArgsWithOtherAttributes = extractOtherArgs(args, { ...fieldArgTypes, ...timeInputArgTypes });
 
   return (
     <Field {...fieldArgs} fieldId={timeInputArgs.id} {...fieldArgsWithOtherAttributes}>

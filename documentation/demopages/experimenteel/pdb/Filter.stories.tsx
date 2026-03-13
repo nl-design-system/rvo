@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Filter from './Filter';
 
-const meta: Meta<typeof Filter> = {
+export default {
   title: "Pagina's/Experimenteel/projects.rvo.nl/Filter/Filter A",
   component: Filter,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Filter> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Filter>;
 type Story = StoryObj<typeof Filter>;
 
 export const Default: Story = { name: 'Filter A' };

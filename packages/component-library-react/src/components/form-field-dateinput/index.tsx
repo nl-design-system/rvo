@@ -4,12 +4,23 @@
  */
 import React from 'react';
 import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
-import { DateInput, argTypes as dateInputArgTypes, IDateInputProps } from '../form-dateinput';
+import { DateInput, IDateInputProps } from '../form-dateinput';
+import { defaultArgs as dateInputDefaultArgs } from '../form-dateinput/defaultArgs';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
 
-export interface IDateInputFieldProps extends FieldPropsWithoutFieldId, IDateInputProps {}
+const dateInputArgTypes = {
+  ...Object.fromEntries(Object.keys(dateInputDefaultArgs).map((key) => [key, {}])),
+  defaultValue: {},
+  value: {},
+  onFocus: {},
+  onBlur: {},
+  onChange: {},
+  onClick: {},
+  onInput: {},
+  onInvalid: {},
+};
 
-export const argTypes = { ...fieldArgTypes, ...dateInputArgTypes };
+export interface IDateInputFieldProps extends FieldPropsWithoutFieldId, IDateInputProps {}
 
 export const DateInputField: React.FC<IDateInputFieldProps> = (args: IDateInputFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes) as FieldPropsWithoutFieldId;

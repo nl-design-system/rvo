@@ -25,24 +25,6 @@ export interface ITableProps {
   onSort?: (columnIndex: number, direction: 'ASC' | 'DESC' | '') => void;
 }
 
-export const argTypes = {
-  description: {
-    control: 'text',
-  },
-  columns: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  rows: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-};
-
 const sortData = (rows: string[][], columnIndex: number, direction: 'ASC' | 'DESC' | '', type?: string): string[][] => {
   if (!direction) return rows;
 

@@ -37,7 +37,7 @@ const defaultArgs: IHeroProps & HTMLAttributes<HTMLDivElement> = {
   subtitle: 'Wij helpen u graag vooruit!',
 };
 
-const meta: Meta<typeof Hero> = {
+export default {
   title: 'Componenten/Hero',
   component: Hero,
   args: defaultArgs,
@@ -54,9 +54,7 @@ const meta: Meta<typeof Hero> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5925-2130&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Hero>;
 type Story = StoryObj<typeof Hero>;
 
 export const Default: Story = {

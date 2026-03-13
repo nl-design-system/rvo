@@ -2,11 +2,13 @@ import { ITextareaFieldProps, TextareaField } from '@nl-rvo/component-library-re
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-textarea/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { HTMLAttributes } from 'react';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof TextareaField> = {
+export default {
   title: 'Componenten/Textarea field',
   component: TextareaField,
   args: defaultArgs as Partial<ITextareaFieldProps & HTMLAttributes<HTMLTextAreaElement>>,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -19,9 +21,7 @@ const meta: Meta<typeof TextareaField> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5909-2331&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof TextareaField>;
 type Story = StoryObj<typeof TextareaField>;
 
 export const Default: Story = {

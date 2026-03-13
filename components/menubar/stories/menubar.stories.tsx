@@ -2,7 +2,7 @@ import { MenuBar } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/menubar/defaultArguments';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-const meta: Meta<typeof MenuBar> = {
+export default {
   title: 'Componenten/Menubar',
   component: MenuBar,
   args: defaultArgs,
@@ -18,9 +18,7 @@ const meta: Meta<typeof MenuBar> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=10-26&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof MenuBar>;
 type Story = StoryObj<typeof MenuBar>;
 
 export const Default: Story = { args: defaultArgs, name: 'Menubar' };

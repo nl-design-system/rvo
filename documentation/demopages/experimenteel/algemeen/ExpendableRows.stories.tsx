@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ExpendableRows from './ExpendableRows';
 
-const meta: Meta<typeof ExpendableRows> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Expendable Rows",
   component: ExpendableRows,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof ExpendableRows> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ExpendableRows>;
 type Story = StoryObj<typeof ExpendableRows>;
 
 export const Default: Story = { name: 'Expendable Rows' };

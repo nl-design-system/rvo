@@ -1,5 +1,5 @@
-import { argTypes, Paragraph } from '@nl-rvo/component-library-react';
-
+import { Paragraph } from '@nl-rvo/component-library-react';
+import { argTypes } from './argTypes';
 export default {
   title: 'Componenten/Paragraph/Colors',
   component: Paragraph,

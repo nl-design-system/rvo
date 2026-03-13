@@ -1,5 +1,5 @@
-import { argTypes, Button } from '@nl-rvo/component-library-react';
-
+import { Button } from '@nl-rvo/component-library-react';
+import { argTypes } from './argTypes';
 export default {
   title: 'Componenten/Button/Icons',
   component: Button,

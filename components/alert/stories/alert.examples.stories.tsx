@@ -1,5 +1,6 @@
-import { Alert, argTypes, Button } from '@nl-rvo/component-library-react';
+import { Alert, Button } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/alert/defaultArgs';
+import { argTypes } from './argTypes';
 
 export const AllAlertKinds = (args) => (
   <div className="rvo-layout-column rvo-layout-gap--md">

@@ -1,11 +1,13 @@
 import { ItemList } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/item-list/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof ItemList> = {
+export default {
   title: 'Componenten/Item list',
   component: ItemList,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof ItemList> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-2220&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ItemList>;
 type Story = StoryObj<typeof ItemList>;
 
 export const Default: Story = { args: defaultArgs, name: 'Item list' };

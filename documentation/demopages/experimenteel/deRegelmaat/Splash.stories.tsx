@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Splash from './Splash';
 
-const meta: Meta<typeof Splash> = {
+export default {
   title: "Pagina's/Experimenteel/de Regelmaat/Splash",
   component: Splash,
   parameters: {
@@ -12,9 +12,7 @@ const meta: Meta<typeof Splash> = {
       defaultViewport: 'mobile2',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Splash>;
 type Story = StoryObj<typeof Splash>;
 
 export const Default: Story = { name: 'Splash' };

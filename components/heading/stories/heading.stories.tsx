@@ -20,7 +20,7 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof Heading> = {
+export default {
   title: 'Componenten/Heading',
   component: Heading,
   args: defaultArgs,
@@ -37,9 +37,7 @@ const meta: Meta<typeof Heading> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=107-1382&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Heading>;
 type Story = StoryObj<typeof Heading>;
 
 export const Default: Story = { args: defaultArgs, name: 'Heading' };

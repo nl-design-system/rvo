@@ -31,7 +31,7 @@ export const DefaultArgs: IMobileMenuBarProps = {
   horizontalRule: true,
 };
 
-const meta: Meta<typeof MobileMenuBar> = {
+export default {
   title: 'Componenten/Mobile Menubar',
   component: MobileMenuBar,
   args: DefaultArgs,
@@ -47,9 +47,7 @@ const meta: Meta<typeof MobileMenuBar> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2742-22&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof MobileMenuBar>;
 type Story = StoryObj<typeof MobileMenuBar>;
 
 const Container = ({ children }) => <div style={{ minHeight: '500px' }}>{children}</div>;

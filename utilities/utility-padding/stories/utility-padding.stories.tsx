@@ -1,7 +1,7 @@
 import { UtilityPadding } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-const meta: Meta<typeof UtilityPadding> = {
+export default {
   title: 'Utilities/Spacing/Padding',
   component: UtilityPadding,
   parameters: {
@@ -12,9 +12,7 @@ const meta: Meta<typeof UtilityPadding> = {
       link: 'utility-padding',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof UtilityPadding>;
 type Story = StoryObj<typeof UtilityPadding>;
 
 export const Default: Story = { name: 'Padding' };

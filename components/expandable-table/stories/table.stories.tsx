@@ -1,6 +1,6 @@
 import { ExpandableTable } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/expandable-table/defaultArgs';
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryObj, Table } from '@storybook/react-webpack5';
 
 const argTypes = {
   tableDescription: {
@@ -15,7 +15,7 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof ExpandableTable> = {
+export default {
   title: 'Experimentele Componenten/ExpandableTable',
   component: ExpandableTable,
   args: defaultArgs,
@@ -31,10 +31,9 @@ const meta: Meta<typeof ExpandableTable> = {
       link: 'table',
     },
   },
-};
-export default meta;
+} satisfies Meta<typeof ExpandableTable>;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   name: 'Expandable Table',

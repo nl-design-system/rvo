@@ -20,7 +20,7 @@ export const ArgTypes = {
   },
 };
 
-const meta: Meta<typeof PageNumberNavigation> = {
+export default {
   title: 'Componenten/Page Number Navigation',
   component: PageNumberNavigation,
   args: DefaultArgs,
@@ -37,9 +37,7 @@ const meta: Meta<typeof PageNumberNavigation> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=220-4774&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof PageNumberNavigation>;
 type Story = StoryObj<typeof PageNumberNavigation>;
 
 export const Default: Story = { args: DefaultArgs, name: 'PageNumberNavigation' };

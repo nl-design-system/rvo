@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import DocumentenClean from './DocumentenClean';
 
-const meta: Meta<typeof DocumentenClean> = {
+export default {
   title: "Pagina's/Voorbeelden/CMOR/Documenten",
   component: DocumentenClean,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof DocumentenClean> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof DocumentenClean>;
 type Story = StoryObj<typeof DocumentenClean>;
 
 export const Default: Story = { name: 'Documenten' };

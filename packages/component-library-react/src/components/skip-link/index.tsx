@@ -12,15 +12,6 @@ export interface ISkipLinkProps {
   anchorLink?: string;
 }
 
-export const argTypes = {
-  textContent: {
-    control: 'text',
-  },
-  anchorLink: {
-    control: 'text',
-  },
-};
-
 export const SkipLink: React.FC<ISkipLinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   textContent = defaultArgs.textContent,
   anchorLink = defaultArgs.anchorLink,

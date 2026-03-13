@@ -94,7 +94,7 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof Footer> = {
+export default {
   title: 'Componenten/Footer',
   component: Footer,
   args: defaultArgs,
@@ -111,9 +111,7 @@ const meta: Meta<typeof Footer> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=287-6733&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Footer>;
 type Story = StoryObj<typeof Footer>;
 
 export const Default: Story = { args: defaultArgs, name: 'Footer' };

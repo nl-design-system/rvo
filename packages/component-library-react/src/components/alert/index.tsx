@@ -24,36 +24,6 @@ export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'conte
   maxWidth?: 'sm' | 'md' | 'lg';
 }
 
-export const argTypes = {
-  kind: {
-    options: ['info', 'warning', 'error', 'success'],
-    control: { type: 'radio' },
-  },
-  heading: {
-    control: 'text',
-  },
-  content: {
-    control: 'text',
-  },
-  closable: {
-    control: 'boolean',
-  },
-  padding: {
-    options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
-    control: { type: 'radio' },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-  onClose: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Alert: React.FC<IAlertProps> = ({
   kind = defaultArgs.kind,
   heading = defaultArgs.heading,

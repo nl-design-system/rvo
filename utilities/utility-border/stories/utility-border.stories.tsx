@@ -1,7 +1,7 @@
 import { UtilityBorder } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-const meta: Meta<typeof UtilityBorder> = {
+export default {
   title: 'Utilities/Colors/Border-color',
   component: UtilityBorder,
   parameters: {
@@ -16,9 +16,7 @@ const meta: Meta<typeof UtilityBorder> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=605-19508&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof UtilityBorder>;
 type Story = StoryObj<typeof UtilityBorder>;
 
 export const Default: Story = { name: 'Border-color' };

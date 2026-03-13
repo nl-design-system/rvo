@@ -19,28 +19,6 @@ export interface ITabsProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  activeTab: {
-    control: 'number',
-  },
-  tabs: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  OnChange: {
-    table: {
-      disable: true,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Tabs: React.FC<ITabsProps & React.HTMLAttributes<HTMLUListElement>> = ({
   tabs = defaultArgs.tabs,
   activeTab = defaultArgs.activeTab,

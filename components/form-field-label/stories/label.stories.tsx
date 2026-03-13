@@ -26,7 +26,7 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof Label> = {
+export default {
   title: 'Componenten/Label',
   component: Label,
   argTypes,
@@ -42,9 +42,7 @@ const meta: Meta<typeof Label> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=575-18745&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Label>;
 type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {

@@ -1,11 +1,13 @@
 import { TextInput } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textinput/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof TextInput> = {
+export default {
   title: 'Componenten/Text input',
   component: TextInput,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof TextInput> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=1313-17903&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof TextInput>;
 type Story = StoryObj<typeof TextInput>;
 
 export const Default: Story = { args: defaultArgs, name: 'Text input' };

@@ -22,32 +22,6 @@ export interface IRadioButtonGroupProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  name: { control: 'text' },
-  invalid: { control: 'boolean' },
-  options: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  currentSelection: {
-    table: {
-      disable: true,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-  onChange: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const RadioButtonGroup: React.FC<IRadioButtonGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({
   name = defaultArgs.name,
   invalid = defaultArgs.invalid,

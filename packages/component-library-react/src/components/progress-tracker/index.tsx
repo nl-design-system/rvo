@@ -14,20 +14,6 @@ export interface IProgressTrackerProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  steps: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const ProgressTracker: React.FC<IProgressTrackerProps & React.HTMLAttributes<HTMLDivElement>> = ({
   steps = defaultArgs.steps,
   children,

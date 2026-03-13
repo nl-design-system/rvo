@@ -1,8 +1,9 @@
-import { argTypes, Breadcrumbs } from '@nl-rvo/component-library-react';
+import { Breadcrumbs } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/breadcrumbs/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Breadcrumbs> = {
+export default {
   title: 'Componenten/Breadcrumbs',
   component: Breadcrumbs,
   args: defaultArgs,
@@ -19,9 +20,7 @@ const meta: Meta<typeof Breadcrumbs> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=373-9578&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Breadcrumbs>;
 type Story = StoryObj<typeof Breadcrumbs>;
 
 export const Default: Story = {

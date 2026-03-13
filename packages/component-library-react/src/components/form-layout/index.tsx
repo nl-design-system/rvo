@@ -14,17 +14,6 @@ export interface IFormLayoutProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  content: {
-    control: 'text',
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const FormLayout: React.FC<IFormLayoutProps & React.HTMLAttributes<HTMLDivElement>> = ({
   content,
   children,

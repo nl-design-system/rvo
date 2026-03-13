@@ -15,15 +15,6 @@ export interface IDataListProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  items: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-};
-
 export const DataList: React.FC<IDataListProps & React.HTMLAttributes<HTMLDListElement>> = ({
   items = defaultArgs.items,
   children,

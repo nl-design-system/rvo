@@ -20,28 +20,6 @@ export interface IMaxWidthLayoutProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  size: {
-    options: ['sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
-  content: {
-    control: 'text',
-  },
-  centered: {
-    control: 'boolean',
-  },
-  inlinePadding: {
-    options: ['none', 'sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps & React.HTMLAttributes<HTMLDivElement>> = ({
   size = defaultArgs.size,
   content = defaultArgs.content,
