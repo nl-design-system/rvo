@@ -1,5 +1,16 @@
 # @nl-rvo/storybook
 
+## 2.1.0
+
+### Minor Changes
+
+- fa36e07: - Version bump storybook with all related packages to 10.2.14
+  - Add missing storybook-addon-status addon to show the component status like "BETA" or "PRODUCTION"
+
+### Patch Changes
+
+- 781d278: Added viewport fix for firefox
+
 ## 2.0.0
 
 ### Major Changes

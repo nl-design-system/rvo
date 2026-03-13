@@ -1,5 +1,21 @@
 # @nl-rvo/component-library-react
 
+## 7.0.0
+
+### Major Changes
+
+- fa36e07: - Replaced `.scss` imports with `.css` imports.
+  - Separated component styles from shared CSS components.
+  - Removed Sass from `package.json`.
+  - Updated `ThemeProvider` to use `.css` instead of `.scss`.
+  - Modified Rollup config to emit CSS files into the correct output folder.
+
+### Patch Changes
+
+- Updated dependencies [fa36e07]
+  - @nl-rvo/component-library-css@4.19.0
+  - @nl-rvo/css-card-experimental@0.3.0
+
 ## 6.2.0
 
 ### Minor Changes
