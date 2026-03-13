@@ -112,6 +112,7 @@ export const CardWithImageSm: Story = {
   name: 'Image (small)',
   args: {
     ...defaultArgs,
+    background: 'image',
     fullCardLink: true,
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
     image: 'images/www/home.jpg',
@@ -130,6 +131,7 @@ export const CardWithImageMd: Story = {
   name: 'Image (big)',
   args: {
     ...defaultArgs,
+    background: 'image',
     fullCardLink: true,
     title: 'Investeringssubsidie duurzame energie en energiebesparing',
     image: 'images/www/home.jpg',
