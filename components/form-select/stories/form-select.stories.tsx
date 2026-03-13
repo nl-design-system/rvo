@@ -1,17 +1,13 @@
 import { Select } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-select/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Select',
   component: Select,
   args: defaultArgs,
-  argTypes: {
-    size: {
-      control: { type: 'select' },
-      options: ['xs', 'sm', 'md', 'lg', 'max'],
-    },
-  },
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
