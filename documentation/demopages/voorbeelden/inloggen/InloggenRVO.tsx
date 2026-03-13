@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
-import { Button, Footer, Grid, Header, Heading, LayoutFlow, Link, List } from '@nl-rvo/components';
+import { Button, Footer, Grid, Header, Heading, LayoutFlow, Link, List } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
