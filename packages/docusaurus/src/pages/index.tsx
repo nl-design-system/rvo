@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
             <Link
               style={{ display: 'inline-block', width: 'max-content' }}
               noUnderline={true}
-              href={useBaseUrl('/aan-de-slag/introductie')}
+              href={useBaseUrl('/over-roos/introductie')}
             >
               <Button>Aan de slag met ROOS</Button>
             </Link>
