@@ -1,15 +1,25 @@
 import { translate } from '@docusaurus/Translate';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Header, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
-import type { Props } from '@theme/Navbar/Layout';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-export default function NavbarLayout({ children }: Props): JSX.Element {
+export default function NavbarLayout() {
   const {
-    navbar: { hideOnScroll, logo, style },
+    navbar: { hideOnScroll, logo, style, items },
   } = useThemeConfig();
+
+  const menuItems = (items as any[])?.map((item, index) => ({
+    label: item.label,
+    link: item.docId ? useBaseUrl(`/${item.docId}`) : item.href || '#',
+    align: item.position === 'right' ? 'right' : 'left',
+    key: `${item.label}-${index}`,
+    useIcons: false,
+    linkColor: 'lintblauw' as const,
+  }));
+
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   return (
@@ -35,14 +45,19 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
         )}
       >
         <div className={styles.menubar}>
-          {children && (
-            <MenuBar size="md" maxWidth="md" linkColor="lintblauw">
-              {children}
-            </MenuBar>
-          )}
+          <MenuBar
+            items={menuItems}
+            direction="horizontal"
+            size="md"
+            maxWidth="md"
+            horizontalRule={false}
+            linkColor="lintblauw"
+          />
         </div>
         {!mobileSidebar.disabled && (
-          <div className={styles.menubarMobile}>{children && <MobileMenuBar>{children}</MobileMenuBar>}</div>
+          <div className={styles.menubarMobile}>
+            <MobileMenuBar items={menuItems} size="md" horizontalRule={false} />
+          </div>
         )}
       </nav>
     </>
