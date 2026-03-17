@@ -11,8 +11,8 @@ import {
   MenuBar,
   RadioButtonField,
 } from '@nl-rvo/component-library-react';
-import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const FormFieldErrors = () => {
   return (
