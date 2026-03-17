@@ -82,8 +82,12 @@ const Subsidiepagina = () => {
           </LayoutFlow>
           <div className="rvo-padding-block-start--md">
             <a href="#" className="rvo-link">
-              View this page in English
+              Informatie voor intermediars
             </a>{' '}
+            |{' '}
+            <a href="#" className="rvo-link">
+              View this page in English
+            </a>
           </div>
           <p>
             <em>De inhoud van deze pagina is gecontroleerd op 22 januari 2025</em> —{' '}
