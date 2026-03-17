@@ -14,6 +14,10 @@
   display: flex;
 }
 
+.docsWrapperNoSidebar {
+  background: var(--rvo-color-wit);
+}
+
 @media only screen and (max-width: 900px) {
   .docPage {
     padding-inline: var(--rvo-space-md);
