@@ -15,6 +15,11 @@ const navbar: Navbar = {
       label: 'Over ROOS',
     },
     {
+      to: '/blog',
+      position: 'left' as const,
+      label: 'Blog',
+    },
+    {
       type: 'doc',
       docId: 'design-tokens/kleuren',
       position: 'left' as const,
@@ -51,21 +56,27 @@ const navbar: Navbar = {
       label: 'Beeldstrategie',
     },
     {
-      href: 'https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0',
-      label: 'Figma',
+      type: 'dropdown',
       position: 'right' as const,
-    },
-    {
-      href: 'https://github.com/nl-design-system/rvo',
-      label: 'GitHub',
-      position: 'right' as const,
-    },
-    {
-      prependBaseUrlToHref: true,
-      href:
-        process.env.NODE_ENV === 'development' ? 'http://localhost:6006' : 'https://nl-design-system.github.io/rvo/',
-      label: 'Storybook',
-      position: 'right' as const,
+      label: 'Tools',
+      items: [
+        {
+          href: 'https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0',
+          label: 'Figma',
+        },
+        {
+          href: 'https://github.com/nl-design-system/rvo',
+          label: 'GitHub',
+        },
+        {
+          prependBaseUrlToHref: true,
+          href:
+            process.env.NODE_ENV === 'development'
+              ? 'http://localhost:6006'
+              : 'https://nl-design-system.github.io/rvo/',
+          label: 'Storybook',
+        },
+      ],
     },
   ],
 };
