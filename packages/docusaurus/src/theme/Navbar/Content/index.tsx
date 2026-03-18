@@ -2,8 +2,9 @@ import { ThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { MenuBar } from '@nl-rvo/component-library-react';
+import type { ReactElement } from 'react';
 
-export default function NavbarContent(): JSX.Element {
+export default function NavbarContent(): ReactElement {
   function useThemeConfig(): ThemeConfig {
     return useDocusaurusContext().siteConfig.themeConfig as ThemeConfig;
   }

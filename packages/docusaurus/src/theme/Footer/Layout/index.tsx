@@ -1,6 +1,7 @@
 import { Footer } from '@nl-rvo/component-library-react';
+import type { ReactElement } from 'react';
 
-export default function FooterLayout(): JSX.Element {
+export default function FooterLayout(): ReactElement {
   return (
     <Footer
       maxWidth="md"

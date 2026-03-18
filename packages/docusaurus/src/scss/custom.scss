@@ -37,7 +37,8 @@ html {
   line-height: 1.5;
 }
 
-html.docs-wrapper.plugin-docs {
+html.docs-wrapper.plugin-docs,
+html.blog-wrapper.plugin-blog {
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
   --doc-sidebar-hidden-width: 0px;
@@ -80,10 +81,12 @@ html.docs-wrapper.plugin-docs {
   // Fix MD headings
   h1:not(.component-example h1) {
     @extend .utrecht-heading-1;
+    margin-bottom: 1rem;
   }
 
   h2:not(.component-example h2) {
     @extend .utrecht-heading-2;
+    margin-bottom: 0.5rem;
   }
 
   h3:not(.component-example h3) {
@@ -100,6 +103,15 @@ html.docs-wrapper.plugin-docs {
 
   h6:not(.component-example h6) {
     @extend .utrecht-heading-6;
+  }
+
+  h1:not(.component-example h1),
+  h2:not(.component-example h2),
+  h3:not(.component-example h3),
+  h4:not(.component-example h4),
+  h5:not(.component-example h5),
+  h6:not(.component-example h6) {
+    color: var(--rvo-color-lintblauw, var(--rvo-color-lichtblauw));
   }
 
   article a:not(article .component-example a) {

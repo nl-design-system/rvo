@@ -4,9 +4,10 @@ import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-com
 import { Header, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/Navbar/Layout';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import styles from './styles.module.css';
 
-export default function NavbarLayout({ children }: Props): JSX.Element {
+export default function NavbarLayout({ children }: Props): ReactElement {
   const {
     navbar: { hideOnScroll, logo, style },
   } = useThemeConfig();

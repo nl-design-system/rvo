@@ -3,9 +3,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Button, Card, Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import styles from './index.module.css';
 
-export default function Home(): JSX.Element {
+export default function Home(): ReactElement {
   const { siteConfig } = useDocusaurusContext();
 
   return (
