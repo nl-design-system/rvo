@@ -1,8 +1,10 @@
 # Toegankelijkheid
 
-Wij vinden het belangrijk dat online informatie begrijpelijk en toegankelijk is voor iedereen. Daarom besteden wij veel
-aandacht aan de gebruiksvriendelijkheid, toegankelijkheid, bouwkwaliteit en vindbaarheid van onze online diensten en
-informatie. (introparagraaf)
+<!-- markdownlint-disable MD033 -->
+
+<p class="rvo-paragraph rvo-paragraph--lg"><strong>Wij vinden het belangrijk dat online informatie begrijpelijk en toegankelijk is voor iedereen. Daarom besteden wij veel aandacht aan de gebruiksvriendelijkheid, toegankelijkheid, bouwkwaliteit en vindbaarheid van onze online diensten en informatie.</strong></p>
+
+<!-- markdownlint-enable MD033 -->
 
 ## Digitale toegankelijkheid
 
@@ -31,4 +33,4 @@ Voor deze website is een toegankelijkheidsverklaring opgesteld. Klik op de afbee
 ## Vragen, opmerkingen of problemen melden
 
 Heeft u een vraag of opmerking over digitale toegankelijkheid? Of wilt u een pagina gebruiken die niet toegankelijk
-blijkt? Neem dan contact op via het e-mailadres [toegankelijkheid@rvo.nl](toegankelijkheid@rvo.nl).
+blijkt? Neem dan contact op via het e-mailadres [toegankelijkheid@rvo.nl](mailto:toegankelijkheid@rvo.nl).
