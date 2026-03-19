@@ -275,31 +275,36 @@ const Evenementen = () => {
               <LayoutFlow gap="sm">
                 {evenementenData.map((event) => (
                   <div key={event.id} className="rvo-card rvo-card--outline rvo-card--padding-md">
-                    <div className="rvo-card__content">
-                      <LayoutFlow row={true} justifyContent="space-between" alignItems="center">
+                    <div className="rvo-card--with-link-indicator">
+                      <div className="rvo-card__content">
                         <Heading type="h3" noMargins={true}>
                           <a href="#" className="rvo-link rvo-link--no-underline">
                             {event.title}
                           </a>
                         </Heading>
-                        <Icon icon="delta-naar-rechts" size="md" color="hemelblauw" />
-                      </LayoutFlow>
-                      <p className="rvo-paragraph rvo-paragraph--no-margin rvo-margin-block-start--xs">
-                        {boldDayMonth(event.dateLabel)}
-                        <br />
-                        <em>{event.location}</em>
-                      </p>
-                      <p className="rvo-paragraph rvo-margin-block-end--xs">{event.description}</p>
-                      {event.aanmeldenGesloten ? (
-                        <LayoutFlow row={true} gap="xs">
-                          <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
-                          <span>Aanmelden gesloten</span>
-                        </LayoutFlow>
-                      ) : (
-                        <Button kind="secondary" size="sm">
-                          Aanmelden
-                        </Button>
-                      )}
+                        <p className="rvo-paragraph rvo-paragraph--no-margin rvo-margin-block-start--xs">
+                          {boldDayMonth(event.dateLabel)}
+                          <br />
+                          <em>{event.location}</em>
+                        </p>
+                        <p className="rvo-paragraph rvo-margin-block-end--xs">{event.description}</p>
+                        {event.aanmeldenGesloten ? (
+                          <LayoutFlow row={true} gap="xs">
+                            <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
+                            <span>Aanmelden gesloten</span>
+                          </LayoutFlow>
+                        ) : (
+                          <Button kind="secondary" size="sm">
+                            Aanmelden
+                          </Button>
+                        )}
+                      </div>
+                      <Icon
+                        icon="delta-naar-rechts"
+                        size="sm"
+                        color="hemelblauw"
+                        className="rvo-card__link-indicator"
+                      />
                     </div>
                   </div>
                 ))}
