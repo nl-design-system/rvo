@@ -195,8 +195,11 @@ const Evenementen = () => {
               View this page in English
             </a>
           </p>
-          <p className="rvo-paragraph">
-            <em>Laatst gecontroleerd:</em> 28 mei 2025
+          <p>
+            <em>De inhoud van deze pagina is gecontroleerd op 28 mei 2025</em> —{' '}
+            <a href="#wijzigingen" className="rvo-link">
+              Bekijk alle wijzigingen
+            </a>
           </p>
           <p className="rvo-paragraph rvo-text--lg rvo-text--bold">
             Wij organiseren jaarlijks veel evenementen. Vaak ook in samenwerking met onze samenwerkingspartners. U kunt
