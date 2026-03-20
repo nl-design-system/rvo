@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
               Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
             </Card>
           </Grid>
-          <Heading type="h2" noMargins={true}>
+          <Heading type="h2" noMargins={true} className="rvo-margin-block-start--xl">
             Werken met ROOS
           </Heading>
           <Grid columns="three" gap="xl">
