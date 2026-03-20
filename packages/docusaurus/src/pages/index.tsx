@@ -33,6 +33,7 @@ export default function Home(): JSX.Element {
       </header>
       <main>
         <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
+          <Heading type="h2">Basisonderdelen van ROOS</Heading>
           <Grid columns="three" gap="xl">
             <Card
               title="Huisstijl"
@@ -64,7 +65,9 @@ export default function Home(): JSX.Element {
             >
               Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
             </Card>
-
+          </Grid>
+          <Heading type="h2">Werken met ROOS</Heading>
+          <Grid columns="three" gap="xl">
             <Card
               background="none"
               title={
