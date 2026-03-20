@@ -15,17 +15,6 @@ export interface IStatusIconProps {
   ignoreDefaultIconColor?: boolean;
 }
 
-export const argTypes = {
-  type: {
-    control: { type: 'select' },
-    options: ['info', 'bevestiging', 'foutmelding', 'waarschuwing'],
-  },
-  size: {
-    options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
-    control: { type: 'radio' },
-  },
-};
-
 export const StatusIcon: React.FC<IStatusIconProps> = ({
   type = defaultArgs.type,
   size = defaultArgs.size,

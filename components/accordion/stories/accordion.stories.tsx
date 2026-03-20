@@ -1,8 +1,9 @@
-import { Accordion, argTypes } from '@nl-rvo/component-library-react';
+import { Accordion } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/accordion/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Accordion> = {
+export default {
   title: 'Componenten/Accordion',
   component: Accordion,
   args: defaultArgs,
@@ -17,9 +18,7 @@ const meta: Meta<typeof Accordion> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5155-13404&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Accordion>;
 type Story = StoryObj<typeof Accordion>;
 
 export const Default: Story = {

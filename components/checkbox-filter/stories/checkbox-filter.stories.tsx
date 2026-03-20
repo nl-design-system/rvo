@@ -62,7 +62,7 @@ const inputArgs = {
   ...defaultArgs,
 };
 
-const meta: Meta<typeof CheckBoxFilter> = {
+export default {
   title: 'Componenten/Checkbox Filter',
   component: CheckBoxFilter,
   args: defaultArgs,
@@ -79,9 +79,7 @@ const meta: Meta<typeof CheckBoxFilter> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=9166-1240&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof CheckBoxFilter>;
 type Story = StoryObj<typeof CheckBoxFilter>;
 
 export const Default: Story = { args: defaultArgs, name: 'Checkbox Filter' };

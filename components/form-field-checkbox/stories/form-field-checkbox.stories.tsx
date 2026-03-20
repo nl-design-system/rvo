@@ -1,11 +1,13 @@
 import { CheckboxField } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-checkbox/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof CheckboxField> = {
+export default {
   title: 'Componenten/Checkbox field',
   component: CheckboxField,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof CheckboxField> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=4231-18757&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof CheckboxField>;
 type Story = StoryObj<typeof CheckboxField>;
 
 export const Default: Story = { args: { ...defaultArgs, helperText: 'Helper text' }, name: 'Checkbox field' };

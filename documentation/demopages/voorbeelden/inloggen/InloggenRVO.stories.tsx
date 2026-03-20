@@ -5,7 +5,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import InloggenRVO from './InloggenRVO';
 
-const meta: Meta<typeof InloggenRVO> = {
+export default {
   title: "Pagina's/Voorbeelden/Inloggen/Inloggen bij RVO",
   component: InloggenRVO,
   parameters: {
@@ -13,9 +13,7 @@ const meta: Meta<typeof InloggenRVO> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof InloggenRVO>;
 type Story = StoryObj<typeof InloggenRVO>;
 
 export const Default: Story = { name: 'Inloggen bij RVO' };

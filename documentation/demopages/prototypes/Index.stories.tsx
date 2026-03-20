@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Index from './Index';
 
-const meta: Meta<typeof Index> = {
+export default {
   title: 'Prototypes/Index',
   component: Index,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Index> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Index>;
 type Story = StoryObj<typeof Index>;
 
 export const Default: Story = { name: 'Index' };

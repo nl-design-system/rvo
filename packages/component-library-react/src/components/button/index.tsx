@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { defaultArgs } from './defaultArgs';
-import { Icon, iconNames as iconOptions } from '../icon';
+import { Icon } from '../icon';
 import { IconType } from '../icon/types';
 import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
 import '@nl-rvo/component-library-css/dist/components/button.css';
@@ -28,35 +28,6 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   /** @uxpinpropname On Click */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
-
-export const argTypes = {
-  kind: {
-    options: ['primary', 'secondary', 'tertiary', 'quaternary', 'subtle', 'warning-subtle', 'warning'],
-    control: { type: 'radio' },
-  },
-  size: {
-    options: ['xs', 'sm', 'md'],
-    control: { type: 'radio' },
-  },
-  label: {
-    control: 'text',
-  },
-  disabled: {
-    control: 'boolean',
-  },
-  showIcon: {
-    options: ['no', 'before', 'after'],
-    control: { type: 'radio' },
-  },
-  icon: {
-    control: { type: 'select' },
-    options: iconOptions,
-  },
-  iconAriaLabel: { control: 'text' },
-  fullWidth: {
-    control: 'boolean',
-  },
-};
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   kind = defaultArgs.kind,

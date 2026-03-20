@@ -1,5 +1,6 @@
-import { argTypes, FileInput } from '@nl-rvo/component-library-react';
+import { FileInput } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-fileinput/defaultArgs';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/File input/States',

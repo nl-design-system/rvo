@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Focus from './Focus';
 
-const meta: Meta<typeof Focus> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Focus",
   component: Focus,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Focus> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Focus>;
 type Story = StoryObj<typeof Focus>;
 
 export const Default: Story = { name: 'Focus' };

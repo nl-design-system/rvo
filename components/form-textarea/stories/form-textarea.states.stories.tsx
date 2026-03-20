@@ -1,5 +1,6 @@
-import { argTypes, Textarea } from '@nl-rvo/component-library-react';
+import { Textarea } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textarea/defaultArgs';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Textarea/States',

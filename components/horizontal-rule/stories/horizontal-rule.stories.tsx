@@ -1,7 +1,7 @@
 import { Hr } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-const meta: Meta<typeof Hr> = {
+export default {
   title: 'Componenten/Horizontal rule',
   component: Hr,
   parameters: {
@@ -16,9 +16,7 @@ const meta: Meta<typeof Hr> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-2211&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Hr>;
 type Story = StoryObj<typeof Hr>;
 
 export const Default: Story = { name: 'Horizontal rule' };

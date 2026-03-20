@@ -1,11 +1,13 @@
 import { StatusIndicator } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/status-indicator/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof StatusIndicator> = {
+export default {
   title: 'Componenten/Status indicator',
   component: StatusIndicator,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof StatusIndicator> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-3033&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof StatusIndicator>;
 type Story = StoryObj<typeof StatusIndicator>;
 
 export const Default: Story = { args: defaultArgs, name: 'Status indicator' };

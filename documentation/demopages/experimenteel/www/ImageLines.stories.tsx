@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ImageLines from './ImageLines';
 import '../../common/imagelines.scss';
 
-const meta: Meta<typeof ImageLines> = {
+export default {
   title: "Pagina's/Experimenteel/www/Image Lines",
   component: ImageLines,
   parameters: {
@@ -10,9 +10,7 @@ const meta: Meta<typeof ImageLines> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ImageLines>;
 type Story = StoryObj<typeof ImageLines>;
 
 export const Default: Story = { name: 'Image Lines' };

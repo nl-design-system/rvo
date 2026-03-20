@@ -14,20 +14,6 @@ export interface IItemListProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  items: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const ItemList: React.FC<IItemListProps & React.HTMLAttributes<HTMLUListElement>> = ({
   items = defaultArgs.items,
   children,

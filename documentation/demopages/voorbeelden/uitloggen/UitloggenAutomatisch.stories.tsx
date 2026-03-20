@@ -5,7 +5,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import UitloggenAutomatisch from './UitloggenAutomatisch';
 
-const meta: Meta<typeof UitloggenAutomatisch> = {
+export default {
   title: "Pagina's/Voorbeelden/Uitloggen/U bent automatisch uitgelogd",
   component: UitloggenAutomatisch,
   parameters: {
@@ -13,9 +13,7 @@ const meta: Meta<typeof UitloggenAutomatisch> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof UitloggenAutomatisch>;
 type Story = StoryObj<typeof UitloggenAutomatisch>;
 
 export const Default: Story = { name: 'U bent automatisch uitgelogd' };

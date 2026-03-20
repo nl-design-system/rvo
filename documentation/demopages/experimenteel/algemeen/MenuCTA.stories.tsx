@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import MenuCTA from './MenuCTA';
 
-const meta: Meta<typeof MenuCTA> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Menu CTA",
   component: MenuCTA,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof MenuCTA> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof MenuCTA>;
 type Story = StoryObj<typeof MenuCTA>;
 
 export const Default: Story = { name: 'Menu CTA' };

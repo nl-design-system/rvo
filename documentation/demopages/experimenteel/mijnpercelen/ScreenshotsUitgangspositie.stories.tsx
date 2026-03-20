@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ScreenshotsUitgangspositie from './ScreenshotsUitgangspositie';
 
-const meta: Meta<typeof ScreenshotsUitgangspositie> = {
+export default {
   title: "Pagina's/Experimenteel/Mijn Percelen/Screenshots Uitgangspositie",
   component: ScreenshotsUitgangspositie,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof ScreenshotsUitgangspositie> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ScreenshotsUitgangspositie>;
 type Story = StoryObj<typeof ScreenshotsUitgangspositie>;
 
 export const Default: Story = { name: 'Screenshots Uitgangspositie' };

@@ -1,5 +1,6 @@
-import { argTypes, Toggle } from '@nl-rvo/component-library-react';
+import { Toggle } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/toggle/defaultArgs';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Toggle/States',

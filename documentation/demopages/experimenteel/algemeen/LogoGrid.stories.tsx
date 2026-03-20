@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import LogoGrid from './LogoGrid';
 
-const meta: Meta<typeof LogoGrid> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Logo grid",
   component: LogoGrid,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof LogoGrid> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof LogoGrid>;
 type Story = StoryObj<typeof LogoGrid>;
 
 export const Default: Story = { name: 'Logo grid' };

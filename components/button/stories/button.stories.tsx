@@ -1,8 +1,9 @@
-import { argTypes, Button } from '@nl-rvo/component-library-react';
+import { Button } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/button/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Button> = {
+export default {
   title: 'Componenten/Button',
   component: Button,
   args: defaultArgs,
@@ -19,9 +20,7 @@ const meta: Meta<typeof Button> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=46-529&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Button>;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {

@@ -21,7 +21,7 @@ const defaultArgs: CardArguments = {
   title: 'Title',
 };
 
-const meta: Meta<typeof CardExperimental> = {
+export default {
   title: 'Experimentele Componenten/CardExperimental',
   component: CardExperimental,
   args: defaultArgs,
@@ -37,9 +37,7 @@ const meta: Meta<typeof CardExperimental> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-118&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof CardExperimental>;
 type Story = StoryObj<CardArguments>;
 
 const Container = ({ children }) => <div>{children}</div>;

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ClickableRows from './ClickableRows';
 
-const meta: Meta<typeof ClickableRows> = {
+export default {
   title: "Pagina's/Voorbeelden/CMOR/Clickable Rows",
   component: ClickableRows,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof ClickableRows> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ClickableRows>;
 type Story = StoryObj<typeof ClickableRows>;
 
 export const Default: Story = { name: 'Clickable Rows' };

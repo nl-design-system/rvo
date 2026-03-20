@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import CopyrightDetails from './CopyrightDetails';
 
-const meta: Meta<typeof CopyrightDetails> = {
+export default {
   title: "Pagina's/Experimenteel/www/Copyright Details",
   component: CopyrightDetails,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof CopyrightDetails> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof CopyrightDetails>;
 type Story = StoryObj<typeof CopyrightDetails>;
 
 export const Default: Story = { name: 'Copyright Details' };

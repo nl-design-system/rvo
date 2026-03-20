@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import RegisterAlternativepagina from './RegisterAlternativepagina';
 
-const meta: Meta<typeof RegisterAlternativepagina> = {
+export default {
   title: "Pagina's/Voorbeelden/www/Registerpagina alternatief",
   component: RegisterAlternativepagina,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof RegisterAlternativepagina> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof RegisterAlternativepagina>;
 type Story = StoryObj<typeof RegisterAlternativepagina>;
 
 export const Default: Story = { name: 'Registerpagina alternatief' };

@@ -15,7 +15,7 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof SkeletonLoader> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Skeleton",
   component: SkeletonLoader,
   argTypes,
@@ -24,9 +24,7 @@ const meta: Meta<typeof SkeletonLoader> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof SkeletonLoader>;
 type Story = StoryObj<typeof SkeletonLoader>;
 
 export const Default: Story = { name: 'Skeleton' };

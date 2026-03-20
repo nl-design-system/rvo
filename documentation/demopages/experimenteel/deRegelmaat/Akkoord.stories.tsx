@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Akkoord from './Akkoord';
 
-const meta: Meta<typeof Akkoord> = {
+export default {
   title: "Pagina's/Experimenteel/de Regelmaat/Akkoord",
   component: Akkoord,
   parameters: {
@@ -12,9 +12,7 @@ const meta: Meta<typeof Akkoord> = {
       defaultViewport: 'mobile2',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Akkoord>;
 type Story = StoryObj<typeof Akkoord>;
 
 export const Default: Story = { name: 'Akkoord' };

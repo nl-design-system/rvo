@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Dashboard from './Dashboard';
 
-const meta: Meta<typeof Dashboard> = {
+export default {
   title: "Pagina's/Templates/Dashboard",
   component: Dashboard,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Dashboard> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Dashboard>;
 type Story = StoryObj<typeof Dashboard>;
 
 export const Default: Story = { name: 'Dashboard' };

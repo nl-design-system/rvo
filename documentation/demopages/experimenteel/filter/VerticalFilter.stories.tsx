@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import VerticalFilter from './VerticalFilter';
 
-const meta: Meta<typeof VerticalFilter> = {
+export default {
   title: "Pagina's/Experimenteel/Filter/Vertical filter",
   component: VerticalFilter,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof VerticalFilter> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof VerticalFilter>;
 type Story = StoryObj<typeof VerticalFilter>;
 
 export const Default: Story = { name: 'Vertical filter' };
