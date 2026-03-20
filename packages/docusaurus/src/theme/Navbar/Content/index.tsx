@@ -1,7 +1,7 @@
 import { ThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { MenuBar } from '@nl-rvo/components';
+import { MenuBar } from '@nl-rvo/component-library-react';
 
 export default function NavbarContent(): JSX.Element {
   function useThemeConfig(): ThemeConfig {

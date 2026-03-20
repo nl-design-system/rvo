@@ -12,7 +12,7 @@ import {
   RadioButtonField,
   SelectField,
   TextInputField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../../common/style.scss';

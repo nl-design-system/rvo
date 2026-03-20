@@ -7,8 +7,9 @@ import {
   MenuBar,
   // MobileMenuBar,
   PageNumberNavigation,
+  TabItem,
   Tabs,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -114,115 +115,120 @@ const Aanvragen = () => {
               </p>
               <div>
                 <LayoutFlow gap="xl">
-                  <Tabs
-                    tabs={[
-                      { label: 'Lopende aanvragen', href: '#' },
-                      { label: 'Archief', href: '#' },
-                    ]}
-                    activeTab={0}
-                  />
-                  <div className="rvo-table--responsive">
-                    <table className="rvo-table">
-                      <thead className="rvo-table-head">
-                        <tr className="rvo-table-row">
-                          <th scope="col" className="rvo-table-header">
-                            Naam
-                          </th>
-                          <th scope="col" className="rvo-table-header ">
-                            Status
-                          </th>
-                          <th scope="col" className="rvo-table-header ">
-                            Referentienummer
-                          </th>
-                          <th scope="col" className="rvo-table-header">
-                            Laatste wijziging
-                          </th>
-                          <th scope="col" className="rvo-table-header"></th>
-                        </tr>
-                      </thead>
-                      <tbody className="rvo-table-body">
-                        <tr className="rvo-table-row">
-                          <td className="rvo-table-cell">
-                            <a className="rvo-link rvo-link--no-underline">LEADER 2023</a>
-                          </td>
-                          <td className="rvo-table-cell">
-                            <LayoutFlow row={true} gap="sm">
-                              <span
-                                className="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--sm rvo-status-icon-waarschuwing"
-                                role="img"
-                                aria-label="Waarschuwing"
-                              ></span>{' '}
-                              Actie nodig
-                            </LayoutFlow>
-                          </td>
-                          <td className="rvo-table-cell">ERTKV23-04546009</td>
-                          <td className="rvo-table-cell">14 dec 2023</td>
-                          <td className="rvo-table-cell">
-                            <LayoutFlow alignItems="end">
-                              <a href="#">
-                                <Icon icon="delta-naar-rechts" size="sm"></Icon>
-                              </a>
-                            </LayoutFlow>
-                          </td>
-                        </tr>
-                        <tr className="rvo-table-row">
-                          <td className="rvo-table-cell">
-                            <a className="rvo-link rvo-link--no-underline">Extra betaling jonge landbouwers GL..</a>
-                          </td>
-                          <td className="rvo-table-cell">In behandeling</td>
-                          <td className="rvo-table-cell">ERTKV23-04546009</td>
-                          <td className="rvo-table-cell">14 dec 2023</td>
-                          <td className="rvo-table-cell">
-                            <LayoutFlow alignItems="end">
-                              <a href="#">
-                                <Icon icon="delta-naar-rechts" size="sm"></Icon>
-                              </a>
-                            </LayoutFlow>
-                          </td>
-                        </tr>
-                        <tr className="rvo-table-row">
-                          <td className="rvo-table-cell">
-                            <a className="rvo-link rvo-link--no-underline">ANLb-Subsidie 2022</a>
-                          </td>
-                          <td className="rvo-table-cell">Bezwaar</td>
-                          <td className="rvo-table-cell">ERTKV23-04546009</td>
-                          <td className="rvo-table-cell">14 dec 2023</td>
-                          <td className="rvo-table-cell">
-                            <LayoutFlow alignItems="end">
-                              <a href="#">
-                                <Icon icon="delta-naar-rechts" size="sm"></Icon>
-                              </a>
-                            </LayoutFlow>
-                          </td>
-                        </tr>
-                        <tr className="rvo-table-row">
-                          <td className="rvo-table-cell">
-                            <a className="rvo-link rvo-link--no-underline">Eco-regeling 2023</a>
-                          </td>
-                          <td className="rvo-table-cell">
-                            <LayoutFlow row={true} gap="sm">
-                              <span
-                                className="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--sm rvo-status-icon-waarschuwing"
-                                role="img"
-                                aria-label="Waarschuwing"
-                              ></span>{' '}
-                              Actie nodig
-                            </LayoutFlow>
-                          </td>
-                          <td className="rvo-table-cell">ERTKV23-04546009</td>
-                          <td className="rvo-table-cell">14 dec 2023</td>
-                          <td className="rvo-table-cell">
-                            <LayoutFlow alignItems="end">
-                              <a href="#">
-                                <Icon icon="delta-naar-rechts" size="sm"></Icon>
-                              </a>
-                            </LayoutFlow>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <PageNumberNavigation numberOfPages={5} activePage={3} />
+                  <Tabs ariaLabel="Aanvragen tabs" defaultActiveTab={0} panelBorder={false} panelPadding={false}>
+                    <TabItem label="Lopende aanvragen">
+                      <LayoutFlow gap="xl">
+                        <div className="rvo-table--responsive">
+                          <table className="rvo-table">
+                            <thead className="rvo-table-head">
+                              <tr className="rvo-table-row">
+                                <th scope="col" className="rvo-table-header">
+                                  Naam
+                                </th>
+                                <th scope="col" className="rvo-table-header ">
+                                  Status
+                                </th>
+                                <th scope="col" className="rvo-table-header ">
+                                  Referentienummer
+                                </th>
+                                <th scope="col" className="rvo-table-header">
+                                  Laatste wijziging
+                                </th>
+                                <th scope="col" className="rvo-table-header"></th>
+                              </tr>
+                            </thead>
+                            <tbody className="rvo-table-body">
+                              <tr className="rvo-table-row">
+                                <td className="rvo-table-cell">
+                                  <a className="rvo-link rvo-link--no-underline">LEADER 2023</a>
+                                </td>
+                                <td className="rvo-table-cell">
+                                  <LayoutFlow row={true} gap="sm">
+                                    <span
+                                      className="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--sm rvo-status-icon-waarschuwing"
+                                      role="img"
+                                      aria-label="Waarschuwing"
+                                    ></span>{' '}
+                                    Actie nodig
+                                  </LayoutFlow>
+                                </td>
+                                <td className="rvo-table-cell">ERTKV23-04546009</td>
+                                <td className="rvo-table-cell">14 dec 2023</td>
+                                <td className="rvo-table-cell">
+                                  <LayoutFlow alignItems="end">
+                                    <a href="#">
+                                      <Icon icon="delta-naar-rechts" size="sm"></Icon>
+                                    </a>
+                                  </LayoutFlow>
+                                </td>
+                              </tr>
+                              <tr className="rvo-table-row">
+                                <td className="rvo-table-cell">
+                                  <a className="rvo-link rvo-link--no-underline">
+                                    Extra betaling jonge landbouwers GL..
+                                  </a>
+                                </td>
+                                <td className="rvo-table-cell">In behandeling</td>
+                                <td className="rvo-table-cell">ERTKV23-04546009</td>
+                                <td className="rvo-table-cell">14 dec 2023</td>
+                                <td className="rvo-table-cell">
+                                  <LayoutFlow alignItems="end">
+                                    <a href="#">
+                                      <Icon icon="delta-naar-rechts" size="sm"></Icon>
+                                    </a>
+                                  </LayoutFlow>
+                                </td>
+                              </tr>
+                              <tr className="rvo-table-row">
+                                <td className="rvo-table-cell">
+                                  <a className="rvo-link rvo-link--no-underline">ANLb-Subsidie 2022</a>
+                                </td>
+                                <td className="rvo-table-cell">Bezwaar</td>
+                                <td className="rvo-table-cell">ERTKV23-04546009</td>
+                                <td className="rvo-table-cell">14 dec 2023</td>
+                                <td className="rvo-table-cell">
+                                  <LayoutFlow alignItems="end">
+                                    <a href="#">
+                                      <Icon icon="delta-naar-rechts" size="sm"></Icon>
+                                    </a>
+                                  </LayoutFlow>
+                                </td>
+                              </tr>
+                              <tr className="rvo-table-row">
+                                <td className="rvo-table-cell">
+                                  <a className="rvo-link rvo-link--no-underline">Eco-regeling 2023</a>
+                                </td>
+                                <td className="rvo-table-cell">
+                                  <LayoutFlow row={true} gap="sm">
+                                    <span
+                                      className="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--sm rvo-status-icon-waarschuwing"
+                                      role="img"
+                                      aria-label="Waarschuwing"
+                                    ></span>{' '}
+                                    Actie nodig
+                                  </LayoutFlow>
+                                </td>
+                                <td className="rvo-table-cell">ERTKV23-04546009</td>
+                                <td className="rvo-table-cell">14 dec 2023</td>
+                                <td className="rvo-table-cell">
+                                  <LayoutFlow alignItems="end">
+                                    <a href="#">
+                                      <Icon icon="delta-naar-rechts" size="sm"></Icon>
+                                    </a>
+                                  </LayoutFlow>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <PageNumberNavigation numberOfPages={5} activePage={3} />
+                      </LayoutFlow>
+                    </TabItem>
+                    <TabItem label="Archief">
+                      <p className="rvo-margin--md">Archief aanvragen.</p>
+                    </TabItem>
+                  </Tabs>
+
                   <div className="rvo-card rvo-card--padding-xl rvo-card--full-colour--grijs-100">
                     <div className="rvo-card__content">
                       <Heading type="h3" noMargins>

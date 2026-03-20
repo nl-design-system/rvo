@@ -1,4 +1,15 @@
-import { Accordion, Button, Footer, Grid, Header, Heading, Hero, Icon, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import {
+  Accordion,
+  Button,
+  Footer,
+  Grid,
+  Header,
+  Heading,
+  Hero,
+  Icon,
+  LayoutFlow,
+  MenuBar,
+} from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 

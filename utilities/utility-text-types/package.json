@@ -1,5 +1,5 @@
 {
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": "Community for NL Design System",
   "name": "@nl-rvo/utility-text-types",
   "license": "CC0-1.0",
@@ -30,6 +30,7 @@
     "directory": "utilities/utility-text-types"
   },
   "devDependencies": {
-    "@nl-rvo/build-utils-css": "workspace:*"
+    "@nl-rvo/build-utils-css": "workspace:*",
+    "@nl-rvo/component-library-react": "workspace:*"
   }
 }

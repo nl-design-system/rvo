@@ -1,4 +1,4 @@
-import { Button, Fieldset, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
+import { Button, Fieldset, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import { useRef, useState } from 'react';
 
 const Feedback = () => {

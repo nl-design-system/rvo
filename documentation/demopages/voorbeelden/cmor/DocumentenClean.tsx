@@ -9,8 +9,9 @@ import {
   MenuBar,
   // MobileMenuBar,
   PageNumberNavigation,
+  TabItem,
   Tabs,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -105,224 +106,227 @@ const DocumentenClean = () => {
               </Heading>
               <div>
                 <LayoutFlow gap="xl">
-                  <Tabs
-                    tabs={[
-                      { label: 'Mijn ontvangen documenten', href: '#' },
-                      { label: 'Mijn verstuurde documenten', href: '#' },
-                    ]}
-                    activeTab={0}
-                  />
-                  <Grid columns="four">
-                    <div>Naam</div>
-                    <div>Regeling</div>
-                    <div>Datum</div>
-                    <div>Acties</div>
-                  </Grid>
-                  <div className="rvo-wrapper rvo-documents">
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                  <Tabs ariaLabel="Documenten tabs" defaultActiveTab={0}>
+                    <TabItem label="Mijn ontvangen documenten">
+                      <LayoutFlow>
+                        <Grid columns="four">
+                          <div>Naam</div>
+                          <div>Regeling</div>
+                          <div>Datum</div>
+                          <div>Acties</div>
+                        </Grid>
+                        <div className="rvo-wrapper rvo-documents">
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
+                          <div className="rvo-wrapper rvo-document">
+                            <Grid columns="four">
+                              <LayoutFlow gap="0">
+                                <strong>Verzoek om informatie</strong>
+                                <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              </LayoutFlow>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">14 december 2023</span>
+                              </div>
+                              <div>
+                                <span className="rvo-text rvo-text--subtle">
+                                  <Link showIcon="before" icon="externe-link" noUnderline={true}>
+                                    Openen
+                                  </Link>
+                                </span>
+                              </div>
+                            </Grid>
+                            <hr className="rvo-hr" />
+                          </div>
                         </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                    <div className="rvo-wrapper rvo-document">
-                      <Grid columns="four">
-                        <LayoutFlow gap="0">
-                          <strong>Verzoek om informatie</strong>
-                          <span className="rvo-text rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
-                        </LayoutFlow>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">ISDE 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">14 december 2023</span>
-                        </div>
-                        <div>
-                          <span className="rvo-text rvo-text--subtle">
-                            <Link showIcon="before" icon="externe-link" noUnderline={true}>
-                              Openen
-                            </Link>
-                          </span>
-                        </div>
-                      </Grid>
-                      <hr className="rvo-hr" />
-                    </div>
-                  </div>
-                  <PageNumberNavigation numberOfPages={5} activePage={3} />
-                  <Alert heading="Info">
-                    Ontbreekt er een document in dit overzicht? Documenten worden ieder [tijd] ingeladen vanuit de
-                    onderliggende systemen. Indien het probleem blijft bestaan neem contact op met ons klantenservice.{' '}
-                  </Alert>
+                        <PageNumberNavigation numberOfPages={5} activePage={3} />
+                        <Alert heading="Info">
+                          Ontbreekt er een document in dit overzicht? Documenten worden ieder [tijd] ingeladen vanuit de
+                          onderliggende systemen. Indien het probleem blijft bestaan neem contact op met ons
+                          klantenservice.{' '}
+                        </Alert>
+                      </LayoutFlow>
+                    </TabItem>
+                    <TabItem label="Mijn verstuurde documenten">
+                      <p className="rvo-text--no-margins">Mijn verstuurde documenten.</p>
+                    </TabItem>
+                  </Tabs>
                 </LayoutFlow>
               </div>
             </LayoutFlow>

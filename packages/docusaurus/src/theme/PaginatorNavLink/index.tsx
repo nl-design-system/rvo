@@ -1,5 +1,5 @@
 // import Link from '@docusaurus/Link';
-import { LayoutFlow, Link } from '@nl-rvo/components';
+import { LayoutFlow, Link } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/PaginatorNavLink';
 import clsx from 'clsx';
 import styles from './styles.module.css';

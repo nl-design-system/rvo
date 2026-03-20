@@ -11,7 +11,7 @@ import {
   MobileMenuBar,
   ProgressTracker,
   RadioButtonField,
-} from '@nl-rvo/components';
+} from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';

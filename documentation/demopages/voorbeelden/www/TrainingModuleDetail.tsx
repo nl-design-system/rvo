@@ -1,4 +1,4 @@
-import { Footer, Header, Heading, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import { Footer, Header, Heading, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';

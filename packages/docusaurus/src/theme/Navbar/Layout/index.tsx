@@ -1,7 +1,7 @@
 import { translate } from '@docusaurus/Translate';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
-import { Header, MenuBar, MobileMenuBar } from '@nl-rvo/components';
+import { Header, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/Navbar/Layout';
 import clsx from 'clsx';
 import styles from './styles.module.css';

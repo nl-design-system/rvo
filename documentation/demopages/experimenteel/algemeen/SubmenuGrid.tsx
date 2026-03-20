@@ -1,4 +1,4 @@
-import { Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 
 const SubmenuGrid = () => {

@@ -11,12 +11,12 @@ import {
   MaxWidthLayout,
   MenuBar,
   TextInputField,
-} from '@nl-rvo/components';
-import { UtilityTextTypes } from '@nl-rvo/utilities';
+} from '@nl-rvo/component-library-react';
+import { UtilityTextTypes } from '@nl-rvo/component-library-react';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
-import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const Notify = () => {
   return (

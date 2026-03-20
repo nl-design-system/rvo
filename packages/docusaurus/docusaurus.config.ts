@@ -5,15 +5,16 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig from './config/navigationConfig';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
 
-const includeList = ['**/*.docusaurus.{md,mdx}'];
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 
 const config: Config = {
   title: 'ROOS Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   favicon: 'img/favicon.ico',
-  url: process.env.DOCUSAURUS_URL || 'https://nl-design-system.github.io',
-  baseUrl: process.env.DOCUSAURUS_BASE_URL || '/rvo/docs/',
+  url: process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : process.env.DOCUSAURUS_URL || 'https://nl-design-system.github.io',
+  baseUrl: process.env.VERCEL ? '/docs/' : process.env.DOCUSAURUS_BASE_URL || '/rvo/docs/',
   organizationName: 'nl-rvo',
   projectName: 'rvo',
   onBrokenLinks: 'warn',
@@ -34,7 +35,7 @@ const config: Config = {
         routeBasePath: '/',
         editUrl: undefined,
         breadcrumbs: false,
-        include: includeList,
+        include: ['**/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },
     ],
@@ -48,7 +49,7 @@ const config: Config = {
         breadcrumbs: false,
         sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
         sidebarItemsGenerator,
-        include: includeList,
+        include: ['*/docs/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },
     ],

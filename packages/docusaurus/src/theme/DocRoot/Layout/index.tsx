@@ -11,9 +11,14 @@ export default function DocRootLayout({ children }: Props): JSX.Element {
   const sidebar = useDocsSidebar();
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
   return (
-    <div className={styles.docsWrapper}>
+    <div className={clsx(styles.docsWrapper, !sidebar && styles.docsWrapperNoSidebar)}>
       <BackToTopButton />
-      <div className={clsx(styles.docPage, 'rvo-max-width-layout', 'rvo-max-width-layout--md')}>
+      <div
+        className={clsx(
+          styles.docPage,
+          !sidebar ? 'rvo-max-width-layout rvo-max-width-layout--sm' : 'rvo-max-width-layout rvo-max-width-layout--md',
+        )}
+      >
         {sidebar && (
           <DocRootLayoutSidebar
             sidebar={sidebar.items}

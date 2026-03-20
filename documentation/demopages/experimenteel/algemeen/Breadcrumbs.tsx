@@ -1,4 +1,4 @@
-import { Header, Heading, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/components';
+import { Header, Heading, Icon, LayoutFlow, MaxWidthLayout, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 

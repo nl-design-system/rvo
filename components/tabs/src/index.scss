@@ -101,6 +101,15 @@
       border: var(--rvo-tabs-panel-border-width) var(--rvo-tabs-panel-border-style) var(--rvo-tabs-panel-border-color);
       outline-offset: var(--rvo-tabs-focus-offset);
     }
+
+    &--no-border {
+      --rvo-tabs-panel-border-width: 0;
+    }
+
+    &--no-padding {
+      --rvo-tabs-panel-padding-inline: 0;
+      --rvo-tabs-panel-padding-block: 0;
+    }
   }
 
   // util

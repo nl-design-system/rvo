@@ -1,4 +1,4 @@
-import { Button, CheckboxField, Heading, LayoutFlow, MenuBar } from '@nl-rvo/components';
+import { Button, CheckboxField, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 

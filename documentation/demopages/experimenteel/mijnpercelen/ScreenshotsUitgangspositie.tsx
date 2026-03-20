@@ -1,4 +1,4 @@
-import {} from '@nl-rvo/components';
+import {} from '@nl-rvo/component-library-react';
 import '../../common/rhs-demos.scss';
 
 const ScreenshotsUitgangspositie = () => {

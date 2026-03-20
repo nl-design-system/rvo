@@ -1,4 +1,4 @@
-import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/components';
+import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/rhs-update.scss';
 import '../../common/www.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';

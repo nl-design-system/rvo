@@ -1,4 +1,4 @@
-import { Footer } from '@nl-rvo/components';
+import { Footer } from '@nl-rvo/component-library-react';
 
 export default function FooterLayout(): JSX.Element {
   return (

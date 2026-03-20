@@ -82,8 +82,10 @@ const sidebarItemsGenerator = async ({ item, docs }) => {
   // Categorize docs by folder
   const sidebarItems = processedDocs.reduce((currentSidebarItemList, doc) => {
     // Get categories from doc's sourceDirName
-    const categoryNames = doc.sourceDirName.split('/');
+    let categoryNames = doc.sourceDirName.split('/');
     categoryNames.shift();
+
+    categoryNames = categoryNames.filter((name) => name !== 'docs');
 
     if (categoryNames.length > 0) {
       categoryNames.reduce((currentCategory, categoryName, categoryIndex) => {
