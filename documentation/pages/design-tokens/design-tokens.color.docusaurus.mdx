@@ -7,5 +7,52 @@ slug: kleuren
 ---
 
 import Doc from "./design-tokens.color.mdx";
+import { ColorDesignTokens } from "../../componenten/design-tokens/ColorDesignTokens";
+import { Alert } from "@nl-rvo/component-library-react";
+
+export const violetTokens = [
+  { path: ["rvo", "color", "violet"], attributes: { item: "violet" }, value: "#a90061", name: "rvo-color-violet" },
+  {
+    path: ["rvo", "color", "violet-150"],
+    attributes: { item: "violet-150" },
+    value: "#F2D9E7",
+    name: "rvo-color-violet-150",
+  },
+  {
+    path: ["rvo", "color", "violet-300"],
+    attributes: { item: "violet-300" },
+    value: "#E5B2CF",
+    name: "rvo-color-violet-300",
+  },
+  {
+    path: ["rvo", "color", "violet-450"],
+    attributes: { item: "violet-450" },
+    value: "#D88CB7",
+    name: "rvo-color-violet-450",
+  },
+  {
+    path: ["rvo", "color", "violet-600"],
+    attributes: { item: "violet-600" },
+    value: "#CB66A0",
+    name: "rvo-color-violet-600",
+  },
+  {
+    path: ["rvo", "color", "violet-750"],
+    attributes: { item: "violet-750" },
+    value: "#BE4088",
+    name: "rvo-color-violet-750",
+  },
+];
+
+<div style={{ marginBlockStart: "var(--rvo-space-lg)" }}>
+  <Alert
+    kind="warning"
+    content="Violet is binnenkort beschikbaar als officieel onderdeel van de huisstijl. De design tokens worden in een volgende release toegevoegd."
+  />
+</div>
+
+<div style={{ marginBlockEnd: "-6em" }}>
+  <ColorDesignTokens tokens={violetTokens} />
+</div>
 
 <Doc />
