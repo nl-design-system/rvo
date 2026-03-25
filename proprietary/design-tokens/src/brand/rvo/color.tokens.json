@@ -2,27 +2,27 @@
   "rvo": {
     "color": {
       "hemelblauw": {
-        "value": "#007BC7",
+        "value": "#a90061",
         "type": "color"
       },
       "hemelblauw-150": {
-        "value": "#D9EBF7",
+        "value": "#F2D9E7",
         "type": "color"
       },
       "hemelblauw-300": {
-        "value": "#B3D7EE",
+        "value": "#E5B2CF",
         "type": "color"
       },
       "hemelblauw-450": {
-        "value": "#8CC4E6",
+        "value": "#D88CB7",
         "type": "color"
       },
       "hemelblauw-600": {
-        "value": "#66B0DD",
+        "value": "#CB66A0",
         "type": "color"
       },
       "hemelblauw-750": {
-        "value": "#409CD5",
+        "value": "#BE4088",
         "type": "color"
       },
       "lintblauw": {
