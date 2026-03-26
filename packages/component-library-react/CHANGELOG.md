@@ -1,5 +1,19 @@
 # @nl-rvo/component-library-react
 
+## 7.0.1
+
+### Patch Changes
+
+- 2ed4a39: Add new `violet` color option to the hero component.
+- c49b651: Refactor Storybook argTypes location
+
+  Move all argTypes from `component-library-react` to
+  `components/<component-name>/stories/argtypes.ts` so each component
+  maintains its own Storybook argTypes configuration.
+
+- Updated dependencies [eb33fc6]
+  - @nl-rvo/component-library-css@4.19.1
+
 ## 7.0.0
 
 ### Major Changes

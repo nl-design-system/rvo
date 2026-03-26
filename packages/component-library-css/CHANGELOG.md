@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.19.1
+
+### Patch Changes
+
+- eb33fc6: Add new `violet` color option to the hero component.
+
 ## 4.19.0
 
 ### Minor Changes
