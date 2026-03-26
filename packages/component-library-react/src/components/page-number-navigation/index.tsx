@@ -103,15 +103,12 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
     setInternalActivePage(activePage);
   }, [activePage]);
 
-  if (
+  const isInvalidPagination =
     !numberOfPages ||
     !internalActivePage ||
     numberOfPages < 1 ||
     internalActivePage < 1 ||
-    internalActivePage > numberOfPages
-  ) {
-    return null;
-  }
+    internalActivePage > numberOfPages;
 
   const handlePageChange = useCallback(
     (newPage: number) => {
@@ -122,9 +119,13 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
   );
 
   const pageNumbers = useMemo(
-    () => generatePageNumbers(numberOfPages, internalActivePage, handlePageChange),
-    [numberOfPages, internalActivePage, handlePageChange],
+    () => (isInvalidPagination ? [] : generatePageNumbers(numberOfPages, internalActivePage, handlePageChange)),
+    [numberOfPages, internalActivePage, handlePageChange, isInvalidPagination],
   );
+
+  if (isInvalidPagination) {
+    return null;
+  }
 
   return (
     <nav className={clsx('rvo-pagination', className)} {...htmlAttributes}>
