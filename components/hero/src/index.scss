@@ -37,17 +37,17 @@
     line-height: var(--rvo-hero-subtitle-line-height);
   }
 
-  &--lichtblauw {
-    .rvo-hero {
-      &__content {
-        background-color: var(--rvo-hero-kind-lichtblauw-background-color);
-        color: var(--rvo-hero-kind-lichtblauw-color);
-      }
+  &--violet {
+    --rvo-hero-box-background-color: var(--rvo-color-violet);
+  }
 
-      &__title,
-      &__subtitle {
-        color: var(--rvo-hero-kind-lichtblauw-color);
-      }
+  &--lichtblauw {
+    --rvo-hero-box-background-color: var(--rvo-hero-kind-lichtblauw-background-color);
+
+    .rvo-hero__content,
+    .rvo-hero__title,
+    .rvo-hero__subtitle {
+      color: var(--rvo-hero-kind-lichtblauw-color);
     }
   }
 }

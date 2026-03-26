@@ -25,7 +25,7 @@ const argTypes = {
     },
   },
   kind: {
-    options: ['none', 'lichtblauw'],
+    options: ['none', 'lichtblauw', 'violet'],
     control: { type: 'radio' },
   },
   showLine: { control: 'boolean' },

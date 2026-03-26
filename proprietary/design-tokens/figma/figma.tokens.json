@@ -382,6 +382,30 @@
           "$value": "#E06056",
           "$type": "color"
         },
+        "violet": {
+          "$value": "#a90061",
+          "$type": "color"
+        },
+        "violet-150": {
+          "$value": "#F2D9E7",
+          "$type": "color"
+        },
+        "violet-300": {
+          "$value": "#E5B2CF",
+          "$type": "color"
+        },
+        "violet-450": {
+          "$value": "#D88CB7",
+          "$type": "color"
+        },
+        "violet-600": {
+          "$value": "#CB66A0",
+          "$type": "color"
+        },
+        "violet-750": {
+          "$value": "#BE4088",
+          "$type": "color"
+        },
         "grijs-050": {
           "$value": "#F8FAFC",
           "$type": "color"
