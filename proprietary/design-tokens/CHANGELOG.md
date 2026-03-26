@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 2.3.0
+
+### Minor Changes
+
+- 2ed4a39: Add new color "Violet".
+
 ## 2.2.0
 
 ### Minor Changes
