@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 7.0.2
+
+### Patch Changes
+
+- 058a2ed: Change types path
+
 ## 7.0.1
 
 ### Patch Changes
