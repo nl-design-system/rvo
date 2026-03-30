@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-react
 
+## 7.0.3
+
+### Patch Changes
+
+- f64662b: ROOS-330: prevents conditional render of react hooks
+- fae5a62: ROOS-330: added overridable labels for i18n purposes
+
 ## 7.0.2
 
 ### Patch Changes
