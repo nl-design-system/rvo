@@ -103,16 +103,6 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
     setInternalActivePage(activePage);
   }, [activePage]);
 
-  if (
-    !numberOfPages ||
-    !internalActivePage ||
-    numberOfPages < 1 ||
-    internalActivePage < 1 ||
-    internalActivePage > numberOfPages
-  ) {
-    return null;
-  }
-
   const handlePageChange = useCallback(
     (newPage: number) => {
       setInternalActivePage(newPage);
@@ -125,6 +115,16 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
     () => generatePageNumbers(numberOfPages, internalActivePage, handlePageChange),
     [numberOfPages, internalActivePage, handlePageChange],
   );
+
+  if (
+    !numberOfPages ||
+    !internalActivePage ||
+    numberOfPages < 1 ||
+    internalActivePage < 1 ||
+    internalActivePage > numberOfPages
+  ) {
+    return null;
+  }
 
   return (
     <nav className={clsx('rvo-pagination', className)} {...htmlAttributes}>
