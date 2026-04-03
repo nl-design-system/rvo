@@ -11,6 +11,7 @@ import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocVersionBadge from '@theme/DocVersionBadge';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import styles from './styles.module.css';
 
 /**
@@ -34,7 +35,7 @@ function useDocTOC() {
   };
 }
 
-export default function DocItemLayout({ children }: Props): JSX.Element {
+export default function DocItemLayout({ children }: Props): ReactElement {
   const docTOC = useDocTOC();
   const { metadata } = useDoc();
   return (

@@ -1,9 +1,10 @@
 import { useLocation } from '@docusaurus/router';
 import * as Components from '@nl-rvo/component-library-react';
+import type { ReactElement } from 'react';
 import styles from './preview.module.css';
 import { deserialize } from '../utils/react-serialize';
 
-export default function Preview(): JSX.Element {
+export default function Preview(): ReactElement {
   const { search } = useLocation();
   if (!search) {
     return null;

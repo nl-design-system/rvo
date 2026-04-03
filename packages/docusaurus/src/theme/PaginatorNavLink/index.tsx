@@ -2,9 +2,10 @@
 import { LayoutFlow, Link } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/PaginatorNavLink';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import styles from './styles.module.css';
 
-export default function PaginatorNavLink(props: Props): JSX.Element {
+export default function PaginatorNavLink(props: Props): ReactElement {
   const { permalink, title, subLabel, isNext } = props;
   return (
     <LayoutFlow gap="0" className={clsx(isNext ? 'pagination-nav__link--next' : 'pagination-nav__link--prev')}>

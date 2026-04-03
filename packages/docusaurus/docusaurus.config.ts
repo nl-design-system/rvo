@@ -60,7 +60,11 @@ const config: Config = {
       {
         debug: process.env['NODE_ENV'] === 'development' ? true : false,
         docs: false,
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          routeBasePath: 'blog',
+          path: 'src/blog',
+        },
         theme: {
           customCss: [
             require.resolve('@nl-rvo/assets/fonts/index.css'),

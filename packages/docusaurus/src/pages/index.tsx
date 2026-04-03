@@ -3,9 +3,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Button, Card, Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import styles from './index.module.css';
 
-export default function Home(): JSX.Element {
+export default function Home(): ReactElement {
   const { siteConfig } = useDocusaurusContext();
 
   return (
@@ -16,11 +17,17 @@ export default function Home(): JSX.Element {
             <Heading type="h1" noMargins={true}>
               ROOS: Het design system van RVO
             </Heading>
-            <p className={styles.heroParagraph}>
-              ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland. ROOS
-              is een <strong>gebruiksvriendelijke</strong> en <strong>toegankelijke</strong> vertaling van de
-              gemoderniseerde Rijkshuisstijl.
-            </p>
+            <LayoutFlow gap="xs">
+              <p className={styles.heroParagraph}>
+                ROOS (RVO Open Ontwerp Systeem) is het Design System van de Rijksdienst voor Ondernemend Nederland. ROOS
+                is een <strong>gebruiksvriendelijke</strong> en <strong>toegankelijke</strong> vertaling van de
+                gemoderniseerde Rijkshuisstijl.
+              </p>
+              <p className={styles.heroParagraph}>
+                Heb je vragen over ROOS of heb je hulp nodig? Stuur dan een e-mail naar{' '}
+                <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
+              </p>
+            </LayoutFlow>
             <Link
               style={{ display: 'inline-block', width: 'max-content' }}
               noUnderline={true}
@@ -41,6 +48,7 @@ export default function Home(): JSX.Element {
               outline={true}
               fullCardLink={true}
               padding="lg"
+              linkProps={{ noUnderline: true }}
             >
               De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS.
             </Card>
@@ -51,6 +59,7 @@ export default function Home(): JSX.Element {
               outline={true}
               fullCardLink={true}
               padding="lg"
+              linkProps={{ noUnderline: true }}
             >
               Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl.
             </Card>
@@ -61,6 +70,7 @@ export default function Home(): JSX.Element {
               outline={true}
               fullCardLink={true}
               padding="lg"
+              linkProps={{ noUnderline: true }}
             >
               Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
             </Card>
@@ -69,22 +79,23 @@ export default function Home(): JSX.Element {
               background="none"
               title={
                 <LayoutFlow row={true} gap="sm">
-                  Voor designers <Icon icon="externe-link" />
+                  Figma <Icon icon="externe-link" />
                 </LayoutFlow>
               }
               link="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0"
               outline={true}
               fullCardLink={true}
               padding="lg"
+              linkProps={{ noUnderline: true }}
             >
-              Ben je een designer en wil je ROOS gebruiken? Gebruik dan ons Figma bestand.
+              Bekijk de ROOS componenten, patronen en templates in de Figma bibliotheek.
             </Card>
 
             <Card
               background="none"
               title={
                 <LayoutFlow row={true} gap="sm">
-                  Voor developers <Icon icon="externe-link" />
+                  Storybook <Icon icon="externe-link" />
                 </LayoutFlow>
               }
               link={
@@ -95,28 +106,24 @@ export default function Home(): JSX.Element {
               outline={true}
               fullCardLink={true}
               padding="lg"
+              linkProps={{ noUnderline: true }}
             >
-              Ben je een developer en wil je ROOS gebruiken? Ga dan naar onze Storybook omgeving.
+              Bekijk de code voorbeelden van de ROOS componenten, patronen en templates in Storybook.
             </Card>
             <Card
               background="none"
               title={
                 <LayoutFlow row={true} gap="sm">
-                  Hulp nodig? <Icon icon="externe-link" />
+                  GitHub <Icon icon="externe-link" />
                 </LayoutFlow>
               }
-              link={
-                process.env.NODE_ENV === 'development'
-                  ? 'http://localhost:6006'
-                  : 'https://nl-design-system.github.io/rvo/'
-              }
+              link="https://github.com/nl-design-system/rvo"
               outline={true}
               fullCardLink={true}
               padding="lg"
+              linkProps={{ noUnderline: true }}
             >
-              Kom je er niet uit? We vinden het altijd leuk als iemand ons Design System wil gebruiken, dus stuur ons
-              een e-mail naar&nbsp;
-              <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
+              Werk mee aan ROOS in de GitHub repository.
             </Card>
           </Grid>
         </MaxWidthLayout>

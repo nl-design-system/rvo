@@ -11,6 +11,7 @@ import { Heading, Link } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/DocSidebarItem/Category';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import { type ComponentProps, MouseEvent, useEffect, useMemo } from 'react';
 
 // If we navigate to a category and it becomes active, it should automatically
@@ -94,7 +95,7 @@ function CollapseButton({
   );
 }
 
-export default function DocSidebarItemCategory({ item, onItemClick, activePath, level, index }: Props): JSX.Element {
+export default function DocSidebarItemCategory({ item, onItemClick, activePath, level, index }: Props): ReactElement {
   const { items, label, collapsible, className, href } = item;
   const {
     docs: {
