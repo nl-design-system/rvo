@@ -5,6 +5,7 @@ authors:
   - name: Robert Roose
 tags: [lorem, voorbeeld, blog]
 description: Voorbeeldblogpost met lorem ipsum content en Nederlandse koppen voor layout- en stijltests.
+draft: true
 ---
 
 # Introductie
