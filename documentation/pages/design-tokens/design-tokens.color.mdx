@@ -3,13 +3,38 @@ import { ColorDesignTokens } from "../../componenten/design-tokens/ColorDesignTo
 
 export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/color.tokens.json"));
 
-<span>Er zijn {tokens.length} design tokens voor kleuren.</span>
+export const concernPrefixes = ["lintblauw", "violet", "lichtblauw"];
+export const functionelePrefixes = ["hemelblauw", "donkerblauw", "zwart", "wit", "grijs"];
 
-<ColorDesignTokens tokens={tokens} />
+export const concernKleuren = concernPrefixes.flatMap((prefix) =>
+  tokens.filter(({ attributes }) => attributes.item === prefix || attributes.item.startsWith(prefix + "-"))
+);
+export const functioneleKleuren = tokens.filter(({ attributes }) =>
+  functionelePrefixes.some((prefix) => attributes.item === prefix || attributes.item.startsWith(prefix + "-"))
+);
+export const signaalkleuren = tokens.filter(
+  ({ attributes }) =>
+    !concernPrefixes.some((prefix) => attributes.item === prefix || attributes.item.startsWith(prefix + "-")) &&
+    !functionelePrefixes.some((prefix) => attributes.item === prefix || attributes.item.startsWith(prefix + "-"))
+);
+
+<div style={{ marginBlockEnd: "1.5em" }}>Er zijn {tokens.length} design tokens voor kleuren.</div>
+
+## Concern kleuren
+
+<ColorDesignTokens tokens={concernKleuren} />
+
+## Functionele kleuren
+
+<ColorDesignTokens tokens={functioneleKleuren} />
+
+## Signaalkleuren
+
+<ColorDesignTokens tokens={signaalkleuren} />
 
 ## Richtlijnen
 
-- De primaire kleur van RVO is Hemelblauw.
+- De primaire kleur van de digitale toepassingen van RVO is Hemelblauw.
 - Gebruik voor foutmeldingen de kleur Rood.
 - Gebruik voor waarschuwingen de kleur Geel.
 - Gebruik voor succesmeldingen de kleur Groen.
