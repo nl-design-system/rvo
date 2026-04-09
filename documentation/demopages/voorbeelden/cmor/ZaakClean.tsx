@@ -13,6 +13,7 @@ import {
   MenuBar,
   // MobileMenuBar,
   StatusIcon,
+  TabItem,
   Tabs,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
@@ -134,55 +135,64 @@ const ZaakClean = () => {
                               <Heading type="h2" noMargins={true}>
                                 Documenten
                               </Heading>
-                              <Tabs
-                                tabs={[
-                                  { label: 'Mijn ontvangen documenten', href: '#' },
-                                  { label: 'Mijn verstuurde documenten', href: '#' },
-                                ]}
-                                activeTab={0}
-                              />
-                              <div>
-                                <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutFlow gap="2xs">
-                                    <p className="rvo-text--bold rvo-text--no-margins">Verzoek om informatie</p>
-                                    <span className="rvo-text--subtle rvo-text--sm">PDF document | 271.73 KB</span>
+                              <Tabs ariaLabel="Documenten tabs" defaultActiveTab={0}>
+                                <TabItem label="Mijn ontvangen documenten">
+                                  <LayoutFlow>
+                                    <div>
+                                      <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
+                                        <LayoutFlow gap="2xs">
+                                          <p className="rvo-text--bold rvo-text--no-margins">Verzoek om informatie</p>
+                                          <span className="rvo-text--subtle rvo-text--sm">
+                                            PDF document | 271.73 KB
+                                          </span>
+                                        </LayoutFlow>
+                                        <span className="rvo-text--subtle">14 december 2023</span>
+                                        <Link icon="downloaden" showIcon="before" noUnderline={true}>
+                                          Downloaden
+                                        </Link>
+                                      </LayoutFlow>
+                                      <hr className="rvo-hr"></hr>
+                                      <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
+                                        <LayoutFlow gap="2xs">
+                                          <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
+                                          <span className="rvo-text--subtle rvo-text--sm">
+                                            PDF document | 550.73 KB
+                                          </span>
+                                        </LayoutFlow>
+                                        <span className="rvo-text--subtle">9 november 2023</span>
+                                        <Link icon="downloaden" showIcon="before" noUnderline={true}>
+                                          Downloaden
+                                        </Link>
+                                      </LayoutFlow>
+                                      <hr className="rvo-hr"></hr>
+                                      <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
+                                        <LayoutFlow gap="2xs">
+                                          <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
+                                          <span className="rvo-text--subtle rvo-text--sm">
+                                            PDF document | 550.73 KB
+                                          </span>
+                                        </LayoutFlow>
+                                        <span className="rvo-text--subtle">9 november 2023</span>
+                                        <Link icon="downloaden" showIcon="before" noUnderline={true}>
+                                          Downloaden
+                                        </Link>
+                                      </LayoutFlow>
+                                    </div>
+                                    <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
+                                      Alle ecoregeling 2023 documenten
+                                      <span
+                                        className="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
+                                        role="img"
+                                        aria-label="Pijl naar rechts"
+                                      ></span>
+                                    </a>
                                   </LayoutFlow>
-                                  <span className="rvo-text--subtle">14 december 2023</span>
-                                  <Link icon="downloaden" showIcon="before" noUnderline={true}>
-                                    Downloaden
-                                  </Link>
-                                </LayoutFlow>
-                                <hr className="rvo-hr"></hr>
-                                <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutFlow gap="2xs">
-                                    <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
-                                    <span className="rvo-text--subtle rvo-text--sm">PDF document | 550.73 KB</span>
-                                  </LayoutFlow>
-                                  <span className="rvo-text--subtle">9 november 2023</span>
-                                  <Link icon="downloaden" showIcon="before" noUnderline={true}>
-                                    Downloaden
-                                  </Link>
-                                </LayoutFlow>
-                                <hr className="rvo-hr"></hr>
-                                <LayoutFlow row={true} alignItems="start" justifyContent="space-between">
-                                  <LayoutFlow gap="2xs">
-                                    <p className="rvo-text--bold rvo-text--no-margins">Ontvangstbevestiging</p>
-                                    <span className="rvo-text--subtle rvo-text--sm">PDF document | 550.73 KB</span>
-                                  </LayoutFlow>
-                                  <span className="rvo-text--subtle">9 november 2023</span>
-                                  <Link icon="downloaden" showIcon="before" noUnderline={true}>
-                                    Downloaden
-                                  </Link>
-                                </LayoutFlow>
-                              </div>
-                              <a className="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#">
-                                Alle ecoregeling 2023 documenten
-                                <span
-                                  className="utrecht-icon rvo-icon rvo-icon-pijl-naar-rechts rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--after"
-                                  role="img"
-                                  aria-label="Pijl naar rechts"
-                                ></span>
-                              </a>
+                                </TabItem>
+                                <TabItem label="Mijn verstuurde documenten">
+                                  <p className="rvo-text--no-margins">Mijn verstuurde documenten.</p>
+                                </TabItem>
+                              </Tabs>
+
                               <div className="rvo-alert rvo-alert--info rvo-alert--padding-md">
                                 <span
                                   className="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
