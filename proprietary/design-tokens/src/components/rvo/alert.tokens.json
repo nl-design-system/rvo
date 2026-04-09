@@ -17,7 +17,7 @@
         "background-color": { "value": "{rvo.color.donkergeel-300}" }
       },
       "error": {
-        "background-color": { "value": "{rvo.color.rood-300}" }
+        "background-color": { "value": "{rvo.color.rood-150}" }
       },
       "success": {
         "background-color": { "value": "{rvo.color.groen-300}" }
