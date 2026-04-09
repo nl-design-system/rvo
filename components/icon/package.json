@@ -32,6 +32,6 @@
     "@nl-rvo/build-utils-css": "workspace:*"
   },
   "dependencies": {
-    "@utrecht/icon": "1.2.0"
+    "@utrecht/icon-css": "3.0.1"
   }
 }
