@@ -24,7 +24,6 @@
     "@nl-rvo/component-library-react": "workspace:*",
     "@nl-rvo/storybook": "workspace:*",
     "@nl-rvo/documentation": "workspace:*",
-    "@nl-rvo/component-library-react": "workspace:*",
     "@types/mdx": "2.0.11",
     "clsx": "2.1.0",
     "glob": "13.0.6"
