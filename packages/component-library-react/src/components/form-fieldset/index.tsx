@@ -18,25 +18,6 @@ export interface IFieldsetProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  legend: {
-    control: 'text',
-  },
-  disabled: {
-    control: 'boolean',
-  },
-  fields: {
-    type: {
-      name: 'array',
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Fieldset: React.FC<IFieldsetProps & React.HTMLAttributes<HTMLDivElement>> = ({
   legend = defaultArgs.legend,
   disabled = defaultArgs.disabled,

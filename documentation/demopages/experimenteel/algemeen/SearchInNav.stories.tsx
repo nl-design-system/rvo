@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import SearchInNav from './SearchInNav';
 
-const meta: Meta<typeof SearchInNav> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Search in menubar",
   component: SearchInNav,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof SearchInNav> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof SearchInNav>;
 type Story = StoryObj<typeof SearchInNav>;
 
 export const Default: Story = { name: 'Search in menubar' };

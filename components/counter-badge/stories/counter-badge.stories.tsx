@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 const argTypes = { count: { control: 'number' } };
 const defaultArgs = { count: 20 };
 
-const meta: Meta<typeof CounterBadge> = {
+export default {
   title: 'Componenten/Counter badge',
   component: CounterBadge,
   args: defaultArgs,
@@ -22,9 +22,7 @@ const meta: Meta<typeof CounterBadge> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=6597-159&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof CounterBadge>;
 type Story = StoryObj<typeof CounterBadge>;
 
 export const Default: Story = { args: defaultArgs, name: 'Counter badge' };

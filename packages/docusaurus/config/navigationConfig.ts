@@ -9,6 +9,11 @@ const navbar: Navbar = {
   },
   items: [
     {
+      href: process.env.NODE_ENV === 'development' ? '/rvo/docs' : 'https://nl-design-system.github.io/rvo/docs',
+      label: 'Home',
+      position: 'left' as const,
+    },
+    {
       type: 'doc',
       docId: 'over-roos/introductie',
       position: 'left' as const,
@@ -49,23 +54,6 @@ const navbar: Navbar = {
       docId: 'beeldstrategie/beeldstrategie-op-roos',
       position: 'left' as const,
       label: 'Beeldstrategie',
-    },
-    {
-      href: 'https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0',
-      label: 'Figma',
-      position: 'right' as const,
-    },
-    {
-      href: 'https://github.com/nl-design-system/rvo',
-      label: 'GitHub',
-      position: 'right' as const,
-    },
-    {
-      prependBaseUrlToHref: true,
-      href:
-        process.env.NODE_ENV === 'development' ? 'http://localhost:6006' : 'https://nl-design-system.github.io/rvo/',
-      label: 'Storybook',
-      position: 'right' as const,
     },
   ],
 };

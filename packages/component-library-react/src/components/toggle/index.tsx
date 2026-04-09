@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
-import { Icon, iconOptions } from '../icon';
+import { Icon } from '../icon';
 import { IconType } from '../icon/types';
 import '@nl-rvo/component-library-css/dist/components/toggle.css';
 
@@ -26,46 +26,6 @@ export interface IToggleProps {
   /** @uxpinpropname On Toggle */
   onToggle?: (isActive: boolean) => void;
 }
-
-export const argTypes = {
-  content: {
-    control: 'text',
-  },
-  showIcon: {
-    options: ['no', 'before', 'after'],
-    control: { type: 'radio' },
-  },
-  icon: {
-    control: { type: 'select' },
-    options: iconOptions,
-  },
-  showHover: {
-    control: 'boolean',
-  },
-  active: {
-    control: 'boolean',
-  },
-  focus: {
-    control: 'boolean',
-  },
-  link: {
-    control: 'text',
-  },
-  linkTarget: {
-    options: ['_blank', '_self', '_parent', '_top'],
-    control: { type: 'radio' },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-  onToggle: {
-    table: {
-      disable: true,
-    },
-  },
-};
 
 export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> = ({
   content = defaultArgs.content,

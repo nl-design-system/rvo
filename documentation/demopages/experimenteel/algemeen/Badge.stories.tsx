@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Badge from './Badge';
 
-const meta: Meta<typeof Badge> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Badge",
   component: Badge,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Badge> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Badge>;
 type Story = StoryObj<typeof Badge>;
 
 export const Default: Story = { name: 'Badge' };

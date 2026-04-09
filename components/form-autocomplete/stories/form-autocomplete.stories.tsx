@@ -29,7 +29,7 @@ const defaultArgs: IAutocompleteProps = {
   ],
 };
 
-const meta: Meta<typeof Autocomplete> = {
+export default {
   title: 'Componenten/Autocomplete',
   component: Autocomplete,
   args: defaultArgs,
@@ -52,9 +52,7 @@ const meta: Meta<typeof Autocomplete> = {
       </div>
     ),
   ],
-};
-export default meta;
-
+} satisfies Meta<typeof Autocomplete>;
 type Story = StoryObj<typeof Autocomplete>;
 
 export const Default: Story = {

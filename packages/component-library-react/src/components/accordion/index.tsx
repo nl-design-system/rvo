@@ -16,17 +16,6 @@ export interface IAccordionProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  items: {
-    control: 'object',
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Accordion: React.FC<IAccordionProps & React.HTMLAttributes<HTMLDivElement>> = ({
   items = defaultArgs.items,
   children,

@@ -1,5 +1,6 @@
-import { argTypes, TextInput } from '@nl-rvo/component-library-react';
+import { TextInput } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-textinput/defaultArgs';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Text input/States',

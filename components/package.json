@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nl-rvo/assets": "1.0.0-alpha.360",
     "@nl-rvo/design-tokens": "workspace:*",
+    "@nl-rvo/component-library-react": "workspace:*",
     "@nl-rvo/storybook": "workspace:*",
     "@nl-rvo/documentation": "workspace:*",
     "@types/mdx": "2.0.11",

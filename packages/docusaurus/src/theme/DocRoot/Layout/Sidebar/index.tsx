@@ -6,6 +6,7 @@ import ExpandButton from '@theme/DocRoot/Layout/Sidebar/ExpandButton';
 import DocSidebar from '@theme/DocSidebar';
 import clsx from 'clsx';
 import React, { type ReactNode, useCallback, useState } from 'react';
+import type { ReactElement } from 'react';
 import styles from './styles.module.css';
 
 // Reset sidebar state when sidebar changes
@@ -20,7 +21,7 @@ export default function DocRootLayoutSidebar({
   sidebar,
   hiddenSidebarContainer,
   setHiddenSidebarContainer,
-}: Props): JSX.Element {
+}: Props): ReactElement {
   const { pathname } = useLocation();
 
   const [hiddenSidebar, setHiddenSidebar] = useState(false);

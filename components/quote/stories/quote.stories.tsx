@@ -13,7 +13,7 @@ const defaultArgs = {
   },
 } as IQuoteProps;
 
-const meta: Meta<typeof Quote> = {
+export default {
   title: 'Componenten/Quote',
   component: Quote,
   args: {},
@@ -25,9 +25,7 @@ const meta: Meta<typeof Quote> = {
       link: 'quote',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Quote>;
 type Story = StoryObj<typeof Quote>;
 
 export const Default: Story = { args: defaultArgs, name: 'Quote' };

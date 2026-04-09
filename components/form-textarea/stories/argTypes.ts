@@ -1,3 +1,6 @@
+/**
+ * Storybook-only argTypes copied from React component source.
+ */
 export const argTypes = {
   id: { control: 'text' },
   disabled: {
@@ -9,17 +12,24 @@ export const argTypes = {
   invalid: {
     control: 'boolean',
   },
+  readOnly: {
+    control: 'boolean',
+  },
   required: {
     control: 'boolean',
   },
-  options: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  size: {
+
+  placeholder: {
     control: 'text',
+  },
+  value: {
+    control: 'text',
+  },
+  maxLength: {
+    control: 'number',
+  },
+  maxLengthIndicator: {
+    control: 'boolean',
   },
   onFocus: {
     table: {
@@ -41,11 +51,14 @@ export const argTypes = {
       disable: true,
     },
   },
+  onInput: {
+    table: {
+      disable: true,
+    },
+  },
   onInvalid: {
     table: {
       disable: true,
     },
   },
-  defaultValue: { control: 'text' },
-  value: { control: 'text' },
 };

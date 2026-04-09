@@ -1,10 +1,18 @@
-import { HTMLAttributes } from 'react';
-import { ITabsProps } from './';
+import { TabsProps } from './';
 
-export const defaultArgs: Partial<ITabsProps & HTMLAttributes<HTMLUListElement>> = {
-  tabs: [
-    { label: 'Tab 1', href: '#tab-1' },
-    { label: 'Tab 2', href: '#tab-2' },
+export const defaultArgs: TabsProps = {
+  items: [
+    {
+      label: 'Tab 1',
+      panel: 'Panel 1 Content',
+    },
+    {
+      label: 'Tab 2',
+      panel: 'Panel 2 Content',
+    },
+    {
+      label: 'Tab 3',
+      panel: 'Panel 3 Content',
+    },
   ],
-  activeTab: 0,
 };

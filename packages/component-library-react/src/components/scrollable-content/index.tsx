@@ -21,30 +21,6 @@ export interface IScrollableContentProps {
   useStyleAttribute?: boolean;
 }
 
-export const argTypes = {
-  height: {
-    control: 'number',
-  },
-  content: {
-    control: 'text',
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-  disableScroll: {
-    table: {
-      disable: true,
-    },
-  },
-  useStyleAttribute: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const ScrollableContent: React.FC<IScrollableContentProps & React.HTMLAttributes<HTMLDivElement>> = ({
   content,
   children,

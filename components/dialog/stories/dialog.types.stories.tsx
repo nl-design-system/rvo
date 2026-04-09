@@ -1,5 +1,5 @@
-import { argTypes, Dialog } from '@nl-rvo/component-library-react';
-
+import { Dialog } from '@nl-rvo/component-library-react';
+import { argTypes } from './argTypes';
 export default {
   title: 'Componenten/Dialog/Types',
   component: Dialog,

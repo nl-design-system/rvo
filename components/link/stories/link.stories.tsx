@@ -1,11 +1,13 @@
 import { Link } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/link/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Link> = {
+export default {
   title: 'Componenten/Link',
   component: Link,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof Link> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=282-5544&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Link>;
 type Story = StoryObj<typeof Link>;
 
 export const Default: Story = { args: defaultArgs, name: 'Link' };

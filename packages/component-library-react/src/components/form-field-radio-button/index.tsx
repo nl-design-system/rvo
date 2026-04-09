@@ -5,11 +5,17 @@
 import React from 'react';
 import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, IFieldProps } from '../form-field';
-import { IRadioButtonGroupProps, argTypes as radioButtonArgTypes, RadioButtonGroup } from '../form-radio-button-group';
+import { IRadioButtonGroupProps, RadioButtonGroup } from '../form-radio-button-group';
+import { defaultArgs as radioButtonGroupDefaultArgs } from '../form-radio-button-group/defaultArgs';
+
+const radioButtonArgTypes = {
+  ...Object.fromEntries(Object.keys(radioButtonGroupDefaultArgs).map((key) => [key, {}])),
+  currentSelection: {},
+  onChange: {},
+  children: {},
+};
 
 export interface IRadioButtonFieldProps extends IFieldProps, IRadioButtonGroupProps {}
-
-export const argTypes = { ...fieldArgTypes, ...radioButtonArgTypes };
 
 export const RadioButtonField: React.FC<IRadioButtonFieldProps> = (args: IRadioButtonFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes);

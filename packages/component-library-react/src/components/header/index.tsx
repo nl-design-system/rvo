@@ -17,28 +17,6 @@ export interface IHeaderProps {
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export const argTypes = {
-  title: {
-    control: 'text',
-  },
-  subtitle: {
-    control: 'text',
-  },
-  link: {
-    control: 'text',
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-  onClick: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Header: React.FC<IHeaderProps & React.HTMLAttributes<HTMLDivElement>> = ({
   link = defaultArgs.link,
   title = defaultArgs.title,

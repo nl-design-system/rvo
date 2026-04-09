@@ -1,11 +1,13 @@
 import { MaxWidthLayout } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/max-width-layout/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof MaxWidthLayout> = {
+export default {
   title: 'Layout/Max width layout',
   component: MaxWidthLayout,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -14,9 +16,7 @@ const meta: Meta<typeof MaxWidthLayout> = {
       link: 'max-width-layout',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof MaxWidthLayout>;
 type Story = StoryObj<typeof MaxWidthLayout>;
 
 export const Default: Story = { args: defaultArgs, name: 'Max width layout' };

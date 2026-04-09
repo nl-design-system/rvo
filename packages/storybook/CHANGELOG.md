@@ -1,5 +1,19 @@
 # @nl-rvo/storybook
 
+## 2.2.0
+
+### Minor Changes
+
+- c49b651: Refactor Storybook argTypes location
+
+  Move all argTypes from `component-library-react` to
+  `components/<component-name>/stories/argtypes.ts` so each component
+  maintains its own Storybook argTypes configuration.
+
+### Patch Changes
+
+- 2ed4a39: Version bump to 10.3.3
+
 ## 2.1.0
 
 ### Minor Changes

@@ -1,11 +1,13 @@
 import { TextInputField } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-textinput/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof TextInputField> = {
+export default {
   title: 'Componenten/Text input field',
   component: TextInputField,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof TextInputField> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=436-26520&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof TextInputField>;
 type Story = StoryObj<typeof TextInputField>;
 
 export const Default: Story = { args: { ...defaultArgs, helperText: 'Helper text' }, name: 'Text input field' };

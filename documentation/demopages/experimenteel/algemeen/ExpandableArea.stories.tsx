@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ExpandableArea from './ExpandableArea';
 
-const meta: Meta<typeof ExpandableArea> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/ExpandableArea",
   component: ExpandableArea,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof ExpandableArea> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ExpandableArea>;
 type Story = StoryObj<typeof ExpandableArea>;
 
 export const Default: Story = { name: 'ExpandableArea' };

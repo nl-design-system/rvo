@@ -10,8 +10,10 @@ import '@nl-rvo/component-library-css/dist/components/page-number-navigation.css
 export interface IPageNumberNavigation extends Omit<HTMLAttributes<HTMLElement>, 'onPageChange'> {
   activePage: number;
   className?: string;
+  nextLabel?: string;
   numberOfPages: number;
   onPageChange?: (currentPage: number) => void;
+  previousLabel?: string;
 }
 
 const generatePageNumbers = (
@@ -93,8 +95,10 @@ const generateEllipses = (key: string) => {
 export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
   activePage,
   className,
+  nextLabel = 'Volgende',
   numberOfPages,
   onPageChange,
+  previousLabel = 'Vorige',
   ...htmlAttributes
 }) => {
   const [internalActivePage, setInternalActivePage] = useState(activePage);
@@ -102,16 +106,6 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
   useEffect(() => {
     setInternalActivePage(activePage);
   }, [activePage]);
-
-  if (
-    !numberOfPages ||
-    !internalActivePage ||
-    numberOfPages < 1 ||
-    internalActivePage < 1 ||
-    internalActivePage > numberOfPages
-  ) {
-    return null;
-  }
 
   const handlePageChange = useCallback(
     (newPage: number) => {
@@ -125,6 +119,16 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
     () => generatePageNumbers(numberOfPages, internalActivePage, handlePageChange),
     [numberOfPages, internalActivePage, handlePageChange],
   );
+
+  if (
+    !numberOfPages ||
+    !internalActivePage ||
+    numberOfPages < 1 ||
+    internalActivePage < 1 ||
+    internalActivePage > numberOfPages
+  ) {
+    return null;
+  }
 
   return (
     <nav className={clsx('rvo-pagination', className)} {...htmlAttributes}>
@@ -140,7 +144,7 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
             }}
             showIcon="before"
           >
-            Vorige
+            {previousLabel}
           </Link>
         </div>
       )}
@@ -159,7 +163,7 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
             }}
             showIcon="after"
           >
-            Volgende
+            {nextLabel}
           </Link>
         </div>
       )}

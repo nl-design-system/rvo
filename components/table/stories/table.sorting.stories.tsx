@@ -1,5 +1,5 @@
-import { argTypes, Table } from '@nl-rvo/component-library-react';
-
+import { Table } from '@nl-rvo/component-library-react';
+import { argTypes } from './argTypes';
 export default {
   title: 'Componenten/Table/Column sorting',
   component: Table,

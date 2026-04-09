@@ -18,28 +18,6 @@ export interface IParagraphProps extends Omit<React.HTMLAttributes<HTMLParagraph
   noSpacing?: boolean;
 }
 
-export const argTypes = {
-  content: {
-    control: 'text',
-  },
-  color: {
-    control: { type: 'select' },
-    options: ['lintblauw', 'wit', 'zwart', 'grijs-500', 'grijs-900'],
-  },
-  size: {
-    control: { type: 'select' },
-    options: ['sm', 'md', 'lg'],
-  },
-  noSpacing: {
-    control: 'boolean',
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Paragraph: React.FC<IParagraphProps> = ({
   content = defaultArgs.content,
   color = defaultArgs.color,

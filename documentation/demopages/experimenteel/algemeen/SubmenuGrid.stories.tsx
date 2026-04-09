@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import SubmenuGrid from './SubmenuGrid';
 
-const meta: Meta<typeof SubmenuGrid> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Submenu grid",
   component: SubmenuGrid,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof SubmenuGrid> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof SubmenuGrid>;
 type Story = StoryObj<typeof SubmenuGrid>;
 
 export const Default: Story = { name: 'Submenu grid' };

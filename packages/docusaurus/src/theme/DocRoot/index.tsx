@@ -4,8 +4,9 @@ import type { Props } from '@theme/DocRoot';
 import DocRootLayout from '@theme/DocRoot/Layout';
 import NotFoundContent from '@theme/NotFound/Content';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 
-export default function DocRoot(props: Props): JSX.Element {
+export default function DocRoot(props: Props): ReactElement {
   const currentDocRouteMetadata = useDocRootMetadata(props);
   if (!currentDocRouteMetadata) {
     // We only render the not found content to avoid a double layout

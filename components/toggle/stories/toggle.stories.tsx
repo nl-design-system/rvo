@@ -1,11 +1,13 @@
 import { Toggle } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/toggle/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Toggle> = {
+export default {
   title: 'Componenten/Toggle',
   component: Toggle,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof Toggle> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=2734-3038&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Toggle>;
 type Story = StoryObj<typeof Toggle>;
 
 export const Default: Story = { args: defaultArgs, name: 'Toggle' };

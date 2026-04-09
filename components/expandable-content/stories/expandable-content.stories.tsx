@@ -32,7 +32,7 @@ const argTypes = {
   },
 };
 
-const meta: Meta<typeof ExpandableContent> = {
+export default {
   title: 'Componenten/Expandable content',
   component: ExpandableContent,
   argTypes,
@@ -49,9 +49,7 @@ const meta: Meta<typeof ExpandableContent> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=105-1742&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ExpandableContent>;
 type Story = StoryObj<typeof ExpandableContent>;
 
 export const Default: Story = { args: defaultArgs, name: 'Expandable content' };

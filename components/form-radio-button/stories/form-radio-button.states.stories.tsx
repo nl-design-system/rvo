@@ -1,5 +1,6 @@
-import { argTypes, RadioButton } from '@nl-rvo/component-library-react';
+import { RadioButton } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-radio-button/defaultArgs';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Radio button/States',

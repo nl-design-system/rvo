@@ -1,5 +1,12 @@
 # `@nl-rvo/css-pagination`
 
+## 1.5.1
+
+### Patch Changes
+
+- f64662b: ROOS-330: prevents conditional render of react hooks
+- fae5a62: ROOS-330: added overridable labels for i18n purposes
+
 ## 1.5.0
 
 ### Minor Changes

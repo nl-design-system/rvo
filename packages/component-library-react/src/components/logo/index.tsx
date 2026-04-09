@@ -13,18 +13,6 @@ export interface ILogoProps {
   className?: string;
 }
 
-export const argTypes = {
-  title: {
-    control: 'text',
-  },
-  subtitle: {
-    control: 'text',
-  },
-  className: {
-    control: 'text',
-  },
-};
-
 export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> = ({
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,

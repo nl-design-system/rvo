@@ -77,7 +77,7 @@ export { SkipLink } from './components/skip-link';
 export { StatusIcon } from './components/status-icon';
 export { StatusIndicator } from './components/status-indicator';
 export { Table } from './components/table';
-export { Tabs } from './components/tabs';
+export { Tabs, TabItem } from './components/tabs';
 export { Tag } from './components/tag';
 export { Toggle } from './components/toggle';
 

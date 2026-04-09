@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import AnimatedAlert from './AnimatedAlert';
 
-const meta: Meta<typeof AnimatedAlert> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Animated Alert",
   component: AnimatedAlert,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof AnimatedAlert> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof AnimatedAlert>;
 type Story = StoryObj<typeof AnimatedAlert>;
 
 export const Default: Story = { name: 'Animated Alert' };

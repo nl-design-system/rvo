@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Profiel from './Profiel';
 
-const meta: Meta<typeof Profiel> = {
+export default {
   title: "Pagina's/Experimenteel/de Regelmaat/Profiel",
   component: Profiel,
   parameters: {
@@ -12,9 +12,7 @@ const meta: Meta<typeof Profiel> = {
       defaultViewport: 'mobile2',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Profiel>;
 type Story = StoryObj<typeof Profiel>;
 
 export const Default: Story = { name: 'Profiel' };

@@ -1,11 +1,13 @@
 import { FileInputField } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-fileinput/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof FileInputField> = {
+export default {
   title: 'Componenten/File input field',
   component: FileInputField,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -18,9 +20,7 @@ const meta: Meta<typeof FileInputField> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=4231-19443&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof FileInputField>;
 type Story = StoryObj<typeof FileInputField>;
 
 export const Default: Story = { args: { ...defaultArgs, helperText: 'Helper text' }, name: 'File input field' };

@@ -1,0 +1,14 @@
+.docMainContainer {
+  width: 100%;
+  background-color: var(--rvo-color-wit);
+  display: flex;
+  padding-block-end: var(--rvo-space-xl);
+  padding-block-start: var(--rvo-space-xl);
+  padding-inline-end: var(--rvo-space-xl);
+  padding-inline-start: var(--rvo-space-xl);
+  width: 100%;
+}
+
+.docMainContainerEnhanced {
+  width: 100%;
+}

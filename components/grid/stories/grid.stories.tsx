@@ -1,11 +1,13 @@
 import { Grid } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/grid/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Grid> = {
+export default {
   title: 'Layout/Grid',
   component: Grid,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -14,9 +16,7 @@ const meta: Meta<typeof Grid> = {
       link: 'grid',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Grid>;
 type Story = StoryObj<typeof Grid>;
 
 export const Default: Story = { args: defaultArgs, name: 'Grid' };

@@ -1,5 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# Local notes (not for version control)
+notities/
+
 # Ignore 3rd party files
 node_modules/
 vendor/
