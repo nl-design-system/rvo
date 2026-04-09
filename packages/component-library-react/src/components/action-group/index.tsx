@@ -21,32 +21,6 @@ export interface IActionGroupProps {
   className?: string;
 }
 
-export const argTypes = {
-  buttonsLeft: {
-    type: {
-      name: 'array',
-      required: false,
-    },
-  },
-  buttonsRight: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  fullWidth: {
-    type: {
-      name: 'boolean',
-      required: false,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const ActionGroup: React.FC<IActionGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({
   buttonsLeft = defaultArgs.buttonsLeft,
   buttonsRight = defaultArgs.buttonsRight,

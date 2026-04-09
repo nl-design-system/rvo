@@ -4,7 +4,9 @@ import { useAnnouncementBar, useScrollPosition } from '@docusaurus/theme-common/
 import type { Props } from '@theme/DocSidebar/Desktop/Content';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import clsx from 'clsx';
+import React from 'react';
 import { useState } from 'react';
+import type { ReactElement } from 'react';
 import styles from './styles.module.css';
 
 function useShowAnnouncementBar() {
@@ -22,7 +24,7 @@ function useShowAnnouncementBar() {
   return isActive && showAnnouncementBar;
 }
 
-export default function DocSidebarDesktopContent({ path, sidebar, className }: Props): JSX.Element {
+export default function DocSidebarDesktopContent({ path, sidebar, className }: Props): ReactElement {
   const showAnnouncementBar = useShowAnnouncementBar();
 
   return (

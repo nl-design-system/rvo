@@ -23,21 +23,6 @@ export interface IBreadcrumbProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  items: {
-    control: 'object',
-  },
-  size: {
-    options: ['sm', 'md', 'lg'],
-    control: { type: 'radio' },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 const parseDividerMarkup = (index: number, maxLength: number) => {
   return index > 0 && index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
 };

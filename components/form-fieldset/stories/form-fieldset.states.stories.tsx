@@ -1,5 +1,6 @@
-import { argTypes, Fieldset as FieldsetComponent } from '@nl-rvo/component-library-react';
+import { Fieldset as FieldsetComponent } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-fieldset/defaultArgs';
+import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Fieldset/States',

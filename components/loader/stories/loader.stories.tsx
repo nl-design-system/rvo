@@ -38,7 +38,7 @@ const secondaryAction: IButtonProps = {
   label: 'Probleem melden',
 };
 
-const meta: Meta<typeof Loader> = {
+export default {
   title: 'Componenten/Loader',
   component: Loader,
   args: defaultArgs,
@@ -55,9 +55,7 @@ const meta: Meta<typeof Loader> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=6605-175&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Loader>;
 // Stories
 type Story = StoryObj<typeof Loader>;
 

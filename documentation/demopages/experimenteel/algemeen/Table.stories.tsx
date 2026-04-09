@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Table from './Table';
 
-const meta: Meta<typeof Table> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Table",
   component: Table,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Table> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Table>;
 type Story = StoryObj<typeof Table>;
 
 export const Default: Story = { name: 'Table' };

@@ -3,13 +3,38 @@ import { ColorDesignTokens } from "../../componenten/design-tokens/ColorDesignTo
 
 export const tokens = designTokens.filter(({ filePath }) => filePath.includes("src/brand/rvo/color.tokens.json"));
 
-<span>Er zijn {tokens.length} design tokens voor kleuren.</span>
+export const concernPrefixes = ["lintblauw", "violet", "lichtblauw"];
+export const functionelePrefixes = ["hemelblauw", "donkerblauw", "zwart", "wit", "grijs"];
 
-<ColorDesignTokens tokens={tokens} />
+export const concernKleuren = concernPrefixes.flatMap((prefix) =>
+  tokens.filter(({ attributes }) => attributes.item === prefix || attributes.item.startsWith(prefix + "-"))
+);
+export const functioneleKleuren = tokens.filter(({ attributes }) =>
+  functionelePrefixes.some((prefix) => attributes.item === prefix || attributes.item.startsWith(prefix + "-"))
+);
+export const signaalkleuren = tokens.filter(
+  ({ attributes }) =>
+    !concernPrefixes.some((prefix) => attributes.item === prefix || attributes.item.startsWith(prefix + "-")) &&
+    !functionelePrefixes.some((prefix) => attributes.item === prefix || attributes.item.startsWith(prefix + "-"))
+);
+
+<div style={{ marginBlockEnd: "1.5em" }}>Er zijn {tokens.length} design tokens voor kleuren.</div>
+
+## Concern kleuren
+
+<ColorDesignTokens tokens={concernKleuren} />
+
+## Functionele kleuren
+
+<ColorDesignTokens tokens={functioneleKleuren} />
+
+## Signaalkleuren
+
+<ColorDesignTokens tokens={signaalkleuren} />
 
 ## Richtlijnen
 
-- De primaire kleur van RVO is Hemelblauw.
+- De primaire kleur van de digitale toepassingen van RVO is Hemelblauw.
 - Gebruik voor foutmeldingen de kleur Rood.
 - Gebruik voor waarschuwingen de kleur Geel.
 - Gebruik voor succesmeldingen de kleur Groen.
@@ -17,7 +42,7 @@ export const tokens = designTokens.filter(({ filePath }) => filePath.includes("s
 
 ### Toegankelijke kleurencombinaties
 
-Dit zijn alle mogelijke toegankelijke kleurencombinaties die voldoen aan de [WCAG 2.1 AA-normen voor normale tekst](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html):
+Dit zijn alle mogelijke toegankelijke kleurencombinaties die voldoen aan de <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" className="rvo-link">WCAG 2.1 AA-normen voor normale tekst</a>:
 
 <span style={{ color: "#01689b", backgroundColor: "#D9E9F0", padding: "4px 8px" }}>Voorbeeldtekst</span> Donkerblauw op Donkerblauw-150
 
@@ -48,6 +73,8 @@ Dit zijn alle mogelijke toegankelijke kleurencombinaties die voldoen aan de [WCA
 <span style={{ color: "#01689b", backgroundColor: "#FBEAD9", padding: "4px 8px" }}>Voorbeeldtekst</span> Donkerblauw op Oranje-150
 
 <span style={{ color: "#01689b", backgroundColor: "#F9DFDD", padding: "4px 8px" }}>Voorbeeldtekst</span> Donkerblauw op Rood-150
+
+<span style={{ color: "#01689b", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Donkerblauw op Violet-150
 
 <span style={{ color: "#01689b", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Donkerblauw op Wit
 
@@ -253,6 +280,10 @@ Zwart
 
 <span style={{ color: "#F8FAFC", backgroundColor: "#D51B1E", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-050 op Rood
 
+<span style={{ color: "#F8FAFC", backgroundColor: "#a90061", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-050 op Violet
+
+<span style={{ color: "#F8FAFC", backgroundColor: "#BE4088", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-050 op Violet-750
+
 <span style={{ color: "#F8FAFC", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-050 op Zwart
 
 <span style={{ color: "#F1F5F9", backgroundColor: "#01689b", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-100 op Donkerblauw
@@ -271,6 +302,8 @@ Zwart
 
 <span style={{ color: "#F1F5F9", backgroundColor: "#D51B1E", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-100 op Rood
 
+<span style={{ color: "#F1F5F9", backgroundColor: "#a90061", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-100 op Violet
+
 <span style={{ color: "#F1F5F9", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-100 op Zwart
 
 <span style={{ color: "#E2E8F0", backgroundColor: "#01689b", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-200 op Donkerblauw
@@ -285,6 +318,8 @@ Zwart
 
 <span style={{ color: "#E2E8F0", backgroundColor: "#154273", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-200 op Lintblauw
 
+<span style={{ color: "#E2E8F0", backgroundColor: "#a90061", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-200 op Violet
+
 <span style={{ color: "#E2E8F0", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-200 op Zwart
 
 <span style={{ color: "#CBD5E1", backgroundColor: "#475569", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-300 op Grijs-600
@@ -296,6 +331,8 @@ Zwart
 <span style={{ color: "#CBD5E1", backgroundColor: "#0F172A", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-300 op Grijs-900
 
 <span style={{ color: "#CBD5E1", backgroundColor: "#154273", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-300 op Lintblauw
+
+<span style={{ color: "#CBD5E1", backgroundColor: "#a90061", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-300 op Violet
 
 <span style={{ color: "#CBD5E1", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-300 op Zwart
 
@@ -360,6 +397,8 @@ Zwart
 <span style={{ color: "#475569", backgroundColor: "#F9DFDD", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-600 op Rood-150
 
 <span style={{ color: "#475569", backgroundColor: "#F3C0BC", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-600 op Rood-300
+
+<span style={{ color: "#475569", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-600 op Violet-150
 
 <span style={{ color: "#475569", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-600 op Wit
 
@@ -430,6 +469,10 @@ Zwart
 <span style={{ color: "#334155", backgroundColor: "#F3C0BC", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-700 op Rood-300
 
 <span style={{ color: "#334155", backgroundColor: "#EC9F99", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-700 op Rood-450
+
+<span style={{ color: "#334155", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-700 op Violet-150
+
+<span style={{ color: "#334155", backgroundColor: "#E5B2CF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-700 op Violet-300
 
 <span style={{ color: "#334155", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-700 op Wit
 
@@ -520,6 +563,12 @@ Zwart
 <span style={{ color: "#1E293B", backgroundColor: "#EC9F99", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-800 op Rood-450
 
 <span style={{ color: "#1E293B", backgroundColor: "#E68078", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-800 op Rood-600
+
+<span style={{ color: "#1E293B", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-800 op Violet-150
+
+<span style={{ color: "#1E293B", backgroundColor: "#E5B2CF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-800 op Violet-300
+
+<span style={{ color: "#1E293B", backgroundColor: "#D88CB7", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-800 op Violet-450
 
 <span style={{ color: "#1E293B", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-800 op Wit
 
@@ -616,6 +665,14 @@ Zwart
 <span style={{ color: "#0F172A", backgroundColor: "#E68078", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Rood-600
 
 <span style={{ color: "#0F172A", backgroundColor: "#E06056", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Rood-750
+
+<span style={{ color: "#0F172A", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Violet-150
+
+<span style={{ color: "#0F172A", backgroundColor: "#E5B2CF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Violet-300
+
+<span style={{ color: "#0F172A", backgroundColor: "#D88CB7", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Violet-450
+
+<span style={{ color: "#0F172A", backgroundColor: "#CB66A0", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Violet-600
 
 <span style={{ color: "#0F172A", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Grijs-900 op Wit
 
@@ -930,6 +987,10 @@ Zwart
 
 <span style={{ color: "#154273", backgroundColor: "#EC9F99", padding: "4px 8px" }}>Voorbeeldtekst</span> Lintblauw op Rood-450
 
+<span style={{ color: "#154273", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Lintblauw op Violet-150
+
+<span style={{ color: "#154273", backgroundColor: "#E5B2CF", padding: "4px 8px" }}>Voorbeeldtekst</span> Lintblauw op Violet-300
+
 <span style={{ color: "#154273", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Lintblauw op Wit
 
 <span style={{ color: "#DCE3EA", backgroundColor: "#01689b", padding: "4px 8px" }}>Voorbeeldtekst</span> Lintblauw-150 op
@@ -1099,6 +1160,84 @@ Zwart
 
 <span style={{ color: "#E06056", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Rood-750 op Zwart
 
+<span style={{ color: "#a90061", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Wit
+
+<span style={{ color: "#a90061", backgroundColor: "#F8FAFC", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Grijs-050
+
+<span style={{ color: "#a90061", backgroundColor: "#F1F5F9", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Grijs-100
+
+<span style={{ color: "#a90061", backgroundColor: "#E2E8F0", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Grijs-200
+
+<span style={{ color: "#a90061", backgroundColor: "#CBD5E1", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Grijs-300
+
+<span style={{ color: "#a90061", backgroundColor: "#D9E9F0", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Donkerblauw-150
+
+<span style={{ color: "#a90061", backgroundColor: "#B3D2E1", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Donkerblauw-300
+
+<span style={{ color: "#a90061", backgroundColor: "#FFF4DB", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Donkergeel-150
+
+<span style={{ color: "#a90061", backgroundColor: "#FFE9B8", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Donkergeel-300
+
+<span style={{ color: "#a90061", backgroundColor: "#FFDE94", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Donkergeel-450
+
+<span style={{ color: "#a90061", backgroundColor: "#E2EDDB", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Groen-150
+
+<span style={{ color: "#a90061", backgroundColor: "#C4DBB7", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Groen-300
+
+<span style={{ color: "#a90061", backgroundColor: "#D9EBF7", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Hemelblauw-150
+
+<span style={{ color: "#a90061", backgroundColor: "#EEF7FC", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Lichtblauw-150
+
+<span style={{ color: "#a90061", backgroundColor: "#DEF0F8", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Lichtblauw-300
+
+<span style={{ color: "#a90061", backgroundColor: "#FBEAD9", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Oranje-150
+
+<span style={{ color: "#a90061", backgroundColor: "#F9DFDD", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Rood-150
+
+<span style={{ color: "#a90061", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet op Violet-150
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Zwart
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#a90061", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Violet
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#01689b", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Donkerblauw
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#475569", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Grijs-600
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#334155", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Grijs-700
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#1E293B", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Grijs-800
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#0F172A", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Grijs-900
+
+<span style={{ color: "#F2D9E7", backgroundColor: "#154273", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-150 op Lintblauw
+
+<span style={{ color: "#E5B2CF", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-300 op Zwart
+
+<span style={{ color: "#E5B2CF", backgroundColor: "#154273", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-300 op Lintblauw
+
+<span style={{ color: "#E5B2CF", backgroundColor: "#334155", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-300 op Grijs-700
+
+<span style={{ color: "#E5B2CF", backgroundColor: "#1E293B", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-300 op Grijs-800
+
+<span style={{ color: "#E5B2CF", backgroundColor: "#0F172A", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-300 op Grijs-900
+
+<span style={{ color: "#D88CB7", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-450 op Zwart
+
+<span style={{ color: "#D88CB7", backgroundColor: "#1E293B", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-450 op Grijs-800
+
+<span style={{ color: "#D88CB7", backgroundColor: "#0F172A", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-450 op Grijs-900
+
+<span style={{ color: "#CB66A0", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-600 op Zwart
+
+<span style={{ color: "#CB66A0", backgroundColor: "#0F172A", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-600 op Grijs-900
+
+<span style={{ color: "#BE4088", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-750 op Wit
+
+<span style={{ color: "#BE4088", backgroundColor: "#F8FAFC", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-750 op Grijs-050
+
+<span style={{ color: "#BE4088", backgroundColor: "#EEF7FC", padding: "4px 8px" }}>Voorbeeldtekst</span> Violet-750 op Lichtblauw-150
+
 <span style={{ color: "#FFFFFF", backgroundColor: "#01689b", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Donkerblauw
 
 <span style={{ color: "#FFFFFF", backgroundColor: "#64748B", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Grijs-500
@@ -1120,6 +1259,10 @@ Zwart
 <span style={{ color: "#FFFFFF", backgroundColor: "#507196", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Lintblauw-750
 
 <span style={{ color: "#FFFFFF", backgroundColor: "#D51B1E", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Rood
+
+<span style={{ color: "#FFFFFF", backgroundColor: "#a90061", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Violet
+
+<span style={{ color: "#FFFFFF", backgroundColor: "#BE4088", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Violet-750
 
 <span style={{ color: "#FFFFFF", backgroundColor: "#000000", padding: "4px 8px" }}>Voorbeeldtekst</span> Wit op Zwart
 
@@ -1220,5 +1363,13 @@ Zwart
 <span style={{ color: "#000000", backgroundColor: "#E68078", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Rood-600
 
 <span style={{ color: "#000000", backgroundColor: "#E06056", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Rood-750
+
+<span style={{ color: "#000000", backgroundColor: "#F2D9E7", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Violet-150
+
+<span style={{ color: "#000000", backgroundColor: "#E5B2CF", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Violet-300
+
+<span style={{ color: "#000000", backgroundColor: "#D88CB7", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Violet-450
+
+<span style={{ color: "#000000", backgroundColor: "#CB66A0", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Violet-600
 
 <span style={{ color: "#000000", backgroundColor: "#FFFFFF", padding: "4px 8px" }}>Voorbeeldtekst</span> Zwart op Wit

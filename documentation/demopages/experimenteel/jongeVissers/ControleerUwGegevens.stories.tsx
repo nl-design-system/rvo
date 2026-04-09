@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import ControleerUwGegevens from './ControleerUwGegevens';
 
-const meta: Meta<typeof ControleerUwGegevens> = {
+export default {
   title: "Pagina's/Experimenteel/Jonge Vissers/Controleer uw gegevens",
   component: ControleerUwGegevens,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof ControleerUwGegevens> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof ControleerUwGegevens>;
 type Story = StoryObj<typeof ControleerUwGegevens>;
 
 export const Default: Story = { name: 'Controleer uw gegevens' };

@@ -1,11 +1,13 @@
 import { Dialog } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/dialog/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Dialog> = {
+export default {
   title: 'Componenten/Dialog',
   component: Dialog,
   args: defaultArgs,
+  argTypes,
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -14,9 +16,7 @@ const meta: Meta<typeof Dialog> = {
       link: 'dialog',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Dialog>;
 type Story = StoryObj<typeof Dialog>;
 
 const Container = ({ children }) => <div style={{ minHeight: '500px' }}>{children}</div>;

@@ -1,5 +1,5 @@
 import { ISkeletonProps, Skeleton } from '@nl-rvo/component-library-react';
-import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryObj, Table } from '@storybook/react-webpack5';
 
 const argTypes = {
   variant: {
@@ -41,7 +41,7 @@ const defaultArgs: ISkeletonProps = {
   color: 'grijs-300',
 };
 
-const meta: Meta<typeof Skeleton> = {
+export default {
   title: 'Componenten/Skeleton',
   component: Skeleton,
   args: defaultArgs,
@@ -54,11 +54,9 @@ const meta: Meta<typeof Skeleton> = {
       link: 'skeleton',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Skeleton>;
 // Stories
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   args: defaultArgs,

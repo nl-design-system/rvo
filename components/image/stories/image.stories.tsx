@@ -61,7 +61,7 @@ defaultArgs.src = 'images/www/beursbezoek.jpeg';
 defaultArgs.width = 427;
 defaultArgs.height = 640;
 
-const meta: Meta<typeof Image> = {
+export default {
   title: 'Componenten/Image',
   component: Image,
   args: defaultArgs,
@@ -81,9 +81,7 @@ Een toegankelijke, responsieve **Image** component voor het NL Design System.
       },
     },
   },
-};
-
-export default meta;
+} satisfies Meta<typeof Image>;
 type Story = StoryObj<typeof Image>;
 
 /* === STORIES === */

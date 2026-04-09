@@ -29,7 +29,7 @@ export interface IHeroProps {
   subtitle?: string;
   size?: 'sm' | 'md' | 'lg';
   children?: ReactNode | undefined;
-  kind?: 'lichtblauw';
+  kind?: 'lichtblauw' | 'violet';
   showLine?: boolean;
 }
 

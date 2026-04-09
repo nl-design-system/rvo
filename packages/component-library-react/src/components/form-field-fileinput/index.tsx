@@ -5,11 +5,19 @@
 import React from 'react';
 import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
-import { FileInput, argTypes as fileInputArgTypes, IFileInputProps } from '../form-fileinput';
+import { FileInput, IFileInputProps } from '../form-fileinput';
+import { defaultArgs as fileInputDefaultArgs } from '../form-fileinput/defaultArgs';
+
+const fileInputArgTypes = {
+  ...Object.fromEntries(Object.keys(fileInputDefaultArgs).map((key) => [key, {}])),
+  onFocus: {},
+  onBlur: {},
+  onChange: {},
+  onClick: {},
+  onInvalid: {},
+};
 
 export interface IFileInputFieldProps extends FieldPropsWithoutFieldId, IFileInputProps {}
-
-export const argTypes = { ...fieldArgTypes, ...fileInputArgTypes };
 
 export const FileInputField: React.FC<IFileInputFieldProps> = (args: IFileInputFieldProps) => {
   const fieldArgs = extractArgs(args, fieldArgTypes) as FieldPropsWithoutFieldId;

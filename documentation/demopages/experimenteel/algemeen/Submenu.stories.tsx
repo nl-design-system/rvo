@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Submenu from './Submenu';
 
-const meta: Meta<typeof Submenu> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Submenu",
   component: Submenu,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Submenu> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Submenu>;
 type Story = StoryObj<typeof Submenu>;
 
 export const Default: Story = { name: 'Submenu' };

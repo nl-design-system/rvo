@@ -1,8 +1,9 @@
-import { argTypes, Logo } from '@nl-rvo/component-library-react';
+import { Logo } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/logo/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { argTypes } from './argTypes';
 
-const meta: Meta<typeof Logo> = {
+export default {
   title: 'Componenten/Logo',
   component: Logo,
   args: defaultArgs,
@@ -19,9 +20,7 @@ const meta: Meta<typeof Logo> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=107-5162&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Logo>;
 type Story = StoryObj<typeof Logo>;
 
 export const Default: Story = {

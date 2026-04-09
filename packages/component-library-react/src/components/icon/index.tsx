@@ -47,24 +47,6 @@ export const iconNames = iconOptions.map((option) => {
   return decodeURIComponent(iconName).toLowerCase().replace(/\s+/g, '-');
 });
 
-export const argTypes = {
-  icon: {
-    control: { type: 'select' },
-    options: iconOptions,
-  },
-  size: {
-    options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
-    control: { type: 'radio' },
-  },
-  color: {
-    options: iconColors,
-    control: { type: 'radio' },
-  },
-  ariaLabel: {
-    control: { type: 'text' },
-  },
-};
-
 export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> = ({
   icon = defaultArgs.icon,
   size = defaultArgs.size,

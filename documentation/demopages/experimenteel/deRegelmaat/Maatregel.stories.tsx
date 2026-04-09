@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Maatregel from './Maatregel';
 
-const meta: Meta<typeof Maatregel> = {
+export default {
   title: "Pagina's/Experimenteel/de Regelmaat/Maatregel",
   component: Maatregel,
   parameters: {
@@ -12,9 +12,7 @@ const meta: Meta<typeof Maatregel> = {
       defaultViewport: 'mobile2',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Maatregel>;
 type Story = StoryObj<typeof Maatregel>;
 
 export const Default: Story = { name: 'Maatregel' };

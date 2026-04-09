@@ -25,58 +25,6 @@ export interface IFileInputProps extends HTMLAttributes<HTMLInputElement> {
   onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
 }
 
-export const argTypes = {
-  id: { control: 'text' },
-  disabled: {
-    control: 'boolean',
-  },
-  focus: {
-    control: 'boolean',
-  },
-  invalid: {
-    control: 'boolean',
-  },
-  required: {
-    control: 'boolean',
-  },
-  accept: {
-    control: 'text',
-  },
-  multiple: {
-    control: 'boolean',
-  },
-  onFocus: {
-    table: {
-      disable: true,
-    },
-  },
-  onBlur: {
-    table: {
-      disable: true,
-    },
-  },
-  onChange: {
-    table: {
-      disable: true,
-    },
-  },
-  onClick: {
-    table: {
-      disable: true,
-    },
-  },
-  onInput: {
-    table: {
-      disable: true,
-    },
-  },
-  onInvalid: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const FileInput: React.FC<IFileInputProps> = ({
   id = defaultArgs.id,
   disabled = defaultArgs.disabled,

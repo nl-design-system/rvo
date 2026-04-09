@@ -1,5 +1,32 @@
 # @nl-rvo/component-library-react
 
+## 7.0.3
+
+### Patch Changes
+
+- f64662b: ROOS-330: prevents conditional render of react hooks
+- fae5a62: ROOS-330: added overridable labels for i18n purposes
+
+## 7.0.2
+
+### Patch Changes
+
+- 058a2ed: Change types path
+
+## 7.0.1
+
+### Patch Changes
+
+- 2ed4a39: Add new `violet` color option to the hero component.
+- c49b651: Refactor Storybook argTypes location
+
+  Move all argTypes from `component-library-react` to
+  `components/<component-name>/stories/argtypes.ts` so each component
+  maintains its own Storybook argTypes configuration.
+
+- Updated dependencies [eb33fc6]
+  - @nl-rvo/component-library-css@4.19.1
+
 ## 7.0.0
 
 ### Major Changes

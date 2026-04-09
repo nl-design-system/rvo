@@ -21,26 +21,6 @@ export interface ICheckboxGroupProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  invalid: { control: 'boolean' },
-  options: {
-    type: {
-      name: 'array',
-      required: true,
-    },
-  },
-  onChange: {
-    table: {
-      disable: true,
-    },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const CheckboxGroup: React.FC<ICheckboxGroupProps & HTMLAttributes<HTMLDivElement>> = ({
   invalid = defaultArgs.invalid,
   options = defaultArgs.options,

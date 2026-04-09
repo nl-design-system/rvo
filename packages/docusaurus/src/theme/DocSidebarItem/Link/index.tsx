@@ -5,9 +5,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Link } from '@nl-rvo/component-library-react';
 import type { Props } from '@theme/DocSidebarItem/Link';
 import clsx from 'clsx';
+import type { ReactElement } from 'react';
 import styles from './styles.module.css';
 
-export default function DocSidebarItemLink({ item, onItemClick, activePath, level, ...props }: Props): JSX.Element {
+export default function DocSidebarItemLink({ item, onItemClick, activePath, level, ...props }: Props): ReactElement {
   const { href, label, className } = item;
   const isActive = isActiveSidebarItem(item, activePath);
   const isInternalLink = isInternalUrl(href);

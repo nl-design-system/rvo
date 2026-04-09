@@ -1,0 +1,61 @@
+---
+title: Inhoud vinden op de pagina
+hide_title: true
+hide_table_of_contents: true
+slug: inhoud-op-pagina
+sidebar_position: 4
+---
+
+import { Heading, LayoutFlow, Link } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Inhoud vinden op de pagina
+
+Gebruik een 'Op deze pagina' blok bovenaan een lange pagina om bezoekers te helpen direct naar de juiste sectie te navigeren.
+
+{/* prettier-ignore */}
+<ComponentExample>
+  <div>
+    <Heading type="h2">Op deze pagina:</Heading>
+    <div className="rvo-layout-grid rvo-layout-grid-columns--two rvo-layout-gap--md">
+      <div>
+        <LayoutFlow gap="2xs">
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-1">Sectie 1</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-2">Sectie 2</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-3">Sectie 3</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-4">Sectie 4</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-5">Sectie 5</Link>
+        </LayoutFlow>
+      </div>
+      <div>
+        <LayoutFlow gap="2xs">
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-6">Sectie 6</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-7">Sectie 7</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-8">Sectie 8</Link>
+          <Link icon="pijl-omlaag" showIcon="before" noUnderline={true} href="#sectie-9">Sectie 9</Link>
+        </LayoutFlow>
+      </div>
+    </div>
+  </div>
+</ComponentExample>
+
+## Opbouw van de inhoudsopgave
+
+- Gebruik een `h2` met de tekst 'Op deze pagina:' als titel boven de inhoudsopgave.
+- Gebruik ankerlinks met een `pijl-omlaag` icoon zodat bezoekers direct naar de juiste sectie kunnen springen.
+- Zet de links bij voorkeur in twee kolommen als er meer dan vijf links zijn.
+
+## Technische realisatie
+
+Elke ankerlink verwijst via `href="#<id>"` naar een sectie op dezelfde pagina. Het doelelement krijgt een overeenkomend `id`-attribuut:
+
+```html
+<!-- Ankerlink in de inhoudsopgave -->
+<a class="rvo-link rvo-link--with-icon rvo-link--no-underline" href="#krijgt-u-subsidie">
+  <span class="rvo-icon rvo-icon-pijl-omlaag rvo-icon--md rvo-link__icon--before" aria-hidden="true"></span>
+  Krijgt u subsidie?
+</a>
+
+<!-- Bijbehorende sectie lager op de pagina -->
+<h2 class="rvo-heading" id="krijgt-u-subsidie">Krijgt u subsidie?</h2>
+```

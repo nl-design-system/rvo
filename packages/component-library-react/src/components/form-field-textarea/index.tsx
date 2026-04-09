@@ -5,11 +5,20 @@
 import React from 'react';
 import { extractArgs, extractOtherArgs } from '../../utils/extractArgs';
 import { Field, argTypes as fieldArgTypes, FieldPropsWithoutFieldId } from '../form-field';
-import { ITextareaProps, Textarea, argTypes as textareaArgTypes } from '../form-textarea';
+import { ITextareaProps, Textarea } from '../form-textarea';
+import { defaultArgs as textareaDefaultArgs } from '../form-textarea/defaultArgs';
+
+const textareaArgTypes = {
+  ...Object.fromEntries(Object.keys(textareaDefaultArgs).map((key) => [key, {}])),
+  onFocus: {},
+  onBlur: {},
+  onChange: {},
+  onClick: {},
+  onInput: {},
+  onInvalid: {},
+};
 
 export interface ITextareaFieldProps extends FieldPropsWithoutFieldId, ITextareaProps {}
-
-export const argTypes = { ...fieldArgTypes, ...textareaArgTypes };
 
 export const TextareaField: React.FC<ITextareaFieldProps & React.HTMLAttributes<HTMLTextAreaElement>> = (args) => {
   const fieldArgs = extractArgs(args, fieldArgTypes) as FieldPropsWithoutFieldId;

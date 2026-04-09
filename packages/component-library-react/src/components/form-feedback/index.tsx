@@ -16,19 +16,6 @@ export interface IFeedbackProps {
   children?: ReactNode | undefined;
 }
 
-export const argTypes = {
-  text: { control: 'text' },
-  type: {
-    options: ['warning', 'error'],
-    control: { type: 'radio' },
-  },
-  children: {
-    table: {
-      disable: true,
-    },
-  },
-};
-
 export const Feedback: React.FC<IFeedbackProps & React.HTMLAttributes<HTMLDivElement>> = ({
   text = defaultArgs.text,
   type = defaultArgs.type,

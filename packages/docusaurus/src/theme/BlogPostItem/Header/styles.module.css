@@ -1,0 +1,61 @@
+.authorsInline {
+  margin: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.authorsInline :global(.row) {
+  display: block;
+}
+
+.authorsInline :global(.col),
+.authorsInline :global(.authorCol) {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.authorsInline :global(.avatar) {
+  margin: 0 !important;
+}
+
+.authorsInline :global(.avatar__photo),
+.authorsInline :global(.avatar__photo-link),
+.authorsInline :global(.avatar__intro small),
+.authorsInline :global(.avatar__intro > div:not(.avatar__name)),
+.authorsInline :global(.avatar__intro .authorTitle),
+.authorsInline :global(.avatar__intro [class*="authorTitle"]) {
+  display: none !important;
+}
+
+.authorsInline :global(.avatar__name),
+.authorsInline :global(.avatar__name a),
+.authorsInline :global(.avatar__name span),
+.authorsInline :global(.authorName),
+.authorsInline :global([class*="authorName"]) {
+  color: inherit !important;
+  display: inline !important;
+  font-size: var(--rvo-font-size-sm, 0.875rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  text-decoration: none !important;
+}
+
+.dateInline {
+  color: var(--rvo-color-grijs-600) !important;
+  font-size: var(--rvo-font-size-sm, 0.875rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.dateInline::before {
+  content: "";
+}
+
+.dateInline :global(time) {
+  color: inherit !important;
+}
+
+.dateInline :global(*) {
+  color: inherit !important;
+}

@@ -1,7 +1,7 @@
 import { UtilityMargin } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-const meta: Meta<typeof UtilityMargin> = {
+export default {
   title: 'Utilities/Spacing/Margin',
   component: UtilityMargin,
   parameters: {
@@ -12,9 +12,7 @@ const meta: Meta<typeof UtilityMargin> = {
       link: 'utility-margin',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof UtilityMargin>;
 type Story = StoryObj<typeof UtilityMargin>;
 
 export const Default: Story = { name: 'Margin' };

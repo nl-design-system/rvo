@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import PaginationUpdate from './PaginationUpdate';
 
-const meta: Meta<typeof PaginationUpdate> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Pagination Update",
   component: PaginationUpdate,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof PaginationUpdate> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof PaginationUpdate>;
 type Story = StoryObj<typeof PaginationUpdate>;
 
 export const Default: Story = { name: 'Pagination Update' };

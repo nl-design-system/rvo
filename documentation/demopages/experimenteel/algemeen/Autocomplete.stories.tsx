@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Autocomplete from './Autocomplete';
 
-const meta: Meta<typeof Autocomplete> = {
+export default {
   title: "Pagina's/Experimenteel/Algemeen/Autocomplete",
   component: Autocomplete,
   parameters: {
@@ -9,9 +9,7 @@ const meta: Meta<typeof Autocomplete> = {
       type: 'WORK IN PROGRESS',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof Autocomplete>;
 type Story = StoryObj<typeof Autocomplete>;
 
 export const Default: Story = { name: 'Autocomplete' };

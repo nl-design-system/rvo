@@ -1,7 +1,7 @@
 import { UtilityTextTypes } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-const meta: Meta<typeof UtilityTextTypes> = {
+export default {
   title: 'Utilities/Typografie/Text-types',
   component: UtilityTextTypes,
   parameters: {
@@ -16,9 +16,7 @@ const meta: Meta<typeof UtilityTextTypes> = {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=43-226&embed-host=share',
     },
   },
-};
-export default meta;
-
+} satisfies Meta<typeof UtilityTextTypes>;
 type Story = StoryObj<typeof UtilityTextTypes>;
 
 export const Default: Story = { name: 'Text-types' };
