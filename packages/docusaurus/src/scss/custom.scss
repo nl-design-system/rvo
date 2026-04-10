@@ -251,6 +251,13 @@ html.blog-wrapper.plugin-blog {
     min-height: calc(100vh - 244px);
   }
 
+  // Align footer content with page content blocks
+  .rvo-footer__container--sm,
+  .rvo-footer__container--md,
+  .rvo-footer__container--lg {
+    padding-inline: var(--rvo-space-md);
+  }
+
   table tr:nth-child(2n) {
     background-color: unset;
   }
