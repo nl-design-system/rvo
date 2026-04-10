@@ -66,7 +66,7 @@ export default function Home(): ReactElement {
             <Card
               title="Patronen"
               background="none"
-              link={useBaseUrl('/patronen/layout/applicatie-layout')}
+              link={useBaseUrl('/patronen/paginas/basispagina')}
               outline={true}
               fullCardLink={true}
               padding="lg"
