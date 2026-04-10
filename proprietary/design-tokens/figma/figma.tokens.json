@@ -690,7 +690,7 @@
         },
         "error": {
           "background-color": {
-            "$value": "{rvo.color.rood-300}"
+            "$value": "{rvo.color.rood-150}"
           }
         },
         "success": {
