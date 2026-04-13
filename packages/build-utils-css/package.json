@@ -18,8 +18,8 @@
     "build-css-package": "./src/index.mjs"
   },
   "devDependencies": {
-    "cssnano": "7.1.2",
-    "postcss": "8.5.6",
-    "sass": "1.97.2"
+    "cssnano": "7.1.4",
+    "postcss": "8.5.9",
+    "sass": "1.99.0"
   }
 }
