@@ -10,10 +10,6 @@
   color: var(--rvo-color-lintblauw);
   display: flex;
 
-  & .rvo-icon {
-    --utrecht-icon-color: var(--rvo-color-lintblauw);
-  }
-
   &--normal {
     font-weight: var(--rvo-font-weight-normal);
   }
@@ -32,26 +28,13 @@
       margin-block-start: var(--utrecht-heading-#{$i}-margin-block-start);
     }
   }
-}
 
-// If there is an RVO Icon available then override the sizes through these selectors
-h1.rvo-heading,
-h2.rvo-heading {
-  .rvo-icon {
-    --utrecht-icon-size: var(--rvo-icon-xl-width);
+  &__icon {
+    display: flex;
   }
-}
 
-h3.rvo-heading,
-h4.rvo-heading {
-  .rvo-icon {
-    --utrecht-icon-size: var(--rvo-icon-lg-width);
-  }
-}
-
-h5.rvo-heading,
-h6.rvo-heading {
-  .rvo-icon {
-    --utrecht-icon-size: var(--rvo-icon-md-width);
+  &__content {
+    display: block;
+    font-size: inherit;
   }
 }

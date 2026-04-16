@@ -1,4 +1,4 @@
-import { Heading, Icon } from '@nl-rvo/component-library-react';
+import { Heading } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/heading/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
@@ -12,6 +12,13 @@ const argTypes = {
   },
   fontWeightNormal: {
     control: 'boolean',
+  },
+  showIcon: {
+    options: ['no', 'before', 'after'],
+    control: { type: 'select' },
+  },
+  icon: {
+    control: 'string',
   },
   children: {
     table: {
@@ -46,9 +53,8 @@ export const HeadingIconBefore: Story = {
   args: defaultArgs,
   name: 'Heading with Icon Before',
   render: (args) => (
-    <Heading {...args}>
-      <Icon icon={'home'} />
-      Heading with Icon
+    <Heading {...args} showIcon="before" icon="home">
+      Heading with Icon before
     </Heading>
   ),
 };
@@ -57,9 +63,8 @@ export const HeadingIconAfter: Story = {
   args: defaultArgs,
   name: 'Heading with Icon After',
   render: (args) => (
-    <Heading {...args}>
-      Heading with Icon
-      <Icon icon={'home'} />
+    <Heading {...args} showIcon="before" icon="home">
+      Heading with Icon after
     </Heading>
   ),
 };
