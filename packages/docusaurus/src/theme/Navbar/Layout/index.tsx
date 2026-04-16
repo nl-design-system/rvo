@@ -51,7 +51,7 @@ export default function NavbarLayout() {
             direction="horizontal"
             size="md"
             maxWidth="md"
-            horizontalRule={false}
+            horizontalRule={true}
             linkColor="lintblauw"
           />
         </div>
