@@ -1,5 +1,15 @@
 # @nl-rvo/design-tokens
 
+## 2.4.0
+
+### Minor Changes
+
+- 8c0a7f8: Update related utrecht css packages.
+
+### Patch Changes
+
+- 34bcb9f: Change the alert background color from rood-300 to rood-150
+
 ## 2.3.0
 
 ### Minor Changes

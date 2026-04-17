@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-css
 
+## 4.20.0
+
+### Minor Changes
+
+- 914bb25: Refactored the Tabs component.
+  Improved accessibility, API clarity, and styling flexibility.
+- 5f77e75: Remove styling from heading css that is not used anymore for the component
+
+### Patch Changes
+
+- e9104b7: Added additional styling to Hero component when on mobile
+
 ## 4.19.1
 
 ### Patch Changes

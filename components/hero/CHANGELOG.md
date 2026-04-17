@@ -1,5 +1,11 @@
 # `@nl-rvo/css-hero`
 
+## 1.7.2
+
+### Patch Changes
+
+- e9104b7: Added additional styling to Hero component when on mobile
+
 ## 1.7.1
 
 ### Patch Changes

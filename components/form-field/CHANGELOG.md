@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field`
 
+## 1.7.0
+
+### Minor Changes
+
+- 8c0a7f8: Update related utrecht css packages.
+
 ## 1.6.0
 
 ### Minor Changes

@@ -1,5 +1,22 @@
 # @nl-rvo/component-library-react
 
+## 7.1.0
+
+### Minor Changes
+
+- 5f77e75: Update Heading component so html strutures inside of content to be properly handled
+- 914bb25: Refactored the Tabs component.
+  Improved accessibility, API clarity, and styling flexibility.
+
+### Patch Changes
+
+- 34bcb9f: Change the alert background color from rood-300 to rood-150
+- e9104b7: Added additional styling to Hero component when on mobile
+- Updated dependencies [914bb25]
+- Updated dependencies [5f77e75]
+- Updated dependencies [e9104b7]
+  - @nl-rvo/component-library-css@4.20.0
+
 ## 7.0.3
 
 ### Patch Changes

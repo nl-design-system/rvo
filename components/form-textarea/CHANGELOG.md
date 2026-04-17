@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.5.0
+
+### Minor Changes
+
+- 8c0a7f8: Update related utrecht css packages.
+
 ## 1.4.0
 
 ### Minor Changes

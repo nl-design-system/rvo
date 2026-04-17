@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.6.1
+
+### Patch Changes
+
+- 34bcb9f: Change the alert background color from rood-300 to rood-150
+
 ## 1.6.0
 
 ### Minor Changes

@@ -1,5 +1,12 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.8.0
+
+### Minor Changes
+
+- 8c0a7f8: Add css height to fix a IE issue.
+- 8c0a7f8: Update related utrecht css packages.
+
 ## 1.7.0
 
 ### Minor Changes
