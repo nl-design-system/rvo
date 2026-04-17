@@ -25,7 +25,7 @@ jobs:
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical --ignore-registry-errors
+          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: |
@@ -51,7 +51,7 @@ jobs:
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical --ignore-registry-errors
+          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -78,7 +78,7 @@ jobs:
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical --ignore-registry-errors
+          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -124,7 +124,7 @@ jobs:
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical --ignore-registry-errors
+          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -153,7 +153,7 @@ jobs:
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical --ignore-registry-errors
+          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -183,7 +183,7 @@ jobs:
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical --ignore-registry-errors
+          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
