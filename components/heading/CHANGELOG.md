@@ -1,5 +1,12 @@
 # `@nl-rvo/css-heading`
 
+## 2.3.0
+
+### Minor Changes
+
+- 5f77e75: Update Heading component to support Icons before and after and not have issues with spans or other html inside the content of the Heading
+- 8c0a7f8: Update related utrecht css packages.
+
 ## 2.2.0
 
 ### Minor Changes

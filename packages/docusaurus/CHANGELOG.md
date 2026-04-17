@@ -1,5 +1,19 @@
 # @nl-rvo/docusaurus
 
+## 0.6.0
+
+### Minor Changes
+
+- e1a8a99: Add blog functionality
+
+  - Replace JSX with ReactElement
+  - Add a blog item example
+  - Improve headings
+
+### Patch Changes
+
+- 0c2b689: Fix mobile menu layout: removed horizontal scrolling and stacked items vertically.
+
 ## 0.5.0
 
 ### Minor Changes

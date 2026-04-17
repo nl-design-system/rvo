@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-radio-button`
 
+## 1.4.0
+
+### Minor Changes
+
+- 8c0a7f8: Update related utrecht css packages.
+
 ## 1.3.0
 
 ### Minor Changes
