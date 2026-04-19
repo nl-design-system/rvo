@@ -1,25 +1,25 @@
 .rvo-skip-link {
+  block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
+  inline-size: 1px;
   overflow: hidden;
   position: absolute;
-  width: 1px;
 }
 
 .rvo-skip-link:focus {
   align-items: center;
   background-color: var(--rvo-skip-link-background-color);
+  block-size: auto;
   clip: auto;
   color: var(--rvo-skip-link-color);
   display: flex;
   font-size: var(--rvo-skip-link-font-size);
   font-weight: var(--rvo-skip-link-font-weight);
-  height: auto;
+  inline-size: auto;
   justify-content: center;
   overflow: visible;
   padding-block-end: var(--rvo-skip-link-padding-block-end);
   padding-block-start: var(--rvo-skip-link-padding-block-start);
   position: relative;
   text-align: center;
-  width: auto;
 }

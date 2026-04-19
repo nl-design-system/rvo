@@ -86,18 +86,18 @@
       }
 
       .rvo-card__image {
+        inline-size: 100%;
         object-fit: cover;
-        width: 100%;
       }
     }
 
     .rvo-card--with-image-md .rvo-card__image {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 
   &.rvo-card--with-background-image {
-    min-height: var(--rvo-card-background-image-min-height);
+    min-block-size: var(--rvo-card-background-image-min-height);
     overflow: hidden;
     padding-block-start: var(--rvo-space-xl);
     position: relative;
@@ -108,22 +108,22 @@
 
     &::after {
       background-color: var(--rvo-card-background-image-overlay-color);
+      block-size: 100%;
       content: "";
       display: block;
-      height: 100%;
-      left: 0;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
       opacity: var(--rvo-card-background-image-overlay-opacity);
       position: absolute;
-      top: 0;
-      width: 100%;
     }
 
     .rvo-card__background-image {
-      left: 0;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
       object-fit: cover;
       position: absolute;
-      top: 0;
-      width: 100%;
     }
   }
 
@@ -136,24 +136,24 @@
     display: block;
 
     &::after {
+      block-size: 100%;
       content: "";
       cursor: pointer;
       display: inline-block;
-      height: 100%;
-      left: 0;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
       position: absolute;
-      top: 0;
-      width: 100%;
       z-index: 1;
     }
   }
 
   .rvo-card--with-link-indicator {
     align-items: center;
+    block-size: 100%;
     display: flex;
     flex: 1;
     gap: var(--rvo-space-xs);
-    height: 100%;
     justify-content: space-between;
 
     .rvo-card__content {
@@ -161,8 +161,8 @@
     }
 
     .rvo-icon--sm {
-      min-height: var(--rvo-size-sm);
-      min-width: var(--rvo-size-sm);
+      min-block-size: var(--rvo-size-sm);
+      min-inline-size: var(--rvo-size-sm);
     }
   }
 

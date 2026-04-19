@@ -12,7 +12,7 @@
 
   &__tablist {
     align-items: flex-end;
-    border-bottom: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
+    border-block-end: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
     display: flex;
     gap: var(--rvo-tabs-gap);
     margin-block: calc(var(--rvo-tabs-border-width) * -1);
@@ -21,11 +21,11 @@
 
     &::after {
       border-block-end: var(--rvo-tabs-border-width) var(--rvo-tabs-border-style) var(--rvo-tabs-border-color);
-      bottom: calc(var(--rvo-tabs-border-width) * -1);
       content: "";
-      left: 0;
+      inset-block-end: calc(var(--rvo-tabs-border-width) * -1);
+      inset-inline-end: 0;
+      inset-inline-start: 0;
       position: absolute;
-      right: 0;
       z-index: 2;
     }
   }
@@ -91,7 +91,7 @@
   &__panel {
     background-color: var(--rvo-tabs-active-background);
     border: var(--rvo-tabs-panel-border-width) var(--rvo-tabs-panel-border-style) var(--rvo-tabs-panel-border-color);
-    border-top: 0;
+    border-block-start: 0;
     padding-block: var(--rvo-tabs-panel-padding-block);
     padding-inline: var(--rvo-tabs-panel-padding-inline);
     position: relative;

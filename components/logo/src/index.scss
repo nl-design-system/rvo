@@ -15,9 +15,9 @@
 
 .rvo-logo__emblem {
   align-self: flex-start;
-  height: 80px;
-  min-width: 40px;
-  width: 40px;
+  block-size: 80px;
+  inline-size: 40px;
+  min-inline-size: 40px;
 }
 
 .rvo-logo__wordmark {
@@ -47,9 +47,9 @@
   }
 
   .rvo-logo__emblem {
-    height: 90px;
-    min-width: 45px;
-    width: 45px;
+    block-size: 90px;
+    inline-size: 45px;
+    min-inline-size: 45px;
   }
 
   .rvo-logo__wordmark {
@@ -72,9 +72,9 @@
   }
 
   .rvo-logo__emblem {
-    height: 100px;
-    min-width: 50px;
-    width: 50px;
+    block-size: 100px;
+    inline-size: 50px;
+    min-inline-size: 50px;
   }
 
   .rvo-logo__wordmark {

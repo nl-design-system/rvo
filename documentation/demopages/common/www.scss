@@ -132,7 +132,7 @@
   }
 
   .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::after {
-    left: 262px;
+    inset-inline-start: 262px;
   }
 
   // HERO //
