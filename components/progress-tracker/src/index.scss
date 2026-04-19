@@ -5,11 +5,11 @@
 @use "../../layout-flow/src";
 
 .rvo-progress-tracker {
-  max-width: var(--rvo-progress-tracker-max-width);
+  max-inline-size: var(--rvo-progress-tracker-max-width);
 }
 
 .rvo-progress-tracker__step {
-  min-height: var(--rvo-progress-tracker-step-height);
+  min-block-size: var(--rvo-progress-tracker-step-height);
   padding-inline-start: var(--rvo-progress-tracker-step-label-padding);
   position: relative;
 
@@ -18,24 +18,24 @@
   &::after {
     background-position: 0 center;
     background-repeat: no-repeat;
+    block-size: var(--rvo-progress-tracker-step-height);
     content: "";
     display: inline-block;
-    height: var(--rvo-progress-tracker-step-height);
-    left: 0;
+    inline-size: var(--rvo-progress-tracker-step-label-padding);
+    inset-block-start: 0;
+    inset-inline-start: 0;
     position: absolute;
-    top: 0;
-    width: var(--rvo-progress-tracker-step-label-padding);
   }
 
   &::before {
     background-repeat: no-repeat;
+    block-size: var(--rvo-progress-tracker-step-line-height);
     content: "";
     display: inline-block;
-    height: var(--rvo-progress-tracker-step-line-height);
-    left: var(--rvo-progress-tracker-step-line-left);
+    inline-size: var(--rvo-progress-tracker-step-line-width);
+    inset-block-start: var(--rvo-progress-tracker-step-line-top);
+    inset-inline-start: var(--rvo-progress-tracker-step-line-left);
     position: absolute;
-    top: var(--rvo-progress-tracker-step-line-top);
-    width: var(--rvo-progress-tracker-step-line-width);
   }
 }
 
@@ -49,10 +49,10 @@
 
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--straight::before,
 .rvo-progress-tracker__step--sm.rvo-progress-tracker__step--substep-end::before {
-  height: var(--rvo-progress-tracker-step-sm-line-height, var(--rvo-progress-tracker-step-line-height));
-  left: var(--rvo-progress-tracker-step-sm-line-left, var(--rvo-progress-tracker-step-line-left));
-  top: var(--rvo-progress-tracker-step-sm-line-top, var(--rvo-progress-tracker-step-line-top));
-  width: var(--rvo-progress-tracker-step-sm-line-width, var(--rvo-progress-tracker-step-line-width));
+  block-size: var(--rvo-progress-tracker-step-sm-line-height, var(--rvo-progress-tracker-step-line-height));
+  inline-size: var(--rvo-progress-tracker-step-sm-line-width, var(--rvo-progress-tracker-step-line-width));
+  inset-block-start: var(--rvo-progress-tracker-step-sm-line-top, var(--rvo-progress-tracker-step-line-top));
+  inset-inline-start: var(--rvo-progress-tracker-step-sm-line-left, var(--rvo-progress-tracker-step-line-left));
 }
 
 .rvo-progress-tracker__step-link {

@@ -8,14 +8,14 @@
 // rvo-select
 .rvo-select {
   &-wrapper {
+    inline-size: var(--utrecht-select-max-inline-size);
     position: relative;
-    width: var(--utrecht-select-max-inline-size);
 
     &::before,
     &::after {
+      block-size: 32px;
       content: "";
       display: block;
-      height: 32px;
       pointer-events: none;
       position: absolute;
     }
@@ -23,13 +23,16 @@
     &::before {
       background-color: var(--rvo-select-icon-background-color);
       border-radius: var(--rvo-border-radius-sm);
-      right: 7px;
-      top: 7px;
-      width: 32px;
+      inline-size: 32px;
+      inset-block-start: 7px;
+      inset-inline-end: 7px;
     }
 
     &::after {
       background-color: var(--rvo-select-icon-color);
+      inline-size: 13px;
+      inset-block-start: 7px;
+      inset-inline-end: 16px;
       -webkit-mask-image: var(--rvo-icon-delta-omlaag);
       mask-image: var(--rvo-icon-delta-omlaag);
       -webkit-mask-position: center center;
@@ -38,9 +41,6 @@
       mask-repeat: no-repeat;
       -webkit-mask-size: 100%;
       mask-size: 100%;
-      right: 16px;
-      top: 7px;
-      width: 13px;
     }
   }
 
@@ -66,12 +66,12 @@
   --utrecht-select-max-inline-size: 100%;
 
   appearance: none;
-  height: 48px;
+  block-size: 48px;
+  inline-size: var(--utrecht-select-max-inline-size);
   padding-block-end: var(--rvo-select-padding-block-end);
   padding-block-start: var(--rvo-select-padding-block-start);
   padding-inline-end: var(--rvo-select-padding-inline-end);
   padding-inline-start: var(--rvo-select-padding-inline-start);
-  width: var(--utrecht-select-max-inline-size);
 
   &:disabled {
     opacity: 100%;
