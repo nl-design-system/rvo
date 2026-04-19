@@ -14,7 +14,6 @@ textarea.rvo-textarea {
   box-sizing: border-box;
   inline-size: 100%;
   min-block-size: 96px;
-  min-height: 96px;
   resize: vertical;
 
   &[aria-disabled="true"],
@@ -55,15 +54,15 @@ textarea.rvo-textarea {
   }
 
   &--xs {
-    width: var(--rvo-textbox-xs-width);
+    inline-size: var(--rvo-textbox-xs-width);
   }
 
   &--sm {
-    width: var(--rvo-textbox-sm-width);
+    inline-size: var(--rvo-textbox-sm-width);
   }
 
   &--md {
-    width: var(--rvo-textbox-md-width);
+    inline-size: var(--rvo-textbox-md-width);
   }
 }
 

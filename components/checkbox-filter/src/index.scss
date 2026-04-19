@@ -1,8 +1,8 @@
 .rvo-checkbox-filter {
   &__icon {
+    inset-block-start: 50%;
+    inset-inline-end: var(--rvo-space-xs);
     position: absolute;
-    right: var(--rvo-space-xs);
-    top: 50%;
     transform: translateY(-50%) rotate(180deg);
   }
 

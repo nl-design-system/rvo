@@ -33,13 +33,13 @@
     background-image: var(--rvo-list-icon-image);
     background-repeat: no-repeat;
     background-size: var(--rvo-list-icon-size) var(--rvo-list-icon-size);
+    block-size: var(--rvo-list-icon-size);
     content: "";
     flex-shrink: 0;
-    height: var(--rvo-list-icon-size);
+    inline-size: var(--rvo-list-icon-size);
     margin-block-start: var(--rvo-list-icon-before-margin);
     margin-inline-end: var(--rvo-list-icon-gap);
-    min-width: var(--rvo-list-icon-size);
-    width: var(--rvo-list-icon-size);
+    min-inline-size: var(--rvo-list-icon-size);
   }
 }
 

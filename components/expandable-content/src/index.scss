@@ -19,7 +19,7 @@
 
     .rvo-icon {
       margin-block-start: 3px;
-      min-width: var(--rvo-expandable-content-summary-icon-min-width);
+      min-inline-size: var(--rvo-expandable-content-summary-icon-min-width);
     }
 
     &::-webkit-details-marker,
@@ -29,8 +29,9 @@
 
     &::after {
       background-color: var(--rvo-expandable-content-summary-icon-background-color);
+      block-size: 16px;
       content: "";
-      height: 16px;
+      inline-size: 10px;
       margin-block-start: 3px;
       -webkit-mask-image: var(--rvo-icon-delta-omlaag);
       mask-image: var(--rvo-icon-delta-omlaag);
@@ -40,8 +41,7 @@
       mask-repeat: no-repeat;
       -webkit-mask-size: 100%;
       mask-size: 100%;
-      min-width: 10px;
-      width: 10px;
+      min-inline-size: 10px;
     }
 
     &:hover {

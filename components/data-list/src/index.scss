@@ -11,9 +11,9 @@
 }
 
 .rvo-data-list dt {
-  border-top-color: var(--rvo-data-list-dt-border-top-color);
-  border-top-style: var(--rvo-data-list-dt-border-top-style);
-  border-top-width: var(--rvo-data-list-dt-border-top-width);
+  border-block-start-color: var(--rvo-data-list-dt-border-top-color);
+  border-block-start-style: var(--rvo-data-list-dt-border-top-style);
+  border-block-start-width: var(--rvo-data-list-dt-border-top-width);
   font-weight: var(--rvo-data-list-dt-font-weight);
   padding-block-end: var(--rvo-data-list-dt-padding-block-end);
   padding-block-start: var(--rvo-data-list-dt-padding-block-start);
@@ -30,7 +30,7 @@
 }
 
 .rvo-data-list dt:nth-of-type(1) {
-  border-top: 0;
+  border-block-start: 0;
 }
 
 @media (min-width: 612px) {
@@ -40,12 +40,12 @@
   }
 
   .rvo-data-list dd {
-    border-left-color: var(--rvo-data-list-breakpoint-sm-dd-border-left-color);
-    border-left-style: var(--rvo-data-list-breakpoint-sm-dd-border-left-style);
-    border-left-width: var(--rvo-data-list-breakpoint-sm-dd-border-left-width);
-    border-top-color: var(--rvo-data-list-breakpoint-sm-dd-border-top-color);
-    border-top-style: var(--rvo-data-list-breakpoint-sm-dd-border-top-style);
-    border-top-width: var(--rvo-data-list-breakpoint-sm-dd-border-top-width);
+    border-block-start-color: var(--rvo-data-list-breakpoint-sm-dd-border-top-color);
+    border-block-start-style: var(--rvo-data-list-breakpoint-sm-dd-border-top-style);
+    border-block-start-width: var(--rvo-data-list-breakpoint-sm-dd-border-top-width);
+    border-inline-start-color: var(--rvo-data-list-breakpoint-sm-dd-border-left-color);
+    border-inline-start-style: var(--rvo-data-list-breakpoint-sm-dd-border-left-style);
+    border-inline-start-width: var(--rvo-data-list-breakpoint-sm-dd-border-left-width);
     padding-block-end: var(--rvo-data-list-breakpoint-sm-dd-padding-block-end);
     padding-block-start: var(--rvo-data-list-breakpoint-sm-dd-padding-block-start);
     padding-inline-end: var(--rvo-data-list-breakpoint-sm-dd-padding-inline-end);
@@ -60,6 +60,6 @@
   }
 
   .rvo-data-list dd:nth-of-type(1) {
-    border-top: 0;
+    border-block-start: 0;
   }
 }

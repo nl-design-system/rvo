@@ -6,11 +6,11 @@
 .rvo-autocomplete {
   &__textinput {
     box-sizing: border-box;
-    max-width: 100%;
+    inline-size: 100%;
+    max-inline-size: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
 
     &::placeholder {
       color: var(--rvo-color-lintblauw);
@@ -27,21 +27,22 @@
     border: var(--rvo-space-3xs) solid;
     border-color: var(--rvo-color-lintblauw);
     border-radius: var(--rvo-border-radius-sm);
-    border-top: 0;
-    border-top-color: var(--rvo-horizontal-rule-border-color);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-start: 0;
+    border-block-start-color: var(--rvo-horizontal-rule-border-color);
+    border-start-end-radius: 0;
+    border-start-start-radius: 0;
     box-sizing: border-box;
+    inline-size: 100%;
     list-style: none;
     margin-block-start: 0;
-    max-height: 300px;
-    max-width: 100%;
+    max-block-size: 300px;
+    max-inline-size: 100%;
     outline: var(--rvo-textbox-invalid-focus-outline-color);
     outline-color: var(--utrecht-focus-outline-color);
     overflow-y: auto;
     padding-inline-start: 0;
     position: absolute;
-    width: 100%;
     z-index: 10;
   }
 
@@ -85,37 +86,37 @@
 
   &__separator {
     border: none;
-    border-top: var(--rvo-space-3xs) solid;
-    border-top-color: var(--rvo-horizontal-rule-border-color);
+    border-block-start: var(--rvo-space-3xs) solid;
+    border-block-start-color: var(--rvo-horizontal-rule-border-color);
     margin: 0 var(--rvo-space-sm);
   }
 
   &--xs {
-    width: var(--rvo-textbox-xs-width);
+    inline-size: var(--rvo-textbox-xs-width);
   }
 
   &--sm {
-    width: var(--rvo-textbox-sm-width);
+    inline-size: var(--rvo-textbox-sm-width);
   }
 
   &--md {
-    width: var(--rvo-textbox-md-width);
+    inline-size: var(--rvo-textbox-md-width);
   }
 
   &--lg {
-    width: var(--rvo-textbox-lg-width);
+    inline-size: var(--rvo-textbox-lg-width);
   }
 
   &--max {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
 .rvo-autocomplete__textinput[data-dropdown-open="true"] {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-left: var(--rvo-space-3xs) solid;
-  border-right: var(--rvo-space-3xs) solid;
-  border-top: var(--rvo-space-3xs) solid;
+  border-block-end: 0;
+  border-block-start: var(--rvo-space-3xs) solid;
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  border-inline-end: var(--rvo-space-3xs) solid;
+  border-inline-start: var(--rvo-space-3xs) solid;
 }

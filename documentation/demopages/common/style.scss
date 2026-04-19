@@ -6,15 +6,15 @@
   &.rvo-demo-page--mijn-rvo {
     display: grid;
     grid-template-rows: 1fr auto;
-    min-height: 100vh;
+    min-block-size: 100vh;
   }
 
   .rvo-progress-tracker {
-    min-width: 268px;
+    min-inline-size: 268px;
   }
 
   .rvo-form {
-    min-width: 600px;
+    min-inline-size: 600px;
   }
 
   p,
@@ -46,8 +46,8 @@
 
   .rvo-responsive-menu,
   .rvo-responsive-menu + .rvo-topnav__background {
+    inset-block-start: -1px;
     position: sticky;
-    top: -1px;
     z-index: 5;
   }
 
@@ -186,16 +186,16 @@
 
   .rvo-login-option-img--e-herkenning {
     margin-block-start: var(--rvo-space-2xs);
-    max-height: 20px;
+    max-block-size: 20px;
   }
 
   .rvo-login-option-img--digid {
-    max-height: 24px;
+    max-block-size: 24px;
   }
 
   .rvo-login-option-img--eu {
     margin-block-start: var(--rvo-space-2xs);
-    max-height: 20px;
+    max-block-size: 20px;
   }
 
   /* @HERO */
@@ -206,21 +206,21 @@
   }
 
   .rvo-hero-bg-img-container {
+    block-size: 100%;
     display: flex;
-    height: 100%;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     position: absolute;
-    right: 0;
-    top: 0;
   }
 
   .rvo-hero-bg-img-container::before {
     background: linear-gradient(90deg, var(--rvo-color-lichtblauw-150) 0%, rgb(217 235 247 / 0%) 52.25%);
+    block-size: 100%;
     content: "";
-    height: 100%;
-    left: 0;
+    inline-size: 25%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     position: absolute;
-    top: 0;
-    width: 25%;
     z-index: 1;
   }
 
@@ -244,7 +244,7 @@
   }
 
   .rvo-hero-img {
-    max-width: 75%;
+    max-inline-size: 75%;
   }
 
   .rvo-hero-text {
@@ -445,8 +445,8 @@
   .rvo-sub-navigation {
     background-color: var(--rvo-color-donkerblauw);
     display: none;
+    inset-block-start: 49px;
     position: sticky;
-    top: 49px;
     z-index: 3;
   }
 
@@ -454,7 +454,7 @@
     line-height: var(--rvo-line-height-md);
     margin-inline-end: auto;
     margin-inline-start: auto;
-    max-width: 580px;
+    max-inline-size: 580px;
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
   }
@@ -522,7 +522,7 @@
   }
 
   .rvo-data dt {
-    border-top: 1px solid var(--rvo-color-grijs-300);
+    border-block-start: 1px solid var(--rvo-color-grijs-300);
     font-weight: 700;
     padding-block-end: 0;
     padding-block-start: var(--rvo-space-xs);
@@ -539,7 +539,7 @@
   }
 
   .rvo-data dt:nth-of-type(1) {
-    border-top: 0;
+    border-block-start: 0;
   }
 
   .rvo-data .rvo-url {
@@ -549,14 +549,14 @@
   /* @TABLE */
 
   .rvo-table--responsive {
+    inline-size: 100%;
     overflow-x: auto;
-    width: 100%;
   }
 
   .rvo-table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    inline-size: 100%;
   }
 
   .rvo-caption {
@@ -578,10 +578,10 @@
 
   .rvo-table-header--sortable .rvo-icon {
     display: inline-block;
+    inset-block-start: var(--rvo-space-3xs);
     margin-block-start: var(--rvo-space-2xs);
     margin-inline-start: var(--rvo-space-2xs);
     position: relative;
-    top: var(--rvo-space-3xs);
   }
 
   .rvo-table-header--sortable:hover,
@@ -591,7 +591,7 @@
   }
 
   .rvo-table-cell {
-    border-bottom: 0.05rem solid var(--rvo-color-grijs-200);
+    border-block-end: 0.05rem solid var(--rvo-color-grijs-200);
     padding-block-end: var(--rvo-space-xs);
     padding-block-start: var(--rvo-space-xs);
     padding-inline-end: var(--rvo-space-md);
@@ -625,9 +625,9 @@
   }
 
   .rvo-alert > .rvo-icon {
+    block-size: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
     flex: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */ 0 0;
-    height: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
-    width: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
+    inline-size: 24px /* Moet vervangen worden met nieuwe rvo-size-xl token */;
   }
 
   .rvo-alert--info {
@@ -715,12 +715,12 @@
   }
 
   .rvo-form-layout {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .rvo-inline-form {
     display: flex;
-    width: 100%;
+    inline-size: 100%;
   }
 
   .rvo-inline-form .utrecht-textbox {
@@ -795,24 +795,25 @@
 
   .rvo-date {
     background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
-    border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
-    border-bottom-width: var(
-      --utrecht-textbox-border-bottom-width,
-      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width))
-    );
     border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color));
     border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-control-border-radius, 0));
     border-style: solid;
+    border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-end-width: var(
+      --utrecht-textbox-border-bottom-width,
+      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width))
+    );
     box-sizing: border-box;
     color: var(--utrecht-textbox-color, var(--utrecht-form-control-color));
     font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-control-font-family));
     font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-control-font-size, 1em));
+    inline-size: 100%;
     max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
     padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end));
     padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start));
     padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end));
     padding-inline-start: var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start));
-    width: 100%;
   }
 
   .rvo-date:focus {
@@ -894,9 +895,9 @@
   }
 
   .rvo-tmp-filter .utrecht-select {
+    inline-size: auto;
     padding-block-end: 7px;
     padding-block-start: 8px;
-    width: auto;
   }
 
   .rvo-tmp-filter[open] .utrecht-select {
@@ -906,15 +907,15 @@
   .rvo-tmp-filter .rvo-checkbox__group {
     background-color: var(--rvo-color-wit);
     border: 1px solid var(--rvo-color-lintblauw);
+    border-block-start: 0;
     border-end-end-radius: var(--rvo-border-radius-sm);
     border-end-start-radius: var(--rvo-border-radius-sm);
-    border-top: 0;
+    inset-block-start: -2px;
     padding-block-end: var(--rvo-space-xs);
     padding-block-start: var(--rvo-space-xs);
     padding-inline-end: var(--rvo-space-xs);
     padding-inline-start: var(--rvo-space-xs);
     position: relative;
-    top: -2px;
   }
 
   .rvo-tmp-filters .utrecht-textbox {
@@ -958,7 +959,7 @@
   .rvo-item-list-item--case,
   .rvo-item-list-item--document,
   .rvo-item-list-item--dienst {
-    border-bottom: 1px solid var(--rvo-color-grijs-200);
+    border-block-end: 1px solid var(--rvo-color-grijs-200);
     display: flex;
     flex-direction: column;
     gap: var(--rvo-space-xs);
@@ -996,13 +997,13 @@
     align-items: center;
     display: flex;
     gap: var(--rvo-space-xs);
-    min-width: 150px;
+    min-inline-size: 150px;
   }
 
   .rvo-status-indicator {
+    block-size: 16px;
     border-radius: 50%;
-    height: 16px;
-    width: 16px;
+    inline-size: 16px;
   }
 
   .rvo-status-indicator--edit {
@@ -1047,7 +1048,7 @@
   }
 
   .rvo-machtigingen-item {
-    border-bottom: 1px solid var(--rvo-color-grijs-200);
+    border-block-end: 1px solid var(--rvo-color-grijs-200);
     margin-block-end: var(--rvo-space-sm);
     padding-block-end: var(--rvo-space-sm);
   }
@@ -1160,13 +1161,13 @@
   }
 
   .rvo-result-image {
-    max-width: 200px;
+    max-inline-size: 200px;
     padding-block-start: var(--rvo-space-xs);
   }
 
   .rvo-result-profile-pic {
     border-radius: 50%;
-    max-width: 125px;
+    max-inline-size: 125px;
     padding-block-start: var(--rvo-space-xs);
   }
 
@@ -1190,11 +1191,11 @@
   .rvo-timeline-status {
     align-items: center;
     background-color: var(--rvo-color-wit);
+    block-size: 16px;
     border: 2px solid var(--rvo-color-zwart);
     border-radius: 50%;
     display: flex;
     flex: 16px 0 0;
-    height: 16px;
     justify-content: center;
     position: relative;
   }
@@ -1213,12 +1214,12 @@
 
   .rvo-timeline-event::before {
     background-color: var(--rvo-color-zwart);
+    block-size: 100%;
     content: "";
     display: block;
-    height: 100%;
-    left: 9px;
+    inline-size: 2px;
+    inset-inline-start: 9px;
     position: absolute;
-    width: 2px;
   }
 
   .rvo-timeline-event--last::before {
@@ -1274,7 +1275,7 @@
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item:hover {
-    border-left-color: var(--rvo-color-hemelblauw-150);
+    border-inline-start-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-accordion__item > .rvo-accordion__item-summary::-webkit-details-marker {
@@ -1282,7 +1283,7 @@
   }
 
   .rvo-accordion__item {
-    border-bottom: 1px solid var(--rvo-color-grijs-200);
+    border-block-end: 1px solid var(--rvo-color-grijs-200);
   }
 
   .rvo-accordion__item[open] .rvo-icon-delta-omhoog {
@@ -1319,16 +1320,16 @@
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item[open] {
-    border-left-color: var(--rvo-color-hemelblauw-150);
+    border-inline-start-color: var(--rvo-color-hemelblauw-150);
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item {
-    border-bottom-color: var(--rvo-color-hemelblauw-150);
-    border-left: 6px solid var(--rvo-color-wit);
+    border-block-end-color: var(--rvo-color-hemelblauw-150);
+    border-inline-start: 6px solid var(--rvo-color-wit);
   }
 
   .rvo-accordion--border-indicator .rvo-accordion__item:first-child {
-    border-top: 1px solid var(--rvo-color-hemelblauw-150);
+    border-block-start: 1px solid var(--rvo-color-hemelblauw-150);
   }
 
   /* @LOGO GRID */
@@ -1336,7 +1337,7 @@
   .rvo-logo-grid {
     margin-inline-end: auto;
     margin-inline-start: auto;
-    max-width: 1010px;
+    max-inline-size: 1010px;
     padding-inline-end: var(--rvo-space-xl);
     padding-inline-start: var(--rvo-space-xl);
   }
@@ -1359,8 +1360,8 @@
   }
 
   .rvo-logo-grid__logo {
-    max-height: 100px;
-    max-width: 100%;
+    max-block-size: 100px;
+    max-inline-size: 100%;
   }
 
   /* @MODAL */
@@ -1368,11 +1369,11 @@
   .rvo-modal {
     align-items: center;
     background-color: rgb(0 0 0 / 85%);
+    block-size: 100%;
     display: flex;
-    height: 100%;
+    inline-size: 100%;
     justify-content: center;
     position: fixed;
-    width: 100%;
     z-index: 3;
   }
 
@@ -1549,18 +1550,18 @@
 
   .rvo-app {
     background: var(--rvo-color-wit);
-    height: 100%;
+    block-size: 100%;
+    inline-size: 100%;
     text-align: center;
-    width: 100%;
   }
 
   .rvo-app-container {
+    block-size: 100vh;
     box-sizing: border-box;
-    height: 100vh;
     margin-inline-end: auto;
     margin-inline-start: auto;
-    max-height: 844px;
-    max-width: 390px;
+    max-block-size: 844px;
+    max-inline-size: 390px;
     padding-inline-end: var(--rvo-space-2xl);
     padding-inline-start: var(--rvo-space-2xl);
     position: relative;
@@ -1625,16 +1626,16 @@
   }
 
   .rvo-next-link {
+    block-size: 100%;
     display: block;
-    height: 100%;
-    left: 0;
+    inline-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     position: absolute;
-    top: 0;
-    width: 100%;
   }
 
   .rvo-app svg {
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 
   .rvo-app a.utrecht-button {
@@ -1648,16 +1649,16 @@
 
   .rvo-app-menu {
     background-color: var(--rvo-color-lichtblauw-150);
-    bottom: 0;
     display: flex;
+    inline-size: 100%;
+    inset-block-end: 0;
+    inset-inline-start: 0;
     justify-content: space-between;
-    left: 0;
     list-style: none;
     margin-block-end: 0;
     margin-block-start: 0;
     padding-inline-start: 0;
     position: fixed;
-    width: 100%;
   }
 
   .rvo-app-menu-item {
@@ -1694,7 +1695,7 @@
 
   .rvo-maatregel {
     background-color: var(--rvo-color-150);
-    border-left: 5px solid var(--rvo-color-grijs-100);
+    border-inline-start: 5px solid var(--rvo-color-grijs-100);
     display: flex;
     justify-content: space-between;
     padding-block-end: var(--rvo-space-sm);
@@ -1714,7 +1715,7 @@
   }
 
   .rvo-maatregel-icon {
-    max-width: 24px;
+    max-inline-size: 24px;
   }
 
   .rvo-maatregel-bewaar-link {
@@ -1765,7 +1766,7 @@
   }
 
   .rvo-maatregel-img {
-    max-width: 75%;
+    max-inline-size: 75%;
   }
 
   .rvo-short-inputs {
@@ -1814,12 +1815,13 @@
 
   .rvo-autocomplete-dropdown {
     border: 1px solid var(--rvo-color-lintblauw);
+    border-radius: var(--rvo-border-radius-sm);
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-start: 0;
     border-end-end-radius: 2px;
     border-end-start-radius: 2px;
-    border-radius: var(--rvo-border-radius-sm);
     border-start-end-radius: 0;
     border-start-start-radius: 0;
-    border-top: 0;
     padding-block-end: var(--rvo-space-sm);
     padding-inline-end: var(--rvo-space-sm);
     padding-inline-start: var(--rvo-space-sm);
@@ -1840,14 +1842,15 @@
     background-color: var(--rvo-color-wit);
     border: 2px solid var(--rvo-color-hemelblauw);
     border-radius: var(--rvo-border-radius-sm);
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-start: 0;
     border-start-end-radius: 0;
     border-start-start-radius: 0;
-    border-top: 0;
+    inset-block-start: -4px;
     margin-block-start: -12px;
     margin-inline-end: -2px;
     margin-inline-start: -1px;
     position: relative;
-    top: -4px;
     z-index: 1;
   }
 
@@ -1877,7 +1880,7 @@
     }
 
     .rvo-lint {
-      max-width: 48px;
+      max-inline-size: 48px;
     }
 
     .utrecht-heading-1 {
@@ -1887,10 +1890,10 @@
     .rvo-topnav__background,
     .rvo-responsive-menu {
       background-color: var(--rvo-color-wit);
-      border-bottom: 1px solid #cbd5e1;
+      border-block-end: 1px solid #cbd5e1;
+      inset-block-start: 0;
       padding-block-start: var(--rvo-size-md);
       position: sticky;
-      top: 0;
       z-index: 3;
     }
 
@@ -1951,8 +1954,8 @@
     }
 
     .rvo-checkbox__input::before {
-      height: 18px;
-      width: 18px;
+      block-size: 18px;
+      inline-size: 18px;
     }
 
     .utrecht-radio-button,
@@ -2008,7 +2011,7 @@
     }
 
     .rvo-form {
-      min-width: auto;
+      min-inline-size: auto;
     }
 
     .utrecht-button--primary-action {
@@ -2025,17 +2028,17 @@
     .rvo-max-width-layout--md,
     .rvo-max-width-layout--sm {
       box-sizing: border-box;
+      inline-size: 100%;
       padding-inline-end: var(--rvo-space-md);
       padding-inline-start: var(--rvo-space-md);
-      width: 100%;
     }
 
     .rvo-max-width-layout--sm {
-      max-width: 576px;
+      max-inline-size: 576px;
     }
 
     .rvo-max-width-layout--md {
-      max-width: 854px;
+      max-inline-size: 854px;
     }
 
     details .rvo-max-width-layout--md {
@@ -2084,7 +2087,7 @@
   }
 
   .rvo-expandable-area-demo > .rvo-layout-column {
-    width: 608px;
+    inline-size: 608px;
   }
 
   @media (min-width: 360px) {
@@ -2105,7 +2108,7 @@
     }
 
     .rvo-hero-text {
-      max-width: 50%;
+      max-inline-size: 50%;
     }
 
     .rvo-hero-img-container {
@@ -2126,12 +2129,12 @@
     }
 
     .rvo-data dd {
-      border-left: 1px solid var(--rvo-color-grijs-300);
-      border-top: 1px solid var(--rvo-color-grijs-300);
+      border-block-start: 1px solid var(--rvo-color-grijs-300);
+      border-inline-start: 1px solid var(--rvo-color-grijs-300);
     }
 
     .rvo-data dd:nth-of-type(1) {
-      border-top: 0;
+      border-block-start: 0;
     }
 
     .rvo-button-group {
@@ -2243,11 +2246,11 @@
 
 .rvo-demo-page-expandable-tr {
   .rvo-table-row--expandable td {
-    border-top: 5px solid var(--rvo-color-wit);
+    border-block-start: 5px solid var(--rvo-color-wit);
+    inset-block-start: -8px;
     margin-block-start: -8px;
     padding-block-end: 0;
     padding-block-start: 0;
     position: relative;
-    top: -8px;
   }
 }

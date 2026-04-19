@@ -14,7 +14,7 @@
   }
 
   .rvo-footer-column {
-    min-width: 224px;
+    min-inline-size: 224px;
     padding-block-end: 0;
     padding-block-start: 0;
   }
@@ -32,7 +32,7 @@
 
   .rvo-footer-columns + .rvo-footer-bottom,
   .rvo-footer-payoff + .rvo-footer-bottom {
-    border-top: 1px solid var(--rvo-color-lintblauw-600);
+    border-block-start: 1px solid var(--rvo-color-lintblauw-600);
     margin-block-start: var(--rvo-space-xl);
     padding-block-start: var(--rvo-space-xl);
   }

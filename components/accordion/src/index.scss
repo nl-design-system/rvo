@@ -11,16 +11,16 @@
 }
 
 .rvo-accordion .rvo-accordion__item[open] {
-  border-left-color: var(--rvo-accordion-border-color);
+  border-inline-start-color: var(--rvo-accordion-border-color);
 }
 
 .rvo-accordion .rvo-accordion__item {
-  border-bottom-color: var(--rvo-accordion-border-color);
-  border-left: 6px solid transparent;
+  border-block-end-color: var(--rvo-accordion-border-color);
+  border-inline-start: 6px solid transparent;
 }
 
 .rvo-accordion .rvo-accordion__item:first-child {
-  border-top: 1px solid var(--rvo-accordion-border-color);
+  border-block-start: 1px solid var(--rvo-accordion-border-color);
 }
 
 .rvo-accordion__item-summary .rvo-icon {
@@ -45,7 +45,7 @@
 }
 
 .rvo-accordion--border-indicator .rvo-accordion__item:hover {
-  border-left-color: var(--rvo-accordion-border-color);
+  border-inline-start-color: var(--rvo-accordion-border-color);
 }
 
 .rvo-accordion__item > .rvo-accordion__item-summary::-webkit-details-marker {
@@ -53,7 +53,7 @@
 }
 
 .rvo-accordion__item {
-  border-bottom: 1px solid var(--rvo-accordion-item-border-bottom);
+  border-block-end: 1px solid var(--rvo-accordion-item-border-bottom);
 }
 
 .rvo-accordion__item[open] .rvo-accordion__item-icon--open {

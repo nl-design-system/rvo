@@ -18,7 +18,7 @@
   }
 
   .rvo-pagination__item {
-    min-width: var(--rvo-size-xl);
+    min-inline-size: var(--rvo-size-xl);
     padding-block-end: var(--rvo-space-sm);
     padding-block-start: var(--rvo-space-sm);
     padding-inline-end: var(--rvo-space-sm);

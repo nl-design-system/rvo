@@ -17,12 +17,12 @@
 
   &__image {
     align-content: center;
+    block-size: var(--rvo-quote-image-size);
     border-radius: 50%;
     display: flex;
-    height: var(--rvo-quote-image-size);
+    inline-size: var(--rvo-quote-image-size);
     justify-content: center;
     overflow: hidden;
-    width: var(--rvo-quote-image-size);
   }
 
   &__credentials {
