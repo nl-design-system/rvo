@@ -1,6 +1,6 @@
 {
   "extends": ["stylelint-config-standard-scss"],
-  "plugins": ["stylelint-order"],
+  "plugins": ["stylelint-order", "stylelint-use-logical"],
   "rules": {
     "alpha-value-notation": "percentage",
     "at-rule-empty-line-before": null,
@@ -67,6 +67,7 @@
     "string-no-newline": true,
     "unit-disallowed-list": ["s"],
     "unit-no-unknown": true,
-    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }]
+    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
+    "csstools/use-logical": "always"
   }
 }
