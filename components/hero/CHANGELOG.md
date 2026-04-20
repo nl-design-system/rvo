@@ -1,5 +1,12 @@
 # `@nl-rvo/css-hero`
 
+## 1.7.3
+
+### Patch Changes
+
+- c4973ba: Removed min-height for hero image on mobile
+- c4973ba: removed min-height from hero image container
+
 ## 1.7.2
 
 ### Patch Changes
