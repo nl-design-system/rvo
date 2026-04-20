@@ -1,5 +1,15 @@
 # @nl-rvo/component-library-react
 
+## 7.1.1
+
+### Patch Changes
+
+- c4973ba: Removed min-height for hero image on mobile
+- c4973ba: removed min-height from hero image container
+- Updated dependencies [c4973ba]
+- Updated dependencies [c4973ba]
+  - @nl-rvo/component-library-css@4.20.1
+
 ## 7.1.0
 
 ### Minor Changes
