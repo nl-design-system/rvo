@@ -49,6 +49,10 @@
     @extend .rvo-layout-gap--sm;
   }
 
+  .rvo-mobile-menu__toggle:focus {
+    text-decoration-line: var(--rvo-mobile-menu-toggle-focus-text-decoration);
+  }
+
   .rvo-mobile-menu__open-icon {
     --utrecht-icon-color: var(--rvo-mobile-menu-toggle-icon-color);
   }
@@ -93,6 +97,10 @@
       color: var(--rvo-mobile-menu-item-link-hover-color);
       font-weight: var(--rvo-mobile-menu-item-link-hover-font-weight);
       text-decoration: var(--rvo-mobile-menu-item-link-hover-text-decoration);
+    }
+
+    &:focus {
+      text-decoration-line: var(--rvo-mobile-menu-item-link-focus-text-decoration);
     }
   }
 

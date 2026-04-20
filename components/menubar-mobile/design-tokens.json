@@ -86,6 +86,14 @@
             }
           }
         },
+        "focus": {
+          "text-decoration": {
+            "css": {
+              "syntax": "<*>",
+              "inherits": true
+            }
+          }
+        },
         "padding-block-start": {
           "css": {
             "syntax": "<length>",
@@ -221,6 +229,12 @@
             "background-color": {
               "css": {
                 "syntax": "<color>",
+                "inherits": true
+              }
+            },
+            "text-decoration": {
+              "css": {
+                "syntax": "<*>",
                 "inherits": true
               }
             }
