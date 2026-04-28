@@ -7,11 +7,11 @@
 .utrecht-textbox {
   --utrecht-pointer-target-min-size: 48px;
 
-  height: var(--utrecht-pointer-target-min-size, 48px);
+  block-size: var(--utrecht-pointer-target-min-size, 48px);
 }
 
 textarea.utrecht-textbox {
-  min-height: 96px;
+  min-block-size: 96px;
   resize: vertical;
 }
 

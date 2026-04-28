@@ -7,8 +7,8 @@
   align-items: center;
   display: flex;
   gap: 2em;
+  inline-size: 100%;
   margin-block-end: 1em !important;
-  width: 100%;
 }
 
 .rvo-design-tokens__column {
@@ -21,19 +21,19 @@
 }
 
 .rvo-design-tokens__column--15 {
-  width: 15%;
+  inline-size: 15%;
 }
 
 .rvo-design-tokens__column--20 {
-  width: 20%;
+  inline-size: 20%;
 }
 
 .rvo-design-tokens__column--30 {
-  width: 30%;
+  inline-size: 30%;
 }
 
 .rvo-design-tokens__column--50 {
-  width: 50%;
+  inline-size: 50%;
 }
 
 .rvo-design-tokens__column--flex {

@@ -6,7 +6,7 @@
   border-end-end-radius: var(--rvo-hero-border-end-end-radius);
   margin-inline-end: auto;
   margin-inline-start: auto;
-  min-height: 200px;
+  min-block-size: 200px;
   overflow: hidden;
   position: relative;
 
@@ -21,8 +21,8 @@
 
     @media (min-width: 540px) {
       border-start-end-radius: var(--rvo-hero-box-border-start-end-radius);
-      bottom: 0;
-      max-width: var(--rvo-hero-box-max-width);
+      inset-block-end: 0;
+      max-inline-size: var(--rvo-hero-box-max-width);
       position: absolute;
       z-index: 1;
     }
@@ -61,24 +61,25 @@
   overflow: hidden;
 
   @media (min-width: 540px) {
-    max-height: 500px;
-    min-height: 300px;
+    max-block-size: 500px;
+    min-block-size: 300px;
     padding-block-end: 0;
   }
 
   &--lined {
     &::after {
+      block-size: 100%;
       border-color: var(--rvo-hero-image-line-border-color);
-      border-end-start-radius: var(--rvo-hero-image-line-border-radius);
       border-style: var(--rvo-hero-image-line-border-style);
       border-width: var(--rvo-hero-image-line-border-width);
+      /* stylelint-disable-next-line order/properties-alphabetical-order */
+      border-end-start-radius: var(--rvo-hero-image-line-border-radius);
       content: "";
       display: block;
-      height: 100%;
+      inline-size: 100%;
       inset-block-start: calc(#{var(--rvo-hero-image-line-inset)} + -25%);
       inset-inline-end: var(--rvo-hero-image-line-inset);
       position: absolute;
-      width: 100%;
 
       @media (min-width: 540px) {
         inset-block-start: var(--rvo-hero-image-line-inset);
@@ -88,14 +89,14 @@
 }
 
 .rvo-hero__image {
-  height: 100%;
-  min-height: 300px;
+  block-size: 100%;
+  inline-size: 100%;
+  min-block-size: 300px;
   object-fit: cover;
-  width: 100%;
 }
 
 .rvo-hero__custom-image-wrapper img {
-  height: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   object-fit: cover;
-  width: 100%;
 }

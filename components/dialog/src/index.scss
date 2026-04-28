@@ -35,16 +35,16 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    inline-size: var(--rvo-dialog-centered-width);
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     justify-content: center;
-    left: 50%;
     margin: 0;
-    max-height: var(--rvo-dialog-centered-dialog-max-height);
-    max-width: 100%;
-    min-height: var(--rvo-dialog-centered-dialog-min-height);
+    max-block-size: var(--rvo-dialog-centered-dialog-max-height);
+    max-inline-size: 100%;
+    min-block-size: var(--rvo-dialog-centered-dialog-min-height);
     position: fixed;
-    top: 50%;
     transform: translate(-50%, -50%);
-    width: var(--rvo-dialog-centered-width);
     z-index: 999;
 
     // centered dialog sizes
@@ -58,8 +58,8 @@
   // dialog content
   &__content {
     flex: 1;
+    inline-size: 100%;
     overflow-y: auto;
-    width: 100%;
   }
 }
 
@@ -68,33 +68,33 @@
 .rvo-dialog--drawer-left, // @deprecated: inset-inline-start is the new renamed version.
 .rvo-dialog--inset-inline-end,
 .rvo-dialog--inset-inline-start {
-  height: 100vh;
-  left: 0;
+  block-size: 100vh;
+  inline-size: var(--rvo-dialog-drawer-width);
+  inset-block-start: 0;
+  inset-inline-start: 0;
   margin: initial;
-  max-width: var(--rvo-dialog-drawer-max-width);
-  min-width: var(--rvo-dialog-drawer-min-width);
+  max-inline-size: var(--rvo-dialog-drawer-max-width);
+  min-inline-size: var(--rvo-dialog-drawer-min-width);
   position: fixed;
-  top: 0;
-  width: var(--rvo-dialog-drawer-width);
   z-index: 999;
 }
 
 .rvo-dialog--drawer-right, // @deprecated: inset-inline-end is the new renamed version.
 .rvo-dialog--inset-inline-end {
-  left: unset;
-  right: 0;
+  inset-inline-end: 0;
+  inset-inline-start: unset;
 }
 
 // Dialog background
 .rvo-dialog__background::before {
   background-color: var(--rvo-dialog-background-bg-color);
+  block-size: 100vh;
   content: "";
   display: block;
-  height: 100vh;
-  left: 0;
+  inline-size: 100vw;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   position: fixed;
-  top: 0;
-  width: 100vw;
   z-index: 998;
 }
 
@@ -107,15 +107,15 @@
 
 // Action group
 .rvo-dialog__action-group {
+  inline-size: 100%;
   margin-block-start: var(--rvo-dialog-action-group-margin-block-start);
-  width: 100%;
 }
 
 .rvo-dialog__close {
   align-items: center;
   align-self: flex-end;
   cursor: pointer;
-  top: var(--rvo-dialog-padding-block-start);
+  inset-block-start: var(--rvo-dialog-padding-block-start);
 }
 
 .rvo-dialog__close-button {

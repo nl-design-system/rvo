@@ -1,6 +1,6 @@
 /* stylelint-disable no-descending-specificity */
 .rvo-mijn-percelen {
-  height: 100vh;
+  block-size: 100vh;
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-end: 0;
@@ -29,8 +29,8 @@
   }
 
   .rvo-main--mijn-percelen-sidebar-active {
+    block-size: 85vh;
     grid-template-columns: 288px 1fr;
-    height: 85vh;
   }
 
   .rvo-main-mijn-percelen--sidebar-menu {
@@ -58,12 +58,12 @@
 
       &::before {
         background-color: var(--rvo-color-hemelblauw);
+        block-size: 20px;
         border-radius: var(--rvo-border-radius-sm);
         content: "";
         display: block;
-        height: 20px;
+        inline-size: 4px;
         opacity: 0%;
-        width: 4px;
       }
 
       &:hover,
@@ -119,17 +119,17 @@
 
       &::after {
         background-color: var(--rvo-color-wit);
+        block-size: 12px;
         border: solid #64748b 1px;
-        border-bottom-width: 0;
-        border-left-width: 0;
+        border-block-end-width: 0;
+        border-inline-start-width: 0;
         content: "";
         display: block;
-        height: 12px;
+        inline-size: 12px;
+        inset-block-start: 24px;
+        inset-inline-end: -7px;
         position: absolute;
-        right: -7px;
-        top: 24px;
         transform: rotate(45deg);
-        width: 12px;
       }
     }
 
@@ -161,15 +161,15 @@
     }
 
     .rvo-card-perceel-actions {
-      border-top: 1px solid #cbd5e1;
+      border-block-start: 1px solid #cbd5e1;
       display: flex;
       justify-content: flex-end;
       margin-inline-end: -16px;
       margin-inline-start: -16px;
 
       .utrecht-icon {
-        height: 16px;
-        width: 16px;
+        block-size: 16px;
+        inline-size: 16px;
       }
 
       // .utrecht-button {
@@ -179,8 +179,8 @@
   }
 
   .rvo-perceel-kaart {
-    height: 100%;
-    max-width: 100%;
+    block-size: 100%;
+    max-inline-size: 100%;
     object-fit: cover;
   }
 
@@ -245,11 +245,11 @@
 
   .rvo-dateinput__part:first-child input,
   .rvo-dateinput__part:nth-child(2) input {
-    width: 48px;
+    inline-size: 48px;
   }
 
   .rvo-dateinput__part:nth-child(3) input {
-    width: 64px;
+    inline-size: 64px;
   }
 
   .rvo-value-information {
@@ -295,7 +295,7 @@
     }
 
     .rvo-table-cell:not(first-child) {
-      width: 40px;
+      inline-size: 40px;
     }
   }
 
@@ -331,24 +331,24 @@
 
   .rvo-fake-checkbox summary::before {
     background-color: var(--rvo-color-wit);
+    block-size: 24px;
     border: 1px solid var(--rvo-color-lintblauw);
     border-radius: var(--rvo-border-radius-sm);
     content: "";
     display: block;
-    height: 24px;
-    width: 24px;
+    inline-size: 24px;
   }
 
   .rvo-fake-checkbox[open] summary::after {
     background-color: var(--rvo-color-lintblauw);
+    block-size: 20px;
     border-radius: var(--rvo-border-radius-sm);
     content: "";
     display: block;
-    height: 20px;
-    left: 2px;
+    inline-size: 21px;
+    inset-block-start: 3px;
+    inset-inline-start: 2px;
     position: absolute;
-    top: 3px;
-    width: 21px;
   }
 
   .rvo-instellingen {
@@ -362,8 +362,8 @@
     }
 
     .utrecht-icon {
-      height: 16px;
-      width: 16px;
+      block-size: 16px;
+      inline-size: 16px;
     }
   }
 }
