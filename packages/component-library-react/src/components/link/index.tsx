@@ -109,7 +109,7 @@ export const Link: React.FC<ILinkProps> = ({
   const linkContent = (
     <>
       {showIcon === 'before' && iconMarkup}
-      {children || content}
+      <span className="rvo-link__text">{children || content}</span>
       {showIcon === 'after' && iconMarkup}
     </>
   );
