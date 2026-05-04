@@ -1,5 +1,11 @@
 # @nl-rvo/design-tokens
 
+## 2.4.1
+
+### Patch Changes
+
+- e326332: Added focus states to mobile menu toggle button and links.
+
 ## 2.4.0
 
 ### Minor Changes

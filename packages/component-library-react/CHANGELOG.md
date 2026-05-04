@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-react
 
+## 7.1.2
+
+### Patch Changes
+
+- e326332: Added focus states to mobile menu toggle button and links.
+  - @nl-rvo/component-library-css@4.20.1
+
 ## 7.1.1
 
 ### Patch Changes
