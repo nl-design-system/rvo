@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar-mobile`
 
+## 1.7.1
+
+### Patch Changes
+
+- e326332: Added focus states to mobile menu toggle button and links.
+
 ## 1.7.0
 
 ### Minor Changes
