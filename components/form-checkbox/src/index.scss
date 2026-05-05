@@ -24,7 +24,7 @@
   border-style: solid;
   border-width: var(--rvo-checkbox-border-width, var(--utrecht-form-control-border-width));
   display: grid;
-  flex: 24px 0 0;
+  flex: 0 0 var(--rvo-checkbox-size);
   height: var(--rvo-checkbox-size);
   margin-block-end: 0;
   margin-block-start: 0;
