@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.3.1
+
+### Patch Changes
+
+- 98006c0: ROOS-351: prevents checkbox shrinking
+
 ## 1.3.0
 
 ### Minor Changes
