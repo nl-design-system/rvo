@@ -33,6 +33,10 @@
 "@nl-rvo/css-tabs": patch
 "@nl-rvo/expandable-table": patch
 "@nl-rvo/skeleton": patch
+"@nl-rvo/expandable-table": patch
+"@nl-rvo/skeleton": patch
+"@nl-rvo/component-library-css": patch
+"@nl-rvo/component-library-react": patch
 ---
 
 Use CSS Logical properties, to support both `dir="ltr"` and `dir="rtl"`.
