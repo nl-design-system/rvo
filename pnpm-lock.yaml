@@ -610,6 +610,195 @@ importers:
 
   packages/component-library-css:
     dependencies:
+      '@nl-rvo/autocomplete':
+        specifier: workspace:*
+        version: link:../../components/form-autocomplete
+      '@nl-rvo/checkbox-filter':
+        specifier: workspace:*
+        version: link:../../components/checkbox-filter
+      '@nl-rvo/counter-badge':
+        specifier: workspace:*
+        version: link:../../components/counter-badge
+      '@nl-rvo/css-accordion':
+        specifier: workspace:*
+        version: link:../../components/accordion
+      '@nl-rvo/css-action-group':
+        specifier: workspace:*
+        version: link:../../components/action-group
+      '@nl-rvo/css-alert':
+        specifier: workspace:*
+        version: link:../../components/alert
+      '@nl-rvo/css-breadcrumbs':
+        specifier: workspace:*
+        version: link:../../components/breadcrumbs
+      '@nl-rvo/css-button':
+        specifier: workspace:*
+        version: link:../../components/button
+      '@nl-rvo/css-card':
+        specifier: workspace:*
+        version: link:../../components/card
+      '@nl-rvo/css-data-list':
+        specifier: workspace:*
+        version: link:../../components/data-list
+      '@nl-rvo/css-dialog':
+        specifier: workspace:*
+        version: link:../../components/dialog
+      '@nl-rvo/css-expandable-content':
+        specifier: workspace:*
+        version: link:../../components/expandable-content
+      '@nl-rvo/css-footer':
+        specifier: workspace:*
+        version: link:../../components/footer
+      '@nl-rvo/css-form-checkbox':
+        specifier: workspace:*
+        version: link:../../components/form-checkbox
+      '@nl-rvo/css-form-checkbox-group':
+        specifier: workspace:*
+        version: link:../../components/form-checkbox-group
+      '@nl-rvo/css-form-feedback':
+        specifier: workspace:*
+        version: link:../../components/form-feedback
+      '@nl-rvo/css-form-field':
+        specifier: workspace:*
+        version: link:../../components/form-field
+      '@nl-rvo/css-form-field-label':
+        specifier: workspace:*
+        version: link:../../components/form-field-label
+      '@nl-rvo/css-form-fieldset':
+        specifier: workspace:*
+        version: link:../../components/form-fieldset
+      '@nl-rvo/css-form-fileinput':
+        specifier: workspace:*
+        version: link:../../components/form-fileinput
+      '@nl-rvo/css-form-layout':
+        specifier: workspace:*
+        version: link:../../components/form-layout
+      '@nl-rvo/css-form-radio-button':
+        specifier: workspace:*
+        version: link:../../components/form-radio-button
+      '@nl-rvo/css-form-radio-button-group':
+        specifier: workspace:*
+        version: link:../../components/form-radio-button-group
+      '@nl-rvo/css-form-select':
+        specifier: workspace:*
+        version: link:../../components/form-select
+      '@nl-rvo/css-form-textarea':
+        specifier: workspace:*
+        version: link:../../components/form-textarea
+      '@nl-rvo/css-form-textinput':
+        specifier: workspace:*
+        version: link:../../components/form-textinput
+      '@nl-rvo/css-grid':
+        specifier: workspace:*
+        version: link:../../components/grid
+      '@nl-rvo/css-header':
+        specifier: workspace:*
+        version: link:../../components/header
+      '@nl-rvo/css-heading':
+        specifier: workspace:*
+        version: link:../../components/heading
+      '@nl-rvo/css-hero':
+        specifier: workspace:*
+        version: link:../../components/hero
+      '@nl-rvo/css-horizontal-rule':
+        specifier: workspace:*
+        version: link:../../components/horizontal-rule
+      '@nl-rvo/css-icon':
+        specifier: workspace:*
+        version: link:../../components/icon
+      '@nl-rvo/css-image':
+        specifier: workspace:*
+        version: link:../../components/image
+      '@nl-rvo/css-item-list':
+        specifier: workspace:*
+        version: link:../../components/item-list
+      '@nl-rvo/css-layout-flow':
+        specifier: workspace:*
+        version: link:../../components/layout-flow
+      '@nl-rvo/css-link':
+        specifier: workspace:*
+        version: link:../../components/link
+      '@nl-rvo/css-loader':
+        specifier: workspace:*
+        version: link:../../components/loader
+      '@nl-rvo/css-logo':
+        specifier: workspace:*
+        version: link:../../components/logo
+      '@nl-rvo/css-max-width-layout':
+        specifier: workspace:*
+        version: link:../../components/max-width-layout
+      '@nl-rvo/css-menubar':
+        specifier: workspace:*
+        version: link:../../components/menubar
+      '@nl-rvo/css-menubar-mobile':
+        specifier: workspace:*
+        version: link:../../components/menubar-mobile
+      '@nl-rvo/css-ordered-unordered-list':
+        specifier: workspace:*
+        version: link:../../components/ordered-unordered-list
+      '@nl-rvo/css-page-number-navigation':
+        specifier: workspace:*
+        version: link:../../components/page-number-navigation
+      '@nl-rvo/css-paragraph':
+        specifier: workspace:*
+        version: link:../../components/paragraph
+      '@nl-rvo/css-progress-tracker':
+        specifier: workspace:*
+        version: link:../../components/progress-tracker
+      '@nl-rvo/css-quote':
+        specifier: workspace:*
+        version: link:../../components/quote
+      '@nl-rvo/css-scrollable-content':
+        specifier: workspace:*
+        version: link:../../components/scrollable-content
+      '@nl-rvo/css-sidebar-layout':
+        specifier: workspace:*
+        version: link:../../components/sidebar-layout
+      '@nl-rvo/css-skip-link':
+        specifier: workspace:*
+        version: link:../../components/skip-link
+      '@nl-rvo/css-status-icon':
+        specifier: workspace:*
+        version: link:../../components/status-icon
+      '@nl-rvo/css-status-indicator':
+        specifier: workspace:*
+        version: link:../../components/status-indicator
+      '@nl-rvo/css-table':
+        specifier: workspace:*
+        version: link:../../components/table
+      '@nl-rvo/css-tabs':
+        specifier: workspace:*
+        version: link:../../components/tabs
+      '@nl-rvo/css-tag':
+        specifier: workspace:*
+        version: link:../../components/tag
+      '@nl-rvo/css-toggle':
+        specifier: workspace:*
+        version: link:../../components/toggle
+      '@nl-rvo/expandable-table':
+        specifier: workspace:*
+        version: link:../../components/expandable-table
+      '@nl-rvo/skeleton':
+        specifier: workspace:*
+        version: link:../../components/skeleton
+      '@nl-rvo/utility-background':
+        specifier: workspace:*
+        version: link:../../utilities/utility-background
+      '@nl-rvo/utility-border':
+        specifier: workspace:*
+        version: link:../../utilities/utility-border
+      '@nl-rvo/utility-margin':
+        specifier: workspace:*
+        version: link:../../utilities/utility-margin
+      '@nl-rvo/utility-padding':
+        specifier: workspace:*
+        version: link:../../utilities/utility-padding
+      '@nl-rvo/utility-text':
+        specifier: workspace:*
+        version: link:../../utilities/utility-text
+      '@nl-rvo/utility-text-types':
+        specifier: workspace:*
+        version: link:../../utilities/utility-text-types
       modern-normalize:
         specifier: 3.0.1
         version: 3.0.1
@@ -828,7 +1017,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
@@ -897,10 +1086,10 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/component-library-css':
         specifier: file:../component-library-css
-        version: link:../component-library-css
+        version: file:packages/component-library-css
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -1026,7 +1215,7 @@ importers:
         version: 7.23.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@mui/material@5.15.13(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.17.1(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(date-fns@3.4.0)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: link:../../proprietary/assets
+        version: 1.0.0
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -1147,6 +1336,10 @@ importers:
         version: 13.0.6
 
   utilities/utility-background:
+    dependencies:
+      '@nl-rvo/design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/design-tokens
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -1154,11 +1347,12 @@ importers:
       '@nl-rvo/components':
         specifier: workspace:*
         version: link:../../components
+
+  utilities/utility-border:
+    dependencies:
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
-
-  utilities/utility-border:
     devDependencies:
       '@nl-rvo/build-utils-css':
         specifier: workspace:*
@@ -1166,9 +1360,6 @@ importers:
       '@nl-rvo/component-library-react':
         specifier: workspace:*
         version: link:../../packages/component-library-react
-      '@nl-rvo/design-tokens':
-        specifier: workspace:*
-        version: link:../../proprietary/design-tokens
 
   utilities/utility-margin:
     devDependencies:
@@ -3941,8 +4132,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@nl-rvo/assets@1.0.0':
+    resolution: {integrity: sha512-YEhM9bzgtsTFU1rbDhjm9oraHHCdeC9DqhiB473y4/NYaaENW8eP7ZCJYcEdG4ax/1tyDoC5e0FSkZNIgz4gJA==}
+
   '@nl-rvo/assets@1.0.0-alpha.360':
     resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
+
+  '@nl-rvo/component-library-css@file:packages/component-library-css':
+    resolution: {directory: packages/component-library-css, type: directory}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -19459,7 +19656,76 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.33':
     optional: true
 
+  '@nl-rvo/assets@1.0.0': {}
+
   '@nl-rvo/assets@1.0.0-alpha.360': {}
+
+  '@nl-rvo/component-library-css@file:packages/component-library-css':
+    dependencies:
+      '@nl-rvo/autocomplete': link:components/form-autocomplete
+      '@nl-rvo/checkbox-filter': link:components/checkbox-filter
+      '@nl-rvo/counter-badge': link:components/counter-badge
+      '@nl-rvo/css-accordion': link:components/accordion
+      '@nl-rvo/css-action-group': link:components/action-group
+      '@nl-rvo/css-alert': link:components/alert
+      '@nl-rvo/css-breadcrumbs': link:components/breadcrumbs
+      '@nl-rvo/css-button': link:components/button
+      '@nl-rvo/css-card': link:components/card
+      '@nl-rvo/css-data-list': link:components/data-list
+      '@nl-rvo/css-dialog': link:components/dialog
+      '@nl-rvo/css-expandable-content': link:components/expandable-content
+      '@nl-rvo/css-footer': link:components/footer
+      '@nl-rvo/css-form-checkbox': link:components/form-checkbox
+      '@nl-rvo/css-form-checkbox-group': link:components/form-checkbox-group
+      '@nl-rvo/css-form-feedback': link:components/form-feedback
+      '@nl-rvo/css-form-field': link:components/form-field
+      '@nl-rvo/css-form-field-label': link:components/form-field-label
+      '@nl-rvo/css-form-fieldset': link:components/form-fieldset
+      '@nl-rvo/css-form-fileinput': link:components/form-fileinput
+      '@nl-rvo/css-form-layout': link:components/form-layout
+      '@nl-rvo/css-form-radio-button': link:components/form-radio-button
+      '@nl-rvo/css-form-radio-button-group': link:components/form-radio-button-group
+      '@nl-rvo/css-form-select': link:components/form-select
+      '@nl-rvo/css-form-textarea': link:components/form-textarea
+      '@nl-rvo/css-form-textinput': link:components/form-textinput
+      '@nl-rvo/css-grid': link:components/grid
+      '@nl-rvo/css-header': link:components/header
+      '@nl-rvo/css-heading': link:components/heading
+      '@nl-rvo/css-hero': link:components/hero
+      '@nl-rvo/css-horizontal-rule': link:components/horizontal-rule
+      '@nl-rvo/css-icon': link:components/icon
+      '@nl-rvo/css-image': link:components/image
+      '@nl-rvo/css-item-list': link:components/item-list
+      '@nl-rvo/css-layout-flow': link:components/layout-flow
+      '@nl-rvo/css-link': link:components/link
+      '@nl-rvo/css-loader': link:components/loader
+      '@nl-rvo/css-logo': link:components/logo
+      '@nl-rvo/css-max-width-layout': link:components/max-width-layout
+      '@nl-rvo/css-menubar': link:components/menubar
+      '@nl-rvo/css-menubar-mobile': link:components/menubar-mobile
+      '@nl-rvo/css-ordered-unordered-list': link:components/ordered-unordered-list
+      '@nl-rvo/css-page-number-navigation': link:components/page-number-navigation
+      '@nl-rvo/css-paragraph': link:components/paragraph
+      '@nl-rvo/css-progress-tracker': link:components/progress-tracker
+      '@nl-rvo/css-quote': link:components/quote
+      '@nl-rvo/css-scrollable-content': link:components/scrollable-content
+      '@nl-rvo/css-sidebar-layout': link:components/sidebar-layout
+      '@nl-rvo/css-skip-link': link:components/skip-link
+      '@nl-rvo/css-status-icon': link:components/status-icon
+      '@nl-rvo/css-status-indicator': link:components/status-indicator
+      '@nl-rvo/css-table': link:components/table
+      '@nl-rvo/css-tabs': link:components/tabs
+      '@nl-rvo/css-tag': link:components/tag
+      '@nl-rvo/css-toggle': link:components/toggle
+      '@nl-rvo/expandable-table': link:components/expandable-table
+      '@nl-rvo/skeleton': link:components/skeleton
+      '@nl-rvo/utility-background': link:utilities/utility-background
+      '@nl-rvo/utility-border': link:utilities/utility-border
+      '@nl-rvo/utility-margin': link:utilities/utility-margin
+      '@nl-rvo/utility-padding': link:utilities/utility-padding
+      '@nl-rvo/utility-text': link:utilities/utility-text
+      '@nl-rvo/utility-text-types': link:utilities/utility-text-types
+      modern-normalize: 3.0.1
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

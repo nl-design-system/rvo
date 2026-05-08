@@ -2,44 +2,49 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
 import fs from 'fs';
-import path from 'node:path';
+import path, { resolve } from 'node:path';
 import url from 'node:url';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..', '..');
 
-// Read and parse @use statements from index.scss
-const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
-const useStatementsComponent = [];
+const packageJSON = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+
+const getWorkspaceDependenciesInDirectory = (packageJSON, parentDir) =>
+  Object.entries(packageJSON.dependencies)
+    // Find all dependencies that are in this workspace
+    .filter(([_packageName, version]) => version === 'workspace:*')
+    .map(([packageName, _version]) => ({
+      packageName,
+      resolvedPath: import.meta.resolve(packageName),
+    }))
+    // Find all dependencies that are __a component__ in this workspace
+    .filter(({ resolvedPath }) => resolvedPath.includes(`/${parentDir}/`))
+    // For each npm package, find the name of the directory the package is in.
+    // This will serve as the slug for the component.
+    .map(({ resolvedPath, ...restProperties }) => {
+      // Find the directory above the `/dist/` folder, so `{component-name}` in `/components/{component-name}/dist/`
+      const match = /\/([^/]+)\/([^/]+)\/dist\/[^\\]+$/i.exec(resolvedPath);
+
+      return {
+        ...restProperties,
+        resolvedPath,
+        slug: match && match[1] === parentDir ? match[2] : null,
+      };
+    })
+    .filter(({ slug }) => slug !== null);
+
+const components = getWorkspaceDependenciesInDirectory(packageJSON, 'components');
+const utilities = getWorkspaceDependenciesInDirectory(packageJSON, 'utilities');
+
 const useStatementsUtil = [];
 
-// Map imported css files
-indexContent
-  .split('\n')
-  .filter((line) => line.trim().startsWith('@use'))
-  .map((line) => {
-    const match = line.match(/@use "([^"]+)"/);
-    return match ? match[1] : null;
-  })
-  .filter((path) => path && !path.includes('node_modules'))
-  .map((componentPath) => {
-    // Convert paths like "../../../components/accordion/src" to just "accordion"
-    const parts = componentPath.split('/');
-
-    // Util CSS
-    if (parts[0].indexOf('utility-') >= 0) {
-      useStatementsUtil.push(parts[0]);
-    }
-
-    if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
-  });
-
 // Create individual component configurations
-const componentBundles = useStatementsComponent.flatMap((component) => [
+const componentBundles = components.flatMap(({ slug }) => [
   {
-    input: `${repoRoot}/components/${component}/src/index.scss`,
+    input: `${repoRoot}/components/${slug}/src/index.scss`,
     output: {
-      file: `dist/components/${component}.css`,
+      file: `dist/components/${slug}.css`,
       format: 'es',
       sourcemap: true,
     },
@@ -53,9 +58,9 @@ const componentBundles = useStatementsComponent.flatMap((component) => [
     ],
   },
   {
-    input: `../../components/${component}/src/index.scss`,
+    input: `../../components/${slug}/src/index.scss`,
     output: {
-      file: `dist/components/${component}.min.css`,
+      file: `dist/components/${slug}.min.css`,
       format: 'es',
       sourcemap: true,
     },
@@ -120,11 +125,11 @@ const mainBundles = [
 ];
 
 // Util bundle configuration
-const utilBundle = useStatementsUtil.flatMap((utilitie) => [
+const utilBundle = utilities.flatMap(({ slug }) => [
   {
-    input: `${repoRoot}/utilities/${utilitie}/src/index.scss`,
+    input: `${repoRoot}/utilities/${slug}/src/index.scss`,
     output: {
-      file: `dist/utilities/${utilitie}.css`,
+      file: `dist/utilities/${slug}.css`,
       format: 'es',
       sourcemap: true,
     },
