@@ -1,0 +1,27 @@
+---
+title: Niet bereikbare dienst
+hide_title: true
+hide_table_of_contents: true
+slug: niet-bereikbare-dienst
+sidebar_position: 10
+---
+
+import { Heading, Link, Paragraph } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Niet bereikbare dienst
+
+Gebruik dit patroon wanneer er een onverwacht probleem is met de dienst. Wanneer de dienst bewust onbeschikbaar is gebruik dan het [Niet beschikbare dienst](/rvo/docs/patronen/help-met/niet-beschikbare-dienst) patroon.
+
+<ComponentExample>
+  <div>
+    <Heading type="h1">Deze dienst is momenteel niet bereikbaar</Heading>
+    <Paragraph>{"Door een technische storing is deze dienst helaas niet bereikbaar. We hopen de storing zo snel mogelijk te verhelpen. Neem "}<Link href="#">contact</Link>{" met ons op als u vragen heeft."}</Paragraph>
+  </div>
+</ComponentExample>
+
+## Richtlijnen
+
+- Geef de reden waarom de dienst niet bereikbaar is voor zover dit bekend is.
+- Biedt de mogelijkheid om contact op te nemen voor vragen.
+- Gebruik geen waarschuwing of foutmelding alert.
