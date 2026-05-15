@@ -74,3 +74,6 @@ pnpm-lock.yaml
 # Docusaurus
 .docusaurus
 .cache-loader
+
+# Playwright (Claude Code MCP)
+.playwright-mcp
