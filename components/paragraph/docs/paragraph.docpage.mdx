@@ -1,7 +1,7 @@
 import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
 import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
 import changeLog from "../CHANGELOG.md";
-import documentation from "../README.md";
+import Documentation from "../README.mdx";
 import * as ParagraphStories from "../stories/paragraph.stories";
 
 <Meta of={ParagraphStories} name="Documentatie" />
@@ -13,7 +13,9 @@ import * as ParagraphStories from "../stories/paragraph.stories";
 
 # Documentatie
 
-<Readme markdown={documentation} />
+<Readme>
+  <Documentation />
+</Readme>
 
 ## Changelog
 
