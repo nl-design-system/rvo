@@ -1,6 +1,6 @@
 # Veelgestelde vragen over ROOS
 
-Deze vragen zijn beantwoord door mij, Robert Roose, Design Lead bij de Rijksdienst voor Ondernemend Nederland (RVO). Staat jouw vraag er niet bij? Stuur dan een mail naar <a href="mailto:robert.roose@rvo.nl" class="rvo-link">robert.roose@rvo.nl</a> of <a href="mailto:designsystem@rvo.nl" class="rvo-link">designsystem@rvo.nl</a>.
+Deze vragen zijn beantwoord door mij, Robert Roose, Design Lead bij de Rijksdienst voor Ondernemend Nederland (RVO). Staat jouw vraag er niet bij? Stuur dan een mail naar [robert.roose@rvo.nl](mailto:robert.roose@rvo.nl) of [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 
 ## Wat is een Design System?
 
@@ -18,9 +18,9 @@ Je kan ROOS gebruiken om applicaties en websites mee te ontwerpen.
 
 ROOS is beschikbaar in drie vormen:
 
-1. Voor iedereen als documentatie op <a href="https://rvo.nl/roos" class="rvo-link">rvo.nl/roos.</a>
-2. Voor ontwikkelaars (developers) in <a href="https://nl-design-system.github.io/rvo/" class="rvo-link">Storybook</a> en <a href="https://github.com/nl-design-system/rvo" class="rvo-link">Github</a>.
-3. Voor ontwerpers (designers) in <a href="<https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System" class="rvo-link">Figma.</a>?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0>)
+1. Voor iedereen als documentatie op [rvo.nl/roos.](https://rvo.nl/roos)
+2. Voor ontwikkelaars (developers) in [Storybook](https://nl-design-system.github.io/rvo/) en [Github](https://github.com/nl-design-system/rvo).
+3. Voor ontwerpers (designers) in [Figma.](<https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0>)
 
 ## Wat is leidend? Figma of code (Storybook/Github)?
 
@@ -46,7 +46,7 @@ ROOS is onze interpretatie van de Rijkshuisstijl die periodiek gecontroleerd wor
 
 ## Hoe kan ik ROOS gebruiken?
 
-De beste manier om van ROOS te profiteren is om de <a href="https://nl-design-system.github.io/rvo/docs/getting-started/getting-started/" class="rvo-link">beschikbare libraries</a> (zoals CSS) en code te gebruiken in jouw website of applicatie. Op deze manier kun je aanpassingen in ROOS gemakkelijk inladen op een testomgeving en, na controle, doorvoeren in productie. Als bijvoorbeeld onze huisstijlkleur aangepast zou worden van hemelsblauw naar paars dan is dat eenvoudig door te voeren.
+De beste manier om van ROOS te profiteren is om de [beschikbare libraries](https://nl-design-system.github.io/rvo/docs/getting-started/getting-started/) (zoals CSS) en code te gebruiken in jouw website of applicatie. Op deze manier kun je aanpassingen in ROOS gemakkelijk inladen op een testomgeving en, na controle, doorvoeren in productie. Als bijvoorbeeld onze huisstijlkleur aangepast zou worden van hemelsblauw naar paars dan is dat eenvoudig door te voeren.
 
 Een andere manier waarop ROOS gebruikt wordt is om de visuele stijlen en code handmatig over te nemen in de website of applicatie. Dit heeft wel als risico dat er bij een update handmatig aanpassingen doorgevoerd moeten worden.
 

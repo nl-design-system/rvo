@@ -39,4 +39,4 @@ Vanuit de Rijkshuisstijl zijn er geen richtlijnen wat betreft dialogen.
 
 ## Bronnen
 
-- <a href="https://web.archive.org/web/20211006165951/https://www.nngroup.com/articles/modal-nonmodal-dialog/" class="rvo-link">Modal & Nonmodal Dialogs: When (& When Not) to Use Them - Therese Fessenden</a>
+- [Modal & Nonmodal Dialogs: When (& When Not) to Use Them - Therese Fessenden](https://web.archive.org/web/20211006165951/https://www.nngroup.com/articles/modal-nonmodal-dialog/)

@@ -35,10 +35,10 @@ Dankzij het NL Design System kan de hele overheid in Nederland samenwerken aan e
 
 Je bekijkt nu de documentatieomgeving van ROOS. ROOS is ook te bekijken of gebruiken met:
 
-- <a href="<https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System" class="rvo-link">Figma</a>?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0>)
-- <a href="https://github.com/nl-design-system/rvo" class="rvo-link">GitHub</a>
-- <a href="https://nl-design-system.github.io/rvo/" class="rvo-link">Storybook</a>
+- [Figma](<https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0>)
+- [GitHub](https://github.com/nl-design-system/rvo)
+- [Storybook](https://nl-design-system.github.io/rvo/)
 
 ## Contact
 
-Heb je vragen, opmerkingen of feedback over ROOS? Stuur een e-mail naar <a href="mailto:designsystem@rvo.nl" class="rvo-link">designsystem@rvo.nl</a>.
+Heb je vragen, opmerkingen of feedback over ROOS? Stuur een e-mail naar [designsystem@rvo.nl](mailto:designsystem@rvo.nl).

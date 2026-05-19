@@ -27,7 +27,7 @@ Een favicon bestaat uit:
 
 ## Rijkshuisstijl
 
-De Rijkshuisstijl <a href="https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/logo" class="rvo-link">richtlijnen</a> zijn aangehouden en uitgebreid met een svg icoon, apple touch icoon en iconen voor progressive web applications.
+De Rijkshuisstijl [richtlijnen](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/logo) zijn aangehouden en uitgebreid met een svg icoon, apple touch icoon en iconen voor progressive web applications.
 
 ## Bronnen
 

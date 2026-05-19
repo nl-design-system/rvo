@@ -3,12 +3,12 @@
 Om te starten met het design system gebruik je een drietal libraries.
 Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.
 
-1. <a href="https://www.npmjs.com/package/@nl-rvo/design-tokens" class="rvo-link">Design tokens</a>:
+1. [Design tokens](https://www.npmjs.com/package/@nl-rvo/design-tokens):
    Bevat de ROOS design tokens in de vorm van o.a. CSS variabelen.
 
-2. a. <a href="https://www.npmjs.com/package/@nl-rvo/component-library-css" class="rvo-link">CSS voor alle componenten</a>:
+2. a. [CSS voor alle componenten](https://www.npmjs.com/package/@nl-rvo/component-library-css):
    Bevat de CSS styling van alle ROOS componenten.
-   b. <a href="https://www.npmjs.com/package/@nl-rvo/css-[component-naam]" class="rvo-link">CSS voor individuele componenten (@nl-rvo/css-[component-naam])</a>:
+   b. [CSS voor individuele componenten (@nl-rvo/css-[component-naam])](https://www.npmjs.com/package/@nl-rvo/css-[component-naam]):
    Bevat de CSS styling van individuele ROOS componenten.
 
 3. Assets:
@@ -16,7 +16,7 @@ Deze zijn gepubliceerd op NPM onder de organisatie 'nl-rvo'.
 
 ## Toestemming voor gebruik van assets
 
-Wanneer je de rijkshuisstijl assets wil gebruiken kun je voor toestemming contact opnemen met de beheerders van het Design System ROOS: <a href="mailto:designsystem@rvo.nl" class="rvo-link">designsystem@rvo.nl</a>.
+Wanneer je de rijkshuisstijl assets wil gebruiken kun je voor toestemming contact opnemen met de beheerders van het Design System ROOS: [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 
 ## Individuele of alle componenten inladen
 
@@ -90,10 +90,10 @@ Nu kunnen code snippets van componenten direct uit Storybook worden gekopieerd. 
 
 ## Afhankelijkheden tussen components
 
-Let op: Sommige componenten zijn afhankelijk van andere componenten. Denk bijvoorbeeld aan het date input field component. Dit component is afhankelijk van het form-field component en het form-textinput component. Om het date input field component te kunnen gebruiken dien je dus ook deze componenten te laden. In de <a href="https://nl-design-system.github.io/rvo/" class="rvo-link">Storybook omgeving</a> zie je in de documentatie van elk component onder het kopje 'Dependencies' welke ondersteunendecomponenten je dient in te laden om het betreffendecomponent te kunnen gebruiken.
+Let op: Sommige componenten zijn afhankelijk van andere componenten. Denk bijvoorbeeld aan het date input field component. Dit component is afhankelijk van het form-field component en het form-textinput component. Om het date input field component te kunnen gebruiken dien je dus ook deze componenten te laden. In de [Storybook omgeving](https://nl-design-system.github.io/rvo/) zie je in de documentatie van elk component onder het kopje 'Dependencies' welke ondersteunendecomponenten je dient in te laden om het betreffendecomponent te kunnen gebruiken.
 
 ## Bijdragen
 
 Heb je eigen componenten of styling ontwikkeld die past binnen het design system? Laat het ons vooral weten!
-Stuur dan een e-mail naar <a href="mailto:designsystem@rvo.nl" class="rvo-link">designsystem@rvo.nl</a>.
+Stuur dan een e-mail naar [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 We werken graag samen verder aan het design system.

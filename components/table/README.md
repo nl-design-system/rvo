@@ -45,5 +45,5 @@ De Rijkshuisstijl kent geen specifieke voorschriften wat betreft tabellen.
 
 ## Bronnen
 
-- <a href="https://web.archive.org/web/20220315222659/https://inclusive-components.design/data-tables/" class="rvo-link">Data Tables</a>
-- <a href="https://web.archive.org/web/20211221193450/https://www.uxmatters.com/mt/archives/2020/07/designing-mobile-tables.php" class="rvo-link">Designing Mobile Tables - Steven Hoober</a>
+- [Data Tables](https://web.archive.org/web/20220315222659/https://inclusive-components.design/data-tables/)
+- [Designing Mobile Tables - Steven Hoober](https://web.archive.org/web/20211221193450/https://www.uxmatters.com/mt/archives/2020/07/designing-mobile-tables.php)

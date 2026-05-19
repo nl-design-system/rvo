@@ -2,7 +2,7 @@ Wat hieronder volgt is een beschrijving van hoe we willen dat er gewerkt wordt m
 
 Het is daarnaast continue onderhevig aan verbeteringen op basis van nieuwe inzichten die wij in de praktijk op doen.
 
-Heb je vragen, opmerkingen over verbeteringen? Neem dan contact op met <a href="mailto:designsystem@rvo.nl" class="rvo-link">designsystem@rvo.nl</a>.
+Heb je vragen, opmerkingen over verbeteringen? Neem dan contact op met [designsystem@rvo.nl](mailto:designsystem@rvo.nl).
 
 ## ROOS is voor gedeelde componenten en patronen
 

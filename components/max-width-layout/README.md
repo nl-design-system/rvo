@@ -20,4 +20,4 @@ Er zijn geen richtlijnen vanuit de Rijkshuisstijl betreffende de maximale breedt
 
 ## Bronnen
 
-- <a href="https://web.archive.org/web/20220606133257/https://baymard.com/blog/line-length-readability" class="rvo-link">Readability: The Optimal Line Length - Baymard Institute</a>
+- [Readability: The Optimal Line Length - Baymard Institute](https://web.archive.org/web/20220606133257/https://baymard.com/blog/line-length-readability)

@@ -26,6 +26,6 @@ Dit component volgt de richtlijnen zoals deze zijn opgesteld door de Rijkshuisst
 
 ## Bronnen
 
-- <a href="https://web.archive.org/web/20211122232910/https://ai.googleblog.com/2014/07/simple-is-better-making-your-web-forms.html" class="rvo-link">Simple is better - Making your web forms easy to use pays off</a>
-- <a href="https://web.archive.org/web/20190603044428/https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/online-componenten/formuliervelden" class="rvo-link">Formuliervelden op de Rijkshuisstijl</a>
-- <a href="https://web.archive.org/web/20210421051618/https://www.nngroup.com/articles/web-form-design/" class="rvo-link">Website Forms Usability: Top 10 Recommendations</a>
+- [Simple is better - Making your web forms easy to use pays off](https://web.archive.org/web/20211122232910/https://ai.googleblog.com/2014/07/simple-is-better-making-your-web-forms.html)
+- [Formuliervelden op de Rijkshuisstijl](https://web.archive.org/web/20190603044428/https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/online-componenten/formuliervelden)
+- [Website Forms Usability: Top 10 Recommendations](https://web.archive.org/web/20210421051618/https://www.nngroup.com/articles/web-form-design/)
