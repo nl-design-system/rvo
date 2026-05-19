@@ -69,7 +69,7 @@ Het lettertype, icons en images van ROOS/Rijkshuisstijl moet je apart toevoegen 
 npm install --save-dev --save-exact @nl-rvo/assets@1.0.0-alpha.360
 ```
 
-Wanneer je de huisstijl assets wil gebruiken dien je voor toestemming contact op te nemen met de huisstijl coördinator van RVO via [rijksbredehuisstijl@rvo.nl](mailto:rijksbredehuisstijl@rvo.nl).
+Wanneer je de huisstijl assets wil gebruiken dien je voor toestemming contact op te nemen met de huisstijl coördinator van RVO via <a href="mailto:rijksbredehuisstijl@rvo.nl" class="rvo-link">rijksbredehuisstijl@rvo.nl</a>.
 
 Voeg de assets toe aan je React project:
 

@@ -29,4 +29,4 @@ De Rijkshuisstijl heeft geen specifieke eisen of richtlijnen wat betreft tabs.
 
 ## Bronnen
 
-- [Tabs - GOV.UK Design System](https://web.archive.org/web/20240830090226/https://design-system.service.gov.uk/components/tabs/)
+- <a href="https://web.archive.org/web/20240830090226/https://design-system.service.gov.uk/components/tabs/" class="rvo-link">Tabs - GOV.UK Design System</a>

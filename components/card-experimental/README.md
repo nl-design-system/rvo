@@ -34,5 +34,5 @@ Vanuit de Rijkshuisstijl zijn er geen richtlijnen wat betreft het card component
 
 # Bronnen
 
-- [Cards: UI-Component Definition](https://web.archive.org/web/20220309101808/https://www.nngroup.com/articles/cards-component/)
-- [How to design better cards - Kai Wong](https://uxdesign.cc/how-to-design-better-cards-2a5fa087b6c9)
+- <a href="https://web.archive.org/web/20220309101808/https://www.nngroup.com/articles/cards-component/" class="rvo-link">Cards: UI-Component Definition</a>
+- <a href="https://uxdesign.cc/how-to-design-better-cards-2a5fa087b6c9" class="rvo-link">How to design better cards - Kai Wong</a>

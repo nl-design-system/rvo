@@ -36,5 +36,5 @@ Vanuit de Rijkshuisstijl zijn er geen specifieke richtlijnen wat betreft het tex
 
 # Bronnen
 
-- [The problem with placeholders and what to do instead](https://web.archive.org/web/20250511143112/https://adamsilver.io/blog/the-problem-with-placeholders-and-what-to-do-instead/)
-- [Why the Email Confirmation Field Must Die](https://web.archive.org/web/20250328104206/https://uxmovement.com/forms/why-the-email-confirmation-field-must-die/)
+- <a href="https://web.archive.org/web/20250511143112/https://adamsilver.io/blog/the-problem-with-placeholders-and-what-to-do-instead/" class="rvo-link">The problem with placeholders and what to do instead</a>
+- <a href="https://web.archive.org/web/20250328104206/https://uxmovement.com/forms/why-the-email-confirmation-field-must-die/" class="rvo-link">Why the Email Confirmation Field Must Die</a>

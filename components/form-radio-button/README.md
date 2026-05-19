@@ -24,4 +24,4 @@ De omlijning van de radio button is zwart in plaats van donkergrijs zoals staat 
 
 ## Bronnen
 
-- [Radio Buttons: Select One by Default or Leave All Unselected? - Kara Pernice](https://web.archive.org/web/20220808214536/https://www.nngroup.com/articles/radio-buttons-default-selection/)
+- <a href="https://web.archive.org/web/20220808214536/https://www.nngroup.com/articles/radio-buttons-default-selection/" class="rvo-link">Radio Buttons: Select One by Default or Leave All Unselected? - Kara Pernice</a>
