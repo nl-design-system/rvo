@@ -1,6 +1,6 @@
-Deze tabel geeft de syncstatus weer tussen de Storybook-implementatie en de bijbehorende Figma-pagina per component.
+Deze tabel geeft de status weer van de synchronisatie tussen het code component (zoals zichtbaar in Storybook) en het bijbehorende Figma component.
 
-**Visuele check**: een component is pas als synchroon gemarkeerd als de visuele vergelijking is uitgevoerd — dat wil zeggen dat een screenshot van de Storybook-story en een export van het Figma-frame naast elkaar zijn gelegd en minder dan 10% van elkaar afwijken. Dit wordt gedaan met een apart tooltje dat automatisch beide vergelijkt. Zolang die check niet is uitgevoerd, staat de status op _Nog niet gecheckt_.
+De code componenten zijn leidend maar we proberen de Figma componenten voor minimaal negentig procent overeen te laten komen. Als dit het geval is staat er 'Ja' in de Sync kolom.
 
 | Naam                   | Figma                                                                                                     | Sync                | Laatste check | Opmerkingen                                                                                                           |
 | ---------------------- | --------------------------------------------------------------------------------------------------------- | ------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
