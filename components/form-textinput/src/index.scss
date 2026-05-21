@@ -31,7 +31,10 @@ textarea.utrecht-textbox {
 
 .utrecht-textbox:focus,
 .utrecht-textbox--focus {
+  outline-color: var(--utrecht-focus-outline-color, revert);
   outline-offset: var(--rvo-textbox-outline-offset);
+  outline-style: var(--utrecht-focus-outline-style, revert);
+  outline-width: var(--utrecht-focus-outline-width, revert);
 }
 
 .utrecht-textbox--focus.utrecht-textbox--invalid,
