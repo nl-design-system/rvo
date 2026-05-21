@@ -71,7 +71,7 @@
       },
       "semibold": {
         "$type": "fontWeights",
-        "value": "550"
+        "value": "625"
       },
       "bold": {
         "$type": "fontWeights",
