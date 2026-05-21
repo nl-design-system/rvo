@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "cssnano": "7.1.2",
-    "postcss": "8.5.6",
-    "sass": "1.97.2"
+    "postcss": "8.5.15",
+    "sass": "1.99.0"
   }
 }
