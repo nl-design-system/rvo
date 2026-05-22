@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-css
 
+## 4.20.2
+
+### Patch Changes
+
+- 98006c0: ROOS-351: prevents checkbox shrinking
+
 ## 4.20.1
 
 ### Patch Changes

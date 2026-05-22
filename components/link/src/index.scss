@@ -14,6 +14,10 @@
   text-decoration-line: var(--rvo-link-text-decoration);
   text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
   text-underline-offset: var(--rvo-link-text-underline-offset);
+
+  &__text {
+    display: block;
+  }
 }
 
 .rvo-link.rvo-link--normal,
@@ -129,12 +133,12 @@
 }
 
 .rvo-link--full-card-link::after {
+  block-size: 100%;
   content: "";
   display: inline-block;
-  height: 100%;
-  left: 0;
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
   z-index: 1;
 }

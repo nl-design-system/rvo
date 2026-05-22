@@ -6,12 +6,12 @@
     position: relative;
 
     &::after {
+      block-size: 100%;
       border: 2px solid #fff;
       content: "";
       display: block;
-      height: 100%;
+      inline-size: 100%;
       position: absolute;
-      width: 100%;
     }
   }
 

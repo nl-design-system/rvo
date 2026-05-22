@@ -1,5 +1,14 @@
 # @nl-rvo/component-library-react
 
+## 7.1.2
+
+### Patch Changes
+
+- 98006c0: ROOS-351: prevents checkbox shrinking
+- e326332: Added focus states to mobile menu toggle button and links.
+- Updated dependencies [98006c0]
+  - @nl-rvo/component-library-css@4.20.2
+
 ## 7.1.1
 
 ### Patch Changes
