@@ -6,7 +6,7 @@ slug: filteren
 sidebar_position: 4
 ---
 
-import { Button, CheckboxField, Fieldset, Heading, LayoutFlow } from "@nl-rvo/component-library-react";
+import { Button, CheckboxField, Fieldset, LayoutFlow } from "@nl-rvo/component-library-react";
 import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
 
 # Filters
@@ -18,16 +18,24 @@ import ComponentExample from "../../../../packages/docusaurus/src/components/Com
         <input type="search" className="utrecht-textbox" aria-label="Zoeken" />
         <Button kind="primary">Zoek</Button>
       </div>
-      <CheckboxField label="Ik ben/werk bij" invalid={false} options={[
-        { id: "mkb", label: "MKB (ook zzp)", checked: true },
-        { id: "grootbedrijf", label: "Grootbedrijf" },
-        { id: "agro", label: "Land- en tuinbouw / Natuur / Visserij" },
-      ]} />
-      <CheckboxField label="Status" invalid={false} options={[
-        { id: "open", label: "Open voor aanvragen", checked: true },
-        { id: "bijna-open", label: "Bijna open voor aanvragen" },
-        { id: "gesloten", label: "Gesloten voor aanvragen" },
-      ]} />
+      <CheckboxField
+        label="Ik ben/werk bij"
+        invalid={false}
+        options={[
+          { id: "mkb", label: "MKB (ook zzp)", checked: true },
+          { id: "grootbedrijf", label: "Grootbedrijf" },
+          { id: "agro", label: "Land- en tuinbouw / Natuur / Visserij" },
+        ]}
+      />
+      <CheckboxField
+        label="Status"
+        invalid={false}
+        options={[
+          { id: "open", label: "Open voor aanvragen", checked: true },
+          { id: "bijna-open", label: "Bijna open voor aanvragen" },
+          { id: "gesloten", label: "Gesloten voor aanvragen" },
+        ]}
+      />
     </LayoutFlow>
   </Fieldset>
 </ComponentExample>

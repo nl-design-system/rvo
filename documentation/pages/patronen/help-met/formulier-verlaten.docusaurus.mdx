@@ -6,15 +6,23 @@ slug: formulier-verlaten
 sidebar_position: 5
 ---
 
-import { useState } from "react";
 import { ActionGroup, Button, Dialog, Heading, Link } from "@nl-rvo/component-library-react";
+import { useState } from "react";
 
 export const FormulierVerlatenVoorbeeld = () => {
   const [isOpen, setIsOpen] = useState(false);
   const sluiten = () => setIsOpen(false);
   return (
     <>
-      <Link href="#" onClick={(e) => { e.preventDefault(); setIsOpen(true); }}>Bekijk een voorbeeld</Link>
+      <Link
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          setIsOpen(true);
+        }}
+      >
+        Bekijk een voorbeeld
+      </Link>
       <Dialog
         isOpen={isOpen}
         isModal={true}
@@ -25,9 +33,15 @@ export const FormulierVerlatenVoorbeeld = () => {
         onClose={sluiten}
         actionGroup={
           <ActionGroup>
-            <Button kind="primary" onClick={sluiten}>Opslaan en sluiten</Button>
-            <Button kind="secondary" onClick={sluiten}>Terug</Button>
-            <Button kind="warning-subtle" onClick={sluiten}>Sluiten zonder opslaan</Button>
+            <Button kind="primary" onClick={sluiten}>
+              Opslaan en sluiten
+            </Button>
+            <Button kind="secondary" onClick={sluiten}>
+              Terug
+            </Button>
+            <Button kind="warning-subtle" onClick={sluiten}>
+              Sluiten zonder opslaan
+            </Button>
           </ActionGroup>
         }
       >
@@ -42,7 +56,9 @@ export const FormulierVerlatenVoorbeeld = () => {
 
 Wanneer een klant een formulier probeert te verlaten met niet-opgeslagen wijzigingen, vraag dan altijd om bevestiging en bied de mogelijkheid om de voortgang op te slaan.
 
-<div className="rvo-margin-block-end--xl"><FormulierVerlatenVoorbeeld /></div>
+<div className="rvo-margin-block-end--xl">
+  <FormulierVerlatenVoorbeeld />
+</div>
 
 ## Wanneer gebruiken
 
