@@ -1,0 +1,56 @@
+---
+title: Fouten oplossen
+hide_table_of_contents: true
+hide_title: true
+slug: fouten
+sidebar_position: 104
+---
+
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Fouten oplossen
+
+Als de bezoeker foutieve gegevens heeft ingevoerd, toon dan altijd een foutmelding bovenaan het formulier.
+
+<ComponentExample>
+  <div className="rvo-alert rvo-alert--error">
+    <div className="rvo-alert__container">
+      <span
+        className="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
+        aria-hidden="true"
+      ></span>
+      <div className="rvo-alert-text">
+        <strong>Herstel de fouten om door te gaan</strong>
+        <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
+          <li>
+            {"Het invullen van uw "}
+            <a href="#naam" className="rvo-link rvo-link--donkerblauw">
+              {"naam"}
+            </a>
+            {" is verplicht. Vul een antwoord in."}
+          </li>
+          <li>
+            {"U heeft een ongeldig "}
+            <a href="#emailadres" className="rvo-link rvo-link--donkerblauw">
+              {"e-mailadres"}
+            </a>
+            {" ingevuld. Vul uw juiste e-mailadres in."}
+          </li>
+          <li>
+            {"Vul een geldig "}
+            <a href="#telefoonnummer" className="rvo-link rvo-link--donkerblauw">
+              {"telefoonnummer"}
+            </a>
+            {" in (bijvoorbeeld: 0612345678)."}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ComponentExample>
+
+## Richtlijnen
+
+- Toon een overzicht van alle fouten in het formulier in een error alert.
+- Maak alle fouten aanklikbaar zodat de gebruiker naar het desbetreffende veld navigeert en de fout kan herstellen.
+- Schrijf foutmeldingen volgens de richtlijnen in de <a href="/rvo/docs/schrijfwijzer/meldingsteksten#foutmeldingen" className="rvo-link">schrijfwijzer over meldingsteksten</a>.

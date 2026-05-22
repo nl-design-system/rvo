@@ -1,0 +1,80 @@
+---
+title: Formulier verlaten
+hide_title: true
+hide_table_of_contents: true
+slug: formulier-verlaten
+sidebar_position: 105
+---
+
+import { ActionGroup, Button, Dialog, Heading, Link } from "@nl-rvo/component-library-react";
+import { useState } from "react";
+
+export const FormulierVerlatenVoorbeeld = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const sluiten = () => setIsOpen(false);
+  return (
+    <>
+      <Link
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          setIsOpen(true);
+        }}
+      >
+        Bekijk een voorbeeld
+      </Link>
+      <Dialog
+        isOpen={isOpen}
+        isModal={true}
+        type="centered-dialog"
+        centeredDialogSize="md"
+        backgroundColor="wit"
+        ariaLabel="Wijzigingen opslaan?"
+        onClose={sluiten}
+        actionGroup={
+          <ActionGroup>
+            <Button kind="primary" onClick={sluiten}>
+              Opslaan en sluiten
+            </Button>
+            <Button kind="secondary" onClick={sluiten}>
+              Terug
+            </Button>
+            <Button kind="warning-subtle" onClick={sluiten}>
+              Sluiten zonder opslaan
+            </Button>
+          </ActionGroup>
+        }
+      >
+        <Heading type="h2">Wijzigingen opslaan?</Heading>
+        <p>U heeft wijzigingen gemaakt die nog niet zijn opgeslagen.</p>
+      </Dialog>
+    </>
+  );
+};
+
+# Formulier verlaten
+
+Wanneer een klant een formulier probeert te verlaten met niet-opgeslagen wijzigingen, vraag dan altijd om bevestiging en bied de mogelijkheid om de voortgang op te slaan.
+
+<div className="rvo-margin-block-end--xl">
+  <FormulierVerlatenVoorbeeld />
+</div>
+
+## Wanneer gebruiken
+
+Toon een bevestigingsdialoog bij het verlaten van een formulier als:
+
+- De klant wijzigingen heeft gemaakt die nog niet zijn opgeslagen.
+- Het formulier meerdere stappen bevat en de klant halverwege afbreekt.
+- Het sluiten van het formulier leidt tot verlies van gegevens.
+
+## Richtlijnen
+
+- Toon een dialoog modal met een duidelijke vraag: "Wilt u uw wijzigingen opslaan voordat u verdergaat?"
+- Bied altijd drie opties:
+  - **Opslaan en sluiten** — wijzigingen worden bewaard als concept.
+  - **Terug** — de klant keert terug naar het formulier.
+  - **Sluiten zonder opslaan** — wijzigingen gaan verloren.
+- Zorg dat de primaire acties het opslaan en sluiten van het formulier zodat er niet per ongeluk gegevens verloren gaan.
+- Informeer de klant na opslaan expliciet dat de aanvraag nog niet is ingediend. Voorbeeld: "Uw aanvraag is opgeslagen als concept. U heeft de aanvraag nog niet ingediend."
+- Sla de voortgang op en herstel de laatste actieve stap wanneer de klant terugkeert.

@@ -1,0 +1,46 @@
+---
+title: Bevestiging en vervolg
+hide_title: true
+hide_table_of_contents: true
+slug: bevestiging-en-vervolg
+sidebar_position: 102
+---
+
+import { Alert, Heading, Link, List } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Bevestiging en vervolg
+
+Toon na een succesvolle indiening altijd een bevestigingspagina die de klant bevestigt dat de aanvraag of melding is ontvangen.
+
+<ComponentExample>
+  <div>
+    <Heading type="h1">Bevestiging</Heading>
+    <Alert kind="success" heading="Uw aanvraag is ontvangen" content="Uw zaaknummer is: RVO-2025-738294" />
+    <Heading type="h2" className="rvo-margin-block-start--lg">
+      Wat gebeurt er nu?
+    </Heading>
+    <List
+      items={[
+        "RVO beoordeelt uw aanvraag. Dit duurt maximaal 13 weken.",
+        "U ontvangt een bevestiging op het e-mailadres dat u heeft opgegeven.",
+        "Als er aanvullende informatie nodig is, neemt RVO contact met u op.",
+      ]}
+    />
+    <Link href="#" showIcon="before" icon="terug" noUnderline className="rvo-margin-block-start--lg">
+      {"Terug naar het overzicht"}
+    </Link>
+  </div>
+</ComponentExample>
+
+## Wanneer gebruiken
+
+Toon een bevestigingspagina wanneer een klant een aanvraag of registratie heeft ingediend.
+
+## Richtlijnen
+
+- Toon een duidelijke bevestigingsboodschap, zoals: "Uw aanvraag is ontvangen." in een succes alert als positieve bevestiging.
+- Vermeld het zaaknummer of kenmerk van de ingediende aanvraag of registratie zodat de klant ernaar kan verwijzen wanneer er contact opgenomen wordt.
+- Informeer de klant over de vervolgstappen: wat gebeurt er nu, wanneer kan de klant een reactie verwachten en via welk kanaal.
+- Informeer de klant of er een bevestigingsmail wordt verstuurd en op welk e-mailadres.
+- Geef de klant een duidelijke vervolgactie, zoals terugkeren naar het dashboard of een nieuwe aanvraag starten.

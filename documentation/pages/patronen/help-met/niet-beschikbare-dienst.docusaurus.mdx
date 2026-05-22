@@ -1,0 +1,38 @@
+---
+title: Niet beschikbare dienst
+hide_title: true
+hide_table_of_contents: true
+slug: niet-beschikbare-dienst
+sidebar_position: 111
+---
+
+import { Heading, Link, Paragraph } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Niet beschikbare dienst
+
+Gebruik deze pagina wanneer een dienst tijdelijk of permanent niet beschikbaar is.
+
+<ComponentExample>
+  <div>
+    <Heading type="h1">Deze dienst is tijdelijk niet beschikbaar</Heading>
+    <Paragraph>
+      {
+        "Door gepland onderhoud is deze dienst tijdelijk niet bereikbaar. Wij verwachten dat deze dienst woensdag 13 mei om 08:00 weer beschikbaar is. Neem "
+      }
+      <Link href="#">contact</Link>
+      {" met ons op als u vragen heeft."}
+    </Paragraph>
+  </div>
+</ComponentExample>
+
+Gebruik dit patroon niet als er een technisch probleem is tijdens gebruik van de dienst — gebruik daarvoor het patroon <a href="/rvo/docs/patronen/help-met/niet-bereikbare-dienst" className="rvo-link">Niet bereikbare dienst</a>.
+
+## Richtlijnen
+
+Op de pagina moet minimaal het volgende staan:
+
+- De reden waarom de dienst niet beschikbaar is.
+- De datum en tijd wanneer verwacht wordt dat de dienst weer beschikbaar is.
+- Een mogelijkheid om contact op te nemen voor vragen.
+- Gebruik geen waarschuwing of foutmelding alert.
