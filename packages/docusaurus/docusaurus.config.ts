@@ -112,7 +112,7 @@ const config: Config = {
     ...navigationConfig,
   } satisfies Preset.ThemeConfig,
   future: {
-    experimental_faster: true,
+    experimental_faster: false,
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
     },
