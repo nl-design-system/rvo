@@ -77,3 +77,6 @@ pnpm-lock.yaml
 
 # Playwright (Claude Code MCP)
 .playwright-mcp
+
+# Claude Code
+.claude/
