@@ -1,0 +1,17 @@
+{
+  "name": "@nl-rvo/figma-sync",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vergelijkt Storybook-renders met Figma-exports en signaleert visuele drift.",
+  "scripts": {
+    "compare": "node compare.mjs",
+    "sync": "./sync.sh"
+  },
+  "dependencies": {
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.49.0",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.33.5"
+  }
+}

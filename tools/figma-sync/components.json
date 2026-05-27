@@ -1,0 +1,37 @@
+{
+  "figmaFileId": "Sj6myBL1Fvot5M1qGxzvEo",
+  "threshold": 0.90,
+  "components": {
+    "button": {
+      "storybookId": "componenten-button--default",
+      "paths": [
+        "components/button/**",
+        "packages/component-library-react/src/components/button/**"
+      ],
+      "figmaComponentSetId": "4127:18556",
+      "figmaNamePattern": "Size={size}, Kind={kindFigma}, Hover=False",
+      "argsPattern": "kind:{kind};size:{size};showIcon:after;icon:home",
+      "axes": {
+        "kind": ["primary", "secondary", "tertiary", "quaternary", "warning", "warning-subtle"],
+        "size": ["md", "sm", "xs"]
+      },
+      "valueMaps": {
+        "kindFigma": {
+          "axis": "kind",
+          "values": {
+            "primary": "Primary",
+            "secondary": "Secondary",
+            "tertiary": "Tertiary",
+            "quaternary": "Quaternary",
+            "warning": "Warning",
+            "warning-subtle": "Warning subtle"
+          }
+        }
+      },
+      "thresholds": {
+        "tertiary-*": 0.70,
+        "warning-subtle-*": 0.70
+      }
+    }
+  }
+}
