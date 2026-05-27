@@ -12,17 +12,18 @@ Een Footer bestaat uit:
 
 - Optionele lijsten met links
 - Optionele pay-off
-- Verplichte links waaronder aan de onderkant van de footer:
-  - Contact: verwijst naar de algemene contactpagina op de website van RVO.
-  - Privacy: verwijst naar de Privacy pagina op de website van RVO.
-  - Cookies en anti-spam: verwijst naar de Cookies en anti-spam pagina op de website van RVO.
-  - Toegankelijkheid: verwijst naar de specifieke eigen toegankelijkheidsverklaring van de website of applicatie.
-  - Proclaimer: verwijst naar de Proclaimer pagina op de website van RVO.
+- Verplichte links aan de onderkant van de footer:
+  - Contact: verwijst naar een contactpagina.
+  - Privacy: verwijst naar een pagina met informatie over Privacy.
+  - Cookies en/of anti-spam: verwijst naar een pagina met informatie over de Cookies die geplaatst worden en/of anti-spam maatregelen die genomen worden.
+  - Toegankelijkheid: verwijst naar de toegankelijkheidsverklaring van de website of applicatie.
+  - Proclaimer: verwijst naar de Proclaimer van de website.
   - Kwetsbaarheid melden: verwijst naar de kwetsbaarheid melden pagina op de website van RVO.
   - Webarchief: verwijst naar de archivering van de website of applicatie.
 
 ## Richtlijnen
 
+- Voor applicaties en websites die alleen bereikt kunnen worden door in te loggen via rvo.nl of mijn.rvo.nl geldt dat de verplichte links altijd verwijzen naar de desbetreffende pagina's op rvo.nl.
 - Een Footer moet elke pagina binnen de applicatie of website zichtbaar zijn.
 - Een Footer moet altijd de verplichte links bevatten.
 - Links die verwijzen naar een externe pagina worden geopend in een nieuw tabblad of venster.
