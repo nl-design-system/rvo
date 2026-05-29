@@ -5,21 +5,23 @@ hide_table_of_contents: true
 slug: /figma-sync/menu-item
 ---
 
-import { Link } from '@nl-rvo/component-library-react';
+import { Link } from "@nl-rvo/component-library-react";
 
-import sb_lg_inactive from './img/menu-item/lg-inactive-storybook.png';
-import figma_lg_inactive from './img/menu-item/lg-inactive-figma.png';
-import diff_lg_inactive from './img/menu-item/lg-inactive-diff.png';
-import sb_md_inactive from './img/menu-item/md-inactive-storybook.png';
-import figma_md_inactive from './img/menu-item/md-inactive-figma.png';
-import diff_md_inactive from './img/menu-item/md-inactive-diff.png';
-import sb_sm_inactive from './img/menu-item/sm-inactive-storybook.png';
-import figma_sm_inactive from './img/menu-item/sm-inactive-figma.png';
-import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
+import sb_lg_inactive from "./img/menu-item/lg-inactive-storybook.png";
+import figma_lg_inactive from "./img/menu-item/lg-inactive-figma.png";
+import diff_lg_inactive from "./img/menu-item/lg-inactive-diff.png";
+import sb_md_inactive from "./img/menu-item/md-inactive-storybook.png";
+import figma_md_inactive from "./img/menu-item/md-inactive-figma.png";
+import diff_md_inactive from "./img/menu-item/md-inactive-diff.png";
+import sb_sm_inactive from "./img/menu-item/sm-inactive-storybook.png";
+import figma_sm_inactive from "./img/menu-item/sm-inactive-figma.png";
+import diff_sm_inactive from "./img/menu-item/sm-inactive-diff.png";
 
 <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-layout-column rvo-layout-gap--md" style={{maxWidth: "912px", margin: "0 auto"}}>
 
-<Link href="/rvo/docs/figma-sync" showIcon="before" icon="terug" noUnderline>Terug naar overzicht</Link>
+<Link href="/rvo/docs/figma-sync" showIcon="before" icon="terug" noUnderline>
+  Terug naar overzicht
+</Link>
 
 # Figma sync rapport: menu-item
 
@@ -31,31 +33,31 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
   <table className="rvo-table">
     <thead className="rvo-table-head">
       <tr className="rvo-table-row">
-          <th className="rvo-table-header">Variant</th>
-          <th className="rvo-table-header">Visueel</th>
-          <th className="rvo-table-header">Properties</th>
-          <th className="rvo-table-header">Status</th>
+        <th className="rvo-table-header">Variant</th>
+        <th className="rvo-table-header">Visueel</th>
+        <th className="rvo-table-header">Properties</th>
+        <th className="rvo-table-header">Status</th>
       </tr>
     </thead>
     <tbody className="rvo-table-body">
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">lg-inactive</td>
-            <td className="rvo-table-cell">89.53%</td>
-            <td className="rvo-table-cell">7 afwijkend</td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">md-inactive</td>
-            <td className="rvo-table-cell">90.86%</td>
-            <td className="rvo-table-cell">6 afwijkend</td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">sm-inactive</td>
-            <td className="rvo-table-cell">92.65%</td>
-            <td className="rvo-table-cell">8 afwijkend</td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">lg-inactive</td>
+        <td className="rvo-table-cell">89.53%</td>
+        <td className="rvo-table-cell">7 afwijkend</td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">md-inactive</td>
+        <td className="rvo-table-cell">90.86%</td>
+        <td className="rvo-table-cell">6 afwijkend</td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">sm-inactive</td>
+        <td className="rvo-table-cell">92.65%</td>
+        <td className="rvo-table-cell">8 afwijkend</td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -68,18 +70,30 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
 - Properties: MISMATCH
 - Figma: <code>7175:1275</code>
 
-<div style={{display:'flex', gap:'12px', marginBottom:'16px'}}>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Storybook</figcaption>
-    <img src={sb_lg_inactive} alt="Storybook render" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+<div style={{ display: "flex", gap: "12px", marginBottom: "16px" }}>
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Storybook</figcaption>
+    <img
+      src={sb_lg_inactive}
+      alt="Storybook render"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Figma</figcaption>
-    <img src={figma_lg_inactive} alt="Figma export" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Figma</figcaption>
+    <img
+      src={figma_lg_inactive}
+      alt="Figma export"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Diff (roze = afwijking)</figcaption>
-    <img src={diff_lg_inactive} alt="Visueel verschil" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Diff (roze = afwijking)</figcaption>
+    <img
+      src={diff_lg_inactive}
+      alt="Visueel verschil"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
 </div>
 
@@ -87,91 +101,143 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
   <table className="rvo-table">
     <thead className="rvo-table-head">
       <tr className="rvo-table-row">
-          <th className="rvo-table-header">Property</th>
-          <th className="rvo-table-header">Storybook</th>
-          <th className="rvo-table-header">Figma</th>
-          <th className="rvo-table-header">Status</th>
+        <th className="rvo-table-header">Property</th>
+        <th className="rvo-table-header">Storybook</th>
+        <th className="rvo-table-header">Figma</th>
+        <th className="rvo-table-header">Status</th>
       </tr>
     </thead>
     <tbody className="rvo-table-body">
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">width</td>
-            <td className="rvo-table-cell"><code>78</code></td>
-            <td className="rvo-table-cell"><code>113</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">height</td>
-            <td className="rvo-table-cell"><code>48</code></td>
-            <td className="rvo-table-cell"><code>50</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-radius</td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-width</td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-color</td>
-            <td className="rvo-table-cell"><code>rgb(0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgba(0, 0, 0, 0)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">background</td>
-            <td className="rvo-table-cell"><code>rgba(0, 0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgb(255, 255, 255)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">text-color</td>
-            <td className="rvo-table-cell"><code>rgb(0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgb(21, 66, 115)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">font-size</td>
-            <td className="rvo-table-cell"><code>18</code></td>
-            <td className="rvo-table-cell"><code>18</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">font-weight</td>
-            <td className="rvo-table-cell"><code>400</code></td>
-            <td className="rvo-table-cell"><code>400</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-top</td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-right</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-bottom</td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-left</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">width</td>
+        <td className="rvo-table-cell">
+          <code>78</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>113</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">height</td>
+        <td className="rvo-table-cell">
+          <code>48</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>50</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-radius</td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-width</td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-color</td>
+        <td className="rvo-table-cell">
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgba(0, 0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">background</td>
+        <td className="rvo-table-cell">
+          <code>rgba(0, 0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">text-color</td>
+        <td className="rvo-table-cell">
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgb(21, 66, 115)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">font-size</td>
+        <td className="rvo-table-cell">
+          <code>18</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>18</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">font-weight</td>
+        <td className="rvo-table-cell">
+          <code>400</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>400</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-top</td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-right</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-bottom</td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-left</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -182,18 +248,30 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
 - Properties: MISMATCH
 - Figma: <code>4234:20370</code>
 
-<div style={{display:'flex', gap:'12px', marginBottom:'16px'}}>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Storybook</figcaption>
-    <img src={sb_md_inactive} alt="Storybook render" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+<div style={{ display: "flex", gap: "12px", marginBottom: "16px" }}>
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Storybook</figcaption>
+    <img
+      src={sb_md_inactive}
+      alt="Storybook render"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Figma</figcaption>
-    <img src={figma_md_inactive} alt="Figma export" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Figma</figcaption>
+    <img
+      src={figma_md_inactive}
+      alt="Figma export"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Diff (roze = afwijking)</figcaption>
-    <img src={diff_md_inactive} alt="Visueel verschil" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Diff (roze = afwijking)</figcaption>
+    <img
+      src={diff_md_inactive}
+      alt="Visueel verschil"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
 </div>
 
@@ -201,91 +279,143 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
   <table className="rvo-table">
     <thead className="rvo-table-head">
       <tr className="rvo-table-row">
-          <th className="rvo-table-header">Property</th>
-          <th className="rvo-table-header">Storybook</th>
-          <th className="rvo-table-header">Figma</th>
-          <th className="rvo-table-header">Status</th>
+        <th className="rvo-table-header">Property</th>
+        <th className="rvo-table-header">Storybook</th>
+        <th className="rvo-table-header">Figma</th>
+        <th className="rvo-table-header">Status</th>
       </tr>
     </thead>
     <tbody className="rvo-table-body">
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">width</td>
-            <td className="rvo-table-cell"><code>72</code></td>
-            <td className="rvo-table-cell"><code>104</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">height</td>
-            <td className="rvo-table-cell"><code>48</code></td>
-            <td className="rvo-table-cell"><code>48</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-radius</td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-width</td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-color</td>
-            <td className="rvo-table-cell"><code>rgb(0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgba(0, 0, 0, 0)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">background</td>
-            <td className="rvo-table-cell"><code>rgba(0, 0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgb(255, 255, 255)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">text-color</td>
-            <td className="rvo-table-cell"><code>rgb(0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgb(21, 66, 115)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">font-size</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">font-weight</td>
-            <td className="rvo-table-cell"><code>400</code></td>
-            <td className="rvo-table-cell"><code>400</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-top</td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-right</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-bottom</td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-left</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">width</td>
+        <td className="rvo-table-cell">
+          <code>72</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>104</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">height</td>
+        <td className="rvo-table-cell">
+          <code>48</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>48</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-radius</td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-width</td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-color</td>
+        <td className="rvo-table-cell">
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgba(0, 0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">background</td>
+        <td className="rvo-table-cell">
+          <code>rgba(0, 0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">text-color</td>
+        <td className="rvo-table-cell">
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgb(21, 66, 115)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">font-size</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">font-weight</td>
+        <td className="rvo-table-cell">
+          <code>400</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>400</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-top</td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-right</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-bottom</td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-left</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -296,18 +426,30 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
 - Properties: MISMATCH
 - Figma: <code>4234:20382</code>
 
-<div style={{display:'flex', gap:'12px', marginBottom:'16px'}}>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Storybook</figcaption>
-    <img src={sb_sm_inactive} alt="Storybook render" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+<div style={{ display: "flex", gap: "12px", marginBottom: "16px" }}>
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Storybook</figcaption>
+    <img
+      src={sb_sm_inactive}
+      alt="Storybook render"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Figma</figcaption>
-    <img src={figma_sm_inactive} alt="Figma export" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Figma</figcaption>
+    <img
+      src={figma_sm_inactive}
+      alt="Figma export"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
-  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
-    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Diff (roze = afwijking)</figcaption>
-    <img src={diff_sm_inactive} alt="Visueel verschil" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  <figure style={{ margin: 0, flex: "1 1 0", minWidth: 0 }}>
+    <figcaption style={{ fontSize: "0.8em", color: "#666", marginBottom: "4px" }}>Diff (roze = afwijking)</figcaption>
+    <img
+      src={diff_sm_inactive}
+      alt="Visueel verschil"
+      style={{ width: "100%", height: "auto", border: "1px solid #e0e0e0" }}
+    />
   </figure>
 </div>
 
@@ -315,91 +457,143 @@ import diff_sm_inactive from './img/menu-item/sm-inactive-diff.png';
   <table className="rvo-table">
     <thead className="rvo-table-head">
       <tr className="rvo-table-row">
-          <th className="rvo-table-header">Property</th>
-          <th className="rvo-table-header">Storybook</th>
-          <th className="rvo-table-header">Figma</th>
-          <th className="rvo-table-header">Status</th>
+        <th className="rvo-table-header">Property</th>
+        <th className="rvo-table-header">Storybook</th>
+        <th className="rvo-table-header">Figma</th>
+        <th className="rvo-table-header">Status</th>
       </tr>
     </thead>
     <tbody className="rvo-table-body">
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">width</td>
-            <td className="rvo-table-cell"><code>68</code></td>
-            <td className="rvo-table-cell"><code>86</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">height</td>
-            <td className="rvo-table-cell"><code>48</code></td>
-            <td className="rvo-table-cell"><code>44</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-radius</td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-width</td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell"><code>0</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">border-color</td>
-            <td className="rvo-table-cell"><code>rgb(0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgba(0, 0, 0, 0)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">background</td>
-            <td className="rvo-table-cell"><code>rgba(0, 0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgb(255, 255, 255)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">text-color</td>
-            <td className="rvo-table-cell"><code>rgb(0, 0, 0)</code></td>
-            <td className="rvo-table-cell"><code>rgb(21, 66, 115)</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">font-size</td>
-            <td className="rvo-table-cell"><code>14</code></td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">font-weight</td>
-            <td className="rvo-table-cell"><code>400</code></td>
-            <td className="rvo-table-cell"><code>400</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-top</td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-right</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-bottom</td>
-            <td className="rvo-table-cell"><code>12</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">MISMATCH</td>
-          </tr>
-          <tr className="rvo-table-row">
-            <td className="rvo-table-cell">padding-left</td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell"><code>16</code></td>
-            <td className="rvo-table-cell">OK</td>
-          </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">width</td>
+        <td className="rvo-table-cell">
+          <code>68</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>86</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">height</td>
+        <td className="rvo-table-cell">
+          <code>48</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>44</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-radius</td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-width</td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>0</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">border-color</td>
+        <td className="rvo-table-cell">
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgba(0, 0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">background</td>
+        <td className="rvo-table-cell">
+          <code>rgba(0, 0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgb(255, 255, 255)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">text-color</td>
+        <td className="rvo-table-cell">
+          <code>rgb(0, 0, 0)</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>rgb(21, 66, 115)</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">font-size</td>
+        <td className="rvo-table-cell">
+          <code>14</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">font-weight</td>
+        <td className="rvo-table-cell">
+          <code>400</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>400</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-top</td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-right</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-bottom</td>
+        <td className="rvo-table-cell">
+          <code>12</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">MISMATCH</td>
+      </tr>
+      <tr className="rvo-table-row">
+        <td className="rvo-table-cell">padding-left</td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">
+          <code>16</code>
+        </td>
+        <td className="rvo-table-cell">OK</td>
+      </tr>
     </tbody>
   </table>
 </div>
