@@ -88,14 +88,36 @@ function thresholdForVariant(variantName) {
   return defaultThreshold;
 }
 
+function thresholdNoteForVariant(variantName) {
+  const notes = component.thresholdNotes ?? {};
+  for (const [pattern, note] of Object.entries(notes)) {
+    if (globToRegex(pattern).test(variantName)) return note;
+  }
+  return null;
+}
+
+function viewportWidthForVariant(variantName) {
+  const widths = component.screenshotViewportWidths ?? {};
+  for (const [pattern, value] of Object.entries(widths)) {
+    if (globToRegex(pattern).test(variantName)) return value;
+  }
+  return component.screenshotViewportWidth ?? 1280;
+}
+
 function buildVariants() {
   if (component.variants) {
     return Object.entries(component.variants).map(([name, v]) => ({
       name,
       args: v.args,
+      storybookId: v.storybookId ?? null,
       figmaName: null,
       figmaNodeId: v.figmaNodeId,
-      threshold: v.threshold ?? defaultThreshold,
+      threshold: v.threshold ?? thresholdForVariant(name),
+      thresholdNote: thresholdNoteForVariant(name),
+      screenshotViewportWidth: v.screenshotViewportWidth ?? viewportWidthForVariant(name),
+      screenshotSelector: v.screenshotSelector ?? null,
+      openSelector: v.openSelector ?? null,
+      focusSelector: v.focusSelector ?? null,
     }));
   }
   if (!component.axes) {
@@ -106,11 +128,25 @@ function buildVariants() {
     const name = Object.values(combo).join('-');
     const args = renderTemplate(component.argsPattern, combo, component.valueMaps);
     const figmaName = renderTemplate(component.figmaNamePattern, combo, component.valueMaps);
-    return { name, args, figmaName, figmaNodeId: null, threshold: thresholdForVariant(name) };
+    return { name, args, figmaName, figmaNodeId: null, threshold: thresholdForVariant(name), thresholdNote: thresholdNoteForVariant(name), screenshotViewportWidth: viewportWidthForVariant(name) };
   });
 }
 
 const variants = buildVariants();
+
+// ---------- Figma fetch met retry bij 429 ----------
+
+async function figmaFetch(url, retries = 4) {
+  const doFetch = () => fetch(url, { headers: { 'X-Figma-Token': FIGMA_TOKEN } });
+  for (let i = 0; i < retries; i++) {
+    const res = await doFetch();
+    if (res.status !== 429) return res;
+    const wait = (i + 1) * 8000;
+    console.log(`  Figma 429 — wacht ${wait / 1000}s (poging ${i + 1}/${retries})...`);
+    await new Promise((r) => setTimeout(r, wait));
+  }
+  return doFetch();
+}
 
 // ---------- Figma COMPONENT_SET children pre-fetchen voor name-lookup ----------
 
@@ -119,7 +155,7 @@ async function fetchFigmaNameMap() {
   const url = `https://api.figma.com/v1/files/${config.figmaFileId}/nodes?ids=${encodeURIComponent(
     component.figmaComponentSetId,
   )}`;
-  const res = await fetch(url, { headers: { 'X-Figma-Token': FIGMA_TOKEN } });
+  const res = await figmaFetch(url);
   if (!res.ok) throw new Error(`Figma nodes API (set): ${res.status} ${res.statusText}`);
   const data = await res.json();
   const setNode = data.nodes?.[component.figmaComponentSetId]?.document;
@@ -148,15 +184,35 @@ console.log(`[${componentName}] ${variants.length} variant(en):`, variants.map((
 // ---------- Storybook: screenshot + getComputedStyle ----------
 
 async function captureStorybook(browser, variant) {
-  const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+  const vpWidth = variant.screenshotViewportWidth ?? 1280;
+  const page = await browser.newPage({ viewport: { width: vpWidth, height: 800 } });
+  const storyId = variant.storybookId ?? component.storybookId;
   const argsParam = variant.args ? `&args=${encodeURIComponent(variant.args)}` : '';
-  const url = `${STORYBOOK_URL}/iframe.html?id=${component.storybookId}${argsParam}&viewMode=story`;
+  const url = `${STORYBOOK_URL}/iframe.html?id=${storyId}${argsParam}&viewMode=story`;
   await page.goto(url, { waitUntil: 'load', timeout: 30000 });
   await page.waitForSelector('#storybook-root > *', { timeout: 10000 });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(200);
 
-  const raw = await page.screenshot({ fullPage: true });
+  if (variant.openSelector) {
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.open = true;
+    }, variant.openSelector);
+    await page.waitForTimeout(100);
+  }
+
+  if (variant.focusSelector) {
+    await page.focus(variant.focusSelector);
+    await page.waitForTimeout(100);
+  }
+
+  const screenshotSel = variant.screenshotSelector ?? targetSelector;
+  const raw = screenshotSel
+    ? await page.locator(screenshotSel).first().screenshot()
+    : await page.screenshot({ fullPage: true });
+
+  const propsSel = variant.screenshotSelector ?? targetSelector;
   const props = await page.evaluate((sel) => {
     const el = document.querySelector(sel);
     if (!el) return null;
@@ -178,13 +234,16 @@ async function captureStorybook(browser, variant) {
       paddingBottom: parseFloat(cs.paddingBottom) || 0,
       paddingLeft: parseFloat(cs.paddingLeft) || 0,
     };
-  }, targetSelector);
+  }, propsSel);
   await page.close();
 
   if (!props) throw new Error(`Selector '${targetSelector}' niet gevonden voor variant '${variant.name}'`);
 
   const pngPath = path.join(outputDir, `${variant.name}-storybook.png`);
-  await sharp(raw).trim().png().toFile(pngPath);
+  // Element screenshots zijn al exact geknipt; alleen full-page screenshots hebben
+  // witte trim nodig (en alleen als de achtergrond wit is).
+  const sbImg = screenshotSel ? sharp(raw) : sharp(raw).trim();
+  await sbImg.png().toFile(pngPath);
   return { pngPath, props };
 }
 
@@ -194,7 +253,7 @@ async function fetchFigmaPng(variant) {
   const url = `https://api.figma.com/v1/images/${config.figmaFileId}?ids=${encodeURIComponent(
     variant.figmaNodeId,
   )}&scale=${FIGMA_SCALE}&format=png`;
-  const res = await fetch(url, { headers: { 'X-Figma-Token': FIGMA_TOKEN } });
+  const res = await figmaFetch(url);
   if (!res.ok) throw new Error(`Figma image API: ${res.status} ${res.statusText} (${variant.name})`);
   const data = await res.json();
   const imgUrl = data.images?.[variant.figmaNodeId];
@@ -228,7 +287,7 @@ async function fetchFigmaProps(variant) {
   const url = `https://api.figma.com/v1/files/${config.figmaFileId}/nodes?ids=${encodeURIComponent(
     variant.figmaNodeId,
   )}`;
-  const res = await fetch(url, { headers: { 'X-Figma-Token': FIGMA_TOKEN } });
+  const res = await figmaFetch(url);
   if (!res.ok) throw new Error(`Figma nodes API: ${res.status} ${res.statusText} (${variant.name})`);
   const data = await res.json();
   const node = data.nodes[variant.figmaNodeId]?.document;
@@ -366,6 +425,7 @@ try {
       figmaNodeId: variant.figmaNodeId,
       figmaName: variant.figmaName,
       threshold: variant.threshold,
+      thresholdNote: variant.thresholdNote ?? null,
       visual: { ...visual, passed: visualPassed },
       properties: { entries: propEntries, passed: propsPassed },
       passed,
@@ -388,64 +448,148 @@ const minMatch = Math.min(...results.map((r) => r.visual.matchPct));
 // ---------- Rapport ----------
 
 function fmtVal(v) {
-  if (v == null) return '`—`';
+  if (v == null) return '<code>—</code>';
   if (typeof v === 'number') {
-    return `\`${Number.isInteger(v) ? v : v.toFixed(2)}\``;
+    return `<code>${Number.isInteger(v) ? v : v.toFixed(2)}</code>`;
   }
-  return `\`${v}\``;
+  return `<code>${v}</code>`;
 }
+
+function rvoTable(headers, rows) {
+  const ths = headers.map((h) => `          <th className="rvo-table-header">${h}</th>`).join('\n');
+  const trs = rows
+    .map(
+      (cells) =>
+        `          <tr className="rvo-table-row">\n${cells.map((c) => `            <td className="rvo-table-cell">${c}</td>`).join('\n')}\n          </tr>`,
+    )
+    .join('\n');
+  return `<div className="rvo-table--responsive">
+  <table className="rvo-table">
+    <thead className="rvo-table-head">
+      <tr className="rvo-table-row">
+${ths}
+      </tr>
+    </thead>
+    <tbody className="rvo-table-body">
+${trs}
+    </tbody>
+  </table>
+</div>`;
+}
+
+// ---------- Afbeeldingen kopiëren naar docs img-map ----------
+
+function toVarId(name) {
+  return name.replace(/[^a-zA-Z0-9]/g, '_');
+}
+
+const imgDir = path.resolve(__dirname, '../../../documentation/pages/figma-sync/img', componentName);
+await fs.mkdir(imgDir, { recursive: true });
+for (const r of results) {
+  for (const suffix of ['storybook', 'figma', 'diff']) {
+    const src = path.join(outputDir, `${r.name}-${suffix}.png`);
+    const dst = path.join(imgDir, `${r.name}-${suffix}.png`);
+    await fs.copyFile(src, dst).catch(() => {});
+  }
+}
+
+// ---------- Rapport ----------
 
 function variantBlock(r) {
   const visualPct = (r.visual.matchPct * 100).toFixed(2);
   const visualStatus = r.visual.passed ? 'OK' : 'MISMATCH';
   const propsStatus = r.properties.passed ? 'OK' : 'MISMATCH';
+  const figmaRef = r.figmaName
+    ? `<code>${r.figmaName}</code> (<code>${r.figmaNodeId}</code>)`
+    : `<code>${r.figmaNodeId}</code>`;
+  const vid = toVarId(r.name);
+  const thresholdLine = r.thresholdNote && r.threshold !== defaultThreshold
+    ? `- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%, verlaagd — ${r.thresholdNote}) — ${visualStatus}`
+    : `- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%) — ${visualStatus}`;
   const head = `### ${r.name} — ${r.passed ? 'OK' : 'MISMATCH'}
 
-- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%) — ${visualStatus}
+${thresholdLine}
 - Properties: ${propsStatus}
-- Figma: ${r.figmaName ? `\`${r.figmaName}\` (\`${r.figmaNodeId}\`)` : `\`${r.figmaNodeId}\``}
+- Figma: ${figmaRef}
+
+<div style={{display:'flex', gap:'12px', marginBottom:'16px'}}>
+  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
+    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Storybook</figcaption>
+    <img src={sb_${vid}} alt="Storybook render" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  </figure>
+  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
+    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Figma</figcaption>
+    <img src={figma_${vid}} alt="Figma export" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  </figure>
+  <figure style={{margin:0, flex:'1 1 0', minWidth:0}}>
+    <figcaption style={{fontSize:'0.8em', color:'#666', marginBottom:'4px'}}>Diff (roze = afwijking)</figcaption>
+    <img src={diff_${vid}} alt="Visueel verschil" style={{width:'100%', height:'auto', border:'1px solid #e0e0e0'}} />
+  </figure>
+</div>
+
 `;
 
-  const propRows = r.properties.entries
-    .map((e) => `| ${e.label} | ${fmtVal(e.storybook)} | ${fmtVal(e.figma)} | ${e.match ? 'OK' : 'MISMATCH'} |`)
-    .join('\n');
-  const propTable = `
-| Property | Storybook | Figma | Status |
-| --- | --- | --- | --- |
-${propRows}
-`;
+  const propTable = rvoTable(
+    ['Property', 'Storybook', 'Figma', 'Status'],
+    r.properties.entries.map((e) => [e.label, fmtVal(e.storybook), fmtVal(e.figma), e.match ? 'OK' : 'MISMATCH']),
+  );
   return head + propTable;
 }
 
-const summaryRows = results
-  .map((r) => {
-    const pct = (r.visual.matchPct * 100).toFixed(2);
+const summaryTable = rvoTable(
+  ['Variant', 'Visueel', 'Properties', 'Status'],
+  results.map((r) => {
+    const pct = (r.visual.matchPct * 100).toFixed(2) + '%';
     const failedProps = r.properties.entries.filter((e) => !e.match).length;
-    return `| ${r.name} | ${pct}% | ${failedProps === 0 ? 'OK' : failedProps + ' afwijkend'} | ${r.passed ? 'OK' : 'MISMATCH'} |`;
-  })
-  .join('\n');
+    return [r.name, pct, failedProps === 0 ? 'OK' : `${failedProps} afwijkend`, r.passed ? 'OK' : 'MISMATCH'];
+  }),
+);
 
-const report = `# Figma sync rapport: ${componentName}
+const imgImports = results.flatMap((r) => {
+  const vid = toVarId(r.name);
+  return [
+    `import sb_${vid} from './img/${componentName}/${r.name}-storybook.png';`,
+    `import figma_${vid} from './img/${componentName}/${r.name}-figma.png';`,
+    `import diff_${vid} from './img/${componentName}/${r.name}-diff.png';`,
+  ];
+}).join('\n');
+
+const docusaurusPageTitle = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+const docusaurusPage = `---
+title: ${docusaurusPageTitle} — Figma sync rapport
+displayed_sidebar: null
+hide_table_of_contents: true
+slug: /figma-sync/${componentName}
+---
+
+import { Link } from '@nl-rvo/component-library-react';
+
+${imgImports}
+
+<div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-layout-column rvo-layout-gap--md" style={{maxWidth: "912px", margin: "0 auto"}}>
+
+<Link href="/rvo/docs/figma-sync" showIcon="before" icon="terug" noUnderline>Terug naar overzicht</Link>
+
+# Figma sync rapport: ${componentName}
 
 **Status**: ${overallPassed ? 'OK' : `${failing.length} van ${results.length} varianten onder drempel`}
 **Laagste visuele match**: ${(minMatch * 100).toFixed(2)}%
 **Storybook ID**: \`${component.storybookId}\`
 
-| Variant | Visueel | Properties | Status |
-| --- | --- | --- | --- |
-${summaryRows}
+${summaryTable}
 
 ---
 
-${results.map(variantBlock).join('\n')}
+${results.map(variantBlock).join('\n\n')}
 
-Bestanden per variant in \`tools/figma-sync/output/${componentName}/\`:
-
-- \`<variant>-storybook.png\` — Storybook-render
-- \`<variant>-figma.png\` — Figma-export
-- \`<variant>-diff.png\` — visueel verschil (roze = afwijking)
+</div>
 `;
 
+const docusaurusDir = path.resolve(__dirname, '../../../documentation/pages/figma-sync');
+await fs.mkdir(docusaurusDir, { recursive: true });
+await fs.writeFile(path.join(docusaurusDir, `${componentName}.docusaurus.mdx`), docusaurusPage);
+
+const report = docusaurusPage;
 await fs.writeFile(path.join(outputDir, 'report.md'), report);
 await fs.writeFile(
   path.join(outputDir, 'result.json'),
@@ -462,6 +606,144 @@ await fs.writeFile(
   ),
 );
 
+// ---------- Dashboard bijwerken ----------
+
+const statusPath = path.join(__dirname, 'output', 'status.json');
+let statusData = {};
+try {
+  statusData = JSON.parse(await fs.readFile(statusPath, 'utf8'));
+} catch {
+  // geen bestaand status-bestand
+}
+
+const failedPropKeys = new Set();
+for (const r of results) {
+  for (const e of r.properties.entries) {
+    if (!e.match) failedPropKeys.add(e.label);
+  }
+}
+
+statusData[componentName] = {
+  lastChecked: new Date().toISOString(),
+  passed: overallPassed,
+  minMatch,
+  totalVariants: results.length,
+  failingVariants: failing.map((r) => r.name),
+  failedProperties: [...failedPropKeys],
+};
+
+await fs.writeFile(statusPath, JSON.stringify(statusData, null, 2));
+
+function fmtDateTime(iso) {
+  const d = new Date(iso);
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const yyyy = d.getFullYear();
+  const hh = String(d.getHours()).padStart(2, '0');
+  const min = String(d.getMinutes()).padStart(2, '0');
+  return `${dd}-${mm}-${yyyy} ${hh}:${min}`;
+}
+
+let analyticsData = {};
+try {
+  analyticsData = JSON.parse(await fs.readFile(path.join(__dirname, 'figma-analytics.json'), 'utf8'));
+} catch { /* analytics optioneel */ }
+
+// Alle componenten: unie van analytics-keys en status-keys, gesorteerd op instanties desc
+// Niet-beschikbare componenten staan altijd onderaan; daarboven componenten zonder analytics (zoals time-input-field)
+const allComponents = new Set([...Object.keys(analyticsData), ...Object.keys(statusData)]);
+const sorted = [...allComponents].sort((a, b) => {
+  const aUnavail = unavailableInFigma.has(a) ? 1 : 0;
+  const bUnavail = unavailableInFigma.has(b) ? 1 : 0;
+  if (aUnavail !== bUnavail) return aUnavail - bUnavail;
+  const ia = analyticsData[a]?.instances ?? -1;
+  const ib = analyticsData[b]?.instances ?? -1;
+  return ib - ia;
+});
+
+function fmtNum(n) {
+  if (n == null) return '—';
+  return n.toLocaleString('nl-NL');
+}
+
+const unavailableInFigma = new Set(config.unavailableInFigma ?? []);
+
+const dashboardRows = sorted
+  .map((name) => {
+    const s = statusData[name];
+    const a = analyticsData[name];
+    const notAvailable = !s && unavailableInFigma.has(name);
+    const lastChecked = s ? fmtDateTime(s.lastChecked) : (notAvailable ? 'Niet beschikbaar' : '—');
+    const matchPct = s ? (s.minMatch * 100).toFixed(1) + '%' : '—';
+    const status = s ? (s.passed ? 'OK' : 'MISMATCH') : '—';
+    const failingStr = s ? (s.failingVariants.length > 0 ? s.failingVariants.join(', ') : '—') : '—';
+    const instances = fmtNum(a?.instances);
+    const inserts = fmtNum(a?.inserts);
+    const detaches = fmtNum(a?.detaches);
+    return `| ${name} | ${lastChecked} | ${matchPct} | ${status} | ${failingStr} | ${instances} | ${inserts} | ${detaches} |`;
+  })
+  .join('\n');
+
+const dashboard = `# Figma sync — componentstatus
+
+Bijgewerkt: ${fmtDateTime(new Date().toISOString())}
+
+| Component | Laatste check | Visueel (min) | Status | Varianten FOUT | Instanties | Inserts (jaar) | Detaches (jaar) |
+| --- | --- | --- | --- | --- | ---: | ---: | ---: |
+${dashboardRows}
+
+---
+
+Figma-cijfers zijn een export van ${fmtDateTime(new Date().toISOString())}.
+
+**Instanties** — huidig totaal gebruik van de component in alle Figma-bestanden van het team.
+
+**Inserts (jaar)** — aantal keer ingevoegd in de afgelopen 12 maanden; maatstaf voor adoptie.
+
+**Detaches (jaar)** — aantal keer losgekoppeld van de library; hoog = component voldoet niet aan de behoefte.
+`;
+
+const dashboardPath = path.join(__dirname, 'output', 'dashboard.md');
+await fs.writeFile(dashboardPath, dashboard);
+
+// ---------- figma-sync-data.json bijwerken ----------
+const syncDataPath = path.resolve(__dirname, '../../../packages/docusaurus/src/pages/figma-sync-data.json');
+try {
+  let syncData = { rows: [], exportDate: '—' };
+  try {
+    syncData = JSON.parse(await fs.readFile(syncDataPath, 'utf8'));
+  } catch { /* nieuw bestand */ }
+
+  const reportHref = `/rvo/docs/figma-sync/${componentName}`;
+  const rowIdx = syncData.rows.findIndex((r) => r.name === componentName);
+  const existing = rowIdx >= 0 ? syncData.rows[rowIdx] : { name: componentName, figmaHref: null, figmaMissing: false, instances: '—', inserts: '—', detaches: '—' };
+  const updatedRow = {
+    ...existing,
+    reportHref,
+    lastChecked: fmtDateTime(new Date().toISOString()),
+    matchPct: `${(minMatch * 100).toFixed(1)}%`,
+    passed: overallPassed,
+  };
+  if (rowIdx >= 0) {
+    syncData.rows[rowIdx] = updatedRow;
+  } else {
+    syncData.rows.push(updatedRow);
+  }
+  // Zet lastChecked voor niet-beschikbare componenten
+  for (const unavailName of (config.unavailableInFigma ?? [])) {
+    const idx = syncData.rows.findIndex((r) => r.name === unavailName);
+    if (idx >= 0 && syncData.rows[idx].lastChecked == null) {
+      syncData.rows[idx] = { ...syncData.rows[idx], lastChecked: 'Niet beschikbaar' };
+    }
+  }
+
+  await fs.writeFile(syncDataPath, JSON.stringify(syncData));
+  console.log(`  figma-sync-data.json bijgewerkt`);
+} catch (e) {
+  console.warn(`  Kon figma-sync-data.json niet bijwerken: ${e.message}`);
+}
+
 console.log(
   `[${componentName}] ${overallPassed ? 'OK' : 'MISMATCH'} — laagste visueel ${(minMatch * 100).toFixed(2)}% (${failing.length} variant(en) onder drempel)`,
 );
+console.log(`  Dashboard: ${dashboardPath}`);
