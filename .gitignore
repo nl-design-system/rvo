@@ -85,6 +85,4 @@ tools/figma-sync/.env.local
 tools/figma-sync/figma-analytics.json
 
 # Figma sync gegenereerde bestanden (niet committen)
-documentation/pages/figma-sync/img/
-documentation/pages/figma-sync/*.docusaurus.mdx
 packages/docusaurus/src/pages/figma-sync-data.json
