@@ -18,7 +18,7 @@ export default function DocRootLayout({ children }: Props): ReactElement {
       <div
         className={clsx(
           styles.docPage,
-          !sidebar ? 'rvo-max-width-layout rvo-max-width-layout--sm' : 'rvo-max-width-layout rvo-max-width-layout--md',
+          'rvo-max-width-layout rvo-max-width-layout--md',
         )}
       >
         {sidebar && (
