@@ -7,10 +7,41 @@ slug: /footer
 
 import { Footer } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
-import Documentation from "../README.md";
+import Documentation from "../README.mdx";
+
+export const primaryMenu = [
+  {
+    label: "Over deze site",
+    items: [
+      { content: "Privacy", link: "#" },
+      { content: "Cookies en anti-spam", link: "#" },
+      { content: "Toegankelijkheid", link: "#" },
+      { content: "Proclaimer", link: "#" },
+    ],
+  },
+  {
+    label: "Blijf op de hoogte",
+    items: [
+      { content: "Social media", link: "#" },
+      { content: "Higherlevel.nl ondernemersforum", link: "#" },
+      { content: "RSS", link: "#" },
+      { content: "Gratis nieuwsbrief", link: "#" },
+    ],
+  },
+];
+
+export const secondaryMenu = [
+  { content: "Contact", link: "https://www.rvo.nl/onderwerpen/contact" },
+  { content: "Privacy", link: "https://www.rvo.nl/onderwerpen/privacy" },
+  { content: "Cookies en anti-spam", link: "https://www.rvo.nl/onderwerpen/cookies" },
+  { content: "Toegankelijkheid", link: "#" },
+  { content: "Proclaimer", link: "https://www.rvo.nl/onderwerpen/proclaimer" },
+  { content: "Kwetsbaarheid melden", link: "https://www.rvo.nl/onderwerpen/kwetsbaarheid" },
+  { content: "Webarchief", link: "#" },
+];
 
 <ComponentExample storyName="componenten-footer--default">
-  <Footer />
+  <Footer primaryMenu={primaryMenu} secondaryMenu={secondaryMenu} maxWidth="lg" payOff="We helpen u graag vooruit!" />
 </ComponentExample>
 
 <Documentation />

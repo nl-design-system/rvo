@@ -78,11 +78,5 @@ pnpm-lock.yaml
 # Playwright (Claude Code MCP)
 .playwright-mcp
 
-# Figma sync tool — output en secrets niet committen
-documentation/tools/figma-sync/node_modules/
-documentation/tools/figma-sync/output/
-documentation/tools/figma-sync/.env.local
-documentation/tools/figma-sync/figma-analytics.json
-
-# Figma sync gegenereerde bestanden (niet committen)
-packages/docusaurus/src/pages/figma-sync-data.json
+# Claude Code
+.claude/
