@@ -77,3 +77,14 @@ pnpm-lock.yaml
 
 # Playwright (Claude Code MCP)
 .playwright-mcp
+
+# Figma sync tool — output en secrets uitgesloten via tools/figma-sync/.gitignore
+tools/figma-sync/node_modules/
+tools/figma-sync/output/
+tools/figma-sync/.env.local
+tools/figma-sync/figma-analytics.json
+
+# Figma sync gegenereerde bestanden (niet committen)
+documentation/pages/figma-sync/img/
+documentation/pages/figma-sync/*.docusaurus.mdx
+packages/docusaurus/src/pages/figma-sync-data.json
