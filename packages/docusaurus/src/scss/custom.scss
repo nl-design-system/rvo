@@ -262,19 +262,6 @@ html.blog-wrapper.plugin-blog {
     background-color: unset;
   }
 
-  // Reset Infima table borders so rvo-table can control its own styling.
-  // Only clear top/left/right — border-bottom is owned by rvo-table tokens.
-  .rvo-table {
-    border: none;
-  }
-
-  .rvo-table th,
-  .rvo-table td {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
-
   .componentExample_Qbwy p {
     margin-block-end: 16px !important;
   }
