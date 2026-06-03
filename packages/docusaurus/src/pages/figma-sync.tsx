@@ -1,3 +1,5 @@
+import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
 import type { ReactElement } from 'react';
 import data from './figma-sync-data.json';
@@ -7,7 +9,7 @@ export default function FigmaSync(): ReactElement {
     <Layout title="Figma Sync" description="Componentstatus Storybook vs Figma">
       <main style={{ paddingBlockStart: 'var(--rvo-space-xl)' }}>
         <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-layout-column rvo-layout-gap--md">
-          <h1>Figma Sync — componentstatus</h1>
+          <Heading as="h1">Figma Sync — componentstatus</Heading>
           <p>
             Automatische vergelijking tussen Storybook-renders en Figma-exports. Visuele match is leidend voor de status
             (drempel 90%).
@@ -30,9 +32,9 @@ export default function FigmaSync(): ReactElement {
                   <tr key={row.name} className="rvo-table-row">
                     <td className="rvo-table-cell">
                       {row.reportHref ? (
-                        <a className="rvo-link" href={row.reportHref}>
+                        <Link className="rvo-link" href={row.reportHref}>
                           {row.name}
-                        </a>
+                        </Link>
                       ) : (
                         row.name
                       )}
