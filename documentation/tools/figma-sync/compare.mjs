@@ -128,7 +128,15 @@ function buildVariants() {
     const name = Object.values(combo).join('-');
     const args = renderTemplate(component.argsPattern, combo, component.valueMaps);
     const figmaName = renderTemplate(component.figmaNamePattern, combo, component.valueMaps);
-    return { name, args, figmaName, figmaNodeId: null, threshold: thresholdForVariant(name), thresholdNote: thresholdNoteForVariant(name), screenshotViewportWidth: viewportWidthForVariant(name) };
+    return {
+      name,
+      args,
+      figmaName,
+      figmaNodeId: null,
+      threshold: thresholdForVariant(name),
+      thresholdNote: thresholdNoteForVariant(name),
+      screenshotViewportWidth: viewportWidthForVariant(name),
+    };
   });
 }
 
@@ -341,19 +349,19 @@ function eqColor(a, b) {
 
 function compareProperties(sb, fg) {
   const checks = [
-    { key: 'width',           label: 'width',          cmp: 'num',   tol: SIZE_TOLERANCE },
-    { key: 'height',          label: 'height',         cmp: 'num',   tol: SIZE_TOLERANCE },
-    { key: 'borderRadius',    label: 'border-radius',  cmp: 'num',   tol: 0 },
-    { key: 'borderWidth',     label: 'border-width',   cmp: 'num',   tol: 0 },
-    { key: 'borderColor',     label: 'border-color',   cmp: 'color' },
-    { key: 'backgroundColor', label: 'background',     cmp: 'color' },
-    { key: 'color',           label: 'text-color',     cmp: 'color' },
-    { key: 'fontSize',        label: 'font-size',      cmp: 'num',   tol: 0 },
-    { key: 'fontWeight',      label: 'font-weight',    cmp: 'num',   tol: 0 },
-    { key: 'paddingTop',      label: 'padding-top',    cmp: 'num',   tol: 0 },
-    { key: 'paddingRight',    label: 'padding-right',  cmp: 'num',   tol: 0 },
-    { key: 'paddingBottom',   label: 'padding-bottom', cmp: 'num',   tol: 0 },
-    { key: 'paddingLeft',     label: 'padding-left',   cmp: 'num',   tol: 0 },
+    { key: 'width', label: 'width', cmp: 'num', tol: SIZE_TOLERANCE },
+    { key: 'height', label: 'height', cmp: 'num', tol: SIZE_TOLERANCE },
+    { key: 'borderRadius', label: 'border-radius', cmp: 'num', tol: 0 },
+    { key: 'borderWidth', label: 'border-width', cmp: 'num', tol: 0 },
+    { key: 'borderColor', label: 'border-color', cmp: 'color' },
+    { key: 'backgroundColor', label: 'background', cmp: 'color' },
+    { key: 'color', label: 'text-color', cmp: 'color' },
+    { key: 'fontSize', label: 'font-size', cmp: 'num', tol: 0 },
+    { key: 'fontWeight', label: 'font-weight', cmp: 'num', tol: 0 },
+    { key: 'paddingTop', label: 'padding-top', cmp: 'num', tol: 0 },
+    { key: 'paddingRight', label: 'padding-right', cmp: 'num', tol: 0 },
+    { key: 'paddingBottom', label: 'padding-bottom', cmp: 'num', tol: 0 },
+    { key: 'paddingLeft', label: 'padding-left', cmp: 'num', tol: 0 },
   ];
   const entries = checks.map(({ key, label, cmp, tol }) => {
     const sbVal = sb[key];
@@ -434,7 +442,9 @@ try {
     const failedProps = propEntries.filter((e) => !e.match).map((e) => e.label);
     const propsSummary = propsPassed ? 'props OK' : `props FOUT: ${failedProps.join(', ')}`;
     console.log(
-      `[${componentName}/${variant.name}] visueel ${(visual.matchPct * 100).toFixed(2)}% — ${propsSummary} — ${passed ? 'OK' : 'MISMATCH'}`,
+      `[${componentName}/${variant.name}] visueel ${(visual.matchPct * 100).toFixed(2)}% — ${propsSummary} — ${
+        passed ? 'OK' : 'MISMATCH'
+      }`,
     );
   }
 } finally {
@@ -460,7 +470,9 @@ function rvoTable(headers, rows) {
   const trs = rows
     .map(
       (cells) =>
-        `          <tr className="rvo-table-row">\n${cells.map((c) => `            <td className="rvo-table-cell">${c}</td>`).join('\n')}\n          </tr>`,
+        `          <tr className="rvo-table-row">\n${cells
+          .map((c) => `            <td className="rvo-table-cell">${c}</td>`)
+          .join('\n')}\n          </tr>`,
     )
     .join('\n');
   return `<div className="rvo-table--responsive">
@@ -503,9 +515,12 @@ function variantBlock(r) {
     ? `<code>${r.figmaName}</code> (<code>${r.figmaNodeId}</code>)`
     : `<code>${r.figmaNodeId}</code>`;
   const vid = toVarId(r.name);
-  const thresholdLine = r.thresholdNote && r.threshold !== defaultThreshold
-    ? `- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%, verlaagd — ${r.thresholdNote}) — ${visualStatus}`
-    : `- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%) — ${visualStatus}`;
+  const thresholdLine =
+    r.thresholdNote && r.threshold !== defaultThreshold
+      ? `- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%, verlaagd — ${
+          r.thresholdNote
+        }) — ${visualStatus}`
+      : `- Visueel: **${visualPct}%** (drempel ${(r.threshold * 100).toFixed(0)}%) — ${visualStatus}`;
   const head = `### ${r.name} — ${r.passed ? 'OK' : 'MISMATCH'}
 
 ${thresholdLine}
@@ -545,14 +560,16 @@ const summaryTable = rvoTable(
   }),
 );
 
-const imgImports = results.flatMap((r) => {
-  const vid = toVarId(r.name);
-  return [
-    `import sb_${vid} from './img/${componentName}/${r.name}-storybook.png';`,
-    `import figma_${vid} from './img/${componentName}/${r.name}-figma.png';`,
-    `import diff_${vid} from './img/${componentName}/${r.name}-diff.png';`,
-  ];
-}).join('\n');
+const imgImports = results
+  .flatMap((r) => {
+    const vid = toVarId(r.name);
+    return [
+      `import sb_${vid} from './img/${componentName}/${r.name}-storybook.png';`,
+      `import figma_${vid} from './img/${componentName}/${r.name}-figma.png';`,
+      `import diff_${vid} from './img/${componentName}/${r.name}-diff.png';`,
+    ];
+  })
+  .join('\n');
 
 const docusaurusPageTitle = componentName.charAt(0).toUpperCase() + componentName.slice(1);
 const docusaurusPage = `---
@@ -647,7 +664,9 @@ function fmtDateTime(iso) {
 let analyticsData = {};
 try {
   analyticsData = JSON.parse(await fs.readFile(path.join(__dirname, 'figma-analytics.json'), 'utf8'));
-} catch { /* analytics optioneel */ }
+} catch {
+  /* analytics optioneel */
+}
 
 // Alle componenten: unie van analytics-keys en status-keys, gesorteerd op instanties desc
 // Niet-beschikbare componenten staan altijd onderaan; daarboven componenten zonder analytics (zoals time-input-field)
@@ -673,7 +692,7 @@ const dashboardRows = sorted
     const s = statusData[name];
     const a = analyticsData[name];
     const notAvailable = !s && unavailableInFigma.has(name);
-    const lastChecked = s ? fmtDateTime(s.lastChecked) : (notAvailable ? 'Niet beschikbaar' : '—');
+    const lastChecked = s ? fmtDateTime(s.lastChecked) : notAvailable ? 'Niet beschikbaar' : '—';
     const matchPct = s ? (s.minMatch * 100).toFixed(1) + '%' : '—';
     const status = s ? (s.passed ? 'OK' : 'MISMATCH') : '—';
     const failingStr = s ? (s.failingVariants.length > 0 ? s.failingVariants.join(', ') : '—') : '—';
@@ -712,11 +731,16 @@ try {
   let syncData = { rows: [], exportDate: '—' };
   try {
     syncData = JSON.parse(await fs.readFile(syncDataPath, 'utf8'));
-  } catch { /* nieuw bestand */ }
+  } catch {
+    /* nieuw bestand */
+  }
 
   const reportHref = `/rvo/docs/figma-sync/${componentName}`;
   const rowIdx = syncData.rows.findIndex((r) => r.name === componentName);
-  const existing = rowIdx >= 0 ? syncData.rows[rowIdx] : { name: componentName, figmaHref: null, figmaMissing: false, instances: '—', inserts: '—', detaches: '—' };
+  const existing =
+    rowIdx >= 0
+      ? syncData.rows[rowIdx]
+      : { name: componentName, figmaHref: null, figmaMissing: false, instances: '—', inserts: '—', detaches: '—' };
   const updatedRow = {
     ...existing,
     reportHref,
@@ -730,7 +754,7 @@ try {
     syncData.rows.push(updatedRow);
   }
   // Zet lastChecked voor niet-beschikbare componenten
-  for (const unavailName of (config.unavailableInFigma ?? [])) {
+  for (const unavailName of config.unavailableInFigma ?? []) {
     const idx = syncData.rows.findIndex((r) => r.name === unavailName);
     if (idx >= 0 && syncData.rows[idx].lastChecked == null) {
       syncData.rows[idx] = { ...syncData.rows[idx], lastChecked: 'Niet beschikbaar' };
@@ -744,6 +768,8 @@ try {
 }
 
 console.log(
-  `[${componentName}] ${overallPassed ? 'OK' : 'MISMATCH'} — laagste visueel ${(minMatch * 100).toFixed(2)}% (${failing.length} variant(en) onder drempel)`,
+  `[${componentName}] ${overallPassed ? 'OK' : 'MISMATCH'} — laagste visueel ${(minMatch * 100).toFixed(2)}% (${
+    failing.length
+  } variant(en) onder drempel)`,
 );
 console.log(`  Dashboard: ${dashboardPath}`);

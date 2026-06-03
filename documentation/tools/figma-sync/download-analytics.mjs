@@ -22,7 +22,7 @@ const browser = await chromium.launchPersistentContext(PROFILE_DIR, {
   slowMo: 500,
 });
 
-const page = browser.pages()[0] ?? await browser.newPage();
+const page = browser.pages()[0] ?? (await browser.newPage());
 
 // Library analytics zit in de file browser, niet op een aparte URL
 const ANALYTICS_URL = `https://www.figma.com/files/${FIGMA_TEAM_ID}/recents-and-sharing`;
@@ -37,7 +37,8 @@ if (needsLogin) {
   console.log(`Loginpagina gedetecteerd (${currentUrl})`);
   console.log('Log in via het browservenster — script wacht (max 2 min)...');
   await page.waitForURL(
-    (url) => !url.toString().includes('login') && !url.toString().includes('signin') && !url.toString().includes('signup'),
+    (url) =>
+      !url.toString().includes('login') && !url.toString().includes('signin') && !url.toString().includes('signup'),
     { timeout: 120000 },
   );
   await page.waitForTimeout(2000);
@@ -59,7 +60,8 @@ await page.waitForTimeout(3000);
 await page.pause();
 
 console.log('Zoeken naar ROOS-bestand in recents...');
-const roosFile = page.locator('[class*="thumbnail"], [data-testid*="file-thumbnail"]')
+const roosFile = page
+  .locator('[class*="thumbnail"], [data-testid*="file-thumbnail"]')
   .filter({ hasText: 'ROOS' })
   .or(page.locator('a, div, li').filter({ hasText: /ROOS.*RVO Design System/i }))
   .first();
@@ -79,11 +81,14 @@ await page.screenshot({ path: path.join(__dirname, 'output', 'analytics-contextm
 console.log('Screenshot contextmenu: output/analytics-contextmenu.png');
 
 // Klik op "Library analytics" in het contextmenu
-const analyticsMenuItem = page.getByRole('menuitem', { name: /library analytics/i }).or(
-  page.locator('[role="menuitem"]').filter({ hasText: /analytics/i }),
-);
+const analyticsMenuItem = page
+  .getByRole('menuitem', { name: /library analytics/i })
+  .or(page.locator('[role="menuitem"]').filter({ hasText: /analytics/i }));
 
-const menuVisible = await analyticsMenuItem.first().isVisible({ timeout: 5000 }).catch(() => false);
+const menuVisible = await analyticsMenuItem
+  .first()
+  .isVisible({ timeout: 5000 })
+  .catch(() => false);
 if (!menuVisible) {
   const menuItems = await page.locator('[role="menuitem"]').allTextContents();
   console.log('Menu-items:', menuItems);
@@ -99,24 +104,27 @@ await page.screenshot({ path: path.join(__dirname, 'output', 'analytics-modal.pn
 console.log('Screenshot modal: output/analytics-modal.png');
 
 // Zoek Download CSV knop
-const csvBtn = page.getByRole('button', { name: /download csv|export/i }).or(
-  page.locator('button:has-text("Download"), a:has-text("CSV")'),
-);
+const csvBtn = page
+  .getByRole('button', { name: /download csv|export/i })
+  .or(page.locator('button:has-text("Download"), a:has-text("CSV")'));
 
-const csvVisible = await csvBtn.first().isVisible({ timeout: 8000 }).catch(() => false);
+const csvVisible = await csvBtn
+  .first()
+  .isVisible({ timeout: 8000 })
+  .catch(() => false);
 if (!csvVisible) {
   const btns = await page.locator('button').allTextContents();
-  console.log('Knoppen in modal:', btns.filter(t => t.trim()));
+  console.log(
+    'Knoppen in modal:',
+    btns.filter((t) => t.trim()),
+  );
   console.log('Download CSV-knop niet gevonden — zie analytics-modal.png.');
   await browser.close();
   process.exit(1);
 }
 
 console.log('Download CSV gevonden, klikken...');
-const [download] = await Promise.all([
-  page.waitForEvent('download', { timeout: 15000 }),
-  csvBtn.first().click(),
-]);
+const [download] = await Promise.all([page.waitForEvent('download', { timeout: 15000 }), csvBtn.first().click()]);
 
 const savePath = path.join(DOWNLOAD_DIR, download.suggestedFilename());
 await download.saveAs(savePath);

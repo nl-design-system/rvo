@@ -4,10 +4,7 @@
   "components": {
     "accordion": {
       "storybookId": "componenten-accordion--default",
-      "paths": [
-        "components/accordion/**",
-        "packages/component-library-react/src/components/accordion/**"
-      ],
+      "paths": ["components/accordion/**", "packages/component-library-react/src/components/accordion/**"],
       "targetSelector": ".rvo-accordion__item",
       "variants": {
         "closed-first": {
@@ -36,10 +33,7 @@
     },
     "table": {
       "storybookId": "componenten-table--default",
-      "paths": [
-        "components/table/**",
-        "packages/component-library-react/src/components/table/**"
-      ],
+      "paths": ["components/table/**", "packages/component-library-react/src/components/table/**"],
       "targetSelector": ".rvo-table--responsive",
       "variants": {
         "default": {
@@ -50,27 +44,13 @@
     },
     "button": {
       "storybookId": "componenten-button--default",
-      "paths": [
-        "components/button/**",
-        "packages/component-library-react/src/components/button/**"
-      ],
+      "paths": ["components/button/**", "packages/component-library-react/src/components/button/**"],
       "figmaComponentSetId": "4127:18556",
       "figmaNamePattern": "Size={size}, Kind={kindFigma}, Hover=False",
       "argsPattern": "kind:{kind};size:{size};showIcon:after;icon:home",
       "axes": {
-        "kind": [
-          "primary",
-          "secondary",
-          "tertiary",
-          "quaternary",
-          "warning",
-          "warning-subtle"
-        ],
-        "size": [
-          "md",
-          "sm",
-          "xs"
-        ]
+        "kind": ["primary", "secondary", "tertiary", "quaternary", "warning", "warning-subtle"],
+        "size": ["md", "sm", "xs"]
       },
       "valueMaps": {
         "kindFigma": {
@@ -96,9 +76,7 @@
     },
     "alert": {
       "storybookId": "componenten-alert--default",
-      "paths": [
-        "components/alert/**"
-      ],
+      "paths": ["components/alert/**"],
       "targetSelector": ".rvo-alert",
       "screenshotViewportWidth": 800,
       "thresholds": {
@@ -111,12 +89,7 @@
       "figmaNamePattern": "Type={typeFigma}",
       "argsPattern": "kind:{kind}",
       "axes": {
-        "kind": [
-          "info",
-          "warning",
-          "error",
-          "success"
-        ]
+        "kind": ["info", "warning", "error", "success"]
       },
       "valueMaps": {
         "typeFigma": {
@@ -132,9 +105,7 @@
     },
     "horizontal-rule": {
       "storybookId": "componenten-horizontal-rule--default",
-      "paths": [
-        "components/horizontal-rule/**"
-      ],
+      "paths": ["components/horizontal-rule/**"],
       "targetSelector": ".rvo-hr",
       "variants": {
         "default": {
@@ -145,9 +116,7 @@
     },
     "item-list": {
       "storybookId": "componenten-item-list--default",
-      "paths": [
-        "components/item-list/**"
-      ],
+      "paths": ["components/item-list/**"],
       "targetSelector": ".rvo-item-list",
       "variants": {
         "default": {
@@ -158,26 +127,18 @@
     },
     "breadcrumbs": {
       "storybookId": "componenten-breadcrumbs--default",
-      "paths": [
-        "components/breadcrumbs/**"
-      ],
+      "paths": ["components/breadcrumbs/**"],
       "targetSelector": ".rvo-breadcrumbs",
       "figmaComponentSetId": "8772:10658",
       "figmaNamePattern": "Size={size}",
       "argsPattern": "size:{size}",
       "axes": {
-        "size": [
-          "sm",
-          "md",
-          "lg"
-        ]
+        "size": ["sm", "md", "lg"]
       }
     },
     "form-feedback": {
       "storybookId": "componenten-feedback--default",
-      "paths": [
-        "components/form-feedback/**"
-      ],
+      "paths": ["components/form-feedback/**"],
       "targetSelector": ".rvo-form-feedback",
       "variants": {
         "error": {
@@ -192,31 +153,18 @@
     },
     "status-indicator": {
       "storybookId": "componenten-status-indicator--default",
-      "paths": [
-        "components/status-indicator/**"
-      ],
+      "paths": ["components/status-indicator/**"],
       "targetSelector": ".rvo-status-indicator",
       "figmaComponentSetId": "2742:3748",
       "figmaNamePattern": "color={color}",
       "argsPattern": "color:{color}",
       "axes": {
-        "color": [
-          "hemelblauw",
-          "groen",
-          "groen-300",
-          "oranje",
-          "oranje-300",
-          "rood",
-          "rood-300",
-          "hemelblauw-300"
-        ]
+        "color": ["hemelblauw", "groen", "groen-300", "oranje", "oranje-300", "rood", "rood-300", "hemelblauw-300"]
       }
     },
     "action-group": {
       "storybookId": "componenten-action-group--default",
-      "paths": [
-        "components/action-group/**"
-      ],
+      "paths": ["components/action-group/**"],
       "targetSelector": ".rvo-action-group",
       "variants": {
         "default": {
@@ -231,9 +179,7 @@
     },
     "expandable-content": {
       "storybookId": "componenten-expandable-content--default",
-      "paths": [
-        "components/expandable-content/**"
-      ],
+      "paths": ["components/expandable-content/**"],
       "targetSelector": ".rvo-expandable-content",
       "variants": {
         "collapsed-default": {
@@ -256,9 +202,7 @@
     },
     "link": {
       "storybookId": "componenten-link--default",
-      "paths": [
-        "components/link/**"
-      ],
+      "paths": ["components/link/**"],
       "targetSelector": ".rvo-link",
       "variants": {
         "default": {
@@ -273,25 +217,14 @@
     },
     "heading": {
       "storybookId": "componenten-heading--default",
-      "paths": [
-        "components/heading/**"
-      ],
+      "paths": ["components/heading/**"],
       "targetSelector": ".rvo-heading",
       "figmaComponentSetId": "4296:19249",
       "figmaNamePattern": "Type={type}, font normal={fontNormal}",
       "argsPattern": "type:{type}",
       "axes": {
-        "type": [
-          "h1",
-          "h2",
-          "h3",
-          "h4",
-          "h5",
-          "h6"
-        ],
-        "fontNormal": [
-          "false"
-        ]
+        "type": ["h1", "h2", "h3", "h4", "h5", "h6"],
+        "fontNormal": ["false"]
       },
       "thresholds": {
         "*": 0.7
@@ -302,9 +235,7 @@
     },
     "label": {
       "storybookId": "componenten-label--default",
-      "paths": [
-        "components/form-field-label/**"
-      ],
+      "paths": ["components/form-field-label/**"],
       "targetSelector": ".rvo-label",
       "thresholds": {
         "*": 0.65
@@ -341,20 +272,13 @@
     },
     "footer": {
       "storybookId": "componenten-footer--default",
-      "paths": [
-        "components/footer/**"
-      ],
+      "paths": ["components/footer/**"],
       "targetSelector": ".rvo-footer",
       "figmaComponentSetId": "2738:2563",
       "figmaNamePattern": "maxWidth={maxWidth}",
       "argsPattern": "maxWidth:{maxWidth}",
       "axes": {
-        "maxWidth": [
-          "sm",
-          "md",
-          "lg",
-          "none"
-        ]
+        "maxWidth": ["sm", "md", "lg", "none"]
       },
       "screenshotViewportWidths": {
         "sm": 650,
@@ -371,9 +295,7 @@
     },
     "checkbox-field": {
       "storybookId": "componenten-checkbox-field--default",
-      "paths": [
-        "components/form-field-checkbox/**"
-      ],
+      "paths": ["components/form-field-checkbox/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -385,9 +307,7 @@
     },
     "text-input-field": {
       "storybookId": "componenten-text-input-field--default",
-      "paths": [
-        "components/form-field-textinput/**"
-      ],
+      "paths": ["components/form-field-textinput/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -399,9 +319,7 @@
     },
     "select-field": {
       "storybookId": "componenten-select-field--default",
-      "paths": [
-        "components/form-field-select/**"
-      ],
+      "paths": ["components/form-field-select/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -413,9 +331,7 @@
     },
     "textarea-field": {
       "storybookId": "componenten-textarea-field--default",
-      "paths": [
-        "components/form-field-textarea/**"
-      ],
+      "paths": ["components/form-field-textarea/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -427,9 +343,7 @@
     },
     "radio-button-field": {
       "storybookId": "componenten-radio-button-field--default",
-      "paths": [
-        "components/form-field-radio-button/**"
-      ],
+      "paths": ["components/form-field-radio-button/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -441,9 +355,7 @@
     },
     "date-input-field": {
       "storybookId": "componenten-date-input-field--default",
-      "paths": [
-        "components/form-field-dateinput/**"
-      ],
+      "paths": ["components/form-field-dateinput/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -455,9 +367,7 @@
     },
     "file-input-field": {
       "storybookId": "componenten-file-input-field--default",
-      "paths": [
-        "components/form-field-fileinput/**"
-      ],
+      "paths": ["components/form-field-fileinput/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -469,9 +379,7 @@
     },
     "time-input-field": {
       "storybookId": "componenten-time-input-field--default",
-      "paths": [
-        "components/form-field-timeinput/**"
-      ],
+      "paths": ["components/form-field-timeinput/**"],
       "targetSelector": ".rvo-form-field",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -495,9 +403,7 @@
     },
     "menubar": {
       "storybookId": "componenten-menubar--default",
-      "paths": [
-        "components/menubar/**"
-      ],
+      "paths": ["components/menubar/**"],
       "targetSelector": ".rvo-menubar",
       "screenshotViewportWidths": {
         "*-lg-*": 1100,
@@ -533,9 +439,7 @@
     },
     "menu-item": {
       "storybookId": "componenten-menubar--default",
-      "paths": [
-        "components/menubar/**"
-      ],
+      "paths": ["components/menubar/**"],
       "targetSelector": ".rvo-menubar__item",
       "screenshotViewportWidth": 1280,
       "thresholds": {
@@ -564,9 +468,7 @@
     },
     "fieldset": {
       "storybookId": "componenten-fieldset--default",
-      "paths": [
-        "components/form-fieldset/**"
-      ],
+      "paths": ["components/form-fieldset/**"],
       "targetSelector": ".rvo-form-fieldset",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -578,10 +480,7 @@
     },
     "tabs": {
       "storybookId": "componenten-tabs--default",
-      "paths": [
-        "components/tabs/**",
-        "packages/component-library-react/src/components/tabs/**"
-      ],
+      "paths": ["components/tabs/**", "packages/component-library-react/src/components/tabs/**"],
       "targetSelector": ".rvo-tabs",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -593,10 +492,7 @@
     },
     "card": {
       "storybookId": "componenten-card--default",
-      "paths": [
-        "components/card/**",
-        "packages/component-library-react/src/components/card/**"
-      ],
+      "paths": ["components/card/**", "packages/component-library-react/src/components/card/**"],
       "targetSelector": ".rvo-card",
       "screenshotViewportWidth": 600,
       "thresholds": {
@@ -618,10 +514,7 @@
     },
     "helper-text": {
       "storybookId": "componenten-text-input-field--default",
-      "paths": [
-        "components/form-field/**",
-        "packages/component-library-react/src/components/form-field/**"
-      ],
+      "paths": ["components/form-field/**", "packages/component-library-react/src/components/form-field/**"],
       "targetSelector": ".utrecht-form-field-description",
       "screenshotViewportWidth": 600,
       "thresholds": {
@@ -639,10 +532,7 @@
     },
     "start-icon": {
       "storybookId": "componenten-icon--default",
-      "paths": [
-        "components/icon/**",
-        "packages/component-library-react/src/components/icon/**"
-      ],
+      "paths": ["components/icon/**", "packages/component-library-react/src/components/icon/**"],
       "targetSelector": ".rvo-icon",
       "thresholds": {
         "*": 0.85
@@ -690,10 +580,7 @@
     },
     "logo": {
       "storybookId": "componenten-logo--default",
-      "paths": [
-        "components/logo/**",
-        "packages/component-library-react/src/components/logo/**"
-      ],
+      "paths": ["components/logo/**", "packages/component-library-react/src/components/logo/**"],
       "targetSelector": ".rvo-logo",
       "variants": {
         "default": {
@@ -704,10 +591,7 @@
     },
     "tab": {
       "storybookId": "componenten-tabs--default",
-      "paths": [
-        "components/tabs/**",
-        "packages/component-library-react/src/components/tabs/**"
-      ],
+      "paths": ["components/tabs/**", "packages/component-library-react/src/components/tabs/**"],
       "targetSelector": ".rvo-tabs__tab",
       "thresholds": {
         "*": 0.8
@@ -730,10 +614,7 @@
     },
     "toggle": {
       "storybookId": "componenten-toggle--default",
-      "paths": [
-        "components/toggle/**",
-        "packages/component-library-react/src/components/toggle/**"
-      ],
+      "paths": ["components/toggle/**", "packages/component-library-react/src/components/toggle/**"],
       "targetSelector": ".rvo-toggle",
       "thresholds": {
         "inactive-icon-after": 0.88,
@@ -770,10 +651,7 @@
     },
     "counter-badge": {
       "storybookId": "componenten-counter-badge--default",
-      "paths": [
-        "components/counter-badge/**",
-        "packages/component-library-react/src/components/counter-badge/**"
-      ],
+      "paths": ["components/counter-badge/**", "packages/component-library-react/src/components/counter-badge/**"],
       "targetSelector": ".rvo-badge",
       "variants": {
         "default": {
@@ -784,10 +662,7 @@
     },
     "data-list": {
       "storybookId": "componenten-data-list--default",
-      "paths": [
-        "components/data-list/**",
-        "packages/component-library-react/src/components/data-list/**"
-      ],
+      "paths": ["components/data-list/**", "packages/component-library-react/src/components/data-list/**"],
       "targetSelector": ".rvo-data-list",
       "screenshotViewportWidth": 800,
       "variants": {
@@ -799,10 +674,7 @@
     },
     "tag": {
       "storybookId": "componenten-tag--default",
-      "paths": [
-        "components/tag/**",
-        "packages/component-library-react/src/components/tag/**"
-      ],
+      "paths": ["components/tag/**", "packages/component-library-react/src/components/tag/**"],
       "targetSelector": ".rvo-tag",
       "thresholds": {
         "info-*": 0.65,
