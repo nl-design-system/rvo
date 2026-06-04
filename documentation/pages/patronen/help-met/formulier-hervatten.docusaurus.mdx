@@ -1,0 +1,47 @@
+---
+title: Formulier hervatten
+hide_title: true
+hide_table_of_contents: true
+slug: formulier-hervatten
+sidebar_position: 103.5
+---
+
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Formulier hervatten
+
+Wanneer een klant terugkeert naar het portaal of de startpagina na het tussentijds opslaan van een formulier, toon dan een duidelijke melding met link waarmee de klant direct verder kan gaan met het invullen van het formulier.
+
+<ComponentExample>
+  <div className="rvo-alert rvo-alert--warning rvo-alert--padding-md">
+    <div className="rvo-alert__container">
+      <span
+        className="utrecht-icon rvo-icon rvo-icon-waarschuwing rvo-icon--xl rvo-status-icon-waarschuwing"
+        aria-hidden="true"
+      ></span>
+      <div className="rvo-alert-text">
+        <strong>Niet verzonden formulier</strong>
+        <div>
+          {"U heeft een nog niet verzonden formulier voor het aanvragen van de ISDE openstaan. "}
+          <a href="#" className="rvo-link rvo-link--donkerblauw">
+            Ga verder
+          </a>
+          {" waar u gebleven was."}
+        </div>
+      </div>
+    </div>
+  </div>
+</ComponentExample>
+
+## Wanneer gebruiken
+
+Toon de melding als:
+
+- De klant eerder een formulier heeft opgeslagen als concept en dit nog niet heeft ingediend.
+- De klant terugkeert naar de startpagina van het formulier of het portaaloverzicht.
+
+## Richtlijnen
+
+- Toon de melding als een <a href="/rvo/docs/components/alert" className="rvo-link">waarschuwing alert</a> zodat de melding direct opvalt zonder een fout te suggereren.
+- Noem de naam van het specifieke formulier zodat de klant weet om welk formulier het gaat.
+- Toon een link welke de klant terugbrengt naar de laatste actieve stap.
