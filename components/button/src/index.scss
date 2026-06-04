@@ -9,13 +9,13 @@ $rvo-button-sizes: (xs, sm, md) !default;
   background-color: var(--rvo-button-background-color);
   border-color: var(--rvo-button-border-color);
   border-radius: var(--rvo-button-border-radius);
-  border-style: solid;
+  border-style: var(--rvo-button-border-style);
   border-width: var(--rvo-button-border-width);
   box-sizing: border-box;
   color: var(--rvo-button-color);
   display: flex;
   flex-shrink: 0;
-  font: var(--rvo-font-sans-serif-font-family);
+  font-family: var(--rvo-button-font-family);
   font-size: var(--rvo-button-font-size);
   gap: 0;
   inline-size: var(--rvo-button-inline-size);
@@ -31,13 +31,13 @@ $rvo-button-sizes: (xs, sm, md) !default;
 
   &--icon-before {
     .utrecht-icon {
-      margin-inline-end: var(--rvo-space-sm);
+      margin-inline-end: var(--rvo-button-icon-gap);
     }
   }
 
   &--icon-after {
     .utrecht-icon {
-      margin-inline-start: var(--rvo-space-sm);
+      margin-inline-start: var(--rvo-button-icon-gap);
     }
   }
 
@@ -48,8 +48,8 @@ $rvo-button-sizes: (xs, sm, md) !default;
 
   &:hover:not(:disabled, [aria-disabled="true"]) {
     cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 30%;
+    text-decoration: var(--rvo-button-hover-text-decoration);
+    text-underline-offset: var(--rvo-button-text-underline-offset);
   }
 
   @each $name in $rvo-button-kinds {
@@ -121,8 +121,9 @@ $rvo-button-sizes: (xs, sm, md) !default;
       --rvo-button-padding-inline-start: var(--rvo-button-size-#{$name}-padding-inline-start);
       --rvo-button-padding-inline-end: var(--rvo-button-size-#{$name}-padding-inline-end);
 
+      gap: var(--rvo-button-icon-gap);
+
       @extend .rvo-layout-row-inline;
-      @extend .rvo-layout-gap--sm;
     }
   }
 }
