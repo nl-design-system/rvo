@@ -17,7 +17,7 @@ $rvo-button-sizes: (xs, sm, md) !default;
   flex-shrink: 0;
   font-family: var(--rvo-button-font-family);
   font-size: var(--rvo-button-font-size);
-  gap: 0;
+  gap: var(--rvo-button-icon-gap);
   inline-size: var(--rvo-button-inline-size);
   justify-content: center;
   line-height: var(--rvo-button-line-height);
@@ -28,18 +28,6 @@ $rvo-button-sizes: (xs, sm, md) !default;
   padding-inline-end: var(--rvo-button-padding-inline-end);
   padding-inline-start: var(--rvo-button-padding-inline-start);
   text-wrap: nowrap;
-
-  &--icon-before {
-    .utrecht-icon {
-      margin-inline-end: var(--rvo-button-icon-gap);
-    }
-  }
-
-  &--icon-after {
-    .utrecht-icon {
-      margin-inline-start: var(--rvo-button-icon-gap);
-    }
-  }
 
   &--full-width {
     --rvo-button-inline-size: 100%;
@@ -120,8 +108,6 @@ $rvo-button-sizes: (xs, sm, md) !default;
       --rvo-button-padding-block-end: var(--rvo-button-size-#{$name}-padding-block-end);
       --rvo-button-padding-inline-start: var(--rvo-button-size-#{$name}-padding-inline-start);
       --rvo-button-padding-inline-end: var(--rvo-button-size-#{$name}-padding-inline-end);
-
-      gap: var(--rvo-button-icon-gap);
 
       @extend .rvo-layout-row-inline;
     }
