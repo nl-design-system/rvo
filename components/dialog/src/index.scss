@@ -101,8 +101,6 @@
 // Dialog close icon
 .rvo-dialog__close-icon {
   --utrecht-icon-color: var(--rvo-mobile-menu-toggle-icon-color);
-
-  margin-inline-end: var(--rvo-space-sm);
 }
 
 // Action group
@@ -119,7 +117,8 @@
 }
 
 .rvo-dialog__close-button {
+  --rvo-button-padding-block-start: 0;
+  --rvo-button-padding-inline-end: 0;
+
   font-size: inherit;
-  padding-block-start: 0;
-  padding-inline-end: 0;
 }
