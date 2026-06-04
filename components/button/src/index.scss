@@ -37,7 +37,7 @@ $rvo-button-sizes: (xs, sm, md) !default;
   &:hover:not(:disabled, [aria-disabled="true"]) {
     cursor: pointer;
     text-decoration: var(--rvo-button-hover-text-decoration);
-    text-underline-offset: var(--rvo-button-text-underline-offset);
+    text-underline-offset: var(--rvo-button-hover-text-underline-offset);
   }
 
   @each $name in $rvo-button-kinds {
