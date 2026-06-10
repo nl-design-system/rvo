@@ -7,7 +7,6 @@ import React, { createContext, ReactNode, useCallback, useContext, useEffect, us
 import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import Button from '../button';
-import { Icon } from '../icon';
 import '@nl-rvo/component-library-css/dist/components/dialog.css';
 
 interface DialogContextType {
@@ -96,8 +95,7 @@ export const Dialog: React.FC<IDialogProps> = ({
       {...props}
     >
       <div className="rvo-dialog__close" onClick={handleClose}>
-        <Button kind="subtle" className="rvo-dialog__close-button">
-          <Icon icon="kruis" size="md" className="rvo-dialog__close-icon" />
+        <Button kind="subtle" icon="kruis" showIcon="before">
           {closeButtonLabel}
         </Button>
       </div>
