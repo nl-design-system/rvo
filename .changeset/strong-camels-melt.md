@@ -39,4 +39,4 @@
 "@nl-rvo/component-library-react": patch
 ---
 
-Use CSS Logical properties, to support both `dir="ltr"` and `dir="rtl"`.
+Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
