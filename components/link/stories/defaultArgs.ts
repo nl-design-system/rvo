@@ -1,16 +1,18 @@
-export const defaultArgs = {
-  content: 'Dit is een link',
-  href: '#',
-  color: 'hemelblauw',
-  weight: 'bold',
-  showIcon: 'no',
-  hover: false,
-  icon: 'home',
-  iconSize: 'md',
-  iconColor: 'hemelblauw',
-  iconAriaLabel: '',
+import { ILinkProps } from '@nl-rvo/component-library-react';
+
+export const defaultArgs: ILinkProps = {
   active: false,
+  children: 'Dit is een link',
+  color: 'hemelblauw',
   focus: false,
-  noUnderline: false,
   fullContainerLink: false,
+  hover: false,
+  href: '#',
+  icon: 'home',
+  iconAriaLabel: '',
+  iconColor: 'hemelblauw',
+  iconSize: 'md',
+  noUnderline: false,
+  showIcon: 'no',
+  weight: 'bold',
 };
