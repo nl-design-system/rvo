@@ -1,6 +1,4 @@
-import { ILinkProps } from './';
-
-export const defaultArgs: ILinkProps = {
+export const defaultArgs = {
   content: 'Dit is een link',
   href: '#',
   color: 'hemelblauw',

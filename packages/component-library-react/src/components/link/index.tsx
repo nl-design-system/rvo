@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon';
 import { IconType } from '../icon/types';
 import '@nl-rvo/component-library-css/dist/components/link.css';
@@ -22,89 +21,72 @@ export type LinkCustomLinkComponentProps = {
 export type LinkCustomLinkComponent = React.ComponentType<LinkCustomLinkComponentProps>;
 
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
-  /** @uxpinignoreprop */
-  content?: string;
-  href?: string;
-  color?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
-  weight?: 'normal' | 'bold';
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-  showIcon?: 'no' | 'before' | 'after';
-  icon?: IconType;
-  iconSize?: 'sm' | 'md';
-  iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
-  iconAriaLabel?: string;
-  role?: string;
-  hover?: boolean;
   active?: boolean;
-  focus?: boolean;
-  noUnderline?: boolean;
-  /** @uxpinignoreprop */
-  fullContainerLink?: boolean;
-  /** @uxpinignoreprop */
-  className?: string;
-  target?: string;
-  /** @uxpinpropname Content */
   children?: React.ReactNode;
+  className?: string;
+  color?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
+  content?: string;
+  focus?: boolean;
+  fullContainerLink?: boolean;
+  hover?: boolean;
+  href?: string;
+  icon?: IconType;
+  iconAriaLabel?: string;
+  iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
+  iconSize?: 'sm' | 'md';
   LinkComponent?: LinkCustomLinkComponent;
+  noUnderline?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  role?: string;
+  showIcon?: 'no' | 'before' | 'after';
+  target?: string;
+  weight?: 'normal' | 'bold';
 }
 
 export const Link: React.FC<ILinkProps> = ({
-  content = defaultArgs.content,
-  href = defaultArgs.href,
-  color = defaultArgs.color,
-  weight = defaultArgs.weight,
-  showIcon = defaultArgs.showIcon,
-  icon = defaultArgs.icon,
-  iconSize = defaultArgs.iconSize,
-  iconColor = defaultArgs.iconColor,
-  iconAriaLabel = defaultArgs.iconAriaLabel,
-  hover = defaultArgs.hover,
-  active = defaultArgs.active,
-  focus = defaultArgs.focus,
-  noUnderline = defaultArgs.noUnderline,
-  fullContainerLink = defaultArgs.fullContainerLink,
+  href = '#',
+  content = '',
+  color = 'hemelblauw',
+  weight = 'bold',
+  showIcon = 'no',
+  icon = 'home',
+  iconSize = 'md',
+  iconColor = 'hemelblauw',
+  iconAriaLabel = '',
+  hover = false,
+  active = false,
+  focus = false,
+  noUnderline = false,
+  fullContainerLink = false,
   className,
   children,
   LinkComponent,
   ...otherProps
 }: ILinkProps) => {
-  // Parse icon markup
-  let iconClassName = '';
-  if (showIcon === 'before') {
-    iconClassName += 'rvo-link__icon--before';
-  }
-  if (showIcon === 'after') {
-    iconClassName += ' rvo-link__icon--after';
-  }
-  const iconMarkup = Icon({
-    icon: icon as any,
-    size: iconSize as any,
-    color: iconColor as any,
-    className: iconClassName,
-    ariaLabel: iconAriaLabel,
-  });
+  const iconMarkup =
+    showIcon !== 'no'
+      ? Icon({
+          icon: icon as any,
+          size: iconSize as any,
+          color: iconColor as any,
+          ariaLabel: iconAriaLabel,
+        })
+      : null;
 
-  const props: LinkStyleProps = {
-    className: clsx(
-      'rvo-link',
-      className,
-      {
-        'rvo-link--active': active,
-        'rvo-link--hover': hover,
-        'rvo-link--focus': focus,
-      },
-      showIcon !== 'no' && ['rvo-link--with-icon'],
-      noUnderline && 'rvo-link--no-underline',
-      color === 'donkerblauw' && 'rvo-link--donkerblauw',
-      color === 'lintblauw' && 'rvo-link--lintblauw',
-      color === 'wit' && 'rvo-link--wit',
-      color === 'zwart' && 'rvo-link--zwart',
-      color === 'grijs-700' && 'rvo-link--grijs-700',
-      weight === 'normal' && 'rvo-link--normal',
-      fullContainerLink && 'rvo-link--full-card-link',
-    ),
-    ...otherProps,
-  };
+  const linkClassName = clsx('rvo-link', className, {
+    'rvo-link--hover': hover,
+    'rvo-link--active': active,
+    'rvo-link--focus': focus,
+    'rvo-link--with-icon': showIcon !== 'no',
+    'rvo-link--no-underline': noUnderline,
+    'rvo-link--full-card-link': fullContainerLink,
+    'rvo-link--normal': weight === 'normal',
+    'rvo-link--donkerblauw': color === 'donkerblauw',
+    'rvo-link--lintblauw': color === 'lintblauw',
+    'rvo-link--wit': color === 'wit',
+    'rvo-link--zwart': color === 'zwart',
+    'rvo-link--grijs-700': color === 'grijs-700',
+  });
 
   const linkContent = (
     <>
@@ -116,14 +98,14 @@ export const Link: React.FC<ILinkProps> = ({
 
   if (LinkComponent && href) {
     return (
-      <LinkComponent href={href} linkProps={props}>
+      <LinkComponent href={href} linkProps={{ className: linkClassName, ...otherProps }}>
         {linkContent}
       </LinkComponent>
     );
   }
 
   return (
-    <a href={href} {...props}>
+    <a href={href} className={linkClassName} {...otherProps}>
       {linkContent}
     </a>
   );
