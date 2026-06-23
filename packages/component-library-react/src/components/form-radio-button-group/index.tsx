@@ -55,10 +55,16 @@ export const RadioButtonGroup: React.FC<IRadioButtonGroupProps & React.HTMLAttri
             onUpdateGroup={onUpdateGroup}
           />
         ))) ||
-        (options &&
-          options.map((option) => (
-            <RadioButton key={option.id} id={option.id} name={name} label={option.label} checked={option.checked} />
-          )))}
+        options?.map((option) => (
+          <RadioButton
+            key={option.id}
+            id={option.id}
+            name={name}
+            label={option.label}
+            checked={option.checked}
+            onUpdateGroup={onUpdateGroup}
+          />
+        ))}
     </div>
   );
 };
