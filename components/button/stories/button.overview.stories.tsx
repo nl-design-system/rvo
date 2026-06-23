@@ -25,7 +25,7 @@ const hoverStyle = (kind: string) =>
     '--rvo-button-border-color': `var(--rvo-button-${kind}-hover-border-color)`,
     textDecoration: 'var(--rvo-button-hover-text-decoration)',
     textUnderlineOffset: 'var(--rvo-button-hover-text-underline-offset)',
-  }) as unknown as React.CSSProperties;
+  } as unknown as React.CSSProperties);
 
 const focusStyle = (kind: string) =>
   ({
@@ -36,7 +36,7 @@ const focusStyle = (kind: string) =>
     outlineOffset: 'var(--utrecht-focus-outline-offset)',
     outlineStyle: 'var(--utrecht-focus-outline-style)',
     outlineWidth: 'var(--utrecht-focus-outline-width)',
-  }) as unknown as React.CSSProperties;
+  } as unknown as React.CSSProperties);
 
 const kindVariations = (kind: string, label: string) => (
   <React.Fragment key={kind}>
