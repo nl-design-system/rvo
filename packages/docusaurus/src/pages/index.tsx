@@ -44,7 +44,7 @@ export default function Home(): ReactElement {
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
               <div className="rvo-card--with-link-indicator">
                 <div className="rvo-card__content">
-                  <Heading type="h3">
+                  <Heading type="h2" noMargins={true}>
                     <Link
                       href={useBaseUrl('/design-tokens/kleuren')}
                       className="rvo-card__link rvo-card__full-card-link"
@@ -64,7 +64,7 @@ export default function Home(): ReactElement {
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
               <div className="rvo-card--with-link-indicator">
                 <div className="rvo-card__content">
-                  <Heading type="h3">
+                  <Heading type="h2" noMargins={true}>
                     <Link
                       href={useBaseUrl('/componenten/accordion')}
                       className="rvo-card__link rvo-card__full-card-link"
@@ -84,7 +84,7 @@ export default function Home(): ReactElement {
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
               <div className="rvo-card--with-link-indicator">
                 <div className="rvo-card__content">
-                  <Heading type="h3">
+                  <Heading type="h2" noMargins={true}>
                     <Link
                       href={useBaseUrl('/patronen/layout/applicatie-layout')}
                       className="rvo-card__link rvo-card__full-card-link"
@@ -105,7 +105,7 @@ export default function Home(): ReactElement {
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
               <div className="rvo-card--with-link-indicator">
                 <div className="rvo-card__content">
-                  <Heading type="h3">
+                  <Heading type="h2" noMargins={true}>
                     <Link
                       href="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0"
                       className="rvo-card__link rvo-card__full-card-link"
@@ -132,7 +132,7 @@ export default function Home(): ReactElement {
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
               <div className="rvo-card--with-link-indicator">
                 <div className="rvo-card__content">
-                  <Heading type="h3">
+                  <Heading type="h2" noMargins={true}>
                     <Link
                       href={
                         process.env.NODE_ENV === 'development'
@@ -162,7 +162,7 @@ export default function Home(): ReactElement {
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
               <div className="rvo-card--with-link-indicator">
                 <div className="rvo-card__content">
-                  <Heading type="h3">
+                  <Heading type="h2" noMargins={true}>
                     <Link
                       href="https://github.com/nl-design-system/rvo"
                       className="rvo-card__link rvo-card__full-card-link"
