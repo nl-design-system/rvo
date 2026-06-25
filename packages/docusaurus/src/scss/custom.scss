@@ -289,3 +289,10 @@ html.blog-wrapper.plugin-blog {
     margin-block-end: 16px !important;
   }
 }
+
+// Ensure the RVO skip link overrides Infima's global link color
+a.rvo-skip-link,
+a.rvo-skip-link:focus {
+  color: var(--rvo-skip-link-color, #ffffff) !important;
+  outline: none;
+}
