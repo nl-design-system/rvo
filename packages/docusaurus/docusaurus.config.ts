@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig from './config/navigationConfig';
+import { rvoLightTheme } from './src/prism-theme';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
 
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
@@ -106,7 +107,7 @@ const config: Config = {
       },
     ],
     prism: {
-      theme: prismThemes.github,
+      theme: rvoLightTheme,
       darkTheme: prismThemes.dracula,
     },
     ...navigationConfig,
