@@ -153,12 +153,35 @@ html.blog-wrapper.plugin-blog {
     padding-inline: var(--rvo-space-md);
   }
 
-  .markdown table td,
-  .markdown th {
+  .markdown table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .markdown table th {
+    background-color: var(--rvo-table-header-background-color);
+    border-bottom-color: var(--rvo-table-header-border-bottom-color);
+    border-bottom-style: var(--rvo-table-header-border-bottom-style);
+    border-bottom-width: var(--rvo-table-header-border-bottom-width);
+    color: var(--rvo-table-header-color);
+    font-weight: var(--rvo-table-header-font-weight);
     padding-block-end: var(--rvo-table-header-padding-block-end);
     padding-block-start: var(--rvo-table-header-padding-block-start);
     padding-inline-end: var(--rvo-table-header-padding-inline-end);
     padding-inline-start: var(--rvo-table-header-padding-inline-start);
+    text-align: start;
+  }
+
+  .markdown table td {
+    border-bottom-color: var(--rvo-table-cell-border-bottom-color);
+    border-bottom-style: var(--rvo-table-cell-border-bottom-style);
+    border-bottom-width: var(--rvo-table-cell-border-bottom-width);
+    overflow-wrap: break-word;
+    padding-block-end: var(--rvo-table-cell-padding-block-end);
+    padding-block-start: var(--rvo-table-cell-padding-block-start);
+    padding-inline-end: var(--rvo-table-cell-padding-inline-end);
+    padding-inline-start: var(--rvo-table-cell-padding-inline-start);
+    vertical-align: baseline;
   }
 
   .markdown p {
