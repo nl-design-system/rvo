@@ -26,7 +26,6 @@ export default function NavbarLayout({ children }: Props): ReactElement {
         className={clsx(
           'navbar',
           styles.navbar,
-          'navbar--fixed-top',
           hideOnScroll && [styles.navbarHideable, !isNavbarVisible && styles.navbarHidden],
           {
             'navbar--dark': style === 'dark',
