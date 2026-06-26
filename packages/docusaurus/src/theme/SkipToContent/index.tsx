@@ -22,7 +22,8 @@ export default function SkipToContent(): ReactNode {
   const label = translate({
     id: 'theme.common.skipToMainContent',
     message: 'Ga naar hoofdinhoud',
-    description: 'The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation',
+    description:
+      'The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation',
   });
 
   const onClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
