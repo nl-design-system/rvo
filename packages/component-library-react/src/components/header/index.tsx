@@ -27,13 +27,7 @@ export const Header: React.FC<IHeaderProps & React.HTMLAttributes<HTMLDivElement
 }) => (
   <header className={clsx('rvo-header')} {...rootElementProps}>
     <div className="rvo-header__logo-wrapper" onClick={onClick}>
-      {link ? (
-        <a href={link} className="rvo-header__logo-link rvo-link rvo-link--no-underline">
-          <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} />
-        </a>
-      ) : (
-        <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} />
-      )}
+      <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} link={link || undefined} />
     </div>
     {children}
   </header>
