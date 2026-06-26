@@ -122,4 +122,12 @@
   font-size: inherit;
   padding-block-start: 0;
   padding-inline-end: 0;
+
+  &:focus-visible {
+    color: var(--rvo-color-zwart);
+    outline: none;
+    text-decoration: underline;
+    text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
+    text-underline-offset: var(--rvo-link-text-underline-offset);
+  }
 }
