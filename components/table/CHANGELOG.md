@@ -1,5 +1,11 @@
 # `@nl-rvo/css-table`
 
+## 1.9.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.9.0
 
 ### Minor Changes

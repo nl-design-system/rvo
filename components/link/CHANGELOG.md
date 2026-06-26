@@ -1,5 +1,12 @@
 # `@nl-rvo/css-link`
 
+## 1.5.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+- 57730f6: Link component text set in own span section to resolve child html structures
+
 ## 1.5.0
 
 ### Minor Changes

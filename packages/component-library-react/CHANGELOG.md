@@ -1,5 +1,19 @@
 # @nl-rvo/component-library-react
 
+## 7.1.3
+
+### Patch Changes
+
+- c90f541: Dialog close button now uses the default subtle button variant without dialog-specific CSS classes. This restores the button's default padding (`padding-inline-end` and `padding-block-start`), which changes the position of the close button.
+- b3806fb: Repair the focus event for text-area and text-input
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+- 57730f6: Link component text set in own span section to resolve child html structures
+- Updated dependencies [b3806fb]
+- Updated dependencies [93fdefc]
+- Updated dependencies [57730f6]
+  - @nl-rvo/component-library-css@4.20.3
+  - @nl-rvo/css-card-experimental@0.3.1
+
 ## 7.1.2
 
 ### Patch Changes

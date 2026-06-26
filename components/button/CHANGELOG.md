@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 2.1.1
+
+### Patch Changes
+
+- 2be8e44: Clean up button tokens and replace icon margin with gap token. Icon spacing is now handled by a single `gap` on the base element; duplicate `margin-inline-end`/`margin-inline-start` rules on icon-before/after variants have been removed.
+
 ## 2.1.0
 
 ### Minor Changes

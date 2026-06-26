@@ -1,5 +1,13 @@
 # @nl-rvo/component-library-css
 
+## 4.20.3
+
+### Patch Changes
+
+- b3806fb: Repair the focus event for text-area and text-input
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+- 57730f6: Link component text set in own span section to resolve child html structures
+
 ## 4.20.2
 
 ### Patch Changes
