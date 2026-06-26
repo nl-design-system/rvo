@@ -5,7 +5,6 @@
 import clsx from 'clsx';
 import React from 'react';
 import { defaultArgs } from './defaultArgs';
-import '@nl-rvo/component-library-css/dist/components/link.css';
 import '@nl-rvo/component-library-css/dist/components/logo.css';
 
 export interface ILogoProps {
@@ -36,7 +35,7 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
       </div>
       <div className="rvo-logo__wordmark">
         {link ? (
-          <a href={link} className="rvo-logo__title rvo-logo__title-link rvo-link rvo-link--no-underline">
+          <a href={link} className="rvo-logo__title rvo-logo__title-link">
             {title}
           </a>
         ) : (

@@ -32,3 +32,8 @@ export const AlternateText: Story = {
   args: { ...defaultArgs, title: 'Ministerie van Economische Zaken en Klimaat' },
   name: 'Alternatieve tekst',
 };
+
+export const WithLink: Story = {
+  args: { ...defaultArgs, link: 'https://rvo.nl' },
+  name: 'Met link',
+};
