@@ -27,6 +27,19 @@ $rvo-tag-status: "info", "warning", "success", "error";
     @extend .rvo-layout-gap--sm;
   }
 
+  &--icon-clickable {
+    span.rvo-icon {
+      &:hover {
+        --utrecht-icon-color: var(--rvo-tag-default-hover-icon-color);
+        cursor: pointer;
+      }
+
+      &:active {
+        --utrecht-icon-color: var(--rvo-tag-default-active-icon-color);
+      }
+    }
+  }
+
   &--as-link,
   &--clickable {
     &:hover {
