@@ -11,14 +11,11 @@ import '@nl-rvo/component-library-css/dist/components/header.css';
 export interface IHeaderProps {
   title?: string;
   subtitle?: string;
-  /** @uxpinignoreprop */
-  link?: string;
   children?: ReactNode | undefined;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export const Header: React.FC<IHeaderProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  link = defaultArgs.link,
   title = defaultArgs.title,
   subtitle = defaultArgs.subtitle,
   children,
@@ -27,7 +24,7 @@ export const Header: React.FC<IHeaderProps & React.HTMLAttributes<HTMLDivElement
 }) => (
   <header className={clsx('rvo-header')} {...rootElementProps}>
     <div className="rvo-header__logo-wrapper" onClick={onClick}>
-      <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} link={link || undefined} />
+      <Logo className="rvo-header__logo-img" title={title} subtitle={subtitle} />
     </div>
     {children}
   </header>
