@@ -11,6 +11,27 @@
   font-family: var(--rvo-logo-font-family);
   font-weight: var(--rvo-logo-font-weight);
   gap: 10px;
+  position: relative;
+}
+
+.rvo-logo__title-link {
+  display: block;
+
+  &::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus:not(:focus-visible) {
+    text-decoration: none;
+  }
 }
 
 .rvo-logo__emblem {
