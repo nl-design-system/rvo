@@ -11,8 +11,8 @@
   font-family: var(--rvo-logo-font-family);
   font-weight: var(--rvo-logo-font-weight);
   gap: 10px;
-  position: relative;
   inline-size: fit-content;
+  position: relative;
 
   &:has(.rvo-logo__title-link:focus-visible) {
     box-shadow: 0 0 0 0.25rem white;
@@ -26,13 +26,13 @@
     text-decoration: none;
 
     &::before {
+      block-size: 100%;
       content: "";
       cursor: pointer;
       display: block;
-      block-size: 100%;
+      inline-size: 100%;
       inset-block-start: 0;
       inset-inline-start: 0;
-      inline-size: 100%;
       position: absolute;
     }
 
