@@ -28,6 +28,7 @@
           "color": { "value": "{rvo.color.lintblauw}" }
         },
         "focus": {
+          "color": { "value": "{rvo.focus.color}" },
           "text-decoration": { "value": "underline" }
         },
         "padding-block-start": { "value": "{rvo.space.md}" },
@@ -78,6 +79,7 @@
           },
           "focus": {
             "background-color": { "value": "transparent" },
+            "color": { "value": "{rvo.focus.color}" },
             "font-weight": { "value": "{rvo.font-weight.normal}" },
             "text-decoration": { "value": "underline" }
           },

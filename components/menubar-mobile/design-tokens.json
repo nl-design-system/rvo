@@ -87,6 +87,12 @@
           }
         },
         "focus": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
           "text-decoration": {
             "css": {
               "syntax": "<*>",
@@ -227,6 +233,12 @@
           },
           "focus": {
             "background-color": {
+              "css": {
+                "syntax": "<color>",
+                "inherits": true
+              }
+            },
+            "color": {
               "css": {
                 "syntax": "<color>",
                 "inherits": true

@@ -1,6 +1,9 @@
 {
   "rvo": {
     "focus": {
+      "color": {
+        "value": "{rvo.color.zwart}"
+      },
       "outline-offset": {
         "value": "2px"
       }
