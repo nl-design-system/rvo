@@ -1,5 +1,5 @@
 import { Logo } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/logo/defaultArgs';
+import { defaultArgs } from './defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { argTypes } from './argTypes';
 

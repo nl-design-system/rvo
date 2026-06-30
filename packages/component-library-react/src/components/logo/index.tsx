@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/logo.css';
 
 export interface ILogoProps {
@@ -15,8 +14,8 @@ export interface ILogoProps {
 }
 
 export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  title = defaultArgs.title,
-  subtitle = defaultArgs.subtitle,
+  title = 'Rijksdienst voor Ondernemend Nederland',
+  subtitle = '',
   link,
   className,
   ...rootElementProps
