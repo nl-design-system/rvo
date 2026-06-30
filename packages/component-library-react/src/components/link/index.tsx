@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon';
 import { IconType } from '../icon/types';
 import '@nl-rvo/component-library-css/dist/components/link.css';
@@ -22,8 +21,6 @@ export type LinkCustomLinkComponentProps = {
 export type LinkCustomLinkComponent = React.ComponentType<LinkCustomLinkComponentProps>;
 
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
-  /** @uxpinignoreprop */
-  content?: string;
   href?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
   weight?: 'normal' | 'bold';
@@ -34,38 +31,30 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconAriaLabel?: string;
   role?: string;
-  hover?: boolean;
-  active?: boolean;
-  focus?: boolean;
   noUnderline?: boolean;
-  /** @uxpinignoreprop */
   fullContainerLink?: boolean;
-  /** @uxpinignoreprop */
   className?: string;
   target?: string;
-  /** @uxpinpropname Content */
   children?: React.ReactNode;
   LinkComponent?: LinkCustomLinkComponent;
+  asButton?: boolean;
 }
 
 export const Link: React.FC<ILinkProps> = ({
-  content = defaultArgs.content,
-  href = defaultArgs.href,
-  color = defaultArgs.color,
-  weight = defaultArgs.weight,
-  showIcon = defaultArgs.showIcon,
-  icon = defaultArgs.icon,
-  iconSize = defaultArgs.iconSize,
-  iconColor = defaultArgs.iconColor,
-  iconAriaLabel = defaultArgs.iconAriaLabel,
-  hover = defaultArgs.hover,
-  active = defaultArgs.active,
-  focus = defaultArgs.focus,
-  noUnderline = defaultArgs.noUnderline,
-  fullContainerLink = defaultArgs.fullContainerLink,
+  href,
+  color,
+  weight,
+  showIcon,
+  icon,
+  iconSize,
+  iconColor,
+  iconAriaLabel,
+  noUnderline,
+  fullContainerLink,
   className,
   children,
   LinkComponent,
+  asButton,
   ...otherProps
 }: ILinkProps) => {
   // Parse icon markup
@@ -88,20 +77,12 @@ export const Link: React.FC<ILinkProps> = ({
     className: clsx(
       'rvo-link',
       className,
-      {
-        'rvo-link--active': active,
-        'rvo-link--hover': hover,
-        'rvo-link--focus': focus,
-      },
       showIcon !== 'no' && ['rvo-link--with-icon'],
       noUnderline && 'rvo-link--no-underline',
-      color === 'donkerblauw' && 'rvo-link--donkerblauw',
-      color === 'lintblauw' && 'rvo-link--lintblauw',
-      color === 'wit' && 'rvo-link--wit',
-      color === 'zwart' && 'rvo-link--zwart',
-      color === 'grijs-700' && 'rvo-link--grijs-700',
-      weight === 'normal' && 'rvo-link--normal',
+      color && `rvo-link--${color}`,
+      weight && `rvo-link--${weight}`,
       fullContainerLink && 'rvo-link--full-card-link',
+      asButton && 'rvo-link--as-button',
     ),
     ...otherProps,
   };
@@ -109,7 +90,7 @@ export const Link: React.FC<ILinkProps> = ({
   const linkContent = (
     <>
       {showIcon === 'before' && iconMarkup}
-      <span className="rvo-link__text">{children || content}</span>
+      <span className="rvo-link__text">{children}</span>
       {showIcon === 'after' && iconMarkup}
     </>
   );
