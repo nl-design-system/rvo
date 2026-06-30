@@ -1,7 +1,7 @@
 import { Header } from '@nl-rvo/component-library-react';
-import { defaultArgs } from './defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { argTypes } from './argTypes';
+import { defaultArgs } from './defaultArgs';
 
 export default {
   title: 'Componenten/Header',
