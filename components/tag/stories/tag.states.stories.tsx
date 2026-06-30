@@ -1,6 +1,6 @@
 import { Tag } from '@nl-rvo/component-library-react';
-import { iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/tag/defaultArgs';
+import { iconNames } from '../../utils/iconUtils';
 
 const argTypes = {
   content: {
@@ -16,7 +16,7 @@ const argTypes = {
   },
   icon: {
     control: { type: 'select' },
-    options: iconOptions,
+    options: iconNames,
   },
   isPill: {
     control: 'boolean',
