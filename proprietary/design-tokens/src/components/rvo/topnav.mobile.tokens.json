@@ -79,6 +79,7 @@
           },
           "focus": {
             "background-color": { "value": "transparent" },
+            "color": { "value": "{rvo.focus.color}" },
             "font-weight": { "value": "{rvo.font-weight.normal}" },
             "text-decoration": { "value": "underline" }
           },
