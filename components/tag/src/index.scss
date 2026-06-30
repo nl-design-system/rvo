@@ -31,6 +31,7 @@ $rvo-tag-status: "info", "warning", "success", "error";
     span.rvo-icon {
       &:hover {
         --utrecht-icon-color: var(--rvo-tag-default-hover-icon-color);
+
         cursor: pointer;
       }
 
