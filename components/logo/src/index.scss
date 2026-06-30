@@ -12,7 +12,7 @@
   font-weight: var(--rvo-logo-font-weight);
   gap: 10px;
   position: relative;
-  width: fit-content;
+  inline-size: fit-content;
 
   &:has(.rvo-logo__title-link:focus-visible) {
     box-shadow: 0 0 0 0.25rem white;
@@ -29,11 +29,11 @@
       content: "";
       cursor: pointer;
       display: block;
-      height: 100%;
-      left: 0;
+      block-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: 100%;
       position: absolute;
-      top: 0;
-      width: 100%;
     }
 
     &:focus-visible {
