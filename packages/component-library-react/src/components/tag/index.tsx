@@ -48,7 +48,6 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
       ? Icon({
           icon: icon as any,
           size: 'lg',
-          color: '',
           className: iconPlacement !== undefined ? `rvo-link__icon--${iconPlacement}` : '',
         })
       : StatusIcon({

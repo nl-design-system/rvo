@@ -19,7 +19,7 @@ export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
 export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> = ({
   icon,
   size = 'md',
-  color = 'hemelblauw',
+  color,
   ariaLabel,
   className,
   ...rootElementProps
