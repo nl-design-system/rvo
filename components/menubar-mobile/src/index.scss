@@ -103,7 +103,7 @@
     }
 
     &:focus-visible {
-      color: var(--rvo-color-zwart);
+      color: var(--rvo-mobile-menu-item-link-focus-color);
       outline: none;
       text-decoration: underline;
       text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
