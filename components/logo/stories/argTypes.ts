@@ -8,6 +8,9 @@ export const argTypes = {
   subtitle: {
     control: 'text',
   },
+  link: {
+    control: 'text',
+  },
   className: {
     control: 'text',
   },

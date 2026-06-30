@@ -210,20 +210,6 @@ html.blog-wrapper.plugin-blog {
   .rvo-header {
     margin-inline-end: 0 !important;
     margin-inline-start: 0 !important;
-
-    .rvo-header__logo-link {
-      overflow: visible;
-      width: auto;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .rvo-header__logo-link {
-    overflow: visible;
   }
 
   // Fix table alignment in preview page
