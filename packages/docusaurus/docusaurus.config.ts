@@ -4,6 +4,7 @@ import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig from './config/navigationConfig';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
+import { rvoLightTheme } from './src/prism-theme';
 
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 
@@ -71,6 +72,7 @@ const config: Config = {
             require.resolve('@nl-rvo/assets/icons/index.css'),
             require.resolve('@nl-rvo/assets/images/index.css'),
             require.resolve('@nl-rvo/design-tokens/dist/index.css'),
+            require.resolve('@nl-rvo/component-library-css/dist/components/skip-link.css'),
             require.resolve('./src/scss/custom.scss'),
           ],
         },
@@ -106,7 +108,7 @@ const config: Config = {
       },
     ],
     prism: {
-      theme: prismThemes.github,
+      theme: rvoLightTheme,
       darkTheme: prismThemes.dracula,
     },
     ...navigationConfig,
