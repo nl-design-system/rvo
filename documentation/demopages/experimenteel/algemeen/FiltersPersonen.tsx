@@ -265,7 +265,7 @@ const FiltersPersonen = () => {
                             <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
                                 <LayoutFlow gap="sm">
-                                  <Link href="#" content="Jelle Knop"></Link>
+                                  <Link href="#">Jelle Knop</Link>
 
                                   <span className="rvo-result-description">
                                     Ik ben adviseur innovatieprogramma’s health bij RVO, waar ik me vooral focus op de
@@ -300,7 +300,7 @@ const FiltersPersonen = () => {
                             <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
                                 <LayoutFlow gap="sm">
-                                  <Link href="#" content="Bert van der Heide"></Link>
+                                  <Link href="#">Bert van der Heide</Link>
 
                                   <span className="rvo-result-description">
                                     Als adviseur internationale innovatie binnen RVO werk ik op het agri-food domein.
@@ -332,7 +332,7 @@ const FiltersPersonen = () => {
                             <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
                                 <LayoutFlow gap="sm">
-                                  <Link href="#" content="Roy Paulissen"></Link>
+                                  <Link href="#">Roy Paulissen</Link>
 
                                   <span className="rvo-result-description">
                                     Samen met de topsector HTSM vorm ik de nieuwe internationale strategie. Ik zit in

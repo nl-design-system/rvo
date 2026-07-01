@@ -52,7 +52,9 @@ const VoordatUStart = () => {
           <div className="rvo-form">
             <LayoutFlow gap="md">
               <div className="rvo-form-intro">
-                <Link content="Terug" href="#" showIcon="before" icon="terug" />
+                <Link href="#" showIcon="before" icon="terug">
+                  Terug
+                </Link>
                 <Heading type="h1">Voordat u start</Heading>
                 <Heading type="h2">Dit heeft u nodig</Heading>
                 <ul className="rvo-list">
@@ -70,30 +72,10 @@ const VoordatUStart = () => {
               <form>
                 <LayoutFlow row={false} gap="md">
                   <ActionGroup>
-                    <Button
-                      kind="warning-subtle"
-                      size="sm"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="warning-subtle" size="sm" busy={false} disabled={false} showIcon="no">
                       Annuleren
                     </Button>
-                    <Button
-                      kind="primary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                       Start aanvraag
                     </Button>
                   </ActionGroup>

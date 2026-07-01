@@ -319,7 +319,9 @@ const Landbouw = () => {
                       <span className="rvo-content-item-date rvo-paragraph--subtle">5 december 2023</span>
                     </div>
                   </div>
-                  <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Meer nieuws" noUnderline={true} />
+                  <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                    Meer nieuws
+                  </Link>
                 </LayoutFlow>
               </div>
 
@@ -330,19 +332,29 @@ const Landbouw = () => {
                   <Heading type="h2">Wegwijzers</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Veranderingen vanaf 1 januari 2024" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Veranderingen vanaf 1 januari 2024
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Dieren houden, verkopen en verzorgen" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Dieren houden, verkopen en verzorgen
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Mest" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Mest
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="In- en uitvoer agrarische producten" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        In- en uitvoer agrarische producten
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Gemeenschappelijk landbouwbeleid (GLB)" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Gemeenschappelijk landbouwbeleid (GLB)
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -350,10 +362,14 @@ const Landbouw = () => {
                   <Heading type="h2">Registraties</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Wanneer doet u uw meldingen en registraties?" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Wanneer doet u uw meldingen en registraties?
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Doe uw agrarische registratie bij ons" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Doe uw agrarische registratie bij ons
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
                       <a
@@ -364,10 +380,14 @@ const Landbouw = () => {
                       </a>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Regel een agrarische bedrijfsoverdracht" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Regel een agrarische bedrijfsoverdracht
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link content="Registreer uw dieren (I&R)" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Registreer uw dieren (I&R)
+                      </Link>
                     </li>
                   </ul>
                 </div>

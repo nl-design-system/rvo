@@ -176,7 +176,7 @@ const PerceelEdit = () => {
                                     type="checkbox"
                                     value=""
                                   />
-                                  0,007ha <Link content="Bekijk" noUnderline={true} />
+                                  0,007ha <Link noUnderline={true}>Bekijk</Link>
                                 </label>
                               </div>
                               <div className="rvo-checkbox__group">
@@ -188,7 +188,7 @@ const PerceelEdit = () => {
                                     type="checkbox"
                                     value=""
                                   />
-                                  0,014ha <Link content="Bekijk" noUnderline={true} />
+                                  0,014ha <Link noUnderline={true}>Bekijk</Link>
                                 </label>
                               </div>
                               <div className="rvo-checkbox__group">
@@ -200,7 +200,7 @@ const PerceelEdit = () => {
                                     type="checkbox"
                                     value=""
                                   />
-                                  0,025ha <Link content="Bekijk" noUnderline={true} />
+                                  0,025ha<Link noUnderline={true}>Bekijk</Link>
                                 </label>
                               </div>
                             </div>
@@ -228,7 +228,7 @@ const PerceelEdit = () => {
                                     type="checkbox"
                                     value=""
                                   />
-                                  0,010ha <Link content="Bekijk" noUnderline={true} />
+                                  0,010ha <Link noUnderline={true}>Bekijk</Link>
                                 </label>
                               </div>
                               <div className="rvo-checkbox__group">
@@ -240,7 +240,7 @@ const PerceelEdit = () => {
                                     type="checkbox"
                                     value=""
                                   />
-                                  0,014ha <Link content="Bekijk" noUnderline={true} />
+                                  0,014ha <Link noUnderline={true}>Bekijk</Link>
                                 </label>
                               </div>
                               <div className="rvo-checkbox__group">
@@ -252,7 +252,7 @@ const PerceelEdit = () => {
                                     type="checkbox"
                                     value=""
                                   />
-                                  0,015ha <Link content="Bekijk" noUnderline={true} />
+                                  0,015ha <Link noUnderline={true}>Bekijk</Link>
                                 </label>
                               </div>
                             </div>

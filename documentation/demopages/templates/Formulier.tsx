@@ -55,7 +55,9 @@ const Formulier = () => {
               <div className="rvo-form">
                 <LayoutFlow gap="sm">
                   <div>
-                    <Link content="Terug" href="#" showIcon="before" icon="terug" noUnderline={true} />
+                    <Link href="#" showIcon="before" icon="terug" noUnderline={true}>
+                      Terug
+                    </Link>
                     <Heading type="h1">Formulier template</Heading>
                     <p className="rvo-text--lg">
                       <span className="rvo-text--bold">Voorbeeld van een paragraaf met grote tekst</span>. Deze
@@ -203,30 +205,10 @@ const Formulier = () => {
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button
-                          kind="primary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
+                        <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                           Primary action
                         </Button>
-                        <Button
-                          kind="secondary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
+                        <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                           Secondary action
                         </Button>
                       </ActionGroup>
