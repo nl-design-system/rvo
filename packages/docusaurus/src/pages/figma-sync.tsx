@@ -7,7 +7,7 @@ import data from './figma-sync-data.json';
 export default function FigmaSync(): ReactElement {
   return (
     <Layout title="Figma Sync" description="Componentstatus Storybook vs Figma">
-      <main style={{ paddingBlockStart: 'var(--rvo-space-xl)' }}>
+      <main id="main" style={{ paddingBlockStart: 'var(--rvo-space-xl)' }}>
         <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-layout-column rvo-layout-gap--md">
           <Heading as="h1">Figma Sync — componentstatus</Heading>
           <p>
