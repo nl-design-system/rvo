@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.6.2
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.6.1
 
 ### Patch Changes

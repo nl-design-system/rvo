@@ -1,5 +1,12 @@
 # @nl-rvo/design-tokens
 
+## 2.4.2
+
+### Patch Changes
+
+- 65d3db8: Semibold font-weight changed from 500 to 625
+- 77a7bb4: Fix alert background colours to use the correct tint (level 150): info to hemelblauw-150, warning to donkergeel-150 and success to groen-150 according to Rijkshuisstijl guidelines.
+
 ## 2.4.1
 
 ### Patch Changes

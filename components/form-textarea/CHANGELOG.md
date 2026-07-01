@@ -1,5 +1,12 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.5.1
+
+### Patch Changes
+
+- b3806fb: Repair the focus event on this component
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.5.0
 
 ### Minor Changes

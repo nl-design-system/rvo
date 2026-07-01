@@ -1,5 +1,11 @@
 # `@nl-rvo/css-progress-tracker`
 
+## 1.3.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.3.0
 
 ### Minor Changes

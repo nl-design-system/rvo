@@ -1,5 +1,11 @@
 ## Pre-releases
 
+## 1.1.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.1.0
 
 ### Minor Changes
