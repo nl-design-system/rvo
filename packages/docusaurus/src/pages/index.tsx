@@ -38,7 +38,7 @@ export default function Home(): ReactElement {
           </MaxWidthLayout>
         </div>
       </header>
-      <main>
+      <main id="main">
         <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
           <Grid columns="three" gap="xl">
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">

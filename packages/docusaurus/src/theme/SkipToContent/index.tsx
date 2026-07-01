@@ -5,9 +5,8 @@
 
 import { translate } from '@docusaurus/Translate';
 import { useHistory } from '@docusaurus/router';
-import { SkipToContentFallbackId } from '@docusaurus/theme-common';
 import { useLocationChange } from '@docusaurus/theme-common/internal';
-import React, { type ReactNode, useCallback, useRef } from 'react';
+import React, { type ReactNode, useRef } from 'react';
 
 function programmaticFocus(el: HTMLElement): void {
   el.setAttribute('tabindex', '-1');
@@ -26,16 +25,6 @@ export default function SkipToContent(): ReactNode {
       'The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation',
   });
 
-  const onClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    // Focus the content wrapper directly after the navbar rather than main:first-of-type,
-    // so page content in <header> sections (e.g. the homepage hero) is not skipped.
-    const target = document.getElementById(SkipToContentFallbackId);
-    if (target) {
-      programmaticFocus(target);
-    }
-  }, []);
-
   useLocationChange(({ location }) => {
     if (containerRef.current && !location.hash && action === 'PUSH') {
       programmaticFocus(containerRef.current);
@@ -45,7 +34,7 @@ export default function SkipToContent(): ReactNode {
   return (
     <div ref={containerRef} role="region" aria-label={label}>
       {/* eslint-disable-next-line @docusaurus/no-html-links */}
-      <a href={`#${SkipToContentFallbackId}`} onClick={onClick} className="rvo-skip-link">
+      <a href="#main" className="rvo-skip-link">
         {label}
       </a>
     </div>
