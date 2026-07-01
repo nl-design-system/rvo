@@ -140,7 +140,7 @@ const OverzichtClean = () => {
                       <Heading type="h2" noMargins={true}>
                         Lopende aanvragen
                       </Heading>
-                      <Tag type="info" content="2 openstaande acties" />
+                      <Tag type="info">2 openstaande acties</Tag>
                     </LayoutFlow>
                   </div>
 

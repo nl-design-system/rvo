@@ -10,20 +10,20 @@ import { StatusIcon } from '../status-icon';
 import '@nl-rvo/component-library-css/dist/components/tag.css';
 
 export interface ITagProps {
-  content: ReactNode;
-  type?: 'info' | 'success' | 'error' | 'warning';
-  iconPlacement?: 'before' | 'after';
+  className?: string;
+  children: ReactNode;
   icon?: IconType;
+  iconPlacement?: 'before' | 'after';
   isPill?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>) => void;
+  type?: 'info' | 'success' | 'error' | 'warning';
   url?: string;
   urlTarget?: '_blank' | '_self' | '_parent' | '_top';
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>) => void;
-  className?: string;
   [key: string]: any; // Allow additional props
 }
 
 export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
-  content,
+  children,
   type,
   iconPlacement,
   icon,
@@ -77,7 +77,7 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
       {...rootElementProps}
     >
       {iconPlacement === 'before' && iconMarkup}
-      {content}
+      {children}
       {iconPlacement === 'after' && iconMarkup}
     </TagElement>
   );
