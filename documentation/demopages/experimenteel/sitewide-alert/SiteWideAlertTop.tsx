@@ -213,9 +213,15 @@ const SiteWideAlertTop = () => {
                     </Card>
                   </Grid>
                   <LayoutFlow row={true}>
-                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true} />
-                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true} />
-                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true} />
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Menu item
+                    </Link>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Menu item
+                    </Link>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Menu item
+                    </Link>
                   </LayoutFlow>
                 </LayoutFlow>
               </div>
@@ -233,7 +239,9 @@ const SiteWideAlertTop = () => {
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                             <LayoutFlow row={true} wrap={true} gap="sm">
-                              <Link content="Item list title" color="zwart" noUnderline={true} />
+                              <Link color="zwart" noUnderline={true}>
+                                Item list title
+                              </Link>
                               met groene status indicator
                             </LayoutFlow>
                           </LayoutFlow>
@@ -249,7 +257,9 @@ const SiteWideAlertTop = () => {
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
                             <LayoutFlow row={true} wrap={true} gap="sm">
-                              <Link content="Item list title" color="zwart" noUnderline={true} />
+                              <Link color="zwart" noUnderline={true}>
+                                Item list title
+                              </Link>
                               met rode status indicator
                             </LayoutFlow>
                           </LayoutFlow>
@@ -265,7 +275,9 @@ const SiteWideAlertTop = () => {
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
                             <LayoutFlow row={true} wrap={true} gap="sm">
-                              <Link content="Item list title" color="zwart" noUnderline={true} />
+                              <Link color="zwart" noUnderline={true}>
+                                Item list title
+                              </Link>
                               met oranje status indicator
                             </LayoutFlow>
                           </LayoutFlow>

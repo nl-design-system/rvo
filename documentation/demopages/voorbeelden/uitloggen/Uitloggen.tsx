@@ -30,7 +30,9 @@ const Uitloggen = () => {
               <Button kind="primary" label="Opnieuw inloggen" />
 
               <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
-                <Link href="https://www.rvo.nl" content="Ga terug naar rvo.nl" noUnderline={true} />
+                <Link href="https://www.rvo.nl" noUnderline={true}>
+                  Ga terug naar rvo.nl
+                </Link>
               </List>
             </LayoutFlow>
           </div>

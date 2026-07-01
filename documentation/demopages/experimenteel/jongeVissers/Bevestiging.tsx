@@ -107,19 +107,15 @@ const Bevestiging = () => {
                     </p>
                   </LayoutFlow>
                   <p>
-                    Een PDF kunt u openen met{' '}
-                    <Link
-                      href="#"
-                      content="Adobe Acrobat
-                  Reader"
-                    ></Link>
-                    .
+                    Een PDF kunt u openen met <Link href="#">Adobe AcrobatReader</Link>.
                   </p>
                   <p>
                     Heeft u nog vragen? Dan kunt u ons bellen op werkdagen tussen 8:30 en 17:00 uur op 088 042 42 42
                     (lokaal tarief)
                   </p>
-                  <Link showIcon="before" href="#" content="Ontvangstbevestiging 192040000027" icon="downloaden"></Link>
+                  <Link showIcon="before" href="#" icon="downloaden">
+                    Ontvangstbevestiging 192040000027
+                  </Link>
                 </div>
               </LayoutFlow>
             </div>

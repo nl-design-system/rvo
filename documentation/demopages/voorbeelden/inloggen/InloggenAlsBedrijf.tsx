@@ -34,7 +34,9 @@ const InloggenAlsBedrijf = () => {
                   showIcon="before"
                   icon="terug"
                   noUnderline={true}
-                />
+                >
+                  Terug
+                </Link>
                 <div className="rvo-card rvo-card--outline rvo-card--padding-xl rvo-bg--wit">
                   <LayoutFlow gap="lg">
                     <Heading type="h1" noMargins={true}>
@@ -86,8 +88,12 @@ const InloggenAlsBedrijf = () => {
                     <Button kind="secondary" fullWidth={true} label="Ik heb geen van deze inlogmiddelen" />
 
                     <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
-                      <Link href="#" content="Heeft u nog geen geldige machtiging?" noUnderline={true} />
-                      <Link href="#" content="Hulp bij inloggen" noUnderline={true} />
+                      <Link href="#" noUnderline={true}>
+                        Heeft u nog geen geldige machtiging?
+                      </Link>
+                      <Link href="#" noUnderline={true}>
+                        Hulp bij inloggen
+                      </Link>
                     </List>
                   </LayoutFlow>
                 </div>

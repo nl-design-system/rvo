@@ -65,7 +65,9 @@ const FormFieldErrors = () => {
               <div className="rvo-form">
                 <LayoutFlow gap="sm">
                   <div>
-                    <Link content="Terug" href="#" showIcon="before" icon="terug" noUnderline={true} />
+                    <Link href="#" showIcon="before" icon="terug" noUnderline={true}>
+                      Terug
+                    </Link>
                     <Heading type="h1">Form Field Errors</Heading>
                     <p className="rvo-text--lg">
                       <span className="rvo-text--bold">Experimental demo page</span>. This form demonstrates radio

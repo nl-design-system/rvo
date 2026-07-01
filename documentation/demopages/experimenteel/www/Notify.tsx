@@ -249,16 +249,18 @@ const Notify = () => {
               </Heading>
             </LayoutFlow>
             <Grid columns="two" gap="xs">
-              <Link showIcon="before" icon="pijl-omlaag" target="#" content="Stand van zaken 2024" noUnderline={true} />
-              <Link showIcon="before" icon="pijl-omlaag" target="#" content="ISDE verbreed" noUnderline={true} />
-              <Link showIcon="before" icon="pijl-omlaag" target="#" content="Stand van zaken 2024" noUnderline={true} />
-              <Link
-                showIcon="before"
-                icon="pijl-omlaag"
-                target="#"
-                content="Cijfers per gemeente en provincie"
-                noUnderline={true}
-              />
+              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+                Stand van zaken 2024
+              </Link>
+              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+                ISDE verbreed
+              </Link>
+              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+                Stand van zaken 2024
+              </Link>
+              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+                Cijfers per gemeente en provincie
+              </Link>
             </Grid>
             <p>
               In 2024 is € 600 miljoen beschikbaar voor zonneboilers, (hybride) warmtepompen, isolatiemaatregelen,

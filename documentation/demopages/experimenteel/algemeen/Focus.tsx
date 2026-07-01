@@ -77,7 +77,9 @@ const Focus = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div className="rvo-form-intro">
-                  <Link content="Terug" href="#" showIcon="before" icon="terug" />
+                  <Link href="#" showIcon="before" icon="terug">
+                    Terug
+                  </Link>
                   <Heading type="h1">Heading</Heading>
                 </div>
                 <form className="rvo-layout-spacer rvo-layout-spacer--2xl">

@@ -1,6 +1,6 @@
 import { Link } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/link/defaultArgs';
 import { argTypes } from './argTypes';
+import { defaultArgs } from './defaultArgs';
 
 export default {
   title: 'Componenten/Link/Voorbeelden',
