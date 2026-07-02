@@ -45,8 +45,8 @@
     &:focus-visible {
       color: var(--rvo-mobile-menu-toggle-focus-color);
       text-decoration: var(--rvo-mobile-menu-toggle-focus-text-decoration);
-      text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
-      text-underline-offset: var(--rvo-link-text-underline-offset);
+      text-decoration-thickness: var(--rvo-mobile-menu-toggle-focus-text-decoration-thickness);
+      text-underline-offset: var(--rvo-mobile-menu-toggle-focus-text-underline-offset);
     }
     padding-block-start: var(--rvo-mobile-menu-toggle-padding-block-start);
     padding-inline-end: var(--rvo-mobile-menu-toggle-padding-inline-end);
@@ -106,8 +106,8 @@
       color: var(--rvo-mobile-menu-item-link-focus-color);
       outline: none;
       text-decoration: underline;
-      text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
-      text-underline-offset: var(--rvo-link-text-underline-offset);
+      text-decoration-thickness: var(--rvo-mobile-menu-item-link-focus-text-decoration-thickness);
+      text-underline-offset: var(--rvo-mobile-menu-item-link-focus-text-underline-offset);
     }
   }
 
