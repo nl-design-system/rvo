@@ -34,7 +34,9 @@ const InloggenVoorIemandAnders = () => {
                   showIcon="before"
                   icon="terug"
                   noUnderline={true}
-                />
+                >
+                  Terug
+                </Link>
                 <div className="rvo-card rvo-card--outline rvo-card--padding-xl rvo-bg--wit">
                   <LayoutFlow gap="lg">
                     <Heading type="h1" noMargins={true}>

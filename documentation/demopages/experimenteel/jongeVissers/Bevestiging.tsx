@@ -107,7 +107,7 @@ const Bevestiging = () => {
                     </p>
                   </LayoutFlow>
                   <p>
-                    Een PDF kunt u openen met <Link href="#">Adobe AcrobatReader</Link>.
+                    Een PDF kunt u openen met <Link href="#">Adobe Acrobat Reader</Link>.
                   </p>
                   <p>
                     Heeft u nog vragen? Dan kunt u ons bellen op werkdagen tussen 8:30 en 17:00 uur op 088 042 42 42

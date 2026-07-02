@@ -295,7 +295,9 @@ const SiteWideAlertTop = () => {
                       icon="externe-link"
                       target="#"
                       noUnderline={true}
-                    />
+                    >
+                      Zoek een andere regeling op rvo.nl
+                    </Link>
                   </LayoutFlow>
                 </LayoutFlow>
               </Grid>
