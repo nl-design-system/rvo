@@ -32,6 +32,13 @@
       "outline-color": { "value": "{rvo.color.grijs-400}" },
       "background": {
         "bg-color": { "value": "rgba(0,0,0,0.35)" }
+      },
+      "close-button": {
+        "focus": {
+          "color": { "value": "{rvo.focus.color}" },
+          "text-decoration-thickness": { "value": "{rvo.focus.text-decoration-thickness}" },
+          "text-underline-offset": { "value": "{rvo.focus.text-underline-offset}" }
+        }
       }
     }
   }
