@@ -38,7 +38,7 @@
     "lint-staged": "15.2.2",
     "markdownlint-cli": "0.47.0",
     "normalize.css": "8.0.1",
-    "npm-check-updates": "19.0.0",
+    "npm-check-updates": "22.2.9",
     "npm-package-json-lint": "7.1.0",
     "npm-run-all": "4.1.5",
     "postcss": "8.4.42",
@@ -83,9 +83,9 @@
     "test": "pnpm run --recursive test",
     "test-build": "pnpm run --recursive test-build",
     "test-update": "npm-run-all --sequential clean lint build test",
-    "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
-    "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
-    "update-major": "npm-check-updates --configFileName .ncurc.major.cjs"
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
+    "update-major": "npm-check-updates --configFileName .ncurc.major.mjs"
   },
   "dependencies": {
     "http-server": "14.1.1"
