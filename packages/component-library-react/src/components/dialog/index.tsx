@@ -74,7 +74,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   }, [isOpenProp]);
 
   useEffect(() => {
-    if (!isOpen || !dialogRef.current) return;
+    if (!isOpen || !dialogRef.current) return undefined;
 
     const dialog = dialogRef.current;
     const focusableElements = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS));
