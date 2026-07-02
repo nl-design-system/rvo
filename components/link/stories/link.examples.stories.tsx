@@ -28,7 +28,7 @@ export const TerugLink = {
 
   args: {
     ...defaultArgs,
-    content: 'Terug',
+    children: 'Terug',
     icon: 'terug',
     showIcon: 'before',
     iconAriaLabel: 'Ga terug',
@@ -41,7 +41,7 @@ export const VerderLink = {
 
   args: {
     ...defaultArgs,
-    content: 'Verder',
+    children: 'Verder',
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     iconAriaLabel: 'Ga verder',
@@ -54,7 +54,7 @@ export const ExterneLink = {
 
   args: {
     ...defaultArgs,
-    content: 'Externe link',
+    children: 'Externe link',
     icon: 'pijl-naar-rechtsboven',
     showIcon: 'after',
     iconAriaLabel: 'Ga naar www.rvo.nl (externe link)',
@@ -67,7 +67,7 @@ export const ZonderUnderline = {
 
   args: {
     ...defaultArgs,
-    content: 'Verder',
+    children: 'Verder',
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     noUnderline: true,
@@ -81,7 +81,7 @@ export const SmallIcon = {
 
   args: {
     ...defaultArgs,
-    content: 'Verder',
+    children: 'Verder',
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     iconSize: 'sm',

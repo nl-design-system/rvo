@@ -51,7 +51,7 @@ export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
   if (state === 'incomplete' || state === 'doing' || state === 'completed') {
     labelMarkup = (
       <Link href={link} className="rvo-progress-tracker__step-link" onClick={onClick}>
-        label
+        {label}
       </Link>
     );
   }

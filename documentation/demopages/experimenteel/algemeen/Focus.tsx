@@ -220,30 +220,10 @@ const Focus = () => {
                   </Fieldset>
 
                   <ActionGroup>
-                    <Button
-                      kind="primary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                       Primary action
                     </Button>
-                    <Button
-                      kind="secondary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                       Secondary action
                     </Button>
                   </ActionGroup>

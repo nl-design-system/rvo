@@ -273,13 +273,7 @@ const SiteWideAlert = () => {
                         </LayoutFlow>
                       </div>
                     </div>
-                    <Link
-                      content="Zoek een andere regeling op rvo.nl"
-                      showIcon="after"
-                      icon="externe-link"
-                      target="#"
-                      noUnderline={true}
-                    >
+                    <Link showIcon="after" icon="externe-link" target="#" noUnderline={true}>
                       Zoek een andere regeling op rvo.nl
                     </Link>
                   </LayoutFlow>

@@ -105,30 +105,10 @@ const FormFieldErrors = () => {
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button
-                          kind="primary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
+                        <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                           Submit
                         </Button>
-                        <Button
-                          kind="secondary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
+                        <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                           Cancel
                         </Button>
                       </ActionGroup>
