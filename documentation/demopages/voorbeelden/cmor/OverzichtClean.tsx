@@ -219,21 +219,15 @@ const OverzichtClean = () => {
                     </Card>
                   </Grid>
                   <LayoutFlow row={true}>
-                    <Link
-                      showIcon="after"
-                      icon="pijl-naar-rechts"
-                      target="#"
-                      content="Alle lopende aanvragen (13)"
-                      noUnderline={true}
-                    />
-                    <Link
-                      showIcon="after"
-                      icon="pijl-naar-rechts"
-                      target="#"
-                      content="Mijn dossier"
-                      noUnderline={true}
-                    />
-                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Concepten" noUnderline={true} />
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Alle lopende aanvragen (13)
+                    </Link>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Mijn dossier
+                    </Link>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Concepten
+                    </Link>
                   </LayoutFlow>
                 </LayoutFlow>
               </div>
@@ -251,7 +245,9 @@ const OverzichtClean = () => {
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                             <LayoutFlow row={true} wrap={true} gap="sm">
-                              <Link content="ANLb-Collectieven" color="zwart" noUnderline={true} />
+                              <Link color="zwart" noUnderline={true}>
+                                ANLb-Collectieven
+                              </Link>
                               Open voor aanvragen
                             </LayoutFlow>
                           </LayoutFlow>
@@ -267,7 +263,9 @@ const OverzichtClean = () => {
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
                             <LayoutFlow row={true} wrap={true} gap="sm">
-                              <Link content="ISDE" color="zwart" noUnderline={true} />
+                              <Link color="zwart" noUnderline={true}>
+                                ISDE
+                              </Link>
                               Gesloten voor aanvragen
                             </LayoutFlow>
                           </LayoutFlow>
@@ -283,7 +281,9 @@ const OverzichtClean = () => {
                           <LayoutFlow row={true} alignItems="start">
                             <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
                             <LayoutFlow row={true} wrap={true} gap="sm">
-                              <Link content="Gecombineerde Opgave" color="zwart" noUnderline={true} />
+                              <Link color="zwart" noUnderline={true}>
+                                Gecombineerde Opgave
+                              </Link>
                               Tijdelijk gesloten voor aanvragen
                             </LayoutFlow>
                           </LayoutFlow>
@@ -295,13 +295,9 @@ const OverzichtClean = () => {
                         </LayoutFlow>
                       </div>
                     </div>
-                    <Link
-                      content="Zoek een andere regeling op rvo.nl"
-                      showIcon="after"
-                      icon="externe-link"
-                      target="#"
-                      noUnderline={true}
-                    />
+                    <Link showIcon="after" icon="externe-link" target="#" noUnderline={true}>
+                      Zoek een andere regeling op rvo.nl
+                    </Link>
                   </LayoutFlow>
                 </LayoutFlow>
                 <LayoutFlow gap="xs">
@@ -311,19 +307,29 @@ const OverzichtClean = () => {
 
                   <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding rvo-ul--none">
                     <li>
-                      <Link content="Wijzig e-mail of telefoonnummer" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Wijzig e-mail of telefoonnummer
+                      </Link>
                     </li>
                     <li>
-                      <Link content="Neem contact op" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Neem contact op
+                      </Link>
                     </li>
                     <li>
-                      <Link content="Voeg favoriet toe" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Voeg favoriet toe
+                      </Link>
                     </li>
                     <li>
-                      <Link content="Machtig iemand anders" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Machtig iemand anders
+                      </Link>
                     </li>
                     <li>
-                      <Link content="Meld een technisch probleem" target="#" noUnderline={true} />
+                      <Link target="#" noUnderline={true}>
+                        Meld een technisch probleem
+                      </Link>
                     </li>
                   </ul>
                 </LayoutFlow>
@@ -337,7 +343,9 @@ const OverzichtClean = () => {
                   <div className="rvo-item-list">
                     <div className="rvo-item-list__item">
                       <LayoutFlow row={true} justifyContent="space-between" wrap={true} gap="sm">
-                        <Link content="U moet uw gegevens updaten" noUnderline={true} color="zwart" />
+                        <Link noUnderline={true} color="zwart">
+                          U moet uw gegevens updaten
+                        </Link>
                         <LayoutFlow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">ISDE 2022</span>
                           <span className="rvo-text--sm rvo-text--subtle">7 jun 2023</span>
@@ -346,7 +354,9 @@ const OverzichtClean = () => {
                     </div>
                     <div className="rvo-item-list__item">
                       <LayoutFlow row={true} justifyContent="space-between" wrap={true} gap="sm">
-                        <Link content="Percelenregistratie goedgekeurd" noUnderline={true} color="zwart" />
+                        <Link noUnderline={true} color="zwart">
+                          Percelenregistratie goedgekeurd
+                        </Link>
                         <LayoutFlow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">Mijn Percelen</span>
                           <span className="rvo-text--sm rvo-text--subtle">15 mei 2023</span>
@@ -355,7 +365,9 @@ const OverzichtClean = () => {
                     </div>
                     <div className="rvo-item-list__item">
                       <LayoutFlow row={true} justifyContent="space-between" wrap={true} gap="sm">
-                        <Link content="Aanvullend bewijsmateriaal aanleveren" noUnderline={true} color="zwart" />
+                        <Link noUnderline={true} color="zwart">
+                          Aanvullend bewijsmateriaal aanleveren
+                        </Link>
                         <LayoutFlow row={true}>
                           <span className="rvo-text--sm rvo-text--subtle">WBSO</span>
                           <span className="rvo-text--sm rvo-text--subtle">22 apr 2023</span>
@@ -363,7 +375,9 @@ const OverzichtClean = () => {
                       </LayoutFlow>
                     </div>
                   </div>
-                  <Link content="Alle berichten" showIcon="after" icon="pijl-naar-rechts" noUnderline={true} />
+                  <Link showIcon="after" icon="pijl-naar-rechts" noUnderline={true}>
+                    Alle berichten
+                  </Link>
                 </LayoutFlow>
               </LayoutFlow>
               <Grid columns="two" gap="xl">
@@ -392,12 +406,9 @@ const OverzichtClean = () => {
                       ]}
                     />
 
-                    <Link
-                      content="Bekijk alle veelgestelde vragen"
-                      showIcon="after"
-                      icon="pijl-naar-rechts"
-                      noUnderline={true}
-                    />
+                    <Link showIcon="after" icon="pijl-naar-rechts" noUnderline={true}>
+                      Bekijk alle veelgestelde vragen
+                    </Link>
                   </LayoutFlow>
                 </div>
 

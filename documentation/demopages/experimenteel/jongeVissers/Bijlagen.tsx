@@ -88,8 +88,8 @@ const Bijlagen = () => {
                   <ul>
                     <li>
                       U kunt alleen bijlagen versturen in PDF-formaat. Als u een ander type document wil versturen maakt
-                      u hier eerst een PDF van waarvoor u eventueel de gratis{' '}
-                      <Link content="PDF Creator" href="#"></Link> kan gebruiken.
+                      u hier eerst een PDF van waarvoor u eventueel de gratis <Link href="#">PDF Creator</Link> kan
+                      gebruiken.
                     </li>
                     <li>
                       Iedere bijlage mag <strong>maximaal 25MB</strong> groot zijn.
