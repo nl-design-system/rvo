@@ -9,6 +9,7 @@ export default function BlogLayout(props) {
     <Layout {...layoutProps}>
       <div className={`rvo-max-width-layout rvo-max-width-layout--sm`}>
         <main
+          id="main"
           className={clsx(
             styles.docMainContainer,
             (hiddenSidebarContainer || !sidebar) && styles.docMainContainerEnhanced,

@@ -155,11 +155,12 @@ const Kosten = () => {
                       </tbody>
                     </table>
                     <Link
-                      content="Kosten toevoegen"
                       icon="plus"
                       showIcon="before"
                       href="iframe.html?args=&id=demo-pagina-s-jonge-vissers--kosten-opvoeren"
-                    ></Link>
+                    >
+                      Kosten toevoegen
+                    </Link>
                   </LayoutFlow>
                 </div>
 
@@ -210,7 +211,9 @@ const Kosten = () => {
                         </tr>
                       </tbody>
                     </table>
-                    <Link content="Subsidie toevoegen" icon="plus" showIcon="before" href="#"></Link>
+                    <Link icon="plus" showIcon="before" href="#">
+                      Subsidie toevoegen
+                    </Link>
                   </LayoutFlow>
                 </div>
                 <Heading type="h2">Berekening</Heading>

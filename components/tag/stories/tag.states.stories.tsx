@@ -1,5 +1,5 @@
 import { Tag } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/tag/defaultArgs';
+import { defaultArgs } from './defaultArgs';
 import { iconNames } from '../../utils/iconUtils';
 
 const argTypes = {

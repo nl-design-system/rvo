@@ -1,5 +1,12 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.8.1
+
+### Patch Changes
+
+- b3806fb: Repair the focus event on this component
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.8.0
 
 ### Minor Changes

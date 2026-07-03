@@ -77,7 +77,9 @@ const Focus = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div className="rvo-form-intro">
-                  <Link content="Terug" href="#" showIcon="before" icon="terug" />
+                  <Link href="#" showIcon="before" icon="terug">
+                    Terug
+                  </Link>
                   <Heading type="h1">Heading</Heading>
                 </div>
                 <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
@@ -218,30 +220,10 @@ const Focus = () => {
                   </Fieldset>
 
                   <ActionGroup>
-                    <Button
-                      kind="primary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                       Primary action
                     </Button>
-                    <Button
-                      kind="secondary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                       Secondary action
                     </Button>
                   </ActionGroup>

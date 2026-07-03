@@ -11,16 +11,16 @@
       "fieldset-margin": { "value": "-{rvo.space.xl}" },
       "line-height": { "value": "{rvo.line-height.md}" },
       "info": {
-        "background-color": { "value": "{rvo.color.hemelblauw-300}" }
+        "background-color": { "value": "{rvo.color.hemelblauw-150}" }
       },
       "warning": {
-        "background-color": { "value": "{rvo.color.donkergeel-300}" }
+        "background-color": { "value": "{rvo.color.donkergeel-150}" }
       },
       "error": {
         "background-color": { "value": "{rvo.color.rood-150}" }
       },
       "success": {
-        "background-color": { "value": "{rvo.color.groen-300}" }
+        "background-color": { "value": "{rvo.color.groen-150}" }
       },
       "padding": {
         "xs": {

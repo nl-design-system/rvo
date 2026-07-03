@@ -11,82 +11,113 @@
   font-family: var(--rvo-logo-font-family);
   font-weight: var(--rvo-logo-font-weight);
   gap: 10px;
-}
+  inline-size: fit-content;
+  position: relative;
 
-.rvo-logo__emblem {
-  align-self: flex-start;
-  block-size: 80px;
-  inline-size: 40px;
-  min-inline-size: 40px;
-}
+  &:has(.rvo-logo__title-link:focus-visible) {
+    box-shadow: 0 0 0 0.25rem white;
+    outline: 0.375rem double black;
+  }
 
-.rvo-logo__wordmark {
-  align-self: flex-start;
-  margin-block-start: 42px;
-}
+  &__title-link {
+    color: inherit;
+    display: block;
+    font-weight: inherit;
+    text-decoration: none;
 
-.rvo-logo__title {
-  font-size: 12px;
-  line-height: 112.5%;
-  margin-block-end: 0;
-  margin-block-start: 0;
-  white-space: pre-line;
-}
+    &::before {
+      block-size: 100%;
+      content: "";
+      cursor: pointer;
+      display: block;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      position: absolute;
+    }
 
-.rvo-logo__subtitle {
-  font-size: 10px;
-  line-height: 125%;
-  margin-block-end: 0;
-  margin-block-start: 4px;
-  white-space: pre-line;
-}
+    &:focus-visible {
+      outline: none;
+    }
 
-@media (min-width: 495px) {
-  .rvo-logo {
+    &:hover,
+    &:focus:not(:focus-visible) {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__emblem {
+    align-self: flex-start;
+    block-size: 80px;
+    inline-size: 40px;
+    min-inline-size: 40px;
+  }
+
+  &__wordmark {
+    align-self: flex-start;
+    margin-block-start: 42px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 112.5%;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    white-space: pre-line;
+  }
+
+  &__subtitle {
+    font-size: 10px;
+    line-height: 125%;
+    margin-block-end: 0;
+    margin-block-start: 4px;
+    white-space: pre-line;
+  }
+
+  @media (min-width: 495px) {
     gap: 11px;
+
+    &__emblem {
+      block-size: 90px;
+      inline-size: 45px;
+      min-inline-size: 45px;
+    }
+
+    &__wordmark {
+      margin-block-start: 47px;
+    }
+
+    &__title {
+      font-size: 13.5px;
+      line-height: 114.5%;
+    }
+
+    &__subtitle {
+      font-size: 11px;
+    }
   }
 
-  .rvo-logo__emblem {
-    block-size: 90px;
-    inline-size: 45px;
-    min-inline-size: 45px;
-  }
-
-  .rvo-logo__wordmark {
-    margin-block-start: 47px;
-  }
-
-  .rvo-logo__title {
-    font-size: 13.5px;
-    line-height: 114.5%;
-  }
-
-  .rvo-logo__subtitle {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 650px) {
-  .rvo-logo {
+  @media (min-width: 650px) {
     gap: 12px;
-  }
 
-  .rvo-logo__emblem {
-    block-size: 100px;
-    inline-size: 50px;
-    min-inline-size: 50px;
-  }
+    &__emblem {
+      block-size: 100px;
+      inline-size: 50px;
+      min-inline-size: 50px;
+    }
 
-  .rvo-logo__wordmark {
-    margin-block-start: 52px;
-  }
+    &__wordmark {
+      margin-block-start: 52px;
+    }
 
-  .rvo-logo__title {
-    font-size: 15px;
-    line-height: 114.8%;
-  }
+    &__title {
+      font-size: 15px;
+      line-height: 114.8%;
+    }
 
-  .rvo-logo__subtitle {
-    font-size: 12.25px;
+    &__subtitle {
+      font-size: 12.25px;
+    }
   }
 }

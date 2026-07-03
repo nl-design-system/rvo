@@ -8,6 +8,17 @@ packages:
   - "uxpin-merge/"
   - "documentation/"
 
+allowBuilds:
+  "@parcel/watcher": true
+  "@swc/core": true
+  core-js: false
+  core-js-pure: false
+  esbuild: true
+  fsevents: true
+  lmdb: true
+  msgpackr-extract: true
+  ngrok: true
+
 # Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
 autoInstallPeers: false
 
@@ -35,6 +46,13 @@ minimumReleaseAgeExclude:
 
 overrides:
   form-data@>=4.0.0 <4.0.4: ">=4.0.4"
+  markdownlint: 0.36.1
+  markdownlint-cli: 0.43.0
+  "@types/react": 18.3.1
+  "@types/react-dom": 18.3.1
+  axios@<1.13.2: ">=1.13.2"
+  axios@<1.15.0: ">=1.15.0"
+  shell-quote@<1.8.4: ">=1.8.4"
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
@@ -43,3 +61,5 @@ savePrefix: ""
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
+
+provenance: true

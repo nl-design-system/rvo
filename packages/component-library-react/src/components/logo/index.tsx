@@ -4,18 +4,19 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/logo.css';
 
 export interface ILogoProps {
   title?: string;
   subtitle?: string;
+  link?: string;
   className?: string;
 }
 
 export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  title = defaultArgs.title,
-  subtitle = defaultArgs.subtitle,
+  title = 'Rijksdienst voor Ondernemend Nederland',
+  subtitle = '',
+  link,
   className,
   ...rootElementProps
 }) => {
@@ -32,7 +33,13 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
         </svg>
       </div>
       <div className="rvo-logo__wordmark">
-        <p className="rvo-logo__title">{title}</p>
+        {link ? (
+          <a href={link} className="rvo-logo__title rvo-logo__title-link">
+            {title}
+          </a>
+        ) : (
+          <p className="rvo-logo__title">{title}</p>
+        )}
         {subtitle && <p className="rvo-logo__subtitle">{subtitle}</p>}
       </div>
     </div>
