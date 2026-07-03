@@ -25,7 +25,7 @@ function formatDate(dateString?: string): string {
 export default function BlogListPage({ metadata, items }: Props): ReactElement {
   return (
     <Layout title="Blog" description="Updates over het ROOS Design System">
-      <main>
+      <main id="main">
         <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-padding-block-start--2xl rvo-padding-block-end--2xl">
           <div className="rvo-padding-inline-start--md rvo-padding-inline-end--md">
             <div className="rvo-layout-column rvo-layout-gap--md">

@@ -1,7 +1,7 @@
 import { Tag } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/tag/defaultArgs';
 import { argTypes } from '@nl-rvo/components/tag/stories/argTypes';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { defaultArgs } from './defaultArgs';
 
 export default {
   title: 'Componenten/Tag',

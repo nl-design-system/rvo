@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.2.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 3.2.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
+import { ITagProps } from '@nl-rvo/component-library-react/src/components/tag';
 import { HTMLAttributes } from 'react';
-import { ITagProps } from './';
 
 export const defaultArgs: ITagProps & HTMLAttributes<HTMLElement> = {
-  content: 'Tag name',
+  children: 'Tag name',
 };

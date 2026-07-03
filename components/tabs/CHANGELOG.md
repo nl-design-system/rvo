@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tabs`
 
+## 2.0.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 2.0.0
 
 ### Major Changes

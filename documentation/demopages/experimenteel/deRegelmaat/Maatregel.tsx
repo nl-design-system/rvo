@@ -41,13 +41,9 @@ const Maatregel = () => {
                   </span>
                 </summary>
               </details>
-              <Link
-                href="https://www.rvo.nl"
-                content="Meer informatie op rvo.nl"
-                icon="externe-link"
-                showIcon="after"
-                noUnderline={true}
-              ></Link>
+              <Link href="https://www.rvo.nl" icon="externe-link" showIcon="after" noUnderline={true}>
+                Meer informatie op rvo.nl
+              </Link>
             </div>
             <div className="rvo-maatregel-img-container">
               <img src="images/regelmaat/boer-computer.svg" className="rvo-maatregel-img" />

@@ -1,6 +1,6 @@
-const minorConfig = require('./.ncurc.minor.cjs');
+import minorConfig from './.ncurc.minor.mjs';
 
-module.exports = {
+export default {
   ...minorConfig,
   reject: [
     ...minorConfig.reject,
@@ -17,5 +17,3 @@ module.exports = {
   ],
   target: 'latest',
 };
-
-console.log(`Reject major updates of:\n\n${module.exports.reject.join('\n')}`);

@@ -101,7 +101,9 @@ const ControleerGegevens = () => {
                         <dt>E-mailadres</dt>
                         <dd>albert@heijn.nl</dd>
                       </dl>
-                      <Link showIcon="before" href="#" icon="bewerken" content="Wijzig deze gegevens"></Link>
+                      <Link showIcon="before" href="#" icon="bewerken">
+                        Wijzig deze gegevens
+                      </Link>
                     </LayoutFlow>
                   </LayoutFlow>
                 </div>

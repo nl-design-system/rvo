@@ -1,5 +1,11 @@
 # `@nl-rvo/css-pagination`
 
+## 1.5.2
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.5.1
 
 ### Patch Changes

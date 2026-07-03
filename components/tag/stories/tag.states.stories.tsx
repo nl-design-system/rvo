@@ -1,6 +1,6 @@
 import { Tag } from '@nl-rvo/component-library-react';
 import { iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/tag/defaultArgs';
+import { defaultArgs } from './defaultArgs';
 
 const argTypes = {
   content: {

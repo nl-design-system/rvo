@@ -1,7 +1,7 @@
 import { Logo } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/logo/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { argTypes } from './argTypes';
+import { defaultArgs } from './defaultArgs';
 
 export default {
   title: 'Componenten/Logo',
@@ -31,4 +31,9 @@ export const Default: Story = {
 export const AlternateText: Story = {
   args: { ...defaultArgs, title: 'Ministerie van Economische Zaken en Klimaat' },
   name: 'Alternatieve tekst',
+};
+
+export const WithLink: Story = {
+  args: { ...defaultArgs, link: 'https://rvo.nl' },
+  name: 'Met link',
 };
