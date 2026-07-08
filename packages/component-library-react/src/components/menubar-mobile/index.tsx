@@ -51,10 +51,14 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps & HTMLAttributes<HTMLDi
         `rvo-mobile-menu--${size}`,
         horizontalRule && 'rvo-mobile-menu--horizontal-rule',
       )}
-      aria-expanded={isOpen}
       {...rootElementProps}
     >
-      <Button kind="subtle" className={clsx('rvo-mobile-menu__toggle')} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <Button
+        kind="subtle"
+        className={clsx('rvo-mobile-menu__toggle')}
+        aria-expanded={isMenuOpen}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
         <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
         Menu
       </Button>
