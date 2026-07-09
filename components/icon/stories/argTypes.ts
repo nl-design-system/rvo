@@ -16,7 +16,5 @@ export const argTypes = {
     options: iconColors,
     control: { type: 'radio' },
   },
-  ariaLabel: {
-    control: { type: 'text' },
-  },
+
 };
