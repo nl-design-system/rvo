@@ -30,7 +30,6 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   hover?: boolean;
   href?: string;
   icon?: IconType;
-  iconAriaLabel?: string;
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconSize?: 'sm' | 'md';
   LinkComponent?: LinkCustomLinkComponent;
@@ -50,7 +49,6 @@ export const Link: React.FC<ILinkProps> = ({
   icon = 'home',
   iconSize = 'md',
   iconColor = 'hemelblauw',
-  iconAriaLabel = '',
   hover = false,
   active = false,
   focus = false,
@@ -67,7 +65,6 @@ export const Link: React.FC<ILinkProps> = ({
           icon: icon as any,
           size: iconSize as any,
           color: iconColor as any,
-          ariaLabel: iconAriaLabel,
         })
       : null;
 

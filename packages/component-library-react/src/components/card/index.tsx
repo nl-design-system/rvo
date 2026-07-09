@@ -157,7 +157,6 @@ export const Card: React.FC<ICardProps> = ({
         </div>
         {hasLinkIndicator && (
           <Icon
-            ariaLabel="Delta naar rechts"
             className="rvo-card__link-indicator"
             color="hemelblauw"
             icon="delta-naar-rechts"
