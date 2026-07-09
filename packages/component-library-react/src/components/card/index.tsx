@@ -160,7 +160,6 @@ export const Card: React.FC<ICardProps> = ({
             className="rvo-card__link-indicator"
             color="hemelblauw"
             icon="delta-naar-rechts"
-            role="img"
             size="sm"
           />
         )}
