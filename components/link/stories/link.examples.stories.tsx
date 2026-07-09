@@ -31,7 +31,6 @@ export const TerugLink = {
     children: 'Terug',
     icon: 'terug',
     showIcon: 'before',
-    iconAriaLabel: 'Ga terug',
   },
 };
 
@@ -44,7 +43,6 @@ export const VerderLink = {
     children: 'Verder',
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
-    iconAriaLabel: 'Ga verder',
   },
 };
 
@@ -57,7 +55,6 @@ export const ExterneLink = {
     children: 'Externe link',
     icon: 'pijl-naar-rechtsboven',
     showIcon: 'after',
-    iconAriaLabel: 'Ga naar www.rvo.nl (externe link)',
   },
 };
 
@@ -71,7 +68,6 @@ export const ZonderUnderline = {
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     noUnderline: true,
-    iconAriaLabel: 'Ga verder',
   },
 };
 
@@ -85,6 +81,5 @@ export const SmallIcon = {
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     iconSize: 'sm',
-    iconAriaLabel: 'Ga verder',
   },
 };
