@@ -15,5 +15,5 @@ Het component bestaat uit:
 ## Richtlijnen
 
 - Gebruik alleen de Rijkshuisstijl iconen die beschikbaar zijn in ROOS.
-- Verschillende gebruikers kunnen een icoon op verschillende manier interpreteren en moet daarom altijd voorzien worden van tekst. 
+- Verschillende gebruikers kunnen een icoon op verschillende manier interpreteren en moet daarom altijd voorzien worden van tekst.
 - Iconen zijn altijd decoratief en worden verborgen voor schermlezers.
