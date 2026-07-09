@@ -35,7 +35,9 @@ export const WithTabItemChildren: Story = {
       </TabItem>
       <TabItem
         label="Tab 3 met icoon"
-        before={<span className="utrecht-icon rvo-icon rvo-icon-home rvo-icon--md rvo-icon--hemelblauw" aria-hidden="true" />}
+        before={
+          <span className="utrecht-icon rvo-icon rvo-icon-home rvo-icon--md rvo-icon--hemelblauw" aria-hidden="true" />
+        }
       >
         <>
           <h2 className="utrecht-heading-2 rvo-heading rvo-heading--margin-1 rvo-heading--gap-sm">Tab 3</h2>

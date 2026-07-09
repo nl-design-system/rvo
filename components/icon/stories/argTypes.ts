@@ -16,5 +16,4 @@ export const argTypes = {
     options: iconColors,
     control: { type: 'radio' },
   },
-
 };

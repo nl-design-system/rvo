@@ -59,12 +59,7 @@ export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
       return (
         <div className="rvo-card--with-link-indicator">
           <div>{children}</div>
-          <Icon
-            className="rvo-card__link-indicator"
-            color="hemelblauw"
-            icon="delta-naar-rechts"
-            size="sm"
-          />
+          <Icon className="rvo-card__link-indicator" color="hemelblauw" icon="delta-naar-rechts" size="sm" />
         </div>
       );
     }

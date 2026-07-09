@@ -4,5 +4,4 @@ export const defaultArgs: IIconProps = {
   icon: 'home',
   size: 'md',
   color: 'hemelblauw',
-
 };
