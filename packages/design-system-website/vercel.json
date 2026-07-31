@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "cd ../.. && pnpm run build && pnpm --filter @nl-rvo/design-system-website generate",
+  "framework": null,
+  "outputDirectory": "dist",
+  "git": {
+    "deploymentEnabled": {
+      "dependabot/*": false,
+      "gh-pages": false
+    }
+  },
+  "build": {
+    "env": {
+      "DOCUSAURUS_BASE_URL": "/docs/"
+    }
+  },
+  "headers": [
+    {
+      "source": "/docs/assets/fonts/:file+",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}
