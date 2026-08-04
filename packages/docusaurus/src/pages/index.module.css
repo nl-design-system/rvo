@@ -7,6 +7,11 @@
   max-width: 390px;
 }
 
+.heroButton:hover,
+.heroButton:focus {
+  color: var(--rvo-color-wit);
+}
+
 .articleGrid {
   display: grid;
   grid-gap: var(--rvo-space-3xl);

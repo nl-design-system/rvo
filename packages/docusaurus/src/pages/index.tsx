@@ -1,6 +1,6 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Button, Grid, Heading, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
+import { Grid, Heading, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import type { ReactElement } from 'react';
@@ -28,13 +28,16 @@ export default function Home(): ReactElement {
                 <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
               </p>
             </LayoutFlow>
-            <Link
-              style={{ display: 'inline-block', width: 'max-content' }}
-              noUnderline={true}
+            <a
+              className={clsx(
+                'rvo-button rvo-button--primary rvo-button--size-md rvo-button--primary-action-button',
+                styles.heroButton,
+              )}
+              style={{ width: 'max-content' }}
               href={useBaseUrl('/over-roos/introductie')}
             >
-              <Button>Aan de slag met ROOS</Button>
-            </Link>
+              Aan de slag met ROOS
+            </a>
           </MaxWidthLayout>
         </div>
       </header>
