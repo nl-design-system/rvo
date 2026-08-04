@@ -1,3 +1,4 @@
+import DocusaurusLink from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Grid, Heading, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
@@ -28,16 +29,16 @@ export default function Home(): ReactElement {
                 <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
               </p>
             </LayoutFlow>
-            <a
+            <DocusaurusLink
               className={clsx(
                 'rvo-button rvo-button--primary rvo-button--size-md rvo-button--primary-action-button',
                 styles.heroButton,
               )}
               style={{ width: 'max-content' }}
-              href={useBaseUrl('/over-roos/introductie')}
+              to={useBaseUrl('/over-roos/introductie')}
             >
               Aan de slag met ROOS
-            </a>
+            </DocusaurusLink>
           </MaxWidthLayout>
         </div>
       </header>
