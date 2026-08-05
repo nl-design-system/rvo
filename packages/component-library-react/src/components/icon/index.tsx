@@ -16,6 +16,8 @@ export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   color?: '' | 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700' | 'lintblauw';
   className?: string;
   onClick?: (event: React.MouseEvent) => void;
+  /** @deprecated Icons are always decorative and hidden from screen readers. This prop has no effect and will be removed in a future major release. */
+  ariaLabel?: string;
 }
 
 export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700', 'lintblauw'];
@@ -51,6 +53,8 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
   size = defaultArgs.size,
   color = defaultArgs.color,
   className,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  ariaLabel: _ariaLabel,
   ...rootElementProps
 }: IIconProps) => {
   let iconName = icon as string;

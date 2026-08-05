@@ -39,6 +39,8 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   showIcon?: 'no' | 'before' | 'after';
   target?: string;
   weight?: 'normal' | 'bold';
+  /** @deprecated Use accessible link text instead. This prop has no effect and will be removed in a future major release. */
+  iconAriaLabel?: string;
 }
 
 export const Link: React.FC<ILinkProps> = ({
@@ -57,6 +59,8 @@ export const Link: React.FC<ILinkProps> = ({
   className,
   children,
   LinkComponent,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  iconAriaLabel: _iconAriaLabel,
   ...otherProps
 }: ILinkProps) => {
   const iconMarkup =

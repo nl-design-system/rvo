@@ -26,6 +26,8 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Click */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  /** @deprecated Use accessible button labels instead. This prop has no effect and will be removed in a future major release. */
+  iconAriaLabel?: string;
 }
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
@@ -39,6 +41,8 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   fullWidth = defaultArgs.fullWidth,
   className,
   busy,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  iconAriaLabel: _iconAriaLabel,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
   const iconMarkup = <Icon icon={icon as any} size={size} />;
