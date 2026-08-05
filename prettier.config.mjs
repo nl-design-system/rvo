@@ -8,8 +8,6 @@ export default {
       options: {
         parser: 'flow',
         printWidth: 120,
-        trailingComma: 'all',
-        tabWidth: 2,
         singleQuote: true,
       },
     },
@@ -18,15 +16,12 @@ export default {
       options: {
         parser: 'json',
         printWidth: 120,
-        tabWidth: 2,
       },
     },
     {
       files: ['package.json'],
       options: {
         parser: 'json-stringify',
-        tabWidth: 2,
-        useTabs: false,
       },
     },
     {
@@ -34,8 +29,6 @@ export default {
       options: {
         parser: 'typescript',
         printWidth: 120,
-        trailingComma: 'all',
-        tabWidth: 2,
         singleQuote: true,
       },
     },
@@ -43,7 +36,6 @@ export default {
       files: ['*.css', '*.scss'],
       options: {
         parser: 'css',
-        tabWidth: 2,
       },
     },
     {
@@ -51,7 +43,6 @@ export default {
       options: {
         parser: 'html',
         printWidth: 120,
-        tabWidth: 2,
       },
     },
   ],
