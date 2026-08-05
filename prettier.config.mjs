@@ -12,6 +12,12 @@ export default {
       },
     },
     {
+      files: ['*.md', '*.mdx'],
+      options: {
+        singleQuote: false,
+      },
+    },
+    {
       files: ['*.js', '*.cjs', '*.mjs', '*.jsx', '*.tsx'],
       options: {
         parser: 'flow',
