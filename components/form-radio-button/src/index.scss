@@ -39,11 +39,11 @@
 }
 
 .utrecht-radio-button:not(
-    :disabled,
-    [aria-disabled="true"],
-    .utrecht-radio-button--disabled,
-    .utrecht-radio-button--invalid
-  ) {
+  :disabled,
+  [aria-disabled="true"],
+  .utrecht-radio-button--disabled,
+  .utrecht-radio-button--invalid
+) {
   // Hover state
   &.utrecht-radio-button:hover,
   &.rvo-radio-button--hover,

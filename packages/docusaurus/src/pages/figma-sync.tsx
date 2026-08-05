@@ -48,8 +48,8 @@ export default function FigmaSync(): ReactElement {
                           row.passed === null
                             ? undefined
                             : row.passed
-                            ? 'var(--rvo-color-groen)'
-                            : 'var(--rvo-color-rood)',
+                              ? 'var(--rvo-color-groen)'
+                              : 'var(--rvo-color-rood)',
                         fontWeight: row.passed !== null ? 600 : undefined,
                       }}
                     >
