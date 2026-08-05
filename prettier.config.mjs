@@ -6,6 +6,12 @@ export default {
   singleQuote: true,
   overrides: [
     {
+      files: ['*.yml', '*.yaml'],
+      options: {
+        singleQuote: false,
+      },
+    },
+    {
       files: ['*.js', '*.cjs', '*.mjs', '*.jsx', '*.tsx'],
       options: {
         parser: 'flow',
@@ -39,6 +45,13 @@ export default {
       files: ['*.html'],
       options: {
         parser: 'html',
+      },
+    },
+    {
+      // match pnpm CLI-driven changes behavior
+      files: ['pnpm-workspace.yaml'],
+      options: {
+        singleQuote: true,
       },
     },
   ],
