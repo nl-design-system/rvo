@@ -310,7 +310,7 @@ async function fetchFigmaProps(variant) {
     width: node.absoluteBoundingBox?.width ?? 0,
     height: node.absoluteBoundingBox?.height ?? 0,
     borderRadius: node.cornerRadius ?? 0,
-    borderWidth: strokeSolid ? node.strokeWeight ?? 0 : 0,
+    borderWidth: strokeSolid ? (node.strokeWeight ?? 0) : 0,
     borderColor: strokeSolid ? figmaColorToCss(strokeSolid.color) : 'rgba(0, 0, 0, 0)',
     backgroundColor: fillSolid ? figmaColorToCss(fillSolid.color) : 'rgba(0, 0, 0, 0)',
     color: textFillSolid ? figmaColorToCss(textFillSolid.color) : null,
