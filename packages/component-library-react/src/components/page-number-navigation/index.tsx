@@ -22,7 +22,7 @@ const generatePageNumbers = (
   onPageChange?: IPageNumberNavigation['onPageChange'],
 ): ReactNode[] => {
   const pages: ReactNode[] = [];
-  const windowSize = 5;
+  const maxPagePositions = 7;
 
   // helper
   const addRange = (from: number, to: number) => {
@@ -31,25 +31,25 @@ const generatePageNumbers = (
     }
   };
 
-  if (totalPages <= windowSize) {
+  if (totalPages <= maxPagePositions) {
     // 1..N
     addRange(1, totalPages);
     return pages;
   }
 
   // Begin: 1 2 3 4 5 ... last
-  if (activePage <= 3) {
-    addRange(1, 5);
+  if (activePage <= 4) {
+    addRange(1, maxPagePositions - 2);
     pages.push(generateEllipses('ellipses-end'));
     pages.push(generatePageNumber(totalPages, activePage, onPageChange));
     return pages;
   }
 
   // Eind: 1 ... last-4 last-3 last-2 last-1 last
-  if (activePage >= totalPages - 2) {
+  if (activePage >= totalPages - 3) {
     pages.push(generatePageNumber(1, activePage, onPageChange));
     pages.push(generateEllipses('ellipses-start'));
-    addRange(totalPages - 4, totalPages);
+    addRange(totalPages - (maxPagePositions - 3), totalPages);
     return pages;
   }
 
