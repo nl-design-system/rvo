@@ -13,6 +13,7 @@ export interface IStatusIconProps {
   /** @uxpinignoreprop */
   className?: string;
   ignoreDefaultIconColor?: boolean;
+  onClick?: (event: React.MouseEvent) => void;
 }
 
 export const StatusIcon: React.FC<IStatusIconProps> = ({

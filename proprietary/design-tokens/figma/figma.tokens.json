@@ -680,12 +680,12 @@
         },
         "info": {
           "background-color": {
-            "$value": "{rvo.color.hemelblauw-300}"
+            "$value": "{rvo.color.hemelblauw-150}"
           }
         },
         "warning": {
           "background-color": {
-            "$value": "{rvo.color.donkergeel-300}"
+            "$value": "{rvo.color.donkergeel-150}"
           }
         },
         "error": {
@@ -695,7 +695,7 @@
         },
         "success": {
           "background-color": {
-            "$value": "{rvo.color.groen-300}"
+            "$value": "{rvo.color.groen-150}"
           }
         },
         "padding": {
