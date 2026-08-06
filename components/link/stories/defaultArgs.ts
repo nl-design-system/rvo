@@ -9,7 +9,6 @@ export const defaultArgs: ILinkProps = {
   hover: false,
   href: '#',
   icon: 'home',
-  iconAriaLabel: '',
   iconColor: 'hemelblauw',
   iconSize: 'md',
   noUnderline: false,

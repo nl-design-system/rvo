@@ -30,7 +30,6 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   hover?: boolean;
   href?: string;
   icon?: IconType;
-  iconAriaLabel?: string;
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconSize?: 'sm' | 'md';
   LinkComponent?: LinkCustomLinkComponent;
@@ -40,6 +39,8 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   showIcon?: 'no' | 'before' | 'after';
   target?: string;
   weight?: 'normal' | 'bold';
+  /** @deprecated Use accessible link text instead. This prop has no effect and will be removed in a future major release. */
+  iconAriaLabel?: string;
 }
 
 export const Link: React.FC<ILinkProps> = ({
@@ -50,7 +51,6 @@ export const Link: React.FC<ILinkProps> = ({
   icon = 'home',
   iconSize = 'md',
   iconColor = 'hemelblauw',
-  iconAriaLabel = '',
   hover = false,
   active = false,
   focus = false,
@@ -59,6 +59,8 @@ export const Link: React.FC<ILinkProps> = ({
   className,
   children,
   LinkComponent,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  iconAriaLabel: _iconAriaLabel,
   ...otherProps
 }: ILinkProps) => {
   const iconMarkup =
@@ -67,7 +69,6 @@ export const Link: React.FC<ILinkProps> = ({
           icon: icon as any,
           size: iconSize as any,
           color: iconColor as any,
-          ariaLabel: iconAriaLabel,
         })
       : null;
 

@@ -34,7 +34,6 @@ export const argTypes = {
     options: iconColors,
     control: { type: 'radio' },
   },
-  iconAriaLabel: { control: 'text' },
   hover: {
     control: 'boolean',
   },
