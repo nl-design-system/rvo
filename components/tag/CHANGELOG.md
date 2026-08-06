@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tag`
 
+## 1.5.0
+
+### Minor Changes
+
+- 6051320: ROOS-264: renamed content prop to children, moved defaultArgs to storybook and removed UX-Pin file
+
 ## 1.4.0
 
 ### Minor Changes

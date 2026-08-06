@@ -1,5 +1,11 @@
 # `@nl-rvo/css-link`
 
+## 1.6.0
+
+### Minor Changes
+
+- c6093de: ROOS-349: refactor Link component, moved defaultArgs to storybook components
+
 ## 1.5.1
 
 ### Patch Changes
