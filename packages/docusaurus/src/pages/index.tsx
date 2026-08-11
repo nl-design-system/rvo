@@ -90,7 +90,7 @@ export default function Home(): ReactElement {
                 <div className="rvo-card__content">
                   <Heading type="h2" noMargins={true}>
                     <Link
-                      href={useBaseUrl('/patronen/layout/applicatie-layout')}
+                      href={useBaseUrl('/patronen/paginas/basispagina')}
                       className="rvo-card__link rvo-card__full-card-link"
                       noUnderline={true}
                     >
