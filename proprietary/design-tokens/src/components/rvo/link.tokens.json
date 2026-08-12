@@ -44,9 +44,11 @@
         "border-style": { "value": "solid" },
         "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.wit}" },
+        "font-weight": { "value": "{rvo.font-weight.normal}" },
         "icon": {
           "background-color": { "value": "{rvo.color.wit}" }
         },
+        "min-block-size": { "value": "48px" },
         "padding-block-end": { "value": "{rvo.space.xs}" },
         "padding-block-start": { "value": "{rvo.space.xs}" },
         "padding-inline-end": { "value": "{rvo.space.md}" },

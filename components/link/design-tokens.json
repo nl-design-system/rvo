@@ -44,6 +44,8 @@
         "border-style": { "css": { "syntax": "*", "inherits": true } },
         "border-width": { "css": { "syntax": "<length>", "inherits": true } },
         "color": { "css": { "syntax": "<color>", "inherits": true } },
+        "font-weight": { "css": { "syntax": "*", "inherits": true } },
+        "min-block-size": { "css": { "syntax": "*", "inherits": true } },
         "icon": {
           "background-color": { "css": { "syntax": "<color>", "inherits": true } }
         },
