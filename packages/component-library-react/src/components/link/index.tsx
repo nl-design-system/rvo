@@ -22,6 +22,7 @@ export type LinkCustomLinkComponent = React.ComponentType<LinkCustomLinkComponen
 
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   active?: boolean;
+  callToAction?: boolean;
   children?: React.ReactNode;
   className?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
@@ -56,6 +57,7 @@ export const Link: React.FC<ILinkProps> = ({
   focus = false,
   noUnderline = false,
   fullContainerLink = false,
+  callToAction = false,
   className,
   children,
   LinkComponent,
@@ -84,6 +86,7 @@ export const Link: React.FC<ILinkProps> = ({
     'rvo-link--wit': color === 'wit',
     'rvo-link--zwart': color === 'zwart',
     'rvo-link--grijs-700': color === 'grijs-700',
+    'rvo-link--call-to-action': callToAction,
   });
 
   const linkContent = (
