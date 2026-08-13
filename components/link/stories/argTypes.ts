@@ -10,6 +10,9 @@ export const argTypes = {
   href: {
     control: 'text',
   },
+  callToAction: {
+    control: 'boolean',
+  },
   color: {
     control: { type: 'select' },
     options: ['hemelblauw', 'donkerblauw', 'lintblauw', 'wit', 'zwart', 'grijs-700'],

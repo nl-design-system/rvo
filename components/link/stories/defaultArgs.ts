@@ -2,6 +2,7 @@ import { ILinkProps } from '@nl-rvo/component-library-react';
 
 export const defaultArgs: ILinkProps = {
   active: false,
+  callToAction: false,
   children: 'Dit is een link',
   color: 'hemelblauw',
   focus: false,
