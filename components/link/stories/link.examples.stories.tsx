@@ -22,6 +22,17 @@ export default {
   },
 };
 
+export const CallToActionLink = {
+  render: Link.bind({}),
+  name: 'Call to action link',
+
+  args: {
+    ...defaultArgs,
+    children: 'Meer informatie',
+    callToAction: true,
+  },
+};
+
 export const TerugLink = {
   render: Link.bind({}),
   name: 'Terug link',
