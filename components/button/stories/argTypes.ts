@@ -1,4 +1,4 @@
-import { iconNames as iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
+import { iconNames } from '../../utils/iconUtils';
 /**
  * Storybook-only argTypes copied from React component source.
  */
@@ -23,7 +23,7 @@ export const argTypes = {
   },
   icon: {
     control: { type: 'select' },
-    options: iconOptions,
+    options: iconNames,
   },
   iconAriaLabel: { control: 'text' },
   fullWidth: {

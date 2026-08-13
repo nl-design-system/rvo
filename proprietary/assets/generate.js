@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return */
+/* eslint-disable no-use-before-define */
 const fs = require('fs');
 const path = require('path');
 
@@ -141,11 +141,14 @@ const generateCSS = (
   // Add CSS vars
   scssString = `.rvo-theme {\n${cssVars.join('\n')}}\n\n${scssString}`;
   const compiledCSS = sass.compileString(scssString);
+  const compressedCompiledCSS = sass.compileString(scssString, { style: 'compressed' });
 
+  // Generate css files
   try {
     fs.writeFileSync(path.join(__dirname, `${targetFolder}/index.css`), compiledCSS.css);
+    fs.writeFileSync(path.join(__dirname, `${targetFolder}/index.min.css`), compressedCompiledCSS.css);
   } catch (err) {
-    console.error(err);
+    console.error(`Something went wrong generating CSS files for ${targetFolder}`, err);
   }
 };
 
@@ -154,7 +157,7 @@ const generateIconList = () => {
   const assetList = readFolder(folderPath);
   generateJS(assetList, 'icons');
   generateTS(assetList, 'icons');
-  generateCSS(assetList, 'icons', 'rvo-icon', true, true);
+  generateCSS(assetList, 'icons', 'rvo-icon', false, false);
 };
 
 const generateImageList = () => {
