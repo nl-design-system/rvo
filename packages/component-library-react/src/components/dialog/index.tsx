@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import Button from '../button';
 import '@nl-rvo/component-library-css/dist/components/dialog.css';
@@ -25,16 +24,16 @@ export const useDialog = () => {
 };
 
 export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElement>, 'className'> {
+  /** @uxpinpropname Content */
+  children?: ReactNode;
+  /** @uxpinpropname Action group content */
+  actionGroup?: ReactNode;
+  /** @uxpinignoreprop */
+  content?: string;
   type?: 'centered-dialog' | 'inset-inline-start' | 'inset-inline-end';
   isModal?: boolean;
   centeredDialogSize?: 'sm' | 'md' | 'lg' | 'xl';
   backgroundColor?: 'wit' | 'grijs-200';
-  /** @uxpinpropname Content */
-  children?: ReactNode | undefined;
-  /** @uxpinpropname Action group content */
-  actionGroup?: ReactNode | undefined;
-  /** @uxpinignoreprop */
-  content?: string;
   isOpen?: boolean;
   onClose?: () => void;
   /** @uxpinignoreprop */
@@ -49,14 +48,14 @@ export const Dialog: React.FC<IDialogProps> = ({
   children,
   actionGroup,
   onClose,
-  content = defaultArgs.content,
-  isOpen: isOpenProp = defaultArgs.isOpen,
-  type = defaultArgs.type,
-  isModal = defaultArgs.isModal,
-  centeredDialogSize = defaultArgs.centeredDialogSize,
-  backgroundColor = defaultArgs.backgroundColor,
-  className = defaultArgs.className,
-  ariaLabel = defaultArgs.ariaLabel,
+  content,
+  isOpen: isOpenProp = true,
+  type = 'centered-dialog',
+  isModal = true,
+  centeredDialogSize = 'md',
+  backgroundColor = 'wit',
+  className,
+  ariaLabel,
   closeButtonLabel = 'Sluiten',
   ...props
 }: IDialogProps) => {
