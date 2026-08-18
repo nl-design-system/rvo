@@ -14,6 +14,7 @@ export const defaultArgs: ILinkProps = {
   iconColor: 'hemelblauw',
   iconSize: 'md',
   noUnderline: false,
+  outline: false,
   showIcon: 'no',
   weight: 'bold',
 };
