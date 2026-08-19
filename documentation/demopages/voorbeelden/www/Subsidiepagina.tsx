@@ -1,5 +1,4 @@
 import {
-  Button,
   Fieldset,
   Footer,
   Header,
@@ -101,8 +100,8 @@ const Subsidiepagina = () => {
             ziet er mooier uit en isoleert beter. Vraag net als 10.000 andere dakeigenaren nu subsidie bij ons aan.
           </p>
           <div className="rvo-action-group">
-            <Button>Aanvragen</Button>
-            <Button kind="secondary">Uw aanvraag bekijken</Button>
+            <Link callToAction={true}>Aanvragen</Link>
+            <Link callToAction={true} outline={true}>Uw aanvraag bekijken</Link>
           </div>
         </div>
         <div className="rvo-custom-aanvraagperiode-budget rvo-max-width-layout rvo-max-width-layout--sm">
@@ -275,9 +274,7 @@ const Subsidiepagina = () => {
             Hoeveel subsidie krijgt u?
           </Heading>
           <p className="rvo-paragraph">Bekijk met onze rekentool wat deze subsidie u oplevert. </p>
-          <Button kind="secondary" size="sm">
-            Bereken uw voordeel
-          </Button>
+          <Link callToAction={true} outline={true}>Bereken uw voordeel</Link>
         </div>
 
         <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
@@ -322,9 +319,7 @@ const Subsidiepagina = () => {
             voor het webinar op 2 juni 2025 van 12:00 tot 13:00 uur. U verhoogt zo de kans dat wij uw voorstel
             goedkeuren.
           </p>
-          <Button kind="secondary" size="sm">
-            Aanmelden webinar
-          </Button>
+          <Link callToAction={true} outline={true}>Aanmelden webinar</Link>
         </div>
 
         <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
@@ -458,9 +453,7 @@ const Subsidiepagina = () => {
             eHerkenning. Voor uw aanvraag heeft u minimaal nodig: eHerkenning niveau 2+ met machtiging 'RVO diensten op
             niveau 2+ (o.a. mijn.rvo.nl, eLoket, NVWA e-Cert)'.
           </p>
-          <Button kind="primary" size="md">
-            Aanvragen
-          </Button>
+          <Link callToAction={true}>Aanvragen</Link>
         </div>
 
         <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
@@ -493,12 +486,8 @@ const Subsidiepagina = () => {
           </ul>
           <div className="rvo-margin-block-start--md rvo-margin-block-end--lg  rvo-max-width-layout rvo-max-width-layout--sm ">
             <div className=" rvo-action-group">
-              <Button kind="secondary" size="sm">
-                Voortgang doorgeven
-              </Button>
-              <Button kind="secondary" size="sm">
-                Vaststelling aanvragen
-              </Button>
+              <Link callToAction={true} outline={true}>Voortgang doorgeven</Link>
+              <Link callToAction={true} outline={true}>Vaststelling aanvragen</Link>
             </div>
           </div>
           <Heading type="h3">Uw aanvraag is afgekeurd</Heading>
@@ -743,7 +732,7 @@ const Subsidiepagina = () => {
             <Icon icon="tekstballon-met-hart" size="2xl" />
             <em className="rvo-text--xl">Bent u tevreden over deze pagina?</em>
             <span className="rvo-rhs-update-component">
-              <Button kind="secondary">Geef uw mening</Button>
+              <Link callToAction={true} outline={true}>Geef uw mening</Link>
             </span>
           </LayoutFlow>
         </div>
