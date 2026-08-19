@@ -101,7 +101,9 @@ const Subsidiepagina = () => {
           </p>
           <div className="rvo-action-group">
             <Link callToAction={true}>Aanvragen</Link>
-            <Link callToAction={true} outline={true}>Uw aanvraag bekijken</Link>
+            <Link callToAction={true} outline={true}>
+              Uw aanvraag bekijken
+            </Link>
           </div>
         </div>
         <div className="rvo-custom-aanvraagperiode-budget rvo-max-width-layout rvo-max-width-layout--sm">
@@ -274,7 +276,9 @@ const Subsidiepagina = () => {
             Hoeveel subsidie krijgt u?
           </Heading>
           <p className="rvo-paragraph">Bekijk met onze rekentool wat deze subsidie u oplevert. </p>
-          <Link callToAction={true} outline={true}>Bereken uw voordeel</Link>
+          <Link callToAction={true} outline={true}>
+            Bereken uw voordeel
+          </Link>
         </div>
 
         <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
@@ -319,7 +323,9 @@ const Subsidiepagina = () => {
             voor het webinar op 2 juni 2025 van 12:00 tot 13:00 uur. U verhoogt zo de kans dat wij uw voorstel
             goedkeuren.
           </p>
-          <Link callToAction={true} outline={true}>Aanmelden webinar</Link>
+          <Link callToAction={true} outline={true}>
+            Aanmelden webinar
+          </Link>
         </div>
 
         <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
@@ -486,8 +492,12 @@ const Subsidiepagina = () => {
           </ul>
           <div className="rvo-margin-block-start--md rvo-margin-block-end--lg  rvo-max-width-layout rvo-max-width-layout--sm ">
             <div className=" rvo-action-group">
-              <Link callToAction={true} outline={true}>Voortgang doorgeven</Link>
-              <Link callToAction={true} outline={true}>Vaststelling aanvragen</Link>
+              <Link callToAction={true} outline={true}>
+                Voortgang doorgeven
+              </Link>
+              <Link callToAction={true} outline={true}>
+                Vaststelling aanvragen
+              </Link>
             </div>
           </div>
           <Heading type="h3">Uw aanvraag is afgekeurd</Heading>
@@ -732,7 +742,9 @@ const Subsidiepagina = () => {
             <Icon icon="tekstballon-met-hart" size="2xl" />
             <em className="rvo-text--xl">Bent u tevreden over deze pagina?</em>
             <span className="rvo-rhs-update-component">
-              <Link callToAction={true} outline={true}>Geef uw mening</Link>
+              <Link callToAction={true} outline={true}>
+                Geef uw mening
+              </Link>
             </span>
           </LayoutFlow>
         </div>
