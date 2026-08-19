@@ -33,6 +33,18 @@ export const CallToActionLink = {
   },
 };
 
+export const CallToActionLinkOutline = {
+  render: Link.bind({}),
+  name: 'Call to action link, outline',
+
+  args: {
+    ...defaultArgs,
+    children: 'Meer informatie',
+    callToAction: true,
+    outline: true,
+  },
+};
+
 export const TerugLink = {
   render: Link.bind({}),
   name: 'Terug link',

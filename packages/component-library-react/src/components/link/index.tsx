@@ -37,6 +37,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   LinkComponent?: LinkCustomLinkComponent;
   noUnderline?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  outline?: boolean;
   role?: string;
   showIcon?: 'no' | 'before' | 'after';
   target?: string;
@@ -58,6 +59,7 @@ export const Link: React.FC<ILinkProps> = ({
   noUnderline = false,
   fullContainerLink = false,
   callToAction = false,
+  outline = false,
   className,
   children,
   LinkComponent,
@@ -87,6 +89,7 @@ export const Link: React.FC<ILinkProps> = ({
     'rvo-link--zwart': color === 'zwart',
     'rvo-link--grijs-700': color === 'grijs-700',
     'rvo-link--call-to-action': callToAction,
+    'rvo-link--call-to-action-outline': callToAction && outline,
   });
 
   const linkContent = (
