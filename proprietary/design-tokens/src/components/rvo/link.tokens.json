@@ -72,6 +72,27 @@
         },
         "focus": {
           "text-decoration-thickness": { "value": "{rvo.link.focus.text-decoration-thickness}" }
+        },
+        "outline": {
+          "background-color": { "value": "{rvo.color.wit}" },
+          "border-color": { "value": "{rvo.color.violet}" },
+          "color": { "value": "{rvo.color.violet}" },
+          "icon": {
+            "background-color": { "value": "{rvo.color.violet}" }
+          },
+          "hover": {
+            "background-color": { "value": "{rvo.color.wit}" },
+            "border-color": { "value": "{rvo.color.violet-750}" },
+            "color": { "value": "{rvo.color.violet-750}" },
+            "icon": {
+              "background-color": { "value": "{rvo.color.violet-750}" }
+            }
+          },
+          "active": {
+            "background-color": { "value": "{rvo.color.wit}" },
+            "border-color": { "value": "{rvo.color.violet-750}" },
+            "color": { "value": "{rvo.color.violet-750}" }
+          }
         }
       }
     }
