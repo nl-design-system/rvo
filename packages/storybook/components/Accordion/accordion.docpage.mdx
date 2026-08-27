@@ -1,0 +1,11 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as AccordionStories from "./accordion.stories";
+
+<Meta of={AccordionStories} name="Documentatie" />
+
+<Title />
+<Canvas of={AccordionStories.Default} layout="padded" />
+
+## Props
+
+<ArgTypes of={AccordionStories.Default} />

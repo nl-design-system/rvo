@@ -14,7 +14,6 @@ const config = (() => {
 
   /* set path */
   const docsPath = path.resolve(__dirname, '../../../documentation');
-  const componentsPath = path.resolve(__dirname, '../../../components');
   const utilitiesPath = path.resolve(__dirname, '../../../utilities');
 
   function getPackageDir(filepath) {
@@ -58,10 +57,10 @@ const config = (() => {
     stories: [
       `${docsPath}/pages/**/*.docpage.mdx`,
       `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
-      `${componentsPath}/*/docs/*.docpage.mdx`,
-      `${componentsPath}/*/stories/*.stories.@(jsx|tsx)`,
       `${utilitiesPath}/*/docs/*.docpage.mdx`,
       `${utilitiesPath}/*/stories/*.stories.@(jsx|tsx)`,
+      `../components/*/*.docpage.mdx`,
+      `../components/*/*.stories.@(jsx|tsx)`,
     ],
 
     addons: [

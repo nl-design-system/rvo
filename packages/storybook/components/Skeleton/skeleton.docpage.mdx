@@ -1,0 +1,20 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as SkeletonStories from "./skeleton.stories";
+
+<Meta of={SkeletonStories} name="Documentatie" />
+
+<Title />
+
+## Preview
+
+<Canvas of={SkeletonStories.Base} layout="padded" />
+## Parameters
+<ArgTypes of={SkeletonStories.Base} />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

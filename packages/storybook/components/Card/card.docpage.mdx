@@ -1,0 +1,18 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as CardStories from "./card.stories";
+
+<Meta of={CardStories} name="Documentatie" />
+
+<Title />
+<Canvas of={CardStories.Base} layout="padded" />
+
+## Props
+
+<ArgTypes of={CardStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/css-heading_
+_@nl-rvo/css-icon_
+_@nl-rvo/assets/icons_
+_@nl-rvo/css-link_

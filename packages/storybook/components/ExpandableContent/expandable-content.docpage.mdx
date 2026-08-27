@@ -1,0 +1,16 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as ExpandableContentStories from "./expandable-content.stories";
+
+<Meta of={ExpandableContentStories} name="Documentatie" />
+
+<Title />
+<Canvas of={ExpandableContentStories.Base} layout="padded" />
+
+## Props
+
+<ArgTypes of={ExpandableContentStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
+_@nl-rvo/css-icon_

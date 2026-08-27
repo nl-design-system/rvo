@@ -1,0 +1,92 @@
+import { Tag } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
+
+export default {
+  title: 'Componenten/Tag',
+  component: Tag,
+  args: { children: 'Tag name' },
+  argTypes: {
+    content: {
+      control: 'text',
+    },
+    type: {
+      options: ['info', 'bevestiging', 'foutmelding', 'waarschuwing'],
+      control: { type: 'radio' },
+    },
+    showIcon: {
+      options: ['no', 'before', 'after'],
+      control: { type: 'select' },
+    },
+    icon: {
+      control: { type: 'select' },
+      options: iconOptions,
+    },
+    isPill: {
+      control: 'boolean',
+    },
+    showHover: {
+      control: 'boolean',
+    },
+    active: {
+      control: 'boolean',
+    },
+    focus: {
+      control: 'boolean',
+    },
+    link: {
+      control: 'text',
+    },
+    linkTarget: {
+      options: ['_blank', '_self', '_parent', '_top'],
+      control: { type: 'radio' },
+    },
+    onClick: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  parameters: {
+    status: {
+      type: 'PRODUCTION',
+    },
+    docusaurus: {
+      link: 'tag',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=263-3553&embed-host=share',
+    },
+  },
+} satisfies Meta<typeof Tag>;
+type Story = StoryObj<typeof Tag>;
+
+export const Base: Story = {};
+
+export const Hover = {
+  render: Tag.bind({}),
+
+  args: {
+    hover: true,
+    showIcon: 'before',
+  },
+};
+
+export const Active = {
+  render: Tag.bind({}),
+
+  args: {
+    active: true,
+    showIcon: 'before',
+  },
+};
+
+export const Focus = {
+  render: Tag.bind({}),
+
+  args: {
+    focus: true,
+    showIcon: 'before',
+  },
+};

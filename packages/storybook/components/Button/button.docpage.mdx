@@ -1,0 +1,15 @@
+import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} name="Documentatie" />
+
+<Title />
+Een klikbaar element dat gebruikt wordt om acties uit te voeren. Buttons communiceren wat voor acties worden uitgevoerd
+wanneer een gebruiker er gebruik van maakt.
+
+<Canvas of={ButtonStories.Base} layout="padded" />
+
+## Props
+
+<ArgTypes of={ButtonStories.Base} />

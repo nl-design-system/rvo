@@ -1,0 +1,107 @@
+import * as componentLibraryReact from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+
+const defaultFooterMenu = [
+  {
+    label: 'RVO',
+    orientation: 'horizontal',
+    items: [
+      { content: <componentLibraryReact.Icon icon="home" size="2xl" color="wit" />, link: '#' },
+      { content: <componentLibraryReact.Icon icon="tekstballon-met-hart" size="2xl" color="wit" />, link: '#' },
+      { content: <componentLibraryReact.Icon icon="computer" size="2xl" color="wit" />, link: '#' },
+      { content: <componentLibraryReact.Icon icon="drone" size="2xl" color="wit" />, link: '#' },
+    ],
+  },
+  {
+    label: 'Over deze site',
+    items: [
+      { content: 'Privacy', link: '#' },
+      { content: 'Cookies en anti-spam', link: '#' },
+      { content: 'Toegankelijkheid', link: '#' },
+      { content: 'Proclaimer', link: '#' },
+    ],
+  },
+  {
+    label: 'Snel naar',
+    items: [
+      { content: 'Onderwerpen A t/m Z', link: '#' },
+      { content: 'Klantenpanel', link: '#' },
+      { content: 'Documenten en publicaties', link: '#' },
+      { content: 'Overheidspublicaties en auteursrecht', link: '#' },
+    ],
+  },
+  {
+    label: 'Blijf op de hoogte',
+    items: [
+      { content: 'Social media', link: '#' },
+      { content: 'Higherlevel.nl ondernemersforum', link: '#' },
+      { content: 'RSS', link: '#' },
+      { content: 'Gratis nieuwsbrief', link: '#' },
+    ],
+  },
+];
+
+const defaultSecondaryFooterMenu = [
+  { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
+  { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
+  { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
+  { content: 'Toegankelijkheid', link: '#' },
+  { content: 'Proclaimer', link: 'https://www.rvo.nl/onderwerpen/proclaimer' },
+  { content: 'Kwetsbaarheid melden', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
+  { content: 'Webarchief', link: '#' },
+];
+
+export default {
+  title: 'Componenten/Footer',
+  component: componentLibraryReact.Footer,
+  args: {
+    primaryMenu: defaultFooterMenu as any,
+    secondaryMenu: defaultSecondaryFooterMenu,
+    maxWidth: 'lg',
+    payOff: 'We helpen u graag vooruit!',
+  },
+  argTypes: {
+    primaryMenu: {
+      control: {
+        name: 'object',
+        required: true,
+      },
+    },
+    secondaryMenu: {
+      control: {
+        name: 'object',
+        required: true,
+      },
+    },
+    maxWidth: {
+      options: ['none', 'sm', 'md', 'lg'],
+      control: { type: 'radio' },
+    },
+    payOff: {
+      control: {
+        name: 'string',
+        required: false,
+      },
+    },
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  parameters: {
+    status: {
+      type: 'PRODUCTION',
+    },
+    docusaurus: {
+      link: 'footer',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=287-6733&embed-host=share',
+    },
+  },
+} satisfies Meta<typeof componentLibraryReact.Footer>;
+type Story = StoryObj<typeof componentLibraryReact.Footer>;
+
+export const Base: Story = {};

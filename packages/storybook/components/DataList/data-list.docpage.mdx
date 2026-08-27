@@ -1,0 +1,11 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as DataListStories from "./data-list.stories";
+
+<Meta of={DataListStories} name="Documentatie" />
+
+<Title />
+<Canvas of={DataListStories.Base} layout="padded" />
+
+## Props
+
+<ArgTypes of={DataListStories.Base} />

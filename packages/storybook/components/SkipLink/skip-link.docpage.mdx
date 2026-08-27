@@ -1,0 +1,19 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as SkipLinkStories from "./skip-link.stories";
+
+<Meta of={SkipLinkStories} name="Documentatie" />
+
+<Title />
+
+Druk op TAB om de skip link knop te tonen.
+
+<Canvas of={SkipLinkStories.Base} layout="padded" />
+<ArgTypes of={SkipLinkStories.Base} />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

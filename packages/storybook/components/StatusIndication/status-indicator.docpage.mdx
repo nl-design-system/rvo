@@ -1,0 +1,16 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as StatusIndicatorStories from "./status-indicator.stories";
+
+<Meta of={StatusIndicatorStories} name="Documentatie" />
+
+<Title />
+<Canvas of={StatusIndicatorStories.Base} layout="padded" />
+<ArgTypes of={StatusIndicatorStories.Base} />
+
+## Documentatie
+
+<Readme markdown={documentation} />
+
+## Changelog
+
+<Changelog markdown={changeLog} />

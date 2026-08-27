@@ -1,0 +1,14 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as TableStories from "./table.stories";
+
+<Meta of={TableStories} name="Documentatie" />
+
+<Title />
+
+## Preview
+
+<Canvas of={TableStories.Base} layout="padded" />
+
+## Parameters
+
+<ArgTypes of={TableStories.Base} />

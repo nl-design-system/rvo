@@ -79,7 +79,7 @@ const parameters = {
     },
   },
   controls: {
-    expanded: true,
+    expanded: false,
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
   },

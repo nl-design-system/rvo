@@ -1,0 +1,8 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as SidebarLayoutStories from "./sidebar-layout.stories";
+
+<Meta of={SidebarLayoutStories} name="Documentatie" />
+
+<Title />
+<Canvas of={SidebarLayoutStories.Base} layout="padded" />
+<ArgTypes of={SidebarLayoutStories.Base} />
