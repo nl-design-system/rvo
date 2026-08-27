@@ -68,6 +68,7 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps & HTMLAttributes<HTMLDi
         isModal={true}
         onClose={() => setIsMenuOpen(false)}
         backgroundColor="grijs-200"
+        ariaLabel="Menu"
       >
         <div className={clsx('rvo-navbar__background')}>
           <nav>
