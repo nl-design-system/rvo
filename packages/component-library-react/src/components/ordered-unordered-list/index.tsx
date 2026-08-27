@@ -4,32 +4,27 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/ordered-unordered-list.css';
 import { parseChildren } from '../../utils/parseChildren';
 
 export interface IListProps {
-  type?: 'unordered' | 'ordered';
-  /** @uxpinignoreprop */
+  type: 'unordered' | 'ordered';
   items?: string[];
-  /** @uxpinpropname Unordered bullet type */
   bulletType?: 'disc' | 'none' | 'icon';
-  /** @uxpinpropname Unordered bullet icon */
   bulletIcon?: 'option-1' | 'option-2' | 'option-3';
   noMargin?: boolean;
   noPadding?: boolean;
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
 
 export const List: React.FC<IListProps & React.HTMLAttributes<HTMLUListElement | HTMLOListElement>> = ({
-  type = defaultArgs.type,
-  items = defaultArgs.items,
-  bulletType = defaultArgs.bulletType,
-  bulletIcon = defaultArgs.bulletIcon,
-  noMargin = defaultArgs.noMargin,
-  noPadding = defaultArgs.noPadding,
-  children = defaultArgs.children,
+  type,
+  items,
+  bulletType = 'icon',
+  bulletIcon = 'option-1',
+  noMargin = true,
+  noPadding = true,
+  children,
   ...rootElementProps
 }) => {
   const ListTag = type === 'unordered' ? 'ul' : 'ol';

@@ -13,27 +13,16 @@ export interface IImageSource {
 }
 
 export interface IImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  /** Required image source */
   src: string;
-  /** Required alt text for accessibility */
   alt: string;
-  /** Corner rounding variant (token-based, RTL-safe) */
   radius?: 'none' | 'all' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-  /** Border radius size — maps to design tokens */
   radiusSize?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-  /** Responsive or alternative sources (used inside <picture>) */
   sources?: IImageSource[];
-  /** Lazy/eager loading mode (optional) */
   loading?: 'lazy' | 'eager';
-  /** Image decoding strategy (optional) */
   decoding?: 'async' | 'sync' | 'auto';
-  /** Fetch priority hint (optional) */
   fetchPriority?: 'high' | 'low' | 'auto';
-  /** Explicit image width (recommended for layout stability) */
   width?: number | string;
-  /** Explicit image height (recommended for layout stability) */
   height?: number | string;
-  /** Custom class name for styling overrides */
   className?: string;
 }
 

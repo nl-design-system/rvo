@@ -6,7 +6,6 @@
 import iconList from '@nl-rvo/assets/icons/index.js';
 import clsx from 'clsx';
 import React from 'react';
-import { defaultArgs } from './defaultArgs';
 import { IconType } from './types';
 import '@nl-rvo/component-library-css/dist/components/icon.css';
 
@@ -48,10 +47,10 @@ export const iconNames = iconOptions.map((option) => {
 });
 
 export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> = ({
-  icon = defaultArgs.icon,
-  size = defaultArgs.size,
-  color = defaultArgs.color,
-  ariaLabel = defaultArgs.ariaLabel,
+  icon,
+  size = 'md',
+  color = 'hemelblauw',
+  ariaLabel,
   className,
   ...rootElementProps
 }: IIconProps) => {

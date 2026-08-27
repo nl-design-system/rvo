@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
 
@@ -16,18 +15,17 @@ export interface ILayoutFlowProps {
   alignContent?: '' | 'start' | 'center' | 'end' | 'space-between';
   justifyItems?: '' | 'start' | 'center' | 'end';
   justifyContent?: '' | 'start' | 'center' | 'end' | 'space-between';
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
 
 export const LayoutFlow: React.FC<ILayoutFlowProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  gap = defaultArgs.gap,
-  row = defaultArgs.row,
-  wrap = defaultArgs.wrap,
-  alignItems = defaultArgs.alignItems,
-  alignContent = defaultArgs.alignContent,
-  justifyItems = defaultArgs.justifyItems,
-  justifyContent = defaultArgs.justifyContent,
+  gap = 'md',
+  row,
+  wrap,
+  alignItems,
+  alignContent,
+  justifyItems,
+  justifyContent,
   children,
   ...rootElementProps
 }) => {

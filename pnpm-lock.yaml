@@ -906,8 +906,11 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@nl-rvo/component-library-css':
-        specifier: file:../component-library-css
+        specifier: workspace:*
         version: link:../component-library-css
+      '@nl-rvo/component-library-react':
+        specifier: workspace:*
+        version: link:../component-library-react
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens

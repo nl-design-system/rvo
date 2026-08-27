@@ -6,25 +6,22 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/max-width-layout.css';
 
 export interface IMaxWidthLayoutProps {
   size?: 'sm' | 'md' | 'lg';
-  /** @uxpinignoreprop */
   content?: string;
   inlinePadding?: 'none' | 'sm' | 'md' | 'lg';
   centered?: boolean;
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
 }
 
 export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  size = defaultArgs.size,
-  content = defaultArgs.content,
-  inlinePadding = defaultArgs.inlinePadding,
-  centered = defaultArgs.centered,
+  size = 'md',
+  content,
+  inlinePadding = 'none',
+  centered,
   children,
   className,
   ...rootElementProps

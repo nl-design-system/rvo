@@ -3,18 +3,17 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { HTMLAttributes } from 'react';
-import { defaultArgs } from './defaultArgs';
 import Link from '../link';
 import '@nl-rvo/component-library-css/dist/components/skip-link.css';
 
 export interface ISkipLinkProps {
-  textContent?: string;
-  anchorLink?: string;
+  textContent: string;
+  anchorLink: string;
 }
 
 export const SkipLink: React.FC<ISkipLinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
-  textContent = defaultArgs.textContent,
-  anchorLink = defaultArgs.anchorLink,
+  textContent,
+  anchorLink,
   ...rootElementProps
 }) => {
   return (

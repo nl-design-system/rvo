@@ -4,30 +4,26 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { Button, IButtonProps } from '../button/';
 import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
 import '@nl-rvo/component-library-css/dist/components/action-group.css';
 
 export interface IActionGroupProps {
-  /** @uxpinignoreprop */
   buttonsLeft?: IButtonProps[];
-  /** @uxpinignoreprop */
   buttonsRight?: IButtonProps[];
   fullWidth?: boolean;
   position?: 'left' | 'right';
-  /** @uxpinpropname Buttons */
   children?: ReactNode | undefined;
   className?: string;
 }
 
 export const ActionGroup: React.FC<IActionGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  buttonsLeft = defaultArgs.buttonsLeft,
-  buttonsRight = defaultArgs.buttonsRight,
+  buttonsLeft,
+  buttonsRight,
   children,
-  fullWidth = defaultArgs.fullWidth,
+  fullWidth,
   className,
-  position = defaultArgs.position,
+  position,
   ...rootElementProps
 }) => {
   return (

@@ -3,19 +3,16 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/item-list.css';
 import { parseChildren } from '../../utils/parseChildren';
 
 export interface IItemListProps {
-  /** @uxpinignoreprop */
   items: string[] | ReactNode[];
-  /** @uxpinpropname Items */
   children?: ReactNode | undefined;
 }
 
 export const ItemList: React.FC<IItemListProps & React.HTMLAttributes<HTMLUListElement>> = ({
-  items = defaultArgs.items,
+  items,
   children,
   ...rootElementProps
 }: IItemListProps) => (

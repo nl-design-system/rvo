@@ -54,6 +54,7 @@ export const TableRow: React.FC<ITableRowProps> = ({ children, expanded = false,
       className: 'utrecht-button--padding-none utrecht-button--fit-content',
       'aria-controls': controls,
       'aria-expanded': visible,
+      label: undefined,
     };
 
     return (

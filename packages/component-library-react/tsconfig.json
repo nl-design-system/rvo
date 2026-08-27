@@ -25,6 +25,12 @@
       "tslib": ["node_modules/tslib/tslib.d.ts"]
     }
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "../../components/toggle/stories/toggle.stories.tsx",
+    "../../components/toggle/stories/toggle.states.stories.tsx"
+  ],
   "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]
 }

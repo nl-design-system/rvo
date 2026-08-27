@@ -5,7 +5,6 @@
 
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useRef } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import '@nl-rvo/component-library-css/dist/components/scrollable-content.css';
 
@@ -24,10 +23,10 @@ export interface IScrollableContentProps {
 export const ScrollableContent: React.FC<IScrollableContentProps & React.HTMLAttributes<HTMLDivElement>> = ({
   content,
   children,
-  height = defaultArgs.height,
-  useAsMinimumHeight = defaultArgs.useAsMinimumHeight,
-  disableScroll = defaultArgs.disableScroll,
-  useStyleAttribute = defaultArgs.useStyleAttribute,
+  height = 300,
+  useAsMinimumHeight,
+  disableScroll,
+  useStyleAttribute,
   ...rootElementProps
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode, SyntheticEvent, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import { Button } from '../button';
 import { Icon } from '../icon';
@@ -14,22 +13,20 @@ import '@nl-rvo/component-library-css/dist/components/alert.css';
 export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {
   kind?: 'info' | 'warning' | 'error' | 'success';
   heading?: string;
-  /** @uxpinignoreprop */
   content?: string | React.ReactNode;
   closable?: boolean;
   padding?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   onClose?: (event: SyntheticEvent<HTMLButtonElement>) => void;
   maxWidth?: 'sm' | 'md' | 'lg';
 }
 
 export const Alert: React.FC<IAlertProps> = ({
-  kind = defaultArgs.kind,
-  heading = defaultArgs.heading,
-  content = defaultArgs.content,
-  closable = defaultArgs.closable,
-  padding = defaultArgs.padding,
+  kind = 'info',
+  heading,
+  content,
+  closable,
+  padding = 'md',
   onClose,
   children,
   maxWidth,

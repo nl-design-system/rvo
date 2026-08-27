@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/status-indicator.css';
 
 export interface IStatusIndicatorProps {
@@ -12,7 +11,7 @@ export interface IStatusIndicatorProps {
 }
 
 export const StatusIndicator: React.FC<IStatusIndicatorProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  color = defaultArgs.color,
+  color,
   ...rootElementProps
 }) => <div className={clsx('rvo-status-indicator', `rvo-status-indicator--${color}`)} {...rootElementProps} />;
 

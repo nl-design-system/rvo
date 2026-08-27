@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes, useCallback, useEffect, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { SortAscendingIcon, SortDefaultIcon, SortDescendingIcon } from './icons';
 import validateHTML from '../../utils/validateHTML';
 import '@nl-rvo/component-library-css/dist/components/table.css';
@@ -44,8 +43,8 @@ const sortData = (rows: string[][], columnIndex: number, direction: 'ASC' | 'DES
 
 export const Table: React.FC<ITableProps & React.HTMLAttributes<HTMLDivElement>> = ({
   description,
-  columns = defaultArgs.columns,
-  rows = defaultArgs.rows,
+  columns,
+  rows,
   onSort,
   ...rootElementProps
 }: ITableProps) => {

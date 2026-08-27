@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import { defaultArgs } from './defaultArgs';
 import { ILinkProps, Link } from '../../link';
 import '@nl-rvo/component-library-css/dist/components/progress-tracker.css';
 
@@ -40,12 +39,12 @@ export const argTypes = {
 };
 
 export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
-  state = defaultArgs.state,
-  line = defaultArgs.line,
-  size = defaultArgs.size,
-  label = defaultArgs.label,
-  link = defaultArgs.link,
-  onClick = defaultArgs.onClick,
+  state,
+  line,
+  size,
+  label,
+  link,
+  onClick,
 }: IProgressTrackerStepProps) => {
   let labelMarkup: string | React.ReactNode = label;
   if (state === 'incomplete' || state === 'doing' || state === 'completed') {

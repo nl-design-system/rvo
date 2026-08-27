@@ -4,8 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes } from 'react';
-import { defaultArgs } from './defaultArgs';
-import { IBreadcrumbsItem } from '../';
+import { IBreadcrumbsItem } from '..';
 import Link, { ILinkProps } from '../../link';
 
 export interface IBreadcrumbsItemProps extends IBreadcrumbsItem, HTMLAttributes<HTMLSpanElement | HTMLAllCollection> {
@@ -13,8 +12,8 @@ export interface IBreadcrumbsItemProps extends IBreadcrumbsItem, HTMLAttributes<
 }
 
 export const BreadcrumbsItem: React.FC<IBreadcrumbsItemProps> = ({
-  label = defaultArgs.label,
-  link = defaultArgs.link,
+  label,
+  link,
   onClick,
   ...props
 }: IBreadcrumbsItemProps) => {

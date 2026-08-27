@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon';
 import { IconType } from '../icon/types';
 import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
@@ -12,33 +11,30 @@ import '@nl-rvo/component-library-css/dist/components/button.css';
 export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   kind?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'subtle' | 'warning-subtle' | 'warning';
   size?: 'xs' | 'sm' | 'md';
-  label?: string | ReactNode;
+  label: string | ReactNode;
   disabled?: boolean;
-  showIcon?: 'no' | 'before' | 'after';
+  showIcon?: 'before' | 'after';
   icon?: IconType;
   iconAriaLabel?: string;
   busy?: boolean;
   fullWidth?: boolean;
   className?: string;
   type?: 'submit' | 'reset' | 'button' | undefined;
-  /** @uxpinpropname On Focus */
   onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
-  /** @uxpinpropname On Blur */
   onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
-  /** @uxpinpropname On Click */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
-  kind = defaultArgs.kind,
-  size = defaultArgs.size,
-  disabled = defaultArgs.disabled,
-  label = defaultArgs.label,
+  kind = 'primary',
+  size = 'md',
+  disabled,
+  label,
   children,
-  showIcon = defaultArgs.showIcon,
-  icon = defaultArgs.icon,
-  iconAriaLabel = defaultArgs.iconAriaLabel,
-  fullWidth = defaultArgs.fullWidth,
+  showIcon,
+  icon,
+  iconAriaLabel,
+  fullWidth = false,
   className,
   busy,
   ...otherProps
@@ -68,7 +64,7 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
         `rvo-button--${kind}`,
         size && `rvo-button--size-${size}`,
         fullWidth && 'rvo-button--full-width',
-        showIcon !== 'no' && `rvo-button--icon-${showIcon}`,
+        showIcon && `rvo-button--icon-${showIcon}`,
         appearance && `rvo-button--${appearance}`,
       )}
       aria-busy={busy}

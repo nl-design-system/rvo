@@ -4,14 +4,11 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/paragraph.css';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 
 export interface IParagraphProps extends Omit<React.HTMLAttributes<HTMLParagraphElement>, 'content'> {
-  /** @uxpinignoreprop */
   content?: string | React.ReactNode;
-  /** @uxpinpropname Content */
   children?: ReactNode | undefined;
   color?: 'lintblauw' | 'wit' | 'zwart' | 'grijs-500' | 'grijs-900';
   size?: 'sm' | 'md' | 'lg';
@@ -19,10 +16,10 @@ export interface IParagraphProps extends Omit<React.HTMLAttributes<HTMLParagraph
 }
 
 export const Paragraph: React.FC<IParagraphProps> = ({
-  content = defaultArgs.content,
-  color = defaultArgs.color,
-  size = defaultArgs.size,
-  noSpacing = defaultArgs.noSpacing,
+  content,
+  color = 'grijs-900',
+  size = 'md',
+  noSpacing,
   children,
   className,
   ...props

@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { HTMLAttributes, ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import Heading, { IHeadingProps } from '../heading';
 import Icon from '../icon';
@@ -41,32 +40,32 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
 }
 
 export const Card: React.FC<ICardProps> = ({
-  background = defaultArgs.background,
-  backgroundColor = defaultArgs.backgroundColor,
-  backgroundImage = defaultArgs.backgroundImage,
-  padding = defaultArgs.padding,
+  background,
+  backgroundColor,
+  backgroundImage,
+  padding = 'md',
   children,
-  className = defaultArgs.className,
+  className,
   content,
-  fullCardLink = defaultArgs.fullCardLink,
+  fullCardLink,
   headingClassName,
   headingProps,
-  image = defaultArgs.image,
+  image,
   imageAlt,
   imageHeight,
   imageLine,
-  imageSize = defaultArgs.imageSize,
+  imageSize,
   imageWidth,
   inlineImage = false,
-  invertedColors = defaultArgs.invertedColors,
+  invertedColors,
   layout = 'column',
-  link = defaultArgs.link,
+  link,
   linkClassName,
   LinkComponent,
   linkProps = {},
   onClick,
-  outline = defaultArgs.outline,
-  showLinkIndicator = defaultArgs.showLinkIndicator,
+  outline,
+  showLinkIndicator,
   title,
   ...props
 }: ICardProps) => {

@@ -1241,7 +1241,7 @@
               "$value": "calc({rvo.space.xs} + {rvo.space.2xs})"
             },
             "min-block-size": {
-              "$value": "auto"
+              "$value": "24px"
             }
           },
           "sm": {

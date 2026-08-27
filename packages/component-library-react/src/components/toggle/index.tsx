@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import { Icon } from '../icon';
 import { IconType } from '../icon/types';
@@ -28,12 +27,12 @@ export interface IToggleProps {
 }
 
 export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> = ({
-  content = defaultArgs.content,
-  showIcon = defaultArgs.showIcon,
-  icon = defaultArgs.icon,
-  active = defaultArgs.active,
-  showHover = defaultArgs.showHover,
-  focus = defaultArgs.focus,
+  content,
+  showIcon = false,
+  icon,
+  active,
+  showHover,
+  focus,
   className,
   link,
   linkTarget = '_self',

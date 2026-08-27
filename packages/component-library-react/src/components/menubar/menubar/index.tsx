@@ -7,7 +7,6 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { MaxWidthLayout } from '../../../index';
 import { IconType } from '../../icon/types';
 // eslint-disable-next-line import/order
-import { defaultArgs } from '../defaultArguments';
 
 import '@nl-rvo/component-library-css/dist/components/menubar.css';
 
@@ -23,14 +22,12 @@ export interface IMenuBarItem {
 }
 
 export interface IMenuBarProps {
-  size: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg';
   direction?: 'horizontal' | 'vertical';
-  /** @uxpinignoreprop */
-  items?: IMenuBarItem[];
+  items: IMenuBarItem[];
   useIcons?: boolean;
   iconPlacement?: 'before' | 'after';
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
-  /** @uxpinpropname MenuBar items */
   children?: ReactNode | undefined;
   horizontalRule?: boolean;
   linkColor?: 'donkerblauw' | 'hemelblauw' | 'lintblauw' | 'grijs-700' | 'zwart';
@@ -39,15 +36,15 @@ export interface IMenuBarProps {
 }
 
 export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  size = defaultArgs.size,
-  direction = defaultArgs.direction,
-  items = defaultArgs.items,
-  useIcons = defaultArgs.useIcons,
-  iconPlacement = defaultArgs.iconPlacement,
-  maxWidth = defaultArgs.maxWidth,
-  horizontalRule = defaultArgs.horizontalRule,
-  linkColor = defaultArgs.linkColor,
-  grid = defaultArgs.grid,
+  size = 'lg',
+  direction = 'horizontal',
+  items,
+  useIcons,
+  iconPlacement,
+  maxWidth = 'lg',
+  horizontalRule,
+  linkColor = 'lintblauw',
+  grid,
   children,
   ...rootElementProps
 }) => {

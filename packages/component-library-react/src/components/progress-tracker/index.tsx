@@ -4,18 +4,15 @@
  */
 import '@nl-rvo/component-library-css/dist/components/progress-tracker.css';
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import { IProgressTrackerStepProps, ProgressTrackerStep } from './progress-tracker-step';
 
 export interface IProgressTrackerProps {
-  /** @uxpinignoreprop */
   steps?: IProgressTrackerStepProps[];
-  /** @uxpinpropname Steps */
   children?: ReactNode | undefined;
 }
 
 export const ProgressTracker: React.FC<IProgressTrackerProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  steps = defaultArgs.steps,
+  steps,
   children,
   ...rootElementProps
 }) => {

@@ -7,17 +7,16 @@ import '@nl-rvo/component-library-css/dist/components/accordion.css';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { AccordionItem, IAccordionItemProps } from './accordion-item';
-import { defaultArgs } from './defaultArgs';
 
 export interface IAccordionProps {
   /** @uxpinignoreprop */
-  items?: IAccordionItemProps[];
+  items: IAccordionItemProps[];
   /** @uxpinpropname Accordion items */
   children?: ReactNode | undefined;
 }
 
 export const Accordion: React.FC<IAccordionProps & React.HTMLAttributes<HTMLDivElement>> = ({
-  items = defaultArgs.items,
+  items,
   children,
   ...props
 }) => {

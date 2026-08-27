@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../../utils/parseContentMarkup';
 import Heading from '../../heading';
 import Icon from '../../icon/';
@@ -11,18 +10,16 @@ import Icon from '../../icon/';
 export interface IAccordionItemProps {
   title: string;
   teaser?: string;
-  /** @uxpinignoreprop */
   content?: string | ReactNode;
   open?: boolean;
-  /** @uxpinpropname Content */
-  children?: ReactNode | undefined;
+  children: ReactNode | undefined;
 }
 
 export const AccordionItem: React.FC<IAccordionItemProps> = ({
-  title = defaultArgs.title,
-  teaser = defaultArgs.teaser,
-  content = defaultArgs.content,
-  open = defaultArgs.open,
+  title,
+  teaser,
+  content,
+  open = false,
   children,
 }: IAccordionItemProps) => {
   let teaserMarkup: string | React.ReactNode = parseContentMarkup(teaser);
@@ -39,7 +36,7 @@ export const AccordionItem: React.FC<IAccordionItemProps> = ({
           <Heading type="h3" noMargins={true} className="rvo-accordion__item-title" fontWeightNormal={true}>
             {title}
           </Heading>
-          <div className="rvo-accordion-teaser">{teaserMarkup}</div>
+          {teaserMarkup && <div className="rvo-accordion-teaser">{teaserMarkup}</div>}
         </div>
       </summary>
       <div className="rvo-accordion__content">{contentMarkup}</div>

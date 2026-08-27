@@ -6,7 +6,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import '@nl-rvo/component-library-css/dist/components/max-width-layout.css';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/sidebar-layout.css';
 import SidebarLayoutBar from './sidebar-layout-bar';
 import SidebarLayoutContent from './sidebar-layout-content';
@@ -15,24 +14,19 @@ import parseContentMarkup from '../../utils/parseContentMarkup';
 export interface ISidebarLayoutProps {
   maxWidthLayoutSize?: 'sm' | 'md' | 'lg';
   sidebarPosition?: 'left' | 'right';
-  /** @uxpinignoreprop */
   sidebarBackgroundColor?: boolean;
-  /** @uxpinignoreprop */
   sidebarContent?: string;
-  /** @uxpinignoreprop */
   content?: string;
-  /** @uxpinignoreprop */
   className?: string;
-  /** @uxpinignoreprop */
   children?: ReactNode | undefined;
 }
 
 export const SidebarLayout: React.FC<ISidebarLayoutProps & React.HTMLAttributes<HTMLElement>> = ({
-  maxWidthLayoutSize = defaultArgs.maxWidthLayoutSize,
-  sidebarPosition = defaultArgs.sidebarPosition,
-  sidebarBackgroundColor = defaultArgs.sidebarBackgroundColor,
-  sidebarContent = defaultArgs.sidebarContent,
-  content = defaultArgs.content,
+  maxWidthLayoutSize = 'md',
+  sidebarPosition = 'left',
+  sidebarBackgroundColor = true,
+  sidebarContent,
+  content,
   children,
   className,
   ...rootElementProps

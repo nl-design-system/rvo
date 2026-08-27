@@ -5,7 +5,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import BreadcrumbsItem from './breadcrumbs-item';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/layout-flow.css';
 import '@nl-rvo/component-library-css/dist/components/breadcrumbs.css';
 import Icon from '../icon';
@@ -17,7 +16,7 @@ export interface IBreadcrumbsItem {
 
 export interface IBreadcrumbProps {
   /** @uxpinignoreprop */
-  items?: IBreadcrumbsItem[];
+  items: IBreadcrumbsItem[];
   size?: 'sm' | 'md' | 'lg';
   /** @uxpinpropname Breadcrumb items */
   children?: ReactNode | undefined;
@@ -28,8 +27,8 @@ const parseDividerMarkup = (index: number, maxLength: number) => {
 };
 
 export const Breadcrumbs: React.FC<IBreadcrumbProps & React.HTMLAttributes<HTMLOListElement>> = ({
-  items = defaultArgs.items,
-  size = defaultArgs.size,
+  items,
+  size = 'sm',
   children,
   ...rootElementProps
 }) => {

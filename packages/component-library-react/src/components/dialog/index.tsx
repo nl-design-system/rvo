@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import Button from '../button';
 import '@nl-rvo/component-library-css/dist/components/dialog.css';
@@ -47,14 +46,14 @@ export const Dialog: React.FC<IDialogProps> = ({
   children,
   actionGroup,
   onClose,
-  content = defaultArgs.content,
-  isOpen: isOpenProp = defaultArgs.isOpen,
-  type = defaultArgs.type,
-  isModal = defaultArgs.isModal,
-  centeredDialogSize = defaultArgs.centeredDialogSize,
-  backgroundColor = defaultArgs.backgroundColor,
-  className = defaultArgs.className,
-  ariaLabel = defaultArgs.ariaLabel,
+  content,
+  isOpen: isOpenProp = false,
+  type = 'centered-dialog',
+  isModal,
+  centeredDialogSize = 'md',
+  backgroundColor = 'wit',
+  className,
+  ariaLabel,
   closeButtonLabel = 'Sluiten',
   ...props
 }: IDialogProps) => {
@@ -95,7 +94,7 @@ export const Dialog: React.FC<IDialogProps> = ({
       {...props}
     >
       <div className="rvo-dialog__close" onClick={handleClose}>
-        <Button kind="subtle" icon="kruis" showIcon="before">
+        <Button kind="subtle" icon="kruis" showIcon="before" label={undefined}>
           {closeButtonLabel}
         </Button>
       </div>

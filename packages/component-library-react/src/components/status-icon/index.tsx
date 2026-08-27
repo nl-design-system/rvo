@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import { defaultArgs } from './defaultArgs';
 import { Icon } from '../icon';
 import '@nl-rvo/component-library-css/dist/components/status-icon.css';
 
@@ -16,8 +15,8 @@ export interface IStatusIconProps {
 }
 
 export const StatusIcon: React.FC<IStatusIconProps> = ({
-  type = defaultArgs.type,
-  size = defaultArgs.size,
+  type,
+  size = 'md',
   className,
   ignoreDefaultIconColor,
   ...rootElementProps

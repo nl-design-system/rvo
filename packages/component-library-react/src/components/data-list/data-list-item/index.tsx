@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { ReactNode } from 'react';
-import { defaultArgs } from './defaultArgs';
 import parseContentMarkup from '../../../utils/parseContentMarkup';
 
 export interface IDataListItemProps {
@@ -11,10 +10,7 @@ export interface IDataListItemProps {
   value: string | ReactNode;
 }
 
-export const DataListItem: React.FC<IDataListItemProps> = ({
-  label = defaultArgs.label,
-  value = defaultArgs.value,
-}: IDataListItemProps) => {
+export const DataListItem: React.FC<IDataListItemProps> = ({ label, value }: IDataListItemProps) => {
   let dtMarkup: string | React.ReactNode = label && parseContentMarkup(label);
   let ddMarkup: string | React.ReactNode = value && parseContentMarkup(value);
 

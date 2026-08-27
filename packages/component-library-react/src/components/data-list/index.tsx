@@ -5,7 +5,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import DataListItem, { IDataListItemProps } from './data-list-item';
-import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/data-list.css';
 
 export interface IDataListProps {
@@ -16,7 +15,7 @@ export interface IDataListProps {
 }
 
 export const DataList: React.FC<IDataListProps & React.HTMLAttributes<HTMLDListElement>> = ({
-  items = defaultArgs.items,
+  items,
   children,
   ...props
 }) => (
