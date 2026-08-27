@@ -1,5 +1,5 @@
 /* stylelint-disable scss/no-global-function-names */
-@use "../../layout-flow/src";
+@use "./layout-flow";
 
 $rvo-button-kinds: (primary, secondary, tertiary, quaternary, subtle, warning, warning-subtle) !default;
 $rvo-button-sizes: (xs, sm, md) !default;

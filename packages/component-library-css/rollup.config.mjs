@@ -9,37 +9,44 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..', '..');
 
 // Read and parse @use statements from index.scss
-const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
-const useStatementsComponent = [];
+// const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
+const markdownFiles = fs.readdirSync('src/components/');
+
+console.log(markdownFiles);
+// const useStatementsComponent = [];
 const useStatementsUtil = [];
 
-// Map imported css files
-indexContent
-  .split('\n')
-  .filter((line) => line.trim().startsWith('@use'))
-  .map((line) => {
-    const match = line.match(/@use "([^"]+)"/);
-    return match ? match[1] : null;
-  })
-  .filter((path) => path && !path.includes('node_modules'))
-  .map((componentPath) => {
-    // Convert paths like "../../../components/accordion/src" to just "accordion"
-    const parts = componentPath.split('/');
+// // Map imported css files
+// indexContent
+//   .split('\n')
+//   .filter((line) => line.trim().startsWith('@use'))
+//   .map((line) => {
+//     const match = line.match(/@use "([^"]+)"/);
+//     return match ? match[1] : null;
+//   })
+//   .filter((path) => path && !path.includes('node_modules'))
+//   .map((componentPath) => {
+//     // Convert paths like "../../../components/accordion/src" to just "accordion"
+//     const parts = componentPath.split('/');
 
-    // Util CSS
-    if (parts[0].indexOf('utility-') >= 0) {
-      useStatementsUtil.push(parts[0]);
-    }
+//     // Util CSS
+//     if (parts[0].indexOf('utility-') >= 0) {
+//       useStatementsUtil.push(parts[0]);
+//     }
 
-    if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
-  });
+//     if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
+//   });
+
+markdownFiles.flatMap((component) => {
+  console.log(component);
+});
 
 // Create individual component configurations
-const componentBundles = useStatementsComponent.flatMap((component) => [
+const componentBundles = markdownFiles.flatMap((component) => [
   {
-    input: `${repoRoot}/components/${component}/src/index.scss`,
+    input: `./src/components/${component.split('.scss')[0]}.scss`,
     output: {
-      file: `dist/components/${component}.css`,
+      file: `dist/components/${component.split('.scss')[0]}.css`,
       format: 'es',
       sourcemap: true,
     },
@@ -53,9 +60,9 @@ const componentBundles = useStatementsComponent.flatMap((component) => [
     ],
   },
   {
-    input: `../../components/${component}/src/index.scss`,
+    input: `./src/components/${component.split('.scss')[0]}.scss`,
     output: {
-      file: `dist/components/${component}.min.css`,
+      file: `dist/components/${component.split('.scss')[0]}.min.css`,
       format: 'es',
       sourcemap: true,
     },

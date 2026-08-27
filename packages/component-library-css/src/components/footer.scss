@@ -3,8 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "../../max-width-layout/src" as *;
-@use "~@utrecht/page-footer-css/dist/index.css" as *;
+@use "./max-width-layout" as *;
 
 .rvo-footer {
   background-color: var(--utrecht-page-footer-background-color);

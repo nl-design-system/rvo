@@ -5,8 +5,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "~@utrecht/radio-button-css/dist/index.css";
-@use "../../layout-flow/src" as *;
+@use "./layout-flow";
 
 .rvo-radio-button {
   @extend .rvo-layout-row;
@@ -33,6 +32,7 @@
 .utrecht-radio-button:disabled {
   background: none;
   border-color: var(--utrecht-radio-button-disabled-border-color);
+
   + .rvo-radio-button__label {
     color: var(--rvo-radio-button-label-disabled-color);
   }
