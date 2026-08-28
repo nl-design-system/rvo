@@ -30,11 +30,8 @@ export default function Home(): ReactElement {
               </p>
             </LayoutFlow>
             <DocusaurusLink
-              className={clsx(
-                'rvo-button rvo-button--primary rvo-button--size-md rvo-button--primary-action-button',
-                styles.heroButton,
-              )}
-              style={{ width: 'max-content' }}
+              className="rvo-link rvo-link--call-to-action"
+              style={{ alignSelf: 'flex-start' }}
               to={useBaseUrl('/over-roos/introductie')}
             >
               Aan de slag met ROOS
