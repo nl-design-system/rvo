@@ -2,8 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { ExpandableContent, Link } from '@nl-rvo/component-library-react';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import espreeParser from 'prettier/parser-espree';
-import htmlParser from 'prettier/parser-html';
+import htmlParser from 'prettier/plugins/html';
 import prettier from 'prettier/standalone';
 import React, { useEffect, useState } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
@@ -17,7 +16,7 @@ export async function formatHTML(children) {
 
     const formatted = await prettier.format(forced, {
       parser: 'html',
-      plugins: [htmlParser, espreeParser],
+      plugins: [htmlParser],
     });
 
     return formatted.trim();
