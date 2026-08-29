@@ -50,11 +50,13 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
           size: 'lg',
           color: '',
           className: iconPlacement !== undefined ? `rvo-link__icon--${iconPlacement}` : '',
+          onClick: onClick as (event: React.MouseEvent) => void,
         })
       : StatusIcon({
           type: typeName[type as keyof typeof typeName],
           size: 'lg',
           ignoreDefaultIconColor: true,
+          onClick: onClick as (event: React.MouseEvent) => void,
         });
   }
 
@@ -67,13 +69,14 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
       className={clsx(
         'rvo-tag',
         url && 'rvo-tag--as-link',
-        onClick && 'rvo-tag--clickable',
+        !iconPlacement && onClick && 'rvo-tag--clickable',
+        iconPlacement && onClick && 'rvo-tag--icon-clickable',
         className,
         iconPlacement && 'rvo-tag--with-icon',
         type !== undefined && `rvo-tag--${type}`,
         isPill && 'rvo-tag--pill',
       )}
-      onClick={onClick}
+      onClick={!iconPlacement ? onClick : undefined}
       {...rootElementProps}
     >
       {iconPlacement === 'before' && iconMarkup}
