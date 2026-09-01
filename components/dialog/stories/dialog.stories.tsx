@@ -1,7 +1,15 @@
 import { Dialog } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/dialog/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { argTypes } from './argTypes';
+
+const defaultArgs = {
+  type: 'centered-dialog' as const,
+  isModal: true,
+  centeredDialogSize: 'md' as const,
+  backgroundColor: 'wit' as const,
+  isOpen: true,
+  ariaLabel: 'Dialog aria label',
+};
 
 export default {
   title: 'Componenten/Dialog',
@@ -22,7 +30,6 @@ type Story = StoryObj<typeof Dialog>;
 const Container = ({ children }) => <div style={{ minHeight: '500px' }}>{children}</div>;
 
 export const Default: Story = {
-  args: defaultArgs,
   name: 'Dialog',
   render: (args) => (
     <Container>
