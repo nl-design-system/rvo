@@ -120,6 +120,11 @@ const config = (() => {
         });
       });
 
+      // Keep the addon-docs MDX-compile rule from also matching `*.mdx?raw` imports (see the
+      // `resourceQuery: /raw/` asset rule below) so a single import can't be processed by both.
+      const docsMdxRule = rules.find((rule) => rule.test && String(rule.test) === String(/\.mdx$/) && rule.use);
+      if (docsMdxRule) docsMdxRule.resourceQuery = { not: [/raw/] };
+
       const svgRule = rules.find((rule) => rule.type === 'asset/resource');
       if (svgRule?.generator?.filename) delete svgRule.generator.filename;
 
@@ -130,6 +135,16 @@ const config = (() => {
       };
 
       rules.push({ test: /\.md$/, type: 'asset/source' });
+
+      // Some *.docpage.mdx pages need the raw text of a sibling *.mdx content file (e.g. to feed
+      // `<Markdown>{doc}</Markdown>` or `<Readme markdown={doc} />`), while others import a sibling
+      // *.mdx to render as a compiled component (e.g. `<Doc />`). @storybook/addon-docs compiles every
+      // *.mdx by default, so the string-consumers were getting a component instead of text and crashing
+      // with "The Markdown block only accepts children as a single string, but children were of type:
+      // 'function'". Rather than guessing per-filename, string-consumers opt in explicitly via a `?raw`
+      // resource query on the import (webpack's usual raw-asset convention), scoped so it never affects
+      // the *.mdx files that must stay compiled.
+      rules.push({ resourceQuery: /raw/, type: 'asset/source' });
 
       return {
         ...config,
