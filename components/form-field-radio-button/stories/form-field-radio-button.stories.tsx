@@ -1,6 +1,7 @@
 import { RadioButtonField } from '@nl-rvo/component-library-react';
 import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-field-radio-button/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { fn } from 'storybook/test';
 import { argTypes } from './argTypes';
 
 export default {
@@ -23,4 +24,7 @@ export default {
 } satisfies Meta<typeof RadioButtonField>;
 type Story = StoryObj<typeof RadioButtonField>;
 
-export const Default: Story = { args: { ...defaultArgs, helperText: 'Helper text' }, name: 'Radio button field' };
+export const Default: Story = {
+  args: { ...defaultArgs, helperText: 'Helper text', onChange: fn() },
+  name: 'Radio button field',
+};
