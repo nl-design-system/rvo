@@ -1,5 +1,5 @@
 import { Button } from '@nl-rvo/component-library-react';
-import { iconNames as iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
+import { iconNames as iconOptions } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 export default {

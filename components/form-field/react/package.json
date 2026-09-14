@@ -1,0 +1,35 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/react-form-field",
+  "description": "Form Field React component",
+  "keywords": [
+    "nl-design-system",
+    "nl-rvo",
+    "react",
+    "form",
+    "field"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
+  },
+  "dependencies": {
+    "@nl-rvo/css-form-field": "workspace:*",
+    "@nl-rvo/react-expandable-content": "workspace:*",
+    "@nl-rvo/react-form-feedback": "workspace:*",
+    "@nl-rvo/react-form-field-label": "workspace:*"
+  }
+}

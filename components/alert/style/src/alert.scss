@@ -1,0 +1,129 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "pkg:@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
+
+.rvo-alert {
+  padding-block-end: var(--rvo-alert-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-inline-start);
+}
+
+.rvo-alert--padding-xs {
+  padding-block-end: var(--rvo-alert-padding-xs-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-xs-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-xs-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-xs-padding-inline-start);
+}
+
+.rvo-alert--padding-sm {
+  padding-block-end: var(--rvo-alert-padding-sm-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-sm-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-sm-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-sm-padding-inline-start);
+}
+
+.rvo-alert--padding-md {
+  padding-block-end: var(--rvo-alert-padding-md-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-md-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-md-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-md-padding-inline-start);
+}
+
+.rvo-alert--padding-lg {
+  padding-block-end: var(--rvo-alert-padding-lg-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-lg-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-lg-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-lg-padding-inline-start);
+}
+
+.rvo-alert--padding-xl {
+  padding-block-end: var(--rvo-alert-padding-xl-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-xl-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-xl-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-xl-padding-inline-start);
+}
+
+.rvo-alert--padding-2xl {
+  padding-block-end: var(--rvo-alert-padding-2xl-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-2xl-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-2xl-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-2xl-padding-inline-start);
+}
+
+.rvo-alert__container {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--rvo-alert-gap);
+}
+
+.rvo-alert p:first-child {
+  margin-block-start: 0;
+}
+
+.rvo-alert button {
+  align-self: flex-start;
+}
+
+.rvo-alert .rvo-icon {
+  min-inline-size: var(--rvo-size-xl);
+}
+
+.utrecht-form-fieldset .rvo-alert {
+  margin-inline-end: var(--rvo-alert-fieldset-margin);
+  margin-inline-start: var(--rvo-alert-fieldset-margin);
+}
+
+.utrecht-form-fieldset .rvo-alert:last-child {
+  margin-block-end: var(--rvo-alert-fieldset-margin);
+}
+
+.rvo-alert--info {
+  background-color: var(--rvo-alert-info-background-color);
+}
+
+.rvo-alert--warning {
+  background-color: var(--rvo-alert-warning-background-color);
+}
+
+.rvo-alert--error {
+  background-color: var(--rvo-alert-error-background-color);
+}
+
+.rvo-alert--success {
+  background-color: var(--rvo-alert-success-background-color);
+}
+
+.rvo-button--subtle.rvo-button__close {
+  --utrecht-icon-color: var(--rvo-color-zwart);
+
+  margin-inline-start: auto;
+  min-block-size: 0;
+  min-inline-size: 0;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+
+  .utrecht-icon.rvo-icon {
+    background-color: var(--utrecht-document-color);
+    min-inline-size: var(--rvo-size-md);
+  }
+
+  &:hover {
+    border-radius: 0;
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-end: 2px solid var(--rvo-color-zwart);
+  }
+}
+
+.rvo-alert .rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  color: var(--rvo-color-lintblauw);
+}
+
+.rvo-alert--layout {
+  display: flex;
+  justify-content: center;
+}

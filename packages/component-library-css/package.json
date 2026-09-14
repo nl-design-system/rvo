@@ -40,6 +40,20 @@
   },
   "main": "dist/index.css",
   "dependencies": {
-    "modern-normalize": "3.0.1"
+    "modern-normalize": "3.0.1",
+    "@nl-rvo/css-accordion": "workspace:*",
+    "@nl-rvo/css-action-group": "workspace:*",
+    "@nl-rvo/css-alert": "workspace:*",
+    "@nl-rvo/css-breadcrumbs": "workspace:*",
+    "@nl-rvo/css-button": "workspace:*",
+    "@nl-rvo/css-card": "workspace:*",
+    "@nl-rvo/css-card-experimental": "workspace:*",
+    "@nl-rvo/css-form-checkbox": "workspace:*",
+    "@nl-rvo/css-heading": "workspace:*",
+    "@nl-rvo/css-icon": "workspace:*",
+    "@nl-rvo/css-max-width-layout": "workspace:*",
+    "@nl-rvo/css-layout-flow": "workspace:*",
+    "@nl-rvo/css-link": "workspace:*",
+    "@nl-rvo/css-status-icon": "workspace:*"
   }
 }

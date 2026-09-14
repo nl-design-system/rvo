@@ -1,0 +1,81 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+
+$rvo-tag-status: "info", "warning", "success", "error";
+
+.rvo-tag {
+  --utrecht-icon-color: var(--rvo-tag-default-icon-color);
+
+  background-color: var(--rvo-tag-default-background-color);
+  border-radius: var(--rvo-tag-border-radius);
+  color: var(--rvo-tag-default-color);
+  display: inline-flex;
+  padding-block-end: var(--rvo-tag-padding-block-end);
+  padding-block-start: var(--rvo-tag-padding-block-start);
+  padding-inline-end: var(--rvo-tag-padding-inline-end);
+  padding-inline-start: var(--rvo-tag-padding-inline-start);
+
+  &--with-icon {
+    padding-inline-end: var(--rvo-tag-padding-inline-end-with-icon);
+    padding-inline-start: var(--rvo-tag-padding-inline-start-with-icon);
+
+    @extend .rvo-layout-row;
+    @extend .rvo-layout-gap--sm;
+  }
+
+  &--as-link,
+  &--clickable {
+    &:hover {
+      --utrecht-icon-color: var(--rvo-tag-default-hover-icon-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-default-hover-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-default-hover-color);
+    }
+
+    &:active {
+      --utrecht-icon-color: var(--rvo-tag-default-active-icon-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-default-active-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-default-active-color);
+    }
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &--pill {
+    border-radius: var(--rvo-tag-pill-border-radius);
+  }
+
+  @each $status in $rvo-tag-status {
+    &--#{$status} {
+      --utrecht-icon-color: var(--rvo-tag-#{$status}-icon-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-#{$status}-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-#{$status}-color);
+    }
+
+    &--as-link.rvo-tag--#{$status}:hover,
+    &--clickable.rvo-tag--#{$status}:hover {
+      --utrecht-icon-color: var(--rvo-tag-#{$status}-hover-icon-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-#{$status}-hover-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-#{$status}-hover-color);
+    }
+
+    &--as-link.rvo-tag--#{$status}:active {
+      --utrecht-icon-color: var(--rvo-tag-#{$status}-active-icon-color);
+      --rvo-tag-default-background-color: var(--rvo-tag-#{$status}-active-background-color);
+      --rvo-tag-default-color: var(--rvo-tag-#{$status}-active-color);
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline-color: var(--utrecht-focus-outline-color, transparent);
+    outline-offset: var(--utrecht-focus-outline-offset, 0);
+    outline-style: var(--utrecht-focus-outline-style, solid);
+    outline-width: var(--utrecht-focus-outline-width, 0);
+  }
+}

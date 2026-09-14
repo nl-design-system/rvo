@@ -1,0 +1,110 @@
+@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+
+// Mobile
+.rvo-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--rvo-mobile-menu-font-family);
+  inline-size: var(--rvo-mobile-menu-item-width);
+
+  &.rvo-mobile-menu--sm {
+    font-size: var(--rvo-mobile-menu-sm-font-size);
+  }
+
+  &.rvo-mobile-menu--md {
+    font-size: var(--rvo-mobile-menu-md-font-size);
+  }
+
+  &.rvo-mobile-menu--lg {
+    font-size: var(--rvo-mobile-menu-lg-font-size);
+  }
+
+  &.rvo-mobile-menu--horizontal-rule {
+    border-block-end-color: var(--rvo-mobile-menu-horizontal-rule-border-bottom-color);
+    border-block-end-style: var(--rvo-mobile-menu-horizontal-rule-border-bottom-style);
+    border-block-end-width: var(--rvo-mobile-menu-horizontal-rule-border-bottom-width);
+  }
+
+  .rvo-mobile-menu__toggle {
+    --utrecht-button-color: var(--rvo-mobile-menu-toggle-color, --rvo-mobile-menu-link-color);
+    --utrecht-button-hover-color: var(--rvo-mobile-menu-toggle-hover-color, --rvo-mobile-menu-link-hover-color);
+    --utrecht-button-active-color: var(--rvo-mobile-menu-toggle-active-color, --utrecht-mobile-menu-link-active-color);
+    --utrecht-button-background-color: var(--rvo-mobile-menu-toggle-background-color);
+    --utrecht-button-hover-background-color: var(--rvo-mobile-menu-toggle-background-color);
+
+    align-self: var(--rvo-mobile-menu-toggle-align-self);
+    cursor: pointer;
+    display: flex;
+    font-size: inherit;
+    font-weight: var(--rvo-mobile-menu-toggle-font-weight);
+    inline-size: var(--rvo-mobile-menu-toggle-width);
+    justify-content: var(--rvo-mobile-menu-toggle-justify-content);
+    outline: none !important;
+    padding-block-end: var(--rvo-mobile-menu-toggle-padding-block-end);
+    padding-block-start: var(--rvo-mobile-menu-toggle-padding-block-start);
+    padding-inline-end: var(--rvo-mobile-menu-toggle-padding-inline-end);
+    padding-inline-start: var(--rvo-mobile-menu-toggle-padding-inline-start);
+
+    @extend .rvo-layout-row;
+    @extend .rvo-layout-gap--sm;
+  }
+
+  .rvo-mobile-menu__toggle:focus {
+    text-decoration-line: var(--rvo-mobile-menu-toggle-focus-text-decoration);
+  }
+
+  .rvo-mobile-menu__open-icon {
+    --utrecht-icon-color: var(--rvo-mobile-menu-toggle-icon-color);
+  }
+
+  .rvo-mobile-menu__item--with-divider {
+    border-block-start-color: var(--rvo-topnav-item-divider-border-color);
+    border-block-start-style: var(--rvo-topnav-item-divider-border-style);
+    border-block-start-width: var(--rvo-topnav-item-divider-border-width);
+    inline-size: var(--rvo-mobile-menu-item-width);
+    margin-block-start: var(--rvo-topnav-item-divider-margin-inline-start);
+    padding-block-start: var(--rvo-topnav-item-divider-padding-inline-start);
+  }
+
+  .rvo-mobile-menu__list--item {
+    align-items: var(--rvo-mobile-menu-list-align-items, flex-start);
+    display: flex;
+    flex-direction: var(--rvo-mobile-menu-list-flex-direction, column);
+    flex-wrap: wrap;
+    gap: var(--rvo-mobile-menu-list-gap);
+    justify-content: normal;
+    list-style-type: none;
+    margin-block-start: var(--rvo-mobile-menu-list-margin-block-start);
+    padding-inline-start: 0;
+  }
+
+  .rvo-mobile-menu__submenu--list {
+    display: flex;
+    flex-direction: var(--rvo-mobile-menu-list-flex-direction, column);
+    gap: var(--rvo-space-sm);
+    list-style-type: none;
+    margin-block-start: var(--rvo-space-sm);
+  }
+
+  .rvo-mobile-menu__link {
+    align-items: center;
+    color: var(--rvo-mobile-menu-item-link-color);
+    font-weight: var(--rvo-topnav-item-link-font-weight);
+    gap: var(--rvo-space-sm);
+    text-decoration-line: var(--rvo-topnav-item-link-text-decoration);
+
+    &:hover {
+      color: var(--rvo-mobile-menu-item-link-hover-color);
+      font-weight: var(--rvo-mobile-menu-item-link-hover-font-weight);
+      text-decoration: var(--rvo-mobile-menu-item-link-hover-text-decoration);
+    }
+
+    &:focus {
+      text-decoration-line: var(--rvo-mobile-menu-item-link-focus-text-decoration);
+    }
+  }
+
+  .rvo-mobile-menu__link--active {
+    text-shadow: 0 0 0.5px currentColor;
+  }
+}

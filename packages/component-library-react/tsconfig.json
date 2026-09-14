@@ -29,8 +29,17 @@
     "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "../../components/toggle/stories/toggle.stories.tsx",
-    "../../components/toggle/stories/toggle.states.stories.tsx"
+    "../../components/card/react/src/index.tsx",
+    "../../components/breadcrumbs/react/src/index.tsx",
+    "../../components/form-field-checkbox/react/src/index.tsx",
+    "../../components/form-field-label/react/src/index.tsx",
+    "../../components/form-feedback/react/src/index.tsx",
+    "../../components/expandable-table/react/src/index.tsx",
+    "../../components/form-checkbox-group/react/src/index.tsx"
+    // "../../components/toggle/stories/toggle.stories.tsx",
+    // "../../components/toggle/stories/toggle.states.stories.tsx",
+    // "../../components/icon/react/src/Icon.tsx",
+    // "../../components/icon/react/src/Icon.types.ts"
   ],
   "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]
 }

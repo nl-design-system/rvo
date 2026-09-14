@@ -1,0 +1,208 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+
+.rvo-link {
+  background-color: var(--rvo-link-background-color);
+  color: var(--rvo-link-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: var(--rvo-link-font-weight);
+  text-decoration-line: var(--rvo-link-text-decoration);
+  text-decoration-thickness: var(--rvo-link-text-decoration-thickness);
+  text-underline-offset: var(--rvo-link-text-underline-offset);
+
+  &__text {
+    display: block;
+  }
+}
+
+.rvo-link.rvo-link--normal,
+.rvo-link.rvo-link--normal:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal:active,
+.rvo-link.rvo-link--normal.rvo-link--active,
+.rvo-link.rvo-link--normal:focus,
+.rvo-link.rvo-link--normal:focus-visible,
+.rvo-link.rvo-link--normal.rvo-link--focus {
+  font-weight: var(--rvo-font-weight-normal);
+}
+
+.rvo-link--no-underline:not(:focus, :hover, .rvo-link--hover, .rvo-link--focus) {
+  text-decoration: none;
+}
+
+.rvo-link--with-icon {
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
+}
+
+// Hover
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  background-color: var(--rvo-link-hover-background-color);
+  color: var(--rvo-link-hover-color);
+  font-weight: var(--rvo-link-hover-font-weight);
+  text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
+}
+
+.rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  color: var(--rvo-color-lintblauw);
+}
+
+// Active
+.rvo-link:active,
+.rvo-link--active {
+  background-color: var(--rvo-link-active-background-color);
+  color: var(--rvo-link-active-color);
+  font-weight: var(--rvo-link-active-font-weight);
+  text-decoration-thickness: var(--rvo-link-active-text-decoration-thickness);
+}
+
+.rvo-link--lintblauw:active {
+  color: var(--rvo-color-lintblauw);
+}
+
+// Focus
+.rvo-link:focus,
+.rvo-link:focus-visible,
+.rvo-link--focus {
+  color: var(--rvo-link-focus-color);
+  font-weight: var(--rvo-link-focus-font-weight);
+  outline: none;
+  text-decoration-thickness: var(--rvo-link-focus-text-decoration-thickness);
+}
+
+// Icon
+.rvo-link__icon {
+  background-color: var(--rvo-link-icon-background-color);
+}
+
+.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon,
+.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon {
+  background-color: var(--rvo-link-hover-icon-background-color);
+}
+
+.rvo-link:active .rvo-link__icon,
+.rvo-link--active .rvo-link__icon {
+  background-color: var(--rvo-link-active-icon-background-color);
+}
+
+.rvo-link:focus .rvo-link__icon,
+.rvo-link:focus-visible .rvo-link__icon,
+.rvo-link--focus .rvo-link__icon {
+  background-color: var(--rvo-link-focus-icon-background-color);
+}
+
+.rvo-link--donkerblauw {
+  color: var(--rvo-color-donkerblauw);
+}
+
+.rvo-link--lintblauw {
+  color: var(--rvo-color-lintblauw);
+}
+
+.rvo-link--zwart {
+  color: var(--rvo-color-zwart);
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+    color: var(--rvo-color-donkerblauw);
+  }
+}
+
+.rvo-link--wit {
+  color: var(--rvo-color-wit);
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+    color: var(--rvo-color-grijs-100);
+  }
+}
+
+.rvo-link--grijs-700 {
+  color: var(--rvo-color-grijs-700);
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+    color: var(--rvo-color-donkerblauw);
+  }
+}
+
+// Call to action
+.rvo-link--call-to-action {
+  align-items: center;
+  background-color: var(--rvo-link-call-to-action-background-color);
+  border-color: var(--rvo-link-call-to-action-border-color);
+  border-radius: var(--rvo-link-call-to-action-border-radius);
+  border-style: var(--rvo-link-call-to-action-border-style);
+  border-width: var(--rvo-link-call-to-action-border-width);
+  box-sizing: border-box;
+  color: var(--rvo-link-call-to-action-color);
+  font-weight: var(--rvo-link-call-to-action-font-weight);
+  min-block-size: var(--rvo-link-call-to-action-min-block-size);
+  padding-block-end: var(--rvo-link-call-to-action-padding-block-end);
+  padding-block-start: var(--rvo-link-call-to-action-padding-block-start);
+  padding-inline-end: var(--rvo-link-call-to-action-padding-inline-end);
+  padding-inline-start: var(--rvo-link-call-to-action-padding-inline-start);
+  text-decoration: underline;
+  text-decoration-color: var(--rvo-link-call-to-action-color);
+  text-decoration-thickness: var(--rvo-link-call-to-action-text-decoration-thickness);
+  text-underline-offset: var(--rvo-link-call-to-action-text-underline-offset);
+
+  .rvo-link__icon {
+    background-color: var(--rvo-link-call-to-action-icon-background-color);
+  }
+
+  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
+  &.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+    background-color: var(--rvo-link-call-to-action-hover-background-color);
+    border-color: var(--rvo-link-call-to-action-hover-border-color);
+    color: var(--rvo-link-call-to-action-hover-color);
+    font-weight: var(--rvo-link-call-to-action-font-weight);
+    text-decoration-thickness: var(--rvo-link-call-to-action-hover-text-decoration-thickness);
+
+    .rvo-link__icon {
+      background-color: var(--rvo-link-call-to-action-hover-icon-background-color);
+    }
+  }
+
+  &.rvo-link:focus,
+  &.rvo-link:focus-visible,
+  &.rvo-link--focus {
+    background-color: var(--rvo-link-call-to-action-background-color);
+    color: var(--rvo-link-call-to-action-color);
+    font-weight: var(--rvo-link-call-to-action-font-weight);
+    outline-color: var(--utrecht-focus-outline-color, revert);
+    outline-offset: var(--utrecht-focus-outline-offset, revert);
+    outline-style: var(--utrecht-focus-outline-style, revert);
+    outline-width: var(--utrecht-focus-outline-width, revert);
+    text-decoration-thickness: var(--rvo-link-call-to-action-focus-text-decoration-thickness);
+
+    .rvo-link__icon {
+      background-color: var(--rvo-link-call-to-action-icon-background-color);
+    }
+  }
+
+  &.rvo-link:active,
+  &.rvo-link--active {
+    background-color: var(--rvo-link-call-to-action-active-background-color);
+    border-color: var(--rvo-link-call-to-action-active-border-color);
+    color: var(--rvo-link-call-to-action-active-color);
+    text-decoration-thickness: var(--rvo-link-call-to-action-active-text-decoration-thickness);
+  }
+}
+
+.rvo-link--full-card-link::after {
+  block-size: 100%;
+  content: "";
+  display: inline-block;
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  position: absolute;
+  z-index: 1;
+}

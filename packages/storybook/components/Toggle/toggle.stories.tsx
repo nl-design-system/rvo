@@ -1,6 +1,6 @@
 import { Toggle } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
+import { iconOptions } from '@nl-rvo/component-library-react';
 
 const defaultArgs = {
   content: 'Toggle',

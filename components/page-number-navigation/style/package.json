@@ -1,0 +1,34 @@
+{
+  "version": "1.5.2",
+  "author": "Community for NL Design System",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/css-page-number-navigation",
+  "description": "Page Number Navigation CSS component",
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "pagination"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/page-number-navigation"
+  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "exports": {
+    ".": "./dist/page-number-navigation.css",
+    "./dist/*": "./dist/*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "sass --pkg-importer=node --style=compressed ./src/:./dist/",
+    "watch": "sass --pkg-importer=node --style=compressed --watch ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  }
+}

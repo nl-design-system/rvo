@@ -72,8 +72,18 @@
     "typescript": "4.9.5"
   },
   "dependencies": {
-    "@nl-rvo/component-library-css": "workspace:*",
-    "@nl-rvo/css-card-experimental": "workspace:*"
+    "@nl-rvo/react-accordion": "workspace:*",
+    "@nl-rvo/react-action-group": "workspace:*",
+    "@nl-rvo/react-alert": "workspace:*",
+    "@nl-rvo/react-breadcrumbs": "workspace:*",
+    "@nl-rvo/react-button": "workspace:*",
+    "@nl-rvo/react-card": "workspace:*",
+    "@nl-rvo/react-card-experimental": "workspace:*",
+    "@nl-rvo/react-form-checkbox": "workspace:*",
+    "@nl-rvo/react-heading": "workspace:*",
+    "@nl-rvo/react-icon": "workspace:*",
+    "@nl-rvo/react-link": "workspace:*",
+    "@nl-rvo/react-status-icon": "workspace:*"
   },
   "peerDependencies": {
     "react": "16 - 19",

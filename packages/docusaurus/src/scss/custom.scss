@@ -1,5 +1,5 @@
-@use "@nl-rvo/css-heading/src" as *;
-@import url("@nl-rvo/component-library-css/dist/components/link.min.css");
+// @use "@nl-rvo/css-heading/src" as *;
+// @import url("@nl-rvo/component-library-css/dist/components/link.min.css");
 
 /* stylelint-disable custom-property-pattern */
 
@@ -80,30 +80,30 @@ html.blog-wrapper.plugin-blog {
 
   // Fix MD headings
   h1:not(.component-example h1) {
-    @extend .utrecht-heading-1;
+    // @extend .utrecht-heading-1;
     margin-bottom: 1rem;
   }
 
   h2:not(.component-example h2) {
-    @extend .utrecht-heading-2;
+    // @extend .utrecht-heading-2;
     margin-bottom: 0.5rem;
   }
 
-  h3:not(.component-example h3) {
-    @extend .utrecht-heading-3;
-  }
+  // h3:not(.component-example h3) {
+  //   // @extend .utrecht-heading-3;
+  // }
 
-  h4:not(.component-example h4) {
-    @extend .utrecht-heading-4;
-  }
+  // h4:not(.component-example h4) {
+  //   @extend .utrecht-heading-4;
+  // }
 
-  h5:not(.component-example h5) {
-    @extend .utrecht-heading-5;
-  }
+  // h5:not(.component-example h5) {
+  //   @extend .utrecht-heading-5;
+  // }
 
-  h6:not(.component-example h6) {
-    @extend .utrecht-heading-6;
-  }
+  // h6:not(.component-example h6) {
+  //   @extend .utrecht-heading-6;
+  // }
 
   h1:not(.component-example h1),
   h2:not(.component-example h2),
@@ -114,9 +114,9 @@ html.blog-wrapper.plugin-blog {
     color: var(--rvo-color-lintblauw, var(--rvo-color-lichtblauw));
   }
 
-  article a:not(article .component-example a) {
-    @extend .rvo-link;
-  }
+  // article a:not(article .component-example a) {
+  //   @extend .rvo-link;
+  // }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

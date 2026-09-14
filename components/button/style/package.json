@@ -1,0 +1,38 @@
+{
+  "version": "2.1.1",
+  "author": "Community for NL Design System",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/css-button",
+  "description": "Button CSS component",
+  "keywords": [
+    "nl-design-system",
+    "nl-rvo",
+    "css",
+    "button"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rvo.git",
+    "directory": "components/button"
+  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "exports": {
+    ".": "./dist/button.css",
+    "./dist/*": "./dist/*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "sass --pkg-importer=node --style=compressed ./src/:./dist/",
+    "watch": "sass --pkg-importer=node --style=compressed --watch ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  },
+  "dependencies": {
+    "@nl-rvo/css-layout-flow": "workspace:*"
+  }
+}

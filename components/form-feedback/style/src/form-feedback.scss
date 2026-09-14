@@ -1,0 +1,21 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+
+.rvo-form-feedback {
+  line-height: var(--rvo-form-feedback-line-height);
+
+  @extend .rvo-layout-row;
+  @extend .rvo-layout-gap--sm;
+}
+
+.rvo-form-feedback.rvo-form-feedback--warning {
+  font-weight: var(--rvo-form-feedback-warning-font-weight);
+}
+
+.rvo-form-feedback.rvo-form-feedback--error {
+  color: var(--rvo-form-feedback-error-color);
+  font-weight: var(--rvo-form-feedback-error-font-weight);
+}

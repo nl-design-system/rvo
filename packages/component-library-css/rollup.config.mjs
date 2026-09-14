@@ -10,9 +10,8 @@ const repoRoot = path.resolve(__dirname, '..', '..');
 
 // Read and parse @use statements from index.scss
 // const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
-const markdownFiles = fs.readdirSync('src/components/');
+// const markdownFiles = fs.readdirSync('src/components/');
 
-console.log(markdownFiles);
 // const useStatementsComponent = [];
 const useStatementsUtil = [];
 
@@ -37,45 +36,41 @@ const useStatementsUtil = [];
 //     if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
 //   });
 
-markdownFiles.flatMap((component) => {
-  console.log(component);
-});
-
 // Create individual component configurations
-const componentBundles = markdownFiles.flatMap((component) => [
-  {
-    input: `./src/components/${component.split('.scss')[0]}.scss`,
-    output: {
-      file: `dist/components/${component.split('.scss')[0]}.css`,
-      format: 'es',
-      sourcemap: true,
-    },
-    plugins: [
-      postcss({
-        extensions: ['.css', '.scss'],
-        extract: true,
-        minimize: false,
-      }),
-      filesize(),
-    ],
-  },
-  {
-    input: `./src/components/${component.split('.scss')[0]}.scss`,
-    output: {
-      file: `dist/components/${component.split('.scss')[0]}.min.css`,
-      format: 'es',
-      sourcemap: true,
-    },
-    plugins: [
-      postcss({
-        extensions: ['.css', '.scss'],
-        extract: true,
-        minimize: true,
-      }),
-      filesize(),
-    ],
-  },
-]);
+// const componentBundles = markdownFiles.flatMap((component) => [
+//   {
+//     input: `./src/components/${component.split('.scss')[0]}.scss`,
+//     output: {
+//       file: `dist/components/${component.split('.scss')[0]}.css`,
+//       format: 'es',
+//       sourcemap: true,
+//     },
+//     plugins: [
+//       postcss({
+//         extensions: ['.css', '.scss'],
+//         extract: true,
+//         minimize: false,
+//       }),
+//       filesize(),
+//     ],
+//   },
+//   {
+//     input: `./src/components/${component.split('.scss')[0]}.scss`,
+//     output: {
+//       file: `dist/components/${component.split('.scss')[0]}.min.css`,
+//       format: 'es',
+//       sourcemap: true,
+//     },
+//     plugins: [
+//       postcss({
+//         extensions: ['.css', '.scss'],
+//         extract: true,
+//         minimize: true,
+//       }),
+//       filesize(),
+//     ],
+//   },
+// ]);
 
 // Main bundle configurations
 const mainBundles = [
@@ -187,4 +182,4 @@ const baseBundles = [
   },
 ];
 
-export default [...mainBundles, ...componentBundles, ...utilBundle, ...baseBundles];
+export default [...mainBundles, ...utilBundle, ...baseBundles];

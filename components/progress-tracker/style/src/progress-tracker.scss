@@ -1,0 +1,85 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+
+.rvo-progress-tracker {
+  max-inline-size: var(--rvo-progress-tracker-max-width);
+}
+
+.rvo-progress-tracker__step {
+  min-block-size: var(--rvo-progress-tracker-step-height);
+  padding-inline-start: var(--rvo-progress-tracker-step-label-padding);
+  position: relative;
+
+  @extend .rvo-layout-row;
+
+  &::after {
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    block-size: var(--rvo-progress-tracker-step-height);
+    content: "";
+    display: inline-block;
+    inline-size: var(--rvo-progress-tracker-step-label-padding);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    position: absolute;
+  }
+
+  &::before {
+    background-repeat: no-repeat;
+    block-size: var(--rvo-progress-tracker-step-line-height);
+    content: "";
+    display: inline-block;
+    inline-size: var(--rvo-progress-tracker-step-line-width);
+    inset-block-start: var(--rvo-progress-tracker-step-line-top);
+    inset-inline-start: var(--rvo-progress-tracker-step-line-left);
+    position: absolute;
+  }
+}
+
+.rvo-progress-tracker__step--substep-start {
+  padding-block-end: var(--rvo-progress-tracker-substep-block-padding);
+}
+
+.rvo-progress-tracker__step--substep-end {
+  padding-block-end: var(--rvo-progress-tracker-substep-block-padding);
+}
+
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--straight::before,
+.rvo-progress-tracker__step--sm.rvo-progress-tracker__step--substep-end::before {
+  block-size: var(--rvo-progress-tracker-step-sm-line-height, var(--rvo-progress-tracker-step-line-height));
+  inline-size: var(--rvo-progress-tracker-step-sm-line-width, var(--rvo-progress-tracker-step-line-width));
+  inset-block-start: var(--rvo-progress-tracker-step-sm-line-top, var(--rvo-progress-tracker-step-line-top));
+  inset-inline-start: var(--rvo-progress-tracker-step-sm-line-left, var(--rvo-progress-tracker-step-line-left));
+}
+
+.rvo-progress-tracker__step-link {
+  display: inline-block;
+  padding-block-end: var(--rvo-progress-tracker-step-link-padding-block-end);
+  padding-block-start: var(--rvo-progress-tracker-step-link-padding-block-start);
+}
+
+.rvo-progress-tracker__step-link.rvo-link {
+  text-decoration: none;
+}
+
+.rvo-progress-tracker__step-link.rvo-link:hover,
+.rvo-progress-tracker__step-link.rvo-link:focus {
+  text-decoration: underline;
+}
+
+.rvo-progress-tracker__step--start {
+  font-size: var(--rvo-progress-tracker-step-start-font-size);
+  font-weight: var(--rvo-progress-tracker-step-start-font-weight);
+}
+
+.rvo-progress-tracker__step--end {
+  font-size: var(--rvo-progress-tracker-step-end-font-size);
+  font-weight: var(--rvo-progress-tracker-step-end-font-weight);
+}
+
+.rvo-progress-tracker__step--sm::after {
+  background-position: var(--rvo-progress-tracker-step-sm-icon-background-position);
+}

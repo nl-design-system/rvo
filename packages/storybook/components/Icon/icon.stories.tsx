@@ -1,6 +1,6 @@
 import { Icon } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { iconColors, iconOptions } from '@nl-rvo/component-library-react/src/components/icon';
+import { iconColors, iconOptions } from '@nl-rvo/component-library-react/';
 
 export default {
   title: 'Componenten/Icon',

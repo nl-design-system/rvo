@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "license": "CC0-1.0",
+  "name": "@nl-rvo/react-checkbox-filter",
+  "description": "Checkbox Filter React component",
+  "keywords": [
+    "nl-design-system",
+    "nl-rvo",
+    "react",
+    "checkbox",
+    "filter"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
+  },
+  "dependencies": {
+    "@nl-rvo/css-checkbox-filter": "workspace:*",
+    "@nl-rvo/css-layout-flow": "workspace:*",
+    "@nl-rvo/react-form-field-checkbox": "workspace:*",
+    "@nl-rvo/react-icon": "workspace:*",
+    "@nl-rvo/react-link": "workspace:*"
+  }
+}
