@@ -18,7 +18,6 @@
   - Added `size` variants (`sm`/`md`/`lg`) and token-friendly styling using CSS custom properties + logical properties.
 
   ### Deprecated / Breaking
-
   - Deprecated legacy `tabs` prop and `TabItem` composition API (fallback still supported temporarily).
   - Tabs should now be defined via `items`; panels are required per item.
 
