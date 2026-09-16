@@ -3,7 +3,17 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  createContext,
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import Button from '../button';
 import '@nl-rvo/component-library-css/dist/components/dialog.css';
@@ -72,8 +82,8 @@ export const Dialog: React.FC<IDialogProps> = ({
     setIsOpen(isOpenProp);
   }, [isOpenProp]);
 
-  useEffect(() => {
-    if (!isOpen || !dialogRef.current) return undefined;
+  useLayoutEffect(() => {
+    if (!isOpenProp || !dialogRef.current) return undefined;
 
     const dialog = dialogRef.current;
     const focusableElements = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS));
@@ -104,7 +114,7 @@ export const Dialog: React.FC<IDialogProps> = ({
 
     dialog.addEventListener('keydown', handleKeyDown);
     return () => dialog.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
+  }, [isOpenProp]);
 
   const contextValue = useMemo(
     () => ({
@@ -117,6 +127,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   const dialogContent = (
     <dialog
       ref={dialogRef}
+      open
       className={clsx(
         'rvo-dialog',
         `rvo-dialog--${backgroundColor}`,
@@ -127,7 +138,7 @@ export const Dialog: React.FC<IDialogProps> = ({
         className,
       )}
       onClick={(e) => e.stopPropagation()}
-      aria-expanded={isOpen}
+      aria-expanded={isOpenProp}
       aria-label={ariaLabel}
       {...props}
     >
@@ -143,7 +154,7 @@ export const Dialog: React.FC<IDialogProps> = ({
 
   return (
     <DialogContext.Provider value={contextValue}>
-      {isOpen &&
+      {isOpenProp &&
         (isModal ? (
           <div className={clsx('rvo-dialog__background')} onClick={handleClose}>
             {dialogContent}
