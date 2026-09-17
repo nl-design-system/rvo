@@ -3,23 +3,29 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  Alert,
   Button,
   CheckBoxFilter,
+  Feedback,
   Fieldset,
   Footer,
   Grid,
   Header,
   Heading,
   Icon,
+  Label,
   LayoutFlow,
   MaxWidthLayout,
   MenuBar,
   MobileMenuBar,
   PageNumberNavigation,
   Select,
+  StatusIcon,
+  Tag,
+  Textarea,
   TextInput,
 } from '@nl-rvo/component-library-react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
@@ -162,8 +168,8 @@ const investeerInOpties = [
   { id: 'groot-detail', label: 'Groot- en detailhandel', checked: false },
   { id: 'industrie', label: 'Industrie', checked: false },
   { id: 'milieusector', label: 'Milieusector', checked: false },
-  { id: 'mobiliteit', label: 'Mobiliteit', checked: false },
-  { id: 'transport', label: 'Transport en logistiek', checked: false },
+  { id: 'toerisme', label: 'Toerisme recreatie en horeca', checked: false },
+  { id: 'vervoer', label: 'Vervoer en logistiek', checked: false },
 ];
 
 const milieudoelOpties = [
@@ -172,8 +178,15 @@ const milieudoelOpties = [
   { id: 'broeikasgassen', label: 'Broeikasgassen reduceren', checked: false },
   { id: 'circulair', label: 'Circulair ondernemen', checked: false },
   { id: 'energie', label: 'Energie besparen', checked: false },
-  { id: 'lucht', label: 'Lucht beschermen', checked: false },
-  { id: 'water', label: 'Water beschermen', checked: false },
+  { id: 'energietransitie', label: 'Energietransitie bevorderen', checked: false },
+  { id: 'veiligheid', label: 'Externe veiligheid bevorderen', checked: false },
+  { id: 'geluid', label: 'Geluidshinder beperken', checked: false },
+  { id: 'grondstoffen', label: 'Grondstoffen besparen', checked: false },
+  { id: 'hernieuwbaar', label: 'Hernieuwbare grondstoffen gebruiken', checked: false },
+  { id: 'klimaatadaptatie', label: 'Klimaatadaptatie bevorderen', checked: false },
+  { id: 'lucht', label: 'Luchtkwaliteit verbeteren', checked: false },
+  { id: 'natuur', label: 'Natuurbescherming en biodiversiteit bevorderen', checked: false },
+  { id: 'water', label: 'Water beheren en beschermen', checked: false },
 ];
 
 const regelingOpties = [
@@ -181,14 +194,78 @@ const regelingOpties = [
   { id: 'mia-vamil', label: 'MIA\\Vamil', checked: false },
 ];
 
+const adviseurResultaten = [
+  { title: 'Adiabatische luchtkoeling in stallen', code: '210208', regeling: 'EIA' },
+  { title: 'Apparatuur voor het afvangen van CO₂ voor nuttige toepassing', code: 'F 4101', regeling: 'MIA\\Vamil' },
+  { title: 'Apparatuur voor het binden van CO₂', code: 'F 4103', regeling: 'MIA\\Vamil' },
+  { title: 'Apparatuur voor het voorkomen van CO₂-vorming', code: 'F 4100', regeling: 'MIA\\Vamil' },
+  {
+    title:
+      'Apparatuur voor verminderd gebruik van grondwater als gietwater in de glastuinbouw (aanpassing bestaande situatie)',
+    code: 'D 2812',
+    regeling: 'MIA\\Vamil',
+  },
+  { title: 'Belichtingssysteem voor tuinbouwgewassen [W]', code: '220503', regeling: 'EIA' },
+  { title: 'Beregeningsboom met lage waterdruk voor het beregenen van gewassen [W]', code: '221228', regeling: 'EIA' },
+  { title: 'Besparingssysteem voor klimaatinstallaties [W]', code: '210906', regeling: 'EIA' },
+];
+
+const DEFAULT_VRAAG =
+  'Wij zijn een glastuinbouwbedrijf gespecialiseerd in tomatenteelt. We zoeken mogelijkheden om energie te besparen en onze CO₂-uitstoot te verminderen.';
+
 const MilieuEnEnergielijst = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  const [vraagValue, setVraagValue] = useState(DEFAULT_VRAAG);
+  const [ingediendVraag, setIngediendVraag] = useState<string | null>(null);
+  const [vraagError, setVraagError] = useState(false);
+  const [investeerInState, setInvesteerInState] = useState(investeerInOpties);
+  const [milieudoelState, setMilieudoelState] = useState(milieudoelOpties);
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const handleStart = () => {
+    if (!vraagValue.trim()) {
+      setVraagError(true);
+      return;
+    }
+    setVraagError(false);
+    setIngediendVraag(vraagValue);
+    setInvesteerInState((prev) => prev.map((o) => ({ ...o, checked: o.id === 'agro-visserij' })));
+    setMilieudoelState((prev) => prev.map((o) => ({ ...o, checked: o.id === 'energie' || o.id === 'broeikasgassen' })));
+  };
+
+  const handleOpnieuw = () => {
+    setIngediendVraag(null);
+    setInvesteerInState(investeerInOpties);
+    setMilieudoelState(milieudoelOpties);
+  };
+
+  const removeTag = (group: 'investeer' | 'milieu', id: string) => {
+    if (group === 'investeer') {
+      setInvesteerInState((prev) => prev.map((o) => (o.id === id ? { ...o, checked: false } : o)));
+    } else {
+      setMilieudoelState((prev) => prev.map((o) => (o.id === id ? { ...o, checked: false } : o)));
+    }
+  };
+
+  const resetFilters = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setInvesteerInState(investeerInOpties);
+    setMilieudoelState(milieudoelOpties);
+  };
+
+  const activeTags = [
+    ...investeerInState
+      .filter((o) => o.checked)
+      .map((o) => ({ id: o.id, label: o.label, group: 'investeer' as const, prefix: 'Ik wil duurzaam investeren in' })),
+    ...milieudoelState
+      .filter((o) => o.checked)
+      .map((o) => ({ id: o.id, label: o.label, group: 'milieu' as const, prefix: 'Mijn milieudoel is' })),
+  ];
 
   return (
     <body className="rvo-theme">
@@ -277,47 +354,136 @@ const MilieuEnEnergielijst = () => {
         <MaxWidthLayout size="md">
           <div className="rvo-padding-inline-start--md rvo-padding-inline-end--md">
             <Grid gap="xl" division="1fr 2fr">
-              <form>
-                <Fieldset legend="Filters">
-                  <div className="rvo-margin-block-start--sm rvo-margin-block-end--md">
-                    <LayoutFlow gap="xs" row={true}>
-                      <TextInput placeholder="Zoeken" />
-                      <Button kind="primary" size="md">
-                        Zoek
-                      </Button>
+              <LayoutFlow gap="xl">
+                <form onSubmit={(e) => e.preventDefault()}>
+                  <Fieldset legend="Op maat advies">
+                    <LayoutFlow gap="sm" className="rvo-margin-block-start--sm">
+                      <div className="utrecht-form-field utrecht-form-field--text rvo-form-field" role="group">
+                        <div className="rvo-form-field__label">
+                          <Label htmlFor="bedrijfsactiviteiten">Omschrijf uw bedrijfsactiviteiten</Label>
+                          <div className="utrecht-form-field-description">
+                            Vul zo compleet mogelijk in wat uw bedrijf doet en wij helpen u met het instellen van de
+                            filters om bedrijfsmiddelen te tonen die mogelijk in aanmerking komen.
+                          </div>
+                          {vraagError && <Feedback text="Vul een omschrijving in om door te gaan." type="error" />}
+                        </div>
+                        {React.createElement(Textarea as React.FC<any>, {
+                          id: 'bedrijfsactiviteiten',
+                          rows: 9,
+                          value: DEFAULT_VRAAG,
+                          disabled: ingediendVraag !== null,
+                          invalid: vraagError,
+                          onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+                            setVraagValue(e.target.value);
+                            if (vraagError) setVraagError(false);
+                          },
+                        })}
+                      </div>
+                      <div>
+                        {ingediendVraag ? (
+                          <Button
+                            type="button"
+                            kind="warning"
+                            size="md"
+                            icon="refresh"
+                            showIcon="before"
+                            onClick={handleOpnieuw}
+                          >
+                            Opnieuw advies krijgen
+                          </Button>
+                        ) : (
+                          <Button type="button" kind="primary" size="md" onClick={handleStart}>
+                            Geef advies
+                          </Button>
+                        )}
+                      </div>
                     </LayoutFlow>
-                  </div>
-                  <LayoutFlow gap="sm">
-                    <CheckBoxFilter
-                      label="Ik wil duurzaam investeren in"
-                      options={investeerInOpties}
-                      optionsOnChange={noop}
-                      limit={5}
-                      showMoreText="+ Toon meer"
-                      showLessText="- Toon minder"
-                    />
-                    <CheckBoxFilter
-                      label="Mijn milieudoel is"
-                      options={milieudoelOpties}
-                      optionsOnChange={noop}
-                      limit={5}
-                      showMoreText="+ Toon meer"
-                      showLessText="- Toon minder"
-                    />
-                    <CheckBoxFilter label="Regeling" options={regelingOpties} optionsOnChange={noop} />
-                  </LayoutFlow>
-                </Fieldset>
-              </form>
+                  </Fieldset>
+                </form>
+
+                <form>
+                  <Fieldset legend="Filters">
+                    <div className="rvo-margin-block-start--sm rvo-margin-block-end--md">
+                      <LayoutFlow gap="xs" row={true}>
+                        <TextInput placeholder="Zoeken" />
+                        <Button kind="primary" size="md">
+                          Zoek
+                        </Button>
+                      </LayoutFlow>
+                    </div>
+                    <LayoutFlow gap="md">
+                      <CheckBoxFilter
+                        key={`investeer-${investeerInState.map((o) => o.checked).join('')}`}
+                        label="Ik wil duurzaam investeren in"
+                        options={investeerInState}
+                        optionsOnChange={noop}
+                        limit={20}
+                      />
+                      <CheckBoxFilter
+                        key={`milieu-${milieudoelState.map((o) => o.checked).join('')}`}
+                        label="Mijn milieudoel is"
+                        options={milieudoelState}
+                        optionsOnChange={noop}
+                        limit={20}
+                      />
+                      <CheckBoxFilter label="Regeling" options={regelingOpties} optionsOnChange={noop} />
+                    </LayoutFlow>
+                  </Fieldset>
+                </form>
+              </LayoutFlow>
 
               <div>
+                {ingediendVraag !== null && (
+                  <div className="rvo-margin-block-end--lg">
+                    <Alert kind="info" heading="Uw advies op maat" padding="md">
+                      <p className="rvo-paragraph">
+                        U bent actief in de agrarische sector en richt zich op energiebesparing en reductie van
+                        broeikasgassen. Wij hebben de filters ingesteld op <strong>Agro en visserij</strong> en
+                        milieudoelen <strong>Energie besparen</strong> en <strong>Broeikasgassen reduceren</strong>.
+                        Hieronder ziet u de bedrijfsmiddelen die mogelijk voor u in aanmerking komen.
+                      </p>
+                    </Alert>
+                  </div>
+                )}
+
+                {activeTags.length > 0 && (
+                  <div className="rvo-margin-block-end--md">
+                    <LayoutFlow gap="xs">
+                      <LayoutFlow row={true} gap="sm" alignItems="center">
+                        <span className="rvo-text--md rvo-text--bold">Actieve filters</span>
+                        <a
+                          href="#"
+                          className="rvo-link rvo-link--no-underline rvo-link--with-icon rvo-text--rood"
+                          onClick={resetFilters}
+                        >
+                          <StatusIcon type="foutmelding" size="sm" /> Reset filters
+                        </a>
+                      </LayoutFlow>
+                      <LayoutFlow gap="md" row={true} wrap={true}>
+                        {activeTags.map((tag) => (
+                          <Tag
+                            key={tag.id}
+                            type="info"
+                            icon="kruis"
+                            iconPlacement="after"
+                            onClick={() => removeTag(tag.group, tag.id)}
+                          >
+                            {tag.prefix} <strong>{tag.label}</strong>
+                          </Tag>
+                        ))}
+                      </LayoutFlow>
+                    </LayoutFlow>
+                  </div>
+                )}
+
                 <div className="rvo-margin-block-end--sm">
-                  <LayoutFlow row={true} gap="lg" alignItems="center">
+                  <LayoutFlow row={true} justifyContent="space-between" alignItems="center">
                     <p className="rvo-paragraph rvo-paragraph--no-margin">
-                      <strong>347</strong> resultaten gevonden
+                      <strong>{ingediendVraag ? adviseurResultaten.length : 347}</strong> resultaten gevonden
                     </p>
-                    <LayoutFlow row={true} gap="sm" alignItems="center">
-                      <label htmlFor="sorteer" className="rvo-text--md">
-                        Sorteer op
+                    <LayoutFlow gap="2xs">
+                      <label htmlFor="sorteer" className="rvo-text--md rvo-text--bold">
+                        Sorteer resultaten op
                       </label>
                       <Select
                         id="sorteer"
@@ -335,7 +501,7 @@ const MilieuEnEnergielijst = () => {
                 </div>
 
                 <LayoutFlow gap="sm">
-                  {bedrijfsmiddelen.map((item, i) => (
+                  {(ingediendVraag ? adviseurResultaten : bedrijfsmiddelen).map((item, i) => (
                     <div key={i} className="rvo-card rvo-card--outline rvo-card--padding-md">
                       <div className="rvo-card--with-link-indicator">
                         <div className="rvo-card__content">
@@ -354,9 +520,11 @@ const MilieuEnEnergielijst = () => {
                   ))}
                 </LayoutFlow>
 
-                <div className="rvo-margin-block-start--xl">
-                  <PageNumberNavigation numberOfPages={7} activePage={1} nextLabel="Volgende" />
-                </div>
+                {!ingediendVraag && (
+                  <div className="rvo-margin-block-start--xl">
+                    <PageNumberNavigation numberOfPages={7} activePage={1} nextLabel="Volgende" />
+                  </div>
+                )}
               </div>
             </Grid>
           </div>
