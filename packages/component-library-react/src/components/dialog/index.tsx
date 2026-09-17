@@ -3,8 +3,17 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { defaultArgs } from './defaultArgs';
+import React, {
+  createContext,
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import parseContentMarkup from '../../utils/parseContentMarkup';
 import Button from '../button';
 import '@nl-rvo/component-library-css/dist/components/dialog.css';
@@ -25,16 +34,16 @@ export const useDialog = () => {
 };
 
 export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElement>, 'className'> {
+  /** @uxpinpropname Content */
+  children?: ReactNode;
+  /** @uxpinpropname Action group content */
+  actionGroup?: ReactNode;
+  /** @uxpinignoreprop */
+  content?: string;
   type?: 'centered-dialog' | 'inset-inline-start' | 'inset-inline-end';
   isModal?: boolean;
   centeredDialogSize?: 'sm' | 'md' | 'lg' | 'xl';
   backgroundColor?: 'wit' | 'grijs-200';
-  /** @uxpinpropname Content */
-  children?: ReactNode | undefined;
-  /** @uxpinpropname Action group content */
-  actionGroup?: ReactNode | undefined;
-  /** @uxpinignoreprop */
-  content?: string;
   isOpen?: boolean;
   onClose?: () => void;
   /** @uxpinignoreprop */
@@ -43,23 +52,26 @@ export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElemen
   closeButtonLabel?: string;
 }
 
+const FOCUSABLE_SELECTORS = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 export const Dialog: React.FC<IDialogProps> = ({
   children,
   actionGroup,
   onClose,
-  content = defaultArgs.content,
-  isOpen: isOpenProp = defaultArgs.isOpen,
-  type = defaultArgs.type,
-  isModal = defaultArgs.isModal,
-  centeredDialogSize = defaultArgs.centeredDialogSize,
-  backgroundColor = defaultArgs.backgroundColor,
-  className = defaultArgs.className,
-  ariaLabel = defaultArgs.ariaLabel,
+  content,
+  isOpen: isOpenProp = true,
+  type = 'centered-dialog',
+  isModal = true,
+  centeredDialogSize = 'md',
+  backgroundColor = 'wit',
+  className,
+  ariaLabel,
   closeButtonLabel = 'Sluiten',
   ...props
 }: IDialogProps) => {
   const contentMarkup = parseContentMarkup(children ?? content);
   const [isOpen, setIsOpen] = useState(isOpenProp);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const handleClose = useCallback(() => {
     setIsOpen(false);
@@ -70,6 +82,40 @@ export const Dialog: React.FC<IDialogProps> = ({
     setIsOpen(isOpenProp);
   }, [isOpenProp]);
 
+  useLayoutEffect(() => {
+    if (!isOpenProp || !dialogRef.current) return undefined;
+
+    const dialog = dialogRef.current;
+    const focusableElements = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS));
+
+    focusableElements[0]?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      const current = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS));
+      if (current.length === 0) return;
+
+      const first = current[0];
+      const last = current[current.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    dialog.addEventListener('keydown', handleKeyDown);
+    return () => dialog.removeEventListener('keydown', handleKeyDown);
+  }, [isOpenProp]);
+
   const contextValue = useMemo(
     () => ({
       isOpen,
@@ -78,8 +124,10 @@ export const Dialog: React.FC<IDialogProps> = ({
     [isOpen, handleClose],
   );
 
-  const renderDialogContent = () => (
+  const dialogContent = (
     <dialog
+      ref={dialogRef}
+      open
       className={clsx(
         'rvo-dialog',
         `rvo-dialog--${backgroundColor}`,
@@ -90,7 +138,7 @@ export const Dialog: React.FC<IDialogProps> = ({
         className,
       )}
       onClick={(e) => e.stopPropagation()}
-      aria-expanded={isOpen}
+      aria-expanded={isOpenProp}
       aria-label={ariaLabel}
       {...props}
     >
@@ -106,13 +154,13 @@ export const Dialog: React.FC<IDialogProps> = ({
 
   return (
     <DialogContext.Provider value={contextValue}>
-      {isOpen &&
+      {isOpenProp &&
         (isModal ? (
           <div className={clsx('rvo-dialog__background')} onClick={handleClose}>
-            {renderDialogContent()}
+            {dialogContent}
           </div>
         ) : (
-          renderDialogContent()
+          dialogContent
         ))}
     </DialogContext.Provider>
   );
