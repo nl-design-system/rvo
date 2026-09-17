@@ -83,12 +83,9 @@ export const Dialog: React.FC<IDialogProps> = ({
   }, [isOpenProp]);
 
   useLayoutEffect(() => {
-    if (!isOpenProp || !dialogRef.current) return undefined;
+    if (!isOpen || !dialogRef.current) return undefined;
 
     const dialog = dialogRef.current;
-    const focusableElements = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS));
-
-    focusableElements[0]?.focus();
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key !== 'Tab') return;
@@ -114,7 +111,7 @@ export const Dialog: React.FC<IDialogProps> = ({
 
     dialog.addEventListener('keydown', handleKeyDown);
     return () => dialog.removeEventListener('keydown', handleKeyDown);
-  }, [isOpenProp]);
+  }, [isOpen]);
 
   const contextValue = useMemo(
     () => ({
@@ -128,6 +125,7 @@ export const Dialog: React.FC<IDialogProps> = ({
     <dialog
       ref={dialogRef}
       open
+      tabIndex={-1}
       className={clsx(
         'rvo-dialog',
         `rvo-dialog--${backgroundColor}`,
@@ -154,7 +152,7 @@ export const Dialog: React.FC<IDialogProps> = ({
 
   return (
     <DialogContext.Provider value={contextValue}>
-      {isOpenProp &&
+      {isOpen &&
         (isModal ? (
           <div className={clsx('rvo-dialog__background')} onClick={handleClose}>
             {dialogContent}
