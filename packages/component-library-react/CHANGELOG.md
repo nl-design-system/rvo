@@ -1,5 +1,13 @@
 # @nl-rvo/component-library-react
 
+## 7.2.0
+
+### Minor Changes
+
+- 6051320: ROOS-264: renamed content prop to children, moved defaultArgs to storybook and removed UX-Pin file
+- bcc44ec: Removed link behaviour from Header component to Logo component and fixed logo link focus state.
+- c6093de: ROOS-349: refactor Link component, moved defaultArgs to storybook components
+
 ## 7.1.3
 
 ### Patch Changes
