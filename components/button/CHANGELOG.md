@@ -1,5 +1,11 @@
 # `@nl-rvo/css-button`
 
+## 2.1.2
+
+### Patch Changes
+
+- d4e7a91: Change focus style for `subtle` and `tertiary` button variants to match the link focus style: no blue outline ring, black text color, and an underline with the same thickness (3px) and offset (2px) as the focused link. The underline and offset are also preserved when hovering over a focused button.
+
 ## 2.1.1
 
 ### Patch Changes
