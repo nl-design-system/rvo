@@ -18,7 +18,7 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
   title = 'Rijksdienst voor Ondernemend Nederland',
   subtitle = '',
   link,
-  linkTitle,
+  linkTitle = 'Home',
   className,
   ...rootElementProps
 }) => {
