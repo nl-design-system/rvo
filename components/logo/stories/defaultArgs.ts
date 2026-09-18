@@ -4,5 +4,6 @@ export const defaultArgs: ILogoProps = {
   title: 'Rijksdienst voor Ondernemend Nederland',
   subtitle: '',
   link: '',
+  linkTitle: '',
   className: '',
 };
