@@ -142,6 +142,7 @@
   border-width: var(--rvo-link-call-to-action-border-width);
   box-sizing: border-box;
   color: var(--rvo-link-call-to-action-color);
+  font-size: var(--rvo-link-call-to-action-font-size, var(--rvo-font-size-lg));
   font-weight: var(--rvo-link-call-to-action-font-weight);
   min-block-size: var(--rvo-link-call-to-action-min-block-size);
   padding-block-end: var(--rvo-link-call-to-action-padding-block-end);
