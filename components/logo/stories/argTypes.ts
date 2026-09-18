@@ -11,6 +11,9 @@ export const argTypes = {
   link: {
     control: 'text',
   },
+  linkTitle: {
+    control: 'text',
+  },
   className: {
     control: 'text',
   },
