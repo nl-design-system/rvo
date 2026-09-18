@@ -1,11 +1,5 @@
 # `@nl-rvo/css-logo`
 
-## 1.4.0
-
-### Minor Changes
-
-- b093bc0: Add `linkTitle` prop to the `Logo` component. When provided, its value is set as the `title` attribute on the logo link, allowing consumers to describe the link destination for screen readers and tooltips.
-
 ## 1.3.0
 
 ### Minor Changes

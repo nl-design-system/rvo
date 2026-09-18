@@ -1,5 +1,11 @@
 # @nl-rvo/component-library-react
 
+## 7.2.0
+
+### Minor Changes
+
+- b093bc0: Add `linkTitle` prop to the `Logo` component. When provided, its value is set as the `title` attribute on the logo link, allowing consumers to describe the link destination for screen readers and tooltips.
+
 ## 7.1.3
 
 ### Patch Changes
