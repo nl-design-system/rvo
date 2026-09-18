@@ -10,6 +10,7 @@ export interface ILogoProps {
   title?: string;
   subtitle?: string;
   link?: string;
+  linkTitle?: string;
   className?: string;
 }
 
@@ -17,6 +18,7 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
   title = 'Rijksdienst voor Ondernemend Nederland',
   subtitle = '',
   link,
+  linkTitle,
   className,
   ...rootElementProps
 }) => {
@@ -34,7 +36,7 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
       </div>
       <div className="rvo-logo__wordmark">
         {link ? (
-          <a href={link} className="rvo-logo__title rvo-logo__title-link">
+          <a href={link} className="rvo-logo__title rvo-logo__title-link" title={linkTitle}>
             {title}
           </a>
         ) : (
