@@ -16,7 +16,6 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   showIcon?: 'no' | 'before' | 'after';
   icon?: IconType;
-  iconAriaLabel?: string;
   busy?: boolean;
   fullWidth?: boolean;
   className?: string;
@@ -27,6 +26,8 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
   /** @uxpinpropname On Click */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  /** @deprecated Use accessible button labels instead. This prop has no effect and will be removed in a future major release. */
+  iconAriaLabel?: string;
 }
 
 export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
@@ -37,13 +38,14 @@ export const Button: React.FC<PropsWithChildren<IButtonProps>> = ({
   children,
   showIcon = defaultArgs.showIcon,
   icon = defaultArgs.icon,
-  iconAriaLabel = defaultArgs.iconAriaLabel,
   fullWidth = defaultArgs.fullWidth,
   className,
   busy,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  iconAriaLabel: _iconAriaLabel,
   ...otherProps
 }: PropsWithChildren<IButtonProps>) => {
-  const iconMarkup = <Icon icon={icon as any} size={size} ariaLabel={iconAriaLabel} />;
+  const iconMarkup = <Icon icon={icon as any} size={size} />;
 
   let appearance: string | undefined;
   switch (kind) {

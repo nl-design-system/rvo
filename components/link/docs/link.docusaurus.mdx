@@ -5,12 +5,66 @@ hide_table_of_contents: true
 slug: /link
 ---
 
-import { Link } from "@nl-rvo/component-library-react";
+import { Heading, Link } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 import Documentation from "../README.md";
 
-<ComponentExample storyName="componenten-link--default">
-  <Link />
+<Heading type="h2">Voorbeelden</Heading>
+
+Standaard link:
+
+<ComponentExample storyName="componenten-link--link">
+  <Link href="#">Dit is een link</Link>
 </ComponentExample>
+
+Call to action link:
+{(() => {
+const props = { href: '#', callToAction: true };
+return (
+
+<ComponentExample storyName="componenten-link-voorbeelden--call-to-action-link">
+  <Link {...props}>Meer informatie</Link>
+</ComponentExample>
+); })()}
+
+Call to action link, outline:
+{(() => {
+const props = { href: '#', callToAction: true, outline: true };
+return (
+
+<ComponentExample storyName="componenten-link-voorbeelden--call-to-action-link-outline">
+  <Link {...props}>Meer informatie</Link>
+</ComponentExample>
+); })()}
+
+Link met icoon:
+{(() => {
+const props = { href: '#', icon: 'terug', showIcon: 'before' };
+return (
+
+<ComponentExample storyName="componenten-link-voorbeelden--terug-link">
+  <Link {...props}>Terug</Link>
+</ComponentExample>
+); })()}
+
+Externe link:
+{(() => {
+const props = { href: '#', icon: 'pijl-naar-rechtsboven', showIcon: 'after' };
+return (
+
+<ComponentExample storyName="componenten-link-voorbeelden--externe-link">
+  <Link {...props}>Externe link</Link>
+</ComponentExample>
+); })()}
+
+Zonder underline:
+{(() => {
+const props = { href: '#', icon: 'pijl-naar-rechts', showIcon: 'after', noUnderline: true };
+return (
+
+<ComponentExample storyName="componenten-link-voorbeelden--zonder-underline">
+  <Link {...props}>Verder</Link>
+</ComponentExample>
+); })()}
 
 <Documentation />

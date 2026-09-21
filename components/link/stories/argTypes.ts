@@ -10,6 +10,12 @@ export const argTypes = {
   href: {
     control: 'text',
   },
+  callToAction: {
+    control: 'boolean',
+  },
+  outline: {
+    control: 'boolean',
+  },
   color: {
     control: { type: 'select' },
     options: ['hemelblauw', 'donkerblauw', 'lintblauw', 'wit', 'zwart', 'grijs-700'],
@@ -34,7 +40,6 @@ export const argTypes = {
     options: iconColors,
     control: { type: 'radio' },
   },
-  iconAriaLabel: { control: 'text' },
   hover: {
     control: 'boolean',
   },

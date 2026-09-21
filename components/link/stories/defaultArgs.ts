@@ -2,6 +2,7 @@ import { ILinkProps } from '@nl-rvo/component-library-react';
 
 export const defaultArgs: ILinkProps = {
   active: false,
+  callToAction: false,
   children: 'Dit is een link',
   color: 'hemelblauw',
   focus: false,
@@ -9,10 +10,10 @@ export const defaultArgs: ILinkProps = {
   hover: false,
   href: '#',
   icon: 'home',
-  iconAriaLabel: '',
   iconColor: 'hemelblauw',
   iconSize: 'md',
   noUnderline: false,
+  outline: false,
   showIcon: 'no',
   weight: 'bold',
 };

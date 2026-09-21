@@ -13,6 +13,7 @@ export interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   color?: 'hemelblauw' | 'donkerblauw' | 'wit' | 'zwart' | 'grijs-700' | 'lintblauw';
   className?: string;
+  /** @deprecated Icons are always decorative and hidden from screen readers. This prop has no effect and will be removed in a future major release. */
   ariaLabel?: string;
 }
 
@@ -20,8 +21,9 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
   icon,
   size = 'md',
   color,
-  ariaLabel,
   className,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  ariaLabel: _ariaLabel,
   ...rootElementProps
 }: IIconProps) => {
   let iconName = icon as string;
@@ -40,10 +42,7 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
       )}
       role="img"
       style={{ ['--rvo-icon-current' as string]: `var(--rvo-icon-${iconName})` }}
-      aria-label={(ariaLabel?.length
-        ? ariaLabel
-        : iconName.charAt(0).toUpperCase() + iconName.substr(1).toLowerCase()
-      ).replace(/-/g, ' ')}
+      aria-hidden={true}
       {...rootElementProps}
     ></span>
   );

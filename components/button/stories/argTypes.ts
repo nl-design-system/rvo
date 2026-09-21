@@ -25,7 +25,6 @@ export const argTypes = {
     control: { type: 'select' },
     options: iconNames,
   },
-  iconAriaLabel: { control: 'text' },
   fullWidth: {
     control: 'boolean',
   },

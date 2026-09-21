@@ -22,6 +22,7 @@ export type LinkCustomLinkComponent = React.ComponentType<LinkCustomLinkComponen
 
 export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   active?: boolean;
+  callToAction?: boolean;
   children?: React.ReactNode;
   className?: string;
   color?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700' | string;
@@ -30,16 +31,18 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   hover?: boolean;
   href?: string;
   icon?: IconType;
-  iconAriaLabel?: string;
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
   iconSize?: 'sm' | 'md';
   LinkComponent?: LinkCustomLinkComponent;
   noUnderline?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  outline?: boolean;
   role?: string;
   showIcon?: 'no' | 'before' | 'after';
   target?: string;
   weight?: 'normal' | 'bold';
+  /** @deprecated Use accessible link text instead. This prop has no effect and will be removed in a future major release. */
+  iconAriaLabel?: string;
 }
 
 export const Link: React.FC<ILinkProps> = ({
@@ -50,15 +53,18 @@ export const Link: React.FC<ILinkProps> = ({
   icon = 'home',
   iconSize = 'md',
   iconColor = 'hemelblauw',
-  iconAriaLabel = '',
   hover = false,
   active = false,
   focus = false,
   noUnderline = false,
   fullContainerLink = false,
+  callToAction = false,
+  outline = false,
   className,
   children,
   LinkComponent,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  iconAriaLabel: _iconAriaLabel,
   ...otherProps
 }: ILinkProps) => {
   const iconMarkup =
@@ -67,7 +73,6 @@ export const Link: React.FC<ILinkProps> = ({
           icon: icon as any,
           size: iconSize as any,
           color: iconColor as any,
-          ariaLabel: iconAriaLabel,
         })
       : null;
 
@@ -84,6 +89,8 @@ export const Link: React.FC<ILinkProps> = ({
     'rvo-link--wit': color === 'wit',
     'rvo-link--zwart': color === 'zwart',
     'rvo-link--grijs-700': color === 'grijs-700',
+    'rvo-link--call-to-action': callToAction,
+    'rvo-link--call-to-action-outline': callToAction && outline,
   });
 
   const linkContent = (

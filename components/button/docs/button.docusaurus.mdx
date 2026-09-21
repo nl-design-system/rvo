@@ -9,7 +9,7 @@ import { Button, Heading } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 import Documentation from "../README.mdx";
 
-<Heading type="h2">Kinds</Heading>
+<Heading type="h2">Voorbeelden</Heading>
 
 Primary button:
 
@@ -43,6 +43,26 @@ const props = { kind: "quaternary" };
 return (
 
 <ComponentExample storyName="componenten-button--default" args={props}>
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Warning subtle button:
+{(() => {
+const props = { kind: "warning-subtle" };
+return (
+
+<ComponentExample storyName="componenten-button-kinds--warning-subtle" args={props}>
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Warning button:
+{(() => {
+const props = { kind: "warning" };
+return (
+
+<ComponentExample storyName="componenten-button-kinds--warning" args={props}>
   <Button {...props} />
 </ComponentExample>
 ); })()}

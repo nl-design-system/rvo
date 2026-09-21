@@ -9,51 +9,52 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const defaultFooterMenu: FooterColumnInterface[] = [
   {
-    label: 'RVO',
     orientation: 'horizontal',
     items: [
       { content: <Icon icon="home" size="2xl" color="wit" />, link: '#' },
       { content: <Icon icon="tekstballon-met-hart" size="2xl" color="wit" />, link: '#' },
-      { content: <Icon icon="computer" size="2xl" color="wit" />, link: '#' },
-      { content: <Icon icon="drone" size="2xl" color="wit" />, link: '#' },
+      { content: <Icon icon="netwerk" size="2xl" color="wit" />, link: '#' },
+      { content: <Icon icon="rss" size="2xl" color="wit" />, link: '#' },
     ],
   },
   {
-    label: 'Over deze site',
+    label: 'Over RVO',
     items: [
-      { content: 'Privacy', link: '#' },
-      { content: 'Cookies en anti-spam', link: '#' },
-      { content: 'Toegankelijkheid', link: '#' },
-      { content: 'Proclaimer', link: '#' },
+      { content: 'Over ons', link: '#' },
+      { content: 'Onze klantbeloften', link: '#' },
+      { content: 'Pers', link: '#' },
+      { content: 'Zaken regelen bij RVO', link: '#' },
+      { content: 'english.rvo.nl', link: '#' },
     ],
   },
   {
     label: 'Snel naar',
     items: [
       { content: 'Onderwerpen A t/m Z', link: '#' },
-      { content: 'Klantenpanel', link: '#' },
       { content: 'Documenten en publicaties', link: '#' },
-      { content: 'Overheidspublicaties en auteursrecht', link: '#' },
+      { content: 'Open data', link: '#' },
+      { content: 'projecten.rvo.nl', link: '#' },
+      { content: 'europese-subsidies.rvo.nl', link: '#' },
+      { content: 'Klantenpanel', link: '#' },
     ],
   },
   {
     label: 'Blijf op de hoogte',
     items: [
-      { content: 'Social media', link: '#' },
-      { content: 'Higherlevel.nl ondernemersforum', link: '#' },
-      { content: 'RSS', link: '#' },
-      { content: 'Gratis nieuwsbrief', link: '#' },
+      { content: 'E-mailnotificaties', link: '#' },
+      { content: 'Nieuwsbrieven', link: '#' },
+      { content: 'Higherlevel ondernemersforum', link: '#' },
     ],
   },
 ];
 
 const defaultSecondaryFooterMenu: FooterItemInterface[] = [
-  { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
-  { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
-  { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
+  { content: 'Contact', link: '#' },
+  { content: 'Cookies en anti-spam', link: '#' },
+  { content: 'Privacy', link: '#' },
   { content: 'Toegankelijkheid', link: '#' },
-  { content: 'Proclaimer', link: 'https://www.rvo.nl/onderwerpen/proclaimer' },
-  { content: 'Kwetsbaarheid melden', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
+  { content: 'Proclaimer', link: '#' },
+  { content: 'Kwetsbaarheid melden', link: '#' },
   { content: 'Webarchief', link: '#' },
 ];
 

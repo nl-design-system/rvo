@@ -30,3 +30,30 @@
   padding-block: var(--rvo-space-xl);
   padding-inline: var(--rvo-space-xl);
 }
+
+.expandableWrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+.codeBlockContainer {
+  margin-block-start: var(--rvo-space-md);
+}
+
+.codeBlockContainer pre {
+  padding: var(--rvo-space-lg);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.codeBlockContainer :global(.theme-code-block) {
+  box-shadow: none;
+}
+
+.codeBlockContainer :global(.theme-code-block) button {
+  display: none;
+}
+
+.codeBlockContainer > :global(button) {
+  margin-block-start: var(--rvo-space-sm);
+}
