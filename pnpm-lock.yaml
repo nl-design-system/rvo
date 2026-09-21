@@ -835,7 +835,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: 1.0.0
+        version: link:../../proprietary/assets
       '@nl-rvo/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
@@ -904,7 +904,7 @@ importers:
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: 1.0.0
+        version: link:../../proprietary/assets
       '@nl-rvo/component-library-css':
         specifier: file:../component-library-css
         version: link:../component-library-css
@@ -1033,7 +1033,7 @@ importers:
         version: 7.23.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@mui/material@5.15.13(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.17.1(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(date-fns@3.4.0)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nl-rvo/assets':
         specifier: 1.0.0
-        version: 1.0.0
+        version: link:../../proprietary/assets
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
