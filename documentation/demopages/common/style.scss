@@ -439,7 +439,10 @@
   }
 
   .rvo-navigation--w-shadow {
-    box-shadow: 0 0 #000, 0 0 #000, 0 1.25rem 0.62rem -0.62rem rgb(21 66 115 / 15%);
+    box-shadow:
+      0 0 #000,
+      0 0 #000,
+      0 1.25rem 0.62rem -0.62rem rgb(21 66 115 / 15%);
   }
 
   .rvo-sub-navigation {

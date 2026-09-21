@@ -1,6 +1,7 @@
+import DocusaurusLink from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Button, Grid, Heading, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
+import { Grid, Heading, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import type { ReactElement } from 'react';
@@ -28,13 +29,13 @@ export default function Home(): ReactElement {
                 <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
               </p>
             </LayoutFlow>
-            <Link
-              style={{ display: 'inline-block', width: 'max-content' }}
-              noUnderline={true}
-              href={useBaseUrl('/over-roos/introductie')}
+            <DocusaurusLink
+              className="rvo-link rvo-link--call-to-action"
+              style={{ alignSelf: 'flex-start' }}
+              to={useBaseUrl('/over-roos/introductie')}
             >
-              <Button>Aan de slag met ROOS</Button>
-            </Link>
+              Aan de slag met ROOS
+            </DocusaurusLink>
           </MaxWidthLayout>
         </div>
       </header>
@@ -86,7 +87,7 @@ export default function Home(): ReactElement {
                 <div className="rvo-card__content">
                   <Heading type="h2" noMargins={true}>
                     <Link
-                      href={useBaseUrl('/patronen/layout/applicatie-layout')}
+                      href={useBaseUrl('/patronen/paginas/basispagina')}
                       className="rvo-card__link rvo-card__full-card-link"
                       noUnderline={true}
                     >

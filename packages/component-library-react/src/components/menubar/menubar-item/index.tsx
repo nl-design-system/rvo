@@ -35,7 +35,9 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   handleItemClick,
   ...rest
 }) => {
-  const iconMarkup = useIcons && icon ? <Icon icon={icon} size={size as any} color="wit" /> : null;
+  const showIcon: 'no' | 'before' | 'after' = useIcons && icon ? iconPlacement : 'no';
+  const iconSizeForLink = (size === 'lg' ? 'md' : size) as 'sm' | 'md';
+
   const chevronMarkup = submenu ? (
     isSubmenuVisible ? (
       <Icon icon="delta-omhoog" size={size as any} color="wit" />
@@ -66,13 +68,14 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
       <Link
         className={clsx('rvo-menubar__link', isSubmenuVisible && 'rvo-menubar__link--active')}
         color={linkColor}
+        showIcon={showIcon}
+        icon={icon}
+        iconSize={iconSizeForLink}
         {...(submenu || typeof link === 'function'
           ? { onClick: handleClick, role: 'button' }
           : { href: link as string })}
       >
-        {iconPlacement === 'before' && iconMarkup}
         {label}
-        {iconPlacement !== 'before' && iconMarkup}
         {chevronMarkup}
       </Link>
 

@@ -22,6 +22,29 @@ export default {
   },
 };
 
+export const CallToActionLink = {
+  render: Link.bind({}),
+  name: 'Call to action link',
+
+  args: {
+    ...defaultArgs,
+    children: 'Meer informatie',
+    callToAction: true,
+  },
+};
+
+export const CallToActionLinkOutline = {
+  render: Link.bind({}),
+  name: 'Call to action link, outline',
+
+  args: {
+    ...defaultArgs,
+    children: 'Meer informatie',
+    callToAction: true,
+    outline: true,
+  },
+};
+
 export const TerugLink = {
   render: Link.bind({}),
   name: 'Terug link',
@@ -31,7 +54,6 @@ export const TerugLink = {
     children: 'Terug',
     icon: 'terug',
     showIcon: 'before',
-    iconAriaLabel: 'Ga terug',
   },
 };
 
@@ -44,7 +66,6 @@ export const VerderLink = {
     children: 'Verder',
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
-    iconAriaLabel: 'Ga verder',
   },
 };
 
@@ -57,7 +78,6 @@ export const ExterneLink = {
     children: 'Externe link',
     icon: 'pijl-naar-rechtsboven',
     showIcon: 'after',
-    iconAriaLabel: 'Ga naar www.rvo.nl (externe link)',
   },
 };
 
@@ -71,7 +91,6 @@ export const ZonderUnderline = {
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     noUnderline: true,
-    iconAriaLabel: 'Ga verder',
   },
 };
 
@@ -85,6 +104,5 @@ export const SmallIcon = {
     icon: 'pijl-naar-rechts',
     showIcon: 'after',
     iconSize: 'sm',
-    iconAriaLabel: 'Ga verder',
   },
 };

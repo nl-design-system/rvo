@@ -1,0 +1,84 @@
+.rvo-card {
+  --rvo-card-border-radius: var(--rvo-border-radius-sm);
+}
+
+/* De data list heeft zelf altijd een volledige buitenrand; binnen een card
+   zorgt dat voor een dubbele rand samen met de card-outline. Die schakelen
+   we hier uit, ongeacht viewport — de card-outline is dan de enige rand. */
+.rvo-card .rvo-data-list--horizontal {
+  border: none;
+}
+
+/* Het data-list component zet dt/dd standaard onder elkaar op een kleine
+   viewport en toont ze pas vanaf zijn eigen sm-breakpoint (612px) naast
+   elkaar in een 2-koloms grid. Dat zou de groepen hierbinnen samen laten
+   vallen met onze eigen (latere) md-breakpoint, dus hou de dl daarom
+   expliciet block tot onze eigen breakpoint. */
+.rvo-data-list--horizontal {
+  display: block;
+}
+
+.rvo-data-list--horizontal .rvo-data-list__group {
+  border-block-start: var(--rvo-data-list-breakpoint-sm-dd-border-top-width)
+    var(--rvo-data-list-breakpoint-sm-dd-border-top-style) var(--rvo-data-list-breakpoint-sm-dd-border-top-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rvo-data-list--horizontal dt {
+  border: none;
+  font-weight: var(--rvo-font-weight-normal);
+  margin: 0;
+  padding-block-end: var(--rvo-data-list-breakpoint-sm-dt-padding-block-end);
+  padding-block-start: var(--rvo-data-list-breakpoint-sm-dt-padding-block-start);
+  padding-inline-end: var(--rvo-data-list-breakpoint-sm-dt-padding-inline-end);
+  padding-inline-start: var(--rvo-data-list-breakpoint-sm-dt-padding-inline-start);
+}
+
+.rvo-data-list--horizontal dd {
+  border-inline-start: var(--rvo-data-list-breakpoint-sm-dd-border-left-width)
+    var(--rvo-data-list-breakpoint-sm-dd-border-left-style) var(--rvo-data-list-breakpoint-sm-dd-border-left-color);
+  font-weight: var(--rvo-font-weight-bold);
+  margin: 0;
+  padding-block-end: var(--rvo-data-list-breakpoint-sm-dd-padding-block-end);
+  padding-block-start: var(--rvo-data-list-breakpoint-sm-dd-padding-block-start);
+  padding-inline-end: var(--rvo-data-list-breakpoint-sm-dd-padding-inline-end);
+  padding-inline-start: var(--rvo-data-list-breakpoint-sm-dd-padding-inline-start);
+}
+
+/* Mobile first: onder de md-breakpoint (--rvo-layout-max-width-md, 912px)
+   blijft de traditionele, naast-elkaar dt/dd-vorm staan. Pas vanaf md
+   schakelt de data list om naar de horizontale vakjes. */
+@media (min-width: 912px) {
+  .rvo-data-list--horizontal {
+    display: flex;
+  }
+
+  .rvo-data-list--horizontal .rvo-data-list__group {
+    border-block-start: var(--rvo-card-outline-border-width) solid var(--rvo-card-outline-border-color);
+    border-inline-end: var(--rvo-card-outline-border-width) solid var(--rvo-card-outline-border-color);
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: var(--rvo-space-3xs);
+    padding: var(--rvo-space-sm);
+  }
+
+  .rvo-data-list--horizontal .rvo-data-list__group:last-child {
+    border-inline-end: none;
+  }
+
+  .rvo-data-list--horizontal dt {
+    border: none;
+    font-weight: var(--rvo-font-weight-normal);
+    margin: 0;
+    padding: 0;
+  }
+
+  .rvo-data-list--horizontal dd {
+    border: none;
+    font-weight: var(--rvo-font-weight-bold);
+    margin: 0;
+    padding: 0;
+  }
+}
