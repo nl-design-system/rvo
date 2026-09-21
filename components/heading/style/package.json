@@ -31,5 +31,13 @@
     "build": "sass --pkg-importer=node --style=compressed ./src/:./dist/",
     "watch": "sass --pkg-importer=node --style=compressed --watch ./src/:./dist/",
     "clean": "rimraf ./dist/"
+  },
+  "dependencies": {
+    "@utrecht/heading-1-css": "3.0.1",
+    "@utrecht/heading-2-css": "3.0.1",
+    "@utrecht/heading-3-css": "3.0.1",
+    "@utrecht/heading-4-css": "3.0.1",
+    "@utrecht/heading-5-css": "3.0.1",
+    "@utrecht/heading-6-css": "3.0.1"
   }
 }

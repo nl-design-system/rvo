@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 .rvo-progress-tracker {
   max-inline-size: var(--rvo-progress-tracker-max-width);
@@ -13,7 +13,7 @@
   padding-inline-start: var(--rvo-progress-tracker-step-label-padding);
   position: relative;
 
-  @extend .rvo-layout-row;
+  // @extend .rvo-layout-row;
 
   &::after {
     background-position: 0 center;

@@ -30,5 +30,8 @@
     "build": "sass --pkg-importer=node --style=compressed ./src/:./dist/",
     "watch": "sass --pkg-importer=node --style=compressed --watch ./src/:./dist/",
     "clean": "rimraf ./dist/"
+  },
+  "dependencies": {
+    "@utrecht/icon-css": "4.0.1"
   }
 }

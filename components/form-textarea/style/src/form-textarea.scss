@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 textarea.rvo-textarea {
   block-size: initial;
@@ -34,8 +34,7 @@ textarea.rvo-textarea {
 
   &:focus-visible,
   &:focus {
-    --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
-      var(--utrecht-focus-inverse-outline-color, transparent);
+    --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0) var(--utrecht-focus-inverse-outline-color, transparent);
 
     box-shadow: var(--_utrecht-focus-ring-box-shadow);
     outline-color: var(--utrecht-focus-outline-color, revert);

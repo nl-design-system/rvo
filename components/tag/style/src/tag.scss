@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 $rvo-tag-status: "info", "warning", "success", "error";
 
@@ -23,8 +23,8 @@ $rvo-tag-status: "info", "warning", "success", "error";
     padding-inline-end: var(--rvo-tag-padding-inline-end-with-icon);
     padding-inline-start: var(--rvo-tag-padding-inline-start-with-icon);
 
-    @extend .rvo-layout-row;
-    @extend .rvo-layout-gap--sm;
+    // @extend .rvo-layout-row;
+    // @extend .rvo-layout-gap--sm;
   }
 
   &--as-link,

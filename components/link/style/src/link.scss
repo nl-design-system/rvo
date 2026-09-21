@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 .rvo-link {
   background-color: var(--rvo-link-background-color);
@@ -36,8 +36,8 @@
 }
 
 .rvo-link--with-icon {
-  @extend .rvo-layout-row;
-  @extend .rvo-layout-gap--sm;
+  // @extend .rvo-layout-row;
+  // @extend .rvo-layout-gap--sm;
 }
 
 // Hover

@@ -36,8 +36,10 @@ type Story = StoryObj<typeof Breadcrumbs>;
 export const Base: Story = {
   args: {
     items: [
-      { label: 'Item 1', link: 'www.google.nl' },
-      { label: 'Item 2', link: 'www.google.nl' },
+      { label: 'First step', link: '#' },
+      { label: 'Second step', link: '#' },
+      { label: 'Third step', link: '#' },
+      { label: 'Current page' }
     ],
   },
   name: 'Breadcrumbs',

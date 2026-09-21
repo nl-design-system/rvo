@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
-@use "pkg:@nl-rvo/css-link/dist/link.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-link/dist/link.css";
 
 .rvo-accordion {
   --rvo-accordion-item-icon-margin-block-start: 6px;
@@ -33,7 +33,7 @@
   --rvo-accordion-item-icon-margin-block-start: 0;
 }
 
-.rvo-accordion__item > .rvo-accordion__item-summary {
+.rvo-accordion__item>.rvo-accordion__item-summary {
   cursor: pointer;
   display: flex;
   gap: var(--rvo-space-xs);
@@ -48,7 +48,7 @@
   border-inline-start-color: var(--rvo-accordion-border-color);
 }
 
-.rvo-accordion__item > .rvo-accordion__item-summary::-webkit-details-marker {
+.rvo-accordion__item>.rvo-accordion__item-summary::-webkit-details-marker {
   display: none;
 }
 
@@ -83,7 +83,6 @@ h3.rvo-accordion__item-title {
   color: var(--rvo-accordion-item-title-color);
   display: flex;
   gap: var(--rvo-space-sm);
-  margin: 0;
 }
 
 .rvo-accordion__content {
@@ -110,14 +109,14 @@ h3.rvo-accordion__item-title {
     padding-inline-start: var(--rvo-accordion-item-content-padding-inline-start);
   }
 
-  .rvo-accordion__item > .rvo-accordion__item-summary {
+  .rvo-accordion__item>.rvo-accordion__item-summary {
     padding-block-end: var(--rvo-accordion-item-summary-padding-block-end);
     padding-block-start: var(--rvo-accordion-item-summary-padding-block-start);
     padding-inline-end: var(--rvo-accordion-item-summary-padding-inline-end);
     padding-inline-start: var(--rvo-accordion-item-summary-padding-inline-start);
   }
 
-  .rvo-accordion__item[open] > .rvo-accordion__item-summary {
+  .rvo-accordion__item[open]>.rvo-accordion__item-summary {
     padding-block-end: 0;
   }
 

@@ -538,7 +538,26 @@ importers:
         specifier: workspace:*
         version: link:../../icon/react
 
-  components/heading/style: {}
+  components/heading/style:
+    dependencies:
+      '@utrecht/heading-1-css':
+        specifier: 3.0.1
+        version: 3.0.1
+      '@utrecht/heading-2-css':
+        specifier: 3.0.1
+        version: 3.0.1
+      '@utrecht/heading-3-css':
+        specifier: 3.0.1
+        version: 3.0.1
+      '@utrecht/heading-4-css':
+        specifier: 3.0.1
+        version: 3.0.1
+      '@utrecht/heading-5-css':
+        specifier: 3.0.1
+        version: 3.0.1
+      '@utrecht/heading-6-css':
+        specifier: 3.0.1
+        version: 3.0.1
 
   components/hero/react:
     dependencies:
@@ -568,7 +587,11 @@ importers:
         specifier: workspace:*
         version: link:../style
 
-  components/icon/style: {}
+  components/icon/style:
+    dependencies:
+      '@utrecht/icon-css':
+        specifier: 4.0.1
+        version: 4.0.1
 
   components/image/react:
     dependencies:
@@ -6648,20 +6671,38 @@ packages:
   '@utrecht/heading-1-css@1.5.1':
     resolution: {integrity: sha512-ihsXPIhPKW9CXlgnPJQxeuF05wQhxPIDEqStGarn89EnBDon9KCMzoiUEA19UiX06XBs8rv3pAduw2qfFX9wnQ==}
 
+  '@utrecht/heading-1-css@3.0.1':
+    resolution: {integrity: sha512-9ONDoQ7RPZ097TfzOQTGxu4E9yFSiFW/RtR0pt3+CFpI3Tb1EkMQMY8lPXL4f/Ay6/rNLolci8Rvks22IXMOKw==}
+
   '@utrecht/heading-2-css@1.5.1':
     resolution: {integrity: sha512-Wf83HNvo61dFvSXC+4z6ey3NafsZ85SVmAf3YTQmUY9qY9aElHTTnv1ag9hgPKSFEAh2mE5Rl+Yb/UT8x5TXYg==}
+
+  '@utrecht/heading-2-css@3.0.1':
+    resolution: {integrity: sha512-RdJPfbZj7WTIJmJsT3Kd9AV7yytunQZVs34jhYIubjqYdHHJ1edJWwkY/v0mXmPicl/TTNljGGu0nDlLeO6W+A==}
 
   '@utrecht/heading-3-css@1.5.1':
     resolution: {integrity: sha512-oxVgWdaTLTRp2y1Sxhcu2xwDqaF0SEhjzlsuTylG6TI4r/fbTpenCcAjuDceUEkCmlIUKERpKgdJVuajmbJpRg==}
 
+  '@utrecht/heading-3-css@3.0.1':
+    resolution: {integrity: sha512-Ikmp7zT0Yivd8/mJhVTx0UD0xBTldZBcfPkbqL69krK9pxXy/NPB76Fh2h6i93JER40e20XLf5cvYx/VCdcYQA==}
+
   '@utrecht/heading-4-css@1.5.1':
     resolution: {integrity: sha512-KJNOoZ8cFCz/glrsc9n5FM5vsiHtMQsOe1ekxGzHMmE38aTrdZ5L81bvKeWbzztvbpxXm5DzT+tS5DqvVYJ93g==}
+
+  '@utrecht/heading-4-css@3.0.1':
+    resolution: {integrity: sha512-/kH1c5lOimF/UfCShAEKMv2vg/1XqFtAf5+qKDKwGun61/lMcCb/pkwPd6gKMtxeUNWS/QvB/kXnQLchARR9Vw==}
 
   '@utrecht/heading-5-css@1.5.1':
     resolution: {integrity: sha512-eN+BKXyoa2UxTKORxOAoeyMZQ1c4thi5+qlaxuPkQg5SDHuq0IZsTXaDWPRaoa05J+85ez0SnoEC0LAJ1f/Bcw==}
 
+  '@utrecht/heading-5-css@3.0.1':
+    resolution: {integrity: sha512-hoqJZ3GDO7U1Fbr5rIpyeTDIYmdQrrJLje3mdcQJZMCK25al+x7OEi9iKt17BkJVVhrbP4NQoIglF6gziofRxg==}
+
   '@utrecht/heading-6-css@1.5.1':
     resolution: {integrity: sha512-4r3Kd+Hej5ugLdiVCKlcN6xdXxzL8X/saW0pfK+3qPqGmhU3TV3r2axJqxLA9Q5NTDabZZuZeDZiqfwKcVsWIA==}
+
+  '@utrecht/heading-6-css@3.0.1':
+    resolution: {integrity: sha512-V0MeD7XvKYwcfUM9ybj1oRAPfOg9K8ZuYznrzxautX8knQTK+Fq6stclDYPYB57PyNC6vFWME9XWzvs2fLYYFQ==}
 
   '@utrecht/heading-group-css@1.5.1':
     resolution: {integrity: sha512-INFePIMQevIK1GGlyfPe1bccrtEDg8hSfkIYt6Ts+l4ptb5yILFhPrYT+odW2Pq+F9h9HPJ0c545kZnik4VhWA==}
@@ -6674,6 +6715,9 @@ packages:
 
   '@utrecht/icon-css@2.0.1':
     resolution: {integrity: sha512-zdoeqPlVO7bWq/XgrgMMykAwiHBgyFmLpx/LcvfF39EnRUyUq/ZnViV1vIPsiA4F3Nnwqvr6D+06IuSDYzvmZg==}
+
+  '@utrecht/icon-css@4.0.1':
+    resolution: {integrity: sha512-X/BVTGRPpOklIIYBHIfl55U7aJmssNstZHWrMbddBaoNCqISeoVuqI3k4beM9i2KiWZ0hvgm0R/Q5g2xCCYtwg==}
 
   '@utrecht/img-css@1.3.1':
     resolution: {integrity: sha512-d6l6Irm0Hi+S6mUT2CEEuJ9W1lNPZp6YSl3pFO3aZXl8gxVOFpI5eqqQO/61e0k/K7APJB/Hn7C35zRRZLkqgQ==}
@@ -22985,15 +23029,27 @@ snapshots:
 
   '@utrecht/heading-1-css@1.5.1': {}
 
+  '@utrecht/heading-1-css@3.0.1': {}
+
   '@utrecht/heading-2-css@1.5.1': {}
+
+  '@utrecht/heading-2-css@3.0.1': {}
 
   '@utrecht/heading-3-css@1.5.1': {}
 
+  '@utrecht/heading-3-css@3.0.1': {}
+
   '@utrecht/heading-4-css@1.5.1': {}
+
+  '@utrecht/heading-4-css@3.0.1': {}
 
   '@utrecht/heading-5-css@1.5.1': {}
 
+  '@utrecht/heading-5-css@3.0.1': {}
+
   '@utrecht/heading-6-css@1.5.1': {}
+
+  '@utrecht/heading-6-css@3.0.1': {}
 
   '@utrecht/heading-group-css@1.5.1': {}
 
@@ -23002,6 +23058,8 @@ snapshots:
   '@utrecht/iban-data-css@1.3.1': {}
 
   '@utrecht/icon-css@2.0.1': {}
+
+  '@utrecht/icon-css@4.0.1': {}
 
   '@utrecht/img-css@1.3.1': {}
 

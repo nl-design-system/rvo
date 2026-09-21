@@ -2,17 +2,10 @@ import { Toggle } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { iconOptions } from '@nl-rvo/component-library-react';
 
-const defaultArgs = {
-  content: 'Toggle',
-};
-
 export default {
   title: 'Componenten/Toggle',
   component: Toggle,
   argTypes: {
-    content: {
-      control: 'text',
-    },
     showIcon: {
       options: ['no', 'before', 'after'],
       control: { type: 'radio' },
@@ -25,9 +18,6 @@ export default {
       control: 'boolean',
     },
     active: {
-      control: 'boolean',
-    },
-    focus: {
       control: 'boolean',
     },
     link: {
@@ -61,39 +51,6 @@ export default {
     },
   },
 } satisfies Meta<typeof Toggle>;
-type Story = StoryObj<typeof Toggle>;
+type Story = StoryObj;
 
-export const Base: Story = { args: defaultArgs };
-
-export const Hover = {
-  render: Toggle.bind({}),
-
-  args: {
-    ...defaultArgs,
-    hover: true,
-    showIcon: 'before',
-    icon: 'home',
-  },
-};
-
-export const Active = {
-  render: Toggle.bind({}),
-
-  args: {
-    ...defaultArgs,
-    active: true,
-    showIcon: 'before',
-    icon: 'home',
-  },
-};
-
-export const Focus = {
-  render: Toggle.bind({}),
-
-  args: {
-    ...defaultArgs,
-    focus: true,
-    showIcon: 'before',
-    icon: 'home',
-  },
-};
+export const Base: Story = { render: () => (<Toggle>Toggle</Toggle>) };

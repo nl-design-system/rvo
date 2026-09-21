@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "pkg:@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
+@import "@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
 
 .rvo-alert {
   padding-block-end: var(--rvo-alert-padding-block-end);

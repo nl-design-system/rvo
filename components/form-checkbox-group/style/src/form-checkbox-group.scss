@@ -1,9 +1,9 @@
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 .rvo-checkbox__group {
-  @extend .rvo-layout-column;
-  @extend .rvo-layout-gap--md;
-  @extend .rvo-layout--wrap;
+  // @extend .rvo-layout-column;
+  // @extend .rvo-layout-gap--md;
+  // @extend .rvo-layout--wrap;
 }
 
 .rvo-radio-button__group--error {

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 .rvo-menubar {
   font-family: var(--rvo-topnav-font-family);
@@ -80,9 +80,7 @@
     }
 
     &.rvo-menubar__item--grid {
-      padding-inline-end: calc(
-        var(--rvo-topnav-item-link-padding-inline-end) + var(--rvo-topnav-item-link-padding-inline-start)
-      );
+      padding-inline-end: calc(var(--rvo-topnav-item-link-padding-inline-end) + var(--rvo-topnav-item-link-padding-inline-start));
     }
 
     .rvo-menubar__link {
@@ -90,8 +88,8 @@
       font-weight: var(--rvo-topnav-item-link-font-weight);
       text-decoration-line: var(--rvo-topnav-item-link-text-decoration);
 
-      @extend .rvo-layout-row;
-      @extend .rvo-layout-gap--sm;
+      // @extend .rvo-layout-row;
+      // @extend .rvo-layout-gap--sm;
 
       .rvo-icon {
         --utrecht-icon-color: var(--rvo-topnav-item-link-color);
@@ -120,15 +118,11 @@
 }
 
 // menubar items first and last child direction vertical
-.rvo-menubar__list.rvo-menubar__list--vertical
-  > .rvo-menubar__group--flex.rvo-menubar__group--vertical
-  > .rvo-menubar__item:first-child {
+.rvo-menubar__list.rvo-menubar__list--vertical>.rvo-menubar__group--flex.rvo-menubar__group--vertical>.rvo-menubar__item:first-child {
   padding-inline-start: var(--rvo-topnav-item-link-padding-inline-start);
 }
 
-.rvo-menubar__list.rvo-menubar__list--vertical
-  > .rvo-menubar__group--flex.rvo-menubar__group--vertical
-  > .rvo-menubar__item:last-child {
+.rvo-menubar__list.rvo-menubar__list--vertical>.rvo-menubar__group--flex.rvo-menubar__group--vertical>.rvo-menubar__item:last-child {
   padding-inline-end: var(--rvo-topnav-item-link-padding-inline-end);
 }
 
@@ -171,7 +165,7 @@
   background-color: var(--rvo-sidebar-layout-sidebar-background-color);
   margin-block-start: var(--rvo-topnav-item-link-padding-block-start);
 
-  & > .rvo-menubar__list {
+  &>.rvo-menubar__list {
     box-sizing: border-box;
     padding-inline-end: var(--rvo-topnav-submenu-padding-inline-end);
     padding-inline-start: var(--rvo-topnav-submenu-padding-inline-start);

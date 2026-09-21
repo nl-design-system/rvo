@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "pkg:@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
+@import "@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
 
 .rvo-footer {
   background-color: var(--utrecht-page-footer-background-color);
@@ -18,20 +18,20 @@
   }
 
   &__container {
-    &--sm {
-      @extend .rvo-max-width-layout;
-      @extend .rvo-max-width-layout--sm;
-    }
+    // &--sm {
+    //   @extend .rvo-max-width-layout;
+    //   @extend .rvo-max-width-layout--sm;
+    // }
 
-    &--md {
-      @extend .rvo-max-width-layout;
-      @extend .rvo-max-width-layout--md;
-    }
+    // &--md {
+    //   @extend .rvo-max-width-layout;
+    //   @extend .rvo-max-width-layout--md;
+    // }
 
-    &--lg {
-      @extend .rvo-max-width-layout;
-      @extend .rvo-max-width-layout--lg;
-    }
+    // &--lg {
+    //   @extend .rvo-max-width-layout;
+    //   @extend .rvo-max-width-layout--lg;
+    // }
   }
 
   &__payoff {

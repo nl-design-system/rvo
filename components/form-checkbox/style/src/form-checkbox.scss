@@ -2,11 +2,11 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "pkg:@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
 .rvo-checkbox {
-  @extend .rvo-layout-row;
-  @extend .rvo-layout-gap--sm;
+  //   @extend .rvo-layout-row;
+  //   @extend .rvo-layout-gap--sm;
 }
 
 .rvo-checkbox__group--error {
@@ -55,10 +55,8 @@
 
 .rvo-checkbox__input:disabled,
 .rvo-checkbox--disabled {
-  background-color: var(
-    --rvo-checkbox-disabled-background-color,
-    var(--utrecht-form-control-disabled-background-color)
-  );
+  background-color: var(--rvo-checkbox-disabled-background-color,
+      var(--utrecht-form-control-disabled-background-color));
   border-color: var(--rvo-checkbox-disabled-border-color, var(--utrecht-form-control-disabled-border-color));
   border-width: var(--rvo-checkbox-disabled-border-width, var(--utrecht-form-control-disabled-border-width));
   color: var(--rvo-checkbox-disabled-color, var(--utrecht-form-control-disabled-color));
