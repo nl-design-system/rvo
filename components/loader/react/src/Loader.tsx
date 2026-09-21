@@ -1,4 +1,4 @@
-import '@nl-rvo/component-library-css/dist/components/loader.css';
+import '@nl-rvo/css-loader';
 
 import clsx from 'clsx';
 import React from 'react';

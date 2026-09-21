@@ -5,14 +5,14 @@
 import clsx from 'clsx';
 import React from 'react';
 import '@nl-rvo/css-expandable-table';
-import { ITableProps } from './ExpandableTable.types';
+import { IExpandableTableProps } from './ExpandableTable.types';
 
-export const ExpandableTable: React.FC<ITableProps> = ({
+export const ExpandableTable: React.FC<IExpandableTableProps> = ({
   caption,
   children,
   className,
   ...otherProps
-}: ITableProps) => {
+}: IExpandableTableProps) => {
   return (
     <div role="region" className={clsx('rvo-table--responsive', className)} {...otherProps}>
       <table className="rvo-expandable-table">

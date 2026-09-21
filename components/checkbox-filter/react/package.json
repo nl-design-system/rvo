@@ -29,8 +29,9 @@
   "dependencies": {
     "@nl-rvo/css-checkbox-filter": "workspace:*",
     "@nl-rvo/css-layout-flow": "workspace:*",
-    "@nl-rvo/react-form-field-checkbox": "workspace:*",
+    "@nl-rvo/react-form-field": "workspace:*",
     "@nl-rvo/react-icon": "workspace:*",
-    "@nl-rvo/react-link": "workspace:*"
+    "@nl-rvo/react-link": "workspace:*",
+    "@nl-rvo/react-form-checkbox": "workspace:*"
   }
 }

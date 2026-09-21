@@ -19,7 +19,7 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/button.css",
+    ".": "./dist/footer.css",
     "./dist/*": "./dist/*"
   },
   "publishConfig": {

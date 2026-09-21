@@ -3,9 +3,9 @@ import React from 'react';
 import parseContentMarkup from '../../../../utils/parseContentMarkup';
 import { Heading } from '@nl-rvo/react-heading';
 import { Link } from '@nl-rvo/react-link';
-import { ICardHeaderProps } from '../CardExperimental.types';
+import { IExperimentalCardHeaderProps } from '../CardExperimental.types';
 
-const CardHeader: React.FC<ICardHeaderProps> = ({
+const CardHeader: React.FC<IExperimentalCardHeaderProps> = ({
   className,
   children,
   href,

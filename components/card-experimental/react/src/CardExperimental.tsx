@@ -15,9 +15,14 @@ import {
   getChildComponentPropValue,
 } from '../../../../packages/component-library-react/src/utils/getChildComponent';
 import '@nl-rvo/css-card-experimental';
-import { CardComponents, ICardHeaderProps, ICardImageProps, ICardProps } from './CardExperimental.types';
+import {
+  CardComponents,
+  IExperimentalCardHeaderProps,
+  IExperimentalCardImageProps,
+  IExperimentalCardProps,
+} from './CardExperimental.types';
 
-export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
+export const CardExperimental: React.FC<IExperimentalCardProps> & CardComponents = ({
   backgroundColor = 'none',
   backgroundImage = '',
   className,
@@ -28,16 +33,16 @@ export const CardExperimental: React.FC<ICardProps> & CardComponents = ({
   children,
 }) => {
   // the card image component
-  const cardImageComponent = getChildComponent<ICardImageProps>(CardImage, children);
+  const cardImageComponent = getChildComponent<IExperimentalCardImageProps>(CardImage, children);
   // all children except CardImage
   const otherComponents = filterComponents(CardImage, children);
 
-  const imageSize = getChildComponentPropValue<ICardImageProps>(CardImage, 'imageSize', children) ?? 'md';
+  const imageSize = getChildComponentPropValue<IExperimentalCardImageProps>(CardImage, 'imageSize', children) ?? 'md';
 
   const hasFullCardLinkProp =
-    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'fullCardLink', children) ?? false;
+    getChildComponentPropValue<IExperimentalCardHeaderProps>(CardHeader, 'fullCardLink', children) ?? false;
   const showLinkIndicator =
-    getChildComponentPropValue<ICardHeaderProps>(CardHeader, 'showLinkIndicator', children) ?? false;
+    getChildComponentPropValue<IExperimentalCardHeaderProps>(CardHeader, 'showLinkIndicator', children) ?? false;
 
   const hasImage = !!cardImageComponent;
   const hasBackgroundImage = backgroundImage && backgroundImage?.length > 0;

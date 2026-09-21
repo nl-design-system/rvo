@@ -1,6 +1,5 @@
 import React, { HTMLAttributes, useEffect, useState } from 'react';
-import { CheckboxField } from '@nl-rvo/react-form-field-checkbox';
-import { TextInputField } from '../../../../packages/component-library-react/src/components/form-field-textinput';
+import { FormField } from '@nl-rvo/react-form-field';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';
 import '@nl-rvo/css-checkbox-filter';
@@ -52,11 +51,16 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
       <summary className="rvo-checkbox-filter__label">
         {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>
-      {showInputField && <TextInputField onChange={inputFieldOnChange} label={inputFieldLabel} size="max" />}
+      {showInputField && (
+        <FormField id="checkbox-filter-search" label={inputFieldLabel}>
+          <FormField.Text type="text" onChange={inputFieldOnChange} size="max" />
+        </FormField>
+      )}
+
       <div className="rvo-checkbox-filter__checkbox-container">
-        {visibleItems.length > 0 && (
-          <CheckboxField label=" " invalid={false} options={visibleItems} onChange={optionsOnChange} />
-        )}
+        {/* {visibleItems.length > 0 && (
+          <FormField><FormField.Checkbox invalid={false} options={visibleItems} onChange={optionsOnChange} /></FormField>
+        )} */}
         {visibleItems.length === 0 && <p className="rvo-checkbox-filter__no-filter-text">{noFiltersText}</p>}
       </div>
       {options?.length > limit && (

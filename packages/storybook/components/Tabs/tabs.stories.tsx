@@ -1,4 +1,4 @@
-import { Icon, LayoutFlow, PageNumberNavigation, TabItem, Tabs } from '@nl-rvo/component-library-react';
+import { Tabs } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const defaultArgs = {
@@ -49,7 +49,7 @@ export const WithTabItemChildren: Story = {
   },
   render: (args) => (
     <Tabs {...args}>
-      <TabItem label="Tab 1">
+      {/* <TabItem label="Tab 1">
         <>
           <h2 className="utrecht-heading-2 rvo-heading rvo-heading--margin-1 rvo-heading--gap-sm">Tab 1</h2>
           <p className="rvo-paragraph rvo-paragraph--grijs-900">Content van tab 1</p>
@@ -69,7 +69,7 @@ export const WithTabItemChildren: Story = {
           <h2 className="utrecht-heading-2 rvo-heading rvo-heading--margin-1 rvo-heading--gap-sm">Tab 3</h2>
           <p className="rvo-paragraph rvo-paragraph--grijs-900">Content van tab 3</p>
         </>
-      </TabItem>
+      </TabItem> */}
     </Tabs>
   ),
 };
@@ -83,7 +83,7 @@ export const WithTableInPanel: Story = {
   },
   render: (args) => (
     <Tabs {...args}>
-      <TabItem label="Overzicht">
+      {/* <Tabs label="Overzicht">
         <LayoutFlow gap="xl">
           <div className="rvo-table--responsive">
             <table className="rvo-table">
@@ -191,7 +191,7 @@ export const WithTableInPanel: Story = {
       </TabItem>
       <TabItem label="Details">
         <p className="rvo-paragraph rvo-paragraph--grijs-900">Tweede tab met normale tekst content.</p>
-      </TabItem>
+      </TabItem> */}
     </Tabs>
   ),
 };

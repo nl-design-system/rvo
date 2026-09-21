@@ -2,7 +2,7 @@
   "version": "1.5.1",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
-  "name": "@nl-rvo/css-autocomplete",
+  "name": "@nl-rvo/css-form-autocomplete",
   "description": "Autocomplete CSS component",
   "keywords": [
     "nl-design-system",
@@ -19,7 +19,7 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/autocomplete.css",
+    ".": "./dist/form-autocomplete.css",
     "./dist/*": "./dist/*"
   },
   "publishConfig": {

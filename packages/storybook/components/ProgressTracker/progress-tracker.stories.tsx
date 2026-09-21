@@ -37,10 +37,6 @@ export default {
   title: 'Componenten/Progress Tracker',
   component: ProgressTracker,
   argTypes: {
-    steps: {
-      name: 'array',
-      required: true,
-    },
     children: {
       table: {
         disable: true,
@@ -63,8 +59,6 @@ export default {
 type Story = StoryObj<typeof ProgressTracker>;
 
 export const Base: Story = {
-  args: {
-    steps: defaultSteps,
-  },
+  args: {},
   name: 'Progress Tracker',
 };

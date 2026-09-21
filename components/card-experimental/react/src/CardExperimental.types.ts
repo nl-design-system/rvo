@@ -9,7 +9,7 @@ export interface CardComponents {
   Image: typeof CardImage;
 }
 
-export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IExperimentalCardProps extends React.HTMLAttributes<HTMLDivElement> {
   backgroundImage?: string;
   backgroundColor?: 'none' | 'wit' | 'grijs-100' | 'hemelblauw';
   className?: string;
@@ -19,12 +19,12 @@ export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
-export interface ICardContentProps {
+export interface IExperimentalCardContentProps {
   contentMarkup?: string | React.ReactNode;
   children?: React.ReactNode;
 }
 
-export interface ICardHeaderProps extends Pick<ILinkProps, 'href' | 'LinkComponent'> {
+export interface IExperimentalCardHeaderProps extends Pick<ILinkProps, 'href' | 'LinkComponent'> {
   children?: React.ReactNode;
   className?: string;
   fullCardLink?: boolean;
@@ -32,7 +32,7 @@ export interface ICardHeaderProps extends Pick<ILinkProps, 'href' | 'LinkCompone
   title?: string | React.ReactNode;
 }
 
-export interface ICardImageProps {
+export interface IExperimentalCardImageProps {
   imageAlt?: string;
   className?: string;
   imageSize?: 'sm' | 'md';

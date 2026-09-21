@@ -5,7 +5,7 @@ import { TableFooterType } from './table-footer';
 
 type TableChild = TableHeadType | TableBodyType | TableFooterType;
 
-export interface ITableProps extends HTMLAttributes<HTMLTableElement> {
+export interface IExpandableTableProps extends HTMLAttributes<HTMLTableElement> {
   caption?: string;
   className?: string;
   children?: TableChild | TableChild[];

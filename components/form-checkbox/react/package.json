@@ -8,7 +8,8 @@
     "nl-design-system",
     "nl-rvo",
     "react",
-    "form-checkbox"
+    "form",
+    "checkbox"
   ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",

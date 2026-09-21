@@ -19,7 +19,7 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-field-set.css",
+    ".": "./dist/form-fieldset.css",
     "./dist/*": "./dist/*"
   },
   "publishConfig": {

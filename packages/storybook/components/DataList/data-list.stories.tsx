@@ -4,12 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 export default {
   title: 'Componenten/Data list',
   component: DataList,
-  argTypes: {
-    items: {
-      name: 'array',
-      required: true,
-    },
-  },
+  argTypes: {},
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -26,20 +21,5 @@ export default {
 type Story = StoryObj<typeof DataList>;
 
 export const Base: Story = {
-  args: {
-    items: [
-      {
-        label: 'Voornaam',
-        value: 'Mees',
-      },
-      {
-        label: 'Achternaam',
-        value: 'de Vos',
-      },
-      {
-        label: 'Adres',
-        value: 'Tweede Kamer der Staten-Generaal\nPostbus 20018\n2500 EA Den Haag',
-      },
-    ],
-  },
+  args: {},
 };

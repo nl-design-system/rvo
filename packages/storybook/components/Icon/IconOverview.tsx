@@ -4,7 +4,7 @@
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
 import { Icon } from '@nl-rvo/component-library-react';
-import { iconColors, toProperCase } from '@nl-rvo/component-library-react/';
+import { iconColors } from '@nl-rvo/component-library-react/';
 import React from 'react';
 
 export const IconOverview: React.FC = ({
@@ -45,7 +45,7 @@ export const IconOverview: React.FC = ({
           >
             {Object.keys(iconList).map((categoryName) => (
               <option key={categoryName} value={categoryName}>
-                {toProperCase(categoryName)}
+                {categoryName}
               </option>
             ))}
           </select>
@@ -57,7 +57,7 @@ export const IconOverview: React.FC = ({
         return (
           <React.Fragment key={categoryName}>
             <h2 id={categoryName} style={{ paddingBlockStart: '55px' }}>
-              {toProperCase(categoryName)}
+              {categoryName}
             </h2>
             <div
               style={{

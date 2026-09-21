@@ -1,2 +1,2 @@
 export { ExpandableTable } from './ExpandableTable';
-export type { ITableProps } from './ExpandableTable.types';
+export type { IExpandableTableProps } from './ExpandableTable.types';

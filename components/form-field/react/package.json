@@ -30,6 +30,7 @@
     "@nl-rvo/css-form-field": "workspace:*",
     "@nl-rvo/react-expandable-content": "workspace:*",
     "@nl-rvo/react-form-feedback": "workspace:*",
-    "@nl-rvo/react-form-field-label": "workspace:*"
+    "@nl-rvo/react-form-text-input": "workspace:*",
+    "@nl-rvo/react-form-checkbox": "workspace:*"
   }
 }

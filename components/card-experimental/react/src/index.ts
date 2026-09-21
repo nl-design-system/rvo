@@ -1,2 +1,7 @@
 export { CardExperimental } from './CardExperimental';
-export type { ICardProps, ICardImageProps, ICardHeaderProps, ICardContentProps } from './CardExperimental.types';
+export type {
+  IExperimentalCardProps,
+  IExperimentalCardImageProps,
+  IExperimentalCardHeaderProps,
+  IExperimentalCardContentProps,
+} from './CardExperimental.types';

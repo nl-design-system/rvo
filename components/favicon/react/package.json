@@ -1,21 +1,27 @@
 {
-  "version": "1.1.0",
+  "version": "0.0.0",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
-  "name": "@nl-rvo/css-favicon",
-  "description": "Favicon CSS component",
+  "name": "@nl-rvo/react-favicon",
+  "description": "Favicon React component",
   "keywords": [
     "nl-design-system",
-    "css",
+    "nl-rvo",
+    "react",
     "favicon"
   ],
-  "private": true,
-  "publishConfig": {
-    "access": "public"
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
   },
-  "repository": {
-    "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/favicon"
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
   }
 }

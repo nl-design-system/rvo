@@ -1,4 +1,4 @@
-import * as componentLibraryReact from '@nl-rvo/component-library-react';
+import { Footer, Icon } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 const defaultFooterMenu = [
@@ -6,10 +6,10 @@ const defaultFooterMenu = [
     label: 'RVO',
     orientation: 'horizontal',
     items: [
-      { content: <componentLibraryReact.Icon icon="home" size="2xl" color="wit" />, link: '#' },
-      { content: <componentLibraryReact.Icon icon="tekstballon-met-hart" size="2xl" color="wit" />, link: '#' },
-      { content: <componentLibraryReact.Icon icon="computer" size="2xl" color="wit" />, link: '#' },
-      { content: <componentLibraryReact.Icon icon="drone" size="2xl" color="wit" />, link: '#' },
+      { content: <Icon icon="home" size="2xl" color="wit" />, link: '#' },
+      { content: <Icon icon="tekstballon-met-hart" size="2xl" color="wit" />, link: '#' },
+      { content: <Icon icon="computer" size="2xl" color="wit" />, link: '#' },
+      { content: <Icon icon="drone" size="2xl" color="wit" />, link: '#' },
     ],
   },
   {
@@ -53,7 +53,7 @@ const defaultSecondaryFooterMenu = [
 
 export default {
   title: 'Componenten/Footer',
-  component: componentLibraryReact.Footer,
+  component: Footer,
   args: {
     primaryMenu: defaultFooterMenu as any,
     secondaryMenu: defaultSecondaryFooterMenu,
@@ -101,7 +101,7 @@ export default {
       url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=287-6733&embed-host=share',
     },
   },
-} satisfies Meta<typeof componentLibraryReact.Footer>;
-type Story = StoryObj<typeof componentLibraryReact.Footer>;
+} satisfies Meta<typeof Footer>;
+type Story = StoryObj<typeof Footer>;
 
 export const Base: Story = {};

@@ -1,0 +1,10 @@
+import { Canvas, ArgTypes, Markdown, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FormTextareaStories from "./form-textarea.stories";
+
+<Meta of={FormTextareaStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormTextareaStories.Default} layout="padded" />
+
+<ArgTypes of={FormTextareaStories.Default} />

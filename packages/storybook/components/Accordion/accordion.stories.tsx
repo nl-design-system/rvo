@@ -5,9 +5,6 @@ export default {
   title: 'Componenten/Accordion',
   component: Accordion,
   argTypes: {
-    items: {
-      control: 'object',
-    },
     children: {
       table: {
         disable: true,
@@ -25,17 +22,27 @@ export default {
     },
   },
 } satisfies Meta<typeof Accordion>;
-type Story = StoryObj<typeof Accordion>;
+type Story = StoryObj;
 
 export const Default: Story = {
   name: 'Accordion',
-  args: {
-    items: [
-      { title: 'Accordion item 1', teaser: 'Teaser for accordion item 1', content: 'Item content' },
-      { title: 'Accordion item 2', teaser: 'Teaser for accordion item 2', content: 'Item content' },
-      { title: 'Accordion item 3', teaser: 'Teaser for accordion item 3', content: 'Item content' },
-      { title: 'Accordion item 4', teaser: 'Teaser for accordion item 4', content: 'Item content' },
-      { title: 'Accordion item 5', teaser: 'Teaser for accordion item 5', content: 'Item content' },
-    ],
-  },
+  render: () => (
+    <Accordion>
+      <Accordion.Item title="Accordion Item 1" teaser="Teaser for accordion item 1">
+        Item Content
+      </Accordion.Item>
+      <Accordion.Item title="Accordion Item 2" teaser="Teaser for accordion item 2">
+        Item Content
+      </Accordion.Item>
+      <Accordion.Item title="Accordion Item 3" teaser="Teaser for accordion item 3">
+        Item Content
+      </Accordion.Item>
+      <Accordion.Item title="Accordion Item 4" teaser="Teaser for accordion item 4">
+        Item Content
+      </Accordion.Item>
+      <Accordion.Item title="Accordion Item 5" teaser="Teaser for accordion item 5">
+        Item Content
+      </Accordion.Item>
+    </Accordion>
+  ),
 };
