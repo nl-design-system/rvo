@@ -834,7 +834,7 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
-        specifier: 1.0.0
+        specifier: workspace:*
         version: link:../../proprietary/assets
       '@nl-rvo/component-library-css':
         specifier: workspace:*
@@ -903,7 +903,7 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(@types/react@18.3.1)(react@18.3.1)
       '@nl-rvo/assets':
-        specifier: 1.0.0
+        specifier: workspace:*
         version: link:../../proprietary/assets
       '@nl-rvo/component-library-css':
         specifier: file:../component-library-css
@@ -1032,7 +1032,7 @@ importers:
         specifier: 7.23.0
         version: 7.23.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@mui/material@5.15.13(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.17.1(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@emotion/styled@11.14.0(@emotion/react@11.11.4(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1)(supports-color@9.4.0))(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(date-fns@3.4.0)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nl-rvo/assets':
-        specifier: 1.0.0
+        specifier: workspace:*
         version: link:../../proprietary/assets
       '@nl-rvo/design-tokens':
         specifier: workspace:*
@@ -4134,9 +4134,6 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
-
-  '@nl-rvo/assets@1.0.0':
-    resolution: {integrity: sha512-YEhM9bzgtsTFU1rbDhjm9oraHHCdeC9DqhiB473y4/NYaaENW8eP7ZCJYcEdG4ax/1tyDoC5e0FSkZNIgz4gJA==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -19727,8 +19724,6 @@ snapshots:
 
   '@next/swc-win32-x64-msvc@15.5.24':
     optional: true
-
-  '@nl-rvo/assets@1.0.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
