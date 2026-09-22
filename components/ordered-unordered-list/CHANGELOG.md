@@ -1,5 +1,11 @@
 # `@nl-rvo/css-ordered-unordered-list`
 
+## 1.4.2
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.4.1
 
 ### Patch Changes

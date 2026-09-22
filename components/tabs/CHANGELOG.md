@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tabs`
 
+## 2.0.2
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 2.0.1
 
 ### Patch Changes

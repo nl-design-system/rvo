@@ -1,5 +1,21 @@
 # `@nl-rvo/css-link`
 
+## 1.6.0
+
+### Minor Changes
+
+- b4c00c9: Add outline call-to-action variant to Link component
+
+  - New `call-to-action-outline` variant with white background and violet text/border, for use alongside the existing `call-to-action` variant
+  - Tokens follow the `--rvo-link-call-to-action-outline-*` naming pattern
+
+- c6093de: ROOS-349: refactor Link component, moved defaultArgs to storybook components
+
+### Patch Changes
+
+- 83a85f5: Implement the updated Icon component
+- 084a230: Ensure package is published with provenance
+
 ## 1.5.1
 
 ### Patch Changes

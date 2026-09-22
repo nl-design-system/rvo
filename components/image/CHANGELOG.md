@@ -1,5 +1,11 @@
 # @nl-rvo/css-image
 
+## 1.2.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.2.0
 
 ### Minor Changes

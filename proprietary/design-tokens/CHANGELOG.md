@@ -1,5 +1,28 @@
 # @nl-rvo/design-tokens
 
+## 2.5.0
+
+### Minor Changes
+
+- b4c00c9: Add outline call-to-action variant to Link component
+
+  - New `call-to-action-outline` variant with white background and violet text/border, for use alongside the existing `call-to-action` variant
+  - Tokens follow the `--rvo-link-call-to-action-outline-*` naming pattern
+
+### Patch Changes
+
+- ac29549: Improve focus visibility and add focus trap to mobile menu
+
+  - Add focus state to mobile menu toggle button
+  - Add focus state to mobile menu links
+  - Add focus state to dialog close button
+  - Add focus trap to dialog component
+  - Add `--rvo-mobile-menu-toggle-focus-color` design token
+  - Add `--rvo-mobile-menu-item-link-focus-color` design token
+  - Add `--rvo-focus-color` common design token
+
+- 084a230: Ensure package is published with provenance
+
 ## 2.4.2
 
 ### Patch Changes

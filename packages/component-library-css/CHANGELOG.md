@@ -1,5 +1,17 @@
 # @nl-rvo/component-library-css
 
+## 4.21.0
+
+### Minor Changes
+
+- 83a85f5: Cleaned up the icon styling
+
+### Patch Changes
+
+- 0e26aa5: Added hover styling to tag icons when they are clickable
+- a261cdb: ROOS-385: prevents user selection on checkbox-filter label and links
+- 084a230: Ensure package is published with provenance
+
 ## 4.20.3
 
 ### Patch Changes
