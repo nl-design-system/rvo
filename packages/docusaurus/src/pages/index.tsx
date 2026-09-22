@@ -1,7 +1,7 @@
 import DocusaurusLink from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Grid, Heading, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
+import { Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import type { ReactElement } from 'react';
@@ -56,10 +56,7 @@ export default function Home(): ReactElement {
                   </Heading>
                   De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS.
                 </div>
-                <span
-                  aria-hidden="true"
-                  className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                ></span>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
               </div>
             </div>
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
@@ -76,10 +73,7 @@ export default function Home(): ReactElement {
                   </Heading>
                   Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl.
                 </div>
-                <span
-                  aria-hidden="true"
-                  className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                ></span>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
               </div>
             </div>
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
@@ -96,10 +90,7 @@ export default function Home(): ReactElement {
                   </Heading>
                   Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
                 </div>
-                <span
-                  aria-hidden="true"
-                  className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                ></span>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
               </div>
             </div>
 
@@ -113,20 +104,13 @@ export default function Home(): ReactElement {
                       noUnderline={true}
                     >
                       <span className="rvo-layout-row rvo-layout-gap--sm">
-                        Figma{' '}
-                        <span
-                          aria-hidden="true"
-                          className="utrecht-icon rvo-icon rvo-icon-externe-link rvo-icon--md rvo-icon--hemelblauw"
-                        ></span>
+                        Figma <Icon size="md" icon="externe-link" color="hemelblauw" />
                       </span>
                     </Link>
                   </Heading>
                   Bekijk de ROOS componenten, patronen en templates in de Figma bibliotheek.
                 </div>
-                <span
-                  aria-hidden="true"
-                  className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                ></span>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
               </div>
             </div>
 
@@ -144,20 +128,13 @@ export default function Home(): ReactElement {
                       noUnderline={true}
                     >
                       <span className="rvo-layout-row rvo-layout-gap--sm">
-                        Storybook{' '}
-                        <span
-                          aria-hidden="true"
-                          className="utrecht-icon rvo-icon rvo-icon-externe-link rvo-icon--md rvo-icon--hemelblauw"
-                        ></span>
+                        Storybook <Icon size="md" icon="externe-link" color="hemelblauw" />
                       </span>
                     </Link>
                   </Heading>
                   Bekijk de code voorbeelden van de ROOS componenten, patronen en templates in Storybook.
                 </div>
-                <span
-                  aria-hidden="true"
-                  className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                ></span>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
               </div>
             </div>
             <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
@@ -170,20 +147,13 @@ export default function Home(): ReactElement {
                       noUnderline={true}
                     >
                       <span className="rvo-layout-row rvo-layout-gap--sm">
-                        GitHub{' '}
-                        <span
-                          aria-hidden="true"
-                          className="utrecht-icon rvo-icon rvo-icon-externe-link rvo-icon--md rvo-icon--hemelblauw"
-                        ></span>
+                        GitHub <Icon size="md" icon="externe-link" color="hemelblauw" />
                       </span>
                     </Link>
                   </Heading>
                   Werk mee aan ROOS in de GitHub repository.
                 </div>
-                <span
-                  aria-hidden="true"
-                  className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--sm rvo-icon--hemelblauw rvo-card__link-indicator"
-                ></span>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
               </div>
             </div>
           </Grid>
