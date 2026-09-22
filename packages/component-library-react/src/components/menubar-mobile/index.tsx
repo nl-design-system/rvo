@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, useState } from 'react';
-import { Icon, LinkCustomLinkComponent } from '../../index';
+import { Icon } from '../../index';
 import Button from '../button';
 import Dialog from '../dialog';
 import { MobileMenuItem } from './menu-item';
@@ -15,7 +15,6 @@ export interface IMobileMenuBarProps {
   children?: React.ReactNode;
   isOpen?: boolean;
   horizontalRule?: boolean;
-  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const MobileMenuBar: React.FC<IMobileMenuBarProps & HTMLAttributes<HTMLDivElement>> = ({
@@ -26,7 +25,6 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps & HTMLAttributes<HTMLDi
   isOpen = false,
   horizontalRule,
   children,
-  LinkComponent,
   ...rootElementProps
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(isOpen);
@@ -41,7 +39,6 @@ export const MobileMenuBar: React.FC<IMobileMenuBarProps & HTMLAttributes<HTMLDi
               iconPlacement={iconPlacement}
               useIcons={useIcons}
               iconSize={size}
-              LinkComponent={LinkComponent}
             />
           );
         })

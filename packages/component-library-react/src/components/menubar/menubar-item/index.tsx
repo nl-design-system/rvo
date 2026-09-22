@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line import/order
 import SubMenu from '../submenu';
 import '@nl-rvo/component-library-css/dist/components/menubar.css';
-import { Icon, Link, LinkCustomLinkComponent } from '../../../index';
+import { Icon, Link } from '../../../index';
 import { IMenuBarItem } from '../menubar';
 
 interface MenuBarItemProps extends IMenuBarItem {
@@ -16,7 +16,6 @@ interface MenuBarItemProps extends IMenuBarItem {
   direction?: 'horizontal' | 'vertical';
   grid?: boolean;
   handleItemClick?: (event: React.MouseEvent) => void;
-  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const MenuBarItem: React.FC<MenuBarItemProps> = ({
@@ -34,7 +33,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   grid,
   maxWidth,
   handleItemClick,
-  LinkComponent,
   ...rest
 }) => {
   const showIcon: 'no' | 'before' | 'after' = useIcons && icon ? iconPlacement : 'no';
@@ -73,7 +71,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
         showIcon={showIcon}
         icon={icon}
         iconSize={iconSizeForLink}
-        LinkComponent={LinkComponent}
         {...(submenu || typeof link === 'function'
           ? { onClick: handleClick, role: 'button' }
           : { href: link as string })}

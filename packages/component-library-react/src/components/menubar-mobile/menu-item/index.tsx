@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { Icon, Link, LinkCustomLinkComponent } from '../../../index';
+import { Icon, Link } from '../../../index';
 import { IMenuBarItem } from '../../menubar/menubar';
 import '@nl-rvo/component-library-css/dist/components/menubar-mobile.css';
 
@@ -9,11 +9,10 @@ export interface MobileMenuItemProps {
   iconPlacement?: 'before' | 'after';
   useIcons?: boolean;
   iconSize?: 'sm' | 'md' | 'lg';
-  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const MobileMenuItem: React.FC<MobileMenuItemProps> = (props: MobileMenuItemProps) => {
-  const { item, iconPlacement, useIcons, iconSize, LinkComponent } = props;
+  const { item, iconPlacement, useIcons, iconSize } = props;
 
   const [openSubMenu, setOpenSubmenu] = useState<boolean>(false);
 
@@ -30,7 +29,6 @@ export const MobileMenuItem: React.FC<MobileMenuItemProps> = (props: MobileMenuI
     <li className={clsx(item.useDivider && 'rvo-mobile-menu__item--with-divider')}>
       <Link
         className={clsx('rvo-mobile-menu__link', openSubMenu && 'rvo-mobile-menu__link--active')}
-        LinkComponent={LinkComponent}
         {...(item.submenu || typeof item.link === 'function'
           ? {
               onClick: (event) => {

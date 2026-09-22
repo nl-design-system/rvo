@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
-import { LinkCustomLinkComponent, MaxWidthLayout } from '../../../index';
+import { MaxWidthLayout } from '../../../index';
 import { IconType } from '../../icon/types';
 // eslint-disable-next-line import/order
 import { defaultArgs } from '../defaultArguments';
@@ -36,7 +36,6 @@ export interface IMenuBarProps {
   linkColor?: 'donkerblauw' | 'hemelblauw' | 'lintblauw' | 'grijs-700' | 'zwart';
   useBackgroundColor?: boolean;
   grid?: boolean;
-  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivElement>> = ({
@@ -50,7 +49,6 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
   linkColor = defaultArgs.linkColor,
   grid = defaultArgs.grid,
   children,
-  LinkComponent,
   ...rootElementProps
 }) => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
@@ -93,7 +91,6 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
                 direction={direction}
                 grid={grid}
                 maxWidth={maxWidth}
-                LinkComponent={LinkComponent}
                 {...item}
               />
             ))}
@@ -115,7 +112,6 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
                   direction={direction}
                   grid={grid}
                   maxWidth={maxWidth}
-                  LinkComponent={LinkComponent}
                   {...item}
                 />
               ))}
