@@ -495,7 +495,16 @@
         }
       },
       "focus": {
+        "color": {
+          "$value": "{rvo.color.zwart}"
+        },
         "outline-offset": {
+          "$value": "2px"
+        },
+        "text-decoration-thickness": {
+          "$value": "3px"
+        },
+        "text-underline-offset": {
           "$value": "2px"
         }
       }
@@ -1667,6 +1676,19 @@
         "background": {
           "bg-color": {
             "$value": "rgba(0,0,0,0.35)"
+          }
+        },
+        "close-button": {
+          "focus": {
+            "color": {
+              "$value": "{rvo.focus.color}"
+            },
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
+            }
           }
         }
       }
