@@ -2,7 +2,8 @@ import { translate } from '@docusaurus/Translate';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Header, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Logo, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { IMenuBarItem } from '@nl-rvo/component-library-react/dist/components/menubar/menubar';
 import clsx from 'clsx';
 import styles from './styles.module.css';
@@ -11,6 +12,8 @@ export default function NavbarLayout() {
   const {
     navbar: { hideOnScroll, logo, style, items },
   } = useThemeConfig();
+  const { siteConfig } = useDocusaurusContext();
+  const logoLinkTitle = siteConfig.customFields?.logoLinkTitle as string | undefined;
 
   const menuItems = (items as any[])?.map((item, index) => ({
     label: item.label,
@@ -25,7 +28,13 @@ export default function NavbarLayout() {
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   return (
     <>
-      {logo && logo.href && <Header link={logo.href} />}
+      {logo && logo.href && (
+        <header className="rvo-header">
+          <div className="rvo-header__logo-wrapper">
+            <Logo className="rvo-header__logo-img" link={logo.href} linkTitle={logoLinkTitle} />
+          </div>
+        </header>
+      )}
       <nav
         ref={navbarRef}
         aria-label={translate({

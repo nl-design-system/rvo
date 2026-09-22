@@ -2,7 +2,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
-import navigationConfig from './config/navigationConfig';
+import navigationConfig, { logoLinkTitle } from './config/navigationConfig';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
 import { rvoLightTheme } from './src/prism-theme';
 
@@ -11,6 +11,7 @@ const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 const config: Config = {
   title: 'ROOS Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
+  customFields: { logoLinkTitle },
   favicon: 'img/favicon.ico',
   url: process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
