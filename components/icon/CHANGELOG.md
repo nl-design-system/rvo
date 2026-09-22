@@ -1,5 +1,15 @@
 # `@nl-rvo/css-icon`
 
+## 1.6.0
+
+### Minor Changes
+
+- 83a85f5: Moved unneccersary functions from Icon and cleaned up the code for this component.
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.5.1
 
 ### Patch Changes
