@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textarea`
 
+## 1.5.2
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.5.1
 
 ### Patch Changes

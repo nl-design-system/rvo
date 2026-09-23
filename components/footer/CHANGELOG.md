@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.10.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.10.0
 
 ### Minor Changes

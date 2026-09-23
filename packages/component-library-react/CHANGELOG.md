@@ -1,5 +1,45 @@
 # @nl-rvo/component-library-react
 
+## 7.2.0
+
+### Minor Changes
+
+- 6089743: All icons are now decorative by default (WCAG SC 1.1.1). The icon `<span>` now always renders with `aria-hidden="true"`. The `ariaLabel` prop on `Icon` and `iconAriaLabel` on `Button` and `Link` are deprecated and will be removed in a future major release.
+- 0e26aa5: When and onClick is added to the Tag with an icon, the click event is added to the icon instead of the Tag Component
+- 7a0c916: feat(logo): add `linkTitle` prop to set title attribute on logo link
+- 6051320: ROOS-264: renamed content prop to children, moved defaultArgs to storybook and removed UX-Pin file
+- bcc44ec: Removed link behaviour from Header component to Logo component and fixed logo link focus state.
+- c6093de: ROOS-349: refactor Link component, moved defaultArgs to storybook components
+
+### Patch Changes
+
+- 109cbfa: fix(menubar-mobile): set aria-label of the menu dialog to "Menu"
+- 6d7d0ed: Add aria-expanded to mobile menu toggle button
+
+  - Communicate open/closed state of the mobile menu to assistive technologies
+
+- 40f109b: fix(menubar): fix icon-text alignment in MenuBarItem by using Link's showIcon prop
+- 83a85f5: Implemented the updated Icon component
+- 1bd0906: ROOS-387: adds LinkComponent prop forwarding to MenuBar and MobileMenu
+- a261cdb: ROOS-385: prevents user selection on checkbox-filter label and links
+- ac29549: Improve focus visibility and add focus trap to mobile menu
+
+  - Add focus state to mobile menu toggle button
+  - Add focus state to mobile menu links
+  - Add focus state to dialog close button
+  - Add focus trap to dialog component
+  - Add `--rvo-mobile-menu-toggle-focus-color` design token
+  - Add `--rvo-mobile-menu-item-link-focus-color` design token
+  - Add `--rvo-focus-color` common design token
+
+- 084a230: Ensure package is published with provenance
+- Updated dependencies [0e26aa5]
+- Updated dependencies [a261cdb]
+- Updated dependencies [084a230]
+- Updated dependencies [83a85f5]
+  - @nl-rvo/component-library-css@4.21.0
+  - @nl-rvo/css-card-experimental@0.3.2
+
 ## 7.1.3
 
 ### Patch Changes

@@ -10,7 +10,7 @@ import ComponentExample from "../../../../packages/docusaurus/src/components/Com
 
 # Fouten oplossen
 
-Als de bezoeker foutieve gegevens heeft ingevoerd, toon dan altijd een foutmelding bovenaan het formulier.
+Als de bezoeker geen of onjuiste gegevens heeft ingevoerd, toon dan altijd een foutmelding bovenaan het formulier.
 
 <ComponentExample>
   <div className="rvo-alert rvo-alert--error">
@@ -20,21 +20,21 @@ Als de bezoeker foutieve gegevens heeft ingevoerd, toon dan altijd een foutmeldi
         aria-hidden="true"
       ></span>
       <div className="rvo-alert-text">
-        <strong>Herstel de fouten om door te gaan</strong>
+        <strong>Er zijn velden niet of onjuist ingevuld. Herstel dit om door te gaan.</strong>
         <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
           <li>
-            {"Het invullen van uw "}
+            {"Het veld "}
             <a href="#naam" className="rvo-link rvo-link--donkerblauw">
-              {"naam"}
+              {"Naam"}
             </a>
-            {" is verplicht. Vul een antwoord in."}
+            {" is niet ingevuld, maar wel verplicht. Vul uw naam in."}
           </li>
           <li>
-            {"U heeft een ongeldig "}
+            {"Vul een geldig "}
             <a href="#emailadres" className="rvo-link rvo-link--donkerblauw">
               {"e-mailadres"}
             </a>
-            {" ingevuld. Vul uw juiste e-mailadres in."}
+            {" in."}
           </li>
           <li>
             {"Vul een geldig "}
@@ -53,4 +53,6 @@ Als de bezoeker foutieve gegevens heeft ingevoerd, toon dan altijd een foutmeldi
 
 - Toon een overzicht van alle fouten in het formulier in een error alert.
 - Maak alle fouten aanklikbaar zodat de gebruiker naar het desbetreffende veld navigeert en de fout kan herstellen.
+- De foutmeldingsteksten staan ook bij het veld.
+- Houd de foutmeldingen qua toon neutraal en leg de fout niet bij de bezoeker.
 - Schrijf foutmeldingen volgens de richtlijnen in de <a href="/rvo/docs/schrijfwijzer/meldingsteksten#foutmeldingen" className="rvo-link">schrijfwijzer over meldingsteksten</a>.
