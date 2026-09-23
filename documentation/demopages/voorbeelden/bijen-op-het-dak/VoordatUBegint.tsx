@@ -144,7 +144,12 @@ const VoordatUBegint = () => {
           </LayoutFlow>
 
           <div className="rvo-action-group">
-            <Link callToAction={true}>Start aanvraag</Link>
+            <Link
+              href="iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story"
+              callToAction={true}
+            >
+              Start aanvraag
+            </Link>
           </div>
         </LayoutFlow>
       </main>
