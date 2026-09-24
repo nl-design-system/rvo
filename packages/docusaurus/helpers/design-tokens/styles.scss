@@ -1,0 +1,41 @@
+.rvo-design-tokens__container {
+  margin-block-end: 2em;
+  margin-block-start: 2em;
+}
+
+.rvo-design-tokens__row {
+  align-items: center;
+  display: flex;
+  gap: 2em;
+  inline-size: 100%;
+  margin-block-end: 1em !important;
+}
+
+.rvo-design-tokens__column {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rvo-design-tokens__column--15 {
+  inline-size: 15%;
+}
+
+.rvo-design-tokens__column--20 {
+  inline-size: 20%;
+}
+
+.rvo-design-tokens__column--30 {
+  inline-size: 30%;
+}
+
+.rvo-design-tokens__column--50 {
+  inline-size: 50%;
+}
+
+.rvo-design-tokens__column--flex {
+  flex: 1;
+}

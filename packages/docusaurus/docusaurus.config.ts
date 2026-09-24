@@ -32,7 +32,7 @@ const config: Config = {
         id: 'default',
         sidebarPath: require.resolve('./config/docsSidebarConfig.js'),
         sidebarItemsGenerator,
-        path: path.resolve(__dirname, '../../documentation/pages'),
+        path: path.resolve(__dirname, 'pages'),
         routeBasePath: '/',
         editUrl: undefined,
         breadcrumbs: false,
