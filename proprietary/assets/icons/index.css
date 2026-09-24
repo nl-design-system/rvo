@@ -1,4 +1,5 @@
 .rvo-theme {
+  --rvo-icon-current: none;
   --rvo-icon-afhaalpunt: url("activiteiten/afhaalpunt.svg");
   --rvo-icon-crisisoverleg: url("activiteiten/crisisoverleg.svg");
   --rvo-icon-dansen: url("activiteiten/dansen.svg");
@@ -1162,4 +1163,4656 @@
   --rvo-icon-waterwaarschuwing: url("water/waterwaarschuwing.svg");
   --rvo-icon-zon-boven-oppervlaktewater: url("water/zon-boven-oppervlaktewater.svg");
   --rvo-icon-zoutgehalte-in-water: url("water/zoutgehalte-in-water.svg");
+}
+
+.rvo-icon-afhaalpunt {
+  --rvo-icon-current: var(--rvo-icon-afhaalpunt);
+}
+
+.rvo-icon-crisisoverleg {
+  --rvo-icon-current: var(--rvo-icon-crisisoverleg);
+}
+
+.rvo-icon-dansen {
+  --rvo-icon-current: var(--rvo-icon-dansen);
+}
+
+.rvo-icon-docent-voor-klas {
+  --rvo-icon-current: var(--rvo-icon-docent-voor-klas);
+}
+
+.rvo-icon-elleboognies {
+  --rvo-icon-current: var(--rvo-icon-elleboognies);
+}
+
+.rvo-icon-fysiotherapeut {
+  --rvo-icon-current: var(--rvo-icon-fysiotherapeut);
+}
+
+.rvo-icon-gevangene {
+  --rvo-icon-current: var(--rvo-icon-gevangene);
+}
+
+.rvo-icon-hulpverleners {
+  --rvo-icon-current: var(--rvo-icon-hulpverleners);
+}
+
+.rvo-icon-kind-in-kinderstoel {
+  --rvo-icon-current: var(--rvo-icon-kind-in-kinderstoel);
+}
+
+.rvo-icon-lopende-personen-met-koffer {
+  --rvo-icon-current: var(--rvo-icon-lopende-personen-met-koffer);
+}
+
+.rvo-icon-man-lopend {
+  --rvo-icon-current: var(--rvo-icon-man-lopend);
+}
+
+.rvo-icon-man-met-laptop {
+  --rvo-icon-current: var(--rvo-icon-man-met-laptop);
+}
+
+.rvo-icon-man-met-puzzelstuk {
+  --rvo-icon-current: var(--rvo-icon-man-met-puzzelstuk);
+}
+
+.rvo-icon-ongeval {
+  --rvo-icon-current: var(--rvo-icon-ongeval);
+}
+
+.rvo-icon-personen-gooien-auto-omver {
+  --rvo-icon-current: var(--rvo-icon-personen-gooien-auto-omver);
+}
+
+.rvo-icon-personen-in-gesprek {
+  --rvo-icon-current: var(--rvo-icon-personen-in-gesprek);
+}
+
+.rvo-icon-persoon-aan-balie {
+  --rvo-icon-current: var(--rvo-icon-persoon-aan-balie);
+}
+
+.rvo-icon-persoon-achter-stuur {
+  --rvo-icon-current: var(--rvo-icon-persoon-achter-stuur);
+}
+
+.rvo-icon-persoon-in-stoel-bij-raam-scherm {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-stoel-bij-raam-scherm);
+}
+
+.rvo-icon-persoon-lopend-met-koffer-en-rolkoffer {
+  --rvo-icon-current: var(--rvo-icon-persoon-lopend-met-koffer-en-rolkoffer);
+}
+
+.rvo-icon-persoon-lopend-met-koffer {
+  --rvo-icon-current: var(--rvo-icon-persoon-lopend-met-koffer);
+}
+
+.rvo-icon-persoon-lopend-met-tassen {
+  --rvo-icon-current: var(--rvo-icon-persoon-lopend-met-tassen);
+}
+
+.rvo-icon-persoon-lopend-op-zebrapad {
+  --rvo-icon-current: var(--rvo-icon-persoon-lopend-op-zebrapad);
+}
+
+.rvo-icon-persoon-met-capuchon-op-met-laptop {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-capuchon-op-met-laptop);
+}
+
+.rvo-icon-persoon-met-drone-besturing {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-drone-besturing);
+}
+
+.rvo-icon-persoon-met-schep-en-berg-aarde {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-schep-en-berg-aarde);
+}
+
+.rvo-icon-persoon-met-verstelbaar-bureau {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-verstelbaar-bureau);
+}
+
+.rvo-icon-persoon-onder-tafel {
+  --rvo-icon-current: var(--rvo-icon-persoon-onder-tafel);
+}
+
+.rvo-icon-persoon-op-hoverboard {
+  --rvo-icon-current: var(--rvo-icon-persoon-op-hoverboard);
+}
+
+.rvo-icon-persoon-op-zonnebank {
+  --rvo-icon-current: var(--rvo-icon-persoon-op-zonnebank);
+}
+
+.rvo-icon-persoon-zittend-in-stoel {
+  --rvo-icon-current: var(--rvo-icon-persoon-zittend-in-stoel);
+}
+
+.rvo-icon-presentatie-voor-groep {
+  --rvo-icon-current: var(--rvo-icon-presentatie-voor-groep);
+}
+
+.rvo-icon-rennend-kind {
+  --rvo-icon-current: var(--rvo-icon-rennend-kind);
+}
+
+.rvo-icon-rennend-persoon-met-rugzak {
+  --rvo-icon-current: var(--rvo-icon-rennend-persoon-met-rugzak);
+}
+
+.rvo-icon-sauna {
+  --rvo-icon-current: var(--rvo-icon-sauna);
+}
+
+.rvo-icon-silhouet-voor-beeldscherm {
+  --rvo-icon-current: var(--rvo-icon-silhouet-voor-beeldscherm);
+}
+
+.rvo-icon-silhouet-voor-scherm-raam-met-silhouet {
+  --rvo-icon-current: var(--rvo-icon-silhouet-voor-scherm-raam-met-silhouet);
+}
+
+.rvo-icon-slapend-persoon {
+  --rvo-icon-current: var(--rvo-icon-slapend-persoon);
+}
+
+.rvo-icon-snel-lopende-vrouw {
+  --rvo-icon-current: var(--rvo-icon-snel-lopende-vrouw);
+}
+
+.rvo-icon-spelend-kind-en-klimrek-onder-dak {
+  --rvo-icon-current: var(--rvo-icon-spelend-kind-en-klimrek-onder-dak);
+}
+
+.rvo-icon-spreker-voor-publiek {
+  --rvo-icon-current: var(--rvo-icon-spreker-voor-publiek);
+}
+
+.rvo-icon-trouwen {
+  --rvo-icon-current: var(--rvo-icon-trouwen);
+}
+
+.rvo-icon-vrouw-achter-katheder {
+  --rvo-icon-current: var(--rvo-icon-vrouw-achter-katheder);
+}
+
+.rvo-icon-vrouw-lopend {
+  --rvo-icon-current: var(--rvo-icon-vrouw-lopend);
+}
+
+.rvo-icon-vrouw-met-laptop {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-laptop);
+}
+
+.rvo-icon-vrouw-met-portemonnee {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-portemonnee);
+}
+
+.rvo-icon-wachtend-persoon {
+  --rvo-icon-current: var(--rvo-icon-wachtend-persoon);
+}
+
+.rvo-icon-zittend-persoon-achter-laptop {
+  --rvo-icon-current: var(--rvo-icon-zittend-persoon-achter-laptop);
+}
+
+.rvo-icon-beveiligingscamera {
+  --rvo-icon-current: var(--rvo-icon-beveiligingscamera);
+}
+
+.rvo-icon-brandende-lamp-met-copyright-teken {
+  --rvo-icon-current: var(--rvo-icon-brandende-lamp-met-copyright-teken);
+}
+
+.rvo-icon-film-projector {
+  --rvo-icon-current: var(--rvo-icon-film-projector);
+}
+
+.rvo-icon-filmstrip-met-plusteken {
+  --rvo-icon-current: var(--rvo-icon-filmstrip-met-plusteken);
+}
+
+.rvo-icon-foto-met-plusteken {
+  --rvo-icon-current: var(--rvo-icon-foto-met-plusteken);
+}
+
+.rvo-icon-fotocamera {
+  --rvo-icon-current: var(--rvo-icon-fotocamera);
+}
+
+.rvo-icon-handmicrofoon {
+  --rvo-icon-current: var(--rvo-icon-handmicrofoon);
+}
+
+.rvo-icon-hangende-spot {
+  --rvo-icon-current: var(--rvo-icon-hangende-spot);
+}
+
+.rvo-icon-koptelefoon-over-microfoon {
+  --rvo-icon-current: var(--rvo-icon-koptelefoon-over-microfoon);
+}
+
+.rvo-icon-koptelefoon {
+  --rvo-icon-current: var(--rvo-icon-koptelefoon);
+}
+
+.rvo-icon-megafoon {
+  --rvo-icon-current: var(--rvo-icon-megafoon);
+}
+
+.rvo-icon-microfoon {
+  --rvo-icon-current: var(--rvo-icon-microfoon);
+}
+
+.rvo-icon-oordopjes {
+  --rvo-icon-current: var(--rvo-icon-oordopjes);
+}
+
+.rvo-icon-stapel-fotos {
+  --rvo-icon-current: var(--rvo-icon-stapel-fotos);
+}
+
+.rvo-icon-verbod-fotografie {
+  --rvo-icon-current: var(--rvo-icon-verbod-fotografie);
+}
+
+.rvo-icon-videocamera {
+  --rvo-icon-current: var(--rvo-icon-videocamera);
+}
+
+.rvo-icon-virtual-reality {
+  --rvo-icon-current: var(--rvo-icon-virtual-reality);
+}
+
+.rvo-icon-gesprek-over-welzijn {
+  --rvo-icon-current: var(--rvo-icon-gesprek-over-welzijn);
+}
+
+.rvo-icon-mobiel-in-hand {
+  --rvo-icon-current: var(--rvo-icon-mobiel-in-hand);
+}
+
+.rvo-icon-nl-alert {
+  --rvo-icon-current: var(--rvo-icon-nl-alert);
+}
+
+.rvo-icon-tekstballon-met-hart {
+  --rvo-icon-current: var(--rvo-icon-tekstballon-met-hart);
+}
+
+.rvo-icon-tekstballon-met-potlood {
+  --rvo-icon-current: var(--rvo-icon-tekstballon-met-potlood);
+}
+
+.rvo-icon-tekstballonnen-met-internationaal-gesprek {
+  --rvo-icon-current: var(--rvo-icon-tekstballonnen-met-internationaal-gesprek);
+}
+
+.rvo-icon-tekstballonnen-met-krul {
+  --rvo-icon-current: var(--rvo-icon-tekstballonnen-met-krul);
+}
+
+.rvo-icon-tekstballonnen-met-punten {
+  --rvo-icon-current: var(--rvo-icon-tekstballonnen-met-punten);
+}
+
+.rvo-icon-tekstballonnen-met-vraagteken {
+  --rvo-icon-current: var(--rvo-icon-tekstballonnen-met-vraagteken);
+}
+
+.rvo-icon-tekstballonnen {
+  --rvo-icon-current: var(--rvo-icon-tekstballonnen);
+}
+
+.rvo-icon-verbodbellen {
+  --rvo-icon-current: var(--rvo-icon-verbodbellen);
+}
+
+.rvo-icon-applicatie {
+  --rvo-icon-current: var(--rvo-icon-applicatie);
+}
+
+.rvo-icon-basisregistratie {
+  --rvo-icon-current: var(--rvo-icon-basisregistratie);
+}
+
+.rvo-icon-beeldbellen {
+  --rvo-icon-current: var(--rvo-icon-beeldbellen);
+}
+
+.rvo-icon-beeldscherm-met-hart {
+  --rvo-icon-current: var(--rvo-icon-beeldscherm-met-hart);
+}
+
+.rvo-icon-beeldscherm-met-streep-erdoor {
+  --rvo-icon-current: var(--rvo-icon-beeldscherm-met-streep-erdoor);
+}
+
+.rvo-icon-chip {
+  --rvo-icon-current: var(--rvo-icon-chip);
+}
+
+.rvo-icon-computer {
+  --rvo-icon-current: var(--rvo-icon-computer);
+}
+
+.rvo-icon-computercode {
+  --rvo-icon-current: var(--rvo-icon-computercode);
+}
+
+.rvo-icon-cybersecurity {
+  --rvo-icon-current: var(--rvo-icon-cybersecurity);
+}
+
+.rvo-icon-database {
+  --rvo-icon-current: var(--rvo-icon-database);
+}
+
+.rvo-icon-dataverkeer {
+  --rvo-icon-current: var(--rvo-icon-dataverkeer);
+}
+
+.rvo-icon-digitaal-onderzoek {
+  --rvo-icon-current: var(--rvo-icon-digitaal-onderzoek);
+}
+
+.rvo-icon-digitale-uitwisseling {
+  --rvo-icon-current: var(--rvo-icon-digitale-uitwisseling);
+}
+
+.rvo-icon-digitalisering {
+  --rvo-icon-current: var(--rvo-icon-digitalisering);
+}
+
+.rvo-icon-ga-naar-www {
+  --rvo-icon-current: var(--rvo-icon-ga-naar-www);
+}
+
+.rvo-icon-gamecontroller {
+  --rvo-icon-current: var(--rvo-icon-gamecontroller);
+}
+
+.rvo-icon-grafieken-op-beeldscherm {
+  --rvo-icon-current: var(--rvo-icon-grafieken-op-beeldscherm);
+}
+
+.rvo-icon-hybride-laptop {
+  --rvo-icon-current: var(--rvo-icon-hybride-laptop);
+}
+
+.rvo-icon-ict {
+  --rvo-icon-current: var(--rvo-icon-ict);
+}
+
+.rvo-icon-informatie-op-internet {
+  --rvo-icon-current: var(--rvo-icon-informatie-op-internet);
+}
+
+.rvo-icon-internet-archief {
+  --rvo-icon-current: var(--rvo-icon-internet-archief);
+}
+
+.rvo-icon-internet {
+  --rvo-icon-current: var(--rvo-icon-internet);
+}
+
+.rvo-icon-laptop-met-huis {
+  --rvo-icon-current: var(--rvo-icon-laptop-met-huis);
+}
+
+.rvo-icon-laptop {
+  --rvo-icon-current: var(--rvo-icon-laptop);
+}
+
+.rvo-icon-nieuwe-computer {
+  --rvo-icon-current: var(--rvo-icon-nieuwe-computer);
+}
+
+.rvo-icon-online-groepstraining {
+  --rvo-icon-current: var(--rvo-icon-online-groepstraining);
+}
+
+.rvo-icon-online-leren {
+  --rvo-icon-current: var(--rvo-icon-online-leren);
+}
+
+.rvo-icon-oude-computer {
+  --rvo-icon-current: var(--rvo-icon-oude-computer);
+}
+
+.rvo-icon-server {
+  --rvo-icon-current: var(--rvo-icon-server);
+}
+
+.rvo-icon-smartphone-bedienen-met-vinger {
+  --rvo-icon-current: var(--rvo-icon-smartphone-bedienen-met-vinger);
+}
+
+.rvo-icon-smartphone-met-streep-erdoor {
+  --rvo-icon-current: var(--rvo-icon-smartphone-met-streep-erdoor);
+}
+
+.rvo-icon-tablet {
+  --rvo-icon-current: var(--rvo-icon-tablet);
+}
+
+.rvo-icon-televisie {
+  --rvo-icon-current: var(--rvo-icon-televisie);
+}
+
+.rvo-icon-usb-lader {
+  --rvo-icon-current: var(--rvo-icon-usb-lader);
+}
+
+.rvo-icon-ux-design {
+  --rvo-icon-current: var(--rvo-icon-ux-design);
+}
+
+.rvo-icon-website {
+  --rvo-icon-current: var(--rvo-icon-website);
+}
+
+.rvo-icon-webwinkel {
+  --rvo-icon-current: var(--rvo-icon-webwinkel);
+}
+
+.rvo-icon-wifi {
+  --rvo-icon-current: var(--rvo-icon-wifi);
+}
+
+.rvo-icon-wiki {
+  --rvo-icon-current: var(--rvo-icon-wiki);
+}
+
+.rvo-icon-zendmast {
+  --rvo-icon-current: var(--rvo-icon-zendmast);
+}
+
+.rvo-icon-beveiligingsscan {
+  --rvo-icon-current: var(--rvo-icon-beveiligingsscan);
+}
+
+.rvo-icon-bezoekersruimte-gedetineerden {
+  --rvo-icon-current: var(--rvo-icon-bezoekersruimte-gedetineerden);
+}
+
+.rvo-icon-bom {
+  --rvo-icon-current: var(--rvo-icon-bom);
+}
+
+.rvo-icon-bommelding {
+  --rvo-icon-current: var(--rvo-icon-bommelding);
+}
+
+.rvo-icon-doping {
+  --rvo-icon-current: var(--rvo-icon-doping);
+}
+
+.rvo-icon-drugs-pillen {
+  --rvo-icon-current: var(--rvo-icon-drugs-pillen);
+}
+
+.rvo-icon-drugs {
+  --rvo-icon-current: var(--rvo-icon-drugs);
+}
+
+.rvo-icon-enkelband {
+  --rvo-icon-current: var(--rvo-icon-enkelband);
+}
+
+.rvo-icon-gijzeling {
+  --rvo-icon-current: var(--rvo-icon-gijzeling);
+}
+
+.rvo-icon-handboeien {
+  --rvo-icon-current: var(--rvo-icon-handboeien);
+}
+
+.rvo-icon-harddrugs {
+  --rvo-icon-current: var(--rvo-icon-harddrugs);
+}
+
+.rvo-icon-ongeoorloofde-afwezigheid {
+  --rvo-icon-current: var(--rvo-icon-ongeoorloofde-afwezigheid);
+}
+
+.rvo-icon-ontvluchting {
+  --rvo-icon-current: var(--rvo-icon-ontvluchting);
+}
+
+.rvo-icon-overlijden-in-detentie {
+  --rvo-icon-current: var(--rvo-icon-overlijden-in-detentie);
+}
+
+.rvo-icon-overval {
+  --rvo-icon-current: var(--rvo-icon-overval);
+}
+
+.rvo-icon-straatroof {
+  --rvo-icon-current: var(--rvo-icon-straatroof);
+}
+
+.rvo-icon-verbod-softdrugs {
+  --rvo-icon-current: var(--rvo-icon-verbod-softdrugs);
+}
+
+.rvo-icon-verbod-wapens {
+  --rvo-icon-current: var(--rvo-icon-verbod-wapens);
+}
+
+.rvo-icon-waterpijp {
+  --rvo-icon-current: var(--rvo-icon-waterpijp);
+}
+
+.rvo-icon-wetboek {
+  --rvo-icon-current: var(--rvo-icon-wetboek);
+}
+
+.rvo-icon-wiet {
+  --rvo-icon-current: var(--rvo-icon-wiet);
+}
+
+.rvo-icon-landschapselement {
+  --rvo-icon-current: var(--rvo-icon-landschapselement);
+}
+
+.rvo-icon-splitsen-perceel {
+  --rvo-icon-current: var(--rvo-icon-splitsen-perceel);
+}
+
+.rvo-icon-splitsen-water {
+  --rvo-icon-current: var(--rvo-icon-splitsen-water);
+}
+
+.rvo-icon-dierentuin {
+  --rvo-icon-current: var(--rvo-icon-dierentuin);
+}
+
+.rvo-icon-eend-zwemmend-bij-riet {
+  --rvo-icon-current: var(--rvo-icon-eend-zwemmend-bij-riet);
+}
+
+.rvo-icon-fazant {
+  --rvo-icon-current: var(--rvo-icon-fazant);
+}
+
+.rvo-icon-geit {
+  --rvo-icon-current: var(--rvo-icon-geit);
+}
+
+.rvo-icon-geleidehond {
+  --rvo-icon-current: var(--rvo-icon-geleidehond);
+}
+
+.rvo-icon-haan-en-fazant {
+  --rvo-icon-current: var(--rvo-icon-haan-en-fazant);
+}
+
+.rvo-icon-haan {
+  --rvo-icon-current: var(--rvo-icon-haan);
+}
+
+.rvo-icon-hert {
+  --rvo-icon-current: var(--rvo-icon-hert);
+}
+
+.rvo-icon-hond-met-kluif-en-klok {
+  --rvo-icon-current: var(--rvo-icon-hond-met-kluif-en-klok);
+}
+
+.rvo-icon-hond-uitlaten {
+  --rvo-icon-current: var(--rvo-icon-hond-uitlaten);
+}
+
+.rvo-icon-hond {
+  --rvo-icon-current: var(--rvo-icon-hond);
+}
+
+.rvo-icon-ius-opvang {
+  --rvo-icon-current: var(--rvo-icon-ius-opvang);
+}
+
+.rvo-icon-kat-en-hond {
+  --rvo-icon-current: var(--rvo-icon-kat-en-hond);
+}
+
+.rvo-icon-kikker {
+  --rvo-icon-current: var(--rvo-icon-kikker);
+}
+
+.rvo-icon-koe-gevlekt {
+  --rvo-icon-current: var(--rvo-icon-koe-gevlekt);
+}
+
+.rvo-icon-koe {
+  --rvo-icon-current: var(--rvo-icon-koe);
+}
+
+.rvo-icon-mier {
+  --rvo-icon-current: var(--rvo-icon-mier);
+}
+
+.rvo-icon-muis {
+  --rvo-icon-current: var(--rvo-icon-muis);
+}
+
+.rvo-icon-nerts {
+  --rvo-icon-current: var(--rvo-icon-nerts);
+}
+
+.rvo-icon-neushoorn-met-uitroepteken {
+  --rvo-icon-current: var(--rvo-icon-neushoorn-met-uitroepteken);
+}
+
+.rvo-icon-pauw {
+  --rvo-icon-current: var(--rvo-icon-pauw);
+}
+
+.rvo-icon-plofkip {
+  --rvo-icon-current: var(--rvo-icon-plofkip);
+}
+
+.rvo-icon-rups {
+  --rvo-icon-current: var(--rvo-icon-rups);
+}
+
+.rvo-icon-schaap {
+  --rvo-icon-current: var(--rvo-icon-schaap);
+}
+
+.rvo-icon-schelp {
+  --rvo-icon-current: var(--rvo-icon-schelp);
+}
+
+.rvo-icon-schelpdier {
+  --rvo-icon-current: var(--rvo-icon-schelpdier);
+}
+
+.rvo-icon-slang {
+  --rvo-icon-current: var(--rvo-icon-slang);
+}
+
+.rvo-icon-twee-vissen {
+  --rvo-icon-current: var(--rvo-icon-twee-vissen);
+}
+
+.rvo-icon-uil {
+  --rvo-icon-current: var(--rvo-icon-uil);
+}
+
+.rvo-icon-varken-en-koe {
+  --rvo-icon-current: var(--rvo-icon-varken-en-koe);
+}
+
+.rvo-icon-varken {
+  --rvo-icon-current: var(--rvo-icon-varken);
+}
+
+.rvo-icon-verbod-hond {
+  --rvo-icon-current: var(--rvo-icon-verbod-hond);
+}
+
+.rvo-icon-vis-met-klok {
+  --rvo-icon-current: var(--rvo-icon-vis-met-klok);
+}
+
+.rvo-icon-vis {
+  --rvo-icon-current: var(--rvo-icon-vis);
+}
+
+.rvo-icon-waterschildpad {
+  --rvo-icon-current: var(--rvo-icon-waterschildpad);
+}
+
+.rvo-icon-zeeleeuw {
+  --rvo-icon-current: var(--rvo-icon-zeeleeuw);
+}
+
+.rvo-icon-accu {
+  --rvo-icon-current: var(--rvo-icon-accu);
+}
+
+.rvo-icon-atoom-wetenschap {
+  --rvo-icon-current: var(--rvo-icon-atoom-wetenschap);
+}
+
+.rvo-icon-batterij {
+  --rvo-icon-current: var(--rvo-icon-batterij);
+}
+
+.rvo-icon-biobrandstof {
+  --rvo-icon-current: var(--rvo-icon-biobrandstof);
+}
+
+.rvo-icon-elektriciteit {
+  --rvo-icon-current: var(--rvo-icon-elektriciteit);
+}
+
+.rvo-icon-erlenmeyer-chemie {
+  --rvo-icon-current: var(--rvo-icon-erlenmeyer-chemie);
+}
+
+.rvo-icon-gaspit-aan {
+  --rvo-icon-current: var(--rvo-icon-gaspit-aan);
+}
+
+.rvo-icon-gaspit-uit {
+  --rvo-icon-current: var(--rvo-icon-gaspit-uit);
+}
+
+.rvo-icon-gevaarlijke-stoffen {
+  --rvo-icon-current: var(--rvo-icon-gevaarlijke-stoffen);
+}
+
+.rvo-icon-groene-energie {
+  --rvo-icon-current: var(--rvo-icon-groene-energie);
+}
+
+.rvo-icon-hoogspanningsmast {
+  --rvo-icon-current: var(--rvo-icon-hoogspanningsmast);
+}
+
+.rvo-icon-kerncentrale {
+  --rvo-icon-current: var(--rvo-icon-kerncentrale);
+}
+
+.rvo-icon-kernongeval {
+  --rvo-icon-current: var(--rvo-icon-kernongeval);
+}
+
+.rvo-icon-kernreactorgebouw-naast-schoorsteen {
+  --rvo-icon-current: var(--rvo-icon-kernreactorgebouw-naast-schoorsteen);
+}
+
+.rvo-icon-kookbrander {
+  --rvo-icon-current: var(--rvo-icon-kookbrander);
+}
+
+.rvo-icon-molecuul {
+  --rvo-icon-current: var(--rvo-icon-molecuul);
+}
+
+.rvo-icon-netwerk {
+  --rvo-icon-current: var(--rvo-icon-netwerk);
+}
+
+.rvo-icon-radioactiviteit {
+  --rvo-icon-current: var(--rvo-icon-radioactiviteit);
+}
+
+.rvo-icon-uitval-stroomvoorziening {
+  --rvo-icon-current: var(--rvo-icon-uitval-stroomvoorziening);
+}
+
+.rvo-icon-waarschuwingsbord-radioactiviteit {
+  --rvo-icon-current: var(--rvo-icon-waarschuwingsbord-radioactiviteit);
+}
+
+.rvo-icon-warmte {
+  --rvo-icon-current: var(--rvo-icon-warmte);
+}
+
+.rvo-icon-windenergie {
+  --rvo-icon-current: var(--rvo-icon-windenergie);
+}
+
+.rvo-icon-zonnepaneel {
+  --rvo-icon-current: var(--rvo-icon-zonnepaneel);
+}
+
+.rvo-icon-activiteit {
+  --rvo-icon-current: var(--rvo-icon-activiteit);
+}
+
+.rvo-icon-agile-werken {
+  --rvo-icon-current: var(--rvo-icon-agile-werken);
+}
+
+.rvo-icon-api-inrichting {
+  --rvo-icon-current: var(--rvo-icon-api-inrichting);
+}
+
+.rvo-icon-audio {
+  --rvo-icon-current: var(--rvo-icon-audio);
+}
+
+.rvo-icon-bel {
+  --rvo-icon-current: var(--rvo-icon-bel);
+}
+
+.rvo-icon-bewerken {
+  --rvo-icon-current: var(--rvo-icon-bewerken);
+}
+
+.rvo-icon-blog {
+  --rvo-icon-current: var(--rvo-icon-blog);
+}
+
+.rvo-icon-comment {
+  --rvo-icon-current: var(--rvo-icon-comment);
+}
+
+.rvo-icon-communicatie {
+  --rvo-icon-current: var(--rvo-icon-communicatie);
+}
+
+.rvo-icon-delen {
+  --rvo-icon-current: var(--rvo-icon-delen);
+}
+
+.rvo-icon-delta-naar-links {
+  --rvo-icon-current: var(--rvo-icon-delta-naar-links);
+}
+
+.rvo-icon-delta-naar-rechts {
+  --rvo-icon-current: var(--rvo-icon-delta-naar-rechts);
+}
+
+.rvo-icon-delta-omhoog {
+  --rvo-icon-current: var(--rvo-icon-delta-omhoog);
+}
+
+.rvo-icon-delta-omlaag {
+  --rvo-icon-current: var(--rvo-icon-delta-omlaag);
+}
+
+.rvo-icon-diagonale-pijl {
+  --rvo-icon-current: var(--rvo-icon-diagonale-pijl);
+}
+
+.rvo-icon-downloaden {
+  --rvo-icon-current: var(--rvo-icon-downloaden);
+}
+
+.rvo-icon-externe-link {
+  --rvo-icon-current: var(--rvo-icon-externe-link);
+}
+
+.rvo-icon-favoriet {
+  --rvo-icon-current: var(--rvo-icon-favoriet);
+}
+
+.rvo-icon-foto-vergroten {
+  --rvo-icon-current: var(--rvo-icon-foto-vergroten);
+}
+
+.rvo-icon-gegevensuitwisseling {
+  --rvo-icon-current: var(--rvo-icon-gegevensuitwisseling);
+}
+
+.rvo-icon-geluid-aan {
+  --rvo-icon-current: var(--rvo-icon-geluid-aan);
+}
+
+.rvo-icon-geluid-uit {
+  --rvo-icon-current: var(--rvo-icon-geluid-uit);
+}
+
+.rvo-icon-haakse-pijl {
+  --rvo-icon-current: var(--rvo-icon-haakse-pijl);
+}
+
+.rvo-icon-hashtag {
+  --rvo-icon-current: var(--rvo-icon-hashtag);
+}
+
+.rvo-icon-home {
+  --rvo-icon-current: var(--rvo-icon-home);
+}
+
+.rvo-icon-info {
+  --rvo-icon-current: var(--rvo-icon-info);
+}
+
+.rvo-icon-inloggen {
+  --rvo-icon-current: var(--rvo-icon-inloggen);
+}
+
+.rvo-icon-instellingen {
+  --rvo-icon-current: var(--rvo-icon-instellingen);
+}
+
+.rvo-icon-interne-link {
+  --rvo-icon-current: var(--rvo-icon-interne-link);
+}
+
+.rvo-icon-kalender {
+  --rvo-icon-current: var(--rvo-icon-kalender);
+}
+
+.rvo-icon-klok {
+  --rvo-icon-current: var(--rvo-icon-klok);
+}
+
+.rvo-icon-kruis {
+  --rvo-icon-current: var(--rvo-icon-kruis);
+}
+
+.rvo-icon-let-op-met-loep {
+  --rvo-icon-current: var(--rvo-icon-let-op-met-loep);
+}
+
+.rvo-icon-let-op {
+  --rvo-icon-current: var(--rvo-icon-let-op);
+}
+
+.rvo-icon-locatiemarker {
+  --rvo-icon-current: var(--rvo-icon-locatiemarker);
+}
+
+.rvo-icon-mail {
+  --rvo-icon-current: var(--rvo-icon-mail);
+}
+
+.rvo-icon-meer {
+  --rvo-icon-current: var(--rvo-icon-meer);
+}
+
+.rvo-icon-menu {
+  --rvo-icon-current: var(--rvo-icon-menu);
+}
+
+.rvo-icon-nieuws {
+  --rvo-icon-current: var(--rvo-icon-nieuws);
+}
+
+.rvo-icon-paperclip {
+  --rvo-icon-current: var(--rvo-icon-paperclip);
+}
+
+.rvo-icon-permanent-beta {
+  --rvo-icon-current: var(--rvo-icon-permanent-beta);
+}
+
+.rvo-icon-pijl-naar-rechts {
+  --rvo-icon-current: var(--rvo-icon-pijl-naar-rechts);
+}
+
+.rvo-icon-pijl-naar-rechtsboven {
+  --rvo-icon-current: var(--rvo-icon-pijl-naar-rechtsboven);
+}
+
+.rvo-icon-pijl-omhoog {
+  --rvo-icon-current: var(--rvo-icon-pijl-omhoog);
+}
+
+.rvo-icon-pijl-omlaag {
+  --rvo-icon-current: var(--rvo-icon-pijl-omlaag);
+}
+
+.rvo-icon-plus {
+  --rvo-icon-current: var(--rvo-icon-plus);
+}
+
+.rvo-icon-printer {
+  --rvo-icon-current: var(--rvo-icon-printer);
+}
+
+.rvo-icon-publicatie {
+  --rvo-icon-current: var(--rvo-icon-publicatie);
+}
+
+.rvo-icon-rechte-pijl {
+  --rvo-icon-current: var(--rvo-icon-rechte-pijl);
+}
+
+.rvo-icon-refresh {
+  --rvo-icon-current: var(--rvo-icon-refresh);
+}
+
+.rvo-icon-rss {
+  --rvo-icon-current: var(--rvo-icon-rss);
+}
+
+.rvo-icon-save {
+  --rvo-icon-current: var(--rvo-icon-save);
+}
+
+.rvo-icon-secure-link {
+  --rvo-icon-current: var(--rvo-icon-secure-link);
+}
+
+.rvo-icon-smartphone {
+  --rvo-icon-current: var(--rvo-icon-smartphone);
+}
+
+.rvo-icon-tegelweergave {
+  --rvo-icon-current: var(--rvo-icon-tegelweergave);
+}
+
+.rvo-icon-telefoon {
+  --rvo-icon-current: var(--rvo-icon-telefoon);
+}
+
+.rvo-icon-terug {
+  --rvo-icon-current: var(--rvo-icon-terug);
+}
+
+.rvo-icon-toegankelijkheid {
+  --rvo-icon-current: var(--rvo-icon-toegankelijkheid);
+}
+
+.rvo-icon-toelichting {
+  --rvo-icon-current: var(--rvo-icon-toelichting);
+}
+
+.rvo-icon-uit-aanknop {
+  --rvo-icon-current: var(--rvo-icon-uit-aanknop);
+}
+
+.rvo-icon-upload {
+  --rvo-icon-current: var(--rvo-icon-upload);
+}
+
+.rvo-icon-user {
+  --rvo-icon-current: var(--rvo-icon-user);
+}
+
+.rvo-icon-versleutelen {
+  --rvo-icon-current: var(--rvo-icon-versleutelen);
+}
+
+.rvo-icon-verwijderen {
+  --rvo-icon-current: var(--rvo-icon-verwijderen);
+}
+
+.rvo-icon-verzenden {
+  --rvo-icon-current: var(--rvo-icon-verzenden);
+}
+
+.rvo-icon-video {
+  --rvo-icon-current: var(--rvo-icon-video);
+}
+
+.rvo-icon-vinkje {
+  --rvo-icon-current: var(--rvo-icon-vinkje);
+}
+
+.rvo-icon-vraagteken {
+  --rvo-icon-current: var(--rvo-icon-vraagteken);
+}
+
+.rvo-icon-zoek {
+  --rvo-icon-current: var(--rvo-icon-zoek);
+}
+
+.rvo-icon-actieve-gevel {
+  --rvo-icon-current: var(--rvo-icon-actieve-gevel);
+}
+
+.rvo-icon-adl-woning {
+  --rvo-icon-current: var(--rvo-icon-adl-woning);
+}
+
+.rvo-icon-ambassade-consulaat {
+  --rvo-icon-current: var(--rvo-icon-ambassade-consulaat);
+}
+
+.rvo-icon-bakkerijketens {
+  --rvo-icon-current: var(--rvo-icon-bakkerijketens);
+}
+
+.rvo-icon-basis-kantoorgebouw {
+  --rvo-icon-current: var(--rvo-icon-basis-kantoorgebouw);
+}
+
+.rvo-icon-beschermde-woonomgeving {
+  --rvo-icon-current: var(--rvo-icon-beschermde-woonomgeving);
+}
+
+.rvo-icon-cateringbedrijven {
+  --rvo-icon-current: var(--rvo-icon-cateringbedrijven);
+}
+
+.rvo-icon-circulaire-bouw {
+  --rvo-icon-current: var(--rvo-icon-circulaire-bouw);
+}
+
+.rvo-icon-coffeeshop-in-wijk {
+  --rvo-icon-current: var(--rvo-icon-coffeeshop-in-wijk);
+}
+
+.rvo-icon-coffeeshop {
+  --rvo-icon-current: var(--rvo-icon-coffeeshop);
+}
+
+.rvo-icon-dorp {
+  --rvo-icon-current: var(--rvo-icon-dorp);
+}
+
+.rvo-icon-dreiging-van-buitenaf {
+  --rvo-icon-current: var(--rvo-icon-dreiging-van-buitenaf);
+}
+
+.rvo-icon-drie-personen-in-huis {
+  --rvo-icon-current: var(--rvo-icon-drie-personen-in-huis);
+}
+
+.rvo-icon-evenemententent {
+  --rvo-icon-current: var(--rvo-icon-evenemententent);
+}
+
+.rvo-icon-excellente-scholen {
+  --rvo-icon-current: var(--rvo-icon-excellente-scholen);
+}
+
+.rvo-icon-fabriek-aan-water {
+  --rvo-icon-current: var(--rvo-icon-fabriek-aan-water);
+}
+
+.rvo-icon-fabriek-met-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-fabriek-met-stapel-munten);
+}
+
+.rvo-icon-festival-ehbo {
+  --rvo-icon-current: var(--rvo-icon-festival-ehbo);
+}
+
+.rvo-icon-flat {
+  --rvo-icon-current: var(--rvo-icon-flat);
+}
+
+.rvo-icon-gebouw-cak {
+  --rvo-icon-current: var(--rvo-icon-gebouw-cak);
+}
+
+.rvo-icon-gebouw-cjib {
+  --rvo-icon-current: var(--rvo-icon-gebouw-cjib);
+}
+
+.rvo-icon-gebouw-cvz {
+  --rvo-icon-current: var(--rvo-icon-gebouw-cvz);
+}
+
+.rvo-icon-gebouw-ggz {
+  --rvo-icon-current: var(--rvo-icon-gebouw-ggz);
+}
+
+.rvo-icon-gebouw-igz {
+  --rvo-icon-current: var(--rvo-icon-gebouw-igz);
+}
+
+.rvo-icon-gebouw-met-busje {
+  --rvo-icon-current: var(--rvo-icon-gebouw-met-busje);
+}
+
+.rvo-icon-gebouw-nvwa {
+  --rvo-icon-current: var(--rvo-icon-gebouw-nvwa);
+}
+
+.rvo-icon-gebouw-vws {
+  --rvo-icon-current: var(--rvo-icon-gebouw-vws);
+}
+
+.rvo-icon-gebouw-zini {
+  --rvo-icon-current: var(--rvo-icon-gebouw-zini);
+}
+
+.rvo-icon-gebouwenbeheer {
+  --rvo-icon-current: var(--rvo-icon-gebouwenbeheer);
+}
+
+.rvo-icon-gemeente-en-provinciefonds {
+  --rvo-icon-current: var(--rvo-icon-gemeente-en-provinciefonds);
+}
+
+.rvo-icon-gemeentehuis {
+  --rvo-icon-current: var(--rvo-icon-gemeentehuis);
+}
+
+.rvo-icon-grootstedelijk {
+  --rvo-icon-current: var(--rvo-icon-grootstedelijk);
+}
+
+.rvo-icon-grote-brand {
+  --rvo-icon-current: var(--rvo-icon-grote-brand);
+}
+
+.rvo-icon-hoge-gebouwen-met-pijl-naar-rechts {
+  --rvo-icon-current: var(--rvo-icon-hoge-gebouwen-met-pijl-naar-rechts);
+}
+
+.rvo-icon-hoog-huis {
+  --rvo-icon-current: var(--rvo-icon-hoog-huis);
+}
+
+.rvo-icon-hoogbouw-transitie {
+  --rvo-icon-current: var(--rvo-icon-hoogbouw-transitie);
+}
+
+.rvo-icon-horecaketens {
+  --rvo-icon-current: var(--rvo-icon-horecaketens);
+}
+
+.rvo-icon-huis-auditief-gehandicapten {
+  --rvo-icon-current: var(--rvo-icon-huis-auditief-gehandicapten);
+}
+
+.rvo-icon-huis-lichamelijk-gehandicapten {
+  --rvo-icon-current: var(--rvo-icon-huis-lichamelijk-gehandicapten);
+}
+
+.rvo-icon-huis-psychiatrische-patienten {
+  --rvo-icon-current: var(--rvo-icon-huis-psychiatrische-patienten);
+}
+
+.rvo-icon-huis-verstandelijk-gehandicapten {
+  --rvo-icon-current: var(--rvo-icon-huis-verstandelijk-gehandicapten);
+}
+
+.rvo-icon-huis-visueel-gehandicapten {
+  --rvo-icon-current: var(--rvo-icon-huis-visueel-gehandicapten);
+}
+
+.rvo-icon-huiselijk-geweld {
+  --rvo-icon-current: var(--rvo-icon-huiselijk-geweld);
+}
+
+.rvo-icon-huisvesting {
+  --rvo-icon-current: var(--rvo-icon-huisvesting);
+}
+
+.rvo-icon-huurtoeslag {
+  --rvo-icon-current: var(--rvo-icon-huurtoeslag);
+}
+
+.rvo-icon-huurwoning {
+  --rvo-icon-current: var(--rvo-icon-huurwoning);
+}
+
+.rvo-icon-industrie-met-druppel-water {
+  --rvo-icon-current: var(--rvo-icon-industrie-met-druppel-water);
+}
+
+.rvo-icon-industrie {
+  --rvo-icon-current: var(--rvo-icon-industrie);
+}
+
+.rvo-icon-instortingsgevaar {
+  --rvo-icon-current: var(--rvo-icon-instortingsgevaar);
+}
+
+.rvo-icon-kantoor-vol-energie {
+  --rvo-icon-current: var(--rvo-icon-kantoor-vol-energie);
+}
+
+.rvo-icon-kleinschalig-wonen {
+  --rvo-icon-current: var(--rvo-icon-kleinschalig-wonen);
+}
+
+.rvo-icon-koopwoning {
+  --rvo-icon-current: var(--rvo-icon-koopwoning);
+}
+
+.rvo-icon-laag-huis {
+  --rvo-icon-current: var(--rvo-icon-laag-huis);
+}
+
+.rvo-icon-leefbaarheid {
+  --rvo-icon-current: var(--rvo-icon-leefbaarheid);
+}
+
+.rvo-icon-leegstand-en-tijdelijk-gebruik {
+  --rvo-icon-current: var(--rvo-icon-leegstand-en-tijdelijk-gebruik);
+}
+
+.rvo-icon-leegstand {
+  --rvo-icon-current: var(--rvo-icon-leegstand);
+}
+
+.rvo-icon-lokaal-welzijnswerk {
+  --rvo-icon-current: var(--rvo-icon-lokaal-welzijnswerk);
+}
+
+.rvo-icon-man-torso-voor-hoogbouw {
+  --rvo-icon-current: var(--rvo-icon-man-torso-voor-hoogbouw);
+}
+
+.rvo-icon-megastallen {
+  --rvo-icon-current: var(--rvo-icon-megastallen);
+}
+
+.rvo-icon-monument {
+  --rvo-icon-current: var(--rvo-icon-monument);
+}
+
+.rvo-icon-moskee {
+  --rvo-icon-current: var(--rvo-icon-moskee);
+}
+
+.rvo-icon-ondernemingen {
+  --rvo-icon-current: var(--rvo-icon-ondernemingen);
+}
+
+.rvo-icon-ontwerp {
+  --rvo-icon-current: var(--rvo-icon-ontwerp);
+}
+
+.rvo-icon-overstroming-dreiging-1 {
+  --rvo-icon-current: var(--rvo-icon-overstroming-dreiging-1);
+}
+
+.rvo-icon-overstroming-dreiging-2 {
+  --rvo-icon-current: var(--rvo-icon-overstroming-dreiging-2);
+}
+
+.rvo-icon-overstroming-dreiging-3 {
+  --rvo-icon-current: var(--rvo-icon-overstroming-dreiging-3);
+}
+
+.rvo-icon-rechtbank {
+  --rvo-icon-current: var(--rvo-icon-rechtbank);
+}
+
+.rvo-icon-rijtjeshuis {
+  --rvo-icon-current: var(--rvo-icon-rijtjeshuis);
+}
+
+.rvo-icon-rolstoel-toegankelijke-woning {
+  --rvo-icon-current: var(--rvo-icon-rolstoel-toegankelijke-woning);
+}
+
+.rvo-icon-schade {
+  --rvo-icon-current: var(--rvo-icon-schade);
+}
+
+.rvo-icon-schone-industrie {
+  --rvo-icon-current: var(--rvo-icon-schone-industrie);
+}
+
+.rvo-icon-school {
+  --rvo-icon-current: var(--rvo-icon-school);
+}
+
+.rvo-icon-schuur-met-silo-erachter {
+  --rvo-icon-current: var(--rvo-icon-schuur-met-silo-erachter);
+}
+
+.rvo-icon-sector-speciaal-onderwijs {
+  --rvo-icon-current: var(--rvo-icon-sector-speciaal-onderwijs);
+}
+
+.rvo-icon-stacaravan {
+  --rvo-icon-current: var(--rvo-icon-stacaravan);
+}
+
+.rvo-icon-supermarktketens {
+  --rvo-icon-current: var(--rvo-icon-supermarktketens);
+}
+
+.rvo-icon-toren {
+  --rvo-icon-current: var(--rvo-icon-toren);
+}
+
+.rvo-icon-uitvoering {
+  --rvo-icon-current: var(--rvo-icon-uitvoering);
+}
+
+.rvo-icon-verpleeghuis {
+  --rvo-icon-current: var(--rvo-icon-verpleeghuis);
+}
+
+.rvo-icon-villa {
+  --rvo-icon-current: var(--rvo-icon-villa);
+}
+
+.rvo-icon-woning-gelijkvloers-wel-rollator {
+  --rvo-icon-current: var(--rvo-icon-woning-gelijkvloers-wel-rollator);
+}
+
+.rvo-icon-woning-met-traplift {
+  --rvo-icon-current: var(--rvo-icon-woning-met-traplift);
+}
+
+.rvo-icon-woning-met-verdieping {
+  --rvo-icon-current: var(--rvo-icon-woning-met-verdieping);
+}
+
+.rvo-icon-woninginbraak {
+  --rvo-icon-current: var(--rvo-icon-woninginbraak);
+}
+
+.rvo-icon-ziekenhuis {
+  --rvo-icon-current: var(--rvo-icon-ziekenhuis);
+}
+
+.rvo-icon-zorgkantoor {
+  --rvo-icon-current: var(--rvo-icon-zorgkantoor);
+}
+
+.rvo-icon-draaideurlinks {
+  --rvo-icon-current: var(--rvo-icon-draaideurlinks);
+}
+
+.rvo-icon-draaideurrechts {
+  --rvo-icon-current: var(--rvo-icon-draaideurrechts);
+}
+
+.rvo-icon-draairichting-deur-naar-je-toe {
+  --rvo-icon-current: var(--rvo-icon-draairichting-deur-naar-je-toe);
+}
+
+.rvo-icon-draairichting-deur-van-je-af {
+  --rvo-icon-current: var(--rvo-icon-draairichting-deur-van-je-af);
+}
+
+.rvo-icon-gedeelde-douche {
+  --rvo-icon-current: var(--rvo-icon-gedeelde-douche);
+}
+
+.rvo-icon-gevangenisdeur {
+  --rvo-icon-current: var(--rvo-icon-gevangenisdeur);
+}
+
+.rvo-icon-hangend-alarmsysteem {
+  --rvo-icon-current: var(--rvo-icon-hangend-alarmsysteem);
+}
+
+.rvo-icon-jaloezie {
+  --rvo-icon-current: var(--rvo-icon-jaloezie);
+}
+
+.rvo-icon-louvreluiken {
+  --rvo-icon-current: var(--rvo-icon-louvreluiken);
+}
+
+.rvo-icon-nooduitgang {
+  --rvo-icon-current: var(--rvo-icon-nooduitgang);
+}
+
+.rvo-icon-open-raam-met-pijlen {
+  --rvo-icon-current: var(--rvo-icon-open-raam-met-pijlen);
+}
+
+.rvo-icon-opendeur-met-pijl-sluiten {
+  --rvo-icon-current: var(--rvo-icon-opendeur-met-pijl-sluiten);
+}
+
+.rvo-icon-openraam-met-pijl-sluiten {
+  --rvo-icon-current: var(--rvo-icon-openraam-met-pijl-sluiten);
+}
+
+.rvo-icon-personen-in-lift {
+  --rvo-icon-current: var(--rvo-icon-personen-in-lift);
+}
+
+.rvo-icon-persoon-in-lift-1 {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-lift-1);
+}
+
+.rvo-icon-persoon-in-lift-2 {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-lift-2);
+}
+
+.rvo-icon-radiator {
+  --rvo-icon-current: var(--rvo-icon-radiator);
+}
+
+.rvo-icon-roltrap-omhoog {
+  --rvo-icon-current: var(--rvo-icon-roltrap-omhoog);
+}
+
+.rvo-icon-roltrap-omlaag {
+  --rvo-icon-current: var(--rvo-icon-roltrap-omlaag);
+}
+
+.rvo-icon-samen-op-trap {
+  --rvo-icon-current: var(--rvo-icon-samen-op-trap);
+}
+
+.rvo-icon-schap-leeg {
+  --rvo-icon-current: var(--rvo-icon-schap-leeg);
+}
+
+.rvo-icon-sprinkler {
+  --rvo-icon-current: var(--rvo-icon-sprinkler);
+}
+
+.rvo-icon-toiletten {
+  --rvo-icon-current: var(--rvo-icon-toiletten);
+}
+
+.rvo-icon-trap-omhoog {
+  --rvo-icon-current: var(--rvo-icon-trap-omhoog);
+}
+
+.rvo-icon-trap-omlaag {
+  --rvo-icon-current: var(--rvo-icon-trap-omlaag);
+}
+
+.rvo-icon-traplift-met-kruis {
+  --rvo-icon-current: var(--rvo-icon-traplift-met-kruis);
+}
+
+.rvo-icon-traplift-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-traplift-met-vinkje);
+}
+
+.rvo-icon-traplift {
+  --rvo-icon-current: var(--rvo-icon-traplift);
+}
+
+.rvo-icon-uitgang {
+  --rvo-icon-current: var(--rvo-icon-uitgang);
+}
+
+.rvo-icon-ventilatierooster {
+  --rvo-icon-current: var(--rvo-icon-ventilatierooster);
+}
+
+.rvo-icon-aanrecht-met-kraan-en-koffiekan {
+  --rvo-icon-current: var(--rvo-icon-aanrecht-met-kraan-en-koffiekan);
+}
+
+.rvo-icon-algemeen-alarm {
+  --rvo-icon-current: var(--rvo-icon-algemeen-alarm);
+}
+
+.rvo-icon-anker {
+  --rvo-icon-current: var(--rvo-icon-anker);
+}
+
+.rvo-icon-ballonstokjes {
+  --rvo-icon-current: var(--rvo-icon-ballonstokjes);
+}
+
+.rvo-icon-baret {
+  --rvo-icon-current: var(--rvo-icon-baret);
+}
+
+.rvo-icon-benzinepomp {
+  --rvo-icon-current: var(--rvo-icon-benzinepomp);
+}
+
+.rvo-icon-brandblusser {
+  --rvo-icon-current: var(--rvo-icon-brandblusser);
+}
+
+.rvo-icon-brandslang {
+  --rvo-icon-current: var(--rvo-icon-brandslang);
+}
+
+.rvo-icon-bureaulamp {
+  --rvo-icon-current: var(--rvo-icon-bureaulamp);
+}
+
+.rvo-icon-doosje-met-ce-keurmerk {
+  --rvo-icon-current: var(--rvo-icon-doosje-met-ce-keurmerk);
+}
+
+.rvo-icon-douches {
+  --rvo-icon-current: var(--rvo-icon-douches);
+}
+
+.rvo-icon-drone {
+  --rvo-icon-current: var(--rvo-icon-drone);
+}
+
+.rvo-icon-finish-vlag {
+  --rvo-icon-current: var(--rvo-icon-finish-vlag);
+}
+
+.rvo-icon-fles-met-beer-en-tube {
+  --rvo-icon-current: var(--rvo-icon-fles-met-beer-en-tube);
+}
+
+.rvo-icon-flesje-met-tatoeage-inkt {
+  --rvo-icon-current: var(--rvo-icon-flesje-met-tatoeage-inkt);
+}
+
+.rvo-icon-gewicht {
+  --rvo-icon-current: var(--rvo-icon-gewicht);
+}
+
+.rvo-icon-hanger-hart {
+  --rvo-icon-current: var(--rvo-icon-hanger-hart);
+}
+
+.rvo-icon-hangkaart-met-hand-erop {
+  --rvo-icon-current: var(--rvo-icon-hangkaart-met-hand-erop);
+}
+
+.rvo-icon-hangslot-dicht-met-hart-erop {
+  --rvo-icon-current: var(--rvo-icon-hangslot-dicht-met-hart-erop);
+}
+
+.rvo-icon-hangslot-dicht {
+  --rvo-icon-current: var(--rvo-icon-hangslot-dicht);
+}
+
+.rvo-icon-kassa {
+  --rvo-icon-current: var(--rvo-icon-kassa);
+}
+
+.rvo-icon-kinderwagen {
+  --rvo-icon-current: var(--rvo-icon-kinderwagen);
+}
+
+.rvo-icon-kledinghanger {
+  --rvo-icon-current: var(--rvo-icon-kledinghanger);
+}
+
+.rvo-icon-kleurenwaaier {
+  --rvo-icon-current: var(--rvo-icon-kleurenwaaier);
+}
+
+.rvo-icon-kliko-dicht {
+  --rvo-icon-current: var(--rvo-icon-kliko-dicht);
+}
+
+.rvo-icon-kliko {
+  --rvo-icon-current: var(--rvo-icon-kliko);
+}
+
+.rvo-icon-koffiezetapparaat {
+  --rvo-icon-current: var(--rvo-icon-koffiezetapparaat);
+}
+
+.rvo-icon-kroon-boven-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-kroon-boven-uitgestoken-hand);
+}
+
+.rvo-icon-kroon {
+  --rvo-icon-current: var(--rvo-icon-kroon);
+}
+
+.rvo-icon-kwast-en-hark {
+  --rvo-icon-current: var(--rvo-icon-kwast-en-hark);
+}
+
+.rvo-icon-laarzen {
+  --rvo-icon-current: var(--rvo-icon-laarzen);
+}
+
+.rvo-icon-lamp {
+  --rvo-icon-current: var(--rvo-icon-lamp);
+}
+
+.rvo-icon-ledikant {
+  --rvo-icon-current: var(--rvo-icon-ledikant);
+}
+
+.rvo-icon-leren-handschoen {
+  --rvo-icon-current: var(--rvo-icon-leren-handschoen);
+}
+
+.rvo-icon-maandverband {
+  --rvo-icon-current: var(--rvo-icon-maandverband);
+}
+
+.rvo-icon-medaille-met-hart-erop {
+  --rvo-icon-current: var(--rvo-icon-medaille-met-hart-erop);
+}
+
+.rvo-icon-oogcremes {
+  --rvo-icon-current: var(--rvo-icon-oogcremes);
+}
+
+.rvo-icon-pieper {
+  --rvo-icon-current: var(--rvo-icon-pieper);
+}
+
+.rvo-icon-pistool {
+  --rvo-icon-current: var(--rvo-icon-pistool);
+}
+
+.rvo-icon-pluim {
+  --rvo-icon-current: var(--rvo-icon-pluim);
+}
+
+.rvo-icon-plumeau {
+  --rvo-icon-current: var(--rvo-icon-plumeau);
+}
+
+.rvo-icon-pompfles-en-pot-met-deksel {
+  --rvo-icon-current: var(--rvo-icon-pompfles-en-pot-met-deksel);
+}
+
+.rvo-icon-portemonnee {
+  --rvo-icon-current: var(--rvo-icon-portemonnee);
+}
+
+.rvo-icon-potlood-en-liniaal {
+  --rvo-icon-current: var(--rvo-icon-potlood-en-liniaal);
+}
+
+.rvo-icon-radio {
+  --rvo-icon-current: var(--rvo-icon-radio);
+}
+
+.rvo-icon-ring-met-gebroken-ring-erdoor {
+  --rvo-icon-current: var(--rvo-icon-ring-met-gebroken-ring-erdoor);
+}
+
+.rvo-icon-schild-met-vinkje-erop {
+  --rvo-icon-current: var(--rvo-icon-schild-met-vinkje-erop);
+}
+
+.rvo-icon-schommelstoel-met-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-schommelstoel-met-stapel-munten);
+}
+
+.rvo-icon-shirt-met-label {
+  --rvo-icon-current: var(--rvo-icon-shirt-met-label);
+}
+
+.rvo-icon-shirt-uv {
+  --rvo-icon-current: var(--rvo-icon-shirt-uv);
+}
+
+.rvo-icon-sleutel {
+  --rvo-icon-current: var(--rvo-icon-sleutel);
+}
+
+.rvo-icon-sleutelbos {
+  --rvo-icon-current: var(--rvo-icon-sleutelbos);
+}
+
+.rvo-icon-smoking-op-hanger {
+  --rvo-icon-current: var(--rvo-icon-smoking-op-hanger);
+}
+
+.rvo-icon-stuur {
+  --rvo-icon-current: var(--rvo-icon-stuur);
+}
+
+.rvo-icon-stuurwiel {
+  --rvo-icon-current: var(--rvo-icon-stuurwiel);
+}
+
+.rvo-icon-telraam {
+  --rvo-icon-current: var(--rvo-icon-telraam);
+}
+
+.rvo-icon-tissuebox {
+  --rvo-icon-current: var(--rvo-icon-tissuebox);
+}
+
+.rvo-icon-vaas {
+  --rvo-icon-current: var(--rvo-icon-vaas);
+}
+
+.rvo-icon-verbod-kinderwagen {
+  --rvo-icon-current: var(--rvo-icon-verbod-kinderwagen);
+}
+
+.rvo-icon-verhuisdoos {
+  --rvo-icon-current: var(--rvo-icon-verhuisdoos);
+}
+
+.rvo-icon-verrekijker {
+  --rvo-icon-current: var(--rvo-icon-verrekijker);
+}
+
+.rvo-icon-vlag-driehoekig {
+  --rvo-icon-current: var(--rvo-icon-vlag-driehoekig);
+}
+
+.rvo-icon-vuilniszak {
+  --rvo-icon-current: var(--rvo-icon-vuilniszak);
+}
+
+.rvo-icon-vuurpijl {
+  --rvo-icon-current: var(--rvo-icon-vuurpijl);
+}
+
+.rvo-icon-wattenstaafjes {
+  --rvo-icon-current: var(--rvo-icon-wattenstaafjes);
+}
+
+.rvo-icon-weegschaal {
+  --rvo-icon-current: var(--rvo-icon-weegschaal);
+}
+
+.rvo-icon-wegwerpaansteker {
+  --rvo-icon-current: var(--rvo-icon-wegwerpaansteker);
+}
+
+.rvo-icon-wensballon {
+  --rvo-icon-current: var(--rvo-icon-wensballon);
+}
+
+.rvo-icon-wijzerplaat {
+  --rvo-icon-current: var(--rvo-icon-wijzerplaat);
+}
+
+.rvo-icon-winkelwagen {
+  --rvo-icon-current: var(--rvo-icon-winkelwagen);
+}
+
+.rvo-icon-zandloper {
+  --rvo-icon-current: var(--rvo-icon-zandloper);
+}
+
+.rvo-icon-zwaailicht {
+  --rvo-icon-current: var(--rvo-icon-zwaailicht);
+}
+
+.rvo-icon-aangifte-ondernemers {
+  --rvo-icon-current: var(--rvo-icon-aangifte-ondernemers);
+}
+
+.rvo-icon-accijns {
+  --rvo-icon-current: var(--rvo-icon-accijns);
+}
+
+.rvo-icon-btw-betalen {
+  --rvo-icon-current: var(--rvo-icon-btw-betalen);
+}
+
+.rvo-icon-budget {
+  --rvo-icon-current: var(--rvo-icon-budget);
+}
+
+.rvo-icon-circulaire-economie {
+  --rvo-icon-current: var(--rvo-icon-circulaire-economie);
+}
+
+.rvo-icon-contactloos-betalen {
+  --rvo-icon-current: var(--rvo-icon-contactloos-betalen);
+}
+
+.rvo-icon-eurobiljetten {
+  --rvo-icon-current: var(--rvo-icon-eurobiljetten);
+}
+
+.rvo-icon-financien {
+  --rvo-icon-current: var(--rvo-icon-financien);
+}
+
+.rvo-icon-fiod {
+  --rvo-icon-current: var(--rvo-icon-fiod);
+}
+
+.rvo-icon-hand-met-rekening {
+  --rvo-icon-current: var(--rvo-icon-hand-met-rekening);
+}
+
+.rvo-icon-handel {
+  --rvo-icon-current: var(--rvo-icon-handel);
+}
+
+.rvo-icon-heffen-en-innen {
+  --rvo-icon-current: var(--rvo-icon-heffen-en-innen);
+}
+
+.rvo-icon-importtarief-verlaging {
+  --rvo-icon-current: var(--rvo-icon-importtarief-verlaging);
+}
+
+.rvo-icon-inkomstenbelasting {
+  --rvo-icon-current: var(--rvo-icon-inkomstenbelasting);
+}
+
+.rvo-icon-loonheffingen {
+  --rvo-icon-current: var(--rvo-icon-loonheffingen);
+}
+
+.rvo-icon-motorrijtuigenbelasting {
+  --rvo-icon-current: var(--rvo-icon-motorrijtuigenbelasting);
+}
+
+.rvo-icon-omzetbelasting {
+  --rvo-icon-current: var(--rvo-icon-omzetbelasting);
+}
+
+.rvo-icon-ondernemingsklimaat {
+  --rvo-icon-current: var(--rvo-icon-ondernemingsklimaat);
+}
+
+.rvo-icon-refund {
+  --rvo-icon-current: var(--rvo-icon-refund);
+}
+
+.rvo-icon-rekening {
+  --rvo-icon-current: var(--rvo-icon-rekening);
+}
+
+.rvo-icon-rentelasten {
+  --rvo-icon-current: var(--rvo-icon-rentelasten);
+}
+
+.rvo-icon-stapel-munten-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-stapel-munten-met-vinkje);
+}
+
+.rvo-icon-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-stapel-munten);
+}
+
+.rvo-icon-teruggave-dividendbelasting {
+  --rvo-icon-current: var(--rvo-icon-teruggave-dividendbelasting);
+}
+
+.rvo-icon-vennootschapsbelasting {
+  --rvo-icon-current: var(--rvo-icon-vennootschapsbelasting);
+}
+
+.rvo-icon-verhuurderheffing {
+  --rvo-icon-current: var(--rvo-icon-verhuurderheffing);
+}
+
+.rvo-icon-vliegbelasting {
+  --rvo-icon-current: var(--rvo-icon-vliegbelasting);
+}
+
+.rvo-icon-werkeloosheid-ww {
+  --rvo-icon-current: var(--rvo-icon-werkeloosheid-ww);
+}
+
+.rvo-icon-zak-met-geld {
+  --rvo-icon-current: var(--rvo-icon-zak-met-geld);
+}
+
+.rvo-icon-half-tandwiel-half-brein {
+  --rvo-icon-current: var(--rvo-icon-half-tandwiel-half-brein);
+}
+
+.rvo-icon-kan-met-druppel {
+  --rvo-icon-current: var(--rvo-icon-kan-met-druppel);
+}
+
+.rvo-icon-ketting {
+  --rvo-icon-current: var(--rvo-icon-ketting);
+}
+
+.rvo-icon-kist-met-hamer-en-moersleutel {
+  --rvo-icon-current: var(--rvo-icon-kist-met-hamer-en-moersleutel);
+}
+
+.rvo-icon-moersleutel-en-moer {
+  --rvo-icon-current: var(--rvo-icon-moersleutel-en-moer);
+}
+
+.rvo-icon-moersleutel-en-pen {
+  --rvo-icon-current: var(--rvo-icon-moersleutel-en-pen);
+}
+
+.rvo-icon-moersleutel-en-schroevendraaier {
+  --rvo-icon-current: var(--rvo-icon-moersleutel-en-schroevendraaier);
+}
+
+.rvo-icon-moersleutel {
+  --rvo-icon-current: var(--rvo-icon-moersleutel);
+}
+
+.rvo-icon-rolmaat {
+  --rvo-icon-current: var(--rvo-icon-rolmaat);
+}
+
+.rvo-icon-tandwiel-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-tandwiel-met-vinkje);
+}
+
+.rvo-icon-tandwielen {
+  --rvo-icon-current: var(--rvo-icon-tandwielen);
+}
+
+.rvo-icon-zwitsers-zakmes {
+  --rvo-icon-current: var(--rvo-icon-zwitsers-zakmes);
+}
+
+.rvo-icon-benauwdheid {
+  --rvo-icon-current: var(--rvo-icon-benauwdheid);
+}
+
+.rvo-icon-coronavaccin {
+  --rvo-icon-current: var(--rvo-icon-coronavaccin);
+}
+
+.rvo-icon-ehbo-aed {
+  --rvo-icon-current: var(--rvo-icon-ehbo-aed);
+}
+
+.rvo-icon-ehbo-ruimte {
+  --rvo-icon-current: var(--rvo-icon-ehbo-ruimte);
+}
+
+.rvo-icon-esculaap {
+  --rvo-icon-current: var(--rvo-icon-esculaap);
+}
+
+.rvo-icon-geen-spatscherm {
+  --rvo-icon-current: var(--rvo-icon-geen-spatscherm);
+}
+
+.rvo-icon-gezinszorg-met-oudere {
+  --rvo-icon-current: var(--rvo-icon-gezinszorg-met-oudere);
+}
+
+.rvo-icon-gezinszorg {
+  --rvo-icon-current: var(--rvo-icon-gezinszorg);
+}
+
+.rvo-icon-hart-met-oudere {
+  --rvo-icon-current: var(--rvo-icon-hart-met-oudere);
+}
+
+.rvo-icon-hart-tussen-2-uitgestoken-handen {
+  --rvo-icon-current: var(--rvo-icon-hart-tussen-2-uitgestoken-handen);
+}
+
+.rvo-icon-hoofd-hoesten {
+  --rvo-icon-current: var(--rvo-icon-hoofd-hoesten);
+}
+
+.rvo-icon-hoofd-met-vinkje-en-wattenstaafje {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-vinkje-en-wattenstaafje);
+}
+
+.rvo-icon-hoofd-met-wattenstaafje-bij-mond {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-wattenstaafje-bij-mond);
+}
+
+.rvo-icon-hoofd-met-wattenstaafje-bij-neus {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-wattenstaafje-bij-neus);
+}
+
+.rvo-icon-jeugdzorg {
+  --rvo-icon-current: var(--rvo-icon-jeugdzorg);
+}
+
+.rvo-icon-kalender-met-virus {
+  --rvo-icon-current: var(--rvo-icon-kalender-met-virus);
+}
+
+.rvo-icon-kinderbescherming {
+  --rvo-icon-current: var(--rvo-icon-kinderbescherming);
+}
+
+.rvo-icon-kinderopvang {
+  --rvo-icon-current: var(--rvo-icon-kinderopvang);
+}
+
+.rvo-icon-kolfruimte {
+  --rvo-icon-current: var(--rvo-icon-kolfruimte);
+}
+
+.rvo-icon-koorts {
+  --rvo-icon-current: var(--rvo-icon-koorts);
+}
+
+.rvo-icon-langdurige-zorg {
+  --rvo-icon-current: var(--rvo-icon-langdurige-zorg);
+}
+
+.rvo-icon-man-met-hart {
+  --rvo-icon-current: var(--rvo-icon-man-met-hart);
+}
+
+.rvo-icon-man-met-medicatie {
+  --rvo-icon-current: var(--rvo-icon-man-met-medicatie);
+}
+
+.rvo-icon-man-met-mondkapje {
+  --rvo-icon-current: var(--rvo-icon-man-met-mondkapje);
+}
+
+.rvo-icon-man-met-nekkraag-en-munten {
+  --rvo-icon-current: var(--rvo-icon-man-met-nekkraag-en-munten);
+}
+
+.rvo-icon-mantelzorg {
+  --rvo-icon-current: var(--rvo-icon-mantelzorg);
+}
+
+.rvo-icon-medisch-beroepsgeheim {
+  --rvo-icon-current: var(--rvo-icon-medisch-beroepsgeheim);
+}
+
+.rvo-icon-mondkapje {
+  --rvo-icon-current: var(--rvo-icon-mondkapje);
+}
+
+.rvo-icon-neusverkoudheid {
+  --rvo-icon-current: var(--rvo-icon-neusverkoudheid);
+}
+
+.rvo-icon-noodopvang {
+  --rvo-icon-current: var(--rvo-icon-noodopvang);
+}
+
+.rvo-icon-opvang-en-nazorg {
+  --rvo-icon-current: var(--rvo-icon-opvang-en-nazorg);
+}
+
+.rvo-icon-ouderenzorg {
+  --rvo-icon-current: var(--rvo-icon-ouderenzorg);
+}
+
+.rvo-icon-persoon-in-rolstoel-en-munten {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-rolstoel-en-munten);
+}
+
+.rvo-icon-persoon-met-rugpijn {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-rugpijn);
+}
+
+.rvo-icon-persoon-staand-met-hart {
+  --rvo-icon-current: var(--rvo-icon-persoon-staand-met-hart);
+}
+
+.rvo-icon-psychologische-hulp {
+  --rvo-icon-current: var(--rvo-icon-psychologische-hulp);
+}
+
+.rvo-icon-puber-met-mondkapje {
+  --rvo-icon-current: var(--rvo-icon-puber-met-mondkapje);
+}
+
+.rvo-icon-rokende-filtersigaret {
+  --rvo-icon-current: var(--rvo-icon-rokende-filtersigaret);
+}
+
+.rvo-icon-rollator-bij-trap {
+  --rvo-icon-current: var(--rvo-icon-rollator-bij-trap);
+}
+
+.rvo-icon-schone-handen {
+  --rvo-icon-current: var(--rvo-icon-schone-handen);
+}
+
+.rvo-icon-verbod-rolstoel {
+  --rvo-icon-current: var(--rvo-icon-verbod-rolstoel);
+}
+
+.rvo-icon-verboden-te-roken {
+  --rvo-icon-current: var(--rvo-icon-verboden-te-roken);
+}
+
+.rvo-icon-verzorgingstehuis {
+  --rvo-icon-current: var(--rvo-icon-verzorgingstehuis);
+}
+
+.rvo-icon-voor-elkaar-zorgen {
+  --rvo-icon-current: var(--rvo-icon-voor-elkaar-zorgen);
+}
+
+.rvo-icon-vrouw-en-persoon-in-rolstoel {
+  --rvo-icon-current: var(--rvo-icon-vrouw-en-persoon-in-rolstoel);
+}
+
+.rvo-icon-vrouw-met-medicatie {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-medicatie);
+}
+
+.rvo-icon-welzijnswerk-ouderen {
+  --rvo-icon-current: var(--rvo-icon-welzijnswerk-ouderen);
+}
+
+.rvo-icon-zelftest {
+  --rvo-icon-current: var(--rvo-icon-zelftest);
+}
+
+.rvo-icon-bacterie-dodende-gel {
+  --rvo-icon-current: var(--rvo-icon-bacterie-dodende-gel);
+}
+
+.rvo-icon-fles-met-mes-en-vork {
+  --rvo-icon-current: var(--rvo-icon-fles-met-mes-en-vork);
+}
+
+.rvo-icon-personenweegschaal {
+  --rvo-icon-current: var(--rvo-icon-personenweegschaal);
+}
+
+.rvo-icon-rubberen-handschoenen {
+  --rvo-icon-current: var(--rvo-icon-rubberen-handschoenen);
+}
+
+.rvo-icon-schoonmaakfles {
+  --rvo-icon-current: var(--rvo-icon-schoonmaakfles);
+}
+
+.rvo-icon-schoonmaakmiddel {
+  --rvo-icon-current: var(--rvo-icon-schoonmaakmiddel);
+}
+
+.rvo-icon-spray-en-bezem {
+  --rvo-icon-current: var(--rvo-icon-spray-en-bezem);
+}
+
+.rvo-icon-spray-en-kaas {
+  --rvo-icon-current: var(--rvo-icon-spray-en-kaas);
+}
+
+.rvo-icon-stofzuiger {
+  --rvo-icon-current: var(--rvo-icon-stofzuiger);
+}
+
+.rvo-icon-toiletborstel {
+  --rvo-icon-current: var(--rvo-icon-toiletborstel);
+}
+
+.rvo-icon-trechter {
+  --rvo-icon-current: var(--rvo-icon-trechter);
+}
+
+.rvo-icon-veiligheidsspeld-open {
+  --rvo-icon-current: var(--rvo-icon-veiligheidsspeld-open);
+}
+
+.rvo-icon-vork-en-mes {
+  --rvo-icon-current: var(--rvo-icon-vork-en-mes);
+}
+
+.rvo-icon-wasmachine {
+  --rvo-icon-current: var(--rvo-icon-wasmachine);
+}
+
+.rvo-icon-afrit {
+  --rvo-icon-current: var(--rvo-icon-afrit);
+}
+
+.rvo-icon-aquaduct {
+  --rvo-icon-current: var(--rvo-icon-aquaduct);
+}
+
+.rvo-icon-beweegbare-brug {
+  --rvo-icon-current: var(--rvo-icon-beweegbare-brug);
+}
+
+.rvo-icon-beweegbare-brugtijden {
+  --rvo-icon-current: var(--rvo-icon-beweegbare-brugtijden);
+}
+
+.rvo-icon-bord-15-km {
+  --rvo-icon-current: var(--rvo-icon-bord-15-km);
+}
+
+.rvo-icon-bord-30-km {
+  --rvo-icon-current: var(--rvo-icon-bord-30-km);
+}
+
+.rvo-icon-bord-40-km {
+  --rvo-icon-current: var(--rvo-icon-bord-40-km);
+}
+
+.rvo-icon-bord-5-km {
+  --rvo-icon-current: var(--rvo-icon-bord-5-km);
+}
+
+.rvo-icon-bord-50-km {
+  --rvo-icon-current: var(--rvo-icon-bord-50-km);
+}
+
+.rvo-icon-coupure {
+  --rvo-icon-current: var(--rvo-icon-coupure);
+}
+
+.rvo-icon-ecoduct {
+  --rvo-icon-current: var(--rvo-icon-ecoduct);
+}
+
+.rvo-icon-gemaal {
+  --rvo-icon-current: var(--rvo-icon-gemaal);
+}
+
+.rvo-icon-grijparm {
+  --rvo-icon-current: var(--rvo-icon-grijparm);
+}
+
+.rvo-icon-hijskraan {
+  --rvo-icon-current: var(--rvo-icon-hijskraan);
+}
+
+.rvo-icon-kade {
+  --rvo-icon-current: var(--rvo-icon-kade);
+}
+
+.rvo-icon-matrixbord-met-maximumsnelheid {
+  --rvo-icon-current: var(--rvo-icon-matrixbord-met-maximumsnelheid);
+}
+
+.rvo-icon-oprit {
+  --rvo-icon-current: var(--rvo-icon-oprit);
+}
+
+.rvo-icon-pylon {
+  --rvo-icon-current: var(--rvo-icon-pylon);
+}
+
+.rvo-icon-ruimtelijke-ordening {
+  --rvo-icon-current: var(--rvo-icon-ruimtelijke-ordening);
+}
+
+.rvo-icon-schade-wegdek {
+  --rvo-icon-current: var(--rvo-icon-schade-wegdek);
+}
+
+.rvo-icon-slagboom-halfopen {
+  --rvo-icon-current: var(--rvo-icon-slagboom-halfopen);
+}
+
+.rvo-icon-sluis-open {
+  --rvo-icon-current: var(--rvo-icon-sluis-open);
+}
+
+.rvo-icon-snelweg-met-boom {
+  --rvo-icon-current: var(--rvo-icon-snelweg-met-boom);
+}
+
+.rvo-icon-snelweg-met-waarschuwingsbord {
+  --rvo-icon-current: var(--rvo-icon-snelweg-met-waarschuwingsbord);
+}
+
+.rvo-icon-snelweg {
+  --rvo-icon-current: var(--rvo-icon-snelweg);
+}
+
+.rvo-icon-spitsstrook {
+  --rvo-icon-current: var(--rvo-icon-spitsstrook);
+}
+
+.rvo-icon-takel-met-balk {
+  --rvo-icon-current: var(--rvo-icon-takel-met-balk);
+}
+
+.rvo-icon-takel-met-container {
+  --rvo-icon-current: var(--rvo-icon-takel-met-container);
+}
+
+.rvo-icon-trein-op-spoorwegovergang {
+  --rvo-icon-current: var(--rvo-icon-trein-op-spoorwegovergang);
+}
+
+.rvo-icon-tunnel {
+  --rvo-icon-current: var(--rvo-icon-tunnel);
+}
+
+.rvo-icon-vaste-brug {
+  --rvo-icon-current: var(--rvo-icon-vaste-brug);
+}
+
+.rvo-icon-viaduct {
+  --rvo-icon-current: var(--rvo-icon-viaduct);
+}
+
+.rvo-icon-waarschuwingsbord-met-schip-op-water {
+  --rvo-icon-current: var(--rvo-icon-waarschuwingsbord-met-schip-op-water);
+}
+
+.rvo-icon-waarschuwingsbord-met-snelweg {
+  --rvo-icon-current: var(--rvo-icon-waarschuwingsbord-met-snelweg);
+}
+
+.rvo-icon-waarschuwingsbord-werkzaamheden {
+  --rvo-icon-current: var(--rvo-icon-waarschuwingsbord-werkzaamheden);
+}
+
+.rvo-icon-waterkering-dicht {
+  --rvo-icon-current: var(--rvo-icon-waterkering-dicht);
+}
+
+.rvo-icon-waterkering-open {
+  --rvo-icon-current: var(--rvo-icon-waterkering-open);
+}
+
+.rvo-icon-weg-langs-huis {
+  --rvo-icon-current: var(--rvo-icon-weg-langs-huis);
+}
+
+.rvo-icon-weg-met-dichte-slagboom {
+  --rvo-icon-current: var(--rvo-icon-weg-met-dichte-slagboom);
+}
+
+.rvo-icon-weg-met-halfopen-slagboom {
+  --rvo-icon-current: var(--rvo-icon-weg-met-halfopen-slagboom);
+}
+
+.rvo-icon-big-ben {
+  --rvo-icon-current: var(--rvo-icon-big-ben);
+}
+
+.rvo-icon-bol-met-rasterpatroon {
+  --rvo-icon-current: var(--rvo-icon-bol-met-rasterpatroon);
+}
+
+.rvo-icon-buitenlandse-handel {
+  --rvo-icon-current: var(--rvo-icon-buitenlandse-handel);
+}
+
+.rvo-icon-colosseum {
+  --rvo-icon-current: var(--rvo-icon-colosseum);
+}
+
+.rvo-icon-pagode {
+  --rvo-icon-current: var(--rvo-icon-pagode);
+}
+
+.rvo-icon-paspoort {
+  --rvo-icon-current: var(--rvo-icon-paspoort);
+}
+
+.rvo-icon-pyramides {
+  --rvo-icon-current: var(--rvo-icon-pyramides);
+}
+
+.rvo-icon-tekstballon-met-wereldbol {
+  --rvo-icon-current: var(--rvo-icon-tekstballon-met-wereldbol);
+}
+
+.rvo-icon-vlag-canada {
+  --rvo-icon-current: var(--rvo-icon-vlag-canada);
+}
+
+.rvo-icon-vlag-europese-unie {
+  --rvo-icon-current: var(--rvo-icon-vlag-europese-unie);
+}
+
+.rvo-icon-wereldbol-met-loep {
+  --rvo-icon-current: var(--rvo-icon-wereldbol-met-loep);
+}
+
+.rvo-icon-wereldbol-tussen-2-uitgestoken-handen {
+  --rvo-icon-current: var(--rvo-icon-wereldbol-tussen-2-uitgestoken-handen);
+}
+
+.rvo-icon-wereldbol {
+  --rvo-icon-current: var(--rvo-icon-wereldbol);
+}
+
+.rvo-icon-biddende-handen {
+  --rvo-icon-current: var(--rvo-icon-biddende-handen);
+}
+
+.rvo-icon-brein-boven-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-brein-boven-uitgestoken-hand);
+}
+
+.rvo-icon-brein {
+  --rvo-icon-current: var(--rvo-icon-brein);
+}
+
+.rvo-icon-dna {
+  --rvo-icon-current: var(--rvo-icon-dna);
+}
+
+.rvo-icon-duim-omhoog {
+  --rvo-icon-current: var(--rvo-icon-duim-omhoog);
+}
+
+.rvo-icon-duim-omlaag {
+  --rvo-icon-current: var(--rvo-icon-duim-omlaag);
+}
+
+.rvo-icon-geen-handen-schudden {
+  --rvo-icon-current: var(--rvo-icon-geen-handen-schudden);
+}
+
+.rvo-icon-hand-2-vingers-opgestoken {
+  --rvo-icon-current: var(--rvo-icon-hand-2-vingers-opgestoken);
+}
+
+.rvo-icon-hand-achter-oor {
+  --rvo-icon-current: var(--rvo-icon-hand-achter-oor);
+}
+
+.rvo-icon-hand-met-pen- {
+  --rvo-icon-current: var(--rvo-icon-hand-met-pen-);
+}
+
+.rvo-icon-hand-met-snee-en-druppel {
+  --rvo-icon-current: var(--rvo-icon-hand-met-snee-en-druppel);
+}
+
+.rvo-icon-hand-met-vlek {
+  --rvo-icon-current: var(--rvo-icon-hand-met-vlek);
+}
+
+.rvo-icon-hand-met-wond {
+  --rvo-icon-current: var(--rvo-icon-hand-met-wond);
+}
+
+.rvo-icon-hand-v-teken-voor-prikkeldraad {
+  --rvo-icon-current: var(--rvo-icon-hand-v-teken-voor-prikkeldraad);
+}
+
+.rvo-icon-hand {
+  --rvo-icon-current: var(--rvo-icon-hand);
+}
+
+.rvo-icon-handen-schudden-hartvorm {
+  --rvo-icon-current: var(--rvo-icon-handen-schudden-hartvorm);
+}
+
+.rvo-icon-handen-schudden {
+  --rvo-icon-current: var(--rvo-icon-handen-schudden);
+}
+
+.rvo-icon-handen-wassen {
+  --rvo-icon-current: var(--rvo-icon-handen-wassen);
+}
+
+.rvo-icon-hoofd-met-brandende-lamp {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-brandende-lamp);
+}
+
+.rvo-icon-hoofd-met-brein {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-brein);
+}
+
+.rvo-icon-hoofd-met-doolhof {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-doolhof);
+}
+
+.rvo-icon-hoofd-met-krabbels {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-krabbels);
+}
+
+.rvo-icon-hoofd-met-schedel {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-schedel);
+}
+
+.rvo-icon-iris {
+  --rvo-icon-current: var(--rvo-icon-iris);
+}
+
+.rvo-icon-oog-met-traan {
+  --rvo-icon-current: var(--rvo-icon-oog-met-traan);
+}
+
+.rvo-icon-oog {
+  --rvo-icon-current: var(--rvo-icon-oog);
+}
+
+.rvo-icon-oor-met-gehoorbeschermer {
+  --rvo-icon-current: var(--rvo-icon-oor-met-gehoorbeschermer);
+}
+
+.rvo-icon-oor {
+  --rvo-icon-current: var(--rvo-icon-oor);
+}
+
+.rvo-icon-pols-vastgrijpen {
+  --rvo-icon-current: var(--rvo-icon-pols-vastgrijpen);
+}
+
+.rvo-icon-scan-gezicht {
+  --rvo-icon-current: var(--rvo-icon-scan-gezicht);
+}
+
+.rvo-icon-scan-vingerafdruk {
+  --rvo-icon-current: var(--rvo-icon-scan-vingerafdruk);
+}
+
+.rvo-icon-silhouet-met-schildklier {
+  --rvo-icon-current: var(--rvo-icon-silhouet-met-schildklier);
+}
+
+.rvo-icon-vingerafdruk-1 {
+  --rvo-icon-current: var(--rvo-icon-vingerafdruk-1);
+}
+
+.rvo-icon-vingerafdruk-2 {
+  --rvo-icon-current: var(--rvo-icon-vingerafdruk-2);
+}
+
+.rvo-icon-vingerafdruk-3 {
+  --rvo-icon-current: var(--rvo-icon-vingerafdruk-3);
+}
+
+.rvo-icon-voeten {
+  --rvo-icon-current: var(--rvo-icon-voeten);
+}
+
+.rvo-icon-vuist-slaand {
+  --rvo-icon-current: var(--rvo-icon-vuist-slaand);
+}
+
+.rvo-icon-vuist {
+  --rvo-icon-current: var(--rvo-icon-vuist);
+}
+
+.rvo-icon-wijsvinger-en-deurbel {
+  --rvo-icon-current: var(--rvo-icon-wijsvinger-en-deurbel);
+}
+
+.rvo-icon-afbrokkelend-schild-met-capsule {
+  --rvo-icon-current: var(--rvo-icon-afbrokkelend-schild-met-capsule);
+}
+
+.rvo-icon-bloeddrukmeter {
+  --rvo-icon-current: var(--rvo-icon-bloeddrukmeter);
+}
+
+.rvo-icon-capsule-boven-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-capsule-boven-uitgestoken-hand);
+}
+
+.rvo-icon-capsule-met-pijl-omhoog {
+  --rvo-icon-current: var(--rvo-icon-capsule-met-pijl-omhoog);
+}
+
+.rvo-icon-capsule-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-capsule-met-vinkje);
+}
+
+.rvo-icon-capsules {
+  --rvo-icon-current: var(--rvo-icon-capsules);
+}
+
+.rvo-icon-dna-op-beeldscherm {
+  --rvo-icon-current: var(--rvo-icon-dna-op-beeldscherm);
+}
+
+.rvo-icon-eencelligen-onder-loep {
+  --rvo-icon-current: var(--rvo-icon-eencelligen-onder-loep);
+}
+
+.rvo-icon-hart-met-vinkje-erin {
+  --rvo-icon-current: var(--rvo-icon-hart-met-vinkje-erin);
+}
+
+.rvo-icon-hart-onder-microscoop {
+  --rvo-icon-current: var(--rvo-icon-hart-onder-microscoop);
+}
+
+.rvo-icon-injectienaald {
+  --rvo-icon-current: var(--rvo-icon-injectienaald);
+}
+
+.rvo-icon-koffer-met-kruis {
+  --rvo-icon-current: var(--rvo-icon-koffer-met-kruis);
+}
+
+.rvo-icon-kruis-met-vergrootglas {
+  --rvo-icon-current: var(--rvo-icon-kruis-met-vergrootglas);
+}
+
+.rvo-icon-omgevallen-pot-met-capsules {
+  --rvo-icon-current: var(--rvo-icon-omgevallen-pot-met-capsules);
+}
+
+.rvo-icon-pillendoosje {
+  --rvo-icon-current: var(--rvo-icon-pillendoosje);
+}
+
+.rvo-icon-pot-met-capsule {
+  --rvo-icon-current: var(--rvo-icon-pot-met-capsule);
+}
+
+.rvo-icon-reageerbuis-met-wattenstaafje {
+  --rvo-icon-current: var(--rvo-icon-reageerbuis-met-wattenstaafje);
+}
+
+.rvo-icon-reageerbuis {
+  --rvo-icon-current: var(--rvo-icon-reageerbuis);
+}
+
+.rvo-icon-stethoscoop {
+  --rvo-icon-current: var(--rvo-icon-stethoscoop);
+}
+
+.rvo-icon-tabletten {
+  --rvo-icon-current: var(--rvo-icon-tabletten);
+}
+
+.rvo-icon-vijzel-met-kruis {
+  --rvo-icon-current: var(--rvo-icon-vijzel-met-kruis);
+}
+
+.rvo-icon-advocaat {
+  --rvo-icon-current: var(--rvo-icon-advocaat);
+}
+
+.rvo-icon-ambtenaar {
+  --rvo-icon-current: var(--rvo-icon-ambtenaar);
+}
+
+.rvo-icon-arts {
+  --rvo-icon-current: var(--rvo-icon-arts);
+}
+
+.rvo-icon-beroepsvisser {
+  --rvo-icon-current: var(--rvo-icon-beroepsvisser);
+}
+
+.rvo-icon-boer {
+  --rvo-icon-current: var(--rvo-icon-boer);
+}
+
+.rvo-icon-boerin {
+  --rvo-icon-current: var(--rvo-icon-boerin);
+}
+
+.rvo-icon-chirurg {
+  --rvo-icon-current: var(--rvo-icon-chirurg);
+}
+
+.rvo-icon-conducteur {
+  --rvo-icon-current: var(--rvo-icon-conducteur);
+}
+
+.rvo-icon-defensie {
+  --rvo-icon-current: var(--rvo-icon-defensie);
+}
+
+.rvo-icon-douane {
+  --rvo-icon-current: var(--rvo-icon-douane);
+}
+
+.rvo-icon-geplandoverleg {
+  --rvo-icon-current: var(--rvo-icon-geplandoverleg);
+}
+
+.rvo-icon-huisarts {
+  --rvo-icon-current: var(--rvo-icon-huisarts);
+}
+
+.rvo-icon-kapperbezoek {
+  --rvo-icon-current: var(--rvo-icon-kapperbezoek);
+}
+
+.rvo-icon-klantencontactcenter {
+  --rvo-icon-current: var(--rvo-icon-klantencontactcenter);
+}
+
+.rvo-icon-landmacht {
+  --rvo-icon-current: var(--rvo-icon-landmacht);
+}
+
+.rvo-icon-loungewerkplek {
+  --rvo-icon-current: var(--rvo-icon-loungewerkplek);
+}
+
+.rvo-icon-luchtmacht {
+  --rvo-icon-current: var(--rvo-icon-luchtmacht);
+}
+
+.rvo-icon-man-met-gebouw {
+  --rvo-icon-current: var(--rvo-icon-man-met-gebouw);
+}
+
+.rvo-icon-man-met-gebouwen {
+  --rvo-icon-current: var(--rvo-icon-man-met-gebouwen);
+}
+
+.rvo-icon-man-met-headset-voor-raam-scherm {
+  --rvo-icon-current: var(--rvo-icon-man-met-headset-voor-raam-scherm);
+}
+
+.rvo-icon-man-met-loep {
+  --rvo-icon-current: var(--rvo-icon-man-met-loep);
+}
+
+.rvo-icon-man-met-stropdas-en-sleutelbos {
+  --rvo-icon-current: var(--rvo-icon-man-met-stropdas-en-sleutelbos);
+}
+
+.rvo-icon-man-met-tekst-zzp {
+  --rvo-icon-current: var(--rvo-icon-man-met-tekst-zzp);
+}
+
+.rvo-icon-marechaussee {
+  --rvo-icon-current: var(--rvo-icon-marechaussee);
+}
+
+.rvo-icon-matroos {
+  --rvo-icon-current: var(--rvo-icon-matroos);
+}
+
+.rvo-icon-ongepland-overleg {
+  --rvo-icon-current: var(--rvo-icon-ongepland-overleg);
+}
+
+.rvo-icon-persoon-headset-voor-beeldschermen {
+  --rvo-icon-current: var(--rvo-icon-persoon-headset-voor-beeldschermen);
+}
+
+.rvo-icon-persoon-in-uniform-en-doos {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-uniform-en-doos);
+}
+
+.rvo-icon-persoon-met-bedekt-gezicht-en-geweer {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-bedekt-gezicht-en-geweer);
+}
+
+.rvo-icon-persoon-met-bouwhelm-en-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-bouwhelm-en-stapel-munten);
+}
+
+.rvo-icon-persoon-met-stethoscoop-voor-mensen {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-stethoscoop-voor-mensen);
+}
+
+.rvo-icon-persoon-voor-beeldschermen {
+  --rvo-icon-current: var(--rvo-icon-persoon-voor-beeldschermen);
+}
+
+.rvo-icon-politieacademie-man {
+  --rvo-icon-current: var(--rvo-icon-politieacademie-man);
+}
+
+.rvo-icon-politieacademie-vrouw {
+  --rvo-icon-current: var(--rvo-icon-politieacademie-vrouw);
+}
+
+.rvo-icon-politieagent-voor-personen {
+  --rvo-icon-current: var(--rvo-icon-politieagent-voor-personen);
+}
+
+.rvo-icon-politieagent {
+  --rvo-icon-current: var(--rvo-icon-politieagent);
+}
+
+.rvo-icon-politieagente-voor-personen {
+  --rvo-icon-current: var(--rvo-icon-politieagente-voor-personen);
+}
+
+.rvo-icon-politieagente {
+  --rvo-icon-current: var(--rvo-icon-politieagente);
+}
+
+.rvo-icon-regievoerder {
+  --rvo-icon-current: var(--rvo-icon-regievoerder);
+}
+
+.rvo-icon-servicedesk-ict {
+  --rvo-icon-current: var(--rvo-icon-servicedesk-ict);
+}
+
+.rvo-icon-servicedesk-telefonie {
+  --rvo-icon-current: var(--rvo-icon-servicedesk-telefonie);
+}
+
+.rvo-icon-specialist {
+  --rvo-icon-current: var(--rvo-icon-specialist);
+}
+
+.rvo-icon-tandarts {
+  --rvo-icon-current: var(--rvo-icon-tandarts);
+}
+
+.rvo-icon-technisch-manager {
+  --rvo-icon-current: var(--rvo-icon-technisch-manager);
+}
+
+.rvo-icon-thuiswerken {
+  --rvo-icon-current: var(--rvo-icon-thuiswerken);
+}
+
+.rvo-icon-touchdown-werkplek {
+  --rvo-icon-current: var(--rvo-icon-touchdown-werkplek);
+}
+
+.rvo-icon-tuinder {
+  --rvo-icon-current: var(--rvo-icon-tuinder);
+}
+
+.rvo-icon-uitval-persoon-ziekte {
+  --rvo-icon-current: var(--rvo-icon-uitval-persoon-ziekte);
+}
+
+.rvo-icon-uitval-persoon {
+  --rvo-icon-current: var(--rvo-icon-uitval-persoon);
+}
+
+.rvo-icon-verloskundige {
+  --rvo-icon-current: var(--rvo-icon-verloskundige);
+}
+
+.rvo-icon-verpleegkundige {
+  --rvo-icon-current: var(--rvo-icon-verpleegkundige);
+}
+
+.rvo-icon-vn-soldaat {
+  --rvo-icon-current: var(--rvo-icon-vn-soldaat);
+}
+
+.rvo-icon-vrouwelijke-arts {
+  --rvo-icon-current: var(--rvo-icon-vrouwelijke-arts);
+}
+
+.rvo-icon-werkdruk {
+  --rvo-icon-current: var(--rvo-icon-werkdruk);
+}
+
+.rvo-icon-wijkagent {
+  --rvo-icon-current: var(--rvo-icon-wijkagent);
+}
+
+.rvo-icon-wijkagente {
+  --rvo-icon-current: var(--rvo-icon-wijkagente);
+}
+
+.rvo-icon-wijkverpleegkundige {
+  --rvo-icon-current: var(--rvo-icon-wijkverpleegkundige);
+}
+
+.rvo-icon-afvalcontainer-plastic {
+  --rvo-icon-current: var(--rvo-icon-afvalcontainer-plastic);
+}
+
+.rvo-icon-blad-met-wereldbol {
+  --rvo-icon-current: var(--rvo-icon-blad-met-wereldbol);
+}
+
+.rvo-icon-bloem-met-uitroepteken {
+  --rvo-icon-current: var(--rvo-icon-bloem-met-uitroepteken);
+}
+
+.rvo-icon-boeket {
+  --rvo-icon-current: var(--rvo-icon-boeket);
+}
+
+.rvo-icon-boom-en-struiken {
+  --rvo-icon-current: var(--rvo-icon-boom-en-struiken);
+}
+
+.rvo-icon-boom-lachend {
+  --rvo-icon-current: var(--rvo-icon-boom-lachend);
+}
+
+.rvo-icon-boom-met-bank {
+  --rvo-icon-current: var(--rvo-icon-boom-met-bank);
+}
+
+.rvo-icon-boom-met-picknicktafel {
+  --rvo-icon-current: var(--rvo-icon-boom-met-picknicktafel);
+}
+
+.rvo-icon-hangende-plant-op-gebarsten-grond {
+  --rvo-icon-current: var(--rvo-icon-hangende-plant-op-gebarsten-grond);
+}
+
+.rvo-icon-jonge-plant-komt-uit-grond {
+  --rvo-icon-current: var(--rvo-icon-jonge-plant-komt-uit-grond);
+}
+
+.rvo-icon-jonge-plant-op-hoop-aarde {
+  --rvo-icon-current: var(--rvo-icon-jonge-plant-op-hoop-aarde);
+}
+
+.rvo-icon-jonge-plant-op-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-jonge-plant-op-uitgestoken-hand);
+}
+
+.rvo-icon-klimaatverandering {
+  --rvo-icon-current: var(--rvo-icon-klimaatverandering);
+}
+
+.rvo-icon-koe-met-tekst-co2 {
+  --rvo-icon-current: var(--rvo-icon-koe-met-tekst-co2);
+}
+
+.rvo-icon-metalen-vat-in-water {
+  --rvo-icon-current: var(--rvo-icon-metalen-vat-in-water);
+}
+
+.rvo-icon-milieu {
+  --rvo-icon-current: var(--rvo-icon-milieu);
+}
+
+.rvo-icon-net-boven-vis {
+  --rvo-icon-current: var(--rvo-icon-net-boven-vis);
+}
+
+.rvo-icon-oever-met-rietkraag {
+  --rvo-icon-current: var(--rvo-icon-oever-met-rietkraag);
+}
+
+.rvo-icon-palmboom-met-weegschaal {
+  --rvo-icon-current: var(--rvo-icon-palmboom-met-weegschaal);
+}
+
+.rvo-icon-persoon-gooit-afval-weg {
+  --rvo-icon-current: var(--rvo-icon-persoon-gooit-afval-weg);
+}
+
+.rvo-icon-plant-in-pot-met-kaartje {
+  --rvo-icon-current: var(--rvo-icon-plant-in-pot-met-kaartje);
+}
+
+.rvo-icon-recycle-om-blad {
+  --rvo-icon-current: var(--rvo-icon-recycle-om-blad);
+}
+
+.rvo-icon-regenboog-boven-wolk {
+  --rvo-icon-current: var(--rvo-icon-regenboog-boven-wolk);
+}
+
+.rvo-icon-storm {
+  --rvo-icon-current: var(--rvo-icon-storm);
+}
+
+.rvo-icon-tulp {
+  --rvo-icon-current: var(--rvo-icon-tulp);
+}
+
+.rvo-icon-visgraat-in-water {
+  --rvo-icon-current: var(--rvo-icon-visgraat-in-water);
+}
+
+.rvo-icon-vistrap {
+  --rvo-icon-current: var(--rvo-icon-vistrap);
+}
+
+.rvo-icon-waarschuwing-radioactiviteit-in-water {
+  --rvo-icon-current: var(--rvo-icon-waarschuwing-radioactiviteit-in-water);
+}
+
+.rvo-icon-water-en-begroeid-duin {
+  --rvo-icon-current: var(--rvo-icon-water-en-begroeid-duin);
+}
+
+.rvo-icon-wervelwind {
+  --rvo-icon-current: var(--rvo-icon-wervelwind);
+}
+
+.rvo-icon-windvaan {
+  --rvo-icon-current: var(--rvo-icon-windvaan);
+}
+
+.rvo-icon-wolk-met-regen-en-bliksem {
+  --rvo-icon-current: var(--rvo-icon-wolk-met-regen-en-bliksem);
+}
+
+.rvo-icon-wolk-met-regen-voor-zon {
+  --rvo-icon-current: var(--rvo-icon-wolk-met-regen-voor-zon);
+}
+
+.rvo-icon-wolk {
+  --rvo-icon-current: var(--rvo-icon-wolk);
+}
+
+.rvo-icon-zon-boven-wolk {
+  --rvo-icon-current: var(--rvo-icon-zon-boven-wolk);
+}
+
+.rvo-icon-zon-met-afbrokkelende-fles {
+  --rvo-icon-current: var(--rvo-icon-zon-met-afbrokkelende-fles);
+}
+
+.rvo-icon-zon {
+  --rvo-icon-current: var(--rvo-icon-zon);
+}
+
+.rvo-icon-document-met-locatiemarker {
+  --rvo-icon-current: var(--rvo-icon-document-met-locatiemarker);
+}
+
+.rvo-icon-kompas {
+  --rvo-icon-current: var(--rvo-icon-kompas);
+}
+
+.rvo-icon-locatiemarker-boven-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-locatiemarker-boven-uitgestoken-hand);
+}
+
+.rvo-icon-locatiemarker-met-blad {
+  --rvo-icon-current: var(--rvo-icon-locatiemarker-met-blad);
+}
+
+.rvo-icon-locatiemarker-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-locatiemarker-met-vinkje);
+}
+
+.rvo-icon-richtingwijzer {
+  --rvo-icon-current: var(--rvo-icon-richtingwijzer);
+}
+
+.rvo-icon-route-met-locatiemarker {
+  --rvo-icon-current: var(--rvo-icon-route-met-locatiemarker);
+}
+
+.rvo-icon-route-met-ster {
+  --rvo-icon-current: var(--rvo-icon-route-met-ster);
+}
+
+.rvo-icon-route-met-vlag {
+  --rvo-icon-current: var(--rvo-icon-route-met-vlag);
+}
+
+.rvo-icon-scherm-navigatiesysteem {
+  --rvo-icon-current: var(--rvo-icon-scherm-navigatiesysteem);
+}
+
+.rvo-icon-bord-provincie {
+  --rvo-icon-current: var(--rvo-icon-bord-provincie);
+}
+
+.rvo-icon-caribisch-nederland {
+  --rvo-icon-current: var(--rvo-icon-caribisch-nederland);
+}
+
+.rvo-icon-immigratie {
+  --rvo-icon-current: var(--rvo-icon-immigratie);
+}
+
+.rvo-icon-koets {
+  --rvo-icon-current: var(--rvo-icon-koets);
+}
+
+.rvo-icon-koninkrijk {
+  --rvo-icon-current: var(--rvo-icon-koninkrijk);
+}
+
+.rvo-icon-nederland-met-auto {
+  --rvo-icon-current: var(--rvo-icon-nederland-met-auto);
+}
+
+.rvo-icon-nederland-met-locatie-grote-steden {
+  --rvo-icon-current: var(--rvo-icon-nederland-met-locatie-grote-steden);
+}
+
+.rvo-icon-nederland-met-pijl-naar-rechts-beneden {
+  --rvo-icon-current: var(--rvo-icon-nederland-met-pijl-naar-rechts-beneden);
+}
+
+.rvo-icon-nederland-met-schip {
+  --rvo-icon-current: var(--rvo-icon-nederland-met-schip);
+}
+
+.rvo-icon-nederland-met-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-nederland-met-stapel-munten);
+}
+
+.rvo-icon-nederland-met-water {
+  --rvo-icon-current: var(--rvo-icon-nederland-met-water);
+}
+
+.rvo-icon-nederland {
+  --rvo-icon-current: var(--rvo-icon-nederland);
+}
+
+.rvo-icon-persconferentie {
+  --rvo-icon-current: var(--rvo-icon-persconferentie);
+}
+
+.rvo-icon-ridderzaal {
+  --rvo-icon-current: var(--rvo-icon-ridderzaal);
+}
+
+.rvo-icon-stembiljet {
+  --rvo-icon-current: var(--rvo-icon-stembiljet);
+}
+
+.rvo-icon-stemmen {
+  --rvo-icon-current: var(--rvo-icon-stemmen);
+}
+
+.rvo-icon-tweede-kamer {
+  --rvo-icon-current: var(--rvo-icon-tweede-kamer);
+}
+
+.rvo-icon-afsprakenstelsel {
+  --rvo-icon-current: var(--rvo-icon-afsprakenstelsel);
+}
+
+.rvo-icon-boek-opengeslagen {
+  --rvo-icon-current: var(--rvo-icon-boek-opengeslagen);
+}
+
+.rvo-icon-boek {
+  --rvo-icon-current: var(--rvo-icon-boek);
+}
+
+.rvo-icon-boeken-achter-elkaar {
+  --rvo-icon-current: var(--rvo-icon-boeken-achter-elkaar);
+}
+
+.rvo-icon-bord-met-grafieken {
+  --rvo-icon-current: var(--rvo-icon-bord-met-grafieken);
+}
+
+.rvo-icon-brievenbus-met-envelop {
+  --rvo-icon-current: var(--rvo-icon-brievenbus-met-envelop);
+}
+
+.rvo-icon-bureaustoel-en-loep {
+  --rvo-icon-current: var(--rvo-icon-bureaustoel-en-loep);
+}
+
+.rvo-icon-bureaustoel-met-tekst-arbo {
+  --rvo-icon-current: var(--rvo-icon-bureaustoel-met-tekst-arbo);
+}
+
+.rvo-icon-bureaustoel-met-thermometer {
+  --rvo-icon-current: var(--rvo-icon-bureaustoel-met-thermometer);
+}
+
+.rvo-icon-bureaustoel {
+  --rvo-icon-current: var(--rvo-icon-bureaustoel);
+}
+
+.rvo-icon-diploma-certificaat {
+  --rvo-icon-current: var(--rvo-icon-diploma-certificaat);
+}
+
+.rvo-icon-document-blanco {
+  --rvo-icon-current: var(--rvo-icon-document-blanco);
+}
+
+.rvo-icon-document-en-telefoon-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-document-en-telefoon-met-vinkje);
+}
+
+.rvo-icon-document-en-telefoon-met-vinkjes {
+  --rvo-icon-current: var(--rvo-icon-document-en-telefoon-met-vinkjes);
+}
+
+.rvo-icon-document-met-golvende-lijnen-en-lint {
+  --rvo-icon-current: var(--rvo-icon-document-met-golvende-lijnen-en-lint);
+}
+
+.rvo-icon-document-met-lijnen-en-lint {
+  --rvo-icon-current: var(--rvo-icon-document-met-lijnen-en-lint);
+}
+
+.rvo-icon-document-met-lijnen {
+  --rvo-icon-current: var(--rvo-icon-document-met-lijnen);
+}
+
+.rvo-icon-document-met-ontevreden-gezicht {
+  --rvo-icon-current: var(--rvo-icon-document-met-ontevreden-gezicht);
+}
+
+.rvo-icon-document-met-persoon {
+  --rvo-icon-current: var(--rvo-icon-document-met-persoon);
+}
+
+.rvo-icon-document-met-potlood {
+  --rvo-icon-current: var(--rvo-icon-document-met-potlood);
+}
+
+.rvo-icon-document-met-tekst-csv {
+  --rvo-icon-current: var(--rvo-icon-document-met-tekst-csv);
+}
+
+.rvo-icon-document-met-vinkje-en-persoon {
+  --rvo-icon-current: var(--rvo-icon-document-met-vinkje-en-persoon);
+}
+
+.rvo-icon-document-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-document-met-vinkje);
+}
+
+.rvo-icon-document-met-vinkjes-en-lijnen {
+  --rvo-icon-current: var(--rvo-icon-document-met-vinkjes-en-lijnen);
+}
+
+.rvo-icon-document-met-vlakken-en-lijnen-erop {
+  --rvo-icon-current: var(--rvo-icon-document-met-vlakken-en-lijnen-erop);
+}
+
+.rvo-icon-document-wisselen {
+  --rvo-icon-current: var(--rvo-icon-document-wisselen);
+}
+
+.rvo-icon-documenten-met-elkaar-verbonden {
+  --rvo-icon-current: var(--rvo-icon-documenten-met-elkaar-verbonden);
+}
+
+.rvo-icon-doos-met-pijlen-op-zijkant {
+  --rvo-icon-current: var(--rvo-icon-doos-met-pijlen-op-zijkant);
+}
+
+.rvo-icon-envelop {
+  --rvo-icon-current: var(--rvo-icon-envelop);
+}
+
+.rvo-icon-gevouwen-document-met-kruis {
+  --rvo-icon-current: var(--rvo-icon-gevouwen-document-met-kruis);
+}
+
+.rvo-icon-gevouwen-document {
+  --rvo-icon-current: var(--rvo-icon-gevouwen-document);
+}
+
+.rvo-icon-grafiek {
+  --rvo-icon-current: var(--rvo-icon-grafiek);
+}
+
+.rvo-icon-gum {
+  --rvo-icon-current: var(--rvo-icon-gum);
+}
+
+.rvo-icon-kalender-met-2-personen {
+  --rvo-icon-current: var(--rvo-icon-kalender-met-2-personen);
+}
+
+.rvo-icon-kalender-met-bliksemschicht {
+  --rvo-icon-current: var(--rvo-icon-kalender-met-bliksemschicht);
+}
+
+.rvo-icon-kalender-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-kalender-met-vinkje);
+}
+
+.rvo-icon-kalender-met-vlakken {
+  --rvo-icon-current: var(--rvo-icon-kalender-met-vlakken);
+}
+
+.rvo-icon-kartonnen-doos {
+  --rvo-icon-current: var(--rvo-icon-kartonnen-doos);
+}
+
+.rvo-icon-klembord-met-lijnen-met-kruis {
+  --rvo-icon-current: var(--rvo-icon-klembord-met-lijnen-met-kruis);
+}
+
+.rvo-icon-klembord-met-loep {
+  --rvo-icon-current: var(--rvo-icon-klembord-met-loep);
+}
+
+.rvo-icon-klembord-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-klembord-met-vinkje);
+}
+
+.rvo-icon-klembord-met-vinkjes-en-lijnen {
+  --rvo-icon-current: var(--rvo-icon-klembord-met-vinkjes-en-lijnen);
+}
+
+.rvo-icon-koffiekan-met-beamer {
+  --rvo-icon-current: var(--rvo-icon-koffiekan-met-beamer);
+}
+
+.rvo-icon-kopieerapparaat {
+  --rvo-icon-current: var(--rvo-icon-kopieerapparaat);
+}
+
+.rvo-icon-label {
+  --rvo-icon-current: var(--rvo-icon-label);
+}
+
+.rvo-icon-lade-archiefkast {
+  --rvo-icon-current: var(--rvo-icon-lade-archiefkast);
+}
+
+.rvo-icon-map-met-loep {
+  --rvo-icon-current: var(--rvo-icon-map-met-loep);
+}
+
+.rvo-icon-map-vol-documenten {
+  --rvo-icon-current: var(--rvo-icon-map-vol-documenten);
+}
+
+.rvo-icon-map {
+  --rvo-icon-current: var(--rvo-icon-map);
+}
+
+.rvo-icon-nietmachine {
+  --rvo-icon-current: var(--rvo-icon-nietmachine);
+}
+
+.rvo-icon-pallet-met-dozen {
+  --rvo-icon-current: var(--rvo-icon-pallet-met-dozen);
+}
+
+.rvo-icon-pijlen-in-cirkel-om-document {
+  --rvo-icon-current: var(--rvo-icon-pijlen-in-cirkel-om-document);
+}
+
+.rvo-icon-prop-papier {
+  --rvo-icon-current: var(--rvo-icon-prop-papier);
+}
+
+.rvo-icon-rekenmachine {
+  --rvo-icon-current: var(--rvo-icon-rekenmachine);
+}
+
+.rvo-icon-ringband-met-silhouet {
+  --rvo-icon-current: var(--rvo-icon-ringband-met-silhouet);
+}
+
+.rvo-icon-rol-papier-met-lijnen-en-veer {
+  --rvo-icon-current: var(--rvo-icon-rol-papier-met-lijnen-en-veer);
+}
+
+.rvo-icon-rol-papier-met-punten-en-lijnen {
+  --rvo-icon-current: var(--rvo-icon-rol-papier-met-punten-en-lijnen);
+}
+
+.rvo-icon-rol-papier-met-tekst-amvb {
+  --rvo-icon-current: var(--rvo-icon-rol-papier-met-tekst-amvb);
+}
+
+.rvo-icon-scan-document {
+  --rvo-icon-current: var(--rvo-icon-scan-document);
+}
+
+.rvo-icon-server-met-document {
+  --rvo-icon-current: var(--rvo-icon-server-met-document);
+}
+
+.rvo-icon-steekwagen-met-dozen {
+  --rvo-icon-current: var(--rvo-icon-steekwagen-met-dozen);
+}
+
+.rvo-icon-toegangspas {
+  --rvo-icon-current: var(--rvo-icon-toegangspas);
+}
+
+.rvo-icon-vergadertafel-met-stoelen {
+  --rvo-icon-current: var(--rvo-icon-vergadertafel-met-stoelen);
+}
+
+.rvo-icon-vouwkaart-met-kruis {
+  --rvo-icon-current: var(--rvo-icon-vouwkaart-met-kruis);
+}
+
+.rvo-icon-vouwkaart {
+  --rvo-icon-current: var(--rvo-icon-vouwkaart);
+}
+
+.rvo-icon-woordenboek {
+  --rvo-icon-current: var(--rvo-icon-woordenboek);
+}
+
+.rvo-icon-zak-met-envelop {
+  --rvo-icon-current: var(--rvo-icon-zak-met-envelop);
+}
+
+.rvo-icon-afstand-houden-armen {
+  --rvo-icon-current: var(--rvo-icon-afstand-houden-armen);
+}
+
+.rvo-icon-afstand-houden {
+  --rvo-icon-current: var(--rvo-icon-afstand-houden);
+}
+
+.rvo-icon-baby-torso {
+  --rvo-icon-current: var(--rvo-icon-baby-torso);
+}
+
+.rvo-icon-baby {
+  --rvo-icon-current: var(--rvo-icon-baby);
+}
+
+.rvo-icon-burgemeester-voor-2-personen {
+  --rvo-icon-current: var(--rvo-icon-burgemeester-voor-2-personen);
+}
+
+.rvo-icon-genderneutraal {
+  --rvo-icon-current: var(--rvo-icon-genderneutraal);
+}
+
+.rvo-icon-groep-3-personen-torso {
+  --rvo-icon-current: var(--rvo-icon-groep-3-personen-torso);
+}
+
+.rvo-icon-groep-3-personen {
+  --rvo-icon-current: var(--rvo-icon-groep-3-personen);
+}
+
+.rvo-icon-groep-5-personen {
+  --rvo-icon-current: var(--rvo-icon-groep-5-personen);
+}
+
+.rvo-icon-groep-personen-op-verhoging {
+  --rvo-icon-current: var(--rvo-icon-groep-personen-op-verhoging);
+}
+
+.rvo-icon-hoofd-met-zuidwester {
+  --rvo-icon-current: var(--rvo-icon-hoofd-met-zuidwester);
+}
+
+.rvo-icon-inclusiviteit {
+  --rvo-icon-current: var(--rvo-icon-inclusiviteit);
+}
+
+.rvo-icon-jongen-torso {
+  --rvo-icon-current: var(--rvo-icon-jongen-torso);
+}
+
+.rvo-icon-kind-vrouw-en-man-met-wandelstok {
+  --rvo-icon-current: var(--rvo-icon-kind-vrouw-en-man-met-wandelstok);
+}
+
+.rvo-icon-kind-vrouw-en-man {
+  --rvo-icon-current: var(--rvo-icon-kind-vrouw-en-man);
+}
+
+.rvo-icon-kind-vrouw-met-koffer-en-man-met-wandelstok {
+  --rvo-icon-current: var(--rvo-icon-kind-vrouw-met-koffer-en-man-met-wandelstok);
+}
+
+.rvo-icon-kring-3-personen-torso {
+  --rvo-icon-current: var(--rvo-icon-kring-3-personen-torso);
+}
+
+.rvo-icon-kring-5-personen-staand {
+  --rvo-icon-current: var(--rvo-icon-kring-5-personen-staand);
+}
+
+.rvo-icon-man-en-vrouw-achter-buro-met-gordijn {
+  --rvo-icon-current: var(--rvo-icon-man-en-vrouw-achter-buro-met-gordijn);
+}
+
+.rvo-icon-man-gelijk-aan-vrouw {
+  --rvo-icon-current: var(--rvo-icon-man-gelijk-aan-vrouw);
+}
+
+.rvo-icon-man-hoofd-leunend-op-hand {
+  --rvo-icon-current: var(--rvo-icon-man-hoofd-leunend-op-hand);
+}
+
+.rvo-icon-man-hoofd {
+  --rvo-icon-current: var(--rvo-icon-man-hoofd);
+}
+
+.rvo-icon-man-met-bril-torso {
+  --rvo-icon-current: var(--rvo-icon-man-met-bril-torso);
+}
+
+.rvo-icon-man-met-cirkel-van-2-pijlen {
+  --rvo-icon-current: var(--rvo-icon-man-met-cirkel-van-2-pijlen);
+}
+
+.rvo-icon-man-met-dubbele-pijl {
+  --rvo-icon-current: var(--rvo-icon-man-met-dubbele-pijl);
+}
+
+.rvo-icon-man-met-stropdas-torso {
+  --rvo-icon-current: var(--rvo-icon-man-met-stropdas-torso);
+}
+
+.rvo-icon-man-met-stropdas-voor-2-personen {
+  --rvo-icon-current: var(--rvo-icon-man-met-stropdas-voor-2-personen);
+}
+
+.rvo-icon-man-met-stropdas-voor-persoon-met-helm {
+  --rvo-icon-current: var(--rvo-icon-man-met-stropdas-voor-persoon-met-helm);
+}
+
+.rvo-icon-man-met-wandelstok {
+  --rvo-icon-current: var(--rvo-icon-man-met-wandelstok);
+}
+
+.rvo-icon-man-staand {
+  --rvo-icon-current: var(--rvo-icon-man-staand);
+}
+
+.rvo-icon-man-torso {
+  --rvo-icon-current: var(--rvo-icon-man-torso);
+}
+
+.rvo-icon-meisje-torso {
+  --rvo-icon-current: var(--rvo-icon-meisje-torso);
+}
+
+.rvo-icon-personen-arm-op-schouder {
+  --rvo-icon-current: var(--rvo-icon-personen-arm-op-schouder);
+}
+
+.rvo-icon-personen-armen-om-schouders {
+  --rvo-icon-current: var(--rvo-icon-personen-armen-om-schouders);
+}
+
+.rvo-icon-personen-hand-op-rug {
+  --rvo-icon-current: var(--rvo-icon-personen-hand-op-rug);
+}
+
+.rvo-icon-personen-hand-op-schouder {
+  --rvo-icon-current: var(--rvo-icon-personen-hand-op-schouder);
+}
+
+.rvo-icon-persoon-armen-en-benen-gespreid {
+  --rvo-icon-current: var(--rvo-icon-persoon-armen-en-benen-gespreid);
+}
+
+.rvo-icon-persoon-boven-3-pijlen {
+  --rvo-icon-current: var(--rvo-icon-persoon-boven-3-pijlen);
+}
+
+.rvo-icon-persoon-handen-in-zij {
+  --rvo-icon-current: var(--rvo-icon-persoon-handen-in-zij);
+}
+
+.rvo-icon-persoon-in-niqab-torso {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-niqab-torso);
+}
+
+.rvo-icon-persoon-in-rolstoel {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-rolstoel);
+}
+
+.rvo-icon-persoon-kaal-in-gestreept-shirt-torso {
+  --rvo-icon-current: var(--rvo-icon-persoon-kaal-in-gestreept-shirt-torso);
+}
+
+.rvo-icon-persoon-met-bivakmuts-torso {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-bivakmuts-torso);
+}
+
+.rvo-icon-persoon-met-blinddoek {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-blinddoek);
+}
+
+.rvo-icon-persoon-met-cape {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-cape);
+}
+
+.rvo-icon-persoon-met-capuchon-en-slot {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-capuchon-en-slot);
+}
+
+.rvo-icon-persoon-met-capuchon-voor-persoon {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-capuchon-voor-persoon);
+}
+
+.rvo-icon-persoon-met-dicht-hangslot {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-dicht-hangslot);
+}
+
+.rvo-icon-persoon-met-hoofddoek-en-bloem {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-hoofddoek-en-bloem);
+}
+
+.rvo-icon-persoon-met-hoofddoek-torso {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-hoofddoek-torso);
+}
+
+.rvo-icon-persoon-met-hoofddoek-voor-persoon-met-punthoed {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-hoofddoek-voor-persoon-met-punthoed);
+}
+
+.rvo-icon-persoon-met-integraalhelm-torso {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-integraalhelm-torso);
+}
+
+.rvo-icon-persoon-met-kromme-pijl {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-kromme-pijl);
+}
+
+.rvo-icon-persoon-met-kronkelpijlen {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-kronkelpijlen);
+}
+
+.rvo-icon-persoon-met-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-stapel-munten);
+}
+
+.rvo-icon-persoon-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-vinkje);
+}
+
+.rvo-icon-persoon-met-weegschaal {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-weegschaal);
+}
+
+.rvo-icon-persoon-stilte {
+  --rvo-icon-current: var(--rvo-icon-persoon-stilte);
+}
+
+.rvo-icon-persoon-torso-onder-loep {
+  --rvo-icon-current: var(--rvo-icon-persoon-torso-onder-loep);
+}
+
+.rvo-icon-persoon-torso-tussen-2-personen {
+  --rvo-icon-current: var(--rvo-icon-persoon-torso-tussen-2-personen);
+}
+
+.rvo-icon-persoon-tussen-4-pijlen {
+  --rvo-icon-current: var(--rvo-icon-persoon-tussen-4-pijlen);
+}
+
+.rvo-icon-rij-mensen {
+  --rvo-icon-current: var(--rvo-icon-rij-mensen);
+}
+
+.rvo-icon-rouw-met-mondkapje-en-naald {
+  --rvo-icon-current: var(--rvo-icon-rouw-met-mondkapje-en-naald);
+}
+
+.rvo-icon-rouw-met-mondkapje {
+  --rvo-icon-current: var(--rvo-icon-rouw-met-mondkapje);
+}
+
+.rvo-icon-sourcing {
+  --rvo-icon-current: var(--rvo-icon-sourcing);
+}
+
+.rvo-icon-vrouw-hoofd {
+  --rvo-icon-current: var(--rvo-icon-vrouw-hoofd);
+}
+
+.rvo-icon-vrouw-met-blinddoek-en-weegschaal {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-blinddoek-en-weegschaal);
+}
+
+.rvo-icon-vrouw-met-halsketting-om-torso {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-halsketting-om-torso);
+}
+
+.rvo-icon-vrouw-met-ketting-om-torso {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-ketting-om-torso);
+}
+
+.rvo-icon-vrouw-met-knot-en-bril-torso {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-knot-en-bril-torso);
+}
+
+.rvo-icon-vrouw-met-knot-en-lipstick-voor-2-personen {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-knot-en-lipstick-voor-2-personen);
+}
+
+.rvo-icon-vrouw-met-rollator {
+  --rvo-icon-current: var(--rvo-icon-vrouw-met-rollator);
+}
+
+.rvo-icon-vrouw-staand {
+  --rvo-icon-current: var(--rvo-icon-vrouw-staand);
+}
+
+.rvo-icon-vrouw-torso {
+  --rvo-icon-current: var(--rvo-icon-vrouw-torso);
+}
+
+.rvo-icon-zwangere-vooraanzicht {
+  --rvo-icon-current: var(--rvo-icon-zwangere-vooraanzicht);
+}
+
+.rvo-icon-zwangere-zijaanzicht {
+  --rvo-icon-current: var(--rvo-icon-zwangere-zijaanzicht);
+}
+
+.rvo-icon-bokaal {
+  --rvo-icon-current: var(--rvo-icon-bokaal);
+}
+
+.rvo-icon-gewichtheffer-staand {
+  --rvo-icon-current: var(--rvo-icon-gewichtheffer-staand);
+}
+
+.rvo-icon-halter {
+  --rvo-icon-current: var(--rvo-icon-halter);
+}
+
+.rvo-icon-hockeyer {
+  --rvo-icon-current: var(--rvo-icon-hockeyer);
+}
+
+.rvo-icon-kleedkamer-man {
+  --rvo-icon-current: var(--rvo-icon-kleedkamer-man);
+}
+
+.rvo-icon-kleedkamer-vrouw {
+  --rvo-icon-current: var(--rvo-icon-kleedkamer-vrouw);
+}
+
+.rvo-icon-kleedkamer {
+  --rvo-icon-current: var(--rvo-icon-kleedkamer);
+}
+
+.rvo-icon-persoon-in-starthouding-sprint {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-starthouding-sprint);
+}
+
+.rvo-icon-persoon-in-water {
+  --rvo-icon-current: var(--rvo-icon-persoon-in-water);
+}
+
+.rvo-icon-persoon-met-haarband {
+  --rvo-icon-current: var(--rvo-icon-persoon-met-haarband);
+}
+
+.rvo-icon-persoon-op-erepodium {
+  --rvo-icon-current: var(--rvo-icon-persoon-op-erepodium);
+}
+
+.rvo-icon-persoon-op-loopband {
+  --rvo-icon-current: var(--rvo-icon-persoon-op-loopband);
+}
+
+.rvo-icon-persoon-rent-naar-bal {
+  --rvo-icon-current: var(--rvo-icon-persoon-rent-naar-bal);
+}
+
+.rvo-icon-persoon-rent-op-blades {
+  --rvo-icon-current: var(--rvo-icon-persoon-rent-op-blades);
+}
+
+.rvo-icon-persoon-springend-naar-bal {
+  --rvo-icon-current: var(--rvo-icon-persoon-springend-naar-bal);
+}
+
+.rvo-icon-schaatser {
+  --rvo-icon-current: var(--rvo-icon-schaatser);
+}
+
+.rvo-icon-wielrenner {
+  --rvo-icon-current: var(--rvo-icon-wielrenner);
+}
+
+.rvo-icon-windsurfer {
+  --rvo-icon-current: var(--rvo-icon-windsurfer);
+}
+
+.rvo-icon-bevestiging {
+  --rvo-icon-current: var(--rvo-icon-bevestiging);
+}
+
+.rvo-icon-foutmelding {
+  --rvo-icon-current: var(--rvo-icon-foutmelding);
+}
+
+.rvo-icon-waarschuwing {
+  --rvo-icon-current: var(--rvo-icon-waarschuwing);
+}
+
+.rvo-icon-avondklok-negen-uur {
+  --rvo-icon-current: var(--rvo-icon-avondklok-negen-uur);
+}
+
+.rvo-icon-boos {
+  --rvo-icon-current: var(--rvo-icon-boos);
+}
+
+.rvo-icon-brandalarm {
+  --rvo-icon-current: var(--rvo-icon-brandalarm);
+}
+
+.rvo-icon-datalek {
+  --rvo-icon-current: var(--rvo-icon-datalek);
+}
+
+.rvo-icon-document-met-grafiek-boven-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-document-met-grafiek-boven-uitgestoken-hand);
+}
+
+.rvo-icon-doel-met-drie-circels {
+  --rvo-icon-current: var(--rvo-icon-doel-met-drie-circels);
+}
+
+.rvo-icon-doel-met-vijf-circels {
+  --rvo-icon-current: var(--rvo-icon-doel-met-vijf-circels);
+}
+
+.rvo-icon-enthousiast {
+  --rvo-icon-current: var(--rvo-icon-enthousiast);
+}
+
+.rvo-icon-golvende-pijlen {
+  --rvo-icon-current: var(--rvo-icon-golvende-pijlen);
+}
+
+.rvo-icon-haakse-pijl-linksboven {
+  --rvo-icon-current: var(--rvo-icon-haakse-pijl-linksboven);
+}
+
+.rvo-icon-haakse-pijl-linksonder {
+  --rvo-icon-current: var(--rvo-icon-haakse-pijl-linksonder);
+}
+
+.rvo-icon-haakse-pijl-rechtsboven {
+  --rvo-icon-current: var(--rvo-icon-haakse-pijl-rechtsboven);
+}
+
+.rvo-icon-haakse-pijl-rechtsonder {
+  --rvo-icon-current: var(--rvo-icon-haakse-pijl-rechtsonder);
+}
+
+.rvo-icon-hart {
+  --rvo-icon-current: var(--rvo-icon-hart);
+}
+
+.rvo-icon-iconen-toevoegen {
+  --rvo-icon-current: var(--rvo-icon-iconen-toevoegen);
+}
+
+.rvo-icon-kaars-voor-grafsteen-wo2 {
+  --rvo-icon-current: var(--rvo-icon-kaars-voor-grafsteen-wo2);
+}
+
+.rvo-icon-kaars-voor-grafsteen {
+  --rvo-icon-current: var(--rvo-icon-kaars-voor-grafsteen);
+}
+
+.rvo-icon-klok-op-hand {
+  --rvo-icon-current: var(--rvo-icon-klok-op-hand);
+}
+
+.rvo-icon-lachend-gezicht {
+  --rvo-icon-current: var(--rvo-icon-lachend-gezicht);
+}
+
+.rvo-icon-mee-eens {
+  --rvo-icon-current: var(--rvo-icon-mee-eens);
+}
+
+.rvo-icon-ontruiming {
+  --rvo-icon-current: var(--rvo-icon-ontruiming);
+}
+
+.rvo-icon-opsomming {
+  --rvo-icon-current: var(--rvo-icon-opsomming);
+}
+
+.rvo-icon-pcm {
+  --rvo-icon-current: var(--rvo-icon-pcm);
+}
+
+.rvo-icon-pijl-met-lijnen {
+  --rvo-icon-current: var(--rvo-icon-pijl-met-lijnen);
+}
+
+.rvo-icon-ronde-pijl-op-hand {
+  --rvo-icon-current: var(--rvo-icon-ronde-pijl-op-hand);
+}
+
+.rvo-icon-rozet-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-rozet-met-vinkje);
+}
+
+.rvo-icon-stapel-kaarten {
+  --rvo-icon-current: var(--rvo-icon-stapel-kaarten);
+}
+
+.rvo-icon-ster {
+  --rvo-icon-current: var(--rvo-icon-ster);
+}
+
+.rvo-icon-twee-pijlen {
+  --rvo-icon-current: var(--rvo-icon-twee-pijlen);
+}
+
+.rvo-icon-verdrietig {
+  --rvo-icon-current: var(--rvo-icon-verdrietig);
+}
+
+.rvo-icon-vermindering-papier {
+  --rvo-icon-current: var(--rvo-icon-vermindering-papier);
+}
+
+.rvo-icon-virus {
+  --rvo-icon-current: var(--rvo-icon-virus);
+}
+
+.rvo-icon-ambulance {
+  --rvo-icon-current: var(--rvo-icon-ambulance);
+}
+
+.rvo-icon-auto- {
+  --rvo-icon-current: var(--rvo-icon-auto-);
+}
+
+.rvo-icon-auto-hulpdiensten- {
+  --rvo-icon-current: var(--rvo-icon-auto-hulpdiensten-);
+}
+
+.rvo-icon-auto-met-3-personen {
+  --rvo-icon-current: var(--rvo-icon-auto-met-3-personen);
+}
+
+.rvo-icon-auto-met-parkeermeter {
+  --rvo-icon-current: var(--rvo-icon-auto-met-parkeermeter);
+}
+
+.rvo-icon-auto-met-pijlen-linksaf-en-rechtsaf {
+  --rvo-icon-current: var(--rvo-icon-auto-met-pijlen-linksaf-en-rechtsaf);
+}
+
+.rvo-icon-auto-met-stekker {
+  --rvo-icon-current: var(--rvo-icon-auto-met-stekker);
+}
+
+.rvo-icon-auto-met-zender-op-dak {
+  --rvo-icon-current: var(--rvo-icon-auto-met-zender-op-dak);
+}
+
+.rvo-icon-auto-met-zender-voor {
+  --rvo-icon-current: var(--rvo-icon-auto-met-zender-voor);
+}
+
+.rvo-icon-auto-met-zenders-opzij {
+  --rvo-icon-current: var(--rvo-icon-auto-met-zenders-opzij);
+}
+
+.rvo-icon-auto-met-zenders-voor-en-opzij {
+  --rvo-icon-current: var(--rvo-icon-auto-met-zenders-voor-en-opzij);
+}
+
+.rvo-icon-auto-onder-overkapping-met-broodje {
+  --rvo-icon-current: var(--rvo-icon-auto-onder-overkapping-met-broodje);
+}
+
+.rvo-icon-auto-onder-overkapping {
+  --rvo-icon-current: var(--rvo-icon-auto-onder-overkapping);
+}
+
+.rvo-icon-auto-op-zijn-kant-met-barst {
+  --rvo-icon-current: var(--rvo-icon-auto-op-zijn-kant-met-barst);
+}
+
+.rvo-icon-auto-op-zijn-kant-voor-vrachtauto-met-barst {
+  --rvo-icon-current: var(--rvo-icon-auto-op-zijn-kant-voor-vrachtauto-met-barst);
+}
+
+.rvo-icon-auto-voor-bestelbus {
+  --rvo-icon-current: var(--rvo-icon-auto-voor-bestelbus);
+}
+
+.rvo-icon-auto-vooraanzicht {
+  --rvo-icon-current: var(--rvo-icon-auto-vooraanzicht);
+}
+
+.rvo-icon-auto {
+  --rvo-icon-current: var(--rvo-icon-auto);
+}
+
+.rvo-icon-autos-achter-elkaar {
+  --rvo-icon-current: var(--rvo-icon-autos-achter-elkaar);
+}
+
+.rvo-icon-autos-met-waarschuwingsbord {
+  --rvo-icon-current: var(--rvo-icon-autos-met-waarschuwingsbord);
+}
+
+.rvo-icon-bakfiets {
+  --rvo-icon-current: var(--rvo-icon-bakfiets);
+}
+
+.rvo-icon-bestelbus-2 {
+  --rvo-icon-current: var(--rvo-icon-bestelbus-2);
+}
+
+.rvo-icon-bestelbus-rijdend {
+  --rvo-icon-current: var(--rvo-icon-bestelbus-rijdend);
+}
+
+.rvo-icon-bestelbus {
+  --rvo-icon-current: var(--rvo-icon-bestelbus);
+}
+
+.rvo-icon-boot-vol-mensen-op-water {
+  --rvo-icon-current: var(--rvo-icon-boot-vol-mensen-op-water);
+}
+
+.rvo-icon-brandweerauto-met-klok {
+  --rvo-icon-current: var(--rvo-icon-brandweerauto-met-klok);
+}
+
+.rvo-icon-bus {
+  --rvo-icon-current: var(--rvo-icon-bus);
+}
+
+.rvo-icon-bushalte {
+  --rvo-icon-current: var(--rvo-icon-bushalte);
+}
+
+.rvo-icon-cruiseschip {
+  --rvo-icon-current: var(--rvo-icon-cruiseschip);
+}
+
+.rvo-icon-fiets-met-krat {
+  --rvo-icon-current: var(--rvo-icon-fiets-met-krat);
+}
+
+.rvo-icon-fiets-met-stekker {
+  --rvo-icon-current: var(--rvo-icon-fiets-met-stekker);
+}
+
+.rvo-icon-fiets {
+  --rvo-icon-current: var(--rvo-icon-fiets);
+}
+
+.rvo-icon-helikopter {
+  --rvo-icon-current: var(--rvo-icon-helikopter);
+}
+
+.rvo-icon-hoge-auto-voor-rolstoel {
+  --rvo-icon-current: var(--rvo-icon-hoge-auto-voor-rolstoel);
+}
+
+.rvo-icon-jacht-op-water {
+  --rvo-icon-current: var(--rvo-icon-jacht-op-water);
+}
+
+.rvo-icon-lorrie-gevuld {
+  --rvo-icon-current: var(--rvo-icon-lorrie-gevuld);
+}
+
+.rvo-icon-motor-hulpdiensten {
+  --rvo-icon-current: var(--rvo-icon-motor-hulpdiensten);
+}
+
+.rvo-icon-motor {
+  --rvo-icon-current: var(--rvo-icon-motor);
+}
+
+.rvo-icon-personen-staand-voor-auto {
+  --rvo-icon-current: var(--rvo-icon-personen-staand-voor-auto);
+}
+
+.rvo-icon-personen-staand-voor-fiets {
+  --rvo-icon-current: var(--rvo-icon-personen-staand-voor-fiets);
+}
+
+.rvo-icon-personen-staand-voor-scooter {
+  --rvo-icon-current: var(--rvo-icon-personen-staand-voor-scooter);
+}
+
+.rvo-icon-persoon-bij-motorkap-auto {
+  --rvo-icon-current: var(--rvo-icon-persoon-bij-motorkap-auto);
+}
+
+.rvo-icon-persoon-loopt-naar-trein {
+  --rvo-icon-current: var(--rvo-icon-persoon-loopt-naar-trein);
+}
+
+.rvo-icon-persoon-staand-naast-auto-met-bestuurder {
+  --rvo-icon-current: var(--rvo-icon-persoon-staand-naast-auto-met-bestuurder);
+}
+
+.rvo-icon-raket {
+  --rvo-icon-current: var(--rvo-icon-raket);
+}
+
+.rvo-icon-schip-en-schuine-oever {
+  --rvo-icon-current: var(--rvo-icon-schip-en-schuine-oever);
+}
+
+.rvo-icon-schip-hulpdiensten {
+  --rvo-icon-current: var(--rvo-icon-schip-hulpdiensten);
+}
+
+.rvo-icon-schip-in-sluis-met-klok {
+  --rvo-icon-current: var(--rvo-icon-schip-in-sluis-met-klok);
+}
+
+.rvo-icon-schip-in-sluis {
+  --rvo-icon-current: var(--rvo-icon-schip-in-sluis);
+}
+
+.rvo-icon-schip-langs-dam {
+  --rvo-icon-current: var(--rvo-icon-schip-langs-dam);
+}
+
+.rvo-icon-schip-langs-kade-met-hijskraan {
+  --rvo-icon-current: var(--rvo-icon-schip-langs-kade-met-hijskraan);
+}
+
+.rvo-icon-schip-langs-kade-met-maan {
+  --rvo-icon-current: var(--rvo-icon-schip-langs-kade-met-maan);
+}
+
+.rvo-icon-schip-langs-kade {
+  --rvo-icon-current: var(--rvo-icon-schip-langs-kade);
+}
+
+.rvo-icon-schip-met-waarschuwingsbord {
+  --rvo-icon-current: var(--rvo-icon-schip-met-waarschuwingsbord);
+}
+
+.rvo-icon-schip-op-water-boven-vaargeul {
+  --rvo-icon-current: var(--rvo-icon-schip-op-water-boven-vaargeul);
+}
+
+.rvo-icon-schip-op-water-met-schuine-oevers-en-pijlen {
+  --rvo-icon-current: var(--rvo-icon-schip-op-water-met-schuine-oevers-en-pijlen);
+}
+
+.rvo-icon-schip-op-water {
+  --rvo-icon-current: var(--rvo-icon-schip-op-water);
+}
+
+.rvo-icon-schip-scheef-in-water {
+  --rvo-icon-current: var(--rvo-icon-schip-scheef-in-water);
+}
+
+.rvo-icon-schip-spuit-zand-op {
+  --rvo-icon-current: var(--rvo-icon-schip-spuit-zand-op);
+}
+
+.rvo-icon-schip-tussen-ijsschotsen {
+  --rvo-icon-current: var(--rvo-icon-schip-tussen-ijsschotsen);
+}
+
+.rvo-icon-scooter-met-stekker {
+  --rvo-icon-current: var(--rvo-icon-scooter-met-stekker);
+}
+
+.rvo-icon-scooter {
+  --rvo-icon-current: var(--rvo-icon-scooter);
+}
+
+.rvo-icon-scootmobiel {
+  --rvo-icon-current: var(--rvo-icon-scootmobiel);
+}
+
+.rvo-icon-step {
+  --rvo-icon-current: var(--rvo-icon-step);
+}
+
+.rvo-icon-strooiwagen-rijdend {
+  --rvo-icon-current: var(--rvo-icon-strooiwagen-rijdend);
+}
+
+.rvo-icon-strooiwagen-strooiend {
+  --rvo-icon-current: var(--rvo-icon-strooiwagen-strooiend);
+}
+
+.rvo-icon-strooiwagen {
+  --rvo-icon-current: var(--rvo-icon-strooiwagen);
+}
+
+.rvo-icon-takelwagen {
+  --rvo-icon-current: var(--rvo-icon-takelwagen);
+}
+
+.rvo-icon-tank {
+  --rvo-icon-current: var(--rvo-icon-tank);
+}
+
+.rvo-icon-taxi {
+  --rvo-icon-current: var(--rvo-icon-taxi);
+}
+
+.rvo-icon-touringcar {
+  --rvo-icon-current: var(--rvo-icon-touringcar);
+}
+
+.rvo-icon-tractor {
+  --rvo-icon-current: var(--rvo-icon-tractor);
+}
+
+.rvo-icon-tram {
+  --rvo-icon-current: var(--rvo-icon-tram);
+}
+
+.rvo-icon-trein-met-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-trein-met-stapel-munten);
+}
+
+.rvo-icon-trein-met-vinkje {
+  --rvo-icon-current: var(--rvo-icon-trein-met-vinkje);
+}
+
+.rvo-icon-trein {
+  --rvo-icon-current: var(--rvo-icon-trein);
+}
+
+.rvo-icon-veerpont-op-water {
+  --rvo-icon-current: var(--rvo-icon-veerpont-op-water);
+}
+
+.rvo-icon-verbod-fiets {
+  --rvo-icon-current: var(--rvo-icon-verbod-fiets);
+}
+
+.rvo-icon-vliegtuig-en-auto {
+  --rvo-icon-current: var(--rvo-icon-vliegtuig-en-auto);
+}
+
+.rvo-icon-vliegtuig-vliegt-bij-verkeerstoren {
+  --rvo-icon-current: var(--rvo-icon-vliegtuig-vliegt-bij-verkeerstoren);
+}
+
+.rvo-icon-vliegtuig {
+  --rvo-icon-current: var(--rvo-icon-vliegtuig);
+}
+
+.rvo-icon-vrachtauto-in-gebouw-met-bel {
+  --rvo-icon-current: var(--rvo-icon-vrachtauto-in-gebouw-met-bel);
+}
+
+.rvo-icon-vrachtauto-met-lekke-band-en-barst-in-voorruit {
+  --rvo-icon-current: var(--rvo-icon-vrachtauto-met-lekke-band-en-barst-in-voorruit);
+}
+
+.rvo-icon-vrachtauto {
+  --rvo-icon-current: var(--rvo-icon-vrachtauto);
+}
+
+.rvo-icon-zeilboot-op-water {
+  --rvo-icon-current: var(--rvo-icon-zeilboot-op-water);
+}
+
+.rvo-icon-aar-met-bladeren {
+  --rvo-icon-current: var(--rvo-icon-aar-met-bladeren);
+}
+
+.rvo-icon-aar {
+  --rvo-icon-current: var(--rvo-icon-aar);
+}
+
+.rvo-icon-afhaaleten {
+  --rvo-icon-current: var(--rvo-icon-afhaaleten);
+}
+
+.rvo-icon-aren {
+  --rvo-icon-current: var(--rvo-icon-aren);
+}
+
+.rvo-icon-belegd-broodje {
+  --rvo-icon-current: var(--rvo-icon-belegd-broodje);
+}
+
+.rvo-icon-blok-met-druppel {
+  --rvo-icon-current: var(--rvo-icon-blok-met-druppel);
+}
+
+.rvo-icon-bout-met-hap-eruit {
+  --rvo-icon-current: var(--rvo-icon-bout-met-hap-eruit);
+}
+
+.rvo-icon-brood-met-pijl-omhoog {
+  --rvo-icon-current: var(--rvo-icon-brood-met-pijl-omhoog);
+}
+
+.rvo-icon-brood {
+  --rvo-icon-current: var(--rvo-icon-brood);
+}
+
+.rvo-icon-broodje-en-appel {
+  --rvo-icon-current: var(--rvo-icon-broodje-en-appel);
+}
+
+.rvo-icon-broodje-met-keurmerk {
+  --rvo-icon-current: var(--rvo-icon-broodje-met-keurmerk);
+}
+
+.rvo-icon-chili-bonen-en-peper {
+  --rvo-icon-current: var(--rvo-icon-chili-bonen-en-peper);
+}
+
+.rvo-icon-dienblad-op-uitgestoken-hand {
+  --rvo-icon-current: var(--rvo-icon-dienblad-op-uitgestoken-hand);
+}
+
+.rvo-icon-drankverpakkingen {
+  --rvo-icon-current: var(--rvo-icon-drankverpakkingen);
+}
+
+.rvo-icon-drinkbeker {
+  --rvo-icon-current: var(--rvo-icon-drinkbeker);
+}
+
+.rvo-icon-fles-zuivel-sap {
+  --rvo-icon-current: var(--rvo-icon-fles-zuivel-sap);
+}
+
+.rvo-icon-fruitschaal {
+  --rvo-icon-current: var(--rvo-icon-fruitschaal);
+}
+
+.rvo-icon-gevuld-wijnglas {
+  --rvo-icon-current: var(--rvo-icon-gevuld-wijnglas);
+}
+
+.rvo-icon-glazen-op-tafel {
+  --rvo-icon-current: var(--rvo-icon-glazen-op-tafel);
+}
+
+.rvo-icon-kop-warme-drank {
+  --rvo-icon-current: var(--rvo-icon-kop-warme-drank);
+}
+
+.rvo-icon-krop-sla-en-wortel {
+  --rvo-icon-current: var(--rvo-icon-krop-sla-en-wortel);
+}
+
+.rvo-icon-literfles {
+  --rvo-icon-current: var(--rvo-icon-literfles);
+}
+
+.rvo-icon-maiskolf {
+  --rvo-icon-current: var(--rvo-icon-maiskolf);
+}
+
+.rvo-icon-plastic-fles {
+  --rvo-icon-current: var(--rvo-icon-plastic-fles);
+}
+
+.rvo-icon-prei-en-appel {
+  --rvo-icon-current: var(--rvo-icon-prei-en-appel);
+}
+
+.rvo-icon-restaurant {
+  --rvo-icon-current: var(--rvo-icon-restaurant);
+}
+
+.rvo-icon-snee-brood-met-hap-eruit {
+  --rvo-icon-current: var(--rvo-icon-snee-brood-met-hap-eruit);
+}
+
+.rvo-icon-snoepje-in-wikkel {
+  --rvo-icon-current: var(--rvo-icon-snoepje-in-wikkel);
+}
+
+.rvo-icon-softijs {
+  --rvo-icon-current: var(--rvo-icon-softijs);
+}
+
+.rvo-icon-strooibus {
+  --rvo-icon-current: var(--rvo-icon-strooibus);
+}
+
+.rvo-icon-stuk-vlees {
+  --rvo-icon-current: var(--rvo-icon-stuk-vlees);
+}
+
+.rvo-icon-suikerpot {
+  --rvo-icon-current: var(--rvo-icon-suikerpot);
+}
+
+.rvo-icon-voedselverpakking {
+  --rvo-icon-current: var(--rvo-icon-voedselverpakking);
+}
+
+.rvo-icon-worst-en-broodje {
+  --rvo-icon-current: var(--rvo-icon-worst-en-broodje);
+}
+
+.rvo-icon-worst-en-kaas {
+  --rvo-icon-current: var(--rvo-icon-worst-en-kaas);
+}
+
+.rvo-icon-worst-en-wortel {
+  --rvo-icon-current: var(--rvo-icon-worst-en-wortel);
+}
+
+.rvo-icon-babypop {
+  --rvo-icon-current: var(--rvo-icon-babypop);
+}
+
+.rvo-icon-ballonnen {
+  --rvo-icon-current: var(--rvo-icon-ballonnen);
+}
+
+.rvo-icon-buitenzwembad {
+  --rvo-icon-current: var(--rvo-icon-buitenzwembad);
+}
+
+.rvo-icon-evenement {
+  --rvo-icon-current: var(--rvo-icon-evenement);
+}
+
+.rvo-icon-kind-springend-op-trampoline {
+  --rvo-icon-current: var(--rvo-icon-kind-springend-op-trampoline);
+}
+
+.rvo-icon-kinderen-springend-naar-bal {
+  --rvo-icon-current: var(--rvo-icon-kinderen-springend-naar-bal);
+}
+
+.rvo-icon-koffer {
+  --rvo-icon-current: var(--rvo-icon-koffer);
+}
+
+.rvo-icon-pretpark {
+  --rvo-icon-current: var(--rvo-icon-pretpark);
+}
+
+.rvo-icon-puzzel {
+  --rvo-icon-current: var(--rvo-icon-puzzel);
+}
+
+.rvo-icon-rolkoffer {
+  --rvo-icon-current: var(--rvo-icon-rolkoffer);
+}
+
+.rvo-icon-rugzak {
+  --rvo-icon-current: var(--rvo-icon-rugzak);
+}
+
+.rvo-icon-schietschijf-met-pijl {
+  --rvo-icon-current: var(--rvo-icon-schietschijf-met-pijl);
+}
+
+.rvo-icon-schilderij-met-bloemen-in-vaas {
+  --rvo-icon-current: var(--rvo-icon-schilderij-met-bloemen-in-vaas);
+}
+
+.rvo-icon-schilderij-met-vrouw-met-stapel-munten {
+  --rvo-icon-current: var(--rvo-icon-schilderij-met-vrouw-met-stapel-munten);
+}
+
+.rvo-icon-schoolbord-met-puzzelstuk {
+  --rvo-icon-current: var(--rvo-icon-schoolbord-met-puzzelstuk);
+}
+
+.rvo-icon-schoolbord {
+  --rvo-icon-current: var(--rvo-icon-schoolbord);
+}
+
+.rvo-icon-speelgoedblokken {
+  --rvo-icon-current: var(--rvo-icon-speelgoedblokken);
+}
+
+.rvo-icon-speelgoedtrein {
+  --rvo-icon-current: var(--rvo-icon-speelgoedtrein);
+}
+
+.rvo-icon-speelkaarten {
+  --rvo-icon-current: var(--rvo-icon-speelkaarten);
+}
+
+.rvo-icon-teddybeer-met-ce {
+  --rvo-icon-current: var(--rvo-icon-teddybeer-met-ce);
+}
+
+.rvo-icon-teddybeer {
+  --rvo-icon-current: var(--rvo-icon-teddybeer);
+}
+
+.rvo-icon-tent-bij-boom {
+  --rvo-icon-current: var(--rvo-icon-tent-bij-boom);
+}
+
+.rvo-icon-thuisonderwijs {
+  --rvo-icon-current: var(--rvo-icon-thuisonderwijs);
+}
+
+.rvo-icon-trompet {
+  --rvo-icon-current: var(--rvo-icon-trompet);
+}
+
+.rvo-icon-twee-maskers {
+  --rvo-icon-current: var(--rvo-icon-twee-maskers);
+}
+
+.rvo-icon-twee-zwembandjes {
+  --rvo-icon-current: var(--rvo-icon-twee-zwembandjes);
+}
+
+.rvo-icon-vaantje {
+  --rvo-icon-current: var(--rvo-icon-vaantje);
+}
+
+.rvo-icon-viool {
+  --rvo-icon-current: var(--rvo-icon-viool);
+}
+
+.rvo-icon-baggeren {
+  --rvo-icon-current: var(--rvo-icon-baggeren);
+}
+
+.rvo-icon-boei {
+  --rvo-icon-current: var(--rvo-icon-boei);
+}
+
+.rvo-icon-dijk {
+  --rvo-icon-current: var(--rvo-icon-dijk);
+}
+
+.rvo-icon-dijkversterking {
+  --rvo-icon-current: var(--rvo-icon-dijkversterking);
+}
+
+.rvo-icon-drijvende-kraan {
+  --rvo-icon-current: var(--rvo-icon-drijvende-kraan);
+}
+
+.rvo-icon-druppel-met-uitroepteken {
+  --rvo-icon-current: var(--rvo-icon-druppel-met-uitroepteken);
+}
+
+.rvo-icon-druppel {
+  --rvo-icon-current: var(--rvo-icon-druppel);
+}
+
+.rvo-icon-duurzaam-waterbeheer {
+  --rvo-icon-current: var(--rvo-icon-duurzaam-waterbeheer);
+}
+
+.rvo-icon-getij {
+  --rvo-icon-current: var(--rvo-icon-getij);
+}
+
+.rvo-icon-golven {
+  --rvo-icon-current: var(--rvo-icon-golven);
+}
+
+.rvo-icon-hoge-golf-langs-vuurtoren {
+  --rvo-icon-current: var(--rvo-icon-hoge-golf-langs-vuurtoren);
+}
+
+.rvo-icon-hoogwater {
+  --rvo-icon-current: var(--rvo-icon-hoogwater);
+}
+
+.rvo-icon-kraan-met-druppel-water {
+  --rvo-icon-current: var(--rvo-icon-kraan-met-druppel-water);
+}
+
+.rvo-icon-laag-water {
+  --rvo-icon-current: var(--rvo-icon-laag-water);
+}
+
+.rvo-icon-loep-en-water {
+  --rvo-icon-current: var(--rvo-icon-loep-en-water);
+}
+
+.rvo-icon-rivierverruiming {
+  --rvo-icon-current: var(--rvo-icon-rivierverruiming);
+}
+
+.rvo-icon-stroomsnelheid {
+  --rvo-icon-current: var(--rvo-icon-stroomsnelheid);
+}
+
+.rvo-icon-vuurtoren {
+  --rvo-icon-current: var(--rvo-icon-vuurtoren);
+}
+
+.rvo-icon-waterafvoer {
+  --rvo-icon-current: var(--rvo-icon-waterafvoer);
+}
+
+.rvo-icon-wateroverlast {
+  --rvo-icon-current: var(--rvo-icon-wateroverlast);
+}
+
+.rvo-icon-waterstanden {
+  --rvo-icon-current: var(--rvo-icon-waterstanden);
+}
+
+.rvo-icon-watertemperatuur {
+  --rvo-icon-current: var(--rvo-icon-watertemperatuur);
+}
+
+.rvo-icon-waterwaarschuwing {
+  --rvo-icon-current: var(--rvo-icon-waterwaarschuwing);
+}
+
+.rvo-icon-zon-boven-oppervlaktewater {
+  --rvo-icon-current: var(--rvo-icon-zon-boven-oppervlaktewater);
+}
+
+.rvo-icon-zoutgehalte-in-water {
+  --rvo-icon-current: var(--rvo-icon-zoutgehalte-in-water);
 }
