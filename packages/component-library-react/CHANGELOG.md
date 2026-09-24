@@ -1,5 +1,14 @@
 # @nl-rvo/component-library-react
 
+## 7.2.1
+
+### Patch Changes
+
+- e2529af: Reintroduced icon names as classes to work with generated css in assets
+- 777d441: Updated the display of child text field in Link component
+- Updated dependencies [777d441]
+  - @nl-rvo/component-library-css@4.21.1
+
 ## 7.2.0
 
 ### Minor Changes

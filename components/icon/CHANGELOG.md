@@ -1,5 +1,11 @@
 # `@nl-rvo/css-icon`
 
+## 1.6.1
+
+### Patch Changes
+
+- e2529af: Reintroduced icon names as classes to work with generated css in assets
+
 ## 1.6.0
 
 ### Minor Changes

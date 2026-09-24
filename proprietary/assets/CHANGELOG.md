@@ -1,5 +1,11 @@
 # @nl-rvo/assets
 
+## 1.2.1
+
+### Patch Changes
+
+- e2529af: Added rvo-current-icon and using classes to fill this variable
+
 ## 1.2.0
 
 ### Minor Changes
