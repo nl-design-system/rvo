@@ -16,7 +16,8 @@
   text-underline-offset: var(--rvo-link-text-underline-offset);
 
   &__text {
-    display: block;
+    @extend .rvo-layout-row;
+    @extend .rvo-layout-gap--sm;
   }
 }
 
