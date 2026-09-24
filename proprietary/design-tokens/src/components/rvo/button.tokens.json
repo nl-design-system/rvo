@@ -91,7 +91,9 @@
           "color": { "value": "{rvo.color.grijs-300}" }
         },
         "focus": {
-          "color": { "value": "{rvo.color.hemelblauw}" }
+          "color": { "value": "{rvo.focus.color}" },
+          "text-decoration-thickness": { "value": "{rvo.focus.text-decoration-thickness}" },
+          "text-underline-offset": { "value": "{rvo.focus.text-underline-offset}" }
         }
       },
       "quaternary": {
@@ -129,9 +131,11 @@
           "color": { "value": "{rvo.color.donkerblauw}" }
         },
         "focus": {
-          "color": { "value": "{rvo.color.donkerblauw}" },
+          "color": { "value": "{rvo.focus.color}" },
           "border-color": {},
-          "border-width": {}
+          "border-width": {},
+          "text-decoration-thickness": { "value": "{rvo.focus.text-decoration-thickness}" },
+          "text-underline-offset": { "value": "{rvo.focus.text-underline-offset}" }
         },
         "disabled": {
           "color": { "value": "{rvo.color.grijs-300}" }

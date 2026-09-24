@@ -1062,7 +1062,13 @@
           },
           "focus": {
             "color": {
-              "$value": "{rvo.color.hemelblauw}"
+              "$value": "{rvo.focus.color}"
+            },
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
             }
           }
         },
@@ -1142,10 +1148,16 @@
           },
           "focus": {
             "color": {
-              "$value": "{rvo.color.donkerblauw}"
+              "$value": "{rvo.focus.color}"
             },
             "border-color": {},
-            "border-width": {}
+            "border-width": {},
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
+            }
           },
           "disabled": {
             "color": {
