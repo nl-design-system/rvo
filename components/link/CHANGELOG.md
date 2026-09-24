@@ -1,5 +1,11 @@
 # `@nl-rvo/css-link`
 
+## 1.6.1
+
+### Patch Changes
+
+- 777d441: Updated the display of child text field in Link component
+
 ## 1.6.0
 
 ### Minor Changes
