@@ -15,7 +15,7 @@ import {
   ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { getPanden, Pand, removePand, saveEditPandIndex } from './pandenStorage';
+import { Bijenkast, getBijenkasten, removeBijenkast, saveEditBijenkastIndex } from './bijenkastenStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -23,10 +23,11 @@ const URL_VOORBEREIDING =
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_PAND_TOEVOEGEN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-toevoegen--default&viewMode=story';
-const URL_PAND_WIJZIGEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-wijzigen--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
+const URL_BIJENKAST_TOEVOEGEN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-toevoegen--default&viewMode=story';
+const URL_BIJENKAST_WIJZIGEN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-wijzigen--default&viewMode=story';
 
 const progressSteps = [
   {
@@ -43,9 +44,9 @@ const progressSteps = [
     size: 'md' as const,
     line: 'straight' as const,
   },
-  { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
+  { state: 'completed' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
   {
-    state: 'incomplete' as const,
+    state: 'doing' as const,
     label: 'Bijenkasten',
     link: URL_BIJENKASTEN,
     size: 'md' as const,
@@ -61,9 +62,9 @@ const progressSteps = [
   },
 ];
 
-const PandenOverzicht = () => {
+const BijenkastenOverzicht = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
-  const [panden, setPanden] = useState<Pand[]>([]);
+  const [bijenkasten, setBijenkasten] = useState<Bijenkast[]>([]);
   const [dialogOpenIndex, setDialogOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -73,13 +74,13 @@ const PandenOverzicht = () => {
   }, []);
 
   useEffect(() => {
-    setPanden(getPanden());
+    setBijenkasten(getBijenkasten());
   }, []);
 
   const handleDeleteConfirm = () => {
     if (dialogOpenIndex !== null) {
-      removePand(dialogOpenIndex);
-      setPanden(getPanden());
+      removeBijenkast(dialogOpenIndex);
+      setBijenkasten(getBijenkasten());
       setDialogOpenIndex(null);
     }
   };
@@ -131,32 +132,36 @@ const PandenOverzicht = () => {
           <main>
             <LayoutFlow gap="xl">
               <div>
-                <Link href={URL_PROJECTGEGEVENS} showIcon="before" icon="terug" noUnderline={true}>
+                <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
                   Terug
                 </Link>
-                <Heading type="h1">Panden</Heading>
+                <Heading type="h1">Bijenkasten</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
-                  Voeg de panden toe waarop u bijenkasten wilt plaatsen. U kunt meerdere panden opgeven.
+                  Voeg de bijenkasten toe die u wilt plaatsen. Geef per bijenkast aan op welk pand deze komt.
                 </p>
               </div>
 
-              {panden.length === 0 ? (
+              {bijenkasten.length === 0 ? (
                 <Alert kind="warning" padding="md">
-                  Er zijn nog geen panden toegevoegd.
+                  Er zijn nog geen bijenkasten toegevoegd.
                 </Alert>
               ) : (
                 <LayoutFlow gap="sm">
-                  {panden.map((pand, index) => (
-                    <Card key={index} outline={true} padding="md" title={`Pand ${index + 1}`}>
+                  {bijenkasten.map((bijenkast, index) => (
+                    <Card key={index} outline={true} padding="md" title={`Bijenkast ${index + 1}`}>
                       <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-margin-block-start--xs">
-                        {pand.straatnaam} {pand.huisnummer}, {pand.postcode} {pand.plaatsnaam}
+                        {bijenkast.pandLabel}
+                      </p>
+                      <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-text--grijs-600">
+                        {bijenkast.typeBijenkast} · {bijenkast.aantalKasten}{' '}
+                        {Number(bijenkast.aantalKasten) === 1 ? 'kast' : 'kasten'}
                       </p>
                       <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--sm">
-                        <Link href={URL_PAND_WIJZIGEN} onClick={() => saveEditPandIndex(index)}>
-                          Wijzig pand
+                        <Link href={URL_BIJENKAST_WIJZIGEN} onClick={() => saveEditBijenkastIndex(index)}>
+                          Wijzig bijenkast
                         </Link>
                         <Button kind="warning" size="sm" onClick={() => setDialogOpenIndex(index)}>
-                          Verwijder pand
+                          Verwijder bijenkast
                         </Button>
                       </div>
                     </Card>
@@ -165,19 +170,19 @@ const PandenOverzicht = () => {
               )}
 
               <div className="rvo-action-group">
-                {panden.length > 0 && (
+                {bijenkasten.length > 0 && (
                   <Button
                     kind="primary"
                     size="md"
                     onClick={() => {
-                      window.location.href = URL_BIJENKASTEN;
+                      window.location.href = '#';
                     }}
                   >
                     Volgende stap
                   </Button>
                 )}
-                <Link href={URL_PAND_TOEVOEGEN} callToAction={panden.length === 0}>
-                  {panden.length === 0 ? 'Voeg een pand toe' : 'Voeg nog een pand toe'}
+                <Link href={URL_BIJENKAST_TOEVOEGEN} callToAction={bijenkasten.length === 0}>
+                  {bijenkasten.length === 0 ? 'Voeg een bijenkast toe' : 'Voeg nog een bijenkast toe'}
                 </Link>
               </div>
             </LayoutFlow>
@@ -202,12 +207,12 @@ const PandenOverzicht = () => {
             </>
           }
         >
-          <Heading type="h2">Pand verwijderen</Heading>
-          <p className="rvo-paragraph">Weet u zeker dat u dit pand wil verwijderen?</p>
+          <Heading type="h2">Bijenkast verwijderen</Heading>
+          <p className="rvo-paragraph">Weet u zeker dat u deze bijenkast wil verwijderen?</p>
         </Dialog>
       )}
     </body>
   );
 };
 
-export default PandenOverzicht;
+export default BijenkastenOverzicht;
