@@ -1,6 +1,5 @@
 import { Footer, Header, Heading, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const VoordatUBegint = () => {
@@ -27,7 +26,7 @@ const VoordatUBegint = () => {
             size="lg"
             useIcons={true}
             iconPlacement="before"
-            maxWidth="lg"
+            maxWidth="md"
           />
         ) : (
           <MobileMenuBar
@@ -67,28 +66,28 @@ const VoordatUBegint = () => {
             </p>
             <dl className="rvo-data-list">
               <dt>Bedrijfsnaam</dt>
-              <dd className="rvo-layout-row rvo-layout--wrap rvo-layout-justify-content-space-between rvo-layout-gap--xs">
+              <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>Powerbod B.V.</span>
                 <a href="#" className="rvo-link">
                   Wijzigen
                 </a>
               </dd>
               <dt>Adres</dt>
-              <dd className="rvo-layout-row rvo-layout--wrap rvo-layout-justify-content-space-between rvo-layout-gap--xs">
+              <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>Energieweg 42, 2909 LV Rotterdam</span>
                 <a href="#" className="rvo-link">
                   Wijzigen
                 </a>
               </dd>
               <dt>KVK-nummer</dt>
-              <dd className="rvo-layout-row rvo-layout--wrap rvo-layout-justify-content-space-between rvo-layout-gap--xs">
+              <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>63847291</span>
                 <a href="#" className="rvo-link">
                   Wijzigen
                 </a>
               </dd>
               <dt>IBAN rekeningnummer</dt>
-              <dd className="rvo-layout-row rvo-layout--wrap rvo-layout-justify-content-space-between rvo-layout-gap--xs">
+              <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>NL91 ABNA 0417 1643 00</span>
                 <a href="#" className="rvo-link">
                   Wijzigen
@@ -154,7 +153,7 @@ const VoordatUBegint = () => {
         </LayoutFlow>
       </main>
 
-      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
+      <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="sm" />
     </body>
   );
 };

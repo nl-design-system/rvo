@@ -1,4 +1,5 @@
 import {
+  Alert,
   Footer,
   Grid,
   Header,
@@ -11,7 +12,6 @@ import {
   ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -70,7 +70,7 @@ const PandenOverzicht = () => {
             size="lg"
             useIcons={true}
             iconPlacement="before"
-            maxWidth="lg"
+            maxWidth="md"
           />
         ) : (
           <MobileMenuBar
@@ -88,7 +88,7 @@ const PandenOverzicht = () => {
         )}
       </div>
 
-      <MaxWidthLayout size="lg" className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
+      <MaxWidthLayout size="md" className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
         <Grid
           columns="two"
           gap="xl"
@@ -111,15 +111,13 @@ const PandenOverzicht = () => {
                 </p>
               </div>
 
-              <div className="rvo-layout-column rvo-layout-gap--md rvo-layout--align-items-center rvo-padding-block--xl rvo-border rvo-border--subtle">
-                <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-text--grijs-600">
-                  Er zijn nog geen panden toegevoegd.
-                </p>
-              </div>
+              <Alert kind="warning" padding="md">
+                Er zijn nog geen panden toegevoegd.
+              </Alert>
 
               <div className="rvo-action-group">
                 <Link href={URL_PAND_TOEVOEGEN} callToAction={true}>
-                  Voeg eerste pand toe
+                  Voeg een pand toe
                 </Link>
               </div>
             </LayoutFlow>
@@ -127,7 +125,7 @@ const PandenOverzicht = () => {
         </Grid>
       </MaxWidthLayout>
 
-      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
+      <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
     </body>
   );
 };
