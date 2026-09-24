@@ -38,10 +38,10 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
         'rvo-icon',
         size && `rvo-icon--${size}`,
         color && `rvo-icon--${color}`,
+        icon && `rvo-icon-${iconName}`,
         className,
       )}
       role="img"
-      style={{ ['--rvo-icon-current' as string]: `var(--rvo-icon-${iconName})` }}
       aria-hidden={true}
       {...rootElementProps}
     ></span>
