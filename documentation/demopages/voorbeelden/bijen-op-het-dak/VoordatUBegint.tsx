@@ -144,7 +144,7 @@ const VoordatUBegint = () => {
 
           <div className="rvo-action-group">
             <Link
-              href="iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story"
+              href="iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story"
               callToAction={true}
             >
               Start aanvraag

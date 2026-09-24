@@ -1,5 +1,6 @@
 import {
   ActionGroup,
+  Alert,
   Button,
   Fieldset,
   Footer,
@@ -15,7 +16,8 @@ import {
   RadioButtonField,
   TextInputField,
 } from '@nl-rvo/component-library-react';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
+import { addPand } from './pandenStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -24,11 +26,22 @@ const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden-
 const URL_PAND_TOEVOEGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-toevoegen--default&viewMode=story';
 
+const URL_PROJECTGEGEVENS =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
+const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
+
 const progressSteps = [
   {
     state: 'completed' as const,
     label: 'Voorbereiding',
     link: URL_VOORBEREIDING,
+    size: 'md' as const,
+    line: 'straight' as const,
+  },
+  {
+    state: 'completed' as const,
+    label: 'Projectgegevens',
+    link: URL_PROJECTGEGEVENS,
     size: 'md' as const,
     line: 'straight' as const,
   },
@@ -42,8 +55,8 @@ const progressSteps = [
   },
   {
     state: 'incomplete' as const,
-    label: 'Bijenkasten & project',
-    link: '#',
+    label: 'Bijenkasten',
+    link: URL_BIJENKASTEN,
     size: 'md' as const,
     line: 'straight' as const,
   },
@@ -57,14 +70,130 @@ const progressSteps = [
   },
 ];
 
+interface FieldError {
+  before: string;
+  linkLabel: string;
+  after: string;
+  fieldText: string;
+  anchor: string;
+}
+
 const PandToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  const [straatnaam, setStraatnaam] = useState('');
+  const [huisnummer, setHuisnummer] = useState('');
+  const [postcode, setPostcode] = useState('');
+  const [plaatsnaam, setPlaatsnaam] = useState('');
+  const [daktype, setDaktype] = useState('');
+  const [dakoppervlak, setDakoppervlak] = useState('');
+  const [bereikbaar, setBereikbaar] = useState('');
+  const [errors, setErrors] = useState<Record<string, FieldError>>({});
+
+  const errorSummaryRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const validate = (): Record<string, FieldError> => {
+    const newErrors: Record<string, FieldError> = {};
+
+    if (!straatnaam.trim()) {
+      newErrors.straatnaam = {
+        before: 'Het veld ',
+        linkLabel: 'Straatnaam',
+        after: ' is niet ingevuld, maar wel verplicht. Vul uw straatnaam in.',
+        fieldText: 'Het veld Straatnaam is niet ingevuld, maar wel verplicht. Vul uw straatnaam in.',
+        anchor: 'straatnaam-label',
+      };
+    }
+
+    if (!huisnummer.trim()) {
+      newErrors.huisnummer = {
+        before: 'Het veld ',
+        linkLabel: 'Huisnummer',
+        after: ' is niet ingevuld, maar wel verplicht. Vul uw huisnummer in.',
+        fieldText: 'Het veld Huisnummer is niet ingevuld, maar wel verplicht. Vul uw huisnummer in.',
+        anchor: 'huisnummer-label',
+      };
+    }
+
+    if (!postcode.trim()) {
+      newErrors.postcode = {
+        before: 'Vul een geldige ',
+        linkLabel: 'postcode',
+        after: ' in (bijvoorbeeld: 1234 AB).',
+        fieldText: 'Vul een geldige postcode in (bijvoorbeeld: 1234 AB).',
+        anchor: 'postcode-label',
+      };
+    } else if (!/^\d{4}\s?[A-Za-z]{2}$/.test(postcode.trim())) {
+      newErrors.postcode = {
+        before: 'Vul een geldige ',
+        linkLabel: 'postcode',
+        after: ' in (bijvoorbeeld: 1234 AB).',
+        fieldText: 'Vul een geldige postcode in (bijvoorbeeld: 1234 AB).',
+        anchor: 'postcode-label',
+      };
+    }
+
+    if (!plaatsnaam.trim()) {
+      newErrors.plaatsnaam = {
+        before: 'Het veld ',
+        linkLabel: 'Plaatsnaam',
+        after: ' is niet ingevuld, maar wel verplicht. Vul uw plaatsnaam in.',
+        fieldText: 'Het veld Plaatsnaam is niet ingevuld, maar wel verplicht. Vul uw plaatsnaam in.',
+        anchor: 'plaatsnaam-label',
+      };
+    }
+
+    if (!daktype) {
+      newErrors.daktype = {
+        before: 'Het veld ',
+        linkLabel: 'Type dak',
+        after: ' is niet ingevuld, maar wel verplicht. Maak een keuze.',
+        fieldText: 'Het veld Type dak is niet ingevuld, maar wel verplicht. Maak een keuze.',
+        anchor: 'daktype-label',
+      };
+    }
+
+    if (!dakoppervlak.trim()) {
+      newErrors.dakoppervlak = {
+        before: 'Het veld ',
+        linkLabel: 'Dakoppervlak',
+        after: ' is niet ingevuld, maar wel verplicht. Vul het dakoppervlak in.',
+        fieldText: 'Het veld Dakoppervlak is niet ingevuld, maar wel verplicht. Vul het dakoppervlak in.',
+        anchor: 'dakoppervlak-label',
+      };
+    }
+
+    if (!bereikbaar) {
+      newErrors.bereikbaar = {
+        before: 'Het veld ',
+        linkLabel: 'Bereikbaar voor onderhoud',
+        after: ' is niet ingevuld, maar wel verplicht. Maak een keuze.',
+        fieldText: 'Het veld Bereikbaar voor onderhoud is niet ingevuld, maar wel verplicht. Maak een keuze.',
+        anchor: 'bereikbaar-label',
+      };
+    }
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const newErrors = validate();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setTimeout(() => errorSummaryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
+      return;
+    }
+    addPand({ straatnaam, huisnummer, postcode, plaatsnaam, daktype, dakoppervlak, bereikbaar });
+    window.location.href = URL_PANDEN;
+  };
+
+  const hasErrors = Object.keys(errors).length > 0;
 
   return (
     <body className="rvo-theme rvo-responsive">
@@ -123,8 +252,27 @@ const PandToevoegen = () => {
                   </p>
                 </div>
 
-                <form>
+                <form onSubmit={handleSubmit} noValidate>
                   <LayoutFlow>
+                    {hasErrors && (
+                      <div ref={errorSummaryRef} tabIndex={-1}>
+                        <Alert kind="error" padding="md">
+                          <strong>Er zijn velden niet of onjuist ingevuld. Herstel dit om door te gaan.</strong>
+                          <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
+                            {Object.entries(errors).map(([key, err]) => (
+                              <li key={key}>
+                                {err.before}
+                                <a href={`#${err.anchor}`} className="rvo-link rvo-link--donkerblauw">
+                                  {err.linkLabel}
+                                </a>
+                                {err.after}
+                              </li>
+                            ))}
+                          </ul>
+                        </Alert>
+                      </div>
+                    )}
+
                     <Fieldset legend="Locatie van het pand">
                       <TextInputField
                         label="Land"
@@ -132,39 +280,93 @@ const PandToevoegen = () => {
                         value="Nederland"
                         warningText="Alleen panden in Nederland komen in aanmerking."
                       />
-                      <TextInputField label="Straatnaam" />
-                      <TextInputField label="Huisnummer" size="xs" />
-                      <TextInputField label="Postcode" size="sm" />
-                      <TextInputField label="Plaatsnaam" />
+                      <TextInputField
+                        id="straatnaam"
+                        label="Straatnaam"
+                        value={straatnaam}
+                        onChange={(e) => setStraatnaam(e.target.value)}
+                        invalid={!!errors.straatnaam}
+                        errorText={errors.straatnaam?.fieldText}
+                      />
+                      <TextInputField
+                        id="huisnummer"
+                        label="Huisnummer"
+                        size="xs"
+                        value={huisnummer}
+                        onChange={(e) => setHuisnummer(e.target.value)}
+                        invalid={!!errors.huisnummer}
+                        errorText={errors.huisnummer?.fieldText}
+                      />
+                      <TextInputField
+                        id="postcode"
+                        label="Postcode"
+                        size="sm"
+                        value={postcode}
+                        onChange={(e) => setPostcode(e.target.value)}
+                        invalid={!!errors.postcode}
+                        errorText={errors.postcode?.fieldText}
+                      />
+                      <TextInputField
+                        id="plaatsnaam"
+                        label="Plaatsnaam"
+                        value={plaatsnaam}
+                        onChange={(e) => setPlaatsnaam(e.target.value)}
+                        invalid={!!errors.plaatsnaam}
+                        errorText={errors.plaatsnaam?.fieldText}
+                      />
                     </Fieldset>
 
                     <Fieldset legend="Informatie over het dak">
-                      <RadioButtonField
-                        name="daktype"
-                        label="Type dak"
-                        options={[
-                          { id: 'plat-dak', label: 'Plat dak' },
-                          { id: 'schuin-dak', label: 'Schuin dak' },
-                        ]}
-                      />
+                      <div
+                        className="rvo-margin-block-end--xl"
+                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                          setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
+                        }
+                      >
+                        <RadioButtonField
+                          fieldId="daktype"
+                          name="daktype"
+                          label="Type dak"
+                          invalid={!!errors.daktype}
+                          errorText={errors.daktype?.fieldText}
+                          options={[
+                            { id: 'plat-dak', label: 'Plat dak' },
+                            { id: 'schuin-dak', label: 'Schuin dak' },
+                          ]}
+                        />
+                      </div>
                       <TextInputField
+                        id="dakoppervlak"
                         label="Dakoppervlak (m²)"
                         helperText="Het beschikbare dakoppervlak waarop de bijenkasten worden geplaatst."
-                        validation="none"
+                        size="sm"
+                        value={dakoppervlak}
+                        onChange={(e) => setDakoppervlak(e.target.value)}
+                        invalid={!!errors.dakoppervlak}
+                        errorText={errors.dakoppervlak?.fieldText}
                       />
-                      <RadioButtonField
-                        name="dak-bereikbaar"
-                        label="Is het dak bereikbaar voor onderhoud?"
-                        helperText="Het dak moet minimaal 2 keer per jaar bereikbaar zijn voor de imker."
-                        options={[
-                          { id: 'bereikbaar-ja', label: 'Ja' },
-                          { id: 'bereikbaar-nee', label: 'Nee' },
-                        ]}
-                      />
+                      <div
+                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                          setBereikbaar(e.target.id === 'bereikbaar-ja' ? 'Ja' : 'Nee')
+                        }
+                      >
+                        <RadioButtonField
+                          fieldId="bereikbaar"
+                          name="dak-bereikbaar"
+                          label="Is het dak bereikbaar voor onderhoud?"
+                          helperText="Het dak moet minimaal 2 keer per jaar bereikbaar zijn voor de imker."
+                          invalid={!!errors.bereikbaar}
+                          errorText={errors.bereikbaar?.fieldText}
+                          options={[
+                            { id: 'bereikbaar-ja', label: 'Ja' },
+                            { id: 'bereikbaar-nee', label: 'Nee' },
+                          ]}
+                        />
+                      </div>
                     </Fieldset>
 
                     <ActionGroup>
-                      <Button kind="primary" size="md">
+                      <Button kind="primary" size="md" type="submit">
                         Volgende stap
                       </Button>
                       <Button kind="secondary" size="md">
