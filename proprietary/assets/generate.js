@@ -95,10 +95,16 @@ const generateCSS = (
   classnamePrefix,
   generateMaskClasses = true,
   generateBackgroundClasses = true,
+  generateIconClasses = false,
 ) => {
   const sass = require('sass');
   let scssString = '';
   const cssVars = [];
+
+  if (generateIconClasses) {
+    // define icon current variable that will be set through classes
+    cssVars.push('--rvo-icon-current: none;');
+  }
 
   // Loop over categories
   Object.keys(assetList).forEach((iconCategoryName) => {
@@ -135,6 +141,13 @@ const generateCSS = (
         scssString += `  background-image: var(--${className});\n`;
         scssString += `}\n\n`;
       }
+
+      // Add mask class
+      if (generateIconClasses) {
+        scssString += `.${className} {\n`;
+        scssString += `  --rvo-icon-current: var(--${className});\n`;
+        scssString += `}\n\n`;
+      }
     });
   });
 
@@ -157,7 +170,7 @@ const generateIconList = () => {
   const assetList = readFolder(folderPath);
   generateJS(assetList, 'icons');
   generateTS(assetList, 'icons');
-  generateCSS(assetList, 'icons', 'rvo-icon', false, false);
+  generateCSS(assetList, 'icons', 'rvo-icon', false, false, true);
 };
 
 const generateImageList = () => {
