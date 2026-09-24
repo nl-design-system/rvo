@@ -1,0 +1,10 @@
+import { Canvas, Argtypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FormLayoutStories from "./form-layout.stories";
+
+<Meta of={FormLayoutStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormLayoutStories.Default} layout="padded" />
+
+<Argtypes of={FormLayoutStories.Default} />

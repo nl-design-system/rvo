@@ -36,23 +36,23 @@ const config: Config = {
         routeBasePath: '/',
         editUrl: undefined,
         breadcrumbs: false,
-        include: ['**/*.docusaurus.{md,mdx}'],
-        exclude: excludeList,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'components',
-        path: path.resolve(__dirname, 'docs'),
-        routeBasePath: 'componenten',
-        editUrl: undefined,
-        breadcrumbs: false,
-        sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
         include: ['**/*.{md,mdx}', '**/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },
     ],
+    // [
+    //   '@docusaurus/plugin-content-docs',
+    //   {
+    //     id: 'components',
+    //     path: path.resolve(__dirname, 'docs'),
+    //     routeBasePath: 'componenten',
+    //     editUrl: undefined,
+    //     breadcrumbs: false,
+    //     sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
+    //     include: ['**/*.{md,mdx}', '**/*.docusaurus.{md,mdx}'],
+    //     exclude: excludeList,
+    //   },
+    // ],
   ],
   presets: [
     [

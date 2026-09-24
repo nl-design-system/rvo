@@ -1,33 +1,33 @@
 import { Autocomplete } from '@nl-rvo/component-library-react';
 import { Meta, StoryObj } from '@storybook/react-webpack5';
 
-// const defaultArgs = {
-//   placeholder: '',
-//   size: 'lg',
-//   renderLinksHeader: () => <div>Links</div>,
-//   renderSuggestionsHeader: () => <div>Suggesties</div>,
-//   keywordSuggestions: [
-//     { value: 'boek' },
-//     { value: 'boer ' },
-//     { value: 'boere ' },
-//     { value: 'boeren' },
-//     { value: 'boerd ' },
-//     { value: 'boerde ' },
-//     { value: 'boerderij ' },
-//     { value: 'boerderije' },
-//     { value: 'boerderijen' },
-//   ],
-//   linkSuggestions: [
-//     {
-//       title: 'Dankzij deze subsidie kunnen we investeren in onze boerderijen',
-//       href: 'https://www.rvo.nl/praktijkverhalen/echt-investeren-toekomst-boerderij',
-//     },
-//     {
-//       title: 'Mest vergisten op boerderijen',
-//       href: 'https://www.rvo.nl/onderwerpen/bio-energie/vergisting-en-vergassing/monomestvergisten',
-//     },
-//   ],
-// };
+const defaultArgs = {
+  placeholder: '',
+  size: 'lg',
+  renderLinksHeader: () => <div>Links</div>,
+  renderSuggestionsHeader: () => <div>Suggesties</div>,
+  keywordSuggestions: [
+    { value: 'boek' },
+    { value: 'boer ' },
+    { value: 'boere ' },
+    { value: 'boeren' },
+    { value: 'boerd ' },
+    { value: 'boerde ' },
+    { value: 'boerderij ' },
+    { value: 'boerderije' },
+    { value: 'boerderijen' },
+  ],
+  linkSuggestions: [
+    {
+      title: 'Dankzij deze subsidie kunnen we investeren in onze boerderijen',
+      href: 'https://www.rvo.nl/praktijkverhalen/echt-investeren-toekomst-boerderij',
+    },
+    {
+      title: 'Mest vergisten op boerderijen',
+      href: 'https://www.rvo.nl/onderwerpen/bio-energie/vergisting-en-vergassing/monomestvergisten',
+    },
+  ],
+};
 
 export default {
   title: 'Componenten/Autocomplete',
@@ -56,4 +56,5 @@ type Story = StoryObj<typeof Autocomplete>;
 
 export const Default: Story = {
   name: 'Autocomplete',
+  args: defaultArgs as any
 };

@@ -94,6 +94,7 @@
     "@nl-rvo/react-form-field": "workspace:*",
     "@nl-rvo/react-form-fieldset": "workspace:*",
     "@nl-rvo/react-form-file-input": "workspace:*",
+    "@nl-rvo/react-form-layout": "workspace:*",
     "@nl-rvo/react-form-radio-button": "workspace:*",
     "@nl-rvo/react-form-radio-button-group": "workspace:*",
     "@nl-rvo/react-form-select": "workspace:*",

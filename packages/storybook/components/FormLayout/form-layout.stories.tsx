@@ -1,13 +1,19 @@
 import { FormLayout } from '@nl-rvo/component-library-react';
-import { defaultArgs } from '@nl-rvo/component-library-react/src/components/form-layout/defaultArgs';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { argTypes } from './argTypes';
 
 export default {
   title: 'Componenten/Form layout',
   component: FormLayout,
-  args: defaultArgs,
-  argTypes,
+  argTypes: {
+    content: {
+      control: 'text',
+    },
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -23,4 +29,4 @@ export default {
 } satisfies Meta<typeof FormLayout>;
 type Story = StoryObj<typeof FormLayout>;
 
-export const Default: Story = { args: defaultArgs, name: 'Form layout' };
+export const Default: Story = { name: 'Form layout' };

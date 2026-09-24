@@ -453,6 +453,12 @@ importers:
 
   components/form-file-input/style: {}
 
+  components/form-layout/react:
+    dependencies:
+      '@nl-rvo/css-form-layout':
+        specifier: workspace:*
+        version: link:../style
+
   components/form-layout/style: {}
 
   components/form-radio-button-group/react:
@@ -1007,6 +1013,9 @@ importers:
       '@nl-rvo/react-form-file-input':
         specifier: workspace:*
         version: link:../../components/form-file-input/react
+      '@nl-rvo/react-form-layout':
+        specifier: workspace:*
+        version: link:../../components/form-layout/react
       '@nl-rvo/react-form-radio-button':
         specifier: workspace:*
         version: link:../../components/form-radio-button/react

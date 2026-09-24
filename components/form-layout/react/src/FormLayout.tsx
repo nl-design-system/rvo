@@ -3,16 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-import React, { ReactNode } from 'react';
-import parseContentMarkup from '../../utils/parseContentMarkup';
-import '@nl-rvo/component-library-css/dist/components/form-layout.css';
-
-export interface IFormLayoutProps {
-  /** @uxpinignoreprop */
-  content: string;
-  /** @uxpinpropname Content */
-  children?: ReactNode | undefined;
-}
+import React from 'react';
+import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import '@nl-rvo/css-form-layout';
+import { IFormLayoutProps } from './FormLayout.types';
 
 export const FormLayout: React.FC<IFormLayoutProps & React.HTMLAttributes<HTMLDivElement>> = ({
   content,
