@@ -1,4 +1,5 @@
 import {
+  ActionGroup,
   Alert,
   Button,
   Card,
@@ -16,6 +17,8 @@ import {
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import { Bijenkast, getBijenkasten, removeBijenkast, saveEditBijenkastIndex } from './bijenkastenStorage';
+import { getPanden } from './pandenStorage';
+import { getProject } from './projectStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -29,43 +32,51 @@ const URL_BIJENKAST_TOEVOEGEN =
 const URL_BIJENKAST_WIJZIGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-wijzigen--default&viewMode=story';
 
-const progressSteps = [
-  {
-    state: 'completed' as const,
-    label: 'Voorbereiding',
-    link: URL_VOORBEREIDING,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  {
-    state: 'completed' as const,
-    label: 'Projectgegevens',
-    link: URL_PROJECTGEGEVENS,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'completed' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'doing' as const,
-    label: 'Bijenkasten',
-    link: URL_BIJENKASTEN,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'disabled' as const,
-    label: 'Controleren & indienen',
-    link: '#',
-    size: 'md' as const,
-    line: 'none' as const,
-  },
-];
-
 const BijenkastenOverzicht = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   const [bijenkasten, setBijenkasten] = useState<Bijenkast[]>([]);
   const [dialogOpenIndex, setDialogOpenIndex] = useState<number | null>(null);
+
+  const projectCompleted = !!getProject();
+  const pandenCompleted = getPanden().length > 0;
+  const progressSteps = [
+    {
+      state: 'completed' as const,
+      label: 'Voorbereiding',
+      link: URL_VOORBEREIDING,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Projectgegevens',
+      link: URL_PROJECTGEGEVENS,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Panden',
+      link: URL_PANDEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'doing' as const,
+      label: 'Bijenkasten',
+      link: URL_BIJENKASTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
+    {
+      state: 'disabled' as const,
+      label: 'Controleren & indienen',
+      link: '#',
+      size: 'md' as const,
+      line: 'none' as const,
+    },
+  ];
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
@@ -197,14 +208,14 @@ const BijenkastenOverzicht = () => {
           isOpen={true}
           onClose={() => setDialogOpenIndex(null)}
           actionGroup={
-            <>
-              <Button kind="primary" size="md" onClick={handleDeleteConfirm}>
-                Ja
+            <ActionGroup>
+              <Button kind="warning" size="md" onClick={handleDeleteConfirm}>
+                Bijenkast verwijderen
               </Button>
               <Button kind="secondary" size="md" onClick={() => setDialogOpenIndex(null)}>
-                Nee
+                Bijenkast niet verwijderen
               </Button>
-            </>
+            </ActionGroup>
           }
         >
           <Heading type="h2">Bijenkast verwijderen</Heading>
