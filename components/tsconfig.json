@@ -17,7 +17,7 @@
     "paths": {
       "@nl-rvo/components/*": ["./*"],
       "@nl-rvo/design-tokens/*": ["../proprietary/design-tokens/*"],
-      "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
+      "@nl-rvo/assets/*": ["./node_modules/@nl-rvo/assets/*"],
       "@nl-rvo/documentation/*": ["../documentation/*"],
       "react-dom/server": ["../packages/storybook/node_modules/react-dom/server"],
       "@storybook/*": ["../packages/storybook/node_modules/@storybook/*"]

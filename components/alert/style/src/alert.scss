@@ -4,96 +4,74 @@
  */
 @import "@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
 
+$rvo-alert-paddings: xs, sm, md, lg, xl, 2xl;
+
 .rvo-alert {
   padding-block-end: var(--rvo-alert-padding-block-end);
   padding-block-start: var(--rvo-alert-padding-block-start);
   padding-inline-end: var(--rvo-alert-padding-inline-end);
   padding-inline-start: var(--rvo-alert-padding-inline-start);
-}
 
-.rvo-alert--padding-xs {
-  padding-block-end: var(--rvo-alert-padding-xs-padding-block-end);
-  padding-block-start: var(--rvo-alert-padding-xs-padding-block-start);
-  padding-inline-end: var(--rvo-alert-padding-xs-padding-inline-end);
-  padding-inline-start: var(--rvo-alert-padding-xs-padding-inline-start);
-}
+  &--info {
+    background-color: var(--rvo-alert-info-background-color);
+  }
 
-.rvo-alert--padding-sm {
-  padding-block-end: var(--rvo-alert-padding-sm-padding-block-end);
-  padding-block-start: var(--rvo-alert-padding-sm-padding-block-start);
-  padding-inline-end: var(--rvo-alert-padding-sm-padding-inline-end);
-  padding-inline-start: var(--rvo-alert-padding-sm-padding-inline-start);
-}
+  &--warning {
+    background-color: var(--rvo-alert-warning-background-color);
+  }
 
-.rvo-alert--padding-md {
-  padding-block-end: var(--rvo-alert-padding-md-padding-block-end);
-  padding-block-start: var(--rvo-alert-padding-md-padding-block-start);
-  padding-inline-end: var(--rvo-alert-padding-md-padding-inline-end);
-  padding-inline-start: var(--rvo-alert-padding-md-padding-inline-start);
-}
+  &--error {
+    background-color: var(--rvo-alert-error-background-color);
+  }
 
-.rvo-alert--padding-lg {
-  padding-block-end: var(--rvo-alert-padding-lg-padding-block-end);
-  padding-block-start: var(--rvo-alert-padding-lg-padding-block-start);
-  padding-inline-end: var(--rvo-alert-padding-lg-padding-inline-end);
-  padding-inline-start: var(--rvo-alert-padding-lg-padding-inline-start);
-}
+  &--success {
+    background-color: var(--rvo-alert-success-background-color);
+  }
 
-.rvo-alert--padding-xl {
-  padding-block-end: var(--rvo-alert-padding-xl-padding-block-end);
-  padding-block-start: var(--rvo-alert-padding-xl-padding-block-start);
-  padding-inline-end: var(--rvo-alert-padding-xl-padding-inline-end);
-  padding-inline-start: var(--rvo-alert-padding-xl-padding-inline-start);
-}
+  &--layout {
+    display: flex;
+    justify-content: center;
+  }
 
-.rvo-alert--padding-2xl {
-  padding-block-end: var(--rvo-alert-padding-2xl-padding-block-end);
-  padding-block-start: var(--rvo-alert-padding-2xl-padding-block-start);
-  padding-inline-end: var(--rvo-alert-padding-2xl-padding-inline-end);
-  padding-inline-start: var(--rvo-alert-padding-2xl-padding-inline-start);
-}
+  @each $size in $rvo-alert-paddings {
+    &--padding-#{$size} {
+      padding-block-end: var(--rvo-alert-padding-#{$size}-padding-block-end);
+      padding-block-start: var(--rvo-alert-padding-#{$size}-padding-block-start);
+      padding-inline-end: var(--rvo-alert-padding-#{$size}-padding-inline-end);
+      padding-inline-start: var(--rvo-alert-padding-#{$size}-padding-inline-start);
+    }
+  }
 
-.rvo-alert__container {
-  align-items: flex-start;
-  display: flex;
-  gap: var(--rvo-alert-gap);
-}
+  &__container {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--rvo-alert-gap);
+  }
 
-.rvo-alert p:first-child {
-  margin-block-start: 0;
-}
+  p:first-child {
+    margin-block-start: 0;
+  }
 
-.rvo-alert button {
-  align-self: flex-start;
-}
+  button {
+    align-self: flex-start;
+  }
 
-.rvo-alert .rvo-icon {
-  min-inline-size: var(--rvo-size-xl);
+  .rvo-icon {
+    min-inline-size: var(--rvo-size-xl);
+  }
+
+  .rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+    color: var(--rvo-color-lintblauw);
+  }
 }
 
 .utrecht-form-fieldset .rvo-alert {
   margin-inline-end: var(--rvo-alert-fieldset-margin);
   margin-inline-start: var(--rvo-alert-fieldset-margin);
-}
 
-.utrecht-form-fieldset .rvo-alert:last-child {
-  margin-block-end: var(--rvo-alert-fieldset-margin);
-}
-
-.rvo-alert--info {
-  background-color: var(--rvo-alert-info-background-color);
-}
-
-.rvo-alert--warning {
-  background-color: var(--rvo-alert-warning-background-color);
-}
-
-.rvo-alert--error {
-  background-color: var(--rvo-alert-error-background-color);
-}
-
-.rvo-alert--success {
-  background-color: var(--rvo-alert-success-background-color);
+  &:last-child {
+    margin-block-end: var(--rvo-alert-fieldset-margin);
+  }
 }
 
 .rvo-button--subtle.rvo-button__close {
@@ -117,13 +95,4 @@
     /* stylelint-disable-next-line order/properties-alphabetical-order */
     border-block-end: 2px solid var(--rvo-color-zwart);
   }
-}
-
-.rvo-alert .rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
-  color: var(--rvo-color-lintblauw);
-}
-
-.rvo-alert--layout {
-  display: flex;
-  justify-content: center;
 }

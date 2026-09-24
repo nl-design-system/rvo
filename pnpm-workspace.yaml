@@ -2,6 +2,7 @@
 
 packages:
   - 'proprietary/*'
+  - 'components'
   - 'components/*/*'
   - 'utilities/**'
   - 'utilities/*/*'
