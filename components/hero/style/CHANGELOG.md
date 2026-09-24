@@ -1,0 +1,91 @@
+# `@nl-rvo/css-hero`
+
+## 1.7.4
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
+## 1.7.3
+
+### Patch Changes
+
+- c4973ba: Removed min-height for hero image on mobile
+- c4973ba: removed min-height from hero image container
+
+## 1.7.2
+
+### Patch Changes
+
+- e9104b7: Added additional styling to Hero component when on mobile
+
+## 1.7.1
+
+### Patch Changes
+
+- 2ed4a39: Add new `violet` color option to the hero component.
+
+## 1.7.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.6.0
+
+### Minor Changes
+
+- a8c9e6f: Added two new parameter; kind and showLine. With this you can change the appearance of the Hero Component. Only kind currently available is 'lichtblauw'
+
+## 1.5.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.5.0
+
+### Minor Changes
+
+- fac57b8: Make image required and enable the props: fetchPriority, width, height, loading, sizes and srcSet.
+
+## 1.4.0
+
+### Minor Changes
+
+- 00a912a: Remove content option for hero component.
+
+## 1.3.0
+
+### Minor Changes
+
+- 82d7db9: Added support to use img as a acceptable param for the hero image.
+
+## 1.2.0
+
+### Minor Changes
+
+- 0cdf4eb: Remove utrecht-components-css reference and include utrecht css per component when needed
+
+## 1.0.1
+
+### Patch Changes
+
+- 0a14f60: Added Hero content box as a separate div and class (not h1)
+
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
+## Pre-releases
+
+_@nl-rvo/component-library-css@1.0.0-alpha.264_:
+Added component

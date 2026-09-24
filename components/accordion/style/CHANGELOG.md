@@ -1,0 +1,67 @@
+# `@nl-rvo/css-accordion`
+
+## 1.3.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
+## 1.3.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.2.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.2.0
+
+### Minor Changes
+
+- 7e1657d: Improve chevron position for accordion.
+- 6342755: Updated the Heading component inside these components
+
+## 1.1.0
+
+### Minor Changes
+
+- 3725b5d: deleted the grey prop inline with WCAG rules
+
+## 1.0.2
+
+### Patch Changes
+
+- 3840c9d: Updated styling issues for the accordion component
+
+## 1.0.1
+
+### Patch Changes
+
+- c6c0a45: Added Accordion item title color as a design token
+
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
+
+## Pre-releases
+
+_@nl-rvo/component-library-css@1.0.0-alpha.362_:
+Added condensed version for mobile
+
+_@nl-rvo/component-library-css@1.0.0-alpha.279_:
+Simplified snippet by removing `rvo-layout` and `rvo-accordion-border-indicator`
+
+_@nl-rvo/component-library-css@1.0.0-alpha.268_:
+Added component
