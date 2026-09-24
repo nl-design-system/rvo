@@ -10,7 +10,7 @@ import '@nl-rvo/css-toggle';
 import { IToggleProps } from './Toggle.types';
 
 export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> = ({
-  showIcon = false,
+  showIcon,
   icon,
   active,
   showHover,
@@ -36,14 +36,14 @@ export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> 
 
   // Parse icon markup
   let iconClassName = '';
-  if (showIcon === 'before') {
+  if (showIcon === 'left') {
     iconClassName += 'rvo-link__icon--before';
   }
-  if (showIcon === 'after') {
+  if (showIcon === 'right') {
     iconClassName += ' rvo-link__icon--after';
   }
 
-  const iconMarkup = (showIcon && icon) && Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
+  const iconMarkup = showIcon && icon && Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
   const ToggleElement = link ? 'a' : 'div';
 
   return (
@@ -51,12 +51,17 @@ export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> 
       onClick={handleToggleClick}
       {...(link ? { href: link } : {})}
       target={linkTarget}
-      className={clsx('rvo-toggle', 'rvo-toggle--default', className, showIcon !== 'no' && ['rvo-toggle--with-icon'])}
+      className={clsx(
+        'rvo-toggle',
+        active && ['rvo-toggle--active'],
+        className,
+        showIcon && icon && ['rvo-toggle--with-icon'],
+      )}
       {...rootElementProps}
     >
-      {showIcon === 'before' && iconMarkup}
+      {showIcon === 'left' && iconMarkup}
       {parseContentMarkup(children)}
-      {showIcon === 'after' && iconMarkup}
+      {showIcon === 'right' && iconMarkup}
     </ToggleElement>
   );
 };

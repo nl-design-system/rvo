@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { IconType } from '@nl-rvo/react-icon';
 
 export interface IToggleProps {
-  showIcon?: 'no' | 'before' | 'after';
+  showIcon?: 'left' | 'right';
   icon?: IconType;
   showHover?: boolean;
   active?: boolean;

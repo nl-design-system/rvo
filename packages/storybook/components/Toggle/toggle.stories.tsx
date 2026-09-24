@@ -7,15 +7,12 @@ export default {
   component: Toggle,
   argTypes: {
     showIcon: {
-      options: ['no', 'before', 'after'],
+      options: ['no', 'left', 'right'],
       control: { type: 'radio' },
     },
     icon: {
       control: { type: 'select' },
       options: iconOptions,
-    },
-    showHover: {
-      control: 'boolean',
     },
     active: {
       control: 'boolean',
@@ -51,6 +48,21 @@ export default {
     },
   },
 } satisfies Meta<typeof Toggle>;
-type Story = StoryObj;
+type Story = StoryObj<typeof Toggle>;
 
-export const Base: Story = { render: () => (<Toggle>Toggle</Toggle>) };
+export const Base: Story = { name: 'Basis Component', render: (args) => <Toggle {...args}>Toggle</Toggle> };
+
+export const WithIcon: Story = {
+  name: 'Met Icoon',
+  args: { icon: 'home' },
+  render: (args) => (
+    <div style={{ display: 'inline-flex', gap: '1rem', flexDirection: 'column' }}>
+      <Toggle showIcon="left" {...args}>
+        Toggle with Icon left
+      </Toggle>
+      <Toggle showIcon="right" {...args}>
+        Toggle with Icon right
+      </Toggle>
+    </div>
+  ),
+};

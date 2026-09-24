@@ -836,11 +836,7 @@ importers:
         specifier: workspace:*
         version: link:../../icon/react
 
-  components/toggle/style:
-    dependencies:
-      '@nl-rvo/css-layout-flow':
-        specifier: workspace:*
-        version: link:../../layout-flow/style
+  components/toggle/style: {}
 
   documentation:
     devDependencies:
