@@ -1,4 +1,5 @@
 import {
+  ActionGroup,
   Alert,
   Button,
   Card,
@@ -15,7 +16,9 @@ import {
   ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
+import { getBijenkasten } from './bijenkastenStorage';
 import { getPanden, Pand, removePand, saveEditPandIndex } from './pandenStorage';
+import { getProject } from './projectStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -28,43 +31,45 @@ const URL_PAND_TOEVOEGEN =
 const URL_PAND_WIJZIGEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-wijzigen--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 
-const progressSteps = [
-  {
-    state: 'completed' as const,
-    label: 'Voorbereiding',
-    link: URL_VOORBEREIDING,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  {
-    state: 'completed' as const,
-    label: 'Projectgegevens',
-    link: URL_PROJECTGEGEVENS,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'incomplete' as const,
-    label: 'Bijenkasten',
-    link: URL_BIJENKASTEN,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'disabled' as const,
-    label: 'Controleren & indienen',
-    link: '#',
-    size: 'md' as const,
-    line: 'none' as const,
-  },
-];
-
 const PandenOverzicht = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   const [panden, setPanden] = useState<Pand[]>([]);
   const [dialogOpenIndex, setDialogOpenIndex] = useState<number | null>(null);
+
+  const projectCompleted = !!getProject();
+  const bijenkastenCompleted = getBijenkasten().length > 0;
+  const progressSteps = [
+    {
+      state: 'completed' as const,
+      label: 'Voorbereiding',
+      link: URL_VOORBEREIDING,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Projectgegevens',
+      link: URL_PROJECTGEGEVENS,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
+    {
+      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Bijenkasten',
+      link: URL_BIJENKASTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
+    {
+      state: 'disabled' as const,
+      label: 'Controleren & indienen',
+      link: '#',
+      size: 'md' as const,
+      line: 'none' as const,
+    },
+  ];
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
@@ -161,10 +166,18 @@ const PandenOverzicht = () => {
                       </div>
                     </Card>
                   ))}
+                  <Link href={URL_PAND_TOEVOEGEN} showIcon="before" icon="plus">
+                    Voeg nog een pand toe
+                  </Link>
                 </LayoutFlow>
               )}
 
               <div className="rvo-action-group">
+                {panden.length === 0 && (
+                  <Link href={URL_PAND_TOEVOEGEN} callToAction={true}>
+                    Voeg een pand toe
+                  </Link>
+                )}
                 {panden.length > 0 && (
                   <Button
                     kind="primary"
@@ -176,9 +189,6 @@ const PandenOverzicht = () => {
                     Volgende stap
                   </Button>
                 )}
-                <Link href={URL_PAND_TOEVOEGEN} callToAction={panden.length === 0}>
-                  {panden.length === 0 ? 'Voeg een pand toe' : 'Voeg nog een pand toe'}
-                </Link>
               </div>
             </LayoutFlow>
           </main>
@@ -192,14 +202,14 @@ const PandenOverzicht = () => {
           isOpen={true}
           onClose={() => setDialogOpenIndex(null)}
           actionGroup={
-            <>
-              <Button kind="primary" size="md" onClick={handleDeleteConfirm}>
-                Ja
+            <ActionGroup>
+              <Button kind="warning" size="md" onClick={handleDeleteConfirm}>
+                Pand verwijderen
               </Button>
               <Button kind="secondary" size="md" onClick={() => setDialogOpenIndex(null)}>
-                Nee
+                Pand niet verwijderen
               </Button>
-            </>
+            </ActionGroup>
           }
         >
           <Heading type="h2">Pand verwijderen</Heading>

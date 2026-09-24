@@ -18,6 +18,8 @@ import {
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { FormEvent, useEffect, useRef, useState } from 'react';
+import { getBijenkasten } from './bijenkastenStorage';
+import { getPanden } from './pandenStorage';
 import { saveProject } from './projectStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
@@ -27,39 +29,6 @@ const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
-
-const progressSteps = [
-  {
-    state: 'completed' as const,
-    label: 'Voorbereiding',
-    link: URL_VOORBEREIDING,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  {
-    state: 'doing' as const,
-    label: 'Projectgegevens',
-    link: URL_PROJECTGEGEVENS,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'incomplete' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'incomplete' as const,
-    label: 'Bijenkasten',
-    link: URL_BIJENKASTEN,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'disabled' as const,
-    label: 'Controleren & indienen',
-    link: '#',
-    size: 'md' as const,
-    line: 'none' as const,
-  },
-];
 
 interface FieldError {
   before: string;
@@ -77,6 +46,47 @@ const Projectgegevens = () => {
   const [errors, setErrors] = useState<Record<string, FieldError>>({});
 
   const errorSummaryRef = useRef<HTMLDivElement>(null);
+
+  const pandenCompleted = getPanden().length > 0;
+  const bijenkastenCompleted = getBijenkasten().length > 0;
+  const progressSteps = [
+    {
+      state: 'completed' as const,
+      label: 'Voorbereiding',
+      link: URL_VOORBEREIDING,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'doing' as const,
+      label: 'Projectgegevens',
+      link: URL_PROJECTGEGEVENS,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Panden',
+      link: URL_PANDEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Bijenkasten',
+      link: URL_BIJENKASTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
+    {
+      state: 'disabled' as const,
+      label: 'Controleren & indienen',
+      link: '#',
+      size: 'md' as const,
+      line: 'none' as const,
+    },
+  ];
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);

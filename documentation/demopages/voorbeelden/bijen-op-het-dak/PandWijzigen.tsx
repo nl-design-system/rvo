@@ -16,7 +16,9 @@ import {
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import { getBijenkasten } from './bijenkastenStorage';
 import { clearEditPandIndex, getEditPandIndex, getPanden, updatePand } from './pandenStorage';
+import { getProject } from './projectStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -27,46 +29,6 @@ const URL_PAND_WIJZIGEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
-
-const progressSteps = [
-  {
-    state: 'completed' as const,
-    label: 'Voorbereiding',
-    link: URL_VOORBEREIDING,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  {
-    state: 'completed' as const,
-    label: 'Projectgegevens',
-    link: URL_PROJECTGEGEVENS,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'substep-start' as const },
-  {
-    state: 'doing' as const,
-    label: 'Pand wijzigen',
-    link: URL_PAND_WIJZIGEN,
-    size: 'sm' as const,
-    line: 'substep-end' as const,
-  },
-  {
-    state: 'incomplete' as const,
-    label: 'Bijenkasten',
-    link: URL_BIJENKASTEN,
-    size: 'md' as const,
-    line: 'straight' as const,
-  },
-  { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
-  {
-    state: 'disabled' as const,
-    label: 'Controleren & indienen',
-    link: '#',
-    size: 'md' as const,
-    line: 'none' as const,
-  },
-];
 
 const PandWijzigen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -81,6 +43,48 @@ const PandWijzigen = () => {
   const [daktype, setDaktype] = useState(existingPand?.daktype ?? '');
   const [dakoppervlak, setDakoppervlak] = useState(existingPand?.dakoppervlak ?? '');
   const [bereikbaar, setBereikbaar] = useState(existingPand?.bereikbaar ?? '');
+
+  const projectCompleted = !!getProject();
+  const bijenkastenCompleted = getBijenkasten().length > 0;
+  const progressSteps = [
+    {
+      state: 'completed' as const,
+      label: 'Voorbereiding',
+      link: URL_VOORBEREIDING,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Projectgegevens',
+      link: URL_PROJECTGEGEVENS,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'substep-start' as const },
+    {
+      state: 'doing' as const,
+      label: 'Pand wijzigen',
+      link: URL_PAND_WIJZIGEN,
+      size: 'sm' as const,
+      line: 'substep-end' as const,
+    },
+    {
+      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      label: 'Bijenkasten',
+      link: URL_BIJENKASTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
+    {
+      state: 'disabled' as const,
+      label: 'Controleren & indienen',
+      link: '#',
+      size: 'md' as const,
+      line: 'none' as const,
+    },
+  ];
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
