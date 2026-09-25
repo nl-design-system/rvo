@@ -31,7 +31,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   noUnderline?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   role?: string;
-  showIcon?: 'no' | 'before' | 'after';
+  iconPlacement?: 'left' | 'right';
   target?: string;
   weight?: 'normal' | 'bold';
 }

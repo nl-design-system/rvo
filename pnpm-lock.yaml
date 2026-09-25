@@ -848,11 +848,7 @@ importers:
         specifier: workspace:*
         version: link:../../status-icon/react
 
-  components/tag/style:
-    dependencies:
-      '@nl-rvo/css-layout-flow':
-        specifier: workspace:*
-        version: link:../../layout-flow/style
+  components/tag/style: {}
 
   components/toggle/react:
     dependencies:

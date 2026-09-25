@@ -12,7 +12,7 @@ export const Link: React.FC<ILinkProps> = ({
   href = '#',
   color = 'hemelblauw',
   weight = 'bold',
-  showIcon = 'no',
+  iconPlacement,
   icon = 'home',
   iconSize = 'md',
   iconColor = 'hemelblauw',
@@ -29,7 +29,7 @@ export const Link: React.FC<ILinkProps> = ({
   ...otherProps
 }: ILinkProps) => {
   const iconMarkup =
-    showIcon !== 'no'
+    iconPlacement && icon
       ? Icon({
           icon: icon as any,
           size: iconSize as any,
@@ -42,7 +42,7 @@ export const Link: React.FC<ILinkProps> = ({
     'rvo-link--hover': hover,
     'rvo-link--active': active,
     'rvo-link--focus': focus,
-    'rvo-link--with-icon': showIcon !== 'no',
+    'rvo-link--with-icon': iconPlacement && icon,
     'rvo-link--no-underline': noUnderline,
     'rvo-link--full-card-link': fullContainerLink,
     'rvo-link--normal': weight === 'normal',
@@ -56,9 +56,9 @@ export const Link: React.FC<ILinkProps> = ({
 
   const linkContent = (
     <>
-      {showIcon === 'before' && iconMarkup}
+      {iconPlacement === 'left' && iconMarkup}
       {children && <span className="rvo-link__text">{children}</span>}
-      {showIcon === 'after' && iconMarkup}
+      {iconPlacement === 'right' && iconMarkup}
     </>
   );
 

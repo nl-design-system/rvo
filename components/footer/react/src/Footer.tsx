@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElem
                         <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
                           <Link
                             href={item.link}
-                            showIcon={column.orientation === 'horizontal' ? 'no' : 'before'}
+                            iconPlacement={column.orientation === 'horizontal' ? undefined : 'left'}
                             icon="delta-naar-rechts"
                             iconSize="sm"
                             iconColor="wit"

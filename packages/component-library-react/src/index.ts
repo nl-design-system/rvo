@@ -67,7 +67,7 @@ export { SkipLink } from '@nl-rvo/react-skip-link';
 export { StatusIcon } from '@nl-rvo/react-status-icon';
 export { StatusIndicator } from '@nl-rvo/react-status-indicator';
 export { Table } from '@nl-rvo/react-table';
-export { Tabs } from '@nl-rvo/react-tabs';
+export { Tabs, TabItem } from '@nl-rvo/react-tabs';
 export { Tag } from '@nl-rvo/react-tag';
 export { Toggle } from '@nl-rvo/react-toggle';
 

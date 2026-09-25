@@ -19,7 +19,6 @@ export default {
     iconColor: 'hemelblauw',
     iconSize: 'md',
     noUnderline: false,
-    showIcon: 'no',
     weight: 'bold',
   },
   argTypes: {
@@ -40,8 +39,8 @@ export default {
       control: { type: 'select' },
       options: ['normal', 'bold'],
     },
-    showIcon: {
-      options: ['no', 'before', 'after'],
+    iconPlacement: {
+      options: ['no', 'left', 'right'],
       control: { type: 'radio' },
     },
     icon: {

@@ -2,9 +2,6 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-
-@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
-
 $rvo-tag-status: "info", "warning", "success", "error";
 
 .rvo-tag {
@@ -20,11 +17,11 @@ $rvo-tag-status: "info", "warning", "success", "error";
   padding-inline-start: var(--rvo-tag-padding-inline-start);
 
   &--with-icon {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--rvo-space-sm);
     padding-inline-end: var(--rvo-tag-padding-inline-end-with-icon);
     padding-inline-start: var(--rvo-tag-padding-inline-start-with-icon);
-
-    // @extend .rvo-layout-row;
-    // @extend .rvo-layout-gap--sm;
   }
 
   &--as-link,

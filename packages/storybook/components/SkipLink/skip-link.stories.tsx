@@ -2,7 +2,7 @@ import { SkipLink } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 export default {
-  title: 'Componenten/Skip link',
+  title: 'Componenten/Skip Link',
   component: SkipLink,
   argTypes: {
     textContent: {
@@ -28,6 +28,7 @@ export default {
 type Story = StoryObj<typeof SkipLink>;
 
 export const Base: Story = {
+  name: 'Basis Component',
   args: {
     textContent: 'Direct naar de inhoud',
     anchorLink: '#main',

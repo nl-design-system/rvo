@@ -134,7 +134,7 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
               e.preventDefault();
               handlePageChange(internalActivePage - 1);
             }}
-            showIcon="before"
+            iconPlacement="right"
           >
             {previousLabel}
           </Link>
@@ -153,7 +153,7 @@ export const PageNumberNavigation: React.FC<IPageNumberNavigation> = ({
               e.preventDefault();
               handlePageChange(internalActivePage + 1);
             }}
-            showIcon="after"
+            iconPlacement="right"
           >
             {nextLabel}
           </Link>

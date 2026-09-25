@@ -36,7 +36,7 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
           icon: icon as any,
           size: 'lg',
           color: '',
-          className: iconPlacement !== undefined ? `rvo-link__icon--${iconPlacement}` : '',
+          className: iconPlacement ? `rvo-link__icon--${iconPlacement}` : '',
         })
       : StatusIcon({
           type: typeName[type as keyof typeof typeName],
@@ -63,9 +63,9 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
       onClick={onClick}
       {...rootElementProps}
     >
-      {iconPlacement === 'before' && iconMarkup}
+      {iconPlacement === 'left' && iconMarkup}
       {children}
-      {iconPlacement === 'after' && iconMarkup}
+      {iconPlacement === 'right' && iconMarkup}
     </TagElement>
   );
 };

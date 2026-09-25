@@ -5,7 +5,7 @@ export interface ITagProps {
   className?: string;
   children: ReactNode;
   icon?: IconType;
-  iconPlacement?: 'before' | 'after';
+  iconPlacement?: 'left' | 'right';
   isPill?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>) => void;
   type?: 'info' | 'success' | 'error' | 'warning';

@@ -5,18 +5,17 @@ import { iconOptions } from '@nl-rvo/component-library-react';
 export default {
   title: 'Componenten/Tag',
   component: Tag,
-  args: { children: 'Tag name' },
+  args: { children: 'Tag' },
   argTypes: {
     content: {
       control: 'text',
     },
     type: {
-      options: ['info', 'bevestiging', 'foutmelding', 'waarschuwing'],
-      control: { type: 'radio' },
-    },
-    showIcon: {
-      options: ['no', 'before', 'after'],
+      options: ['-', 'info', 'bevestiging', 'foutmelding', 'waarschuwing'],
       control: { type: 'select' },
+      mapping: {
+        '-': undefined,
+      },
     },
     icon: {
       control: { type: 'select' },
@@ -25,21 +24,19 @@ export default {
     isPill: {
       control: 'boolean',
     },
-    showHover: {
-      control: 'boolean',
-    },
-    active: {
-      control: 'boolean',
-    },
-    focus: {
-      control: 'boolean',
-    },
     link: {
       control: 'text',
     },
     linkTarget: {
       options: ['_blank', '_self', '_parent', '_top'],
       control: { type: 'radio' },
+    },
+    iconPlacement: {
+      options: ['-', 'left', 'right'],
+      control: { type: 'select' },
+      mapping: {
+        '-': undefined,
+      },
     },
     onClick: {
       table: {
@@ -62,31 +59,30 @@ export default {
 } satisfies Meta<typeof Tag>;
 type Story = StoryObj<typeof Tag>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };
 
-export const Hover = {
-  render: Tag.bind({}),
-
-  args: {
-    hover: true,
-    showIcon: 'before',
-  },
+export const WithIcon: Story = {
+  name: 'Met Icoon',
+  render: () => (
+    <div style={{ display: 'inline-flex', gap: '1rem', flexDirection: 'column' }}>
+      <Tag icon="home" iconPlacement="left">
+        Tag met Icon Links
+      </Tag>
+      <Tag icon="home" iconPlacement="right">
+        Tag met Icon Rechts
+      </Tag>
+    </div>
+  ),
 };
 
-export const Active = {
-  render: Tag.bind({}),
-
-  args: {
-    active: true,
-    showIcon: 'before',
-  },
-};
-
-export const Focus = {
-  render: Tag.bind({}),
-
-  args: {
-    focus: true,
-    showIcon: 'before',
-  },
+export const WithType: Story = {
+  name: 'Type Variants',
+  render: () => (
+    <div style={{ display: 'inline-flex', gap: '1rem', flexDirection: 'column' }}>
+      <Tag type="info">Tag met 'info' type</Tag>
+      <Tag type="success">Tag met 'success' type</Tag>
+      <Tag type="error">Tag met 'error' type</Tag>
+      <Tag type="warning">Tag met 'warning' type</Tag>
+    </div>
+  ),
 };

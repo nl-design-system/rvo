@@ -6,9 +6,12 @@ export default {
   title: 'Componenten/Toggle',
   component: Toggle,
   argTypes: {
-    showIcon: {
-      options: ['no', 'left', 'right'],
-      control: { type: 'radio' },
+    iconPlacement: {
+      options: ['-', 'left', 'right'],
+      control: { type: 'select' },
+      mapping: {
+        '-': undefined,
+      },
     },
     icon: {
       control: { type: 'select' },
@@ -21,8 +24,11 @@ export default {
       control: 'text',
     },
     linkTarget: {
-      options: ['_blank', '_self', '_parent', '_top'],
-      control: { type: 'radio' },
+      options: ['-', '_blank', '_self', '_parent', '_top'],
+      control: { type: 'select' },
+      mapping: {
+        '-': undefined,
+      },
     },
     children: {
       table: {
@@ -57,11 +63,11 @@ export const WithIcon: Story = {
   args: { icon: 'home' },
   render: (args) => (
     <div style={{ display: 'inline-flex', gap: '1rem', flexDirection: 'column' }}>
-      <Toggle showIcon="left" {...args}>
-        Toggle with Icon left
+      <Toggle iconPlacement="left" {...args}>
+        Toggle met Icon links
       </Toggle>
-      <Toggle showIcon="right" {...args}>
-        Toggle with Icon right
+      <Toggle iconPlacement="right" {...args}>
+        Toggle met Icon rechts
       </Toggle>
     </div>
   ),

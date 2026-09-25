@@ -10,7 +10,7 @@ import '@nl-rvo/css-toggle';
 import { IToggleProps } from './Toggle.types';
 
 export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> = ({
-  showIcon,
+  iconPlacement,
   icon,
   active,
   showHover,
@@ -36,14 +36,12 @@ export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> 
 
   // Parse icon markup
   let iconClassName = '';
-  if (showIcon === 'left') {
-    iconClassName += 'rvo-link__icon--before';
-  }
-  if (showIcon === 'right') {
-    iconClassName += ' rvo-link__icon--after';
+  if (iconPlacement) {
+    iconClassName += `rvo-link__icon--${iconPlacement}`;
   }
 
-  const iconMarkup = showIcon && icon && Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
+  const iconMarkup =
+    iconPlacement && icon && Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
   const ToggleElement = link ? 'a' : 'div';
 
   return (
@@ -55,13 +53,13 @@ export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> 
         'rvo-toggle',
         active && ['rvo-toggle--active'],
         className,
-        showIcon && icon && ['rvo-toggle--with-icon'],
+        iconPlacement && icon && ['rvo-toggle--with-icon'],
       )}
       {...rootElementProps}
     >
-      {showIcon === 'left' && iconMarkup}
+      {iconPlacement === 'left' && iconMarkup}
       {parseContentMarkup(children)}
-      {showIcon === 'right' && iconMarkup}
+      {iconPlacement === 'right' && iconMarkup}
     </ToggleElement>
   );
 };

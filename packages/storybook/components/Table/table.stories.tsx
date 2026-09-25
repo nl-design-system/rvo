@@ -47,11 +47,13 @@ export default {
 } satisfies Meta<typeof Table>;
 type Story = StoryObj<typeof Table>;
 
-export const Base: Story = {};
+export const Base: Story = {
+  name: 'Basis Component',
+};
 
 export const AscendingSorting = {
   render: Table.bind({}),
-  name: 'Ascending sorting',
+  name: 'Sorteer volgorde oplopend',
 
   args: {
     description: 'Table with titles in ascending order.',
@@ -78,7 +80,7 @@ export const AscendingSorting = {
 
 export const DescendingSorting = {
   render: Table.bind({}),
-  name: 'Descending sorting',
+  name: 'Sorteer volgorde aflopend',
 
   args: {
     description: 'Table with titles in descending order.',
@@ -104,6 +106,7 @@ export const DescendingSorting = {
 };
 
 export const Numeric = {
+  name: 'Nummerieke kolom',
   render: Table.bind({}),
 
   args: {

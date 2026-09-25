@@ -2,12 +2,12 @@ import { StatusIndicator } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 export default {
-  title: 'Componenten/Status indicator',
+  title: 'Componenten/Status Indicator',
   component: StatusIndicator,
   argTypes: {
     color: {
       options: ['groen', 'groen-300', 'oranje', 'oranje-300', 'rood', 'rood-300', 'hemelblauw', 'hemelblauw-300'],
-      control: { type: 'radio' },
+      control: { type: 'select' },
     },
   },
   parameters: {
@@ -25,4 +25,7 @@ export default {
 } satisfies Meta<typeof StatusIndicator>;
 type Story = StoryObj<typeof StatusIndicator>;
 
-export const Base: Story = { args: { color: 'groen' } };
+export const Base: Story = {
+  name: 'Basis Component',
+  args: { color: 'groen' },
+};

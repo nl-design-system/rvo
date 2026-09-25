@@ -67,7 +67,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
         <Link
           icon="plus"
           iconSize="md"
-          showIcon="before"
+          iconPlacement="right"
           noUnderline
           color="lintblauw"
           iconColor="lintblauw"

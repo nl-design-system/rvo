@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { CSSProperties } from 'react';
-import { isDefined } from '@nl-rvo/component-library-react/src/utils/guards';
 import '@nl-rvo/css-skeleton';
 import { ISkeletonProps } from './Skeleton.types';
 
@@ -22,9 +21,9 @@ export const Skeleton: React.FC<ISkeletonProps> = (props: ISkeletonProps) => {
       className={clsx(
         className,
         'rvo-skeleton',
-        isDefined(variant) && `rvo-skeleton--${variant}`,
-        isDefined(animation) && `rvo-skeleton--${animation}`,
-        isDefined(color) && `rvo-skeleton--${color}`,
+        variant && `rvo-skeleton--${variant}`,
+        animation && `rvo-skeleton--${animation}`,
+        color && `rvo-skeleton--${color}`,
       )}
       style={{ ...style, ...inlineStyle }}
       {...otherProps}
