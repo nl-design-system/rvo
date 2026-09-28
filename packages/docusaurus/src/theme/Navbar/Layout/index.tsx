@@ -3,7 +3,6 @@ import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Header, MenuBar } from '@nl-rvo/component-library-react';
-// import { IMenuBarItem } from '@nl-rvo/component-library-react/dist/components/menubar/menubar';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
@@ -54,11 +53,6 @@ export default function NavbarLayout() {
             linkColor="lintblauw"
           />
         </div>
-        {/* {!mobileSidebar.disabled && (
-          <div className={styles.menubarMobile}>
-            <MobileMenuBar items={menuItems} size="md" horizontalRule={false} />
-          </div>
-        )} */}
       </nav>
     </>
   );

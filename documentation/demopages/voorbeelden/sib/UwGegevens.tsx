@@ -7,7 +7,6 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  MobileMenuBar,
   ProgressTracker,
   RadioButtonField,
   TextInputField,
@@ -23,26 +22,6 @@ const UwGegevens = () => {
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
-            <MobileMenuBar
-              iconPlacement="before"
-              useIcons={true}
-              isOpen={false}
-              size="md"
-              items={[
-                {
-                  label: 'Overzicht',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Mijn dossier',
-                  link: '#',
-                  icon: 'map',
-                },
-                { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-              ]}
-            ></MobileMenuBar>
             <MenuBar
               items={[
                 {

@@ -29,6 +29,8 @@
     "@nl-rvo/css-menubar": "workspace:*",
     "@nl-rvo/react-max-width-layout": "workspace:*",
     "@nl-rvo/react-link": "workspace:*",
+    "@nl-rvo/react-button": "workspace:*",
+    "@nl-rvo/react-dialog": "workspace:*",
     "@nl-rvo/react-icon": "workspace:*"
   }
 }

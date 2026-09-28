@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
 // eslint-disable-next-line import/order
-import SubMenu from '../submenu';
+import SubMenu from './SubMenu';
 import '@nl-rvo/css-menubar';
 import { Link } from '@nl-rvo/react-link';
-import { IMenuBarItem } from '../Menubar.types';
+import { IMenuBarItem } from './Menubar.types';
 import { Icon } from '@nl-rvo/react-icon';
 
 interface MenuBarItemProps extends IMenuBarItem {
@@ -14,7 +14,6 @@ interface MenuBarItemProps extends IMenuBarItem {
   linkColor?: string;
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
   isSubmenuVisible?: boolean;
-  direction?: 'horizontal' | 'vertical';
   grid?: boolean;
   handleItemClick?: (event: React.MouseEvent) => void;
 }
@@ -30,8 +29,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   iconPlacement,
   linkColor,
   isSubmenuVisible,
-  direction,
-  grid,
   maxWidth,
   handleItemClick,
   ...rest
@@ -85,8 +82,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           iconPlacement={iconPlacement}
           linkColor={linkColor}
           isSubmenuVisible={isSubmenuVisible}
-          direction={direction}
-          grid={grid}
           maxWidth={maxWidth}
         />
       )}

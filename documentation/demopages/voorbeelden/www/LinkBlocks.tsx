@@ -1,14 +1,4 @@
-import {
-  Button,
-  Footer,
-  Header,
-  Heading,
-  Hero,
-  Icon,
-  LayoutFlow,
-  MenuBar,
-  MobileMenuBar,
-} from '@nl-rvo/component-library-react';
+import { Button, Footer, Header, Heading, Hero, Icon, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -29,27 +19,23 @@ const LinkBlocks = () => {
     <body className="rvo-theme">
       <Header />
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        {isDesktop ? (
-          <MenuBar
-            items={[
-              { label: 'Home', link: '#' },
-              { label: 'Onderwerpen', link: '#' },
-              { label: 'Subsidie- en financieringswijzer', link: '#' },
-              { label: 'Over ons', link: '#' },
-              { label: 'Contact', link: '#' },
-              { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
-              { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
-              { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            maxWidth="lg"
-            horizontalRule={false}
-          />
-        ) : (
-          <MobileMenuBar />
-        )}
+        <MenuBar
+          items={[
+            { label: 'Home', link: '#' },
+            { label: 'Onderwerpen', link: '#' },
+            { label: 'Subsidie- en financieringswijzer', link: '#' },
+            { label: 'Over ons', link: '#' },
+            { label: 'Contact', link: '#' },
+            { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
+            { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
+            { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
+          ]}
+          size="lg"
+          useIcons={true}
+          iconPlacement="before"
+          maxWidth="lg"
+          horizontalRule={false}
+        />
       </div>
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         <Hero

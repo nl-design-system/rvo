@@ -6,7 +6,6 @@ import {
   Icon,
   LayoutFlow,
   MenuBar,
-  MobileMenuBar,
   PageNumberNavigation,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
@@ -17,26 +16,6 @@ const Stallijst = () => {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <MobileMenuBar
-        iconPlacement="before"
-        useIcons={true}
-        isOpen={false}
-        size="md"
-        items={[
-          {
-            label: 'Overzicht',
-            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-            icon: 'home',
-          },
-          {
-            label: 'Mijn dossier',
-            link: '#',
-            icon: 'map',
-          },
-          { label: 'Mijn berichten', link: '#', icon: 'mail' },
-          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-        ]}
-      ></MobileMenuBar>
       <MenuBar
         items={[
           {

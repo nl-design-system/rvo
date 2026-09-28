@@ -16,7 +16,10 @@
   text-underline-offset: var(--rvo-link-text-underline-offset);
 
   &__text {
-    display: block;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--rvo-space-sm);
   }
 }
 
@@ -36,8 +39,9 @@
 }
 
 .rvo-link--with-icon {
-  // @extend .rvo-layout-row;
-  // @extend .rvo-layout-gap--sm;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--rvo-space-sm);
 }
 
 // Hover

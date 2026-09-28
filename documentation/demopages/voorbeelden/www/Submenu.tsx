@@ -1,210 +1,184 @@
-import {
-  Button,
-  Footer,
-  Header,
-  Heading,
-  Hero,
-  Icon,
-  LayoutFlow,
-  Link,
-  MobileMenuBar,
-} from '@nl-rvo/component-library-react';
-import { useEffect, useState } from 'react';
+import { Button, Footer, Header, Heading, Hero, Icon, LayoutFlow, Link } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const Submenu = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1020);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <body className="rvo-theme">
       <Header />
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        {isDesktop ? (
-          <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none">
-            <nav className="rvo-topnav rvo-topnav--lg">
+        <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none">
+          <nav className="rvo-topnav rvo-topnav--lg">
+            <ul className="rvo-topnav__list">
+              <li className="rvo-topnav__item rvo-topnav__item--active">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="rvo-topnav__item">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  Onderwerpen
+                  <span
+                    className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--xs rvo-icon--wit"
+                    role="img"
+                    aria-label="Delta omlaag"
+                  ></span>
+                </a>
+              </li>
+              <li className="rvo-topnav__item">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  Subsidie- en financieringswijzer
+                </a>
+              </li>
+              <li className="rvo-topnav__item">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  Over ons
+                </a>
+              </li>
+              <li className="rvo-topnav__item">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  Contact
+                </a>
+              </li>
+              <li className="rvo-topnav__item rvo-topnav__item--active rvo-topnav__item--align-right">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  <span
+                    className="utrecht-icon rvo-icon rvo-icon-user rvo-icon--lg rvo-icon--wit"
+                    role="img"
+                    aria-label="User"
+                  ></span>
+                  Mijn RVO
+                </a>
+              </li>
+              <li className="rvo-topnav__item">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  <span
+                    className="utrecht-icon rvo-icon rvo-icon-wereldbol rvo-icon--lg rvo-icon--wit"
+                    role="img"
+                    aria-label="Wereldbol"
+                  ></span>
+                  English
+                </a>
+              </li>
+              <li className="rvo-topnav__item">
+                <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                  <span
+                    className="utrecht-icon rvo-icon rvo-icon-zoek rvo-icon--lg rvo-icon--wit"
+                    role="img"
+                    aria-label="Zoek"
+                  ></span>
+                  Zoeken
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="rvo-topnav__background rvo-topnav__background--horizontal-rule rvo-topnav--sub rvo-topnav--sub-grid">
+            <nav className="rvo-topnav rvo-topnav--md">
               <ul className="rvo-topnav__list">
-                <li className="rvo-topnav__item rvo-topnav__item--active">
-                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                    Home
-                  </a>
-                </li>
                 <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                    Onderwerpen
-                    <span
-                      className="utrecht-icon rvo-icon rvo-icon-delta-omlaag rvo-icon--xs rvo-icon--wit"
-                      role="img"
-                      aria-label="Delta omlaag"
-                    ></span>
-                  </a>
-                </li>
-                <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                    Subsidie- en financieringswijzer
-                  </a>
-                </li>
-                <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                    Over ons
-                  </a>
-                </li>
-                <li className="rvo-topnav__item">
-                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                    Contact
-                  </a>
-                </li>
-                <li className="rvo-topnav__item rvo-topnav__item--active rvo-topnav__item--align-right">
                   <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     <span
-                      className="utrecht-icon rvo-icon rvo-icon-user rvo-icon--lg rvo-icon--wit"
+                      className="utrecht-icon rvo-icon rvo-icon-blad-met-wereldbol rvo-icon--xl rvo-icon--wit"
                       role="img"
-                      aria-label="User"
+                      aria-label="Plus"
                     ></span>
-                    Mijn RVO
+                    Klimaat & Energie
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
                   <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     <span
-                      className="utrecht-icon rvo-icon rvo-icon-wereldbol rvo-icon--lg rvo-icon--wit"
+                      className="utrecht-icon rvo-icon rvo-icon-grootstedelijk rvo-icon--xl rvo-icon--wit"
                       role="img"
-                      aria-label="Wereldbol"
+                      aria-label="Plus"
                     ></span>
-                    English
+                    Bouwen & Wonen
                   </a>
                 </li>
                 <li className="rvo-topnav__item">
                   <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
                     <span
-                      className="utrecht-icon rvo-icon rvo-icon-zoek rvo-icon--lg rvo-icon--wit"
+                      className="utrecht-icon rvo-icon rvo-icon-buitenlandse-handel rvo-icon--xl rvo-icon--wit"
                       role="img"
-                      aria-label="Zoek"
+                      aria-label="Plus"
                     ></span>
-                    Zoeken
+                    Internationaal ondernemen
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-wereldbol-tussen-2-uitgestoken-handen rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Ontwikkelingssamenwerking
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-tractor rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Landbouw
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-vis rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Visserij
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-eend-zwemmend-bij-riet rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Dier & Natuur
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-lamp rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Innovatie, Onderzoek & Onderwijs
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-grafiek rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Ondernemen & Bedrijfsvoering
+                  </a>
+                </li>
+                <li className="rvo-topnav__item">
+                  <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
+                    <span
+                      className="utrecht-icon rvo-icon rvo-icon-stethoscoop rvo-icon--xl rvo-icon--wit"
+                      role="img"
+                      aria-label="Plus"
+                    ></span>
+                    Gezondheid, Zorg & Welzijn
                   </a>
                 </li>
               </ul>
             </nav>
-            <div className="rvo-topnav__background rvo-topnav__background--horizontal-rule rvo-topnav--sub rvo-topnav--sub-grid">
-              <nav className="rvo-topnav rvo-topnav--md">
-                <ul className="rvo-topnav__list">
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-blad-met-wereldbol rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Klimaat & Energie
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-grootstedelijk rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Bouwen & Wonen
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-buitenlandse-handel rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Internationaal ondernemen
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-wereldbol-tussen-2-uitgestoken-handen rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Ontwikkelingssamenwerking
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-tractor rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Landbouw
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-vis rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Visserij
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-eend-zwemmend-bij-riet rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Dier & Natuur
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-lamp rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Innovatie, Onderzoek & Onderwijs
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-grafiek rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Ondernemen & Bedrijfsvoering
-                    </a>
-                  </li>
-                  <li className="rvo-topnav__item">
-                    <a className="rvo-link rvo-topnav__link rvo-link--lintblauw" href="#">
-                      <span
-                        className="utrecht-icon rvo-icon rvo-icon-stethoscoop rvo-icon--xl rvo-icon--wit"
-                        role="img"
-                        aria-label="Plus"
-                      ></span>
-                      Gezondheid, Zorg & Welzijn
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
           </div>
-        ) : (
-          <MobileMenuBar />
-        )}
+        </div>
       </div>
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
         <Hero size="lg" title="Heading" image={{ src: 'images/www/home.jpg', alt: 'home' }} />

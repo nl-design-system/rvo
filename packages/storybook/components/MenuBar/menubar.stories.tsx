@@ -58,14 +58,11 @@ export const defaultItems = [
 
 export const defaultArgs = {
   size: 'md',
-  direction: 'horizontal',
   items: defaultItems,
   useIcons: true,
   iconPlacement: 'before',
-  maxWidth: 'none',
   horizontalRule: true,
   linkColor: 'lintblauw',
-  grid: true,
 };
 
 export default {

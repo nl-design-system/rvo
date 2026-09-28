@@ -8,27 +8,6 @@ const ExpendableRows = () => {
   return (
     <body className="rvo-theme rvo-responsive rvo-demo-page-expandable-tr">
       <Header />
-      {/* <MobileMenuBar
-        iconPlacement="before"
-        useIcons={true}
-        isOpen={false}
-        submenuItems={[]}
-        size="md"
-        items={[
-          {
-            label: 'Overzicht',
-            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-            icon: 'home',
-          },
-          {
-            label: 'Mijn dossier',
-            link: '#',
-            icon: 'map',
-          },
-          { label: 'Mijn berichten', link: '#', icon: 'mail' },
-          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-        ]}
-      ></MobileMenuBar> */}
       <MenuBar
         items={[
           {

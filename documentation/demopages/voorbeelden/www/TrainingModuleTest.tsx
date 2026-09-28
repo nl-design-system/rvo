@@ -1,10 +1,9 @@
-import { Footer, Header, Heading, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
-import { useEffect, useState } from 'react';
+import { Footer, Header, Heading, MenuBar } from '@nl-rvo/component-library-react';
+import { useState } from 'react';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const TrainingModuleTest = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   const [isVraag1Correct, setIsVraag1Correct] = useState(false);
   const [isVraag1Incorrect, setIsVraag1Incorrect] = useState(false);
   const [isVraag1Answered, setIsVraag1Answered] = useState(false);
@@ -20,15 +19,6 @@ const TrainingModuleTest = () => {
   const [isVraag5Correct, setIsVraag5Correct] = useState(false);
   const [isVraag5Incorrect, setIsVraag5Incorrect] = useState(false);
   const [isVraag5Answered, setIsVraag5Answered] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1020);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const handleVraag1Change = (event) => {
     setIsVraag1Answered(true);
@@ -89,27 +79,23 @@ const TrainingModuleTest = () => {
     <body className="rvo-theme">
       <Header />
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        {isDesktop ? (
-          <MenuBar
-            items={[
-              { label: 'Home', link: '#' },
-              { label: 'Onderwerpen', link: '#' },
-              { label: 'Subsidie- en financieringswijzer', link: '#' },
-              { label: 'Over ons', link: '#' },
-              { label: 'Contact', link: '#' },
-              { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
-              { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
-              { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="before"
-            maxWidth="lg"
-            horizontalRule={false}
-          />
-        ) : (
-          <MobileMenuBar />
-        )}
+        <MenuBar
+          items={[
+            { label: 'Home', link: '#' },
+            { label: 'Onderwerpen', link: '#' },
+            { label: 'Subsidie- en financieringswijzer', link: '#' },
+            { label: 'Over ons', link: '#' },
+            { label: 'Contact', link: '#' },
+            { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
+            { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
+            { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
+          ]}
+          size="lg"
+          useIcons={true}
+          iconPlacement="before"
+          maxWidth="lg"
+          horizontalRule={false}
+        />
       </div>
 
       <main className="rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">

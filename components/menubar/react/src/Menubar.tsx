@@ -7,23 +7,25 @@ import React, { useEffect, useRef, useState } from 'react';
 // eslint-disable-next-line import/order
 
 import '@nl-rvo/css-menubar';
-import MenuBarItem from './menubar-item';
+import MenuBarItem from './MenuItem';
 import { MaxWidthLayout } from '@nl-rvo/react-max-width-layout';
+import { Button } from '@nl-rvo/react-button';
+import { Icon } from '@nl-rvo/react-icon';
+
 import { IMenuBarProps } from './Menubar.types';
 
 export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivElement>> = ({
   size = 'lg',
-  direction = 'horizontal',
   items,
   useIcons,
   iconPlacement,
   maxWidth = 'lg',
   horizontalRule,
   linkColor = 'lintblauw',
-  grid,
   children,
   ...rootElementProps
 }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const menuBarRef = useRef<HTMLDivElement>(null);
 
@@ -48,64 +50,71 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
   const rightItems = items?.filter((item) => item.align === 'right') || [];
 
   const navMarkup = (
-    <nav className={clsx(`rvo-menubar rvo-menubar--${size}`)}>
-      <ul className={clsx('rvo-menubar__ul')}>
-        <li className={clsx('rvo-menubar__list', direction === 'vertical' && 'rvo-menubar__list--vertical')}>
-          <ul className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}>
-            {leftItems?.map((item, index) => (
-              <MenuBarItem
-                key={`${item.label}-${index}`}
-                useIcons={useIcons ?? false}
-                size={size}
-                iconPlacement={iconPlacement ?? 'before'}
-                linkColor={linkColor}
-                isSubmenuVisible={activeSubmenu === item.label}
-                handleItemClick={() => handleItemClick(item.label)}
-                direction={direction}
-                grid={grid}
-                maxWidth={maxWidth}
-                {...item}
-              />
-            ))}
-          </ul>
+    <nav className={clsx(`rvo-menubar__nav`)}>
+      <div className="rvo-menubar__toggle">
+        <Button kind="subtle" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <Icon icon="menu" size={size as any} className="rvo-mobile-menu__open-icon" />
+          Menu
+        </Button>
+      </div>
 
-          {rightItems.length > 0 && (
-            <ul
-              className={clsx('rvo-menubar__group--flex', direction === 'vertical' && 'rvo-menubar__group--vertical')}
-            >
-              {rightItems?.map((item, index) => (
-                <MenuBarItem
-                  key={`${item.label}-${index}`}
-                  useIcons={useIcons ?? false}
-                  size={size}
-                  iconPlacement={iconPlacement ?? 'before'}
-                  linkColor={linkColor}
-                  isSubmenuVisible={activeSubmenu === item.label}
-                  handleItemClick={() => handleItemClick(item.label)}
-                  direction={direction}
-                  grid={grid}
-                  maxWidth={maxWidth}
-                  {...item}
-                />
-              ))}
-            </ul>
-          )}
-        </li>
-      </ul>
+      <div className={clsx(`rvo-menubar__container`, [isMenuOpen && 'rvo-menubar__container--open'])}>
+        {/* Close Button. Only visible on Mobile */}
+        <div className="rvo-menubar__container-close">
+          <Button kind="subtle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Icon icon="kruis" size={size as any} className="rvo-mobile-menu__open-icon" />
+            Sluiten
+          </Button>
+        </div>
+
+        {/* Left Items */}
+        <ul className="rvo-menubar__group rvo-menubar__group--left">
+          {leftItems?.map((item, index) => (
+            <MenuBarItem
+              key={`${item.label}-${index}`}
+              useIcons={useIcons ?? false}
+              size={size}
+              iconPlacement={iconPlacement ?? 'before'}
+              linkColor={linkColor}
+              isSubmenuVisible={activeSubmenu === item.label}
+              handleItemClick={() => handleItemClick(item.label)}
+              maxWidth={maxWidth}
+              {...item}
+            />
+          ))}
+        </ul>
+
+        {/* Right Items */}
+        <ul className="rvo-menubar__group rvo-menubar__group--right">
+          {rightItems?.map((item, index) => (
+            <MenuBarItem
+              key={`${item.label}-${index}`}
+              useIcons={useIcons ?? false}
+              size={size}
+              iconPlacement={iconPlacement ?? 'before'}
+              linkColor={linkColor}
+              isSubmenuVisible={activeSubmenu === item.label}
+              handleItemClick={() => handleItemClick(item.label)}
+              maxWidth={maxWidth}
+              {...item}
+            />
+          ))}
+        </ul>
+      </div>
+
+      {isMenuOpen && <div className="rvo-menubar__overlay" onClick={() => setIsMenuOpen(!isMenuOpen)}></div>}
     </nav>
   );
 
   return (
     <div
       ref={menuBarRef}
-      className={clsx('rvo-menubar__background', horizontalRule && 'rvo-menubar__background--horizontal-rule')}
+      className={clsx('rvo-menubar', horizontalRule && 'rvo-menubar--horizontal-rule', size && `rvo-menubar--${size}`)}
       {...rootElementProps}
     >
-      {direction === 'horizontal' && maxWidth !== 'none' ? (
-        <MaxWidthLayout size={maxWidth}>{children || navMarkup}</MaxWidthLayout>
-      ) : (
-        children || navMarkup
-      )}
+      <MaxWidthLayout centered size={maxWidth}>
+        {children || navMarkup}
+      </MaxWidthLayout>
     </div>
   );
 };

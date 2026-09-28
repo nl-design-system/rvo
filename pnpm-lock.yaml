@@ -700,6 +700,12 @@ importers:
       '@nl-rvo/css-menubar':
         specifier: workspace:*
         version: link:../style
+      '@nl-rvo/react-button':
+        specifier: workspace:*
+        version: link:../../button/react
+      '@nl-rvo/react-dialog':
+        specifier: workspace:*
+        version: link:../../dialog/react
       '@nl-rvo/react-icon':
         specifier: workspace:*
         version: link:../../icon/react
