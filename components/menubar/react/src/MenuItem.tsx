@@ -22,7 +22,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   label,
   icon,
   link,
-  useDivider,
   submenu,
   useIcons,
   size,
@@ -56,7 +55,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
     <li
       className={clsx(
         'rvo-menubar__item',
-        useDivider && 'rvo-menubar__item--with-divider',
         isSubmenuVisible && 'rvo-menubar__item--submenu-visible',
       )}
       {...rest}
@@ -82,7 +80,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           iconPlacement={iconPlacement}
           linkColor={linkColor}
           isSubmenuVisible={isSubmenuVisible}
-          maxWidth={maxWidth}
         />
       )}
     </li>

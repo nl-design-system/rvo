@@ -2,7 +2,7 @@ import { IExpandableContentProps } from '@nl-rvo/components/expandable-content/r
 import { ReactNode } from 'react';
 
 export interface IFieldProps {
-  id: string;
+  id?: string;
   label: string;
   labelSize?: 'sm' | 'md';
   labelType?: 'default' | 'optional' | 'required';

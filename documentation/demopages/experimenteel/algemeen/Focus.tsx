@@ -2,19 +2,14 @@ import {
   Accordion,
   ActionGroup,
   Button,
-  CheckboxField,
+  FormField,
   Fieldset,
-  FileInputField,
   Footer,
   Header,
   Heading,
   LayoutFlow,
   Link,
   MenuBar,
-  RadioButtonField,
-  SelectField,
-  TextareaField,
-  TextInputField,
 } from '@nl-rvo/component-library-react';
 import '../../common/focus.scss';
 import { defaultFooterItems } from '../../../demopages/common/defaultFooterItems';
@@ -77,69 +72,92 @@ const Focus = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div className="rvo-form-intro">
-                  <Link href="#" showIcon="before" icon="terug">
+                  <Link href="#" iconPlacement="left" icon="terug">
                     Terug
                   </Link>
                   <Heading type="h1">Heading</Heading>
                 </div>
                 <form className="rvo-layout-spacer rvo-layout-spacer--2xl">
                   <Fieldset legend="Keyboard inputs">
-                    <TextInputField label="Text" />
-                    <TextInputField
-                      label="Text with helper text"
-                      helperText="This is a helper text which can be used for instructions."
-                    />
-                    <TextInputField label="Text" />
-                    <TextInputField label="Text with an error" errorText="This is an error" invalid={true} />
-                    <TextInputField label="Text with a warning" warningText="This is a warning" />
-                    <TextInputField
+                    <FormField label="Text">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField label="Text with helper text" helperText="This is a helper text which can be used for instructions.">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField label="Text">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField label="Text with an error" errorText="This is an error">
+                      <FormField.Text invalid={true} />
+                    </FormField>
+                    <FormField label="Text with a warning" warningText="This is a warning" >
+                      <FormField.Text />
+                    </FormField>
+                    <FormField 
                       label="Text with expandable helper text"
                       helperText="This is a helper text which can be used for instructions."
-                      expandableHelperText={true}
-                      expandableHelperTextTitle="Expandable helper text"
-                    />
-                    <TextInputField label="Text disabled" disabled={true} />
-                    <TextInputField label="Text disabled with value" disabled={true} value="Value" />
-                    <TextInputField label="Number" validation="none" />
-                    <TextareaField label="Textarea" />
+                      expandableHelperText={{title: "Expandable helper text", children: ""}}>
+                      <FormField.Text />
+                    </FormField>
+                    <FormField label="Text disabled">
+                      <FormField.Text disabled={true} />
+                    </FormField>
+                    <FormField label="Text disabled with value">
+                      <FormField.Text disabled={true} value="Value" />
+                    </FormField>
+                    <FormField label="Number">
+                      <FormField.Text validation="none" />
+                    </FormField>
+                    <FormField label="Textare">
+                      <FormField.TextArea />
+                    </FormField>
                   </Fieldset>
 
                   <Fieldset legend="Options">
-                    <RadioButtonField
-                      name="radio-buttons"
+                    <FormField 
                       label="Radio buttons"
                       helperText="This is an helper text"
-                      options={[
-                        { id: 'optionA', label: 'Option A' },
-                        { id: 'optionB', label: 'Option B' },
-                        { id: 'optionC', label: 'Option C' },
-                        { id: 'optionD', label: 'Option D' },
-                      ]}
-                    ></RadioButtonField>
-                    <RadioButtonField
-                      name="radio-buttons-error"
+                    >
+                      <FormField.RadioButtonGroup 
+                        name="radio-buttons" 
+                        options={[
+                          { id: 'optionA', label: 'Option A' },
+                          { id: 'optionB', label: 'Option B' },
+                          { id: 'optionC', label: 'Option C' },
+                          { id: 'optionD', label: 'Option D' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField 
                       label="Radio buttons invalid"
                       errorText="This is an error"
-                      invalid={true}
-                      options={[
-                        { id: 'optionA-error', label: 'Option A' },
-                        { id: 'optionB-error', label: 'Option B' },
-                        { id: 'optionC-error', label: 'Option C' },
-                        { id: 'optionD-error', label: 'Option D' },
-                      ]}
-                    ></RadioButtonField>
-
-                    <RadioButtonField
-                      name="radio-buttons-warning"
-                      label="Radio buttons with warning"
+                    >
+                      <FormField.RadioButtonGroup 
+                        name="radio-buttons" 
+                        invalid={true}
+                        options={[
+                          { id: 'optionA-error', label: 'Option A' },
+                          { id: 'optionB-error', label: 'Option B' },
+                          { id: 'optionC-error', label: 'Option C' },
+                          { id: 'optionD-error', label: 'Option D' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField 
+                      label="Radio buttons warning"
                       warningText="This is a warning"
-                      options={[
-                        { id: 'optionA-warning', label: 'Option A' },
-                        { id: 'optionB-warning', label: 'Option B' },
-                        { id: 'optionC-warning', label: 'Option C' },
-                        { id: 'optionD-warning', label: 'Option D' },
-                      ]}
-                    ></RadioButtonField>
+                    >
+                      <FormField.RadioButtonGroup 
+                        name="radio-buttons-warning" 
+                        options={[
+                          { id: 'optionA-warning', label: 'Option A' },
+                          { id: 'optionB-warning', label: 'Option B' },
+                          { id: 'optionC-warning', label: 'Option C' },
+                          { id: 'optionD-warning', label: 'Option D' },
+                        ]}
+                      />
+                    </FormField>
 
                     <CheckboxField
                       helperText="This is an helper text"
@@ -188,7 +206,9 @@ const Focus = () => {
                   </Fieldset>
 
                   <Fieldset legend="Other">
-                    <FileInputField label="File" />
+                    <FormField label="File">
+                      <FormField.FileInput />
+                    </FormField>
                     <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
                       <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
                         <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">

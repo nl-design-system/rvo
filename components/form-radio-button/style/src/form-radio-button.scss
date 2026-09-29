@@ -5,11 +5,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
+@import "~@utrecht/radio-button-css/dist/index.css";
 
 .rvo-radio-button {
-  // @extend .rvo-layout-row;
-  // @extend .rvo-layout-gap--sm;
+  display: flex;
+  flex-direction: row;
+  gap: var(--rvo-space-sm);
+  align-items: center;
 }
 
 // Overrides

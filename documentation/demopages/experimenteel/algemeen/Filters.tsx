@@ -8,7 +8,7 @@ import {
   Link,
   MaxWidthLayout,
   MenuBar,
-  TextInputField,
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -53,7 +53,9 @@ const Filters = () => {
                     <Fieldset legend="">
                       <MaxWidthLayout size="lg">
                         <LayoutFlow gap="xl" row={true}>
-                          <TextInputField label="Zoek op trefwoord/code"></TextInputField>
+                          <FormField label="Zoek op trefwoord/code">
+                            <FormField.Text />
+                          </FormField>
                           <details className="rvo-tmp-filter">
                             <summary>
                               <div className="rvo-form-field rvo-layout-column rvo-layout-gap--sm">

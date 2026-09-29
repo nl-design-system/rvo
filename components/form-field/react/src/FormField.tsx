@@ -10,12 +10,24 @@ import '@nl-rvo/css-form-field';
 import { IFieldProps } from './FormField.types';
 import clsx from 'clsx';
 import { TextInput, ITextInputProps } from '@nl-rvo/react-form-text-input';
-// import { Checkbox } from '@nl-rvo/react-form-checkbox';
-// import { ICheckboxProps } from '@nl-rvo/components/form-checkbox/react/src';
+import { Checkbox, ICheckboxProps } from '@nl-rvo/react-form-checkbox';
+import { CheckboxGroup, ICheckboxGroupProps } from '@nl-rvo/react-form-checkbox-group';
+import { FileInput, IFileInputProps } from '@nl-rvo/react-form-file-input';
+import { RadioButton, IRadioButtonProps } from '@nl-rvo/react-form-radio-button';
+import { RadioButtonGroup, IRadioButtonGroupProps } from '@nl-rvo/react-form-radio-button-group';
+import { Select, ISelectProps } from '@nl-rvo/react-form-select';
+import { Textarea, ITextareaProps } from '@nl-rvo/react-form-textarea';
 
 interface FormFieldInputField {
   Text: React.FC<ITextInputProps>;
-  // Checkbox: React.FC<ICheckboxProps>;
+  Date: React.FC<ITextInputProps>;
+  Checkbox: React.FC<ICheckboxProps>;
+  CheckboxGroup: React.FC<ICheckboxGroupProps>;
+  FileInput: React.FC<IFileInputProps>;
+  RadioButton: React.FC<IRadioButtonProps>;
+  RadioButtonGroup: React.FC<IRadioButtonGroupProps>;
+  Select: React.FC<ISelectProps>;
+  TextArea: React.FC<ITextareaProps>;
 }
 
 const FormField: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttributes<HTMLDivElement>> &
@@ -74,6 +86,13 @@ const FormField: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttributes<
 };
 
 FormField.Text = TextInput;
-// FormField.Checkbox = Checkbox
+FormField.Date = (params) => <TextInput type='date' {...params} />;
+FormField.Checkbox = Checkbox;
+FormField.CheckboxGroup = CheckboxGroup;
+FormField.FileInput = FileInput;
+FormField.RadioButton = RadioButton;
+FormField.RadioButtonGroup = RadioButtonGroup;
+FormField.Select = Select;
+FormField.TextArea = Textarea;
 
 export { FormField };

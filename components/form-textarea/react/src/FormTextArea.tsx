@@ -10,8 +10,8 @@ import { ITextareaProps } from './FormTextArea.types';
 export const Textarea: React.FC<ITextareaProps> = ({
   invalid,
   value,
-  maxLength,
-  maxLengthIndicator,
+  maxLength = 300,
+  maxLengthIndicator = true,
   ...otherProps
 }: ITextareaProps) => {
   const [currentValue, setCurrentValue] = useState<string | undefined>(value as string | undefined);

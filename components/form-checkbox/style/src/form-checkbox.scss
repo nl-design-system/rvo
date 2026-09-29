@@ -2,11 +2,11 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
-
 .rvo-checkbox {
-  //   @extend .rvo-layout-row;
-  //   @extend .rvo-layout-gap--sm;
+  display: flex;
+  flex-direction: row;
+  gap: var(--rvo-space-sm);
+  align-items: center;
 }
 
 .rvo-checkbox__group--error {

@@ -30,8 +30,5 @@
     "build": "sass --pkg-importer=node --style=compressed ./src/:./dist/",
     "watch": "sass --pkg-importer=node --style=compressed --watch ./src/:./dist/",
     "clean": "rimraf ./dist/"
-  },
-  "dependencies": {
-    "@nl-rvo/css-layout-flow": "workspace:*"
   }
 }

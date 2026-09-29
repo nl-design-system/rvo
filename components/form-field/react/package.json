@@ -31,6 +31,12 @@
     "@nl-rvo/react-expandable-content": "workspace:*",
     "@nl-rvo/react-form-feedback": "workspace:*",
     "@nl-rvo/react-form-text-input": "workspace:*",
-    "@nl-rvo/react-form-checkbox": "workspace:*"
+    "@nl-rvo/react-form-checkbox": "workspace:*",
+    "@nl-rvo/react-form-checkbox-group": "workspace:*",
+    "@nl-rvo/react-form-file-input": "workspace:*",
+    "@nl-rvo/react-form-radio-button": "workspace:*",
+    "@nl-rvo/react-form-radio-button-group": "workspace:*",
+    "@nl-rvo/react-form-select": "workspace:*",
+    "@nl-rvo/react-form-textarea": "workspace:*"
   }
 }

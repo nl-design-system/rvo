@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react';
 
 export interface ITextInputProps extends HTMLAttributes<HTMLInputElement> {
-  type: 'text' | 'password' | 'email' | 'tel' | 'url' | 'search' | 'number' | 'date' | 'time' | 'datetime-local';
+  type?: 'text' | 'password' | 'email' | 'tel' | 'url' | 'search' | 'number' | 'date' | 'time' | 'datetime-local';
   disabled?: boolean;
   focus?: boolean;
   invalid?: boolean;

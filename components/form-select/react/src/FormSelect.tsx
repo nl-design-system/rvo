@@ -20,13 +20,19 @@ export const Select: React.FC<ISelectProps> = ({
   onChange,
   ...otherProps
 }: ISelectProps) => (
-  <div className={clsx('rvo-select__wrapper', size && size !== 'max' && `rvo-select__wrapper--${size}`)}>
+  <div className={clsx('rvo-select-wrapper', size && size !== 'max' && `rvo-select--${size}`)}>
     <select
       id={id}
       aria-invalid={invalid || undefined}
       disabled={disabled || undefined}
       required={required || undefined}
-      className={clsx('rvo-select', 'rvo-select--html-select')}
+      className={clsx('utrecht-select', 'utrecht-select--html-select', {
+        'utrecht-select--disabled': disabled,
+        'utrecht-select--focus': focus,
+        'utrecht-select--focus-visible': focus,
+        'utrecht-select--invalid': invalid,
+        'utrecht-select--required': required,
+      })}
       defaultValue={defaultValue}
       value={value}
       onChange={onChange}

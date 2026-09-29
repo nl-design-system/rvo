@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
-
 .rvo-radio-button__group {
-  // @extend .rvo-layout-column;
-  // @extend .rvo-layout-gap--md;
-  // @extend .rvo-layout--wrap;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rvo-space-md);
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .rvo-radio-button__group--error {

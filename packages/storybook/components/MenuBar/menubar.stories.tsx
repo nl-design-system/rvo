@@ -1,7 +1,7 @@
 import { MenuBar } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-export const defaultItems = [
+const defaultItems = [
   { label: 'Home', link: '#' },
   {
     label: 'Onderwerpen',
@@ -56,7 +56,7 @@ export const defaultItems = [
   { label: 'Uitloggen', link: '#', align: 'right' as const },
 ];
 
-export const defaultArgs = {
+const defaultArgs = {
   size: 'md',
   items: defaultItems,
   useIcons: true,
@@ -84,4 +84,4 @@ export default {
 } satisfies Meta<typeof MenuBar>;
 type Story = StoryObj<typeof MenuBar>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component'};
