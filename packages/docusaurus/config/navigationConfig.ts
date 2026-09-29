@@ -39,6 +39,12 @@ const navbar: Navbar = {
       position: 'left' as const,
       label: 'Patronen',
     },
+    {
+      type: 'doc',
+      docId: 'paginas/over-paginas',
+      position: 'left' as const,
+      label: "Pagina's",
+    },
     // {
     //   type: 'doc',
     //   docId: 'best-practices/informatiebehoefte-per-doelgroep',
