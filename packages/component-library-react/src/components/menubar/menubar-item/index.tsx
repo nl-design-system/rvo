@@ -38,7 +38,6 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   ...rest
 }) => {
   const showIcon: 'no' | 'before' | 'after' = useIcons && icon ? iconPlacement : 'no';
-  const iconSizeForLink = (size === 'lg' ? 'md' : size) as 'sm' | 'md';
 
   const chevronMarkup = submenu ? (
     isSubmenuVisible ? (
@@ -72,7 +71,7 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
         color={linkColor}
         showIcon={showIcon}
         icon={icon}
-        iconSize={iconSizeForLink}
+        iconSize={size}
         LinkComponent={LinkComponent}
         {...(submenu || typeof link === 'function'
           ? { onClick: handleClick, role: 'button' }

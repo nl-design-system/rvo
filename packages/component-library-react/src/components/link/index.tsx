@@ -32,7 +32,7 @@ export interface ILinkProps extends HTMLAttributes<HTMLAnchorElement> {
   href?: string;
   icon?: IconType;
   iconColor?: 'hemelblauw' | 'donkerblauw' | 'lintblauw' | 'wit' | 'zwart' | 'grijs-700';
-  iconSize?: 'sm' | 'md';
+  iconSize?: 'sm' | 'md' | 'lg';
   LinkComponent?: LinkCustomLinkComponent;
   noUnderline?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
