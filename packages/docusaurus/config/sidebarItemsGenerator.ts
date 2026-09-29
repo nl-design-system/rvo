@@ -79,6 +79,9 @@ const sidebarItemsGenerator = async ({ item, docs }) => {
     processedDocs.splice(homepageIndex, 1);
   }
 
+  // Remove docs that opted out of the sidebar (e.g. a section's own navbar landing page)
+  processedDocs = processedDocs.filter((doc) => !doc.frontMatter.hide_from_sidebar);
+
   // Categorize docs by folder
   const sidebarItems = processedDocs.reduce((currentSidebarItemList, doc) => {
     // Get categories from doc's sourceDirName
