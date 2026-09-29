@@ -41,27 +41,17 @@ const Focus = () => {
               Deze pagina laat alle focus indicators zien van de verschillende componenten. Er is gekozen voor
               focus:visible omdat dit voldoende ondersteund wordt door grote browsers.
             </p>
-            <Accordion
-              items={[
-                {
-                  title: 'Mag ik voor deze regeling subsidies stapelen/combineren?',
-                  teaser: '',
-                  content:
-                    'Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.',
-                },
-                {
-                  title: 'Wat is een bestaande thermische schil?',
-                  teaser: '',
-                  content:
-                    'De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.',
-                },
-                {
-                  title: 'Wanneer krijg ik bericht over mijn subsidie?',
-                  teaser: '',
-                  content: 'Zo snel mogelijk.',
-                },
-              ]}
-            />
+            <Accordion>
+              <Accordion.Item title="Mag ik voor deze regeling subsidies stapelen/combineren?">
+                Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.
+              </Accordion.Item>
+              <Accordion.Item title="Wat is een bestaande thermische schil?">
+                De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.
+              </Accordion.Item>
+              <Accordion.Item title="Wanneer krijg ik bericht over mijn subsidie?">
+                Zo snel mogelijk.
+              </Accordion.Item>
+            </Accordion>
             <p>
               Dit is een voorbeeld van een{' '}
               <a href="#" className="rvo-link">
@@ -159,50 +149,60 @@ const Focus = () => {
                       />
                     </FormField>
 
-                    <CheckboxField
+                    <FormField 
+                      label='Checkboxes'
                       helperText="This is an helper text"
-                      label="Checkboxes"
-                      invalid={false}
-                      options={[
-                        { id: 'optionA-cb', label: 'Option A' },
-                        { id: 'optionB-cb', label: 'Option B' },
-                        { id: 'optionC-cb', label: 'Option C' },
-                        { id: 'optionD-cb', label: 'Option D' },
-                      ]}
-                    ></CheckboxField>
+                    >
+                      <FormField.CheckboxGroup
+                        invalid={false}
+                        options={[
+                          { id: 'optionA-cb', label: 'Option A' },
+                          { id: 'optionB-cb', label: 'Option B' },
+                          { id: 'optionC-cb', label: 'Option C' },
+                          { id: 'optionD-cb', label: 'Option D' },
+                        ]}
+                      />
+                    </FormField>
 
-                    <CheckboxField
+                    <FormField 
+                      label='Checkboxes with Error'
                       errorText="This is an error"
-                      label="Checkboxes with error"
-                      invalid={true}
-                      options={[
-                        { id: 'optionA-cb-error', label: 'Option A' },
-                        { id: 'optionB-cb-error', label: 'Option B' },
-                        { id: 'optionC-cb-error', label: 'Option C' },
-                        { id: 'optionD-cb-error', label: 'Option D' },
-                      ]}
-                    ></CheckboxField>
+                    >
+                      <FormField.CheckboxGroup
+                        invalid={true}
+                        options={[
+                          { id: 'optionA-cb-error', label: 'Option A' },
+                          { id: 'optionB-cb-error', label: 'Option B' },
+                          { id: 'optionC-cb-error', label: 'Option C' },
+                          { id: 'optionD-cb-error', label: 'Option D' },
+                        ]}
+                      />
+                    </FormField>
 
-                    <CheckboxField
+                    <FormField 
+                      label='Checkboxes with Warning'
                       warningText="This is a warning"
-                      label="Checkboxes with a warning"
-                      invalid={false}
-                      options={[
-                        { id: 'optionA-cb-warning', label: 'Option A' },
-                        { id: 'optionB-cb-warning', label: 'Option B' },
-                        { id: 'optionC-cb-warning', label: 'Option C' },
-                        { id: 'optionD-cb-warning', label: 'Option D' },
-                      ]}
-                    ></CheckboxField>
+                    >
+                      <FormField.CheckboxGroup
+                        invalid={false}
+                        options={[
+                          { id: 'optionA-cb-warning', label: 'Option A' },
+                          { id: 'optionB-cb-warning', label: 'Option B' },
+                          { id: 'optionC-cb-warning', label: 'Option C' },
+                          { id: 'optionD-cb-warning', label: 'Option D' },
+                        ]}
+                      />
+                    </FormField>
 
-                    <SelectField
-                      label="Select"
-                      options={[
-                        { value: '1', label: 'Option #1' },
-                        { value: '2', label: 'Option #2' },
-                        { value: '3', label: 'Option #3' },
-                      ]}
-                    ></SelectField>
+                    <FormField label="Select">
+                      <FormField.Select 
+                        options={[
+                          { value: '1', label: 'Option #1' },
+                          { value: '2', label: 'Option #2' },
+                          { value: '3', label: 'Option #3' },
+                        ]}
+                      />
+                    </FormField>
                   </Fieldset>
 
                   <Fieldset legend="Other">
@@ -240,10 +240,10 @@ const Focus = () => {
                   </Fieldset>
 
                   <ActionGroup>
-                    <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
+                    <Button kind="primary" size="md" busy={false} disabled={false} label="">
                       Primary action
                     </Button>
-                    <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
+                    <Button kind="secondary" size="md" busy={false} disabled={false} label="">
                       Secondary action
                     </Button>
                   </ActionGroup>

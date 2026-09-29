@@ -6,7 +6,7 @@ import {
   LayoutFlow,
   MaxWidthLayout,
   MenuBar,
-  TextInputField,
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '../../common/style.scss';
 
@@ -32,18 +32,15 @@ const SearchInNav = () => {
             <div className="rvo-form-layout">
               <MaxWidthLayout size="sm">
                 <div className="rvo-inline-form">
-                  <TextInputField label="Zoekterm"></TextInputField>
+                  <FormField label="Zoekterm">
+                    <FormField.Text />
+                  </FormField>
                   <Button
                     kind="primary"
                     size="md"
                     label="Zoeken"
-                    active={false}
                     busy={false}
-                    focus={false}
-                    focusVisible={false}
                     disabled={false}
-                    hover={false}
-                    showIcon="no"
                   ></Button>
                 </div>
               </MaxWidthLayout>

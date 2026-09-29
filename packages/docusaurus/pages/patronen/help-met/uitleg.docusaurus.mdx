@@ -6,7 +6,7 @@ slug: uitleg
 sidebar_position: 114
 ---
 
-import { Fieldset, FileInputField, FormLayout, TextareaField } from "@nl-rvo/component-library-react";
+import { Fieldset, FormField, FormLayout } from "@nl-rvo/component-library-react";
 import ComponentExample from "../../../src/components/ComponentExample";
 
 # Uitleg vragen
@@ -14,8 +14,12 @@ import ComponentExample from "../../../src/components/ComponentExample";
 <ComponentExample>
   <FormLayout>
     <Fieldset legend="Uw aanvraag">
-      <FileInputField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is." />
-      <TextareaField label="Uw vraag" helperText="Beschrijf beknopt wat uw vraag is." />
+      <FormField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is.">
+        <FormField.FileInput />
+      </FormField>
+      <FormField label="Uw vraag" helperText="Beschrijf beknopt wat uw vraag is.">
+        <FormField.TextArea />
+      </FormField>
     </Fieldset>
   </FormLayout>
 </ComponentExample>
@@ -23,17 +27,18 @@ import ComponentExample from "../../../src/components/ComponentExample";
 <ComponentExample>
   <FormLayout>
     <Fieldset legend="Uw aanvraag">
-      <FileInputField
-        label="Upload uw document"
-        expandableHelperText={true}
-        expandableHelperTextTitle="Voorwaarden voor uw document"
+      <FormField 
+        label="Upload uw document" 
+        expandableHelperText={{title: 'expandableHelperText', children: ''}}
         helperText={
           <ul>
             <li>Zorg dat het document in PDF-formaat is.</li>
             <li>Zorg dat het document al uw contactgegevens bevat.</li>
           </ul>
         }
-      />
+      >
+        <FormField.FileInput />
+      </FormField>
     </Fieldset>
   </FormLayout>
 </ComponentExample>

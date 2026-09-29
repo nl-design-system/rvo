@@ -6,7 +6,7 @@ slug: bestanden-uploaden
 sidebar_position: 202
 ---
 
-import { Alert, FileInputField } from "@nl-rvo/component-library-react";
+import { Alert, FormField } from "@nl-rvo/component-library-react";
 import ComponentExample from "../../../src/components/ComponentExample";
 
 # Bestanden uploaden
@@ -14,10 +14,12 @@ import ComponentExample from "../../../src/components/ComponentExample";
 <Alert kind="warning" content="Let op: dit patroon is nog in ontwikkeling." />
 
 <ComponentExample>
-  <FileInputField
+  <FormField
     label="Upload uw document"
     helperText="Het bestand dient in PDF formaat te zijn en mag maximaal 3 mb groot zijn."
-  />
+  >
+    <FormField.FileInput />
+  </FormField>
 </ComponentExample>
 
 <p>Wanneer je een bezoeker vraagt bestanden up te loaden, zorg dan dat de volgende informatie zichtbaar is:</p>

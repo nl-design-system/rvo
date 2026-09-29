@@ -6,25 +6,35 @@ slug: adres
 sidebar_position: 201
 ---
 
-import { Fieldset, SelectField, TextInputField } from "@nl-rvo/component-library-react";
+import { Fieldset, FormField } from "@nl-rvo/component-library-react";
 import ComponentExample from "../../../src/components/ComponentExample";
 
 # Adres uitvragen
 
 <ComponentExample>
   <Fieldset legend="Uw adres">
-    <SelectField
-      label="Land"
-      options={[
-        { value: "Nederland", label: "Nederland" },
-        { value: "Duitsland", label: "Duitsland" },
-        { value: "Frankrijk", label: "Frankrijk" },
-      ]}
-    />
-    <TextInputField label="Straatnaam" />
-    <TextInputField label="Huisnummer" size="xs" />
-    <TextInputField label="Postcode" size="sm" />
-    <TextInputField label="Plaatsnaam" />
+    <FormField label="Land">
+      <FormField.Select
+        label="Land"
+        options={[
+          { value: "Nederland", label: "Nederland" },
+          { value: "Duitsland", label: "Duitsland" },
+          { value: "Frankrijk", label: "Frankrijk" },
+        ]}
+      />
+    </FormField>
+    <FormField label="Straatnaam">
+      <FormField.Text />
+    </FormField>
+    <FormField label="Huisnummer">
+      <FormField.Text size="xs" />
+    </FormField>
+    <FormField label="Postcode">
+      <FormField.Text size="sm" />
+    </FormField>
+    <FormField label="Plaatsnaam">
+      <FormField.Text />
+    </FormField>
   </Fieldset>
 </ComponentExample>
 

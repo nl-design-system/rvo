@@ -170,10 +170,10 @@ const Geboortemeldingen = () => {
                 <TextInputField label="Levensnummer" size="sm"></TextInputField>
                 <TextInputField label="Werknummer" size="sm"></TextInputField>
               </Fieldset>
-              <Button kind="secondary" icon="plus" showIcon="before">
+              <Button kind="secondary" icon="plus" showIcon="before" label={''}>
                 Opslaan en nog een geboortemelding doen
               </Button>
-              <Button kind="primary" icon="pijl-naar-rechts" showIcon="after">
+              <Button kind="primary" icon="pijl-naar-rechts" showIcon="after" label={''}>
                 Opslaan en doorgaan
               </Button>
             </LayoutFlow>

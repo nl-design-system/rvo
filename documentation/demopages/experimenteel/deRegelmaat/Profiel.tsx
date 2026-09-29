@@ -1,4 +1,4 @@
-import { ActionGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/component-library-react';
+import { ActionGroup, FormField, Fieldset, Heading, Icon } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 
@@ -11,36 +11,38 @@ const Profiel = () => {
             <Heading type="h1">Profiel</Heading>
             <p>Vul je profiel in om maatregelen te krijgen die voor jou van toepassing kunnen zijn.</p>{' '}
             <Fieldset legend="">
-              <SelectField
-                label="Waar zit je onderneming?"
-                options={[
-                  { value: '1', label: 'Noordelijk kleigebied' },
-                  { value: '2', label: 'Noordelijk weidegebied - veen' },
-                  { value: '3', label: 'Noordelijk weidegebied - zand' },
-                  { value: '4', label: 'Veenkoloniën' },
-                  { value: '5', label: 'Oostelijk veehouderijgebied' },
-                  { value: '6', label: 'Centraal veehouderijgebied' },
-                  { value: '7', label: 'IJsselmeerpolders' },
-                  { value: '8', label: 'Westelijk Holland' },
-                  { value: '9', label: 'Waterland en Droogmakerijen' },
-                  { value: '10', label: 'Hollands Utrechts weidegebied' },
-                  { value: '11', label: 'Zuidwestelijk akkerbouwgebied' },
-                  { value: '12', label: 'Zuidwest-Brabant' },
-                  { value: '13', label: 'Rivierengebied' },
-                  { value: '14', label: 'Zuidelijk veehouderijgebied' },
-                  { value: '15', label: 'Zuid-Limburg' },
-                ]}
-              ></SelectField>
-              <SelectField
-                label="Soort onderneming"
-                options={[
-                  { value: '1', label: 'Akkerbouwbedrijf' },
-                  { value: '2', label: 'Melkveehouderij' },
-                  { value: '3', label: 'Fruitteler' },
-                  { value: '4', label: 'Intensieve veeteelt' },
-                  { value: '5', label: 'Gemengd' },
-                ]}
-              ></SelectField>
+              <FormField label="Waar zit je onderneming?">
+                <FormField.Select 
+                  options={[
+                    { value: '1', label: 'Noordelijk kleigebied' },
+                    { value: '2', label: 'Noordelijk weidegebied - veen' },
+                    { value: '3', label: 'Noordelijk weidegebied - zand' },
+                    { value: '4', label: 'Veenkoloniën' },
+                    { value: '5', label: 'Oostelijk veehouderijgebied' },
+                    { value: '6', label: 'Centraal veehouderijgebied' },
+                    { value: '7', label: 'IJsselmeerpolders' },
+                    { value: '8', label: 'Westelijk Holland' },
+                    { value: '9', label: 'Waterland en Droogmakerijen' },
+                    { value: '10', label: 'Hollands Utrechts weidegebied' },
+                    { value: '11', label: 'Zuidwestelijk akkerbouwgebied' },
+                    { value: '12', label: 'Zuidwest-Brabant' },
+                    { value: '13', label: 'Rivierengebied' },
+                    { value: '14', label: 'Zuidelijk veehouderijgebied' },
+                    { value: '15', label: 'Zuid-Limburg' },
+                  ]}
+                />
+              </FormField>
+              <FormField label="Soort onderneming">
+                <FormField.Select 
+                  options={[
+                    { value: '1', label: 'Akkerbouwbedrijf' },
+                    { value: '2', label: 'Melkveehouderij' },
+                    { value: '3', label: 'Fruitteler' },
+                    { value: '4', label: 'Intensieve veeteelt' },
+                    { value: '5', label: 'Gemengd' },
+                  ]}
+                />
+              </FormField>
             </Fieldset>
             <div className="rvo-short-inputs">
               <label className="utrecht-form-label">Grondgebruik</label>
@@ -227,15 +229,15 @@ const Profiel = () => {
               </div>
             </div>
             <div className="rvo-short-inputs">
-              <CheckboxField
-                label="Overige gegevens"
-                invalid={false}
-                options={[
-                  { id: 'optionA-cb', label: 'Vroeg oogsten' },
-                  { id: 'optionB-cb', label: 'Inproductieve stukken land' },
-                  { id: 'optionC-cb', label: 'Drogere grond' },
-                ]}
-              ></CheckboxField>
+              <FormField label='Overige gegevens'>
+                <FormField.CheckboxGroup 
+                  options={[
+                    { id: 'optionA-cb', label: 'Vroeg oogsten' },
+                    { id: 'optionB-cb', label: 'Inproductieve stukken land' },
+                    { id: 'optionC-cb', label: 'Drogere grond' },
+                  ]}
+                />
+              </FormField>
             </div>
             <ActionGroup>
               <a

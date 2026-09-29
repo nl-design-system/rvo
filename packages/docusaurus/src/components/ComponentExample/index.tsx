@@ -69,7 +69,7 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
             content="Open in nieuwe tab"
             href={previewLink}
             target="_blank"
-            showIcon="after"
+            iconPlacement="right"
             icon="externe-link"
           />
         )}

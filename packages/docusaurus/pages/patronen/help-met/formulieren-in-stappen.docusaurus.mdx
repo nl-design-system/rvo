@@ -13,7 +13,7 @@ import {
   FormLayout,
   ProgressTracker,
   ProgressTrackerStep,
-  TextInputField,
+  FormField,
 } from "@nl-rvo/component-library-react";
 import ComponentExample from "../../../src/components/ComponentExample";
 
@@ -31,7 +31,9 @@ Gebruik meerdere stappen wanneer een formulier te veel velden bevat om op één 
     </ProgressTracker>
     <FormLayout style={{ flex: 1 }}>
       <Fieldset legend="Uw situatie">
-        <TextInputField label="Wat is uw hoofdactiviteit?" />
+        <FormField label="Wat is uw hoofdactiviteit?">
+          <FormField.Text />
+        </FormField>
       </Fieldset>
       <div className="rvo-margin-block-start--xl">
         <ActionGroup>

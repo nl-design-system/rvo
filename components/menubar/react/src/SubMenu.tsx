@@ -36,7 +36,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   ));
 
   return (
-    <MaxWidthLayout className="rvo-menubar__submenu-layout" centered size={maxWidth}>
+    <MaxWidthLayout className="rvo-menubar__submenu-layout" size={maxWidth}>
       <ul className={clsx('rvo-menubar__submenu')}>{subMenuMarkup}</ul>
     </MaxWidthLayout>
   );

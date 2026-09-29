@@ -1,6 +1,4 @@
-import { HTMLAttributes } from 'react';
-
-export interface IRadioButtonProps extends HTMLAttributes<HTMLInputElement> {
+export interface IRadioButtonProps extends React.ComponentPropsWithoutRef<"input"> {
   id?: string;
   name?: string;
   label: string;

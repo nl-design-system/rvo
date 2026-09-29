@@ -1,4 +1,4 @@
-import { ActionGroup, CheckboxField, Fieldset, Heading, Icon, SelectField } from '@nl-rvo/component-library-react';
+import { ActionGroup, FormField, Fieldset, Heading, Icon } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import '../../common/style.scss';
 
@@ -11,26 +11,27 @@ const Zoeken = () => {
             <Heading type="h1">Zoeken</Heading>
             <p>Vul je profiel in om maatregelen te krijgen die voor jou van toepassing kunnen zijn.</p>{' '}
             <Fieldset legend="">
-              <CheckboxField
-                label="Ik ben op zoek naar maatregelen"
-                invalid={false}
-                options={[
-                  { id: 'optionA-cb', label: 'die eenvoudig te realiseren zijn' },
-                  { id: 'optionB-cb', label: 'die financieel interessant zijn' },
-                  { id: 'optionC-cb', label: 'die duurzaam zijn' },
-                ]}
-              ></CheckboxField>
-              <SelectField
-                label="Duurzaam op het gebied van"
-                options={[
-                  { value: '1', label: 'Klimaat' },
-                  { value: '2', label: 'Bodem en lucht' },
-                  { value: '3', label: 'Water' },
-                  { value: '4', label: 'Landschap' },
-                  { value: '5', label: 'Biodiversiteit' },
-                  { value: '6', label: 'Op alle gebieden' },
-                ]}
-              ></SelectField>
+              <FormField label='Ik ben op zoek naar maatregelen'>
+                <FormField.CheckboxGroup 
+                  options={[
+                    { id: 'optionA-cb', label: 'die eenvoudig te realiseren zijn' },
+                    { id: 'optionB-cb', label: 'die financieel interessant zijn' },
+                    { id: 'optionC-cb', label: 'die duurzaam zijn' },
+                  ]}
+                />
+              </FormField>
+              <FormField label="Duurzaam op het gebied van">
+                  <FormField.Select 
+                    options={[
+                      { value: '1', label: 'Klimaat' },
+                      { value: '2', label: 'Bodem en lucht' },
+                      { value: '3', label: 'Water' },
+                      { value: '4', label: 'Landschap' },
+                      { value: '5', label: 'Biodiversiteit' },
+                      { value: '6', label: 'Op alle gebieden' },
+                    ]}
+                  />
+              </FormField>
             </Fieldset>
             <ActionGroup>
               <a

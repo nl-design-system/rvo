@@ -1,7 +1,7 @@
 import {
   ActionGroup,
   Button,
-  CheckboxField,
+  FormField,
   Fieldset,
   Footer,
   Header,
@@ -9,7 +9,6 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  RadioButtonField,
 } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -65,7 +64,7 @@ const FormFieldErrors = () => {
               <div className="rvo-form">
                 <LayoutFlow gap="sm">
                   <div>
-                    <Link href="#" showIcon="before" icon="terug" noUnderline={true}>
+                    <Link href="#" iconPlacement="left" icon="terug" noUnderline={true}>
                       Terug
                     </Link>
                     <Heading type="h1">Form Field Errors</Heading>
@@ -78,37 +77,41 @@ const FormFieldErrors = () => {
                     <LayoutFlow>
                       <div>
                         <Fieldset legend="Form fields with errors">
-                          <RadioButtonField
-                            name="radio-buttons-error"
+                          <FormField
                             label="Radio buttons with error"
                             errorText="Please select one of the options"
-                            invalid={true}
-                            options={[
-                              { id: 'radio-optionA', label: 'Option A' },
-                              { id: 'radio-optionB', label: 'Option B' },
-                              { id: 'radio-optionC', label: 'Option C' },
-                              { id: 'radio-optionD', label: 'Option D' },
-                            ]}
-                          ></RadioButtonField>
-
-                          <CheckboxField
-                            errorText="Please select at least one option"
+                          >
+                            <FormField.RadioButtonGroup 
+                              invalid={true}
+                              options={[
+                                { id: 'radio-optionA', label: 'Option A' },
+                                { id: 'radio-optionB', label: 'Option B' },
+                                { id: 'radio-optionC', label: 'Option C' },
+                                { id: 'radio-optionD', label: 'Option D' },
+                              ]}
+                            />
+                          </FormField>
+                          <FormField
                             label="Checkboxes with error"
-                            invalid={true}
-                            options={[
-                              { id: 'checkbox-optionA', label: 'Option A' },
-                              { id: 'checkbox-optionB', label: 'Option B' },
-                              { id: 'checkbox-optionC', label: 'Option C' },
-                              { id: 'checkbox-optionD', label: 'Option D' },
-                            ]}
-                          ></CheckboxField>
+                            errorText="Please select at least one option"
+                          >
+                            <FormField.CheckboxGroup 
+                              invalid={true}
+                              options={[
+                                { id: 'checkbox-optionA', label: 'Option A' },
+                                { id: 'checkbox-optionB', label: 'Option B' },
+                                { id: 'checkbox-optionC', label: 'Option C' },
+                                { id: 'checkbox-optionD', label: 'Option D' },
+                              ]}
+                            />
+                          </FormField>
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
+                        <Button kind="primary" size="md" busy={false} disabled={false} label={''}>
                           Submit
                         </Button>
-                        <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
+                        <Button kind="secondary" size="md" busy={false} disabled={false} label={''}>
                           Cancel
                         </Button>
                       </ActionGroup>

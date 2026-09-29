@@ -14,7 +14,7 @@ export const MaxWidthLayout: React.FC<IMaxWidthLayoutProps & React.HTMLAttribute
   size = 'md',
   content,
   inlinePadding = 'none',
-  centered,
+  centered = true,
   children,
   className,
   ...rootElementProps
