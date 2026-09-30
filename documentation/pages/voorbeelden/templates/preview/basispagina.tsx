@@ -4,8 +4,8 @@
  */
 import { Footer, Header, Heading, LayoutFlow } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
-import { defaultFooterItems } from '../demopages/common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../demopages/common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../../demopages/common/defaultSecondaryFooterItems';
 
 export default function BasispaginaPage(): ReactElement {
   return (

@@ -1,8 +1,13 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import { Footer, Header, Heading, Hero, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
-import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
-import { defaultFooterItems } from '../common/defaultFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../../demopages/common/defaultSecondaryFooterItems';
 
-const Content = () => {
+export default function ContentPage(): ReactElement {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -61,13 +66,11 @@ const Content = () => {
             </Heading>
             <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
               <li>Voorbeeld van een unordered list</li>
-
               <li>Item 2</li>
               <li>Item 3</li>
             </ul>
             <ol className="rvo-ol rvo-ol--no-padding">
               <li>Voorbeeld van een unordered list</li>
-
               <li>Item 2</li>
               <li>Item 3</li>
             </ol>
@@ -78,6 +81,4 @@ const Content = () => {
       </LayoutFlow>
     </div>
   );
-};
-
-export default Content;
+}

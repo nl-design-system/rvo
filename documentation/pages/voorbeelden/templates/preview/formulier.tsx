@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Button,
@@ -15,10 +19,11 @@ import {
   TextareaField,
   TextInputField,
 } from '@nl-rvo/component-library-react';
-import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
-import { defaultFooterItems } from '../common/defaultFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../../demopages/common/defaultSecondaryFooterItems';
 
-const Formulier = () => {
+export default function FormulierPage(): ReactElement {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -224,6 +229,4 @@ const Formulier = () => {
       </LayoutFlow>
     </div>
   );
-};
-
-export default Formulier;
+}

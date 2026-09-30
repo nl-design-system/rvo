@@ -59,8 +59,8 @@ const config: Config = {
       '@docusaurus/plugin-content-pages',
       {
         id: 'templates',
-        path: path.resolve(__dirname, '../../documentation/templates'),
-        routeBasePath: 'templates',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden/templates/preview'),
+        routeBasePath: 'voorbeelden/templates/preview',
         include: ['**/*.tsx'],
       },
     ],
