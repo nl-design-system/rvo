@@ -2,12 +2,21 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Footer, Grid, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../../../../demopages/common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../../../../demopages/common/defaultSecondaryFooterItems';
 
 export default function ProjectPage(): ReactElement {
+  const eWeb01ImgUrl = useBaseUrl('images/sdg/E_WEB_01.png');
+  const eWeb02ImgUrl = useBaseUrl('images/sdg/E_WEB_02.png');
+  const eWeb03ImgUrl = useBaseUrl('images/sdg/E_WEB_03.png');
+  const eWeb04ImgUrl = useBaseUrl('images/sdg/E_WEB_04.png');
+  const eWeb05ImgUrl = useBaseUrl('images/sdg/E_WEB_05.png');
+  const eWeb06ImgUrl = useBaseUrl('images/sdg/E_WEB_06.png');
+  const eWeb07ImgUrl = useBaseUrl('images/sdg/E_WEB_07.png');
+  const eWeb08ImgUrl = useBaseUrl('images/sdg/E_WEB_08.png');
   return (
     <body className="rvo-theme">
       <Header link="#" />
@@ -143,14 +152,14 @@ export default function ProjectPage(): ReactElement {
                   width="100%"
                 />
                 <LayoutFlow row={true} gap="sm" wrap={true}>
-                  <img src="images/sdg/E_WEB_01.png" width="68px" />
-                  <img src="images/sdg/E_WEB_02.png" width="68px" />
-                  <img src="images/sdg/E_WEB_03.png" width="68px" />
-                  <img src="images/sdg/E_WEB_04.png" width="68px" />
-                  <img src="images/sdg/E_WEB_05.png" width="68px" />
-                  <img src="images/sdg/E_WEB_06.png" width="68px" />
-                  <img src="images/sdg/E_WEB_07.png" width="68px" />
-                  <img src="images/sdg/E_WEB_08.png" width="68px" />
+                  <img src={eWeb01ImgUrl} width="68px" />
+                  <img src={eWeb02ImgUrl} width="68px" />
+                  <img src={eWeb03ImgUrl} width="68px" />
+                  <img src={eWeb04ImgUrl} width="68px" />
+                  <img src={eWeb05ImgUrl} width="68px" />
+                  <img src={eWeb06ImgUrl} width="68px" />
+                  <img src={eWeb07ImgUrl} width="68px" />
+                  <img src={eWeb08ImgUrl} width="68px" />
                 </LayoutFlow>
               </div>
             </Grid>

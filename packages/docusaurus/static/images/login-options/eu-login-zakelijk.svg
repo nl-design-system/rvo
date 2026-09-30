@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Dark blue background -->
+  <rect width="48" height="48" rx="6" fill="#003399"/>
+  <!-- 12 EU stars arranged in circle using circles -->
+  <g fill="#FFCC00">
+    <circle cx="24" cy="8" r="1.5"/>
+    <circle cx="30.5" cy="9.8" r="1.5"/>
+    <circle cx="35.2" cy="15" r="1.5"/>
+    <circle cx="36.5" cy="22" r="1.5"/>
+    <circle cx="35" cy="29.5" r="1.5"/>
+    <circle cx="30" cy="34.5" r="1.5"/>
+    <circle cx="24" cy="36.5" r="1.5"/>
+    <circle cx="18" cy="34.5" r="1.5"/>
+    <circle cx="13" cy="29.5" r="1.5"/>
+    <circle cx="11.5" cy="22" r="1.5"/>
+    <circle cx="12.8" cy="15" r="1.5"/>
+    <circle cx="17.5" cy="9.8" r="1.5"/>
+  </g>
+  <!-- Building/office icon (white) in center -->
+  <g fill="white">
+    <!-- Main building -->
+    <rect x="16" y="20" width="16" height="13" rx="1"/>
+    <!-- Roof triangle -->
+    <polygon points="24,13 33,20 15,20"/>
+    <!-- Door -->
+    <rect x="21" y="26" width="6" height="7" fill="#003399"/>
+    <!-- Windows -->
+    <rect x="17" y="21" width="3" height="3" fill="#003399"/>
+    <rect x="28" y="21" width="3" height="3" fill="#003399"/>
+  </g>
+</svg>

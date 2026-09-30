@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   Fieldset,
   Footer,
@@ -20,6 +21,7 @@ import { defaultFooterItems } from '../../../../../demopages/common/defaultFoote
 import { defaultSecondaryFooterItems } from '../../../../../demopages/common/defaultSecondaryFooterItems';
 
 export default function SubsidiepaginaPage(): ReactElement {
+  const profielFoto2ImgUrl = useBaseUrl('images/berichtenbox/profiel-foto-2.png');
   const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' && window.innerWidth > 1020);
 
   useEffect(() => {
@@ -352,7 +354,7 @@ export default function SubsidiepaginaPage(): ReactElement {
                 </span>
                 <LayoutFlow row={true} gap="sm">
                   <div className="rvo-quote__image">
-                    <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                    <img src={profielFoto2ImgUrl} width="64px" height="64px" />
                   </div>
                   <div className="rvo-quote__person">
                     <LayoutFlow gap="0">
@@ -785,7 +787,7 @@ export default function SubsidiepaginaPage(): ReactElement {
                   </span>
                   <LayoutFlow row={true} gap="sm">
                     <div className="rvo-quote__image">
-                      <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                      <img src={profielFoto2ImgUrl} width="64px" height="64px" />
                     </div>
                     <div className="rvo-quote__person">
                       <LayoutFlow gap="0">

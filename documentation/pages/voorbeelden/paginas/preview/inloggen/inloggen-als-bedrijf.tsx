@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   Button,
   Footer,
@@ -19,6 +20,8 @@ import { defaultFooterItems } from '../../../../../demopages/common/defaultFoote
 import { defaultSecondaryFooterItems } from '../../../../../demopages/common/defaultSecondaryFooterItems';
 
 export default function InloggenAlsBedrijfPage(): ReactElement {
+  const eHerkenningLogoImgUrl = useBaseUrl('images/login-options/e-herkenning-logo.svg');
+  const euFlagImgUrl = useBaseUrl('images/login-options/eu-flag.svg');
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -50,12 +53,7 @@ export default function InloggenAlsBedrijfPage(): ReactElement {
                         href="#"
                         className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--md rvo-padding-inline--md"
                       >
-                        <img
-                          src="images/login-options/e-herkenning-logo.svg"
-                          alt="eHerkenning logo"
-                          width="40"
-                          height="23"
-                        />
+                        <img src={eHerkenningLogoImgUrl} alt="eHerkenning logo" width="40" height="23" />
                         <span className="rvo-text rvo-text--bold rvo-layout-row__fill">
                           Inloggen met eHerkenning 2+
                         </span>
@@ -66,12 +64,7 @@ export default function InloggenAlsBedrijfPage(): ReactElement {
                         href="#"
                         className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--md rvo-padding-inline--md"
                       >
-                        <img
-                          src="images/login-options/e-herkenning-logo.svg"
-                          alt="eHerkenning logo"
-                          width="40"
-                          height="23"
-                        />
+                        <img src={eHerkenningLogoImgUrl} alt="eHerkenning logo" width="40" height="23" />
                         <span className="rvo-text rvo-text--bold rvo-layout-row__fill">Inloggen met eHerkenning 3</span>
                         <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                       </a>
@@ -80,7 +73,7 @@ export default function InloggenAlsBedrijfPage(): ReactElement {
                         href="#"
                         className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--md rvo-padding-inline--md"
                       >
-                        <img src="images/login-options/eu-flag.svg" alt="EU vlag" width="40" height="27" />
+                        <img src={euFlagImgUrl} alt="EU vlag" width="40" height="27" />
                         <span className="rvo-text rvo-text--bold rvo-layout-row__fill">European login Zakelijk</span>
                         <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                       </a>

@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   Button,
   Footer,
@@ -24,6 +25,9 @@ const navigeerNaarIemandAnders = () => {
 };
 
 export default function InloggenPage(): ReactElement {
+  const digidLogoImgUrl = useBaseUrl('images/login-options/digid-logo.svg');
+  const eHerkenningLogoImgUrl = useBaseUrl('images/login-options/e-herkenning-logo.svg');
+  const euFlagImgUrl = useBaseUrl('images/login-options/eu-flag.svg');
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -48,12 +52,7 @@ export default function InloggenPage(): ReactElement {
                       href="#"
                       className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--sm"
                     >
-                      <img
-                        src="images/login-options/e-herkenning-logo.svg"
-                        alt="eHerkenning logo"
-                        width="40"
-                        height="23"
-                      />
+                      <img src={eHerkenningLogoImgUrl} alt="eHerkenning logo" width="40" height="23" />
                       <span className="rvo-text rvo-text--bold rvo-layout-row__fill">Inloggen met eHerkenning 2+</span>
                       <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                     </a>
@@ -62,12 +61,7 @@ export default function InloggenPage(): ReactElement {
                       href="#"
                       className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--sm"
                     >
-                      <img
-                        src="images/login-options/e-herkenning-logo.svg"
-                        alt="eHerkenning logo"
-                        width="40"
-                        height="23"
-                      />
+                      <img src={eHerkenningLogoImgUrl} alt="eHerkenning logo" width="40" height="23" />
                       <span className="rvo-text rvo-text--bold rvo-layout-row__fill">Inloggen met eHerkenning 3</span>
                       <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                     </a>
@@ -76,7 +70,7 @@ export default function InloggenPage(): ReactElement {
                       href="#"
                       className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--sm"
                     >
-                      <img src="images/login-options/eu-flag.svg" alt="EU vlag" width="40" height="27" />
+                      <img src={euFlagImgUrl} alt="EU vlag" width="40" height="27" />
                       <span className="rvo-text rvo-text--bold rvo-layout-row__fill">European login Zakelijk</span>
                       <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                     </a>
@@ -93,7 +87,7 @@ export default function InloggenPage(): ReactElement {
                       href="#"
                       className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--sm"
                     >
-                      <img src="images/login-options/digid-logo.svg" alt="DigiD logo" width="40" height="40" />
+                      <img src={digidLogoImgUrl} alt="DigiD logo" width="40" height="40" />
                       <span className="rvo-text rvo-text--bold rvo-layout-row__fill">Inloggen met DigiD</span>
                       <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                     </a>
@@ -102,7 +96,7 @@ export default function InloggenPage(): ReactElement {
                       href="#"
                       className="rvo-link rvo-link--no-underline rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md rvo-padding-block--sm"
                     >
-                      <img src="images/login-options/eu-flag.svg" alt="EU vlag" width="40" height="27" />
+                      <img src={euFlagImgUrl} alt="EU vlag" width="40" height="27" />
                       <span className="rvo-text rvo-text--bold rvo-layout-row__fill">European login Particulier</span>
                       <Icon icon="delta-naar-rechts" size="sm" color="hemelblauw" />
                     </a>

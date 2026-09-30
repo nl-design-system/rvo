@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   Accordion,
   Button,
@@ -19,6 +20,10 @@ import { defaultFooterItems } from '../../../../../demopages/common/defaultFoote
 import { defaultSecondaryFooterItems } from '../../../../../demopages/common/defaultSecondaryFooterItems';
 
 export default function LandingspaginaPage(): ReactElement {
+  const berichtenboxBedrijvenImgUrl = useBaseUrl('images/berichtenbox/berichtenbox-bedrijven.jpg');
+  const profielFoto1ImgUrl = useBaseUrl('images/berichtenbox/profiel-foto-1.png');
+  const profielFoto2ImgUrl = useBaseUrl('images/berichtenbox/profiel-foto-2.png');
+  const videoImgUrl = useBaseUrl('images/berichtenbox/video.jpg');
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -59,7 +64,7 @@ export default function LandingspaginaPage(): ReactElement {
               <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-hero">
                 <Hero
                   image={{
-                    src: 'images/berichtenbox/berichtenbox-bedrijven.jpg',
+                    src: berichtenboxBedrijvenImgUrl,
                     alt: 'Ondernemer bekijkt met collega de berichtenbox op een laptop.',
                   }}
                   title="Berichtenbox voor bedrijven"
@@ -84,7 +89,7 @@ export default function LandingspaginaPage(): ReactElement {
                             </span>
                             <LayoutFlow row={true} gap="sm">
                               <div className="rvo-quote__image">
-                                <img src="images/berichtenbox/profiel-foto-1.png" width="64px" height="64px" />
+                                <img src={profielFoto1ImgUrl} width="64px" height="64px" />
                               </div>
                               <div className="rvo-quote__person">
                                 <LayoutFlow gap="0">
@@ -106,7 +111,7 @@ export default function LandingspaginaPage(): ReactElement {
                             </span>
                             <LayoutFlow row={true} gap="sm">
                               <div className="rvo-quote__image">
-                                <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                                <img src={profielFoto2ImgUrl} width="64px" height="64px" />
                               </div>
                               <div className="rvo-quote__person">
                                 <LayoutFlow gap="0">
@@ -122,7 +127,7 @@ export default function LandingspaginaPage(): ReactElement {
                   </Grid>
                   <div className="rvo-card rvo-card--padding-xl rvo-card--with-background-image rvo-card--inverted-colors">
                     <div className="rvo-card__background-image-container">
-                      <img src="images/berichtenbox/video.jpg" className="rvo-card__background-image" />
+                      <img src={videoImgUrl} className="rvo-card__background-image" />
                     </div>
                     <div className="rvo-card__content">
                       <div className="rvo-max-width-layout rvo-max-width-layout--sm">
@@ -146,7 +151,7 @@ export default function LandingspaginaPage(): ReactElement {
                   </div>
 
                   {/* <LayoutFlow row={true} size="2xl">
-                    <img src="images/berichtenbox/video.jpg" width="440px"></img>
+                    <img src={videoImgUrl} width="440px"></img>
                     <div>
                       <Heading type="h3" noMargins={true}>
                         Video: Berichtenbox in 90 seconden

@@ -2,6 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   Button,
   Footer,
@@ -19,6 +20,10 @@ import { defaultFooterItems } from '../../../../../demopages/common/defaultFoote
 import { defaultSecondaryFooterItems } from '../../../../../demopages/common/defaultSecondaryFooterItems';
 
 export default function LinkBlocksPage(): ReactElement {
+  const bedrijvenImgUrl = useBaseUrl('images/www/bedrijven.webp');
+  const kennisinstellingenImgUrl = useBaseUrl('images/www/kennisinstellingen.webp');
+  const overhedenImgUrl = useBaseUrl('images/www/overheden.webp');
+  const particulierenImgUrl = useBaseUrl('images/www/particulieren.webp');
   const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' && window.innerWidth > 1020);
 
   useEffect(() => {
@@ -120,7 +125,7 @@ export default function LinkBlocksPage(): ReactElement {
           <div className="rvo-layout-grid rvo-layout-gap--xl rvo-layout-grid-columns--four">
             <div className="rvo-card rvo-card--full-colour--hemelblauw">
               <div className="rvo-card__content rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md">
-                <img src="images/www/bedrijven.webp" className="rvo-card-img" width="100px" height="66px" />
+                <img src={bedrijvenImgUrl} className="rvo-card-img" width="100px" height="66px" />
                 <Heading type="h3" noMargins>
                   <a href="#" className="rvo-link--no-underline rvo-link--wit rvo-link--full-container">
                     Bedrijven
@@ -130,7 +135,7 @@ export default function LinkBlocksPage(): ReactElement {
             </div>
             <div className="rvo-card rvo-card--full-colour--hemelblauw">
               <div className="rvo-card__content rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md">
-                <img src="images/www/particulieren.webp" className="rvo-card-img" width="100px" height="66px" />
+                <img src={particulierenImgUrl} className="rvo-card-img" width="100px" height="66px" />
                 <Heading type="h3" noMargins>
                   <a href="#" className="rvo-link--no-underline rvo-link--wit rvo-link--full-container">
                     Particulieren
@@ -140,7 +145,7 @@ export default function LinkBlocksPage(): ReactElement {
             </div>
             <div className="rvo-card rvo-card--full-colour--hemelblauw">
               <div className="rvo-card__content rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md">
-                <img src="images/www/overheden.webp" className="rvo-card-img" width="100px" height="66px" />
+                <img src={overhedenImgUrl} className="rvo-card-img" width="100px" height="66px" />
                 <Heading type="h3" noMargins>
                   <a href="#" className="rvo-link--no-underline rvo-link--wit rvo-link--full-container">
                     Overheden
@@ -150,7 +155,7 @@ export default function LinkBlocksPage(): ReactElement {
             </div>
             <div className="rvo-card rvo-card--full-colour--hemelblauw">
               <div className="rvo-card__content rvo-layout-row rvo-layout-align-content-center rvo-layout-gap--md">
-                <img src="images/www/kennisinstellingen.webp" className="rvo-card-img" width="100px" height="66px" />
+                <img src={kennisinstellingenImgUrl} className="rvo-card-img" width="100px" height="66px" />
                 <Heading type="h3" noMargins>
                   <a href="#" className="rvo-link--no-underline rvo-link--wit rvo-link--full-container">
                     Kennisinstellingen
@@ -542,7 +547,7 @@ export default function LinkBlocksPage(): ReactElement {
             <div className="rvo-cards-grid">
               <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                 <div className="rvo-card-img-container">
-                  <img src="images/www/socialfund.webp" className="rvo-card-img" />
+                  <img src={socialfundImgUrl} className="rvo-card-img" />
                 </div>
                 <div className="rvo-card__content">
                   <Heading type="h3" noMargins>
@@ -558,7 +563,7 @@ export default function LinkBlocksPage(): ReactElement {
               </div>
               <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                 <div className="rvo-card-img-container">
-                  <img src="images/www/besparen.jpeg" className="rvo-card-img" />
+                  <img src={besparenImgUrl} className="rvo-card-img" />
                 </div>
                 <div className="rvo-card__content">
                   <Heading type="h3" noMargins>
@@ -574,7 +579,7 @@ export default function LinkBlocksPage(): ReactElement {
               </div>
               <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                 <div className="rvo-card-img-container">
-                  <img src="images/www/beursbezoek.jpeg" className="rvo-card-img" />
+                  <img src={beursbezoekImgUrl} className="rvo-card-img" />
                 </div>
                 <div className="rvo-card__content">
                   <Heading type="h3" noMargins>
@@ -591,7 +596,7 @@ export default function LinkBlocksPage(): ReactElement {
 
               <div className="rvo-card rvo-card--w-link rvo-card--outline rvo-card--w-img rvo-card--md">
                 <div className="rvo-card-img-container">
-                  <img src="images/www/lbv.png" className="rvo-card-img" />
+                  <img src={lbvImgUrl} className="rvo-card-img" />
                 </div>
                 <div className="rvo-card__content">
                   <Heading type="h3" noMargins>
@@ -620,7 +625,7 @@ export default function LinkBlocksPage(): ReactElement {
               <div className="rvo-cards-grid">
                 <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
                   <div className="rvo-card-img-container">
-                    <img src="images/www/mobiel.webp" className="rvo-card-img" />
+                    <img src={mobielImgUrl} className="rvo-card-img" />
                   </div>
                   <div className="rvo-card__content">
                     <Heading type="h3" noMargins>
@@ -690,7 +695,7 @@ export default function LinkBlocksPage(): ReactElement {
 
                 <div className="rvo-card rvo-card--w-link rvo-card--img-bg rvo-card--w-img rvo-card--md rvo-card--inverted-colours">
                   <div className="rvo-card-img-container">
-                    <img src="images/www/nieuwsbrief.webp" className="rvo-card-img" />
+                    <img src={nieuwsbriefImgUrl} className="rvo-card-img" />
                   </div>
                   <div className="rvo-card__content">
                     <Heading type="h3" noMargins>
