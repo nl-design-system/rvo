@@ -26,3 +26,7 @@ yarn.lock
 
 # Playwright MCP snapshots
 .playwright-mcp
+
+# MDX docs pages — Prettier's MDX formatter wraps JSX text children in <p>,
+# which is invalid HTML when the JSX element is an inline element like <a>
+**/*.docusaurus.mdx
