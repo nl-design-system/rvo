@@ -371,10 +371,10 @@ const PandToevoegen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Volgende stap
+                        Opslaan en naar bijenkasten
                       </Button>
                       <Button kind="secondary" size="md">
-                        Opslaan en later verdergaan
+                        Opslaan en nog een pand toevoegen
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>
