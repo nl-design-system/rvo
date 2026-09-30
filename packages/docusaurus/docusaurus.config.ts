@@ -55,6 +55,15 @@ const config: Config = {
         exclude: excludeList,
       },
     ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'templates',
+        path: path.resolve(__dirname, '../../documentation/templates'),
+        routeBasePath: 'templates',
+        include: ['**/*.tsx'],
+      },
+    ],
   ],
   presets: [
     [
