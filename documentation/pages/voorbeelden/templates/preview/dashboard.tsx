@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Alert,
@@ -14,12 +18,13 @@ import {
   StatusIcon,
   Tag,
 } from '@nl-rvo/component-library-react';
-import { defaultSecondaryFooterItems } from '../../demopages/common/defaultSecondaryFooterItems';
-import { defaultFooterItems } from '../common/defaultFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../../demopages/common/defaultSecondaryFooterItems';
 
-const Dashboard = () => {
+export default function DashboardPage(): ReactElement {
   return (
-    <body className="rvo-theme">
+    <div className="rvo-demo-page">
       <Header />
       <MenuBar
         items={[
@@ -119,11 +124,7 @@ const Dashboard = () => {
                   <Grid gap="md" columns="two">
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link
-                          fullContainerLink={true}
-                          noUnderline={true}
-                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
-                        >
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
                           Card titel
                         </Link>
                       </Heading>
@@ -137,11 +138,7 @@ const Dashboard = () => {
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link
-                          fullContainerLink={true}
-                          noUnderline={true}
-                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
-                        >
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
                           Card titel
                         </Link>
                       </Heading>
@@ -155,11 +152,7 @@ const Dashboard = () => {
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link
-                          fullContainerLink={true}
-                          noUnderline={true}
-                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
-                        >
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
                           Card titel
                         </Link>
                       </Heading>
@@ -173,11 +166,7 @@ const Dashboard = () => {
                     </Card>
                     <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
                       <Heading type="h3" noMargins={true}>
-                        <Link
-                          fullContainerLink={true}
-                          noUnderline={true}
-                          href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-zaak--default&viewMode=story"
-                        >
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
                           Card titel
                         </Link>
                       </Heading>
@@ -278,8 +267,6 @@ const Dashboard = () => {
         </div>
       </main>
       <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
-    </body>
+    </div>
   );
-};
-
-export default Dashboard;
+}
