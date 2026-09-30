@@ -41,9 +41,9 @@ const navbar: Navbar = {
     },
     {
       type: 'doc',
-      docId: 'paginas/over-paginas',
+      docId: 'paginas/over-voorbeelden',
       position: 'left' as const,
-      label: "Pagina's",
+      label: 'Voorbeelden',
     },
     // {
     //   type: 'doc',
