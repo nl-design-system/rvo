@@ -1,8 +1,13 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import { Footer, Header, Heading, LayoutFlow } from '@nl-rvo/component-library-react';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../demopages/common/defaultSecondaryFooterItems';
 
-const Basispagina = () => {
+export default function BasispaginaPage(): ReactElement {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -18,6 +23,4 @@ const Basispagina = () => {
       </LayoutFlow>
     </div>
   );
-};
-
-export default Basispagina;
+}
