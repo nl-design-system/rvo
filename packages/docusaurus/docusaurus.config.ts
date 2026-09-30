@@ -64,6 +64,15 @@ const config: Config = {
         include: ['**/*.tsx'],
       },
     ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'paginas',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden/paginas/preview'),
+        routeBasePath: 'voorbeelden/paginas/preview',
+        include: ['**/*.tsx'],
+      },
+    ],
   ],
   presets: [
     [
