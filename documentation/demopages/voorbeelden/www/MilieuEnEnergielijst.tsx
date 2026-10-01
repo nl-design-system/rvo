@@ -195,19 +195,63 @@ const regelingOpties = [
 ];
 
 const adviseurResultaten = [
-  { title: 'Adiabatische luchtkoeling in stallen', code: '210208', regeling: 'EIA' },
-  { title: 'Apparatuur voor het afvangen van CO₂ voor nuttige toepassing', code: 'F 4101', regeling: 'MIA\\Vamil' },
-  { title: 'Apparatuur voor het binden van CO₂', code: 'F 4103', regeling: 'MIA\\Vamil' },
-  { title: 'Apparatuur voor het voorkomen van CO₂-vorming', code: 'F 4100', regeling: 'MIA\\Vamil' },
+  {
+    title: 'Adiabatische luchtkoeling in stallen',
+    code: '210208',
+    regeling: 'EIA',
+    verantwoording:
+      'Deze luchtkoelingstechniek verlaagt het energieverbruik voor klimaatbeheersing, wat aansluit bij uw doel om energie te besparen. Daarom valt dit bedrijfsmiddel onder de EIA.',
+  },
+  {
+    title: 'Apparatuur voor het afvangen van CO₂ voor nuttige toepassing',
+    code: 'F 4101',
+    regeling: 'MIA\\Vamil',
+    verantwoording:
+      'Deze apparatuur legt CO₂ vast voor hergebruik, bijvoorbeeld als meststof voor uw tomatenteelt, en draagt direct bij aan het verminderen van broeikasgassen. Daarom valt dit bedrijfsmiddel onder de MIA\\Vamil.',
+  },
+  {
+    title: 'Apparatuur voor het binden van CO₂',
+    code: 'F 4103',
+    regeling: 'MIA\\Vamil',
+    verantwoording:
+      'Deze apparatuur bindt CO₂ structureel, wat bijdraagt aan de reductie van broeikasgassen in uw bedrijfsvoering. Daarom valt dit bedrijfsmiddel onder de MIA\\Vamil.',
+  },
+  {
+    title: 'Apparatuur voor het voorkomen van CO₂-vorming',
+    code: 'F 4100',
+    regeling: 'MIA\\Vamil',
+    verantwoording:
+      'Deze apparatuur voorkomt het ontstaan van CO₂-uitstoot bij uw processen, wat aansluit bij uw doel om broeikasgassen te reduceren. Daarom valt dit bedrijfsmiddel onder de MIA\\Vamil.',
+  },
   {
     title:
       'Apparatuur voor verminderd gebruik van grondwater als gietwater in de glastuinbouw (aanpassing bestaande situatie)',
     code: 'D 2812',
     regeling: 'MIA\\Vamil',
+    verantwoording:
+      'Deze apparatuur is specifiek ontwikkeld voor de glastuinbouw en vermindert het gebruik van grondwater als gietwater, passend bij uw sector en milieudoelen. Daarom valt dit bedrijfsmiddel onder de MIA\\Vamil.',
   },
-  { title: 'Belichtingssysteem voor tuinbouwgewassen [W]', code: '220503', regeling: 'EIA' },
-  { title: 'Beregeningsboom met lage waterdruk voor het beregenen van gewassen [W]', code: '221228', regeling: 'EIA' },
-  { title: 'Besparingssysteem voor klimaatinstallaties [W]', code: '210906', regeling: 'EIA' },
+  {
+    title: 'Belichtingssysteem voor tuinbouwgewassen [W]',
+    code: '220503',
+    regeling: 'EIA',
+    verantwoording:
+      'Dit energiezuinige belichtingssysteem is specifiek bedoeld voor tuinbouwgewassen zoals tomaten en verlaagt uw energieverbruik. Daarom valt dit bedrijfsmiddel onder de EIA.',
+  },
+  {
+    title: 'Beregeningsboom met lage waterdruk voor het beregenen van gewassen [W]',
+    code: '221228',
+    regeling: 'EIA',
+    verantwoording:
+      'Dit systeem beregent gewassen met lage waterdruk, wat energie bespaart bij de watervoorziening van uw tomatenteelt. Daarom valt dit bedrijfsmiddel onder de EIA.',
+  },
+  {
+    title: 'Besparingssysteem voor klimaatinstallaties [W]',
+    code: '210906',
+    regeling: 'EIA',
+    verantwoording:
+      'Dit besparingssysteem verlaagt het energieverbruik van klimaatinstallaties in uw kas, wat direct bijdraagt aan uw doel om energie te besparen. Daarom valt dit bedrijfsmiddel onder de EIA.',
+  },
 ];
 
 const DEFAULT_VRAAG =
@@ -220,6 +264,7 @@ const MilieuEnEnergielijst = () => {
   const [vraagError, setVraagError] = useState(false);
   const [investeerInState, setInvesteerInState] = useState(investeerInOpties);
   const [milieudoelState, setMilieudoelState] = useState(milieudoelOpties);
+  const [sorteerValue, setSorteerValue] = useState('title-asc');
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
@@ -236,12 +281,14 @@ const MilieuEnEnergielijst = () => {
     setIngediendVraag(vraagValue);
     setInvesteerInState((prev) => prev.map((o) => ({ ...o, checked: o.id === 'agro-visserij' })));
     setMilieudoelState((prev) => prev.map((o) => ({ ...o, checked: o.id === 'energie' || o.id === 'broeikasgassen' })));
+    setSorteerValue('relevance');
   };
 
   const handleOpnieuw = () => {
     setIngediendVraag(null);
     setInvesteerInState(investeerInOpties);
     setMilieudoelState(milieudoelOpties);
+    setSorteerValue('title-asc');
   };
 
   const removeTag = (group: 'investeer' | 'milieu', id: string) => {
@@ -323,7 +370,7 @@ const MilieuEnEnergielijst = () => {
           </p>
 
           <div className="rvo-margin-block-start--md">
-            <p className="rvo-paragraph rvo-paragraph--no-margin">
+            <p className="rvo-paragraph rvo-paragraph--no-spacing">
               <strong>Zie ook</strong>
             </p>
             <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
@@ -435,14 +482,24 @@ const MilieuEnEnergielijst = () => {
               <div>
                 {ingediendVraag !== null && (
                   <div className="rvo-margin-block-end--lg">
-                    <Alert kind="info" heading="Uw advies op maat" padding="md">
-                      <p className="rvo-paragraph">
-                        U bent actief in de agrarische sector en richt zich op energiebesparing en reductie van
-                        broeikasgassen. Wij hebben de filters ingesteld op <strong>Agro en visserij</strong> en
-                        milieudoelen <strong>Energie besparen</strong> en <strong>Broeikasgassen reduceren</strong>.
-                        Hieronder ziet u de bedrijfsmiddelen die mogelijk voor u in aanmerking komen.
-                      </p>
-                    </Alert>
+                    <LayoutFlow gap="sm">
+                      <Alert kind="info" heading="Uw advies op maat (met AI gemaakt)" padding="md">
+                        <p className="rvo-paragraph rvo-paragraph--no-spacing">
+                          U bent actief in de agrarische sector en richt zich op energiebesparing en reductie van
+                          broeikasgassen. Wij hebben de filters ingesteld op <strong>Agro en visserij</strong> en
+                          milieudoelen <strong>Energie besparen</strong> en <strong>Broeikasgassen reduceren</strong>.
+                          Hieronder ziet u de bedrijfsmiddelen die mogelijk voor u in aanmerking komen.
+                        </p>
+                      </Alert>
+                      <Alert kind="warning" padding="md">
+                        <p className="rvo-paragraph rvo-paragraph--no-spacing">
+                          Dit advies is met AI gemaakt.{' '}
+                          <a href="#" className="rvo-link rvo-link--lintblauw">
+                            Lees de volledige disclaimer
+                          </a>
+                        </p>
+                      </Alert>
+                    </LayoutFlow>
                   </div>
                 )}
 
@@ -478,7 +535,7 @@ const MilieuEnEnergielijst = () => {
 
                 <div className="rvo-margin-block-end--sm">
                   <LayoutFlow row={true} justifyContent="space-between" alignItems="center">
-                    <p className="rvo-paragraph rvo-paragraph--no-margin">
+                    <p className="rvo-paragraph rvo-paragraph--no-spacing">
                       <strong>{ingediendVraag ? adviseurResultaten.length : 347}</strong> resultaten gevonden
                     </p>
                     <LayoutFlow gap="2xs">
@@ -494,6 +551,8 @@ const MilieuEnEnergielijst = () => {
                           { label: 'Oudste eerst', value: 'oldest' },
                           { label: 'Relevantie', value: 'relevance' },
                         ]}
+                        value={sorteerValue}
+                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSorteerValue(e.target.value)}
                         size="sm"
                       />
                     </LayoutFlow>
@@ -502,20 +561,34 @@ const MilieuEnEnergielijst = () => {
 
                 <LayoutFlow gap="sm">
                   {(ingediendVraag ? adviseurResultaten : bedrijfsmiddelen).map((item, i) => (
-                    <div key={i} className="rvo-card rvo-card--outline rvo-card--padding-md">
-                      <div className="rvo-card--with-link-indicator">
-                        <div className="rvo-card__content">
-                          <Heading type="h3" noMargins={true}>
-                            <a href="#" className="rvo-link rvo-link--no-underline">
-                              {item.title}
-                            </a>
-                          </Heading>
-                          <p className="rvo-paragraph rvo-paragraph--no-margin rvo-margin-block-start--2xs">
-                            Bedrijfsmiddelcode: {item.code}&nbsp;&nbsp;Regeling: {item.regeling}
-                          </p>
+                    <div key={i}>
+                      <div className="rvo-card rvo-card--outline rvo-card--padding-md">
+                        <div className="rvo-card--with-link-indicator">
+                          <div className="rvo-card__content">
+                            <Heading type="h3" noMargins={true}>
+                              <a href="#" className="rvo-link rvo-link--no-underline">
+                                {item.title}
+                              </a>
+                            </Heading>
+                            <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-margin-block-start--2xs">
+                              Bedrijfsmiddelcode: {item.code}&nbsp;&nbsp;Regeling: {item.regeling}
+                            </p>
+                          </div>
+                          <Icon icon="delta-naar-rechts" size="md" color="hemelblauw" />
                         </div>
-                        <Icon icon="delta-naar-rechts" size="md" color="hemelblauw" />
                       </div>
+                      {ingediendVraag && (item as { verantwoording?: string }).verantwoording && (
+                        <div
+                          className="rvo-margin-block-start--custom rvo-margin-block-end--sm"
+                          style={{ '--space-block-start': 'calc(var(--rvo-space-sm) / 2)' } as React.CSSProperties}
+                        >
+                          <Alert kind="info" heading="Waarom dit middel? (Met AI gemaakt)" padding="md">
+                            <p className="rvo-paragraph rvo-paragraph--no-spacing">
+                              {(item as { verantwoording?: string }).verantwoording}
+                            </p>
+                          </Alert>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </LayoutFlow>
