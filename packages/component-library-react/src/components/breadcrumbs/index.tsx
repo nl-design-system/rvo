@@ -24,7 +24,10 @@ export interface IBreadcrumbProps {
 }
 
 const parseDividerMarkup = (index: number, maxLength: number) => {
-  return index > 0 && index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
+  return (
+    index > 0 &&
+    index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" role="none" />
+  );
 };
 
 export const Breadcrumbs: React.FC<IBreadcrumbProps & React.HTMLAttributes<HTMLOListElement>> = ({
