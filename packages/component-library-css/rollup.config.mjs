@@ -9,32 +9,32 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..', '..');
 
 // Read and parse @use statements from index.scss
-// const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
+const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
 // const markdownFiles = fs.readdirSync('src/components/');
 
 // const useStatementsComponent = [];
 const useStatementsUtil = [];
 
 // // Map imported css files
-// indexContent
-//   .split('\n')
-//   .filter((line) => line.trim().startsWith('@use'))
-//   .map((line) => {
-//     const match = line.match(/@use "([^"]+)"/);
-//     return match ? match[1] : null;
-//   })
-//   .filter((path) => path && !path.includes('node_modules'))
-//   .map((componentPath) => {
-//     // Convert paths like "../../../components/accordion/src" to just "accordion"
-//     const parts = componentPath.split('/');
+indexContent
+  .split('\n')
+  .filter((line) => line.trim().startsWith('@use'))
+  .map((line) => {
+    const match = line.match(/@use "([^"]+)"/);
+    return match ? match[1] : null;
+  })
+  .filter((path) => path && !path.includes('node_modules'))
+  .map((componentPath) => {
+    // Convert paths like "../../../components/accordion/src" to just "accordion"
+    const parts = componentPath.split('/');
 
-//     // Util CSS
-//     if (parts[0].indexOf('utility-') >= 0) {
-//       useStatementsUtil.push(parts[0]);
-//     }
+    // Util CSS
+    if (parts[0].indexOf('utility-') >= 0) {
+      useStatementsUtil.push(parts[0]);
+    }
 
-//     if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
-//   });
+    if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
+  });
 
 // Create individual component configurations
 // const componentBundles = markdownFiles.flatMap((component) => [
