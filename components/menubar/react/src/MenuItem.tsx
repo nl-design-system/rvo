@@ -3,23 +3,11 @@ import React from 'react';
 // eslint-disable-next-line import/order
 import SubMenu from './SubMenu';
 import '@nl-rvo/css-menubar';
-import { Link, LinkCustomLinkComponent } from '@nl-rvo/react-link';
+import { Link } from '@nl-rvo/react-link';
 import { IMenuBarItem } from './Menubar.types';
 import { Icon } from '@nl-rvo/react-icon';
 
-interface MenuBarItemProps extends IMenuBarItem {
-  useIcons: boolean;
-  size: 'sm' | 'md' | 'lg';
-  iconPlacement: 'left' | 'right';
-  linkColor?: string;
-  maxWidth?: 'none' | 'sm' | 'md' | 'lg';
-  isSubmenuVisible?: boolean;
-  grid?: boolean;
-  handleItemClick?: (event: React.MouseEvent) => void;
-  LinkComponent?: LinkCustomLinkComponent;
-}
-
-export const MenuBarItem: React.FC<MenuBarItemProps> = ({
+export const MenuBarItem: React.FC<IMenuBarItem> = ({
   label,
   icon,
   link,
@@ -53,13 +41,7 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   };
 
   return (
-    <li
-      className={clsx(
-        'rvo-menubar__item',
-        isSubmenuVisible && 'rvo-menubar__item--submenu-visible',
-      )}
-      {...rest}
-    >
+    <li className={clsx('rvo-menubar__item', isSubmenuVisible && 'rvo-menubar__item--submenu-visible')} {...rest}>
       <Link
         className={clsx('rvo-menubar__link', isSubmenuVisible && 'rvo-menubar__link--active')}
         color={linkColor}
@@ -82,6 +64,7 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           iconPlacement={iconPlacement}
           linkColor={linkColor}
           isSubmenuVisible={isSubmenuVisible}
+          maxWidth={maxWidth}
         />
       )}
     </li>

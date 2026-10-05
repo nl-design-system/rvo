@@ -1,5 +1,6 @@
 import { IconType } from '@nl-rvo/react-icon';
 import { ReactNode } from 'react';
+import { LinkCustomLinkComponent } from '@nl-rvo/react-link';
 
 export interface IMenuBarSubItem extends Omit<IMenuBarItem, 'align' | 'submenu'> {}
 
@@ -9,6 +10,15 @@ export interface IMenuBarItem {
   link: string | ((event: React.MouseEvent) => void);
   align?: 'left' | 'right';
   submenu?: IMenuBarSubItem[];
+  useIcons?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  iconPlacement?: 'left' | 'right';
+  linkColor?: string;
+  maxWidth?: 'sm' | 'md' | 'lg';
+  isSubmenuVisible?: boolean;
+  grid?: boolean;
+  handleItemClick?: (event: React.MouseEvent) => void;
+  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export interface IMenuBarProps {

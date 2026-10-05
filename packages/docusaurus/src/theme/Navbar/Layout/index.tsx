@@ -5,6 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Logo, MenuBar } from '@nl-rvo/component-library-react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function NavbarLayout() {
   const {
@@ -52,13 +53,7 @@ export default function NavbarLayout() {
         )}
       >
         <div className={styles.menubar}>
-          <MenuBar
-            items={menuItems}
-            size="md"
-            maxWidth="md"
-            horizontalRule={true}
-            linkColor="lintblauw"
-          />
+          <MenuBar items={menuItems} size="md" maxWidth="md" horizontalRule={true} linkColor="lintblauw" />
         </div>
       </nav>
     </>
