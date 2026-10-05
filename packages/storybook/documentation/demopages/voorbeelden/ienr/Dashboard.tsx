@@ -44,7 +44,7 @@ const Dashboard = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -82,7 +82,7 @@ const Dashboard = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             /> */}
           </div>

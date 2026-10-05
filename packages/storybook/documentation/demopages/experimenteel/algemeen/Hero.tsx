@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultMenuBarItems} size="lg" useIcons={true} iconPlacement="before" maxWidth="lg" />
+      <MenuBar items={defaultMenuBarItems} size="lg" useIcons={true} iconPlacement="left" maxWidth="lg" />
       <div className="rvo-hero rvo-hero--man-met-laptop">
         <div className="rvo-hero-bg-img-container">
           <img src="images/hero/hero-bg--man-met-laptop.webp" className="rvo-hero-bg-img" />

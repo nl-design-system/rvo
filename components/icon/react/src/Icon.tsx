@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 // @ts-ignore
-import iconList from '@nl-rvo/assets/icons/index.js';
 import clsx from 'clsx';
 import React from 'react';
 import '@nl-rvo/css-icon';
 import { IIconProps } from './Icon.types';
+import iconList from '@nl-rvo/assets/icons/index.js';
 
 export const iconColors = ['', 'hemelblauw', 'donkerblauw', 'wit', 'zwart', 'grijs-700', 'lintblauw'];
 
@@ -16,10 +16,8 @@ export const toProperCase = (inputString: string) =>
     .replace(/\w\S*/g, (txt: string) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
     .replace(/_/g, ' ');
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { STATUS, ...iconListWithoutStatus } = iconList;
-
-export const iconOptions = Object.keys(iconListWithoutStatus).flatMap((categoryOrIconName) => {
+// Icon Options
+export const iconOptions = Object.keys(iconList).flatMap((categoryOrIconName) => {
   if (typeof iconList[categoryOrIconName] === 'object') {
     return Object.keys(iconList[categoryOrIconName]).map((iconName) =>
       toProperCase(`${categoryOrIconName} > ${iconName}`),
@@ -29,6 +27,7 @@ export const iconOptions = Object.keys(iconListWithoutStatus).flatMap((categoryO
   }
 });
 
+// IconNames
 export const iconNames = iconOptions.map((option) => {
   let iconName = option;
   if (iconName.indexOf(' > ') > -1) {
@@ -43,6 +42,8 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
   color = 'hemelblauw',
   ariaLabel,
   className,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  ariaLabel: _ariaLabel,
   ...rootElementProps
 }: IIconProps) => {
   let iconName = icon as string;
@@ -55,23 +56,13 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
       className={clsx(
         'utrecht-icon',
         'rvo-icon',
-        `rvo-icon-${iconName}`,
         size && `rvo-icon--${size}`,
-        {
-          'rvo-icon--hemelblauw': color === 'hemelblauw',
-          'rvo-icon--donkerblauw': color === 'donkerblauw',
-          'rvo-icon--lintblauw': color === 'lintblauw',
-          'rvo-icon--wit': color === 'wit',
-          'rvo-icon--zwart': color === 'zwart',
-          'rvo-icon--grijs-700': color === 'grijs-700',
-        },
+        color && `rvo-icon--${color}`,
+        icon && `rvo-icon-${iconName}`,
         className,
       )}
       role="img"
-      aria-label={(ariaLabel?.length
-        ? ariaLabel
-        : iconName.charAt(0).toUpperCase() + iconName.substr(1).toLowerCase()
-      ).replace(/-/g, ' ')}
+      aria-hidden={true}
       {...rootElementProps}
     ></span>
   );

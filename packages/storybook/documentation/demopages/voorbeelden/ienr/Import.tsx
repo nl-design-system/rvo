@@ -43,7 +43,7 @@ const Import = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -81,7 +81,7 @@ const Import = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             /> */}
           </div>

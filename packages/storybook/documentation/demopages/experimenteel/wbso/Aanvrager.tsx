@@ -18,7 +18,7 @@ const Aanvrager = () => {
   return (
     <div className="rvo-demo-page">
       <Header />
-      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
+      <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" maxWidth="md" />
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
           <ProgressTracker

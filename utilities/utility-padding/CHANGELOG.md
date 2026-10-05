@@ -1,5 +1,11 @@
 # `@nl-rvo/utility-padding`
 
+## 2.1.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 2.1.0
 
 ### Minor Changes

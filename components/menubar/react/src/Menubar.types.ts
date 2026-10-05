@@ -15,7 +15,7 @@ export interface IMenuBarProps {
   size?: 'sm' | 'md' | 'lg';
   items: IMenuBarItem[];
   useIcons?: boolean;
-  iconPlacement?: 'before' | 'after';
+  iconPlacement?: 'left' | 'right';
   maxWidth?: 'sm' | 'md' | 'lg';
   children?: ReactNode | undefined;
   horizontalRule?: boolean;
@@ -26,7 +26,7 @@ export interface SubMenuProps {
   submenu: IMenuBarSubItem[];
   useIcons: boolean;
   size: 'sm' | 'md' | 'lg';
-  iconPlacement: 'before' | 'after';
+  iconPlacement: 'left' | 'right';
   linkColor?: string;
   isSubmenuVisible?: boolean;
   className?: string | string[];

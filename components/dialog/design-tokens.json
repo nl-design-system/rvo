@@ -112,6 +112,28 @@
             "inherits": true
           }
         }
+      },
+      "close-button": {
+        "focus": {
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "text-decoration-thickness": {
+            "css": {
+              "syntax": "<*>",
+              "inherits": true
+            }
+          },
+          "text-underline-offset": {
+            "css": {
+              "syntax": "<length>",
+              "inherits": true
+            }
+          }
+        }
       }
     }
   }

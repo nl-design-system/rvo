@@ -30,7 +30,7 @@ const FiltersPersonen = () => {
           size="md"
           maxWidth="md"
           useIcons={true}
-          iconPlacement="before"
+          iconPlacement="left"
         />
         <LayoutFlow gap="3xl">
           <main>

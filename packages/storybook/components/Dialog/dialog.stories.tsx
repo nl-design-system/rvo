@@ -1,9 +1,19 @@
 import { ActionGroup, Button, Dialog } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
+const defaultArgs = {
+  type: 'centered-dialog' as const,
+  isModal: true,
+  centeredDialogSize: 'md' as const,
+  backgroundColor: 'wit' as const,
+  isOpen: true,
+  ariaLabel: 'Dialog aria label',
+};
+
 export default {
   title: 'Componenten/Dialog',
   component: Dialog,
+  args: defaultArgs,
   argTypes: {
     type: {
       options: ['centered-dialog', 'inset-inline-start', 'inset-inline-end'],

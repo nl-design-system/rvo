@@ -39,7 +39,7 @@ const Aanvragen = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -72,7 +72,7 @@ const Aanvragen = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             /> */}
           </div>

@@ -1,5 +1,11 @@
 ## Pre-releases
 
+## 1.3.2
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.3.1
 
 ### Patch Changes

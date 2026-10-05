@@ -20,7 +20,7 @@ const RegisterAlternativepagina = () => {
           ]}
           size="lg"
           useIcons={true}
-          iconPlacement="before"
+          iconPlacement="left"
           maxWidth="lg"
         />
         )

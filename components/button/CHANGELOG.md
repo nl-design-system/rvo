@@ -1,5 +1,12 @@
 # `@nl-rvo/css-button`
 
+## 2.1.2
+
+### Patch Changes
+
+- 83a85f5: Implement the updated Icon component
+- 084a230: Ensure package is published with provenance
+
 ## 2.1.1
 
 ### Patch Changes

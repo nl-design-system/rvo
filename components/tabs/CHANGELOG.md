@@ -1,5 +1,11 @@
 # `@nl-rvo/css-tabs`
 
+## 2.0.2
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 2.0.1
 
 ### Patch Changes
@@ -18,7 +24,6 @@
   - Added `size` variants (`sm`/`md`/`lg`) and token-friendly styling using CSS custom properties + logical properties.
 
   ### Deprecated / Breaking
-
   - Deprecated legacy `tabs` prop and `TabItem` composition API (fallback still supported temporarily).
   - Tabs should now be defined via `items`; panels are required per item.
 

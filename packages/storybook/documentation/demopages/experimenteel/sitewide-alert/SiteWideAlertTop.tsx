@@ -66,7 +66,7 @@ const SiteWideAlertTop = () => {
         ]}
         size="md"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -93,7 +93,7 @@ const SiteWideAlertTop = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             /> */}
           </div>

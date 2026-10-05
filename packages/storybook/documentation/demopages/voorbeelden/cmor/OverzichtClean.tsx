@@ -46,7 +46,7 @@ const OverzichtClean = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -73,7 +73,7 @@ const OverzichtClean = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             /> */}
           </div>

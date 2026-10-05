@@ -48,7 +48,7 @@ const SIBstartpagina = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
             <MenuBar
@@ -66,7 +66,7 @@ const SIBstartpagina = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
           </div>

@@ -43,7 +43,7 @@ const VerticalFilter = () => {
             ]}
             size="lg"
             useIcons={true}
-            iconPlacement="before"
+            iconPlacement="left"
             maxWidth="md"
           />
 

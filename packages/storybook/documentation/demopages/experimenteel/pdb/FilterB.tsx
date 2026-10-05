@@ -43,7 +43,7 @@ const Filter = () => {
             ]}
             size="lg"
             useIcons={true}
-            iconPlacement="before"
+            iconPlacement="left"
             maxWidth="md"
           />
           <main className="rvo-max-width-layout rvo-max-width-layout--sm">

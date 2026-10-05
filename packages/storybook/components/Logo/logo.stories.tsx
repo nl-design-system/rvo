@@ -8,6 +8,7 @@ export default {
     title: 'Rijksdienst voor Ondernemend Nederland',
     subtitle: '',
     link: '',
+    linkTitle: 'Home',
     className: '',
   },
   argTypes: {
@@ -18,6 +19,9 @@ export default {
       control: 'text',
     },
     link: {
+      control: 'text',
+    },
+    linkTitle: {
       control: 'text',
     },
     className: {

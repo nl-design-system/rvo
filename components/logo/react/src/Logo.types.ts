@@ -3,4 +3,5 @@ export interface ILogoProps {
   subtitle?: string;
   link?: string;
   className?: string;
+  linkTitle?: string;
 }

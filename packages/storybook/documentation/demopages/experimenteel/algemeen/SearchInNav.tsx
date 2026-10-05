@@ -23,7 +23,7 @@ const SearchInNav = () => {
         ]}
         size="md"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="md"
       />
       <LayoutFlow gap="md">

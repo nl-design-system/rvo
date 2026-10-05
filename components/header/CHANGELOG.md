@@ -1,5 +1,15 @@
 # `@nl-rvo/css-header`
 
+## 1.4.0
+
+### Minor Changes
+
+- bcc44ec: Removed link behaviour from Header component to Logo component and fixed logo link focus state.
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.3.1
 
 ### Patch Changes

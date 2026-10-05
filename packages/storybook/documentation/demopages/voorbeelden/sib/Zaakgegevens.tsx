@@ -47,7 +47,7 @@ const Zaakgegevens = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
             <MenuBar
@@ -65,7 +65,7 @@ const Zaakgegevens = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
           </div>

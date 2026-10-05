@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-fieldset`
 
+## 1.6.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.6.0
 
 ### Minor Changes

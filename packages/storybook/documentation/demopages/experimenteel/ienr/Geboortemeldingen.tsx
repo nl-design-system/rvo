@@ -42,7 +42,7 @@ const Geboortemeldingen = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -80,7 +80,7 @@ const Geboortemeldingen = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             /> */}
           </div>

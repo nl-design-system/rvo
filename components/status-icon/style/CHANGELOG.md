@@ -1,4 +1,10 @@
-# `@nl-rvo/css-status-icon`
+# `@nl-rvo/css-form-field-label`
+
+## 1.4.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
 
 ## 1.3.0
 

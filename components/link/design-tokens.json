@@ -72,6 +72,27 @@
         },
         "focus": {
           "text-decoration-thickness": { "css": { "syntax": "*", "inherits": true } }
+        },
+        "outline": {
+          "background-color": { "css": { "syntax": "<color>", "inherits": true } },
+          "border-color": { "css": { "syntax": "<color>", "inherits": true } },
+          "color": { "css": { "syntax": "<color>", "inherits": true } },
+          "icon": {
+            "background-color": { "css": { "syntax": "<color>", "inherits": true } }
+          },
+          "hover": {
+            "background-color": { "css": { "syntax": "<color>", "inherits": true } },
+            "border-color": { "css": { "syntax": "<color>", "inherits": true } },
+            "color": { "css": { "syntax": "<color>", "inherits": true } },
+            "icon": {
+              "background-color": { "css": { "syntax": "<color>", "inherits": true } }
+            }
+          },
+          "active": {
+            "background-color": { "css": { "syntax": "<color>", "inherits": true } },
+            "border-color": { "css": { "syntax": "<color>", "inherits": true } },
+            "color": { "css": { "syntax": "<color>", "inherits": true } }
+          }
         }
       }
     }

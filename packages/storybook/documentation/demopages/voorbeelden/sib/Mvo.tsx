@@ -47,7 +47,7 @@ const Mvo = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
             <MenuBar
@@ -66,7 +66,7 @@ const Mvo = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
           </div>

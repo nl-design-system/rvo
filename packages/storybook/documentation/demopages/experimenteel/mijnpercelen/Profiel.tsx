@@ -44,7 +44,7 @@ const Profiel = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
           </div>
@@ -55,7 +55,7 @@ const Profiel = () => {
               items={[{ label: 'Instellingen', link: '#', icon: 'user' }]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md"
             />
           </div>

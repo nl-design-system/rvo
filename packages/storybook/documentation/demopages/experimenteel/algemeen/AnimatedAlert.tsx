@@ -31,7 +31,7 @@ const AnimatedAlert = () => {
           ]}
           size="md"
           useIcons={true}
-          iconPlacement="before"
+          iconPlacement="left"
           maxWidth="md"
         />
         <LayoutFlow gap="3xl">

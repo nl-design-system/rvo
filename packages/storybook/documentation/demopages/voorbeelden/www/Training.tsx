@@ -20,7 +20,7 @@ const Training = () => {
           ]}
           size="lg"
           useIcons={true}
-          iconPlacement="before"
+          iconPlacement="left"
           maxWidth="lg"
           horizontalRule={false}
         />

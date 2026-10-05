@@ -1,5 +1,11 @@
 # `@nl-rvo/css-grid`
 
+## 3.2.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 3.2.0
 
 ### Minor Changes

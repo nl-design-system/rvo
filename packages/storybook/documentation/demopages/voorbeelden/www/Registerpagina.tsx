@@ -20,7 +20,7 @@ const Registerpagina = () => {
           ]}
           size="lg"
           useIcons={true}
-          iconPlacement="before"
+          iconPlacement="left"
           maxWidth="lg"
         />
       </div>

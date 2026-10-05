@@ -26,6 +26,7 @@
     "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
   },
   "dependencies": {
-    "@nl-rvo/css-icon": "workspace:*"
+    "@nl-rvo/css-icon": "workspace:*",
+    "@nl-rvo/assets": "workspace:*"
   }
 }

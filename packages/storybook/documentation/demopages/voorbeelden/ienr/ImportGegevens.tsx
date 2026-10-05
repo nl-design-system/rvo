@@ -48,7 +48,7 @@ const ImportGegevens = () => {
           ]}
           size="lg"
           useIcons={true}
-          iconPlacement="before"
+          iconPlacement="left"
           maxWidth="lg"
         />
 

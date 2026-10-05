@@ -71,7 +71,7 @@ const Notify = () => {
                   ]}
                   size="lg"
                   useIcons={true}
-                  iconPlacement="before"
+                  iconPlacement="left"
                   maxWidth="lg"
                   horizontalRule={false}
                 />
@@ -124,7 +124,7 @@ const Notify = () => {
             ]}
             size="lg"
             useIcons={true}
-            iconPlacement="before"
+            iconPlacement="left"
             maxWidth="lg"
             horizontalRule={true}
           />

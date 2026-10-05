@@ -7,7 +7,7 @@ const Alerts = () => {
     <div className="rvo-demo-page">
       <Header />
       <LayoutFlow gap="md">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" />
 
         <Alert maxWidth="lg" kind="info" content="This is an example of a max width info alert." />
         <Alert maxWidth="lg" kind="warning" content="This is an example a max width warning alert." />

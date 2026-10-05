@@ -19,7 +19,7 @@
     "directory": "components"
   },
   "devDependencies": {
-    "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/assets": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "@nl-rvo/component-library-react": "workspace:*",
     "@nl-rvo/storybook": "workspace:*",

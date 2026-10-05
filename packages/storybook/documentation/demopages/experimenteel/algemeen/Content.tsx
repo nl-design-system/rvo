@@ -7,7 +7,7 @@ const Content = () => {
     <div className="rvo-demo-page">
       <Header />
       <LayoutFlow gap="md">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" />
         <main className="rvo-max-width-layout rvo-max-width-layout--sm">
           <div className="rvo-content">
             <Heading type="h1">Heading 1</Heading>

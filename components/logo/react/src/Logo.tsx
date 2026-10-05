@@ -11,6 +11,7 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
   title = 'Rijksdienst voor Ondernemend Nederland',
   subtitle = '',
   link,
+  linkTitle = 'Home',
   className,
   ...rootElementProps
 }) => {
@@ -28,7 +29,7 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
       </div>
       <div className="rvo-logo__wordmark">
         {link ? (
-          <a href={link} className="rvo-logo__title rvo-logo__title-link">
+          <a href={link} className="rvo-logo__title rvo-logo__title-link" title={linkTitle}>
             {title}
           </a>
         ) : (

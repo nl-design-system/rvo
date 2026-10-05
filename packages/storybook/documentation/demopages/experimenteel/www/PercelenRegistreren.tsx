@@ -56,7 +56,7 @@ const PercelenRegistreren = () => {
                   ]}
                   size="lg"
                   useIcons={true}
-                  iconPlacement="before"
+                  iconPlacement="left"
                   maxWidth="lg"
                 />
               </div>
@@ -106,7 +106,7 @@ const PercelenRegistreren = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="lg"
             />
           </div>

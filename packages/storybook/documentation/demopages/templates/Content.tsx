@@ -31,7 +31,7 @@ const Content = () => {
         size="md"
         useIcons={true}
         horizontalRule={false}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="md"
       />
       <LayoutFlow gap="3xl">

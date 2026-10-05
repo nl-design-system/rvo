@@ -17,7 +17,7 @@ const ControleerGegevens = () => {
     <div className="rvo-demo-page">
       <Header />
       <LayoutFlow gap="2xl">
-        <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="before" maxWidth="md" />
+        <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="left" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
             <ProgressTracker

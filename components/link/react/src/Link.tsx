@@ -16,16 +16,18 @@ export const Link: React.FC<ILinkProps> = ({
   icon = 'home',
   iconSize = 'md',
   iconColor = 'hemelblauw',
-  iconAriaLabel = '',
   hover = false,
   active = false,
   focus = false,
   noUnderline = false,
   fullContainerLink = false,
   callToAction = false,
+  outline = false,
   className,
   children,
   LinkComponent,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  iconAriaLabel: _iconAriaLabel,
   ...otherProps
 }: ILinkProps) => {
   const iconMarkup =
@@ -34,7 +36,6 @@ export const Link: React.FC<ILinkProps> = ({
           icon: icon as any,
           size: iconSize as any,
           color: iconColor as any,
-          ariaLabel: iconAriaLabel,
         })
       : null;
 
@@ -52,6 +53,7 @@ export const Link: React.FC<ILinkProps> = ({
     'rvo-link--zwart': color === 'zwart',
     'rvo-link--grijs-700': color === 'grijs-700',
     'rvo-link--call-to-action': callToAction,
+    'rvo-link--call-to-action-outline': callToAction && outline,
   });
 
   const linkContent = (

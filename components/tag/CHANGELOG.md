@@ -1,5 +1,17 @@
 # `@nl-rvo/css-tag`
 
+## 1.5.0
+
+### Minor Changes
+
+- 0e26aa5: When and onClick is added to the Tag with an icon, the click event is added to the icon instead of the Tag Component
+- 6051320: ROOS-264: renamed content prop to children, moved defaultArgs to storybook and removed UX-Pin file
+
+### Patch Changes
+
+- 83a85f5: Implement the updated Icon component
+- 084a230: Ensure package is published with provenance
+
 ## 1.4.0
 
 ### Minor Changes

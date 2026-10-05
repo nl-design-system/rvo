@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-select`
 
+## 1.5.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.5.0
 
 ### Minor Changes

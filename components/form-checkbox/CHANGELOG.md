@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-checkbox`
 
+## 1.3.3
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.3.2
 
 ### Patch Changes

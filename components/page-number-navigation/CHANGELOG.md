@@ -1,5 +1,11 @@
 # `@nl-rvo/css-pagination`
 
+## 1.5.3
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.5.2
 
 ### Patch Changes

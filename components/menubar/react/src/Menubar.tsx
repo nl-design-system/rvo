@@ -74,7 +74,7 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
               key={`${item.label}-${index}`}
               useIcons={useIcons ?? false}
               size={size}
-              iconPlacement={iconPlacement ?? 'before'}
+              iconPlacement={iconPlacement ?? 'left'}
               linkColor={linkColor}
               isSubmenuVisible={activeSubmenu === item.label}
               handleItemClick={() => handleItemClick(item.label)}
@@ -91,7 +91,7 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
               key={`${item.label}-${index}`}
               useIcons={useIcons ?? false}
               size={size}
-              iconPlacement={iconPlacement ?? 'before'}
+              iconPlacement={iconPlacement ?? 'left'}
               linkColor={linkColor}
               isSubmenuVisible={activeSubmenu === item.label}
               handleItemClick={() => handleItemClick(item.label)}

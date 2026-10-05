@@ -24,6 +24,20 @@ $rvo-tag-status: "info", "warning", "success", "error";
     padding-inline-start: var(--rvo-tag-padding-inline-start-with-icon);
   }
 
+  &--icon-clickable {
+    span.rvo-icon {
+      &:hover {
+        --utrecht-icon-color: var(--rvo-tag-default-hover-icon-color);
+
+        cursor: pointer;
+      }
+
+      &:active {
+        --utrecht-icon-color: var(--rvo-tag-default-active-icon-color);
+      }
+    }
+  }
+
   &--as-link,
   &--clickable {
     &:hover {

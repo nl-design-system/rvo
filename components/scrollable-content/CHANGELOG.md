@@ -1,5 +1,11 @@
 # `@nl-rvo/css-scrollable-content`
 
+## 1.3.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.3.0
 
 ### Minor Changes

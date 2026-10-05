@@ -41,7 +41,7 @@ const DocumentenClean = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="before"
+        iconPlacement="left"
         maxWidth="lg"
       />
 
@@ -73,7 +73,7 @@ const DocumentenClean = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="before"
+              iconPlacement="left"
               maxWidth="md" */}
             />
           </div>

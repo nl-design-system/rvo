@@ -31,6 +31,9 @@ export default {
     callToAction: {
       control: 'boolean',
     },
+    outline: {
+      control: 'boolean',
+    },
     color: {
       control: { type: 'select' },
       options: ['hemelblauw', 'donkerblauw', 'lintblauw', 'wit', 'zwart', 'grijs-700'],

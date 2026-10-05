@@ -67,7 +67,7 @@ const HomeLichtblauw = () => {
                   ]}
                   size="lg"
                   useIcons={true}
-                  iconPlacement="before"
+                  iconPlacement="left"
                   maxWidth="lg"
                 />
               </div>
@@ -117,7 +117,7 @@ const HomeLichtblauw = () => {
             ]}
             size="lg"
             useIcons={true}
-            iconPlacement="before"
+            iconPlacement="left"
             maxWidth="lg"
             horizontalRule={false}
           />

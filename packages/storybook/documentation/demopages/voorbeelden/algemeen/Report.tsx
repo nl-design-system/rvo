@@ -8,7 +8,7 @@ const Report = () => {
     <div className="rvo-demo-page">
       <Header link="#" />
       <LayoutFlow gap="lg">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="md" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" maxWidth="md" />
         <LayoutFlow gap="3xl">
           <LayoutFlow gap="xl">
             <main className="rvo-max-width-layout rvo-max-width-layout--sm">

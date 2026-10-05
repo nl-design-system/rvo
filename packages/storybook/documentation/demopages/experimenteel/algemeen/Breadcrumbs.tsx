@@ -7,7 +7,7 @@ const Breadcrumbs = () => {
     <div className="rvo-demo-page">
       <Header />
       <LayoutFlow gap="md">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" />
         <MaxWidthLayout size="md">
           <main>
             <div className="rvo-breadcrumbs">

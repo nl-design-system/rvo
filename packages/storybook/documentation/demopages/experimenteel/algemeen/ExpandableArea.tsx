@@ -7,7 +7,7 @@ const ExpandableArea = () => {
     <div className="rvo-demo-page">
       <Header />
       <LayoutFlow gap="md">
-        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="before" maxWidth="sm" />
+        <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" maxWidth="sm" />
 
         <MaxWidthLayout size="sm">
           <main className="rvo-expandable-area-demo">
