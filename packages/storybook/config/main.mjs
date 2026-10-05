@@ -13,7 +13,7 @@ const config = (() => {
   const require = createRequire(import.meta.url);
 
   /* set path */
-  const docsPath = path.resolve(__dirname, '../../../documentation');
+  const docsPath = path.resolve(__dirname, '../documentation');
   const utilitiesPath = path.resolve(__dirname, '../../../utilities');
 
   function getPackageDir(filepath) {
@@ -75,7 +75,7 @@ const config = (() => {
       '@etchteam/storybook-addon-status',
     ],
 
-    staticDirs: ['../../../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
+    staticDirs: ['../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
 
     typescript: {
       check: true,

@@ -15,7 +15,7 @@ export const Button: React.FC<IButtonProps> = ({
   disabled,
   label,
   children,
-  showIcon,
+  iconPlacement,
   icon,
   iconAriaLabel,
   fullWidth = false,
@@ -48,16 +48,16 @@ export const Button: React.FC<IButtonProps> = ({
         `rvo-button--${kind}`,
         size && `rvo-button--size-${size}`,
         fullWidth && 'rvo-button--full-width',
-        showIcon && `rvo-button--icon-${showIcon}`,
+        iconPlacement && `rvo-button--icon-${iconPlacement}`,
         appearance && `rvo-button--${appearance}`,
       )}
       aria-busy={busy}
       disabled={disabled || undefined}
       {...otherProps}
     >
-      {showIcon === 'before' && iconMarkup}
+      {iconPlacement === 'left' && iconMarkup}
       {children || label}
-      {showIcon === 'after' && iconMarkup}
+      {iconPlacement === 'right' && iconMarkup}
     </button>
   );
 };

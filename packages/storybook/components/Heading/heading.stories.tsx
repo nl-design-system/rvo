@@ -16,8 +16,8 @@ export default {
     fontWeightNormal: {
       control: 'boolean',
     },
-    showIcon: {
-      options: ['no', 'before', 'after'],
+    iconPlacement: {
+      options: ['no', 'left', 'right'],
       control: { type: 'select' },
     },
     icon: {
@@ -62,7 +62,7 @@ export const Types: Story = {
 export const HeadingIconBefore: Story = {
   name: 'Heading with Icon Before',
   render: (args) => (
-    <Heading {...args} showIcon="before" icon="home">
+    <Heading {...args} iconPlacement="left" icon="home">
       Heading with Icon before
     </Heading>
   ),
@@ -71,7 +71,7 @@ export const HeadingIconBefore: Story = {
 export const HeadingIconAfter: Story = {
   name: 'Heading with Icon After',
   render: (args) => (
-    <Heading {...args} showIcon="after" icon="home">
+    <Heading {...args} iconPlacement="right" icon="home">
       Heading with Icon after
     </Heading>
   ),

@@ -585,7 +585,7 @@ ${imgImports}
 
 <div className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--none rvo-layout-column rvo-layout-gap--md" style={{maxWidth: "912px", margin: "0 auto"}}>
 
-<Link href="/rvo/docs/figma-sync" showIcon="before" icon="terug" noUnderline>Terug naar overzicht</Link>
+<Link href="/rvo/docs/figma-sync" iconPlacement="left" icon="terug" noUnderline>Terug naar overzicht</Link>
 
 # Figma sync rapport: ${componentName}
 

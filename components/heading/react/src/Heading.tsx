@@ -15,7 +15,7 @@ export const Heading: React.FC<IHeadingProps> = ({
   fontWeightNormal,
   className,
   children,
-  showIcon,
+  iconPlacement,
   icon,
   ...rest
 }: IHeadingProps) => {
@@ -52,13 +52,13 @@ export const Heading: React.FC<IHeadingProps> = ({
       ...rest,
     },
     <>
-      {showIcon === 'before' && icon && (
+      {iconPlacement === 'left' && icon && (
         <div className="rvo-heading__icon">
           <Icon icon={icon} color="lintblauw" size={iconSize} />
         </div>
       )}
       <div className="rvo-heading__content">{children && parseContentMarkup(children)}</div>
-      {showIcon === 'after' && icon && (
+      {iconPlacement === 'right' && icon && (
         <div className="rvo-heading__icon">
           <Icon icon={icon} color="lintblauw" size={iconSize} />
         </div>

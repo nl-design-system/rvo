@@ -5,6 +5,6 @@ export interface IHeadingProps extends React.HTMLAttributes<HTMLHeadingElement> 
   noMargins?: boolean;
   fontWeightNormal?: boolean;
   className?: string;
-  showIcon?: 'before' | 'after';
+  iconPlacement?: 'left' | 'right';
   icon?: IconType;
 }

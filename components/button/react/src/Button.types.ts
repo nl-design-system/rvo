@@ -5,7 +5,7 @@ export interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   size?: 'xs' | 'sm' | 'md';
   label?: string | React.ReactNode;
   disabled?: boolean;
-  showIcon?: 'before' | 'after';
+  iconPlacement?: 'left' | 'right';
   icon?: IconType;
   iconAriaLabel?: string;
   busy?: boolean;

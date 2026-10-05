@@ -38,8 +38,8 @@ export default {
     disabled: {
       control: 'boolean',
     },
-    showIcon: {
-      options: ['no', 'before', 'after'],
+    iconPlacement: {
+      options: ['no', 'left', 'right'],
       control: { type: 'radio' },
     },
     icon: {
@@ -104,8 +104,8 @@ export const Sizes: Story = {
 export const WithIcon: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button {...args} icon="home" showIcon="before" label="Icon Before" />
-      <Button {...args} icon="home" showIcon="after" label="Icon After" />
+      <Button {...args} icon="home" iconPlacement="left" label="Icon Before" />
+      <Button {...args} icon="home" iconPlacement="right" label="Icon After" />
     </div>
   ),
 };
