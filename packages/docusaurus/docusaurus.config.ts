@@ -53,7 +53,7 @@ const config: Config = {
         include: ['**/*.{md,mdx}', '**/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },
-    ]
+    ],
   ],
   presets: [
     [
@@ -114,7 +114,6 @@ const config: Config = {
     ...navigationConfig,
   } satisfies Preset.ThemeConfig,
   future: {
-    experimental_faster: false,
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
     },
