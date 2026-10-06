@@ -8,69 +8,77 @@ import url from 'node:url';
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..', '..');
 
-// Read and parse @use statements from index.scss
-const indexContent = fs.readFileSync('src/index.scss', 'utf-8');
-// const markdownFiles = fs.readdirSync('src/components/');
+const packageJSON = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
-// const useStatementsComponent = [];
-const useStatementsUtil = [];
+const getWorkspaceDependenciesInDirectory = (packageJSON, parentDir) =>
+  Object.entries(packageJSON.dependencies)
+    // Find all dependencies that are in this workspace
+    .filter(([_packageName, version]) => version === 'workspace:*')
+    .map(([packageName, _version]) => ({
+      packageName,
+      resolvedPath: import.meta.resolve(packageName),
+    }))
+    // Find all dependencies that are __a component__ in this workspace
+    .filter(({ resolvedPath }) => resolvedPath.includes(`/${parentDir}/`))
+    // For each npm package, find the name of the directory the package is in.
+    // This will serve as the slug for the component.
+    .map(({ resolvedPath, ...restProperties }) => {
+      let match;
+      let slugMatch;
+      if(parentDir === 'components'){
+        match = /\/([^/]+)\/([^/]+)\/([^/]+)\/dist\/[^\\]+$/i.exec(resolvedPath);
+        slugMatch = match && match[1] === parentDir ? match[2] : null
+      } else {
+        match = /\/([^/]+)\/([^/]+)\/dist\/[^\\]+$/i.exec(resolvedPath)
+        slugMatch = match && match[1] === parentDir ? match[2] : null
+      }      
+      
+      return {
+        ...restProperties,
+        resolvedPath,
+        slug: slugMatch,
+      };
+    })
+    .filter(({ slug }) => slug !== null);
 
-// // Map imported css files
-indexContent
-  .split('\n')
-  .filter((line) => line.trim().startsWith('@use'))
-  .map((line) => {
-    const match = line.match(/@use "([^"]+)"/);
-    return match ? match[1] : null;
-  })
-  .filter((path) => path && !path.includes('node_modules'))
-  .map((componentPath) => {
-    // Convert paths like "../../../components/accordion/src" to just "accordion"
-    const parts = componentPath.split('/');
-
-    // Util CSS
-    if (parts[0].indexOf('utility-') >= 0) {
-      useStatementsUtil.push(parts[0]);
-    }
-
-    if (parts[0] !== '.' && parts[0].indexOf('utility-') < 0) useStatementsComponent.push(parts[0]);
-  });
+const components = getWorkspaceDependenciesInDirectory(packageJSON, 'components');
+const utilities = getWorkspaceDependenciesInDirectory(packageJSON, 'utilities');
 
 // Create individual component configurations
-// const componentBundles = markdownFiles.flatMap((component) => [
-//   {
-//     input: `./src/components/${component.split('.scss')[0]}.scss`,
-//     output: {
-//       file: `dist/components/${component.split('.scss')[0]}.css`,
-//       format: 'es',
-//       sourcemap: true,
-//     },
-//     plugins: [
-//       postcss({
-//         extensions: ['.css', '.scss'],
-//         extract: true,
-//         minimize: false,
-//       }),
-//       filesize(),
-//     ],
-//   },
-//   {
-//     input: `./src/components/${component.split('.scss')[0]}.scss`,
-//     output: {
-//       file: `dist/components/${component.split('.scss')[0]}.min.css`,
-//       format: 'es',
-//       sourcemap: true,
-//     },
-//     plugins: [
-//       postcss({
-//         extensions: ['.css', '.scss'],
-//         extract: true,
-//         minimize: true,
-//       }),
-//       filesize(),
-//     ],
-//   },
-// ]);
+const componentBundles = components.flatMap(({ slug }) => [
+  {
+    input: `${repoRoot}/components/${slug}/style/src/${slug}.scss`,
+    output: {
+      file: `dist/components/${slug}.css`,
+      format: 'es',
+      sourcemap: true,
+    },
+    plugins: [
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: true,
+        minimize: false,
+      }),
+      filesize(),
+    ],
+  },
+  {
+    input: `../../components/${slug}/style/src/${slug}.scss`,
+    output: {
+      file: `dist/components/${slug}.min.css`,
+      format: 'es',
+      sourcemap: true,
+    },
+    plugins: [
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: true,
+        minimize: true,
+      }),
+      filesize(),
+    ],
+  },
+]);
 
 // Main bundle configurations
 const mainBundles = [
@@ -122,11 +130,11 @@ const mainBundles = [
 ];
 
 // Util bundle configuration
-const utilBundle = useStatementsUtil.flatMap((utilitie) => [
+const utilBundle = utilities.flatMap(({ slug }) => [
   {
-    input: `${repoRoot}/utilities/${utilitie}/src/index.scss`,
+    input: `${repoRoot}/utilities/${slug}/src/index.scss`,
     output: {
-      file: `dist/utilities/${utilitie}.css`,
+      file: `dist/utilities/${slug}.css`,
       format: 'es',
       sourcemap: true,
     },
@@ -182,4 +190,4 @@ const baseBundles = [
   },
 ];
 
-export default [...mainBundles, ...utilBundle, ...baseBundles];
+export default [...mainBundles, ...componentBundles, ...utilBundle, ...baseBundles];
