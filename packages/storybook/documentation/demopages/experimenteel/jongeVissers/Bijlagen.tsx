@@ -8,7 +8,7 @@ import {
   Link,
   MaxWidthLayout,
   MenuBar,
-  ProgressTracker
+  ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
@@ -22,9 +22,8 @@ const Bijlagen = () => {
         <MenuBar items={defaultMenuBarItemsJV} size="lg" useIcons={true} iconPlacement="left" maxWidth="md" />
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
-            <ProgressTracker>
-            </ProgressTracker>
-              {/* steps={[
+            <ProgressTracker
+              steps={[
                 { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
                 {
                   state: 'completed',
@@ -78,8 +77,8 @@ const Bijlagen = () => {
                   line: 'straight',
                 },
                 { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              ]} 
-            />*/}
+              ]}
+            />
             <div className="rvo-form">
               <LayoutFlow gap="xl">
                 <div className="rvo-form-intro">
@@ -102,7 +101,7 @@ const Bijlagen = () => {
                   <LayoutFlow gap="md">
                     <Fieldset legend="Financiële capaciteit">
                       <FormField label="Wat stuurt u mee om uw financiële capaciteit aan te tonen?">
-                        <FormField.CheckboxGroup 
+                        <FormField.CheckboxGroup
                           options={[
                             {
                               id: 'fca',
@@ -112,23 +111,29 @@ const Bijlagen = () => {
                           ]}
                         />
                       </FormField>
-                      <FormField label="Bewijs van het eigen vermogen" helperText="Het is mogelijk meerdere bestanden te selecteren">
+                      <FormField
+                        label="Bewijs van het eigen vermogen"
+                        helperText="Het is mogelijk meerdere bestanden te selecteren"
+                      >
                         <FormField.FileInput multiple />
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="Opleiding of werkervaring">
                       <FormField label="Wat stuurt u mee om uw opleiding of werkervaring aan te tonen?">
-                          <FormField.CheckboxGroup 
-                            options={[
-                              {
-                                id: 'wea',
-                                label: 'Bewijs van de opleiding',
-                              },
-                              { id: 'web', label: 'Bewijs dat u vijf jaar werkervaring heeft' },
-                            ]}
-                          />
+                        <FormField.CheckboxGroup
+                          options={[
+                            {
+                              id: 'wea',
+                              label: 'Bewijs van de opleiding',
+                            },
+                            { id: 'web', label: 'Bewijs dat u vijf jaar werkervaring heeft' },
+                          ]}
+                        />
                       </FormField>
-                      <FormField label="Bewijs dat u vijf jaar werkervaring heeft" helperText="Het is mogelijk meerdere bestanden te selecteren">
+                      <FormField
+                        label="Bewijs dat u vijf jaar werkervaring heeft"
+                        helperText="Het is mogelijk meerdere bestanden te selecteren"
+                      >
                         <FormField.FileInput multiple />
                       </FormField>
                     </Fieldset>
@@ -139,8 +144,8 @@ const Bijlagen = () => {
                     </Fieldset>
                     <Fieldset legend="Marktwaarde vissersvaartuig">
                       <FormField label="Wat stuurt u mee om de marktwaarde van het visservaartuig aan te tonen?">
-                        <FormField.RadioButtonGroup 
-                          name='vv'
+                        <FormField.RadioButtonGroup
+                          name="vv"
                           options={[
                             {
                               id: 'mwa',
@@ -155,15 +160,18 @@ const Bijlagen = () => {
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="Bewijs andere subsidies">
-                    <FormField 
-                      label="U stuurt de beslissing mee van deze andere subsidies" 
-                      helperText="Heeft u nog geen beslissing ontvangen? Stuur dan een kopie van de aanvraag mee. Het is mogelijk meerdere bestanden te selecteren."
-                    >
+                      <FormField
+                        label="U stuurt de beslissing mee van deze andere subsidies"
+                        helperText="Heeft u nog geen beslissing ontvangen? Stuur dan een kopie van de aanvraag mee. Het is mogelijk meerdere bestanden te selecteren."
+                      >
                         <FormField.FileInput multiple />
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="Niet verplichte bijlagen">
-                      <FormField label="Voeg hier de overige (niet verplichte) bijlagen toe" helperText="Het is mogelijk meerdere bestanden te selecteren">
+                      <FormField
+                        label="Voeg hier de overige (niet verplichte) bijlagen toe"
+                        helperText="Het is mogelijk meerdere bestanden te selecteren"
+                      >
                         <FormField.FileInput multiple />
                       </FormField>
                     </Fieldset>

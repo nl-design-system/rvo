@@ -23,68 +23,68 @@ const Kosten = () => {
         <MaxWidthLayout size="lg">
           <main className="rvo-progress-tracker-active">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Controleer uw gegevens',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Correspondentie',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Datum verleningsverzoek',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
-              //     label: 'Project vragen',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Kosten',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Bijlagen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Samenvatting',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Controleer uw gegevens',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Correspondentie',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Datum verleningsverzoek',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
+                  label: 'Project vragen',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Kosten',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Bijlagen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Samenvatting',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <div className="rvo-form">
               <LayoutFlow gap="xl">

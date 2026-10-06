@@ -7,7 +7,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  ProgressTracker
+  ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -72,68 +72,68 @@ const Zaakgegevens = () => {
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Startpagina',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw gegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw onderneming',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Zaakgegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Kosten',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Startpagina',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw gegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw onderneming',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Zaakgegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Kosten',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Uitvoerder coaching traject',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Maatschappelijk verantwoord ondernemen',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                {
+                  state: 'incomplete',
+                  label: 'Uitvoerder coaching traject',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Maatschappelijk verantwoord ondernemen',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <LayoutFlow gap="xl">
               <div>
@@ -158,30 +158,24 @@ const Zaakgegevens = () => {
                 <FormField label="Geef uw aanvraag een toepasselijke zaaknaam">
                   <FormField.Text />
                 </FormField>
-                <FormField 
-                  label="Startdatum (van)" 
-                  helperText="Geef hier de begindatum van uw coachingstraject op."
-                >
+                <FormField label="Startdatum (van)" helperText="Geef hier de begindatum van uw coachingstraject op.">
                   <FormField.Date />
                 </FormField>
-                <FormField 
-                  label="Einddatum (t/m)" 
-                  helperText="Geef hier de einddatum van uw coachingstraject op."
-                >
+                <FormField label="Einddatum (t/m)" helperText="Geef hier de einddatum van uw coachingstraject op.">
                   <FormField.Date />
                 </FormField>
-                <FormField 
-                  label="Voor export naar welk land wilt u coaching ontvangen?" 
+                <FormField
+                  label="Voor export naar welk land wilt u coaching ontvangen?"
                   helperText="U kunt hier één land noemen, niet Nederland. Als u meerderde doellanden heeft, maakt u dan een keuze."
                 >
                   <FormField.Text />
                 </FormField>
-                <FormField 
+                <FormField
                   label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
                   helperText="U kunt maximaal € 6.500 SIB subsidie per kalenderjaar ontvangen. Dit betekent dat u in één kalenderjaar verschillende onderdelen van SIB mag aanvragen en de subsidie kunt stapelen tot dit maximum bedrag. Zie voor de voorwaarden en subsidiebedragen <a href='#' class='rvo-link rvo-link--donkerblauw'>Support International Business (SIB) (rvo.nl)</a>"
-                  expandableHelperText={{title: "Meer uitleg", children: ""}}
+                  expandableHelperText={{ title: 'Meer uitleg', children: '' }}
                 >
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="bedrag"
                     options={[
                       { id: 'bedrag A', label: 'Ja' },
@@ -190,11 +184,11 @@ const Zaakgegevens = () => {
                   />
                 </FormField>
                 <FormField label="Welke kansen ziet u in dit land?">
-                    <FormField.TextArea />
+                  <FormField.TextArea />
                 </FormField>
 
                 <FormField label="Bent u al actief in dit doelland?">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="actief"
                     options={[
                       { id: 'actief A', label: 'Ja' },
@@ -202,11 +196,11 @@ const Zaakgegevens = () => {
                     ]}
                   />
                 </FormField>
-                <FormField 
+                <FormField
                   label="Gaat u exporteren met een eigen product of dienst?"
                   helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst."
                 >
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="export"
                     options={[
                       { id: 'export A', label: 'Ja' },
@@ -215,7 +209,7 @@ const Zaakgegevens = () => {
                   />
                 </FormField>
                 <FormField label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="capaciteit"
                     options={[
                       { id: 'capaciteit A', label: 'Ja' },
@@ -224,7 +218,7 @@ const Zaakgegevens = () => {
                   />
                 </FormField>
                 <FormField label="Bent u met uw product of dienst al actief op de Nederlandse markt?">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="nlmarkt"
                     options={[
                       { id: 'nlmarkt A', label: 'Ja' },

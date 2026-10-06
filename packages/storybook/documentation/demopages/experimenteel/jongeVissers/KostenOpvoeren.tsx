@@ -7,7 +7,7 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
@@ -22,75 +22,75 @@ const KostenOpvoeren = () => {
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Controleer uw gegevens',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Correspondentie',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Datum verleningsverzoek',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Project vragen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Kosten',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
-              //     size: 'md',
-              //     line: 'substep-start',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Kosten opvoeren',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten opvoeren"),
-              //     size: 'sm',
-              //     line: 'substep-end',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Bijlagen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Controleer uw gegevens',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Correspondentie',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Datum verleningsverzoek',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Project vragen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Kosten',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
+                  size: 'md',
+                  line: 'substep-start',
+                },
+                {
+                  state: 'doing',
+                  label: 'Kosten opvoeren',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten opvoeren"),
+                  size: 'sm',
+                  line: 'substep-end',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Bijlagen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Samenvatting',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                {
+                  state: 'incomplete',
+                  label: 'Samenvatting',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <div className="rvo-form">
               <LayoutFlow gap="xl">
@@ -107,12 +107,12 @@ const KostenOpvoeren = () => {
                   <LayoutFlow gap="md">
                     <Fieldset legend="">
                       <FormField label="Hoeveel kost het vissersvaartuig (exclusief btw)?">
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="">
                       <FormField label="Wordt u volledig of gedeeltelijk eigenaar van het vissersvaartuig?">
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="vv-eigenaar"
                           options={[
                             {
@@ -128,9 +128,9 @@ const KostenOpvoeren = () => {
                       <FormField
                         label="Wat zijn de kosten waarvoor u subsidie wilt aanvragen?"
                         helperText="Uitgebreide uitleg over de subsidie."
-                        expandableHelperText={{title: "Meer informatie", children: ""}}
+                        expandableHelperText={{ title: 'Meer informatie', children: '' }}
                       >
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                     </Fieldset>
 

@@ -3,6 +3,7 @@ import { ILinkProps } from '@nl-rvo/react-link';
 
 export interface IProgressTrackerProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: ReactNode | undefined;
+  steps?: IProgressTrackerStepProps[];
 }
 
 export interface IProgressTrackerStepProps {

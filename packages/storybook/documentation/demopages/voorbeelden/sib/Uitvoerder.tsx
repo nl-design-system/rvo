@@ -7,7 +7,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  ProgressTracker
+  ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -72,68 +72,68 @@ const Uitvoerder = () => {
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Startpagina',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw gegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw onderneming',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Zaakgegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Kosten',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Startpagina',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw gegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw onderneming',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Zaakgegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Kosten',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'doing',
-              //     label: 'Uitvoerder coaching traject',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Maatschappelijk verantwoord ondernemen',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                {
+                  state: 'doing',
+                  label: 'Uitvoerder coaching traject',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Maatschappelijk verantwoord ondernemen',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <LayoutFlow gap="xl">
               <div>
@@ -154,7 +154,7 @@ const Uitvoerder = () => {
               </div>
               <Fieldset legend="">
                 <FormField label="Uitvoerder coachingtraject">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="uitvoerder"
                     options={[
                       { id: 'uitvoerderA', label: 'Albert Heijn' },
@@ -227,8 +227,8 @@ const Uitvoerder = () => {
                     het doelland.
                   </li>
                 </ul>
-                <FormField 
-                  label='CV bestand coach'
+                <FormField
+                  label="CV bestand coach"
                   warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
                 >
                   <FormField.FileInput />

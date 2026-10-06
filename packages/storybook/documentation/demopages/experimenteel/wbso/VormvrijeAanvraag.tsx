@@ -9,10 +9,11 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../../common/style.scss';
+import { linkTo } from '@storybook/addon-links';
 
 const VormvrijeAanvraag = () => {
   return (
@@ -22,33 +23,33 @@ const VormvrijeAanvraag = () => {
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
           <ProgressTracker
-            // steps={[
-            //   { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
-            //   {
-            //     state: 'completed',
-            //     label: 'Voordat u start',
-            //     onClick: linkTo("Demo pagina's/WBSO/Voordat u start"),
-            //     size: 'md',
-            //     line: 'straight',
-            //   },
-            //   {
-            //     state: 'doing',
-            //     label: 'Vormvrije aanvraag',
-            //     onClick: linkTo("Demo pagina's/WBSO/Vormvrije aanvraag"),
-            //     size: 'md',
-            //     line: 'straight',
-            //   },
-            //   {
-            //     state: 'incomplete',
-            //     label: 'Aanvrager',
-            //     onClick: linkTo("Demo pagina's/WBSO/Aanvrager"),
-            //     size: 'md',
-            //     line: 'straight',
-            //   },
-            //   { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
-            //   { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
-            //   { state: 'end', label: 'Aanvraag ingediend', link: '#', size: 'md', line: 'none' },
-            // ]}
+            steps={[
+              { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'completed',
+                label: 'Voordat u start',
+                onClick: linkTo("Demo pagina's/WBSO/Voordat u start"),
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'doing',
+                label: 'Vormvrije aanvraag',
+                onClick: linkTo("Demo pagina's/WBSO/Vormvrije aanvraag"),
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'incomplete',
+                label: 'Aanvrager',
+                onClick: linkTo("Demo pagina's/WBSO/Aanvrager"),
+                size: 'md',
+                line: 'straight',
+              },
+              { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
+              { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
+              { state: 'end', label: 'Aanvraag ingediend', link: '#', size: 'md', line: 'none' },
+            ]}
           />
           <div className="rvo-form">
             <LayoutFlow gap="md">
@@ -66,7 +67,7 @@ const VormvrijeAanvraag = () => {
                         label="Wilt u een vormvrije aanvraag indienen?"
                         helperText="Heeft u geen tijd om een volledige WBSO-aanvraag in te dienen? Dien dan een vormvrije aanvraag in. U vult een paar basisgegevens in en vult uw aanvraag later aan."
                       >
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="radio-buttons"
                           options={[
                             { id: 'vva', label: 'Ja' },

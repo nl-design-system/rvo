@@ -7,7 +7,7 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -72,68 +72,68 @@ const UwOnderneming = () => {
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Startpagina',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw gegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Uw onderneming',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Zaakgegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Kosten',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Startpagina',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw gegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Uw onderneming',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Zaakgegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Kosten',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Uitvoerder coaching traject',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Maatschappelijk verantwoord ondernemen',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                {
+                  state: 'incomplete',
+                  label: 'Uitvoerder coaching traject',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Maatschappelijk verantwoord ondernemen',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <LayoutFlow gap="xl">
               <div>
@@ -154,7 +154,7 @@ const UwOnderneming = () => {
               </div>
               <Fieldset legend="">
                 <FormField label="Is voor uw organisatie een verzoek tot surseance van betaling, tot faillissement, of tot het van toepassing verklaren van de schuldsaneringsregeling ingediend?">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="schuld"
                     options={[
                       { id: 'schuldA', label: 'Ja' },
@@ -163,7 +163,7 @@ const UwOnderneming = () => {
                   />
                 </FormField>
                 <FormField label="Is uw organisatie een mkb-onderneming?">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="mkb"
                     options={[
                       { id: 'mkb A', label: 'Ja' },
@@ -172,7 +172,7 @@ const UwOnderneming = () => {
                   />
                 </FormField>
                 <FormField label="U beschikt over financiële middelen, potentie en ambitie om structureel internationaal actief te worden en verdere stappen te kunnen nemen. Klopt dit? *">
-                  <FormField.RadioButtonGroup 
+                  <FormField.RadioButtonGroup
                     name="middelen"
                     options={[
                       { id: 'middelen A', label: 'Ja' },
@@ -182,13 +182,16 @@ const UwOnderneming = () => {
                 </FormField>
 
                 <FormField label="Hoeveel medewerkers heeft uw onderneming?">
-                  <FormField.Text size="sm" validation='none' />
+                  <FormField.Text size="sm" validation="none" />
                 </FormField>
                 <FormField label="Wat is de website van uw organisatie?">
                   <FormField.Text />
                 </FormField>
-                <FormField label="SBI-code" helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>">
-                  <FormField.Text size="sm" validation='none' />
+                <FormField
+                  label="SBI-code"
+                  helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
+                >
+                  <FormField.Text size="sm" validation="none" />
                 </FormField>
               </Fieldset>
               <ActionGroup>

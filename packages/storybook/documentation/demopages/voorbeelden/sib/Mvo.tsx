@@ -73,68 +73,68 @@ const Mvo = () => {
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Startpagina',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw gegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Uw onderneming',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Zaakgegevens',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Kosten',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'SIB 2024: Coaching', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Startpagina',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw gegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-gegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Uw onderneming',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uw-onderneming--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Zaakgegevens',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-zaakgegevens--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Kosten',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-kosten--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'completed',
-              //     label: 'Uitvoerder coaching traject',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Maatschappelijk verantwoord ondernemen',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                {
+                  state: 'completed',
+                  label: 'Uitvoerder coaching traject',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-uitvoerder--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Maatschappelijk verantwoord ondernemen',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-ondertekening--default&viewMode=story',
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <LayoutFlow gap="xl">
               <div>
@@ -170,11 +170,11 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField 
-                  label='Bent u actief op het gebied van duurzaamheid?'
+                <FormField
+                  label="Bent u actief op het gebied van duurzaamheid?"
                   helperText="Kies één of meerdere van de onderstaande antwoorden"
                 >
-                  <FormField.CheckboxGroup 
+                  <FormField.CheckboxGroup
                     options={[
                       {
                         id: 'optionA-cb',
@@ -186,7 +186,7 @@ const Mvo = () => {
                     ]}
                   />
                 </FormField>
-                <FormField label='Kunt u deze geselecteerde activiteiten (of anders) toelichten?'>
+                <FormField label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?">
                   <FormField.TextArea />
                 </FormField>
               </Fieldset>
@@ -213,10 +213,10 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField label='Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? '>
+                <FormField label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? ">
                   <FormField.TextArea />
                 </FormField>
-                <FormField label='Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?'>
+                <FormField label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?">
                   <FormField.TextArea />
                 </FormField>
               </Fieldset>
@@ -239,10 +239,8 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField id="verklaring" label=''>
-                  <FormField.Checkbox 
-                    label='Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO).'
-                  />
+                <FormField id="verklaring" label="">
+                  <FormField.Checkbox label="Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO)." />
                 </FormField>
               </Fieldset>
               <ActionGroup>

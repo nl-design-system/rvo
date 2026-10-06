@@ -7,7 +7,7 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { linkTo } from '@storybook/addon-links';
 import { defaultMenuBarItemsJV } from './defaultMenuBarItemsJV';
@@ -22,74 +22,74 @@ const Project = () => {
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Controleer uw gegevens',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Correspondentie',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Datum verleningsverzoek',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
+              steps={[
+                { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Controleer uw gegevens',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Correspondentie',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Datum verleningsverzoek',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
 
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Project vragen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Project vragen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
 
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Kosten',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Kosten',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
 
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Bijlagen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Bijlagen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
 
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Samenvatting',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
+                {
+                  state: 'incomplete',
+                  label: 'Samenvatting',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
 
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'incomplete',
-              //     label: 'Ondertekening',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'incomplete',
+                  label: 'Ondertekening',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
 
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <div className="rvo-form">
               <LayoutFlow gap="xl">
@@ -106,7 +106,7 @@ const Project = () => {
 
                     <Fieldset legend="">
                       <FormField label="Heeft u een vissersvaartuig in bezit of in bezit gehad?">
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="vv"
                           options={[
                             {
@@ -118,7 +118,7 @@ const Project = () => {
                         />
                       </FormField>
                       <FormField label="Waar gaat u het aan te schaffen visservaartuig voor gebruiken?">
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="vvg"
                           options={[
                             {
@@ -130,7 +130,7 @@ const Project = () => {
                         />
                       </FormField>
                       <FormField label="Voor welke vorm van visserij is het vissersvaartuig uitgerust?">
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="vvu"
                           options={[
                             {
@@ -145,19 +145,19 @@ const Project = () => {
                     </Fieldset>
                     <Fieldset legend="">
                       <FormField label="Heeft het vaartuig dat u aanschaft een nummer in het EU-vlootregister (een EU-identificatienummer)?">
-                          <FormField.RadioButtonGroup
-                            name="vveu"
-                            options={[
-                              {
-                                id: 'vveua',
-                                label: 'Ja',
-                              },
-                              { id: 'vveub', label: 'Nee' },
-                            ]}
-                          />
+                        <FormField.RadioButtonGroup
+                          name="vveu"
+                          options={[
+                            {
+                              id: 'vveua',
+                              label: 'Ja',
+                            },
+                            { id: 'vveub', label: 'Nee' },
+                          ]}
+                        />
                       </FormField>
                       <FormField label="Wat is dit EU-identificatienummer?">
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                       <FormField label="In welk land is het vaartuig dat u aanschaft geregistreerd in het EU-vlootregister?">
                         <FormField.Text />
@@ -165,16 +165,16 @@ const Project = () => {
                     </Fieldset>
                     <Fieldset legend="">
                       <FormField label="Hoeveel personen (in fte per jaar) verwacht u dat er op het visservaartuig komen werken, met uzelf erbij?">
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                       <FormField label="Hoeveel personen (in fte per jaar) verwacht u hebben niet eerder gewerkt in de visserij of maritieme sector?">
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                     </Fieldset>
 
                     <Fieldset legend="">
                       <FormField label="Gaat u met het publiek communiceren over uw investering (bijvoorbeeld via een brochure, flyer of persbericht)?">
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="com"
                           options={[
                             {

@@ -7,11 +7,14 @@ import React from 'react';
 import { IProgressTrackerProps } from './ProgressTracker.types';
 import ProgressTrackerStep from './ProgressTrackerStep';
 
-export const ProgressTracker: React.FC<IProgressTrackerProps> = ({ children, ...rootElementProps }) => {
+export const ProgressTracker: React.FC<IProgressTrackerProps> = ({ children, steps, ...rootElementProps }) => {
   return (
     <div className="rvo-progress-tracker" {...rootElementProps}>
-      {children &&
-        React.Children.map(children, (child, index) => <ProgressTrackerStep key={index} {...(child as any).props} />)}
+      {(children &&
+        React.Children.map(children, (child, index) => (
+          <ProgressTrackerStep key={index} {...(child as any).props} />
+        ))) ||
+        (steps && steps.map((stepProps, index) => <ProgressTrackerStep key={index} {...stepProps} />))}
     </div>
   );
 };

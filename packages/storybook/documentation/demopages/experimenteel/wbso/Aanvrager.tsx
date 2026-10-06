@@ -9,10 +9,11 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { defaultMenuBarItems } from '../../common/defaultMenuBarItems';
 import '../../common/style.scss';
+import { linkTo } from '@storybook/addon-links';
 
 const Aanvrager = () => {
   return (
@@ -22,33 +23,33 @@ const Aanvrager = () => {
       <MaxWidthLayout size="md">
         <main className="rvo-progress-tracker-active">
           <ProgressTracker
-            // steps={[
-            //   { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
-            //   {
-            //     state: 'completed',
-            //     label: 'Voordat u start',
-            //     onClick: linkTo("Demo pagina's/WBSO/Voordat u start"),
-            //     size: 'md',
-            //     line: 'straight',
-            //   },
-            //   {
-            //     state: 'completed',
-            //     label: 'Vormvrije aanvraag',
-            //     onClick: linkTo("Demo pagina's/WBSO/Vormvrije aanvraag"),
-            //     size: 'md',
-            //     line: 'straight',
-            //   },
-            //   {
-            //     state: 'doing',
-            //     label: 'Aanvrager',
-            //     onClick: linkTo("Demo pagina's/WBSO/Aanvrager"),
-            //     size: 'md',
-            //     line: 'straight',
-            //   },
-            //   { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
-            //   { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
-            //   { state: 'end', label: 'Aanvraag ingediend', link: '#', size: 'md', line: 'none' },
-            // ]}
+            steps={[
+              { state: 'start', label: 'Aanvraag WBSO', link: '#', size: 'md', line: 'straight' },
+              {
+                state: 'completed',
+                label: 'Voordat u start',
+                onClick: linkTo("Demo pagina's/WBSO/Voordat u start"),
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'completed',
+                label: 'Vormvrije aanvraag',
+                onClick: linkTo("Demo pagina's/WBSO/Vormvrije aanvraag"),
+                size: 'md',
+                line: 'straight',
+              },
+              {
+                state: 'doing',
+                label: 'Aanvrager',
+                onClick: linkTo("Demo pagina's/WBSO/Aanvrager"),
+                size: 'md',
+                line: 'straight',
+              },
+              { state: 'incomplete', label: 'Projecten', link: '#', size: 'md', line: 'straight' },
+              { state: 'incomplete', label: 'S&O uren', link: '#', size: 'md', line: 'straight' },
+              { state: 'end', label: 'Aanvraag ingediend', link: '#', size: 'md', line: 'none' },
+            ]}
           />
           <div className="rvo-form">
             <LayoutFlow gap="md">
@@ -83,8 +84,8 @@ const Aanvrager = () => {
                   <LayoutFlow row={false} gap="md">
                     <Fieldset legend="Contactpersoon">
                       <FormField label="Contactpersoon">
-                        <FormField.Select 
-                           options={[
+                        <FormField.Select
+                          options={[
                             { value: '1', label: 'Contactpersoon 1' },
                             { value: '2', label: 'Contactpersoon 2' },
                             { value: '3', label: 'Contactpersoon 3' },
@@ -98,7 +99,7 @@ const Aanvrager = () => {
                         helperText="Bent u geen ondernemer in de zin van de Wet IB (Inkomstenbelasting 2001) of Wet VpB
                           (Vennootschapsbelasting 1969), dan kunt u geen WBSO aanvragen. U kunt ook geen WBSO aanvragen
                           indienen als u een publieke kennisinstelling bent (zie artikel 1, onderdeel m van de WVA)."
-                        expandableHelperText={{title: "Meer uitleg", children: ""}}
+                        expandableHelperText={{ title: 'Meer uitleg', children: '' }}
                       >
                         <FormField.RadioButtonGroup
                           name="radio-buttons"
@@ -111,18 +112,18 @@ const Aanvrager = () => {
                     </Fieldset>
                     <Fieldset legend="Gegevens aanvrager in aanvraagperiode">
                       <FormField label="Prognose totaal aantal werknemers">
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                       <FormField label="(Waarvan) eigen S&O-werknemers">
-                        <FormField.Text validation='currency' />
+                        <FormField.Text validation="currency" />
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="S&O-uurloon">
-                      <FormField 
+                      <FormField
                         label="Heeft u in 2020 S&O-werkzaamheden verricht waarvoor u een S&O-verklaring heeft ontvangen?"
                         warningText="Voor u geldt in 2022 een forfaitar uurloon van €29."
                       >
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="radio-buttons"
                           options={[
                             { id: 'so', label: 'Ja' },
@@ -132,7 +133,7 @@ const Aanvrager = () => {
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="Technologiegebied">
-                      <FormField 
+                      <FormField
                         label="Technologiegebied"
                         helperText={
                           <dl>
@@ -140,18 +141,14 @@ const Aanvrager = () => {
                             <dd>geowetenschappen | meteorologie | klimaatonderzoek | water & ecologie onderzoek</dd>
                           </dl>
                         }
-                        expandableHelperText={{title: "Uitleg over technologiegebieden", children: ""}}
+                        expandableHelperText={{ title: 'Uitleg over technologiegebieden', children: '' }}
                       >
-                        <FormField.Select 
-                          options={[{ value: '1', label: 'aard- en milieuwetenschappen' }]}
-                        />
+                        <FormField.Select options={[{ value: '1', label: 'aard- en milieuwetenschappen' }]} />
                       </FormField>
                     </Fieldset>
                     <Fieldset legend="Periode aanvraag">
-                      <FormField label='Maand aanvand'>
-                        <FormField.Select 
-                          options={[{ value: '1', label: 'Januari' }]}
-                        />
+                      <FormField label="Maand aanvand">
+                        <FormField.Select options={[{ value: '1', label: 'Januari' }]} />
                       </FormField>
                     </Fieldset>
                   </LayoutFlow>

@@ -22,67 +22,67 @@ const Ondertekening = () => {
         <MaxWidthLayout size="md">
           <main className="rvo-progress-tracker-active">
             <ProgressTracker
-              // steps={[
-              //   { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
-              //   {
-              //     state: 'completed',
-              //     label: 'Controleer uw gegevens',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Correspondentie',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Datum verleningsverzoek',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Project vragen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Kosten',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Bijlagen',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'completed',
-              //     label: 'Samenvatting',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
-              //   {
-              //     state: 'doing',
-              //     label: 'Ondertekening',
-              //     onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
-              //     size: 'md',
-              //     line: 'straight',
-              //   },
+              steps={[
+                { state: 'start', label: 'JV 2020', link: '#', size: 'md', line: 'straight' },
+                {
+                  state: 'completed',
+                  label: 'Controleer uw gegevens',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Controleer uw gegevens"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Correspondentie',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Correspondentie"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Datum verleningsverzoek',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Datum"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Project vragen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Project"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Kosten',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Kosten"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Bijlagen',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Bijlagen"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'completed',
+                  label: 'Samenvatting',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Samenvatting"),
+                  size: 'md',
+                  line: 'straight',
+                },
+                {
+                  state: 'doing',
+                  label: 'Ondertekening',
+                  onClick: linkTo("Demo pagina's/Jonge Vissers/Ondertekening"),
+                  size: 'md',
+                  line: 'straight',
+                },
 
-              //   { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
-              // ]}
+                { state: 'end', label: 'Bevestiging', link: '#', size: 'md', line: 'none' },
+              ]}
             />
             <div className="rvo-form">
               <LayoutFlow gap="xl">
@@ -92,12 +92,12 @@ const Ondertekening = () => {
                 <form>
                   <LayoutFlow gap="md">
                     <Fieldset legend="Overtreding en fraude">
-                      <FormField 
-                        label="Zijn er één of meerdere overtredingen bij u vastgesteld?" 
-                        helperText="Uitgebreide informatie over overtredingen." 
-                        expandableHelperText={{title: "Meer informatie", children: ""}}
+                      <FormField
+                        label="Zijn er één of meerdere overtredingen bij u vastgesteld?"
+                        helperText="Uitgebreide informatie over overtredingen."
+                        expandableHelperText={{ title: 'Meer informatie', children: '' }}
                       >
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="radio-buttons"
                           options={[
                             { id: 'overa', label: 'Ja' },
@@ -105,12 +105,12 @@ const Ondertekening = () => {
                           ]}
                         />
                       </FormField>
-                      <FormField 
-                        label="Is er fraude bij u vastgesteld?" 
-                        helperText="Uitgebreide informatie over fraude." 
-                        expandableHelperText={{title: "Meer informatie", children: ""}}
+                      <FormField
+                        label="Is er fraude bij u vastgesteld?"
+                        helperText="Uitgebreide informatie over fraude."
+                        expandableHelperText={{ title: 'Meer informatie', children: '' }}
                       >
-                        <FormField.RadioButtonGroup 
+                        <FormField.RadioButtonGroup
                           name="radio-buttons"
                           options={[
                             { id: 'fraua', label: 'Ja' },
