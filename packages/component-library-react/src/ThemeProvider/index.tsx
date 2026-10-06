@@ -1,5 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
 import './index.css';
+import '@nl-rvo/design-tokens/dist/index.css';
+import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/component-library-css/dist/utilities/utility-background.css';
 import '@nl-rvo/component-library-css/dist/utilities/utility-border.css';
 import '@nl-rvo/component-library-css/dist/utilities/utility-margin.css';

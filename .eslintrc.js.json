@@ -95,15 +95,6 @@
     "prefer-regex-literals": "error",
     "radix": "error",
     "require-yield": "error",
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": true,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false,
-        "allowSeparatedGroups": false
-      }
-    ],
     "use-isnan": "error",
     "valid-typeof": "error",
     "vars-on-top": "off",

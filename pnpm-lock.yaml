@@ -1127,6 +1127,12 @@ importers:
 
   packages/component-library-react:
     dependencies:
+      '@nl-rvo/assets':
+        specifier: workspace:*
+        version: link:../../proprietary/assets
+      '@nl-rvo/design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/design-tokens
       '@nl-rvo/react-accordion':
         specifier: workspace:*
         version: link:../../components/accordion/react
@@ -1314,9 +1320,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.6
         version: 7.28.6
-      '@nl-rvo/design-tokens':
-        specifier: workspace:*
-        version: link:../../proprietary/design-tokens
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.28.5(supports-color@9.4.0))(@types/babel__core@7.20.5)(rollup@4.28.0)(supports-color@9.4.0)
