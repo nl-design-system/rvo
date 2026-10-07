@@ -57,7 +57,7 @@ export default {
       type: 'PRODUCTION',
     },
     docusaurus: {
-      link: 'form-fileinput',
+      link: 'form-file-input',
     },
     design: {
       type: 'figma',
