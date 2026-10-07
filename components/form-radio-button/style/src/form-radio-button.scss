@@ -5,13 +5,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "~@utrecht/radio-button-css/dist/index.css";
+@import "@utrecht/radio-button-css/dist/index.css";
 
 .rvo-radio-button {
+  align-items: center;
   display: flex;
   flex-direction: row;
   gap: var(--rvo-space-sm);
-  align-items: center;
 }
 
 // Overrides
@@ -35,20 +35,21 @@
   background: none;
   border-color: var(--utrecht-radio-button-disabled-border-color);
 
-  +.rvo-radio-button__label {
+  + .rvo-radio-button__label {
     color: var(--rvo-radio-button-label-disabled-color);
   }
 }
 
-.utrecht-radio-button:not( :disabled,
+.utrecht-radio-button:not(
+  :disabled,
   [aria-disabled="true"],
   .utrecht-radio-button--disabled,
-  .utrecht-radio-button--invalid) {
-
+  .utrecht-radio-button--invalid
+) {
   // Hover state
   &.utrecht-radio-button:hover,
   &.rvo-radio-button--hover,
-  +.rvo-radio-button__label:hover {
+  + .rvo-radio-button__label:hover {
     border-color: var(--rvo-radio-button-hover-border-color);
   }
 

@@ -21,7 +21,7 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-fileinput.css",
+    ".": "./dist/form-file-input.css",
     "./dist/*": "./dist/*"
   },
   "publishConfig": {
