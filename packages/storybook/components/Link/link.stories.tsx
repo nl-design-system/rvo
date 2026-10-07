@@ -1,6 +1,6 @@
 import { Link } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { iconColors, iconOptions } from '@nl-rvo/component-library-react/';
+import { iconColors, iconNames as iconOptions } from '@nl-rvo/component-library-react';
 
 export default {
   title: 'Componenten/Link',
