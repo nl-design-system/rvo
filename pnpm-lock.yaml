@@ -1097,7 +1097,7 @@ importers:
         version: 2.1.0
       parcel:
         specifier: 2.13.3
-        version: 2.13.3(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
+        version: 2.13.3(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
       resolve-url-loader:
         specifier: 5.0.0
         version: 5.0.0
@@ -4269,6 +4269,8 @@ packages:
   '@parcel/node-resolver-core@3.4.3':
     resolution: {integrity: sha512-IEnMks49egEic1ITBp59VQyHzkSQUXqpU9hOHwqN3KoSTdZ6rEgrXcS3pa6tdXay4NYGlcZ88kFCE8i/xYoVCg==}
     engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': '*'
 
   '@parcel/optimizer-css@2.13.3':
     resolution: {integrity: sha512-A8o9IVCv919vhv69SkLmyW2WjJR5WZgcMqV6L1uiGF8i8z18myrMhrp2JuSHx29PRT9uNyzNC4Xrd4StYjIhJg==}
@@ -4345,6 +4347,8 @@ packages:
   '@parcel/resolver-default@2.13.3':
     resolution: {integrity: sha512-urBZuRALWT9pFMeWQ8JirchLmsQEyI9lrJptiwLbJWrwvmlwSUGkcstmPwoNRf/aAQjICB7ser/247Vny0pFxA==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+    peerDependencies:
+      '@parcel/core': '*'
 
   '@parcel/runtime-browser-hmr@2.13.3':
     resolution: {integrity: sha512-EAcPojQFUNUGUrDk66cu3ySPO0NXRVS5CKPd4QrxPCVVbGzde4koKu8krC/TaGsoyUqhie8HMnS70qBP0GFfcQ==}
@@ -5296,72 +5300,86 @@ packages:
   '@swc/helpers@0.5.17':
     resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
 
-  '@swc/html-darwin-arm64@1.15.3':
-    resolution: {integrity: sha512-IIVuFRTr1exOX29lZ3RApa+5RYWSJir65eWKOM5OhqpBWlzdYVnbHaObrBCOYrIBL+BXGYySnbp72b79NggXDg==}
+  '@swc/html-darwin-arm64@1.16.13':
+    resolution: {integrity: sha512-ah+W37P6vvbR3778r1f2ES4UJ3VUeHF1OMyCMsMUsxScHfjusP2xTK1ND1NTFLE5/uqZvniFZ0FTKezmasw5mw==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@swc/html-darwin-x64@1.15.3':
-    resolution: {integrity: sha512-gW1fu0etuFLQ23i5fm2XDc4xjOMXm0wi+EjezFzYooAvSyC5On0KCveTIxeXNnYKk2Q85IOC03PTjmVwkVKqeg==}
+  '@swc/html-darwin-x64@1.16.13':
+    resolution: {integrity: sha512-vnWXBHUuvEUt+SUXjWP059RXJNxrTESuhjWSN7DHVGzekCWGftdayzz08/iouVDwVP1xpc+KjnONcF1JDjiieg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
 
-  '@swc/html-linux-arm-gnueabihf@1.15.3':
-    resolution: {integrity: sha512-JztA9n1zMM3kJKp99U2rRnXUfzTeETEgyeu+VArtaG0KXoP08tUVMC5QYCYOBW4vTBbs5SiLN+FCzB65y7UKLQ==}
+  '@swc/html-linux-arm-gnueabihf@1.16.13':
+    resolution: {integrity: sha512-AeJETHDNjpQ/h0H3eenCvUXmSeix5DFKAdqVPQqOYjL6HSNZ3dJTjz/sr8aKIJLznYs5Cc/jRTc0KxvjjwqSAQ==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
 
-  '@swc/html-linux-arm64-gnu@1.15.3':
-    resolution: {integrity: sha512-9dikO1z0IdfiB+gYXEReeUvurao7pruAVUB+lvn0824IoGFutUinLUnRJPqCDMT4f70J8xBZkHC4QIfO0N1lZQ==}
+  '@swc/html-linux-arm64-gnu@1.16.13':
+    resolution: {integrity: sha512-N0rho3bbFSva00yZQTfsmzOQFZEu+QP27O4Z4dSKi1Ix2tn2LH3xh/osMymXvC3JvN5cOMpfcnXxgxam1sOWBA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@swc/html-linux-arm64-musl@1.15.3':
-    resolution: {integrity: sha512-ZmVYAP2xuzc8RN+jwJR84eMjgoWA0r20YL5Sb+hMo8p4+piOLPif0FjfTbRGy0iwz/lFY7Ml8Fent3I8kXjGig==}
+  '@swc/html-linux-arm64-musl@1.16.13':
+    resolution: {integrity: sha512-VsU3rBE25ex5C3JNx9vGvj8crHCEnwL1peKW200sNTCOTTMFaCAHCKjq5ws/oUlq+XqAEGoFkOgZ18TEyNLz4g==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@swc/html-linux-x64-gnu@1.15.3':
-    resolution: {integrity: sha512-QqHhNedxWps0nzam5aNJ+vHet+EsFYW3FkjdqyUnfpJZdrvVudzfyNd4yxjo/nMeb5RsOb/fZlfp1cx26XB2LQ==}
+  '@swc/html-linux-ppc64-gnu@1.16.13':
+    resolution: {integrity: sha512-pBbdxUM0TtBMCD5saaPI7G0pqiaFOGcED1cNBzXnsb1YA8gHWJzm0UtY/AhKEkBcw0E8JJBewMw5zHO59xCEeQ==}
+    engines: {node: '>=10'}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@swc/html-linux-s390x-gnu@1.16.13':
+    resolution: {integrity: sha512-6Qp/l/3P2MQFwX4TCUfw4gSJZSBVhKHtFuw1rYIJw9ffyLuBRvn7+hqo33KU0EDRYqIp9uH0AUhWq08/oFNGFQ==}
+    engines: {node: '>=10'}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@swc/html-linux-x64-gnu@1.16.13':
+    resolution: {integrity: sha512-7iPcqY2kZArBRZigMmHUz9U3Z7uMePOsy7XkYEGhRrWfWx6n/90slerhaytLMYCYTZMIhrpAqT9KVkIygW6sUg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@swc/html-linux-x64-musl@1.15.3':
-    resolution: {integrity: sha512-gwowjNEHMflw3Nu1P4MPpUHCeBbEWW8uwDtMsWARPGb9onBCyzMr7Z3m1jvuRVd/kd44o9VwWfh0AB4j26Y12w==}
+  '@swc/html-linux-x64-musl@1.16.13':
+    resolution: {integrity: sha512-pSVH8LfTAuEsu5CeKbynl5FQTFAa06Lc/k51iMKvCmVJeuqRf3NCtuU3WxPAWv0BhU2wDIU7sY9Gfq9osEN8KQ==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@swc/html-win32-arm64-msvc@1.15.3':
-    resolution: {integrity: sha512-rxxvpXER5KuKSN6bI5zU3RXMu5jpTIgQdWLzBlMVjuhRWRNk14LMaoxKSRxGJ3k/i0qwQWaMA+8oPpcsTVguKw==}
+  '@swc/html-win32-arm64-msvc@1.16.13':
+    resolution: {integrity: sha512-ahGzL7v5ZgKP9C/WalQB6ebPV0CRpNylRBuEzEkyMmXPb8EkMUvRT0lgiR8PmdTlecjcA03njyCdxtTVZUEcJA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
 
-  '@swc/html-win32-ia32-msvc@1.15.3':
-    resolution: {integrity: sha512-eWGVaOwksC9eJ7409DNgCWp0O4YmlO8OgToMWFozTzG3zEDCHpKjVhD/Fi8zUtdFkc/cuXrHmunmTfh62XTvZg==}
+  '@swc/html-win32-ia32-msvc@1.16.13':
+    resolution: {integrity: sha512-qsQBRIXusSxXNOWBTHAZdkgasU56NDolKxx1enaWT3IPKsHyAPaVmQt4vV4Htf8nsYmLj6C7Ad97hjnQzawBCg==}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
 
-  '@swc/html-win32-x64-msvc@1.15.3':
-    resolution: {integrity: sha512-PdTREP0388VJjgwoN/LbkZkfGkSFR7k7n4PMqpV7PHy8Gri8kOYewExlyxyLJ+lYi1MXZMkMUI8VJbZZFnaxIw==}
+  '@swc/html-win32-x64-msvc@1.16.13':
+    resolution: {integrity: sha512-D6ScrzmTFhvcLWwzIXjtzrYSuPR+QyRzwJXl4cHin5wvc2E+ljRhIiXcmdUOcexJu4RRWuEmugRGom7abs3xsw==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
 
-  '@swc/html@1.15.3':
-    resolution: {integrity: sha512-3LnbQ0UGJPfVunEB4n+0zbmd1+jRa2o4ZVofnyM5SKAB1anP70B04k3lEMs2lFDp1TksJIld2Y8h+RhB1PhKEw==}
+  '@swc/html@1.16.13':
+    resolution: {integrity: sha512-zBkWXiksdWdFkM46CQuMoJiq1Wic5Kj9SWPazxHHgXZyjdaTESAkmLPt3AKp80qQPTmXk4hE4CKvva+Ls0t5Rg==}
     engines: {node: '>=14'}
 
   '@swc/types@0.1.21':
@@ -18034,7 +18052,7 @@ snapshots:
       '@docusaurus/types': 3.9.2(@swc/core@1.11.15(@swc/helpers@0.5.17))(acorn@8.15.0)(esbuild@0.18.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(supports-color@9.4.0)
       '@rspack/core': 1.6.6(@swc/helpers@0.5.17)
       '@swc/core': 1.11.15(@swc/helpers@0.5.17)
-      '@swc/html': 1.15.3
+      '@swc/html': 1.16.13
       browserslist: 4.28.0
       lightningcss: 1.29.3
       swc-loader: 0.2.6(@swc/core@1.11.15(@swc/helpers@0.5.17))(webpack@5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.17))(esbuild@0.18.20))
@@ -19867,14 +19885,14 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/config-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)':
+  '@parcel/config-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)':
     dependencies:
       '@parcel/bundler-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/compressor-raw': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/core': 2.13.3(@swc/helpers@0.5.17)
       '@parcel/namer-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/optimizer-css': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
-      '@parcel/optimizer-htmlnano': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
+      '@parcel/optimizer-htmlnano': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
       '@parcel/optimizer-image': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/optimizer-svgo': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/optimizer-swc': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
@@ -19987,14 +20005,13 @@ snapshots:
   '@parcel/node-resolver-core@3.4.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))':
     dependencies:
       '@mischnic/json-sourcemap': 0.1.1
+      '@parcel/core': 2.13.3(@swc/helpers@0.5.17)
       '@parcel/diagnostic': 2.13.3
       '@parcel/fs': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/rust': 2.13.3
       '@parcel/utils': 2.13.3
       nullthrows: 1.1.1
       semver: 7.7.3
-    transitivePeerDependencies:
-      - '@parcel/core'
 
   '@parcel/optimizer-css@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))':
     dependencies:
@@ -20008,12 +20025,12 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/optimizer-htmlnano@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)':
+  '@parcel/optimizer-htmlnano@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)':
     dependencies:
       '@parcel/diagnostic': 2.13.3
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/utils': 2.13.3
-      htmlnano: 2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
+      htmlnano: 2.1.1(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
       nullthrows: 1.1.1
       posthtml: 0.16.6
     transitivePeerDependencies:
@@ -20168,10 +20185,9 @@ snapshots:
 
   '@parcel/resolver-default@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))':
     dependencies:
+      '@parcel/core': 2.13.3(@swc/helpers@0.5.17)
       '@parcel/node-resolver-core': 3.4.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))
-    transitivePeerDependencies:
-      - '@parcel/core'
 
   '@parcel/runtime-browser-hmr@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))':
     dependencies:
@@ -21264,50 +21280,58 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@swc/html-darwin-arm64@1.15.3':
+  '@swc/html-darwin-arm64@1.16.13':
     optional: true
 
-  '@swc/html-darwin-x64@1.15.3':
+  '@swc/html-darwin-x64@1.16.13':
     optional: true
 
-  '@swc/html-linux-arm-gnueabihf@1.15.3':
+  '@swc/html-linux-arm-gnueabihf@1.16.13':
     optional: true
 
-  '@swc/html-linux-arm64-gnu@1.15.3':
+  '@swc/html-linux-arm64-gnu@1.16.13':
     optional: true
 
-  '@swc/html-linux-arm64-musl@1.15.3':
+  '@swc/html-linux-arm64-musl@1.16.13':
     optional: true
 
-  '@swc/html-linux-x64-gnu@1.15.3':
+  '@swc/html-linux-ppc64-gnu@1.16.13':
     optional: true
 
-  '@swc/html-linux-x64-musl@1.15.3':
+  '@swc/html-linux-s390x-gnu@1.16.13':
     optional: true
 
-  '@swc/html-win32-arm64-msvc@1.15.3':
+  '@swc/html-linux-x64-gnu@1.16.13':
     optional: true
 
-  '@swc/html-win32-ia32-msvc@1.15.3':
+  '@swc/html-linux-x64-musl@1.16.13':
     optional: true
 
-  '@swc/html-win32-x64-msvc@1.15.3':
+  '@swc/html-win32-arm64-msvc@1.16.13':
     optional: true
 
-  '@swc/html@1.15.3':
+  '@swc/html-win32-ia32-msvc@1.16.13':
+    optional: true
+
+  '@swc/html-win32-x64-msvc@1.16.13':
+    optional: true
+
+  '@swc/html@1.16.13':
     dependencies:
       '@swc/counter': 0.1.3
     optionalDependencies:
-      '@swc/html-darwin-arm64': 1.15.3
-      '@swc/html-darwin-x64': 1.15.3
-      '@swc/html-linux-arm-gnueabihf': 1.15.3
-      '@swc/html-linux-arm64-gnu': 1.15.3
-      '@swc/html-linux-arm64-musl': 1.15.3
-      '@swc/html-linux-x64-gnu': 1.15.3
-      '@swc/html-linux-x64-musl': 1.15.3
-      '@swc/html-win32-arm64-msvc': 1.15.3
-      '@swc/html-win32-ia32-msvc': 1.15.3
-      '@swc/html-win32-x64-msvc': 1.15.3
+      '@swc/html-darwin-arm64': 1.16.13
+      '@swc/html-darwin-x64': 1.16.13
+      '@swc/html-linux-arm-gnueabihf': 1.16.13
+      '@swc/html-linux-arm64-gnu': 1.16.13
+      '@swc/html-linux-arm64-musl': 1.16.13
+      '@swc/html-linux-ppc64-gnu': 1.16.13
+      '@swc/html-linux-s390x-gnu': 1.16.13
+      '@swc/html-linux-x64-gnu': 1.16.13
+      '@swc/html-linux-x64-musl': 1.16.13
+      '@swc/html-win32-arm64-msvc': 1.16.13
+      '@swc/html-win32-ia32-msvc': 1.16.13
+      '@swc/html-win32-x64-msvc': 1.16.13
 
   '@swc/types@0.1.21':
     dependencies:
@@ -23933,6 +23957,11 @@ snapshots:
     dependencies:
       postcss: 8.4.42
 
+  css-declaration-sorter@7.3.0(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+    optional: true
+
   css-declaration-sorter@7.3.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -24181,6 +24210,41 @@ snapshots:
       postcss-svgo: 6.0.3(postcss@8.5.6)
       postcss-unique-selectors: 6.0.4(postcss@8.5.6)
 
+  cssnano-preset-default@7.0.10(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.0
+      css-declaration-sorter: 7.3.0(postcss@8.4.42)
+      cssnano-utils: 5.0.1(postcss@8.4.42)
+      postcss: 8.4.42
+      postcss-calc: 10.1.1(postcss@8.4.42)
+      postcss-colormin: 7.0.5(postcss@8.4.42)
+      postcss-convert-values: 7.0.8(postcss@8.4.42)
+      postcss-discard-comments: 7.0.5(postcss@8.4.42)
+      postcss-discard-duplicates: 7.0.2(postcss@8.4.42)
+      postcss-discard-empty: 7.0.1(postcss@8.4.42)
+      postcss-discard-overridden: 7.0.1(postcss@8.4.42)
+      postcss-merge-longhand: 7.0.5(postcss@8.4.42)
+      postcss-merge-rules: 7.0.7(postcss@8.4.42)
+      postcss-minify-font-values: 7.0.1(postcss@8.4.42)
+      postcss-minify-gradients: 7.0.1(postcss@8.4.42)
+      postcss-minify-params: 7.0.5(postcss@8.4.42)
+      postcss-minify-selectors: 7.0.5(postcss@8.4.42)
+      postcss-normalize-charset: 7.0.1(postcss@8.4.42)
+      postcss-normalize-display-values: 7.0.1(postcss@8.4.42)
+      postcss-normalize-positions: 7.0.1(postcss@8.4.42)
+      postcss-normalize-repeat-style: 7.0.1(postcss@8.4.42)
+      postcss-normalize-string: 7.0.1(postcss@8.4.42)
+      postcss-normalize-timing-functions: 7.0.1(postcss@8.4.42)
+      postcss-normalize-unicode: 7.0.5(postcss@8.4.42)
+      postcss-normalize-url: 7.0.1(postcss@8.4.42)
+      postcss-normalize-whitespace: 7.0.1(postcss@8.4.42)
+      postcss-ordered-values: 7.0.2(postcss@8.4.42)
+      postcss-reduce-initial: 7.0.5(postcss@8.4.42)
+      postcss-reduce-transforms: 7.0.1(postcss@8.4.42)
+      postcss-svgo: 7.1.0(postcss@8.4.42)
+      postcss-unique-selectors: 7.0.4(postcss@8.4.42)
+    optional: true
+
   cssnano-preset-default@7.0.10(postcss@8.5.6):
     dependencies:
       browserslist: 4.28.0
@@ -24298,6 +24362,13 @@ snapshots:
       cssnano-preset-default: 7.0.6(postcss@8.4.42)
       lilconfig: 3.1.3
       postcss: 8.4.42
+
+  cssnano@7.1.2(postcss@8.4.42):
+    dependencies:
+      cssnano-preset-default: 7.0.10(postcss@8.4.42)
+      lilconfig: 3.1.3
+      postcss: 8.4.42
+    optional: true
 
   cssnano@7.1.2(postcss@8.5.6):
     dependencies:
@@ -26178,13 +26249,13 @@ snapshots:
       '@rspack/core': 1.6.6(@swc/helpers@0.5.17)
       webpack: 5.96.1(@swc/core@1.11.15(@swc/helpers@0.5.17))(esbuild@0.18.20)
 
-  htmlnano@2.1.1(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2):
+  htmlnano@2.1.1(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2):
     dependencies:
       cosmiconfig: 9.0.0(typescript@5.5.2)
       posthtml: 0.16.6
       timsort: 0.3.0
     optionalDependencies:
-      cssnano: 7.1.2(postcss@8.5.6)
+      cssnano: 7.1.2(postcss@8.4.42)
       postcss: 8.5.6
       relateurl: 0.2.7
       svgo: 3.3.2
@@ -29435,9 +29506,9 @@ snapshots:
       dot-case: 3.0.4
       tslib: 2.8.1
 
-  parcel@2.13.3(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2):
+  parcel@2.13.3(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2):
     dependencies:
-      '@parcel/config-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.5.6))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
+      '@parcel/config-default': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)(cssnano@7.1.2(postcss@8.4.42))(postcss@8.5.6)(relateurl@0.2.7)(svgo@3.3.2)(terser@5.44.0)(typescript@5.5.2)
       '@parcel/core': 2.13.3(@swc/helpers@0.5.17)
       '@parcel/diagnostic': 2.13.3
       '@parcel/events': 2.13.3
@@ -29736,6 +29807,15 @@ snapshots:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
 
+  postcss-colormin@7.0.5(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.1
+      caniuse-api: 3.0.0
+      colord: 2.9.3
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-colormin@7.0.5(postcss@8.5.6):
     dependencies:
       browserslist: 4.28.1
@@ -29767,6 +29847,13 @@ snapshots:
       browserslist: 4.28.1
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-convert-values@7.0.8(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.1
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-convert-values@7.0.8(postcss@8.5.6):
     dependencies:
@@ -29821,6 +29908,12 @@ snapshots:
       postcss: 8.4.42
       postcss-selector-parser: 6.1.2
 
+  postcss-discard-comments@7.0.5(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-selector-parser: 7.1.0
+    optional: true
+
   postcss-discard-comments@7.0.5(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29842,6 +29935,11 @@ snapshots:
     dependencies:
       postcss: 8.4.42
 
+  postcss-discard-duplicates@7.0.2(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+    optional: true
+
   postcss-discard-duplicates@7.0.2(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29862,6 +29960,11 @@ snapshots:
     dependencies:
       postcss: 8.4.42
 
+  postcss-discard-empty@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+    optional: true
+
   postcss-discard-empty@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -29881,6 +29984,11 @@ snapshots:
   postcss-discard-overridden@7.0.0(postcss@8.4.42):
     dependencies:
       postcss: 8.4.42
+
+  postcss-discard-overridden@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+    optional: true
 
   postcss-discard-overridden@7.0.1(postcss@8.5.6):
     dependencies:
@@ -29992,6 +30100,13 @@ snapshots:
       postcss-value-parser: 4.2.0
       stylehacks: 7.0.6(postcss@8.4.42)
 
+  postcss-merge-longhand@7.0.5(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+      stylehacks: 7.0.6(postcss@8.4.42)
+    optional: true
+
   postcss-merge-longhand@7.0.5(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30030,6 +30145,15 @@ snapshots:
       postcss: 8.4.42
       postcss-selector-parser: 6.1.2
 
+  postcss-merge-rules@7.0.7(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.1
+      caniuse-api: 3.0.0
+      cssnano-utils: 5.0.1(postcss@8.4.42)
+      postcss: 8.4.42
+      postcss-selector-parser: 7.1.0
+    optional: true
+
   postcss-merge-rules@7.0.7(postcss@8.5.6):
     dependencies:
       browserslist: 4.28.1
@@ -30057,6 +30181,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-minify-font-values@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-minify-font-values@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30090,6 +30220,14 @@ snapshots:
       cssnano-utils: 5.0.1(postcss@8.4.42)
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-minify-gradients@7.0.1(postcss@8.4.42):
+    dependencies:
+      colord: 2.9.3
+      cssnano-utils: 5.0.1(postcss@8.4.42)
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-minify-gradients@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30126,6 +30264,14 @@ snapshots:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
 
+  postcss-minify-params@7.0.5(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.1
+      cssnano-utils: 5.0.1(postcss@8.4.42)
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-minify-params@7.0.5(postcss@8.5.6):
     dependencies:
       browserslist: 4.28.1
@@ -30153,6 +30299,13 @@ snapshots:
       cssesc: 3.0.0
       postcss: 8.4.42
       postcss-selector-parser: 6.1.2
+
+  postcss-minify-selectors@7.0.5(postcss@8.4.42):
+    dependencies:
+      cssesc: 3.0.0
+      postcss: 8.4.42
+      postcss-selector-parser: 7.1.0
+    optional: true
 
   postcss-minify-selectors@7.0.5(postcss@8.5.6):
     dependencies:
@@ -30270,6 +30423,11 @@ snapshots:
     dependencies:
       postcss: 8.4.42
 
+  postcss-normalize-charset@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+    optional: true
+
   postcss-normalize-charset@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30293,6 +30451,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-display-values@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-display-values@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30319,6 +30483,12 @@ snapshots:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-positions@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-positions@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30343,6 +30513,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-repeat-style@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-repeat-style@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30369,6 +30545,12 @@ snapshots:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-string@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-string@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30393,6 +30575,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-timing-functions@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-timing-functions@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30423,6 +30611,13 @@ snapshots:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-unicode@7.0.5(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.1
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-unicode@7.0.5(postcss@8.5.6):
     dependencies:
       browserslist: 4.28.1
@@ -30451,6 +30646,12 @@ snapshots:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-url@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
+
   postcss-normalize-url@7.0.1(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30475,6 +30676,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-normalize-whitespace@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-normalize-whitespace@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30508,6 +30715,13 @@ snapshots:
       cssnano-utils: 5.0.1(postcss@8.4.42)
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-ordered-values@7.0.2(postcss@8.4.42):
+    dependencies:
+      cssnano-utils: 5.0.1(postcss@8.4.42)
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-ordered-values@7.0.2(postcss@8.5.6):
     dependencies:
@@ -30634,6 +30848,13 @@ snapshots:
       caniuse-api: 3.0.0
       postcss: 8.4.42
 
+  postcss-reduce-initial@7.0.5(postcss@8.4.42):
+    dependencies:
+      browserslist: 4.28.1
+      caniuse-api: 3.0.0
+      postcss: 8.4.42
+    optional: true
+
   postcss-reduce-initial@7.0.5(postcss@8.5.6):
     dependencies:
       browserslist: 4.28.1
@@ -30659,6 +30880,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-value-parser: 4.2.0
+
+  postcss-reduce-transforms@7.0.1(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+    optional: true
 
   postcss-reduce-transforms@7.0.1(postcss@8.5.6):
     dependencies:
@@ -30727,6 +30954,13 @@ snapshots:
       postcss-value-parser: 4.2.0
       svgo: 3.3.2
 
+  postcss-svgo@7.1.0(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-value-parser: 4.2.0
+      svgo: 4.0.0
+    optional: true
+
   postcss-svgo@7.1.0(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -30752,6 +30986,12 @@ snapshots:
     dependencies:
       postcss: 8.4.42
       postcss-selector-parser: 6.1.2
+
+  postcss-unique-selectors@7.0.4(postcss@8.4.42):
+    dependencies:
+      postcss: 8.4.42
+      postcss-selector-parser: 7.1.0
+    optional: true
 
   postcss-unique-selectors@7.0.4(postcss@8.5.6):
     dependencies:
