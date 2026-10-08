@@ -74,8 +74,8 @@ const DocumentenClean = () => {
               size="md"
               useIcons={true}
               iconPlacement="left"
-              maxWidth="md" */}
-            />
+              maxWidth="md" 
+            />*/}
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
