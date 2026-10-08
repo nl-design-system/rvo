@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes } from 'react';
+import Reactfrom 'react';
 import { defaultArgs } from './defaultArgs';
 import '@nl-rvo/component-library-css/dist/components/form-radio-button.css';
 
-export interface IRadioButtonProps extends HTMLAttributes<HTMLInputElement> {
+export interface IRadioButtonProps extends React.ComponentPropsWithoutRef<"input"> {
   id?: string;
   name?: string;
   label: string;
