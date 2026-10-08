@@ -18,7 +18,6 @@ export const Card: React.FC<ICardProps> = ({
   padding = 'md',
   children,
   className,
-  content,
   fullCardLink,
   headingClassName,
   headingProps,
@@ -41,7 +40,6 @@ export const Card: React.FC<ICardProps> = ({
   title,
   ...props
 }: ICardProps) => {
-  const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
   const hasLinkIndicator = showLinkIndicator && link && link.length > 0 && fullCardLink === true;
   const hasBackgroundImage = background === 'image' && backgroundImage && backgroundImage?.length > 0;
 
@@ -124,7 +122,7 @@ export const Card: React.FC<ICardProps> = ({
               )}
             </Heading>
           )}
-          {contentMarkup}
+          {parseContentMarkup(children)}
         </div>
         {hasLinkIndicator && (
           <Icon className="rvo-card__link-indicator" color="hemelblauw" icon="delta-naar-rechts" size="sm" />

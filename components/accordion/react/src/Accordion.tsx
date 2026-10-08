@@ -21,12 +21,18 @@ export const Accordion: React.FC<IAccordionProps> & {
   );
 };
 
-const AccordionItem: React.FC<IAccordionItemProps> = ({ open, title, teaser, children }: IAccordionItemProps) => {
+const AccordionItem: React.FC<IAccordionItemProps> = ({
+  open,
+  title,
+  teaser,
+  children,
+  ...rest
+}: IAccordionItemProps) => {
   let teaserMarkup: string | React.ReactNode = parseContentMarkup(teaser);
   let contentMarkup: string | React.ReactNode = parseContentMarkup(children);
 
   return (
-    <details className="rvo-accordion__item" {...(open ? { open } : {})}>
+    <details className="rvo-accordion__item" {...(open ? { open } : {})} {...rest}>
       <summary className="rvo-accordion__item-summary">
         <div className="rvo-accordion__item-icon">
           <Icon icon="delta-omlaag" size="md" color="hemelblauw" className="rvo-accordion__item-icon--closed" />

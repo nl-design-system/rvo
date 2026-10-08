@@ -30,8 +30,7 @@ interface FormFieldInputField {
   TextArea: React.FC<ITextareaProps>;
 }
 
-const FormField: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttributes<HTMLDivElement>> &
-  FormFieldInputField = ({
+const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField = ({
   id,
   label,
   labelSize,
@@ -86,7 +85,7 @@ const FormField: React.FC<PropsWithChildren<IFieldProps> & React.HTMLAttributes<
 };
 
 FormField.Text = TextInput;
-FormField.Date = (params) => <TextInput type='date' {...params} />;
+FormField.Date = (params) => <TextInput type="date" {...params} />;
 FormField.Checkbox = Checkbox;
 FormField.CheckboxGroup = CheckboxGroup;
 FormField.FileInput = FileInput;

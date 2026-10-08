@@ -17,13 +17,10 @@ export const DataList: React.FC<IDataListProps> & {
 );
 
 export const DataListItem: React.FC<IDataListItemProps> = ({ label, value }: IDataListItemProps) => {
-  let dtMarkup: string | React.ReactNode = label && parseContentMarkup(label);
-  let ddMarkup: string | React.ReactNode = value && parseContentMarkup(value);
-
   return (
     <React.Fragment>
-      <dt>{dtMarkup}</dt>
-      <dd>{ddMarkup}</dd>
+      <dt>{parseContentMarkup(label)}</dt>
+      <dd>{parseContentMarkup(value)}</dd>
     </React.Fragment>
   );
 };

@@ -1,13 +1,11 @@
-import React, { HTMLAttributes, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormField } from '@nl-rvo/react-form-field';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';
 import '@nl-rvo/css-checkbox-filter';
 import { ICheckboxFilter } from './CheckboxFilter.types';
 
-export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetailsElement>> = (
-  props: ICheckboxFilter,
-) => {
+export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter) => {
   const {
     label,
     options,
@@ -20,7 +18,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
     showLessText = 'Toon minder',
     noFiltersText = 'Geen filters beschikbaar',
     initialCollapseState = 'expanded',
-    ...rootElementProps
+    ...rest
   } = props;
   const [visibleItems, setVisibleItems] = useState([]);
   const [toggleShow, setToggleShow] = useState(false);
@@ -47,7 +45,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter & HTMLAttributes<HTMLDetai
   };
 
   return (
-    <details open={initialCollapseState === 'expanded'} className="rvo-checkbox-filter" {...rootElementProps}>
+    <details open={initialCollapseState === 'expanded'} className="rvo-checkbox-filter" {...rest}>
       <summary className="rvo-checkbox-filter__label">
         {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>

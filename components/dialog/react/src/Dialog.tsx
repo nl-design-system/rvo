@@ -3,7 +3,16 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { createContext, useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
 import { Button } from '@nl-rvo/react-button';
 import '@nl-rvo/css-dialog';
@@ -30,7 +39,6 @@ export const Dialog: React.FC<IDialogProps> = ({
   children,
   actionGroup,
   onClose,
-  content,
   isOpen: isOpenProp = true,
   type = 'centered-dialog',
   isModal = true,
@@ -41,7 +49,6 @@ export const Dialog: React.FC<IDialogProps> = ({
   closeButtonLabel = 'Sluiten',
   ...props
 }: IDialogProps) => {
-  const contentMarkup = parseContentMarkup(children ?? content);
   const [isOpen, setIsOpen] = useState(isOpenProp);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -117,7 +124,7 @@ export const Dialog: React.FC<IDialogProps> = ({
           {closeButtonLabel}
         </Button>
       </div>
-      <div className="rvo-dialog__content">{contentMarkup}</div>
+      <div className="rvo-dialog__content">{parseContentMarkup(children)}</div>
       {actionGroup && <div className="rvo-dialog__action-group">{actionGroup}</div>}
     </dialog>
   );

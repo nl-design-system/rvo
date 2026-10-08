@@ -3,7 +3,6 @@ import { ReactNode } from 'react';
 export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElement>, 'className'> {
   children?: ReactNode;
   actionGroup?: ReactNode;
-  content?: string;
   type?: 'centered-dialog' | 'inset-inline-start' | 'inset-inline-end';
   isModal?: boolean;
   centeredDialogSize?: 'sm' | 'md' | 'lg' | 'xl';

@@ -14,12 +14,7 @@ const parseDividerMarkup = (index: number, maxLength: number) => {
   return index > 0 && index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
 };
 
-export const Breadcrumbs: React.FC<IBreadcrumbProps & React.HTMLAttributes<HTMLOListElement>> = ({
-  items,
-  size = 'sm',
-  children,
-  ...rootElementProps
-}) => {
+export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items, size = 'sm', children, ...rest }) => {
   const renderBreadcrumbItem = (link, label) => {
     if (link?.length && link.length > 0) {
       return (
@@ -33,7 +28,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps & React.HTMLAttributes<HTMLO
   };
 
   return (
-    <ol className={clsx('rvo-breadcrumbs', size && `rvo-breadcrumbs--${size}`)} {...rootElementProps}>
+    <ol className={clsx('rvo-breadcrumbs', size && `rvo-breadcrumbs--${size}`)} {...rest}>
       {items?.map((item, index) => {
         return (
           <li key={`${item.label}${index}`} className="rvo-breadcrumbs-item">

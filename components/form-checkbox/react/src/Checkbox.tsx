@@ -3,29 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import '@nl-rvo/css-form-checkbox';
-
-export interface ICheckboxProps extends HTMLAttributes<HTMLInputElement> {
-  id?: string;
-  name?: string;
-  label: string;
-  checked?: boolean;
-  hover?: boolean;
-  disabled?: boolean;
-  active?: boolean;
-  focus?: boolean;
-  indeterminate?: boolean;
-  invalid?: boolean;
-  required?: boolean;
-  helperTextId?: string;
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
-  onInvalid?: (event: React.InvalidEvent<HTMLInputElement>) => void;
-  onUpdateGroup?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import { ICheckboxProps } from './Checkbox.types';
 
 export const Checkbox: React.FC<ICheckboxProps> = ({
   id,

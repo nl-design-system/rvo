@@ -8,7 +8,6 @@ export interface ICardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   backgroundImage?: string;
   children?: ReactNode | undefined;
   className?: string;
-  content?: string;
   fullCardLink?: boolean;
   headingClassName?: string;
   headingProps?: IHeadingProps;

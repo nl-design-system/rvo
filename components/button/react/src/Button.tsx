@@ -13,7 +13,6 @@ export const Button: React.FC<IButtonProps> = ({
   kind = 'primary',
   size = 'md',
   disabled,
-  label,
   children,
   iconPlacement,
   icon,
@@ -56,7 +55,7 @@ export const Button: React.FC<IButtonProps> = ({
       {...otherProps}
     >
       {iconPlacement === 'left' && iconMarkup}
-      {children || label}
+      {children}
       {iconPlacement === 'right' && iconMarkup}
     </button>
   );

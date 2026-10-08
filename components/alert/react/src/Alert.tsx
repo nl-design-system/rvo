@@ -20,7 +20,7 @@ export const Alert: React.FC<IAlertProps> = ({
   onClose,
   children,
   maxWidth,
-  ...props
+  ...rest
 }: IAlertProps) => {
   // State to control the visibility of the alert
   const [isVisible, setIsVisible] = useState(true);
@@ -63,7 +63,7 @@ export const Alert: React.FC<IAlertProps> = ({
         padding && `rvo-alert--padding-${padding}`,
         maxWidth && 'rvo-alert--layout',
       )}
-      {...props}
+      {...rest}
     >
       <div className={clsx('rvo-alert__container', maxWidth && `rvo-max-width-layout--${maxWidth}`)}>
         {iconMarkup}
