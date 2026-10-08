@@ -14,7 +14,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/checkbox-filter"
+    "directory": "components/checkbox-filter/style"
   },
   "files": [
     "src/",

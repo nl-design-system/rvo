@@ -12,7 +12,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/ordered-unordered-list"
+    "directory": "components/ordered-unordered-list/style"
   },
   "files": [
     "src/",

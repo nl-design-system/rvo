@@ -13,7 +13,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/card-experimental"
+    "directory": "components/card-experimental/style"
   },
   "files": [
     "src/",

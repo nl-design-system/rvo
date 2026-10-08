@@ -13,7 +13,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/button"
+    "directory": "components/button/style"
   },
   "files": [
     "src/",

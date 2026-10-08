@@ -12,7 +12,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/page-number-navigation"
+    "directory": "components/page-number-navigation/style"
   },
   "files": [
     "src/",

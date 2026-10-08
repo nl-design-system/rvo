@@ -14,7 +14,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/form-file-input"
+    "directory": "components/form-file-input/style"
   },
   "files": [
     "src/",

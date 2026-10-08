@@ -14,7 +14,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rvo.git",
-    "directory": "components/counter-badge"
+    "directory": "components/counter-badge/style"
   },
   "files": [
     "src/",
