@@ -1,11 +1,4 @@
-import {
-  Alert,
-  Button,
-  FormField,
-  Icon,
-  LayoutFlow,
-  MenuBar
-} from '@nl-rvo/component-library-react';
+import { Alert, Button, FormField, Icon, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 
@@ -79,12 +72,10 @@ const PercelenTable = () => {
                         </summary>
                         <LayoutFlow gap="md">
                           <FormField label="Filter op peildatum">
-                            <FormField.Select 
-                              options={[{ value: '1', label: '15-05-2023' }]}
-                            />
+                            <FormField.Select options={[{ value: '1', label: '15-05-2023' }]} />
                           </FormField>
                           <FormField label="">
-                            <FormField.CheckboxGroup 
+                            <FormField.CheckboxGroup
                               options={[
                                 { id: 'optionA-cb-warning', label: 'Toon percelen met conflicten' },
                                 { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
@@ -92,10 +83,10 @@ const PercelenTable = () => {
                             />
                           </FormField>
                           <FormField label="Filter op naam perceel">
-                              <FormField.Text />
+                            <FormField.Text />
                           </FormField>
                           <FormField label="Sorteer percelen">
-                            <FormField.Select 
+                            <FormField.Select
                               options={[
                                 { value: 'a', label: 'Op naam' },
                                 { value: 'b', label: 'Op nummer' },
@@ -152,7 +143,7 @@ const PercelenTable = () => {
                             >
                               Bewerken
                             </a>
-                            <Button kind="tertiary" size="xs" label={''}>
+                            <Button kind="tertiary" size="xs">
                               Verwijderen
                             </Button>
                           </td>
@@ -178,7 +169,7 @@ const PercelenTable = () => {
                             >
                               Bewerken
                             </a>
-                            <Button kind="tertiary" size="xs" label={''}>
+                            <Button kind="tertiary" size="xs">
                               Verwijderen
                             </Button>
                           </td>
@@ -197,7 +188,7 @@ const PercelenTable = () => {
                             >
                               Bewerken
                             </a>
-                            <Button kind="tertiary" size="xs" label={''}>
+                            <Button kind="tertiary" size="xs">
                               Verwijderen
                             </Button>
                           </td>
@@ -216,7 +207,7 @@ const PercelenTable = () => {
                             >
                               Bewerken
                             </a>
-                            <Button kind="tertiary" size="xs" label={''}>
+                            <Button kind="tertiary" size="xs">
                               Verwijderen
                             </Button>
                           </td>

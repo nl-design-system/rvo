@@ -35,13 +35,9 @@ const SearchInNav = () => {
                   <FormField label="Zoekterm">
                     <FormField.Text />
                   </FormField>
-                  <Button
-                    kind="primary"
-                    size="md"
-                    label="Zoeken"
-                    busy={false}
-                    disabled={false}
-                  ></Button>
+                  <Button kind="primary" size="md" busy={false} disabled={false}>
+                    Zoeken
+                  </Button>
                 </div>
               </MaxWidthLayout>
             </div>

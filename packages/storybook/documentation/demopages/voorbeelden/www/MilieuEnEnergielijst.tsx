@@ -309,22 +309,22 @@ const MilieuEnEnergielijst = () => {
     <body className="rvo-theme">
       <Header />
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-          <MenuBar
-            items={[
-              { label: 'Home', link: '#' },
-              { label: 'Onderwerpen', link: '#' },
-              { label: 'Subsidie- en financieringswijzer', link: '#' },
-              { label: 'Over ons', link: '#' },
-              { label: 'Contact', link: '#' },
-              { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
-              { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
-              { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
-            ]}
-            size="lg"
-            useIcons={true}
-            iconPlacement="left"
-            maxWidth="lg"
-          />
+        <MenuBar
+          items={[
+            { label: 'Home', link: '#' },
+            { label: 'Onderwerpen', link: '#' },
+            { label: 'Subsidie- en financieringswijzer', link: '#' },
+            { label: 'Over ons', link: '#' },
+            { label: 'Contact', link: '#' },
+            { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
+            { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
+            { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
+          ]}
+          size="lg"
+          useIcons={true}
+          iconPlacement="left"
+          maxWidth="lg"
+        />
       </div>
 
       <MaxWidthLayout size="sm" className="rvo-padding-block-start--2xl rvo-padding-block-end--lg">
@@ -387,7 +387,7 @@ const MilieuEnEnergielijst = () => {
       <main className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
         <MaxWidthLayout size="md">
           <div className="rvo-padding-inline-start--md rvo-padding-inline-end--md">
-            <Grid gap="xl" division="1fr 2fr" columns='two'>
+            <Grid gap="xl" division="1fr 2fr" columns="two">
               <LayoutFlow gap="xl">
                 <form onSubmit={(e) => e.preventDefault()}>
                   <Fieldset legend="Op maat advies">
@@ -399,7 +399,7 @@ const MilieuEnEnergielijst = () => {
                             Vul zo compleet mogelijk in wat uw bedrijf doet en wij helpen u met het instellen van de
                             filters om bedrijfsmiddelen te tonen die mogelijk in aanmerking komen.
                           </div>
-                          {vraagError && <Feedback text="Vul een omschrijving in om door te gaan." type="error" />}
+                          {vraagError && <Feedback type="error">"Vul een omschrijving in om door te gaan.</Feedback>}
                         </div>
                         {React.createElement(Textarea as React.FC<any>, {
                           id: 'bedrijfsactiviteiten',

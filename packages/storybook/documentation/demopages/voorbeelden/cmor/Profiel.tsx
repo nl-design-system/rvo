@@ -9,7 +9,7 @@ import {
   MenuBar,
   TabItem,
   Tabs,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -184,7 +184,7 @@ const Profiel = () => {
                           </select>
                         </div>
                       </div>
-                      <FormField label="Straatnaam" >
+                      <FormField label="Straatnaam">
                         <FormField.Text />
                       </FormField>
                       <LayoutFlow row={true} alignItems="start">
@@ -192,14 +192,14 @@ const Profiel = () => {
                           <FormField.Text />
                         </FormField>
                         <FormField label="Toevoeging (niet verplicht)">
-                          <FormField.Text size='xs' />
+                          <FormField.Text sizeInput="xs" />
                         </FormField>
                       </LayoutFlow>
                       <FormField label="Postcode">
-                        <FormField.Text size="sm"  />
+                        <FormField.Text sizeInput="sm" />
                       </FormField>
                       <FormField label="Woonplaats">
-                        <FormField.Text size="lg"  />
+                        <FormField.Text sizeInput="lg" />
                       </FormField>
                       <LayoutFlow row={true}>
                         <Button kind="primary">Wijzigingen opslaan</Button>

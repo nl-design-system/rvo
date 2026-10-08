@@ -1,6 +1,4 @@
-import { HTMLAttributes } from 'react';
-
-export interface ITextInputProps extends HTMLAttributes<HTMLInputElement> {
+export interface ITextInputProps extends React.ComponentPropsWithoutRef<'input'> {
   type?: 'text' | 'password' | 'email' | 'tel' | 'url' | 'search' | 'number' | 'date' | 'time' | 'datetime-local';
   disabled?: boolean;
   focus?: boolean;
@@ -11,7 +9,7 @@ export interface ITextInputProps extends HTMLAttributes<HTMLInputElement> {
   validation?: 'none' | 'currency';
   prefix?: string;
   suffix?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'max';
+  sizeInput?: 'xs' | 'sm' | 'md' | 'lg' | 'max';
   maxLength?: number | undefined;
   className?: string;
   defaultValue?: string | number | readonly string[];

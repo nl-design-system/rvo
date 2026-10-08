@@ -6,7 +6,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -105,7 +105,7 @@ const Import = () => {
                         label="Nummer gezondheidscertificaat"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
                       >
-                        <FormField.Text size="sm" />
+                        <FormField.Text sizeInput="sm" />
                       </FormField>
                       <FormField
                         label="Land van herkomst"
@@ -117,7 +117,7 @@ const Import = () => {
                         label="Transport nummer (optioneel)"
                         helperText="Vult u het transportnummer in? Dan heeft u een extra mogelijkheid om meldingen van hetzelfde transport bij elkaar te zoeken. Bij Bekijken van meldingen kunt u dan ook zoeken op transportnummer. Vul alleen cijfers in, geen letters."
                       >
-                        <FormField.Text size="sm" />
+                        <FormField.Text sizeInput="sm" />
                       </FormField>
                     </Fieldset>
 

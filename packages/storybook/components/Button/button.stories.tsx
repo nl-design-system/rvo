@@ -32,9 +32,6 @@ export default {
         },
       },
     },
-    label: {
-      control: 'text',
-    },
     disabled: {
       control: 'boolean',
     },
@@ -69,7 +66,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Base: Story = {
   args: {
-    label: 'Button',
+    children: 'Button',
     disabled: false,
     onClick: () => {
       console.log('Button Clicked');
@@ -80,13 +77,27 @@ export const Base: Story = {
 export const Kinds: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button {...args} kind="primary" label="Primary" />
-      <Button {...args} kind="secondary" label="Secondary" />
-      <Button {...args} kind="tertiary" label="Tertiary" />
-      <Button {...args} kind="quaternary" label="Quaternary" />
-      <Button {...args} kind="subtle" label="Subtle" />
-      <Button {...args} kind="warning-subtle" label="Warning Subtle" />
-      <Button {...args} kind="warning" label="Warning" />
+      <Button {...args} kind="primary">
+        Primary
+      </Button>
+      <Button {...args} kind="secondary">
+        Secondary
+      </Button>
+      <Button {...args} kind="tertiary">
+        Tertiary
+      </Button>
+      <Button {...args} kind="quaternary">
+        Quaternary
+      </Button>
+      <Button {...args} kind="subtle">
+        Subtle
+      </Button>
+      <Button {...args} kind="warning-subtle">
+        Warning Subtle
+      </Button>
+      <Button {...args} kind="warning">
+        Warning
+      </Button>
     </div>
   ),
 };
@@ -94,9 +105,15 @@ export const Kinds: Story = {
 export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button {...args} size="md" label="MD Button" />
-      <Button {...args} size="sm" label="SM Button" />
-      <Button {...args} size="xs" label="XS Button" />
+      <Button {...args} size="md">
+        MD Button
+      </Button>
+      <Button {...args} size="sm">
+        SM Button
+      </Button>
+      <Button {...args} size="xs">
+        XS Button
+      </Button>
     </div>
   ),
 };
@@ -104,8 +121,12 @@ export const Sizes: Story = {
 export const WithIcon: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Button {...args} icon="home" iconPlacement="left" label="Icon Before" />
-      <Button {...args} icon="home" iconPlacement="right" label="Icon After" />
+      <Button {...args} icon="home" iconPlacement="left">
+        Icon Left
+      </Button>
+      <Button {...args} icon="home" iconPlacement="right">
+        Icon Right
+      </Button>
     </div>
   ),
 };

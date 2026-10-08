@@ -19,7 +19,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   validation,
   prefix,
   suffix,
-  size = 'md',
+  sizeInput = 'md',
   maxLength,
   className,
   value,
@@ -49,7 +49,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
       type={type}
       aria-invalid={invalid}
       aria-required={required}
-      className={clsx(className, 'utrecht-textbox', size && `utrecht-textbox--${size}`)}
+      className={clsx(className, 'utrecht-textbox', sizeInput && `utrecht-textbox--${sizeInput}`)}
     />
   );
 

@@ -120,7 +120,7 @@ export const Dialog: React.FC<IDialogProps> = ({
       {...props}
     >
       <div className="rvo-dialog__close" onClick={handleClose}>
-        <Button kind="subtle" icon="kruis" iconPlacement="left" label={undefined}>
+        <Button kind="subtle" icon="kruis" iconPlacement="left">
           {closeButtonLabel}
         </Button>
       </div>

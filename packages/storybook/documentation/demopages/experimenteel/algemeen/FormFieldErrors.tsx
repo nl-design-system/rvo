@@ -77,11 +77,8 @@ const FormFieldErrors = () => {
                     <LayoutFlow>
                       <div>
                         <Fieldset legend="Form fields with errors">
-                          <FormField
-                            label="Radio buttons with error"
-                            errorText="Please select one of the options"
-                          >
-                            <FormField.RadioButtonGroup 
+                          <FormField label="Radio buttons with error" errorText="Please select one of the options">
+                            <FormField.RadioButtonGroup
                               invalid={true}
                               options={[
                                 { id: 'radio-optionA', label: 'Option A' },
@@ -91,11 +88,8 @@ const FormFieldErrors = () => {
                               ]}
                             />
                           </FormField>
-                          <FormField
-                            label="Checkboxes with error"
-                            errorText="Please select at least one option"
-                          >
-                            <FormField.CheckboxGroup 
+                          <FormField label="Checkboxes with error" errorText="Please select at least one option">
+                            <FormField.CheckboxGroup
                               invalid={true}
                               options={[
                                 { id: 'checkbox-optionA', label: 'Option A' },
@@ -108,10 +102,10 @@ const FormFieldErrors = () => {
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button kind="primary" size="md" busy={false} disabled={false} label={''}>
+                        <Button kind="primary" size="md" busy={false} disabled={false}>
                           Submit
                         </Button>
-                        <Button kind="secondary" size="md" busy={false} disabled={false} label={''}>
+                        <Button kind="secondary" size="md" busy={false} disabled={false}>
                           Cancel
                         </Button>
                       </ActionGroup>

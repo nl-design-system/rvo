@@ -9,7 +9,7 @@ import { Icon } from '@nl-rvo/react-icon';
 import '@nl-rvo/css-toggle';
 import { IToggleProps } from './Toggle.types';
 
-export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> = ({
+export const Toggle: React.FC<IToggleProps> = ({
   iconPlacement,
   icon,
   active,

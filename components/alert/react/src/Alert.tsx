@@ -72,13 +72,9 @@ export const Alert: React.FC<IAlertProps> = ({
           <div>{contentMarkup}</div>
         </div>
         {closable && (
-          <Button
-            kind="subtle"
-            className="rvo-button__close"
-            label={<Icon icon="kruis" size="sm" color="zwart" />}
-            aria-label="Sluiten"
-            onClick={handleClose}
-          />
+          <Button kind="subtle" className="rvo-button__close" aria-label="Sluiten" onClick={handleClose}>
+            <Icon icon="kruis" size="sm" color="zwart" />
+          </Button>
         )}
       </div>
     </div>

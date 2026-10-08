@@ -5,7 +5,6 @@ export default {
   title: 'Componenten/Feedback',
   component: Feedback,
   argTypes: {
-    text: { control: 'text' },
     type: {
       options: ['warning', 'error'],
       control: { type: 'radio' },

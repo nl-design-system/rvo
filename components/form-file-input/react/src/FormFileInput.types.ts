@@ -1,6 +1,4 @@
-import { HTMLAttributes } from 'react';
-
-export interface IFileInputProps extends HTMLAttributes<HTMLInputElement> {
+export interface IFileInputProps extends React.ComponentPropsWithoutRef<'input'> {
   id?: string;
   disabled?: boolean;
   invalid?: boolean;

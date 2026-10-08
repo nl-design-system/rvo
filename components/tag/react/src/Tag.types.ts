@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { IconType } from '@nl-rvo/react-icon';
 
-export interface ITagProps {
+export interface ITagProps extends React.HTMLAttributes<HTMLElement> {
   className?: string;
   children: ReactNode;
   icon?: IconType;

@@ -193,16 +193,16 @@ const Uitvoerder = () => {
               </Fieldset>
               <Fieldset legend="Contactpersoon coach">
                 <FormField label="Voorletters">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Tussenvoegsels">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Achternaam">
                   <FormField.Text />
                 </FormField>
                 <FormField label="Telefoonnummer">
-                  <FormField.Text size="md" />
+                  <FormField.Text sizeInput="md" />
                 </FormField>
                 <FormField label="E-mailadres">
                   <FormField.Text />

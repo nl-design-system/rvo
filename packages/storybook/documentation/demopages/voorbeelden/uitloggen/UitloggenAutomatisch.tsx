@@ -27,7 +27,7 @@ const UitloggenAutomatisch = () => {
                 pagina.
               </p>
 
-              <Button kind="primary" label="Opnieuw inloggen" />
+              <Button kind="primary">Opnieuw inloggen</Button>
 
               <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
                 <Link href="https://www.rvo.nl" noUnderline={true}>

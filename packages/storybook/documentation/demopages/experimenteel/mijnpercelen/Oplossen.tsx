@@ -180,10 +180,10 @@ const Oplossen = () => {
                             </label>
                           </div>
                           <div className="rvo-action-group">
-                            <Button kind="warning" size="xs" label={''}>
+                            <Button kind="warning" size="xs">
                               -0,044 ha afknippen
                             </Button>
-                            <Button kind="secondary" size="xs" label={''}>
+                            <Button kind="secondary" size="xs">
                               -0,044 ha negeren
                             </Button>
                           </div>
@@ -247,10 +247,10 @@ const Oplossen = () => {
                             </label>
                           </div>
                           <div className="rvo-action-group">
-                            <Button kind="primary" size="xs" label={''}>
+                            <Button kind="primary" size="xs">
                               -0,044 ha toevoegen
                             </Button>
-                            <Button kind="secondary" size="xs" label={''}>
+                            <Button kind="secondary" size="xs">
                               -0,044 ha negeren
                             </Button>
                           </div>
@@ -259,8 +259,8 @@ const Oplossen = () => {
                     </fieldset>
                   </div>
                   <div className="rvo-action-group">
-                    <Button kind="primary" label={''}>Versturen</Button>
-                    <Button kind="secondary" label={''}>Percelen wijzigen</Button>
+                    <Button kind="primary">Versturen</Button>
+                    <Button kind="secondary">Percelen wijzigen</Button>
                   </div>
                 </LayoutFlow>
               </div>

@@ -6,7 +6,7 @@ import {
   Heading,
   LayoutFlow,
   Link,
-  MenuBar
+  MenuBar,
 } from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
@@ -125,11 +125,18 @@ const PerceelEdit = () => {
                   <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                     <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
                       <LayoutFlow gap="md">
-                        <FormField label="Naam" expandableHelperText={{title:'Meer uitleg', children: 'Geef uw perceel een herkenbare en logische naam. Dat maakt uw lijst met percelen overzichtelijk wanneer u landschapselementen heeft geregistreerd. U ziet dan makkelijk bij welk perceel een landschapselement hoort.'}}>
-                          <FormField.Text value={"Sloot bij de buren"} />
+                        <FormField
+                          label="Naam"
+                          expandableHelperText={{
+                            title: 'Meer uitleg',
+                            children:
+                              'Geef uw perceel een herkenbare en logische naam. Dat maakt uw lijst met percelen overzichtelijk wanneer u landschapselementen heeft geregistreerd. U ziet dan makkelijk bij welk perceel een landschapselement hoort.',
+                          }}
+                        >
+                          <FormField.Text value={'Sloot bij de buren'} />
                         </FormField>
                         <FormField label="Gewas">
-                          <FormField.Select 
+                          <FormField.Select
                             options={[
                               { value: '1', label: 'Aardperen' },
                               { value: '2', label: 'Aardappelen, consumptie (2014)' },
@@ -137,7 +144,7 @@ const PerceelEdit = () => {
                           />
                         </FormField>
                         <FormField label="Gebruik">
-                          <FormField.Select 
+                          <FormField.Select
                             options={[
                               { value: '1', label: 'Eigendom' },
                               { value: '2', label: 'Erfpacht' },
@@ -200,7 +207,7 @@ const PerceelEdit = () => {
                               </div>
                             </div>
                             <div className="rvo-button--inline">
-                              <Button kind="secondary" size="xs" label={''}>
+                              <Button kind="secondary" size="xs">
                                 Geselecteerde -0,044 ha afknippen
                               </Button>
                             </div>
@@ -252,7 +259,7 @@ const PerceelEdit = () => {
                               </div>
                             </div>
                             <div className="rvo-button--inline">
-                              <Button kind="secondary" size="xs" label={''}>
+                              <Button kind="secondary" size="xs">
                                 Geselecteerde 0,055 ha toevoegen
                               </Button>
                             </div>
@@ -274,21 +281,21 @@ const PerceelEdit = () => {
                           </FormField>
                         </details>
 
-                        <FormField label=''>
-                            <FormField.CheckboxGroup
-                              options={[
-                                {
-                                  id: 'optionA-cb-warning',
-                                  label: 'De topografische grens van het perceel is gewijzigd of niet juist.',
-                                },
-                              ]}
-                            />
+                        <FormField label="">
+                          <FormField.CheckboxGroup
+                            options={[
+                              {
+                                id: 'optionA-cb-warning',
+                                label: 'De topografische grens van het perceel is gewijzigd of niet juist.',
+                              },
+                            ]}
+                          />
                         </FormField>
                       </LayoutFlow>
                     </fieldset>
                   </div>
                   <ActionGroup>
-                    <Button kind="primary" label={''}>Opslaan</Button>
+                    <Button kind="primary">Opslaan</Button>
                   </ActionGroup>
                 </LayoutFlow>
               </div>

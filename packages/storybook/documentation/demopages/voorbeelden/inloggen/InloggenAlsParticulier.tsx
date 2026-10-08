@@ -63,7 +63,9 @@ const InloggenAlsParticulier = () => {
                       </a>
                     </div>
 
-                    <Button kind="secondary" fullWidth={true} label="Ik heb geen van deze inlogmiddelen" />
+                    <Button kind="secondary" fullWidth={true}>
+                      Ik heb geen van deze inlogmiddelen
+                    </Button>
 
                     <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
                       <Link href="#" noUnderline={true}>

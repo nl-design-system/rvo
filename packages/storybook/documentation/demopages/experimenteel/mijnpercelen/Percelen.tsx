@@ -1,12 +1,4 @@
-import {
-  Alert,
-  Button,
-  FormField,
-  Heading,
-  Icon,
-  LayoutFlow,
-  MenuBar
-} from '@nl-rvo/component-library-react';
+import { Alert, Button, FormField, Heading, Icon, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
 import '../../common/mijn-percelen.scss';
 import '../../common/rhs-update.scss';
 
@@ -128,12 +120,10 @@ const Percelen = () => {
                         </summary>
                         <LayoutFlow gap="md">
                           <FormField label="Filter op peildatum">
-                            <FormField.Select 
-                              options={[{ value: '1', label: '15-05-2023' }]}
-                            />
+                            <FormField.Select options={[{ value: '1', label: '15-05-2023' }]} />
                           </FormField>
                           <FormField label="">
-                            <FormField.CheckboxGroup 
+                            <FormField.CheckboxGroup
                               options={[
                                 { id: 'optionA-cb-warning', label: 'Toon percelen met conflicten' },
                                 { id: 'optionB-cb-warning', label: 'Toon percelen met waarschuwingen' },
@@ -141,10 +131,10 @@ const Percelen = () => {
                             />
                           </FormField>
                           <FormField label="Filter op naam perceel">
-                              <FormField.Text />
+                            <FormField.Text />
                           </FormField>
                           <FormField label="Sorteer percelen">
-                            <FormField.Select 
+                            <FormField.Select
                               options={[
                                 { value: 'a', label: 'Op naam' },
                                 { value: 'b', label: 'Op nummer' },
@@ -174,10 +164,10 @@ const Percelen = () => {
                         content="Dit perceel heeft gedurende (een deel van) de looptijd geheel of gedeeltelijk overlap met een perceel van een andere gebruiker. <a href='#'>Oplossen</a>"
                       ></Alert>
                       <div className="rvo-card-perceel-actions">
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Bewerken
                         </Button>
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Verwijderen
                         </Button>
                       </div>
@@ -198,10 +188,10 @@ const Percelen = () => {
                         <Button kind="warning-subtle" size="xs" iconPlacement="left" icon="refresh">
                           Ongedaan maken
                         </Button>
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Bewerken
                         </Button>
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Verwijderen
                         </Button>
                       </div>
@@ -219,10 +209,10 @@ const Percelen = () => {
                       </div>
 
                       <div className="rvo-card-perceel-actions">
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Bewerken
                         </Button>
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Verwijderen
                         </Button>
                       </div>
@@ -250,7 +240,7 @@ const Percelen = () => {
                         >
                           Bewerken
                         </a>
-                        <Button kind="tertiary" size="xs" label={''}>
+                        <Button kind="tertiary" size="xs">
                           Verwijderen
                         </Button>
                       </div>

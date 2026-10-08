@@ -42,28 +42,31 @@ const InloggenRVO = () => {
                     fullWidth={true}
                     iconPlacement="left"
                     icon="basis-kantoorgebouw"
-                    label="Inloggen als bedrijf of organisatie"
                     className="rvo-layout-justify-content-start"
                     onClick={navigeerNaarBedrijf}
-                  />
+                  >
+                    Inloggen als bedrijf of organisatie
+                  </Button>
                   <Button
                     kind="secondary"
                     fullWidth={true}
                     iconPlacement="left"
                     icon="man-torso"
-                    label="Inloggen als particulier"
                     className="rvo-layout-justify-content-start"
                     onClick={navigeerNaarParticulier}
-                  />
+                  >
+                    Inloggen als particulier
+                  </Button>
                   <Button
                     kind="secondary"
                     fullWidth={true}
                     iconPlacement="left"
                     icon="persoon-met-vinkje"
-                    label="Inloggen voor iemand anders"
                     onClick={navigeerNaarIemandAnders}
                     className="rvo-layout-justify-content-start"
-                  />
+                  >
+                    Inloggen voor iemand anders
+                  </Button>
                 </LayoutFlow>
 
                 <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>

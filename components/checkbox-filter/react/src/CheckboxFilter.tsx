@@ -51,7 +51,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
       </summary>
       {showInputField && (
         <FormField id="checkbox-filter-search" label={inputFieldLabel}>
-          <FormField.Text type="text" onChange={inputFieldOnChange} size="max" />
+          <FormField.Text type="text" onChange={inputFieldOnChange} sizeInput="max" />
         </FormField>
       )}
 

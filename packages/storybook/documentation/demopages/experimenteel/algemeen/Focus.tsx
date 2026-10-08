@@ -43,14 +43,17 @@ const Focus = () => {
             </p>
             <Accordion>
               <Accordion.Item title="Mag ik voor deze regeling subsidies stapelen/combineren?">
-                Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.
+                Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies
+                om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de
+                Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid
+                voor dezelfde maatregel.
               </Accordion.Item>
               <Accordion.Item title="Wat is een bestaande thermische schil?">
-                De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.
+                De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken,
+                beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en
+                warmte binnen te houden. De thermische schil is de jas van de woning.
               </Accordion.Item>
-              <Accordion.Item title="Wanneer krijg ik bericht over mijn subsidie?">
-                Zo snel mogelijk.
-              </Accordion.Item>
+              <Accordion.Item title="Wanneer krijg ik bericht over mijn subsidie?">Zo snel mogelijk.</Accordion.Item>
             </Accordion>
             <p>
               Dit is een voorbeeld van een{' '}
@@ -72,7 +75,10 @@ const Focus = () => {
                     <FormField label="Text">
                       <FormField.Text />
                     </FormField>
-                    <FormField label="Text with helper text" helperText="This is a helper text which can be used for instructions.">
+                    <FormField
+                      label="Text with helper text"
+                      helperText="This is a helper text which can be used for instructions."
+                    >
                       <FormField.Text />
                     </FormField>
                     <FormField label="Text">
@@ -81,13 +87,14 @@ const Focus = () => {
                     <FormField label="Text with an error" errorText="This is an error">
                       <FormField.Text invalid={true} />
                     </FormField>
-                    <FormField label="Text with a warning" warningText="This is a warning" >
+                    <FormField label="Text with a warning" warningText="This is a warning">
                       <FormField.Text />
                     </FormField>
-                    <FormField 
+                    <FormField
                       label="Text with expandable helper text"
                       helperText="This is a helper text which can be used for instructions."
-                      expandableHelperText={{title: "Expandable helper text", children: ""}}>
+                      expandableHelperText={{ title: 'Expandable helper text', children: '' }}
+                    >
                       <FormField.Text />
                     </FormField>
                     <FormField label="Text disabled">
@@ -105,12 +112,9 @@ const Focus = () => {
                   </Fieldset>
 
                   <Fieldset legend="Options">
-                    <FormField 
-                      label="Radio buttons"
-                      helperText="This is an helper text"
-                    >
-                      <FormField.RadioButtonGroup 
-                        name="radio-buttons" 
+                    <FormField label="Radio buttons" helperText="This is an helper text">
+                      <FormField.RadioButtonGroup
+                        name="radio-buttons"
                         options={[
                           { id: 'optionA', label: 'Option A' },
                           { id: 'optionB', label: 'Option B' },
@@ -119,12 +123,9 @@ const Focus = () => {
                         ]}
                       />
                     </FormField>
-                    <FormField 
-                      label="Radio buttons invalid"
-                      errorText="This is an error"
-                    >
-                      <FormField.RadioButtonGroup 
-                        name="radio-buttons" 
+                    <FormField label="Radio buttons invalid" errorText="This is an error">
+                      <FormField.RadioButtonGroup
+                        name="radio-buttons"
                         invalid={true}
                         options={[
                           { id: 'optionA-error', label: 'Option A' },
@@ -134,12 +135,9 @@ const Focus = () => {
                         ]}
                       />
                     </FormField>
-                    <FormField 
-                      label="Radio buttons warning"
-                      warningText="This is a warning"
-                    >
-                      <FormField.RadioButtonGroup 
-                        name="radio-buttons-warning" 
+                    <FormField label="Radio buttons warning" warningText="This is a warning">
+                      <FormField.RadioButtonGroup
+                        name="radio-buttons-warning"
                         options={[
                           { id: 'optionA-warning', label: 'Option A' },
                           { id: 'optionB-warning', label: 'Option B' },
@@ -149,10 +147,7 @@ const Focus = () => {
                       />
                     </FormField>
 
-                    <FormField 
-                      label='Checkboxes'
-                      helperText="This is an helper text"
-                    >
+                    <FormField label="Checkboxes" helperText="This is an helper text">
                       <FormField.CheckboxGroup
                         invalid={false}
                         options={[
@@ -164,10 +159,7 @@ const Focus = () => {
                       />
                     </FormField>
 
-                    <FormField 
-                      label='Checkboxes with Error'
-                      errorText="This is an error"
-                    >
+                    <FormField label="Checkboxes with Error" errorText="This is an error">
                       <FormField.CheckboxGroup
                         invalid={true}
                         options={[
@@ -179,10 +171,7 @@ const Focus = () => {
                       />
                     </FormField>
 
-                    <FormField 
-                      label='Checkboxes with Warning'
-                      warningText="This is a warning"
-                    >
+                    <FormField label="Checkboxes with Warning" warningText="This is a warning">
                       <FormField.CheckboxGroup
                         invalid={false}
                         options={[
@@ -195,7 +184,7 @@ const Focus = () => {
                     </FormField>
 
                     <FormField label="Select">
-                      <FormField.Select 
+                      <FormField.Select
                         options={[
                           { value: '1', label: 'Option #1' },
                           { value: '2', label: 'Option #2' },
@@ -240,10 +229,10 @@ const Focus = () => {
                   </Fieldset>
 
                   <ActionGroup>
-                    <Button kind="primary" size="md" busy={false} disabled={false} label="">
+                    <Button kind="primary" size="md" busy={false} disabled={false}>
                       Primary action
                     </Button>
-                    <Button kind="secondary" size="md" busy={false} disabled={false} label="">
+                    <Button kind="secondary" size="md" busy={false} disabled={false}>
                       Secondary action
                     </Button>
                   </ActionGroup>

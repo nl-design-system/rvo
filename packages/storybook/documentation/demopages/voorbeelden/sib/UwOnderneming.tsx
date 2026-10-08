@@ -182,7 +182,7 @@ const UwOnderneming = () => {
                 </FormField>
 
                 <FormField label="Hoeveel medewerkers heeft uw onderneming?">
-                  <FormField.Text size="sm" validation="none" />
+                  <FormField.Text sizeInput="sm" validation="none" />
                 </FormField>
                 <FormField label="Wat is de website van uw organisatie?">
                   <FormField.Text />
@@ -191,7 +191,7 @@ const UwOnderneming = () => {
                   label="SBI-code"
                   helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
                 >
-                  <FormField.Text size="sm" validation="none" />
+                  <FormField.Text sizeInput="sm" validation="none" />
                 </FormField>
               </Fieldset>
               <ActionGroup>

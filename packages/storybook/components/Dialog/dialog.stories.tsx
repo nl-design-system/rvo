@@ -85,12 +85,8 @@ export const WithActionGroup: Story = {
     content: 'Dialog content',
     actionGroup: (
       <ActionGroup>
-        <Button kind="primary" label="">
-          Ok
-        </Button>
-        <Button kind="secondary" label="">
-          Annuleren
-        </Button>
+        <Button kind="primary">Ok</Button>
+        <Button kind="secondary">Annuleren</Button>
       </ActionGroup>
     ),
   },

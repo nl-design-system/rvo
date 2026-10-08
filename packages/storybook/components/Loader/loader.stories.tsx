@@ -8,11 +8,11 @@ const status = {
 };
 
 const primaryAction = {
-  label: 'Probeer het opnieuw',
+  children: 'Probeer het opnieuw',
 };
 
 const secondaryAction = {
-  label: 'Probleem melden',
+  children: 'Probleem melden',
 };
 
 export default {

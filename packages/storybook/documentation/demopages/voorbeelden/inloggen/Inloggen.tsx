@@ -114,10 +114,11 @@ const Inloggen = () => {
                   fullWidth={true}
                   iconPlacement="left"
                   icon="persoon-met-vinkje"
-                  label="Inloggen voor iemand anders"
                   onClick={navigeerNaarIemandAnders}
                   className="rvo-layout-justify-content-start"
-                />
+                >
+                  Inloggen voor iemand anders
+                </Button>
 
                 <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
                   <Link href="#" noUnderline={true}>

@@ -9,7 +9,7 @@ import { StatusIcon } from '@nl-rvo/react-status-icon';
 import '@nl-rvo/css-tag';
 import { ITagProps } from './Tag.types';
 
-export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
+export const Tag: React.FC<ITagProps> = ({
   children,
   type,
   iconPlacement,
@@ -42,7 +42,7 @@ export const Tag: React.FC<ITagProps & React.HTMLAttributes<HTMLElement>> = ({
       : StatusIcon({
           type: typeName[type as keyof typeof typeName],
           size: 'lg',
-          ignoreDefaultIconColor: true        
+          ignoreDefaultIconColor: true,
         });
   }
 

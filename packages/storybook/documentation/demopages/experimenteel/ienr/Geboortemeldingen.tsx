@@ -6,7 +6,7 @@ import {
   Header,
   Heading,
   LayoutFlow,
-  MenuBar
+  MenuBar,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -91,20 +91,20 @@ const Geboortemeldingen = () => {
               </Heading>
               <Fieldset legend="Landcode">
                 <FormField label="">
-                  <FormField.Text size='sm' />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Levensnummer">
-                  <FormField.Text size='sm' />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Werknummer">
-                  <FormField.Text size='sm' />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Geboortedatum">
-                  <FormField.Date size='sm' />
+                  <FormField.Date sizeInput="sm" />
                 </FormField>
 
                 <FormField label="Haarkleur">
-                  <FormField.Select 
+                  <FormField.Select
                     options={[
                       { label: 'Zwart', value: 'zwart' },
                       { label: 'Wit', value: 'wit' },
@@ -118,7 +118,7 @@ const Geboortemeldingen = () => {
                   />
                 </FormField>
                 <FormField label="Geslacht">
-                  <FormField.Select 
+                  <FormField.Select
                     options={[
                       { label: 'Mannelijk', value: 'mannelijk' },
                       { label: 'Vrouwelijk', value: 'vrouwelijk' },
@@ -127,7 +127,7 @@ const Geboortemeldingen = () => {
                 </FormField>
 
                 <FormField label="Land van geboorte/oorsprong">
-                  <FormField.Select 
+                  <FormField.Select
                     options={[
                       { label: 'Nederland', value: 'NL' },
                       { label: 'België', value: 'BE' },
@@ -178,19 +178,19 @@ const Geboortemeldingen = () => {
 
                 <Heading type="h3">Gegevens moeder</Heading>
                 <FormField label="Landcode">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Levensnummer">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Werknummer">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
               </Fieldset>
-              <Button kind="secondary" icon="plus" iconPlacement="left" label={''}>
+              <Button kind="secondary" icon="plus" iconPlacement="left">
                 Opslaan en nog een geboortemelding doen
               </Button>
-              <Button kind="primary" icon="pijl-naar-rechts" iconPlacement="right" label={''}>
+              <Button kind="primary" icon="pijl-naar-rechts" iconPlacement="right">
                 Opslaan en doorgaan
               </Button>
             </LayoutFlow>

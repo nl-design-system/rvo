@@ -202,16 +202,16 @@ const UwGegevens = () => {
               </Fieldset>
               <Fieldset legend="Contactpersoon aanvrager ">
                 <FormField label="Voorletters">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Tussenvoegsels">
-                  <FormField.Text size="sm" />
+                  <FormField.Text sizeInput="sm" />
                 </FormField>
                 <FormField label="Achternaam">
                   <FormField.Text />
                 </FormField>
                 <FormField label="Telefoonnummer">
-                  <FormField.Text size="md" />
+                  <FormField.Text sizeInput="md" />
                 </FormField>
                 <FormField label="E-mailadres">
                   <FormField.Text />

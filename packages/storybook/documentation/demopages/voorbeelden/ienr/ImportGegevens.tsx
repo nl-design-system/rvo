@@ -9,7 +9,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -61,10 +61,24 @@ const ImportGegevens = () => {
                 </Heading>
                 <Grid columns="two">
                   <Accordion>
-                    <Accordion.Item title='Uitleg over in te voeren gegevens'>
-                      <span className="rvo-text--bold">Landcode: </span>Neem de landcode over van het (oor)merk.<br/> <span className="rvo-text--bold">Levensnummer: </span>Neem het levensnummer over van het (oor)merk.<br/> <span className="rvo-text--bold">Werknummer: </span>Neem het werknummer over van het (oor)merk.<br/> <span className="rvo-text--bold">Geboortedatum: </span>Vul hier de datum in waarop het dier is geboren.<br/> <span className="rvo-text--bold">Geslacht (optioneel): </span>Geef hier aan of het een mannelijk of vrouwelijk schaap is.<br/> <span className="rvo-text--bold">Land van geboorte/oorsprong (optioneel): </span>Kies hier het land van geboorte/oorsprong. Is dit geen EU-land? Vul dan ook het oorspronkelijke levensnummer (ID-code) in.<br/> <span className="rvo-text--bold">Oorspr. ID, niet EU land: </span>U bent verplicht dieren die uit een niet EU-land komen om te nummeren. Vul hier het oorspronkelijke levensnummer (ID-code) in zodat dierhistorie bewaard blijft.
+                    <Accordion.Item title="Uitleg over in te voeren gegevens">
+                      <span className="rvo-text--bold">Landcode: </span>Neem de landcode over van het (oor)merk.
+                      <br /> <span className="rvo-text--bold">Levensnummer: </span>Neem het levensnummer over van het
+                      (oor)merk.
+                      <br /> <span className="rvo-text--bold">Werknummer: </span>Neem het werknummer over van het
+                      (oor)merk.
+                      <br /> <span className="rvo-text--bold">Geboortedatum: </span>Vul hier de datum in waarop het dier
+                      is geboren.
+                      <br /> <span className="rvo-text--bold">Geslacht (optioneel): </span>Geef hier aan of het een
+                      mannelijk of vrouwelijk schaap is.
+                      <br /> <span className="rvo-text--bold">Land van geboorte/oorsprong (optioneel): </span>Kies hier
+                      het land van geboorte/oorsprong. Is dit geen EU-land? Vul dan ook het oorspronkelijke levensnummer
+                      (ID-code) in.
+                      <br /> <span className="rvo-text--bold">Oorspr. ID, niet EU land: </span>U bent verplicht dieren
+                      die uit een niet EU-land komen om te nummeren. Vul hier het oorspronkelijke levensnummer (ID-code)
+                      in zodat dierhistorie bewaard blijft.
                     </Accordion.Item>
-                  </Accordion>                  
+                  </Accordion>
                 </Grid>
 
                 <LayoutFlow gap="md">
@@ -85,10 +99,10 @@ const ImportGegevens = () => {
                         <LayoutFlow row={true} alignItems="start">
                           <span>1</span>
                           <FormField label="Landcode">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Levensnummer">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Werknummer">
                             <FormField.Text />
@@ -106,10 +120,10 @@ const ImportGegevens = () => {
                         <LayoutFlow row={true} alignItems="start">
                           <span>2</span>
                           <FormField label="Landcode">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Levensnummer">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Werknummer">
                             <FormField.Text />
@@ -127,10 +141,10 @@ const ImportGegevens = () => {
                         <LayoutFlow row={true} alignItems="start">
                           <span>3</span>
                           <FormField label="Landcode">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Levensnummer">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Werknummer">
                             <FormField.Text />
@@ -148,10 +162,10 @@ const ImportGegevens = () => {
                         <LayoutFlow row={true} alignItems="start">
                           <span>4</span>
                           <FormField label="Landcode">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Levensnummer">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Werknummer">
                             <FormField.Text />
@@ -169,10 +183,10 @@ const ImportGegevens = () => {
                         <LayoutFlow row={true} alignItems="start">
                           <span>5</span>
                           <FormField label="Landcode">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Levensnummer">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Werknummer">
                             <FormField.Text />
@@ -190,10 +204,10 @@ const ImportGegevens = () => {
                         <LayoutFlow row={true} alignItems="start">
                           <span>6</span>
                           <FormField label="Landcode">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Levensnummer">
-                            <FormField.Text size="sm" />
+                            <FormField.Text sizeInput="sm" />
                           </FormField>
                           <FormField label="Werknummer">
                             <FormField.Text />
