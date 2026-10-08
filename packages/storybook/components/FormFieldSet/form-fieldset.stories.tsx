@@ -41,20 +41,20 @@ export const Default: Story = {
   render: (args) => (
     <Fieldset {...args}>
       <FormField id="fieldA" label="Field">
-        <FormField.Text type="text" size="lg" />
+        <FormField.Text type="text" sizeInput="lg" />
       </FormField>
       <FormField
         id="fieldB"
         label="Field met helper tekst"
         helperText="Deze helpertekst kan gebruikt worden voor instructies"
       >
-        <FormField.Text type="text" size="lg" />
+        <FormField.Text type="text" sizeInput="lg" />
       </FormField>
       <FormField id="fieldC" label="Field met waarschuwing" warningText="Dit is een waarschuwing">
-        <FormField.Text type="text" size="lg" />
+        <FormField.Text type="text" sizeInput="lg" />
       </FormField>
       <FormField id="fieldD" label="Field met foutmelding" errorText="Dit is een foutmelding">
-        <FormField.Text type="text" size="lg" />
+        <FormField.Text type="text" sizeInput="lg" />
       </FormField>
     </Fieldset>
   ),
