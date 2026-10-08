@@ -65,6 +65,7 @@ export const MenuBarItem: React.FC<IMenuBarItem> = ({
           linkColor={linkColor}
           isSubmenuVisible={isSubmenuVisible}
           maxWidth={maxWidth}
+          LinkComponent={LinkComponent}
         />
       )}
     </li>

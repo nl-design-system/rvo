@@ -41,4 +41,5 @@ export interface SubMenuProps {
   isSubmenuVisible?: boolean;
   className?: string | string[];
   maxWidth?: 'sm' | 'md' | 'lg';
+  LinkComponent?: LinkCustomLinkComponent;
 }

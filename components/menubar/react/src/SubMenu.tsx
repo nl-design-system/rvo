@@ -14,6 +14,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   linkColor,
   isSubmenuVisible,
   maxWidth,
+  LinkComponent,
 }) => {
   if (!isSubmenuVisible) return null;
 
@@ -23,12 +24,13 @@ export const SubMenu: React.FC<SubMenuProps> = ({
         className="rvo-menubar__link"
         {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}
         color={linkColor}
+        LinkComponent={LinkComponent}
       >
-        {iconPlacement === 'before' && useIcons && subItem.icon && (
+        {iconPlacement === 'left' && useIcons && subItem.icon && (
           <Icon icon={subItem.icon} size={size as any} color="wit" />
         )}
         {subItem.label}
-        {iconPlacement === 'after' && useIcons && subItem.icon && (
+        {iconPlacement === 'right' && useIcons && subItem.icon && (
           <Icon icon={subItem.icon} size={size as any} color="wit" />
         )}
       </Link>
