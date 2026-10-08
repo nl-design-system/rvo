@@ -59,6 +59,7 @@ export default {
     'scss/dollar-variable-pattern': '^(rvo|utrecht)-[a-z0-9-]+$',
     'scss/operator-no-newline-after': null,
     'scss/percent-placeholder-pattern': '^(rvo|utrecht)-[a-z0-9-]+$',
+    'scss/operator-no-unspaced': null,
     'selector-attribute-quotes': 'always',
     'selector-class-pattern': '^(rvo|utrecht)-[a-z0-9_-]+$',
     'selector-max-id': 0,
