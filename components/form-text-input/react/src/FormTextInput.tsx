@@ -11,7 +11,6 @@ export const TextInput: React.FC<ITextInputProps> = ({
   type = 'text',
   defaultValue,
   disabled,
-  focus,
   invalid,
   readOnly,
   required,

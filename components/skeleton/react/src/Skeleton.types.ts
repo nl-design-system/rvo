@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface ISkeletonProps extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: 'circular';
   animation?: 'shimmer' | 'pulse';

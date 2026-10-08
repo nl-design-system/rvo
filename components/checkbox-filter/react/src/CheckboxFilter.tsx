@@ -13,7 +13,6 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     showInputField,
     inputFieldLabel = 'Zoek in lijst',
     inputFieldOnChange,
-    optionsOnChange,
     showMoreText = 'Toon meer',
     showLessText = 'Toon minder',
     noFiltersText = 'Geen filters beschikbaar',
@@ -56,9 +55,6 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
       )}
 
       <div className="rvo-checkbox-filter__checkbox-container">
-        {/* {visibleItems.length > 0 && (
-          <FormField><FormField.Checkbox invalid={false} options={visibleItems} onChange={optionsOnChange} /></FormField>
-        )} */}
         {visibleItems.length === 0 && <p className="rvo-checkbox-filter__no-filter-text">{noFiltersText}</p>}
       </div>
       {options?.length > limit && (

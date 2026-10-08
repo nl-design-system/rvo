@@ -1,3 +1,4 @@
+import React from 'react';
 import { HTMLAttributes, SyntheticEvent } from 'react';
 
 export interface IAlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'content'> {

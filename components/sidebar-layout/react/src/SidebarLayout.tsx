@@ -12,14 +12,7 @@ import { ISidebarBarProps, ISidebarLayoutContentProps, ISidebarLayoutProps } fro
 export const SidebarLayout: React.FC<ISidebarLayoutProps> & {
   Bar: React.FC<ISidebarBarProps>;
   Content: React.FC<ISidebarLayoutContentProps>;
-} = ({
-  maxWidthLayoutSize = 'md',
-  sidebarPosition = 'left',
-  sidebarBackgroundColor = true,
-  children,
-  className,
-  ...rootElementProps
-}) => {
+} = ({ sidebarPosition = 'left', sidebarBackgroundColor = true, className, ...rootElementProps }) => {
   return (
     <main
       className={clsx(

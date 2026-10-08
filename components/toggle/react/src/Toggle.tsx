@@ -13,7 +13,6 @@ export const Toggle: React.FC<IToggleProps> = ({
   iconPlacement,
   icon,
   active,
-  showHover,
   className,
   link,
   linkTarget = '_self',

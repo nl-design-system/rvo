@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { ILinkProps } from '@nl-rvo/react-link';
 
 export interface IProgressTrackerProps extends React.HTMLAttributes<HTMLDivElement> {

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export interface IDialogProps extends Omit<React.HTMLAttributes<HTMLDialogElement>, 'className'> {
   children?: ReactNode;

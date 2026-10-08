@@ -1,3 +1,4 @@
+import React from 'react';
 import { IconType } from '@nl-rvo/components/icon/react/src';
 
 export interface IHeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {

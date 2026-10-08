@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export interface IScrollableContentProps extends React.HTMLAttributes<HTMLDivElement> {
   height?: number;

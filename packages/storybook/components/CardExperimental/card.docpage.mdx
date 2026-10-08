@@ -1,4 +1,3 @@
-import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as CardStories from "./card.stories";
 
@@ -9,11 +8,4 @@ import * as CardStories from "./card.stories";
 
 ## Props
 
-<ArgTypes />
-
-## Dependencies
-
-_@nl-rvo/css-heading_
-_@nl-rvo/css-icon_
-_@nl-rvo/assets/icons_
-_@nl-rvo/css-link_
+<ArgTypes of={CardStories.Base} />

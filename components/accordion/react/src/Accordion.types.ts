@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export interface IAccordionProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;

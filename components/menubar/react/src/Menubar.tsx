@@ -4,7 +4,6 @@
  */
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
-// eslint-disable-next-line import/order
 
 import '@nl-rvo/css-menubar';
 import MenuBarItem from './MenuItem';

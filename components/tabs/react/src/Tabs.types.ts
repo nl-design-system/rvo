@@ -1,3 +1,4 @@
+import React from 'react';
 import { TabActivationMode } from './keyboard';
 
 export type TabsSize = 'sm' | 'md' | 'lg';

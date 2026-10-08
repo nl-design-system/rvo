@@ -1,3 +1,4 @@
+import React from 'react';
 import { IExpandableContentProps } from '@nl-rvo/components/expandable-content/react/src';
 import { ReactNode } from 'react';
 

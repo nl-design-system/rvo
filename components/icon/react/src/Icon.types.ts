@@ -1,6 +1,8 @@
 // This file was copied from "@nl-rvo/assets/icons/types"
 // TODO: Use original file again, which is in sync with icon assets.
 
+import React from 'react';
+
 export type IconType =
   | 'afhaalpunt'
   | 'crisisoverleg'

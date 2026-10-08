@@ -1,3 +1,4 @@
+import React from 'react';
 import { IHeadingProps } from '@nl-rvo/react-heading';
 import { ILinkProps } from '@nl-rvo/react-link';
 import { HTMLAttributes, ReactNode } from 'react';

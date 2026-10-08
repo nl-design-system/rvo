@@ -1,3 +1,4 @@
+import React from 'react';
 import { ILinkProps } from '@nl-rvo/react-link';
 import CardContent from './components/CardContent';
 import CardHeader from './components/CardHeader';

@@ -1,5 +1,5 @@
 import { IconType } from '@nl-rvo/react-icon';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { LinkCustomLinkComponent } from '@nl-rvo/react-link';
 
 export interface IMenuBarSubItem extends Omit<IMenuBarItem, 'align' | 'submenu'> {}

@@ -1,10 +1,9 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { IconType } from '@nl-rvo/react-icon';
 
 export interface IToggleProps extends React.HTMLAttributes<HTMLElement> {
   iconPlacement?: 'left' | 'right';
   icon?: IconType;
-  showHover?: boolean;
   active?: boolean;
   className?: string;
   link?: string;

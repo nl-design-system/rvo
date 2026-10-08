@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export interface ISidebarLayoutProps extends React.HTMLAttributes<HTMLElement> {
   maxWidthLayoutSize?: 'sm' | 'md' | 'lg';

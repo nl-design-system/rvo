@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface ICheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   id?: string;
   name?: string;

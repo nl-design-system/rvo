@@ -14,7 +14,7 @@ const parseDividerMarkup = (index: number, maxLength: number) => {
   return index > 0 && index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
 };
 
-export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items, size = 'sm', children, ...rest }) => {
+export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items, size = 'sm', ...rest }) => {
   const renderBreadcrumbItem = (link, label) => {
     if (link?.length && link.length > 0) {
       return (

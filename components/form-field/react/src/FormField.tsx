@@ -85,7 +85,9 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
 };
 
 FormField.Text = TextInput;
-FormField.Date = (params) => <TextInput type="date" {...params} />;
+FormField.Date = function FormFieldDate(params) {
+  return <TextInput type="date" {...params} />;
+};
 FormField.Checkbox = Checkbox;
 FormField.CheckboxGroup = CheckboxGroup;
 FormField.FileInput = FileInput;

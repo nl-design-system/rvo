@@ -1,3 +1,4 @@
+import React from 'react';
 import { IconType } from '@nl-rvo/react-icon';
 
 export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

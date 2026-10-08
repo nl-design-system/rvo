@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-// eslint-disable-next-line import/order
+
 import SubMenu from './SubMenu';
 import '@nl-rvo/css-menubar';
 import { Link } from '@nl-rvo/react-link';

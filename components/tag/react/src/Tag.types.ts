@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { IconType } from '@nl-rvo/react-icon';
 
 export interface ITagProps extends React.HTMLAttributes<HTMLElement> {

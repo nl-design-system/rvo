@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface ITextInputProps extends React.ComponentPropsWithoutRef<'input'> {
   type?: 'text' | 'password' | 'email' | 'tel' | 'url' | 'search' | 'number' | 'date' | 'time' | 'datetime-local';
   disabled?: boolean;

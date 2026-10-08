@@ -63,6 +63,7 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
       )}
       role="img"
       aria-hidden={true}
+      aria-label={ariaLabel}
       {...rootElementProps}
     ></span>
   );
