@@ -7,7 +7,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  PageNumberNavigation
+  PageNumberNavigation,
 } from '@nl-rvo/component-library-react';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -146,7 +146,7 @@ const VerticalFilter = () => {
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter countries</summary>
                           <FormField label="Search countries">
-                              <FormField.Text />
+                            <FormField.Text />
                           </FormField>
                           <div className="rvo-collapsible-filter--scroll">
                             <FormField label="Countries">
@@ -404,7 +404,7 @@ const VerticalFilter = () => {
                   </LayoutFlow>
                   <div className="rvo-inline-sort">
                     <FormField label="Sort project on">
-                      <FormField.Select 
+                      <FormField.Select
                         options={[
                           {
                             value: 'startdate-closest-now',

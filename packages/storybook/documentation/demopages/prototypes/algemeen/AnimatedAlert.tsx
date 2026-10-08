@@ -1,12 +1,4 @@
-import {
-  Fieldset,
-  Footer,
-  Header,
-  Heading,
-  LayoutFlow,
-  MenuBar,
-  FormField
-} from '@nl-rvo/component-library-react';
+import { Fieldset, Footer, Header, Heading, LayoutFlow, MenuBar, FormField } from '@nl-rvo/component-library-react';
 import { useState } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -74,11 +66,7 @@ const AnimatedAlert = () => {
                           helperText="Je mag alles invullen wat je wil"
                           errorText={showError ? 'Maar wat je net invulde dus niet.' : undefined}
                         >
-                          <FormField.Text 
-                            invalid={showError}
-                            value={value}
-                            onChange={handleChange}
-                          />
+                          <FormField.Text invalid={showError} value={value} onChange={handleChange} />
                         </FormField>
                       </Fieldset>
                       <button

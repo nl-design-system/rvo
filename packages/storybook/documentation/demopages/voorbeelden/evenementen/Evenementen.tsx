@@ -196,7 +196,12 @@ const Evenementen = () => {
 
       <main className="rvo-padding-block-end--3xl">
         <MaxWidthLayout size="md">
-          <Grid gap="xl" division="1fr 2fr" className="rvo-padding-inline-start--md rvo-padding-inline-end--md" columns='two'>
+          <Grid
+            gap="xl"
+            division="1fr 2fr"
+            className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
+            columns="two"
+          >
             {/* Filterkolom links */}
             <form>
               <Fieldset legend="Filters">

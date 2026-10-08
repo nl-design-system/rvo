@@ -11,8 +11,8 @@ const Zoeken = () => {
             <Heading type="h1">Zoeken</Heading>
             <p>Vul je profiel in om maatregelen te krijgen die voor jou van toepassing kunnen zijn.</p>{' '}
             <Fieldset legend="">
-              <FormField label='Ik ben op zoek naar maatregelen'>
-                <FormField.CheckboxGroup 
+              <FormField label="Ik ben op zoek naar maatregelen">
+                <FormField.CheckboxGroup
                   options={[
                     { id: 'optionA-cb', label: 'die eenvoudig te realiseren zijn' },
                     { id: 'optionB-cb', label: 'die financieel interessant zijn' },
@@ -21,16 +21,16 @@ const Zoeken = () => {
                 />
               </FormField>
               <FormField label="Duurzaam op het gebied van">
-                  <FormField.Select 
-                    options={[
-                      { value: '1', label: 'Klimaat' },
-                      { value: '2', label: 'Bodem en lucht' },
-                      { value: '3', label: 'Water' },
-                      { value: '4', label: 'Landschap' },
-                      { value: '5', label: 'Biodiversiteit' },
-                      { value: '6', label: 'Op alle gebieden' },
-                    ]}
-                  />
+                <FormField.Select
+                  options={[
+                    { value: '1', label: 'Klimaat' },
+                    { value: '2', label: 'Bodem en lucht' },
+                    { value: '3', label: 'Water' },
+                    { value: '4', label: 'Landschap' },
+                    { value: '5', label: 'Biodiversiteit' },
+                    { value: '6', label: 'Op alle gebieden' },
+                  ]}
+                />
               </FormField>
             </Fieldset>
             <ActionGroup>

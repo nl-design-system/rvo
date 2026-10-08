@@ -8,7 +8,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  PageNumberNavigation
+  PageNumberNavigation,
 } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -59,72 +59,72 @@ const VerticalFilterClean = () => {
                     </summary>
 
                     <form className="rvo-form">
-                        <FormField label="Search projects">
-                          <FormField.Text value="study" />
-                        </FormField>
+                      <FormField label="Search projects">
+                        <FormField.Text value="study" />
+                      </FormField>
 
-                        <LayoutFlow row={true} gap="sm" alignItems="start">
-                          <FormField label="From (year)">
-                            <FormField.Select
-                              options={[
-                                {
-                                  value: '1998',
-                                  label: '1998',
-                                },
-                                {
-                                  value: '1999',
-                                  label: '1999',
-                                },
-                                {
-                                  value: '2000',
-                                  label: '2000',
-                                },
-                                {
-                                  value: '2001',
-                                  label: '2001',
-                                },
-                                {
-                                  value: '2002',
-                                  label: '2002',
-                                },
-                                {
-                                  value: '2003',
-                                  label: '2003',
-                                },
-                              ]}
-                            />
-                          </FormField>
-                          <FormField label="Till (year)">
-                            <FormField.Select
-                              options={[
-                                {
-                                  value: '1998',
-                                  label: '1998',
-                                },
-                                {
-                                  value: '1999',
-                                  label: '1999',
-                                },
-                                {
-                                  value: '2000',
-                                  label: '2000',
-                                },
-                                {
-                                  value: '2001',
-                                  label: '2001',
-                                },
-                                {
-                                  value: '2002',
-                                  label: '2002',
-                                },
-                                {
-                                  value: '2003',
-                                  label: '2003',
-                                },
-                              ]}
-                            />
-                          </FormField>
-                        </LayoutFlow>
+                      <LayoutFlow row={true} gap="sm" alignItems="start">
+                        <FormField label="From (year)">
+                          <FormField.Select
+                            options={[
+                              {
+                                value: '1998',
+                                label: '1998',
+                              },
+                              {
+                                value: '1999',
+                                label: '1999',
+                              },
+                              {
+                                value: '2000',
+                                label: '2000',
+                              },
+                              {
+                                value: '2001',
+                                label: '2001',
+                              },
+                              {
+                                value: '2002',
+                                label: '2002',
+                              },
+                              {
+                                value: '2003',
+                                label: '2003',
+                              },
+                            ]}
+                          />
+                        </FormField>
+                        <FormField label="Till (year)">
+                          <FormField.Select
+                            options={[
+                              {
+                                value: '1998',
+                                label: '1998',
+                              },
+                              {
+                                value: '1999',
+                                label: '1999',
+                              },
+                              {
+                                value: '2000',
+                                label: '2000',
+                              },
+                              {
+                                value: '2001',
+                                label: '2001',
+                              },
+                              {
+                                value: '2002',
+                                label: '2002',
+                              },
+                              {
+                                value: '2003',
+                                label: '2003',
+                              },
+                            ]}
+                          />
+                        </FormField>
+                      </LayoutFlow>
                       <LayoutFlow gap="xl">
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter status</summary>
@@ -145,7 +145,7 @@ const VerticalFilterClean = () => {
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter countries</summary>
                           <FormField label="Search countries">
-                              <FormField.Text />
+                            <FormField.Text />
                           </FormField>
                           <div className="rvo-collapsible-filter--scroll">
                             <FormField label="Countries">
@@ -403,7 +403,7 @@ const VerticalFilterClean = () => {
                   </LayoutFlow>
                   <div className="rvo-inline-sort">
                     <FormField label="Sort project on">
-                      <FormField.Select 
+                      <FormField.Select
                         options={[
                           {
                             value: 'startdate-closest-now',

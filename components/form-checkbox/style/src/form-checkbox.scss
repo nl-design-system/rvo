@@ -55,8 +55,10 @@
 
 .rvo-checkbox__input:disabled,
 .rvo-checkbox--disabled {
-  background-color: var(--rvo-checkbox-disabled-background-color,
-      var(--utrecht-form-control-disabled-background-color));
+  background-color: var(
+    --rvo-checkbox-disabled-background-color,
+    var(--utrecht-form-control-disabled-background-color)
+  );
   border-color: var(--rvo-checkbox-disabled-border-color, var(--utrecht-form-control-disabled-border-color));
   border-width: var(--rvo-checkbox-disabled-border-width, var(--utrecht-form-control-disabled-border-width));
   color: var(--rvo-checkbox-disabled-color, var(--utrecht-form-control-disabled-color));

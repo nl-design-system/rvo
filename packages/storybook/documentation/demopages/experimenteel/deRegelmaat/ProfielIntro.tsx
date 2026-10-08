@@ -11,8 +11,8 @@ const ProfielIntro = () => {
             <Heading type="h1">Profiel</Heading>
             <p>Vul je profiel in om maatregelen te krijgen die voor jou van toepassing kunnen zijn.</p>{' '}
             <Fieldset legend="">
-            <FormField label="Waar zit je onderneming?">
-                <FormField.Select 
+              <FormField label="Waar zit je onderneming?">
+                <FormField.Select
                   options={[
                     { value: '1', label: 'Noordelijk kleigebied' },
                     { value: '2', label: 'Noordelijk weidegebied - veen' },
@@ -33,7 +33,7 @@ const ProfielIntro = () => {
                 />
               </FormField>
               <FormField label="Soort onderneming">
-                <FormField.Select 
+                <FormField.Select
                   options={[
                     { value: '1', label: 'Akkerbouwbedrijf' },
                     { value: '2', label: 'Melkveehouderij' },

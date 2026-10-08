@@ -7,7 +7,7 @@ import {
   LayoutFlow,
   MenuBar,
   PageNumberNavigation,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -92,7 +92,7 @@ const Filter = () => {
                           <FormField.Text value="study" />
                         </FormField>
                         <LayoutFlow row={true} gap="sm" alignItems="start">
-                        <FormField label="From (year)">
+                          <FormField label="From (year)">
                             <FormField.Select
                               options={[
                                 {
@@ -121,7 +121,7 @@ const Filter = () => {
                                 },
                               ]}
                             />
-                          </FormField >
+                          </FormField>
                           <FormField label="Till (year)">
                             <FormField.Select
                               options={[
@@ -174,7 +174,7 @@ const Filter = () => {
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter countries</summary>
                           <div className="rvo-collapsible-filter--scroll">
-                          <FormField label="All countries">
+                            <FormField label="All countries">
                               <FormField.CheckboxGroup
                                 options={[
                                   { id: 'Afghanistan', label: 'Afghanistan' },
@@ -382,25 +382,25 @@ const Filter = () => {
                           <summary className="rvo-collapsible-filter-label">Filter sector</summary>
 
                           <div className="rvo-collapsible-filter--scroll">
-                          <FormField label="Sector">
-                            <FormField.CheckboxGroup
-                              options={[
-                                {
-                                  id: 'Advanced technical and managerial training',
-                                  label: 'Advanced technical and managerial training',
-                                },
-                                { id: 'Agrarian reform', label: 'Agrarian reform' },
-                                {
-                                  id: 'Agricultural alternative development',
-                                  label: 'Agricultural alternative development',
-                                },
-                                { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
-                                { id: 'Agricultural development', label: 'Agricultural development' },
-                                { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
-                                { id: 'Agricultural education/training', label: 'Agricultural education/training' },
-                              ]}
-                            />
-                          </FormField>
+                            <FormField label="Sector">
+                              <FormField.CheckboxGroup
+                                options={[
+                                  {
+                                    id: 'Advanced technical and managerial training',
+                                    label: 'Advanced technical and managerial training',
+                                  },
+                                  { id: 'Agrarian reform', label: 'Agrarian reform' },
+                                  {
+                                    id: 'Agricultural alternative development',
+                                    label: 'Agricultural alternative development',
+                                  },
+                                  { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                                  { id: 'Agricultural development', label: 'Agricultural development' },
+                                  { id: 'Agricultural co-operatives', label: 'Agricultural co-operatives' },
+                                  { id: 'Agricultural education/training', label: 'Agricultural education/training' },
+                                ]}
+                              />
+                            </FormField>
                           </div>
                         </details>
                         <hr className="rvo-hr" />

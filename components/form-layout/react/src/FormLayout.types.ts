@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface IFormLayoutProps {
-    content: string;
-    children?: ReactNode | undefined;
-  }
+  content: string;
+  children?: ReactNode | undefined;
+}

@@ -84,4 +84,4 @@ export default {
 } satisfies Meta<typeof MenuBar>;
 type Story = StoryObj<typeof MenuBar>;
 
-export const Base: Story = { name: 'Basis Component'};
+export const Base: Story = { name: 'Basis Component' };

@@ -3,9 +3,11 @@
 
 @each $name, $value in tokens.$colors {
   /* stylelint-disable scss/dollar-variable-default */
-  $rvo-short-name: if(string.index($name, "rvo-color-")==1,
-      string.slice($name, string.length("rvo-color-") + 1),
-      $name );
+  $rvo-short-name: if(
+    string.index($name, "rvo-color-") ==1,
+    string.slice($name, string.length("rvo-color-") + 1),
+    $name
+  );
   /* stylelint-enable scss/dollar-variable-default */
 
   .rvo-border--#{$rvo-short-name} {

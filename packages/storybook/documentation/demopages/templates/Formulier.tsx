@@ -8,7 +8,7 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 import { defaultFooterItems } from '../common/defaultFooterItems';
@@ -67,7 +67,7 @@ const Formulier = () => {
                           <FormField label="Text">
                             <FormField.Text />
                           </FormField>
-                          <FormField 
+                          <FormField
                             label="Text met helper text"
                             helperText="This is a helper text which can be used for instructions."
                           >
@@ -76,22 +76,16 @@ const Formulier = () => {
                           <FormField label="Text">
                             <FormField.Text />
                           </FormField>
-                          <FormField 
-                            label="Text with an error"
-                            errorText=''
-                          >
+                          <FormField label="Text with an error" errorText="">
                             <FormField.Text invalid />
                           </FormField>
-                          <FormField 
-                            label="Text with a warning"
-                            warningText="This is a warning"
-                          >
+                          <FormField label="Text with a warning" warningText="This is a warning">
                             <FormField.Text />
                           </FormField>
-                          <FormField 
+                          <FormField
                             label="Text with expandable helper text"
                             helperText="This is a helper text which can be used for instructions."
-                            expandableHelperText={{title:"Expandable helper text", children: ""}}
+                            expandableHelperText={{ title: 'Expandable helper text', children: '' }}
                           >
                             <FormField.Text />
                           </FormField>
@@ -102,19 +96,16 @@ const Formulier = () => {
                             <FormField.Text disabled value="Value" />
                           </FormField>
                           <FormField label="Number">
-                            <FormField.Text validation='none' />
+                            <FormField.Text validation="none" />
                           </FormField>
-                          <FormField label='Textarea'>
+                          <FormField label="Textarea">
                             <FormField.TextArea />
                           </FormField>
                         </Fieldset>
 
                         <Fieldset legend="Options">
-                          <FormField 
-                            label='Radio buttons'
-                            helperText="This is an helper text"
-                          >
-                            <FormField.RadioButtonGroup 
+                          <FormField label="Radio buttons" helperText="This is an helper text">
+                            <FormField.RadioButtonGroup
                               name="radio-buttons"
                               options={[
                                 { id: 'optionA', label: 'Option A' },
@@ -124,11 +115,8 @@ const Formulier = () => {
                               ]}
                             />
                           </FormField>
-                          <FormField 
-                            label='Radio buttons invalid'
-                            errorText="This is an error"
-                          >
-                            <FormField.RadioButtonGroup 
+                          <FormField label="Radio buttons invalid" errorText="This is an error">
+                            <FormField.RadioButtonGroup
                               name="radio-buttons-error"
                               invalid
                               options={[
@@ -139,11 +127,8 @@ const Formulier = () => {
                               ]}
                             />
                           </FormField>
-                          <FormField 
-                            label='Radio buttons with warning'
-                            warningText="This is a wanrning"
-                          >
-                            <FormField.RadioButtonGroup 
+                          <FormField label="Radio buttons with warning" warningText="This is a wanrning">
+                            <FormField.RadioButtonGroup
                               name="radio-buttons-warning"
                               options={[
                                 { id: 'optionA-warning', label: 'Option A' },
@@ -154,11 +139,8 @@ const Formulier = () => {
                             />
                           </FormField>
 
-                          <FormField 
-                            label='Checkboxes'
-                            helperText="This is an helper text"
-                          >
-                            <FormField.CheckboxGroup 
+                          <FormField label="Checkboxes" helperText="This is an helper text">
+                            <FormField.CheckboxGroup
                               options={[
                                 { id: 'optionA', label: 'Option A' },
                                 { id: 'optionB', label: 'Option B' },
@@ -167,11 +149,8 @@ const Formulier = () => {
                               ]}
                             />
                           </FormField>
-                          <FormField 
-                            label='Checkboxes invalid'
-                            errorText="This is an error"
-                          >
-                            <FormField.CheckboxGroup 
+                          <FormField label="Checkboxes invalid" errorText="This is an error">
+                            <FormField.CheckboxGroup
                               invalid
                               options={[
                                 { id: 'optionA-error', label: 'Option A' },
@@ -181,11 +160,8 @@ const Formulier = () => {
                               ]}
                             />
                           </FormField>
-                          <FormField 
-                            label='Checkboxes with warning'
-                            warningText="This is a wanrning"
-                          >
-                            <FormField.CheckboxGroup 
+                          <FormField label="Checkboxes with warning" warningText="This is a wanrning">
+                            <FormField.CheckboxGroup
                               options={[
                                 { id: 'optionA-warning', label: 'Option A' },
                                 { id: 'optionB-warning', label: 'Option B' },
@@ -195,8 +171,8 @@ const Formulier = () => {
                             />
                           </FormField>
 
-                          <FormField label='Select'>
-                            <FormField.Select 
+                          <FormField label="Select">
+                            <FormField.Select
                               options={[
                                 { value: '1', label: 'Option #1' },
                                 { value: '2', label: 'Option #2' },
@@ -207,7 +183,7 @@ const Formulier = () => {
                         </Fieldset>
 
                         <Fieldset legend="Other">
-                          <FormField label='File'>
+                          <FormField label="File">
                             <FormField.FileInput />
                           </FormField>
                           <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">

@@ -44,7 +44,12 @@ const Homepage = () => {
         <div>
           <header>
             <MaxWidthLayout size="md" className="rvo-padding-block-start--2xl">
-              <Grid division="2fr 1fr" gap="xl" className="rvo-padding-inline-start--md rvo-padding-inline-end--md" columns='two'>
+              <Grid
+                division="2fr 1fr"
+                gap="xl"
+                className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
+                columns="two"
+              >
                 <div className="rvo-layout-column rvo-layout-gap--md">
                   <Heading type="h1" noMargins={true}>
                     ROOS: Het design system van RVO

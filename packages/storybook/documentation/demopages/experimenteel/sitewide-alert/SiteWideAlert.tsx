@@ -197,13 +197,31 @@ const SiteWideAlert = () => {
                     </Card>
                   </Grid>
                   <LayoutFlow row={true}>
-                    <Link iconPlacement="right" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true}>
+                    <Link
+                      iconPlacement="right"
+                      icon="pijl-naar-rechts"
+                      target="#"
+                      content="Menu item"
+                      noUnderline={true}
+                    >
                       Menu item
                     </Link>
-                    <Link iconPlacement="right" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true}>
+                    <Link
+                      iconPlacement="right"
+                      icon="pijl-naar-rechts"
+                      target="#"
+                      content="Menu item"
+                      noUnderline={true}
+                    >
                       Menu item
                     </Link>
-                    <Link iconPlacement="right" icon="pijl-naar-rechts" target="#" content="Menu item" noUnderline={true}>
+                    <Link
+                      iconPlacement="right"
+                      icon="pijl-naar-rechts"
+                      target="#"
+                      content="Menu item"
+                      noUnderline={true}
+                    >
                       Menu item
                     </Link>
                   </LayoutFlow>

@@ -16,31 +16,19 @@
       "version": "17.0.2"
     }
   },
-  "plugins": [
-    "markdown"
-  ],
+  "plugins": ["markdown"],
   "overrides": [
     {
-      "files": [
-        "**/*.md"
-      ],
-      "extends": [
-        "plugin:markdown/recommended-legacy"
-      ],
+      "files": ["**/*.md"],
+      "extends": ["plugin:markdown/recommended-legacy"],
       "processor": "markdown/markdown"
     },
     {
-      "extends": [
-        "plugin:json/recommended"
-      ],
-      "files": [
-        "*.json"
-      ]
+      "extends": ["plugin:json/recommended"],
+      "files": ["*.json"]
     },
     {
-      "files": [
-        "*.mdx"
-      ],
+      "files": ["*.mdx"],
       "extends": [
         "plugin:mdx/recommended",
         "plugin:react/recommended",
@@ -49,9 +37,7 @@
         "./.eslintrc.react.json",
         "./.eslintrc.mdx.json"
       ],
-      "plugins": [
-        "import"
-      ]
+      "plugins": ["import"]
     },
     {
       "extends": [
@@ -60,13 +46,8 @@
         "./.eslintrc.js.json",
         "./.eslintrc.react.json"
       ],
-      "files": [
-        "*.js",
-        "*.jsx"
-      ],
-      "plugins": [
-        "import"
-      ]
+      "files": ["*.js", "*.jsx"],
+      "plugins": ["import"]
     },
     {
       "extends": [
@@ -75,10 +56,7 @@
         "./.eslintrc.js.json",
         "./.eslintrc.react.json"
       ],
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": [
@@ -91,26 +69,19 @@
           "packages/storybook/tsconfig.json"
         ]
       },
-      "plugins": [
-        "@typescript-eslint",
-        "import"
-      ],
+      "plugins": ["@typescript-eslint", "import"],
       "rules": {
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "error"
       }
     },
     {
-      "files": [
-        "*.mjs"
-      ],
+      "files": ["*.mjs"],
       "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 2022
       }
     }
   ],
-  "extends": [
-    "plugin:storybook/recommended"
-  ]
+  "extends": ["plugin:storybook/recommended"]
 }

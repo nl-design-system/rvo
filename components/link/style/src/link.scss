@@ -209,7 +209,9 @@
   --rvo-link-call-to-action-hover-background-color: var(--rvo-link-call-to-action-outline-hover-background-color);
   --rvo-link-call-to-action-hover-border-color: var(--rvo-link-call-to-action-outline-hover-border-color);
   --rvo-link-call-to-action-hover-color: var(--rvo-link-call-to-action-outline-hover-color);
-  --rvo-link-call-to-action-hover-icon-background-color: var(--rvo-link-call-to-action-outline-hover-icon-background-color);
+  --rvo-link-call-to-action-hover-icon-background-color: var(
+    --rvo-link-call-to-action-outline-hover-icon-background-color
+  );
   --rvo-link-call-to-action-active-background-color: var(--rvo-link-call-to-action-outline-active-background-color);
   --rvo-link-call-to-action-active-border-color: var(--rvo-link-call-to-action-outline-active-border-color);
   --rvo-link-call-to-action-active-color: var(--rvo-link-call-to-action-outline-active-color);

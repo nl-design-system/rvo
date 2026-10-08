@@ -1,4 +1,6 @@
-export interface IRadioButtonProps extends React.ComponentPropsWithoutRef<"input"> {
+import React from 'react';
+
+export interface IRadioButtonProps extends React.ComponentPropsWithoutRef<'input'> {
   id?: string;
   name?: string;
   label: string;

@@ -101,9 +101,12 @@ const Profiel = () => {
                 <div className="utrecht-form-fieldset rvo-form-fieldset rvo-percelen-filter-form">
                   <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
                     <LayoutFlow gap="xl">
-                      <FormField label="Perceelweergave" helperText="Bepaal welke onderdelen er getoond worden in het perceeloverzicht">
-                        <CheckboxGroup 
-                           options={[
+                      <FormField
+                        label="Perceelweergave"
+                        helperText="Bepaal welke onderdelen er getoond worden in het perceeloverzicht"
+                      >
+                        <CheckboxGroup
+                          options={[
                             { id: 'optionA-cb-warning', label: 'Nummer' },
                             { id: 'optionB-cb-warning', label: 'Naam' },
                             { id: 'optionA-cb-warning', label: 'Hectare' },

@@ -56,5 +56,5 @@ type Story = StoryObj<typeof Autocomplete>;
 
 export const Default: Story = {
   name: 'Autocomplete',
-  args: defaultArgs as any
+  args: defaultArgs as any,
 };

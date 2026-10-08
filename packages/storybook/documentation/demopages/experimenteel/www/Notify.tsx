@@ -10,7 +10,7 @@ import {
   Link,
   MaxWidthLayout,
   MenuBar,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { UtilityTextTypes } from '@nl-rvo/component-library-react';
 import '../../common/rhs-update.scss';

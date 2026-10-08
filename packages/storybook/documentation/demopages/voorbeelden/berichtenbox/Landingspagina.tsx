@@ -280,19 +280,24 @@ const Landingspagina = () => {
                 </LayoutFlow>
                 <Accordion>
                   <Accordion.Item title="Hoe maak ik een berichtenbox account?">
-                    Om een Berichtenbox account aan te maken, gaat u naar de website en klikt u op "Account aanmaken". Volg de stappen en gebruik uw eHerkenning om het proces te voltooien.
+                    Om een Berichtenbox account aan te maken, gaat u naar de website en klikt u op "Account aanmaken".
+                    Volg de stappen en gebruik uw eHerkenning om het proces te voltooien.
                   </Accordion.Item>
                   <Accordion.Item title="Is de Berichtenbox voor bedrijven veilig?">
-                    Ja, de Berichtenbox maakt gebruik van de nieuwste beveiligingstechnologieën en voldoet aan alle wettelijke eisen voor gegevensbescherming.
+                    Ja, de Berichtenbox maakt gebruik van de nieuwste beveiligingstechnologieën en voldoet aan alle
+                    wettelijke eisen voor gegevensbescherming.
                   </Accordion.Item>
                   <Accordion.Item title="Kan ik ook grote bijlagen versturen via de Berichtenbox?">
-                    De Berichtenbox ondersteunt bijlagen tot 20 MB. Voor grotere bestanden kunt u gebruik maken van een beveiligde downloadlink.
+                    De Berichtenbox ondersteunt bijlagen tot 20 MB. Voor grotere bestanden kunt u gebruik maken van een
+                    beveiligde downloadlink.
                   </Accordion.Item>
                   <Accordion.Item title="Hoe kan ik berichten versturen aan meerdere overheidsorganisaties?">
-                    In de Berichtenbox kunt u eenvoudig meerdere ontvangers selecteren voordat u uw bericht verstuurt. Kies de relevante organisaties uit de lijst.
+                    In de Berichtenbox kunt u eenvoudig meerdere ontvangers selecteren voordat u uw bericht verstuurt.
+                    Kies de relevante organisaties uit de lijst.
                   </Accordion.Item>
                   <Accordion.Item title="Kan een collega toegang krijgen tot mijn account?">
-                    Ja, u kunt collega's machtigen om namens u de Berichtenbox te beheren. Gebruik hiervoor de machtigingsfunctie in uw accountinstellingen.
+                    Ja, u kunt collega's machtigen om namens u de Berichtenbox te beheren. Gebruik hiervoor de
+                    machtigingsfunctie in uw accountinstellingen.
                   </Accordion.Item>
                 </Accordion>
               </div>

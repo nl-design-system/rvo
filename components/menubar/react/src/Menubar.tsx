@@ -112,9 +112,7 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
       className={clsx('rvo-menubar', horizontalRule && 'rvo-menubar--horizontal-rule', size && `rvo-menubar--${size}`)}
       {...rootElementProps}
     >
-      <MaxWidthLayout size={maxWidth}>
-        {children || navMarkup}
-      </MaxWidthLayout>
+      <MaxWidthLayout size={maxWidth}>{children || navMarkup}</MaxWidthLayout>
     </div>
   );
 };

@@ -5,11 +5,7 @@
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
     "moduleResolution": "bundler",
     "target": "ES2022",
@@ -18,24 +14,12 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "baseUrl": "./",
-    "types": [
-      "node",
-      "react",
-      "react-dom"
-    ],
+    "types": ["node", "react", "react-dom"],
     "paths": {
-      "@nl-rvo/design-tokens/*": [
-        "../../proprietary/design-tokens/*"
-      ],
-      "@nl-rvo/assets/*": [
-        "node_modules/@nl-rvo/assets/*"
-      ],
-      "@nl-rvo/components/*": [
-        "../../components/*"
-      ],
-      "@docusaurus/components/*": [
-        "../docusaurus/src/components/*"
-      ]
+      "@nl-rvo/design-tokens/*": ["../../proprietary/design-tokens/*"],
+      "@nl-rvo/assets/*": ["node_modules/@nl-rvo/assets/*"],
+      "@nl-rvo/components/*": ["../../components/*"],
+      "@docusaurus/components/*": ["../docusaurus/src/components/*"]
     }
   },
   "include": [
@@ -58,14 +42,10 @@
     "packages/storybook/dist"
   ],
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "project": ["./tsconfig.json"]
   },
   "paths": {
-    "@bootstrap-icons/*": [
-      "node_modules/bootstrap-icons/*"
-    ]
+    "@bootstrap-icons/*": ["node_modules/bootstrap-icons/*"]
   },
   "ts-node": {
     "esm": true

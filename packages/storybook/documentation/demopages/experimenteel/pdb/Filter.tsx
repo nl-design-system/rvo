@@ -8,7 +8,7 @@ import {
   LayoutFlow,
   MenuBar,
   PageNumberNavigation,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '../../common/filter.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -122,7 +122,7 @@ const Filter = () => {
                                 },
                               ]}
                             />
-                          </FormField >
+                          </FormField>
                           <FormField label="Till (year)">
                             <FormField.Select
                               options={[
@@ -397,7 +397,7 @@ const Filter = () => {
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Filter sector</summary>
                           <FormField label="Refine filter options">
-                                <FormField.Text />
+                            <FormField.Text />
                           </FormField>
                           <FormField label="Sector">
                             <FormField.CheckboxGroup
@@ -464,7 +464,6 @@ const Filter = () => {
                                 ]}
                               />
                             </FormField>
-
                           </details>
                           <hr className="rvo-hr" />
                         </details>

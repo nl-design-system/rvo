@@ -25,14 +25,14 @@ const getWorkspaceDependenciesInDirectory = (packageJSON, parentDir) =>
     .map(({ resolvedPath, ...restProperties }) => {
       let match;
       let slugMatch;
-      if(parentDir === 'components'){
+      if (parentDir === 'components') {
         match = /\/([^/]+)\/([^/]+)\/([^/]+)\/dist\/[^\\]+$/i.exec(resolvedPath);
-        slugMatch = match && match[1] === parentDir ? match[2] : null
+        slugMatch = match && match[1] === parentDir ? match[2] : null;
       } else {
-        match = /\/([^/]+)\/([^/]+)\/dist\/[^\\]+$/i.exec(resolvedPath)
-        slugMatch = match && match[1] === parentDir ? match[2] : null
-      }      
-      
+        match = /\/([^/]+)\/([^/]+)\/dist\/[^\\]+$/i.exec(resolvedPath);
+        slugMatch = match && match[1] === parentDir ? match[2] : null;
+      }
+
       return {
         ...restProperties,
         resolvedPath,

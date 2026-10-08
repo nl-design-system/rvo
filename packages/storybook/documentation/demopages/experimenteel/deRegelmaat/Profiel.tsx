@@ -12,7 +12,7 @@ const Profiel = () => {
             <p>Vul je profiel in om maatregelen te krijgen die voor jou van toepassing kunnen zijn.</p>{' '}
             <Fieldset legend="">
               <FormField label="Waar zit je onderneming?">
-                <FormField.Select 
+                <FormField.Select
                   options={[
                     { value: '1', label: 'Noordelijk kleigebied' },
                     { value: '2', label: 'Noordelijk weidegebied - veen' },
@@ -33,7 +33,7 @@ const Profiel = () => {
                 />
               </FormField>
               <FormField label="Soort onderneming">
-                <FormField.Select 
+                <FormField.Select
                   options={[
                     { value: '1', label: 'Akkerbouwbedrijf' },
                     { value: '2', label: 'Melkveehouderij' },
@@ -229,8 +229,8 @@ const Profiel = () => {
               </div>
             </div>
             <div className="rvo-short-inputs">
-              <FormField label='Overige gegevens'>
-                <FormField.CheckboxGroup 
+              <FormField label="Overige gegevens">
+                <FormField.CheckboxGroup
                   options={[
                     { id: 'optionA-cb', label: 'Vroeg oogsten' },
                     { id: 'optionB-cb', label: 'Inproductieve stukken land' },

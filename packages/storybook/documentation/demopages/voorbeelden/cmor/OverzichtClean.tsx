@@ -363,10 +363,15 @@ const OverzichtClean = () => {
                   <LayoutFlow gap="sm">
                     <Accordion>
                       <Accordion.Item title="Mag ik voor deze regeling subsidies stapelen/combineren?">
-                        Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.
+                        Per 21 april 2021 kunt u als woningeigenaar ISDE combineren met gemeentelijke of provinciale
+                        subsidies om bijvoorbeeld uw woning aan te sluiten op een warmtenet. Dit is terug te vinden in
+                        de publicatie in de Staatscourant. Het is niet mogelijk om meer dan een keer subsidie te
+                        ontvangen vanuit de Rijksoverheid voor dezelfde maatregel.
                       </Accordion.Item>
                       <Accordion.Item title="Wat is een bestaande thermische schil?">
-                        De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden, daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.  
+                        De bestaande thermische schil is de isolerende laag aan de buitenzijde van de woning. Wanden,
+                        daken, beglazing en deuren, en vloeren grenzend aan de buitenlucht of grond zijn geïsoleerd om
+                        kou te weren en warmte binnen te houden. De thermische schil is de jas van de woning.
                       </Accordion.Item>
                       <Accordion.Item title="Wanneer krijg ik bericht over mijn subsidie?">
                         Zo snel mogelijk.

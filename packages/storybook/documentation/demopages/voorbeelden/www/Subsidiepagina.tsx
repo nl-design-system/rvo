@@ -7,7 +7,7 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -227,7 +227,7 @@ const Subsidiepagina = () => {
               Beantwoord maximaal 5 vragen en u ziet direct of u kans maakt op deze subsidie.
             </p>
             <FormField label="Bent u eigenaar van het gebouw?">
-              <FormField.RadioButtonGroup 
+              <FormField.RadioButtonGroup
                 name="subsidie"
                 options={[
                   { id: 'ja', label: 'Ja', checked: true },
@@ -236,7 +236,7 @@ const Subsidiepagina = () => {
               />
             </FormField>
             <FormField label="Heeft u toestemming van de VvE?">
-              <FormField.RadioButtonGroup 
+              <FormField.RadioButtonGroup
                 name="subsidie"
                 options={[
                   { id: 'toestemming-ja', label: 'Ja', checked: true },

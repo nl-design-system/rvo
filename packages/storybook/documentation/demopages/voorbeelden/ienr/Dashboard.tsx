@@ -8,7 +8,7 @@ import {
   LayoutFlow,
   MenuBar,
   StatusIcon,
-  FormField
+  FormField,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -112,7 +112,7 @@ const Dashboard = () => {
                       <div>
                         <LayoutFlow gap="md">
                           <FormField label="Selecteer een andere locatie">
-                            <FormField.RadioButtonGroup 
+                            <FormField.RadioButtonGroup
                               name="ubn"
                               options={[
                                 { id: 'locatieA', label: 'UBN 2309458' },

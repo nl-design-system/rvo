@@ -7,7 +7,7 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  PageNumberNavigation
+  PageNumberNavigation,
 } from '@nl-rvo/component-library-react';
 import { useEffect } from 'react';
 import '../../common/filter.scss';
@@ -116,7 +116,7 @@ const Subsidiewijzer = () => {
                     <form className="rvo-form">
                       <LayoutFlow gap="2xl">
                         <FormField label="Zoek subsidies en financiering">
-                          <FormField.Text value="wbso"/>
+                          <FormField.Text value="wbso" />
                         </FormField>
                         <details open className="rvo-collapsible-filter">
                           <summary className="rvo-collapsible-filter-label">Ik ben/werk bij</summary>

@@ -39,7 +39,7 @@ export const Base: Story = {
       { label: 'First step', link: '#' },
       { label: 'Second step', link: '#' },
       { label: 'Third step', link: '#' },
-      { label: 'Current page' }
+      { label: 'Current page' },
     ],
   },
   name: 'Breadcrumbs',

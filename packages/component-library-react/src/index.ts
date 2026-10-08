@@ -39,7 +39,7 @@ export { Header } from '@nl-rvo/react-header';
 export { Heading } from '@nl-rvo/react-heading';
 export { Hero } from '@nl-rvo/react-hero';
 export { Hr } from '@nl-rvo/react-horizontal-rule';
-export { Icon, iconColors, iconNames, iconOptions} from '@nl-rvo/react-icon';
+export { Icon, iconColors, iconNames, iconOptions } from '@nl-rvo/react-icon';
 export { Image } from '@nl-rvo/react-image';
 export { ItemList } from '@nl-rvo/react-item-list';
 export { LayoutFlow } from '@nl-rvo/react-layout-flow';
@@ -79,7 +79,12 @@ export type { IAlertProps } from '@nl-rvo/react-alert';
 export type { IBreadcrumbProps, IBreadcrumbsItem } from '@nl-rvo/react-breadcrumbs';
 export type { IButtonProps } from '@nl-rvo/react-button';
 export type { ICardProps } from '@nl-rvo/react-card';
-export type { IExperimentalCardProps, IExperimentalCardImageProps, IExperimentalCardHeaderProps, IExperimentalCardContentProps } from '@nl-rvo/react-card-experimental';
+export type {
+  IExperimentalCardProps,
+  IExperimentalCardImageProps,
+  IExperimentalCardHeaderProps,
+  IExperimentalCardContentProps,
+} from '@nl-rvo/react-card-experimental';
 export type { ICheckboxFilter } from '@nl-rvo/react-checkbox-filter';
 export type { ICounterBadge } from '@nl-rvo/react-counter-badge';
 export type { IDataListProps, IDataListItemProps } from '@nl-rvo/react-data-list';
