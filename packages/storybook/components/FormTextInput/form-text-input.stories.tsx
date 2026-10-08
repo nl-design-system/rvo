@@ -87,7 +87,7 @@ export default {
       type: 'PRODUCTION',
     },
     docusaurus: {
-      link: 'form-textinput',
+      link: 'form-text-input',
     },
     design: {
       type: 'figma',
