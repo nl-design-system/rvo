@@ -92,6 +92,7 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           direction={direction}
           grid={grid}
           maxWidth={maxWidth}
+          LinkComponent={LinkComponent}
         />
       )}
     </li>

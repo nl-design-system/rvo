@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import '@nl-rvo/component-library-css/dist/components/menubar.css';
-import { Icon, Link } from '../../../index';
+import { Icon, Link, LinkCustomLinkComponent } from '../../../index';
 import { IMenuBarItem } from '../menubar';
 
 export interface SubMenuProps {
@@ -15,6 +15,7 @@ export interface SubMenuProps {
   grid?: boolean;
   className?: string | string[];
   maxWidth?: 'none' | 'sm' | 'md' | 'lg';
+  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const SubMenu: React.FC<SubMenuProps> = ({
@@ -27,6 +28,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   direction,
   grid,
   maxWidth,
+  LinkComponent,
 }) => {
   if (!isSubmenuVisible) return null;
 
@@ -39,6 +41,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({
         className="rvo-menubar__link"
         {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}
         color={linkColor}
+        LinkComponent={LinkComponent}
       >
         {iconPlacement === 'before' && useIcons && subItem.icon && (
           <Icon icon={subItem.icon} size={size as any} color="wit" />
