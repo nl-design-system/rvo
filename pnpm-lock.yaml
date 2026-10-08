@@ -1484,9 +1484,6 @@ importers:
       '@nl-rvo/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@nl-rvo/css-heading':
-        specifier: workspace:*
-        version: link:../../components/heading/style
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
