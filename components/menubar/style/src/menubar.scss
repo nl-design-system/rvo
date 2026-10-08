@@ -5,8 +5,6 @@
 
 @import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
 
-$menu-sizes: "sm", "md", "lg";
-
 .rvo-menubar {
   font-family: var(--rvo-topnav-font-family);
 
@@ -43,8 +41,8 @@ $menu-sizes: "sm", "md", "lg";
     &--open {
       position: absolute;
       display: block;
-      top: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-inline-start: 0;
       background-color: var(--rvo-color-grijs-200);
       block-size: 100vh;
       padding: 16px;
@@ -106,7 +104,7 @@ $menu-sizes: "sm", "md", "lg";
       list-style-type: none;
       padding: 0;
       margin: 0;
-      text-align-last: left;
+      text-align-last: end;
       flex-direction: row;
       gap: unset;
     }
@@ -125,10 +123,10 @@ $menu-sizes: "sm", "md", "lg";
       }
 
       li {
-        text-align: left;
+        text-align: start;
 
         @media (min-width: 768px) {
-          text-align: right;
+          text-align: end;
         }
       }
     }
@@ -197,14 +195,14 @@ $menu-sizes: "sm", "md", "lg";
     gap: var(--rvo-space-sm);
     margin-block-start: var(--rvo-space-sm);
     padding-inline-start: var(--rvo-space-xl);
-    width: auto;
+    inline-size: auto;
     list-style-type: none;
 
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       padding: 0;
-      width: inherit;
+      inline-size: inherit;
       margin-block-start: 0;
       gap: 0;
     }
