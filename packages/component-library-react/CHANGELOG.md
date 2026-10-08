@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-react
 
+## 7.2.3
+
+### Patch Changes
+
+- 7c308f4: ROOS-387: properly forwarding LinkComponent prop to SubMenu component
+- d7c8470: Update IRadioButtonProps to use ComponentPropsWithoutRef
+
 ## 7.2.2
 
 ### Patch Changes
