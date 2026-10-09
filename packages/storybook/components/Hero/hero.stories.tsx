@@ -1,0 +1,72 @@
+import { Hero } from '@nl-rvo/component-library-react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { HTMLAttributes } from 'react';
+
+const defaultArgs: any & HTMLAttributes<HTMLDivElement> = {
+  image: { src: '', alt: '' },
+  title: 'Rijksdienst voor Ondernemend Nederland',
+  subtitle: 'Wij helpen u graag vooruit!',
+};
+
+export default {
+  title: 'Componenten/Hero',
+  component: Hero,
+  args: defaultArgs,
+  argTypes: {
+    image: {
+      control: { type: 'object' },
+    },
+    title: {
+      control: 'text',
+    },
+    subtitle: {
+      control: 'text',
+    },
+    size: {
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'radio' },
+    },
+    className: {
+      control: 'text',
+    },
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+    kind: {
+      options: ['none', 'lichtblauw', 'violet'],
+      control: { type: 'radio' },
+    },
+    showLine: { control: 'boolean' },
+  },
+  parameters: {
+    status: {
+      type: 'PRODUCTION',
+    },
+    docusaurus: {
+      link: 'hero',
+    },
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=5925-2130&embed-host=share',
+    },
+  },
+} satisfies Meta<typeof Hero>;
+type Story = StoryObj<typeof Hero>;
+
+export const Base: Story = {
+  args: {
+    ...defaultArgs,
+    image: { src: 'images/www/home.jpg', alt: 'homepage image' },
+  },
+  name: 'Hero',
+};
+
+export const CustomImageHero: Story = {
+  args: {
+    ...defaultArgs,
+    image: <img src="images/www/nieuwsbrief.webp" alt="newsletter" />,
+  },
+  name: 'Hero - Custom image',
+};

@@ -1,0 +1,50 @@
+---
+title: Uitleg vragen
+hide_title: true
+hide_table_of_contents: true
+slug: uitleg
+sidebar_position: 114
+---
+
+import { Fieldset, FormField, FormLayout } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../src/components/ComponentExample";
+
+# Uitleg vragen
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FormField label="Upload uw document" helperText="Zorg dat het document in PDF-formaat is.">
+        <FormField.FileInput />
+      </FormField>
+      <FormField label="Uw vraag" helperText="Beschrijf beknopt wat uw vraag is.">
+        <FormField.TextArea />
+      </FormField>
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
+
+<ComponentExample>
+  <FormLayout>
+    <Fieldset legend="Uw aanvraag">
+      <FormField
+        label="Upload uw document"
+        expandableHelperText={{ title: "expandableHelperText", children: "" }}
+        helperText={
+          <ul>
+            <li>Zorg dat het document in PDF-formaat is.</li>
+            <li>Zorg dat het document al uw contactgegevens bevat.</li>
+          </ul>
+        }
+      >
+        <FormField.FileInput />
+      </FormField>
+    </Fieldset>
+  </FormLayout>
+</ComponentExample>
+
+## Richtlijnen
+
+- Zorg dat complexere velden zijn voorzien van een heldere uitleg.
+- Gebruik een 'expandable' helper tekst als een veld een langere uitleg nodig heeft.
+- Plaats de helper tekst altijd boven het invoerveld. Tekst eronder kan aan het zicht onttrokken worden door een autocomplete- of suggestielijst.

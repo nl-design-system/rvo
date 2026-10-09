@@ -10,7 +10,6 @@ build
 coverage
 dist
 tmp
-.uxpin-merge
 .docusaurus
 
 # Ignore assets package

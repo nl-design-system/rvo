@@ -1,0 +1,67 @@
+---
+title: Button
+hide_title: false
+hide_table_of_contents: true
+slug: /button
+---
+
+import { Button, Heading } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<Heading type="h2">Voorbeelden</Heading>
+
+Primary button:
+
+<ComponentExample storyName="componenten-button--default">
+  <Button />
+</ComponentExample>
+
+Secondary button:
+{(() => {
+const props = { kind: "secondary" };
+return (
+
+<ComponentExample storyName="componenten-button--default">
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Tertiary button:
+{(() => {
+const props = { kind: "tertiary" };
+return (
+
+<ComponentExample storyName="componenten-button--default" args={props}>
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Quaternary button:
+{(() => {
+const props = { kind: "quaternary" };
+return (
+
+<ComponentExample storyName="componenten-button--default" args={props}>
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Warning subtle button:
+{(() => {
+const props = { kind: "warning-subtle" };
+return (
+
+<ComponentExample storyName="componenten-button-kinds--warning-subtle" args={props}>
+  <Button {...props} />
+</ComponentExample>
+); })()}
+
+Warning button:
+{(() => {
+const props = { kind: "warning" };
+return (
+
+<ComponentExample storyName="componenten-button-kinds--warning" args={props}>
+  <Button {...props} />
+</ComponentExample>
+); })()}

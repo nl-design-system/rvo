@@ -1,0 +1,10 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FormSelectStories from "./form-select.stories";
+
+<Meta of={FormSelectStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormSelectStories.Default} layout="padded" />
+
+<ArgTypes of={FormSelectStories.Default} />

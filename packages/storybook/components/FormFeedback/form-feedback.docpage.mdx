@@ -1,0 +1,12 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FormFeedbackStories from "./form-feedback.stories";
+
+<Meta of={FormFeedbackStories} name="Documentatie" />
+
+<Title />
+
+Let op: Gebruik de checkbox group altijd in combinatie met een heldere vraag erboven.
+
+<Canvas of={FormFeedbackStories.Default} layout="padded" />
+
+<ArgTypes of={FormFeedbackStories.Default} />

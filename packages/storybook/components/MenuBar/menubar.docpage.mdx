@@ -1,0 +1,13 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as MenubarStories from "./menubar.stories";
+
+<Meta of={MenubarStories} name="Documentatie" />
+
+<Title />
+<Canvas of={MenubarStories.Base} layout="padded" />
+<ArgTypes of={MenubarStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/assets/icons_
+_@nl-rvo/css-icon_

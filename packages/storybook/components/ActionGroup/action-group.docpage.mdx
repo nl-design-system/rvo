@@ -1,0 +1,16 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as ActionGroupStories from "./action-group.stories";
+
+<Meta of={ActionGroupStories} name="Documentatie" />
+
+<Title />
+<Canvas of={ActionGroupStories.Default} layout="padded" />
+
+## Props
+
+<ArgTypes of={ActionGroupStories.Default} />
+
+## Dependencies
+
+_@nl-rvo/css-button_
+_@nl-rvo/css-layout-flow_

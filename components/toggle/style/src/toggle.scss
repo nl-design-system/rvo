@@ -1,0 +1,55 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rvo-toggle {
+  --utrecht-icon-color: var(--rvo-toggle-default-icon-color);
+
+  border-radius: var(--rvo-toggle-border-radius);
+  cursor: pointer;
+  display: inline-flex;
+  padding-block-end: var(--rvo-toggle-padding-block-end);
+  padding-block-start: var(--rvo-toggle-padding-block-start);
+  padding-inline-end: var(--rvo-toggle-padding-inline-end);
+  padding-inline-start: var(--rvo-toggle-padding-inline-start);
+  background-color: var(--rvo-toggle-default-background-color);
+  border-color: var(--rvo-toggle-default-border-color);
+  border-style: var(--rvo-toggle-default-border-style);
+  border-width: var(--rvo-toggle-default-border-width);
+  color: var(--rvo-toggle-default-color);
+  text-decoration: var(--rvo-toggle-default-text-decoration);
+
+  &--with-icon {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--rvo-space-sm);
+    padding-inline-end: var(--rvo-toggle-padding-inline-end-with-icon);
+    padding-inline-start: var(--rvo-toggle-padding-inline-start-with-icon);
+  }
+
+  &--active {
+    --utrecht-icon-color: var(--rvo-toggle-default-active-icon-color);
+
+    background-color: var(--rvo-toggle-default-active-background-color);
+    border-color: var(--rvo-toggle-default-active-border-color);
+    border-style: var(--rvo-toggle-default-active-border-style);
+    border-width: var(--rvo-toggle-default-active-border-width);
+    color: var(--rvo-toggle-default-active-color);
+  }
+
+  &:hover:not(:focus, :focus-visible, .rvo-toggle--focus, .rvo-toggle--active) {
+    --utrecht-icon-color: var(--rvo-toggle-default-hover-icon-color);
+
+    color: var(--rvo-toggle-default-hover-color);
+    background-color: var(--rvo-toggle-default-hover-background-color);
+    text-decoration: var(--rvo-toggle-default-hover-text-decoration);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline-color: var(--utrecht-focus-outline-color, transparent);
+    outline-offset: var(--utrecht-focus-outline-offset, 0);
+    outline-style: var(--utrecht-focus-outline-style, solid);
+    outline-width: var(--utrecht-focus-outline-width, 0);
+  }
+}

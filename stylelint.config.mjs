@@ -47,76 +47,7 @@ export default {
     'no-empty-source': true,
     'no-invalid-double-slash-comments': true,
     'order/order': ['custom-properties', 'declarations'],
-    'order/properties-order': [
-      {
-        groupName: 'border',
-        properties: [
-          'border', // `border` before `border-*`
-          'border-color', // `border-color` before `border-*-color`
-          'border-radius', // `border-radius` before `border-*-radius`
-          'border-style', // `border-style` before `border-*-style`
-          'border-width', // `border-width` before `border-*-width`
-          'border-bottom',
-          'border-bottom-color',
-          'border-bottom-left-radius',
-          'border-bottom-right-radius',
-          'border-bottom-style',
-          'border-bottom-width',
-          'border-left',
-          'border-left-color',
-          'border-left-style',
-          'border-left-width',
-          'border-right',
-          'border-right-color',
-          'border-right-style',
-          'border-right-width',
-          'border-top',
-          'border-top-color',
-          'border-top-left-radius',
-          'border-top-right-radius',
-          'border-top-style',
-          'border-top-width',
-          // CSS Logical properties after CSS Physical properties (typically used as fallback)
-          'border-block', // `border-block` before `border-block-*`
-          'border-block-color', // `border-block-color` before `border-block-*-color`
-          'border-block-style', // `border-block-style` before `border-block-*-style`
-          'border-block-width', // `border-block-width` before `border-block-*-width`
-          'border-block-end',
-          'border-block-end-color',
-          'border-block-end-style',
-          'border-block-end-width',
-          'border-block-start',
-          'border-block-start-color',
-          'border-block-start-style',
-          'border-block-start-width',
-          'border-collapse',
-          'border-image',
-          'border-image-outset',
-          'border-image-repeat',
-          'border-image-slice',
-          'border-image-source',
-          'border-image-width',
-          'border-end-end-radius',
-          'border-end-start-radius',
-          'border-inline',
-          'border-inline-color', // `border-inline-color` before `border-inline-*-color`
-          'border-inline-style', // `border-inline-style` before `border-inline-*-style`
-          'border-inline-width', // `border-inline-width` before `border-inline-*-width`
-          'border-inline-end',
-          'border-inline-end-color',
-          'border-inline-end-style',
-          'border-inline-end-width',
-          'border-inline-start',
-          'border-inline-start-color',
-          'border-inline-start-style',
-          'border-inline-start-width',
-          'border-spacing',
-          'border-start-end-radius',
-          'border-start-start-radius',
-        ],
-      },
-    ],
-    'order/properties-alphabetical-order': true,
+    'order/properties-alphabetical-order': null,
     'property-no-unknown': true,
     'property-no-vendor-prefix': null,
     'rule-empty-line-before': null,
@@ -128,6 +59,7 @@ export default {
     'scss/dollar-variable-pattern': '^(rvo|utrecht)-[a-z0-9-]+$',
     'scss/operator-no-newline-after': null,
     'scss/percent-placeholder-pattern': '^(rvo|utrecht)-[a-z0-9-]+$',
+    'scss/operator-no-unspaced': null,
     'selector-attribute-quotes': 'always',
     'selector-class-pattern': '^(rvo|utrecht)-[a-z0-9_-]+$',
     'selector-max-id': 0,

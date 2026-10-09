@@ -68,9 +68,6 @@ package-lock.json
 pnpm-lock.yaml
 !/pnpm-lock.yaml
 
-# Merge
-.uxpin-merge
-
 # Docusaurus
 .docusaurus
 .cache-loader

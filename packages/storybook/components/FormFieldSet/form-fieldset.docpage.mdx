@@ -1,0 +1,10 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FieldsetStories from "./form-fieldset.stories";
+
+<Meta of={FieldsetStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FieldsetStories.Default} layout="padded" />
+
+<ArgTypes of={FieldsetStories.Default} />

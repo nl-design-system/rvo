@@ -1,0 +1,45 @@
+## Pre-releases
+
+## 1.3.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
+## 1.3.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.2.1
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.2.0
+
+### Minor Changes
+
+- 5442d67: Fixed Issues with the isExpandable check
+
+## 1.1.1
+
+### Patch Changes
+
+- d850ddd: border-collapse CSS fix in expandable-table component
+
+## 1.1.0
+
+### Minor Changes
+
+- 0cffc4f: New experimental expandable table component
+
+Added New Table component wit Expandable rows

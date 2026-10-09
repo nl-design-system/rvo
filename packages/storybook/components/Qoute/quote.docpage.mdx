@@ -1,0 +1,9 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as QuoteStories from "./quote.stories";
+
+<Meta of={QuoteStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={QuoteStories.Base} layout="padded" />
+<ArgTypes of={QuoteStories.Base} />

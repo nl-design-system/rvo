@@ -1,0 +1,82 @@
+# `@nl-rvo/css-dialog`
+
+## 1.5.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
+## 1.5.0
+
+### Minor Changes
+
+- fa36e07: Project structure updates
+
+  - Moved all Storybook stories to the /stories directory.
+  - Moved all documentation files to the /docs directory.
+  - Removed React components from library-component-react and moved them into this package.
+  - Update all .stories imports to the right react package "component-library-react"
+  - Fix all Redundant / PascalCase lint warnings for .stories files.
+
+## 1.4.5
+
+### Patch Changes
+
+- 3b31082: Updated all flex alignment and justify to prefix with flex-
+
+## 1.4.4
+
+### Patch Changes
+
+- 11eb258: Update imports to support storybook v10
+
+## 1.4.3
+
+### Patch Changes
+
+- 5442d67: Updated ActionGroup check for Dialogs
+
+## 1.4.2
+
+### Patch Changes
+
+- 77773e1: ROOS-269: fix dialog content height and made dialog close label configurable
+
+## 1.4.1
+
+### Patch Changes
+
+- 6c8b7fb: mobile menu changes
+
+## 1.4.0
+
+### Minor Changes
+
+- 064091a: Rename position-right and -left to inset-inline-end and -start.
+- c8632e5: Rename dialog drawer-right/left to position-right/left.
+  Introduced new CSS variables (`--rvo-dialog-background`, etc.) for improved customization.
+
+## 1.3.2
+
+### Patch Changes
+
+- 103e6af: Fixed Dialog border and margin
+
+## 1.3.1
+
+### Patch Changes
+
+- c56b5ac: Removed title from Dialog component
+- c56b5ac: Set default padding of Dialog to 2xl, and only flex content if there is an action group
+
+## 1.3.0
+
+### Minor Changes
+
+- 19e94e5: Added Dialog / Modal component
+
+## 1.0.0
+
+### Major Changes
+
+- daa0537: Create npm package for each component.
