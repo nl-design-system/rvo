@@ -58,7 +58,7 @@
     "webpack": "5.96.1"
   },
   "scripts": {
-    "build": "pnpm --filter ./components/**/style... run build && pnpm --filter ./components/**/react... run --recursive --sequential build && pnpm --filter ./packages/component-library-css... run build && pnpm --filter ./packages/component-library-react... run build",
+    "build": "pnpm --filter ./proprietary/**... run build && pnpm --filter ./components/**/style... run build && pnpm --filter ./components/**/react... run --recursive --sequential build && pnpm --filter ./packages/component-library-css... run build && pnpm --filter ./packages/component-library-react... run build",
     "clean": "pnpm run --recursive --parallel clean",
     "docs": "pnpm run --filter @nl-rvo/docusaurus start",
     "find-undocumented-tokens": "npm run --workspace proprietary/design-tokens/ build:stylelint && npm run lint:css -- --config ./.tokens.stylelintrc.json",
