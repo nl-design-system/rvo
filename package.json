@@ -83,7 +83,6 @@
     "serve-docusaurus": "pnpm --filter @nl-rvo/docusaurus exec http-server build",
     "serve-storybook": "pnpm --filter @nl-rvo/storybook exec http-server dist",
     "test": "pnpm run --recursive --sequential --config.ignore-workspace-cycles=true test",
-    "test-build": "pnpm run --recursive --sequential --config.ignore-workspace-cycles=true test-build",
     "test-update": "npm-run-all --sequential clean lint build test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
