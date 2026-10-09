@@ -1,5 +1,5 @@
-@use "~@nl-rvo/design-tokens/dist/colors" as tokens;
 @use "sass:string";
+@use "../node_modules/@nl-rvo/design-tokens/dist/colors" as tokens;
 
 @each $name, $value in tokens.$colors {
   /* stylelint-disable scss/dollar-variable-default */

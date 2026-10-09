@@ -1,52 +1,31 @@
-// This file has been automatically migrated to valid ESM format by Storybook.
 // .storybook/main.mjs
 import path, { dirname } from 'node:path';
-import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { createRequire } from 'node:module';
 import remarkGfm from 'remark-gfm';
 
 /** @type {import('@storybook/react-webpack5').StorybookConfig} */
 const config = (() => {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
-  const require = createRequire(import.meta.url);
 
-  /* set path */
-  const docsPath = path.resolve(__dirname, '../documentation');
-  const utilitiesPath = path.resolve(__dirname, '../../../utilities');
-
-  function getPackageDir(filepath) {
-    let currDir = path.dirname(require.resolve(filepath));
-    while (true) {
-      if (fs.existsSync(path.join(currDir, 'package.json'))) return currDir;
-      const { dir, root } = path.parse(currDir);
-      if (dir === root) {
-        throw new Error(`Could not find package.json in the parent directories starting from ${filepath}.`);
-      }
-      currDir = dir;
-    }
-  }
-
-  const webpackStyleImporter = {
-    findFileUrl(url, { _containingUrl }) {
-      if (url.startsWith('~')) {
-        const normalizedUrl = url.slice(1);
-        try {
-          const basePath = _containingUrl.pathname.split('/src')[0];
-          const resolvedPath = path.join(basePath, 'node_modules', normalizedUrl);
-          return new URL(`file://${resolvedPath}`);
-        } catch {
-          console.warn(`Warning: Could not resolve ${url}`);
-          return null;
-        }
-      }
-      return null;
-    },
-  };
+  // // Custom Sass Importer to handle legacy tilde (~) dependencies cleanly
+  // const webpackStyleImporter = {
+  //   findFileUrl(url, { _containingUrl }) {
+  //     if (url.startsWith('~')) {
+  //       const normalizedUrl = url.slice(1);
+  //       try {
+  //         const basePath = _containingUrl.pathname.split('/src')[0];
+  //         return new URL(`file://${path.join(basePath, 'node_modules', normalizedUrl)}`);
+  //       } catch {
+  //         return null;
+  //       }
+  //     }
+  //     return null;
+  //   },
+  // };
 
   return {
-    framework: { name: '@storybook/react-webpack5', options: {} },
+    framework: { name: '@storybook/react-vite', options: {} },
 
     core: {
       disableTelemetry: true,
@@ -54,13 +33,14 @@ const config = (() => {
       disableOnboarding: true,
     },
 
+    // Simplified Stories Array using standard relative lookups
     stories: [
-      `${docsPath}/pages/**/*.docpage.mdx`,
-      `${docsPath}/demopages/**/*.stories.@(jsx|tsx)`,
-      `${utilitiesPath}/*/docs/*.docpage.mdx`,
-      `${utilitiesPath}/*/stories/*.stories.@(jsx|tsx)`,
-      `../components/*/*.docpage.mdx`,
-      `../components/*/*.stories.@(jsx|tsx)`,
+      '../documentation/pages/**/*.docpage.mdx',
+      '../documentation/demopages/**/*.stories.@(jsx|tsx)',
+      '../utilities/*/docs/*.docpage.mdx',
+      '../utilities/*/stories/*.stories.@(jsx|tsx)',
+      '../components/*/*.docpage.mdx',
+      '../components/*/*.stories.@(jsx|tsx)',
     ],
 
     addons: [
@@ -78,84 +58,30 @@ const config = (() => {
     staticDirs: ['../documentation/demopages/common', '../node_modules/@nl-rvo/assets/'],
 
     typescript: {
-      check: true,
-      checkOptions: {},
+      check: false, // Performance Fix: Keeps the compilation fast and in a single thread
       reactDocgen: 'react-docgen-typescript',
     },
 
-    webpackFinal: async (config) => {
-      const rules = config.module?.rules || [];
-
-      const scssRule = rules.find((rule) => rule.test?.toString().replace(/\\/g, '') === '/.s[ca]ss$/');
-      if (scssRule) {
-        scssRule.use = [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sassOptions: {
-                api: 'modern',
-                implementation: 'sass-embedded',
-                importers: [webpackStyleImporter],
-              },
-            },
-          },
-        ];
-      }
-
-      const mdxRules = rules.filter((rule) => rule.test && String(rule.test).includes('mdx'));
-      mdxRules.forEach((rule) => {
-        (rule.use || []).forEach((u) => {
-          if (typeof u === 'object' && u.loader?.includes('@storybook/mdx2-csf')) {
-            u.options = {
-              ...u.options,
-              mdxCompileOptions: {
-                ...(u.options?.mdxCompileOptions || {}),
-                remarkPlugins: [...(u.options?.mdxCompileOptions?.remarkPlugins || []), remarkGfm],
-              },
-            };
-          }
-        });
-      });
-
-      // Keep the addon-docs MDX-compile rule from also matching `*.mdx?raw` imports (see the
-      // `resourceQuery: /raw/` asset rule below) so a single import can't be processed by both.
-      const docsMdxRule = rules.find((rule) => rule.test && String(rule.test) === String(/\.mdx$/) && rule.use);
-      if (docsMdxRule) docsMdxRule.resourceQuery = { not: [/raw/] };
-
-      const svgRule = rules.find((rule) => rule.type === 'asset/resource');
-      if (svgRule?.generator?.filename) delete svgRule.generator.filename;
-
-      config.output.assetModuleFilename = (pathData) => {
-        const m = path.dirname(pathData.filename).match(/(?<=assets\/).*/);
-        const filepath = m ? m[0] : '';
-        return `static/${filepath}/[name][ext][query]`;
-      };
-
-      rules.push({ test: /\.md$/, type: 'asset/source' });
-
-      // Some *.docpage.mdx pages need the raw text of a sibling *.mdx content file (e.g. to feed
-      // `<Markdown>{doc}</Markdown>` or `<Readme markdown={doc} />`), while others import a sibling
-      // *.mdx to render as a compiled component (e.g. `<Doc />`). @storybook/addon-docs compiles every
-      // *.mdx by default, so the string-consumers were getting a component instead of text and crashing
-      // with "The Markdown block only accepts children as a single string, but children were of type:
-      // 'function'". Rather than guessing per-filename, string-consumers opt in explicitly via a `?raw`
-      // resource query on the import (webpack's usual raw-asset convention), scoped so it never affects
-      // the *.mdx files that must stay compiled.
-      rules.push({ resourceQuery: /raw/, type: 'asset/source' });
-
+    viteFinal: async (config) => {
       return {
         ...config,
-        performance: { hints: false },
-        module: { ...(config.module || {}), rules },
+        // Fixes the ".md missing semicolon" crash by telling Vite to read markdown as raw assets
+        assetsInclude: ['**/*.md'],
+
+        css: {
+          preprocessorOptions: {
+            scss: {
+              api: 'modern',
+              implementation: await import('sass-embedded').then((m) => m.default || m),
+            },
+          },
+        },
         resolve: {
           ...config.resolve,
           alias: {
-            ...(config.resolve?.alias || {}),
-            '@emotion/core': getPackageDir('@emotion/react'),
-            '@emotion/styled': getPackageDir('@emotion/styled'),
-            'emotion-theming': getPackageDir('@emotion/react'),
+            ...config.resolve?.alias,
+            // Replaces your old Webpack tilde (~) resolution logic natively
+            '~': path.resolve(__dirname, '../node_modules'),
           },
         },
       };
@@ -166,7 +92,7 @@ const config = (() => {
     docs: {
       autodocs: false,
       mdxPluginOptions: {
-        mdxCompileOptions: { remarkPlugins: [remarkGfm] },
+        mdxCompileOptions: { remarkPlugins: [remarkGfm] }, // Injects Remark-GFM cleanly into all pages natively
       },
     },
   };

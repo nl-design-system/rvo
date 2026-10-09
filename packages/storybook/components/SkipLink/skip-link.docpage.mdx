@@ -1,7 +1,4 @@
-import { Changelog, Readme } from "@nl-rvo/storybook/config/storybook-blocks";
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
-import changeLog from "../../../../components/skip-link/CHANGELOG.md";
-import documentation from "../../../../components/skip-link/README.md";
 import * as SkipLinkStories from "./skip-link.stories";
 
 <Meta of={SkipLinkStories} name="Documentatie" />
@@ -12,11 +9,3 @@ Druk op TAB om de skip link knop te tonen.
 
 <Canvas of={SkipLinkStories.Base} layout="padded" />
 <ArgTypes of={SkipLinkStories.Base} />
-
-## Documentatie
-
-<Readme markdown={documentation} />
-
-## Changelog
-
-<Changelog markdown={changeLog} />
