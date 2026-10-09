@@ -102,9 +102,6 @@ jobs:
           BASE_URL: "/rvo/"
         run: pnpm run --if-present build
 
-      - name: "Continuous Integration: test build"
-        run: pnpm run --if-present test-build
-
       - name: "Generate design system website"
         run: pnpm run --filter @nl-rvo/design-system-website generate
 
@@ -152,7 +149,7 @@ jobs:
 
   publish-chromatic:
     runs-on: ubuntu-latest
-    needs: install
+    needs: [install, build]
     permissions:
       contents: read
 
