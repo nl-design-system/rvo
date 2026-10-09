@@ -58,7 +58,7 @@
     "webpack": "5.96.1"
   },
   "scripts": {
-    "build": "pnpm --filter ./proprietary/**... run build && pnpm --filter ./components/**/style... run build && pnpm --filter ./components/**/react... run --recursive --sequential build && pnpm --filter ./packages/component-library-css... run build && pnpm --filter ./packages/component-library-react... run build",
+    "build": "pnpm --filter ./proprietary/**... run build && pnpm --filter ./utilities/**... run --recursive --sequential --config.ignore-workspace-cycles=true build && pnpm --filter ./components/**/style... run build && pnpm --filter ./components/**/react... run --recursive --sequential build && pnpm --filter ./packages/component-library-css... run build && pnpm --filter ./packages/component-library-react... run build",
     "clean": "pnpm run --recursive --parallel clean",
     "docs": "pnpm run --filter @nl-rvo/docusaurus start",
     "find-undocumented-tokens": "npm run --workspace proprietary/design-tokens/ build:stylelint && npm run lint:css -- --config ./.tokens.stylelintrc.json",
@@ -82,7 +82,7 @@
     "serve": "pnpm --filter @nl-rvo/design-system-website exec http-server dist",
     "serve-docusaurus": "pnpm --filter @nl-rvo/docusaurus exec http-server build",
     "serve-storybook": "pnpm --filter @nl-rvo/storybook exec http-server dist",
-    "test": "pnpm run --recursive test",
+    "test": "pnpm run --recursive --config.ignore-workspace-cycles=true test",
     "test-build": "pnpm run --recursive test-build",
     "test-update": "npm-run-all --sequential clean lint build test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
