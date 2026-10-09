@@ -1132,6 +1132,9 @@ importers:
       '@nl-rvo/assets':
         specifier: workspace:*
         version: link:../../proprietary/assets
+      '@nl-rvo/component-library-css':
+        specifier: workspace:*
+        version: link:../component-library-css
       '@nl-rvo/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens

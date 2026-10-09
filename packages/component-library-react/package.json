@@ -74,6 +74,7 @@
   "dependencies": {
     "@nl-rvo/design-tokens": "workspace:*",
     "@nl-rvo/assets": "workspace:*",
+    "@nl-rvo/component-library-css": "workspace:*",
     "@nl-rvo/react-accordion": "workspace:*",
     "@nl-rvo/react-action-group": "workspace:*",
     "@nl-rvo/react-alert": "workspace:*",
