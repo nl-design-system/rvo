@@ -4,7 +4,11 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 export default {
   title: 'Componenten/Data list',
   component: DataList,
-  argTypes: {},
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
   parameters: {
     status: {
       type: 'PRODUCTION',
@@ -21,5 +25,25 @@ export default {
 type Story = StoryObj<typeof DataList>;
 
 export const Base: Story = {
-  args: {},
+  args: {
+    children: (
+      <>
+        <DataList.Item label="Voornaam" value="Mees" />
+        <DataList.Item label="Achternaam" value="de Vos" />
+        <DataList.Item
+          label="Adres"
+          value={
+            <>
+              Tweede Kamer der Staten-Generaal
+              <br />
+              Postbus 20018
+              <br />
+              2500 EA Den Haag
+            </>
+          }
+        />
+      </>
+    ),
+  },
+  name: 'Data list',
 };

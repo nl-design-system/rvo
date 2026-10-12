@@ -1,6 +1,5 @@
-import { Toggle } from '@nl-rvo/component-library-react';
+import { Toggle, iconOptions } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { iconOptions } from '@nl-rvo/component-library-react';
 
 export default {
   title: 'Componenten/Toggle',
@@ -63,10 +62,10 @@ export const WithIcon: Story = {
   args: { icon: 'home' },
   render: (args) => (
     <div style={{ display: 'inline-flex', gap: '1rem', flexDirection: 'column' }}>
-      <Toggle iconPlacement="left" {...args}>
+      <Toggle {...args} iconPlacement="left">
         Toggle met Icon links
       </Toggle>
-      <Toggle iconPlacement="right" {...args}>
+      <Toggle {...args} iconPlacement="right">
         Toggle met Icon rechts
       </Toggle>
     </div>
