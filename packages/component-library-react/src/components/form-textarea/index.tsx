@@ -70,14 +70,14 @@ export const Textarea: React.FC<ITextareaProps> = ({
         <textarea
           {...props}
           className={clsx(
-            'rvo-textarea',
-            'rvo-textarea--html-textarea',
-            invalid && 'rvo-textarea--invalid',
-            focus && ['rvo-textarea--focus', 'rvo-textarea--focus-visible'],
+            'utrecht-textarea',
+            'utrecht-textarea--html-textarea',
+            invalid && 'utrecht-textarea--invalid',
+            focus && ['utrecht-textarea--focus', 'utrecht-textarea--focus-visible'],
           )}
           aria-invalid={invalid}
         />
-        <span className="rvo-textarea__remaining-chars">
+        <span className="utrecht-textarea-remaining-chars">
           Nog <strong>{maxLength - (currentValue?.length || 0)}</strong> teken
           {maxLength - (currentValue?.length || 0) > 1 && 's'} over
         </span>
@@ -88,11 +88,10 @@ export const Textarea: React.FC<ITextareaProps> = ({
       <textarea
         {...props}
         className={clsx(
-          'rvo-textarea',
-          'rvo-textarea--html-textarea',
-          invalid && 'rvo-textarea--invalid',
-
-          focus && ['rvo-textarea--focus', 'rvo-textarea--focus-visible'],
+          'utrecht-textarea',
+          'utrecht-textarea--html-textarea',
+          invalid && 'utrecht-textarea--invalid',
+          focus && ['utrecht-textarea--focus', 'utrecht-textarea--focus-visible'],
         )}
         aria-invalid={invalid}
       />
