@@ -1,5 +1,11 @@
 # `@nl-rvo/css-heading`
 
+## 2.3.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 2.3.0
 
 ### Minor Changes

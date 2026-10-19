@@ -156,14 +156,7 @@ export const Card: React.FC<ICardProps> = ({
           {contentMarkup}
         </div>
         {hasLinkIndicator && (
-          <Icon
-            ariaLabel="Delta naar rechts"
-            className="rvo-card__link-indicator"
-            color="hemelblauw"
-            icon="delta-naar-rechts"
-            role="img"
-            size="sm"
-          />
+          <Icon className="rvo-card__link-indicator" color="hemelblauw" icon="delta-naar-rechts" size="sm" />
         )}
       </ContentContainer>
     </div>

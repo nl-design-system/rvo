@@ -13,18 +13,18 @@
 }
 
 .rvo-max-width-layout--sm {
-  max-width: var(--rvo-layout-max-width-sm);
-  width: 100%;
+  inline-size: 100%;
+  max-inline-size: var(--rvo-layout-max-width-sm);
 }
 
 .rvo-max-width-layout--md {
-  max-width: var(--rvo-layout-max-width-md);
-  width: 100%;
+  inline-size: 100%;
+  max-inline-size: var(--rvo-layout-max-width-md);
 }
 
 .rvo-max-width-layout--lg {
-  max-width: var(--rvo-layout-max-width-lg);
-  width: 100%;
+  inline-size: 100%;
+  max-inline-size: var(--rvo-layout-max-width-lg);
 }
 
 .rvo-max-width-layout-inline-padding--sm {

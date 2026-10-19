@@ -8,6 +8,7 @@ export default function DocRootLayoutMain({ hiddenSidebarContainer, children }: 
   const sidebar = useDocsSidebar();
   return (
     <main
+      id="main"
       className={clsx(styles.docMainContainer, (hiddenSidebarContainer || !sidebar) && styles.docMainContainerEnhanced)}
     >
       <div

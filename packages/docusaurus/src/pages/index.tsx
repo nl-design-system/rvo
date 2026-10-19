@@ -1,6 +1,7 @@
+import DocusaurusLink from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Button, Card, Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
+import { Grid, Heading, Icon, LayoutFlow, Link, MaxWidthLayout } from '@nl-rvo/component-library-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import type { ReactElement } from 'react';
@@ -28,103 +29,133 @@ export default function Home(): ReactElement {
                 <Link href="mailto:designsystem@rvo.nl">designsystem@rvo.nl</Link>.
               </p>
             </LayoutFlow>
-            <Link
-              style={{ display: 'inline-block', width: 'max-content' }}
-              noUnderline={true}
-              href={useBaseUrl('/over-roos/introductie')}
+            <DocusaurusLink
+              className="rvo-link rvo-link--call-to-action"
+              style={{ alignSelf: 'flex-start' }}
+              to={useBaseUrl('/over-roos/introductie')}
             >
-              <Button>Aan de slag met ROOS</Button>
-            </Link>
+              Aan de slag met ROOS
+            </DocusaurusLink>
           </MaxWidthLayout>
         </div>
       </header>
-      <main>
+      <main id="main">
         <MaxWidthLayout size="md" className={clsx('rvo-layout-column', 'rvo-layout-gap--md', styles.hero)}>
           <Grid columns="three" gap="xl">
-            <Card
-              title="Huisstijl"
-              background="none"
-              link={useBaseUrl('/design-tokens/kleuren')}
-              outline={true}
-              fullCardLink={true}
-              padding="lg"
-              linkProps={{ noUnderline: true }}
-            >
-              De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS.
-            </Card>
-            <Card
-              title="Componenten"
-              background="none"
-              link={useBaseUrl('/componenten/accordion')}
-              outline={true}
-              fullCardLink={true}
-              padding="lg"
-              linkProps={{ noUnderline: true }}
-            >
-              Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl.
-            </Card>
-            <Card
-              title="Patronen"
-              background="none"
-              link={useBaseUrl('/patronen/paginas/basispagina')}
-              outline={true}
-              fullCardLink={true}
-              padding="lg"
-              linkProps={{ noUnderline: true }}
-            >
-              Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
-            </Card>
+            <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
+              <div className="rvo-card--with-link-indicator">
+                <div className="rvo-card__content">
+                  <Heading type="h2" noMargins={true}>
+                    <Link
+                      href={useBaseUrl('/design-tokens/kleuren')}
+                      className="rvo-card__link rvo-card__full-card-link"
+                      noUnderline={true}
+                    >
+                      Huisstijl
+                    </Link>
+                  </Heading>
+                  De kleuren, lettertypes, de space en sizes die er beschikbaar zijn binnen ROOS.
+                </div>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
+              </div>
+            </div>
+            <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
+              <div className="rvo-card--with-link-indicator">
+                <div className="rvo-card__content">
+                  <Heading type="h2" noMargins={true}>
+                    <Link
+                      href={useBaseUrl('/componenten/accordion')}
+                      className="rvo-card__link rvo-card__full-card-link"
+                      noUnderline={true}
+                    >
+                      Componenten
+                    </Link>
+                  </Heading>
+                  Een collectie aan gebruiksvriendelijke, toegankelijke componenten die voldoen aan de Rijkshuisstijl.
+                </div>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
+              </div>
+            </div>
+            <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
+              <div className="rvo-card--with-link-indicator">
+                <div className="rvo-card__content">
+                  <Heading type="h2" noMargins={true}>
+                    <Link
+                      href={useBaseUrl('/patronen/paginas/basispagina')}
+                      className="rvo-card__link rvo-card__full-card-link"
+                      noUnderline={true}
+                    >
+                      Patronen
+                    </Link>
+                  </Heading>
+                  Een set van componenten die samen een patroon vormen van acties die een gebruiker moet uitvoeren.
+                </div>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
+              </div>
+            </div>
 
-            <Card
-              background="none"
-              title={
-                <LayoutFlow row={true} gap="sm">
-                  Figma <Icon icon="externe-link" />
-                </LayoutFlow>
-              }
-              link="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0"
-              outline={true}
-              fullCardLink={true}
-              padding="lg"
-              linkProps={{ noUnderline: true }}
-            >
-              Bekijk de ROOS componenten, patronen en templates in de Figma bibliotheek.
-            </Card>
+            <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
+              <div className="rvo-card--with-link-indicator">
+                <div className="rvo-card__content">
+                  <Heading type="h2" noMargins={true}>
+                    <Link
+                      href="https://www.figma.com/file/Sj6myBL1Fvot5M1qGxzvEo/ROOS-(RVO-Design-System)?type=design&node-id=484-13305&t=vZTjQBvAiufxd5Qs-0"
+                      className="rvo-card__link rvo-card__full-card-link"
+                      noUnderline={true}
+                    >
+                      <span className="rvo-layout-row rvo-layout-gap--sm">
+                        Figma <Icon size="md" icon="externe-link" color="hemelblauw" />
+                      </span>
+                    </Link>
+                  </Heading>
+                  Bekijk de ROOS componenten, patronen en templates in de Figma bibliotheek.
+                </div>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
+              </div>
+            </div>
 
-            <Card
-              background="none"
-              title={
-                <LayoutFlow row={true} gap="sm">
-                  Storybook <Icon icon="externe-link" />
-                </LayoutFlow>
-              }
-              link={
-                process.env.NODE_ENV === 'development'
-                  ? 'http://localhost:6006'
-                  : 'https://nl-design-system.github.io/rvo/'
-              }
-              outline={true}
-              fullCardLink={true}
-              padding="lg"
-              linkProps={{ noUnderline: true }}
-            >
-              Bekijk de code voorbeelden van de ROOS componenten, patronen en templates in Storybook.
-            </Card>
-            <Card
-              background="none"
-              title={
-                <LayoutFlow row={true} gap="sm">
-                  GitHub <Icon icon="externe-link" />
-                </LayoutFlow>
-              }
-              link="https://github.com/nl-design-system/rvo"
-              outline={true}
-              fullCardLink={true}
-              padding="lg"
-              linkProps={{ noUnderline: true }}
-            >
-              Werk mee aan ROOS in de GitHub repository.
-            </Card>
+            <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
+              <div className="rvo-card--with-link-indicator">
+                <div className="rvo-card__content">
+                  <Heading type="h2" noMargins={true}>
+                    <Link
+                      href={
+                        process.env.NODE_ENV === 'development'
+                          ? 'http://localhost:6006'
+                          : 'https://nl-design-system.github.io/rvo/'
+                      }
+                      className="rvo-card__link rvo-card__full-card-link"
+                      noUnderline={true}
+                    >
+                      <span className="rvo-layout-row rvo-layout-gap--sm">
+                        Storybook <Icon size="md" icon="externe-link" color="hemelblauw" />
+                      </span>
+                    </Link>
+                  </Heading>
+                  Bekijk de code voorbeelden van de ROOS componenten, patronen en templates in Storybook.
+                </div>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
+              </div>
+            </div>
+            <div className="rvo-card rvo-card--outline rvo-card--padding--lg">
+              <div className="rvo-card--with-link-indicator">
+                <div className="rvo-card__content">
+                  <Heading type="h2" noMargins={true}>
+                    <Link
+                      href="https://github.com/nl-design-system/rvo"
+                      className="rvo-card__link rvo-card__full-card-link"
+                      noUnderline={true}
+                    >
+                      <span className="rvo-layout-row rvo-layout-gap--sm">
+                        GitHub <Icon size="md" icon="externe-link" color="hemelblauw" />
+                      </span>
+                    </Link>
+                  </Heading>
+                  Werk mee aan ROOS in de GitHub repository.
+                </div>
+                <Icon size="sm" icon="delta-naar-rechts" color="hemelblauw" className="rvo-card__link-indicator" />
+              </div>
+            </div>
           </Grid>
         </MaxWidthLayout>
       </main>

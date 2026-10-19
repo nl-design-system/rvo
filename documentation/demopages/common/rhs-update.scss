@@ -98,23 +98,25 @@
 
   .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::before {
     background-color: var(--rvo-color-zwart);
+    block-size: 100%;
     content: "";
     display: block;
-    height: 100%;
-    left: 0;
+    inline-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     opacity: 35%;
     position: absolute;
-    top: 0;
-    width: 100%;
     z-index: 2;
   }
 
   .rvo-responsive-menu[open] > .rvo-responsive-menu-toggle::after {
     background-color: var(--rvo-color-hemelblauw);
+    block-size: 16px;
     content: "";
     display: block;
-    height: 16px;
-    left: 196px;
+    inline-size: 16px;
+    inset-block-start: 32px;
+    inset-inline-start: 196px;
     -webkit-mask-image: var(--rvo-icon-kruis);
     mask-image: var(--rvo-icon-kruis);
     -webkit-mask-position: center center;
@@ -124,24 +126,22 @@
     -webkit-mask-size: 100%;
     mask-size: 100%;
     position: absolute;
-    top: 32px;
-    width: 16px;
     z-index: 3;
   }
 
   .rvo-responsive-menu .rvo-sidebar-menu {
-    height: 100vh;
-    left: 0;
+    block-size: 100vh;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     padding-block-start: var(--rvo-space-3xl);
     padding-inline-end: var(--rvo-space-2xl);
     padding-inline-start: var(--rvo-space-2xl);
     position: absolute;
-    top: 0;
     z-index: 2;
   }
 
   .rvo-topnav--w-line .rvo-topnav__background {
-    border-bottom: 1px solid #e2e8f0;
+    border-block-end: 1px solid #e2e8f0;
   }
 
   .rvo-topnav__background {
@@ -190,7 +190,7 @@
     }
 
     .rvo-topnav__background + .rvo-topnav__background {
-      border-top: 1px solid #cbd5e1;
+      border-block-start: 1px solid #cbd5e1;
       margin-block-start: var(--rvo-space-sm);
       padding-block-start: var(--rvo-space-md);
     }
@@ -222,12 +222,12 @@
 
       &::before {
         background-color: var(--rvo-color-hemelblauw);
+        block-size: 20px;
         border-radius: var(--rvo-border-radius-sm);
         content: "";
         display: block;
-        height: 20px;
+        inline-size: 4px;
         opacity: 0%;
-        width: 4px;
       }
 
       &:hover,
@@ -265,9 +265,9 @@
     }
 
     .rvo-tabs-item-link {
-      border-bottom-color: #cbd5e1;
-      border-bottom-style: solid;
-      border-bottom-width: 2px;
+      border-block-end-color: #cbd5e1;
+      border-block-end-style: solid;
+      border-block-end-width: 2px;
       color: #334155;
       display: block;
       padding-block-end: var(--rvo-space-xs);
@@ -283,7 +283,7 @@
     }
 
     .rvo-tabs-item-link--active {
-      border-bottom-color: var(--rvo-color-hemelblauw);
+      border-block-end-color: var(--rvo-color-hemelblauw);
       color: var(--rvo-color-hemelblauw);
       font-weight: 700;
 
@@ -333,8 +333,8 @@
     }
 
     .rvo-checkbox__input::before {
-      height: 18px;
-      width: 18px;
+      block-size: 18px;
+      inline-size: 18px;
     }
 
     .utrecht-radio-button,
@@ -439,13 +439,13 @@
     }
 
     &::after {
+      block-size: 100%;
       content: "";
       display: inline-block;
-      height: 100%;
-      left: 0;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
       position: absolute;
-      top: 0;
-      width: 100%;
       z-index: 1;
     }
   }
@@ -474,15 +474,15 @@
       }
 
       .rvo-card-img {
-        height: 76px;
+        block-size: 76px;
+        inline-size: 96px;
         object-fit: cover;
-        width: 96px;
       }
     }
 
     &.rvo-card--md {
       .rvo-card-img {
-        width: 100%;
+        inline-size: 100%;
       }
     }
   }
@@ -506,33 +506,33 @@
 
     .rvo-icon {
       margin-block-start: 3px;
-      min-width: var(--rvo-space-md);
+      min-inline-size: var(--rvo-space-md);
     }
   }
 
   .rvo-card--img-bg {
-    min-height: 150px;
+    min-block-size: 150px;
     padding-block-start: var(--rvo-space-xl);
     position: relative;
 
     &::after {
       background-color: #1e293b;
+      block-size: 100%;
       content: "";
       display: block;
-      height: 100%;
-      left: 0;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
       opacity: 50%;
       position: absolute;
-      top: 0;
-      width: 100%;
     }
 
     .rvo-card-img {
-      left: 0;
-      min-height: 400px;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      min-block-size: 400px;
       object-fit: cover;
       position: absolute;
-      top: 0;
     }
 
     .rvo-card-content {
@@ -584,9 +584,9 @@
 
   .rvo-divider {
     border: 1px solid #e2e8f0;
+    inline-size: 100%;
     margin-block-end: 0;
     margin-block-start: 0;
-    width: 100%;
   }
 
   // TABLE //
@@ -597,7 +597,7 @@
   }
 
   .rvo-table-cell {
-    border-bottom-color: #e2e8f0;
+    border-block-end-color: #e2e8f0;
 
     .rvo-link:hover,
     .rvo-link:focus {
@@ -609,7 +609,7 @@
 
       .rvo-icon {
         margin-block-start: 3px;
-        min-width: var(--rvo-size-md);
+        min-inline-size: var(--rvo-size-md);
       }
     }
   }
@@ -677,7 +677,7 @@
   // ITEM LIST //
 
   .rvo-item-list-item {
-    border-bottom: 1px solid #e2e8f0;
+    border-block-end: 1px solid #e2e8f0;
     display: flex;
     gap: var(--rvo-space-sm);
     justify-content: space-between;
@@ -699,9 +699,9 @@
   }
 
   .rvo-status-indicator {
+    block-size: 100%;
     border-radius: 5px;
-    height: 100%;
-    min-width: 3px;
+    min-inline-size: 3px;
   }
 
   .rvo-status-indicator--open {
@@ -756,7 +756,7 @@
   }
 
   .rvo-messages-list-item {
-    border-bottom: 1px solid #e2e8f0;
+    border-block-end: 1px solid #e2e8f0;
     padding-block-end: var(--rvo-space-xs);
     position: relative;
   }
@@ -806,7 +806,7 @@
 
   .rvo-contact-options {
     .utrecht-button {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 
@@ -924,12 +924,12 @@
 
   .rvo-hero-image {
     line-height: 0;
-    max-height: 300px;
+    max-block-size: 300px;
     overflow: hidden;
     padding-block-end: 25%;
 
     @media (min-width: 540px) {
-      max-height: 500px;
+      max-block-size: 500px;
     }
 
     @media (min-width: 540px) {
@@ -942,9 +942,9 @@
   }
 
   .rvo-hero-img {
-    height: 100%;
+    block-size: 100%;
+    inline-size: 100%;
     object-fit: cover;
-    width: 100%;
   }
 
   // SECTION //
@@ -974,12 +974,12 @@
 
   .rvo-expandable-text__summary .utrecht-icon {
     margin-block-start: 3px;
-    min-width: var(--rvo-size-md);
+    min-inline-size: var(--rvo-size-md);
   }
 
   .rvo-expandable-text__summary::after {
     margin-block-start: 3px;
-    min-width: 10px;
+    min-inline-size: 10px;
   }
 
   .rvo-expandable-text__details {

@@ -315,10 +315,7 @@ const Filters = () => {
                             <LayoutFlow row={true} gap="lg">
                               <div className="rvo-result-text">
                                 <LayoutFlow gap="sm">
-                                  <Link
-                                    href="#"
-                                    content="Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]"
-                                  ></Link>
+                                  <Link href="#">Energieprestatieverbetering van bestaande bedrijfsgebouwen [W]</Link>
 
                                   <span className="rvo-result-description">
                                     Het verbeteren van de energieprestatie van bestaande bedrijfsgebouwen, bepaald
@@ -347,7 +344,7 @@ const Filters = () => {
                           </div>
                           <div className="rvo-result">
                             <LayoutFlow gap="sm">
-                              <Link href="#" content="HR-luchtverwarmer [W]"></Link>
+                              <Link href="#">HR-luchtverwarmer [W]</Link>
 
                               <span className="rvo-result-description">
                                 direct gasgestookte luchtverwarmer, al dan niet voorzien van een tussenmedium,
@@ -367,7 +364,7 @@ const Filters = () => {
                           </div>
                           <div className="rvo-result">
                             <LayoutFlow gap="sm">
-                              <Link href="#" content="Direct gasgestookt stralingspaneel [W]"></Link>
+                              <Link href="#">Direct gasgestookt stralingspaneel [W]</Link>
 
                               <span className="rvo-result-description">
                                 het verwarmen van gesloten binnenruimten in bedrijfsgebouwen met een gemiddelde
@@ -385,7 +382,7 @@ const Filters = () => {
                           </div>
                           <div className="rvo-result">
                             <LayoutFlow gap="sm">
-                              <Link href="#" content="Warmteterugwinningsysteem uit luchtwassers"></Link>
+                              <Link href="#">Warmteterugwinningsysteem uit luchtwassers</Link>
 
                               <span className="rvo-result-description">
                                 het verwarmen van veestallen door het benutten van de warmte uit de luchtwasser,
@@ -402,7 +399,7 @@ const Filters = () => {
                           </div>
                           <div className="rvo-result">
                             <LayoutFlow gap="sm">
-                              <Link href="#" content="Verwarmingssysteem voor bestaande pluimveestallen [W]"></Link>
+                              <Link href="#">Verwarmingssysteem voor bestaande pluimveestallen [W]</Link>
 
                               <span className="rvo-result-description">
                                 het verwarmen van bestaande pluimveestallen waarbij warme lucht van boven uit de stal

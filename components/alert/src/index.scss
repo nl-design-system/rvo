@@ -68,7 +68,7 @@
 }
 
 .rvo-alert .rvo-icon {
-  min-width: var(--rvo-size-xl);
+  min-inline-size: var(--rvo-size-xl);
 }
 
 .utrecht-form-fieldset .rvo-alert {
@@ -109,12 +109,13 @@
 
   .utrecht-icon.rvo-icon {
     background-color: var(--utrecht-document-color);
-    min-width: var(--rvo-size-md);
+    min-inline-size: var(--rvo-size-md);
   }
 
   &:hover {
-    border-bottom: 2px solid var(--rvo-color-zwart);
     border-radius: 0;
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-end: 2px solid var(--rvo-color-zwart);
   }
 }
 

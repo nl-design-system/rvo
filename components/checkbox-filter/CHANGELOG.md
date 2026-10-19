@@ -1,5 +1,18 @@
 # @nl-rvo/checkbox-filter
 
+## 3.2.2
+
+### Patch Changes
+
+- a261cdb: ROOS-385: prevents user selection on checkbox-filter label and links
+- 084a230: Ensure package is published with provenance
+
+## 3.2.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 3.2.0
 
 ### Minor Changes

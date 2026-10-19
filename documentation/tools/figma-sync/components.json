@@ -1,0 +1,929 @@
+{
+  "figmaFileId": "Sj6myBL1Fvot5M1qGxzvEo",
+  "threshold": 0.9,
+  "components": {
+    "accordion": {
+      "storybookId": "componenten-accordion--default",
+      "paths": ["components/accordion/**", "packages/component-library-react/src/components/accordion/**"],
+      "targetSelector": ".rvo-accordion__item",
+      "variants": {
+        "closed-first": {
+          "args": "",
+          "figmaNodeId": "5155:13405",
+          "screenshotSelector": ".rvo-accordion__item:first-child"
+        },
+        "closed-middle": {
+          "args": "",
+          "figmaNodeId": "4040:4882",
+          "screenshotSelector": ".rvo-accordion__item:nth-child(2)"
+        },
+        "open-first": {
+          "args": "",
+          "figmaNodeId": "5155:13419",
+          "screenshotSelector": ".rvo-accordion__item:first-child",
+          "openSelector": ".rvo-accordion__item:first-child"
+        },
+        "open-middle": {
+          "args": "",
+          "figmaNodeId": "4040:4918",
+          "screenshotSelector": ".rvo-accordion__item:nth-child(2)",
+          "openSelector": ".rvo-accordion__item:nth-child(2)"
+        }
+      }
+    },
+    "table": {
+      "storybookId": "componenten-table--default",
+      "paths": ["components/table/**", "packages/component-library-react/src/components/table/**"],
+      "targetSelector": ".rvo-table--responsive",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4301:12130"
+        }
+      }
+    },
+    "button": {
+      "storybookId": "componenten-button--default",
+      "paths": ["components/button/**", "packages/component-library-react/src/components/button/**"],
+      "figmaComponentSetId": "4127:18556",
+      "figmaNamePattern": "Size={size}, Kind={kindFigma}, Hover=False",
+      "argsPattern": "kind:{kind};size:{size};showIcon:after;icon:home",
+      "axes": {
+        "kind": ["primary", "secondary", "tertiary", "quaternary", "warning", "warning-subtle"],
+        "size": ["md", "sm", "xs"]
+      },
+      "valueMaps": {
+        "kindFigma": {
+          "axis": "kind",
+          "values": {
+            "primary": "Primary",
+            "secondary": "Secondary",
+            "tertiary": "Tertiary",
+            "quaternary": "Quaternary",
+            "warning": "Warning",
+            "warning-subtle": "Warning subtle"
+          }
+        }
+      },
+      "thresholds": {
+        "tertiary-*": 0.7,
+        "warning-subtle-*": 0.7
+      },
+      "thresholdNotes": {
+        "tertiary-*": "Tekst-only variant zonder solid achtergrond. Browser en Figma renderen lettertype-antialiasing net iets anders, wat al ~20–25% afwijkende pixels oplevert ook als het design correct is.",
+        "warning-subtle-*": "Subtiele achtergrondkleur met weinig solide pixels. Anti-aliasing van tekst en randen veroorzaakt structureel meer ruis dan bij solid-background varianten."
+      }
+    },
+    "alert": {
+      "storybookId": "componenten-alert--default",
+      "paths": ["components/alert/**"],
+      "targetSelector": ".rvo-alert",
+      "screenshotViewportWidth": 800,
+      "thresholds": {
+        "*": 0.72
+      },
+      "thresholdNotes": {
+        "*": "De Figma-component toont een vette koptitel ('Info', 'Foutmelding', …) en meerregelige Nederlandse loremipsum-tekst; de Storybook-story gebruikt een kortere Engelse placeholder zonder titel. Dit inhoudsverschil vergroot de componenten in hoogte en verhoogt de structurele ruis."
+      },
+      "figmaComponentSetId": "94:391",
+      "figmaNamePattern": "Type={typeFigma}",
+      "argsPattern": "kind:{kind}",
+      "axes": {
+        "kind": ["info", "warning", "error", "success"]
+      },
+      "valueMaps": {
+        "typeFigma": {
+          "axis": "kind",
+          "values": {
+            "info": "Info",
+            "warning": "Warning",
+            "error": "Error",
+            "success": "Succes"
+          }
+        }
+      }
+    },
+    "horizontal-rule": {
+      "storybookId": "componenten-horizontal-rule--default",
+      "paths": ["components/horizontal-rule/**"],
+      "targetSelector": ".rvo-hr",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "2742:21"
+        }
+      }
+    },
+    "item-list": {
+      "storybookId": "componenten-item-list--default",
+      "paths": ["components/item-list/**"],
+      "targetSelector": ".rvo-item-list",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "2742:3"
+        }
+      }
+    },
+    "breadcrumbs": {
+      "storybookId": "componenten-breadcrumbs--default",
+      "paths": ["components/breadcrumbs/**"],
+      "targetSelector": ".rvo-breadcrumbs",
+      "figmaComponentSetId": "8772:10658",
+      "figmaNamePattern": "Size={size}",
+      "argsPattern": "size:{size}",
+      "axes": {
+        "size": ["sm", "md", "lg"]
+      }
+    },
+    "form-feedback": {
+      "storybookId": "componenten-feedback--default",
+      "paths": ["components/form-feedback/**"],
+      "targetSelector": ".rvo-form-feedback",
+      "variants": {
+        "error": {
+          "args": "type:error",
+          "figmaNodeId": "4231:18741"
+        },
+        "warning": {
+          "args": "type:warning",
+          "figmaNodeId": "4231:18743"
+        }
+      }
+    },
+    "status-indicator": {
+      "storybookId": "componenten-status-indicator--default",
+      "paths": ["components/status-indicator/**"],
+      "targetSelector": ".rvo-status-indicator",
+      "figmaComponentSetId": "2742:3748",
+      "figmaNamePattern": "color={color}",
+      "argsPattern": "color:{color}",
+      "axes": {
+        "color": ["hemelblauw", "groen", "groen-300", "oranje", "oranje-300", "rood", "rood-300", "hemelblauw-300"]
+      }
+    },
+    "action-group": {
+      "storybookId": "componenten-action-group--default",
+      "paths": ["components/action-group/**"],
+      "targetSelector": ".rvo-action-group",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4207:18737"
+        },
+        "full-width": {
+          "args": "fullWidth:true",
+          "figmaNodeId": "10451:13"
+        }
+      }
+    },
+    "expandable-content": {
+      "storybookId": "componenten-expandable-content--default",
+      "paths": ["components/expandable-content/**"],
+      "targetSelector": ".rvo-expandable-content",
+      "variants": {
+        "collapsed-default": {
+          "args": "open:false;subtle:false",
+          "figmaNodeId": "4224:18829"
+        },
+        "collapsed-subtle": {
+          "args": "open:false;subtle:true",
+          "figmaNodeId": "4040:8604"
+        },
+        "expanded-default": {
+          "args": "open:true;subtle:false",
+          "figmaNodeId": "4224:18941"
+        },
+        "expanded-subtle": {
+          "args": "open:true;subtle:true",
+          "figmaNodeId": "4040:8715"
+        }
+      }
+    },
+    "link": {
+      "storybookId": "componenten-link--default",
+      "paths": ["components/link/**"],
+      "targetSelector": ".rvo-link",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "3232:18564"
+        },
+        "no-underline": {
+          "args": "noUnderline:true",
+          "figmaNodeId": "8665:828"
+        }
+      }
+    },
+    "heading": {
+      "storybookId": "componenten-heading--default",
+      "paths": ["components/heading/**"],
+      "targetSelector": ".rvo-heading",
+      "figmaComponentSetId": "4296:19249",
+      "figmaNamePattern": "Type={type}, font normal={fontNormal}",
+      "argsPattern": "type:{type}",
+      "axes": {
+        "type": ["h1", "h2", "h3", "h4", "h5", "h6"],
+        "fontNormal": ["false"]
+      },
+      "thresholds": {
+        "*": 0.7
+      },
+      "thresholdNotes": {
+        "*": "Tekstcomponent zonder achtergrondvlak. Kleine positioneringsverschillen en lettertype-antialiasing tellen op over de volle breedte van de heading."
+      }
+    },
+    "label": {
+      "storybookId": "componenten-label--default",
+      "paths": ["components/form-field-label/**"],
+      "targetSelector": ".rvo-label",
+      "thresholds": {
+        "*": 0.65
+      },
+      "thresholdNotes": {
+        "*": "Tekst-component met twee bekende inhoudsverschillen: (1) Storybook gebruikt 'Field label' als placeholder, Figma gebruikt 'Label'; (2) de required-state toont in Storybook '(verplicht)' uitgeschreven terwijl Figma een asterisk (*) gebruikt — dit is een potentiële designdiscrepantie die verificatie verdient."
+      },
+      "variants": {
+        "default-none": {
+          "args": "small:false;type:none",
+          "figmaNodeId": "1304:18122"
+        },
+        "default-required": {
+          "args": "small:false;type:required",
+          "figmaNodeId": "1318:17907"
+        },
+        "default-optional": {
+          "args": "small:false;type:optional",
+          "figmaNodeId": "3038:18556"
+        },
+        "small-none": {
+          "args": "small:true;type:none",
+          "figmaNodeId": "1358:18016"
+        },
+        "small-required": {
+          "args": "small:true;type:required",
+          "figmaNodeId": "1358:18014"
+        },
+        "small-optional": {
+          "args": "small:true;type:optional",
+          "figmaNodeId": "3038:18559"
+        }
+      }
+    },
+    "footer": {
+      "storybookId": "componenten-footer--default",
+      "paths": ["components/footer/**"],
+      "targetSelector": ".rvo-footer",
+      "figmaComponentSetId": "2738:2563",
+      "figmaNamePattern": "maxWidth={maxWidth}",
+      "argsPattern": "maxWidth:{maxWidth}",
+      "axes": {
+        "maxWidth": ["sm", "md", "lg", "none"]
+      },
+      "screenshotViewportWidths": {
+        "sm": 650,
+        "md": 920,
+        "lg": 1100,
+        "none": 1100
+      },
+      "thresholds": {
+        "*": 0.7
+      },
+      "thresholdNotes": {
+        "*": "Complexe layout met veel tekst en nesting. Kleine positioneringsverschillen (1–2px) tellen op over een breed canvas, waardoor de baseline-ruis hoger is dan bij eenvoudige solid-background componenten."
+      }
+    },
+    "checkbox-field": {
+      "storybookId": "componenten-checkbox-field--default",
+      "paths": ["components/form-field-checkbox/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4231:18757"
+        }
+      }
+    },
+    "text-input-field": {
+      "storybookId": "componenten-text-input-field--default",
+      "paths": ["components/form-field-textinput/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4234:20048"
+        }
+      }
+    },
+    "select-field": {
+      "storybookId": "componenten-select-field--default",
+      "paths": ["components/form-field-select/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4234:19984"
+        }
+      }
+    },
+    "textarea-field": {
+      "storybookId": "componenten-textarea-field--default",
+      "paths": ["components/form-field-textarea/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "5913:142"
+        }
+      }
+    },
+    "radio-button-field": {
+      "storybookId": "componenten-radio-button-field--default",
+      "paths": ["components/form-field-radio-button/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4234:19768"
+        }
+      }
+    },
+    "date-input-field": {
+      "storybookId": "componenten-date-input-field--default",
+      "paths": ["components/form-field-dateinput/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "5909:2298"
+        }
+      }
+    },
+    "file-input-field": {
+      "storybookId": "componenten-file-input-field--default",
+      "paths": ["components/form-field-fileinput/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4231:19443"
+        }
+      }
+    },
+    "time-input-field": {
+      "storybookId": "componenten-time-input-field--default",
+      "paths": ["components/form-field-timeinput/**"],
+      "targetSelector": ".rvo-form-field",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "disabled-false-required-false": {
+          "args": "disabled:false;required:false",
+          "figmaNodeId": "2738:4216"
+        },
+        "disabled-false-required-true": {
+          "args": "disabled:false;required:true",
+          "figmaNodeId": "2738:4230"
+        },
+        "disabled-true-required-false": {
+          "args": "disabled:true;required:false",
+          "figmaNodeId": "2738:4244"
+        },
+        "disabled-true-required-true": {
+          "args": "disabled:true;required:true",
+          "figmaNodeId": "2738:4251"
+        }
+      }
+    },
+    "menubar": {
+      "storybookId": "componenten-menubar--default",
+      "paths": ["components/menubar/**"],
+      "targetSelector": ".rvo-menubar",
+      "screenshotViewportWidths": {
+        "*-lg-*": 1100,
+        "*-md-*": 920,
+        "*-sm-*": 650
+      },
+      "variants": {
+        "lg-main-no-rule": {
+          "args": "maxWidth:lg;horizontalRule:false",
+          "figmaNodeId": "4234:20395"
+        },
+        "lg-main-rule": {
+          "args": "maxWidth:lg;horizontalRule:true",
+          "figmaNodeId": "2037:3076"
+        },
+        "md-main-no-rule": {
+          "args": "maxWidth:md;horizontalRule:false",
+          "figmaNodeId": "4234:20671"
+        },
+        "md-main-rule": {
+          "args": "maxWidth:md;horizontalRule:true",
+          "figmaNodeId": "2038:3326"
+        },
+        "sm-main-no-rule": {
+          "args": "maxWidth:sm;horizontalRule:false",
+          "figmaNodeId": "4234:20734"
+        },
+        "sm-main-rule": {
+          "args": "maxWidth:sm;horizontalRule:true",
+          "figmaNodeId": "2038:3576"
+        }
+      }
+    },
+    "menu-item": {
+      "storybookId": "componenten-menubar--default",
+      "paths": ["components/menubar/**"],
+      "targetSelector": ".rvo-menubar__item",
+      "screenshotViewportWidth": 1280,
+      "thresholds": {
+        "*": 0.88
+      },
+      "thresholdNotes": {
+        "*": "Sub-component geïsoleerd uit de menubar story. Storybook toont echte linktekst ('Home'), Figma gebruikt 'Menu item' als placeholder — het tekstlengteverschil veroorzaakt structurele ruis."
+      },
+      "variants": {
+        "lg-inactive": {
+          "args": "size:lg",
+          "figmaNodeId": "7175:1275",
+          "screenshotSelector": ".rvo-menubar__item:first-child"
+        },
+        "md-inactive": {
+          "args": "size:md",
+          "figmaNodeId": "4234:20370",
+          "screenshotSelector": ".rvo-menubar__item:first-child"
+        },
+        "sm-inactive": {
+          "args": "size:sm",
+          "figmaNodeId": "4234:20382",
+          "screenshotSelector": ".rvo-menubar__item:first-child"
+        }
+      }
+    },
+    "fieldset": {
+      "storybookId": "componenten-fieldset--default",
+      "paths": ["components/form-fieldset/**"],
+      "targetSelector": ".rvo-form-fieldset",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "9151:320"
+        }
+      }
+    },
+    "tabs": {
+      "storybookId": "componenten-tabs--default",
+      "paths": ["components/tabs/**", "packages/component-library-react/src/components/tabs/**"],
+      "targetSelector": ".rvo-tabs",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "3669:2859"
+        }
+      }
+    },
+    "card": {
+      "storybookId": "componenten-card--default",
+      "paths": ["components/card/**", "packages/component-library-react/src/components/card/**"],
+      "targetSelector": ".rvo-card",
+      "screenshotViewportWidth": 600,
+      "thresholds": {
+        "*": 0.75
+      },
+      "thresholdNotes": {
+        "*": "Card bevat vrije content. Storybook rendert 'Content' als tekst zonder titel; Figma-varianten gebruiken eigen placeholder-content. Structureel (border, padding, border-radius) moet wel matchen."
+      },
+      "variants": {
+        "outline-sm": {
+          "args": "outline:true;padding:sm",
+          "figmaNodeId": "4899:140"
+        },
+        "no-outline-md": {
+          "args": "outline:false;padding:md",
+          "figmaNodeId": "4894:2444"
+        }
+      }
+    },
+    "helper-text": {
+      "storybookId": "componenten-text-input-field--default",
+      "paths": ["components/form-field/**", "packages/component-library-react/src/components/form-field/**"],
+      "targetSelector": ".utrecht-form-field-description",
+      "screenshotViewportWidth": 600,
+      "thresholds": {
+        "*": 0.7
+      },
+      "thresholdNotes": {
+        "*": "Helptekst geïsoleerd via screenshotSelector uit de text-input-field story. Storybook gebruikt 'Helptekst' als placeholder, Figma 'Helper text' — tekstlengteverschil veroorzaakt structurele ruis."
+      },
+      "variants": {
+        "default": {
+          "args": "helperText:Helptekst",
+          "figmaNodeId": "5772:11842"
+        }
+      }
+    },
+    "start-icon": {
+      "storybookId": "componenten-icon--default",
+      "paths": ["components/icon/**", "packages/component-library-react/src/components/icon/**"],
+      "targetSelector": ".rvo-icon",
+      "thresholds": {
+        "*": 0.85
+      },
+      "thresholdNotes": {
+        "*": "Klein SVG-icoon. Browser-antialiasing vs Figma PNG-export veroorzaken structurele ruis die groter is bij kleinere maten. Beide tonen visueel identieke home-iconen."
+      },
+      "variants": {
+        "sm": {
+          "args": "size:sm",
+          "figmaNodeId": "4003:2860"
+        },
+        "md": {
+          "args": "",
+          "figmaNodeId": "4003:2874"
+        },
+        "lg": {
+          "args": "size:lg",
+          "figmaNodeId": "4003:3005"
+        }
+      }
+    },
+    "page-number-navigation": {
+      "storybookId": "componenten-page-number-navigation--default",
+      "paths": [
+        "components/page-number-navigation/**",
+        "packages/component-library-react/src/components/page-number-navigation/**"
+      ],
+      "targetSelector": ".rvo-pagination",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "page-1": {
+          "args": "activePage:1",
+          "figmaNodeId": "8666:952"
+        },
+        "page-10": {
+          "args": "activePage:10",
+          "figmaNodeId": "8665:900"
+        },
+        "page-30": {
+          "args": "activePage:30",
+          "figmaNodeId": "8666:983"
+        }
+      }
+    },
+    "logo": {
+      "storybookId": "componenten-logo--default",
+      "paths": ["components/logo/**", "packages/component-library-react/src/components/logo/**"],
+      "targetSelector": ".rvo-logo",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "2968:18534"
+        }
+      }
+    },
+    "tab": {
+      "storybookId": "componenten-tabs--default",
+      "paths": ["components/tabs/**", "packages/component-library-react/src/components/tabs/**"],
+      "targetSelector": ".rvo-tabs__tab",
+      "thresholds": {
+        "*": 0.8
+      },
+      "thresholdNotes": {
+        "*": "Tab-knop geïsoleerd uit de tabs story via screenshotSelector. Storybook gebruikt 'Tab 1'/'Tab 2' als labeltekst, Figma gebruikt 'Tab titel' — dit tekstlengteverschil veroorzaakt structurele breedte-ruis."
+      },
+      "variants": {
+        "inactive": {
+          "args": "",
+          "figmaNodeId": "3669:595",
+          "screenshotSelector": ".rvo-tabs__tab:not(.rvo-tabs__tab--active)"
+        },
+        "active": {
+          "args": "",
+          "figmaNodeId": "3669:600",
+          "screenshotSelector": ".rvo-tabs__tab--active"
+        }
+      }
+    },
+    "toggle": {
+      "storybookId": "componenten-toggle--default",
+      "paths": ["components/toggle/**", "packages/component-library-react/src/components/toggle/**"],
+      "targetSelector": ".rvo-toggle",
+      "thresholds": {
+        "inactive-icon-after": 0.88,
+        "active-*": 0.85
+      },
+      "thresholdNotes": {
+        "inactive-no-icon": "Echte designdiscrepantie: code rendert witte achtergrond voor inactive toggle, Figma toont een lichtblauwe achtergrond (hemelblauw-tint). Mogelijk een Figma-componentfout of een niet-geïmplementeerde designwijziging.",
+        "inactive-icon-before": "Echte designdiscrepantie: Figma toont geen icoon voor active=false/showIcon=before, code toont het icoon wel. Mogelijk een verborgen icoon-laag in de Figma-component voor de inactive-before-variant.",
+        "inactive-icon-after": "Structurele ruis door icoon-rendering (browser antialiasing vs Figma PNG export) en lichte padding-afwijkingen.",
+        "active-*": "Structurele ruis: beide tonen lichtblauwe achtergrond + icoon + tekst. Kleine pixel-afwijkingen door icoon-antialiasing en exacte kleurwaarden."
+      },
+      "variants": {
+        "inactive-no-icon": {
+          "args": "",
+          "figmaNodeId": "3177:5573"
+        },
+        "inactive-icon-before": {
+          "args": "showIcon:before",
+          "figmaNodeId": "3177:5555"
+        },
+        "inactive-icon-after": {
+          "args": "showIcon:after",
+          "figmaNodeId": "3177:5565"
+        },
+        "active-icon-before": {
+          "args": "showIcon:before;active:true",
+          "figmaNodeId": "3177:5575"
+        },
+        "active-icon-after": {
+          "args": "showIcon:after;active:true",
+          "figmaNodeId": "3177:5583"
+        }
+      }
+    },
+    "counter-badge": {
+      "storybookId": "componenten-counter-badge--default",
+      "paths": ["components/counter-badge/**", "packages/component-library-react/src/components/counter-badge/**"],
+      "targetSelector": ".rvo-badge",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "6597:161"
+        }
+      }
+    },
+    "data-list": {
+      "storybookId": "componenten-data-list--default",
+      "paths": ["components/data-list/**", "packages/component-library-react/src/components/data-list/**"],
+      "targetSelector": ".rvo-data-list",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "4196:18766"
+        }
+      }
+    },
+    "tag": {
+      "storybookId": "componenten-tag--default",
+      "paths": ["components/tag/**", "packages/component-library-react/src/components/tag/**"],
+      "targetSelector": ".rvo-tag",
+      "thresholds": {
+        "info-*": 0.65,
+        "warning-no-icon": 0.7,
+        "error-*": 0.65,
+        "success-*": 0.65
+      },
+      "thresholdNotes": {
+        "info-*": "Hoogteverschil Storybook 32px vs Figma 28px plus lichte kleurafwijking (rgb(143,202,231) vs rgb(140,196,230)) veroorzaken ~25% structurele ruis.",
+        "warning-no-icon": "Achtergrondkleur matcht exact; hoogteverschil (32 vs 28px) veroorzaakt ~24% ruis.",
+        "error-*": "Hoogteverschil Storybook 32px vs Figma 28px veroorzaakt structurele ruis.",
+        "success-*": "Hoogteverschil Storybook 32px vs Figma 28px veroorzaakt structurele ruis.",
+        "default-*": "Echte designdiscrepantie: Storybook gebruikt grijs-200 (#E2E8F0) als achtergrond, Figma gebruikt een donkerder grijs (#94A3B8). Verificatie nodig.",
+        "warning-icon-before": "Echte designdiscrepantie: Figma toont een subtiele achtergrondkleur (rgb(255,244,219)) voor warning-tag met icon, de code gebruikt altijd de volle waarschuwingskleur (rgb(255,182,18)). Dit verschil is niet geïmplementeerd."
+      },
+      "variants": {
+        "default-no-icon": {
+          "storybookId": "componenten-tag--default-no-icon",
+          "figmaNodeId": "263:4009"
+        },
+        "default-icon-before": {
+          "storybookId": "componenten-tag--default-icon-before",
+          "figmaNodeId": "268:9076"
+        },
+        "info-no-icon": {
+          "storybookId": "componenten-tag--info-no-icon",
+          "figmaNodeId": "268:7363"
+        },
+        "info-icon-before": {
+          "storybookId": "componenten-tag--info-icon-before",
+          "figmaNodeId": "268:7306"
+        },
+        "warning-no-icon": {
+          "storybookId": "componenten-tag--warning-no-icon",
+          "figmaNodeId": "263:4133"
+        },
+        "warning-icon-before": {
+          "storybookId": "componenten-tag--warning-icon-before",
+          "figmaNodeId": "268:9147"
+        },
+        "error-no-icon": {
+          "storybookId": "componenten-tag--error-no-icon",
+          "figmaNodeId": "263:4190"
+        },
+        "error-icon-before": {
+          "storybookId": "componenten-tag--error-icon-before",
+          "figmaNodeId": "268:9207"
+        },
+        "success-no-icon": {
+          "storybookId": "componenten-tag--success-no-icon",
+          "figmaNodeId": "268:7337"
+        },
+        "success-icon-before": {
+          "storybookId": "componenten-tag--success-icon-before",
+          "figmaNodeId": "268:9267"
+        }
+      }
+    },
+    "header": {
+      "storybookId": "componenten-header--default",
+      "targetSelector": ".rvo-header",
+      "screenshotViewportWidth": 1280,
+      "thresholds": {
+        "*": 0.85
+      },
+      "thresholdNotes": {
+        "*": "Header bevat logo en navigatie. Storybook- en Figma-content kunnen afwijken."
+      },
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "9100:47"
+        }
+      }
+    },
+    "hero": {
+      "storybookId": "componenten-hero--default",
+      "targetSelector": ".rvo-hero",
+      "screenshotViewportWidth": 1280,
+      "thresholds": {
+        "*": 0.25
+      },
+      "thresholdNotes": {
+        "*": "Figma exporteert leeg image-slot (transparant → wit), Storybook toont demo-foto. Het image-gebied domineert de diff; alleen de tekstlaag is vergelijkbaar."
+      },
+      "variants": {
+        "sm": {
+          "args": "size:sm",
+          "figmaNodeId": "5925:2129"
+        },
+        "md": {
+          "args": "size:md",
+          "figmaNodeId": "5937:31"
+        },
+        "lg": {
+          "args": "size:lg",
+          "figmaNodeId": "5937:36"
+        }
+      }
+    },
+    "loader": {
+      "storybookId": "componenten-loader--default",
+      "targetSelector": ".rvo-loader",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "6605:181"
+        }
+      }
+    },
+    "skip-link": {
+      "storybookId": "componenten-skip-link--default",
+      "targetSelector": ".rvo-skip-link",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "1862:18990",
+          "focusSelector": ".rvo-skip-link"
+        }
+      },
+      "thresholdNotes": {
+        "default": "Echte designdiscrepantie: Storybook rendert skip-link (gefocust) als brede blauwe balk met witte tekst; Figma toont een simpele tekstlink zonder achtergrond."
+      }
+    },
+    "horizontal-progress-tracker": {
+      "storybookId": "componenten-progress-tracker--default",
+      "targetSelector": ".rvo-progress-tracker",
+      "screenshotViewportWidth": 800,
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "282:7902"
+        }
+      }
+    },
+    "max-width-layout": {
+      "storybookId": "layout-max-width-layout--default",
+      "targetSelector": ".rvo-max-width-layout",
+      "screenshotViewportWidth": 1280,
+      "variants": {
+        "sm": {
+          "args": "size:sm",
+          "figmaNodeId": "3681:12"
+        },
+        "md": {
+          "args": "size:md",
+          "figmaNodeId": "3681:14"
+        },
+        "lg": {
+          "args": "size:lg",
+          "figmaNodeId": "3681:19"
+        }
+      },
+      "thresholds": {
+        "*": 0.83
+      },
+      "thresholdNotes": {
+        "*": "Structurele ruis: Figma toont grijze achtergrond als visueel kader; Storybook gebruikt witte achtergrond. Tekstinhoud verschilt (verschillende placeholder-tekst)."
+      }
+    },
+    "mobile-menubar": {
+      "storybookId": "componenten-mobile-menubar--default",
+      "targetSelector": ".rvo-mobile-menu",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "2742:708"
+        }
+      }
+    },
+    "ordered-unordered-list": {
+      "storybookId": "componenten-ordered-unordered-list--default",
+      "targetSelector": ".rvo-ul",
+      "variants": {
+        "unordered": {
+          "args": "",
+          "figmaNodeId": "2742:2656"
+        },
+        "ordered": {
+          "args": "type:ordered",
+          "figmaNodeId": "2742:2667",
+          "screenshotSelector": ".rvo-ol"
+        }
+      }
+    },
+    "breadcrumb-step": {
+      "storybookId": "componenten-breadcrumbs--default",
+      "targetSelector": ".rvo-breadcrumbs-item",
+      "thresholds": {
+        "step-*": 0.73,
+        "current-*": 0.83
+      },
+      "thresholdNotes": {
+        "step-*": "Structurele ruis: Storybook rendert \"First step\" (langere tekst), Figma toont \"Step >\" (inclusief separator). Breedte en baseline-pixels wijken af door tekstlengte.",
+        "current-*": "Storybook toont \"Current page\", Figma toont \"Step\" als laatste item. Lichte ruis door tekstlengte."
+      },
+      "variants": {
+        "step-sm": {
+          "args": "size:sm",
+          "figmaNodeId": "8772:10513",
+          "screenshotSelector": ".rvo-breadcrumbs-item:first-child"
+        },
+        "current-sm": {
+          "args": "size:sm",
+          "figmaNodeId": "8772:10516",
+          "screenshotSelector": ".rvo-breadcrumbs-item:last-child"
+        },
+        "step-md": {
+          "args": "size:md",
+          "figmaNodeId": "8772:10518",
+          "screenshotSelector": ".rvo-breadcrumbs-item:first-child"
+        },
+        "current-md": {
+          "args": "size:md",
+          "figmaNodeId": "8772:10521",
+          "screenshotSelector": ".rvo-breadcrumbs-item:last-child"
+        },
+        "step-lg": {
+          "args": "size:lg",
+          "figmaNodeId": "8772:10523",
+          "screenshotSelector": ".rvo-breadcrumbs-item:first-child"
+        },
+        "current-lg": {
+          "args": "size:lg",
+          "figmaNodeId": "8772:10526",
+          "screenshotSelector": ".rvo-breadcrumbs-item:last-child"
+        }
+      }
+    },
+    "progress-tracker": {
+      "storybookId": "componenten-progress-tracker--default",
+      "targetSelector": ".rvo-progress-tracker",
+      "variants": {
+        "default": {
+          "args": "",
+          "figmaNodeId": "253:4815"
+        }
+      }
+    }
+  },
+  "unavailableInFigma": [
+    "checkbox-filter",
+    "dialog",
+    "favicon",
+    "form-autocomplete",
+    "image",
+    "paragraph",
+    "quote",
+    "skeleton",
+    "status-icon"
+  ]
+}

@@ -54,7 +54,9 @@ const VormvrijeAanvraag = () => {
           <div className="rvo-form">
             <LayoutFlow gap="md">
               <div className="rvo-form-intro">
-                <Link content="Terug" href="#" showIcon="before" icon="terug" />
+                <Link href="#" showIcon="before" icon="terug">
+                  Terug
+                </Link>
                 <Heading type="h1">Vormvrije aanvraag</Heading>
               </div>
               <form>
@@ -73,30 +75,10 @@ const VormvrijeAanvraag = () => {
                     </Fieldset>
                   </LayoutFlow>
                   <ActionGroup>
-                    <Button
-                      kind="secondary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                       Opslaan en sluiten
                     </Button>
-                    <Button
-                      kind="primary"
-                      size="md"
-                      active={false}
-                      busy={false}
-                      focus={false}
-                      focusVisible={false}
-                      disabled={false}
-                      hover={false}
-                      showIcon="no"
-                    >
+                    <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                       Opslaan en verder
                     </Button>
                   </ActionGroup>

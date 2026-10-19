@@ -11,12 +11,12 @@
   --rvo-image-object-position: center;
   --rvo-image-border-radius: var(--rvo-border-radius-2xl, 4px);
 
+  block-size: var(--rvo-image-height);
   display: block;
-  height: var(--rvo-image-height);
-  max-width: var(--rvo-image-max-width);
+  inline-size: var(--rvo-image-width);
+  max-inline-size: var(--rvo-image-max-width);
   object-fit: var(--rvo-image-object-fit);
   object-position: var(--rvo-image-object-position);
-  width: var(--rvo-image-width);
 
   &--radius-size {
     &-sm {

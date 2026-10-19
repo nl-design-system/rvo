@@ -1,0 +1,54 @@
+---
+title: Fouten oplossen
+hide_table_of_contents: true
+hide_title: true
+slug: fouten
+sidebar_position: 4
+---
+
+import { Alert } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Fouten oplossen
+
+<Alert kind="warning" content="Let op: dit patroon is nog in ontwikkeling." />
+
+<ComponentExample>
+  <em>Voorbeeld nog niet beschikbaar</em>
+</ComponentExample>
+
+Als de gebruiker foutieve of ontbrekende gegevens heeft ingevoerd, toon dan altijd een foutoverzicht boven aan het formulier én een foutmelding direct bij het betreffende veld.
+
+## Foutoverzicht boven het formulier
+
+- Toon een samenvattend overzicht van alle fouten boven aan het formulier, vóór de velden.
+- Vermeld in het overzicht voor elke fout: de naam van het veld én wat er mis is.
+- Maak elke fout in het overzicht klikbaar: bij klikken scrollt de pagina naar het betreffende veld.
+- Pas de paginatitel aan zodat screenreaders en zoekmachines de foutstatus herkennen: gebruik "Fout: [originele paginatitel]".
+
+## Foutmelding bij het veld
+
+- Toon de foutmelding direct onder het label en boven het invoerveld.
+- Formuleer foutmeldingen in de tweede persoon en beschrijf wat de gebruiker moet doen, niet wat hij fout deed:
+  - Gebruik: "Vul uw telefoonnummer in."
+  - Vermijd: "Telefoonnummer is verplicht."
+- Wees specifiek over het verwachte formaat bij formaatfouten:
+  - Gebruik: "Vul een geldig IBAN in, bijvoorbeeld NL00BANK0123456789."
+  - Vermijd: "Ongeldige waarde."
+- Gebruik geen rood tekst zonder een icoon of andere markering — niet iedereen kan kleurverschillen onderscheiden.
+
+## Wanneer valideren
+
+- Valideer bij het verlaten van een veld (on blur) voor eenvoudige velden zoals e-mailadres of telefoonnummer.
+- Valideer bij het klikken op "Volgende stap" of "Indienen" voor het complete formulier of de complete stap.
+- Valideer niet bij elke toetsaanslag — dit verstoort de gebruiker tijdens het typen.
+
+## RVO-context
+
+De drie onderzochte platforms hanteren verschillende validatiestijlen:
+
+- **WBSO (Angular)**: generieke melding "Dit veld is verplicht" bij alle ontbrekende velden. Samenvattende melding onderaan de pagina.
+- **ISDE eLoket (LIP)**: beschrijvende meldingen per veld ("Rol bij deze aanvraag is verplicht."). Samenvatting met uitroepteken: "Uw formulier voldoet niet aan de volgende controles: !"
+- **TripleForms**: geel/oranje callout per veld met header "Ongeldige waarde" en specifieke beschrijving. Meest informatief van de drie.
+
+Vergelijkbaar: GOV.UK Design System "Recover from validation errors".

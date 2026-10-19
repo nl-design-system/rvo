@@ -1,5 +1,5 @@
 {
-  "version": "2.4.0",
+  "version": "2.5.0",
   "author": "Community for NL Design System",
   "description": "RVO Rijkshuisstijl design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -10,7 +10,8 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "files": [
     "dist/",

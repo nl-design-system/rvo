@@ -1,5 +1,17 @@
 # `@nl-rvo/css-hero`
 
+## 1.7.5
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
+## 1.7.4
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.7.3
 
 ### Patch Changes

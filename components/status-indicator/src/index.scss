@@ -4,10 +4,10 @@
  */
 
 .rvo-status-indicator {
+  block-size: var(--rvo-status-indicator-height);
   border-radius: var(--rvo-status-indicator-border-radius);
-  height: var(--rvo-status-indicator-height);
-  min-width: 3px;
-  width: var(--rvo-status-indicator-width);
+  inline-size: var(--rvo-status-indicator-width);
+  min-inline-size: 3px;
 }
 
 .rvo-status-indicator--groen {

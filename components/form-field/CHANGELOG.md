@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field`
 
+## 1.7.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.7.0
 
 ### Minor Changes

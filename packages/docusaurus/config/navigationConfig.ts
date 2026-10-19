@@ -1,5 +1,7 @@
 import { Footer, Navbar } from '@docusaurus/theme-common';
 
+export const logoLinkTitle = 'Ga naar de homepage van ROOS';
+
 const navbar: Navbar = {
   title: 'ROOS',
   hideOnScroll: false,

@@ -1,0 +1,6 @@
+# See: https://nldesignsystem.nl/codeowners
+
+* @nl-design-system/rvo-maintainer @nl-design-system/kernteam-maintainer
+
+# Protect this file itself (order matters, keep this line last):
+.github/CODEOWNERS @nl-design-system/rvo-maintainer @nl-design-system/kernteam-maintainer

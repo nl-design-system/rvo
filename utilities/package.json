@@ -19,7 +19,7 @@
     "directory": "utilities"
   },
   "devDependencies": {
-    "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/assets": "workspace:*",
     "@nl-rvo/design-tokens": "workspace:*",
     "@types/mdx": "2.0.11",
     "clsx": "2.1.0",

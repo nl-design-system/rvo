@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return */
+/* eslint-disable no-use-before-define */
 const fs = require('fs');
 const path = require('path');
 
@@ -95,10 +95,16 @@ const generateCSS = (
   classnamePrefix,
   generateMaskClasses = true,
   generateBackgroundClasses = true,
+  generateIconClasses = false,
 ) => {
   const sass = require('sass');
   let scssString = '';
   const cssVars = [];
+
+  if (generateIconClasses) {
+    // define icon current variable that will be set through classes
+    cssVars.push('--rvo-icon-current: none;');
+  }
 
   // Loop over categories
   Object.keys(assetList).forEach((iconCategoryName) => {
@@ -135,17 +141,27 @@ const generateCSS = (
         scssString += `  background-image: var(--${className});\n`;
         scssString += `}\n\n`;
       }
+
+      // Add mask class
+      if (generateIconClasses) {
+        scssString += `.${className} {\n`;
+        scssString += `  --rvo-icon-current: var(--${className});\n`;
+        scssString += `}\n\n`;
+      }
     });
   });
 
   // Add CSS vars
   scssString = `.rvo-theme {\n${cssVars.join('\n')}}\n\n${scssString}`;
   const compiledCSS = sass.compileString(scssString);
+  const compressedCompiledCSS = sass.compileString(scssString, { style: 'compressed' });
 
+  // Generate css files
   try {
     fs.writeFileSync(path.join(__dirname, `${targetFolder}/index.css`), compiledCSS.css);
+    fs.writeFileSync(path.join(__dirname, `${targetFolder}/index.min.css`), compressedCompiledCSS.css);
   } catch (err) {
-    console.error(err);
+    console.error(`Something went wrong generating CSS files for ${targetFolder}`, err);
   }
 };
 
@@ -154,7 +170,7 @@ const generateIconList = () => {
   const assetList = readFolder(folderPath);
   generateJS(assetList, 'icons');
   generateTS(assetList, 'icons');
-  generateCSS(assetList, 'icons', 'rvo-icon', true, true);
+  generateCSS(assetList, 'icons', 'rvo-icon', false, false, true);
 };
 
 const generateImageList = () => {

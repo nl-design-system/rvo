@@ -1,4 +1,3 @@
-// import { iconNames as iconOptions } from '../icon';
 import { IButtonProps } from './';
 
 export const defaultArgs: IButtonProps = {
@@ -8,6 +7,5 @@ export const defaultArgs: IButtonProps = {
   label: 'Button',
   showIcon: 'no',
   icon: 'home',
-  iconAriaLabel: '',
   fullWidth: false,
 };

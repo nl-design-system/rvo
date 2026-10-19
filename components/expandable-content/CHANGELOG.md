@@ -1,5 +1,17 @@
 # `@nl-rvo/css-expandable-content`
 
+## 1.4.2
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
+## 1.4.1
+
+### Patch Changes
+
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+
 ## 1.4.0
 
 ### Minor Changes

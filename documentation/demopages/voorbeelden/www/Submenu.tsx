@@ -396,7 +396,9 @@ const Submenu = () => {
               </div>
             </div>
           </div>
-          <Link showIcon="after" icon="pijl-naar-rechts" target="#" content="Naar A-Z overzicht" noUnderline={true} />
+          <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+            Naar A-Z overzicht
+          </Link>
         </div>
         {/* <hr className="rvo-hr" /> */}
 

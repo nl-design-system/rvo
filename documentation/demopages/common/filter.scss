@@ -1,6 +1,6 @@
 .rvo-filter-body {
   .rvo-max-width-layout--md {
-    width: auto;
+    inline-size: auto;
   }
 
   .rvo-menubar {
@@ -60,9 +60,10 @@
 
     .rvo-collapsible-filter-label::after {
       background-color: var(--rvo-color-lintblauw);
+      block-size: 16px;
       content: "";
       display: inline-block;
-      height: 16px;
+      inline-size: 10px;
       margin-block-start: 4px;
       -webkit-mask-image: var(--rvo-icon-delta-omhoog);
       mask-image: var(--rvo-icon-delta-omhoog);
@@ -72,8 +73,7 @@
       mask-repeat: no-repeat;
       -webkit-mask-size: 100%;
       mask-size: 100%;
-      min-width: 10px;
-      width: 10px;
+      min-inline-size: 10px;
     }
 
     .rvo-collapsible-filter-header .utrecht-heading-3 {
@@ -81,14 +81,14 @@
     }
 
     .rvo-collapsible-filter-header::after {
-      height: 12px;
+      block-size: 12px;
+      inline-size: 14px;
       margin-block-start: 8px;
-      width: 14px;
     }
   }
 
   .rvo-collapsible-filter--scroll {
-    max-height: 200px;
+    max-block-size: 200px;
     overflow: scroll;
     overflow-x: hidden;
     scrollbar-color: var(--rvo-color-grijs-500) var(--rvo-color-grijs-200);

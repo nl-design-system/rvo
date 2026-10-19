@@ -72,7 +72,7 @@
         },
         "semibold": {
           "$type": "fontWeights",
-          "$value": "550"
+          "$value": "625"
         },
         "bold": {
           "$type": "fontWeights",
@@ -495,7 +495,16 @@
         }
       },
       "focus": {
+        "color": {
+          "$value": "{rvo.color.zwart}"
+        },
         "outline-offset": {
+          "$value": "2px"
+        },
+        "text-decoration-thickness": {
+          "$value": "3px"
+        },
+        "text-underline-offset": {
           "$value": "2px"
         }
       }
@@ -680,12 +689,12 @@
         },
         "info": {
           "background-color": {
-            "$value": "{rvo.color.hemelblauw-300}"
+            "$value": "{rvo.color.hemelblauw-150}"
           }
         },
         "warning": {
           "background-color": {
-            "$value": "{rvo.color.donkergeel-300}"
+            "$value": "{rvo.color.donkergeel-150}"
           }
         },
         "error": {
@@ -695,7 +704,7 @@
         },
         "success": {
           "background-color": {
-            "$value": "{rvo.color.groen-300}"
+            "$value": "{rvo.color.groen-150}"
           }
         },
         "padding": {
@@ -861,37 +870,41 @@
         "border-radius": {
           "$value": "{rvo.border-radius.sm}"
         },
+        "border-style": {
+          "$value": "solid"
+        },
         "color": {
           "$value": "{rvo.color.wit}"
         },
-        "hover-color": {
-          "$value": "{rvo.color.hemelblauw}"
+        "font-family": {
+          "$value": "{rvo.font.sans-serif.font-family}"
         },
         "font-size": {
           "$value": "{rvo.font-size.lg}"
         },
-        "font-weight": {},
-        "height": {
-          "$value": "48px"
+        "hover": {
+          "text-decoration": {
+            "$value": "underline"
+          },
+          "text-underline-offset": {
+            "$value": "30%"
+          }
+        },
+        "icon-gap": {
+          "$value": "{rvo.space.sm}"
         },
         "inline-size": {
           "$value": "auto"
         },
-        "letter-spacing": {},
         "line-height": {
           "$value": "24px"
         },
-        "margin-block-end": {},
-        "margin-block-start": {},
-        "margin-inline-end": {},
-        "margin-inline-start": {},
         "max-inline-size": {
           "$value": "fit-content"
         },
         "min-block-size": {
           "$value": "48px"
         },
-        "min-inline-size": {},
         "padding-block-start": {
           "$value": "{rvo.space.xs}"
         },
@@ -904,7 +917,6 @@
         "padding-inline-end": {
           "$value": "{rvo.space.md}"
         },
-        "text-transform": {},
         "primary": {
           "background-color": {
             "$value": "{rvo.color.hemelblauw}"
@@ -1037,9 +1049,6 @@
           "hover": {
             "color": {
               "$value": "{rvo.color.donkerblauw}"
-            },
-            "text-decoration": {
-              "$value": "underline"
             }
           },
           "disabled": {
@@ -1146,9 +1155,6 @@
           "hover": {
             "color": {
               "$value": "{rvo.color.zwart}"
-            },
-            "text-decoration": {
-              "$value": "underline"
             }
           }
         },
@@ -1182,9 +1188,6 @@
           "focus": {
             "color": {
               "$value": "{rvo.color.rood}"
-            },
-            "text-decoration": {
-              "$value": "underline"
             }
           }
         },
@@ -1226,9 +1229,6 @@
           "focus": {
             "background-color": {
               "$value": "{rvo.color.rood-750}"
-            },
-            "text-decoration": {
-              "$value": "underline"
             }
           }
         },
@@ -1676,6 +1676,19 @@
         "background": {
           "bg-color": {
             "$value": "rgba(0,0,0,0.35)"
+          }
+        },
+        "close-button": {
+          "focus": {
+            "color": {
+              "$value": "{rvo.focus.color}"
+            },
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
+            }
           }
         }
       }

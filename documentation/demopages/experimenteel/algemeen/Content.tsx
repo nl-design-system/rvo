@@ -15,16 +15,16 @@ const Content = () => {
               <strong>Paragraph large.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
-              instellingen, ambassades en lokale overheden.
+              <Link href="#">Dit is een link.</Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
+              ambassades en lokale overheden.
             </p>
             <Heading type="h2">Heading 2</Heading>
             <p className="rvo-paragraph rvo-paragraph--md">
               <strong>Paragraph medium.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
-              instellingen, ambassades en lokale overheden.
+              <Link href="#">Dit is een link.</Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
+              ambassades en lokale overheden.
             </p>
             <Heading type="h3">Heading 3</Heading>
 
@@ -32,8 +32,8 @@ const Content = () => {
               <strong>Paragraph small.</strong> De overheid zet zich in voor een uitstekend ondernemersklimaat. De
               ministeries stippelen daar beleid voor uit. En de taak om dit uit te voeren ligt bij RVO: de Rijksdienst
               voor Ondernemend Nederland. Onze mensen maken wereldwijd verbinding.{' '}
-              <Link content="Dit is een link. " href="#"></Link>&nbsp;Tussen bedrijven, kennis- en financiële
-              instellingen, ambassades en lokale overheden.
+              <Link href="#">Dit is een link.</Link>&nbsp;Tussen bedrijven, kennis- en financiële instellingen,
+              ambassades en lokale overheden.
             </p>
             <ul className="rvo-list rvo-list--unordered">
               <li className="rvo-list-item">Unordered list</li>

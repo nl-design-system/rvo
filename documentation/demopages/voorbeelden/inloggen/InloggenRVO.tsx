@@ -67,8 +67,12 @@ const InloggenRVO = () => {
                 </LayoutFlow>
 
                 <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
-                  <Link href="#" content="Heeft u nog geen geldige machtiging?" noUnderline={true} />
-                  <Link href="#" content="Hulp bij inloggen" noUnderline={true} />
+                  <Link href="#" noUnderline={true}>
+                    Heeft u nog geen geldige machtiging?
+                  </Link>
+                  <Link href="#" noUnderline={true}>
+                    Hulp bij inloggen
+                  </Link>
                 </List>
               </LayoutFlow>
             </div>

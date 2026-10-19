@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line import/order
 import SubMenu from '../submenu';
 import '@nl-rvo/component-library-css/dist/components/menubar.css';
-import { Icon, Link } from '../../../index';
+import { Icon, Link, LinkCustomLinkComponent } from '../../../index';
 import { IMenuBarItem } from '../menubar';
 
 interface MenuBarItemProps extends IMenuBarItem {
@@ -16,6 +16,7 @@ interface MenuBarItemProps extends IMenuBarItem {
   direction?: 'horizontal' | 'vertical';
   grid?: boolean;
   handleItemClick?: (event: React.MouseEvent) => void;
+  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export const MenuBarItem: React.FC<MenuBarItemProps> = ({
@@ -33,9 +34,11 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
   grid,
   maxWidth,
   handleItemClick,
+  LinkComponent,
   ...rest
 }) => {
-  const iconMarkup = useIcons && icon ? <Icon icon={icon} size={size as any} color="wit" /> : null;
+  const showIcon: 'no' | 'before' | 'after' = useIcons && icon ? iconPlacement : 'no';
+
   const chevronMarkup = submenu ? (
     isSubmenuVisible ? (
       <Icon icon="delta-omhoog" size={size as any} color="wit" />
@@ -66,13 +69,15 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
       <Link
         className={clsx('rvo-menubar__link', isSubmenuVisible && 'rvo-menubar__link--active')}
         color={linkColor}
+        showIcon={showIcon}
+        icon={icon}
+        iconSize={size}
+        LinkComponent={LinkComponent}
         {...(submenu || typeof link === 'function'
           ? { onClick: handleClick, role: 'button' }
           : { href: link as string })}
       >
-        {iconPlacement === 'before' && iconMarkup}
         {label}
-        {iconPlacement !== 'before' && iconMarkup}
         {chevronMarkup}
       </Link>
 
@@ -87,6 +92,7 @@ export const MenuBarItem: React.FC<MenuBarItemProps> = ({
           direction={direction}
           grid={grid}
           maxWidth={maxWidth}
+          LinkComponent={LinkComponent}
         />
       )}
     </li>

@@ -1,7 +1,16 @@
 {
   "rvo": {
     "focus": {
+      "color": {
+        "value": "{rvo.color.zwart}"
+      },
       "outline-offset": {
+        "value": "2px"
+      },
+      "text-decoration-thickness": {
+        "value": "3px"
+      },
+      "text-underline-offset": {
         "value": "2px"
       }
     }

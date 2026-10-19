@@ -1,0 +1,58 @@
+---
+title: Gegevens controleren
+hide_title: true
+hide_table_of_contents: true
+slug: gegevens-controleren
+sidebar_position: 4
+---
+
+import { Alert } from "@nl-rvo/component-library-react";
+import ComponentExample from "../../../../packages/docusaurus/src/components/ComponentExample";
+
+# Samenvatting
+
+<Alert kind="warning" content="Let op: dit patroon is nog in ontwikkeling." />
+
+<ComponentExample>
+  <em>Voorbeeld nog niet beschikbaar</em>
+</ComponentExample>
+
+Toon na een meerstappenformulier altijd een overzicht van de ingevoerde gegevens vóór de definitieve indiening. Hiermee kan de gebruiker fouten ontdekken en corrigeren voordat zijn aanvraag wordt verwerkt.
+
+## Richtlijnen
+
+- Toon het overzicht als een aparte stap of sectie, direct vóór de indienknop.
+- Groepeer de gegevens per formulierstap of thema, zodat de gebruiker de structuur herkent.
+- Toon per gegeven: het label, de ingevoerde waarde en een "Wijzig"-link.
+- De "Wijzig"-link brengt de gebruiker terug naar de specifieke stap of het specifieke veld, met de eerder ingevulde waarde nog aanwezig.
+- Na het wijzigen keert de gebruiker terug naar het overzicht, niet naar een tussenliggende stap.
+- Toon ook gegevens die automatisch zijn vooringevuld vanuit externe databronnen, inclusief de bron.
+- Vermeld ontbrekende of lege velden expliciet, zodat de gebruiker weet wat hij nog moet invullen.
+
+## Wanneer gebruiken
+
+- Bij formulieren met drie of meer stappen.
+- Bij formulieren waarbij de gebruiker meerdere sessies nodig heeft om het formulier in te vullen (concept-opslag).
+- Altijd vóór een actie die moeilijk of niet terug te draaien is, zoals het indienen van een subsidieaanvraag.
+
+## Wat niet te doen
+
+- Toon het overzicht niet als een samenvatting ná indiening — dan is het te laat om te corrigeren.
+- Gebruik niet alleen iconen of kleuren om ontbrekende velden aan te geven.
+- Verstop "Wijzig"-links niet in de marge of als kleine iconen — ze moeten duidelijk zichtbaar zijn naast elk gegeven.
+
+## Relatie met andere patronen
+
+- Gebruik dit patroon in combinatie met <a href="/rvo/docs/patronen/help-met/formulier-verlaten" className="rvo-link">Tussentijds opslaan</a> voor lange formulieren.
+- Gebruik dit patroon in combinatie met <a href="/rvo/docs/patronen/help-met/verklaring" className="rvo-link">Verklaring bij indienen</a> op dezelfde pagina.
+- Zie ook <a href="/rvo/docs/patronen/paginas/bevestigingspagina" className="rvo-link">Bevestigingspagina</a> voor wat er na indiening getoond wordt.
+
+## RVO-context
+
+Alle drie onderzochte platforms bevatten een controleer-stap, maar met verschillende diepgang:
+
+- **WBSO**: de Indienen-stap toont een samenvatting met aantal projecten en totaaluren. Geen "Wijzig"-links per veld.
+- **ISDE eLoket**: de Verzenden-tab toont een volledig overzicht van alle gegevens, maatregel-details en bijlagen. Gegevens zijn bewerkbaar via terug-navigatie.
+- **TripleForms**: uniek patroon waarbij bevestigde antwoorden al ná invullen worden getoond als samenvatting met "Wijzig"-knop — niet alleen aan het einde maar doorlopend tijdens de flow.
+
+Vergelijkbaar: GOV.UK Design System "Check answers".

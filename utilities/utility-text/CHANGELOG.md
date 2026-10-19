@@ -1,5 +1,11 @@
 # @nl-rvo/utility-text
 
+## 1.1.1
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.1.0
 
 ### Minor Changes

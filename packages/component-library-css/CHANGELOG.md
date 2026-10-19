@@ -1,5 +1,37 @@
 # @nl-rvo/component-library-css
 
+## 4.21.1
+
+### Patch Changes
+
+- 777d441: Updated the display of child text field in Link component
+
+## 4.21.0
+
+### Minor Changes
+
+- 83a85f5: Cleaned up the icon styling
+
+### Patch Changes
+
+- 0e26aa5: Added hover styling to tag icons when they are clickable
+- a261cdb: ROOS-385: prevents user selection on checkbox-filter label and links
+- 084a230: Ensure package is published with provenance
+
+## 4.20.3
+
+### Patch Changes
+
+- b3806fb: Repair the focus event for text-area and text-input
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+- 57730f6: Link component text set in own span section to resolve child html structures
+
+## 4.20.2
+
+### Patch Changes
+
+- 98006c0: ROOS-351: prevents checkbox shrinking
+
 ## 4.20.1
 
 ### Patch Changes

@@ -131,49 +131,29 @@ const PercelenRegistreren = () => {
                   <Heading type="h2">Op deze pagina</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
-                      <Link
-                        content="Waarom percelen registreren?"
-                        target="#"
-                        noUnderline={true}
-                        showIcon="before"
-                        icon="pijl-omlaag"
-                      />
+                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                        Waarom percelen registreren?
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link
-                        content="Wat registreert u en waar doet u dat?"
-                        target="#"
-                        noUnderline={true}
-                        showIcon="before"
-                        icon="pijl-omlaag"
-                      />
+                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                        Wat registreert u en waar doet u dat?
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link
-                        content="Hoe registreert en wijzigt u uw percelen?"
-                        target="#"
-                        noUnderline={true}
-                        showIcon="before"
-                        icon="pijl-omlaag"
-                      />
+                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                        Hoe registreert en wijzigt u uw percelen?
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link
-                        content="Welke wijzigingen geeft u door?"
-                        target="#"
-                        noUnderline={true}
-                        showIcon="before"
-                        icon="pijl-omlaag"
-                      />
+                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                        Welke wijzigingen geeft u door?
+                      </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link
-                        content="Gebruik van uw registratie"
-                        target="#"
-                        noUnderline={true}
-                        showIcon="before"
-                        icon="pijl-omlaag"
-                      />
+                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                        Gebruik van uw registratie
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Community for NL Design System",
   "name": "@nl-rvo/utility-text",
   "license": "CC0-1.0",
@@ -17,7 +17,8 @@
   "main": "dist/index.css",
   "style": "src/index.scss",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "build-css-package",

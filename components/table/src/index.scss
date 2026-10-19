@@ -7,12 +7,12 @@
 .rvo-table {
   border-collapse: collapse;
   border-spacing: 0;
+  inline-size: 100%;
   table-layout: fixed;
-  width: 100%;
 
   &--responsive {
+    inline-size: 100%;
     overflow-x: auto;
-    width: 100%;
   }
 
   .rvo-caption,
@@ -25,9 +25,9 @@
   &-header,
   &__header {
     background-color: var(--rvo-table-header-background-color);
-    border-bottom-color: var(--rvo-table-header-border-bottom-color);
-    border-bottom-style: var(--rvo-table-header-border-bottom-style);
-    border-bottom-width: var(--rvo-table-header-border-bottom-width);
+    border-block-end-color: var(--rvo-table-header-border-bottom-color);
+    border-block-end-style: var(--rvo-table-header-border-bottom-style);
+    border-block-end-width: var(--rvo-table-header-border-bottom-width);
     color: var(--rvo-table-header-color);
     font-weight: var(--rvo-table-header-font-weight);
     padding-block-end: var(--rvo-table-header-padding-block-end);
@@ -55,7 +55,7 @@
 
     @each $size in $rvo-sizes {
       &--#{$size} {
-        width: var(--rvo-table-header-size-#{$size});
+        inline-size: var(--rvo-table-header-size-#{$size});
       }
     }
 
@@ -72,7 +72,7 @@
       padding-inline: 0;
 
       &--numeric {
-        float: right;
+        float: inline-end;
       }
     }
 
@@ -82,17 +82,17 @@
     }
 
     &__sorting-icon {
+      block-size: var(--rvo-icon-md-height);
       display: flex;
-      height: var(--rvo-icon-md-height);
-      width: var(--rvo-icon-md-width);
+      inline-size: var(--rvo-icon-md-width);
     }
   }
 
   &-cell,
   &__cell {
-    border-bottom-color: var(--rvo-table-cell-border-bottom-color);
-    border-bottom-style: var(--rvo-table-cell-border-bottom-style);
-    border-bottom-width: var(--rvo-table-cell-border-bottom-width);
+    border-block-end-color: var(--rvo-table-cell-border-bottom-color);
+    border-block-end-style: var(--rvo-table-cell-border-bottom-style);
+    border-block-end-width: var(--rvo-table-cell-border-bottom-width);
     overflow-wrap: break-word;
     padding-block-end: var(--rvo-table-cell-padding-block-end);
     padding-block-start: var(--rvo-table-cell-padding-block-start);

@@ -8,9 +8,6 @@ export const argTypes = {
   subtitle: {
     control: 'text',
   },
-  link: {
-    control: 'text',
-  },
   children: {
     table: {
       disable: true,

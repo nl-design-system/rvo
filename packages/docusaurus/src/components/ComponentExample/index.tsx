@@ -1,9 +1,8 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { ExpandableContent, Link } from '@nl-rvo/component-library-react';
+import { Button, ExpandableContent, Link } from '@nl-rvo/component-library-react';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import espreeParser from 'prettier/parser-espree';
-import htmlParser from 'prettier/parser-html';
+import htmlParser from 'prettier/plugins/html';
 import prettier from 'prettier/standalone';
 import React, { useEffect, useState } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
@@ -17,7 +16,7 @@ export async function formatHTML(children) {
 
     const formatted = await prettier.format(forced, {
       parser: 'html',
-      plugins: [htmlParser, espreeParser],
+      plugins: [htmlParser],
     });
 
     return formatted.trim();
@@ -42,6 +41,7 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
   const previewLink = `${baseUrl}iframe.html?id=${storyName}&viewMode=story${argsParam}`;
 
   const [html, setHtml] = useState('');
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -52,6 +52,12 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
     })();
   }, [children]);
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(html);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className={clsx(styles.componentExample, 'component-example')}>
       <div className={styles.componentContainer} style={{ minHeight }}>
@@ -59,9 +65,19 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
       </div>
 
       <div className={clsx(styles.infoContainer, 'rvo-layout-row')}>
-        <ExpandableContent title="Voorbeeld HTML">
-          <CodeBlock language="html">{html || '<!-- HTML wordt geladen -->'}</CodeBlock>
-        </ExpandableContent>
+        <div className={styles.expandableWrapper}>
+          <ExpandableContent title="Voorbeeld HTML">
+            <div className={styles.codeBlockContainer}>
+              <CodeBlock language="html">{html || '<!-- HTML wordt geladen -->'}</CodeBlock>
+              <Button
+                kind="secondary"
+                label={copied ? 'Gekopieerd!' : 'Kopieer code'}
+                onClick={handleCopy}
+                disabled={!html}
+              />
+            </div>
+          </ExpandableContent>
+        </div>
 
         {storyName && (
           <Link

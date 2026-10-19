@@ -1,5 +1,90 @@
 # @nl-rvo/component-library-react
 
+## 7.2.3
+
+### Patch Changes
+
+- 7c308f4: ROOS-387: properly forwarding LinkComponent prop to SubMenu component
+- d7c8470: Update IRadioButtonProps to use ComponentPropsWithoutRef
+
+## 7.2.2
+
+### Patch Changes
+
+- 8c918a2: Fix icon size regression in `MenuBarItem`: with `size="lg"`, the icon was incorrectly rendered at 16px (md) instead of 18px (lg), because `Link`'s `iconSize` prop did not support `lg`. `iconSize` now also accepts `lg`.
+
+## 7.2.1
+
+### Patch Changes
+
+- e2529af: Reintroduced icon names as classes to work with generated css in assets
+- 777d441: Updated the display of child text field in Link component
+- Updated dependencies [777d441]
+  - @nl-rvo/component-library-css@4.21.1
+
+## 7.2.0
+
+### Minor Changes
+
+- 6089743: All icons are now decorative by default (WCAG SC 1.1.1). The icon `<span>` now always renders with `aria-hidden="true"`. The `ariaLabel` prop on `Icon` and `iconAriaLabel` on `Button` and `Link` are deprecated and will be removed in a future major release.
+- 0e26aa5: When and onClick is added to the Tag with an icon, the click event is added to the icon instead of the Tag Component
+- 7a0c916: feat(logo): add `linkTitle` prop to set title attribute on logo link
+- 6051320: ROOS-264: renamed content prop to children, moved defaultArgs to storybook and removed UX-Pin file
+- bcc44ec: Removed link behaviour from Header component to Logo component and fixed logo link focus state.
+- c6093de: ROOS-349: refactor Link component, moved defaultArgs to storybook components
+
+### Patch Changes
+
+- 109cbfa: fix(menubar-mobile): set aria-label of the menu dialog to "Menu"
+- 6d7d0ed: Add aria-expanded to mobile menu toggle button
+
+  - Communicate open/closed state of the mobile menu to assistive technologies
+
+- 40f109b: fix(menubar): fix icon-text alignment in MenuBarItem by using Link's showIcon prop
+- 83a85f5: Implemented the updated Icon component
+- 1bd0906: ROOS-387: adds LinkComponent prop forwarding to MenuBar and MobileMenu
+- a261cdb: ROOS-385: prevents user selection on checkbox-filter label and links
+- ac29549: Improve focus visibility and add focus trap to mobile menu
+
+  - Add focus state to mobile menu toggle button
+  - Add focus state to mobile menu links
+  - Add focus state to dialog close button
+  - Add focus trap to dialog component
+  - Add `--rvo-mobile-menu-toggle-focus-color` design token
+  - Add `--rvo-mobile-menu-item-link-focus-color` design token
+  - Add `--rvo-focus-color` common design token
+
+- 084a230: Ensure package is published with provenance
+- Updated dependencies [0e26aa5]
+- Updated dependencies [a261cdb]
+- Updated dependencies [084a230]
+- Updated dependencies [83a85f5]
+  - @nl-rvo/component-library-css@4.21.0
+  - @nl-rvo/css-card-experimental@0.3.2
+
+## 7.1.3
+
+### Patch Changes
+
+- c90f541: Dialog close button now uses the default subtle button variant without dialog-specific CSS classes. This restores the button's default padding (`padding-inline-end` and `padding-block-start`), which changes the position of the close button.
+- b3806fb: Repair the focus event for text-area and text-input
+- 93fdefc: Use CSS Logical properties, to support both `dir=ltr` and `dir=rtl`.
+- 57730f6: Link component text set in own span section to resolve child html structures
+- Updated dependencies [b3806fb]
+- Updated dependencies [93fdefc]
+- Updated dependencies [57730f6]
+  - @nl-rvo/component-library-css@4.20.3
+  - @nl-rvo/css-card-experimental@0.3.1
+
+## 7.1.2
+
+### Patch Changes
+
+- 98006c0: ROOS-351: prevents checkbox shrinking
+- e326332: Added focus states to mobile menu toggle button and links.
+- Updated dependencies [98006c0]
+  - @nl-rvo/component-library-css@4.20.2
+
 ## 7.1.1
 
 ### Patch Changes

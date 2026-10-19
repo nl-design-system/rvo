@@ -65,7 +65,9 @@ const FormFieldErrors = () => {
               <div className="rvo-form">
                 <LayoutFlow gap="sm">
                   <div>
-                    <Link content="Terug" href="#" showIcon="before" icon="terug" noUnderline={true} />
+                    <Link href="#" showIcon="before" icon="terug" noUnderline={true}>
+                      Terug
+                    </Link>
                     <Heading type="h1">Form Field Errors</Heading>
                     <p className="rvo-text--lg">
                       <span className="rvo-text--bold">Experimental demo page</span>. This form demonstrates radio
@@ -103,30 +105,10 @@ const FormFieldErrors = () => {
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button
-                          kind="primary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
+                        <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                           Submit
                         </Button>
-                        <Button
-                          kind="secondary"
-                          size="md"
-                          active={false}
-                          busy={false}
-                          focus={false}
-                          focusVisible={false}
-                          disabled={false}
-                          hover={false}
-                          showIcon="no"
-                        >
+                        <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                           Cancel
                         </Button>
                       </ActionGroup>

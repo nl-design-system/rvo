@@ -139,44 +139,43 @@ const Oplossen = () => {
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#433</strong> Maisveld (0,007ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#433</strong> Maisveld (0,007ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#433</strong> Maisveld (0,014ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#433</strong> Maisveld (0,014ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#433</strong> Maisveld (0,025ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#433</strong> Maisveld (0,025ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#41</strong> Sloot buren (0,015ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#41</strong> Sloot buren (0,015ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#40</strong> Sloot buren (0,005ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#40</strong> Sloot buren (0,005ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#12</strong> Hoogweg boomgrens (1,125ha){' '}
-                              <Link content="Bekijk" noUnderline={true} />
+                              <strong>#12</strong> Hoogweg boomgrens (1,125ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#17</strong> Hoogweg hek (2,025ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#17</strong> Hoogweg hek (2,025ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-action-group">
@@ -207,44 +206,43 @@ const Oplossen = () => {
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#433</strong> Maisveld (0,007ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#433</strong> Maisveld (0,007ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#433</strong> Maisveld (0,014ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#433</strong> Maisveld (0,014ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#433</strong> Maisveld (0,025ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#433</strong> Maisveld (0,025ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#41</strong> Sloot buren (0,015ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#41</strong> Sloot buren (0,015ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#40</strong> Sloot buren (0,005ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#40</strong> Sloot buren (0,005ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#12</strong> Hoogweg boomgrens (1,125ha){' '}
-                              <Link content="Bekijk" noUnderline={true} />
+                              <strong>#12</strong> Hoogweg boomgrens (1,125ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-checkbox__group">
                             <label className="rvo-checkbox rvo-checkbox--not-checked" htmlFor="sf1">
                               <input id="sf1" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                              <strong>#17</strong> Hoogweg hek (2,025ha) <Link content="Bekijk" noUnderline={true} />
+                              <strong>#17</strong> Hoogweg hek (2,025ha) <Link noUnderline={true}>Bekijk</Link>
                             </label>
                           </div>
                           <div className="rvo-action-group">

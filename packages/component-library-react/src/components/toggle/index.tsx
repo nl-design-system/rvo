@@ -63,7 +63,7 @@ export const Toggle: React.FC<IToggleProps & React.HTMLAttributes<HTMLElement>> 
     iconClassName += ' rvo-link__icon--after';
   }
 
-  const iconMarkup = Icon({ icon: icon as any, size: 'lg', color: '', className: iconClassName });
+  const iconMarkup = Icon({ icon: icon as any, size: 'lg', className: iconClassName });
   const ToggleElement = link ? 'a' : 'div';
 
   return (

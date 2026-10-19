@@ -32,7 +32,7 @@
   }
 
   .rvo-screenshot {
-    max-width: 1920px;
-    width: 100%;
+    inline-size: 100%;
+    max-inline-size: 1920px;
   }
 }

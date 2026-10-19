@@ -242,7 +242,9 @@ const Nieuwsbrief = () => {
                 <LayoutFlow row={true} alignItems="start">
                   <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
                   <LayoutFlow row={true} wrap={true} gap="sm">
-                    <Link content="Horizon Europe Partnership (HEP)" color="zwart" noUnderline={true} />
+                    <Link color="zwart" noUnderline={true}>
+                      Horizon Europe Partnership (HEP)
+                    </Link>
                     Open
                   </LayoutFlow>
                 </LayoutFlow>
@@ -258,7 +260,9 @@ const Nieuwsbrief = () => {
                 <LayoutFlow row={true} alignItems="start">
                   <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
                   <LayoutFlow row={true} wrap={true} gap="sm">
-                    <Link content="Topsector Energie (TSE) Industrie studies" color="zwart" noUnderline={true} />
+                    <Link color="zwart" noUnderline={true}>
+                      Topsector Energie (TSE) Industrie studies
+                    </Link>
                     Bijna gesloten
                   </LayoutFlow>
                 </LayoutFlow>
@@ -275,11 +279,9 @@ const Nieuwsbrief = () => {
                 <LayoutFlow row={true} alignItems="start">
                   <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
                   <LayoutFlow row={true} wrap={true} gap="sm">
-                    <Link
-                      content="Subsidie Warmte-infrastructuur Glastuinbouw (SWiG)"
-                      color="zwart"
-                      noUnderline={true}
-                    />
+                    <Link color="zwart" noUnderline={true}>
+                      Subsidie Warmte-infrastructuur Glastuinbouw (SWiG)
+                    </Link>
                     Bijna gesloten
                   </LayoutFlow>
                 </LayoutFlow>
