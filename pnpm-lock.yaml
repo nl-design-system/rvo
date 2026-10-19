@@ -428,11 +428,7 @@ importers:
         specifier: workspace:*
         version: link:../../status-icon/react
 
-  components/form-feedback/style:
-    dependencies:
-      '@nl-rvo/css-layout-flow':
-        specifier: workspace:*
-        version: link:../../layout-flow/style
+  components/form-feedback/style: {}
 
   components/form-field/react:
     dependencies:
@@ -470,11 +466,7 @@ importers:
         specifier: workspace:*
         version: link:../../form-textarea/react
 
-  components/form-field/style:
-    dependencies:
-      '@nl-rvo/css-layout-flow':
-        specifier: workspace:*
-        version: link:../../layout-flow/style
+  components/form-field/style: {}
 
   components/form-fieldset/react:
     dependencies:
@@ -777,11 +769,7 @@ importers:
         specifier: workspace:*
         version: link:../../link/react
 
-  components/progress-tracker/style:
-    dependencies:
-      '@nl-rvo/css-layout-flow':
-        specifier: workspace:*
-        version: link:../../layout-flow/style
+  components/progress-tracker/style: {}
 
   components/quote/react:
     dependencies:

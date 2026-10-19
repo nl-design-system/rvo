@@ -9,6 +9,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
   const {
     label,
     options,
+    optionsOnChange,
     limit = 5,
     showInputField,
     inputFieldLabel = 'Zoek in lijst',
@@ -55,13 +56,18 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
       )}
 
       <div className="rvo-checkbox-filter__checkbox-container">
+        {visibleItems.length > 0 && (
+          <FormField label="">
+            <FormField.CheckboxGroup options={visibleItems} onChange={optionsOnChange} />
+          </FormField>
+        )}
         {visibleItems.length === 0 && <p className="rvo-checkbox-filter__no-filter-text">{noFiltersText}</p>}
       </div>
       {options?.length > limit && (
         <Link
           icon="plus"
           iconSize="md"
-          iconPlacement="right"
+          iconPlacement="left"
           noUnderline
           color="lintblauw"
           iconColor="lintblauw"

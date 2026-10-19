@@ -3,7 +3,7 @@ import './manager.css';
 import theme from './theme';
 
 addons.setConfig({
-  panelPosition: 'right',
+  panelPosition: 'bottom',
   theme,
 });
 

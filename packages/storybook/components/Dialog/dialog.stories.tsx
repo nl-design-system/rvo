@@ -40,9 +40,6 @@ export default {
         disable: true,
       },
     },
-    content: {
-      control: 'text',
-    },
     isOpen: {
       control: 'boolean',
     },
@@ -82,7 +79,7 @@ export const WithActionGroup: Story = {
   args: {
     type: 'centered-dialog',
     backgroundColor: 'grijs-200',
-    content: 'Dialog content',
+    children: 'Dialog content',
     actionGroup: (
       <ActionGroup>
         <Button kind="primary">Ok</Button>

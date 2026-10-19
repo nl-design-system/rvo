@@ -399,7 +399,9 @@ const MilieuEnEnergielijst = () => {
                             Vul zo compleet mogelijk in wat uw bedrijf doet en wij helpen u met het instellen van de
                             filters om bedrijfsmiddelen te tonen die mogelijk in aanmerking komen.
                           </div>
-                          {vraagError && <Feedback type="error">"Vul een omschrijving in om door te gaan.</Feedback>}
+                          {vraagError && (
+                            <Feedback type="foutmelding">"Vul een omschrijving in om door te gaan.</Feedback>
+                          )}
                         </div>
                         {React.createElement(Textarea as React.FC<any>, {
                           id: 'bedrijfsactiviteiten',

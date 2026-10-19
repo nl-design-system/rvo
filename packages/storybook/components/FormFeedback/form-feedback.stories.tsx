@@ -4,9 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 export default {
   title: 'Componenten/Feedback',
   component: Feedback,
+  args: {
+    children: 'Dit is een melding.',
+    type: 'waarschuwing',
+  },
   argTypes: {
     type: {
-      options: ['warning', 'error'],
+      options: ['waarschuwing', 'foutmelding'],
       control: { type: 'radio' },
     },
     children: {

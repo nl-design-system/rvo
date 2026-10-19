@@ -5,7 +5,7 @@ export default {
   title: 'Componenten/Card',
   component: Card,
   args: {
-    content: 'Card Content',
+    children: 'Card Content',
     title: 'Card Title',
   },
   argTypes: {
@@ -39,7 +39,6 @@ export default {
     },
     showLinkIndicator: { control: { type: 'boolean' } },
     invertedColors: { control: { type: 'boolean' } },
-    content: { control: { type: 'text' } },
     children: {
       table: {
         disable: true,

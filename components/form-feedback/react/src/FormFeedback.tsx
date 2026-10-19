@@ -11,7 +11,7 @@ import '@nl-rvo/css-form-feedback';
 export const Feedback: React.FC<IFeedbackProps> = ({ type, children, ...rootElementProps }) => {
   return (
     <div className={`rvo-form-feedback rvo-form-feedback--${type}`} {...rootElementProps}>
-      <StatusIcon type="waarschuwing" size="md" className="rvo-status-icon-waarschuwing" />
+      <StatusIcon type={type} size="md" className="rvo-status-icon-waarschuwing" />
       {parseContentMarkup(children)}
     </div>
   );

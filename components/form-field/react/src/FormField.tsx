@@ -76,8 +76,8 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
             parseContentMarkup(helperText)
           )}
         </div>
-        {errorText && <Feedback type="error">{errorText}</Feedback>}
-        {warningText && <Feedback type="warning">{warningText}</Feedback>}
+        {errorText && <Feedback type="foutmelding">{errorText}</Feedback>}
+        {warningText && <Feedback type="waarschuwing">{warningText}</Feedback>}
       </div>
       {(className && <div className={className}>{childWithId}</div>) || childWithId}
     </div>

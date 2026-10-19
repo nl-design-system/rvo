@@ -8,17 +8,21 @@ import '@nl-rvo/css-layout-flow';
 import '@nl-rvo/css-breadcrumbs';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';
-import { IBreadcrumbProps } from './Breadcrumbs.types';
+import { IBreadcrumbProps, IBreadcrumbsItem } from './Breadcrumbs.types';
 
 const parseDividerMarkup = (index: number, maxLength: number) => {
   return index > 0 && index < maxLength && <Icon color="hemelblauw" icon={'delta-naar-rechts' as any} size="xs" />;
 };
 
 export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items, size = 'sm', ...rest }) => {
-  const renderBreadcrumbItem = (link, label) => {
+  const renderBreadcrumbItem = (
+    link: IBreadcrumbsItem['link'],
+    label: IBreadcrumbsItem['label'],
+    onClick: IBreadcrumbsItem['onClick'],
+  ) => {
     if (link?.length && link.length > 0) {
       return (
-        <Link href={link} noUnderline={true}>
+        <Link href={link} noUnderline={true} onClick={onClick}>
           {label}
         </Link>
       );
@@ -33,7 +37,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({ items, size = 'sm', ..
         return (
           <li key={`${item.label}${index}`} className="rvo-breadcrumbs-item">
             {items && parseDividerMarkup(index, items.length)}
-            {renderBreadcrumbItem(item.link, item.label)}
+            {renderBreadcrumbItem(item.link, item.label, item.onClick)}
           </li>
         );
       })}

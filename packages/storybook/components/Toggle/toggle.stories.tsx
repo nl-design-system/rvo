@@ -63,10 +63,10 @@ export const WithIcon: Story = {
   args: { icon: 'home' },
   render: (args) => (
     <div style={{ display: 'inline-flex', gap: '1rem', flexDirection: 'column' }}>
-      <Toggle iconPlacement="left" {...args}>
+      <Toggle {...args} iconPlacement="left">
         Toggle met Icon links
       </Toggle>
-      <Toggle iconPlacement="right" {...args}>
+      <Toggle {...args} iconPlacement="right">
         Toggle met Icon rechts
       </Toggle>
     </div>

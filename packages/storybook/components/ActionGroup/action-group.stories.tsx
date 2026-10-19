@@ -42,7 +42,7 @@ const defaultButtonsLeft = [
   {
     kind: 'primary' as const,
     size: 'md' as const,
-    label: 'Primary action',
+    children: 'Primary action',
   },
 ];
 
@@ -50,7 +50,7 @@ const defaultButtonsRight = [
   {
     kind: 'secondary' as const,
     size: 'md' as const,
-    label: 'Secondary action',
+    children: 'Secondary action',
   },
 ];
 

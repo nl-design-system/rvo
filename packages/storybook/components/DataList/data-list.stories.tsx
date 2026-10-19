@@ -21,5 +21,11 @@ export default {
 type Story = StoryObj<typeof DataList>;
 
 export const Base: Story = {
-  args: {},
+  render: () => (
+    <DataList>
+      <DataList.Item label="Voornaam" value="Mees" />
+      <DataList.Item label="Achternaam" value="de Vos" />
+      <DataList.Item label="Adres" value="Tweede Kamer der Staten-Generaal Postbus 20018 2500 EA Den Haag" />
+    </DataList>
+  ),
 };

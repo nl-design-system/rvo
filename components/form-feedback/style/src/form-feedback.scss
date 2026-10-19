@@ -2,20 +2,19 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "@nl-rvo/css-layout-flow/dist/layout-flow.css";
-
 .rvo-form-feedback {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--rvo-space-sm);
   line-height: var(--rvo-form-feedback-line-height);
-
-  // @extend .rvo-layout-row;
-  // @extend .rvo-layout-gap--sm;
 }
 
-.rvo-form-feedback.rvo-form-feedback--warning {
+.rvo-form-feedback.rvo-form-feedback--waarschuwing {
   font-weight: var(--rvo-form-feedback-warning-font-weight);
 }
 
-.rvo-form-feedback.rvo-form-feedback--error {
+.rvo-form-feedback.rvo-form-feedback--foutmelding {
   color: var(--rvo-form-feedback-error-color);
   font-weight: var(--rvo-form-feedback-error-font-weight);
 }

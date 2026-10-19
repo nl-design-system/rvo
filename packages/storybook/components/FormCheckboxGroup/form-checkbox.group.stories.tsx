@@ -4,6 +4,26 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 export default {
   title: 'Componenten/Checkbox group',
   component: CheckboxGroup,
+  args: {
+    options: [
+      {
+        id: 'optionA',
+        label: 'Option A',
+      },
+      {
+        id: 'optionB',
+        label: 'Option B',
+      },
+      {
+        id: 'optionC',
+        label: 'Option C',
+      },
+      {
+        id: 'optionD',
+        label: 'Option D',
+      },
+    ],
+  },
   argTypes: {
     invalid: { control: 'boolean' },
     onChange: {
