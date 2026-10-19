@@ -1,5 +1,6 @@
 import { FormLayout } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import * as designTokens from '@nl-rvo/design-tokens/dist/index.js';
 
 export default {
   title: 'Componenten/Form layout',
@@ -29,4 +30,9 @@ export default {
 } satisfies Meta<typeof FormLayout>;
 type Story = StoryObj<typeof FormLayout>;
 
-export const Default: Story = { name: 'Form layout' };
+export const Default: Story = {
+  args: {
+    content: `Deze gecentreerde container heeft een maximale breedte van ${designTokens.rvoLayoutMaxWidthSm} en dient gebruikt te worden voor formulieren.`,
+  },
+  name: 'Form layout',
+};

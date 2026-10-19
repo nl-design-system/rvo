@@ -1,17 +1,18 @@
-import { ActionGroup } from '@nl-rvo/component-library-react';
+import { ActionGroup, IButtonProps } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 export default {
   title: 'Componenten/Action group',
   component: ActionGroup,
   argTypes: {
-    buttonsLeft: {},
-    buttonsRight: {},
+    buttonsLeft: {
+      control: 'object',
+    },
+    buttonsRight: {
+      control: 'object',
+    },
     fullWidth: {
-      type: {
-        name: 'boolean',
-        required: false,
-      },
+      control: 'boolean',
     },
     position: {
       options: ['left', 'right'],
@@ -38,18 +39,18 @@ export default {
 } satisfies Meta<typeof ActionGroup>;
 type Story = StoryObj<typeof ActionGroup>;
 
-const defaultButtonsLeft = [
+const defaultButtonsLeft: IButtonProps[] = [
   {
-    kind: 'primary' as const,
-    size: 'md' as const,
+    kind: 'primary',
+    size: 'md',
     children: 'Primary action',
   },
 ];
 
-const defaultButtonsRight = [
+const defaultButtonsRight: IButtonProps[] = [
   {
-    kind: 'secondary' as const,
-    size: 'md' as const,
+    kind: 'secondary',
+    size: 'md',
     children: 'Secondary action',
   },
 ];
@@ -58,6 +59,7 @@ export const Default: Story = {
   args: {
     buttonsLeft: defaultButtonsLeft,
     buttonsRight: defaultButtonsRight,
+    fullWidth: false,
     position: 'left',
   },
   name: 'Action group',

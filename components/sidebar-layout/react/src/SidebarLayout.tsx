@@ -12,18 +12,25 @@ import { ISidebarBarProps, ISidebarLayoutContentProps, ISidebarLayoutProps } fro
 export const SidebarLayout: React.FC<ISidebarLayoutProps> & {
   Bar: React.FC<ISidebarBarProps>;
   Content: React.FC<ISidebarLayoutContentProps>;
-} = ({ sidebarPosition = 'left', sidebarBackgroundColor = true, className, ...rootElementProps }) => {
+} = ({
+  sidebarPosition = 'left',
+  sidebarBackgroundColor = true,
+  sidebarContent,
+  children,
+  className,
+  ...rootElementProps
+}) => {
   return (
     <main
       className={clsx(
         'rvo-sidebar-layout__container',
-        sidebarPosition === 'right' && 'rvo-sidebar-layout__container--right',
+        sidebarPosition === 'right' && ['rvo-sidebar-layout--right', 'rvo-sidebar-layout__container--right'],
         className,
       )}
       {...rootElementProps}
     >
-      <SidebarLayout.Bar backgroundColor={sidebarBackgroundColor} />
-      <SidebarLayout.Content />
+      <SidebarLayout.Bar backgroundColor={sidebarBackgroundColor}>{sidebarContent}</SidebarLayout.Bar>
+      <SidebarLayout.Content>{children}</SidebarLayout.Content>
     </main>
   );
 };

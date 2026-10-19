@@ -36,7 +36,11 @@ export const defaultSteps = [
 export default {
   title: 'Componenten/Progress Tracker',
   component: ProgressTracker,
+  excludeStories: ['defaultSteps'],
   argTypes: {
+    steps: {
+      control: 'object',
+    },
     children: {
       table: {
         disable: true,
@@ -59,6 +63,8 @@ export default {
 type Story = StoryObj<typeof ProgressTracker>;
 
 export const Base: Story = {
-  args: {},
+  args: {
+    steps: defaultSteps,
+  },
   name: 'Progress Tracker',
 };

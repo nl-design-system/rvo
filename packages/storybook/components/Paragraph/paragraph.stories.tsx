@@ -5,10 +5,10 @@ export default {
   title: 'Componenten/Paragraph',
   component: Paragraph,
   args: {
-    content: 'Paragraph Content',
+    children: 'Paragraph Content',
   },
   argTypes: {
-    content: {
+    children: {
       control: 'text',
     },
     color: {
@@ -21,11 +21,6 @@ export default {
     },
     noSpacing: {
       control: 'boolean',
-    },
-    children: {
-      table: {
-        disable: true,
-      },
     },
   },
   parameters: {

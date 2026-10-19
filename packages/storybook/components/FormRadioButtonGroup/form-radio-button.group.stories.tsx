@@ -1,4 +1,4 @@
-import { RadioButtonGroup } from '@nl-rvo/component-library-react';
+import { IRadioButtonProps, RadioButtonGroup } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 export default {
@@ -7,6 +7,7 @@ export default {
   argTypes: {
     name: { control: 'text' },
     invalid: { control: 'boolean' },
+    options: { control: 'object' },
     currentSelection: {
       table: {
         disable: true,
@@ -38,4 +39,18 @@ export default {
 } satisfies Meta<typeof RadioButtonGroup>;
 type Story = StoryObj<typeof RadioButtonGroup>;
 
-export const Default: Story = { name: 'Radio button group' };
+const defaultOptions: IRadioButtonProps[] = [
+  { id: 'optionA', label: 'Option A' },
+  { id: 'optionB', label: 'Option B' },
+  { id: 'optionC', label: 'Option C' },
+  { id: 'optionD', label: 'Option D' },
+];
+
+export const Default: Story = {
+  args: {
+    name: 'group',
+    invalid: false,
+    options: defaultOptions,
+  },
+  name: 'Radio button group',
+};

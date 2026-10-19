@@ -9,7 +9,7 @@ export default {
     sidebarPosition: 'left',
     sidebarBackgroundColor: true,
     sidebarContent: 'Sidebar',
-    content: 'Content',
+    children: 'Content',
   },
   argTypes: {
     maxWidthLayoutSize: {
@@ -26,14 +26,8 @@ export default {
     sidebarContent: {
       control: 'text',
     },
-    content: {
-      control: 'text',
-    },
-
     children: {
-      table: {
-        disable: true,
-      },
+      control: 'text',
     },
   },
   parameters: {

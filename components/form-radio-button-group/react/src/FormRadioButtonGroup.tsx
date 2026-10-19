@@ -8,7 +8,7 @@ import { RadioButton } from '@nl-rvo/react-form-radio-button';
 import '@nl-rvo/css-form-radio-button-group';
 import { IRadioButtonGroupProps } from './FormRadioButtonGroup.types';
 
-export const RadioButtonGroup: React.FC<IRadioButtonGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({
+export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({
   name,
   invalid,
   options,

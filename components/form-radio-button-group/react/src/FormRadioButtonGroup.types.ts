@@ -1,7 +1,7 @@
 import { IRadioButtonProps } from '@nl-rvo/react-form-radio-button';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
-export interface IRadioButtonGroupProps {
+export interface IRadioButtonGroupProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   name?: string;
   invalid?: boolean;
   options?: IRadioButtonProps[];

@@ -26,6 +26,12 @@ export default {
   },
   argTypes: {
     invalid: { control: 'boolean' },
+    options: { control: 'object' },
+    currentSelection: {
+      table: {
+        disable: true,
+      },
+    },
     onChange: {
       table: {
         disable: true,

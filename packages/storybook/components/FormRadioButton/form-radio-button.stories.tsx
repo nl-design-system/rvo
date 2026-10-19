@@ -4,6 +4,11 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 export default {
   title: 'Componenten/Radio button',
   component: RadioButton,
+  args: {
+    id: 'radio-button',
+    name: 'radio-button',
+    label: 'Radio button',
+  },
   argTypes: {
     id: { control: 'text' },
     name: { control: 'text' },
