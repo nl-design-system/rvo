@@ -9,5 +9,10 @@ import { ActionGroup } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 
 <ComponentExample storyName="componenten-action-group--default">
-  <ActionGroup />
+  <ActionGroup
+    buttonsLeft={[{ kind: "primary", size: "md", children: "Primary action" }]}
+    buttonsRight={[{ kind: "secondary", size: "md", children: "Secondary action" }]}
+    position="left"
+    fullWidth={false}
+  />
 </ComponentExample>

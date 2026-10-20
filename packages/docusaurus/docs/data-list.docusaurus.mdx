@@ -9,5 +9,20 @@ import { DataList } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 
 <ComponentExample storyName="componenten-data-list--default">
-  <DataList />
+  <DataList>
+    <DataList.Item label="Voornaam" value="Mees" />
+    <DataList.Item label="Achternaam" value="de Vos" />
+    <DataList.Item
+      label="Adres"
+      value={
+        <>
+          Tweede Kamer der Staten-Generaal
+          <br />
+          Postbus 20018
+          <br />
+          2500 EA Den Haag
+        </>
+      }
+    />
+  </DataList>
 </ComponentExample>

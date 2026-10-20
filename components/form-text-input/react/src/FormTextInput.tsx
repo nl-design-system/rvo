@@ -48,7 +48,15 @@ export const TextInput: React.FC<ITextInputProps> = ({
       type={type}
       aria-invalid={invalid}
       aria-required={required}
-      className={clsx(className, 'utrecht-textbox', sizeInput && `utrecht-textbox--${sizeInput}`)}
+      className={clsx(
+        className,
+        'utrecht-textbox',
+        disabled && 'utrecht-textbox--disabled',
+        sizeInput && `utrecht-textbox--${sizeInput}`,
+        invalid && `utrecht-textbox--invalid`,
+        readOnly && 'utrecht-textbox--readonly',
+        required && 'utrecht-textbox--required',
+      )}
     />
   );
 

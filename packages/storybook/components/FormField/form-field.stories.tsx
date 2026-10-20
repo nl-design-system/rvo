@@ -24,7 +24,16 @@ export const TextInput: Story = {
   name: 'Text Input',
   render: () => (
     <FormField id="form-field-with-text-input" label="Text Input">
-      <FormField.Text type="text" sizeInput="lg"></FormField.Text>
+      <FormField.Text type="text" sizeInput="md"></FormField.Text>
+    </FormField>
+  ),
+};
+
+export const DateInput: Story = {
+  name: 'Date Input',
+  render: () => (
+    <FormField id="form-field-with-text-input" label="Date Input">
+      <FormField.Date sizeInput="md"></FormField.Date>
     </FormField>
   ),
 };
@@ -41,7 +50,7 @@ export const Checkbox: Story = {
 export const CheckboxGroup: Story = {
   name: 'Checkbox Group',
   render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
+    <FormField id="form-field-with-text-input" label="CheckboxGroup">
       <FormField.CheckboxGroup options={[{ label: 'Optie 1' }, { label: 'Optie 2' }, { label: 'Optie 3' }]} />
     </FormField>
   ),
@@ -50,7 +59,7 @@ export const CheckboxGroup: Story = {
 export const FileInput: Story = {
   name: 'File Input',
   render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
+    <FormField id="form-field-with-text-input" label="FileInput">
       <FormField.FileInput />
     </FormField>
   ),
@@ -59,7 +68,7 @@ export const FileInput: Story = {
 export const RadioButton: Story = {
   name: 'Radio Button',
   render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
+    <FormField id="form-field-with-text-input" label="RadioButton">
       <FormField.RadioButton label="Ja, vink ik aan" />
     </FormField>
   ),
@@ -68,7 +77,7 @@ export const RadioButton: Story = {
 export const RadioButtonGroup: Story = {
   name: 'Radio Button Group',
   render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
+    <FormField id="form-field-with-text-input" label="RadioButtonGroup">
       <FormField.RadioButtonGroup options={[{ label: 'Optie 1' }, { label: 'Optie 2' }, { label: 'Optie 3' }]} />
     </FormField>
   ),
@@ -77,7 +86,7 @@ export const RadioButtonGroup: Story = {
 export const Select: Story = {
   name: 'Select',
   render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
+    <FormField id="form-field-with-text-input" label="Select">
       <FormField.Select
         options={[
           { value: '1', label: 'Optie 1' },
@@ -92,7 +101,7 @@ export const Select: Story = {
 export const TextArea: Story = {
   name: 'Text Area',
   render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
+    <FormField id="form-field-with-text-input" label="TextArea">
       <FormField.TextArea />
     </FormField>
   ),
