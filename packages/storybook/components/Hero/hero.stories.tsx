@@ -60,7 +60,7 @@ export const Base: Story = {
     ...defaultArgs,
     image: { src: 'images/www/home.jpg', alt: 'homepage image' },
   },
-  name: 'Hero',
+  name: 'Basis Component',
 };
 
 export const CustomImageHero: Story = {
@@ -68,5 +68,5 @@ export const CustomImageHero: Story = {
     ...defaultArgs,
     image: <img src="images/www/nieuwsbrief.webp" alt="newsletter" />,
   },
-  name: 'Hero - Custom image',
+  name: 'Met Custom Image',
 };

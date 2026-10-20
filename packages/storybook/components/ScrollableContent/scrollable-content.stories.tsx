@@ -41,4 +41,4 @@ export default {
 } satisfies Meta<typeof ScrollableContent>;
 type Story = StoryObj<typeof ScrollableContent>;
 
-export const Base: Story = { args: { useStyleAttribute: true } };
+export const Base: Story = { name: 'Basis Component', args: { useStyleAttribute: true } };

@@ -67,4 +67,4 @@ export default {
 } satisfies Meta<typeof FileInput>;
 type Story = StoryObj<typeof FileInput>;
 
-export const Default: Story = { name: 'File input' };
+export const Base: Story = { name: 'Basis Component' };

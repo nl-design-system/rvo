@@ -30,9 +30,9 @@ export default {
 } satisfies Meta<typeof FormLayout>;
 type Story = StoryObj<typeof FormLayout>;
 
-export const Default: Story = {
+export const Base: Story = {
   args: {
     content: `Deze gecentreerde container heeft een maximale breedte van ${designTokens.rvoLayoutMaxWidthSm} en dient gebruikt te worden voor formulieren.`,
   },
-  name: 'Form layout',
+  name: 'Basis Component',
 };

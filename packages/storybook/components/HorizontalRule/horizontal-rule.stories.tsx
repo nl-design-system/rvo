@@ -19,4 +19,4 @@ export default {
 } satisfies Meta<typeof Hr>;
 type Story = StoryObj<typeof Hr>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

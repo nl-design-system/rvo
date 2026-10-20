@@ -42,4 +42,4 @@ export default {
 } satisfies Meta<typeof Header>;
 type Story = StoryObj<typeof Header>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

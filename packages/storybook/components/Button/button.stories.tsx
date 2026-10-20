@@ -72,6 +72,7 @@ export const Base: Story = {
       console.log('Button Clicked');
     },
   },
+  name: 'Basis Component',
 };
 
 export const Kinds: Story = {
@@ -100,6 +101,7 @@ export const Kinds: Story = {
       </Button>
     </div>
   ),
+  name: 'Soorten',
 };
 
 export const Sizes: Story = {
@@ -116,6 +118,7 @@ export const Sizes: Story = {
       </Button>
     </div>
   ),
+  name: 'Sizes',
 };
 
 export const WithIcon: Story = {
@@ -129,4 +132,5 @@ export const WithIcon: Story = {
       </Button>
     </div>
   ),
+  name: 'Met Icon',
 };

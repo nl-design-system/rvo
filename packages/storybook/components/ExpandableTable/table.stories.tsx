@@ -27,7 +27,7 @@ export default {
 type Story = StoryObj<typeof ExpandableTable>;
 
 export const Base: Story = {
-  name: 'Expandable Table',
+  name: 'Basis Component',
   args: {
     caption: 'My table description',
   },

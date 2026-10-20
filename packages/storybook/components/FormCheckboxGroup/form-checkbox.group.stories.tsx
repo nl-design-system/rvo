@@ -58,4 +58,4 @@ export default {
 } satisfies Meta<typeof CheckboxGroup>;
 type Story = StoryObj<typeof CheckboxGroup>;
 
-export const Default: Story = { name: 'Checkbox group' };
+export const Base: Story = { name: 'Basis Component' };

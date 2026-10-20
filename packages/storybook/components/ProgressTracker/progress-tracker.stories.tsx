@@ -66,5 +66,5 @@ export const Base: Story = {
   args: {
     steps: defaultSteps,
   },
-  name: 'Progress Tracker',
+  name: 'Basis Component',
 };

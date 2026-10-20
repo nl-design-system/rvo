@@ -44,9 +44,10 @@ export default {
 } satisfies Meta<typeof Heading>;
 type Story = StoryObj<typeof Heading>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };
 
 export const Types: Story = {
+  name: 'Types',
   render: () => (
     <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
       <Heading type="h1">H1 Heading</Heading>
@@ -60,7 +61,7 @@ export const Types: Story = {
 };
 
 export const HeadingIconBefore: Story = {
-  name: 'Heading with Icon Before',
+  name: 'met Icon Links',
   render: (args) => (
     <Heading {...args} iconPlacement="left" icon="home">
       Heading with Icon before
@@ -69,7 +70,7 @@ export const HeadingIconBefore: Story = {
 };
 
 export const HeadingIconAfter: Story = {
-  name: 'Heading with Icon After',
+  name: 'met Icon Rechts',
   render: (args) => (
     <Heading {...args} iconPlacement="right" icon="home">
       Heading with Icon after

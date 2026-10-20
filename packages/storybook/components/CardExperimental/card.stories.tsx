@@ -38,7 +38,7 @@ const Container = ({ children }) => <div>{children}</div>;
 
 export const Base: Story = {
   args: defaultArgs,
-  name: 'CardExperimental',
+  name: 'Basis Component',
   render: () => (
     <Container>
       <CardExperimental></CardExperimental>

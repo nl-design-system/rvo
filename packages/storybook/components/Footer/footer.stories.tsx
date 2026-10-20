@@ -105,4 +105,4 @@ export default {
 } satisfies Meta<typeof Footer>;
 type Story = StoryObj<typeof Footer>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

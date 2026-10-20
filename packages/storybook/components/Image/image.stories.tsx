@@ -93,6 +93,7 @@ type Story = StoryObj<typeof Image>;
 /* === STORIES === */
 
 export const Base: Story = {
+  name: 'Basis Component',
   args: {
     ...defaultArgs,
     radius: 'none',

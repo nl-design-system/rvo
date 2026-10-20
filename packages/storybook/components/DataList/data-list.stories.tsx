@@ -45,5 +45,5 @@ export const Base: Story = {
       </>
     ),
   },
-  name: 'Data list',
+  name: 'Basis Component',
 };

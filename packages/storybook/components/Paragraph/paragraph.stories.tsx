@@ -39,10 +39,11 @@ export default {
 
 type Story = StoryObj<typeof Paragraph>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };
 
 // sizes
 export const Sizes: Story = {
+  name: 'Sizes',
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
       <Paragraph {...args} size="sm" />
@@ -54,6 +55,7 @@ export const Sizes: Story = {
 
 // colors
 export const Colors: Story = {
+  name: 'Kleuren',
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
       <Paragraph {...args} color="lintblauw" />

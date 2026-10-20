@@ -26,4 +26,4 @@ export default {
 } satisfies Meta<typeof CounterBadge>;
 type Story = StoryObj<typeof CounterBadge>;
 
-export const Base: Story = { args: defaultArgs, name: 'Counter badge' };
+export const Base: Story = { args: defaultArgs, name: 'Basis Component' };

@@ -77,4 +77,4 @@ export default {
 } satisfies Meta<typeof Textarea>;
 type Story = StoryObj<typeof Textarea>;
 
-export const Default: Story = { args: { maxLength: 300, maxLengthIndicator: true }, name: 'Textarea' };
+export const Base: Story = { args: { maxLength: 300, maxLengthIndicator: true }, name: 'Basis Component' };

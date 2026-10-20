@@ -74,6 +74,7 @@ export const Base: Story = {
       <Card {...args} />
     </Container>
   ),
+  name: 'Basis Component',
 };
 
 export const Outlined: Story = {
@@ -85,6 +86,7 @@ export const Outlined: Story = {
       <Card {...args} />
     </Container>
   ),
+  name: 'Met Outline',
 };
 
 export const FullCardLink: Story = {
@@ -96,6 +98,7 @@ export const FullCardLink: Story = {
       <Card {...args} fullCardLink link="www.google.nl" />
     </Container>
   ),
+  name: 'Card als Link',
 };
 
 export const ColoredBackground: Story = {
@@ -110,6 +113,7 @@ export const ColoredBackground: Story = {
       <Card {...args} background="color" backgroundColor="wit" />
     </div>
   ),
+  name: 'Gekleurde achtergrond',
 };
 
 export const WithImage: Story = {
@@ -122,4 +126,5 @@ export const WithImage: Story = {
       <Card {...args} imageSize="md" image="images/www/home.jpg" />
     </div>
   ),
+  name: 'Met Image',
 };

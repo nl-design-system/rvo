@@ -65,8 +65,8 @@ export default {
 } satisfies Meta<typeof Select>;
 type Story = StoryObj<typeof Select>;
 
-export const Default: Story = {
-  name: 'Select',
+export const Base: Story = {
+  name: 'Basis Component',
   args: {
     id: 'field',
     disabled: false,

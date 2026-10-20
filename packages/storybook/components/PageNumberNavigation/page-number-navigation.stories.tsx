@@ -36,4 +36,4 @@ export default {
 } satisfies Meta<typeof PageNumberNavigation>;
 type Story = StoryObj<typeof PageNumberNavigation>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

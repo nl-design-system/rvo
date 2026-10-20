@@ -26,4 +26,4 @@ export default {
 } satisfies Meta<typeof Quote>;
 type Story = StoryObj<typeof Quote>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

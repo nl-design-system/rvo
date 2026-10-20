@@ -46,11 +46,11 @@ const defaultOptions: IRadioButtonProps[] = [
   { id: 'optionD', label: 'Option D' },
 ];
 
-export const Default: Story = {
+export const Base: Story = {
   args: {
     name: 'group',
     invalid: false,
     options: defaultOptions,
   },
-  name: 'Radio button group',
+  name: 'Basis Component',
 };

@@ -50,4 +50,4 @@ export default {
 } satisfies Meta<typeof ExpandableContent>;
 type Story = StoryObj<typeof ExpandableContent>;
 
-export const Base: Story = { args: defaultArgs, name: 'Expandable content' };
+export const Base: Story = { args: defaultArgs, name: 'Basis Component' };

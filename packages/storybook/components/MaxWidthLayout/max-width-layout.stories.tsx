@@ -42,4 +42,4 @@ export default {
 } satisfies Meta<typeof MaxWidthLayout>;
 type Story = StoryObj<typeof MaxWidthLayout>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

@@ -72,6 +72,7 @@ export const Base: Story = {
       <Dialog {...args}>Dialog content</Dialog>
     </Container>
   ),
+  name: 'Basis Component',
 };
 
 export const WithActionGroup: Story = {
@@ -87,6 +88,7 @@ export const WithActionGroup: Story = {
       </ActionGroup>
     ),
   },
+  name: 'Met ActionGroup',
 };
 
 // Backgrounds
@@ -121,6 +123,7 @@ export const SizeSm: Story = {
       </Dialog>
     </Container>
   ),
+  name: 'Kleine Size',
 };
 
 export const SizeMd: Story = {
@@ -131,6 +134,7 @@ export const SizeMd: Story = {
       </Dialog>
     </Container>
   ),
+  name: 'Medium Size',
 };
 
 export const SizeLg: Story = {
@@ -141,6 +145,7 @@ export const SizeLg: Story = {
       </Dialog>
     </Container>
   ),
+  name: 'Large Size',
 };
 
 export const SizeXl: Story = {
@@ -151,6 +156,7 @@ export const SizeXl: Story = {
       </Dialog>
     </Container>
   ),
+  name: 'Extra Large Size',
 };
 
 // Types

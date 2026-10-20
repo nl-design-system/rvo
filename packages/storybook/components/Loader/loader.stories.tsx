@@ -56,12 +56,12 @@ export default {
 type Story = StoryObj<typeof Loader>;
 
 export const Base: Story = {
-  name: 'Loader',
+  name: 'Basis Component',
 };
 
 export const LoaderWithStatus: Story = {
   args: { status: status as any },
-  name: 'Loader Status',
+  name: 'Met Status',
 };
 
 export const LoaderOverlay: Story = {
@@ -70,10 +70,10 @@ export const LoaderOverlay: Story = {
 
 export const LoaderWithActions: Story = {
   args: { primaryAction, secondaryAction },
-  name: 'Loader Actions',
+  name: 'met Actions',
 };
 
 export const LoaderWithStatusandActions: Story = {
   args: { status: status as any, primaryAction, secondaryAction },
-  name: 'Loader Status and Actions',
+  name: 'Met Status and Actions',
 };

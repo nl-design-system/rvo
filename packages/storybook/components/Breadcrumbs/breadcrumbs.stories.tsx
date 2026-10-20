@@ -42,5 +42,5 @@ export const Base: Story = {
       { label: 'Current page' },
     ],
   },
-  name: 'Breadcrumbs',
+  name: 'Basis Component',
 };

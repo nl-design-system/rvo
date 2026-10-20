@@ -57,4 +57,4 @@ export default {
 } satisfies Meta<typeof LayoutFlow>;
 type Story = StoryObj<typeof LayoutFlow>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

@@ -32,8 +32,8 @@ export default {
 } satisfies Meta<typeof Fieldset>;
 type Story = StoryObj<typeof Fieldset>;
 
-export const Default: Story = {
-  name: 'Fieldset',
+export const Base: Story = {
+  name: 'Basis Component',
   args: {
     legend: 'Fieldset legend',
     disabled: false,

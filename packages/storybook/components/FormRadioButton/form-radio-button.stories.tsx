@@ -71,4 +71,4 @@ export default {
 } satisfies Meta<typeof RadioButton>;
 type Story = StoryObj<typeof RadioButton>;
 
-export const Default: Story = { name: 'Radio button' };
+export const Base: Story = { name: 'Basis Component' };

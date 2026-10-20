@@ -54,7 +54,7 @@ export default {
 } satisfies Meta<typeof Autocomplete>;
 type Story = StoryObj<typeof Autocomplete>;
 
-export const Default: Story = {
-  name: 'Autocomplete',
+export const Base: Story = {
+  name: 'Basis Component',
   args: defaultArgs as any,
 };

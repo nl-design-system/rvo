@@ -56,7 +56,7 @@ export const Base: Story = {
     closable: false,
     padding: 'md',
   },
-  name: 'Alert',
+  name: 'Basis Component',
 };
 
 export const Kinds: Story = {
@@ -68,6 +68,7 @@ export const Kinds: Story = {
       <Alert {...args} kind="success" content="Success Alert" />
     </div>
   ),
+  name: 'Soorten',
 };
 
 export const Padding: Story = {
@@ -81,4 +82,5 @@ export const Padding: Story = {
       <Alert {...args} padding="2xl" content="2XL Padding Alert" />
     </div>
   ),
+  name: 'Padding',
 };

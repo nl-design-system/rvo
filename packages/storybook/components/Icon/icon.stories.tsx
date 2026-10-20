@@ -43,4 +43,4 @@ export default {
 } satisfies Meta<typeof Icon>;
 type Story = StoryObj<typeof Icon>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

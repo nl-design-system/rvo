@@ -97,4 +97,4 @@ export default {
 } satisfies Meta<typeof TextInput>;
 type Story = StoryObj<typeof TextInput>;
 
-export const Default: Story = { name: 'Text input' };
+export const Base: Story = { name: 'Basis Component' };

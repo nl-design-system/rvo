@@ -29,6 +29,15 @@ export const TextInput: Story = {
   ),
 };
 
+export const TimeInput: Story = {
+  name: 'Time Input',
+  render: () => (
+    <FormField id="form-field-with-text-input" label="Time Input">
+      <FormField.Text type="time" sizeInput="md"></FormField.Text>
+    </FormField>
+  ),
+};
+
 export const DateInput: Story = {
   name: 'Date Input',
   render: () => (

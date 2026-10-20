@@ -34,4 +34,4 @@ export default {
 } satisfies Meta<typeof Feedback>;
 type Story = StoryObj<typeof Feedback>;
 
-export const Default: Story = { name: 'Feedback' };
+export const Base: Story = { name: 'Basis Component' };

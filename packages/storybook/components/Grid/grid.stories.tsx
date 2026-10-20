@@ -38,4 +38,4 @@ export default {
 } satisfies Meta<typeof Grid>;
 type Story = StoryObj<typeof Grid>;
 
-export const Default: Story = { name: 'Grid' };
+export const Base: Story = { name: 'Basis Component' };

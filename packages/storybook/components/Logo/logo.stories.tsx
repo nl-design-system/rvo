@@ -43,7 +43,7 @@ export default {
 } satisfies Meta<typeof Logo>;
 type Story = StoryObj<typeof Logo>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };
 
 export const AlternateText: Story = {
   args: { title: 'Ministerie van Economische Zaken en Klimaat' },

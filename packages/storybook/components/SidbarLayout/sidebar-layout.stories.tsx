@@ -41,4 +41,4 @@ export default {
 } satisfies Meta<typeof SidebarLayout>;
 type Story = StoryObj<typeof SidebarLayout>;
 
-export const Base: Story = { name: 'Sidebar layout' };
+export const Base: Story = { name: 'Basis Component' };

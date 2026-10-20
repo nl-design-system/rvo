@@ -100,4 +100,4 @@ export default {
 } satisfies Meta<typeof Link>;
 type Story = StoryObj<typeof Link>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

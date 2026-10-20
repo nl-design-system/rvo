@@ -33,4 +33,4 @@ export default {
 } satisfies Meta<typeof ItemList>;
 type Story = StoryObj<typeof ItemList>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

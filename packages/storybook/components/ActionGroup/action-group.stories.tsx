@@ -55,12 +55,12 @@ const defaultButtonsRight: IButtonProps[] = [
   },
 ];
 
-export const Default: Story = {
+export const Base: Story = {
   args: {
     buttonsLeft: defaultButtonsLeft,
     buttonsRight: defaultButtonsRight,
     fullWidth: false,
     position: 'left',
   },
-  name: 'Action group',
+  name: 'Basis Component',
 };

@@ -54,4 +54,4 @@ export default {
 // Stories
 type Story = StoryObj<typeof Skeleton>;
 
-export const Base: Story = {};
+export const Base: Story = { name: 'Basis Component' };

@@ -24,7 +24,7 @@ export default {
 } satisfies Meta<typeof Accordion>;
 type Story = StoryObj;
 
-export const Default: Story = {
+export const Base: Story = {
   name: 'Accordion',
   render: () => (
     <Accordion>

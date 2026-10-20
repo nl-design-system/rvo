@@ -30,6 +30,7 @@ export default {
 type Story = StoryObj<typeof StatusIcon>;
 
 export const Base: Story = {
+  name: 'Basis Component',
   args: {
     type: 'bevestiging',
     size: 'sm',

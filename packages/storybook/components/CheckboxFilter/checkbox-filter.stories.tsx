@@ -80,11 +80,11 @@ export default {
 } satisfies Meta<typeof CheckBoxFilter>;
 type Story = StoryObj<typeof CheckBoxFilter>;
 
-export const Base: Story = { args: defaultArgs, name: 'Checkbox Filter' };
+export const Base: Story = { args: defaultArgs, name: 'Basis Component' };
 
 export const CheckboxFilterWithInput: Story = {
   args: inputArgs,
-  name: 'Checkbox Filter met input',
+  name: 'Met Inputveld',
   render: function Render(args) {
     let testData = [...inputOptions];
 
