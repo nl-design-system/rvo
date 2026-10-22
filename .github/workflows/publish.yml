@@ -108,8 +108,6 @@ jobs:
           name: workspace-build
           path: |
             components/**/dist/
-            packages/**/dist/
-            utilities/**/dist/
           if-no-files-found: error
 
       - name: "Generate design system website"
