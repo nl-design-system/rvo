@@ -102,9 +102,6 @@ jobs:
           BASE_URL: "/rvo/"
         run: pnpm run --if-present build
 
-      - name: "Continuous Integration: test"
-        run: pnpm run --if-present test
-
       - name: "Generate design system website"
         run: pnpm run --filter @nl-rvo/design-system-website generate
 
@@ -119,6 +116,42 @@ jobs:
           name: storybook
           path: packages/storybook/dist/
           retention-days: 1
+
+  test:
+    runs-on: ubuntu-latest
+    needs: [install, build]
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+
+      - name: Check for known security issues with npm packages
+        run: |
+          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
+          pnpm audit --audit-level critical
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        env:
+          BASE_URL: "/rvo/"
+        run: pnpm run --if-present build
+
+      - name: "Continuous Integration: test"
+        run: pnpm run --if-present test
 
   publish-chromatic:
     runs-on: ubuntu-latest
