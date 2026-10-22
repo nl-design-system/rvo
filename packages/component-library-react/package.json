@@ -22,9 +22,7 @@
     "build": "rimraf dist && rollup -c",
     "build:watch": "rollup -c --watch",
     "clean": "rimraf dist/",
-    "lint": "tsc --noEmit --project ./tsconfig.json",
-    "test": "jest --coverage --verbose",
-    "watch:test": "jest --verbose --watch"
+    "lint": "tsc --noEmit --project ./tsconfig.json"
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
