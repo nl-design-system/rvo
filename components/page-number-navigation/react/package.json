@@ -28,7 +28,10 @@
     "react": "^18.0.0 || ^19.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@nl-rvo/css-page-number-navigation": "workspace:*",
