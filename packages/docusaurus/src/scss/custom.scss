@@ -1,4 +1,5 @@
 @use "@nl-rvo/css-heading/src" as *;
+@use "../../../../utilities/utility-text-types/src" as *;
 @import url("@nl-rvo/component-library-css/dist/components/link.min.css");
 
 /* stylelint-disable custom-property-pattern */
@@ -280,4 +281,13 @@ a.rvo-skip-link,
 a.rvo-skip-link:focus {
   color: var(--rvo-skip-link-color, #ffffff) !important;
   outline: none;
+}
+
+.markdown .rvo-alert {
+  margin-block-end: var(--rvo-space-md);
+}
+
+.rvo-theme .markdown .rvo-text--no-margins {
+  margin-block-end: 0;
+  margin-block-start: 0;
 }

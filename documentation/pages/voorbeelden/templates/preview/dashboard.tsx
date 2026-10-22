@@ -1,0 +1,272 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
+import {
+  ActionGroup,
+  Alert,
+  Button,
+  Card,
+  Footer,
+  Grid,
+  Header,
+  Heading,
+  Icon,
+  LayoutFlow,
+  Link,
+  MenuBar,
+  StatusIcon,
+  Tag,
+} from '@nl-rvo/component-library-react';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../../../../demopages/common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../../../demopages/common/defaultSecondaryFooterItems';
+
+export default function DashboardPage(): ReactElement {
+  return (
+    <div className="rvo-demo-page">
+      <Header />
+      <MenuBar
+        items={[
+          {
+            label: 'Naam app/website',
+            link: '#',
+          },
+          {
+            align: 'right',
+            label: 'Menu item',
+            link: '#',
+          },
+          {
+            align: 'right',
+            label: 'English',
+            icon: 'wereldbol',
+            link: '#',
+          },
+          {
+            align: 'right',
+            label: 'Klantnaam',
+            link: '#',
+            icon: 'user',
+          },
+        ]}
+        size="md"
+        useIcons={true}
+        iconPlacement="before"
+        maxWidth="lg"
+      />
+
+      <main className="rvo-sidebar-layout__container">
+        <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
+          <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
+            <MenuBar
+              direction="vertical"
+              linkColor="zwart"
+              horizontalRule={false}
+              items={[
+                {
+                  label: 'Dashboard',
+                  link: '#',
+                  icon: 'home',
+                },
+                {
+                  label: 'Menu item',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Menu item', link: '#', icon: 'mail' },
+                { label: 'Menu item', link: '#', icon: 'user' },
+              ]}
+              size="md"
+              useIcons={true}
+              iconPlacement="before"
+              maxWidth="md"
+            />
+          </div>
+          <div className="rvo-sidebar-layout__content">
+            <LayoutFlow gap="xl">
+              <Heading type="h1" noMargins={true} fontWeightNormal={true}>
+                <strong>Overzicht</strong> van klantnaam
+              </Heading>
+              <LayoutFlow gap="md">
+                <LayoutFlow gap="xs">
+                  <LayoutFlow gap="md">
+                    <Grid columns="two">
+                      <Alert heading="Notificatie titel" kind="info">
+                        <LayoutFlow gap="sm">
+                          Notificatie tekst
+                          <ActionGroup>
+                            <Button kind="primary" size="sm">
+                              Primary button
+                            </Button>
+                            <Button kind="secondary" size="sm">
+                              Secondary button
+                            </Button>
+                          </ActionGroup>
+                        </LayoutFlow>
+                      </Alert>
+                    </Grid>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </LayoutFlow>
+
+              <div className="rvo-cards">
+                <LayoutFlow gap="md">
+                  <div className="rvo-heading-w-tag">
+                    <LayoutFlow row={true}>
+                      <Heading type="h2" noMargins={true}>
+                        Overzicht met cards
+                      </Heading>
+                      <Tag type="info">Info tag</Tag>
+                    </LayoutFlow>
+                  </div>
+
+                  <Grid gap="md" columns="two">
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
+                          Card titel
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
+                      <LayoutFlow row={true} gap="xs">
+                        <StatusIcon type="waarschuwing" size="md" />
+                        <span className="rvo-text--sm">
+                          Waarschuwing met <strong>dik gedrukte tekst</strong>
+                        </span>
+                      </LayoutFlow>
+                    </Card>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
+                          Card titel
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
+                      <LayoutFlow row={true} gap="xs">
+                        <StatusIcon type="waarschuwing" size="md" />
+                        <span className="rvo-text--sm">
+                          Waarschuwing met <strong>dik gedrukte tekst</strong>
+                        </span>
+                      </LayoutFlow>
+                    </Card>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
+                          Card titel
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
+                      <LayoutFlow row={true} gap="xs">
+                        <StatusIcon type="waarschuwing" size="md" />
+                        <span className="rvo-text--sm">
+                          Waarschuwing met <strong>dik gedrukte tekst</strong>
+                        </span>
+                      </LayoutFlow>
+                    </Card>
+                    <Card background="none" outline={true} fullCardLink={true} padding="md" title="">
+                      <Heading type="h3" noMargins={true}>
+                        <Link fullContainerLink={true} noUnderline={true} href="#">
+                          Card titel
+                        </Link>
+                      </Heading>
+                      <span className="rvo-text--subtle rvo-text--sm">Subtle text met uitleg</span>
+                      <LayoutFlow row={true} gap="xs">
+                        <StatusIcon type="waarschuwing" size="md" />
+                        <span className="rvo-text--sm">
+                          Waarschuwing met <strong>dik gedrukte tekst</strong>
+                        </span>
+                      </LayoutFlow>
+                    </Card>
+                  </Grid>
+                  <LayoutFlow row={true}>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Menu item
+                    </Link>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Menu item
+                    </Link>
+                    <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                      Menu item
+                    </Link>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </div>
+              <hr className="rvo-hr"></hr>
+              <Grid gap="xl" columns="two">
+                <LayoutFlow gap="sm">
+                  <Heading type="h2" noMargins={true}>
+                    Item list
+                  </Heading>
+                  <span>Intro of uitleg</span>
+                  <LayoutFlow gap="sm">
+                    <div className="rvo-item-list">
+                      <div className="rvo-item-list__item">
+                        <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutFlow row={true} alignItems="start">
+                            <div className="rvo-status-indicator rvo-status-indicator--groen"></div>
+                            <LayoutFlow row={true} wrap={true} gap="sm">
+                              <Link color="zwart" noUnderline={true}>
+                                Item list title
+                              </Link>
+                              met groene status indicator
+                            </LayoutFlow>
+                          </LayoutFlow>
+                          <div className="rvo-item-list-icon">
+                            <Link target="#">
+                              <Icon icon="delta-naar-rechts" size="sm" />
+                            </Link>
+                          </div>
+                        </LayoutFlow>
+                      </div>
+                      <div className="rvo-item-list__item">
+                        <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutFlow row={true} alignItems="start">
+                            <div className="rvo-status-indicator rvo-status-indicator--rood"></div>
+                            <LayoutFlow row={true} wrap={true} gap="sm">
+                              <Link color="zwart" noUnderline={true}>
+                                Item list title
+                              </Link>
+                              met rode status indicator
+                            </LayoutFlow>
+                          </LayoutFlow>
+                          <div className="rvo-item-list-icon">
+                            <Link target="#">
+                              <Icon icon="delta-naar-rechts" size="sm" />
+                            </Link>
+                          </div>
+                        </LayoutFlow>
+                      </div>
+                      <div className="rvo-item-list__item">
+                        <LayoutFlow row={true} justifyContent="space-between" alignItems="start">
+                          <LayoutFlow row={true} alignItems="start">
+                            <div className="rvo-status-indicator rvo-status-indicator--oranje"></div>
+                            <LayoutFlow row={true} wrap={true} gap="sm">
+                              <Link color="zwart" noUnderline={true}>
+                                Item list title
+                              </Link>
+                              met oranje status indicator
+                            </LayoutFlow>
+                          </LayoutFlow>
+                          <div className="rvo-item-list-icon">
+                            <Link target="#">
+                              <Icon icon="delta-naar-rechts" size="sm" />
+                            </Link>
+                          </div>
+                        </LayoutFlow>
+                      </div>
+                    </div>
+                    <Link showIcon="after" icon="externe-link" target="#" noUnderline={true}>
+                      Zoek een andere regeling op rvo.nl
+                    </Link>
+                  </LayoutFlow>
+                </LayoutFlow>
+              </Grid>
+            </LayoutFlow>
+          </div>
+        </div>
+      </main>
+      <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
+    </div>
+  );
+}

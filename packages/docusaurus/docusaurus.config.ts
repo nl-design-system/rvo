@@ -55,6 +55,42 @@ const config: Config = {
         exclude: excludeList,
       },
     ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'templates',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden/templates/preview'),
+        routeBasePath: 'voorbeelden/templates/preview',
+        include: ['**/*.tsx'],
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'paginas',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden/paginas/preview'),
+        routeBasePath: 'voorbeelden/paginas/preview',
+        include: ['**/*.tsx'],
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'experimenteel',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden/experimenteel/preview'),
+        routeBasePath: 'voorbeelden/experimenteel/preview',
+        include: ['**/*.tsx'],
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'prototypes',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden/prototypes/preview'),
+        routeBasePath: 'voorbeelden/prototypes/preview',
+        include: ['**/*.tsx'],
+      },
+    ],
   ],
   presets: [
     [
@@ -73,6 +109,7 @@ const config: Config = {
             require.resolve('@nl-rvo/assets/icons/index.css'),
             require.resolve('@nl-rvo/assets/images/index.css'),
             require.resolve('@nl-rvo/design-tokens/dist/index.css'),
+            require.resolve('@nl-rvo/component-library-css/dist/components/alert.css'),
             require.resolve('@nl-rvo/component-library-css/dist/components/skip-link.css'),
             require.resolve('./src/scss/custom.scss'),
           ],
