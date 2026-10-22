@@ -144,8 +144,12 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build component packages
+        run: pnpm --filter './components/**' --if-present build
+
       - name: "Continuous Integration: test"
-        run: pnpm --filter './components/**' --if-present test
+        run: pnpm run --if-present test
 
   publish-chromatic:
     runs-on: ubuntu-latest
