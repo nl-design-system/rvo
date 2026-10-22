@@ -119,7 +119,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: install
+    needs: [install, build]
     permissions:
       contents: read
 
