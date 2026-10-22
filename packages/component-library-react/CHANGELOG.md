@@ -1,5 +1,12 @@
 # @nl-rvo/component-library-react
 
+## 7.2.4
+
+### Patch Changes
+
+- ee6a68c: Wire up radio button form field onChange event handler as this was not firing.
+- e9ef41a: Do not show ellipses in page number navigation when not needed
+
 ## 7.2.3
 
 ### Patch Changes
