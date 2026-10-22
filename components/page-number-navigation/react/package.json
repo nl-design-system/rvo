@@ -28,7 +28,9 @@
     "react": "^18.0.0 || ^19.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean",
+    "test": "jest --coverage --verbose",
+    "watch:test": "jest --verbose --watch"
   },
   "dependencies": {
     "@nl-rvo/css-page-number-navigation": "workspace:*",
