@@ -77,6 +77,12 @@
       }
     },
     {
+      "files": ["*.test.ts", "*.test.tsx", "jest.setup.ts"],
+      "env": {
+        "jest": true
+      }
+    },
+    {
       "files": ["*.mjs"],
       "parserOptions": {
         "sourceType": "module",

@@ -22,8 +22,9 @@
     "build": "rimraf dist && rollup -c",
     "build:watch": "rollup -c --watch",
     "clean": "rimraf dist/",
-    "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
-    "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
+    "lint": "tsc --noEmit --project ./tsconfig.json",
+    "test": "jest --coverage --verbose",
+    "watch:test": "jest --verbose --watch"
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
@@ -43,7 +44,7 @@
     "@rollup/plugin-node-resolve": "15.2.3",
     "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.4.2",
-    "@testing-library/react": "14.2.1",
+    "@testing-library/react": "16.3.3",
     "@testing-library/user-event": "14.5.2",
     "@types/jest": "29.5.12",
     "@types/react": "18.3.1",
