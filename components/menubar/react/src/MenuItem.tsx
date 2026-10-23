@@ -46,6 +46,7 @@ export const MenuBarItem: React.FC<IMenuBarItem> = ({
         className={clsx('rvo-menubar__link', isSubmenuVisible && 'rvo-menubar__link--active')}
         color={linkColor}
         icon={icon}
+        iconPlacement="left"
         iconSize={size}
         LinkComponent={LinkComponent}
         {...(submenu || typeof link === 'function'

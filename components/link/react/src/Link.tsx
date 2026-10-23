@@ -13,7 +13,7 @@ export const Link: React.FC<ILinkProps> = ({
   color = 'hemelblauw',
   weight = 'bold',
   iconPlacement,
-  icon = 'home',
+  icon,
   iconSize = 'md',
   iconColor = 'hemelblauw',
   hover = false,

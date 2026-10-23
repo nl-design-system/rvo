@@ -10,7 +10,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   submenu,
   useIcons,
   size,
-  iconPlacement,
+  iconPlacement = 'left',
   linkColor,
   isSubmenuVisible,
   maxWidth,
@@ -38,9 +38,11 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   ));
 
   return (
-    <MaxWidthLayout className="rvo-menubar__submenu-layout" size={maxWidth}>
-      <ul className={clsx('rvo-menubar__submenu')}>{subMenuMarkup}</ul>
-    </MaxWidthLayout>
+    <div className="rvo-menubar__submenu-layout">
+      <MaxWidthLayout size={maxWidth}>
+        <ul className={clsx('rvo-menubar__submenu')}>{subMenuMarkup}</ul>
+      </MaxWidthLayout>
+    </div>
   );
 };
 
