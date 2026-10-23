@@ -14,7 +14,7 @@ export const Select: React.FC<ISelectProps> = ({
   invalid,
   required,
   options,
-  size = 'md',
+  size = 'max',
   defaultValue,
   value,
   onChange,

@@ -15,6 +15,31 @@
   flex-direction: column;
   align-items: stretch;
   gap: var(--rvo-space-2xs);
+
+  .rvo-label {
+    color: var(--rvo-label-color, var(--utrecht-document-color));
+    font-size: var(--rvo-label-font-size);
+    font-weight: var(--rvo-label-font-weight);
+
+    &--sm {
+      font-size: var(--rvo-label-sm-font-size);
+      font-weight: var(--rvo-label-sm-font-weight);
+    }
+
+    &--has-after-field::after {
+      font-size: var(--rvo-label-after-field-font-size);
+      font-weight: var(--rvo-label-after-field-font-weight);
+      margin-inline-start: var(--rvo-space-2xs);
+    }
+
+    &--optional::after {
+      content: var(--rvo-label-optional-content);
+    }
+
+    &--required::after {
+      content: var(--rvo-label-required-content);
+    }
+  }
 }
 
 .rvo-form-field__label-text {

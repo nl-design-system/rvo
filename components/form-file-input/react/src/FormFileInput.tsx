@@ -13,7 +13,7 @@ export const FileInput: React.FC<IFileInputProps> = ({
   invalid,
   required,
   accept,
-  multiple = false,
+  multiple = true,
   ...otherProps
 }: IFileInputProps) => (
   <input

@@ -18,7 +18,7 @@ export const Textarea: React.FC<ITextareaProps> = ({
 
   if (maxLength && maxLengthIndicator) {
     // Override onChange
-    otherProps.onChange = (event) => {
+    const handleChange = (event) => {
       otherProps.onChange?.(event);
       setCurrentValue(event.currentTarget.value);
     };
@@ -26,8 +26,10 @@ export const Textarea: React.FC<ITextareaProps> = ({
       <div className={clsx('rvo-layout-column', 'rvo-layout-gap--xs')}>
         <textarea
           {...otherProps}
+          onChange={handleChange}
           className={clsx('rvo-textarea', 'rvo-textarea--html-textarea', invalid && 'rvo-textarea--invalid')}
           aria-invalid={invalid}
+          maxLength={maxLength}
         />
         <span className="rvo-textarea__remaining-chars">
           Nog <strong>{maxLength - (currentValue?.length || 0)}</strong> teken

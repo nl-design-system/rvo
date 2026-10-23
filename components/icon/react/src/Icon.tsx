@@ -61,7 +61,6 @@ export const Icon: React.FC<IIconProps & React.HTMLAttributes<HTMLSpanElement>> 
         icon && `rvo-icon-${iconName}`,
         className,
       )}
-      role="img"
       aria-hidden={true}
       aria-label={ariaLabel}
       {...rootElementProps}

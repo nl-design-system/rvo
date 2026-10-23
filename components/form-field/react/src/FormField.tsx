@@ -58,7 +58,6 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
         <label
           className={clsx(
             'rvo-label',
-            'rvo-label--sm',
             labelType && 'rvo-label--has-after-field',
             labelSize && `rvo-label--${labelSize}`,
             (labelType === 'optional' || labelType === 'required') && `rvo-label--${labelType}`,

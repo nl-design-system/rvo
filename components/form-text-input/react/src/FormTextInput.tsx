@@ -32,6 +32,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
     placeholder,
     readOnly,
     className,
+    required,
     value: isControlled ? value : undefined,
     defaultValue: !isControlled ? defaultValue : undefined,
     ...(validation === 'currency' && {
