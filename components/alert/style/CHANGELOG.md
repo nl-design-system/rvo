@@ -1,5 +1,11 @@
 # `@nl-rvo/css-alert`
 
+## 1.6.3
+
+### Patch Changes
+
+- 084a230: Ensure package is published with provenance
+
 ## 1.6.2
 
 ### Patch Changes

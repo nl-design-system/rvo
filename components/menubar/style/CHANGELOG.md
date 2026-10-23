@@ -1,18 +1,8 @@
-# `@nl-rvo/css-menubar-mobile`
+# `@nl-rvo/css-menubar`
 
-## 1.7.3
+## 1.6.2
 
 ### Patch Changes
-
-- ac29549: Improve focus visibility and add focus trap to mobile menu
-
-  - Add focus state to mobile menu toggle button
-  - Add focus state to mobile menu links
-  - Add focus state to dialog close button
-  - Add focus trap to dialog component
-  - Add `--rvo-mobile-menu-toggle-focus-color` design token
-  - Add `--rvo-mobile-menu-item-link-focus-color` design token
-  - Add `--rvo-focus-color` common design token
 
 - 084a230: Ensure package is published with provenance
 

@@ -1,6 +1,6 @@
-# `@nl-rvo/css-form-field-label`
+# `@nl-rvo/css-status-icon`
 
-## 1.4.1
+## 1.3.1
 
 ### Patch Changes
 

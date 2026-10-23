@@ -1,5 +1,12 @@
 # `@nl-rvo/css-toggle`
 
+## 1.3.1
+
+### Patch Changes
+
+- 83a85f5: Implement the updated Icon component
+- 084a230: Ensure package is published with provenance
+
 ## 1.3.0
 
 ### Minor Changes
