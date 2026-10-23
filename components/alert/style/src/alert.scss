@@ -1,0 +1,98 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
+
+$rvo-alert-paddings: xs, sm, md, lg, xl, 2xl;
+
+.rvo-alert {
+  padding-block-end: var(--rvo-alert-padding-block-end);
+  padding-block-start: var(--rvo-alert-padding-block-start);
+  padding-inline-end: var(--rvo-alert-padding-inline-end);
+  padding-inline-start: var(--rvo-alert-padding-inline-start);
+
+  &--info {
+    background-color: var(--rvo-alert-info-background-color);
+  }
+
+  &--warning {
+    background-color: var(--rvo-alert-warning-background-color);
+  }
+
+  &--error {
+    background-color: var(--rvo-alert-error-background-color);
+  }
+
+  &--success {
+    background-color: var(--rvo-alert-success-background-color);
+  }
+
+  &--layout {
+    display: flex;
+    justify-content: center;
+  }
+
+  @each $size in $rvo-alert-paddings {
+    &--padding-#{$size} {
+      padding-block-end: var(--rvo-alert-padding-#{$size}-padding-block-end);
+      padding-block-start: var(--rvo-alert-padding-#{$size}-padding-block-start);
+      padding-inline-end: var(--rvo-alert-padding-#{$size}-padding-inline-end);
+      padding-inline-start: var(--rvo-alert-padding-#{$size}-padding-inline-start);
+    }
+  }
+
+  &__container {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--rvo-alert-gap);
+  }
+
+  p:first-child {
+    margin-block-start: 0;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+
+  .rvo-icon {
+    min-inline-size: var(--rvo-size-xl);
+  }
+
+  .rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+    color: var(--rvo-color-lintblauw);
+  }
+}
+
+.utrecht-form-fieldset .rvo-alert {
+  margin-inline-end: var(--rvo-alert-fieldset-margin);
+  margin-inline-start: var(--rvo-alert-fieldset-margin);
+
+  &:last-child {
+    margin-block-end: var(--rvo-alert-fieldset-margin);
+  }
+}
+
+.rvo-button--subtle.rvo-button__close {
+  --utrecht-icon-color: var(--rvo-color-zwart);
+
+  margin-inline-start: auto;
+  min-block-size: 0;
+  min-inline-size: 0;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+
+  .utrecht-icon.rvo-icon {
+    background-color: var(--utrecht-document-color);
+    min-inline-size: var(--rvo-size-md);
+  }
+
+  &:hover {
+    border-radius: 0;
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-end: 2px solid var(--rvo-color-zwart);
+  }
+}

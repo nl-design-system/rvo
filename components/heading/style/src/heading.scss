@@ -1,0 +1,40 @@
+@import "@utrecht/heading-1-css/dist/index.css";
+@import "@utrecht/heading-2-css/dist/index.css";
+@import "@utrecht/heading-3-css/dist/index.css";
+@import "@utrecht/heading-4-css/dist/index.css";
+@import "@utrecht/heading-5-css/dist/index.css";
+@import "@utrecht/heading-6-css/dist/index.css";
+
+.rvo-heading {
+  align-items: center;
+  color: var(--rvo-color-lintblauw);
+  display: flex;
+
+  &--normal {
+    font-weight: var(--rvo-font-weight-normal);
+  }
+
+  &--gap-xs {
+    gap: var(--rvo-space-xs);
+  }
+
+  &--gap-sm {
+    gap: var(--rvo-space-sm);
+  }
+
+  @for $i from 1 through 6 {
+    &--margin-#{$i} {
+      margin-block-end: var(--utrecht-heading-#{$i}-margin-block-end);
+      margin-block-start: var(--utrecht-heading-#{$i}-margin-block-start);
+    }
+  }
+
+  &__icon {
+    display: flex;
+  }
+
+  &__content {
+    display: block;
+    font-size: inherit;
+  }
+}

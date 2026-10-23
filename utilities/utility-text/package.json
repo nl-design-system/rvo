@@ -21,8 +21,9 @@
     "provenance": true
   },
   "scripts": {
-    "build": "build-css-package",
-    "clean": "rimraf dist"
+    "build": "sass -I node_modules --style=compressed ./src/:./dist/",
+    "watch": "sass -I node_modules --style=compressed --watch ./src/:./dist/",
+    "clean": "rimraf ./dist/"
   },
   "repository": {
     "type": "git",

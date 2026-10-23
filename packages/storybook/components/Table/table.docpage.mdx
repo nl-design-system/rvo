@@ -1,0 +1,18 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as TableStories from "./table.stories";
+
+<Meta of={TableStories} name="Documentatie" />
+
+<Title />
+
+Let op: Zorg er altijd voor dat alle kolommen zijn voorzien van een naam.
+
+<Canvas of={TableStories.Base} layout="padded" />
+
+## Props
+
+<ArgTypes of={TableStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/css-button_

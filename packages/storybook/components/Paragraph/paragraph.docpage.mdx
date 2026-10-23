@@ -1,0 +1,9 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as ParagraphStories from "./paragraph.stories";
+
+<Meta of={ParagraphStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={ParagraphStories.Base} layout="padded" />
+<ArgTypes of={ParagraphStories.Base} />

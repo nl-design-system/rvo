@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import LayoutFlow from '../../components/layout-flow';
+import { LayoutFlow } from '@nl-rvo/react-layout-flow';
 import '@nl-rvo/component-library-css/dist/utilities/utility-padding.css';
 
 const BorderedBox: React.FC<{ children: React.ReactNode }> = ({ children }) => (

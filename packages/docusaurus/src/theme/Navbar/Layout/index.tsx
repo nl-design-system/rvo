@@ -2,11 +2,10 @@ import { translate } from '@docusaurus/Translate';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Logo, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
-import { IMenuBarItem } from '@nl-rvo/component-library-react/dist/components/menubar/menubar';
+import { Logo, MenuBar } from '@nl-rvo/component-library-react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function NavbarLayout() {
   const {
@@ -22,7 +21,7 @@ export default function NavbarLayout() {
     key: `${item.label}-${index}`,
     useIcons: false,
     linkColor: 'lintblauw' as const,
-  })) as IMenuBarItem[];
+  })) as any[];
 
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
@@ -54,20 +53,8 @@ export default function NavbarLayout() {
         )}
       >
         <div className={styles.menubar}>
-          <MenuBar
-            items={menuItems}
-            direction="horizontal"
-            size="md"
-            maxWidth="md"
-            horizontalRule={true}
-            linkColor="lintblauw"
-          />
+          <MenuBar items={menuItems} size="md" maxWidth="md" horizontalRule={true} linkColor="lintblauw" />
         </div>
-        {!mobileSidebar.disabled && (
-          <div className={styles.menubarMobile}>
-            <MobileMenuBar items={menuItems} size="md" horizontalRule={false} />
-          </div>
-        )}
       </nav>
     </>
   );

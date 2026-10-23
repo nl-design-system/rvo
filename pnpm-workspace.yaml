@@ -2,10 +2,11 @@
 
 packages:
   - 'proprietary/*'
-  - 'components/**'
+  - 'components'
+  - 'components/*/*'
   - 'utilities/**'
+  - 'utilities/*/*'
   - 'packages/*'
-  - 'uxpin-merge/'
   - 'documentation/'
 
 allowBuilds:

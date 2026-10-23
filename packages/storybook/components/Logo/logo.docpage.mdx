@@ -1,0 +1,15 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as LogoStories from "./logo.stories";
+
+<Meta of={LogoStories} name="Documentatie" />
+
+<Title />
+
+Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo), [Specificaties logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/specificaties-logo) en [Logokleur](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/logokleuren).
+
+<Canvas of={LogoStories.Base} layout="padded" />
+<ArgTypes of={LogoStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/assets/images_

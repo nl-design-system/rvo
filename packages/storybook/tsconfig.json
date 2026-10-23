@@ -22,7 +22,15 @@
       "@docusaurus/components/*": ["../docusaurus/src/components/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.d.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.d.ts",
+    "../docusaurus/src/theme/MDXComponents.js"
+  ],
   "exclude": [
     "node_modules",
     "**/node_modules",

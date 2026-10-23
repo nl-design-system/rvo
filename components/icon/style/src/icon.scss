@@ -1,0 +1,37 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "@utrecht/icon-css/dist/index.css";
+
+$rvo-icon-kinds: (wit, hemelblauw, donkerblauw, lintblauw, zwart, grijs-700) !default;
+$rvo-icon-sizes: (xs, sm, md, lg, xl, 2xl, 3xl, 4xl) !default;
+
+.rvo-icon {
+  background-color: var(--utrecht-icon-color, currentColor);
+  -webkit-mask-image: var(--rvo-icon-current);
+  mask-image: var(--rvo-icon-current);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  min-inline-size: var(--utrecht-icon-size);
+}
+
+.rvo-icon--bg {
+  background-image: var(--rvo-icon-current);
+}
+
+@each $kind in $rvo-icon-kinds {
+  .rvo-icon--#{$kind} {
+    --utrecht-icon-color: var(--rvo-color-#{$kind});
+  }
+}
+
+@each $size in $rvo-icon-sizes {
+  .rvo-icon--#{$size} {
+    --utrecht-icon-size: var(--rvo-icon-#{$size}-width);
+  }
+}

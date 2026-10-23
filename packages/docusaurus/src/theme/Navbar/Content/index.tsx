@@ -34,10 +34,10 @@ export default function NavbarContent(): ReactElement {
   const menuitems = items.map((item, index) => ({
     label: item.label || `item-${index}`,
     link: getLink(item),
-    align: item.position === 'right' ? 'right' : 'left',
+    align: item.position,
     key: `${item.label || 'item'}-${index}`,
     useIcons: false,
-    linkColor: 'lintblauw' as const,
+    linkColor: 'lintblauw',
     submenu:
       item.type === 'dropdown' && Array.isArray(item.items)
         ? item.items.map((subItem, subIndex) => ({
@@ -49,7 +49,7 @@ export default function NavbarContent(): ReactElement {
 
   return (
     <>
-      <MenuBar items={menuitems} direction="horizontal" size="md" maxWidth="md" horizontalRule={false} grid={false} />
+      <MenuBar items={menuitems} size="md" maxWidth="md" horizontalRule={false} />
     </>
   );
 }
