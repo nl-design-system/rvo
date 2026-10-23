@@ -18,7 +18,7 @@ export const TextInput: React.FC<ITextInputProps> = ({
   validation,
   prefix,
   suffix,
-  sizeInput = 'md',
+  sizeInput = 'lg',
   maxLength,
   className,
   value,
