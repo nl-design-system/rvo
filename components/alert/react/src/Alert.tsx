@@ -14,7 +14,6 @@ import { IAlertProps } from './Alert.types';
 export const Alert: React.FC<IAlertProps> = ({
   kind = 'info',
   heading,
-  content,
   closable,
   padding = 'md',
   onClose,
@@ -52,9 +51,6 @@ export const Alert: React.FC<IAlertProps> = ({
       break;
   }
 
-  // Parse content markup (either a string, HTML string, React node or children)
-  const contentMarkup: string | React.ReactNode = parseContentMarkup(children || content);
-
   return (
     <div
       className={clsx(
@@ -69,7 +65,7 @@ export const Alert: React.FC<IAlertProps> = ({
         {iconMarkup}
         <div className="rvo-alert-text">
           {heading && heading !== '' && <strong>{heading}</strong>}
-          <div>{contentMarkup}</div>
+          <div>{parseContentMarkup(children)}</div>
         </div>
         {closable && (
           <Button kind="subtle" className="rvo-button__close" aria-label="Sluiten" onClick={handleClose}>

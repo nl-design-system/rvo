@@ -23,8 +23,12 @@ export const SidebarLayout: React.FC<ISidebarLayoutProps> & {
   return (
     <main
       className={clsx(
+        'rvo-sidebar-layout',
         'rvo-sidebar-layout__container',
-        sidebarPosition === 'right' && ['rvo-sidebar-layout--right', 'rvo-sidebar-layout__container--right'],
+        sidebarPosition && [
+          `rvo-sidebar-layout--${sidebarPosition}`,
+          `rvo-sidebar-layout__container--${sidebarPosition}`,
+        ],
         className,
       )}
       {...rootElementProps}

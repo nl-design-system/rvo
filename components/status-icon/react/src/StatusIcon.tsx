@@ -9,7 +9,7 @@ import { IStatusIconProps } from './StatusIcon.types';
 
 export const StatusIcon: React.FC<IStatusIconProps> = ({
   type,
-  size = 'md',
+  size = 'sm',
   className,
   ignoreDefaultIconColor,
   ...rootElementProps
