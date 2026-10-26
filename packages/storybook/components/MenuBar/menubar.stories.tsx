@@ -60,7 +60,7 @@ const defaultArgs = {
   size: 'md',
   items: defaultItems,
   useIcons: true,
-  iconPlacement: 'before',
+  iconPlacement: 'left',
   horizontalRule: true,
   linkColor: 'lintblauw',
 };
