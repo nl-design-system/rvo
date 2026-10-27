@@ -4,11 +4,13 @@
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": true,
+    "declarationDir": "./dist",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "isolatedModules": true,
+    "incremental": false,
+    "isolatedModules": false,
     "jsx": "react-jsx",
     "lib": ["dom", "es2015"],
     "module": "es2015",
@@ -25,6 +27,6 @@
       "tslib": ["node_modules/tslib/tslib.d.ts"]
     }
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "jest.setup.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx", "jest.setup.ts"]
 }
