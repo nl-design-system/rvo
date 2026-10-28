@@ -23,6 +23,7 @@ import { clearEditBijenkastIndex, getBijenkasten, getEditBijenkastIndex, updateB
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { useDemoControls } from './useDemoControls';
+import { useFormLeaveGuard } from './useFormLeaveGuard';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -48,7 +49,7 @@ interface FieldError {
 const BijenkastWijzigen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
-  const [showLeaveDialog, setShowLeaveDialog] = useState(false);
+  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard();
 
   const editIndex = getEditBijenkastIndex();
   const existing = editIndex !== null ? getBijenkasten()[editIndex] : null;
@@ -244,16 +245,7 @@ const BijenkastWijzigen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link
-                    href={URL_BIJENKASTEN}
-                    showIcon="before"
-                    icon="terug"
-                    noUnderline={true}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowLeaveDialog(true);
-                    }}
-                  >
+                  <Link href={URL_BIJENKASTEN} showIcon="before" icon="terug" noUnderline={true}>
                     Terug
                   </Link>
                   <Heading type="h1">Bijenkast wijzigen</Heading>
@@ -350,7 +342,7 @@ const BijenkastWijzigen = () => {
       </MaxWidthLayout>
 
       <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
-      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={URL_BIJENKASTEN} onClose={() => setShowLeaveDialog(false)} />
+      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={leaveTarget} onClose={dismissLeaveDialog} />
     </body>
   );
 };
