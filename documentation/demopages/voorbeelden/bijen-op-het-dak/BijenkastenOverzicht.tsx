@@ -103,7 +103,7 @@ const BijenkastenOverzicht = () => {
         {isDesktop ? (
           <MenuBar
             items={[
-              { label: 'Bijen op het dak subsidie (FSSBD)', link: '#' },
+              { label: 'Bijen op het dak subsidie (FSSBD)', link: URL_VOORBEREIDING },
               { align: 'right', label: 'Hulp & Contact', link: '#' },
               { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
               { align: 'right', label: 'Rosita van der Helm', link: '#', icon: 'user' },

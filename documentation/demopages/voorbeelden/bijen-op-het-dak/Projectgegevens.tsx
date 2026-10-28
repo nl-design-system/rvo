@@ -20,7 +20,7 @@ import {
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
-import { saveProject } from './projectStorage';
+import { getProject, saveProject } from './projectStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -40,9 +40,10 @@ interface FieldError {
 
 const Projectgegevens = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
-  const [naam, setNaam] = useState('');
-  const [omschrijving, setOmschrijving] = useState('');
-  const [startdatum, setStartdatum] = useState('');
+  const stored = getProject();
+  const [naam, setNaam] = useState(stored?.naam ?? '');
+  const [omschrijving, setOmschrijving] = useState(stored?.omschrijving ?? '');
+  const [startdatum, setStartdatum] = useState(stored?.startdatum ?? '');
   const [errors, setErrors] = useState<Record<string, FieldError>>({});
 
   const errorSummaryRef = useRef<HTMLDivElement>(null);
@@ -151,7 +152,7 @@ const Projectgegevens = () => {
         {isDesktop ? (
           <MenuBar
             items={[
-              { label: 'Bijen op het dak subsidie (FSSBD)', link: '#' },
+              { label: 'Bijen op het dak subsidie (FSSBD)', link: URL_VOORBEREIDING },
               { align: 'right', label: 'Hulp & Contact', link: '#' },
               { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
               { align: 'right', label: 'Rosita van der Helm', link: '#', icon: 'user' },

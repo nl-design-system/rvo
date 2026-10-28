@@ -1,6 +1,16 @@
 import { Footer, Header, Heading, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
+import { fillDemoData } from './demoCheatCode';
+
+const footerItems = [
+  { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
+  { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
+  { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
+  { content: 'Toegankelijkheid', link: '#' },
+  { content: 'Proclaimer', link: 'https://www.rvo.nl/onderwerpen/proclaimer' },
+  { content: 'Kwetsbaarheid op website', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
+  { content: 'Demo data gebruiken', link: '#demo-data-gebruiken' },
+];
 
 const VoordatUBegint = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -9,6 +19,18 @@ const VoordatUBegint = () => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === '#demo-data-gebruiken') {
+        fillDemoData();
+        window.location.href =
+          'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
+      }
+    };
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
   }, []);
 
   return (
@@ -153,7 +175,7 @@ const VoordatUBegint = () => {
         </LayoutFlow>
       </main>
 
-      <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="sm" />
+      <Footer secondaryMenu={footerItems} maxWidth="md" />
     </body>
   );
 };
