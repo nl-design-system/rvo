@@ -49,7 +49,7 @@ interface FieldError {
 const BijenkastToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
-  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard();
+  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard(URL_VOORBEREIDING);
   const [pandIndex, setPandIndex] = useState('');
   const [aantalKasten, setAantalKasten] = useState('');
   const [typeBijenkast, setTypeBijenkast] = useState('');

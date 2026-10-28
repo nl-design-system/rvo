@@ -47,7 +47,7 @@ interface FieldError {
 const Projectgegevens = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
-  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard();
+  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard(URL_VOORBEREIDING);
   const stored = getProject();
   const [naam, setNaam] = useState(stored?.naam ?? '');
   const [omschrijving, setOmschrijving] = useState(stored?.omschrijving ?? '');

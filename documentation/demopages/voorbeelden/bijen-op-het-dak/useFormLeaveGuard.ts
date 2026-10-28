@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useFormLeaveGuard = () => {
+export const useFormLeaveGuard = (guardUrl: string) => {
   const [leaveTarget, setLeaveTarget] = useState<string | null>(null);
 
   useEffect(() => {
@@ -8,14 +8,14 @@ export const useFormLeaveGuard = () => {
       const anchor = (e.target as HTMLElement).closest('a');
       if (!anchor) return;
       const href = anchor.getAttribute('href');
-      if (!href || href.startsWith('#')) return;
+      if (href !== guardUrl) return;
       e.preventDefault();
       e.stopPropagation();
       setLeaveTarget(href);
     };
     document.addEventListener('click', handleClick, true);
     return () => document.removeEventListener('click', handleClick, true);
-  }, []);
+  }, [guardUrl]);
 
   return {
     showLeaveDialog: leaveTarget !== null,

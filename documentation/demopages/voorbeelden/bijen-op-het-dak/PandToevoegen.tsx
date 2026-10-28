@@ -49,7 +49,7 @@ interface FieldError {
 const PandToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
-  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard();
+  const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard(URL_VOORBEREIDING);
   const [straatnaam, setStraatnaam] = useState('');
   const [huisnummer, setHuisnummer] = useState('');
   const [postcode, setPostcode] = useState('');
