@@ -11,12 +11,12 @@ import {
   MaxWidthLayout,
   MenuBar,
   MobileMenuBar,
-  ProgressTracker,
   RadioButtonField,
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { FormLeaveDialog } from './FormLeaveDialog';
+import { ResponsiveProgressTracker } from './ResponsiveProgressTracker';
 import { getBijenkasten } from './bijenkastenStorage';
 import { clearEditPandIndex, getEditPandIndex, getPanden, updatePand } from './pandenStorage';
 import { getProject } from './projectStorage';
@@ -162,7 +162,7 @@ const PandWijzigen = () => {
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
           <aside>
-            <ProgressTracker steps={progressSteps} />
+            <ResponsiveProgressTracker steps={progressSteps} isDesktop={isDesktop} />
           </aside>
 
           <main>

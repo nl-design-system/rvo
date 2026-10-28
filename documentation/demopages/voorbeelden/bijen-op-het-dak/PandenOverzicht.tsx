@@ -13,9 +13,9 @@ import {
   MaxWidthLayout,
   MenuBar,
   MobileMenuBar,
-  ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
+import { ResponsiveProgressTracker } from './ResponsiveProgressTracker';
 import { getBijenkasten, removeAndReindexForPand } from './bijenkastenStorage';
 import { getPanden, Pand, removePand, saveEditPandIndex } from './pandenStorage';
 import { getProject } from './projectStorage';
@@ -142,7 +142,7 @@ const PandenOverzicht = () => {
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
           <aside>
-            <ProgressTracker steps={progressSteps} />
+            <ResponsiveProgressTracker steps={progressSteps} isDesktop={isDesktop} />
           </aside>
 
           <main>

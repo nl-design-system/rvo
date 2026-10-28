@@ -13,12 +13,12 @@ import {
   MaxWidthLayout,
   MenuBar,
   MobileMenuBar,
-  ProgressTracker,
   TextareaField,
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import { FormLeaveDialog } from './FormLeaveDialog';
+import { ResponsiveProgressTracker } from './ResponsiveProgressTracker';
 import { getBijenkasten } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject, saveProject } from './projectStorage';
@@ -200,7 +200,7 @@ const Projectgegevens = () => {
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
           <aside>
-            <ProgressTracker steps={progressSteps} />
+            <ResponsiveProgressTracker steps={progressSteps} isDesktop={isDesktop} />
           </aside>
 
           <main>
