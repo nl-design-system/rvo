@@ -19,6 +19,7 @@ import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
 import { clearEditPandIndex, getEditPandIndex, getPanden, updatePand } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -31,10 +32,11 @@ const URL_PROJECTGEGEVENS =
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 const PandWijzigen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
 
   const editIndex = getEditPandIndex();
   const existingPand = editIndex !== null ? getPanden()[editIndex] : null;
@@ -94,7 +96,7 @@ const PandWijzigen = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,

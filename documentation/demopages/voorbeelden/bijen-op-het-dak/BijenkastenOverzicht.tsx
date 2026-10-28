@@ -19,6 +19,7 @@ import { useEffect, useState } from 'react';
 import { Bijenkast, getBijenkasten, removeBijenkast, saveEditBijenkastIndex } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -33,10 +34,11 @@ const URL_BIJENKAST_WIJZIGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-wijzigen--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 const BijenkastenOverzicht = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
   const [bijenkasten, setBijenkasten] = useState<Bijenkast[]>([]);
   const [dialogOpenIndex, setDialogOpenIndex] = useState<number | null>(null);
 
@@ -80,7 +82,7 @@ const BijenkastenOverzicht = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,

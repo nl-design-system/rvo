@@ -20,6 +20,7 @@ import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
 import { addPand } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -33,7 +34,7 @@ const URL_PROJECTGEGEVENS =
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -45,6 +46,7 @@ interface FieldError {
 
 const PandToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
   const [straatnaam, setStraatnaam] = useState('');
   const [huisnummer, setHuisnummer] = useState('');
   const [postcode, setPostcode] = useState('');
@@ -103,7 +105,7 @@ const PandToevoegen = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,

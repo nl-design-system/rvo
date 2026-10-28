@@ -1,36 +1,16 @@
 import { Footer, Header, Heading, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { fillDemoData } from './demoPrefill';
-
-const footerItems = [
-  { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
-  { content: 'Privacy', link: 'https://www.rvo.nl/onderwerpen/privacy' },
-  { content: 'Cookies en anti-spam', link: 'https://www.rvo.nl/onderwerpen/cookies' },
-  { content: 'Toegankelijkheid', link: '#' },
-  { content: 'Proclaimer', link: 'https://www.rvo.nl/onderwerpen/proclaimer' },
-  { content: 'Kwetsbaarheid op website', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
-  { content: 'Demo data gebruiken', link: '#demo-data-gebruiken' },
-];
+import { useDemoControls } from './useDemoControls';
+import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const VoordatUBegint = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const handleHash = () => {
-      if (window.location.hash === '#demo-data-gebruiken') {
-        fillDemoData();
-        window.location.href =
-          'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
-      }
-    };
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
   }, []);
 
   return (
@@ -70,6 +50,9 @@ const VoordatUBegint = () => {
         <LayoutFlow gap="xl">
           <LayoutFlow gap="xs">
             <Heading type="h1" noMargins={true}>
+              Bijen op het dak subsidie (FSSBD)
+            </Heading>
+            <Heading type="h2" noMargins={true}>
               Voordat u begint met aanvragen
             </Heading>
             <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--zwart rvo-paragraph--lg rvo-text--bold">
@@ -79,7 +62,7 @@ const VoordatUBegint = () => {
           </LayoutFlow>
 
           <LayoutFlow gap="sm">
-            <Heading type="h2" noMargins={true}>
+            <Heading type="h3" noMargins={true}>
               Controleer uw gegevens
             </Heading>
             <p className="rvo-paragraph rvo-paragraph--no-spacing">
@@ -119,7 +102,7 @@ const VoordatUBegint = () => {
           </LayoutFlow>
 
           <LayoutFlow gap="sm">
-            <Heading type="h2" noMargins={true}>
+            <Heading type="h3" noMargins={true}>
               Voorbereidingen
             </Heading>
             <p className="rvo-paragraph rvo-paragraph--no-spacing">Zet deze stappen voordat u start met de aanvraag:</p>
@@ -175,7 +158,7 @@ const VoordatUBegint = () => {
         </LayoutFlow>
       </main>
 
-      <Footer secondaryMenu={footerItems} maxWidth="md" />
+      <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
     </body>
   );
 };

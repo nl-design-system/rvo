@@ -28,6 +28,7 @@ import {
 } from './documentenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -38,7 +39,7 @@ const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden-
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 const formatFileSize = (bytes: number): string => {
   if (bytes >= 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(1).replace('.', ',')} MB`;
@@ -52,6 +53,7 @@ interface DeleteTarget {
 
 const Documenten = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
   const [offertes, setOffertes] = useState<DocumentInfo[]>([]);
   const [tekeningen, setTekeningen] = useState<DocumentInfo[]>([]);
   const [showOfferteForm, setShowOfferteForm] = useState(true);
@@ -99,7 +101,7 @@ const Documenten = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
@@ -152,8 +154,6 @@ const Documenten = () => {
     }
     setDeleteTarget(null);
   };
-
-  const canProceed = offertes.length > 0 && tekeningen.length > 0;
 
   return (
     <body className="rvo-theme rvo-responsive">
@@ -356,17 +356,15 @@ const Documenten = () => {
               </Fieldset>
 
               <ActionGroup>
-                {canProceed && (
-                  <Button
-                    kind="primary"
-                    size="md"
-                    onClick={() => {
-                      window.location.href = URL_CONTROLEREN;
-                    }}
-                  >
-                    Volgende stap
-                  </Button>
-                )}
+                <Button
+                  kind="primary"
+                  size="md"
+                  onClick={() => {
+                    window.location.href = URL_CONTROLEREN;
+                  }}
+                >
+                  Documenten opslaan
+                </Button>
               </ActionGroup>
             </LayoutFlow>
           </main>

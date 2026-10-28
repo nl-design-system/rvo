@@ -10,6 +10,7 @@ import {
   MobileMenuBar,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -17,6 +18,7 @@ const URL_VOORBEREIDING =
 
 const Bevestiging = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
@@ -63,7 +65,7 @@ const Bevestiging = () => {
       >
         <LayoutFlow gap="xl">
           <Alert kind="success" padding="md">
-            <strong>Uw aanvraag is ingediend.</strong>
+            <strong>Uw aanvraag is verstuurd.</strong>
           </Alert>
 
           <LayoutFlow gap="xs">
@@ -71,7 +73,7 @@ const Bevestiging = () => {
               Aanvraag ontvangen
             </Heading>
             <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
-              Uw aanvraag voor de subsidie Bijen op het dak (FSSBD) is succesvol ingediend.
+              Uw aanvraag voor de subsidie Bijen op het dak (FSSBD) is succesvol verstuurd.
             </p>
           </LayoutFlow>
 

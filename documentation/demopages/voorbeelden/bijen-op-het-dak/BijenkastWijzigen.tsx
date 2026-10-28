@@ -21,6 +21,7 @@ import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { clearEditBijenkastIndex, getBijenkasten, getEditBijenkastIndex, updateBijenkast } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -33,7 +34,7 @@ const URL_BIJENKAST_WIJZIGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-wijzigen--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -45,6 +46,7 @@ interface FieldError {
 
 const BijenkastWijzigen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
 
   const editIndex = getEditBijenkastIndex();
   const existing = editIndex !== null ? getBijenkasten()[editIndex] : null;
@@ -112,7 +114,7 @@ const BijenkastWijzigen = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
@@ -279,7 +281,9 @@ const BijenkastWijzigen = () => {
                         onChange={(e) => setPandIndex((e.target as HTMLSelectElement).value)}
                         invalid={!!errors.pand}
                         errorText={errors.pand?.fieldText}
+                        warningText={panden.length === 0 ? 'Er zijn nog geen gebouwen toegevoegd.' : undefined}
                         options={pandOptions}
+                        disabled={panden.length === 0}
                       />
                       <TextInputField
                         id="aantalKasten"

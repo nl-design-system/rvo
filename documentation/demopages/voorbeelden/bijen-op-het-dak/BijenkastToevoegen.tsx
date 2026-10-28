@@ -21,6 +21,7 @@ import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { addBijenkast } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -28,14 +29,12 @@ const URL_VOORBEREIDING =
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_PAND_TOEVOEGEN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-toevoegen--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_BIJENKAST_TOEVOEGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-toevoegen--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -47,6 +46,7 @@ interface FieldError {
 
 const BijenkastToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
   const [pandIndex, setPandIndex] = useState('');
   const [aantalKasten, setAantalKasten] = useState('');
   const [typeBijenkast, setTypeBijenkast] = useState('');
@@ -102,7 +102,7 @@ const BijenkastToevoegen = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
@@ -279,17 +279,6 @@ const BijenkastToevoegen = () => {
                         options={pandOptions}
                         disabled={panden.length === 0}
                       />
-                      {panden.length === 0 && (
-                        <Link
-                          href={URL_PAND_TOEVOEGEN}
-                          color="donkerblauw"
-                          showIcon="before"
-                          icon="plus"
-                          noUnderline={true}
-                        >
-                          Pand toevoegen
-                        </Link>
-                      )}
                       <TextInputField
                         id="aantalKasten"
                         label="Aantal bijenkasten"

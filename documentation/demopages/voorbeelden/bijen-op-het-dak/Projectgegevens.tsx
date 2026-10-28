@@ -21,6 +21,7 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject, saveProject } from './projectStorage';
+import { useDemoControls } from './useDemoControls';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_VOORBEREIDING =
@@ -31,7 +32,7 @@ const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden-
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
-  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -43,6 +44,7 @@ interface FieldError {
 
 const Projectgegevens = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
+  useDemoControls();
   const stored = getProject();
   const [naam, setNaam] = useState(stored?.naam ?? '');
   const [omschrijving, setOmschrijving] = useState(stored?.omschrijving ?? '');
@@ -91,7 +93,7 @@ const Projectgegevens = () => {
     },
     {
       state: 'incomplete' as const,
-      label: 'Controleren & indienen',
+      label: 'Controleren en versturen',
       link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
