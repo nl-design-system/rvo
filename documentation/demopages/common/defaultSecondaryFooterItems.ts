@@ -5,6 +5,4 @@ export const defaultSecondaryFooterItems = [
   { content: 'Toegankelijkheid', link: '#' },
   { content: 'Proclaimer', link: 'https://www.rvo.nl/onderwerpen/proclaimer' },
   { content: 'Kwetsbaarheid op website', link: 'https://www.rvo.nl/onderwerpen/kwetsbaarheid' },
-  { content: 'Demo', link: '#demo' },
-  { content: 'Reset', link: '#reset' },
 ];

@@ -1,20 +1,11 @@
-import {
-  Alert,
-  Footer,
-  Header,
-  Heading,
-  LayoutFlow,
-  Link,
-  MenuBar,
-  MobileMenuBar,
-} from '@nl-rvo/component-library-react';
+import '@nl-rvo/component-library-css/dist/components/footer.css';
+import { Alert, Header, Heading, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
 import { getOffertes, getTekeningen } from './documentenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { useDemoControls } from './useDemoControls';
-import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
 
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
@@ -215,7 +206,51 @@ const VoordatUBegint = () => {
         </LayoutFlow>
       </main>
 
-      <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
+      <footer className="rvo-footer">
+        <div className="rvo-footer__container rvo-footer__container--md">
+          <div className="rvo-footer__menu-container rvo-footer__menu-container--secondary">
+            <a
+              href="https://www.rvo.nl/onderwerpen/contact"
+              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
+            >
+              Contact
+            </a>
+            <a
+              href="https://www.rvo.nl/onderwerpen/privacy"
+              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
+            >
+              Privacy
+            </a>
+            <a
+              href="https://www.rvo.nl/onderwerpen/cookies"
+              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
+            >
+              Cookies en anti-spam
+            </a>
+            <a href="#" className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal">
+              Toegankelijkheid
+            </a>
+            <a
+              href="https://www.rvo.nl/onderwerpen/proclaimer"
+              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
+            >
+              Proclaimer
+            </a>
+            <a
+              href="https://www.rvo.nl/onderwerpen/kwetsbaarheid"
+              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
+            >
+              Kwetsbaarheid op website
+            </a>
+            <a href="#demo" className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal">
+              Demo
+            </a>
+            <a href="#reset" className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal">
+              Reset
+            </a>
+          </div>
+        </div>
+      </footer>
     </body>
   );
 };
