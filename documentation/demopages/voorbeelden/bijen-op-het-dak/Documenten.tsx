@@ -245,7 +245,15 @@ const Documenten = () => {
                       <FileInputField
                         id={`offerte-upload-${offertes.length}`}
                         label="Offerte uploaden"
-                        helperText="Selecteer een PDF-bestand van maximaal 10 MB."
+                        expandableHelperText={true}
+                        expandableHelperTextTitle="Voorwaarden voor de offerte"
+                        helperText={
+                          <ul>
+                            <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
+                            <li>De offerte is opgesteld door een gecertificeerde installateur.</li>
+                            <li>De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.</li>
+                          </ul>
+                        }
                         accept=".pdf"
                         onChange={handleOfferteChange}
                       />
@@ -317,7 +325,15 @@ const Documenten = () => {
                       <FileInputField
                         id={`tekening-upload-${tekeningen.length}`}
                         label="Tekening uploaden"
-                        helperText="Selecteer een PDF-bestand van maximaal 10 MB."
+                        expandableHelperText={true}
+                        expandableHelperTextTitle="Voorwaarden voor de tekening"
+                        helperText={
+                          <ul>
+                            <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
+                            <li>De tekening toont een bovenaanzicht van het dak.</li>
+                            <li>De locatie van de bijenkasten is duidelijk aangegeven.</li>
+                          </ul>
+                        }
                         accept=".pdf"
                         onChange={handleTekeningChange}
                       />

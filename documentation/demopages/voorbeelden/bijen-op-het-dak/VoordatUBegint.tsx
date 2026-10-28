@@ -106,6 +106,20 @@ const VoordatUBegint = () => {
 
           <LayoutFlow gap="sm">
             <Heading type="h3" noMargins={true}>
+              Op deze pagina
+            </Heading>
+            <LayoutFlow gap="2xs">
+              <Link href="#controleer-uw-gegevens" icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                Controleer uw gegevens
+              </Link>
+              <Link href="#voorbereidingen" icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                Voorbereidingen
+              </Link>
+            </LayoutFlow>
+          </LayoutFlow>
+
+          <LayoutFlow gap="sm">
+            <Heading type="h3" noMargins={true} id="controleer-uw-gegevens">
               Controleer uw gegevens
             </Heading>
             <p className="rvo-paragraph rvo-paragraph--no-spacing">
@@ -145,7 +159,7 @@ const VoordatUBegint = () => {
           </LayoutFlow>
 
           <LayoutFlow gap="sm">
-            <Heading type="h3" noMargins={true}>
+            <Heading type="h3" noMargins={true} id="voorbereidingen">
               Voorbereidingen
             </Heading>
             <p className="rvo-paragraph rvo-paragraph--no-spacing">Zet deze stappen voordat u start met de aanvraag:</p>
