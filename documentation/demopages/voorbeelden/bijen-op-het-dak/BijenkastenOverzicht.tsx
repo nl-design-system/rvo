@@ -31,6 +31,9 @@ const URL_BIJENKAST_TOEVOEGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-toevoegen--default&viewMode=story';
 const URL_BIJENKAST_WIJZIGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-wijzigen--default&viewMode=story';
+const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
+const URL_CONTROLEREN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
 
 const BijenkastenOverzicht = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -56,7 +59,7 @@ const BijenkastenOverzicht = () => {
     },
     {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Panden',
+      label: 'Gebouwen',
       link: URL_PANDEN,
       size: 'md' as const,
       line: 'straight' as const,
@@ -68,11 +71,17 @@ const BijenkastenOverzicht = () => {
       size: 'md' as const,
       line: 'straight' as const,
     },
-    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
     {
-      state: 'disabled' as const,
+      state: 'incomplete' as const,
+      label: 'Documenten',
+      link: URL_DOCUMENTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'incomplete' as const,
       label: 'Controleren & indienen',
-      link: '#',
+      link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
     },
@@ -148,7 +157,7 @@ const BijenkastenOverzicht = () => {
                 </Link>
                 <Heading type="h1">Bijenkasten</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
-                  Voeg de bijenkasten toe die u wilt plaatsen. Geef per bijenkast aan op welk pand deze komt.
+                  Voeg de bijenkasten toe die u wilt plaatsen. Geef per bijenkast aan op welk gebouw deze komt.
                 </p>
               </div>
 
@@ -159,42 +168,60 @@ const BijenkastenOverzicht = () => {
               ) : (
                 <LayoutFlow gap="sm">
                   {bijenkasten.map((bijenkast, index) => (
-                    <Card key={index} outline={true} padding="md" title={`Bijenkast ${index + 1}`}>
-                      <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-margin-block-start--xs">
-                        {bijenkast.pandLabel}
-                      </p>
-                      <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-text--grijs-600">
-                        {bijenkast.typeBijenkast} · {bijenkast.aantalKasten}{' '}
-                        {Number(bijenkast.aantalKasten) === 1 ? 'kast' : 'kasten'}
-                      </p>
+                    <Card
+                      key={index}
+                      outline={true}
+                      padding="md"
+                      title={`${bijenkast.aantalKasten} ${Number(bijenkast.aantalKasten) === 1 ? bijenkast.typeBijenkast : bijenkast.typeBijenkast.replace(/kast$/, 'kasten')}`}
+                    >
+                      {bijenkast.pandIndex === -1 ? (
+                        <Alert kind="warning" padding="sm">
+                          Let op: deze bijenkast is niet gekoppeld aan een gebouw.
+                        </Alert>
+                      ) : (
+                        <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-margin-block-start--xs">
+                          {bijenkast.pandLabel}
+                        </p>
+                      )}
                       <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--sm">
-                        <Link href={URL_BIJENKAST_WIJZIGEN} onClick={() => saveEditBijenkastIndex(index)}>
+                        <Link
+                          href={URL_BIJENKAST_WIJZIGEN}
+                          showIcon="before"
+                          icon="bewerken"
+                          noUnderline={true}
+                          onClick={() => saveEditBijenkastIndex(index)}
+                        >
                           Wijzig bijenkast
                         </Link>
-                        <Button kind="warning" size="sm" onClick={() => setDialogOpenIndex(index)}>
+                        <Button kind="warning" size="sm" icon="verwijderen" onClick={() => setDialogOpenIndex(index)}>
                           Verwijder bijenkast
                         </Button>
                       </div>
                     </Card>
                   ))}
+                  <Link href={URL_BIJENKAST_TOEVOEGEN} showIcon="before" icon="plus" noUnderline={true}>
+                    Voeg nog een bijenkast toe
+                  </Link>
                 </LayoutFlow>
               )}
 
               <div className="rvo-action-group">
+                {bijenkasten.length === 0 && (
+                  <Link href={URL_BIJENKAST_TOEVOEGEN} callToAction={true}>
+                    Voeg een bijenkast toe
+                  </Link>
+                )}
                 {bijenkasten.length > 0 && (
                   <Button
                     kind="primary"
                     size="md"
                     onClick={() => {
-                      window.location.href = '#';
+                      window.location.href = URL_DOCUMENTEN;
                     }}
                   >
                     Volgende stap
                   </Button>
                 )}
-                <Link href={URL_BIJENKAST_TOEVOEGEN} callToAction={bijenkasten.length === 0}>
-                  {bijenkasten.length === 0 ? 'Voeg een bijenkast toe' : 'Voeg nog een bijenkast toe'}
-                </Link>
               </div>
             </LayoutFlow>
           </main>
@@ -219,7 +246,17 @@ const BijenkastenOverzicht = () => {
           }
         >
           <Heading type="h2">Bijenkast verwijderen</Heading>
-          <p className="rvo-paragraph">Weet u zeker dat u deze bijenkast wil verwijderen?</p>
+          <p className="rvo-paragraph">
+            Weet u zeker dat u{' '}
+            <strong>
+              {dialogOpenIndex !== null &&
+                (() => {
+                  const b = bijenkasten[dialogOpenIndex];
+                  return `${b.aantalKasten} ${Number(b.aantalKasten) === 1 ? b.typeBijenkast : b.typeBijenkast.replace(/kast$/, 'kasten')}`;
+                })()}
+            </strong>{' '}
+            wilt verwijderen?
+          </p>
         </Dialog>
       )}
     </body>

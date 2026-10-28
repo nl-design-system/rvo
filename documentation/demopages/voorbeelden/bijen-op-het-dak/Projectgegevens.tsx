@@ -29,6 +29,9 @@ const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
+const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
+const URL_CONTROLEREN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -67,7 +70,7 @@ const Projectgegevens = () => {
     },
     {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Panden',
+      label: 'Gebouwen',
       link: URL_PANDEN,
       size: 'md' as const,
       line: 'straight' as const,
@@ -79,11 +82,17 @@ const Projectgegevens = () => {
       size: 'md' as const,
       line: 'straight' as const,
     },
-    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
     {
-      state: 'disabled' as const,
+      state: 'incomplete' as const,
+      label: 'Documenten',
+      link: URL_DOCUMENTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'incomplete' as const,
       label: 'Controleren & indienen',
-      link: '#',
+      link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
     },
@@ -255,10 +264,7 @@ const Projectgegevens = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Volgende stap
-                      </Button>
-                      <Button kind="secondary" size="md">
-                        Opslaan en later verdergaan
+                        {pandenCompleted ? 'Opslaan en naar gebouwen' : 'Opslaan en gebouwen toevoegen'}
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

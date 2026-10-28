@@ -31,6 +31,9 @@ const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden-
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_BIJENKAST_WIJZIGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-wijzigen--default&viewMode=story';
+const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
+const URL_CONTROLEREN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -48,10 +51,10 @@ const BijenkastWijzigen = () => {
 
   const panden = getPanden();
   const pandOptions = [
-    { value: '', label: 'Selecteer een pand' },
+    { value: '', label: 'Selecteer een gebouw' },
     ...panden.map((pand, index) => ({
       value: String(index),
-      label: `Pand ${index + 1} — ${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
+      label: `${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
     })),
   ];
 
@@ -81,7 +84,7 @@ const BijenkastWijzigen = () => {
     },
     {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Panden',
+      label: 'Gebouwen',
       link: URL_PANDEN,
       size: 'md' as const,
       line: 'straight' as const,
@@ -100,11 +103,17 @@ const BijenkastWijzigen = () => {
       size: 'sm' as const,
       line: 'substep-end' as const,
     },
-    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
     {
-      state: 'disabled' as const,
+      state: 'incomplete' as const,
+      label: 'Documenten',
+      link: URL_DOCUMENTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'incomplete' as const,
       label: 'Controleren & indienen',
-      link: '#',
+      link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
     },
@@ -122,10 +131,10 @@ const BijenkastWijzigen = () => {
     if (!pandIndex) {
       newErrors.pand = {
         before: 'Het veld ',
-        linkLabel: 'Pand',
+        linkLabel: 'Gebouw',
         after: ' is niet ingevuld, maar wel verplicht. Maak een keuze.',
-        fieldText: 'Het veld Pand is niet ingevuld, maar wel verplicht. Maak een keuze.',
-        anchor: 'pand-label',
+        fieldText: 'Het veld Gebouw is niet ingevuld, maar wel verplicht. Maak een keuze.',
+        anchor: 'gebouw-label',
       };
     }
 
@@ -172,7 +181,7 @@ const BijenkastWijzigen = () => {
       const selectedPand = panden[Number(pandIndex)];
       updateBijenkast(editIndex, {
         pandIndex: Number(pandIndex),
-        pandLabel: `Pand ${Number(pandIndex) + 1} — ${selectedPand.straatnaam} ${selectedPand.huisnummer}, ${selectedPand.plaatsnaam}`,
+        pandLabel: `${selectedPand.straatnaam} ${selectedPand.huisnummer}, ${selectedPand.plaatsnaam}`,
         aantalKasten,
         typeBijenkast,
       });
@@ -264,8 +273,8 @@ const BijenkastWijzigen = () => {
                     <Fieldset legend="Bijenkastgegevens">
                       <SelectField
                         id="pand"
-                        label="Pand"
-                        helperText="Selecteer het pand waarop u deze bijenkast wilt plaatsen."
+                        label="Gebouw"
+                        helperText="Selecteer het gebouw waarop u deze bijenkast wilt plaatsen."
                         value={pandIndex}
                         onChange={(e) => setPandIndex((e.target as HTMLSelectElement).value)}
                         invalid={!!errors.pand}
@@ -314,10 +323,7 @@ const BijenkastWijzigen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Opslaan
-                      </Button>
-                      <Button kind="secondary" size="md">
-                        Opslaan en later verdergaan
+                        Bijenkast opslaan
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

@@ -1,6 +1,6 @@
 import { Footer, Header, Heading, LayoutFlow, Link, MenuBar, MobileMenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { fillDemoData } from './demoCheatCode';
+import { fillDemoData } from './demoPrefill';
 
 const footerItems = [
   { content: 'Contact', link: 'https://www.rvo.nl/onderwerpen/contact' },
@@ -90,30 +90,30 @@ const VoordatUBegint = () => {
               <dt>Bedrijfsnaam</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>Powerbod B.V.</span>
-                <a href="#" className="rvo-link">
+                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
                   Wijzigen
-                </a>
+                </Link>
               </dd>
               <dt>Adres</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>Energieweg 42, 2909 LV Rotterdam</span>
-                <a href="#" className="rvo-link">
+                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
                   Wijzigen
-                </a>
+                </Link>
               </dd>
               <dt>KVK-nummer</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>63847291</span>
-                <a href="#" className="rvo-link">
+                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
                   Wijzigen
-                </a>
+                </Link>
               </dd>
               <dt>IBAN rekeningnummer</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>NL91 ABNA 0417 1643 00</span>
-                <a href="#" className="rvo-link">
+                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
                   Wijzigen
-                </a>
+                </Link>
               </dd>
             </dl>
           </LayoutFlow>

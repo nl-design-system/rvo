@@ -35,6 +35,28 @@ export const removeBijenkast = (index: number): void => {
   sessionStorage.setItem(STORAGE_KEY, JSON.stringify(bijenkasten));
 };
 
+export const removeAndReindexForPand = (
+  deletedPandIndex: number,
+  panden: Array<{ straatnaam: string; huisnummer: string; plaatsnaam: string }>,
+): void => {
+  const updated = getBijenkasten().map((b) => {
+    if (b.pandIndex === deletedPandIndex) {
+      return { ...b, pandIndex: -1 };
+    }
+    if (b.pandIndex > deletedPandIndex) {
+      const newIndex = b.pandIndex - 1;
+      const pand = panden[b.pandIndex];
+      return {
+        ...b,
+        pandIndex: newIndex,
+        pandLabel: `${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
+      };
+    }
+    return b;
+  });
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+};
+
 export const saveEditBijenkastIndex = (index: number): void => {
   sessionStorage.setItem(EDIT_INDEX_KEY, String(index));
 };

@@ -16,7 +16,7 @@ import {
   ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { getBijenkasten } from './bijenkastenStorage';
+import { getBijenkasten, removeAndReindexForPand } from './bijenkastenStorage';
 import { getPanden, Pand, removePand, saveEditPandIndex } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { defaultSecondaryFooterItems } from '../../../demopages/common/defaultSecondaryFooterItems';
@@ -30,6 +30,9 @@ const URL_PAND_TOEVOEGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-toevoegen--default&viewMode=story';
 const URL_PAND_WIJZIGEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-wijzigen--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
+const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
+const URL_CONTROLEREN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
 
 const PandenOverzicht = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -53,7 +56,7 @@ const PandenOverzicht = () => {
       size: 'md' as const,
       line: 'straight' as const,
     },
-    { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
+    { state: 'doing' as const, label: 'Gebouwen', link: URL_PANDEN, size: 'md' as const, line: 'straight' as const },
     {
       state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Bijenkasten',
@@ -61,11 +64,17 @@ const PandenOverzicht = () => {
       size: 'md' as const,
       line: 'straight' as const,
     },
-    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
     {
-      state: 'disabled' as const,
+      state: 'incomplete' as const,
+      label: 'Documenten',
+      link: URL_DOCUMENTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'incomplete' as const,
       label: 'Controleren & indienen',
-      link: '#',
+      link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
     },
@@ -83,6 +92,7 @@ const PandenOverzicht = () => {
 
   const handleDeleteConfirm = () => {
     if (dialogOpenIndex !== null) {
+      removeAndReindexForPand(dialogOpenIndex, getPanden());
       removePand(dialogOpenIndex);
       setPanden(getPanden());
       setDialogOpenIndex(null);
@@ -139,35 +149,43 @@ const PandenOverzicht = () => {
                 <Link href={URL_PROJECTGEGEVENS} showIcon="before" icon="terug" noUnderline={true}>
                   Terug
                 </Link>
-                <Heading type="h1">Panden</Heading>
+                <Heading type="h1">Gebouwen</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
-                  Voeg de panden toe waarop u bijenkasten wilt plaatsen. U kunt meerdere panden opgeven.
+                  Voeg de gebouwen toe waarop u bijenkasten wilt plaatsen. U kunt meerdere gebouwen opgeven.
                 </p>
               </div>
 
               {panden.length === 0 ? (
                 <Alert kind="warning" padding="md">
-                  Er zijn nog geen panden toegevoegd.
+                  Er zijn nog geen gebouwen toegevoegd.
                 </Alert>
               ) : (
                 <LayoutFlow gap="sm">
                   {panden.map((pand, index) => (
-                    <Card key={index} outline={true} padding="md" title={`Pand ${index + 1}`}>
-                      <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-margin-block-start--xs">
-                        {pand.straatnaam} {pand.huisnummer}, {pand.postcode} {pand.plaatsnaam}
-                      </p>
+                    <Card
+                      key={index}
+                      outline={true}
+                      padding="md"
+                      title={`${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`}
+                    >
                       <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--sm">
-                        <Link href={URL_PAND_WIJZIGEN} onClick={() => saveEditPandIndex(index)}>
-                          Wijzig pand
+                        <Link
+                          href={URL_PAND_WIJZIGEN}
+                          showIcon="before"
+                          icon="bewerken"
+                          noUnderline={true}
+                          onClick={() => saveEditPandIndex(index)}
+                        >
+                          Wijzig gebouw
                         </Link>
-                        <Button kind="warning" size="sm" onClick={() => setDialogOpenIndex(index)}>
-                          Verwijder pand
+                        <Button kind="warning" size="sm" icon="verwijderen" onClick={() => setDialogOpenIndex(index)}>
+                          Verwijder gebouw
                         </Button>
                       </div>
                     </Card>
                   ))}
-                  <Link href={URL_PAND_TOEVOEGEN} showIcon="before" icon="plus">
-                    Voeg nog een pand toe
+                  <Link href={URL_PAND_TOEVOEGEN} showIcon="before" icon="plus" noUnderline={true}>
+                    Voeg nog een gebouw toe
                   </Link>
                 </LayoutFlow>
               )}
@@ -175,7 +193,7 @@ const PandenOverzicht = () => {
               <div className="rvo-action-group">
                 {panden.length === 0 && (
                   <Link href={URL_PAND_TOEVOEGEN} callToAction={true}>
-                    Voeg een pand toe
+                    Voeg een gebouw toe
                   </Link>
                 )}
                 {panden.length > 0 && (
@@ -204,16 +222,23 @@ const PandenOverzicht = () => {
           actionGroup={
             <ActionGroup>
               <Button kind="warning" size="md" onClick={handleDeleteConfirm}>
-                Pand verwijderen
+                Gebouw verwijderen
               </Button>
               <Button kind="secondary" size="md" onClick={() => setDialogOpenIndex(null)}>
-                Pand niet verwijderen
+                Gebouw niet verwijderen
               </Button>
             </ActionGroup>
           }
         >
-          <Heading type="h2">Pand verwijderen</Heading>
-          <p className="rvo-paragraph">Weet u zeker dat u dit pand wil verwijderen?</p>
+          <Heading type="h2">Gebouw verwijderen</Heading>
+          <p className="rvo-paragraph">
+            Weet u zeker dat u{' '}
+            <strong>
+              {dialogOpenIndex !== null &&
+                `${panden[dialogOpenIndex].straatnaam} ${panden[dialogOpenIndex].huisnummer}, ${panden[dialogOpenIndex].plaatsnaam}`}
+            </strong>{' '}
+            wilt verwijderen?
+          </p>
         </Dialog>
       )}
     </body>

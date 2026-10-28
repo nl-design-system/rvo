@@ -29,6 +29,9 @@ const URL_PAND_WIJZIGEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
+const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
+const URL_CONTROLEREN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
 
 const PandWijzigen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
@@ -61,10 +64,16 @@ const PandWijzigen = () => {
       size: 'md' as const,
       line: 'straight' as const,
     },
-    { state: 'doing' as const, label: 'Panden', link: URL_PANDEN, size: 'md' as const, line: 'substep-start' as const },
     {
       state: 'doing' as const,
-      label: 'Pand wijzigen',
+      label: 'Gebouwen',
+      link: URL_PANDEN,
+      size: 'md' as const,
+      line: 'substep-start' as const,
+    },
+    {
+      state: 'doing' as const,
+      label: 'Gebouw wijzigen',
       link: URL_PAND_WIJZIGEN,
       size: 'sm' as const,
       line: 'substep-end' as const,
@@ -76,11 +85,17 @@ const PandWijzigen = () => {
       size: 'md' as const,
       line: 'straight' as const,
     },
-    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
     {
-      state: 'disabled' as const,
+      state: 'incomplete' as const,
+      label: 'Documenten',
+      link: URL_DOCUMENTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'incomplete' as const,
       label: 'Controleren & indienen',
-      link: '#',
+      link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
     },
@@ -152,20 +167,20 @@ const PandWijzigen = () => {
                   <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
                     Terug
                   </Link>
-                  <Heading type="h1">Pand wijzigen</Heading>
+                  <Heading type="h1">Gebouw wijzigen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
-                    Pas de gegevens aan van het pand waarop u bijenkasten wilt plaatsen.
+                    Pas de gegevens aan van het gebouw waarop u bijenkasten wilt plaatsen.
                   </p>
                 </div>
 
                 <form onSubmit={handleSubmit}>
                   <LayoutFlow>
-                    <Fieldset legend="Locatie van het pand">
+                    <Fieldset legend="Locatie van het gebouw">
                       <TextInputField
                         label="Land"
                         disabled={true}
                         value="Nederland"
-                        warningText="Alleen panden in Nederland komen in aanmerking."
+                        warningText="Alleen gebouwen in Nederland komen in aanmerking."
                       />
                       <TextInputField
                         label="Straatnaam"
@@ -231,10 +246,7 @@ const PandWijzigen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Opslaan
-                      </Button>
-                      <Button kind="secondary" size="md">
-                        Opslaan en later verdergaan
+                        Gebouw opslaan
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

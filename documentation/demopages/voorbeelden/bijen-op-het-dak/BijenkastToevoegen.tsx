@@ -28,9 +28,14 @@ const URL_VOORBEREIDING =
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
+const URL_PAND_TOEVOEGEN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-pand-toevoegen--default&viewMode=story';
 const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_BIJENKAST_TOEVOEGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-toevoegen--default&viewMode=story';
+const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
+const URL_CONTROLEREN =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-indienen--default&viewMode=story';
 
 interface FieldError {
   before: string;
@@ -48,6 +53,7 @@ const BijenkastToevoegen = () => {
   const [errors, setErrors] = useState<Record<string, FieldError>>({});
 
   const errorSummaryRef = useRef<HTMLDivElement>(null);
+  const submitDestRef = useRef(URL_BIJENKASTEN);
 
   const projectCompleted = !!getProject();
   const pandenCompleted = getPanden().length > 0;
@@ -68,7 +74,7 @@ const BijenkastToevoegen = () => {
     },
     {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Panden',
+      label: 'Gebouwen',
       link: URL_PANDEN,
       size: 'md' as const,
       line: 'straight' as const,
@@ -87,11 +93,17 @@ const BijenkastToevoegen = () => {
       size: 'sm' as const,
       line: 'substep-end' as const,
     },
-    { state: 'incomplete' as const, label: 'Documenten', link: '#', size: 'md' as const, line: 'straight' as const },
     {
-      state: 'disabled' as const,
+      state: 'incomplete' as const,
+      label: 'Documenten',
+      link: URL_DOCUMENTEN,
+      size: 'md' as const,
+      line: 'straight' as const,
+    },
+    {
+      state: 'incomplete' as const,
       label: 'Controleren & indienen',
-      link: '#',
+      link: URL_CONTROLEREN,
       size: 'md' as const,
       line: 'none' as const,
     },
@@ -99,10 +111,10 @@ const BijenkastToevoegen = () => {
 
   const panden = getPanden();
   const pandOptions = [
-    { value: '', label: 'Selecteer een pand' },
+    { value: '', label: 'Selecteer een gebouw' },
     ...panden.map((pand, index) => ({
       value: String(index),
-      label: `Pand ${index + 1} — ${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
+      label: `${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
     })),
   ];
 
@@ -118,10 +130,10 @@ const BijenkastToevoegen = () => {
     if (!pandIndex) {
       newErrors.pand = {
         before: 'Het veld ',
-        linkLabel: 'Pand',
+        linkLabel: 'Gebouw',
         after: ' is niet ingevuld, maar wel verplicht. Maak een keuze.',
-        fieldText: 'Het veld Pand is niet ingevuld, maar wel verplicht. Maak een keuze.',
-        anchor: 'pand-label',
+        fieldText: 'Het veld Gebouw is niet ingevuld, maar wel verplicht. Maak een keuze.',
+        anchor: 'gebouw-label',
       };
     }
 
@@ -167,11 +179,11 @@ const BijenkastToevoegen = () => {
     const selectedPand = panden[Number(pandIndex)];
     addBijenkast({
       pandIndex: Number(pandIndex),
-      pandLabel: `Pand ${Number(pandIndex) + 1} — ${selectedPand.straatnaam} ${selectedPand.huisnummer}, ${selectedPand.plaatsnaam}`,
+      pandLabel: `${selectedPand.straatnaam} ${selectedPand.huisnummer}, ${selectedPand.plaatsnaam}`,
       aantalKasten,
       typeBijenkast,
     });
-    window.location.href = URL_BIJENKASTEN;
+    window.location.href = submitDestRef.current;
   };
 
   const hasErrors = Object.keys(errors).length > 0;
@@ -257,14 +269,27 @@ const BijenkastToevoegen = () => {
                     <Fieldset legend="Bijenkastgegevens">
                       <SelectField
                         id="pand"
-                        label="Pand"
-                        helperText="Selecteer het pand waarop u deze bijenkast wilt plaatsen."
+                        label="Gebouw"
+                        helperText="Selecteer het gebouw waarop u deze bijenkast wilt plaatsen."
                         value={pandIndex}
                         onChange={(e) => setPandIndex((e.target as HTMLSelectElement).value)}
                         invalid={!!errors.pand}
                         errorText={errors.pand?.fieldText}
+                        warningText={panden.length === 0 ? 'Er zijn nog geen gebouwen toegevoegd.' : undefined}
                         options={pandOptions}
+                        disabled={panden.length === 0}
                       />
+                      {panden.length === 0 && (
+                        <Link
+                          href={URL_PAND_TOEVOEGEN}
+                          color="donkerblauw"
+                          showIcon="before"
+                          icon="plus"
+                          noUnderline={true}
+                        >
+                          Pand toevoegen
+                        </Link>
+                      )}
                       <TextInputField
                         id="aantalKasten"
                         label="Aantal bijenkasten"
@@ -302,11 +327,25 @@ const BijenkastToevoegen = () => {
                     </Fieldset>
 
                     <ActionGroup>
-                      <Button kind="primary" size="md" type="submit">
-                        Volgende stap
+                      <Button
+                        kind="primary"
+                        size="md"
+                        type="submit"
+                        onClick={() => {
+                          submitDestRef.current = URL_BIJENKASTEN;
+                        }}
+                      >
+                        Bijenkast opslaan
                       </Button>
-                      <Button kind="secondary" size="md">
-                        Opslaan en later verdergaan
+                      <Button
+                        kind="secondary"
+                        size="md"
+                        type="submit"
+                        onClick={() => {
+                          submitDestRef.current = URL_BIJENKAST_TOEVOEGEN;
+                        }}
+                      >
+                        Opslaan en nog een bijenkast toevoegen
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>
