@@ -179,10 +179,10 @@ const Documenten = () => {
             isOpen={false}
             size="md"
             items={[
-              { label: 'Overzicht', link: '#', icon: 'home' },
-              { label: 'Mijn aanvragen', link: '#', icon: 'map' },
-              { label: 'Berichten', link: '#', icon: 'mail' },
-              { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              { label: 'Bijen op het dak subsidie (FSSBD)', link: URL_VOORBEREIDING, icon: 'home' },
+              { label: 'Hulp & Contact', link: '#', icon: 'telefoon' },
+              { label: 'English', link: '#', icon: 'wereldbol' },
+              { label: 'Rosita van der Helm', link: '#', icon: 'user' },
             ]}
           />
         )}
