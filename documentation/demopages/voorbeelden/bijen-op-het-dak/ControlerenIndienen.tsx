@@ -14,9 +14,9 @@ import {
   MaxWidthLayout,
   MenuBar,
   MobileMenuBar,
+  ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useRef, useState } from 'react';
-import { ResponsiveProgressTracker } from './ResponsiveProgressTracker';
 import { getBijenkasten, saveEditBijenkastIndex } from './bijenkastenStorage';
 import { getOffertes, getTekeningen } from './documentenStorage';
 import { getPanden } from './pandenStorage';
@@ -191,7 +191,7 @@ const ControlerenIndienen = () => {
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
           <aside>
-            <ResponsiveProgressTracker steps={progressSteps} isDesktop={isDesktop} />
+            <ProgressTracker steps={progressSteps} />
           </aside>
 
           <main>

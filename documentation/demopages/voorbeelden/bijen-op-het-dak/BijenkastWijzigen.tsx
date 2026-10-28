@@ -2,6 +2,7 @@ import {
   ActionGroup,
   Alert,
   Button,
+  Dialog,
   Fieldset,
   Footer,
   Grid,
@@ -12,13 +13,12 @@ import {
   MaxWidthLayout,
   MenuBar,
   MobileMenuBar,
+  ProgressTracker,
   RadioButtonField,
   SelectField,
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
-import { FormLeaveDialog } from './FormLeaveDialog';
-import { ResponsiveProgressTracker } from './ResponsiveProgressTracker';
 import { clearEditBijenkastIndex, getBijenkasten, getEditBijenkastIndex, updateBijenkast } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
@@ -238,7 +238,7 @@ const BijenkastWijzigen = () => {
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
           <aside>
-            <ResponsiveProgressTracker steps={progressSteps} isDesktop={isDesktop} />
+            <ProgressTracker steps={progressSteps} />
           </aside>
 
           <main>
@@ -342,7 +342,43 @@ const BijenkastWijzigen = () => {
       </MaxWidthLayout>
 
       <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
-      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={leaveTarget} onClose={dismissLeaveDialog} />
+      {showLeaveDialog && (
+        <Dialog
+          isOpen={true}
+          onClose={dismissLeaveDialog}
+          isModal={true}
+          actionGroup={
+            <ActionGroup>
+              <Button
+                kind="primary"
+                size="md"
+                onClick={() => {
+                  window.location.href = URL_VOORBEREIDING;
+                }}
+              >
+                Opslaan en sluiten
+              </Button>
+              <Button kind="secondary" size="md" onClick={dismissLeaveDialog}>
+                Terug
+              </Button>
+              <Button
+                kind="warning"
+                size="md"
+                onClick={() => {
+                  window.location.href = leaveTarget;
+                }}
+              >
+                Sluiten zonder opslaan
+              </Button>
+            </ActionGroup>
+          }
+        >
+          <Heading type="h2">Wilt u het formulier sluiten?</Heading>
+          <p className="rvo-paragraph">
+            Uw wijzigingen zijn nog niet opgeslagen. Als u sluit zonder op te slaan, gaan uw wijzigingen verloren.
+          </p>
+        </Dialog>
+      )}
     </body>
   );
 };
