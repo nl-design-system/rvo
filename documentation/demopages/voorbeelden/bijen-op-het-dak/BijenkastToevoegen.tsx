@@ -18,6 +18,7 @@ import {
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
+import { FormLeaveDialog } from './FormLeaveDialog';
 import { addBijenkast } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
@@ -47,6 +48,7 @@ interface FieldError {
 const BijenkastToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
+  const [showLeaveDialog, setShowLeaveDialog] = useState(false);
   const [pandIndex, setPandIndex] = useState('');
   const [aantalKasten, setAantalKasten] = useState('');
   const [typeBijenkast, setTypeBijenkast] = useState('');
@@ -236,7 +238,16 @@ const BijenkastToevoegen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_BIJENKASTEN} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link
+                    href={URL_BIJENKASTEN}
+                    showIcon="before"
+                    icon="terug"
+                    noUnderline={true}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowLeaveDialog(true);
+                    }}
+                  >
                     Terug
                   </Link>
                   <Heading type="h1">Bijenkast toevoegen</Heading>
@@ -346,6 +357,7 @@ const BijenkastToevoegen = () => {
       </MaxWidthLayout>
 
       <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
+      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={URL_BIJENKASTEN} onClose={() => setShowLeaveDialog(false)} />
     </body>
   );
 };

@@ -17,6 +17,7 @@ import {
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
+import { FormLeaveDialog } from './FormLeaveDialog';
 import { getBijenkasten } from './bijenkastenStorage';
 import { addPand } from './pandenStorage';
 import { getProject } from './projectStorage';
@@ -47,6 +48,7 @@ interface FieldError {
 const PandToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
+  const [showLeaveDialog, setShowLeaveDialog] = useState(false);
   const [straatnaam, setStraatnaam] = useState('');
   const [huisnummer, setHuisnummer] = useState('');
   const [postcode, setPostcode] = useState('');
@@ -264,7 +266,16 @@ const PandToevoegen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link
+                    href={URL_PANDEN}
+                    showIcon="before"
+                    icon="terug"
+                    noUnderline={true}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowLeaveDialog(true);
+                    }}
+                  >
                     Terug
                   </Link>
                   <Heading type="h1">Gebouw toevoegen</Heading>
@@ -403,6 +414,7 @@ const PandToevoegen = () => {
       </MaxWidthLayout>
 
       <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
+      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={URL_PANDEN} onClose={() => setShowLeaveDialog(false)} />
     </body>
   );
 };

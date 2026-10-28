@@ -16,6 +16,7 @@ import {
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import { FormLeaveDialog } from './FormLeaveDialog';
 import { getBijenkasten } from './bijenkastenStorage';
 import { clearEditPandIndex, getEditPandIndex, getPanden, updatePand } from './pandenStorage';
 import { getProject } from './projectStorage';
@@ -37,6 +38,7 @@ const URL_CONTROLEREN =
 const PandWijzigen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
+  const [showLeaveDialog, setShowLeaveDialog] = useState(false);
 
   const editIndex = getEditPandIndex();
   const existingPand = editIndex !== null ? getPanden()[editIndex] : null;
@@ -166,7 +168,16 @@ const PandWijzigen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link
+                    href={URL_PANDEN}
+                    showIcon="before"
+                    icon="terug"
+                    noUnderline={true}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowLeaveDialog(true);
+                    }}
+                  >
                     Terug
                   </Link>
                   <Heading type="h1">Gebouw wijzigen</Heading>
@@ -260,6 +271,7 @@ const PandWijzigen = () => {
       </MaxWidthLayout>
 
       <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
+      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={URL_PANDEN} onClose={() => setShowLeaveDialog(false)} />
     </body>
   );
 };

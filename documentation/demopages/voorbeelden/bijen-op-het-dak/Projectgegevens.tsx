@@ -18,6 +18,7 @@ import {
   TextInputField,
 } from '@nl-rvo/component-library-react';
 import { FormEvent, useEffect, useRef, useState } from 'react';
+import { FormLeaveDialog } from './FormLeaveDialog';
 import { getBijenkasten } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject, saveProject } from './projectStorage';
@@ -45,6 +46,7 @@ interface FieldError {
 const Projectgegevens = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
+  const [showLeaveDialog, setShowLeaveDialog] = useState(false);
   const stored = getProject();
   const [naam, setNaam] = useState(stored?.naam ?? '');
   const [omschrijving, setOmschrijving] = useState(stored?.omschrijving ?? '');
@@ -204,7 +206,16 @@ const Projectgegevens = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_VOORBEREIDING} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link
+                    href={URL_VOORBEREIDING}
+                    showIcon="before"
+                    icon="terug"
+                    noUnderline={true}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowLeaveDialog(true);
+                    }}
+                  >
                     Terug
                   </Link>
                   <Heading type="h1">Projectgegevens</Heading>
@@ -278,6 +289,7 @@ const Projectgegevens = () => {
       </MaxWidthLayout>
 
       <Footer secondaryMenu={defaultSecondaryFooterItems} maxWidth="md" />
+      <FormLeaveDialog isOpen={showLeaveDialog} backUrl={URL_VOORBEREIDING} onClose={() => setShowLeaveDialog(false)} />
     </body>
   );
 };
