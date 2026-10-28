@@ -254,9 +254,9 @@ const PandToevoegen = () => {
 
       <MaxWidthLayout size="md" className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
         <Grid
-          columns="two"
+          columns={isDesktop ? 'two' : 'one'}
           gap="xl"
-          division="1fr 3fr"
+          division={isDesktop ? '1fr 3fr' : undefined}
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
           <aside>
