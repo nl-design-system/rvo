@@ -1,0 +1,10 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FormFileInputStories from "./form-file-input.stories";
+
+<Meta of={FormFileInputStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormFileInputStories.Base} layout="padded" />
+
+<ArgTypes of={FormFileInputStories.Base} />

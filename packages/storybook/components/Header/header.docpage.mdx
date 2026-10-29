@@ -1,0 +1,13 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as HeaderStories from "./header.stories";
+
+<Meta of={HeaderStories} name="Documentatie" />
+
+<Title />
+<Canvas of={HeaderStories.Base} layout="padded" />
+<ArgTypes of={HeaderStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/assets/images_
+_@nl-rvo/css-logo_

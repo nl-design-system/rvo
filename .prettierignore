@@ -21,7 +21,6 @@ package-lock.json
 yarn.lock
 
 # Ignore generated files from packages
-.uxpin-merge
 .docusaurus
 
 # Playwright MCP snapshots

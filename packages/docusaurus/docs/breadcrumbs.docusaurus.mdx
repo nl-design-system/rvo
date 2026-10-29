@@ -1,0 +1,20 @@
+---
+title: Breadcrumbs
+hide_title: false
+hide_table_of_contents: true
+slug: /breadcrumbs
+---
+
+import { Breadcrumbs } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-breadcrumbs--default">
+  <Breadcrumbs
+    items={[
+      { label: "First step", link: "#" },
+      { label: "Second step", link: "#" },
+      { label: "Third step", link: "#" },
+      { label: "Current page" },
+    ]}
+  />
+</ComponentExample>

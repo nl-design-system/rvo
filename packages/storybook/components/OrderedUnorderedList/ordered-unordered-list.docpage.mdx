@@ -1,0 +1,9 @@
+import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as ListStories from "./ordered-unordered-list.stories";
+
+<Meta of={ListStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={ListStories.Base} layout="padded" />
+<Controls of={ListStories.Base} />

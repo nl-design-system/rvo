@@ -1,0 +1,10 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as FormFieldStories from "./form-field.stories";
+
+<Meta of={FormFieldStories} name="Documentatie" />
+
+<Title />
+
+<Canvas of={FormFieldStories.TextInput} layout="padded" />
+
+<ArgTypes of={FormFieldStories.TextInput} />

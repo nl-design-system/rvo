@@ -1,0 +1,17 @@
+import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
+import * as AlertStories from "./alert.stories";
+
+<Meta of={AlertStories} name="Documentatie" />
+
+<Title />
+<Canvas of={AlertStories.Base} layout="padded" />
+
+## Props
+
+<ArgTypes of={AlertStories.Base} />
+
+## Dependencies
+
+_@nl-rvo/css-button_
+_@nl-rvo/css-icon_
+_@nl-rvo/css-status-icon_

@@ -1,0 +1,12 @@
+.rvo-checkbox__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rvo-space-md);
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.rvo-radio-button__group--error {
+  border-inline-start: 3px solid var(--rvo-color-rood);
+  padding-inline-start: var(--rvo-space-md);
+}

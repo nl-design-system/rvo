@@ -1,0 +1,59 @@
+---
+title: Menu bar
+hide_title: false
+hide_table_of_contents: true
+slug: /menubar
+---
+
+import { MenuBar } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-menubar--default">
+  <MenuBar
+    items={[
+      { label: "Home", link: "#" },
+      {
+        label: "Onderwerpen",
+        link: "#",
+        submenu: [
+          {
+            label: "Klimaat & energie",
+            link: "#",
+            icon: "milieu",
+          },
+          {
+            label: "Landbouw",
+            link: "#",
+            icon: "koe-met-tekst-co2",
+          },
+          {
+            label: "Ondernemen & Bedrijfsvoering",
+            link: "#",
+            icon: "ondernemingsklimaat",
+          },
+          {
+            label: "Bouwen & Wonen",
+            link: "#",
+            icon: "grootstedelijk",
+          },
+          {
+            label: "Visserij",
+            link: "#",
+            icon: "vis",
+          },
+          {
+            label: "Gezondheid, Zorg & Welzijn",
+            link: "#",
+            icon: "hart-tussen-2-uitgestoken-handen",
+          },
+          {
+            label: "Dier & Natuur",
+            link: "#",
+            icon: "eend-zwemmend-bij-riet",
+          },
+        ],
+      },
+      { label: "Uitloggen", link: "#", align: "right" },
+    ]}
+  />
+</ComponentExample>
