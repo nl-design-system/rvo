@@ -1,5 +1,16 @@
 # @nl-rvo/react-checkbox-filter
 
+## 1.0.2
+
+### Patch Changes
+
+- 6ba10cb: Update package.json with a public field
+- Updated dependencies [6ba10cb]
+  - @nl-rvo/react-form-checkbox@1.0.1
+  - @nl-rvo/react-form-field@1.0.2
+  - @nl-rvo/react-icon@1.0.1
+  - @nl-rvo/react-link@1.0.1
+
 ## 1.0.1
 
 ### Patch Changes
