@@ -14395,8 +14395,8 @@ packages:
   socket.io-adapter@2.5.5:
     resolution: {integrity: sha512-eLDQas5dzPgOWCk9GuuJC2lBqItuhKI4uxGgo9aIV7MYbk2h9Q6uULEh8WBzThoI7l+qU9Ast9fVUmkqPP9wYg==}
 
-  socket.io-parser@4.2.4:
-    resolution: {integrity: sha512-/GbIKmo8ioc+NIWIhwdecY0ge+qVBSMdgxGygevmdHj24bsfgtCmcUUcQ5ZzcylGFHsN3k4HB4Cgkl96KVnuew==}
+  socket.io-parser@4.2.7:
+    resolution: {integrity: sha512-IH/iSeO9T6gz1KkFleGDWkG9N3dl4jXVYUtMhIqH10Md0ttMer8nUNWiP1DKuNrybD2xBrixLJdCC9J6ECoYkg==}
     engines: {node: '>=10.0.0'}
 
   socket.io@4.8.1:
@@ -32091,10 +32091,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  socket.io-parser@4.2.4(supports-color@9.4.0):
+  socket.io-parser@4.2.7(supports-color@9.4.0):
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.3.4(supports-color@9.4.0)
+      debug: 4.4.3(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -32106,7 +32106,7 @@ snapshots:
       debug: 4.3.4(supports-color@9.4.0)
       engine.io: 6.6.4(supports-color@9.4.0)
       socket.io-adapter: 2.5.5(supports-color@9.4.0)
-      socket.io-parser: 4.2.4(supports-color@9.4.0)
+      socket.io-parser: 4.2.7(supports-color@9.4.0)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
