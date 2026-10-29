@@ -221,7 +221,7 @@ const Subsidiepagina = () => {
             <div></div>
           </div>
         </div>
-        <div className="rvo-max-width-layout rvo-max-width-layout--sm">
+        <div id="krijgt-u-subsidie" className="rvo-max-width-layout rvo-max-width-layout--sm">
           <Fieldset legend="Krijgt u subsidie?">
             <p className="rvo-margin-block-end--lg rvo-margin-block-start--2xs">
               Beantwoord maximaal 5 vragen en u ziet direct of u kans maakt op deze subsidie.
@@ -266,7 +266,7 @@ const Subsidiepagina = () => {
           </Link>
         </div>
 
-        <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div id="voorwaarden" className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Voorwaarden
           </Heading>
@@ -401,7 +401,10 @@ const Subsidiepagina = () => {
           </details>
         </div>
 
-        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="uw-aanvraag-voorbereiden"
+          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2" noMargins={true}>
             Uw aanvraag voorbereiden
           </Heading>
