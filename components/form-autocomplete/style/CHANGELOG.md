@@ -1,5 +1,11 @@
 # `@nl-rvo/autocomplete`
 
+## 1.0.0
+
+### Major Changes
+
+- 74ba609: Initial version of these css packages. They have been renamed to work in new Architecture
+
 ## 1.6.0
 
 ### Minor Changes

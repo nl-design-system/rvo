@@ -1,5 +1,19 @@
 # @nl-rvo/component-library-react
 
+## 8.0.1
+
+### Patch Changes
+
+- @nl-rvo/react-checkbox-filter@1.0.1
+  - @nl-rvo/component-library-css@5.0.1
+  - @nl-rvo/react-counter-badge@1.0.1
+  - @nl-rvo/react-expandable-table@1.0.1
+  - @nl-rvo/react-form-autocomplete@1.0.1
+  - @nl-rvo/react-form-file-input@1.0.1
+  - @nl-rvo/react-form-text-input@1.0.1
+  - @nl-rvo/react-skeleton@1.0.1
+  - @nl-rvo/react-form-field@1.0.1
+
 ## 8.0.0
 
 ### Major Changes

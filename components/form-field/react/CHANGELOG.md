@@ -1,5 +1,12 @@
 # @nl-rvo/react-form-field
 
+## 1.0.1
+
+### Patch Changes
+
+- @nl-rvo/react-form-file-input@1.0.1
+  - @nl-rvo/react-form-text-input@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

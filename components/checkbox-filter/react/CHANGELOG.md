@@ -1,5 +1,13 @@
 # @nl-rvo/react-checkbox-filter
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [74ba609]
+  - @nl-rvo/css-checkbox-filter@1.0.0
+  - @nl-rvo/react-form-field@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

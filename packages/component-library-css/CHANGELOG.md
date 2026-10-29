@@ -1,5 +1,22 @@
 # @nl-rvo/component-library-css
 
+## 5.0.1
+
+### Patch Changes
+
+- Updated dependencies [74ba609]
+  - @nl-rvo/css-checkbox-filter@1.0.0
+  - @nl-rvo/css-counter-badge@1.0.0
+  - @nl-rvo/css-expandable-table@1.0.0
+  - @nl-rvo/css-form-autocomplete@1.0.0
+  - @nl-rvo/css-form-file-input@1.0.0
+  - @nl-rvo/css-form-text-input@1.0.0
+  - @nl-rvo/utility-border@1.1.1
+  - @nl-rvo/utility-margin@2.1.1
+  - @nl-rvo/utility-padding@2.1.1
+  - @nl-rvo/utility-text@1.1.1
+  - @nl-rvo/utility-text-types@2.1.1
+
 ## 5.0.0
 
 ### Major Changes
