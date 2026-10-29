@@ -1,5 +1,11 @@
 # @nl-rvo/react-ordered-unordered-list
 
+## 1.0.1
+
+### Patch Changes
+
+- 6ba10cb: Update package.json with a public field
+
 ## 1.0.0
 
 ### Major Changes

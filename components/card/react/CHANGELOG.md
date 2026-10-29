@@ -1,5 +1,15 @@
 # @nl-rvo/react-card
 
+## 1.0.1
+
+### Patch Changes
+
+- 6ba10cb: Update package.json with a public field
+- Updated dependencies [6ba10cb]
+  - @nl-rvo/react-heading@1.0.1
+  - @nl-rvo/react-icon@1.0.1
+  - @nl-rvo/react-link@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
