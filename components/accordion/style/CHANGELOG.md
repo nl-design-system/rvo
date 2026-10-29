@@ -1,5 +1,17 @@
 # `@nl-rvo/css-accordion`
 
+## 1.4.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
+### Patch Changes
+
+- Updated dependencies [b1b55a0]
+  - @nl-rvo/css-layout-flow@1.6.0
+  - @nl-rvo/css-link@1.7.0
+
 ## 1.3.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-favicon`
 
+## 1.0.0
+
+### Major Changes
+
+- b1b55a0: First version of this React Component
+
 ## 1.1.0
 
 ### Minor Changes

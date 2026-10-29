@@ -1,5 +1,11 @@
 # `@nl-rvo/css-pagination`
 
+## 1.6.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
 ## 1.5.3
 
 ### Patch Changes

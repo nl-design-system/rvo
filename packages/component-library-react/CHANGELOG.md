@@ -1,5 +1,74 @@
 # @nl-rvo/component-library-react
 
+## 8.0.0
+
+### Major Changes
+
+- b1b55a0: Move react package outside to each their own react package and updated the dependencies. Exported each react package and interfaces in index.ts
+
+### Patch Changes
+
+- Updated dependencies [b1b55a0]
+- Updated dependencies [b1b55a0]
+  - @nl-rvo/react-accordion@1.0.0
+  - @nl-rvo/react-action-group@1.0.0
+  - @nl-rvo/react-alert@1.0.0
+  - @nl-rvo/react-breadcrumbs@1.0.0
+  - @nl-rvo/react-button@1.0.0
+  - @nl-rvo/react-card@1.0.0
+  - @nl-rvo/react-card-experimental@1.0.0
+  - @nl-rvo/react-checkbox-filter@1.0.0
+  - @nl-rvo/react-counter-badge@1.0.0
+  - @nl-rvo/react-data-list@1.0.0
+  - @nl-rvo/react-dialog@1.0.0
+  - @nl-rvo/react-expandable-content@1.0.0
+  - @nl-rvo/react-expandable-table@1.0.0
+  - @nl-rvo/react-favicon@1.0.0
+  - @nl-rvo/react-footer@1.0.0
+  - @nl-rvo/react-form-autocomplete@1.0.0
+  - @nl-rvo/react-form-checkbox@1.0.0
+  - @nl-rvo/react-form-checkbox-group@1.0.0
+  - @nl-rvo/react-form-feedback@1.0.0
+  - @nl-rvo/react-form-field@1.0.0
+  - @nl-rvo/react-form-fieldset@1.0.0
+  - @nl-rvo/react-form-file-input@1.0.0
+  - @nl-rvo/react-form-layout@1.0.0
+  - @nl-rvo/react-form-radio-button@1.0.0
+  - @nl-rvo/react-form-radio-button-group@1.0.0
+  - @nl-rvo/react-form-select@1.0.0
+  - @nl-rvo/react-form-text-input@1.0.0
+  - @nl-rvo/react-form-textarea@1.0.0
+  - @nl-rvo/react-grid@1.0.0
+  - @nl-rvo/react-header@1.0.0
+  - @nl-rvo/react-heading@1.0.0
+  - @nl-rvo/react-hero@1.0.0
+  - @nl-rvo/react-horizontal-rule@1.0.0
+  - @nl-rvo/react-icon@1.0.0
+  - @nl-rvo/react-image@1.0.0
+  - @nl-rvo/react-item-list@1.0.0
+  - @nl-rvo/react-layout-flow@1.0.0
+  - @nl-rvo/react-link@1.0.0
+  - @nl-rvo/react-loader@1.0.0
+  - @nl-rvo/react-logo@1.0.0
+  - @nl-rvo/react-max-width-layout@1.0.0
+  - @nl-rvo/react-menubar@1.0.0
+  - @nl-rvo/react-ordered-unordered-list@1.0.0
+  - @nl-rvo/react-page-number-navigation@1.0.0
+  - @nl-rvo/react-paragraph@1.0.0
+  - @nl-rvo/react-progress-tracker@1.0.0
+  - @nl-rvo/react-quote@1.0.0
+  - @nl-rvo/react-scrollable-content@1.0.0
+  - @nl-rvo/react-sidebar-layout@1.0.0
+  - @nl-rvo/react-skeleton@1.0.0
+  - @nl-rvo/react-skip-link@1.0.0
+  - @nl-rvo/react-status-icon@1.0.0
+  - @nl-rvo/react-status-indicator@1.0.0
+  - @nl-rvo/react-table@1.0.0
+  - @nl-rvo/react-tabs@1.0.0
+  - @nl-rvo/react-tag@1.0.0
+  - @nl-rvo/react-toggle@1.0.0
+  - @nl-rvo/component-library-css@5.0.0
+
 ## 7.2.4
 
 ### Patch Changes

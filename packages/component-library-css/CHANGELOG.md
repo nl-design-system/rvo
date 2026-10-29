@@ -1,5 +1,74 @@
 # @nl-rvo/component-library-css
 
+## 5.0.0
+
+### Major Changes
+
+- b1b55a0: Updated dependencies to use workspace
+
+### Patch Changes
+
+- Updated dependencies [b1b55a0]
+  - @nl-rvo/css-accordion@1.4.0
+  - @nl-rvo/css-action-group@1.5.0
+  - @nl-rvo/css-alert@1.7.0
+  - @nl-rvo/css-breadcrumbs@1.5.0
+  - @nl-rvo/css-button@2.2.0
+  - @nl-rvo/css-card@1.9.0
+  - @nl-rvo/css-card-experimental@0.4.0
+  - @nl-rvo/css-checkbox-filter@3.3.0
+  - @nl-rvo/css-counter-badge@1.2.0
+  - @nl-rvo/css-data-list@1.4.0
+  - @nl-rvo/css-dialog@1.6.0
+  - @nl-rvo/css-expandable-content@1.5.0
+  - @nl-rvo/css-expandable-table@1.4.0
+  - @nl-rvo/css-footer@1.11.0
+  - @nl-rvo/css-form-autocomplete@1.6.0
+  - @nl-rvo/css-form-checkbox@1.4.0
+  - @nl-rvo/css-form-checkbox-group@1.4.0
+  - @nl-rvo/css-form-feedback@1.5.0
+  - @nl-rvo/css-form-field@1.8.0
+  - @nl-rvo/css-form-fieldset@1.7.0
+  - @nl-rvo/css-form-file-input@1.4.0
+  - @nl-rvo/css-form-layout@1.4.0
+  - @nl-rvo/css-form-radio-button@1.5.0
+  - @nl-rvo/css-form-radio-button-group@1.4.0
+  - @nl-rvo/css-form-select@1.6.0
+  - @nl-rvo/css-form-text-input@1.9.0
+  - @nl-rvo/css-form-textarea@1.6.0
+  - @nl-rvo/css-grid@3.3.0
+  - @nl-rvo/css-header@1.5.0
+  - @nl-rvo/css-heading@2.4.0
+  - @nl-rvo/css-hero@1.8.0
+  - @nl-rvo/css-horizontal-rule@1.4.0
+  - @nl-rvo/css-icon@1.7.0
+  - @nl-rvo/css-image@1.3.0
+  - @nl-rvo/css-item-list@1.4.0
+  - @nl-rvo/css-layout-flow@1.6.0
+  - @nl-rvo/css-link@1.7.0
+  - @nl-rvo/css-loader@2.2.0
+  - @nl-rvo/css-logo@1.5.0
+  - @nl-rvo/css-max-width-layout@1.4.0
+  - @nl-rvo/css-menubar@1.7.0
+  - @nl-rvo/css-ordered-unordered-list@1.5.0
+  - @nl-rvo/css-page-number-navigation@1.6.0
+  - @nl-rvo/css-paragraph@1.6.0
+  - @nl-rvo/css-progress-tracker@1.4.0
+  - @nl-rvo/css-quote@1.2.0
+  - @nl-rvo/css-scrollable-content@1.4.0
+  - @nl-rvo/css-sidebar-layout@1.4.0
+  - @nl-rvo/css-skip-link@1.4.0
+  - @nl-rvo/css-status-icon@1.4.0
+  - @nl-rvo/css-status-indicator@1.4.0
+  - @nl-rvo/css-table@1.10.0
+  - @nl-rvo/css-tabs@2.1.0
+  - @nl-rvo/css-toggle@1.4.0
+  - @nl-rvo/utility-border@1.1.1
+  - @nl-rvo/utility-margin@2.1.1
+  - @nl-rvo/utility-padding@2.1.1
+  - @nl-rvo/utility-text@1.1.1
+  - @nl-rvo/utility-text-types@2.1.1
+
 ## 4.21.1
 
 ### Patch Changes
