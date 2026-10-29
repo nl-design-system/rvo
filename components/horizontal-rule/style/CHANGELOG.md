@@ -1,5 +1,11 @@
 # `@nl-rvo/css-horizontal-rule`
 
+## 1.4.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
 ## 1.3.2
 
 ### Patch Changes

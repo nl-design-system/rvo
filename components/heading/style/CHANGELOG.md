@@ -1,5 +1,11 @@
 # `@nl-rvo/css-heading`
 
+## 2.4.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
 ## 2.3.1
 
 ### Patch Changes

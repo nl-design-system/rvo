@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-textinput`
 
+## 1.9.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
 ## 1.8.2
 
 ### Patch Changes

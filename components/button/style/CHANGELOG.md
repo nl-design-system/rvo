@@ -1,5 +1,16 @@
 # `@nl-rvo/css-button`
 
+## 2.2.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
+### Patch Changes
+
+- Updated dependencies [b1b55a0]
+  - @nl-rvo/css-layout-flow@1.6.0
+
 ## 2.1.2
 
 ### Patch Changes

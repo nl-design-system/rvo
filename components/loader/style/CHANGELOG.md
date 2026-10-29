@@ -1,5 +1,11 @@
 # @nl-rvo/css-loader
 
+## 2.2.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
 ## 2.1.2
 
 ### Patch Changes

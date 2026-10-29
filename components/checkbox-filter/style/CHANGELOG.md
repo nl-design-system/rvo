@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 3.3.0
+
+### Minor Changes
+
+- b1b55a0: Updated package setup and how css is generated
+
 ## 3.2.2
 
 ### Patch Changes
