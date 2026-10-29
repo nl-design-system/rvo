@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-fileinput`
 
+## 1.0.0
+
+### Major Changes
+
+- 74ba609: Initial version of these css packages. They have been renamed to work in new Architecture
+
 ## 1.4.0
 
 ### Minor Changes

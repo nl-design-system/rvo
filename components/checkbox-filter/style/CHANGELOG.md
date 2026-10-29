@@ -1,5 +1,11 @@
 # @nl-rvo/checkbox-filter
 
+## 1.0.0
+
+### Major Changes
+
+- 74ba609: Initial version of these css packages. They have been renamed to work in new Architecture
+
 ## 3.3.0
 
 ### Minor Changes
