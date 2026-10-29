@@ -113,7 +113,7 @@ export type { IIconProps } from '@nl-rvo/react-icon';
 export type { IImageProps, IImageSource } from '@nl-rvo/react-image';
 export type { IItemListProps } from '@nl-rvo/react-item-list';
 export type { ILayoutFlowProps } from '@nl-rvo/react-layout-flow';
-export type { ILinkProps } from '@nl-rvo/react-link';
+export type { ILinkProps, LinkCustomLinkComponentProps } from '@nl-rvo/react-link';
 export type { ILoader, ILoaderStatus } from '@nl-rvo/react-loader';
 export type { ILogoProps } from '@nl-rvo/react-logo';
 export type { IMaxWidthLayoutProps } from '@nl-rvo/react-max-width-layout';
