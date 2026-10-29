@@ -8,6 +8,9 @@
     "nl-design-system",
     "nl-rvo"
   ],
+  "publishConfig": {
+    "access": "restricted"
+  },
   "private": true,
   "repository": {
     "type": "git+ssh",

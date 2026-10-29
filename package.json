@@ -4,6 +4,9 @@
   "description": "RVO design system based on the NL Design System architecture",
   "license": "CC0-1.0",
   "name": "@nl-rvo/design-system",
+  "publishConfig": {
+    "access": "restricted"
+  },
   "private": true,
   "keywords": [
     "nl-design-system",

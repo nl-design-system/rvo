@@ -1,6 +1,9 @@
 {
   "name": "@nl-rvo/figma-sync",
   "version": "0.0.0",
+  "publishConfig": {
+    "access": "restricted"
+  },
   "private": true,
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
