@@ -1,25 +1,50 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Fieldset,
-  FormField,
+  FileInput,
   Footer,
   Header,
   Heading,
   LayoutFlow,
   MenuBar,
   ProgressTracker,
+  TextInput,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const Kosten = () => {
+export default function KostenPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -47,7 +72,7 @@ const Kosten = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -66,7 +91,7 @@ const Kosten = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -155,9 +180,7 @@ const Kosten = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField label="Totaalkosten">
-                  <FormField.Text prefix="€" />
-                </FormField>
+                <TextInput label="Totaalkosten" prefix="€"></TextInput>
                 <Heading type="h2" noMargins={true}>
                   Gespecificeerde offerte
                 </Heading>
@@ -166,12 +189,10 @@ const Kosten = () => {
                   de coach gespecificeerd te zijn. De offerte mag niet ouder zijn dan 3 maanden op het moment van
                   indiening.
                 </p>
-                <FormField
+                <FileInput
                   label="Offertebestand"
                   warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
-                >
-                  <FormField.FileInput />
-                </FormField>
+                ></FileInput>
               </Fieldset>
               <ActionGroup>
                 <a
@@ -188,6 +209,4 @@ const Kosten = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default Kosten;
+}

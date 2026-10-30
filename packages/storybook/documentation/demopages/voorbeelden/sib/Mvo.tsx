@@ -1,5 +1,10 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
+  Checkbox,
   Fieldset,
   Footer,
   Header,
@@ -7,19 +12,39 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  FormField,
+  Textarea,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const Mvo = () => {
+export default function MvoPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -47,7 +72,7 @@ const Mvo = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -66,7 +91,7 @@ const Mvo = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -170,25 +195,21 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField
-                  label="Bent u actief op het gebied van duurzaamheid?"
+                <Checkbox
                   helperText="Kies één of meerdere van de onderstaande antwoorden"
-                >
-                  <FormField.CheckboxGroup
-                    options={[
-                      {
-                        id: 'optionA-cb',
-                        label: 'Waardige werkomstandigheden en eerlijke beloning',
-                      },
-                      { id: 'optionB-cb', label: 'Efficiënter verbouwen voedsel en tegengaan van voedselverspilling ' },
-                      { id: 'optionC-cb', label: 'Inclusiviteit en vermindering ongelijkheid ' },
-                      { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?">
-                  <FormField.TextArea />
-                </FormField>
+                  label="Bent u actief op het gebied van duurzaamheid? "
+                  invalid={false}
+                  options={[
+                    {
+                      id: 'optionA-cb',
+                      label: 'Waardige werkomstandigheden en eerlijke beloning',
+                    },
+                    { id: 'optionB-cb', label: 'Efficiënter verbouwen voedsel en tegengaan van voedselverspilling ' },
+                    { id: 'optionC-cb', label: 'Inclusiviteit en vermindering ongelijkheid ' },
+                    { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
+                  ]}
+                ></Checkbox>
+                <Textarea label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?" />
               </Fieldset>
 
               <div>
@@ -213,12 +234,8 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? ">
-                  <FormField.TextArea />
-                </FormField>
-                <FormField label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?">
-                  <FormField.TextArea />
-                </FormField>
+                <Textarea label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? " />
+                <Textarea label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?" />
               </Fieldset>
               <div>
                 <Heading type="h2" noMargins={true}>
@@ -239,9 +256,17 @@ const Mvo = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField id="verklaring" label="">
-                  <FormField.Checkbox label="Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO)." />
-                </FormField>
+                <Checkbox
+                  label=" "
+                  invalid={false}
+                  options={[
+                    {
+                      id: 'verklaring',
+                      label:
+                        'Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO). ',
+                    },
+                  ]}
+                ></Checkbox>
               </Fieldset>
               <ActionGroup>
                 <a
@@ -258,6 +283,4 @@ const Mvo = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default Mvo;
+}

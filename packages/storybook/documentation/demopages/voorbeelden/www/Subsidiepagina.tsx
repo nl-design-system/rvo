@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   Fieldset,
   Footer,
@@ -7,32 +11,50 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  FormField,
+  RadioButton,
 } from '@nl-rvo/component-library-react';
+import type { ReactElement } from 'react';
+import { useEffect, useState } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const Subsidiepagina = () => {
+export default function SubsidiepaginaPage(): ReactElement {
+  const profielFoto2ImgUrl = 'images/berichtenbox/profiel-foto-2.png';
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' && window.innerWidth > 1020);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1020);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <body className="rvo-theme">
       <Header />
       <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <MenuBar
-          items={[
-            { label: 'Home', link: '#' },
-            { label: 'Onderwerpen', link: '#' },
-            { label: 'Subsidie- en financieringswijzer', link: '#' },
-            { label: 'Over ons', link: '#' },
-            { label: 'Contact', link: '#' },
-            { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
-            { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
-            { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
-          ]}
-          size="lg"
-          useIcons={true}
-          iconPlacement="left"
-          maxWidth="lg"
-        />
+        {isDesktop ? (
+          <MenuBar
+            items={[
+              { label: 'Home', link: '#' },
+              { label: 'Onderwerpen', link: '#' },
+              { label: 'Subsidie- en financieringswijzer', link: '#' },
+              { label: 'Over ons', link: '#' },
+              { label: 'Contact', link: '#' },
+              { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
+              { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
+              { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
+            ]}
+            size="lg"
+            useIcons={true}
+            iconPlacement="before"
+            maxWidth="lg"
+          />
+        ) : (
+          <MenuBar />
+        )}
       </div>
 
       <main className="rvo-padding-block-end--3xl rvo-padding-block-start--2xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
@@ -185,35 +207,35 @@ const Subsidiepagina = () => {
           <div className="rvo-layout-grid rvo-layout-grid-columns--two rvo-layout-gap--md">
             <div>
               <LayoutFlow gap="2xs">
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Krijgt u subsidie?
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Hoeveel subsidie krijgt u?
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Voorwaarden
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Subsidieproces in 4 stappen
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Uw aanvraag voorbereiden
                 </Link>
               </LayoutFlow>
             </div>
             <div>
               <LayoutFlow gap="2xs">
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Aanvragen
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Na uw aanvraag
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Veelgestelde vragen
                 </Link>
-                <Link icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
                   Meer weten?
                 </Link>
               </LayoutFlow>
@@ -221,29 +243,27 @@ const Subsidiepagina = () => {
             <div></div>
           </div>
         </div>
-        <div id="krijgt-u-subsidie" className="rvo-max-width-layout rvo-max-width-layout--sm">
+        <div className="rvo-max-width-layout rvo-max-width-layout--sm">
           <Fieldset legend="Krijgt u subsidie?">
             <p className="rvo-margin-block-end--lg rvo-margin-block-start--2xs">
               Beantwoord maximaal 5 vragen en u ziet direct of u kans maakt op deze subsidie.
             </p>
-            <FormField label="Bent u eigenaar van het gebouw?">
-              <FormField.RadioButtonGroup
-                name="subsidie"
-                options={[
-                  { id: 'ja', label: 'Ja', checked: true },
-                  { id: 'nee', label: 'Nee' },
-                ]}
-              />
-            </FormField>
-            <FormField label="Heeft u toestemming van de VvE?">
-              <FormField.RadioButtonGroup
-                name="subsidie"
-                options={[
-                  { id: 'toestemming-ja', label: 'Ja', checked: true },
-                  { id: 'toestemming-nee', label: 'Nee' },
-                ]}
-              />
-            </FormField>
+            <RadioButton
+              name="subsidie"
+              label="Bent u eigenaar van het gebouw?"
+              options={[
+                { id: 'ja', label: 'Ja', checked: true },
+                { id: 'nee', label: 'Nee' },
+              ]}
+            />
+            <RadioButton
+              name="subsidie"
+              label="Heeft u toestemming van de VvE?"
+              options={[
+                { id: 'toestemming-ja', label: 'Ja', checked: true },
+                { id: 'toestemming-nee', label: 'Nee' },
+              ]}
+            />
             <Heading type="h3" noMargins={true}>
               U kunt subsidie aanvragen
             </Heading>
@@ -266,7 +286,7 @@ const Subsidiepagina = () => {
           </Link>
         </div>
 
-        <div id="voorwaarden" className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Voorwaarden
           </Heading>
@@ -332,7 +352,7 @@ const Subsidiepagina = () => {
                 </span>
                 <LayoutFlow row={true} gap="sm">
                   <div className="rvo-quote__image">
-                    <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                    <img src={profielFoto2ImgUrl} width="64px" height="64px" />
                   </div>
                   <div className="rvo-quote__person">
                     <LayoutFlow gap="0">
@@ -401,10 +421,7 @@ const Subsidiepagina = () => {
           </details>
         </div>
 
-        <div
-          id="uw-aanvraag-voorbereiden"
-          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm "
-        >
+        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Uw aanvraag voorbereiden
           </Heading>
@@ -768,7 +785,7 @@ const Subsidiepagina = () => {
                   </span>
                   <LayoutFlow row={true} gap="sm">
                     <div className="rvo-quote__image">
-                      <img src="images/berichtenbox/profiel-foto-2.png" width="64px" height="64px" />
+                      <img src={profielFoto2ImgUrl} width="64px" height="64px" />
                     </div>
                     <div className="rvo-quote__person">
                       <LayoutFlow gap="0">
@@ -826,6 +843,4 @@ const Subsidiepagina = () => {
       <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
-};
-
-export default Subsidiepagina;
+}

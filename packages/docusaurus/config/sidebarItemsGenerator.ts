@@ -73,6 +73,9 @@ const sidebarItemsGenerator = async ({ item, docs }) => {
     return a.title.localeCompare(b.title);
   });
 
+  // Remove docs marked as hidden from sidebar
+  processedDocs = processedDocs.filter((doc) => !doc.frontMatter.hide_from_sidebar);
+
   // Remove the homepage from the sidebar
   const homepageIndex = processedDocs.findIndex((doc) => doc.sourceDirName === '.');
   if (homepageIndex > -1) {

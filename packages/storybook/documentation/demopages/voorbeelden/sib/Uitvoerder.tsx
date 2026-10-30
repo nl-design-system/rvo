@@ -1,25 +1,52 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Fieldset,
+  FileInput,
   Footer,
-  FormField,
   Header,
   Heading,
   LayoutFlow,
   MenuBar,
   ProgressTracker,
+  RadioButton,
+  Textarea,
+  TextInput,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const Uitvoerder = () => {
+export default function UitvoerderPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -47,7 +74,7 @@ const Uitvoerder = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -65,7 +92,7 @@ const Uitvoerder = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -153,15 +180,15 @@ const Uitvoerder = () => {
                 </Heading>
               </div>
               <Fieldset legend="">
-                <FormField label="Uitvoerder coachingtraject">
-                  <FormField.RadioButtonGroup
-                    name="uitvoerder"
-                    options={[
-                      { id: 'uitvoerderA', label: 'Albert Heijn' },
-                      { id: 'uitvoerderB', label: 'Nieuwe organisatie toevoegen' },
-                    ]}
-                  />
-                </FormField>
+                <RadioButton
+                  name="uitvoerder"
+                  label="Uitvoerder coachingtraject"
+                  helperText=""
+                  options={[
+                    { id: 'uitvoerderA', label: 'Albert Heijn' },
+                    { id: 'uitvoerderB', label: 'Nieuwe organisatie toevoegen' },
+                  ]}
+                ></RadioButton>
                 <div
                   role="group"
                   aria-labelledby="fieldId-label"
@@ -192,27 +219,13 @@ const Uitvoerder = () => {
                 </div>
               </Fieldset>
               <Fieldset legend="Contactpersoon coach">
-                <FormField label="Voorletters">
-                  <FormField.Text sizeInput="sm" />
-                </FormField>
-                <FormField label="Tussenvoegsels">
-                  <FormField.Text sizeInput="sm" />
-                </FormField>
-                <FormField label="Achternaam">
-                  <FormField.Text />
-                </FormField>
-                <FormField label="Telefoonnummer">
-                  <FormField.Text sizeInput="md" />
-                </FormField>
-                <FormField label="E-mailadres">
-                  <FormField.Text />
-                </FormField>
-                <FormField label="Wat is de website (URL) van de opgegeven coach?">
-                  <FormField.Text />
-                </FormField>
-                <FormField label="Waarom heeft u voor de opgegeven coach gekozen?">
-                  <FormField.TextArea />
-                </FormField>
+                <TextInput label="Voorletters" size="sm"></TextInput>
+                <TextInput label="Tussenvoegsels" size="sm"></TextInput>
+                <TextInput label="Achternaam"></TextInput>
+                <TextInput label="Telefoonnummer" size="md"></TextInput>
+                <TextInput label="E-mailadres"></TextInput>
+                <TextInput label="Wat is de website (URL) van de opgegeven coach?"></TextInput>
+                <Textarea label="Waarom heeft u voor de opgegeven coach gekozen?"></Textarea>
               </Fieldset>
               <Fieldset legend="Curriculum Vitae (CV) coach">
                 <p className="rvo-text rvo-text--no-margins">
@@ -227,12 +240,10 @@ const Uitvoerder = () => {
                     het doelland.
                   </li>
                 </ul>
-                <FormField
+                <FileInput
                   label="CV bestand coach"
                   warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
-                >
-                  <FormField.FileInput />
-                </FormField>
+                ></FileInput>
               </Fieldset>
               <ActionGroup>
                 <a
@@ -249,6 +260,4 @@ const Uitvoerder = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default Uitvoerder;
+}

@@ -1,0 +1,62 @@
+---
+title: Formulier
+hide_title: true
+hide_table_of_contents: true
+slug: formulier
+sidebar_position: 4
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import StorybookLink from "../../../../packages/docusaurus/src/components/StorybookLink";
+
+export const TemplateLink = () => (
+  <StorybookLink id="pagina-s-templates-formulier--default">
+    Bekijk de Formulier-template op volledig scherm
+  </StorybookLink>
+);
+
+# Formulier
+
+De Formulier template toont een volledig formulier met invoervelden, keuzerondjes, checkboxes en een actiegroep.
+
+<TemplateLink />
+
+<div className="rvo-margin-block-start--xl">
+
+## Opbouw
+
+- Groepeer velden in een Fieldset.
+- Zorg dat elk veld een duidelijk, kort label erboven heeft.
+- Gebruik helper tekst voor aanvullende uitleg en instructies.
+
+## Complexe formulieren
+
+- Gebruik voor complexe formulieren met veel velden meerdere stappen.
+- Probeer het aantal velden per stap te beperken. Begin met één stap per veld en voeg stappen samen als gebruikersonderzoeken uitwijzen dat dit wenselijk is.
+- Geef de gebruiker de mogelijkheid om de voortgang op te slaan wanneer een stap is afgerond.
+- Ga terug naar de laatste actieve stap wanneer een gebruiker een formulier tussentijds afbreekt en daarna terugkeert.
+- Toon een <a href={useBaseUrl("componenten/progress-tracker")} className="rvo-link">Progress tracker</a> zodat de gebruiker weet hoeveel stappen er zijn, welke stappen zijn afgerond en welke stap momenteel actief is.
+
+</div>
+
+<div className="rvo-margin-block-start--xl">
+
+## Componenten
+
+- <a href={useBaseUrl("componenten/action-group")} className="rvo-link">Action Group</a>
+- <a href={useBaseUrl("componenten/button")} className="rvo-link">Button</a>
+- <a href={useBaseUrl("componenten/form-field-checkbox")} className="rvo-link">Checkbox Field</a>
+- <a href={useBaseUrl("componenten/form-fieldset")} className="rvo-link">Fieldset</a>
+- <a href={useBaseUrl("componenten/form-field-fileinput")} className="rvo-link">File Input Field</a>
+- <a href={useBaseUrl("componenten/footer")} className="rvo-link">Footer</a>
+- <a href={useBaseUrl("componenten/header")} className="rvo-link">Header</a>
+- <a href={useBaseUrl("componenten/heading")} className="rvo-link">Heading</a>
+- <a href={useBaseUrl("componenten/layout-flow")} className="rvo-link">Layout Flow</a>
+- <a href={useBaseUrl("componenten/link")} className="rvo-link">Link</a>
+- <a href={useBaseUrl("componenten/menubar")} className="rvo-link">MenuBar</a>
+- <a href={useBaseUrl("componenten/form-field-radio-button")} className="rvo-link">Radio Button Field</a>
+- <a href={useBaseUrl("componenten/form-field-select")} className="rvo-link">Select Field</a>
+- <a href={useBaseUrl("componenten/form-field-textinput")} className="rvo-link">Text Input Field</a>
+- <a href={useBaseUrl("componenten/form-field-textarea")} className="rvo-link">Textarea Field</a>
+
+</div>

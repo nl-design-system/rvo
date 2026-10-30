@@ -3,7 +3,7 @@ import { useLocation } from '@docusaurus/router';
 import { prefersReducedMotion, ThemeClassNames } from '@docusaurus/theme-common';
 import type { Props } from '@theme/DocRoot/Layout/Sidebar';
 import ExpandButton from '@theme/DocRoot/Layout/Sidebar/ExpandButton';
-import DocSidebar from '@theme/DocSidebar';
+import DocSidebarDesktop from '@theme/DocSidebar/Desktop';
 import clsx from 'clsx';
 import React, { type ReactNode, useCallback, useState } from 'react';
 import type { ReactElement } from 'react';
@@ -56,7 +56,7 @@ export default function DocRootLayoutSidebar({
     >
       <ResetOnSidebarChange>
         <div className={clsx(styles.sidebarViewport, hiddenSidebar && styles.sidebarViewportHidden)}>
-          <DocSidebar sidebar={sidebar} path={pathname} onCollapse={toggleSidebar} isHidden={hiddenSidebar} />
+          <DocSidebarDesktop sidebar={sidebar} path={pathname} onCollapse={toggleSidebar} isHidden={hiddenSidebar} />
           {hiddenSidebar && <ExpandButton toggleSidebar={toggleSidebar} />}
         </div>
       </ResetOnSidebarChange>
