@@ -4,7 +4,6 @@ import {
   Alert,
   Button,
   DataList,
-  DataListItem,
   Grid,
   Header,
   Heading,
@@ -225,9 +224,9 @@ const ControlerenIndienen = () => {
                   <Heading type="h2">Projectgegevens</Heading>
                   {project ? (
                     <DataList>
-                      <DataListItem label="Projectnaam" value={project.naam} />
-                      <DataListItem label="Omschrijving" value={project.omschrijving} />
-                      <DataListItem label="Beoogde startdatum" value={formatDate(project.startdatum)} />
+                      <DataList.Item label="Projectnaam" value={project.naam} />
+                      <DataList.Item label="Omschrijving" value={project.omschrijving} />
+                      <DataList.Item label="Beoogde startdatum" value={formatDate(project.startdatum)} />
                     </DataList>
                   ) : (
                     <Alert kind="warning" padding="md">
@@ -253,9 +252,9 @@ const ControlerenIndienen = () => {
                             {pand.straatnaam} {pand.huisnummer}, {pand.postcode} {pand.plaatsnaam}
                           </Heading>
                           <DataList>
-                            <DataListItem label="Daktype" value={pand.daktype} />
-                            <DataListItem label="Dakoppervlak" value={`${pand.dakoppervlak} m²`} />
-                            <DataListItem label="Bereikbaar" value={pand.bereikbaar} />
+                            <DataList.Item label="Daktype" value={pand.daktype} />
+                            <DataList.Item label="Dakoppervlak" value={`${pand.dakoppervlak} m²`} />
+                            <DataList.Item label="Bereikbaar" value={pand.bereikbaar} />
                           </DataList>
                         </div>
                       ))}
@@ -293,9 +292,9 @@ const ControlerenIndienen = () => {
                               : bijenkast.typeBijenkast.replace(/kast$/, 'kasten')}
                           </Heading>
                           <DataList>
-                            <DataListItem label="Gebouw" value={bijenkast.pandLabel} />
-                            <DataListItem label="Type" value={bijenkast.typeBijenkast} />
-                            <DataListItem
+                            <DataList.Item label="Gebouw" value={bijenkast.pandLabel} />
+                            <DataList.Item label="Type" value={bijenkast.typeBijenkast} />
+                            <DataList.Item
                               label="Aantal"
                               value={`${bijenkast.aantalKasten} ${Number(bijenkast.aantalKasten) === 1 ? 'kast' : 'kasten'}`}
                             />

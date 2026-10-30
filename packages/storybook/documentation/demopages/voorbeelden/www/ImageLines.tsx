@@ -10,8 +10,8 @@ import {
   MenuBar,
 } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const Home = () => {
   const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' && window.innerWidth > 1020);

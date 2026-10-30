@@ -13,10 +13,10 @@ import {
   TextInput,
 } from '@nl-rvo/component-library-react';
 import { UtilityTextTypes } from '@nl-rvo/component-library-react';
-import '../common/rhs-update.scss';
-import '../common/www.scss';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import '../../common/rhs-update.scss';
+import '../../common/www.scss';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const Notify = () => {
   return (

@@ -15,8 +15,8 @@ import {
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useEffect, useState } from 'react';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 export default function SubsidiepaginaPage(): ReactElement {
   const profielFoto2ImgUrl = 'images/berichtenbox/profiel-foto-2.png';

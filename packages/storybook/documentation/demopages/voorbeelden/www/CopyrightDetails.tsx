@@ -1,8 +1,8 @@
 import { Button, Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import { useEffect, useState } from 'react';
-import '../common/copyright-details.scss';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import '../../common/copyright-details.scss';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const CopyrightDetails = () => {
   const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' && window.innerWidth > 1020);

@@ -16,8 +16,8 @@ import {
   TextInput,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 export default function UwGegevensPage(): ReactElement {
   return (

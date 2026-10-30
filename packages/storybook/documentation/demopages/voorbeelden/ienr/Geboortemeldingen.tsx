@@ -10,8 +10,8 @@ import {
   Select,
 } from '@nl-rvo/component-library-react';
 import '../../../../../../utilities/utility-text-types/src/index.scss';
-import { defaultFooterItems } from '../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import { defaultFooterItems } from '../../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
 const Geboortemeldingen = () => {
   return (
