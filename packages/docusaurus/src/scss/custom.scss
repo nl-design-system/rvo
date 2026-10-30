@@ -75,10 +75,6 @@ html.blog-wrapper.plugin-blog {
   --ifm-pre-padding: 0;
   --ifm-paragraph-margin-bottom: 0;
 
-  h2:not(.component-example h2) {
-    margin-bottom: 0.5rem;
-  }
-
   h1:not(.component-example h1),
   h2:not(.component-example h2),
   h3:not(.component-example h3),
@@ -115,7 +111,12 @@ html.blog-wrapper.plugin-blog {
     margin-block-start: 0 !important;
   }
 
-  .markdown h1 {
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
     margin-block-start: 0;
     margin-block-end: 0;
   }
