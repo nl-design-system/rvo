@@ -120,6 +120,7 @@ const BijenkastenOverzicht = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -137,7 +138,7 @@ const BijenkastenOverzicht = () => {
           <main>
             <LayoutFlow gap="xl">
               <div>
-                <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
+                <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
                   Terug
                 </Link>
                 <Heading type="h1">Bijenkasten</Heading>
@@ -171,7 +172,7 @@ const BijenkastenOverzicht = () => {
                       <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--sm">
                         <Link
                           href={URL_BIJENKAST_WIJZIGEN}
-                          showIcon="before"
+                          iconPlacement="left"
                           icon="bewerken"
                           noUnderline={true}
                           onClick={() => saveEditBijenkastIndex(index)}
@@ -184,7 +185,7 @@ const BijenkastenOverzicht = () => {
                       </div>
                     </Card>
                   ))}
-                  <Link href={URL_BIJENKAST_TOEVOEGEN} showIcon="before" icon="plus" noUnderline={true}>
+                  <Link href={URL_BIJENKAST_TOEVOEGEN} iconPlacement="left" icon="plus" noUnderline={true}>
                     Voeg nog een bijenkast toe
                   </Link>
                 </LayoutFlow>

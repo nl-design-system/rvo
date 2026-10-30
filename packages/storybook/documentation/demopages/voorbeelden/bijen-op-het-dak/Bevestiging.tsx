@@ -23,6 +23,7 @@ const Bevestiging = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -92,7 +93,7 @@ const Bevestiging = () => {
             </p>
           </LayoutFlow>
 
-          <Link href="#" showIcon="after" icon="externe-link">
+          <Link href="#" iconPlacement="right" icon="externe-link">
             Ga naar Mijn aanvragen
           </Link>
         </LayoutFlow>

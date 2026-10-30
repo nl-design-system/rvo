@@ -4,6 +4,7 @@ import {
   Button,
   Dialog,
   Fieldset,
+  FormField,
   Grid,
   Header,
   Heading,
@@ -12,8 +13,6 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  RadioButtonField,
-  TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
@@ -134,6 +133,7 @@ const PandWijzigen = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -152,7 +152,7 @@ const PandWijzigen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
                     Terug
                   </Link>
                   <Heading type="h1">Gebouw wijzigen</Heading>
@@ -164,34 +164,25 @@ const PandWijzigen = () => {
                 <form onSubmit={handleSubmit}>
                   <LayoutFlow>
                     <Fieldset legend="Locatie van het gebouw">
-                      <TextInputField
-                        label="Land"
-                        disabled={true}
-                        value="Nederland"
-                        warningText="Alleen gebouwen in Nederland komen in aanmerking."
-                      />
-                      <TextInputField
-                        label="Straatnaam"
-                        value={straatnaam}
-                        onChange={(e) => setStraatnaam(e.target.value)}
-                      />
-                      <TextInputField
-                        label="Huisnummer"
-                        size="xs"
-                        value={huisnummer}
-                        onChange={(e) => setHuisnummer(e.target.value)}
-                      />
-                      <TextInputField
-                        label="Postcode"
-                        size="sm"
-                        value={postcode}
-                        onChange={(e) => setPostcode(e.target.value)}
-                      />
-                      <TextInputField
-                        label="Plaatsnaam"
-                        value={plaatsnaam}
-                        onChange={(e) => setPlaatsnaam(e.target.value)}
-                      />
+                      <FormField label="Land" warningText="Alleen gebouwen in Nederland komen in aanmerking.">
+                        <FormField.Text disabled={true} value="Nederland" />
+                      </FormField>
+                      <FormField label="Straatnaam">
+                        <FormField.Text value={straatnaam} onChange={(e) => setStraatnaam(e.target.value)} />
+                      </FormField>
+                      <FormField label="Huisnummer">
+                        <FormField.Text
+                          sizeInput="xs"
+                          value={huisnummer}
+                          onChange={(e) => setHuisnummer(e.target.value)}
+                        />
+                      </FormField>
+                      <FormField label="Postcode">
+                        <FormField.Text sizeInput="sm" value={postcode} onChange={(e) => setPostcode(e.target.value)} />
+                      </FormField>
+                      <FormField label="Plaatsnaam">
+                        <FormField.Text value={plaatsnaam} onChange={(e) => setPlaatsnaam(e.target.value)} />
+                      </FormField>
                     </Fieldset>
 
                     <Fieldset legend="Informatie over het dak">
@@ -200,35 +191,40 @@ const PandWijzigen = () => {
                           setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
                         }
                       >
-                        <RadioButtonField
-                          name="daktype"
-                          label="Type dak"
-                          options={[
-                            { id: 'plat-dak', label: 'Plat dak', checked: daktype === 'Plat dak' },
-                            { id: 'schuin-dak', label: 'Schuin dak', checked: daktype === 'Schuin dak' },
-                          ]}
-                        />
+                        <FormField id="daktype" label="Type dak">
+                          <FormField.RadioButtonGroup
+                            name="daktype"
+                            options={[
+                              { id: 'plat-dak', label: 'Plat dak', checked: daktype === 'Plat dak' },
+                              { id: 'schuin-dak', label: 'Schuin dak', checked: daktype === 'Schuin dak' },
+                            ]}
+                          />
+                        </FormField>
                       </div>
-                      <TextInputField
+                      <FormField
                         label="Dakoppervlak (m²)"
                         helperText="Het beschikbare dakoppervlak waarop de bijenkasten worden geplaatst."
-                        value={dakoppervlak}
-                        onChange={(e) => setDakoppervlak(e.target.value)}
-                      />
+                      >
+                        <FormField.Text value={dakoppervlak} onChange={(e) => setDakoppervlak(e.target.value)} />
+                      </FormField>
                       <div
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                           setBereikbaar(e.target.id === 'bereikbaar-ja' ? 'Ja' : 'Nee')
                         }
                       >
-                        <RadioButtonField
-                          name="dak-bereikbaar"
+                        <FormField
+                          id="bereikbaar"
                           label="Is het dak bereikbaar voor onderhoud?"
                           helperText="Het dak moet minimaal 2 keer per jaar bereikbaar zijn voor de imker."
-                          options={[
-                            { id: 'bereikbaar-ja', label: 'Ja', checked: bereikbaar === 'Ja' },
-                            { id: 'bereikbaar-nee', label: 'Nee', checked: bereikbaar === 'Nee' },
-                          ]}
-                        />
+                        >
+                          <FormField.RadioButtonGroup
+                            name="dak-bereikbaar"
+                            options={[
+                              { id: 'bereikbaar-ja', label: 'Ja', checked: bereikbaar === 'Ja' },
+                              { id: 'bereikbaar-nee', label: 'Nee', checked: bereikbaar === 'Nee' },
+                            ]}
+                          />
+                        </FormField>
                       </div>
                     </Fieldset>
 

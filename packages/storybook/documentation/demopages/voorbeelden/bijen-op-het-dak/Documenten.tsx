@@ -4,7 +4,7 @@ import {
   Button,
   Dialog,
   Fieldset,
-  FileInputField,
+  FormField,
   Grid,
   Header,
   Heading,
@@ -168,6 +168,7 @@ const Documenten = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -185,7 +186,7 @@ const Documenten = () => {
           <main>
             <LayoutFlow gap="xl">
               <div>
-                <Link href={URL_BIJENKASTEN} showIcon="before" icon="terug" noUnderline={true}>
+                <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="terug" noUnderline={true}>
                   Terug
                 </Link>
                 <Heading type="h1">Documenten</Heading>
@@ -225,11 +226,10 @@ const Documenten = () => {
 
                   {showOfferteForm ? (
                     <LayoutFlow gap="xs">
-                      <FileInputField
+                      <FormField
                         id={`offerte-upload-${offertes.length}`}
                         label="Offerte uploaden"
-                        expandableHelperText={true}
-                        expandableHelperTextTitle="Voorwaarden voor de offerte"
+                        expandableHelperText={{ title: 'Voorwaarden voor de offerte' }}
                         helperText={
                           <ul>
                             <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
@@ -237,14 +237,14 @@ const Documenten = () => {
                             <li>De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.</li>
                           </ul>
                         }
-                        accept=".pdf"
-                        onChange={handleOfferteChange}
-                      />
+                      >
+                        <FormField.FileInput accept=".pdf" onChange={handleOfferteChange} />
+                      </FormField>
                       {offertes.length > 0 && (
                         <Link
                           href="#"
                           color="donkerblauw"
-                          showIcon="before"
+                          iconPlacement="left"
                           icon="kruis"
                           noUnderline={true}
                           onClick={(e) => {
@@ -260,7 +260,7 @@ const Documenten = () => {
                     <Link
                       href="#"
                       color="donkerblauw"
-                      showIcon="before"
+                      iconPlacement="left"
                       icon="plus"
                       noUnderline={true}
                       onClick={(e) => {
@@ -305,11 +305,10 @@ const Documenten = () => {
 
                   {showTekeningForm ? (
                     <LayoutFlow gap="xs">
-                      <FileInputField
+                      <FormField
                         id={`tekening-upload-${tekeningen.length}`}
                         label="Tekening uploaden"
-                        expandableHelperText={true}
-                        expandableHelperTextTitle="Voorwaarden voor de tekening"
+                        expandableHelperText={{ title: 'Voorwaarden voor de tekening' }}
                         helperText={
                           <ul>
                             <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
@@ -317,14 +316,14 @@ const Documenten = () => {
                             <li>De locatie van de bijenkasten is duidelijk aangegeven.</li>
                           </ul>
                         }
-                        accept=".pdf"
-                        onChange={handleTekeningChange}
-                      />
+                      >
+                        <FormField.FileInput accept=".pdf" onChange={handleTekeningChange} />
+                      </FormField>
                       {tekeningen.length > 0 && (
                         <Link
                           href="#"
                           color="donkerblauw"
-                          showIcon="before"
+                          iconPlacement="left"
                           icon="kruis"
                           noUnderline={true}
                           onClick={(e) => {
@@ -340,7 +339,7 @@ const Documenten = () => {
                     <Link
                       href="#"
                       color="donkerblauw"
-                      showIcon="before"
+                      iconPlacement="left"
                       icon="plus"
                       noUnderline={true}
                       onClick={(e) => {

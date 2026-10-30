@@ -44,6 +44,7 @@ const VoordatUBegint = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -77,10 +78,10 @@ const VoordatUBegint = () => {
               Op deze pagina
             </Heading>
             <LayoutFlow gap="2xs">
-              <Link href="#controleer-uw-gegevens" icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+              <Link href="#controleer-uw-gegevens" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                 Controleer uw gegevens
               </Link>
-              <Link href="#voorbereidingen" icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+              <Link href="#voorbereidingen" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                 Voorbereidingen
               </Link>
             </LayoutFlow>
@@ -98,28 +99,28 @@ const VoordatUBegint = () => {
               <dt>Bedrijfsnaam</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>Powerbod B.V.</span>
-                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
+                <Link href="#" iconPlacement="left" icon="bewerken" noUnderline={true}>
                   Wijzigen
                 </Link>
               </dd>
               <dt>Adres</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>Energieweg 42, 2909 LV Rotterdam</span>
-                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
+                <Link href="#" iconPlacement="left" icon="bewerken" noUnderline={true}>
                   Wijzigen
                 </Link>
               </dd>
               <dt>KVK-nummer</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>63847291</span>
-                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
+                <Link href="#" iconPlacement="left" icon="bewerken" noUnderline={true}>
                   Wijzigen
                 </Link>
               </dd>
               <dt>IBAN rekeningnummer</dt>
               <dd className="rvo-layout-column rvo-layout-gap--2xs">
                 <span>NL91 ABNA 0417 1643 00</span>
-                <Link href="#" showIcon="before" icon="bewerken" noUnderline={true}>
+                <Link href="#" iconPlacement="left" icon="bewerken" noUnderline={true}>
                   Wijzigen
                 </Link>
               </dd>

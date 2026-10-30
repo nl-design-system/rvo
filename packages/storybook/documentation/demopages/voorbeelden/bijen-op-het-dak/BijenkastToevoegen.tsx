@@ -5,6 +5,7 @@ import {
   Button,
   Dialog,
   Fieldset,
+  FormField,
   Grid,
   Header,
   Heading,
@@ -13,9 +14,6 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  RadioButtonField,
-  SelectField,
-  TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { addBijenkast } from './bijenkastenStorage';
@@ -204,6 +202,7 @@ const BijenkastToevoegen = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -222,7 +221,7 @@ const BijenkastToevoegen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_BIJENKASTEN} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="terug" noUnderline={true}>
                     Terug
                   </Link>
                   <Heading type="h1">Bijenkast toevoegen</Heading>
@@ -253,27 +252,33 @@ const BijenkastToevoegen = () => {
                     )}
 
                     <Fieldset legend="Bijenkastgegevens">
-                      <SelectField
+                      <FormField
                         id="pand"
                         label="Gebouw"
                         helperText="Selecteer het gebouw waarop u deze bijenkast wilt plaatsen."
-                        value={pandIndex}
-                        onChange={(e) => setPandIndex((e.target as HTMLSelectElement).value)}
-                        invalid={!!errors.pand}
                         errorText={errors.pand?.fieldText}
                         warningText={panden.length === 0 ? 'Er zijn nog geen gebouwen toegevoegd.' : undefined}
-                        options={pandOptions}
-                        disabled={panden.length === 0}
-                      />
-                      <TextInputField
+                      >
+                        <FormField.Select
+                          value={pandIndex}
+                          onChange={(e) => setPandIndex((e.target as HTMLSelectElement).value)}
+                          invalid={!!errors.pand}
+                          options={pandOptions}
+                          disabled={panden.length === 0}
+                        />
+                      </FormField>
+                      <FormField
                         id="aantalKasten"
                         label="Aantal bijenkasten"
-                        size="xs"
-                        value={aantalKasten}
-                        onChange={(e) => setAantalKasten(e.target.value)}
-                        invalid={!!errors.aantalKasten}
                         errorText={errors.aantalKasten?.fieldText}
-                      />
+                      >
+                        <FormField.Text
+                          sizeInput="xs"
+                          value={aantalKasten}
+                          onChange={(e) => setAantalKasten(e.target.value)}
+                          invalid={!!errors.aantalKasten}
+                        />
+                      </FormField>
                       <div
                         className="rvo-margin-block-end--xl"
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -286,18 +291,21 @@ const BijenkastToevoegen = () => {
                           )
                         }
                       >
-                        <RadioButtonField
-                          fieldId="typeBijenkast"
-                          name="typeBijenkast"
+                        <FormField
+                          id="typeBijenkast"
                           label="Type bijenkast"
-                          invalid={!!errors.typeBijenkast}
                           errorText={errors.typeBijenkast?.fieldText}
-                          options={[
-                            { id: 'langstroth', label: 'Langstroth kast' },
-                            { id: 'warre', label: 'Warré kast' },
-                            { id: 'topbar', label: 'Top-bar kast' },
-                          ]}
-                        />
+                        >
+                          <FormField.RadioButtonGroup
+                            name="typeBijenkast"
+                            invalid={!!errors.typeBijenkast}
+                            options={[
+                              { id: 'langstroth', label: 'Langstroth kast' },
+                              { id: 'warre', label: 'Warré kast' },
+                              { id: 'topbar', label: 'Top-bar kast' },
+                            ]}
+                          />
+                        </FormField>
                       </div>
                     </Fieldset>
 

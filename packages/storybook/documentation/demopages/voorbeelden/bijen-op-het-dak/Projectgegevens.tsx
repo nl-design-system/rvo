@@ -3,9 +3,9 @@ import {
   ActionGroup,
   Alert,
   Button,
-  DateInputField,
   Dialog,
   Fieldset,
+  FormField,
   Grid,
   Header,
   Heading,
@@ -14,8 +14,6 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  TextareaField,
-  TextInputField,
 } from '@nl-rvo/component-library-react';
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
@@ -172,6 +170,7 @@ const Projectgegevens = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -190,7 +189,7 @@ const Projectgegevens = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_VOORBEREIDING} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link href={URL_VOORBEREIDING} iconPlacement="left" icon="terug" noUnderline={true}>
                     Terug
                   </Link>
                   <Heading type="h1">Projectgegevens</Heading>
@@ -221,33 +220,38 @@ const Projectgegevens = () => {
                     )}
 
                     <Fieldset legend="Projectgegevens">
-                      <TextInputField
-                        id="naam"
-                        label="Projectnaam"
-                        value={naam}
-                        onChange={(e) => setNaam(e.target.value)}
-                        invalid={!!errors.naam}
-                        errorText={errors.naam?.fieldText}
-                      />
-                      <TextareaField
+                      <FormField id="naam" label="Projectnaam" errorText={errors.naam?.fieldText}>
+                        <FormField.Text
+                          value={naam}
+                          onChange={(e) => setNaam(e.target.value)}
+                          invalid={!!errors.naam}
+                        />
+                      </FormField>
+                      <FormField
                         id="omschrijving"
                         label="Projectomschrijving"
                         helperText="Beschrijf kort het doel en de aanpak van uw bijenproject."
-                        value={omschrijving}
-                        onChange={(e) => setOmschrijving(e.target.value)}
-                        invalid={!!errors.omschrijving}
                         errorText={errors.omschrijving?.fieldText}
-                      />
-                      <DateInputField
+                      >
+                        <FormField.TextArea
+                          value={omschrijving}
+                          onChange={(e) => setOmschrijving(e.target.value)}
+                          invalid={!!errors.omschrijving}
+                        />
+                      </FormField>
+                      <FormField
                         id="startdatum"
                         label="Beoogde startdatum"
                         helperText="De datum waarop u verwacht te beginnen met plaatsen van de bijenkasten."
-                        size="sm"
-                        value={startdatum}
-                        onChange={(e) => setStartdatum(e.target.value)}
-                        invalid={!!errors.startdatum}
                         errorText={errors.startdatum?.fieldText}
-                      />
+                      >
+                        <FormField.Date
+                          sizeInput="sm"
+                          value={startdatum}
+                          onChange={(e) => setStartdatum(e.target.value)}
+                          invalid={!!errors.startdatum}
+                        />
+                      </FormField>
                     </Fieldset>
 
                     <ActionGroup>

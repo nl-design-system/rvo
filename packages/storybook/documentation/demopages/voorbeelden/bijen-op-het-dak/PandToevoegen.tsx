@@ -5,6 +5,7 @@ import {
   Button,
   Dialog,
   Fieldset,
+  FormField,
   Grid,
   Header,
   Heading,
@@ -13,8 +14,6 @@ import {
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
-  RadioButtonField,
-  TextInputField,
 } from '@nl-rvo/component-library-react';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import { getBijenkasten } from './bijenkastenStorage';
@@ -232,6 +231,7 @@ const PandToevoegen = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -250,7 +250,7 @@ const PandToevoegen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_PANDEN} showIcon="before" icon="terug" noUnderline={true}>
+                  <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
                     Terug
                   </Link>
                   <Heading type="h1">Gebouw toevoegen</Heading>
@@ -281,46 +281,39 @@ const PandToevoegen = () => {
                     )}
 
                     <Fieldset legend="Locatie van het gebouw">
-                      <TextInputField
-                        label="Land"
-                        disabled={true}
-                        value="Nederland"
-                        warningText="Alleen gebouwen in Nederland komen in aanmerking."
-                      />
-                      <TextInputField
-                        id="straatnaam"
-                        label="Straatnaam"
-                        value={straatnaam}
-                        onChange={(e) => setStraatnaam(e.target.value)}
-                        invalid={!!errors.straatnaam}
-                        errorText={errors.straatnaam?.fieldText}
-                      />
-                      <TextInputField
-                        id="huisnummer"
-                        label="Huisnummer"
-                        size="xs"
-                        value={huisnummer}
-                        onChange={(e) => setHuisnummer(e.target.value)}
-                        invalid={!!errors.huisnummer}
-                        errorText={errors.huisnummer?.fieldText}
-                      />
-                      <TextInputField
-                        id="postcode"
-                        label="Postcode"
-                        size="sm"
-                        value={postcode}
-                        onChange={(e) => setPostcode(e.target.value)}
-                        invalid={!!errors.postcode}
-                        errorText={errors.postcode?.fieldText}
-                      />
-                      <TextInputField
-                        id="plaatsnaam"
-                        label="Plaatsnaam"
-                        value={plaatsnaam}
-                        onChange={(e) => setPlaatsnaam(e.target.value)}
-                        invalid={!!errors.plaatsnaam}
-                        errorText={errors.plaatsnaam?.fieldText}
-                      />
+                      <FormField label="Land" warningText="Alleen gebouwen in Nederland komen in aanmerking.">
+                        <FormField.Text disabled={true} value="Nederland" />
+                      </FormField>
+                      <FormField id="straatnaam" label="Straatnaam" errorText={errors.straatnaam?.fieldText}>
+                        <FormField.Text
+                          value={straatnaam}
+                          onChange={(e) => setStraatnaam(e.target.value)}
+                          invalid={!!errors.straatnaam}
+                        />
+                      </FormField>
+                      <FormField id="huisnummer" label="Huisnummer" errorText={errors.huisnummer?.fieldText}>
+                        <FormField.Text
+                          sizeInput="xs"
+                          value={huisnummer}
+                          onChange={(e) => setHuisnummer(e.target.value)}
+                          invalid={!!errors.huisnummer}
+                        />
+                      </FormField>
+                      <FormField id="postcode" label="Postcode" errorText={errors.postcode?.fieldText}>
+                        <FormField.Text
+                          sizeInput="sm"
+                          value={postcode}
+                          onChange={(e) => setPostcode(e.target.value)}
+                          invalid={!!errors.postcode}
+                        />
+                      </FormField>
+                      <FormField id="plaatsnaam" label="Plaatsnaam" errorText={errors.plaatsnaam?.fieldText}>
+                        <FormField.Text
+                          value={plaatsnaam}
+                          onChange={(e) => setPlaatsnaam(e.target.value)}
+                          invalid={!!errors.plaatsnaam}
+                        />
+                      </FormField>
                     </Fieldset>
 
                     <Fieldset legend="Informatie over het dak">
@@ -330,45 +323,50 @@ const PandToevoegen = () => {
                           setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
                         }
                       >
-                        <RadioButtonField
-                          fieldId="daktype"
-                          name="daktype"
-                          label="Type dak"
-                          invalid={!!errors.daktype}
-                          errorText={errors.daktype?.fieldText}
-                          options={[
-                            { id: 'plat-dak', label: 'Plat dak' },
-                            { id: 'schuin-dak', label: 'Schuin dak' },
-                          ]}
-                        />
+                        <FormField id="daktype" label="Type dak" errorText={errors.daktype?.fieldText}>
+                          <FormField.RadioButtonGroup
+                            name="daktype"
+                            invalid={!!errors.daktype}
+                            options={[
+                              { id: 'plat-dak', label: 'Plat dak' },
+                              { id: 'schuin-dak', label: 'Schuin dak' },
+                            ]}
+                          />
+                        </FormField>
                       </div>
-                      <TextInputField
+                      <FormField
                         id="dakoppervlak"
                         label="Dakoppervlak (m²)"
                         helperText="Het beschikbare dakoppervlak waarop de bijenkasten worden geplaatst."
-                        size="sm"
-                        value={dakoppervlak}
-                        onChange={(e) => setDakoppervlak(e.target.value)}
-                        invalid={!!errors.dakoppervlak}
                         errorText={errors.dakoppervlak?.fieldText}
-                      />
+                      >
+                        <FormField.Text
+                          sizeInput="sm"
+                          value={dakoppervlak}
+                          onChange={(e) => setDakoppervlak(e.target.value)}
+                          invalid={!!errors.dakoppervlak}
+                        />
+                      </FormField>
                       <div
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                           setBereikbaar(e.target.id === 'bereikbaar-ja' ? 'Ja' : 'Nee')
                         }
                       >
-                        <RadioButtonField
-                          fieldId="bereikbaar"
-                          name="dak-bereikbaar"
+                        <FormField
+                          id="bereikbaar"
                           label="Is het dak bereikbaar voor onderhoud?"
                           helperText="Het dak moet minimaal 2 keer per jaar bereikbaar zijn voor de imker."
-                          invalid={!!errors.bereikbaar}
                           errorText={errors.bereikbaar?.fieldText}
-                          options={[
-                            { id: 'bereikbaar-ja', label: 'Ja' },
-                            { id: 'bereikbaar-nee', label: 'Nee' },
-                          ]}
-                        />
+                        >
+                          <FormField.RadioButtonGroup
+                            name="dak-bereikbaar"
+                            invalid={!!errors.bereikbaar}
+                            options={[
+                              { id: 'bereikbaar-ja', label: 'Ja' },
+                              { id: 'bereikbaar-nee', label: 'Nee' },
+                            ]}
+                          />
+                        </FormField>
                       </div>
                     </Fieldset>
 

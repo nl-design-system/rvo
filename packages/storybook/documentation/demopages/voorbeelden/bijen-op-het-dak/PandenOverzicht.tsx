@@ -114,6 +114,7 @@ const PandenOverzicht = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -131,7 +132,7 @@ const PandenOverzicht = () => {
           <main>
             <LayoutFlow gap="xl">
               <div>
-                <Link href={URL_PROJECTGEGEVENS} showIcon="before" icon="terug" noUnderline={true}>
+                <Link href={URL_PROJECTGEGEVENS} iconPlacement="left" icon="terug" noUnderline={true}>
                   Terug
                 </Link>
                 <Heading type="h1">Gebouwen</Heading>
@@ -156,7 +157,7 @@ const PandenOverzicht = () => {
                       <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--sm">
                         <Link
                           href={URL_PAND_WIJZIGEN}
-                          showIcon="before"
+                          iconPlacement="left"
                           icon="bewerken"
                           noUnderline={true}
                           onClick={() => saveEditPandIndex(index)}
@@ -169,7 +170,7 @@ const PandenOverzicht = () => {
                       </div>
                     </Card>
                   ))}
-                  <Link href={URL_PAND_TOEVOEGEN} showIcon="before" icon="plus" noUnderline={true}>
+                  <Link href={URL_PAND_TOEVOEGEN} iconPlacement="left" icon="plus" noUnderline={true}>
                     Voeg nog een gebouw toe
                   </Link>
                 </LayoutFlow>

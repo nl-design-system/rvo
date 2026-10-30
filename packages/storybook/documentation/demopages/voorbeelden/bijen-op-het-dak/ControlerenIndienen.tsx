@@ -163,6 +163,7 @@ const ControlerenIndienen = () => {
           useIcons={true}
           iconPlacement="before"
           maxWidth="md"
+          horizontalRule={true}
         />
       </div>
 
@@ -180,7 +181,7 @@ const ControlerenIndienen = () => {
           <main>
             <LayoutFlow gap="xl">
               <div>
-                <Link href={URL_DOCUMENTEN} showIcon="before" icon="terug" noUnderline={true}>
+                <Link href={URL_DOCUMENTEN} iconPlacement="left" icon="terug" noUnderline={true}>
                   Terug
                 </Link>
                 <Heading type="h1">Controleren en versturen</Heading>
@@ -234,7 +235,7 @@ const ControlerenIndienen = () => {
                     </Alert>
                   )}
                   <div className="rvo-margin-block-start--md">
-                    <Link href={URL_PROJECTGEGEVENS} showIcon="before" icon="bewerken" noUnderline={true}>
+                    <Link href={URL_PROJECTGEGEVENS} iconPlacement="left" icon="bewerken" noUnderline={true}>
                       Projectgegevens wijzigen
                     </Link>
                   </div>
@@ -266,11 +267,11 @@ const ControlerenIndienen = () => {
                   )}
                   <div className="rvo-margin-block-start--md">
                     {panden.length > 0 ? (
-                      <Link href={URL_PANDEN} showIcon="before" icon="bewerken" noUnderline={true}>
+                      <Link href={URL_PANDEN} iconPlacement="left" icon="bewerken" noUnderline={true}>
                         Gebouwen wijzigen
                       </Link>
                     ) : (
-                      <Link href={URL_PAND_TOEVOEGEN} showIcon="before" icon="plus" noUnderline={true}>
+                      <Link href={URL_PAND_TOEVOEGEN} iconPlacement="left" icon="plus" noUnderline={true}>
                         Gebouw toevoegen
                       </Link>
                     )}
@@ -309,11 +310,11 @@ const ControlerenIndienen = () => {
                   )}
                   <div className="rvo-margin-block-start--md">
                     {bijenkasten.length > 0 ? (
-                      <Link href={URL_BIJENKASTEN} showIcon="before" icon="bewerken" noUnderline={true}>
+                      <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="bewerken" noUnderline={true}>
                         Bijenkasten wijzigen
                       </Link>
                     ) : (
-                      <Link href={URL_BIJENKAST_TOEVOEGEN} showIcon="before" icon="plus" noUnderline={true}>
+                      <Link href={URL_BIJENKAST_TOEVOEGEN} iconPlacement="left" icon="plus" noUnderline={true}>
                         Bijenkast toevoegen
                       </Link>
                     )}
@@ -355,7 +356,7 @@ const ControlerenIndienen = () => {
                     </div>
                   </LayoutFlow>
                   <div className="rvo-margin-block-start--md">
-                    <Link href={URL_DOCUMENTEN} showIcon="before" icon="bewerken" noUnderline={true}>
+                    <Link href={URL_DOCUMENTEN} iconPlacement="left" icon="bewerken" noUnderline={true}>
                       Documenten wijzigen
                     </Link>
                   </div>
