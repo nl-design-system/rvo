@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/footer.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/footer.css",
+      "import": "./dist/footer.css",
+      "default": "./dist/footer.css"
+    },
+    "./footer.css": "./dist/footer.css"
   },
   "publishConfig": {
     "access": "public",
@@ -30,8 +34,5 @@
     "build": "sass --pkg-importer=node --style=compressed ./src/:./dist/",
     "watch": "sass --pkg-importer=node --style=compressed --watch ./src/:./dist/",
     "clean": "rimraf ./dist/"
-  },
-  "dependencies": {
-    "@nl-rvo/css-max-width-layout": "workspace:*"
   }
 }

@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-skip-link';
+import '@nl-rvo/css-skip-link/skip-link.css';
 import { ISkipLinkProps } from './SkipLink.types';
 
 export const SkipLink: React.FC<ISkipLinkProps> = ({ textContent, anchorLink, ...rootElementProps }) => {

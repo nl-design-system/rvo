@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-menubar';
+import '@nl-rvo/css-menubar/menubar.css';
 import { Link } from '@nl-rvo/react-link';
 import { Icon } from '@nl-rvo/react-icon';
 import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/react/dist/index.mjs';

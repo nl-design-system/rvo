@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
-import '@nl-rvo/css-layout-flow';
+import '@nl-rvo/css-layout-flow/layout-flow.css';
 import { ILayoutFlowProps } from './LayoutFlow.types';
 
 export const LayoutFlow: React.FC<ILayoutFlowProps & React.HTMLAttributes<HTMLDivElement>> = ({

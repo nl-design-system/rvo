@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '../../../icon/react/src/Icon';
 import { ILinkProps } from './Link.types';
-import '@nl-rvo/css-link';
+import '@nl-rvo/css-link/link.css';
 
 export const Link: React.FC<ILinkProps> = ({
   href = '#',

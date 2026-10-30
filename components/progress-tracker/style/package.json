@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/progress-tracker.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/progress-tracker.css",
+      "import": "./dist/progress-tracker.css",
+      "default": "./dist/progress-tracker.css"
+    },
+    "./progress-tracker.css": "./dist/progress-tracker.css"
   },
   "publishConfig": {
     "access": "public",

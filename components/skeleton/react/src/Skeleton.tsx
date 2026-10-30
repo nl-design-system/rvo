@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { CSSProperties } from 'react';
-import '@nl-rvo/css-skeleton';
+import '@nl-rvo/css-skeleton/skeleton.css';
 import { ISkeletonProps } from './Skeleton.types';
 
 type SkeletonCSSProperties = {

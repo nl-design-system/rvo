@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-status-indicator';
+import '@nl-rvo/css-status-indicator/status-indicator.css';
 import { IStatusIndicatorProps } from './StatusIndicator.types';
 
 export const StatusIndicator: React.FC<IStatusIndicatorProps> = ({

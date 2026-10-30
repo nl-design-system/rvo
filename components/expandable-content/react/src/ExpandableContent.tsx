@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '@nl-rvo/react-icon';
-import '@nl-rvo/css-expandable-content';
+import '@nl-rvo/css-expandable-content/expandable-content.css';
 import { IExpandableContentProps } from './ExpandableContent.types';
 
 export const ExpandableContent: React.FC<IExpandableContentProps> = ({

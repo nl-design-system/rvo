@@ -7,7 +7,7 @@ import React, { ReactNode } from 'react';
 import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
 import { Heading } from '@nl-rvo/react-heading';
 import { MaxWidthLayout } from '@nl-rvo/react-max-width-layout';
-import '@nl-rvo/css-hero';
+import '@nl-rvo/css-hero/hero.css';
 import { IHeroProps } from './Hero.types';
 
 type HeroProps = IHeroProps & React.HTMLAttributes<HTMLDivElement>;

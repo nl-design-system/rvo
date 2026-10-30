@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-feedback.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-feedback.css",
+      "import": "./dist/form-feedback.css",
+      "default": "./dist/form-feedback.css"
+    },
+    "./form-feedback.css": "./dist/form-feedback.css"
   },
   "publishConfig": {
     "access": "public",

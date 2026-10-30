@@ -109,7 +109,7 @@ export type { IGridProps } from '@nl-rvo/react-grid';
 export type { IHeaderProps } from '@nl-rvo/react-header';
 export type { IHeadingProps } from '@nl-rvo/react-heading';
 export type { IHeroProps } from '@nl-rvo/react-hero';
-export type { IIconProps } from '@nl-rvo/react-icon';
+export type { IIconProps, IconType } from '@nl-rvo/react-icon';
 export type { IImageProps, IImageSource } from '@nl-rvo/react-image';
 export type { IItemListProps } from '@nl-rvo/react-item-list';
 export type { ILayoutFlowProps } from '@nl-rvo/react-layout-flow';

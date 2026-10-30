@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import SubMenu from './SubMenu';
-import '@nl-rvo/css-menubar';
+import '@nl-rvo/css-menubar/menubar.css';
 import { Link } from '@nl-rvo/react-link';
 import { IMenuBarItem } from './Menubar.types';
 import { Icon } from '@nl-rvo/react-icon';

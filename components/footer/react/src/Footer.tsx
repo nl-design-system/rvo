@@ -7,12 +7,13 @@ import React from 'react';
 import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
 import { Hr } from '@nl-rvo/react-horizontal-rule';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-footer';
+import '@nl-rvo/css-footer/footer.css';
 import { FooterInterface } from './Footer.types';
+import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/react/dist/index.mjs';
 
 export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElement>> = ({
   primaryMenu,
-  maxWidth,
+  maxWidth = 'lg',
   payOff,
   secondaryMenu,
   ...rootElementProps
@@ -27,63 +28,65 @@ export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElem
           maxWidth === 'lg' && 'rvo-footer__container--lg',
         )}
       >
-        {primaryMenu && (
-          <div className={clsx('rvo-footer__menu-container', maxWidth === 'sm' && 'rvo-footer__menu-container--sm')}>
-            {primaryMenu.map((column, columnIndex) => (
-              <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
-                {column && column.label && <span className="rvo-footer__column-title">{column.label}</span>}
-                <ul
-                  className={clsx(
-                    'rvo-footer__menu',
-                    column.orientation === 'horizontal' && 'rvo-footer__menu--horizontal',
-                  )}
-                >
-                  {column.items?.map((item, itemIndex) => (
-                    <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
-                      <Link
-                        href={item.link}
-                        iconPlacement={column.orientation === 'horizontal' ? undefined : 'left'}
-                        icon="delta-naar-rechts"
-                        iconSize="sm"
-                        iconColor="wit"
-                        noUnderline={true}
-                      >
-                        {parseContentMarkup(item.content)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        )}
-        {payOff && payOff.length > 0 && <div className="rvo-footer__payoff">{payOff}</div>}
-        {secondaryMenu && (
-          <>
-            {((primaryMenu && primaryMenu.length > 0) || (payOff && payOff.length > 0)) && <Hr />}
-            <div
-              className={clsx(
-                'rvo-footer__menu-container',
-                'rvo-footer__menu-container--secondary',
-                maxWidth === 'sm' && 'rvo-footer__menu-container--sm',
-              )}
-            >
-              {secondaryMenu.map((item, itemIndex) => {
-                return (
-                  <Link
-                    key={`secondary-menu-item-${itemIndex}`}
-                    color="wit"
-                    href={item.link}
-                    noUnderline={true}
-                    weight="normal"
+        <MaxWidthLayout size={maxWidth}>
+          {primaryMenu && (
+            <div className={clsx('rvo-footer__menu-container', maxWidth === 'sm' && 'rvo-footer__menu-container--sm')}>
+              {primaryMenu.map((column, columnIndex) => (
+                <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
+                  {column && column.label && <span className="rvo-footer__column-title">{column.label}</span>}
+                  <ul
+                    className={clsx(
+                      'rvo-footer__menu',
+                      column.orientation === 'horizontal' && 'rvo-footer__menu--horizontal',
+                    )}
                   >
-                    {item.content}
-                  </Link>
-                );
-              })}
+                    {column.items?.map((item, itemIndex) => (
+                      <li key={`primary-menu-item-${itemIndex}`} className="rvo-footer__menu-item">
+                        <Link
+                          href={item.link}
+                          iconPlacement={column.orientation === 'horizontal' ? undefined : 'left'}
+                          icon="delta-naar-rechts"
+                          iconSize="sm"
+                          iconColor="wit"
+                          noUnderline={true}
+                        >
+                          {parseContentMarkup(item.content)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          </>
-        )}
+          )}
+          {payOff && payOff.length > 0 && <div className="rvo-footer__payoff">{payOff}</div>}
+          {secondaryMenu && (
+            <>
+              {((primaryMenu && primaryMenu.length > 0) || (payOff && payOff.length > 0)) && <Hr />}
+              <div
+                className={clsx(
+                  'rvo-footer__menu-container',
+                  'rvo-footer__menu-container--secondary',
+                  maxWidth === 'sm' && 'rvo-footer__menu-container--sm',
+                )}
+              >
+                {secondaryMenu.map((item, itemIndex) => {
+                  return (
+                    <Link
+                      key={`secondary-menu-item-${itemIndex}`}
+                      color="wit"
+                      href={item.link}
+                      noUnderline={true}
+                      weight="normal"
+                    >
+                      {item.content}
+                    </Link>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </MaxWidthLayout>
       </div>
     </footer>
   );

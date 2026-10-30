@@ -1,5 +1,5 @@
 import React from 'react';
-import '@nl-rvo/css-counter-badge';
+import '@nl-rvo/css-counter-badge/counter-badge.css';
 import { ICounterBadge } from './CounterBadge.types';
 
 export const CounterBadge: React.FC<ICounterBadge> = (props: ICounterBadge) => {

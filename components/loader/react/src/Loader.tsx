@@ -1,4 +1,4 @@
-import '@nl-rvo/css-loader';
+import '@nl-rvo/css-loader/loader.css';
 
 import clsx from 'clsx';
 import React from 'react';
@@ -17,7 +17,13 @@ export const Loader: React.FC<ILoader & React.HTMLAttributes<HTMLDivElement>> = 
       </span>
       {status && (
         <p className="rvo-loader__warning">
-          <StatusIcon type={status.type} size="sm" /> {status.text}
+          {status.type ? (
+            <>
+              <StatusIcon type={status.type} size="sm" /> {status.text}
+            </>
+          ) : (
+            <>{status.text}</>
+          )}
         </p>
       )}
       {(primaryAction || secondaryAction) && (

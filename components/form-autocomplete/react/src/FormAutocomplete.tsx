@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { TextInput } from '@nl-rvo/react-form-text-input';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-form-autocomplete';
+import '@nl-rvo/css-form-autocomplete/form-autocomplete.css';
 import {
   AutocompleteKeywordFilter,
   AutocompleteKeywordSuggestion,

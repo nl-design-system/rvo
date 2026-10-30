@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/link.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/link.css",
+      "import": "./dist/link.css",
+      "default": "./dist/link.css"
+    },
+    "./link.css": "./dist/link.css"
   },
   "publishConfig": {
     "access": "public",

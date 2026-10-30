@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { createElement } from 'react';
 import parseContentMarkup from '@nl-rvo/components/utils/parseContentMarkup';
-import '@nl-rvo/css-heading';
+import '@nl-rvo/css-heading/heading.css';
 import { Icon } from '@nl-rvo/react-icon';
 import { IHeadingProps } from './Heading.types';
 

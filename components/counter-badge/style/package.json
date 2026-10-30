@@ -21,8 +21,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/counter-badge.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/counter-badge.css",
+      "import": "./dist/counter-badge.css",
+      "default": "./dist/counter-badge.css"
+    },
+    "./counter-badge.css": "./dist/counter-badge.css"
   },
   "publishConfig": {
     "access": "public",

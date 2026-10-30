@@ -20,8 +20,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/card-experimental.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/card-experimental.css",
+      "import": "./dist/card-experimental.css",
+      "default": "./dist/card-experimental.css"
+    },
+    "./card-experimental.css": "./dist/card-experimental.css"
   },
   "publishConfig": {
     "access": "public",

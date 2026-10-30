@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/dialog.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/dialog.css",
+      "import": "./dist/dialog.css",
+      "default": "./dist/dialog.css"
+    },
+    "./dialog.css": "./dist/dialog.css"
   },
   "publishConfig": {
     "access": "public",

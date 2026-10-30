@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import clsx from 'clsx';
-import '@nl-rvo/css-form-select';
+import '@nl-rvo/css-form-select/form-select.css';
 import React from 'react';
 import { ISelectProps } from './FormSelect.types';
 

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/image.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/image.css",
+      "import": "./dist/image.css",
+      "default": "./dist/image.css"
+    },
+    "./image.css": "./dist/image.css"
   },
   "publishConfig": {
     "access": "public",

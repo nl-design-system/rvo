@@ -20,8 +20,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/button.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/button.css",
+      "import": "./dist/button.css",
+      "default": "./dist/button.css"
+    },
+    "./button.css": "./dist/button.css"
   },
   "publishConfig": {
     "access": "public",

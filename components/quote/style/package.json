@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/quote.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/quote.css",
+      "import": "./dist/quote.css",
+      "default": "./dist/quote.css"
+    },
+    "./quote.css": "./dist/quote.css"
   },
   "publishConfig": {
     "access": "public",

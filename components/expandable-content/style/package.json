@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/expandable-content.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/expandable-content.css",
+      "import": "./dist/expandable-content.css",
+      "default": "./dist/expandable-content.css"
+    },
+    "./expandable-content.css": "./dist/expandable-content.css"
   },
   "publishConfig": {
     "access": "public",

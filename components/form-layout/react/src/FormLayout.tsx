@@ -5,7 +5,7 @@
 
 import React from 'react';
 import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
-import '@nl-rvo/css-form-layout';
+import '@nl-rvo/css-form-layout/form-layout.css';
 import { IFormLayoutProps } from './FormLayout.types';
 
 export const FormLayout: React.FC<IFormLayoutProps & React.HTMLAttributes<HTMLDivElement>> = ({

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-autocomplete.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-autocomplete.css",
+      "import": "./dist/form-autocomplete.css",
+      "default": "./dist/form-autocomplete.css"
+    },
+    "./form-autocomplete.css": "./dist/form-autocomplete.css"
   },
   "publishConfig": {
     "access": "public",

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-checkbox.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-checkbox.css",
+      "import": "./dist/form-checkbox.css",
+      "default": "./dist/form-checkbox.css"
+    },
+    "./form-checkbox.css": "./dist/form-checkbox.css"
   },
   "publishConfig": {
     "access": "public",

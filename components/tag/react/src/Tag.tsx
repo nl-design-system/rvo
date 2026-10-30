@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '@nl-rvo/react-icon';
 import { StatusIcon } from '@nl-rvo/react-status-icon';
-import '@nl-rvo/css-tag';
+import '@nl-rvo/css-tag/tag.css';
 import { ITagProps } from './Tag.types';
 
 export const Tag: React.FC<ITagProps> = ({

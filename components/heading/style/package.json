@@ -20,8 +20,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/heading.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/heading.css",
+      "import": "./dist/heading.css",
+      "default": "./dist/heading.css"
+    },
+    "./heading.css": "./dist/heading.css"
   },
   "publishConfig": {
     "access": "public",

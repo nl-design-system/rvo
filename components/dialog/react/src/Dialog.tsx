@@ -15,7 +15,7 @@ import React, {
 } from 'react';
 import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
 import { Button } from '@nl-rvo/react-button';
-import '@nl-rvo/css-dialog';
+import '@nl-rvo/css-dialog/dialog.css';
 import { IDialogProps } from './Dialog.types';
 
 interface DialogContextType {

@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { useCallback, useRef } from 'react';
 import { RadioButton } from '@nl-rvo/react-form-radio-button';
-import '@nl-rvo/css-form-radio-button-group';
+import '@nl-rvo/css-form-radio-button-group/form-radio-button-group.css';
 import { IRadioButtonGroupProps } from './FormRadioButtonGroup.types';
 
 export const RadioButtonGroup: React.FC<IRadioButtonGroupProps> = ({

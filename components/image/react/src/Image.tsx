@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-image';
+import '@nl-rvo/css-image/image.css';
 import { IImageProps } from './Image.types';
 
 /**

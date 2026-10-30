@@ -1,7 +1,7 @@
 import { IButtonProps } from '@nl-rvo/react-button';
 
 export interface ILoaderStatus {
-  type: 'foutmelding' | 'waarschuwing';
+  type?: 'foutmelding' | 'waarschuwing';
   text: string;
 }
 

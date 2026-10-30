@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-select.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-select.css",
+      "import": "./dist/form-select.css",
+      "default": "./dist/form-select.css"
+    },
+    "./form-select.css": "./dist/form-select.css"
   },
   "publishConfig": {
     "access": "public",

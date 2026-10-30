@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@nl-rvo/css-accordion';
+import '@nl-rvo/css-accordion/accordion.css';
 import clsx from 'clsx';
 import React from 'react';
 import { IAccordionItemProps, IAccordionProps } from './Accordion.types';

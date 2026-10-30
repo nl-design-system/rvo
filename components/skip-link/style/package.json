@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/skip-link.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/skip-link.css",
+      "import": "./dist/skip-link.css",
+      "default": "./dist/skip-link.css"
+    },
+    "./skip-link.css": "./dist/skip-link.css"
   },
   "publishConfig": {
     "access": "public",

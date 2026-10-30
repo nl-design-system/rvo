@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import '@nl-rvo/css-horizontal-rule';
+import '@nl-rvo/css-horizontal-rule/horizontal-rule.css';
 
 export const Hr: React.FC<React.HTMLAttributes<HTMLHRElement>> = (props) => <hr className="rvo-hr" {...props} />;
 

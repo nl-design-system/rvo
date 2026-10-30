@@ -6,7 +6,7 @@ import React, { PropsWithChildren } from 'react';
 import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
 import { ExpandableContent } from '@nl-rvo/react-expandable-content';
 import { Feedback } from '@nl-rvo/react-form-feedback';
-import '@nl-rvo/css-form-field';
+import '@nl-rvo/css-form-field/form-field.css';
 import { IFieldProps } from './FormField.types';
 import clsx from 'clsx';
 import { TextInput, ITextInputProps } from '@nl-rvo/react-form-text-input';

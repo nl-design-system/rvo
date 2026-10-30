@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@nl-rvo/css-form-textarea';
+import '@nl-rvo/css-form-textarea/form-textarea.css';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { ITextareaProps } from './FormTextArea.types';

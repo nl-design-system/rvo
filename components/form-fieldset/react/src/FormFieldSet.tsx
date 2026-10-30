@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-form-fieldset';
+import '@nl-rvo/css-form-fieldset/form-fieldset.css';
 import { IFieldsetProps } from './FormFieldSet.types';
 
 export const Fieldset: React.FC<IFieldsetProps & React.HTMLAttributes<HTMLDivElement>> = ({

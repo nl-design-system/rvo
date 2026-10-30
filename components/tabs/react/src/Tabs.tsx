@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { handleTabsKeyDown } from './keyboard';
-import '@nl-rvo/css-tabs';
+import '@nl-rvo/css-tabs/tabs.css';
 import { TabItemProps, TabsItem, TabsProps } from './Tabs.types';
 
 export const TabItem: React.FC<TabItemProps> = () => null;

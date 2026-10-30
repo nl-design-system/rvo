@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-logo';
+import '@nl-rvo/css-logo/logo.css';
 import { ILogoProps } from './Logo.types';
 
 export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> = ({

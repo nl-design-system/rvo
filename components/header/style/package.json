@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/header.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/header.css",
+      "import": "./dist/header.css",
+      "default": "./dist/header.css"
+    },
+    "./header.css": "./dist/header.css"
   },
   "publishConfig": {
     "access": "public",

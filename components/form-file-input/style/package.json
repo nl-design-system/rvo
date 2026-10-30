@@ -21,8 +21,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-file-input.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-file-input.css",
+      "import": "./dist/form-file-input.css",
+      "default": "./dist/form-file-input.css"
+    },
+    "./form-file-input.css": "./dist/form-file-input.css"
   },
   "publishConfig": {
     "access": "public",

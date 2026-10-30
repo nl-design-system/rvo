@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-form-radio-button';
+import '@nl-rvo/css-form-radio-button/form-radio-button.css';
 import { IRadioButtonProps } from './FormRadioButton.types';
 
 export const RadioButton: React.FC<IRadioButtonProps> = ({

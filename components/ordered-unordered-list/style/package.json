@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/ordered-unordered-list.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/ordered-unordered-list.css",
+      "import": "./dist/ordered-unordered-list.css",
+      "default": "./dist/ordered-unordered-list.css"
+    },
+    "./ordered-unordered-list.css": "./dist/ordered-unordered-list.css"
   },
   "publishConfig": {
     "access": "public",

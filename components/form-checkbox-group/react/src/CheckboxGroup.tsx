@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Checkbox } from '@nl-rvo/react-form-checkbox';
-import '@nl-rvo/css-form-checkbox-group';
+import '@nl-rvo/css-form-checkbox-group/form-checkbox-group.css';
 import { ICheckboxGroupProps } from './CheckboxGroup.types';
 
 export const CheckboxGroup: React.FC<ICheckboxGroupProps> = ({

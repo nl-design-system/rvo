@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/card.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/card.css",
+      "import": "./dist/card.css",
+      "default": "./dist/card.css"
+    },
+    "./card.css": "./dist/card.css"
   },
   "publishConfig": {
     "access": "public",

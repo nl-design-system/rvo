@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/alert.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/alert.css",
+      "import": "./dist/alert.css",
+      "default": "./dist/alert.css"
+    },
+    "./alert.css": "./dist/alert.css"
   },
   "publishConfig": {
     "access": "public",

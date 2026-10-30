@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import '@nl-rvo/css-item-list';
+import '@nl-rvo/css-item-list/item-list.css';
 import { parseChildren } from '@nl-rvo/component-library-react/src/utils/parseChildren';
 import { IItemListProps } from './ItemList.types';
 

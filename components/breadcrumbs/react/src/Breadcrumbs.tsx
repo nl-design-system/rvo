@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-layout-flow';
-import '@nl-rvo/css-breadcrumbs';
+import '@nl-rvo/css-layout-flow/layout-flow.css';
+import '@nl-rvo/css-breadcrumbs/breadcrumbs.css';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';
 import { IBreadcrumbProps, IBreadcrumbsItem } from './Breadcrumbs.types';

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/logo.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/logo.css",
+      "import": "./dist/logo.css",
+      "default": "./dist/logo.css"
+    },
+    "./logo.css": "./dist/logo.css"
   },
   "publishConfig": {
     "access": "public",

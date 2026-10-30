@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-form-file-input';
+import '@nl-rvo/css-form-file-input/form-file-input.css';
 import { IFileInputProps } from './FormFileInput.types';
 
 export const FileInput: React.FC<IFileInputProps> = ({

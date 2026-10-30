@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-layout.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-layout.css",
+      "import": "./dist/form-layout.css",
+      "default": "./dist/form-layout.css"
+    },
+    "./form-layout.css": "./dist/form-layout.css"
   },
   "publishConfig": {
     "access": "public",

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/status-indicator.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/status-indicator.css",
+      "import": "./dist/status-indicator.css",
+      "default": "./dist/status-indicator.css"
+    },
+    "./status-indicator.css": "./dist/status-indicator.css"
   },
   "publishConfig": {
     "access": "public",

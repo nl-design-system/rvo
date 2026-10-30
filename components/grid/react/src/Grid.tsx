@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-grid';
+import '@nl-rvo/css-grid/grid.css';
 import { IGridProps } from './Grid.types';
 
 export const Grid: React.FC<IGridProps & React.HTMLAttributes<HTMLDivElement>> = ({

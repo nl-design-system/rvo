@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/grid.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/grid.css",
+      "import": "./dist/grid.css",
+      "default": "./dist/grid.css"
+    },
+    "./grid.css": "./dist/grid.css"
   },
   "publishConfig": {
     "access": "public",

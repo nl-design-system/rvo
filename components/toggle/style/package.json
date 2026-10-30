@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/toggle.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/toggle.css",
+      "import": "./dist/toggle.css",
+      "default": "./dist/toggle.css"
+    },
+    "./toggle.css": "./dist/toggle.css"
   },
   "publishConfig": {
     "access": "public",

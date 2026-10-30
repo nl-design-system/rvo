@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-textarea.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-textarea.css",
+      "import": "./dist/form-textarea.css",
+      "default": "./dist/form-textarea.css"
+    },
+    "./form-textarea.css": "./dist/form-textarea.css"
   },
   "publishConfig": {
     "access": "public",

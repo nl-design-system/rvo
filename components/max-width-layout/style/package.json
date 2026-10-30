@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/max-width-layout.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/max-width-layout.css",
+      "import": "./dist/max-width-layout.css",
+      "default": "./dist/max-width-layout.css"
+    },
+    "./max-width-layout.css": "./dist/max-width-layout.css"
   },
   "publishConfig": {
     "access": "public",
