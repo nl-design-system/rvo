@@ -41,6 +41,7 @@ const Aanvragen = () => {
         useIcons={true}
         iconPlacement="left"
         maxWidth="lg"
+        horizontalRule={true}
       />
 
       <main className="rvo-sidebar-layout__container">

@@ -71,6 +71,7 @@ export default function ProfielPage(): ReactElement {
         useIcons={true}
         iconPlacement="before"
         maxWidth="lg"
+        horizontalRule={true}
       />
 
       <main className="rvo-sidebar-layout__container">
