@@ -1,4 +1,4 @@
-import '@nl-rvo/component-library-css/dist/components/footer.css';
+import '../../../../../../components/footer/style/src/footer.scss';
 import {
   ActionGroup,
   Button,

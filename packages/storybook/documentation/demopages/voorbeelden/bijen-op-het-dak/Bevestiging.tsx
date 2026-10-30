@@ -1,4 +1,4 @@
-import '@nl-rvo/component-library-css/dist/components/footer.css';
+import '../../../../../../components/footer/style/src/footer.scss';
 import { Alert, Header, Heading, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/component-library-react';
 import { useDemoControls } from './useDemoControls';
 
