@@ -75,11 +75,6 @@ html.blog-wrapper.plugin-blog {
   --ifm-pre-padding: 0;
   --ifm-paragraph-margin-bottom: 0;
 
-  // Fix MD headings
-  h1:not(.component-example h1) {
-    margin-bottom: 1rem;
-  }
-
   h2:not(.component-example h2) {
     margin-bottom: 0.5rem;
   }
@@ -120,8 +115,9 @@ html.blog-wrapper.plugin-blog {
     margin-block-start: 0 !important;
   }
 
-  .markdown header > h1:first-child {
-    margin-block-start: var(--rvo-space-xs);
+  .markdown h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   .markdown blockquote {
