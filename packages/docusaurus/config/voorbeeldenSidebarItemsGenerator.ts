@@ -26,7 +26,6 @@ const getCategoryMetadata = (dirName: string): CategoryMeta => {
 
 const toProperCase = (s: string): string => s.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const voorbeeldenSidebarItemsGenerator = async ({ docs }: { docs: any[] }) => {
   const processedDocs = docs
     .filter((doc) => doc.sourceDirName !== '.' && !doc.frontMatter.hide_from_sidebar)
