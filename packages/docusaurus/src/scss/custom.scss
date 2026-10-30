@@ -232,6 +232,22 @@ html.blog-wrapper.plugin-blog {
     min-height: calc(100vh - 244px);
   }
 
+  @media (max-width: 996px) {
+    .rvo-max-width-layout:has(> aside.theme-doc-sidebar-container) {
+      flex-direction: column;
+    }
+
+    aside.theme-doc-sidebar-container,
+    aside.theme-doc-sidebar-container > div,
+    aside.theme-doc-sidebar-container > div > div {
+      display: block !important;
+      height: auto !important;
+      max-width: 100% !important;
+      min-height: unset !important;
+      width: 100% !important;
+    }
+  }
+
   // Align footer content with page content blocks
   .rvo-footer__container--sm,
   .rvo-footer__container--md,

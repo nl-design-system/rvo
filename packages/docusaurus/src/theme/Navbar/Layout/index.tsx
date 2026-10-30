@@ -15,11 +15,10 @@ export default function NavbarLayout() {
   const logoLinkTitle = siteConfig.customFields?.logoLinkTitle as string | undefined;
   const { withBaseUrl } = useBaseUrlUtils();
 
-  const menuItems = (items as any[])?.map((item, index) => ({
+  const menuItems = (items as any[])?.map((item) => ({
     label: item.label,
     link: item.docId ? withBaseUrl(`/${item.docId}`) : item.to ? withBaseUrl(item.to) : item.href || '#',
     align: item.position === 'right' ? 'right' : 'left',
-    key: `${item.label}-${index}`,
     useIcons: false,
     linkColor: 'lintblauw' as const,
   })) as any[];
