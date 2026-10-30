@@ -1,5 +1,14 @@
-import '../../../../../../components/footer/style/src/footer.scss';
-import { Alert, Header, Heading, LayoutFlow, Link, MaxWidthLayout, MenuBar } from '@nl-rvo/component-library-react';
+import {
+  Alert,
+  Footer,
+  Header,
+  Heading,
+  LayoutFlow,
+  Link,
+  MaxWidthLayout,
+  MenuBar,
+} from '@nl-rvo/component-library-react';
+import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import { useDemoControls } from './useDemoControls';
 
 const URL_VOORBEREIDING =
@@ -99,51 +108,14 @@ const Bevestiging = () => {
         </LayoutFlow>
       </MaxWidthLayout>
 
-      <footer className="rvo-footer">
-        <div className="rvo-footer__container rvo-footer__container--md">
-          <div className="rvo-footer__menu-container rvo-footer__menu-container--secondary">
-            <a
-              href="https://www.rvo.nl/onderwerpen/contact"
-              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
-            >
-              Contact
-            </a>
-            <a
-              href="https://www.rvo.nl/onderwerpen/privacy"
-              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
-            >
-              Privacy
-            </a>
-            <a
-              href="https://www.rvo.nl/onderwerpen/cookies"
-              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
-            >
-              Cookies en anti-spam
-            </a>
-            <a href="#" className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal">
-              Toegankelijkheid
-            </a>
-            <a
-              href="https://www.rvo.nl/onderwerpen/proclaimer"
-              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
-            >
-              Proclaimer
-            </a>
-            <a
-              href="https://www.rvo.nl/onderwerpen/kwetsbaarheid"
-              className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal"
-            >
-              Kwetsbaarheid op website
-            </a>
-            <a href="#demo" className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal">
-              Demo
-            </a>
-            <a href="#reset" className="rvo-link rvo-link--wit rvo-link--no-underline rvo-link--normal">
-              Reset
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer
+        secondaryMenu={[
+          ...defaultSecondaryFooterItems,
+          { content: 'Demo', link: '#demo' },
+          { content: 'Reset', link: '#reset' },
+        ]}
+        maxWidth="md"
+      />
     </body>
   );
 };
