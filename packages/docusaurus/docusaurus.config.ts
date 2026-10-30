@@ -14,7 +14,7 @@ const config: Config = {
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   customFields: {
     logoLinkTitle,
-    storybookIframeBase: process.env.NODE_ENV === 'development' ? 'http://localhost:6006' : '/rvo',
+    storybookIframeBase: process.env.CI ? '/rvo' : 'http://localhost:6006',
   },
   favicon: 'img/favicon.ico',
   url: process.env.VERCEL_URL
