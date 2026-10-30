@@ -1,7 +1,7 @@
 import { translate } from '@docusaurus/Translate';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useHideableNavbar, useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import { Logo, MenuBar } from '@nl-rvo/component-library-react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
@@ -13,10 +13,11 @@ export default function NavbarLayout() {
   } = useThemeConfig();
   const { siteConfig } = useDocusaurusContext();
   const logoLinkTitle = siteConfig.customFields?.logoLinkTitle as string | undefined;
+  const { withBaseUrl } = useBaseUrlUtils();
 
   const menuItems = (items as any[])?.map((item, index) => ({
     label: item.label,
-    link: item.docId ? useBaseUrl(`/${item.docId}`) : item.href || '#',
+    link: item.docId ? withBaseUrl(`/${item.docId}`) : item.to ? withBaseUrl(item.to) : item.href || '#',
     align: item.position === 'right' ? 'right' : 'left',
     key: `${item.label}-${index}`,
     useIcons: false,

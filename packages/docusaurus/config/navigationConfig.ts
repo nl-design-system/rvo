@@ -39,6 +39,11 @@ const navbar: Navbar = {
       position: 'left' as const,
       label: 'Patronen',
     },
+    {
+      to: '/voorbeelden/over-voorbeelden',
+      position: 'left' as const,
+      label: 'Voorbeelden',
+    },
     // {
     //   type: 'doc',
     //   docId: 'best-practices/informatiebehoefte-per-doelgroep',

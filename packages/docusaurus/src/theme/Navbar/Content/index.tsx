@@ -1,5 +1,5 @@
 import { ThemeConfig } from '@docusaurus/theme-common';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { MenuBar } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
@@ -20,13 +20,14 @@ export default function NavbarContent(): ReactElement {
   }
 
   const items = (useThemeConfig().navbar.items ?? []) as NavbarItem[];
+  const { withBaseUrl } = useBaseUrlUtils();
 
   const getLink = (item: NavbarItem): string => {
     if (item.type === 'doc' && item.docId) {
-      return useBaseUrl(`/${item.docId}`);
+      return withBaseUrl(`/${item.docId}`);
     }
     if (item.to) {
-      return useBaseUrl(item.to);
+      return withBaseUrl(item.to);
     }
     return item.href || '#';
   };
