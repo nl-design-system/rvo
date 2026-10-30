@@ -1,6 +1,10 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
-  FormField,
+  TextInput,
   Fieldset,
   Footer,
   Header,
@@ -8,18 +12,40 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
+  RadioButton,
+  Textarea,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
-import { defaultFooterItems } from '../../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 
-const Zaakgegevens = () => {
+export default function ZaakgegevensPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -47,7 +73,7 @@ const Zaakgegevens = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -65,7 +91,7 @@ const Zaakgegevens = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -155,77 +181,65 @@ const Zaakgegevens = () => {
                 </p>
               </div>
               <Fieldset legend="">
-                <FormField label="Geef uw aanvraag een toepasselijke zaaknaam">
-                  <FormField.Text />
-                </FormField>
-                <FormField label="Startdatum (van)" helperText="Geef hier de begindatum van uw coachingstraject op.">
-                  <FormField.Date />
-                </FormField>
-                <FormField label="Einddatum (t/m)" helperText="Geef hier de einddatum van uw coachingstraject op.">
-                  <FormField.Date />
-                </FormField>
-                <FormField
+                <TextInput label="Geef uw aanvraag een toepasselijke zaaknaam"></TextInput>
+                <TextInput
+                  label="Startdatum (van)"
+                  helperText="Geef hier de begindatum van uw coachingstraject op."
+                ></TextInput>
+                <TextInput
+                  label="Einddatum (t/m)"
+                  helperText="Geef hier de einddatum van uw coachingstraject op."
+                ></TextInput>
+                <TextInput
                   label="Voor export naar welk land wilt u coaching ontvangen?"
                   helperText="U kunt hier één land noemen, niet Nederland. Als u meerderde doellanden heeft, maakt u dan een keuze."
-                >
-                  <FormField.Text />
-                </FormField>
-                <FormField
+                ></TextInput>
+                <RadioButton
+                  name="bedrag"
                   label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
+                  expandableHelperText={true}
+                  expandableHelperTextTitle="Meer uitleg"
                   helperText="U kunt maximaal € 6.500 SIB subsidie per kalenderjaar ontvangen. Dit betekent dat u in één kalenderjaar verschillende onderdelen van SIB mag aanvragen en de subsidie kunt stapelen tot dit maximum bedrag. Zie voor de voorwaarden en subsidiebedragen <a href='#' class='rvo-link rvo-link--donkerblauw'>Support International Business (SIB) (rvo.nl)</a>"
-                  expandableHelperText={{ title: 'Meer uitleg', children: '' }}
-                >
-                  <FormField.RadioButtonGroup
-                    name="bedrag"
-                    options={[
-                      { id: 'bedrag A', label: 'Ja' },
-                      { id: 'bedrag B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="Welke kansen ziet u in dit land?">
-                  <FormField.TextArea />
-                </FormField>
-
-                <FormField label="Bent u al actief in dit doelland?">
-                  <FormField.RadioButtonGroup
-                    name="actief"
-                    options={[
-                      { id: 'actief A', label: 'Ja' },
-                      { id: 'actief B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField
+                  options={[
+                    { id: 'bedrag A', label: 'Ja' },
+                    { id: 'bedrag B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <Textarea label="Welke kansen ziet u in dit land?"></Textarea>
+                <RadioButton
+                  name="actief"
+                  label="Bent u al actief in dit doelland?"
+                  helperText=""
+                  options={[
+                    { id: 'actief A', label: 'Ja' },
+                    { id: 'actief B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="export"
                   label="Gaat u exporteren met een eigen product of dienst?"
-                  helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst."
-                >
-                  <FormField.RadioButtonGroup
-                    name="export"
-                    options={[
-                      { id: 'export A', label: 'Ja' },
-                      { id: 'export B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?">
-                  <FormField.RadioButtonGroup
-                    name="capaciteit"
-                    options={[
-                      { id: 'capaciteit A', label: 'Ja' },
-                      { id: 'capaciteit B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="Bent u met uw product of dienst al actief op de Nederlandse markt?">
-                  <FormField.RadioButtonGroup
-                    name="nlmarkt"
-                    options={[
-                      { id: 'nlmarkt A', label: 'Ja' },
-                      { id: 'nlmarkt B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
+                  helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst. "
+                  options={[
+                    { id: 'export A', label: 'Ja' },
+                    { id: 'export B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="capaciteit"
+                  label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?"
+                  options={[
+                    { id: 'capaciteit A', label: 'Ja' },
+                    { id: 'capaciteit B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="nlmarkt"
+                  label="Bent u met uw product of dienst al actief op de Nederlandse markt?"
+                  options={[
+                    { id: 'nlmarkt A', label: 'Ja' },
+                    { id: 'nlmarkt B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
               </Fieldset>
               <ActionGroup>
                 <a
@@ -242,6 +256,4 @@ const Zaakgegevens = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default Zaakgegevens;
+}

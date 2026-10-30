@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Fieldset,
@@ -7,19 +11,40 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  FormField,
+  RadioButton,
+  TextInput,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
-import { defaultFooterItems } from '../../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 
-const UwOnderneming = () => {
+export default function UwOndernemingPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -47,7 +72,7 @@ const UwOnderneming = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -65,7 +90,7 @@ const UwOnderneming = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -153,46 +178,41 @@ const UwOnderneming = () => {
                 </Heading>
               </div>
               <Fieldset legend="">
-                <FormField label="Is voor uw organisatie een verzoek tot surseance van betaling, tot faillissement, of tot het van toepassing verklaren van de schuldsaneringsregeling ingediend?">
-                  <FormField.RadioButtonGroup
-                    name="schuld"
-                    options={[
-                      { id: 'schuldA', label: 'Ja' },
-                      { id: 'schuldB', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="Is uw organisatie een mkb-onderneming?">
-                  <FormField.RadioButtonGroup
-                    name="mkb"
-                    options={[
-                      { id: 'mkb A', label: 'Ja' },
-                      { id: 'mkb B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="U beschikt over financiële middelen, potentie en ambitie om structureel internationaal actief te worden en verdere stappen te kunnen nemen. Klopt dit? *">
-                  <FormField.RadioButtonGroup
-                    name="middelen"
-                    options={[
-                      { id: 'middelen A', label: 'Ja' },
-                      { id: 'middelen B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-
-                <FormField label="Hoeveel medewerkers heeft uw onderneming?">
-                  <FormField.Text sizeInput="sm" validation="none" />
-                </FormField>
-                <FormField label="Wat is de website van uw organisatie?">
-                  <FormField.Text />
-                </FormField>
-                <FormField
+                <RadioButton
+                  name="schuld"
+                  label="Is voor uw organisatie een verzoek tot surseance van betaling, tot faillissement, of tot het van toepassing verklaren van de schuldsaneringsregeling ingediend?"
+                  helperText=""
+                  options={[
+                    { id: 'schuldA', label: 'Ja' },
+                    { id: 'schuldB', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="mkb"
+                  label="Is uw organisatie een mkb-onderneming?"
+                  helperText=""
+                  options={[
+                    { id: 'mkb A', label: 'Ja' },
+                    { id: 'mkb B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="middelen"
+                  label="U beschikt over financiële middelen, potentie en ambitie om structureel internationaal actief te worden en verdere stappen te kunnen nemen. Klopt dit? *"
+                  helperText=""
+                  options={[
+                    { id: 'middelen A', label: 'Ja' },
+                    { id: 'middelen B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <TextInput label="Hoeveel medewerkers heeft uw onderneming?" size="sm" validation="none"></TextInput>
+                <TextInput label="Wat is de website van uw organisatie?"></TextInput>
+                <TextInput
                   label="SBI-code"
+                  size="sm"
+                  validation="none"
                   helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
-                >
-                  <FormField.Text sizeInput="sm" validation="none" />
-                </FormField>
+                ></TextInput>
               </Fieldset>
               <ActionGroup>
                 <a
@@ -209,6 +229,4 @@ const UwOnderneming = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default UwOnderneming;
+}

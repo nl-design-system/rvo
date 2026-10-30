@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Alert,
@@ -8,19 +12,40 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  FormField,
+  RadioButton,
+  TextInput,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
-import { defaultFooterItems } from '../../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 
-const UwGegevens = () => {
+export default function UwGegevensPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -48,7 +73,7 @@ const UwGegevens = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -66,7 +91,7 @@ const UwGegevens = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -190,32 +215,22 @@ const UwGegevens = () => {
                     </a>
                   </p>
                 </div>
-                <FormField label="Voert u een IBAN nummer op?">
-                  <FormField.RadioButtonGroup
-                    name="iban"
-                    options={[
-                      { id: 'ibanA', label: 'Ja' },
-                      { id: 'ibanB', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
+                <RadioButton
+                  name="iban"
+                  label="Voert u een IBAN nummer op?"
+                  helperText=""
+                  options={[
+                    { id: 'ibanA', label: 'Ja' },
+                    { id: 'ibanB', label: 'Nee' },
+                  ]}
+                ></RadioButton>
               </Fieldset>
               <Fieldset legend="Contactpersoon aanvrager ">
-                <FormField label="Voorletters">
-                  <FormField.Text sizeInput="sm" />
-                </FormField>
-                <FormField label="Tussenvoegsels">
-                  <FormField.Text sizeInput="sm" />
-                </FormField>
-                <FormField label="Achternaam">
-                  <FormField.Text />
-                </FormField>
-                <FormField label="Telefoonnummer">
-                  <FormField.Text sizeInput="md" />
-                </FormField>
-                <FormField label="E-mailadres">
-                  <FormField.Text />
-                </FormField>
+                <TextInput label="Voorletters" size="sm"></TextInput>
+                <TextInput label="Tussenvoegsels" size="sm"></TextInput>
+                <TextInput label="Achternaam"></TextInput>
+                <TextInput label="Telefoonnummer" size="md"></TextInput>
+                <TextInput label="E-mailadres"></TextInput>
               </Fieldset>
               <Alert kind="warning">
                 <strong>U ontvangt over deze zaak altijd digitaal bericht van ons</strong>
@@ -241,6 +256,4 @@ const UwGegevens = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default UwGegevens;
+}

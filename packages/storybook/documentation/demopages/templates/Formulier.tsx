@@ -1,19 +1,29 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Button,
+  Checkbox,
   Fieldset,
+  FileInput,
   Footer,
   Header,
   Heading,
   LayoutFlow,
   Link,
   MenuBar,
-  FormField,
+  RadioButton,
+  Select,
+  Textarea,
+  TextInput,
 } from '@nl-rvo/component-library-react';
-import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 
-const Formulier = () => {
+export default function FormulierPage(): ReactElement {
   return (
     <div className="rvo-demo-page">
       <Header link="#" />
@@ -41,7 +51,7 @@ const Formulier = () => {
           ]}
           size="md"
           useIcons={true}
-          iconPlacement="left"
+          iconPlacement="before"
           maxWidth="md"
         />
         <LayoutFlow gap="3xl">
@@ -50,7 +60,7 @@ const Formulier = () => {
               <div className="rvo-form">
                 <LayoutFlow gap="sm">
                   <div>
-                    <Link href="#" iconPlacement="left" icon="terug" noUnderline={true}>
+                    <Link href="#" showIcon="before" icon="terug" noUnderline={true}>
                       Terug
                     </Link>
                     <Heading type="h1">Formulier template</Heading>
@@ -64,128 +74,111 @@ const Formulier = () => {
                     <LayoutFlow>
                       <div>
                         <Fieldset legend="Keyboard inputs">
-                          <FormField label="Text">
-                            <FormField.Text />
-                          </FormField>
-                          <FormField
-                            label="Text met helper text"
+                          <TextInput label="Text" />
+                          <TextInput
+                            label="Text with helper text"
                             helperText="This is a helper text which can be used for instructions."
-                          >
-                            <FormField.Text />
-                          </FormField>
-                          <FormField label="Text">
-                            <FormField.Text />
-                          </FormField>
-                          <FormField label="Text with an error" errorText="">
-                            <FormField.Text invalid />
-                          </FormField>
-                          <FormField label="Text with a warning" warningText="This is a warning">
-                            <FormField.Text />
-                          </FormField>
-                          <FormField
+                          />
+                          <TextInput label="Text" />
+                          <TextInput label="Text with an error" errorText="This is an error" invalid={true} />
+                          <TextInput label="Text with a warning" warningText="This is a warning" />
+                          <TextInput
                             label="Text with expandable helper text"
                             helperText="This is a helper text which can be used for instructions."
-                            expandableHelperText={{ title: 'Expandable helper text', children: '' }}
-                          >
-                            <FormField.Text />
-                          </FormField>
-                          <FormField label="Text disabled">
-                            <FormField.Text disabled />
-                          </FormField>
-                          <FormField label="Text disabled with value">
-                            <FormField.Text disabled value="Value" />
-                          </FormField>
-                          <FormField label="Number">
-                            <FormField.Text validation="none" />
-                          </FormField>
-                          <FormField label="Textarea">
-                            <FormField.TextArea />
-                          </FormField>
+                            expandableHelperText={true}
+                            expandableHelperTextTitle="Expandable helper text"
+                          />
+                          <TextInput label="Text disabled" disabled={true} />
+                          <TextInput label="Text disabled with value" disabled={true} value="Value" />
+                          <TextInput label="Number" validation="none" />
+                          <Textarea label="Textarea" />
                         </Fieldset>
 
                         <Fieldset legend="Options">
-                          <FormField label="Radio buttons" helperText="This is an helper text">
-                            <FormField.RadioButtonGroup
-                              name="radio-buttons"
-                              options={[
-                                { id: 'optionA', label: 'Option A' },
-                                { id: 'optionB', label: 'Option B' },
-                                { id: 'optionC', label: 'Option C' },
-                                { id: 'optionD', label: 'Option D' },
-                              ]}
-                            />
-                          </FormField>
-                          <FormField label="Radio buttons invalid" errorText="This is an error">
-                            <FormField.RadioButtonGroup
-                              name="radio-buttons-error"
-                              invalid
-                              options={[
-                                { id: 'optionA-error', label: 'Option A' },
-                                { id: 'optionB-error', label: 'Option B' },
-                                { id: 'optionC-error', label: 'Option C' },
-                                { id: 'optionD-error', label: 'Option D' },
-                              ]}
-                            />
-                          </FormField>
-                          <FormField label="Radio buttons with warning" warningText="This is a wanrning">
-                            <FormField.RadioButtonGroup
-                              name="radio-buttons-warning"
-                              options={[
-                                { id: 'optionA-warning', label: 'Option A' },
-                                { id: 'optionB-warning', label: 'Option B' },
-                                { id: 'optionC-warning', label: 'Option C' },
-                                { id: 'optionD-warning', label: 'Option D' },
-                              ]}
-                            />
-                          </FormField>
+                          <RadioButton
+                            name="radio-buttons"
+                            label="Radio buttons"
+                            helperText="This is an helper text"
+                            options={[
+                              { id: 'optionA', label: 'Option A' },
+                              { id: 'optionB', label: 'Option B' },
+                              { id: 'optionC', label: 'Option C' },
+                              { id: 'optionD', label: 'Option D' },
+                            ]}
+                          ></RadioButton>
+                          <RadioButton
+                            name="radio-buttons-error"
+                            label="Radio buttons invalid"
+                            errorText="This is an error"
+                            invalid={true}
+                            options={[
+                              { id: 'optionA-error', label: 'Option A' },
+                              { id: 'optionB-error', label: 'Option B' },
+                              { id: 'optionC-error', label: 'Option C' },
+                              { id: 'optionD-error', label: 'Option D' },
+                            ]}
+                          ></RadioButton>
 
-                          <FormField label="Checkboxes" helperText="This is an helper text">
-                            <FormField.CheckboxGroup
-                              options={[
-                                { id: 'optionA', label: 'Option A' },
-                                { id: 'optionB', label: 'Option B' },
-                                { id: 'optionC', label: 'Option C' },
-                                { id: 'optionD', label: 'Option D' },
-                              ]}
-                            />
-                          </FormField>
-                          <FormField label="Checkboxes invalid" errorText="This is an error">
-                            <FormField.CheckboxGroup
-                              invalid
-                              options={[
-                                { id: 'optionA-error', label: 'Option A' },
-                                { id: 'optionB-error', label: 'Option B' },
-                                { id: 'optionC-error', label: 'Option C' },
-                                { id: 'optionD-error', label: 'Option D' },
-                              ]}
-                            />
-                          </FormField>
-                          <FormField label="Checkboxes with warning" warningText="This is a wanrning">
-                            <FormField.CheckboxGroup
-                              options={[
-                                { id: 'optionA-warning', label: 'Option A' },
-                                { id: 'optionB-warning', label: 'Option B' },
-                                { id: 'optionC-warning', label: 'Option C' },
-                                { id: 'optionD-warning', label: 'Option D' },
-                              ]}
-                            />
-                          </FormField>
+                          <RadioButton
+                            name="radio-buttons-warning"
+                            label="Radio buttons with warning"
+                            warningText="This is a warning"
+                            options={[
+                              { id: 'optionA-warning', label: 'Option A' },
+                              { id: 'optionB-warning', label: 'Option B' },
+                              { id: 'optionC-warning', label: 'Option C' },
+                              { id: 'optionD-warning', label: 'Option D' },
+                            ]}
+                          ></RadioButton>
 
-                          <FormField label="Select">
-                            <FormField.Select
-                              options={[
-                                { value: '1', label: 'Option #1' },
-                                { value: '2', label: 'Option #2' },
-                                { value: '3', label: 'Option #3' },
-                              ]}
-                            />
-                          </FormField>
+                          <Checkbox
+                            helperText="This is an helper text"
+                            label="Checkboxes"
+                            invalid={false}
+                            options={[
+                              { id: 'optionA-cb', label: 'Option A' },
+                              { id: 'optionB-cb', label: 'Option B' },
+                              { id: 'optionC-cb', label: 'Option C' },
+                              { id: 'optionD-cb', label: 'Option D' },
+                            ]}
+                          ></Checkbox>
+
+                          <Checkbox
+                            errorText="This is an error"
+                            label="Checkboxes with error"
+                            invalid={true}
+                            options={[
+                              { id: 'optionA-cb-error', label: 'Option A' },
+                              { id: 'optionB-cb-error', label: 'Option B' },
+                              { id: 'optionC-cb-error', label: 'Option C' },
+                              { id: 'optionD-cb-error', label: 'Option D' },
+                            ]}
+                          ></Checkbox>
+
+                          <Checkbox
+                            warningText="This is a warning"
+                            label="Checkboxes with a warning"
+                            invalid={false}
+                            options={[
+                              { id: 'optionA-cb-warning', label: 'Option A' },
+                              { id: 'optionB-cb-warning', label: 'Option B' },
+                              { id: 'optionC-cb-warning', label: 'Option C' },
+                              { id: 'optionD-cb-warning', label: 'Option D' },
+                            ]}
+                          ></Checkbox>
+
+                          <Select
+                            label="Select"
+                            options={[
+                              { value: '1', label: 'Option #1' },
+                              { value: '2', label: 'Option #2' },
+                              { value: '3', label: 'Option #3' },
+                            ]}
+                          ></Select>
                         </Fieldset>
 
                         <Fieldset legend="Other">
-                          <FormField label="File">
-                            <FormField.FileInput />
-                          </FormField>
+                          <FileInput label="File" />
                           <div className="utrecht-form-field rvo-form-field rvo-layout-column rvo-layout-gap--sm">
                             <div className="rvo-form-field__label rvo-layout-column rvo-layout-gap--2xs">
                               <label htmlFor="fieldId" className="utrecht-form-label rvo-form-field__label-text">
@@ -217,10 +210,10 @@ const Formulier = () => {
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button kind="primary" size="md" busy={false} disabled={false}>
+                        <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
                           Primary action
                         </Button>
-                        <Button kind="secondary" size="md" busy={false} disabled={false}>
+                        <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
                           Secondary action
                         </Button>
                       </ActionGroup>
@@ -236,6 +229,4 @@ const Formulier = () => {
       </LayoutFlow>
     </div>
   );
-};
-
-export default Formulier;
+}

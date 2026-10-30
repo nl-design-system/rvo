@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   Button,
   Fieldset,
@@ -7,18 +11,41 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
+  // MenuBar,
   TabItem,
   Tabs,
-  FormField,
+  TextInput,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
-import { defaultFooterItems } from '../../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 
-const Profiel = () => {
+export default function ProfielPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
+      {/* <MenuBar
+        iconPlacement="before"
+        useIcons={true}
+        isOpen={false}
+        submenuItems={[]}
+        size="md"
+        items={[
+          {
+            label: 'Overzicht',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+            icon: 'home',
+
+          },
+          {
+            label: 'Mijn dossier',
+            link: '#',
+            icon: 'map',
+          },
+          { label: 'Mijn berichten', link: '#', icon: 'mail' },
+          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+        ]}
+      ></MenuBar> */}
       <MenuBar
         items={[
           {
@@ -42,14 +69,14 @@ const Profiel = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="left"
+        iconPlacement="before"
         maxWidth="lg"
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
+            <MenuBar
               direction="vertical"
               linkColor="zwart"
               horizontalRule={false}
@@ -75,9 +102,9 @@ const Profiel = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
-            /> */}
+            />
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -126,9 +153,7 @@ const Profiel = () => {
                         automatisch doorgevoerd in uw lopende zaken. Wijzig uw gegevens daarom ook handmatig in uw
                         aanvraag en/of registratie.
                       </p>
-                      <FormField label="E-mailadres">
-                        <FormField.Text />
-                      </FormField>
+                      <TextInput label="E-mailadres" />
                       <Heading type="h4">Telefoonnummer (inclusief landcode)</Heading>
                       <LayoutFlow row={true} alignItems="start">
                         <div
@@ -151,9 +176,8 @@ const Profiel = () => {
                             </select>
                           </div>
                         </div>
-                        <FormField label="Telefoonnummer">
-                          <FormField.Text />
-                        </FormField>
+
+                        <TextInput label="Telefoonnummer" />
                       </LayoutFlow>
                       <div className="rvo-spacer--postadres rvo-margin-block-start--xl">
                         <Heading type="h4" noMargins={true}>
@@ -184,23 +208,13 @@ const Profiel = () => {
                           </select>
                         </div>
                       </div>
-                      <FormField label="Straatnaam">
-                        <FormField.Text />
-                      </FormField>
+                      <TextInput label="Straatnaam" />
                       <LayoutFlow row={true} alignItems="start">
-                        <FormField label="Huisnummer">
-                          <FormField.Text />
-                        </FormField>
-                        <FormField label="Toevoeging (niet verplicht)">
-                          <FormField.Text sizeInput="xs" />
-                        </FormField>
+                        <TextInput label="Huisnummer" size="sm" />
+                        <TextInput label="Toevoeging (niet verplicht)" size="xs" />
                       </LayoutFlow>
-                      <FormField label="Postcode">
-                        <FormField.Text sizeInput="sm" />
-                      </FormField>
-                      <FormField label="Woonplaats">
-                        <FormField.Text sizeInput="lg" />
-                      </FormField>
+                      <TextInput label="Postcode" size="sm" />
+                      <TextInput label="Woonplaats" size="lg" />
                       <LayoutFlow row={true}>
                         <Button kind="primary">Wijzigingen opslaan</Button>
                         <Button kind="warning-subtle" size="sm">
@@ -219,13 +233,13 @@ const Profiel = () => {
                   Direct regelen
                 </Heading>
                 <LayoutFlow row={true} wrap={true}>
-                  <Link icon="pijl-naar-rechts" iconPlacement="left" noUnderline={true}>
+                  <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
                     Profiel verwijderen
                   </Link>
-                  <Link icon="pijl-naar-rechts" iconPlacement="left" noUnderline={true}>
+                  <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
                     Overlijden accounteigenaar doorgeven
                   </Link>
-                  <Link icon="pijl-naar-rechts" iconPlacement="left" noUnderline={true}>
+                  <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
                     Snelkoppeling
                   </Link>
                 </LayoutFlow>
@@ -237,6 +251,4 @@ const Profiel = () => {
       <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
-};
-
-export default Profiel;
+}

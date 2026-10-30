@@ -1,21 +1,46 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
+  TextInput,
   Fieldset,
   Footer,
   Header,
   Heading,
   LayoutFlow,
   MenuBar,
-  FormField,
+  Select,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
-import { defaultFooterItems } from '../../common/defaultFooterItems';
-import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+import type { ReactElement } from 'react';
+import { defaultFooterItems } from '../common/defaultFooterItems';
+import { defaultSecondaryFooterItems } from '../common/defaultSecondaryFooterItems';
 
-const Import = () => {
+export default function ImportPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
+      <MenuBar
+        iconPlacement="before"
+        useIcons={true}
+        isOpen={false}
+        size="md"
+        items={[
+          {
+            label: 'Overzicht',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+            icon: 'home',
+          },
+          {
+            label: 'Mijn dossier',
+            link: '#',
+            icon: 'map',
+          },
+          { label: 'Mijn berichten', link: '#', icon: 'mail' },
+          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+        ]}
+      ></MenuBar>
       <MenuBar
         items={[
           {
@@ -43,14 +68,14 @@ const Import = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="left"
+        iconPlacement="before"
         maxWidth="lg"
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
+            <MenuBar
               direction="vertical"
               linkColor="zwart"
               horizontalRule={false}
@@ -81,9 +106,9 @@ const Import = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
-            /> */}
+            />
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -95,30 +120,24 @@ const Import = () => {
                 <LayoutFlow gap="xs">
                   <LayoutFlow gap="md">
                     <Fieldset legend="">
-                      <FormField
+                      <TextInput
                         label="Importdatum"
                         helperText="Vul hier de datum in waarop u het dier heeft ge&iuml;mporteerd. Gebruik de kalender om de datum te kiezen of vul de datum zelf in. Gebruik dan het formaat dd-mm-jjjj (bijvoorbeeld 01-09-2020)."
-                      >
-                        <FormField.Date />
-                      </FormField>
-                      <FormField
+                      ></TextInput>
+                      <TextInput
                         label="Nummer gezondheidscertificaat"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
-                      >
-                        <FormField.Text sizeInput="sm" />
-                      </FormField>
-                      <FormField
+                        size="sm"
+                      ></TextInput>
+                      <Select
                         label="Land van herkomst"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
-                      >
-                        <FormField.Select />
-                      </FormField>
-                      <FormField
+                      ></Select>
+                      <TextInput
                         label="Transport nummer (optioneel)"
                         helperText="Vult u het transportnummer in? Dan heeft u een extra mogelijkheid om meldingen van hetzelfde transport bij elkaar te zoeken. Bij Bekijken van meldingen kunt u dan ook zoeken op transportnummer. Vul alleen cijfers in, geen letters."
-                      >
-                        <FormField.Text sizeInput="sm" />
-                      </FormField>
+                        size="sm"
+                      ></TextInput>
                     </Fieldset>
 
                     <ActionGroup>
@@ -139,6 +158,4 @@ const Import = () => {
       <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
-};
-
-export default Import;
+}
