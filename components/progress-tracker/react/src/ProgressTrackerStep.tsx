@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-progress-tracker';
+import '@nl-rvo/css-progress-tracker/progress-tracker.css';
 import { IProgressTrackerStepProps } from './ProgressTracker.types';
 
 export const argTypes = {

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/loader.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/loader.css",
+      "import": "./dist/loader.css",
+      "default": "./dist/loader.css"
+    },
+    "./loader.css": "./dist/loader.css"
   },
   "publishConfig": {
     "access": "public",

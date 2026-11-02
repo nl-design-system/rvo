@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/scrollable-content.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/scrollable-content.css",
+      "import": "./dist/scrollable-content.css",
+      "default": "./dist/scrollable-content.css"
+    },
+    "./scrollable-content.css": "./dist/scrollable-content.css"
   },
   "publishConfig": {
     "access": "public",

@@ -6,7 +6,7 @@ import React from 'react';
 import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
 import { StatusIcon } from '@nl-rvo/react-status-icon';
 import { IFeedbackProps } from './FormFeedback.types';
-import '@nl-rvo/css-form-feedback';
+import '@nl-rvo/css-form-feedback/form-feedback.css';
 
 export const Feedback: React.FC<IFeedbackProps> = ({ type, children, ...rootElementProps }) => {
   return (

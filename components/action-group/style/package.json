@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/action-group.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/action-group.css",
+      "import": "./dist/action-group.css",
+      "default": "./dist/action-group.css"
+    },
+    "./action-group.css": "./dist/action-group.css"
   },
   "publishConfig": {
     "access": "public",

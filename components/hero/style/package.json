@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/hero.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/hero.css",
+      "import": "./dist/hero.css",
+      "default": "./dist/hero.css"
+    },
+    "./hero.css": "./dist/hero.css"
   },
   "publishConfig": {
     "access": "public",

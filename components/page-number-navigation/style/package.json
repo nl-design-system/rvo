@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/page-number-navigation.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/page-number-navigation.css",
+      "import": "./dist/page-number-navigation.css",
+      "default": "./dist/page-number-navigation.css"
+    },
+    "./page-number-navigation.css": "./dist/page-number-navigation.css"
   },
   "publishConfig": {
     "access": "public",

@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-fieldset.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-fieldset.css",
+      "import": "./dist/form-fieldset.css",
+      "default": "./dist/form-fieldset.css"
+    },
+    "./form-fieldset.css": "./dist/form-fieldset.css"
   },
   "publishConfig": {
     "access": "public",

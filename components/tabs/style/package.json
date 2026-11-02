@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/tabs.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/tabs.css",
+      "import": "./dist/tabs.css",
+      "default": "./dist/tabs.css"
+    },
+    "./tabs.css": "./dist/tabs.css"
   },
   "publishConfig": {
     "access": "public",

@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-data-list';
+import '@nl-rvo/css-data-list/data-list.css';
 import { IDataListItemProps, IDataListProps } from './DataList.types';
 import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
 

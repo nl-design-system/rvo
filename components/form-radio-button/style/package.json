@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/form-radio-button.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/form-radio-button.css",
+      "import": "./dist/form-radio-button.css",
+      "default": "./dist/form-radio-button.css"
+    },
+    "./form-radio-button.css": "./dist/form-radio-button.css"
   },
   "publishConfig": {
     "access": "public",

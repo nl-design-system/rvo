@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-expandable-table';
+import '@nl-rvo/css-expandable-table/expandable-table.css';
 import { IExpandableTableProps } from './ExpandableTable.types';
 
 export const ExpandableTable: React.FC<IExpandableTableProps> = ({

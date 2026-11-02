@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/skeleton.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/skeleton.css",
+      "import": "./dist/skeleton.css",
+      "default": "./dist/skeleton.css"
+    },
+    "./skeleton.css": "./dist/skeleton.css"
   },
   "publishConfig": {
     "access": "public",

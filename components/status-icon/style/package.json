@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/status-icon.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/status-icon.css",
+      "import": "./dist/status-icon.css",
+      "default": "./dist/status-icon.css"
+    },
+    "./status-icon.css": "./dist/status-icon.css"
   },
   "publishConfig": {
     "access": "public",

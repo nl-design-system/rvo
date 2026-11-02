@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/sidebar-layout.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/sidebar-layout.css",
+      "import": "./dist/sidebar-layout.css",
+      "default": "./dist/sidebar-layout.css"
+    },
+    "./sidebar-layout.css": "./dist/sidebar-layout.css"
   },
   "publishConfig": {
     "access": "public",

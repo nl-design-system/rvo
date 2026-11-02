@@ -5,8 +5,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Button } from '@nl-rvo/react-button';
-import '@nl-rvo/css-action-group';
-import '@nl-rvo/css-layout-flow';
+import '@nl-rvo/css-action-group/action-group.css';
+import '@nl-rvo/css-layout-flow/layout-flow.css';
 import { IActionGroupProps } from './ActionGroup.types';
 
 export const ActionGroup: React.FC<IActionGroupProps & React.HTMLAttributes<HTMLDivElement>> = ({

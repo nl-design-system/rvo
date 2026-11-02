@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/paragraph.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/paragraph.css",
+      "import": "./dist/paragraph.css",
+      "default": "./dist/paragraph.css"
+    },
+    "./paragraph.css": "./dist/paragraph.css"
   },
   "publishConfig": {
     "access": "public",

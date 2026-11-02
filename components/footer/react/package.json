@@ -21,7 +21,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
     }
   },
   "publishConfig": {
@@ -37,6 +38,7 @@
   "dependencies": {
     "@nl-rvo/css-footer": "workspace:*",
     "@nl-rvo/react-link": "workspace:*",
+    "@nl-rvo/react-max-width-layout": "workspace:*",
     "@nl-rvo/react-horizontal-rule": "workspace:*"
   }
 }

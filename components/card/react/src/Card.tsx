@@ -8,7 +8,7 @@ import parseContentMarkup from '../../../../packages/component-library-react/src
 import { Heading } from '@nl-rvo/react-heading';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-card';
+import '@nl-rvo/css-card/card.css';
 import { ICardProps } from './Card.types';
 
 export const Card: React.FC<ICardProps> = ({

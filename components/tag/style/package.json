@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/tag.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/tag.css",
+      "import": "./dist/tag.css",
+      "default": "./dist/tag.css"
+    },
+    "./tag.css": "./dist/tag.css"
   },
   "publishConfig": {
     "access": "public",

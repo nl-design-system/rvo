@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
 
-import '@nl-rvo/css-menubar';
+import '@nl-rvo/css-menubar/menubar.css';
 import MenuBarItem from './MenuItem';
 import { MaxWidthLayout } from '@nl-rvo/react-max-width-layout';
 import { Button } from '@nl-rvo/react-button';

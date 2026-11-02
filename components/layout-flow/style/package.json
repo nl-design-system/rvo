@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/layout-flow.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/layout-flow.css",
+      "import": "./dist/layout-flow.css",
+      "default": "./dist/layout-flow.css"
+    },
+    "./layout-flow.css": "./dist/layout-flow.css"
   },
   "publishConfig": {
     "access": "public",

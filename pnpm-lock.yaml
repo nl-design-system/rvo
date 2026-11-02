@@ -397,12 +397,11 @@ importers:
       '@nl-rvo/react-link':
         specifier: workspace:*
         version: link:../../link/react
-
-  components/footer/style:
-    dependencies:
-      '@nl-rvo/css-max-width-layout':
+      '@nl-rvo/react-max-width-layout':
         specifier: workspace:*
-        version: link:../../max-width-layout/style
+        version: link:../../max-width-layout/react
+
+  components/footer/style: {}
 
   components/form-autocomplete/react:
     dependencies:

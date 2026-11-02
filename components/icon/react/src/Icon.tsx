@@ -5,7 +5,7 @@
 // @ts-ignore
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-icon';
+import '@nl-rvo/css-icon/icon.css';
 import { IIconProps } from './Icon.types';
 import iconList from '@nl-rvo/assets/icons/index.js';
 

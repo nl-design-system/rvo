@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FormField } from '@nl-rvo/react-form-field';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-checkbox-filter';
+import '@nl-rvo/css-checkbox-filter/checkbox-filter.css';
 import { ICheckboxFilter } from './CheckboxFilter.types';
 
 export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter) => {

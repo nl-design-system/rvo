@@ -3,8 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "@nl-rvo/css-max-width-layout/dist/max-width-layout.css";
-
 .rvo-footer {
   background-color: var(--utrecht-page-footer-background-color);
   display: flex;
@@ -18,20 +16,7 @@
   }
 
   &__container {
-    // &--sm {
-    //   @extend .rvo-max-width-layout;
-    //   @extend .rvo-max-width-layout--sm;
-    // }
-
-    // &--md {
-    //   @extend .rvo-max-width-layout;
-    //   @extend .rvo-max-width-layout--md;
-    // }
-
-    // &--lg {
-    //   @extend .rvo-max-width-layout;
-    //   @extend .rvo-max-width-layout--lg;
-    // }
+    inline-size: 100vw;
   }
 
   &__payoff {

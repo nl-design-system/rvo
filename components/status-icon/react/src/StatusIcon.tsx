@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { Icon } from '../../../icon/react/src/Icon';
-import '@nl-rvo/css-status-icon';
+import '@nl-rvo/css-status-icon/status-icon.css';
 import { IStatusIconProps } from './StatusIcon.types';
 
 export const StatusIcon: React.FC<IStatusIconProps> = ({

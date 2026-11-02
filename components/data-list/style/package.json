@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/data-list.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/data-list.css",
+      "import": "./dist/data-list.css",
+      "default": "./dist/data-list.css"
+    },
+    "./data-list.css": "./dist/data-list.css"
   },
   "publishConfig": {
     "access": "public",

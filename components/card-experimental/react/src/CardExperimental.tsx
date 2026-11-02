@@ -14,7 +14,7 @@ import {
   getChildComponent,
   getChildComponentPropValue,
 } from '../../../../packages/component-library-react/src/utils/getChildComponent';
-import '@nl-rvo/css-card-experimental';
+import '@nl-rvo/css-card-experimental/card-experimental.css';
 import {
   CardComponents,
   IExperimentalCardHeaderProps,

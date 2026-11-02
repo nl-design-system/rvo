@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/breadcrumbs.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/breadcrumbs.css",
+      "import": "./dist/breadcrumbs.css",
+      "default": "./dist/breadcrumbs.css"
+    },
+    "./breadcrumbs.css": "./dist/breadcrumbs.css"
   },
   "publishConfig": {
     "access": "public",

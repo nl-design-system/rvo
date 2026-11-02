@@ -13,7 +13,7 @@ export interface FooterColumnInterface {
 
 export interface FooterInterface {
   primaryMenu?: FooterColumnInterface[];
-  maxWidth?: 'none' | 'sm' | 'md' | 'lg';
+  maxWidth?: 'sm' | 'md' | 'lg';
   payOff?: string;
   secondaryMenu?: FooterItemInterface[];
 }

@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React, { ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from '@nl-rvo/react-link';
-import '@nl-rvo/css-page-number-navigation';
+import '@nl-rvo/css-page-number-navigation/page-number-navigation.css';
 import { IPageNumberNavigation } from './PageNumberNavigation.types';
 
 const generatePageNumbers = (

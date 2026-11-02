@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/horizontal-rule.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/horizontal-rule.css",
+      "import": "./dist/horizontal-rule.css",
+      "default": "./dist/horizontal-rule.css"
+    },
+    "./horizontal-rule.css": "./dist/horizontal-rule.css"
   },
   "publishConfig": {
     "access": "public",

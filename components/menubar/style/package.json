@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/menubar.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/menubar.css",
+      "import": "./dist/menubar.css",
+      "default": "./dist/menubar.css"
+    },
+    "./menubar.css": "./dist/menubar.css"
   },
   "publishConfig": {
     "access": "public",

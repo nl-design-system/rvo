@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Logo } from '@nl-rvo/react-logo';
-import '@nl-rvo/css-header';
+import '@nl-rvo/css-header/header.css';
 import { IHeaderProps } from './Header.types';
 
 export const Header: React.FC<IHeaderProps & React.HTMLAttributes<HTMLDivElement>> = ({

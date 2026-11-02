@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { SortAscendingIcon, SortDefaultIcon, SortDescendingIcon } from './icons';
 import validateHTML from '../../../../packages/component-library-react/src/utils/validateHTML';
-import '@nl-rvo/css-table';
+import '@nl-rvo/css-table/table.css';
 import { ITableProps } from './Table.types';
 
 const sortData = (rows: string[][], columnIndex: number, direction: 'ASC' | 'DESC' | '', type?: string): string[][] => {

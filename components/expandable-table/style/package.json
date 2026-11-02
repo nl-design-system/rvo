@@ -19,8 +19,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/expandable-table.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/expandable-table.css",
+      "import": "./dist/expandable-table.css",
+      "default": "./dist/expandable-table.css"
+    },
+    "./expandable-table.css": "./dist/expandable-table.css"
   },
   "publishConfig": {
     "access": "public",

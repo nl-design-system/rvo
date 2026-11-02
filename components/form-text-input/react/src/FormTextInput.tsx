@@ -2,7 +2,7 @@
  * @license CC0-1.0
  * Copyright (c) 2021 Community for NL Design System
  */
-import '@nl-rvo/css-form-text-input';
+import '@nl-rvo/css-form-text-input/form-text-input.css';
 import clsx from 'clsx';
 import React from 'react';
 import { ITextInputProps } from './FormTextInput.types';

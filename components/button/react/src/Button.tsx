@@ -5,8 +5,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { Icon } from '@nl-rvo/react-icon';
-import '@nl-rvo/css-layout-flow';
-import '@nl-rvo/css-button';
+import '@nl-rvo/css-layout-flow/layout-flow.css';
+import '@nl-rvo/css-button/button.css';
 import { IButtonProps } from './Button.types';
 
 export const Button: React.FC<IButtonProps> = ({

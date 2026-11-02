@@ -21,8 +21,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/checkbox-filter.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/checkbox-filter.css",
+      "import": "./dist/checkbox-filter.css",
+      "default": "./dist/checkbox-filter.css"
+    },
+    "./checkbox-filter.css": "./dist/checkbox-filter.css"
   },
   "publishConfig": {
     "access": "public",

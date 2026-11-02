@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-ordered-unordered-list';
+import '@nl-rvo/css-ordered-unordered-list/ordered-unordered-list.css';
 import { parseChildren } from '@nl-rvo/component-library-react/src/utils/parseChildren';
 import { IListProps } from './OrderedUnorderedList.types';
 

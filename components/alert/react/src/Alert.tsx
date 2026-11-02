@@ -8,7 +8,7 @@ import parseContentMarkup from '../../../../packages/component-library-react/src
 import { Button } from '@nl-rvo/react-button';
 import { Icon } from '@nl-rvo/react-icon';
 import { StatusIcon } from '@nl-rvo/react-status-icon';
-import '@nl-rvo/css-alert';
+import '@nl-rvo/css-alert/alert.css';
 import { IAlertProps } from './Alert.types';
 
 export const Alert: React.FC<IAlertProps> = ({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { isOfType } from '@nl-rvo/component-library-react/src/utils/typeUtils';
-import '@nl-rvo/css-quote';
+import '@nl-rvo/css-quote/quote.css';
 import { IQuoteProps } from './Quote.types';
 
 export const Quote: React.FC<IQuoteProps> = ({ quote, user, ...rootElementProps }) => {

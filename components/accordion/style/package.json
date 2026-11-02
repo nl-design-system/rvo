@@ -20,8 +20,12 @@
     "dist/"
   ],
   "exports": {
-    ".": "./dist/accordion.css",
-    "./dist/*": "./dist/*"
+    ".": {
+      "style": "./dist/accordion.css",
+      "import": "./dist/accordion.css",
+      "default": "./dist/accordion.css"
+    },
+    "./accordion.css": "./dist/accordion.css"
   },
   "publishConfig": {
     "access": "public",
