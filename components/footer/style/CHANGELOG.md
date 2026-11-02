@@ -1,5 +1,11 @@
 # `@nl-rvo/css-footer`
 
+## 1.11.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.11.0
 
 ### Minor Changes

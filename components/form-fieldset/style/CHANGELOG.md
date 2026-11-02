@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-fieldset`
 
+## 1.7.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.7.0
 
 ### Minor Changes

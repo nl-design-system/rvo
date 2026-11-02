@@ -1,5 +1,16 @@
 # @nl-rvo/react-hero
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+- Updated dependencies [ef698d1]
+  - @nl-rvo/react-heading@1.0.2
+  - @nl-rvo/react-max-width-layout@1.0.2
+  - @nl-rvo/css-hero@1.8.1
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # `@nl-rvo/css-favicon`
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+
 ## 1.0.1
 
 ### Patch Changes

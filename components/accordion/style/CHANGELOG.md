@@ -1,5 +1,14 @@
 # `@nl-rvo/css-accordion`
 
+## 1.4.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+- Updated dependencies [ef698d1]
+  - @nl-rvo/css-layout-flow@1.6.1
+  - @nl-rvo/css-link@1.7.1
+
 ## 1.4.0
 
 ### Minor Changes

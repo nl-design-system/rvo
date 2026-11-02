@@ -1,5 +1,24 @@
 # @nl-rvo/react-form-field
 
+## 1.0.3
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+- Updated dependencies [ef698d1]
+  - @nl-rvo/react-expandable-content@1.0.2
+  - @nl-rvo/react-form-checkbox@1.0.2
+  - @nl-rvo/react-form-checkbox-group@1.0.2
+  - @nl-rvo/react-form-feedback@1.0.2
+  - @nl-rvo/react-form-file-input@1.0.3
+  - @nl-rvo/react-form-radio-button@1.0.2
+  - @nl-rvo/react-form-radio-button-group@1.0.2
+  - @nl-rvo/react-form-select@1.0.2
+  - @nl-rvo/react-form-text-input@1.0.3
+  - @nl-rvo/react-form-textarea@1.0.2
+  - @nl-rvo/css-form-field@1.8.1
+
 ## 1.0.2
 
 ### Patch Changes

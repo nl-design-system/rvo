@@ -1,5 +1,13 @@
 # @nl-rvo/react-paragraph
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+  - @nl-rvo/css-paragraph@1.6.1
+
 ## 1.0.1
 
 ### Patch Changes

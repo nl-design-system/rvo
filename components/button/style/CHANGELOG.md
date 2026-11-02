@@ -1,5 +1,13 @@
 # `@nl-rvo/css-button`
 
+## 2.2.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+- Updated dependencies [ef698d1]
+  - @nl-rvo/css-layout-flow@1.6.1
+
 ## 2.2.0
 
 ### Minor Changes

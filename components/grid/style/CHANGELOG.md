@@ -1,5 +1,11 @@
 # `@nl-rvo/css-grid`
 
+## 3.3.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 3.3.0
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @nl-rvo/react-counter-badge
 
+## 1.0.3
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+  - @nl-rvo/css-counter-badge@1.0.1
+
 ## 1.0.2
 
 ### Patch Changes

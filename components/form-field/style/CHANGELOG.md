@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-field`
 
+## 1.8.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.8.0
 
 ### Minor Changes

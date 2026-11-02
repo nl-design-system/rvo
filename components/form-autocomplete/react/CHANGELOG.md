@@ -1,5 +1,16 @@
 # @nl-rvo/react-form-autocomplete
 
+## 1.0.3
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+- Updated dependencies [ef698d1]
+  - @nl-rvo/react-form-text-input@1.0.3
+  - @nl-rvo/react-link@1.0.2
+  - @nl-rvo/css-form-autocomplete@1.0.1
+
 ## 1.0.2
 
 ### Patch Changes
