@@ -1,5 +1,19 @@
 # @nl-rvo/react-checkbox-filter
 
+## 1.0.3
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+- Updated dependencies [ef698d1]
+  - @nl-rvo/react-form-checkbox@1.0.2
+  - @nl-rvo/react-form-field@1.0.3
+  - @nl-rvo/react-icon@1.0.2
+  - @nl-rvo/react-link@1.0.2
+  - @nl-rvo/css-checkbox-filter@1.0.1
+  - @nl-rvo/css-layout-flow@1.6.1
+
 ## 1.0.2
 
 ### Patch Changes

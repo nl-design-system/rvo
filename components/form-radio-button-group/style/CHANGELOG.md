@@ -1,5 +1,11 @@
 # `@nl-rvo/css-form-radio-button-group`
 
+## 1.4.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.4.0
 
 ### Minor Changes

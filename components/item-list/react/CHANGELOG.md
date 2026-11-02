@@ -1,5 +1,13 @@
 # @nl-rvo/react-item-list
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+  - @nl-rvo/css-item-list@1.4.1
+
 ## 1.0.1
 
 ### Patch Changes

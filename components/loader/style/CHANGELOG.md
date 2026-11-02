@@ -1,5 +1,11 @@
 # @nl-rvo/css-loader
 
+## 2.2.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 2.2.0
 
 ### Minor Changes

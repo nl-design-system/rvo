@@ -1,5 +1,11 @@
 # @nl-rvo/css-image
 
+## 1.3.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.3.0
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @nl-rvo/react-tabs
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+  - @nl-rvo/css-tabs@2.1.1
+
 ## 1.0.1
 
 ### Patch Changes

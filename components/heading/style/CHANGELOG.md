@@ -1,5 +1,11 @@
 # `@nl-rvo/css-heading`
 
+## 2.4.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 2.4.0
 
 ### Minor Changes

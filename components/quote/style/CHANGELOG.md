@@ -1,5 +1,11 @@
 # @nl-rvo/css-quote
 
+## 1.2.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.2.0
 
 ### Minor Changes

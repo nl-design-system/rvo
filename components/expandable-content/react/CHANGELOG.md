@@ -1,5 +1,15 @@
 # @nl-rvo/react-expandable-content
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+- Updated dependencies [ef698d1]
+  - @nl-rvo/react-icon@1.0.2
+  - @nl-rvo/css-expandable-content@1.5.1
+
 ## 1.0.1
 
 ### Patch Changes

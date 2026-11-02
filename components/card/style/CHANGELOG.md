@@ -1,5 +1,11 @@
 # `@nl-rvo/css-card`
 
+## 1.9.1
+
+### Patch Changes
+
+- ef698d1: Update packages.json to have default exports
+
 ## 1.9.0
 
 ### Minor Changes

@@ -1,5 +1,17 @@
 # @nl-rvo/react-alert
 
+## 1.0.2
+
+### Patch Changes
+
+- ef698d1: Update package.json to include default exports
+- Updated dependencies [ef698d1]
+- Updated dependencies [ef698d1]
+  - @nl-rvo/react-button@1.0.2
+  - @nl-rvo/react-icon@1.0.2
+  - @nl-rvo/react-status-icon@1.0.2
+  - @nl-rvo/css-alert@1.7.1
+
 ## 1.0.1
 
 ### Patch Changes
