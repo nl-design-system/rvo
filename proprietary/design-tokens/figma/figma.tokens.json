@@ -2268,14 +2268,6 @@
     }
   },
   "components/link": {
-    "rvo": {
-      "link": {
-        "call-to-action": {
-          "font-size": { "$value": "18px" },
-          "font-weight": { "$value": "{rvo.font-weight.bold}" }
-        }
-      }
-    },
     "utrecht": {
       "link": {
         "color": {
