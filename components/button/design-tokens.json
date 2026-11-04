@@ -10,6 +10,7 @@
       "font-size": { "css": { "syntax": "*", "inherits": true } },
       "hover": {
         "text-decoration": { "css": { "syntax": "*", "inherits": true } },
+        "text-decoration-thickness": { "css": { "syntax": "<length>", "inherits": true } },
         "text-underline-offset": { "css": { "syntax": "*", "inherits": true } }
       },
       "icon-gap": { "css": { "syntax": "<length>", "inherits": true } },

@@ -24,8 +24,11 @@
         "text-decoration": {
           "value": "underline"
         },
+        "text-decoration-thickness": {
+          "value": "2px"
+        },
         "text-underline-offset": {
-          "value": "30%"
+          "value": "25%"
         }
       },
       "icon-gap": {

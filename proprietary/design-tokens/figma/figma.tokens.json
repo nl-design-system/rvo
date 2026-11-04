@@ -502,7 +502,7 @@
           "$value": "2px"
         },
         "text-decoration-thickness": {
-          "$value": "3px"
+          "$value": "4px"
         },
         "text-underline-offset": {
           "$value": "2px"
@@ -886,8 +886,11 @@
           "text-decoration": {
             "$value": "underline"
           },
+          "text-decoration-thickness": {
+            "$value": "2px"
+          },
           "text-underline-offset": {
-            "$value": "30%"
+            "$value": "25%"
           }
         },
         "icon-gap": {
