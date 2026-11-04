@@ -568,9 +568,9 @@ importers:
 
   components/form-textarea/style:
     dependencies:
-      '@nl-rvo/css-layout-flow':
-        specifier: workspace:*
-        version: link:../../layout-flow/style
+      '@utrecht/textarea-css':
+        specifier: 3.0.1
+        version: 3.0.1
 
   components/grid/react:
     dependencies:
@@ -6947,6 +6947,9 @@ packages:
 
   '@utrecht/textarea-css@2.3.2':
     resolution: {integrity: sha512-//1PLWGMvTqS6exirU0OUO3l9odc7S2Wg1kg4I82v5oeoniUbn2gNgVfvDonPx4l9IywPNhIjlMM/9VfgU8T+Q==}
+
+  '@utrecht/textarea-css@3.0.1':
+    resolution: {integrity: sha512-byy2EpNx6g9ORxTZyeGxWclsvzJxbkmi1uqLSCS7286nw3t7PkwiWSKBPBJ568153nKgBD7FgiZrjR0Oe7TDnA==}
 
   '@utrecht/textbox-css@2.0.0':
     resolution: {integrity: sha512-z4ewJ6WxC3TMTG2jR4I7k73O5NijdjE/ydR1lovzPr4/Wa27l3I7pM0qjymSarKtc5IapfXsFhIpwV/kKbPPSA==}
@@ -22427,6 +22430,8 @@ snapshots:
   '@utrecht/table-of-contents-css@0.3.1': {}
 
   '@utrecht/textarea-css@2.3.2': {}
+
+  '@utrecht/textarea-css@3.0.1': {}
 
   '@utrecht/textbox-css@2.0.0': {}
 
