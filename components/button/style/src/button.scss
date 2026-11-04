@@ -100,6 +100,37 @@ $rvo-button-sizes: (xs, sm, md) !default;
     }
   }
 
+  &--subtle,
+  &--tertiary {
+    &:focus-visible {
+      box-shadow: none;
+      outline: none;
+      text-decoration: underline;
+    }
+  }
+
+  &--subtle:focus-visible,
+  &--subtle:focus-visible:hover {
+    color: var(--rvo-button-subtle-focus-color);
+    text-decoration-thickness: var(--rvo-button-subtle-focus-text-decoration-thickness);
+    text-underline-offset: var(--rvo-button-subtle-focus-text-underline-offset);
+
+    .utrecht-icon.rvo-icon {
+      background-color: var(--rvo-button-subtle-focus-color);
+    }
+  }
+
+  &--tertiary:focus-visible,
+  &--tertiary:focus-visible:hover {
+    color: var(--rvo-button-tertiary-focus-color);
+    text-decoration-thickness: var(--rvo-button-tertiary-focus-text-decoration-thickness);
+    text-underline-offset: var(--rvo-button-tertiary-focus-text-underline-offset);
+
+    .utrecht-icon.rvo-icon {
+      background-color: var(--rvo-button-tertiary-focus-color);
+    }
+  }
+
   @each $name in $rvo-button-sizes {
     &--size-#{$name} {
       --rvo-button-font-size: var(--rvo-button-size-#{$name}-font-size);
