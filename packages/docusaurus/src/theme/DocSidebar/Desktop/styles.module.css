@@ -1,12 +1,23 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-block-start: var(--rvo-dialog-padding-block-start) !important;
+  padding-inline-start: var(--rvo-dialog-padding-inline-start) !important;
+  transition: opacity 50ms ease;
+  width: var(--doc-sidebar-width);
+}
+
+@media (max-width: 996px) {
+  .sidebar {
+    height: auto;
+    width: 100%;
+  }
+}
+
 @media (min-width: 997px) {
   .sidebar {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding-block-start: var(--rvo-dialog-padding-block-start) !important;
-    padding-inline-start: var(--rvo-dialog-padding-inline-start) !important;
-    transition: opacity 50ms ease;
-    width: var(--doc-sidebar-width);
   }
 
   .sidebarWithHideableNavbar {

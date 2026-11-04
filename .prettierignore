@@ -25,3 +25,6 @@ yarn.lock
 
 # Playwright MCP snapshots
 .playwright-mcp
+
+# MDX files — prettier wraps JSX children across lines which causes MDX to inject <p> elements
+*.mdx

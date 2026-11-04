@@ -1,6 +1,11 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Alert,
+  Checkbox,
   Fieldset,
   Footer,
   Header,
@@ -8,19 +13,39 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  FormField,
+  RadioButton,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const Ondertekening = () => {
+export default function OndertekeningPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -48,7 +73,7 @@ const Ondertekening = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -67,7 +92,7 @@ const Ondertekening = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -163,39 +188,32 @@ const Ondertekening = () => {
                 </p>
               </div>
               <Fieldset legend="Uw bedrijf en het doel van de steun ">
-                <FormField label="Is er al eerder steun verleend door een overheidsorganisatie voor dezelfde kosten als waar u nu steun voor aanvraagt?">
-                  <FormField.RadioButtonGroup
-                    name="eerder"
-                    options={[
-                      { id: 'eerder A', label: 'Ja' },
-                      { id: 'eerder B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField
+                <RadioButton
+                  name="eerder"
+                  label="Is er al eerder steun verleend door een overheidsorganisatie voor dezelfde kosten als waar u nu steun voor aanvraagt?"
+                  options={[
+                    { id: 'eerder A', label: 'Ja' },
+                    { id: 'eerder B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="export"
                   label="Vraagt u om exportsteun?"
                   helperText="Exportsteun is bijvoorbeeld de financiering van exportwerkzaamheden of steun voor de oprichting of exploitatie van een distributienetwerk. Subsidies voor deelname aan handelsbeurzen of voor onderzoek naar nieuwe markten vallen hier niet onder."
-                >
-                  <FormField.RadioButtonGroup
-                    name="export"
-                    options={[
-                      { id: 'export A', label: 'Ja' },
-                      { id: 'export B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField
+                  options={[
+                    { id: 'export A', label: 'Ja' },
+                    { id: 'export B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="afhank"
                   label="Vraagt u om steun die afhankelijk is van het gebruik van binnenlandse goederen in plaats van ingevoerde goederen?"
                   helperText="De-minimissteun is niet mogelijk als daardoor binnenlandse producten worden bevoordeeld boven ingevoerde producten."
-                >
-                  <FormField.RadioButtonGroup
-                    name="afhank"
-                    options={[
-                      { id: 'afhank A', label: 'Ja' },
-                      { id: 'afhank B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
+                  options={[
+                    { id: 'afhank A', label: 'Ja' },
+                    { id: 'afhank B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
               </Fieldset>
               <Alert>
                 <strong>U kunt gebeld worden</strong>
@@ -214,35 +232,34 @@ const Ondertekening = () => {
                 </dl>
               </div>
               <Fieldset legend="Verklaring">
-                <FormField label="Is de contactpersoon tevens de ondertekenaar?">
-                  <FormField.RadioButtonGroup
-                    name="cp"
-                    options={[
-                      { id: 'cp A', label: 'Ja' },
-                      { id: 'cp B', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="">
-                  <FormField.CheckboxGroup
-                    options={[
-                      {
-                        id: 'verklaring',
-                        label: 'Ik ben bevoegd en/of gemachtigd om deze aanvraag te ondertekenen.',
-                      },
-                    ]}
-                  />
-                </FormField>
-                <FormField label="">
-                  <FormField.CheckboxGroup
-                    options={[
-                      {
-                        id: 'verklaring',
-                        label: 'Ik verklaar dat dit formulier en de bijlagen naar waarheid zijn ingevuld. ',
-                      },
-                    ]}
-                  />
-                </FormField>
+                <RadioButton
+                  name="cp"
+                  label="Is de contactpersoon tevens de ondertekenaar?"
+                  options={[
+                    { id: 'cp A', label: 'Ja' },
+                    { id: 'cp B', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <Checkbox
+                  label=" "
+                  invalid={false}
+                  options={[
+                    {
+                      id: 'verklaring',
+                      label: 'Ik ben bevoegd en/of gemachtigd om deze aanvraag te ondertekenen.',
+                    },
+                  ]}
+                ></Checkbox>
+                <Checkbox
+                  label=" "
+                  invalid={false}
+                  options={[
+                    {
+                      id: 'verklaring',
+                      label: 'Ik verklaar dat dit formulier en de bijlagen naar waarheid zijn ingevuld. ',
+                    },
+                  ]}
+                ></Checkbox>
               </Fieldset>
               <ActionGroup>
                 <a
@@ -259,6 +276,4 @@ const Ondertekening = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default Ondertekening;
+}

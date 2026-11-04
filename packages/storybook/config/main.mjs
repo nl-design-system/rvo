@@ -68,6 +68,15 @@ const config = (() => {
         // Fixes the ".md missing semicolon" crash by telling Vite to read markdown as raw assets
         assetsInclude: ['**/*.md'],
 
+        server: {
+          ...config.server,
+          fs: {
+            ...config.server?.fs,
+            // Allow serving files from the monorepo root (needed for workspace package symlinks)
+            allow: [...(config.server?.fs?.allow ?? []), path.resolve(__dirname, '../../..')],
+          },
+        },
+
         css: {
           preprocessorOptions: {
             scss: {

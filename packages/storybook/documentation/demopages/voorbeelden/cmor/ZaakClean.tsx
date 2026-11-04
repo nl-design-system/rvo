@@ -51,6 +51,7 @@ const ZaakClean = () => {
               useIcons={true}
               iconPlacement="left"
               maxWidth="md"
+              horizontalRule={true}
             />
 
             <main className="">

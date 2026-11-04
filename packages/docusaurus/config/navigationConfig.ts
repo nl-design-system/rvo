@@ -35,9 +35,14 @@ const navbar: Navbar = {
     },
     {
       type: 'doc',
-      docId: 'patronen/paginas/basispagina',
+      docId: 'patronen/over-patronen',
       position: 'left' as const,
       label: 'Patronen',
+    },
+    {
+      to: '/voorbeelden/over-voorbeelden',
+      position: 'left' as const,
+      label: 'Voorbeelden',
     },
     // {
     //   type: 'doc',
