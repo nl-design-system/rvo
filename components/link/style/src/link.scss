@@ -146,6 +146,7 @@
   border-width: var(--rvo-link-call-to-action-border-width);
   box-sizing: border-box;
   color: var(--rvo-link-call-to-action-color);
+  font-size: var(--rvo-link-call-to-action-font-size);
   font-weight: var(--rvo-link-call-to-action-font-weight);
   min-block-size: var(--rvo-link-call-to-action-min-block-size);
   padding-block-end: var(--rvo-link-call-to-action-padding-block-end);
@@ -180,10 +181,7 @@
     background-color: var(--rvo-link-call-to-action-background-color);
     color: var(--rvo-link-call-to-action-color);
     font-weight: var(--rvo-link-call-to-action-font-weight);
-    outline-color: var(--utrecht-focus-outline-color, revert);
-    outline-offset: var(--utrecht-focus-outline-offset, revert);
-    outline-style: var(--utrecht-focus-outline-style, revert);
-    outline-width: var(--utrecht-focus-outline-width, revert);
+    outline: none;
     text-decoration-thickness: var(--rvo-link-call-to-action-focus-text-decoration-thickness);
 
     .rvo-link__icon {
