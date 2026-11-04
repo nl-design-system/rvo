@@ -2,6 +2,6 @@
 "@nl-rvo/css-button": patch
 ---
 
-fix(button): replace focus ring with link-style underline for subtle and tertiary variants
+fix(button): replace focus ring with link-style underline for all button variants
 
-No more blue outline on focus; instead black text color with a 3px underline at 2px offset, matching the link focus style. The underline is also preserved when hovering over a focused button.
+All button variants now show a 3px underline at 2px offset on focus instead of the Utrecht focus ring. Solid variants (primary, secondary, quaternary, warning) use their existing text color for the underline. Subtle, tertiary, and warning-subtle keep their base colors (donkerblauw, hemelblauw, rood) on focus and when hovering a focused button.

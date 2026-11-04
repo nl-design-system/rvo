@@ -160,7 +160,9 @@
           "color": { "css": { "syntax": "<color>", "inherits": true } }
         },
         "focus": {
-          "color": { "css": { "syntax": "<color>", "inherits": true } }
+          "color": { "css": { "syntax": "<color>", "inherits": true } },
+          "text-decoration-thickness": { "css": { "syntax": "<length>", "inherits": true } },
+          "text-underline-offset": { "css": { "syntax": "<length>", "inherits": true } }
         }
       },
       "warning": {
