@@ -502,7 +502,7 @@
           "$value": "2px"
         },
         "text-decoration-thickness": {
-          "$value": "3px"
+          "$value": "4px"
         },
         "text-underline-offset": {
           "$value": "2px"
@@ -886,8 +886,11 @@
           "text-decoration": {
             "$value": "underline"
           },
+          "text-decoration-thickness": {
+            "$value": "2px"
+          },
           "text-underline-offset": {
-            "$value": "30%"
+            "$value": "25%"
           }
         },
         "icon-gap": {
@@ -1063,6 +1066,12 @@
           "focus": {
             "color": {
               "$value": "{rvo.color.hemelblauw}"
+            },
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
             }
           }
         },
@@ -1092,13 +1101,13 @@
           },
           "hover": {
             "background-color": {
-              "$value": "{rvo.color.groen-750}"
+              "$value": "{rvo.color.groen}"
             },
             "border-color": {
-              "$value": "{rvo.color.groen-750}"
+              "$value": "{rvo.color.groen}"
             },
             "color": {
-              "$value": "{rvo.color.zwart}"
+              "$value": "{rvo.color.wit}"
             }
           },
           "disabled": {
@@ -1145,7 +1154,13 @@
               "$value": "{rvo.color.donkerblauw}"
             },
             "border-color": {},
-            "border-width": {}
+            "border-width": {},
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
+            }
           },
           "disabled": {
             "color": {
@@ -1188,6 +1203,12 @@
           "focus": {
             "color": {
               "$value": "{rvo.color.rood}"
+            },
+            "text-decoration-thickness": {
+              "$value": "{rvo.focus.text-decoration-thickness}"
+            },
+            "text-underline-offset": {
+              "$value": "{rvo.focus.text-underline-offset}"
             }
           }
         },
@@ -1212,10 +1233,10 @@
           },
           "hover": {
             "background-color": {
-              "$value": "{rvo.color.rood-750}"
+              "$value": "{rvo.color.rood}"
             },
             "color": {
-              "$value": "{rvo.color.zwart}"
+              "$value": "{rvo.color.wit}"
             }
           },
           "disabled": {
@@ -1228,7 +1249,7 @@
           },
           "focus": {
             "background-color": {
-              "$value": "{rvo.color.rood-750}"
+              "$value": "{rvo.color.rood}"
             }
           }
         },
