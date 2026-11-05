@@ -44,7 +44,8 @@
         "border-style": { "value": "solid" },
         "border-width": { "value": "1px" },
         "color": { "value": "{rvo.color.wit}" },
-        "font-weight": { "value": "{rvo.font-weight.normal}" },
+        "font-size": { "value": "{rvo.font-size.lg}" },
+        "font-weight": { "value": "{rvo.font-weight.bold}" },
         "icon": {
           "background-color": { "value": "{rvo.color.wit}" }
         },
@@ -82,10 +83,10 @@
           },
           "hover": {
             "background-color": { "value": "{rvo.color.wit}" },
-            "border-color": { "value": "{rvo.color.violet-750}" },
-            "color": { "value": "{rvo.color.violet-750}" },
+            "border-color": { "value": "{rvo.color.violet}" },
+            "color": { "value": "{rvo.color.violet}" },
             "icon": {
-              "background-color": { "value": "{rvo.color.violet-750}" }
+              "background-color": { "value": "{rvo.color.violet}" }
             }
           },
           "active": {
