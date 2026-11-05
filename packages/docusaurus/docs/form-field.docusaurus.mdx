@@ -8,12 +8,10 @@ slug: /form-field
 import { FormField, Heading } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 
-<Heading type="h2">FormField</Heading>
-
 Verplicht label:
 
 {(() => {
-const props = { id: "example-required", label: "Naam", labelType: "required" };
+const props = { id: "example-required", label: "Text Input", labelType: "required" };
 return (
 
 <ComponentExample storyName="componenten-formfield--text-input" args={props}>
@@ -26,7 +24,7 @@ return (
 Optioneel label:
 
 {(() => {
-const props = { id: "example-optional", label: "Naam", labelType: "optional" };
+const props = { id: "example-optional", label: "Text Input", labelType: "optional" };
 return (
 
 <ComponentExample storyName="componenten-formfield--text-input" args={props}>
@@ -39,7 +37,7 @@ return (
 Met omschrijving:
 
 {(() => {
-const props = { id: "example-helper", label: "Naam", helperText: "Voer uw volledige naam in zoals vermeld op uw identiteitsbewijs." };
+const props = { id: "example-helper", label: "Text Input", helperText: "Helper text" };
 return (
 
 <ComponentExample storyName="componenten-formfield--text-input" args={props}>
@@ -52,7 +50,7 @@ return (
 Met waarschuwing:
 
 {(() => {
-const props = { id: "example-warning", label: "Naam", warningText: "Let op: gebruik uw officiële naam." };
+const props = { id: "example-warning", label: "Text Input", warningText: "Warning text" };
 return (
 
 <ComponentExample storyName="componenten-formfield--text-input" args={props}>
@@ -65,292 +63,12 @@ return (
 Met foutmelding:
 
 {(() => {
-const props = { id: "example-error", label: "Naam", errorText: "Dit veld is verplicht." };
+const props = { id: "example-error", label: "Text Input", errorText: "Error text" };
 return (
 
 <ComponentExample storyName="componenten-formfield--text-input" args={props}>
   <FormField {...props}>
     <FormField.Text type="text" sizeInput="md" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Tekstveld</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "text-with-helper", label: "Voornaam", helperText: "Voer uw voornaam in." };
-return (
-
-<ComponentExample storyName="componenten-formfield--text-input" args={props}>
-  <FormField {...props}>
-    <FormField.Text type="text" sizeInput="md" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "text-without-helper", label: "Voornaam" };
-return (
-
-<ComponentExample storyName="componenten-formfield--text-input" args={props}>
-  <FormField {...props}>
-    <FormField.Text type="text" sizeInput="md" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Selecteer</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "select-with-helper", label: "Land", helperText: "Selecteer het land waar u woont." };
-return (
-
-<ComponentExample storyName="componenten-formfield--select" args={props}>
-  <FormField {...props}>
-    <FormField.Select options={[{ value: "nl", label: "Nederland" }, { value: "be", label: "België" }, { value: "de", label: "Duitsland" }]} />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "select-without-helper", label: "Land" };
-return (
-
-<ComponentExample storyName="componenten-formfield--select" args={props}>
-  <FormField {...props}>
-    <FormField.Select options={[{ value: "nl", label: "Nederland" }, { value: "be", label: "België" }, { value: "de", label: "Duitsland" }]} />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Tekstgebied</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "textarea-with-helper", label: "Toelichting", helperText: "Geef een korte toelichting op uw aanvraag." };
-return (
-
-<ComponentExample storyName="componenten-formfield--text-area" args={props}>
-  <FormField {...props}>
-    <FormField.TextArea />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "textarea-without-helper", label: "Toelichting" };
-return (
-
-<ComponentExample storyName="componenten-formfield--text-area" args={props}>
-  <FormField {...props}>
-    <FormField.TextArea />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Checkbox</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "checkbox-with-helper", label: "Akkoord", helperText: "Vink aan om akkoord te gaan." };
-return (
-
-<ComponentExample storyName="componenten-formfield--checkbox" args={props}>
-  <FormField {...props}>
-    <FormField.Checkbox label="Ja, ik ga akkoord" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "checkbox-without-helper", label: "Akkoord" };
-return (
-
-<ComponentExample storyName="componenten-formfield--checkbox" args={props}>
-  <FormField {...props}>
-    <FormField.Checkbox label="Ja, ik ga akkoord" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Checkboxgroep</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "checkbox-group-with-helper", label: "Sectoren", helperText: "Selecteer alle sectoren die van toepassing zijn." };
-return (
-
-<ComponentExample storyName="componenten-formfield--checkbox-group" args={props}>
-  <FormField {...props}>
-    <FormField.CheckboxGroup options={[{ label: "Landbouw" }, { label: "Industrie" }, { label: "Diensten" }]} />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "checkbox-group-without-helper", label: "Sectoren" };
-return (
-
-<ComponentExample storyName="componenten-formfield--checkbox-group" args={props}>
-  <FormField {...props}>
-    <FormField.CheckboxGroup options={[{ label: "Landbouw" }, { label: "Industrie" }, { label: "Diensten" }]} />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Radioknop</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "radio-with-helper", label: "Bent u eigenaar?", helperText: "Selecteer of u eigenaar bent van het bedrijf." };
-return (
-
-<ComponentExample storyName="componenten-formfield--radio-button" args={props}>
-  <FormField {...props}>
-    <FormField.RadioButton label="Ja" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "radio-without-helper", label: "Bent u eigenaar?" };
-return (
-
-<ComponentExample storyName="componenten-formfield--radio-button" args={props}>
-  <FormField {...props}>
-    <FormField.RadioButton label="Ja" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Radioknoppen</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "radio-group-with-helper", label: "Bedrijfsgrootte", helperText: "Selecteer de grootte van uw bedrijf." };
-return (
-
-<ComponentExample storyName="componenten-formfield--radio-button-group" args={props}>
-  <FormField {...props}>
-    <FormField.RadioButtonGroup options={[{ label: "Klein (1–9 medewerkers)" }, { label: "Middel (10–49 medewerkers)" }, { label: "Groot (50+ medewerkers)" }]} />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "radio-group-without-helper", label: "Bedrijfsgrootte" };
-return (
-
-<ComponentExample storyName="componenten-formfield--radio-button-group" args={props}>
-  <FormField {...props}>
-    <FormField.RadioButtonGroup options={[{ label: "Klein (1–9 medewerkers)" }, { label: "Middel (10–49 medewerkers)" }, { label: "Groot (50+ medewerkers)" }]} />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Bestandsinvoer</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "file-with-helper", label: "Document uploaden", helperText: "Toegestane bestandstypen: pdf, docx. Maximale bestandsgrootte: 10 MB." };
-return (
-
-<ComponentExample storyName="componenten-formfield--file-input" args={props}>
-  <FormField {...props}>
-    <FormField.FileInput />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "file-without-helper", label: "Document uploaden" };
-return (
-
-<ComponentExample storyName="componenten-formfield--file-input" args={props}>
-  <FormField {...props}>
-    <FormField.FileInput />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Datuminvoer</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "date-with-helper", label: "Geboortedatum", helperText: "Voer uw geboortedatum in, bijvoorbeeld 01-01-1990." };
-return (
-
-<ComponentExample storyName="componenten-formfield--date-input" args={props}>
-  <FormField {...props}>
-    <FormField.Date sizeInput="md" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "date-without-helper", label: "Geboortedatum" };
-return (
-
-<ComponentExample storyName="componenten-formfield--date-input" args={props}>
-  <FormField {...props}>
-    <FormField.Date sizeInput="md" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-<Heading type="h2">Tijdinvoer</Heading>
-
-Met label en omschrijving:
-
-{(() => {
-const props = { id: "time-with-helper", label: "Starttijd", helperText: "Voer de starttijd in, bijvoorbeeld 09:00." };
-return (
-
-<ComponentExample storyName="componenten-formfield--time-input" args={props}>
-  <FormField {...props}>
-    <FormField.Text type="time" sizeInput="md" />
-  </FormField>
-</ComponentExample>
-); })()}
-
-Zonder omschrijving:
-
-{(() => {
-const props = { id: "time-without-helper", label: "Starttijd" };
-return (
-
-<ComponentExample storyName="componenten-formfield--time-input" args={props}>
-  <FormField {...props}>
-    <FormField.Text type="time" sizeInput="md" />
   </FormField>
 </ComponentExample>
 ); })()}

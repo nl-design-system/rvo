@@ -12,7 +12,7 @@ import ComponentExample from "@site/src/components/ComponentExample";
 
 Primary button:
 
-<ComponentExample storyName="componenten-button--default">
+<ComponentExample storyName="componenten-button--base">
   <Button>Primary Button</Button>
 </ComponentExample>
 
@@ -21,7 +21,7 @@ Secondary button:
 const props = { kind: "secondary" };
 return (
 
-<ComponentExample storyName="componenten-button--default">
+<ComponentExample storyName="componenten-button--base">
   <Button {...props}>Secondary Button</Button>
 </ComponentExample>
 ); })()}
@@ -31,7 +31,7 @@ Tertiary button:
 const props = { kind: "tertiary" };
 return (
 
-<ComponentExample storyName="componenten-button--default" args={props}>
+<ComponentExample storyName="componenten-button--base" args={props}>
   <Button {...props}>Tertiary Button</Button>
 </ComponentExample>
 ); })()}
@@ -41,7 +41,7 @@ Quaternary button:
 const props = { kind: "quaternary" };
 return (
 
-<ComponentExample storyName="componenten-button--default" args={props}>
+<ComponentExample storyName="componenten-button--base" args={props}>
   <Button {...props}>Quaternary Button</Button>
 </ComponentExample>
 ); })()}
@@ -51,7 +51,7 @@ Warning subtle button:
 const props = { kind: "warning-subtle" };
 return (
 
-<ComponentExample storyName="componenten-button-kinds--warning-subtle" args={props}>
+<ComponentExample storyName="componenten-button--base" args={props}>
   <Button {...props}>Warning Subtle Button</Button>
 </ComponentExample>
 ); })()}
@@ -61,7 +61,7 @@ Warning button:
 const props = { kind: "warning" };
 return (
 
-<ComponentExample storyName="componenten-button-kinds--warning" args={props}>
+<ComponentExample storyName="componenten-button--base" args={props}>
   <Button {...props}>Warning Button</Button>
 </ComponentExample>
 ); })()}

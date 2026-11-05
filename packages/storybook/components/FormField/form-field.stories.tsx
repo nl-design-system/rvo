@@ -97,7 +97,7 @@ export const Checkbox: Story = {
   },
   render: (args) => (
     <FormField {...args}>
-      <FormField.Checkbox label="Ja, vink ik aan" />
+      <FormField.Checkbox label="Checkbox" />
     </FormField>
   ),
 };
@@ -110,7 +110,14 @@ export const CheckboxGroup: Story = {
   },
   render: (args) => (
     <FormField {...args}>
-      <FormField.CheckboxGroup options={[{ label: 'Optie 1' }, { label: 'Optie 2' }, { label: 'Optie 3' }]} />
+      <FormField.CheckboxGroup
+        options={[
+          { id: 'optionA', label: 'Option A' },
+          { id: 'optionB', label: 'Option B' },
+          { id: 'optionC', label: 'Option C' },
+          { id: 'optionD', label: 'Option D' },
+        ]}
+      />
     </FormField>
   ),
 };
@@ -136,7 +143,7 @@ export const RadioButton: Story = {
   },
   render: (args) => (
     <FormField {...args}>
-      <FormField.RadioButton label="Ja, vink ik aan" />
+      <FormField.RadioButton label="Radio button" />
     </FormField>
   ),
 };
@@ -149,7 +156,14 @@ export const RadioButtonGroup: Story = {
   },
   render: (args) => (
     <FormField {...args}>
-      <FormField.RadioButtonGroup options={[{ label: 'Optie 1' }, { label: 'Optie 2' }, { label: 'Optie 3' }]} />
+      <FormField.RadioButtonGroup
+        options={[
+          { id: 'optionA', label: 'Option A' },
+          { id: 'optionB', label: 'Option B' },
+          { id: 'optionC', label: 'Option C' },
+          { id: 'optionD', label: 'Option D' },
+        ]}
+      />
     </FormField>
   ),
 };
@@ -164,9 +178,9 @@ export const Select: Story = {
     <FormField {...args}>
       <FormField.Select
         options={[
-          { value: '1', label: 'Optie 1' },
-          { value: '2', label: 'Optie 2' },
-          { value: '3', label: 'Optie 3' },
+          { value: '1', label: 'Option #1' },
+          { value: '2', label: 'Option #2' },
+          { value: '3', label: 'Option #3' },
         ]}
       />
     </FormField>

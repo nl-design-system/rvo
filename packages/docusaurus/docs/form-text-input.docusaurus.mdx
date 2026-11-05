@@ -1,0 +1,39 @@
+---
+title: Text input
+hide_title: false
+hide_table_of_contents: true
+slug: /form-text-input
+---
+
+import { TextInput, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-text-input--base">
+  <TextInput sizeInput="md" />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "text-input-with-helper", label: "Text Input", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "text-input-without-helper", label: "Text Input" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}

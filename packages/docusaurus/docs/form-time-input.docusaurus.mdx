@@ -1,0 +1,39 @@
+---
+title: Time input
+hide_title: false
+hide_table_of_contents: true
+slug: /form-time-input
+---
+
+import { TextInput, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-text-input--base" args={{ type: "time" }}>
+  <TextInput type="time" sizeInput="md" />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "time-input-with-helper", label: "Time Input", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--time-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="time" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "time-input-without-helper", label: "Time Input" };
+return (
+
+<ComponentExample storyName="componenten-formfield--time-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="time" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}

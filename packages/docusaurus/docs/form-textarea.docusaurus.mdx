@@ -1,0 +1,39 @@
+---
+title: Textarea
+hide_title: false
+hide_table_of_contents: true
+slug: /form-textarea
+---
+
+import { Textarea, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-textarea--base">
+  <Textarea maxLength={300} maxLengthIndicator={true} />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "textarea-with-helper", label: "Text Area", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-area" args={props}>
+  <FormField {...props}>
+    <FormField.TextArea maxLength={300} maxLengthIndicator={true} />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "textarea-without-helper", label: "Text Area" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-area" args={props}>
+  <FormField {...props}>
+    <FormField.TextArea maxLength={300} maxLengthIndicator={true} />
+  </FormField>
+</ComponentExample>
+); })()}
