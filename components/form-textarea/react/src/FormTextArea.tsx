@@ -27,11 +27,15 @@ export const Textarea: React.FC<ITextareaProps> = ({
         <textarea
           {...otherProps}
           onChange={handleChange}
-          className={clsx('rvo-textarea', 'rvo-textarea--html-textarea', invalid && 'rvo-textarea--invalid')}
+          className={clsx(
+            'utrecht-textarea',
+            'utrecht-textarea--html-textarea',
+            invalid && 'utrecht-textarea--invalid',
+          )}
           aria-invalid={invalid}
           maxLength={maxLength}
         />
-        <span className="rvo-textarea__remaining-chars">
+        <span className="utrecht-textarea-remaining-chars">
           Nog <strong>{maxLength - (currentValue?.length || 0)}</strong> teken
           {maxLength - (currentValue?.length || 0) > 1 && 's'} over
         </span>
@@ -41,7 +45,7 @@ export const Textarea: React.FC<ITextareaProps> = ({
     return (
       <textarea
         {...otherProps}
-        className={clsx('rvo-textarea', 'rvo-textarea--html-textarea', invalid && 'rvo-textarea--invalid')}
+        className={clsx('utrecht-textarea', 'utrecht-textarea--html-textarea', invalid && 'utrecht-textarea--invalid')}
         aria-invalid={invalid}
       />
     );
