@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { ICheckboxProps } from '@nl-rvo/react-form-checkbox';
 
-export interface ICheckboxGroupProps {
+export interface ICheckboxGroupProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   invalid?: boolean;
   options?: ICheckboxProps[];
   onChange?: (currentGroupSelection: string[]) => void;
