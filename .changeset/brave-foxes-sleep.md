@@ -1,6 +1,12 @@
 ---
+"@nl-rvo/component-library-css": patch
+"@nl-rvo/component-library-react": patch
 "@nl-rvo/css-button": patch
 "@nl-rvo/css-link": patch
+"@nl-rvo/design-tokens": patch
+"@nl-rvo/utility-background": patch
+"@nl-rvo/utility-border": patch
+"@nl-rvo/utility-text": patch
 ---
 
 fix(button, link): replace focus ring with underline, align hover/focus styles
