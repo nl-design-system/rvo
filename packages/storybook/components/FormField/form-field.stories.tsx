@@ -39,7 +39,7 @@ export default {
       type: 'PRODUCTION',
     },
     docusaurus: {
-      link: 'form-fieldset',
+      link: 'form-field',
     },
     design: {
       type: 'figma',
