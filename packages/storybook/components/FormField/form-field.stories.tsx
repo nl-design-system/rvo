@@ -51,7 +51,6 @@ export default {
 type Story = StoryObj<typeof FormField>;
 
 export const TextInput: Story = {
-  name: 'Text Input',
   args: {
     id: 'form-field-text-input',
     label: 'Text Input',
@@ -64,7 +63,6 @@ export const TextInput: Story = {
 };
 
 export const TimeInput: Story = {
-  name: 'Time Input',
   args: {
     id: 'form-field-time-input',
     label: 'Time Input',
@@ -77,7 +75,6 @@ export const TimeInput: Story = {
 };
 
 export const DateInput: Story = {
-  name: 'Date Input',
   args: {
     id: 'form-field-date-input',
     label: 'Date Input',
@@ -90,7 +87,6 @@ export const DateInput: Story = {
 };
 
 export const Checkbox: Story = {
-  name: 'Checkbox',
   args: {
     id: 'form-field-checkbox',
     label: 'Checkbox',
@@ -103,7 +99,6 @@ export const Checkbox: Story = {
 };
 
 export const CheckboxGroup: Story = {
-  name: 'Checkbox Group',
   args: {
     id: 'form-field-checkbox-group',
     label: 'Checkbox Group',
@@ -123,7 +118,6 @@ export const CheckboxGroup: Story = {
 };
 
 export const FileInput: Story = {
-  name: 'File Input',
   args: {
     id: 'form-field-file-input',
     label: 'File Input',
@@ -136,7 +130,6 @@ export const FileInput: Story = {
 };
 
 export const RadioButton: Story = {
-  name: 'Radio Button',
   args: {
     id: 'form-field-radio-button',
     label: 'Radio Button',
@@ -149,7 +142,6 @@ export const RadioButton: Story = {
 };
 
 export const RadioButtonGroup: Story = {
-  name: 'Radio Button Group',
   args: {
     id: 'form-field-radio-button-group',
     label: 'Radio Button Group',
@@ -169,7 +161,6 @@ export const RadioButtonGroup: Story = {
 };
 
 export const Select: Story = {
-  name: 'Select',
   args: {
     id: 'form-field-select',
     label: 'Select',
@@ -188,7 +179,6 @@ export const Select: Story = {
 };
 
 export const TextArea: Story = {
-  name: 'Text Area',
   args: {
     id: 'form-field-text-area',
     label: 'Text Area',
