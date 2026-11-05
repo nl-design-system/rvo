@@ -1,4 +1,6 @@
 ---
+"@nl-rvo/component-library-css": patch
+"@nl-rvo/component-library-react": patch
 "@nl-rvo/css-form-textarea": patch
 "@nl-rvo/react-form-textarea": patch
 ---
