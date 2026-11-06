@@ -319,7 +319,6 @@ const PandToevoegen = () => {
 
                     <Fieldset legend="Informatie over het dak">
                       <div
-                        className="rvo-margin-block-end--xl"
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                           setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
                         }

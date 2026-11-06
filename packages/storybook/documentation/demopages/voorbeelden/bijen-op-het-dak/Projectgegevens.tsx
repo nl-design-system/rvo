@@ -3,7 +3,6 @@ import {
   Alert,
   Button,
   Dialog,
-  Fieldset,
   Footer,
   FormField,
   Grid,
@@ -220,7 +219,7 @@ const Projectgegevens = () => {
                       </div>
                     )}
 
-                    <Fieldset legend="Projectgegevens">
+                    <div className="rvo-layout-column rvo-layout-gap--xl">
                       <FormField id="naam" label="Projectnaam" errorText={errors.naam?.fieldText}>
                         <FormField.Text
                           value={naam}
@@ -253,7 +252,7 @@ const Projectgegevens = () => {
                           invalid={!!errors.startdatum}
                         />
                       </FormField>
-                    </Fieldset>
+                    </div>
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
