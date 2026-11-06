@@ -62,7 +62,8 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
             labelSize && `rvo-label--${labelSize}`,
             (labelType === 'optional' || labelType === 'required') && `rvo-label--${labelType}`,
           )}
-          id={id}
+          id={`${id}-label`}
+          htmlFor={id}
         >
           {label}
         </label>
