@@ -1,5 +1,14 @@
 # @nl-rvo/react-form-field
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [0d60d9a]
+- Updated dependencies [a3e14e9]
+  - @nl-rvo/react-form-feedback@1.0.3
+  - @nl-rvo/react-form-textarea@1.0.3
+
 ## 1.0.3
 
 ### Patch Changes

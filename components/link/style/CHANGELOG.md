@@ -1,5 +1,19 @@
 # `@nl-rvo/css-link`
 
+## 1.7.2
+
+### Patch Changes
+
+- d0debaf: fix(button, link): replace focus ring with underline, align hover/focus styles
+
+  All button variants now show a 4px underline on focus instead of the Utrecht focus ring. Solid variants (primary, secondary, quaternary, warning) use their existing text color for the underline. Subtle, tertiary, and warning-subtle keep their base colors (donkerblauw, hemelblauw, rood) on focus and when hovering a focused button. Hover also adds a 2px underline for all variants without changing background or text color.
+
+  The link component now uses a text-underline-offset of 25% at all states (base, hover, active, focus). This ensures the underline remains visible even with descender-heavy text — without sufficient offset the line was hidden behind characters like g, j, and y.
+
+- 5fc9b29: fix(link): update call-to-action style and token values
+
+  Add font-size (18px) and bold font-weight to the call-to-action variant. Remove Utrecht focus outline in favour of text-decoration underline. Fix outline variant hover colors to use `rvo.color.violet` instead of `rvo.color.violet-750`.
+
 ## 1.7.1
 
 ### Patch Changes

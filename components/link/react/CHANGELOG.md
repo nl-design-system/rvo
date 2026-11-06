@@ -1,5 +1,13 @@
 # @nl-rvo/react-link
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [d0debaf]
+- Updated dependencies [5fc9b29]
+  - @nl-rvo/css-link@1.7.2
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # `@nl-rvo/css-accordion`
 
+## 1.4.2
+
+### Patch Changes
+
+- Updated dependencies [d0debaf]
+- Updated dependencies [5fc9b29]
+  - @nl-rvo/css-link@1.7.2
+
 ## 1.4.1
 
 ### Patch Changes
