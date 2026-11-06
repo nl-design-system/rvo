@@ -2,6 +2,7 @@
 import path, { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import remarkGfm from 'remark-gfm';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 /** @type {import('@storybook/react-webpack5').StorybookConfig} */
 const config = (() => {
@@ -82,6 +83,7 @@ const config = (() => {
             ...config.resolve?.alias,
             // Replaces your old Webpack tilde (~) resolution logic natively
             '~': path.resolve(__dirname, '../node_modules'),
+            '@components': path.resolve(__dirname, '../../../components'),
           },
         },
       };

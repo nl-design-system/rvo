@@ -1,15 +1,25 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as CounterBadgeStories from "./counter-badge.stories";
+import Intro from "@components/counter-badge/docs/intro.mdx";
+import Usage from "@components/counter-badge/docs/usage.mdx";
 
 <Meta of={CounterBadgeStories} name="Documentatie" />
 <Title />
+
+<Intro />
+
+### Voorbeeld
 
 ### Preview
 
 <Canvas of={CounterBadgeStories.Base} layout="padded" />
 
-### Props
+### Properties
 
 <ArgTypes of={CounterBadgeStories.Base} />
 
 Dit component heeft maar één parameters, `count`. Als `count` leeg blijft valt hij automatisch terug naar `0`.
+
+## Gebruik
+
+<Usage />

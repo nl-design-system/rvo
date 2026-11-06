@@ -11,6 +11,14 @@ export default {
     size: {
       options: ['sm', 'md', 'lg'],
       control: { type: 'radio' },
+      table: {
+        type: {
+          summary: "'sm' | 'md' | 'lg'",
+        },
+        defaultValue: {
+          summary: "'sm'",
+        },
+      },
     },
     children: {
       table: {

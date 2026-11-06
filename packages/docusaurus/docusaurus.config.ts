@@ -54,6 +54,20 @@ const config: Config = {
         exclude: excludeList,
       },
     ],
+    function myWebpackAliasPlugin(context, options) {
+      return {
+        name: 'webpack-alias-plugin',
+        configureWebpack(config, isServer, utils) {
+          return {
+            resolve: {
+              alias: {
+                '@components': path.resolve(__dirname, '../../components'),
+              },
+            },
+          };
+        },
+      };
+    },
   ],
   presets: [
     [

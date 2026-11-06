@@ -1,14 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as ToggleStories from "./toggle.stories";
+import Intro from "@components/toggle/docs/intro.mdx";
+import Usage from "@components/toggle/docs/usage.mdx";
 
 <Meta of={ToggleStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={ToggleStories.Base} layout="padded" />
 <ArgTypes of={ToggleStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/icons_
-_@nl-rvo/css-icon_
+<Usage />

@@ -1,8 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as LayoutFlowStories from "./layout-flow.stories";
+import Intro from "@components/layout-flow/docs/intro.mdx";
+import Usage from "@components/layout-flow/docs/usage.mdx";
 
 <Meta of={LayoutFlowStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={LayoutFlowStories.Base} layout="padded" />
 <ArgTypes of={LayoutFlowStories.Base} />
+
+## Gebruik
+
+<Usage />

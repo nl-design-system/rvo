@@ -1,13 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as StatusIconStories from "./statusicon.stories";
+import Intro from "@components/status-icon/docs/intro.mdx";
+import Usage from "@components/status-icon/docs/usage.mdx";
 
 <Meta of={StatusIconStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={StatusIconStories.Base} layout="padded" />
 <ArgTypes of={StatusIconStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/icons_
-_@nl-rvo/css-icon_
+<Usage />

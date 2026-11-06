@@ -7,6 +7,12 @@ slug: /grid
 
 import { Grid } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
+import Intro from "@components/grid/docs/intro.mdx";
+import Usage from "@components/grid/docs/usage.mdx";
+
+<Intro />
+
+### Voorbeeld
 
 {(() => {
 const props = { columns: "three" };
@@ -16,3 +22,7 @@ return (
   <Grid {...props} />
 </ComponentExample>
 ); })()}
+
+### Gebruik
+
+<Usage />

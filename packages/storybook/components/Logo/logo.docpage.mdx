@@ -1,15 +1,21 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as LogoStories from "./logo.stories";
+import Intro from "@components/logo/docs/intro.mdx";
+import Usage from "@components/logo/docs/usage.mdx";
 
 <Meta of={LogoStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
 
 Zie ook: [Rijkshuisstijl: Logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo), [Specificaties logo](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/specificaties-logo) en [Logokleur](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-offline/logo/logokleuren).
 
 <Canvas of={LogoStories.Base} layout="padded" />
 <ArgTypes of={LogoStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/images_
+<Usage />

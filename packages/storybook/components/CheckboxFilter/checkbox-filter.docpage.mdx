@@ -1,13 +1,23 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as CheckboxFilterStories from "./checkbox-filter.stories";
+import Intro from "@components/checkbox-filter/docs/intro.mdx";
+import Usage from "@components/checkbox-filter/docs/usage.mdx";
 
 <Meta of={CheckboxFilterStories} name="Documentatie" />
 <Title />
+
+<Intro />
+
+### Voorbeeld
 
 ### Preview
 
 <Canvas of={CheckboxFilterStories.Base} layout="padded" />
 
-### Props
+### Properties
 
 <ArgTypes of={CheckboxFilterStories.Base} />
+
+## Gebruik
+
+<Usage />

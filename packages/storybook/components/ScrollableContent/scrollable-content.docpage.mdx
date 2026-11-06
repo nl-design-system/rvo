@@ -1,10 +1,20 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as ScrollableContentStories from "./scrollable-content.stories";
+import Intro from "@components/scrollable-content/docs/intro.mdx";
+import Usage from "@components/scrollable-content/docs/usage.mdx";
 
 <Meta of={ScrollableContentStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={ScrollableContentStories.Base} layout="padded" />
 
 <ArgTypes of={ScrollableContentStories.Base} />
+
+## Gebruik
+
+<Usage />

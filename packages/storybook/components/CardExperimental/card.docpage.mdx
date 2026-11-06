@@ -1,11 +1,22 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as CardStories from "./card.stories";
+import Intro from "@components/card-experimental/docs/intro.mdx";
+import Usage from "@components/card-experimental/docs/usage.mdx";
 
 <Meta of={CardStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={CardStories.Base} layout="padded" />
 
-## Props
+## Properties
 
 <ArgTypes of={CardStories.Base} />
+
+## Gebruik
+
+<Usage />
