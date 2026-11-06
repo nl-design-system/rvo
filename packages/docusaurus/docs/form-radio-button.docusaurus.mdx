@@ -1,0 +1,39 @@
+---
+title: Radio button
+hide_title: false
+hide_table_of_contents: true
+slug: /form-radio-button
+---
+
+import { RadioButton, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-radio-button--base">
+  <RadioButton id="radio-button" name="radio-button" label="Radio button" />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "radio-button-with-helper", label: "Radio Button", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--radio-button" args={props}>
+  <FormField {...props}>
+    <FormField.RadioButton label="Radio button" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "radio-button-without-helper", label: "Radio Button" };
+return (
+
+<ComponentExample storyName="componenten-formfield--radio-button" args={props}>
+  <FormField {...props}>
+    <FormField.RadioButton label="Radio button" />
+  </FormField>
+</ComponentExample>
+); })()}

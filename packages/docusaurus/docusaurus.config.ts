@@ -4,6 +4,7 @@ import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig, { logoLinkTitle } from './config/navigationConfig';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
+import componentsSidebarItemsGenerator from './config/componentsSidebarItemsGenerator';
 import voorbeeldenSidebarItemsGenerator from './config/voorbeeldenSidebarItemsGenerator';
 import { rvoLightTheme } from './src/prism-theme';
 
@@ -54,6 +55,7 @@ const config: Config = {
         editUrl: undefined,
         breadcrumbs: false,
         sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
+        sidebarItemsGenerator: componentsSidebarItemsGenerator,
         include: ['**/*.{md,mdx}', '**/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
       },

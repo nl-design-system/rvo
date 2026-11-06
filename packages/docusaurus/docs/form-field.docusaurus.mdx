@@ -1,0 +1,74 @@
+---
+title: Form field
+hide_title: false
+hide_table_of_contents: true
+slug: /form-field
+---
+
+import { FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+Verplicht label:
+
+{(() => {
+const props = { id: "example-required", label: "Text Input", labelType: "required" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Optioneel label:
+
+{(() => {
+const props = { id: "example-optional", label: "Text Input", labelType: "optional" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Met omschrijving:
+
+{(() => {
+const props = { id: "example-helper", label: "Text Input", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Met waarschuwing:
+
+{(() => {
+const props = { id: "example-warning", label: "Text Input", warningText: "Warning text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Met foutmelding:
+
+{(() => {
+const props = { id: "example-error", label: "Text Input", errorText: "Error text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--text-input" args={props}>
+  <FormField {...props}>
+    <FormField.Text type="text" sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}

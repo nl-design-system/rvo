@@ -1,0 +1,59 @@
+---
+title: Select
+hide_title: false
+hide_table_of_contents: true
+slug: /form-select
+---
+
+import { Select, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-select--base">
+  <Select
+    id="field"
+    size="max"
+    options={[
+      { value: "1", label: "Option #1" },
+      { value: "2", label: "Option #2" },
+      { value: "3", label: "Option #3" },
+    ]}
+  />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "select-with-helper", label: "Select", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--select" args={props}>
+  <FormField {...props}>
+    <FormField.Select
+      options={[
+        { value: "1", label: "Option #1" },
+        { value: "2", label: "Option #2" },
+        { value: "3", label: "Option #3" },
+      ]}
+    />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "select-without-helper", label: "Select" };
+return (
+
+<ComponentExample storyName="componenten-formfield--select" args={props}>
+  <FormField {...props}>
+    <FormField.Select
+      options={[
+        { value: "1", label: "Option #1" },
+        { value: "2", label: "Option #2" },
+        { value: "3", label: "Option #3" },
+      ]}
+    />
+  </FormField>
+</ComponentExample>
+); })()}
