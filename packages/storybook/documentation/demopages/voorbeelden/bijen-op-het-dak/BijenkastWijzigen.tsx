@@ -287,7 +287,6 @@ const BijenkastWijzigen = () => {
                         />
                       </FormField>
                       <div
-                        className="rvo-margin-block-end--xl"
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                           setTypeBijenkast(
                             e.target.id === 'langstroth'
