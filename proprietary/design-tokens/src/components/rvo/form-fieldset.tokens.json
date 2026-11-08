@@ -1,7 +1,8 @@
 {
   "rvo": {
     "form-fieldset": {
-      "gap": { "value": "{rvo.space.xl}" }
+      "gap": { "value": "{rvo.space.xl}" },
+      "legend-gap": { "value": "{rvo.space.md}" }
     }
   }
 }

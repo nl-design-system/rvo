@@ -6,6 +6,12 @@
           "syntax": "<length>",
           "inherits": true
         }
+      },
+      "legend-gap": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
       }
     }
   }
