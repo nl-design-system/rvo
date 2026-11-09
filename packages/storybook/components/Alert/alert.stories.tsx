@@ -75,10 +75,18 @@ export const Base: Story = {
 export const Kinds: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <Alert {...args} kind="info" children="Info Alert" />
-      <Alert {...args} kind="warning" children="Warning Alert" />
-      <Alert {...args} kind="error" children="Error Alert" />
-      <Alert {...args} kind="success" children="Success Alert" />
+      <Alert {...args} kind="info">
+        "Info Alert"
+      </Alert>
+      <Alert {...args} kind="warning">
+        "Warning Alert"
+      </Alert>
+      <Alert {...args} kind="error">
+        "Error Alert"
+      </Alert>
+      <Alert {...args} kind="success">
+        "Success Alert"
+      </Alert>
     </div>
   ),
   name: 'Soorten',
@@ -87,12 +95,24 @@ export const Kinds: Story = {
 export const Padding: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <Alert {...args} padding="xs" children="XS Padding Alert" />
-      <Alert {...args} padding="sm" children="SM Padding Alert" />
-      <Alert {...args} padding="md" children="MD Padding Alert" />
-      <Alert {...args} padding="lg" children="LG Padding Alert" />
-      <Alert {...args} padding="xl" children="XL Padding Alert" />
-      <Alert {...args} padding="2xl" children="2XL Padding Alert" />
+      <Alert {...args} padding="xs">
+        "XS Padding Alert"
+      </Alert>
+      <Alert {...args} padding="sm">
+        "SM Padding Alert"
+      </Alert>
+      <Alert {...args} padding="md">
+        "MD Padding Alert"
+      </Alert>
+      <Alert {...args} padding="lg">
+        "LG Padding Alert"
+      </Alert>
+      <Alert {...args} padding="xl">
+        "XL Padding Alert"
+      </Alert>
+      <Alert {...args} padding="2xl">
+        "2XL Padding Alert"
+      </Alert>
     </div>
   ),
   name: 'Padding',
