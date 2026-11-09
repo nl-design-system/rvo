@@ -1,7 +1,4 @@
 import type { Decorator, Preview } from '@storybook/react-webpack5';
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
-import * as ReactDOMServer from 'react-dom/server';
 import { useArgs } from 'storybook/preview-api';
 import './preview.scss';
 import theme from './theme';

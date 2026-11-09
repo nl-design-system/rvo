@@ -74,10 +74,10 @@ const config: Config = {
         breadcrumbs: false,
       },
     ],
-    function myWebpackAliasPlugin(context, options) {
+    function myWebpackAliasPlugin() {
       return {
         name: 'webpack-alias-plugin',
-        configureWebpack(config, isServer, utils) {
+        configureWebpack() {
           return {
             resolve: {
               alias: {

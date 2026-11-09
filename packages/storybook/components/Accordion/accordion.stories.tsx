@@ -1,3 +1,4 @@
+import React from 'react';
 import { Accordion, IAccordionItemProps } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
