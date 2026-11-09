@@ -1,16 +1,22 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as BreadcrumbsStories from "./breadcrumbs.stories";
+import Intro from "@components/breadcrumbs/docs/intro.mdx";
+import Usage from "@components/breadcrumbs/docs/usage.mdx";
 
 <Meta of={BreadcrumbsStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={BreadcrumbsStories.Base} layout="padded" />
 
-## Props
+## Properties
 
 <ArgTypes of={BreadcrumbsStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/icons_
-_@nl-rvo/css-icon_
+<Usage />

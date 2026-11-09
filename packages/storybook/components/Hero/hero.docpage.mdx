@@ -1,18 +1,22 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as HeroStories from "./hero.stories";
+import Intro from "@components/hero/docs/intro.mdx";
+import Usage from "@components/hero/docs/usage.mdx";
 
 <Meta of={HeroStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={HeroStories.Base} layout="padded" />
 
-## Props
+## Properties
 
 <ArgTypes of={HeroStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/images_
-_@nl-rvo/css-heading_
-_@nl-rvo/css-max-width-layout_
+<Usage />

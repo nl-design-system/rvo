@@ -1,13 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as TabsStories from "./tabs.stories";
+import Intro from "@components/tabs/docs/intro.mdx";
+import Usage from "@components/tabs/docs/usage.mdx";
 
 <Meta of={TabsStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={TabsStories.Base} layout="padded" />
 <ArgTypes of={TabsStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/css-ordered-unordered-list_
+<Usage />

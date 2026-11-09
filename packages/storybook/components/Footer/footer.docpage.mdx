@@ -1,19 +1,23 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as FooterStories from "./footer.stories";
+import Intro from "@components/footer/docs/intro.mdx";
+import Usage from "@components/footer/docs/usage.mdx";
 
 <Meta of={FooterStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 Items met een link worden weergegeven als tekstlinks met een pictogram (bijv. > Linkinhoud), anders worden items weergegeven
 als generieke HTML-inhoud.
+
 <Canvas of={FooterStories.Base} layout="padded" />
 
 <ArgTypes of={FooterStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/icons_
-_@nl-rvo/css-icon_
-_@nl-rvo/css-link_
-_@nl-rvo/css-heading_
-_@nl-rvo/css-horizontal-rule_
+<Usage />

@@ -1,12 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as ProgressTrackerStories from "./progress-tracker.stories";
+import Intro from "@components/progress-tracker/docs/intro.mdx";
+import Usage from "@components/progress-tracker/docs/usage.mdx";
 
 <Meta of={ProgressTrackerStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={ProgressTrackerStories.Base} layout="padded" />
 <ArgTypes of={ProgressTrackerStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/images_
+<Usage />

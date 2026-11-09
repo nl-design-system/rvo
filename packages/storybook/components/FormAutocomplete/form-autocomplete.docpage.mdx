@@ -1,9 +1,15 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as AutocompleteStories from "./form-autocomplete.stories";
+import Intro from "@components/form-autocomplete/docs/intro.mdx";
+import Usage from "@components/form-autocomplete/docs/usage.mdx";
 
 <Meta of={AutocompleteStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
 
 ## Preview
 
@@ -12,3 +18,7 @@ import * as AutocompleteStories from "./form-autocomplete.stories";
 ## Controls
 
 <ArgTypes of={AutocompleteStories.Base} />
+
+## Gebruik
+
+<Usage />

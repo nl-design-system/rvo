@@ -1,10 +1,20 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as FormTextareaStories from "./form-textarea.stories";
 
+import Intro from "@components/accordion/docs/intro.mdx";
+import Usage from "@components/accordion/docs/usage.mdx";
+
 <Meta of={FormTextareaStories} name="Documentatie" />
 
 <Title />
+<Intro />
+
+### Voorbeeld
 
 <Canvas of={FormTextareaStories.Base} layout="padded" />
 
 <ArgTypes of={FormTextareaStories.Base} />
+
+## Gebruik
+
+<Usage />

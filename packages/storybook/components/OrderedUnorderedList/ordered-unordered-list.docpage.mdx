@@ -1,9 +1,19 @@
 import { Canvas, Controls, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as ListStories from "./ordered-unordered-list.stories";
+import Intro from "@components/ordered-unordered-list/docs/intro.mdx";
+import Usage from "@components/ordered-unordered-list/docs/usage.mdx";
 
 <Meta of={ListStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={ListStories.Base} layout="padded" />
 <Controls of={ListStories.Base} />
+
+## Gebruik
+
+<Usage />

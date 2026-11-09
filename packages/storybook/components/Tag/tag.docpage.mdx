@@ -1,15 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as TagStories from "./tag.stories";
+import Intro from "@components/tag/docs/intro.mdx";
+import Usage from "@components/tag/docs/usage.mdx";
 
 <Meta of={TagStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={TagStories.Base} layout="padded" />
 <ArgTypes of={TagStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/icons_
-_@nl-rvo/css-icon_
-_@nl-rvo/css-status-icon_
+<Usage />

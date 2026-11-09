@@ -1,16 +1,22 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as ActionGroupStories from "./action-group.stories";
+import Intro from "@components/action-group/docs/intro.mdx";
+import Usage from "@components/action-group/docs/usage.mdx";
 
 <Meta of={ActionGroupStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={ActionGroupStories.Base} layout="padded" />
 
-## Props
+## Properties
 
 <ArgTypes of={ActionGroupStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/css-button_
-_@nl-rvo/css-layout-flow_
+<Usage />

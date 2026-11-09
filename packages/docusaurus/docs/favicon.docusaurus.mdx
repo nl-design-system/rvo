@@ -8,6 +8,12 @@ slug: /favicon
 import { Favicon } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 import FavIconUrl from "../../../documentation/common/favicon.ico";
+import Intro from "@components/favicon/docs/intro.mdx";
+import Usage from "@components/favicon/docs/usage.mdx";
+
+<Intro />
+
+### Voorbeeld
 
 {(() => {
 const props = { src: FavIconUrl };
@@ -17,3 +23,7 @@ return (
   <Favicon {...props} />
 </ComponentExample>
 ); })()}
+
+### Gebruik
+
+<Usage />

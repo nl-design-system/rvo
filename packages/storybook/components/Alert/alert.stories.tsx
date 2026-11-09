@@ -8,11 +8,16 @@ export default {
     kind: {
       options: ['info', 'warning', 'error', 'success'],
       control: { type: 'radio' },
+      table: {
+        type: {
+          summary: "'info' | 'warning' | 'error' | 'success'",
+        },
+        defaultValue: {
+          summary: "'info'",
+        },
+      },
     },
     heading: {
-      control: 'text',
-    },
-    content: {
       control: 'text',
     },
     closable: {
@@ -21,6 +26,14 @@ export default {
     padding: {
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
       control: { type: 'radio' },
+      table: {
+        type: {
+          summary: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
+        },
+        defaultValue: {
+          summary: "'md'",
+        },
+      },
     },
     children: {
       table: {
@@ -52,7 +65,7 @@ export const Base: Story = {
   args: {
     kind: 'info',
     heading: '',
-    content: `This is an example of an alert, with a <a href="#" class="rvo-link rvo-link--lintblauw">link</a> inside.`,
+    children: `This is an example of an alert, with a <a href="#" class="rvo-link rvo-link--lintblauw">link</a> inside.`,
     closable: false,
     padding: 'md',
   },
@@ -62,10 +75,18 @@ export const Base: Story = {
 export const Kinds: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <Alert {...args} kind="info" content="Info Alert" />
-      <Alert {...args} kind="warning" content="Warning Alert" />
-      <Alert {...args} kind="error" content="Error Alert" />
-      <Alert {...args} kind="success" content="Success Alert" />
+      <Alert {...args} kind="info">
+        "Info Alert"
+      </Alert>
+      <Alert {...args} kind="warning">
+        "Warning Alert"
+      </Alert>
+      <Alert {...args} kind="error">
+        "Error Alert"
+      </Alert>
+      <Alert {...args} kind="success">
+        "Success Alert"
+      </Alert>
     </div>
   ),
   name: 'Soorten',
@@ -74,12 +95,24 @@ export const Kinds: Story = {
 export const Padding: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <Alert {...args} padding="xs" content="XS Padding Alert" />
-      <Alert {...args} padding="sm" content="SM Padding Alert" />
-      <Alert {...args} padding="md" content="MD Padding Alert" />
-      <Alert {...args} padding="lg" content="LG Padding Alert" />
-      <Alert {...args} padding="xl" content="XL Padding Alert" />
-      <Alert {...args} padding="2xl" content="2XL Padding Alert" />
+      <Alert {...args} padding="xs">
+        "XS Padding Alert"
+      </Alert>
+      <Alert {...args} padding="sm">
+        "SM Padding Alert"
+      </Alert>
+      <Alert {...args} padding="md">
+        "MD Padding Alert"
+      </Alert>
+      <Alert {...args} padding="lg">
+        "LG Padding Alert"
+      </Alert>
+      <Alert {...args} padding="xl">
+        "XL Padding Alert"
+      </Alert>
+      <Alert {...args} padding="2xl">
+        "2XL Padding Alert"
+      </Alert>
     </div>
   ),
   name: 'Padding',

@@ -74,6 +74,20 @@ const config: Config = {
         breadcrumbs: false,
       },
     ],
+    function myWebpackAliasPlugin() {
+      return {
+        name: 'webpack-alias-plugin',
+        configureWebpack() {
+          return {
+            resolve: {
+              alias: {
+                '@components': path.resolve(__dirname, '../../components'),
+              },
+            },
+          };
+        },
+      };
+    },
   ],
   presets: [
     [

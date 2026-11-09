@@ -23,11 +23,9 @@ export default {
       control: { type: 'radio' },
       table: {
         type: {
-          // Displays the pipe-separated allowed options under the "Type" column
           summary: "'xs' | 'sm' | 'md'",
         },
         defaultValue: {
-          // Displays the initial value under the "Default" column
           summary: "'md'",
         },
       },
@@ -38,14 +36,36 @@ export default {
     iconPlacement: {
       options: ['no', 'left', 'right'],
       control: { type: 'radio' },
+      table: {
+        type: {
+          summary: "'left' | 'right'",
+        },
+      },
     },
     icon: {
       control: { type: 'select' },
       options: iconOptions,
+      table: {
+        type: {
+          summary: 'string',
+        },
+      },
     },
-    iconAriaLabel: { control: 'text' },
+    iconAriaLabel: {
+      control: 'text',
+      table: {
+        type: {
+          summary: 'string',
+        },
+      },
+    },
     fullWidth: {
       control: 'boolean',
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+      },
     },
   },
   parameters: {

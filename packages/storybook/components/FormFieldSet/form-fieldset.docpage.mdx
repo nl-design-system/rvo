@@ -1,10 +1,20 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as FieldsetStories from "./form-fieldset.stories";
 
+import Intro from "@components/accordion/docs/intro.mdx";
+import Usage from "@components/accordion/docs/usage.mdx";
+
 <Meta of={FieldsetStories} name="Documentatie" />
 
 <Title />
+<Intro />
+
+### Voorbeeld
 
 <Canvas of={FieldsetStories.Base} layout="padded" />
 
 <ArgTypes of={FieldsetStories.Base} />
+
+## Gebruik
+
+<Usage />

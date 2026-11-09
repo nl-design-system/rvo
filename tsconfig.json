@@ -16,6 +16,9 @@
     "target": "ES2015",
     "module": "es2020",
     "jsx": "react-jsx",
-    "lib": ["es2020", "dom"]
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "@components/*": ["components/*"]
+    }
   }
 }

@@ -1,16 +1,22 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as DialogStories from "./dialog.stories";
+import Intro from "@components/dialog/docs/intro.mdx";
+import Usage from "@components/dialog/docs/usage.mdx";
 
 <Meta of={DialogStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={DialogStories.Base} layout="fullscreen" className="autoHeight" />
 
-## Props
+## Properties
 
 <ArgTypes of={DialogStories.Base} />
 
-## Dependencies
+## Gebruik
 
-_@nl-rvo/assets/icons_
-_@nl-rvo/components/icon_
+<Usage />

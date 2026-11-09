@@ -1,7 +1,4 @@
 import type { Decorator, Preview } from '@storybook/react-webpack5';
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
-import * as ReactDOMServer from 'react-dom/server';
 import { useArgs } from 'storybook/preview-api';
 import './preview.scss';
 import theme from './theme';
@@ -85,24 +82,6 @@ const parameters = {
   },
   docs: {
     theme,
-    source: {
-      state: 'open',
-      language: 'html',
-      transform: (src: any, storyContext: { args: any; originalStoryFn: (arg0: any, arg1: any) => any }) => {
-        // Ensure valid HTML in the Preview source
-        let currentStoryArgs = storyContext.args;
-        if (storyContext.originalStoryFn) {
-          return prettier
-            .format(ReactDOMServer.renderToStaticMarkup(storyContext.originalStoryFn(currentStoryArgs, storyContext)), {
-              parser: 'babel',
-              plugins: [prettierBabel],
-            })
-            .replace(/\{" "\}/gm, ' ')
-            .replace(/(;)[^;]*$/g, '');
-        }
-        return src;
-      },
-    },
   },
   ...addonStatus,
   layout: 'fullscreen',

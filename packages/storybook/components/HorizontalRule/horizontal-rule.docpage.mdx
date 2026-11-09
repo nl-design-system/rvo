@@ -1,7 +1,18 @@
 import { Canvas, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as HorizontalRuleStories from "./horizontal-rule.stories";
+import Intro from "@components/horizontal-rule/docs/intro.mdx";
+import Usage from "@components/horizontal-rule/docs/usage.mdx";
 
 <Meta of={HorizontalRuleStories} name="Documentatie" />
 
 <Title />
+
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={HorizontalRuleStories.Base} layout="padded" />
+
+## Gebruik
+
+<Usage />

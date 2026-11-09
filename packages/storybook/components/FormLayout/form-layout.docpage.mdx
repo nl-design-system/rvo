@@ -1,10 +1,20 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as FormLayoutStories from "./form-layout.stories";
+import Intro from "@components/form-layout/docs/intro.mdx";
+import Usage from "@components/form-layout/docs/usage.mdx";
 
 <Meta of={FormLayoutStories} name="Documentatie" />
 
 <Title />
 
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={FormLayoutStories.Base} layout="padded" />
 
 <ArgTypes of={FormLayoutStories.Base} />
+
+## Gebruik
+
+<Usage />

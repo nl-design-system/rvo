@@ -1,8 +1,19 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as SidebarLayoutStories from "./sidebar-layout.stories";
 
+import Intro from "@components/accordion/docs/intro.mdx";
+import Usage from "@components/accordion/docs/usage.mdx";
+
 <Meta of={SidebarLayoutStories} name="Documentatie" />
 
 <Title />
+<Intro />
+
+### Voorbeeld
+
 <Canvas of={SidebarLayoutStories.Base} layout="padded" />
 <ArgTypes of={SidebarLayoutStories.Base} />
+
+## Gebruik
+
+<Usage />
