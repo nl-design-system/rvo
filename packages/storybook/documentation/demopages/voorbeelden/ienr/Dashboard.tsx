@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   Button,
   Card,
@@ -7,17 +11,37 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
+  RadioButton,
   StatusIcon,
-  FormField,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const Dashboard = () => {
+export default function DashboardPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
+      <MenuBar
+        iconPlacement="before"
+        useIcons={true}
+        isOpen={false}
+        size="md"
+        items={[
+          {
+            label: 'Overzicht',
+            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+            icon: 'home',
+          },
+          {
+            label: 'Mijn dossier',
+            link: '#',
+            icon: 'map',
+          },
+          { label: 'Mijn berichten', link: '#', icon: 'mail' },
+          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+        ]}
+      ></MenuBar>
       <MenuBar
         items={[
           {
@@ -44,14 +68,14 @@ const Dashboard = () => {
         ]}
         size="lg"
         useIcons={true}
-        iconPlacement="left"
+        iconPlacement="before"
         maxWidth="lg"
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
+            <MenuBar
               direction="vertical"
               linkColor="zwart"
               horizontalRule={false}
@@ -82,9 +106,9 @@ const Dashboard = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
-            /> */}
+            />
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -111,15 +135,15 @@ const Dashboard = () => {
                       </dl>
                       <div>
                         <LayoutFlow gap="md">
-                          <FormField label="Selecteer een andere locatie">
-                            <FormField.RadioButtonGroup
-                              name="ubn"
-                              options={[
-                                { id: 'locatieA', label: 'UBN 2309458' },
-                                { id: 'locatieB', label: 'UBN 2485594' },
-                              ]}
-                            />
-                          </FormField>
+                          <RadioButton
+                            name="ubn"
+                            label="Selecteer een andere locatie"
+                            helperText=""
+                            options={[
+                              { id: 'locatieA', label: 'UBN 2309458' },
+                              { id: 'locatieB', label: 'UBN 2485594' },
+                            ]}
+                          ></RadioButton>
                           <Button kind="secondary" size="xs">
                             Zoek een andere UBN
                           </Button>
@@ -239,6 +263,4 @@ const Dashboard = () => {
       <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />
     </body>
   );
-};
-
-export default Dashboard;
+}

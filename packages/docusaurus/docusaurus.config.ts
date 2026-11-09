@@ -4,6 +4,8 @@ import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import navigationConfig, { logoLinkTitle } from './config/navigationConfig';
 import sidebarItemsGenerator from './config/sidebarItemsGenerator';
+import componentsSidebarItemsGenerator from './config/componentsSidebarItemsGenerator';
+import voorbeeldenSidebarItemsGenerator from './config/voorbeeldenSidebarItemsGenerator';
 import { rvoLightTheme } from './src/prism-theme';
 
 const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
@@ -11,7 +13,10 @@ const excludeList = ['node_modules/**/*', '**/!(*.docusaurus)*'];
 const config: Config = {
   title: 'ROOS Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
-  customFields: { logoLinkTitle },
+  customFields: {
+    logoLinkTitle,
+    storybookIframeBase: process.env.VERCEL ? '' : process.env.CI ? '/rvo' : 'http://localhost:6006',
+  },
   favicon: 'img/favicon.ico',
   url: process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
@@ -50,8 +55,23 @@ const config: Config = {
         editUrl: undefined,
         breadcrumbs: false,
         sidebarPath: require.resolve('./config/componentsSidebarConfig.js'),
+        sidebarItemsGenerator: componentsSidebarItemsGenerator,
         include: ['**/*.{md,mdx}', '**/*.docusaurus.{md,mdx}'],
         exclude: excludeList,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'voorbeelden',
+        path: path.resolve(__dirname, '../../documentation/pages/voorbeelden'),
+        routeBasePath: 'voorbeelden',
+        sidebarPath: require.resolve('./config/voorbeeldenSidebarConfig.js'),
+        sidebarItemsGenerator: voorbeeldenSidebarItemsGenerator,
+        include: ['**/*.{md,mdx}', '**/*.docusaurus.{md,mdx}'],
+        exclude: excludeList,
+        editUrl: undefined,
+        breadcrumbs: false,
       },
     ],
     function myWebpackAliasPlugin(context, options) {

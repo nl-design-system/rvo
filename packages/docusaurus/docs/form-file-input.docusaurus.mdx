@@ -1,0 +1,39 @@
+---
+title: File input
+hide_title: false
+hide_table_of_contents: true
+slug: /form-file-input
+---
+
+import { FileInput, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-file-input--base">
+  <FileInput />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "file-input-with-helper", label: "File Input", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--file-input" args={props}>
+  <FormField {...props}>
+    <FormField.FileInput />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "file-input-without-helper", label: "File Input" };
+return (
+
+<ComponentExample storyName="componenten-formfield--file-input" args={props}>
+  <FormField {...props}>
+    <FormField.FileInput />
+  </FormField>
+</ComponentExample>
+); })()}

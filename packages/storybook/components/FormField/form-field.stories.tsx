@@ -4,13 +4,42 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 export default {
   title: 'Componenten/Formfield',
   component: FormField,
-  argTypes: {},
+  argTypes: {
+    label: {
+      control: 'text',
+    },
+    labelSize: {
+      options: ['sm', 'md'],
+      control: { type: 'radio' },
+      table: {
+        type: { summary: "'sm' | 'md'" },
+        defaultValue: { summary: "'md'" },
+      },
+    },
+    labelType: {
+      options: ['default', 'optional', 'required'],
+      control: { type: 'radio' },
+      table: {
+        type: { summary: "'default' | 'optional' | 'required'" },
+        defaultValue: { summary: "'default'" },
+      },
+    },
+    helperText: {
+      control: 'text',
+    },
+    warningText: {
+      control: 'text',
+    },
+    errorText: {
+      control: 'text',
+    },
+  },
   parameters: {
     status: {
       type: 'PRODUCTION',
     },
     docusaurus: {
-      link: 'form-fieldset',
+      link: 'form-field',
     },
     design: {
       type: 'figma',
@@ -18,99 +47,144 @@ export default {
     },
   },
 } satisfies Meta<typeof FormField>;
+
 type Story = StoryObj<typeof FormField>;
 
 export const TextInput: Story = {
-  name: 'Text Input',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="Text Input">
-      <FormField.Text type="text" sizeInput="md"></FormField.Text>
+  args: {
+    id: 'form-field-text-input',
+    label: 'Text Input',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.Text type="text" sizeInput="md" />
     </FormField>
   ),
 };
 
 export const TimeInput: Story = {
-  name: 'Time Input',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="Time Input">
-      <FormField.Text type="time" sizeInput="md"></FormField.Text>
+  args: {
+    id: 'form-field-time-input',
+    label: 'Time Input',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.Text type="time" sizeInput="md" />
     </FormField>
   ),
 };
 
 export const DateInput: Story = {
-  name: 'Date Input',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="Date Input">
-      <FormField.Date sizeInput="md"></FormField.Date>
+  args: {
+    id: 'form-field-date-input',
+    label: 'Date Input',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.Date sizeInput="md" />
     </FormField>
   ),
 };
 
 export const Checkbox: Story = {
-  name: 'Checkbox',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="Checkbox">
-      <FormField.Checkbox label="Ja, vink ik aan"></FormField.Checkbox>
+  args: {
+    id: 'form-field-checkbox',
+    label: 'Checkbox',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.Checkbox label="Checkbox" />
     </FormField>
   ),
 };
 
 export const CheckboxGroup: Story = {
-  name: 'Checkbox Group',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="CheckboxGroup">
-      <FormField.CheckboxGroup options={[{ label: 'Optie 1' }, { label: 'Optie 2' }, { label: 'Optie 3' }]} />
+  args: {
+    id: 'form-field-checkbox-group',
+    label: 'Checkbox Group',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.CheckboxGroup
+        options={[
+          { id: 'optionA', label: 'Option A' },
+          { id: 'optionB', label: 'Option B' },
+          { id: 'optionC', label: 'Option C' },
+          { id: 'optionD', label: 'Option D' },
+        ]}
+      />
     </FormField>
   ),
 };
 
 export const FileInput: Story = {
-  name: 'File Input',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="FileInput">
+  args: {
+    id: 'form-field-file-input',
+    label: 'File Input',
+  },
+  render: (args) => (
+    <FormField {...args}>
       <FormField.FileInput />
     </FormField>
   ),
 };
 
 export const RadioButton: Story = {
-  name: 'Radio Button',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="RadioButton">
-      <FormField.RadioButton label="Ja, vink ik aan" />
+  args: {
+    id: 'form-field-radio-button',
+    label: 'Radio Button',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.RadioButton label="Radio button" />
     </FormField>
   ),
 };
 
 export const RadioButtonGroup: Story = {
-  name: 'Radio Button Group',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="RadioButtonGroup">
-      <FormField.RadioButtonGroup options={[{ label: 'Optie 1' }, { label: 'Optie 2' }, { label: 'Optie 3' }]} />
+  args: {
+    id: 'form-field-radio-button-group',
+    label: 'Radio Button Group',
+  },
+  render: (args) => (
+    <FormField {...args}>
+      <FormField.RadioButtonGroup
+        options={[
+          { id: 'optionA', label: 'Option A' },
+          { id: 'optionB', label: 'Option B' },
+          { id: 'optionC', label: 'Option C' },
+          { id: 'optionD', label: 'Option D' },
+        ]}
+      />
     </FormField>
   ),
 };
 
 export const Select: Story = {
-  name: 'Select',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="Select">
+  args: {
+    id: 'form-field-select',
+    label: 'Select',
+  },
+  render: (args) => (
+    <FormField {...args}>
       <FormField.Select
         options={[
-          { value: '1', label: 'Optie 1' },
-          { value: '2', label: 'Optie 2' },
-          { value: '3', label: 'Optie 3' },
+          { value: '1', label: 'Option #1' },
+          { value: '2', label: 'Option #2' },
+          { value: '3', label: 'Option #3' },
         ]}
-      ></FormField.Select>
+      />
     </FormField>
   ),
 };
 
 export const TextArea: Story = {
-  name: 'Text Area',
-  render: () => (
-    <FormField id="form-field-with-text-input" label="TextArea">
+  args: {
+    id: 'form-field-text-area',
+    label: 'Text Area',
+  },
+  render: (args) => (
+    <FormField {...args}>
       <FormField.TextArea />
     </FormField>
   ),

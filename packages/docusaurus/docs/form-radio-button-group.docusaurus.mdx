@@ -1,0 +1,61 @@
+---
+title: Radio button group
+hide_title: false
+hide_table_of_contents: true
+slug: /form-radio-button-group
+---
+
+import { RadioButtonGroup, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-radio-button-group--base">
+  <RadioButtonGroup
+    name="group"
+    options={[
+      { id: "optionA", label: "Option A" },
+      { id: "optionB", label: "Option B" },
+      { id: "optionC", label: "Option C" },
+      { id: "optionD", label: "Option D" },
+    ]}
+  />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "radio-button-group-with-helper", label: "Radio Button Group", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--radio-button-group" args={props}>
+  <FormField {...props}>
+    <FormField.RadioButtonGroup
+      options={[
+        { id: "optionA", label: "Option A" },
+        { id: "optionB", label: "Option B" },
+        { id: "optionC", label: "Option C" },
+        { id: "optionD", label: "Option D" },
+      ]}
+    />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "radio-button-group-without-helper", label: "Radio Button Group" };
+return (
+
+<ComponentExample storyName="componenten-formfield--radio-button-group" args={props}>
+  <FormField {...props}>
+    <FormField.RadioButtonGroup
+      options={[
+        { id: "optionA", label: "Option A" },
+        { id: "optionB", label: "Option B" },
+        { id: "optionC", label: "Option C" },
+        { id: "optionD", label: "Option D" },
+      ]}
+    />
+  </FormField>
+</ComponentExample>
+); })()}

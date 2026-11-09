@@ -46,6 +46,7 @@ const DocumentenZaak = () => {
               useIcons={true}
               iconPlacement="left"
               maxWidth="md"
+              horizontalRule={true}
             />
 
             <main className="">

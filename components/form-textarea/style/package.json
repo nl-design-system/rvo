@@ -36,6 +36,6 @@
     "clean": "rimraf ./dist/"
   },
   "dependencies": {
-    "@nl-rvo/css-layout-flow": "workspace:*"
+    "@utrecht/textarea-css": "3.0.1"
   }
 }

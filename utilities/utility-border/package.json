@@ -16,7 +16,7 @@
     "utility-border"
   ],
   "main": "dist/index.css",
-  "style": "src/index.scss",
+  "style": "dist/index.css",
   "publishConfig": {
     "access": "public",
     "provenance": true

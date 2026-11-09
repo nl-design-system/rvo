@@ -3,7 +3,7 @@
   --doc-sidebar-hidden-width: 30px;
 }
 .docSidebarContainer {
-  display: none;
+  display: block;
 }
 
 @media (min-width: 997px) {

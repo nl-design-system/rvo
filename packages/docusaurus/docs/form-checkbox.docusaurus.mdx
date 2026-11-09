@@ -1,0 +1,59 @@
+---
+title: Checkbox
+hide_title: false
+hide_table_of_contents: true
+slug: /form-checkbox
+---
+
+import { Checkbox, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-formfield--checkbox">
+  <Checkbox label="Checkbox" />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "checkbox-with-helper", label: "Checkbox", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--checkbox" args={props}>
+  <FormField {...props}>
+    <FormField.Checkbox label="Checkbox" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "checkbox-without-helper", label: "Checkbox" };
+return (
+
+<ComponentExample storyName="componenten-formfield--checkbox" args={props}>
+  <FormField {...props}>
+    <FormField.Checkbox label="Checkbox" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Meerdere checkboxes:
+
+{(() => {
+const props = { id: "checkbox-multiple", label: "Checkbox Group", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--checkbox-group" args={props}>
+  <FormField {...props}>
+    <FormField.CheckboxGroup
+      options={[
+        { id: "optionA", label: "Option A" },
+        { id: "optionB", label: "Option B" },
+        { id: "optionC", label: "Option C" },
+        { id: "optionD", label: "Option D" },
+      ]}
+    />
+  </FormField>
+</ComponentExample>
+); })()}

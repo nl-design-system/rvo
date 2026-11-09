@@ -16,7 +16,7 @@ import Usage from "@components/loader/docs/usage.mdx";
 
 ## Standard component:
 
-<ComponentExample storyName="componenten-loader--default">
+<ComponentExample storyName="componenten-loader--base">
   <Loader />
 </ComponentExample>
 
@@ -26,7 +26,7 @@ import Usage from "@components/loader/docs/usage.mdx";
 const props = { status: { type: 'waarschuwing', text: 'Het laden duurt iets langer dan verwacht' } };
 return (
 
-<ComponentExample storyName="componenten-button--default">
+<ComponentExample storyName="componenten-button--base">
   <Loader {...props} />
 </ComponentExample>
 ); })()}
@@ -37,7 +37,7 @@ return (
 const props = { overlay: true };
 return (
 
-<ComponentExample storyName="componenten-button--default">
+<ComponentExample storyName="componenten-button--base">
   <div style={{ position: "relative", width: 500, height: 500 }}>
     <Loader {...props} />
   </div>
@@ -54,7 +54,7 @@ secondaryAction: { label: 'Probleem melden' }
 
 return (
 
-<ComponentExample storyName="componenten-button--default">
+<ComponentExample storyName="componenten-button--base">
   <Loader {...props} />
 </ComponentExample>
 ); })()}
@@ -70,7 +70,7 @@ secondaryAction: { label: 'Probleem melden' }
 
 return (
 
-<ComponentExample storyName="componenten-button--default">
+<ComponentExample storyName="componenten-button--base">
   <Loader {...props} />
 </ComponentExample>
 ); })()}

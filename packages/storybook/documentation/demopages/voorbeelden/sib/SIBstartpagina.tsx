@@ -1,3 +1,7 @@
+/**
+ * @license CC0-1.0
+ * Copyright (c) 2022 Community for NL Design System
+ */
 import {
   ActionGroup,
   Alert,
@@ -8,19 +12,39 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  FormField,
+  RadioButton,
 } from '@nl-rvo/component-library-react';
-import '@nl-rvo/utility-text-types/src/index.scss';
+import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
-const SIBstartpagina = () => {
+export default function SibStartpaginaPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
           <div className="navigation">
+            <MenuBar
+              iconPlacement="before"
+              useIcons={true}
+              isOpen={false}
+              size="md"
+              items={[
+                {
+                  label: 'Overzicht',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
+                  icon: 'home',
+                },
+                {
+                  label: 'Mijn dossier',
+                  link: '#',
+                  icon: 'map',
+                },
+                { label: 'Mijn berichten', link: '#', icon: 'mail' },
+                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
+              ]}
+            ></MenuBar>
             <MenuBar
               items={[
                 {
@@ -48,7 +72,7 @@ const SIBstartpagina = () => {
               ]}
               size="lg"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
             <MenuBar
@@ -66,7 +90,7 @@ const SIBstartpagina = () => {
               ]}
               size="md"
               useIcons={true}
-              iconPlacement="left"
+              iconPlacement="before"
               maxWidth="md"
             />
           </div>
@@ -146,31 +170,35 @@ const SIBstartpagina = () => {
                 </p>
               </div>
               <Fieldset legend="Welke rol heeft u? ">
-                <FormField label="U doet deze aanvraag als">
-                  <FormField.RadioButtonGroup
-                    name="rol"
-                    options={[
-                      { id: 'rolA', label: 'Aanvrager' },
-                      { id: 'rolB', label: 'Intermediar' },
-                    ]}
-                  />
-                </FormField>
-                <FormField
+                <RadioButton
+                  name="rol"
+                  label="U doet deze aanvraag als"
+                  helperText=""
+                  options={[
+                    { id: 'rolA', label: 'Aanvrager' },
+                    { id: 'rolB', label: 'Intermediar' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="aanmerking"
                   label="Dient u deze aanvraag in namens een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) of maatschap?"
-                  helperText="Bedrijven zonder rechtspersoonlijkheid, zoals een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) en een maatschap, komen niet voor SIB in aanmerking."
-                  expandableHelperText={{ title: 'Meer uitleg', children: '' }}
-                >
-                  <FormField.RadioButtonGroup name="aanmerking" />
-                </FormField>
-                <FormField label="Klopt het dat u deze aanvraag voor iemand anders doet?">
-                  <FormField.RadioButtonGroup
-                    name="anders"
-                    options={[
-                      { id: 'andersA', label: 'Ja' },
-                      { id: 'andersB', label: 'Nee' },
-                    ]}
-                  />
-                </FormField>
+                  expandableHelperText={true}
+                  expandableHelperTextTitle="Meer uitleg"
+                  helperText="Bedrijven zonder rechtspersoonlijkheid, zoals een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) en een maatschap, komen niet voor SIB in aanmerking. "
+                  options={[
+                    { id: 'aanmerkingA', label: 'Ja' },
+                    { id: 'aanmerkingB', label: 'Nee' },
+                  ]}
+                ></RadioButton>
+                <RadioButton
+                  name="anders"
+                  label="Klopt het dat u deze aanvraag voor iemand anders doet?"
+                  helperText=""
+                  options={[
+                    { id: 'andersA', label: 'Ja' },
+                    { id: 'andersB', label: 'Nee' },
+                  ]}
+                ></RadioButton>
               </Fieldset>
 
               <div>
@@ -242,6 +270,4 @@ const SIBstartpagina = () => {
       </LayoutFlow>
     </body>
   );
-};
-
-export default SIBstartpagina;
+}

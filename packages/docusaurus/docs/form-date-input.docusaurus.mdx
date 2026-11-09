@@ -1,0 +1,39 @@
+---
+title: Date input
+hide_title: false
+hide_table_of_contents: true
+slug: /form-date-input
+---
+
+import { TextInput, FormField } from "@nl-rvo/component-library-react";
+import ComponentExample from "@site/src/components/ComponentExample";
+
+<ComponentExample storyName="componenten-text-input--base" args={{ type: "date" }}>
+  <TextInput type="date" sizeInput="md" />
+</ComponentExample>
+
+Met label en omschrijving:
+
+{(() => {
+const props = { id: "date-input-with-helper", label: "Date Input", helperText: "Helper text" };
+return (
+
+<ComponentExample storyName="componenten-formfield--date-input" args={props}>
+  <FormField {...props}>
+    <FormField.Date sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}
+
+Zonder omschrijving:
+
+{(() => {
+const props = { id: "date-input-without-helper", label: "Date Input" };
+return (
+
+<ComponentExample storyName="componenten-formfield--date-input" args={props}>
+  <FormField {...props}>
+    <FormField.Date sizeInput="md" />
+  </FormField>
+</ComponentExample>
+); })()}

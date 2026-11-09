@@ -11,12 +11,12 @@ import '@nl-rvo/assets/icons/index.css';
 import '@nl-rvo/assets/images/index.css';
 import '@nl-rvo/design-tokens/dist/index.css';
 
-import '@nl-rvo/utility-background/src/index.scss';
-import '@nl-rvo/utility-border/src/index.scss';
-import '@nl-rvo/utility-text/src/index.scss';
-import '@nl-rvo/utility-text-types/src/index.scss';
-import '@nl-rvo/utility-margin/src/index.scss';
-import '@nl-rvo/utility-padding/src/index.scss';
+import '@nl-rvo/utility-background/dist/index.css';
+import '@nl-rvo/utility-border/dist/index.css';
+import '@nl-rvo/utility-text/dist/index.css';
+import '@nl-rvo/utility-text-types/dist/index.css';
+import '@nl-rvo/utility-margin/dist/index.css';
+import '@nl-rvo/utility-padding/dist/index.css';
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {

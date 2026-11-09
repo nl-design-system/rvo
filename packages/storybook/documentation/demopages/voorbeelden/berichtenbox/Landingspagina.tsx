@@ -212,7 +212,7 @@ const Landingspagina = () => {
                             <span className="rvo-text rvo-text--subtle">
                               Voor het aanmaken van een account en inloggen in de berichtenbox heeft u e-herkenning
                               nodig.
-                              <a href="#" className="rvo-link rvo-link--no-underline">
+                              <a href="#" className="rvo-link">
                                 Direct e-herkenning aanvragen
                               </a>
                             </span>
@@ -229,7 +229,7 @@ const Landingspagina = () => {
                             <span className="rvo-text rvo-text--subtle">
                               Vul daarna uw bedrijfgegevens in en maak een account aan voor de berichtenbox.
                               <br />
-                              <a href="#" className="rvo-link rvo-link--no-underline">
+                              <a href="#" className="rvo-link">
                                 Account aanmaken
                               </a>
                             </span>
@@ -246,7 +246,7 @@ const Landingspagina = () => {
                             <span className="rvo-text rvo-text--subtle">
                               Geef toegang tot overheidsorganisaties bij de Kamer van Koophandel.
                               <br />
-                              <a href="#" className="rvo-link rvo-link--no-underline">
+                              <a href="#" className="rvo-link">
                                 Inloggen bij de KVK
                               </a>
                             </span>
@@ -263,7 +263,7 @@ const Landingspagina = () => {
                             <span className="rvo-text rvo-text--subtle">
                               Gefeliciteerd! Uw bedrijf kan nu gebruik maken van de berichtenbox voor bedrijven.
                               <br />
-                              <a href="#" className="rvo-link rvo-link--no-underline">
+                              <a href="#" className="rvo-link">
                                 Nu inloggen met e-herkenning
                               </a>
                             </span>

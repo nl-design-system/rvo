@@ -37,6 +37,7 @@ $rvo-button-sizes: (xs, sm, md) !default;
   &:hover:not(:disabled, [aria-disabled="true"]) {
     cursor: pointer;
     text-decoration: var(--rvo-button-hover-text-decoration);
+    text-decoration-thickness: var(--rvo-button-hover-text-decoration-thickness);
     text-underline-offset: var(--rvo-button-hover-text-underline-offset);
   }
 
@@ -65,15 +66,14 @@ $rvo-button-sizes: (xs, sm, md) !default;
 
       &:focus {
         --rvo-button-background-color: var(--rvo-button-#{$name}-focus-background-color);
-        --rvo-button-border-color: var(--rvo-button-#{$name}-focus-border-color);
       }
 
       &:focus-visible {
-        box-shadow: var(--_utrecht-focus-ring-box-shadow);
-        outline-color: var(--utrecht-focus-outline-color, revert);
-        outline-offset: var(--utrecht-focus-outline-offset, revert);
-        outline-style: var(--utrecht-focus-outline-style, revert);
-        outline-width: var(--utrecht-focus-outline-width, revert);
+        box-shadow: none;
+        outline: none;
+        text-decoration: underline;
+        text-decoration-thickness: var(--rvo-focus-text-decoration-thickness);
+        text-underline-offset: var(--rvo-button-hover-text-underline-offset);
       }
 
       &:hover {
@@ -97,6 +97,33 @@ $rvo-button-sizes: (xs, sm, md) !default;
           background-color: var(--rvo-button-#{$name}-disabled-color) !important;
         }
       }
+    }
+  }
+
+  &--subtle:focus-visible,
+  &--subtle:focus-visible:hover {
+    color: var(--rvo-button-subtle-focus-color);
+
+    .utrecht-icon.rvo-icon {
+      background-color: var(--rvo-button-subtle-focus-color);
+    }
+  }
+
+  &--tertiary:focus-visible,
+  &--tertiary:focus-visible:hover {
+    color: var(--rvo-button-tertiary-focus-color);
+
+    .utrecht-icon.rvo-icon {
+      background-color: var(--rvo-button-tertiary-focus-color);
+    }
+  }
+
+  &--warning-subtle:focus-visible,
+  &--warning-subtle:focus-visible:hover {
+    color: var(--rvo-button-warning-subtle-focus-color);
+
+    .utrecht-icon.rvo-icon {
+      background-color: var(--rvo-button-warning-subtle-focus-color);
     }
   }
 
