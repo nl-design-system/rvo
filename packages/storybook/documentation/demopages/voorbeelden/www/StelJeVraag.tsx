@@ -9,6 +9,7 @@ import {
   Heading,
   Icon,
   LayoutFlow,
+  Link,
   MenuBar,
 } from '@nl-rvo/component-library-react';
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from 'react';
@@ -17,48 +18,95 @@ import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooter
 
 type Sender = 'gebruiker' | 'assistent';
 
-interface IMessage {
+interface IAnswerLink {
+  label: string;
+  href: string;
+}
+
+interface IAnswer {
+  text: string;
+  links?: IAnswerLink[];
+}
+
+interface IMessage extends IAnswer {
   id: number;
   sender: Sender;
-  text: string;
   feedback?: 'nuttig' | 'niet-nuttig';
 }
 
 const greeting = 'Hallo, ik ben de digitale assistent van RVO. Waarmee kan ik u helpen?';
 
-const topicAnswers: { keywords: string[]; answer: string }[] = [
+const topicAnswers: ({ keywords: string[] } & IAnswer)[] = [
   {
     keywords: ['verduurza', 'duurzaam', 'energie', 'subsidie'],
-    answer:
-      'Er zijn verschillende regelingen om uw bedrijf te verduurzamen. Denk aan de Energie-investeringsaftrek (EIA) voor energiebesparende investeringen, de Milieu-investeringsaftrek (MIA) en de Willekeurige afschrijving milieu-investeringen (Vamil) voor milieuvriendelijke investeringen, en de ISDE voor bijvoorbeeld warmtepompen en zonneboilers.\n\nMet de Subsidie- en financieringswijzer vindt u welke regeling bij uw situatie past.',
+    text: 'Er zijn verschillende regelingen om uw bedrijf te verduurzamen. Denk aan de Energie-investeringsaftrek (EIA) voor energiebesparende investeringen, de Milieu-investeringsaftrek (MIA) en de Willekeurige afschrijving milieu-investeringen (Vamil) voor milieuvriendelijke investeringen, en de ISDE voor bijvoorbeeld warmtepompen en zonneboilers.\n\nMet de Subsidie- en financieringswijzer vindt u welke regeling bij uw situatie past.',
+    links: [
+      { label: 'Subsidie- en financieringswijzer', href: '#' },
+      { label: 'Energie-investeringsaftrek (EIA)', href: '#' },
+      { label: 'MIA en Vamil', href: '#' },
+      { label: 'Investeringssubsidie duurzame energie en energiebesparing (ISDE)', href: '#' },
+    ],
   },
   {
     keywords: ['eherkenning', 'inloggen'],
-    answer:
-      'Voor de meeste diensten van RVO logt u in met eHerkenning. U vraagt eHerkenning aan bij een erkende leverancier. Let op het betrouwbaarheidsniveau: voor veel RVO-diensten heeft u minimaal niveau eH3 nodig.\n\nHet aanvragen duurt meestal een paar werkdagen, dus regel het op tijd.',
+    text: 'Voor de meeste diensten van RVO logt u in met eHerkenning. U vraagt eHerkenning aan bij een erkende leverancier. Let op het betrouwbaarheidsniveau: voor veel RVO-diensten heeft u minimaal niveau eH3 nodig.\n\nHet aanvragen duurt meestal een paar werkdagen, dus regel het op tijd.',
+    links: [
+      { label: 'Inloggen bij RVO met eHerkenning', href: '#' },
+      { label: 'Welk betrouwbaarheidsniveau heeft u nodig?', href: '#' },
+    ],
   },
   {
     keywords: ['gecombineerde opgave', 'percelen', 'gewassen'],
-    answer:
-      'U kunt de Gecombineerde opgave elk jaar indienen van 1 februari tot en met 15 mei. Daarin geeft u onder andere uw percelen, gewassen en dieren door. Na 15 mei kunt u nog tot en met 31 mei indienen, maar dan krijgt u een korting op uw betalingen.',
+    text: 'U kunt de Gecombineerde opgave elk jaar indienen van 1 februari tot en met 15 mei. Daarin geeft u onder andere uw percelen, gewassen en dieren door. Na 15 mei kunt u nog tot en met 31 mei indienen, maar dan krijgt u een korting op uw betalingen.',
+    links: [
+      { label: 'Gecombineerde opgave', href: '#' },
+      { label: 'Percelen registreren', href: '#' },
+      { label: 'Belangrijke data voor landbouwers', href: '#' },
+    ],
   },
   {
     keywords: ['wbso', 'innovatie', 'speur- en ontwikkeling'],
-    answer:
-      'Met de WBSO krijgt u een tegemoetkoming in de loonkosten en andere kosten voor research en development (speur- en ontwikkelingswerk). U vraagt WBSO aan via Mijn RVO, vóór de periode waarin u het werk uitvoert. U kunt maximaal 4 keer per jaar een aanvraag doen, voor een periode van 3 tot 12 maanden.',
+    text: 'Met de WBSO krijgt u een tegemoetkoming in de loonkosten en andere kosten voor research en development (speur- en ontwikkelingswerk). U vraagt WBSO aan via Mijn RVO, vóór de periode waarin u het werk uitvoert. U kunt maximaal 4 keer per jaar een aanvraag doen, voor een periode van 3 tot 12 maanden.',
+    links: [
+      { label: 'WBSO aanvragen', href: '#' },
+      { label: 'Voorwaarden WBSO', href: '#' },
+      { label: 'Mijn RVO', href: '#' },
+    ],
   },
   {
     keywords: ['export', 'buitenland', 'buiten de eu'],
-    answer:
-      'Bij export buiten de EU heeft u vaak te maken met douaneformaliteiten en soms met certificaten, bijvoorbeeld voor landbouwproducten of dual-use goederen. RVO helpt met informatie over landen en markten, en met financiering en verzekeringen voor internationaal ondernemen. Wilt u weten welke landen en producten het gaat om? Dan kan ik u verder op weg helpen.',
+    text: 'Bij export buiten de EU heeft u vaak te maken met douaneformaliteiten en soms met certificaten, bijvoorbeeld voor landbouwproducten of dual-use goederen. RVO helpt met informatie over landen en markten, en met financiering en verzekeringen voor internationaal ondernemen. Wilt u weten welke landen en producten het gaat om? Dan kan ik u verder op weg helpen.',
+    links: [
+      { label: 'Internationaal ondernemen', href: '#' },
+      { label: 'Landenoverzicht', href: '#' },
+      { label: 'Financiering voor export', href: '#' },
+    ],
   },
 ];
 
-const followUpAnswers = [
-  'Goede vraag. Op rvo.nl vindt u per onderwerp de voorwaarden, termijnen en hoe u aanvraagt. Kunt u iets meer vertellen over uw situatie, bijvoorbeeld in welke sector u werkt? Dan kan ik u gerichter helpen.',
-  'Daar kan ik u mee helpen. Of u in aanmerking komt, hangt meestal af van de grootte van uw bedrijf en het soort project. Wilt u weten welke regelingen daarbij passen?',
-  'Dank u voor uw vraag. Veel aanvragen doet u via Mijn RVO, waar u inlogt met eHerkenning of DigiD. Heeft u nog een andere vraag, of wilt u dat ik dit verder uitleg?',
-  'Ik begrijp uw vraag. Komt u er niet uit? Dan kunt u ook contact opnemen met RVO via telefoon of het contactformulier. Waar kan ik u verder nog mee helpen?',
+const followUpAnswers: IAnswer[] = [
+  {
+    text: 'Goede vraag. Op rvo.nl vindt u per onderwerp de voorwaarden, termijnen en hoe u aanvraagt. Kunt u iets meer vertellen over uw situatie, bijvoorbeeld in welke sector u werkt? Dan kan ik u gerichter helpen.',
+    links: [
+      { label: 'Onderwerpen op rvo.nl', href: '#' },
+      { label: 'Subsidie- en financieringswijzer', href: '#' },
+    ],
+  },
+  {
+    text: 'Daar kan ik u mee helpen. Of u in aanmerking komt, hangt meestal af van de grootte van uw bedrijf en het soort project. Wilt u weten welke regelingen daarbij passen?',
+    links: [{ label: 'Subsidie- en financieringswijzer', href: '#' }],
+  },
+  {
+    text: 'Dank u voor uw vraag. Veel aanvragen doet u via Mijn RVO, waar u inlogt met eHerkenning of DigiD. Heeft u nog een andere vraag, of wilt u dat ik dit verder uitleg?',
+    links: [
+      { label: 'Mijn RVO', href: '#' },
+      { label: 'Inloggen bij RVO', href: '#' },
+    ],
+  },
+  {
+    text: 'Ik begrijp uw vraag. Komt u er niet uit? Dan kunt u ook contact opnemen met RVO via telefoon of het contactformulier. Waar kan ik u verder nog mee helpen?',
+    links: [{ label: 'Contact met RVO', href: '#' }],
+  },
 ];
 
 const emptyQuestionAnswer = 'Ik heb geen vraag ontvangen. Waarmee kan ik u helpen?';
@@ -96,14 +144,14 @@ const StelJeVraag = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }, [messages, isTyping]);
 
-  const addMessage = (sender: Sender, text: string) => {
-    setMessages((previous) => [...previous, { id: nextId.current++, sender, text }]);
+  const addMessage = (sender: Sender, answer: IAnswer) => {
+    setMessages((previous) => [...previous, { id: nextId.current++, sender, ...answer }]);
   };
 
-  const getAnswer = (text: string) => {
+  const getAnswer = (text: string): IAnswer => {
     const lowerCaseText = text.toLowerCase();
     const topic = topicAnswers.find((item) => item.keywords.some((keyword) => lowerCaseText.includes(keyword)));
-    if (topic) return topic.answer;
+    if (topic) return topic;
     const answer = followUpAnswers[followUpIndex.current % followUpAnswers.length];
     followUpIndex.current++;
     return answer;
@@ -111,14 +159,14 @@ const StelJeVraag = () => {
 
   const ask = (text: string) => {
     const trimmed = text.trim();
-    if (trimmed) addMessage('gebruiker', trimmed);
+    if (trimmed) addMessage('gebruiker', { text: trimmed });
     setQuestion('');
     // The Textarea component does not support a controlled value, so it is remounted to clear it
     setInputKey((previous) => previous + 1);
     setIsTyping(true);
     window.setTimeout(() => {
       setIsTyping(false);
-      addMessage('assistent', trimmed ? getAnswer(trimmed) : emptyQuestionAnswer);
+      addMessage('assistent', trimmed ? getAnswer(trimmed) : { text: emptyQuestionAnswer });
     }, 800);
   };
 
@@ -197,6 +245,25 @@ const StelJeVraag = () => {
                               <Icon icon="ster" size="sm" color="hemelblauw" /> Digitale assistent
                             </span>
                             <MessageText text={message.text} />
+                            {message.links && (
+                              <LayoutFlow gap="2xs">
+                                <span className="rvo-text--bold">Meer informatie</span>
+                                {message.links.map((link) => (
+                                  <Link
+                                    key={link.label}
+                                    href={link.href}
+                                    color="donkerblauw"
+                                    icon="pijl-naar-rechts"
+                                    iconPlacement="left"
+                                    iconColor="donkerblauw"
+                                    iconSize="sm"
+                                    noUnderline={true}
+                                  >
+                                    {link.label}
+                                  </Link>
+                                ))}
+                              </LayoutFlow>
+                            )}
                             {message.id !== 0 && message.text !== greeting && (
                               <LayoutFlow gap="xs">
                                 {message.feedback ? (
