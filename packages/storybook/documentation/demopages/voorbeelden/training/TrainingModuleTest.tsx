@@ -156,7 +156,7 @@ const TrainingModuleTest = () => {
           <Heading type="h1" noMargins={true}>
             Test je kennis
           </Heading>
-          <p>
+          <p className="rvo-paragraph rvo-paragraph--lg">
             <em>
               Onderdeel <strong>5</strong> van module <strong>1</strong>
             </em>
@@ -175,13 +175,13 @@ const TrainingModuleTest = () => {
               <Heading type="h2" noMargins>
                 Resultaat
               </Heading>
-              <p className="rvo-paragraph rvo-paragraph--no-margins">
+              <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
                 Je hebt <strong>{score}</strong> van de <strong>{questions.length}</strong> vragen goed beantwoord.
               </p>
             </LayoutFlow>
           ) : (
             <LayoutFlow gap="md">
-              <p className="rvo-paragraph rvo-paragraph--no-margins">
+              <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
                 Vraag <strong>{currentQuestion + 1}</strong> van <strong>{questions.length}</strong>
               </p>
               <FormField

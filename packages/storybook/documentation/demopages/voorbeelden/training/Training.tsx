@@ -62,7 +62,7 @@ const Training = () => {
         </div>
         <div className="rvo-max-width-layout rvo-max-width-layout--sm rvo-margin-block-start--xl">
           <Heading type="h2">Trainingsmodules</Heading>
-          <p className="rvo-paragraph">
+          <p className="rvo-paragraph rvo-paragraph--lg">
             De training Internationaal Maatschappelijk Verantwoord Ondernemen voor het MKB is onderverdeeld in 10
             modules. Elke module biedt inzicht, hulpmiddelen, praktische tips en de mogelijkheid om je kennis te testen.
           </p>

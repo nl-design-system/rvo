@@ -61,7 +61,7 @@ const TrainingModule = () => {
           <Heading type="h1" noMargins={true}>
             Internationaal Maatschappelijk Verantwoord Ondernemen: hoe doe je dat?
           </Heading>
-          <p>
+          <p className="rvo-paragraph rvo-paragraph--lg">
             <em>
               Module <strong>1</strong> van <strong>10</strong>
             </em>

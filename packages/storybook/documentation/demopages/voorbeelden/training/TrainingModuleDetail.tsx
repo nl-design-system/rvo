@@ -75,7 +75,7 @@ const TrainingModuleDetail = () => {
           <Heading type="h1" noMargins={true}>
             Internationaal Maatschappelijk Verantwoord Ondernemen
           </Heading>
-          <p>
+          <p className="rvo-paragraph rvo-paragraph--lg">
             <em>
               Onderdeel <strong>1</strong> van module <strong>1</strong>
             </em>
@@ -86,7 +86,7 @@ const TrainingModuleDetail = () => {
             van de wereld, hebben bedrijven een positief maar soms ook een negatief effect op de mensen en omgeving ver
             weg.
           </p>
-          <p className="rvo-paragraph rvo-text--italic">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-text--italic">
             Let op! Deze training is speciaal gemaakt voor MKB-bedrijven. Maar de stappen zijn ook relevant voor grote
             organisaties!
           </p>
@@ -102,14 +102,14 @@ const TrainingModuleDetail = () => {
           <Heading type="h2" noMargins={true}>
             Ken je keten
           </Heading>
-          <p className="rvo-paragraph rvo-paragraph--no-margins">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
             Hoe zit dat voor jouw bedrijf? Om te snappen welke effecten jouw bedrijf ergens anders op de wereld heeft,
             moet je weten waar je producten precies vandaan komen en onder welke omstandigheden de producten worden
             gemaakt. Uit welke landen komen ze? Welke producenten zijn allemaal betrokken? Wie maken de producten en
             onder welke omstandigheden? Met die kennis krijg je meer grip op risico’s zoals kinderarbeid of (te) lage
             lonen van arbeiders of boeren.
           </p>
-          <p className="rvo-paragraph rvo-paragraph--no-margins">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
             Vervolgens ga je op zoek naar oplossingen om negatieve gevolgen te stoppen, voorkomen of beperken. Als
             bedrijf kan je negatieve gevolgen veroorzaken, aan hebben bijgedragen of aan verbonden zijn. Afhankelijk van
             de mate waarin jouw bedrijf betrokken is onderneem je acties. Deze acties vallen onder Internationaal
@@ -120,13 +120,13 @@ const TrainingModuleDetail = () => {
           <Heading type="h2" noMargins={true}>
             Gepaste zorgvuldigheid
           </Heading>
-          <p className="rvo-paragraph rvo-paragraph--no-margins">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
             Het proces van gepaste zorgvuldigheid (in het Engels: Due Diligence), bestaat uit zes stappen. In die
             stappen neemt een bedrijf verantwoordelijkheid voor (mogelijke) negatieve gevolgen van de eigen acties in de
             keten. De zes stappen volgen elkaar logisch op. Als alle stappen genomen zijn, begint het proces weer
             opnieuw.
           </p>
-          <p className="rvo-paragraph rvo-paragraph--no-margins">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
             Toekomstige wetgeving zal ‘gepaste zorgvuldigheid’ verplicht maken voor de grootste bedrijven maar ook voor
             het MKB is IMVO belangrijk. Zo verwachten belanghebbenden (‘stakeholders’) steeds meer dat bedrijven
             duurzaamheidsrisico’s in hun keten kennen en aanpakken. Het is belangrijk om te beseffen dat de keten niet
@@ -138,7 +138,7 @@ const TrainingModuleDetail = () => {
           <Heading type="h2" noMargins={true}>
             De zes due diligence stappen
           </Heading>
-          <p className="rvo-paragraph rvo-paragraph--no-margins">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
             Afbeelding laat de zes stappen zien. Hieronder staan ze kort beschreven.
           </p>
         </div>
@@ -149,13 +149,15 @@ const TrainingModuleDetail = () => {
           />
         </div>
         <div className="rvo-margin-block-start--md rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
-          Na deze opdracht heb je duidelijk in beeld in welke mate IMVO een rol speelt in jouw bedrijf.
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
+            Na deze opdracht heb je duidelijk in beeld in welke mate IMVO een rol speelt in jouw bedrijf.
+          </p>
         </div>
         <div className="rvo-margin-block-start--md rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <div className="rvo-card rvo-card--padding-lg rvo-card--full-colour--grijs-100">
             <div className="rvo-card__content">
               <Heading type="h3">Handige hulpmiddelen</Heading>
-              <ul className="">
+              <ul className="rvo-text--lg">
                 <li>
                   Verschillende bedrijven in de voedingsmiddelensector werkten samen aan de verduurzaming van hun
                   ketens. Zij verenigden zich onder het Convenant Voedingsmiddelen. Het convenant loopt tot juni 2023 op
@@ -196,10 +198,10 @@ const TrainingModuleDetail = () => {
           <div className="rvo-card rvo-card--padding-lg rvo-card--outline">
             <div className="rvo-card__content">
               <Heading type="h3">Huiswerk opdracht</Heading>
-              <p className="rvo-paragraph rvo-paragraph--no-margins">
+              <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
                 Na deze opdracht heb je duidelijk in beeld in welke mate IMVO een rol speelt in jouw bedrijf.
               </p>
-              <ul className="">
+              <ul className="rvo-text--lg">
                 <li>Ga na of er voor jouw bedrijf een visie is voor IMVO.</li>
                 <li>Is de hoogst belanghebbende (bijvoorbeeld de directeur) betrokken bij IMVO?</li>
                 <li>Ga na in welke beleidsdocumenten naar IMVO verwezen wordt.</li>
@@ -214,7 +216,7 @@ const TrainingModuleDetail = () => {
           <Heading type="h3" noMargins={true}>
             OESO-richtlijnen en het due diligence proces
           </Heading>
-          <p className="rvo-paragraph rvo-paragraph--no-margins">
+          <p className="rvo-paragraph rvo-paragraph--lg rvo-paragraph--no-margins">
             In 2018 is de OESO Due Diligence Handreiking voor Maatschappelijk Verantwoord Ondernemen gepubliceerd. Dit
             uitgebreide document geeft bedrijven praktische handvatten om IMVO toe te passen.
             <br />
