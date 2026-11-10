@@ -15,7 +15,7 @@ export const Link: React.FC<ILinkProps> = ({
   iconPlacement,
   icon,
   iconSize = 'md',
-  iconColor = 'hemelblauw',
+  iconColor,
   hover = false,
   active = false,
   focus = false,
@@ -35,7 +35,9 @@ export const Link: React.FC<ILinkProps> = ({
       ? Icon({
           icon: icon as any,
           size: iconSize as any,
-          color: iconColor as any,
+          // Without an explicit iconColor the icon follows the link styling (e.g. the call-to-action text color)
+          color: (iconColor ?? '') as any,
+          className: iconColor ? undefined : 'rvo-link__icon',
         })
       : null;
 
