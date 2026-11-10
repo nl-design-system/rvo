@@ -9928,9 +9928,9 @@ packages:
     resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
 
-  image-size@2.0.2:
-    resolution: {integrity: sha512-IRqXKlaXwgSMAMtpNzZa1ZAe8m+Sa1770Dhk8VkSsP9LS+iHD62Zd8FQKs8fbPiagBE7BzoFX23cxFnwshpV6w==}
-    engines: {node: '>=16.x'}
+  image-size@2.1.0:
+    resolution: {integrity: sha512-6Dbisa46RsgeAh3TMSFL2i8+uIFG+/LRmz6Q2oscSJJvXo1sOw3EgNO4M8jPl1P+gR1atJLDPrpclX4IHz63sA==}
+    engines: {node: '>=18'}
     hasBin: true
 
   immutable@4.3.7:
@@ -18640,7 +18640,7 @@ snapshots:
       estree-util-value-to-estree: 3.3.2
       file-loader: 6.2.0(webpack@5.105.0(@swc/core@1.16.18)(esbuild@0.27.7))
       fs-extra: 11.3.0
-      image-size: 2.0.2
+      image-size: 2.1.0
       mdast-util-mdx: 3.0.0(supports-color@9.4.0)
       mdast-util-to-string: 4.0.0
       react: 18.3.1
@@ -26236,7 +26236,7 @@ snapshots:
 
   ignore@7.0.5: {}
 
-  image-size@2.0.2: {}
+  image-size@2.1.0: {}
 
   immutable@4.3.7: {}
 
