@@ -1,5 +1,3 @@
-import { Link } from '@nl-rvo/component-library-react';
-
 interface ITrainingNavigationLink {
   label: string;
   href: string;
@@ -10,6 +8,8 @@ interface ITrainingNavigationProps {
   next?: ITrainingNavigationLink;
 }
 
+// Uses the HTML/CSS link instead of the React Link component, because the React component does not add
+// rvo-link__icon to its icon yet, which keeps the call-to-action icons blue instead of the text color.
 const TrainingNavigation = ({ previous, next }: ITrainingNavigationProps) => (
   <nav
     aria-label="Navigatie tussen onderdelen"
@@ -17,14 +17,22 @@ const TrainingNavigation = ({ previous, next }: ITrainingNavigationProps) => (
   >
     <div className="rvo-action-group">
       {previous && (
-        <Link callToAction={true} outline={true} href={previous.href} icon="terug" iconPlacement="left">
-          Vorige: {previous.label}
-        </Link>
+        <a
+          href={previous.href}
+          className="rvo-link rvo-link--with-icon rvo-link--call-to-action rvo-link--call-to-action-outline"
+        >
+          <span className="utrecht-icon rvo-icon rvo-icon--md rvo-icon-terug rvo-link__icon" aria-hidden={true}></span>
+          <span className="rvo-link__text">Vorige: {previous.label}</span>
+        </a>
       )}
       {next && (
-        <Link callToAction={true} href={next.href} icon="pijl-naar-rechts" iconPlacement="right">
-          Volgende: {next.label}
-        </Link>
+        <a href={next.href} className="rvo-link rvo-link--with-icon rvo-link--call-to-action">
+          <span className="rvo-link__text">Volgende: {next.label}</span>
+          <span
+            className="utrecht-icon rvo-icon rvo-icon--md rvo-icon-pijl-naar-rechts rvo-link__icon"
+            aria-hidden={true}
+          ></span>
+        </a>
       )}
     </div>
   </nav>
