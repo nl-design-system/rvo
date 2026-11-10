@@ -48,7 +48,7 @@ const TrainingModule = () => {
             <li className="rvo-breadcrumbs-item">
               <a
                 className="rvo-link rvo-link--no-underline"
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training--default&viewMode=story"
               >
                 IMVO Trainingmodules
               </a>
@@ -76,7 +76,7 @@ const TrainingModule = () => {
                 icon="pijl-naar-rechts"
                 iconPlacement="left"
                 noUnderline={true}
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-detailpagina--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training-module-detailpagina--default&viewMode=story"
               >
                 Internationaal Maatschappelijk Verantwoord Ondernemen
               </Link>
@@ -93,7 +93,7 @@ const TrainingModule = () => {
                 icon="pijl-naar-rechts"
                 iconPlacement="left"
                 noUnderline={true}
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-test--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training-module-test--default&viewMode=story"
               >
                 Test je kennis!
               </Link>

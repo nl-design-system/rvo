@@ -46,7 +46,7 @@ const TrainingModuleDetail = () => {
             <li className="rvo-breadcrumbs-item">
               <a
                 className="rvo-link rvo-link--no-underline"
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training--default&viewMode=story"
               >
                 IMVO Trainingmodules
               </a>
@@ -59,7 +59,7 @@ const TrainingModuleDetail = () => {
               ></span>
               <a
                 className="rvo-link rvo-link--no-underline"
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training-module--default&viewMode=story"
               >
                 Module 1
               </a>

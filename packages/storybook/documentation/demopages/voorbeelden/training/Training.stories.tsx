@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import Training from './Training';
 
 export default {
-  title: "Pagina's/Voorbeelden/www/Training",
+  title: "Pagina's/Voorbeelden/Training/Training",
   component: Training,
   parameters: {
     status: {

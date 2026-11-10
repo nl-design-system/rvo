@@ -69,7 +69,7 @@ const Training = () => {
                   <Heading type="h3" noMargins>
                     <a
                       className="rvo-link rvo-card__link rvo-card__full-card-link rvo-link--no-underline"
-                      href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module--default&viewMode=story"
+                      href="iframe.html?args=&id=pagina-s-voorbeelden-training-training-module--default&viewMode=story"
                     >
                       IMVO: Hoe doe je dat?
                     </a>
