@@ -1,6 +1,7 @@
 import { Footer, Header, Heading, MenuBar } from '@nl-rvo/component-library-react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+import TrainingNavigation from './TrainingNavigation';
 
 const TrainingModuleDetail = () => {
   return (
@@ -22,28 +23,24 @@ const TrainingModuleDetail = () => {
           useIcons={true}
           iconPlacement="left"
           maxWidth="lg"
-          horizontalRule={false}
+          horizontalRule={true}
         />
       </div>
 
-      <main className="rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none rvo-hero ">
-          <div className="rvo-hero__image-container">
-            <img
-              src="https://www.imvotraining.nl/imvo-duediligence/imvo/module_1_1/13422/AdobeStock_119067326.1600_0_1.jpg"
-              className="rvo-hero__image"
-              alt=""
-            />
-          </div>
-          <div className="rvo-hero__content">
-            <Heading type="h1" className="rvo-hero__title" noMargins>
-              Internationaal Maatschappelijk Verantwoord Ondernemen
-            </Heading>
-          </div>
-        </div>
-        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
+      <main className="rvo-padding-block-end--3xl rvo-padding-block-start--2xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        <div className="rvo-margin-block-end--md rvo-max-width-layout rvo-max-width-layout--sm ">
           <ol className="rvo-breadcrumbs rvo-breadcrumbs--md">
             <li className="rvo-breadcrumbs-item">
+              <a className="rvo-link rvo-link--no-underline" href="#">
+                Home
+              </a>
+            </li>
+            <li className="rvo-breadcrumbs-item">
+              <span
+                className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
+                role="img"
+                aria-label="Delta naar rechts"
+              ></span>
               <a
                 className="rvo-link rvo-link--no-underline"
                 href="iframe.html?args=&id=pagina-s-voorbeelden-training-training--default&viewMode=story"
@@ -64,7 +61,6 @@ const TrainingModuleDetail = () => {
                 Module 1
               </a>
             </li>
-
             <li className="rvo-breadcrumbs-item">
               <span
                 className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
@@ -74,6 +70,16 @@ const TrainingModuleDetail = () => {
               <span className="rvo-breadcrumb-current-page">IMVO</span>
             </li>
           </ol>
+        </div>
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm ">
+          <Heading type="h1" noMargins={true}>
+            Internationaal Maatschappelijk Verantwoord Ondernemen
+          </Heading>
+          <p>
+            <em>
+              Onderdeel <strong>1</strong> van module <strong>1</strong>
+            </em>
+          </p>
           <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Bedrijven in Nederland kopen producten en grondstoffen vanuit de hele wereld. Denk bijvoorbeeld aan gewassen
             zoals katoen en cacao of aan mijnbouwproducten zoals mica. Via de handel met bedrijven aan de andere kant
@@ -84,6 +90,13 @@ const TrainingModuleDetail = () => {
             Let op! Deze training is speciaal gemaakt voor MKB-bedrijven. Maar de stappen zijn ook relevant voor grote
             organisaties!
           </p>
+        </div>
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--md rvo-margin-block-start--xl">
+          <img
+            src="https://www.imvotraining.nl/imvo-duediligence/imvo/module_1_1/13422/AdobeStock_119067326.1600_0_1.jpg"
+            alt=""
+            className="rvo-image rvo-image--radius-all rvo-image--radius-size-md"
+          />
         </div>
         <div className="rvo-margin-block-start--2xl rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
@@ -210,6 +223,13 @@ const TrainingModuleDetail = () => {
             </a>
           </p>
         </div>
+        <TrainingNavigation
+          previous={{
+            label: 'Module 1',
+            href: 'iframe.html?args=&id=pagina-s-voorbeelden-training-training-module--default&viewMode=story',
+          }}
+          next={{ label: 'De due diligence stappen', href: '#' }}
+        />
       </main>
 
       <Footer primaryMenu={defaultFooterItems} secondaryMenu={defaultSecondaryFooterItems} maxWidth="lg" />

@@ -22,33 +22,47 @@ const Training = () => {
           useIcons={true}
           iconPlacement="left"
           maxWidth="lg"
-          horizontalRule={false}
+          horizontalRule={true}
         />
       </div>
 
-      <main className="rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none rvo-hero ">
-          <div className="rvo-hero__image-container">
-            <img
-              src="https://www.imvotraining.nl/imvo-duediligence/imvo/startpagina/13389/EDUCATION_b657042e_58a1_4f7b_b83c_0f8c237796bb_2160x.1600_0_1.jpg"
-              className="rvo-hero__image"
-              alt=""
-            />
-          </div>
-          <div className="rvo-hero__content">
-            <Heading type="h1" className="rvo-hero__title" noMargins>
-              Internationaal Maatschappelijk Verantwoord Ondernemen voor het MKB
-            </Heading>
-            <span className="rvo-hero__subtitle">
-              Praktische tips voor het bestrijden van kinderarbeid, het ondersteunen goede arbeidsomstandigheden en het
-              werken naar leefbare lonen en inkomens in toeleveringsketens.
-            </span>
-          </div>
+      <main className="rvo-padding-block-end--3xl rvo-padding-block-start--2xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        <div className="rvo-margin-block-end--md rvo-max-width-layout rvo-max-width-layout--sm ">
+          <ol className="rvo-breadcrumbs rvo-breadcrumbs--md">
+            <li className="rvo-breadcrumbs-item">
+              <a className="rvo-link rvo-link--no-underline" href="#">
+                Home
+              </a>
+            </li>
+            <li className="rvo-breadcrumbs-item">
+              <span
+                className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
+                role="img"
+                aria-label="Delta naar rechts"
+              ></span>
+              <span className="rvo-breadcrumb-current-page">IMVO Trainingmodules</span>
+            </li>
+          </ol>
         </div>
-        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm ">
+          <Heading type="h1" noMargins={true}>
+            Internationaal Maatschappelijk Verantwoord Ondernemen voor het MKB
+          </Heading>
+          <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
+            Praktische tips voor het bestrijden van kinderarbeid, het ondersteunen goede arbeidsomstandigheden en het
+            werken naar leefbare lonen en inkomens in toeleveringsketens.
+          </p>
+        </div>
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--md rvo-margin-block-start--xl">
+          <img
+            src="https://www.imvotraining.nl/imvo-duediligence/imvo/startpagina/13389/EDUCATION_b657042e_58a1_4f7b_b83c_0f8c237796bb_2160x.1600_0_1.jpg"
+            alt=""
+            className="rvo-image rvo-image--radius-all rvo-image--radius-size-md"
+          />
+        </div>
+        <div className="rvo-max-width-layout rvo-max-width-layout--sm rvo-margin-block-start--xl">
           <Heading type="h2">Trainingsmodules</Heading>
-
-          <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg ">
+          <p className="rvo-paragraph">
             De training Internationaal Maatschappelijk Verantwoord Ondernemen voor het MKB is onderverdeeld in 10
             modules. Elke module biedt inzicht, hulpmiddelen, praktische tips en de mogelijkheid om je kennis te testen.
           </p>
