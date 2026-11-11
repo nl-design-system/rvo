@@ -31,7 +31,7 @@ Monorepo (`@nl-rvo/design-system`) built on [NL Design System](https://nldesigns
   - `refactor/` — code restructuring without behaviour change
   - `chore/` — tooling, config, dependencies
 - Commit messages must be concise and state the problem the change solves. Use only periods and commas as punctuation. Write in the imperative: "fix button color", not "fixed button color".
-- Add the ROOS core team as reviewer to every pull request.
+- When the PR touches components, add the ROOS core team as reviewer: [@PLassche-dictu](https://github.com/PLassche-dictu), [@joana-dictu](https://github.com/joana-dictu). PRs that only affect patterns or demopages do not require these reviewers.
 - The person who opens the pull request is responsible for all committed code in that PR. A commit or PR can never have a co-author.
 
 ## Documentation
