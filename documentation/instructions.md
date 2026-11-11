@@ -4,6 +4,42 @@ All instructions in this file must be written in English.
 
 Monorepo (`@nl-rvo/design-system`) built on [NL Design System](https://nldesignsystem.nl/). Provides design tokens, CSS components, and React wrappers for Dutch government applications.
 
+## Pre-commit checklist
+
+- [ ] Separate branch created — not committing directly to `master`
+- [ ] Branch name matches the Jira ticket (e.g. `ROOS-123-short-description`)
+- [ ] Prettier run: `pnpm format`
+- [ ] Lint run: `pnpm lint`
+- [ ] Commit message states the problem the change solves
+- [ ] Commit message, code comments, and changeset are in English
+- [ ] If any component was touched: changeset is present and covers all affected packages
+
+## Language
+
+- Write changesets, release notes, commit messages, and CSS comments in English.
+- Write documentation pages in Dutch, at B1 language level, in a clear business-like style.
+- Consult the schrijfwijzer in `packages/docusaurus/pages/schrijfwijzer/` for all writing decisions.
+
+## Git workflow
+
+- Always create branches from `master`.
+- Never commit directly to `master`.
+- Name branches using the pattern `type/short-description` in lowercase kebab-case. Common types:
+  - `feature/` — new functionality
+  - `fix/` — bug fixes
+  - `docs/` — documentation only
+  - `refactor/` — code restructuring without behaviour change
+  - `chore/` — tooling, config, dependencies
+- Commit messages must be concise and state the problem the change solves. Use only periods and commas as punctuation. Write in the imperative: "fix button color", not "fixed button color".
+- Add the ROOS core team as reviewer to every pull request.
+- The person who opens the pull request is responsible for all committed code in that PR. A commit or PR can never have a co-author.
+
+## Documentation
+
+- Before every change, consult the documentation of existing components and patterns.
+- Use the available templates for new components, documentation pages, changesets, and test files.
+- Do not design visual solutions on your own initiative. Visual design is the responsibility of the designer, not the developer.
+
 ## Tech stack
 
 | Tool            | Notes                                     |
@@ -30,18 +66,22 @@ proprietary/      # Closed design tokens and assets
 
 ```text
 components/<name>/
-  src/
-    template.tsx      # React component + exported argTypes
-    index.scss        # BEM + design tokens
-    defaultArgs.ts    # Default Storybook args
-    types.ts          # (optional)
-    presets/          # (optional)
+  react/
+    src/
+      <Name>.tsx        # React component
+      <Name>.types.ts   # TypeScript types
+      index.ts
+  style/
+    src/
+      <name>.scss       # BEM + design tokens
   design-tokens.json
-  package.json        # @nl-rvo/css-<name>
-  *.stories.tsx
-  *.docusaurus.mdx
+  package.json          # @nl-rvo/css-<name>
+  README.mdx
   CHANGELOG.md
 ```
+
+Stories live in `packages/storybook/components/<Name>/<name>.stories.tsx`.
+Docusaurus pages live in `packages/storybook/components/<Name>/<name>.docpage.mdx`.
 
 ## Coding conventions
 
@@ -67,9 +107,9 @@ components/<name>/
 ### SCSS
 
 - Always use design tokens (CSS custom properties); never hardcode colours, spacing, or typography.
-- BEM naming.
+- No inline styles. No custom CSS outside the component's own `index.scss`.
+- BEM naming. Use SCSS nesting for BEM modifiers (`&--modifier`), pseudo-classes (`&:hover`), and child selectors — not for arbitrary descendants.
 - Import `index.scss` inside `template.tsx`.
-- Base on `@utrecht/*` packages where available.
 
 ### Docusaurus pattern pages (`.docusaurus.mdx`)
 
@@ -81,9 +121,9 @@ components/<name>/
 
 ### Storybook stories
 
-- Story files live next to the component, not inside `src/`.
-- Use `argTypes` from `src/template.tsx` and `defaultArgs` from `src/defaultArgs.ts`.
+- Story files live in `packages/storybook/components/<Name>/`, not in the component folder.
 - Split into separate files for many variants (e.g. `button.kinds.stories.tsx`).
+- Do not set default text values in stories — `defaultArgs` for textual content has been removed from components.
 
 ### Design tokens
 
@@ -93,7 +133,7 @@ components/<name>/
   1. `components/<name>/design-tokens.json` — CSS custom property declarations
   2. `proprietary/design-tokens/src/components/rvo/<name>.tokens.json` — token values
   3. `proprietary/design-tokens/figma/figma.tokens.json` — Figma sync values
-- **Always look for an existing brand or common token before using a hardcoded value.** Check `proprietary/design-tokens/src/brand/` and `proprietary/design-tokens/src/common/` first. Use a token reference (`{rvo.*}`) whenever one exists. If no matching token exists, notify the team before writing a hardcoded value — never silently use a hardcoded value.
+- **Always look for an existing brand or common token before using a hardcoded value.** Check `proprietary/design-tokens/src/brand/` and `proprietary/design-tokens/src/common/` first. Use a token reference (`{rvo.*}`) whenever one exists. If no matching token exists, notify the team before writing a hardcoded value.
 
 ### Package naming
 
@@ -120,26 +160,53 @@ pnpm --filter @nl-rvo/react-<component> build
 pnpm --filter @nl-rvo/design-tokens build
 ```
 
+## Changesets
+
+Before every commit, check whether the staged changes touch a published package. If yes, create a changeset first and include it in the same commit.
+
+Before creating a new changeset, check whether the branch already has one (`ls .changeset/`). If one exists and the new changes logically belong together, extend it instead of creating a new one.
+
+- **Filename**: random adjective-noun-verb slug (e.g. `brave-foxes-sleep.md`) — never a descriptive name.
+- **Language**: always English.
+- **Format**:
+
+  ```markdown
+  ---
+  "@nl-rvo/css-<component>": patch
+  ---
+
+  type(scope): short imperative subject line
+
+  One paragraph explaining what changed and why, written as a human-readable description for the changelog.
+  ```
+
+- **Bump type**: `patch` for fixes and small improvements, `minor` for new features, `major` for breaking changes.
+- Always include `@nl-rvo/component-library-css` and `@nl-rvo/component-library-react` in every changeset that touches a component.
+- Always include `@nl-rvo/design-tokens` when any file under `proprietary/design-tokens/` is changed.
+- Always include every utility package (`@nl-rvo/utility-*`) whose `package.json` was modified.
+
 ## Prototyping
 
-Prototypes live in `documentation/demopages/`:
+Prototypes live in `packages/storybook/documentation/demopages/`:
 
-| Type         | Folder                               |
-| ------------ | ------------------------------------ |
-| Experimental | `demopages/experimenteel/<project>/` |
-| Example      | `demopages/voorbeelden/<project>/`   |
-| Template     | `demopages/templates/`               |
+| Type         | Folder                                                                |
+| ------------ | --------------------------------------------------------------------- |
+| Experimental | `packages/storybook/documentation/demopages/experimenteel/<project>/` |
+| Example      | `packages/storybook/documentation/demopages/voorbeelden/<project>/`   |
+| Template     | `packages/storybook/documentation/demopages/templates/`               |
+| Prototype    | `packages/storybook/documentation/demopages/prototypes/<project>/`    |
 
 Each folder contains `<PageName>.tsx` + `<PageName>.stories.tsx`.
 
-Confirm the type (experimental, example, or template) before starting.
+Confirm the type (experimental, example, template, or prototype) before starting.
 
 Existing demopages as reference:
 
-- `documentation/demopages/templates/` — Basispagina, Content, Dashboard, Formulier (base patterns)
-- `documentation/demopages/voorbeelden/` — worked-out examples per application (berichtenbox, www, sib)
-- `documentation/demopages/experimenteel/` — experimental patterns (submenu, grid, zoek-in-nav)
-- `documentation/demopages/common/` — shared defaults (footer items, menubar items)
+- `…/demopages/templates/` — Basispagina, Content, Dashboard, Formulier (base patterns)
+- `…/demopages/voorbeelden/` — worked-out examples per application (berichtenbox, www, sib)
+- `…/demopages/experimenteel/` — experimental patterns (filter, sitewide-alert, subsidiewijzer)
+- `…/demopages/prototypes/` — prototypes (www, algemeen)
+- `…/demopages/common/` — shared defaults (footer items, menubar items)
 
 ### Rules
 
@@ -149,7 +216,6 @@ Existing demopages as reference:
   - **Exception (experimental only):** inline styles / custom SCSS allowed when no token or utility class exists.
 - No hardcoded colour values — always use design tokens (e.g. `var(--rvo-color-...)`). Do not use tokens that don't exist in ROOS.
 - No interactive code (state, event handlers) unless explicitly requested.
-- Always wrap form fields in `Fieldset` (with `legend`). See `templates/Formulier.tsx`.
 - Always use `Basispagina` (`templates/Basispagina.tsx`) as outer layout.
 - `MenuBar` between header and main only when requested.
 - **Code is the source of truth.** When code and Figma diverge, Figma is updated to match code. This applies to "dead" property values too (e.g. `border-color` without `border-width`): keep them in code and reflect them in Figma.
@@ -199,21 +265,18 @@ Only use combinations from the official ROOS list in `documentation/pages/design
 
 - wit / grijs-050..100 / lichtblauw-150 / donkerblauw-150 / hemelblauw-150 on: donkerblauw, lintblauw, grijs-600..900, zwart
 
-**Common mistake — not accessible:**
-
-- hemelblauw (#007BC7) on lichtblauw-150 (#EEF7FC): contrast ~4.2:1 — use donkerblauw on lichtblauw-150 instead
-- hemelblauw on wit IS accessible (4.55:1)
-- On coloured backgrounds, always use `color="donkerblauw"` for links instead of the default `hemelblauw`
-
 ## Available components (`@nl-rvo/component-library-react`)
 
+Individual components are also installable separately, e.g. `@nl-rvo/react-button`. You still need the `rvo-theme` class and `@nl-rvo/design-tokens` for correct styling.
+
 ```text
-Accordion, AccordionItem, ActionGroup, Alert, Breadcrumbs, BreadcrumbsItem,
+Accordion (+ Accordion.Item), ActionGroup, Alert, Breadcrumbs, BreadcrumbsItem,
 Button, Card, CardExperimental, CheckBoxFilter, CounterBadge, DataList, DataListItem,
 Dialog, ExpandableContent, ExpandableTable, Favicon, Footer,
-Autocomplete, Checkbox, CheckboxGroup, DateInput, Feedback, Field,
-CheckboxField, DateInputField, FileInputField, Label, RadioButtonField,
-SelectField, TextareaField, TextInputField, TimeInputField, Fieldset,
+Autocomplete, Checkbox, CheckboxGroup, DateInput, Feedback,
+FormField (+ FormField.Text, FormField.Date, FormField.Checkbox, FormField.CheckboxGroup,
+  FormField.FileInput, FormField.RadioButton, FormField.RadioButtonGroup,
+  FormField.Select, FormField.TextArea), Label, Fieldset,
 FileInput, FormLayout, RadioButton, RadioButtonGroup, Select, Textarea,
 TextInput, TimeInput, Grid, Header, Heading, Hero, Hr, Icon, Image,
 ItemList, LayoutFlow, Link, Loader, Logo, MaxWidthLayout,
@@ -228,7 +291,7 @@ ThemeProvider
 ## Heading
 
 ```tsx
-<Heading type="h1|h2|h3|h4|h5|h6" noMargins? fontWeightNormal? showIcon="before|after" icon={IconType}>
+<Heading type="h1|h2|h3|h4|h5|h6" noMargins? fontWeightNormal? iconPlacement="left|right" icon={IconType}>
 ```
 
 Use `noMargins` when managing spacing yourself via `LayoutFlow`.
@@ -257,6 +320,42 @@ Spacing scale in px: `3xs`=2, `2xs`=4, `xs`=8, `sm`=12, `md`=16, `lg`=18, `xl`=2
 />
 ```
 
+## Component patterns
+
+### FormField
+
+`FormField` uses sub-components to render the input element. Pass exactly one sub-component as a child:
+
+```tsx
+<FormField label="Name">
+  <FormField.Text />
+</FormField>
+```
+
+Supported sub-components: `FormField.Text`, `FormField.Date`, `FormField.Checkbox`, `FormField.CheckboxGroup`, `FormField.FileInput`, `FormField.RadioButton`, `FormField.RadioButtonGroup`, `FormField.Select`, `FormField.TextArea`. Each sub-component accepts the props of the underlying input element. Only one child per `FormField` is supported.
+
+### Accordion
+
+Use `Accordion.Item` as child — not the standalone `AccordionItem` component:
+
+```tsx
+<Accordion>
+  <Accordion.Item label="Title">Content</Accordion.Item>
+</Accordion>
+```
+
+### MenuBar
+
+`MenuBarMobile` no longer exists — `MenuBar` handles both desktop and mobile via CSS media queries.
+
+### iconPlacement
+
+The `showIcon` prop has been removed. Use `iconPlacement="left|right"` instead. The prop is optional and not required.
+
+### children over content
+
+The `content` prop has been removed from all components. Use `children` instead.
+
 ## Icons (commonly used)
 
 `home`, `user`, `plus`, `kruis`, `vinkje`, `zoek`, `info`, `let-op`, `pijl-naar-rechts`, `pijl-omlaag`, `pijl-omhoog`, `terug`, `inloggen`, `instellingen`, `mail`, `telefoon`, `kalender`, `klok`, `downloaden`, `upload`, `bewerken`, `verwijderen`, `externe-link`, `menu`, `meer`, `refresh`, `publicatie`, `locatiemarker`, `favoriet`, `printer`, `save`, `delen`, `delta-naar-links`, `delta-naar-rechts`, `delta-omhoog`, `delta-omlaag`
@@ -283,32 +382,9 @@ Full list: `packages/component-library-react/src/components/icon/types.ts`.
 
 Available as React component and as CSS class. See `utilities/utility-*/src/index.scss` for full lists: margin, padding, text (colour/size/weight), background, border.
 
-## Changesets
+## Common mistakes
 
-Before every commit, check whether the staged changes touch a published package. If yes, create a changeset first and include it in the same commit.
-
-Before creating a new changeset, check whether the branch already has one (`ls .changeset/`). If one exists and the new changes logically belong together, extend it instead of creating a new one.
-
-- **Filename**: random adjective-noun-verb slug (e.g. `brave-foxes-sleep.md`) — never a descriptive name.
-- **Language**: always English.
-- **Format**:
-
-  ```markdown
-  ---
-  "@nl-rvo/css-<component>": patch
-  ---
-
-  type(scope): short imperative subject line
-
-  One paragraph explaining what changed and why, written as a human-readable description for the changelog.
-  ```
-
-- **Bump type**: `patch` for fixes and small improvements, `minor` for new features, `major` for breaking changes.
-- Always include `@nl-rvo/component-library-css` and `@nl-rvo/component-library-react` in every changeset that touches a component.
-- Always include `@nl-rvo/design-tokens` when any file under `proprietary/design-tokens/` is changed.
-- Always include every utility package (`@nl-rvo/utility-*`) whose `package.json` was modified.
-
-## Things to avoid
+**General:**
 
 - Hardcoded colours, spacing, or font sizes — always use CSS custom properties.
 - Default exports for components.
@@ -316,3 +392,9 @@ Before creating a new changeset, check whether the branch already has one (`ls .
 - Node versions outside `>=24 <=25`.
 - Internal deps without `workspace:*` protocol.
 - Any changes outside `documentation/` without explicit permission.
+
+**Colour accessibility:**
+
+- hemelblauw (#007BC7) on lichtblauw-150 (#EEF7FC): contrast ~4.2:1 — use donkerblauw on lichtblauw-150 instead
+- hemelblauw on wit IS accessible (4.55:1)
+- On coloured backgrounds, always use `color="donkerblauw"` for links instead of the default `hemelblauw`
