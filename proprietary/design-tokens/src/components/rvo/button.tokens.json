@@ -32,7 +32,7 @@
         }
       },
       "icon-gap": {
-        "value": "{rvo.space.sm}"
+        "value": "{rvo.space.xs}"
       },
       "inline-size": {
         "value": "auto"

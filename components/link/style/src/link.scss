@@ -19,7 +19,7 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--rvo-space-sm);
+    gap: var(--rvo-space-xs);
   }
 }
 
@@ -40,7 +40,7 @@
 .rvo-link--with-icon {
   flex-direction: row;
   align-items: center;
-  gap: var(--rvo-space-sm);
+  gap: var(--rvo-space-xs);
 }
 
 // Hover
