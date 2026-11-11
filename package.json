@@ -92,9 +92,9 @@
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.mjs",
-    "test": "pnpm --filter './components/**' --if-present test",
-    "test:watch": "pnpm --filter './components/**' --parallel --if-present test:watch",
-    "test:coverage": "pnpm --filter './components/**' --if-present coverage"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "http-server": "14.1.1"

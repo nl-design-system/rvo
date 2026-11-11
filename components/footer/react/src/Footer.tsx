@@ -9,7 +9,7 @@ import { Hr } from '@nl-rvo/react-horizontal-rule';
 import { Link } from '@nl-rvo/react-link';
 import '@nl-rvo/css-footer/footer.css';
 import { FooterInterface } from './Footer.types';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/react/dist/index.mjs';
+import { MaxWidthLayout } from '@nl-rvo/react-max-width-layout';
 
 export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElement>> = ({
   primaryMenu,

@@ -18,7 +18,7 @@ export const Textarea: React.FC<ITextareaProps> = ({
 
   if (maxLength && maxLengthIndicator) {
     // Override onChange
-    const handleChange = (event) => {
+    const handleChange = (event: any) => {
       otherProps.onChange?.(event);
       setCurrentValue(event.currentTarget.value);
     };

@@ -1,6 +1,27 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2019"
+    ],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2019",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react-jsx",
+    "types": [
+      "node",
+      "mdx",
+      "vitest/globals"
+    ],
+    "skipLibCheck": true,
+    "baseUrl": "./",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -8,14 +29,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2015",
-    "module": "es2020",
-    "jsx": "react-jsx",
-    "lib": ["es2020", "dom"]
-  }
+  },
+  "include": [
+    "vitest.config.ts",
+    "vitest.setup.ts",
+    "components/**/*"
+  ]
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import '@nl-rvo/css-menubar/menubar.css';
 import { Link } from '@nl-rvo/react-link';
 import { Icon } from '@nl-rvo/react-icon';
-import { MaxWidthLayout } from '@nl-rvo/components/max-width-layout/react/dist/index.mjs';
+import { MaxWidthLayout } from '@nl-rvo/react-max-width-layout';
 import { SubMenuProps } from './Menubar.types';
 
 export const SubMenu: React.FC<SubMenuProps> = ({

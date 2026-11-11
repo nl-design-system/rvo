@@ -8,7 +8,7 @@ import React from 'react';
 import { IAccordionItemProps, IAccordionProps } from './Accordion.types';
 import { Icon } from '@nl-rvo/react-icon';
 import { Heading } from '@nl-rvo/react-heading';
-import parseContentMarkup from '@nl-rvo/components/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 
 export const Accordion: React.FC<IAccordionProps> & {
   Item: React.FC<IAccordionItemProps>;
