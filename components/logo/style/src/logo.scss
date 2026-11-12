@@ -14,17 +14,7 @@
   inline-size: fit-content;
   position: relative;
 
-  &:has(.rvo-logo__title-link:focus-visible) {
-    box-shadow: 0 0 0 0.25rem white;
-    outline: 0.375rem double black;
-  }
-
   &__title-link {
-    color: inherit;
-    display: block;
-    font-weight: inherit;
-    text-decoration: none;
-
     &::before {
       block-size: 100%;
       content: "";
@@ -34,16 +24,6 @@
       inset-block-start: 0;
       inset-inline-start: 0;
       position: absolute;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-
-    &:hover,
-    &:focus:not(:focus-visible) {
-      color: inherit;
-      text-decoration: none;
     }
   }
 
@@ -119,5 +99,31 @@
     &__subtitle {
       font-size: 12.25px;
     }
+  }
+}
+
+// Keep the title link visually identical to the plain title: same font weight in
+// every state, no underline on hover or active, and no background on focus. Selectors are doubled up so
+// they win over the rvo-link states regardless of stylesheet order.
+.rvo-logo .rvo-logo__title-link.rvo-link {
+  // Block-level, so the link does not end up in a line box with the parent's line-height.
+  display: flex;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    font-weight: inherit;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
   }
 }
