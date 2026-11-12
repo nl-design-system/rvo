@@ -106,6 +106,9 @@
 // every state, no underline on hover or active, and no background on focus. Selectors are doubled up so
 // they win over the rvo-link states regardless of stylesheet order.
 .rvo-logo .rvo-logo__title-link.rvo-link {
+  // Block-level, so the link does not end up in a line box with the parent's line-height.
+  display: flex;
+
   &,
   &:hover,
   &:active,
