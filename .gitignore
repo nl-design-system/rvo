@@ -75,6 +75,7 @@ pnpm-lock.yaml
 # Playwright (Claude Code MCP)
 .playwright-mcp
 
-# Claude Code
+# AI and LLM instructions and agents
 .claude/
 CLAUDE.md
+AGENTS.md
