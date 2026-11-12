@@ -44,7 +44,7 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     }
   };
 
-  const withPrefix = (id: string): string => `checkbox-filter-${label}-${id}`;
+  const withPrefix = (id: string): string => `checkbox-filter-${label.toLowerCase()}-${id}`;
 
   const groupLabelId = withPrefix('label');
   const checkboxGroupId = withPrefix('checkbox-group');
