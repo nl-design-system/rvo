@@ -1068,6 +1068,9 @@ importers:
       '@nl-rvo/css-sidebar-layout':
         specifier: workspace:*
         version: link:../../components/sidebar-layout/style
+      '@nl-rvo/css-skeleton':
+        specifier: workspace:*
+        version: link:../../components/skeleton/style
       '@nl-rvo/css-skip-link':
         specifier: workspace:*
         version: link:../../components/skip-link/style
@@ -1083,6 +1086,9 @@ importers:
       '@nl-rvo/css-tabs':
         specifier: workspace:*
         version: link:../../components/tabs/style
+      '@nl-rvo/css-tag':
+        specifier: workspace:*
+        version: link:../../components/tag/style
       '@nl-rvo/css-toggle':
         specifier: workspace:*
         version: link:../../components/toggle/style
