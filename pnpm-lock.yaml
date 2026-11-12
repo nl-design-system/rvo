@@ -713,6 +713,9 @@ importers:
 
   components/logo/react:
     dependencies:
+      '@nl-rvo/css-link':
+        specifier: workspace:*
+        version: link:../../link/style
       '@nl-rvo/css-logo':
         specifier: workspace:*
         version: link:../style
