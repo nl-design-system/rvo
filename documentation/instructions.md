@@ -111,6 +111,21 @@ Docusaurus pages live in `packages/storybook/components/<Name>/<name>.docpage.md
 - BEM naming. Use SCSS nesting for BEM modifiers (`&--modifier`), pseudo-classes (`&:hover`), and child selectors — not for arbitrary descendants.
 - Import `index.scss` inside `template.tsx`.
 
+### Modern web guidance
+
+For every task that touches HTML, CSS, or client-side JavaScript (focus and hover states, forms, dialogs and popovers, layout, animation, accessibility, performance), always check the [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) skill **before** implementing:
+
+1. Search with `npx -y modern-web-guidance@latest search "<2-5 word query>"`.
+2. Retrieve the matching guides with `npx -y modern-web-guidance@latest retrieve "<id>"` and read them in full.
+3. Check the result against the guide before finishing, and name the guides you applied in the summary.
+
+Rules for using it:
+
+- The rules in this file take precedence over the guides: design tokens, BEM, existing components, and "do not design visual solutions on your own initiative" still apply.
+- Follow the fallback recommendations of a guide for features that are not Baseline widely available.
+- Skip it for backend, tooling, and copy-only changes.
+- The skill is installed locally per developer. Do not add it to this repository.
+
 ### Docusaurus pattern pages (`.docusaurus.mdx`)
 
 - Both `<ComponentExample>` previews and fenced code examples must use **plain HTML with BEM/CSS classes** — never React components or TSX.
