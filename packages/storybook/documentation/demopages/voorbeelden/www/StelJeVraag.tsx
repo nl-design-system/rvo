@@ -208,7 +208,7 @@ const StelJeVraag = () => {
             { label: 'Subsidies en financiering', link: '#' },
             { label: 'Over ons', link: '#' },
             { label: 'Contact', link: '#' },
-            { align: 'right', label: 'Stel je vraag', icon: 'ster', link: '#' },
+            { align: 'right', label: 'Stel uw vraag', icon: 'ster', link: '#' },
             { align: 'right', label: 'Mijn RVO', link: '#', icon: 'user' },
             { align: 'right', label: 'Zoeken', icon: 'zoek', link: '#' },
           ]}
@@ -225,7 +225,7 @@ const StelJeVraag = () => {
           <LayoutFlow gap="xl">
             <div>
               <Heading type="h1" noMargins={true}>
-                Stel je vraag
+                Stel uw vraag
               </Heading>
               <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
                 Heeft u een vraag over subsidies, regelingen of ondernemen? Onze digitale assistent helpt u op weg. De
