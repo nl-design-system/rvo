@@ -9,10 +9,18 @@ const Alerts = () => {
       <LayoutFlow gap="md">
         <MenuBar items={defaultMenuBarItems} size="md" useIcons={true} iconPlacement="left" />
 
-        <Alert maxWidth="lg" kind="info" content="This is an example of a max width info alert." />
-        <Alert maxWidth="lg" kind="warning" content="This is an example a max width warning alert." />
-        <Alert maxWidth="lg" kind="error" content="This is an example a max width error alert." />
-        <Alert maxWidth="lg" kind="success" content="This is an example a max width success alert." />
+        <Alert maxWidth="lg" kind="info">
+          This is an example of a max width info alert.
+        </Alert>
+        <Alert maxWidth="lg" kind="warning">
+          This is an example a max width warning alert.
+        </Alert>
+        <Alert maxWidth="lg" kind="error">
+          This is an example a max width error alert.
+        </Alert>
+        <Alert maxWidth="lg" kind="success">
+          This is an example a max width success alert.
+        </Alert>
 
         <MaxWidthLayout size="sm">
           <main>
