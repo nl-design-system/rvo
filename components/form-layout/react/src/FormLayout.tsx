@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import '@nl-rvo/css-form-layout/form-layout.css';
 import { IFormLayoutProps } from './FormLayout.types';
 

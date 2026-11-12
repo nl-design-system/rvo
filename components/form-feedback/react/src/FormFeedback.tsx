@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React from 'react';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { StatusIcon } from '@nl-rvo/react-status-icon';
 import { IFeedbackProps } from './FormFeedback.types';
 import '@nl-rvo/css-form-feedback/form-feedback.css';

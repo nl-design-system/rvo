@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { Icon } from '@nl-rvo/react-icon';
 import '@nl-rvo/css-toggle/toggle.css';
 import { IToggleProps } from './Toggle.types';

@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import '@nl-rvo/css-item-list/item-list.css';
-import { parseChildren } from '@nl-rvo/component-library-react/src/utils/parseChildren';
+import { parseChildren } from '../../../utils/parseChildren';
 import { IItemListProps } from './ItemList.types';
 
 export const ItemList: React.FC<IItemListProps & React.HTMLAttributes<HTMLUListElement>> = ({

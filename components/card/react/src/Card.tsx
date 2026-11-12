@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { Heading } from '@nl-rvo/react-heading';
 import { Icon } from '@nl-rvo/react-icon';
 import { Link } from '@nl-rvo/react-link';

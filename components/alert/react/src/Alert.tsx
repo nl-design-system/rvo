@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { SyntheticEvent, useState } from 'react';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { Button } from '@nl-rvo/react-button';
 import { Icon } from '@nl-rvo/react-icon';
 import { StatusIcon } from '@nl-rvo/react-status-icon';

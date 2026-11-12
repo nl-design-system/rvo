@@ -4,7 +4,7 @@
  */
 import iconList from '@nl-rvo/assets/icons/index.js';
 import { Icon } from '@nl-rvo/component-library-react';
-import { iconColors } from '@nl-rvo/component-library-react/';
+import { iconColors } from '@nl-rvo/component-library-react';
 import React from 'react';
 
 export const IconOverview: React.FC = ({
