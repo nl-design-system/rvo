@@ -142,6 +142,15 @@ Docusaurus pages live in `packages/storybook/components/<Name>/<name>.docpage.md
 - Design tokens: `@nl-rvo/design-tokens`
 - Build utils: `@nl-rvo/build-utils-css`
 
+### Dependencies between components
+
+A package always depends on packages from its own library (layer), never across layers:
+
+- A React package (`@nl-rvo/react-<component>`) depends on other `@nl-rvo/react-*` packages and uses their components. Example: the Logo renders `<Link>` from `@nl-rvo/react-link`, not an `<a class="rvo-link">` with a dependency on `@nl-rvo/css-link`.
+- A CSS package (`@nl-rvo/css-<component>`) depends on other `@nl-rvo/css-*` packages only.
+- The only link between the two layers is that `@nl-rvo/react-<component>` depends on its own `@nl-rvo/css-<component>`.
+- Use `workspace:*` for every internal dependency.
+
 ## Commands
 
 ```bash
