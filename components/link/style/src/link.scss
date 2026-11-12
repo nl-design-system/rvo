@@ -24,17 +24,16 @@
 }
 
 .rvo-link.rvo-link--normal,
-.rvo-link.rvo-link--normal:hover:not(:focus, :focus-visible, .rvo-link--focus),
-.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal:hover:not(:focus-visible, .rvo-link--focus),
+.rvo-link.rvo-link--normal.rvo-link--hover:not(:focus-visible, .rvo-link--focus),
 .rvo-link.rvo-link--normal:active,
 .rvo-link.rvo-link--normal.rvo-link--active,
-.rvo-link.rvo-link--normal:focus,
 .rvo-link.rvo-link--normal:focus-visible,
 .rvo-link.rvo-link--normal.rvo-link--focus {
   font-weight: var(--rvo-font-weight-normal);
 }
 
-.rvo-link--no-underline:not(:focus, :hover, .rvo-link--hover, .rvo-link--focus) {
+.rvo-link--no-underline:not(:focus-visible, :hover, .rvo-link--hover, .rvo-link--focus) {
   text-decoration: none;
 }
 
@@ -45,15 +44,15 @@
 }
 
 // Hover
-.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+.rvo-link:hover:not(:focus-visible, .rvo-link--focus),
+.rvo-link--hover:not(:focus-visible, .rvo-link--focus) {
   background-color: var(--rvo-link-hover-background-color);
   color: var(--rvo-link-hover-color);
   font-weight: var(--rvo-link-hover-font-weight);
   text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
 }
 
-.rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+.rvo-link--lintblauw:hover:not(:focus-visible, .rvo-link--focus) {
   color: var(--rvo-color-lintblauw);
 }
 
@@ -71,7 +70,6 @@
 }
 
 // Focus
-.rvo-link:focus,
 .rvo-link:focus-visible,
 .rvo-link--focus {
   color: var(--rvo-link-focus-color);
@@ -85,8 +83,8 @@
   background-color: var(--rvo-link-icon-background-color);
 }
 
-.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon,
-.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) .rvo-link__icon {
+.rvo-link:hover:not(:focus-visible, .rvo-link--focus) .rvo-link__icon,
+.rvo-link--hover:not(:focus-visible, .rvo-link--focus) .rvo-link__icon {
   background-color: var(--rvo-link-hover-icon-background-color);
 }
 
@@ -95,7 +93,6 @@
   background-color: var(--rvo-link-active-icon-background-color);
 }
 
-.rvo-link:focus .rvo-link__icon,
 .rvo-link:focus-visible .rvo-link__icon,
 .rvo-link--focus .rvo-link__icon {
   background-color: var(--rvo-link-focus-icon-background-color);
@@ -112,8 +109,8 @@
 .rvo-link--zwart {
   color: var(--rvo-color-zwart);
 
-  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+  &.rvo-link:hover:not(:focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus-visible, .rvo-link--focus):hover {
     color: var(--rvo-color-donkerblauw);
   }
 }
@@ -121,8 +118,8 @@
 .rvo-link--wit {
   color: var(--rvo-color-wit);
 
-  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+  &.rvo-link:hover:not(:focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus-visible, .rvo-link--focus):hover {
     color: var(--rvo-color-grijs-100);
   }
 }
@@ -130,8 +127,8 @@
 .rvo-link--grijs-700 {
   color: var(--rvo-color-grijs-700);
 
-  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-  .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus):hover {
+  &.rvo-link:hover:not(:focus-visible, .rvo-link--focus),
+  .rvo-link--hover:not(:focus-visible, .rvo-link--focus):hover {
     color: var(--rvo-color-donkerblauw);
   }
 }
@@ -162,8 +159,8 @@
     background-color: var(--rvo-link-call-to-action-icon-background-color);
   }
 
-  &.rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-  &.rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  &.rvo-link:hover:not(:focus-visible, .rvo-link--focus),
+  &.rvo-link--hover:not(:focus-visible, .rvo-link--focus) {
     background-color: var(--rvo-link-call-to-action-hover-background-color);
     border-color: var(--rvo-link-call-to-action-hover-border-color);
     color: var(--rvo-link-call-to-action-hover-color);
@@ -175,7 +172,6 @@
     }
   }
 
-  &.rvo-link:focus,
   &.rvo-link:focus-visible,
   &.rvo-link--focus {
     background-color: var(--rvo-link-call-to-action-background-color);

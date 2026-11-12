@@ -60,7 +60,7 @@ $rvo-alert-paddings: xs, sm, md, lg, xl, 2xl;
     min-inline-size: var(--rvo-size-xl);
   }
 
-  .rvo-link--lintblauw:hover:not(:focus, :focus-visible, .rvo-link--focus) {
+  .rvo-link--lintblauw:hover:not(:focus-visible, .rvo-link--focus) {
     color: var(--rvo-color-lintblauw);
   }
 }
