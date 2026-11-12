@@ -4,8 +4,8 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import '@nl-rvo/css-link/link.css';
 import '@nl-rvo/css-logo/logo.css';
+import { Link } from '@nl-rvo/react-link';
 import { ILogoProps } from './Logo.types';
 
 export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> = ({
@@ -30,13 +30,15 @@ export const Logo: React.FC<ILogoProps & React.HTMLAttributes<HTMLDivElement>> =
       </div>
       <div className="rvo-logo__wordmark">
         {link ? (
-          <a
+          <Link
             href={link}
-            className="rvo-link rvo-link--lintblauw rvo-link--no-underline rvo-logo__title rvo-logo__title-link"
+            color="lintblauw"
+            noUnderline
+            className="rvo-logo__title rvo-logo__title-link"
             title={linkTitle}
           >
             {title}
-          </a>
+          </Link>
         ) : (
           <p className="rvo-logo__title">{title}</p>
         )}

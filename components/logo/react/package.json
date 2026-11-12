@@ -36,7 +36,7 @@
     "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
   },
   "dependencies": {
-    "@nl-rvo/css-link": "workspace:*",
-    "@nl-rvo/css-logo": "workspace:*"
+    "@nl-rvo/css-logo": "workspace:*",
+    "@nl-rvo/react-link": "workspace:*"
   }
 }
