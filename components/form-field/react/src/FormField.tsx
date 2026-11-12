@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { PropsWithChildren } from 'react';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { ExpandableContent } from '@nl-rvo/react-expandable-content';
 import { Feedback } from '@nl-rvo/react-form-feedback';
 import '@nl-rvo/css-form-field/form-field.css';

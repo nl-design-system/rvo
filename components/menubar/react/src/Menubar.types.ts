@@ -28,8 +28,10 @@ export interface IMenuBarProps {
   iconPlacement?: 'left' | 'right';
   maxWidth?: 'sm' | 'md' | 'lg';
   children?: ReactNode | undefined;
+  closeButtonText?: string;
   horizontalRule?: boolean;
   linkColor?: 'donkerblauw' | 'hemelblauw' | 'lintblauw' | 'grijs-700' | 'zwart';
+  LinkComponent?: LinkCustomLinkComponent;
 }
 
 export interface SubMenuProps {

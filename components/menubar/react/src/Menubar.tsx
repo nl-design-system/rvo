@@ -22,6 +22,8 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
   horizontalRule,
   linkColor = 'lintblauw',
   children,
+  closeButtonText = 'Sluiten',
+  LinkComponent,
   ...rootElementProps
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,7 +64,7 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
         <div className="rvo-menubar__container-close">
           <Button kind="subtle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Icon icon="kruis" size={size as any} className="rvo-mobile-menu__open-icon" />
-            Sluiten
+            {closeButtonText}
           </Button>
         </div>
 
@@ -78,6 +80,7 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
               isSubmenuVisible={activeSubmenu === item.label}
               handleItemClick={() => handleItemClick(item.label)}
               maxWidth={maxWidth}
+              LinkComponent={LinkComponent}
               {...item}
             />
           ))}
@@ -95,6 +98,7 @@ export const MenuBar: React.FC<IMenuBarProps & React.HTMLAttributes<HTMLDivEleme
               isSubmenuVisible={activeSubmenu === item.label}
               handleItemClick={() => handleItemClick(item.label)}
               maxWidth={maxWidth}
+              LinkComponent={LinkComponent}
               {...item}
             />
           ))}

@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { Hr } from '@nl-rvo/react-horizontal-rule';
 import { Link } from '@nl-rvo/react-link';
 import '@nl-rvo/css-footer/footer.css';

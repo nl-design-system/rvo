@@ -27,13 +27,13 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        file: packageJson.main,
+        file: packageJson.exports['.'].require,
         format: 'cjs',
         sourcemap: true,
         globals: outputGlobals,
       },
       {
-        file: packageJson.module,
+        file: packageJson.exports['.'].import,
         format: 'esm',
         sourcemap: true,
         globals: outputGlobals,
@@ -42,10 +42,9 @@ export default [
     external: [/@babel\/runtime/, 'react-dom', 'react'],
     plugins: [
       postcss({
-        extensions: ['.css'],
-        minimize: true,
         extract: false,
-        inject: false,
+        inject: true,
+        minimize: true,
       }),
       copy({
         targets: [
