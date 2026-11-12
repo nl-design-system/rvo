@@ -1,5 +1,11 @@
 # `@nl-rvo/css-menubar`
 
+## 1.7.2
+
+### Patch Changes
+
+- 8af4738: Change the value of the media query until the component displays the mobile version
+
 ## 1.7.1
 
 ### Patch Changes

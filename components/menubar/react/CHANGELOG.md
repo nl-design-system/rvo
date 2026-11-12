@@ -1,5 +1,19 @@
 # @nl-rvo/react-menubar
 
+## 1.0.3
+
+### Patch Changes
+
+- 8af4738: Added the propeties LinkComponent and closeButtonText
+- Updated dependencies [1bbc261]
+- Updated dependencies [8af4738]
+- Updated dependencies [8af4738]
+  - @nl-rvo/react-link@1.0.3
+  - @nl-rvo/react-max-width-layout@1.0.3
+  - @nl-rvo/css-menubar@1.7.2
+  - @nl-rvo/react-button@1.0.3
+  - @nl-rvo/react-dialog@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @nl-rvo/react-form-radio-button
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [fc941a9]
+  - @nl-rvo/css-form-radio-button@1.5.2
+
 ## 1.0.2
 
 ### Patch Changes

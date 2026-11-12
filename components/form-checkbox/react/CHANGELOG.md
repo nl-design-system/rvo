@@ -1,5 +1,12 @@
 # @nl-rvo/react-form-checkbox
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [fc941a9]
+  - @nl-rvo/css-form-checkbox@1.4.2
+
 ## 1.0.2
 
 ### Patch Changes

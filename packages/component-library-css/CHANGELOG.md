@@ -1,5 +1,74 @@
 # @nl-rvo/component-library-css
 
+## 5.0.3
+
+### Patch Changes
+
+- d0debaf: fix(button, link): replace focus ring with underline, align hover/focus styles
+
+  All button variants now show a 4px underline on focus instead of the Utrecht focus ring. Solid variants (primary, secondary, quaternary, warning) use their existing text color for the underline. Subtle, tertiary, and warning-subtle keep their base colors (donkerblauw, hemelblauw, rood) on focus and when hovering a focused button. Hover also adds a 2px underline for all variants without changing background or text color.
+
+  The link component now uses a text-underline-offset of 25% at all states (base, hover, active, focus). This ensures the underline remains visible even with descender-heavy text — without sufficient offset the line was hidden behind characters like g, j, and y.
+
+- fc941a9: fix(form-field, radio-button, checkbox): make labels fully clickable and show pointer cursor
+
+  The form-field label had `id={id}` instead of `htmlFor={id}`, which meant clicking
+  the label did not activate the associated form control (e.g. checkbox, text input).
+  Also fixes a mismatch where `aria-labelledby` referenced `${id}-label` but the
+  label's id was `${id}`. Radio button and checkbox labels now show a pointer cursor
+  on hover (via `--utrecht-action-activate-cursor`) and a not-allowed cursor when disabled.
+
+- b56f374: fix(logo): use rvo-link states for the logo title link
+
+  The logo title link no longer draws a large double outline around the whole logo on focus. The title is now a regular `rvo-link` (lintblauw), so it shares the focus state of every other link. Font weight stays the same in every state, there is no underline on hover and no background on focus. The whole logo stays clickable through the existing overlay.
+
+- a3e14e9: Align textarea styling with textinput
+
+  - Switch textarea to render `utrecht-textarea` classes so it inherits padding,
+    font-family, font-size, color, and border tokens from the utrecht base +
+    `--utrecht-form-control-*` tokens.
+  - Focus and invalid-focus states now match textinput exactly (outline
+    color/width/style + `--rvo-textbox-outline-offset`,
+    `--rvo-textbox-invalid-focus-*`).
+  - Widths use `--utrecht-textarea-max-inline-size`
+    (`--rvo-textbox-{xs,sm,md,lg}-width`) instead of hardcoded `inline-size`.
+  - Remaining-chars span renamed from `rvo-textarea__remaining-chars` to
+    `utrecht-textarea-remaining-chars` to align with textinput.
+
+- e52e9fd: fix(link): show link focus styles on :focus-visible only
+
+  Link focus styles were applied on `:focus`, so they also appeared after a mouse click. They now follow `:focus-visible`, which keeps the clear focus indicator for keyboard users and drops it for pointer users. The hover exclusions in link, footer and alert and the focus underline in the progress tracker follow the same rule.
+
+- 5fc9b29: fix(link): update call-to-action style and token values
+
+  Add font-size (18px) and bold font-weight to the call-to-action variant. Remove Utrecht focus outline in favour of text-decoration underline. Fix outline variant hover colors to use `rvo.color.violet` instead of `rvo.color.violet-750`.
+
+- 7b42029: Fix unresolvable `@import` references in the CSS bundle. Removed the import of the no longer existing `css-form-field-label` package (its styles are part of `css-form-field`), corrected the package names of `css-form-file-input`, `css-form-text-input` and the utility packages, and added `css-skeleton` and `css-tag` as dependencies so they are installed together with the component library.
+- Updated dependencies [d0debaf]
+- Updated dependencies [fc941a9]
+- Updated dependencies [b56f374]
+- Updated dependencies [a3e14e9]
+- Updated dependencies [e52e9fd]
+- Updated dependencies [5fc9b29]
+- Updated dependencies [8af4738]
+  - @nl-rvo/css-button@2.2.2
+  - @nl-rvo/css-link@1.7.2
+  - @nl-rvo/utility-background@1.1.2
+  - @nl-rvo/utility-border@1.1.2
+  - @nl-rvo/utility-text@1.1.2
+  - @nl-rvo/css-form-checkbox@1.4.2
+  - @nl-rvo/css-form-radio-button@1.5.2
+  - @nl-rvo/css-logo@1.5.2
+  - @nl-rvo/css-form-textarea@1.6.2
+  - @nl-rvo/css-footer@1.11.2
+  - @nl-rvo/css-alert@1.7.2
+  - @nl-rvo/css-progress-tracker@1.4.2
+  - @nl-rvo/css-menubar@1.7.2
+  - @nl-rvo/utility-margin@2.1.1
+  - @nl-rvo/utility-padding@2.1.1
+  - @nl-rvo/utility-text-types@2.1.1
+  - @nl-rvo/css-accordion@1.4.2
+
 ## 5.0.2
 
 ### Patch Changes
