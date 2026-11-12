@@ -60,14 +60,13 @@
       padding-block-start: 0;
     }
 
-    .rvo-link:hover:not(:focus, :focus-visible, .rvo-link--focus),
-    .rvo-link--hover:not(:focus, :focus-visible, .rvo-link--focus) {
+    .rvo-link:hover:not(:focus-visible, .rvo-link--focus),
+    .rvo-link--hover:not(:focus-visible, .rvo-link--focus) {
       color: var(--rvo-footer-column-itemlink-hover-color);
       font-weight: var(--rvo-footer-column-itemlink-hover-font-weight);
       text-decoration: underline;
     }
 
-    .rvo-link:focus,
     .rvo-link:focus-visible,
     .rvo-link--focus {
       background-color: var(--rvo-footer-column-itemlink-focus-background-color);
