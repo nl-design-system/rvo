@@ -196,7 +196,7 @@ const Documenten = () => {
               </div>
 
               {/* Offertes */}
-              <div className="rvo-layout-column rvo-layout-gap--xl">
+              <div className="rvo-layout-column rvo-layout-gap--sm">
                 <Heading type="h2" noMargins>
                   Offertes
                 </Heading>
@@ -278,7 +278,7 @@ const Documenten = () => {
               </div>
 
               {/* Tekeningen */}
-              <div className="rvo-layout-column rvo-layout-gap--xl">
+              <div className="rvo-layout-column rvo-layout-gap--sm">
                 <Heading type="h2" noMargins>
                   Tekeningen
                 </Heading>
