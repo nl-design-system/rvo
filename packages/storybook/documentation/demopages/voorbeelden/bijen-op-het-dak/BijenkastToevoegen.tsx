@@ -231,7 +231,7 @@ const BijenkastToevoegen = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} noValidate>
-                  <LayoutFlow>
+                  <LayoutFlow gap="xl">
                     {hasErrors && (
                       <div ref={errorSummaryRef} tabIndex={-1}>
                         <Alert kind="error" padding="md">

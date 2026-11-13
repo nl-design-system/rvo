@@ -163,7 +163,7 @@ const PandWijzigen = () => {
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                  <LayoutFlow>
+                  <LayoutFlow gap="xl">
                     <Fieldset legend="Locatie van het gebouw">
                       <FormField label="Land" warningText="Alleen gebouwen in Nederland komen in aanmerking.">
                         <FormField.Text disabled={true} value="Nederland" />
