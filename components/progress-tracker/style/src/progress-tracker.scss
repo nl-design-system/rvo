@@ -60,15 +60,6 @@
   padding-block-start: var(--rvo-progress-tracker-step-link-padding-block-start);
 }
 
-.rvo-progress-tracker__step-link.rvo-link {
-  text-decoration: none;
-}
-
-.rvo-progress-tracker__step-link.rvo-link:hover,
-.rvo-progress-tracker__step-link.rvo-link:focus-visible {
-  text-decoration: underline;
-}
-
 .rvo-progress-tracker__step--start {
   font-size: var(--rvo-progress-tracker-step-start-font-size);
   font-weight: var(--rvo-progress-tracker-step-start-font-weight);
