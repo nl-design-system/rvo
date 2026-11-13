@@ -1,5 +1,107 @@
 # @nl-rvo/component-library-react
 
+## 8.0.4
+
+### Patch Changes
+
+- d0debaf: fix(button, link): replace focus ring with underline, align hover/focus styles
+
+  All button variants now show a 4px underline on focus instead of the Utrecht focus ring. Solid variants (primary, secondary, quaternary, warning) use their existing text color for the underline. Subtle, tertiary, and warning-subtle keep their base colors (donkerblauw, hemelblauw, rood) on focus and when hovering a focused button. Hover also adds a 2px underline for all variants without changing background or text color.
+
+  The link component now uses a text-underline-offset of 25% at all states (base, hover, active, focus). This ensures the underline remains visible even with descender-heavy text — without sufficient offset the line was hidden behind characters like g, j, and y.
+
+- 1bbc261: Call-to-action link icons now follow the call-to-action text color (white for the default variant, violet for the outline variant) when no `iconColor` is set. Other links keep their existing icon color behaviour.
+- 0d60d9a: fix(form-feedback): use correct icon color for error state
+
+  The error icon was always rendered with the warning class (`rvo-status-icon-waarschuwing`), causing it to appear yellow. Removed the hardcoded className so StatusIcon applies `rvo-status-icon-foutmelding` automatically based on its type prop, rendering the icon in red as intended.
+
+- fc941a9: fix(form-field, radio-button, checkbox): make labels fully clickable and show pointer cursor
+
+  The form-field label had `id={id}` instead of `htmlFor={id}`, which meant clicking
+  the label did not activate the associated form control (e.g. checkbox, text input).
+  Also fixes a mismatch where `aria-labelledby` referenced `${id}-label` but the
+  label's id was `${id}`. Radio button and checkbox labels now show a pointer cursor
+  on hover (via `--utrecht-action-activate-cursor`) and a not-allowed cursor when disabled.
+
+- b56f374: fix(logo): use rvo-link states for the logo title link
+
+  The logo title link no longer draws a large double outline around the whole logo on focus. The title is now a regular `rvo-link` (lintblauw), so it shares the focus state of every other link. Font weight stays the same in every state, there is no underline on hover and no background on focus. The whole logo stays clickable through the existing overlay.
+
+- a3e14e9: Align textarea styling with textinput
+
+  - Switch textarea to render `utrecht-textarea` classes so it inherits padding,
+    font-family, font-size, color, and border tokens from the utrecht base +
+    `--utrecht-form-control-*` tokens.
+  - Focus and invalid-focus states now match textinput exactly (outline
+    color/width/style + `--rvo-textbox-outline-offset`,
+    `--rvo-textbox-invalid-focus-*`).
+  - Widths use `--utrecht-textarea-max-inline-size`
+    (`--rvo-textbox-{xs,sm,md,lg}-width`) instead of hardcoded `inline-size`.
+  - Remaining-chars span renamed from `rvo-textarea__remaining-chars` to
+    `utrecht-textarea-remaining-chars` to align with textinput.
+
+- e52e9fd: fix(link): show link focus styles on :focus-visible only
+
+  Link focus styles were applied on `:focus`, so they also appeared after a mouse click. They now follow `:focus-visible`, which keeps the clear focus indicator for keyboard users and drops it for pointer users. The hover exclusions in link, footer and alert and the focus underline in the progress tracker follow the same rule.
+
+- 5fc9b29: fix(link): update call-to-action style and token values
+
+  Add font-size (18px) and bold font-weight to the call-to-action variant. Remove Utrecht focus outline in favour of text-decoration underline. Fix outline variant hover colors to use `rvo.color.violet` instead of `rvo.color.violet-750`.
+
+- 8af4738: Removed main, module and types in added exports. Roll up configuration updated to inject missing css
+- Updated dependencies [d0debaf]
+- Updated dependencies [1bbc261]
+- Updated dependencies [0d60d9a]
+- Updated dependencies [8af4738]
+- Updated dependencies [8af4738]
+- Updated dependencies [fc941a9]
+- Updated dependencies [b56f374]
+- Updated dependencies [a3e14e9]
+- Updated dependencies [e52e9fd]
+- Updated dependencies [5fc9b29]
+- Updated dependencies [7b42029]
+  - @nl-rvo/component-library-css@5.0.3
+  - @nl-rvo/react-link@1.0.3
+  - @nl-rvo/react-form-feedback@1.0.3
+  - @nl-rvo/react-alert@1.0.3
+  - @nl-rvo/react-card@1.0.3
+  - @nl-rvo/react-card-experimental@1.0.3
+  - @nl-rvo/react-data-list@1.0.3
+  - @nl-rvo/react-footer@1.0.3
+  - @nl-rvo/react-form-field@1.0.4
+  - @nl-rvo/react-form-layout@1.0.3
+  - @nl-rvo/react-heading@1.0.3
+  - @nl-rvo/react-hero@1.0.3
+  - @nl-rvo/react-item-list@1.0.3
+  - @nl-rvo/react-layout-flow@1.0.3
+  - @nl-rvo/react-max-width-layout@1.0.3
+  - @nl-rvo/react-ordered-unordered-list@1.0.3
+  - @nl-rvo/react-paragraph@1.0.3
+  - @nl-rvo/react-quote@1.0.3
+  - @nl-rvo/react-scrollable-content@1.0.3
+  - @nl-rvo/react-sidebar-layout@1.0.3
+  - @nl-rvo/react-toggle@1.0.3
+  - @nl-rvo/react-menubar@1.0.3
+  - @nl-rvo/react-logo@1.0.3
+  - @nl-rvo/react-form-textarea@1.0.3
+  - @nl-rvo/react-button@1.0.3
+  - @nl-rvo/react-breadcrumbs@1.0.3
+  - @nl-rvo/react-checkbox-filter@1.0.4
+  - @nl-rvo/react-form-autocomplete@1.0.4
+  - @nl-rvo/react-page-number-navigation@1.0.3
+  - @nl-rvo/react-progress-tracker@1.0.3
+  - @nl-rvo/react-skip-link@1.0.3
+  - @nl-rvo/react-accordion@1.0.3
+  - @nl-rvo/react-form-checkbox@1.0.3
+  - @nl-rvo/react-form-radio-button@1.0.3
+  - @nl-rvo/react-header@1.0.3
+  - @nl-rvo/react-action-group@1.0.3
+  - @nl-rvo/react-dialog@1.0.3
+  - @nl-rvo/react-expandable-table@1.0.4
+  - @nl-rvo/react-loader@1.0.3
+  - @nl-rvo/react-form-checkbox-group@1.0.3
+  - @nl-rvo/react-form-radio-button-group@1.0.3
+
 ## 8.0.3
 
 ### Patch Changes

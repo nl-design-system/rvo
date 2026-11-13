@@ -1,5 +1,12 @@
 # @nl-rvo/react-breadcrumbs
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [1bbc261]
+  - @nl-rvo/react-link@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

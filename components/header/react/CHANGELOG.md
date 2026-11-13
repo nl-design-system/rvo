@@ -1,5 +1,12 @@
 # @nl-rvo/react-header
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [b56f374]
+  - @nl-rvo/react-logo@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
