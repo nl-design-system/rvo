@@ -317,59 +317,61 @@ const PandToevoegen = () => {
                       </FormField>
                     </Fieldset>
 
-                    <div className="rvo-layout-column rvo-layout-gap--xl">
+                    <div className="rvo-layout-column rvo-layout-gap--xs">
                       <Heading type="h2" noMargins>
                         Informatie over het dak
                       </Heading>
-                      <div
-                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                          setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
-                        }
-                      >
-                        <FormField id="daktype" label="Type dak" errorText={errors.daktype?.fieldText}>
-                          <FormField.RadioButtonGroup
-                            name="daktype"
-                            invalid={!!errors.daktype}
-                            options={[
-                              { id: 'plat-dak', label: 'Plat dak' },
-                              { id: 'schuin-dak', label: 'Schuin dak' },
-                            ]}
-                          />
-                        </FormField>
-                      </div>
-                      <FormField
-                        id="dakoppervlak"
-                        label="Dakoppervlak (m²)"
-                        helperText="Het beschikbare dakoppervlak waarop de bijenkasten worden geplaatst."
-                        errorText={errors.dakoppervlak?.fieldText}
-                      >
-                        <FormField.Text
-                          sizeInput="sm"
-                          value={dakoppervlak}
-                          onChange={(e) => setDakoppervlak(e.target.value)}
-                          invalid={!!errors.dakoppervlak}
-                        />
-                      </FormField>
-                      <div
-                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                          setBereikbaar(e.target.id === 'bereikbaar-ja' ? 'Ja' : 'Nee')
-                        }
-                      >
-                        <FormField
-                          id="bereikbaar"
-                          label="Is het dak bereikbaar voor onderhoud?"
-                          helperText="Het dak moet minimaal 2 keer per jaar bereikbaar zijn voor de imker."
-                          errorText={errors.bereikbaar?.fieldText}
+                      <div className="rvo-layout-column rvo-layout-gap--xl">
+                        <div
+                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
+                          }
                         >
-                          <FormField.RadioButtonGroup
-                            name="dak-bereikbaar"
-                            invalid={!!errors.bereikbaar}
-                            options={[
-                              { id: 'bereikbaar-ja', label: 'Ja' },
-                              { id: 'bereikbaar-nee', label: 'Nee' },
-                            ]}
+                          <FormField id="daktype" label="Type dak" errorText={errors.daktype?.fieldText}>
+                            <FormField.RadioButtonGroup
+                              name="daktype"
+                              invalid={!!errors.daktype}
+                              options={[
+                                { id: 'plat-dak', label: 'Plat dak' },
+                                { id: 'schuin-dak', label: 'Schuin dak' },
+                              ]}
+                            />
+                          </FormField>
+                        </div>
+                        <FormField
+                          id="dakoppervlak"
+                          label="Dakoppervlak (m²)"
+                          helperText="Het beschikbare dakoppervlak waarop de bijenkasten worden geplaatst."
+                          errorText={errors.dakoppervlak?.fieldText}
+                        >
+                          <FormField.Text
+                            sizeInput="sm"
+                            value={dakoppervlak}
+                            onChange={(e) => setDakoppervlak(e.target.value)}
+                            invalid={!!errors.dakoppervlak}
                           />
                         </FormField>
+                        <div
+                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            setBereikbaar(e.target.id === 'bereikbaar-ja' ? 'Ja' : 'Nee')
+                          }
+                        >
+                          <FormField
+                            id="bereikbaar"
+                            label="Is het dak bereikbaar voor onderhoud?"
+                            helperText="Het dak moet minimaal 2 keer per jaar bereikbaar zijn voor de imker."
+                            errorText={errors.bereikbaar?.fieldText}
+                          >
+                            <FormField.RadioButtonGroup
+                              name="dak-bereikbaar"
+                              invalid={!!errors.bereikbaar}
+                              options={[
+                                { id: 'bereikbaar-ja', label: 'Ja' },
+                                { id: 'bereikbaar-nee', label: 'Nee' },
+                              ]}
+                            />
+                          </FormField>
+                        </div>
                       </div>
                     </div>
 
