@@ -7,6 +7,7 @@ import {
   Grid,
   Header,
   Heading,
+  Hr,
   LayoutFlow,
   Link,
   List,
@@ -280,6 +281,8 @@ const Documenten = () => {
                   )}
                 </LayoutFlow>
               </div>
+
+              <Hr />
 
               {/* Tekeningen */}
               <div className="rvo-layout-column rvo-layout-gap--xs">
