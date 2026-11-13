@@ -1,5 +1,13 @@
 # @nl-rvo/react-menubar
 
+## 1.0.4
+
+### Patch Changes
+
+- @nl-rvo/react-link@1.0.4
+  - @nl-rvo/react-button@1.0.4
+  - @nl-rvo/react-dialog@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes
