@@ -106,6 +106,8 @@ Docusaurus pages live in `packages/storybook/components/<Name>/<name>.docpage.md
 ### SCSS
 
 - Always use design tokens (CSS custom properties); never hardcode colours, spacing, or typography.
+- Follow the [NL Design System token architecture](https://nldesignsystem.nl/handboek/huisstijl/design-tokens/): a component's SCSS only references its own component tokens (`--rvo-<component>-*`). Component tokens in turn reference common or brand tokens, and that mapping lives in the token files, not in the SCSS. Do not reference common tokens such as `--rvo-space-*` or `--rvo-font-size-*` directly in component SCSS. Create a component token instead, for example `--rvo-<component>-<size>-gap`.
+- Never add fallback values to `var()` for design tokens (`var(--rvo-tabs-gap, 8px)`). Component tokens are always defined by `@nl-rvo/design-tokens`; a fallback hides a missing or misnamed token.
 - No inline styles. No custom CSS outside the component's own `index.scss`.
 - BEM naming. Use SCSS nesting for BEM modifiers (`&--modifier`), pseudo-classes (`&:hover`), and child selectors — not for arbitrary descendants.
 - Import `index.scss` inside `template.tsx`.
