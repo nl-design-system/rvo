@@ -9,6 +9,7 @@ import {
   Heading,
   LayoutFlow,
   Link,
+  List,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -234,11 +235,14 @@ const Documenten = () => {
                         label="Offerte uploaden"
                         expandableHelperText={{ title: 'Voorwaarden voor de offerte' }}
                         helperText={
-                          <ul className="rvo-ul rvo-ul--no-margin">
-                            <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
-                            <li>De offerte is opgesteld door een gecertificeerde installateur.</li>
-                            <li>De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.</li>
-                          </ul>
+                          <List
+                            type="unordered"
+                            items={[
+                              'Het bestand is in PDF-formaat en maximaal 10 MB.',
+                              'De offerte is opgesteld door een gecertificeerde installateur.',
+                              'De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.',
+                            ]}
+                          />
                         }
                       >
                         <FormField.FileInput accept=".pdf" onChange={handleOfferteChange} />
@@ -316,11 +320,14 @@ const Documenten = () => {
                         label="Tekening uploaden"
                         expandableHelperText={{ title: 'Voorwaarden voor de tekening' }}
                         helperText={
-                          <ul className="rvo-ul rvo-ul--no-margin">
-                            <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
-                            <li>De tekening toont een bovenaanzicht van het dak.</li>
-                            <li>De locatie van de bijenkasten is duidelijk aangegeven.</li>
-                          </ul>
+                          <List
+                            type="unordered"
+                            items={[
+                              'Het bestand is in PDF-formaat en maximaal 10 MB.',
+                              'De tekening toont een bovenaanzicht van het dak.',
+                              'De locatie van de bijenkasten is duidelijk aangegeven.',
+                            ]}
+                          />
                         }
                       >
                         <FormField.FileInput accept=".pdf" onChange={handleTekeningChange} />
