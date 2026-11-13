@@ -186,7 +186,10 @@ const PandWijzigen = () => {
                       </FormField>
                     </Fieldset>
 
-                    <Fieldset legend="Informatie over het dak">
+                    <div className="rvo-layout-column rvo-layout-gap--xl">
+                      <Heading type="h2" noMargins>
+                        Informatie over het dak
+                      </Heading>
                       <div
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                           setDaktype(e.target.id === 'plat-dak' ? 'Plat dak' : 'Schuin dak')
@@ -227,7 +230,7 @@ const PandWijzigen = () => {
                           />
                         </FormField>
                       </div>
-                    </Fieldset>
+                    </div>
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">

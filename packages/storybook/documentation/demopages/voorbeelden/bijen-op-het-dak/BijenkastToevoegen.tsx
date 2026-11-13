@@ -3,7 +3,6 @@ import {
   Alert,
   Button,
   Dialog,
-  Fieldset,
   Footer,
   FormField,
   Grid,
@@ -252,7 +251,7 @@ const BijenkastToevoegen = () => {
                       </div>
                     )}
 
-                    <Fieldset legend="Bijenkastgegevens">
+                    <div className="rvo-layout-column rvo-layout-gap--xl">
                       <FormField
                         id="pand"
                         label="Gebouw"
@@ -307,7 +306,7 @@ const BijenkastToevoegen = () => {
                           />
                         </FormField>
                       </div>
-                    </Fieldset>
+                    </div>
 
                     <ActionGroup>
                       <Button
