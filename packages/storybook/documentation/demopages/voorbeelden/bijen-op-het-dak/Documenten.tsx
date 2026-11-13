@@ -2,7 +2,6 @@ import {
   ActionGroup,
   Button,
   Dialog,
-  Fieldset,
   Footer,
   FormField,
   Grid,
@@ -197,7 +196,10 @@ const Documenten = () => {
               </div>
 
               {/* Offertes */}
-              <Fieldset legend="Offertes">
+              <div className="rvo-layout-column rvo-layout-gap--xl">
+                <Heading type="h2" noMargins>
+                  Offertes
+                </Heading>
                 <LayoutFlow gap="sm">
                   <p className="rvo-paragraph rvo-paragraph--no-spacing">
                     Upload de offerte(s) van uw installateur voor de plaatsing van de bijenkasten.
@@ -273,10 +275,13 @@ const Documenten = () => {
                     </Link>
                   )}
                 </LayoutFlow>
-              </Fieldset>
+              </div>
 
               {/* Tekeningen */}
-              <Fieldset legend="Tekeningen">
+              <div className="rvo-layout-column rvo-layout-gap--xl">
+                <Heading type="h2" noMargins>
+                  Tekeningen
+                </Heading>
                 <LayoutFlow gap="sm">
                   <p className="rvo-paragraph rvo-paragraph--no-spacing">
                     Upload de tekeningen of plattegronden van de gebouwen waarop u bijenkasten wilt plaatsen.
@@ -352,7 +357,7 @@ const Documenten = () => {
                     </Link>
                   )}
                 </LayoutFlow>
-              </Fieldset>
+              </div>
 
               <ActionGroup>
                 <Button
