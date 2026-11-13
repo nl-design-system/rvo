@@ -67,15 +67,17 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
         >
           {label}
         </label>
-        <div className="utrecht-form-field-description" id={helperTextId}>
-          {expandableHelperText ? (
-            <ExpandableContent title={expandableHelperText.title ?? ''}>
-              {parseContentMarkup(helperText)}
-            </ExpandableContent>
-          ) : (
-            parseContentMarkup(helperText)
-          )}
-        </div>
+        {(helperText || expandableHelperText) && (
+          <div className="utrecht-form-field-description" id={helperTextId}>
+            {expandableHelperText ? (
+              <ExpandableContent title={expandableHelperText.title ?? ''}>
+                {parseContentMarkup(helperText)}
+              </ExpandableContent>
+            ) : (
+              parseContentMarkup(helperText)
+            )}
+          </div>
+        )}
         {errorText && <Feedback type="foutmelding">{errorText}</Feedback>}
         {warningText && <Feedback type="waarschuwing">{warningText}</Feedback>}
       </div>
