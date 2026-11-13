@@ -2,14 +2,15 @@ import {
   ActionGroup,
   Button,
   Dialog,
-  Fieldset,
   Footer,
   FormField,
   Grid,
   Header,
   Heading,
+  Hr,
   LayoutFlow,
   Link,
+  List,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -176,7 +177,7 @@ const Documenten = () => {
       <MaxWidthLayout size="md" className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
         <Grid
           columns={isDesktop ? 'two' : 'one'}
-          gap="xl"
+          gap="2xl"
           division={isDesktop ? '1fr 3fr' : undefined}
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
@@ -197,7 +198,10 @@ const Documenten = () => {
               </div>
 
               {/* Offertes */}
-              <Fieldset legend="Offertes">
+              <div className="rvo-layout-column rvo-layout-gap--xs">
+                <Heading type="h2" noMargins>
+                  Offertes
+                </Heading>
                 <LayoutFlow gap="sm">
                   <p className="rvo-paragraph rvo-paragraph--no-spacing">
                     Upload de offerte(s) van uw installateur voor de plaatsing van de bijenkasten.
@@ -232,11 +236,14 @@ const Documenten = () => {
                         label="Offerte uploaden"
                         expandableHelperText={{ title: 'Voorwaarden voor de offerte' }}
                         helperText={
-                          <ul>
-                            <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
-                            <li>De offerte is opgesteld door een gecertificeerde installateur.</li>
-                            <li>De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.</li>
-                          </ul>
+                          <List
+                            type="unordered"
+                            items={[
+                              'Het bestand is in PDF-formaat en maximaal 10 MB.',
+                              'De offerte is opgesteld door een gecertificeerde installateur.',
+                              'De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.',
+                            ]}
+                          />
                         }
                       >
                         <FormField.FileInput accept=".pdf" onChange={handleOfferteChange} />
@@ -273,10 +280,15 @@ const Documenten = () => {
                     </Link>
                   )}
                 </LayoutFlow>
-              </Fieldset>
+              </div>
+
+              <Hr />
 
               {/* Tekeningen */}
-              <Fieldset legend="Tekeningen">
+              <div className="rvo-layout-column rvo-layout-gap--xs">
+                <Heading type="h2" noMargins>
+                  Tekeningen
+                </Heading>
                 <LayoutFlow gap="sm">
                   <p className="rvo-paragraph rvo-paragraph--no-spacing">
                     Upload de tekeningen of plattegronden van de gebouwen waarop u bijenkasten wilt plaatsen.
@@ -311,11 +323,14 @@ const Documenten = () => {
                         label="Tekening uploaden"
                         expandableHelperText={{ title: 'Voorwaarden voor de tekening' }}
                         helperText={
-                          <ul>
-                            <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
-                            <li>De tekening toont een bovenaanzicht van het dak.</li>
-                            <li>De locatie van de bijenkasten is duidelijk aangegeven.</li>
-                          </ul>
+                          <List
+                            type="unordered"
+                            items={[
+                              'Het bestand is in PDF-formaat en maximaal 10 MB.',
+                              'De tekening toont een bovenaanzicht van het dak.',
+                              'De locatie van de bijenkasten is duidelijk aangegeven.',
+                            ]}
+                          />
                         }
                       >
                         <FormField.FileInput accept=".pdf" onChange={handleTekeningChange} />
@@ -352,7 +367,7 @@ const Documenten = () => {
                     </Link>
                   )}
                 </LayoutFlow>
-              </Fieldset>
+              </div>
 
               <ActionGroup>
                 <Button
