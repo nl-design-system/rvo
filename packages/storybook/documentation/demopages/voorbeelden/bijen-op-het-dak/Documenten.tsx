@@ -234,7 +234,7 @@ const Documenten = () => {
                         label="Offerte uploaden"
                         expandableHelperText={{ title: 'Voorwaarden voor de offerte' }}
                         helperText={
-                          <ul>
+                          <ul className="rvo-ul">
                             <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
                             <li>De offerte is opgesteld door een gecertificeerde installateur.</li>
                             <li>De offerte bevat een specificatie van de bijenkasten en de plaatsingskosten.</li>
@@ -316,7 +316,7 @@ const Documenten = () => {
                         label="Tekening uploaden"
                         expandableHelperText={{ title: 'Voorwaarden voor de tekening' }}
                         helperText={
-                          <ul>
+                          <ul className="rvo-ul">
                             <li>Het bestand is in PDF-formaat en maximaal 10 MB.</li>
                             <li>De tekening toont een bovenaanzicht van het dak.</li>
                             <li>De locatie van de bijenkasten is duidelijk aangegeven.</li>
