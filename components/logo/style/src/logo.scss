@@ -103,7 +103,7 @@
 }
 
 // Keep the title link visually identical to the plain title: same font weight in
-// every state, no underline on hover or active, and no background on focus. Selectors are doubled up so
+// every state, no underline on hover or active (unless keyboard focused), and no background on focus. Selectors are doubled up so
 // they win over the rvo-link states regardless of stylesheet order.
 .rvo-logo .rvo-logo__title-link.rvo-link {
   // Block-level, so the link does not end up in a line box with the parent's line-height.
@@ -122,8 +122,19 @@
     background-color: transparent;
   }
 
-  &:hover,
-  &:active {
+  // After a mouse click the link keeps :focus but not :focus-visible. It must then look like the rest state.
+  &:focus:not(:focus-visible) {
+    color: var(--rvo-logo-color);
     text-decoration: none;
+  }
+
+  &:hover:not(:focus-visible),
+  &:active:not(:focus-visible) {
+    text-decoration: none;
+  }
+
+  // Keyboard focus plus hover keeps the underline visible, as thick as the hover underline of a link.
+  &:focus-visible:hover {
+    text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
   }
 }
