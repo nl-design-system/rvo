@@ -141,7 +141,7 @@ const PandWijzigen = () => {
       <MaxWidthLayout size="md" className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
         <Grid
           columns={isDesktop ? 'two' : 'one'}
-          gap="xl"
+          gap="2xl"
           division={isDesktop ? '1fr 3fr' : undefined}
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
