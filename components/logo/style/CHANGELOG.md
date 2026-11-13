@@ -1,5 +1,13 @@
 # `@nl-rvo/css-logo`
 
+## 1.5.3
+
+### Patch Changes
+
+- b516c70: fix(logo): keep the logo title link in its rest state after a mouse click and show a 2px underline on keyboard focus plus hover
+
+  After a mouse click the title link kept `:focus` and showed the thick black focus underline. It now looks like the rest state again. When the link has keyboard focus and is hovered, the underline stays visible at the hover thickness instead of disappearing.
+
 ## 1.5.2
 
 ### Patch Changes

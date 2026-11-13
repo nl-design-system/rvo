@@ -1,5 +1,11 @@
 # @nl-rvo/react-alert
 
+## 1.0.4
+
+### Patch Changes
+
+- @nl-rvo/react-button@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @nl-rvo/design-tokens
 
+## 2.5.2
+
+### Patch Changes
+
+- 8a4ae9a: fix(button, link): reduce icon-text gap from 12px to 8px
+
+  The gap between icon and adjacent text in the button and link components has been reduced from `--rvo-space-sm` (12px) to `--rvo-space-xs` (8px). This applies to all button variants with icons and to link elements using `.rvo-link__text` or `.rvo-link--with-icon`.
+
 ## 2.5.1
 
 ### Patch Changes
