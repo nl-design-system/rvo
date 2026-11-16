@@ -127,6 +127,16 @@ Rules for using it:
 - Skip it for backend, tooling, and copy-only changes.
 - The skill is installed locally per developer. Do not add it to this repository.
 
+### Browser automation (agent-browser)
+
+When [agent-browser](https://agent-browser.dev/) is available, use it for all browser tasks, such as checking Storybook stories or Docusaurus pages.
+
+- Run it headless by default. Do not use `--headed` for checks the agent does on its own: verifying changes, snapshots, screenshots, reading pages, testing flows.
+- Use `--headed` only when the user explicitly asks to see or check something, for example "open Storybook with the button component" or "show me the page".
+- Headed or headless is fixed when the browser launches. Run `agent-browser close` before switching modes.
+- Leave a headed browser open after the task so the user can look at it. Close a headless browser when finished.
+- agent-browser is installed locally per developer. Do not add it to this repository.
+
 ### Docusaurus pattern pages (`.docusaurus.mdx`)
 
 - Both `<ComponentExample>` previews and fenced code examples must use **plain HTML with BEM/CSS classes** — never React components or TSX.
