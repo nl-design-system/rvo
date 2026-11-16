@@ -56,7 +56,7 @@ Issue titles describe the problem instead of the solution, so they use `bug` ins
 
 - Concise and states the problem the change solves.
 - Lowercase, imperative: "fix button color", not "fixed button color".
-- After the `type(scope):` prefix, use only periods and commas as punctuation. No trailing period.
+- No trailing period.
 
 **Breaking changes:** add `!` after the type or scope: `feat(button)!: remove the size prop`. A breaking change asks for extra care in review and must be announced to everyone who uses the affected packages.
 
