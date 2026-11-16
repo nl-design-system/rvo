@@ -7,10 +7,10 @@ Monorepo (`@nl-rvo/design-system`) built on [NL Design System](https://nldesigns
 ## Pre-commit checklist
 
 - [ ] Separate branch created — not committing directly to `master`
-- [ ] Branch name matches the Jira ticket (e.g. `ROOS-123-short-description`)
+- [ ] Branch name follows `type/short-description`, with the Jira key when there is a ticket (e.g. `fix/ROOS-123-short-description`)
 - [ ] Prettier run: `pnpm format`
 - [ ] Lint run: `pnpm lint`
-- [ ] Commit message states the problem the change solves
+- [ ] Commit message follows `type(scope): description` and states the problem the change solves
 - [ ] Commit message, code comments, and changeset are in English
 - [ ] If any component was touched: changeset is present and covers all affected packages
 
@@ -24,15 +24,49 @@ Monorepo (`@nl-rvo/design-system`) built on [NL Design System](https://nldesigns
 
 - Always create branches from `master`.
 - Never commit directly to `master`.
-- Name branches using the pattern `type/short-description` in lowercase kebab-case. Common types:
-  - `feature/` — new functionality
-  - `fix/` — bug fixes
-  - `docs/` — documentation only
-  - `refactor/` — code restructuring without behaviour change
-  - `chore/` — tooling, config, dependencies
-- Commit messages must be concise and state the problem the change solves. Use only periods and commas as punctuation. Write in the imperative: "fix button color", not "fixed button color".
+- Name branches using the pattern `type/short-description` in lowercase kebab-case, using the types from [Conventional Commits](#conventional-commits). Add the Jira key when there is a ticket: `fix/ROOS-123-short-description`.
 - When the PR touches components, add the ROOS core team as reviewer: [@PLassche-dictu](https://github.com/PLassche-dictu), [@joana-dictu](https://github.com/joana-dictu). PRs that only affect patterns or demopages do not require these reviewers.
 - The person who opens the pull request is responsible for all committed code in that PR. A commit or PR can never have a co-author.
+
+### Conventional Commits
+
+Use the [Conventional Commits](https://www.conventionalcommits.org/) format `type(scope): description` for commit messages, pull request titles, issue titles, and the first line of a changeset. One format everywhere keeps the history scannable and makes the impact of a change clear from its title alone. Pull requests are squash-merged, so the PR title becomes the commit message on `master`.
+
+**Types:**
+
+| Type       | Use for                                                     |
+| ---------- | ----------------------------------------------------------- |
+| `feat`     | New functionality                                           |
+| `fix`      | Bug fixes                                                   |
+| `a11y`     | Accessibility fixes and improvements                        |
+| `docs`     | Documentation and instructions only                         |
+| `style`    | Visual styling changes, such as tokens or CSS without logic |
+| `refactor` | Code restructuring without behaviour change                 |
+| `perf`     | Performance improvements                                    |
+| `test`     | Adding or changing tests                                    |
+| `build`    | Build tooling, bundling, and package output                 |
+| `ci`       | GitHub workflows and CI configuration                       |
+| `chore`    | Maintenance, config, and dependencies                       |
+
+Issue titles describe the problem instead of the solution, so they use `bug` instead of `fix`: `bug(input): focus indicator is missing`. A `bug` issue is resolved by a `fix` PR.
+
+**Scope:** the component, package, or area that changes, in lowercase kebab-case: `fix(button): …`, `docs(instructions): …`, `chore(design-tokens): …`. Separate multiple scopes with a comma: `fix(button, link): …`. Leave the scope out when the change is repo-wide: `chore: update dependencies`.
+
+**Description:**
+
+- Concise and states the problem the change solves.
+- Lowercase, imperative: "fix button color", not "fixed button color".
+- After the `type(scope):` prefix, use only periods and commas as punctuation. No trailing period.
+
+**Breaking changes:** add `!` after the type or scope: `feat(button)!: remove the size prop`. A breaking change asks for extra care in review and must be announced to everyone who uses the affected packages.
+
+**Version bumps:** the type predicts the changeset bump type.
+
+- `fix`, `a11y`, `style`, `perf` → `patch`
+- `feat` → `minor`
+- any type with `!` → `major`
+
+**Scripts:** name new `package.json` scripts with the same types, as `type:target`, for example `build:tokens`, `test:themes`, `docs:generate`. The existing `lint:*` scripts keep their names.
 
 ## Documentation
 
@@ -215,7 +249,8 @@ Before creating a new changeset, check whether the branch already has one (`ls .
   One paragraph explaining what changed and why, written as a human-readable description for the changelog.
   ```
 
-- **Bump type**: `patch` for fixes and small improvements, `minor` for new features, `major` for breaking changes.
+- **First line**: follows [Conventional Commits](#conventional-commits), usually the same as the PR title.
+- **Bump type**: `patch` for fixes and small improvements, `minor` for new features, `major` for breaking changes. It matches the commit type, see [Conventional Commits](#conventional-commits).
 - Always include `@nl-rvo/component-library-css` and `@nl-rvo/component-library-react` in every changeset that touches a component.
 - Always include `@nl-rvo/design-tokens` when any file under `proprietary/design-tokens/` is changed.
 - Always include every utility package (`@nl-rvo/utility-*`) whose `package.json` was modified.
