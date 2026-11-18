@@ -27,7 +27,7 @@ Monorepo (`@nl-rvo/design-system`) built on [NL Design System](https://nldesigns
 - Name branches using the pattern `type/short-description` in lowercase kebab-case, using the types from [Conventional Commits](#conventional-commits). Add the Jira key when there is a ticket: `fix/ROOS-123-short-description`.
 - When the PR touches components, add the ROOS core team as reviewer: [@PLassche-dictu](https://github.com/PLassche-dictu), [@joana-dictu](https://github.com/joana-dictu). PRs that only affect patterns or demopages do not require these reviewers.
 - The person who opens the pull request is responsible for all committed code in that PR. A commit or PR can never have a co-author.
-- Keep the PR title on one line, within the title length limit. Never let it run over into the description.
+- Keep the PR title and the first line of every commit at 72 characters or fewer. GitHub fills the PR title from the first commit of a single-commit PR and moves anything beyond the limit into the description. Put the reason for the change in the commit body, not in the first line.
 - Keep the PR description concise and to the point. Do not describe what changed ("changed", "added", "updated"): the changed files already show that.
 - Always state why the change was made in the PR description, for example: "to align with the overarching Rijkshuisstijl guidelines."
 
