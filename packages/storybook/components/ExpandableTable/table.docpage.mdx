@@ -1,7 +1,7 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as TableStories from "./table.stories";
 import Intro from "@components/expandable-table/docs/intro.mdx";
-import Usage from "@components/expandable-table/docs/usage.mdx";
+import Usage from "@components/expandable-table/docs/documentation.mdx";
 
 <Meta of={TableStories} name="Documentatie" />
 
@@ -11,14 +11,10 @@ import Usage from "@components/expandable-table/docs/usage.mdx";
 
 ### Voorbeeld
 
-## Preview
-
 <Canvas of={TableStories.Base} layout="padded" />
 
 ## Parameters
 
 <ArgTypes of={TableStories.Base} />
-
-## Gebruik
 
 <Usage />

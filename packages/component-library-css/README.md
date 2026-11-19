@@ -10,7 +10,7 @@ CSS-componenten worden ontwikkeld met behulp van BEM-classnamen en de stylesheet
 npm install --save-dev --save-exact @nl-rvo/component-library-css
 ```
 
-## Gebruik van de componenten
+van de componenten
 
 Je kunt kiezen om in één keer de hele library in te laden of alleen de componenten die je nodig hebt.
 

@@ -1,7 +1,7 @@
 import { Canvas, ArgTypes, Meta, Title } from "@storybook/addon-docs/blocks";
 import * as SkeletonStories from "./skeleton.stories";
 import Intro from "@components/skeleton/docs/intro.mdx";
-import Usage from "@components/skeleton/docs/usage.mdx";
+import Usage from "@components/skeleton/docs/documentation.mdx";
 
 <Meta of={SkeletonStories} name="Documentatie" />
 
@@ -11,12 +11,8 @@ import Usage from "@components/skeleton/docs/usage.mdx";
 
 ### Voorbeeld
 
-## Preview
-
 <Canvas of={SkeletonStories.Base} layout="padded" />
 ## Parameters
 <ArgTypes of={SkeletonStories.Base} />
-
-## Gebruik
 
 <Usage />
