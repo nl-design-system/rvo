@@ -1,5 +1,5 @@
 import React from 'react';
-import { isOfType } from '@nl-rvo/component-library-react/src/utils/typeUtils';
+import { isOfType } from '../../../utils/typeUtils';
 import '@nl-rvo/css-quote/quote.css';
 import { IQuoteProps } from './Quote.types';
 

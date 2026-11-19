@@ -1,5 +1,18 @@
 # @nl-rvo/react-logo
 
+## 1.0.3
+
+### Patch Changes
+
+- b56f374: fix(logo): use rvo-link states for the logo title link
+
+  The logo title link no longer draws a large double outline around the whole logo on focus. The title is now a regular `rvo-link` (lintblauw), so it shares the focus state of every other link. Font weight stays the same in every state, there is no underline on hover and no background on focus. The whole logo stays clickable through the existing overlay.
+
+- Updated dependencies [1bbc261]
+- Updated dependencies [b56f374]
+  - @nl-rvo/react-link@1.0.3
+  - @nl-rvo/css-logo@1.5.2
+
 ## 1.0.2
 
 ### Patch Changes

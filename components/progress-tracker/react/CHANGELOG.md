@@ -1,5 +1,14 @@
 # @nl-rvo/react-progress-tracker
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [1bbc261]
+- Updated dependencies [e52e9fd]
+  - @nl-rvo/react-link@1.0.3
+  - @nl-rvo/css-progress-tracker@1.4.2
+
 ## 1.0.2
 
 ### Patch Changes

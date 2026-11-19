@@ -13,7 +13,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { Button } from '@nl-rvo/react-button';
 import '@nl-rvo/css-dialog/dialog.css';
 import { IDialogProps } from './Dialog.types';

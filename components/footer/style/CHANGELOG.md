@@ -1,5 +1,13 @@
 # `@nl-rvo/css-footer`
 
+## 1.11.2
+
+### Patch Changes
+
+- e52e9fd: fix(link): show link focus styles on :focus-visible only
+
+  Link focus styles were applied on `:focus`, so they also appeared after a mouse click. They now follow `:focus-visible`, which keeps the clear focus indicator for keyboard users and drops it for pointer users. The hover exclusions in link, footer and alert and the focus underline in the progress tracker follow the same rule.
+
 ## 1.11.1
 
 ### Patch Changes

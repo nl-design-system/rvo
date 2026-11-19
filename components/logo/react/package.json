@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Community for NL Design System",
   "license": "CC0-1.0",
   "name": "@nl-rvo/react-logo",
@@ -36,6 +36,7 @@
     "build": "tsup src/index.ts --format esm --dts --sourcemap --clean"
   },
   "dependencies": {
-    "@nl-rvo/css-logo": "workspace:*"
+    "@nl-rvo/css-logo": "workspace:*",
+    "@nl-rvo/react-link": "workspace:*"
   }
 }

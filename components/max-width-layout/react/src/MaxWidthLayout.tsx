@@ -6,7 +6,7 @@
 import * as designTokens from '@nl-rvo/design-tokens/dist';
 import clsx from 'clsx';
 import React from 'react';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import '@nl-rvo/css-max-width-layout/max-width-layout.css';
 import { IMaxWidthLayoutProps } from './MaxWidthLayout.types';
 

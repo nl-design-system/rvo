@@ -4,7 +4,7 @@
  */
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { Heading } from '@nl-rvo/react-heading';
 import { MaxWidthLayout } from '@nl-rvo/react-max-width-layout';
 import '@nl-rvo/css-hero/hero.css';

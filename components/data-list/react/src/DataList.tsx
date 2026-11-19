@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import '@nl-rvo/css-data-list/data-list.css';
 import { IDataListItemProps, IDataListProps } from './DataList.types';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 
 export const DataList: React.FC<IDataListProps> & {
   Item: React.FC<IDataListItemProps>;

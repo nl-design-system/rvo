@@ -1,5 +1,13 @@
 # @nl-rvo/react-accordion
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [8af4738]
+  - @nl-rvo/react-heading@1.0.3
+  - @nl-rvo/css-accordion@1.4.2
+
 ## 1.0.2
 
 ### Patch Changes

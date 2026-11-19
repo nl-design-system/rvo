@@ -5,7 +5,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import '@nl-rvo/css-paragraph/paragraph.css';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { IParagraphProps } from './Paragraph.types';
 
 export const Paragraph: React.FC<IParagraphProps> = ({

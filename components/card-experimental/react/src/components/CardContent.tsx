@@ -1,5 +1,5 @@
 import React from 'react';
-import parseContentMarkup from '../../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../../utils/parseContentMarkup';
 import { IExperimentalCardContentProps } from '../CardExperimental.types';
 
 const CardContent: React.FC<IExperimentalCardContentProps> = ({ contentMarkup, children }) => {

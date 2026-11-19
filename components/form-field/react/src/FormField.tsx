@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 import React, { PropsWithChildren } from 'react';
-import parseContentMarkup from '../../../../packages/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { ExpandableContent } from '@nl-rvo/react-expandable-content';
 import { Feedback } from '@nl-rvo/react-form-feedback';
 import '@nl-rvo/css-form-field/form-field.css';
@@ -46,12 +46,13 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
 }) => {
   const child = React.Children.only(children);
   const childWithId = React.cloneElement(child, { id });
+  const labelId = `${id}-label`;
 
   return (
     <div
       className="utrecht-form-field utrecht-form-field--text rvo-form-field"
       role="group"
-      aria-labelledby={`${id}-label`}
+      aria-labelledby={labelId}
       {...rootElementProps}
     >
       <div className="rvo-form-field__label">
@@ -62,7 +63,8 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
             labelSize && `rvo-label--${labelSize}`,
             (labelType === 'optional' || labelType === 'required') && `rvo-label--${labelType}`,
           )}
-          id={id}
+          id={labelId}
+          htmlFor={id}
         >
           {label}
         </label>

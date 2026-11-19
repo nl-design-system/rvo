@@ -1,5 +1,11 @@
 # @nl-rvo/react-form-layout
 
+## 1.0.3
+
+### Patch Changes
+
+- 8af4738: Change the import paths for utilities functions.
+
 ## 1.0.2
 
 ### Patch Changes

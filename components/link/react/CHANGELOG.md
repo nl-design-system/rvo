@@ -1,5 +1,15 @@
 # @nl-rvo/react-link
 
+## 1.0.3
+
+### Patch Changes
+
+- 1bbc261: Call-to-action link icons now follow the call-to-action text color (white for the default variant, violet for the outline variant) when no `iconColor` is set. Other links keep their existing icon color behaviour.
+- Updated dependencies [d0debaf]
+- Updated dependencies [e52e9fd]
+- Updated dependencies [5fc9b29]
+  - @nl-rvo/css-link@1.7.2
+
 ## 1.0.2
 
 ### Patch Changes

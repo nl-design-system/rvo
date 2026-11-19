@@ -1,5 +1,11 @@
 # @nl-rvo/react-form-checkbox-group
 
+## 1.0.3
+
+### Patch Changes
+
+- @nl-rvo/react-form-checkbox@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
