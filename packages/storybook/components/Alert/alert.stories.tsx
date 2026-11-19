@@ -8,11 +8,16 @@ export default {
     kind: {
       options: ['info', 'warning', 'error', 'success'],
       control: { type: 'radio' },
+      table: {
+        type: {
+          summary: "'info' | 'warning' | 'error' | 'success'",
+        },
+        defaultValue: {
+          summary: "'info'",
+        },
+      },
     },
     heading: {
-      control: 'text',
-    },
-    children: {
       control: 'text',
     },
     closable: {
@@ -21,6 +26,19 @@ export default {
     padding: {
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
       control: { type: 'radio' },
+      table: {
+        type: {
+          summary: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
+        },
+        defaultValue: {
+          summary: "'md'",
+        },
+      },
+    },
+    children: {
+      table: {
+        disable: true,
+      },
     },
     onClose: {
       table: {
@@ -58,16 +76,16 @@ export const Kinds: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       <Alert {...args} kind="info">
-        Info Alert
+        "Info Alert"
       </Alert>
       <Alert {...args} kind="warning">
-        Warning Alert
+        "Warning Alert"
       </Alert>
       <Alert {...args} kind="error">
-        Error Alert
+        "Error Alert"
       </Alert>
       <Alert {...args} kind="success">
-        Success Alert
+        "Success Alert"
       </Alert>
     </div>
   ),
@@ -78,22 +96,22 @@ export const Padding: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       <Alert {...args} padding="xs">
-        XS Padding Alert
+        "XS Padding Alert"
       </Alert>
       <Alert {...args} padding="sm">
-        SM Padding Alert
+        "SM Padding Alert"
       </Alert>
       <Alert {...args} padding="md">
-        MD Padding Alert
+        "MD Padding Alert"
       </Alert>
       <Alert {...args} padding="lg">
-        LG Padding Alert
+        "LG Padding Alert"
       </Alert>
       <Alert {...args} padding="xl">
-        XL Padding Alert
+        "XL Padding Alert"
       </Alert>
       <Alert {...args} padding="2xl">
-        2XL Padding Alert
+        "2XL Padding Alert"
       </Alert>
     </div>
   ),

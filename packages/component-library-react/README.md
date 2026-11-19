@@ -61,7 +61,7 @@ const Example = () => {
 export default Example;
 ```
 
-## Gebruik van ROOS/Rijkshuisstijl lettertype, icons en images (assets)
+van ROOS/Rijkshuisstijl lettertype, icons en images (assets)
 
 Het lettertype, icons en images van ROOS/Rijkshuisstijl moet je apart toevoegen aan je React project.
 Deze zitten omwille van licenties en gebruiksrechten niet in de NPM package.

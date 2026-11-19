@@ -45,7 +45,8 @@
     "project": ["./tsconfig.json"]
   },
   "paths": {
-    "@bootstrap-icons/*": ["node_modules/bootstrap-icons/*"]
+    "@bootstrap-icons/*": ["node_modules/bootstrap-icons/*"],
+    "@components/*": ["../../components/*"]
   },
   "ts-node": {
     "esm": true
