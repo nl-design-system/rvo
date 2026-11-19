@@ -46,12 +46,13 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
 }) => {
   const child = React.Children.only(children);
   const childWithId = React.cloneElement(child, { id });
+  const labelId = `${id}-label`;
 
   return (
     <div
       className="utrecht-form-field utrecht-form-field--text rvo-form-field"
       role="group"
-      aria-labelledby={`${id}-label`}
+      aria-labelledby={labelId}
       {...rootElementProps}
     >
       <div className="rvo-form-field__label">
@@ -62,7 +63,7 @@ const FormField: React.FC<PropsWithChildren<IFieldProps>> & FormFieldInputField 
             labelSize && `rvo-label--${labelSize}`,
             (labelType === 'optional' || labelType === 'required') && `rvo-label--${labelType}`,
           )}
-          id={`${id}-label`}
+          id={labelId}
           htmlFor={id}
         >
           {label}

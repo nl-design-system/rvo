@@ -3,25 +3,25 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { useArgs } from 'storybook/preview-api';
 
 const inputOptions = [
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1651', label: 'Agro en visserij', checked: false },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1652', label: 'Biotechnologie', checked: false },
+  { id: 'agro-en-visserij', label: 'Agro en visserij', checked: false },
+  { id: 'biotechnologie', label: 'Biotechnologie', checked: false },
   {
-    id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1653',
+    id: 'bosbouw-en-houtbewerkingsindustrie',
     label: 'Bosbouw en hout(bewerkings)industrie',
     checked: false,
   },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1654', label: 'Bouw en infrastructuur', checked: false },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1655', label: 'Chemie en kunststoffen', checked: false },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1656', label: 'Chemische industrie', checked: false },
+  { id: 'bouw-en-infrastructuur', label: 'Bouw en infrastructuur', checked: false },
+  { id: 'chemie-en-kunststoffen', label: 'Chemie en kunststoffen', checked: false },
+  { id: 'chemische-industrie', label: 'Chemische industrie', checked: false },
   {
-    id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1657',
+    id: 'consumentgoederen-en-detailhandel',
     label: 'Consumentengoederen en detailhandel',
     checked: false,
   },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1658', label: 'Creatieve industrie', checked: false },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1659', label: 'Dienstensector', checked: false },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1660', label: 'Elektronica-industrie', checked: false },
-  { id: '0df9e5f2-3d23-4714-9bb1-d7a9b88a1661', label: 'Energiesector', checked: false },
+  { id: 'creatieve-industrie', label: 'Creatieve industrie', checked: false },
+  { id: 'dienstensector', label: 'Dienstensector', checked: false },
+  { id: 'elektronica-industrie', label: 'Elektronica-industrie', checked: false },
+  { id: 'energiesector', label: 'Energiesector', checked: false },
 ];
 
 const defaultArgs = {
