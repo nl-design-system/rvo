@@ -44,22 +44,33 @@ export const CheckBoxFilter: React.FC<ICheckboxFilter> = (props: ICheckboxFilter
     }
   };
 
+  const withPrefix = (id: string): string => `checkbox-filter-${label.toLowerCase()}-${id}`;
+
+  const groupLabelId = withPrefix('label');
+  const checkboxGroupId = withPrefix('checkbox-group');
+
   return (
     <details open={initialCollapseState === 'expanded'} className="rvo-checkbox-filter" {...rest}>
       <summary className="rvo-checkbox-filter__label">
-        {label} <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
+        <span id={groupLabelId}>{label}</span>
+        <Icon className="rvo-checkbox-filter__icon" icon="delta-omhoog" color="lintblauw" />
       </summary>
       {showInputField && (
-        <FormField id="checkbox-filter-search" label={inputFieldLabel}>
-          <FormField.Text type="text" onChange={inputFieldOnChange} sizeInput="max" />
+        <FormField id={withPrefix('input')} label={inputFieldLabel}>
+          <FormField.Text type="text" onChange={inputFieldOnChange} sizeInput="max" aria-controls={checkboxGroupId} />
         </FormField>
       )}
 
       <div className="rvo-checkbox-filter__checkbox-container">
         {visibleItems.length > 0 && (
-          <FormField label="">
-            <FormField.CheckboxGroup options={visibleItems} onChange={optionsOnChange} />
-          </FormField>
+          <FormField.CheckboxGroup
+            id={checkboxGroupId}
+            options={visibleItems}
+            onChange={optionsOnChange}
+            role="group"
+            aria-labelledby={groupLabelId}
+            aria-live="polite"
+          />
         )}
         {visibleItems.length === 0 && <p className="rvo-checkbox-filter__no-filter-text">{noFiltersText}</p>}
       </div>

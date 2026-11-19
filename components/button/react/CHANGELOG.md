@@ -1,5 +1,12 @@
 # @nl-rvo/react-button
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [d0debaf]
+  - @nl-rvo/css-button@2.2.2
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @nl-rvo/react-alert
 
+## 1.0.3
+
+### Patch Changes
+
+- 8af4738: Change the import paths for utilities functions.
+- Updated dependencies [e52e9fd]
+  - @nl-rvo/css-alert@1.7.2
+  - @nl-rvo/react-button@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

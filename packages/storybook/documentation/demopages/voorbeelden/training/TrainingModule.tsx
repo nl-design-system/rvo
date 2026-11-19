@@ -22,38 +22,31 @@ const TrainingModule = () => {
           useIcons={true}
           iconPlacement="left"
           maxWidth="lg"
-          horizontalRule={false}
+          horizontalRule={true}
         />
       </div>
 
-      <main className="rvo-padding-block-end--3xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
-        <div className="rvo-max-width-layout rvo-max-width-layout--lg rvo-max-width-layout-inline-padding--none rvo-hero ">
-          <div className="rvo-hero__image-container">
-            <img
-              src="https://www.imvotraining.nl/imvo-duediligence/imvo/module_1/13420/Hoofdbeeld_Gespiegeld_iStock_1378159183.1600_0_1.jpg"
-              className="rvo-hero__image"
-              alt=""
-            />
-          </div>
-          <div className="rvo-hero__content">
-            <span className="rvo-text rvo-text--small rvo-paragraph--wit">MODULE 1</span>
-            <Heading type="h1" className="rvo-hero__title" noMargins>
-              Internationaal Maatschappelijk Verantwoord Ondernemen
-            </Heading>
-            <span className="rvo-hero__subtitle">Hoe doe je dat?</span>
-          </div>
-        </div>
-        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm rvo-padding-block-start--xl">
+      <main className="rvo-padding-block-end--3xl rvo-padding-block-start--2xl rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
+        <div className="rvo-margin-block-end--md rvo-max-width-layout rvo-max-width-layout--sm ">
           <ol className="rvo-breadcrumbs rvo-breadcrumbs--md">
             <li className="rvo-breadcrumbs-item">
+              <a className="rvo-link rvo-link--no-underline" href="#">
+                Home
+              </a>
+            </li>
+            <li className="rvo-breadcrumbs-item">
+              <span
+                className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
+                role="img"
+                aria-label="Delta naar rechts"
+              ></span>
               <a
                 className="rvo-link rvo-link--no-underline"
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training--default&viewMode=story"
               >
                 IMVO Trainingmodules
               </a>
             </li>
-
             <li className="rvo-breadcrumbs-item">
               <span
                 className="utrecht-icon rvo-icon rvo-icon-delta-naar-rechts rvo-icon--xs rvo-icon--hemelblauw"
@@ -63,12 +56,28 @@ const TrainingModule = () => {
               <span className="rvo-breadcrumb-current-page">Module 1</span>
             </li>
           </ol>
-          <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg ">
+        </div>
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--sm ">
+          <Heading type="h1" noMargins={true}>
+            Internationaal Maatschappelijk Verantwoord Ondernemen: hoe doe je dat?
+          </Heading>
+          <p>
+            <em>
+              Module <strong>1</strong> van <strong>10</strong>
+            </em>
+          </p>
+          <p className="rvo-paragraph rvo-paragraph--zwart rvo-paragraph--lg">
             Je leert wat Internationaal Maatschappelijk Verantwoord Ondernemen is, hoe je ‘gepaste zorgvuldigheid’
             toepast en wat dit concreet betekent voor jouw bedrijf.
           </p>
         </div>
-
+        <div className="rvo-custom-intro rvo-max-width-layout rvo-max-width-layout--md rvo-margin-block-start--xl">
+          <img
+            src="https://www.imvotraining.nl/imvo-duediligence/imvo/module_1/13420/Hoofdbeeld_Gespiegeld_iStock_1378159183.1600_0_1.jpg"
+            alt=""
+            className="rvo-image rvo-image--radius-all rvo-image--radius-size-md"
+          />
+        </div>
         <div className="rvo-margin-block-start--2xl rvo-margin-block-end--xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <div>
             <LayoutFlow gap="2xs">
@@ -76,7 +85,7 @@ const TrainingModule = () => {
                 icon="pijl-naar-rechts"
                 iconPlacement="left"
                 noUnderline={true}
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-detailpagina--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training-module-detailpagina--default&viewMode=story"
               >
                 Internationaal Maatschappelijk Verantwoord Ondernemen
               </Link>
@@ -93,7 +102,7 @@ const TrainingModule = () => {
                 icon="pijl-naar-rechts"
                 iconPlacement="left"
                 noUnderline={true}
-                href="iframe.html?args=&id=pagina-s-voorbeelden-www-training-module-test--default&viewMode=story"
+                href="iframe.html?args=&id=pagina-s-voorbeelden-training-training-module-test--default&viewMode=story"
               >
                 Test je kennis!
               </Link>

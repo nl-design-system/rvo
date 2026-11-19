@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import React from 'react';
 import '@nl-rvo/css-max-width-layout/max-width-layout.css';
 import '@nl-rvo/css-sidebar-layout/sidebar-layout.css';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import { ISidebarBarProps, ISidebarLayoutContentProps, ISidebarLayoutProps } from './SidebarLayout.types';
 
 export const SidebarLayout: React.FC<ISidebarLayoutProps> & {

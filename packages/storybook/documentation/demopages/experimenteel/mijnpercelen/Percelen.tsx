@@ -96,7 +96,9 @@ const Percelen = () => {
             <div className="rvo-tab-content rvo-tab-content--wijzigen">
               <div className="rvo-rhs-update-component">
                 <LayoutFlow gap="md">
-                  <Alert kind="warning" content="U moet de wijzigingen nog versturen. <a href='#'>Nu versturen</a>" />
+                  <Alert kind="warning">
+                    U moet de wijzigingen nog versturen. <a href="#">Nu versturen</a>
+                  </Alert>
                   <div className="rvo-instellingen">
                     <a
                       className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-xs"

@@ -25,14 +25,13 @@
 @import "@nl-rvo/css-form-checkbox-group/form-checkbox-group.css";
 @import "@nl-rvo/css-form-feedback/form-feedback.css";
 @import "@nl-rvo/css-form-field/form-field.css";
-@import "@nl-rvo/css-form-field-label/form-field-label.css";
 @import "@nl-rvo/css-form-fieldset/form-fieldset.css";
-@import "@nl-rvo/css-form-fileinput/form-fileinput.css";
+@import "@nl-rvo/css-form-file-input/form-file-input.css";
 @import "@nl-rvo/css-form-layout/form-layout.css";
 @import "@nl-rvo/css-form-radio-button/form-radio-button.css";
 @import "@nl-rvo/css-form-radio-button-group/form-radio-button-group.css";
 @import "@nl-rvo/css-form-select/form-select.css";
-@import "@nl-rvo/css-form-textinput/form-textinput.css";
+@import "@nl-rvo/css-form-text-input/form-text-input.css";
 @import "@nl-rvo/css-form-textarea/form-textarea.css";
 @import "@nl-rvo/css-grid/grid.css";
 @import "@nl-rvo/css-header/header.css";
@@ -65,9 +64,9 @@
 @import "@nl-rvo/css-tag/tag.css";
 
 // utilities
-@import "@nl-rvo/css-utility-background/index.css";
-@import "@nl-rvo/css-utility-border/index.css";
-@import "@nl-rvo/css-utility-text/index.css";
-@import "@nl-rvo/css-utility-text-types/index.css";
-@import "@nl-rvo/css-utility-margin/index.css";
-@import "@nl-rvo/css-utility-padding/index.css";
+@import "@nl-rvo/utility-background/dist/index.css";
+@import "@nl-rvo/utility-border/dist/index.css";
+@import "@nl-rvo/utility-text/dist/index.css";
+@import "@nl-rvo/utility-text-types/dist/index.css";
+@import "@nl-rvo/utility-margin/dist/index.css";
+@import "@nl-rvo/utility-padding/dist/index.css";

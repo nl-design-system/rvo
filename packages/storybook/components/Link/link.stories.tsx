@@ -16,7 +16,6 @@ export default {
     href: '#',
     icon: 'home',
     iconAriaLabel: '',
-    iconColor: 'hemelblauw',
     iconSize: 'md',
     noUnderline: false,
     weight: 'bold',

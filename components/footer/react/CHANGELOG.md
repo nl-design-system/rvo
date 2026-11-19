@@ -1,5 +1,17 @@
 # @nl-rvo/react-footer
 
+## 1.0.3
+
+### Patch Changes
+
+- 8af4738: Change the import paths for utilities functions.
+- Updated dependencies [1bbc261]
+- Updated dependencies [8af4738]
+- Updated dependencies [e52e9fd]
+  - @nl-rvo/react-link@1.0.3
+  - @nl-rvo/react-max-width-layout@1.0.3
+  - @nl-rvo/css-footer@1.11.2
+
 ## 1.0.2
 
 ### Patch Changes

@@ -5,7 +5,7 @@
 
 import clsx from 'clsx';
 import React, { useEffect, useRef } from 'react';
-import parseContentMarkup from '@nl-rvo/component-library-react/src/utils/parseContentMarkup';
+import parseContentMarkup from '../../../utils/parseContentMarkup';
 import '@nl-rvo/css-scrollable-content/scrollable-content.css';
 import { IScrollableContentProps } from './ScrollableContent.types';
 

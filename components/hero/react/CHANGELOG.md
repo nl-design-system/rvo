@@ -1,5 +1,14 @@
 # @nl-rvo/react-hero
 
+## 1.0.3
+
+### Patch Changes
+
+- 8af4738: Change the import paths for utilities functions.
+- Updated dependencies [8af4738]
+  - @nl-rvo/react-heading@1.0.3
+  - @nl-rvo/react-max-width-layout@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

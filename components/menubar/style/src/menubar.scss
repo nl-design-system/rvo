@@ -30,7 +30,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: none;
     }
   }
@@ -51,7 +51,7 @@
       min-inline-size: var(--rvo-dialog-drawer-min-width);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       background-color: transparent;
       display: flex;
       flex-wrap: wrap;
@@ -72,7 +72,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: none;
     }
   }
@@ -88,7 +88,7 @@
     position: absolute;
     z-index: 998;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: none;
     }
   }
@@ -100,7 +100,7 @@
     padding: 0;
     gap: var(--rvo-mobile-menu-list-gap);
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       list-style-type: none;
       padding: 0;
       margin: 0;
@@ -115,7 +115,7 @@
       margin-block-start: var(--rvo-topnav-item-divider-margin-inline-start);
       padding-block-start: var(--rvo-topnav-item-divider-padding-inline-start);
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         border: none;
         margin-block-start: 0;
         padding-block-start: 0;
@@ -124,7 +124,7 @@
       li {
         text-align: start;
 
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
           text-align: end;
         }
       }
@@ -139,7 +139,7 @@
     padding-inline-end: 0;
     padding-inline-start: 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       padding-block-end: var(--rvo-topnav-item-link-padding-block-end);
       padding-block-start: var(--rvo-topnav-item-link-padding-block-start);
       padding-inline-end: var(--rvo-topnav-item-link-padding-inline-end);
@@ -171,14 +171,14 @@
     }
 
     &--submenu-visible {
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         background-color: var(--rvo-sidebar-layout-sidebar-background-color);
       }
     }
   }
 
   &__submenu-layout {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: flex;
       inline-size: 100%;
       inset-inline-start: 0;
@@ -197,7 +197,7 @@
     inline-size: auto;
     list-style-type: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       padding: 0;
