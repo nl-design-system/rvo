@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterInterface & React.HTMLAttributes<HTMLDivElem
             <div className={clsx('rvo-footer__menu-container', maxWidth === 'sm' && 'rvo-footer__menu-container--sm')}>
               {primaryMenu.map((column, columnIndex) => (
                 <div key={`primary-menu-${columnIndex}`} className="rvo-footer__column">
-                  {column && column.label && <span className="rvo-footer__column-title">{column.label}</span>}
+                  {column && column.label && <h2 className="rvo-footer__column-title">{column.label}</h2>}
                   <ul
                     className={clsx(
                       'rvo-footer__menu',
