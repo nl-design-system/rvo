@@ -41,7 +41,7 @@ export const ProgressTrackerStep: React.FC<IProgressTrackerStepProps> = ({
   let labelMarkup: string | React.ReactNode = label;
   if (state === 'incomplete' || state === 'doing' || state === 'completed') {
     labelMarkup = (
-      <Link href={link} className="rvo-progress-tracker__step-link" onClick={onClick}>
+      <Link href={link} className="rvo-progress-tracker__step-link" noUnderline onClick={onClick}>
         {label}
       </Link>
     );
