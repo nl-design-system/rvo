@@ -16,10 +16,11 @@
   &__prev,
   &__next {
     .rvo-link {
-      text-decoration: none;
+      text-decoration-line: none;
 
-      &:hover {
-        text-decoration: underline;
+      &:hover,
+      &:focus-visible {
+        text-decoration-line: underline;
       }
     }
   }
@@ -46,10 +47,11 @@
 
   .rvo-link {
     font-weight: var(--rvo-font-weight-regular);
-    text-decoration: none;
+    text-decoration-line: none;
 
-    &:hover {
-      text-decoration: underline;
+    &:hover,
+    &:focus-visible {
+      text-decoration-line: underline;
     }
   }
 
