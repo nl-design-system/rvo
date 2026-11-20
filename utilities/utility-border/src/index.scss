@@ -1,6 +1,9 @@
 @use "sass:string";
 @use "../node_modules/@nl-rvo/design-tokens/dist/colors" as tokens;
 
+$rvo-border-radius-sizes: sm, md, lg, xl, 2xl;
+$rvo-border-radius-corners: start-start, start-end, end-start, end-end;
+
 @each $name, $value in tokens.$colors {
   /* stylelint-disable scss/dollar-variable-default */
   $rvo-short-name: if(
@@ -14,3 +17,17 @@
     border-color: var(--#{$name}, #{$value}) !important;
   }
 }
+
+/* stylelint-disable custom-property-pattern */
+@each $size in $rvo-border-radius-sizes {
+  .rvo-border-radius--#{$size} {
+    border-radius: var(--rvo-border-radius-#{$size});
+  }
+
+  @each $corner in $rvo-border-radius-corners {
+    .rvo-border-#{$corner}-radius--#{$size} {
+      border-#{$corner}-radius: var(--rvo-border-radius-#{$size});
+    }
+  }
+}
+/* stylelint-enable custom-property-pattern */
