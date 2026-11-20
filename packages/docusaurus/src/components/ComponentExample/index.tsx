@@ -69,12 +69,9 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
           <ExpandableContent title="Voorbeeld HTML">
             <div className={styles.codeBlockContainer}>
               <CodeBlock language="html">{html || '<!-- HTML wordt geladen -->'}</CodeBlock>
-              <Button
-                kind="secondary"
-                label={copied ? 'Gekopieerd!' : 'Kopieer code'}
-                onClick={handleCopy}
-                disabled={!html}
-              />
+              <Button kind="secondary" onClick={handleCopy} disabled={!html}>
+                {copied ? 'Gekopieerd!' : 'Kopiëren'}
+              </Button>
             </div>
           </ExpandableContent>
         </div>
@@ -82,12 +79,15 @@ const ComponentExample = ({ children, minHeight, storyName, args }) => {
         {storyName && (
           <Link
             className={styles.openInNewTabLink}
-            content="Open in nieuwe tab"
             href={previewLink}
+            noUnderline
             target="_blank"
+            rel="noopener noreferrer"
             iconPlacement="right"
             icon="externe-link"
-          />
+          >
+            Bekijk
+          </Link>
         )}
       </div>
     </div>

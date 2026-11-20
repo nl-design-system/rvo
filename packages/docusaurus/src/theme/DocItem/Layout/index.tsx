@@ -1,3 +1,5 @@
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { Link, List } from '@nl-rvo/component-library-react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { useWindowSize } from '@docusaurus/theme-common';
 import ContentVisibility from '@theme/ContentVisibility';
@@ -35,6 +37,36 @@ function useDocTOC() {
   };
 }
 
+const DEFAULT_FIGMA_URL =
+  'https://www.figma.com/design/Sj6myBL1Fvot5M1qGxzvEo/ROOS--RVO-Design-System-?node-id=484-13305';
+
+function ComponentLinks() {
+  const { frontMatter } = useDoc();
+  const { siteConfig } = useDocusaurusContext();
+  const storybook = frontMatter.storybook as string | undefined;
+
+  if (!storybook) {
+    return null;
+  }
+
+  const base = (siteConfig.customFields?.storybookIframeBase as string) ?? '/rvo';
+  const storybookUrl = `${base}/?path=/${storybook}`;
+  const figmaUrl = (frontMatter.figma as string | undefined) ?? DEFAULT_FIGMA_URL;
+
+  return (
+    <div className={styles.componentLinks}>
+      <List type="unordered" bulletType="icon" bulletIcon="option-1">
+        <Link href={storybookUrl} noUnderline target="_blank" rel="noopener noreferrer">
+          Bekijk dit component in Storybook
+        </Link>
+        <Link href={figmaUrl} noUnderline target="_blank" rel="noopener noreferrer">
+          Bekijk dit component in Figma
+        </Link>
+      </List>
+    </div>
+  );
+}
+
 export default function DocItemLayout({ children }: Props): ReactElement {
   const docTOC = useDocTOC();
   const { metadata } = useDoc();
@@ -49,6 +81,7 @@ export default function DocItemLayout({ children }: Props): ReactElement {
             <DocVersionBadge />
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>
+            <ComponentLinks />
             <DocItemFooter />
           </article>
           {/* <DocItemPaginator /> */}
