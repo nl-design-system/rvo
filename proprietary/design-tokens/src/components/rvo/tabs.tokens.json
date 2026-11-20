@@ -13,6 +13,18 @@
       "font-size": { "value": "{rvo.font-size.md}" },
       "font-weight": { "value": "{rvo.font-weight.normal}" },
       "gap": { "value": "{rvo.space.2xs}" },
+      "sm": {
+        "font-size": { "value": "{rvo.font-size.sm}" },
+        "gap": { "value": "{rvo.space.2xs}" }
+      },
+      "md": {
+        "font-size": { "value": "{rvo.font-size.md}" },
+        "gap": { "value": "{rvo.space.xs}" }
+      },
+      "lg": {
+        "font-size": { "value": "{rvo.font-size.lg}" },
+        "gap": { "value": "{rvo.space.xs}" }
+      },
       "panel": {
         "padding-block-start": { "value": "{rvo.space.md}" },
         "padding-block-end": { "value": "{rvo.space.md}" },

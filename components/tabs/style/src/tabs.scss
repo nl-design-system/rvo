@@ -1,12 +1,8 @@
 .rvo-tabs {
-  --rvo-tabs-padding-block: var(--rvo-tabs-padding-block-start, --rvo-space-xs)
-    var(--rvo-tabs-padding-block-end, --rvo-space-xs);
-  --rvo-tabs-padding-inline: var(--rvo-tabs-padding-inline-start, --rvo-space-md)
-    var(--rvo-tabs-padding-inline-end, --rvo-space-md);
-  --rvo-tabs-panel-padding-block: var(--rvo-tabs-panel-padding-block-start, --rvo-space-xs)
-    var(--rvo-tabs-panel-padding-block-end, --rvo-space-xs);
-  --rvo-tabs-panel-padding-inline: var(--rvo-tabs-panel-padding-inline-start, --rvo-space-md)
-    var(--rvo-tabs-panel-padding-inline-end, --rvo-space-md);
+  --rvo-tabs-padding-block: var(--rvo-tabs-padding-block-start) var(--rvo-tabs-padding-block-end);
+  --rvo-tabs-padding-inline: var(--rvo-tabs-padding-inline-start) var(--rvo-tabs-padding-inline-end);
+  --rvo-tabs-panel-padding-block: var(--rvo-tabs-panel-padding-block-start) var(--rvo-tabs-panel-padding-block-end);
+  --rvo-tabs-panel-padding-inline: var(--rvo-tabs-panel-padding-inline-start) var(--rvo-tabs-panel-padding-inline-end);
 
   font-size: var(--rvo-tabs-font-size);
 
@@ -114,17 +110,17 @@
 
   // util
   &--sm {
-    --rvo-tabs-font-size: var(--rvo-font-size-sm, --rvo-space-sm);
-    --rvo-tabs-gap: var(--rvo-space-2xs, --rvo-space-2xs);
+    --rvo-tabs-font-size: var(--rvo-tabs-sm-font-size);
+    --rvo-tabs-gap: var(--rvo-tabs-sm-gap);
   }
 
   &--md {
-    --rvo-tabs-font-size: var(--rvo-font-size-md, --rvo-space-md);
-    --rvo-tabs-gap: var(--rvo-space-xs, --rvo-space-xs);
+    --rvo-tabs-font-size: var(--rvo-tabs-md-font-size);
+    --rvo-tabs-gap: var(--rvo-tabs-md-gap);
   }
 
   &--lg {
-    --rvo-tabs-font-size: var(--rvo-font-size-lg, --rvo-space-lg);
-    --rvo-tabs-gap: var(--rvo-space-xs, --rvo-space-xs);
+    --rvo-tabs-font-size: var(--rvo-tabs-lg-font-size);
+    --rvo-tabs-gap: var(--rvo-tabs-lg-gap);
   }
 }
