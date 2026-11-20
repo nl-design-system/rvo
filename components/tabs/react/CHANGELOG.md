@@ -1,5 +1,12 @@
 # @nl-rvo/react-tabs
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [be7d61a]
+  - @nl-rvo/css-tabs@2.1.2
+
 ## 1.0.2
 
 ### Patch Changes

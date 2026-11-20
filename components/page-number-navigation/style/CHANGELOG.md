@@ -1,5 +1,13 @@
 # `@nl-rvo/css-pagination`
 
+## 1.6.2
+
+### Patch Changes
+
+- 5961895: a11y(page-number-navigation): make focused link visible
+
+  It was unclear which item had keyboard focus in the page number navigation, because the links had no focus indicator. Links are now underlined on keyboard focus, like on hover, with the focus thickness of the link component.
+
 ## 1.6.1
 
 ### Patch Changes

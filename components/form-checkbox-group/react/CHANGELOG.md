@@ -1,5 +1,13 @@
 # @nl-rvo/react-form-checkbox-group
 
+## 1.0.4
+
+### Patch Changes
+
+- 443bf97: Add a proper label to the CheckboxFilter and link it to its CheckboxGroup
+  Properly link label to text input within CheckboxFilter
+  Configure aria-live/aria-controls relations between text input and CheckboxGroup within CheckboxFilter
+
 ## 1.0.3
 
 ### Patch Changes

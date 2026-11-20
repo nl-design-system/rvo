@@ -1,5 +1,17 @@
 # `@nl-rvo/css-link`
 
+## 1.7.3
+
+### Patch Changes
+
+- 837ee8f: fix(link): restore underline on hover and focus for links inside block containers
+
+  Since the architecture refactor `.rvo-link__text` used `display: inline-flex`. An atomic inline box does not inherit `text-decoration` from its parent, so links whose anchor is `display: block` (for example the card title link with `fullCardLink`) lost their underline on hover and focus. The text wrapper is a block-level flex container again, as it was before the refactor.
+
+- 8a4ae9a: fix(button, link): reduce icon-text gap from 12px to 8px
+
+  The gap between icon and adjacent text in the button and link components has been reduced from `--rvo-space-sm` (12px) to `--rvo-space-xs` (8px). This applies to all button variants with icons and to link elements using `.rvo-link__text` or `.rvo-link--with-icon`.
+
 ## 1.7.2
 
 ### Patch Changes
