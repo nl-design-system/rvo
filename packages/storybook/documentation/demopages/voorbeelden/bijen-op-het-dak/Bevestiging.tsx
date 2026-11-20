@@ -102,7 +102,7 @@ const Bevestiging = () => {
             </p>
           </LayoutFlow>
 
-          <Link href="#" iconPlacement="right" icon="externe-link">
+          <Link href="#" iconPlacement="left" icon="terug" noUnderline={true}>
             Ga naar Mijn aanvragen
           </Link>
         </LayoutFlow>

@@ -3,7 +3,6 @@ import {
   Alert,
   Button,
   Dialog,
-  Fieldset,
   Footer,
   FormField,
   Grid,
@@ -216,7 +215,7 @@ const BijenkastWijzigen = () => {
       <MaxWidthLayout size="md" className="rvo-padding-block-start--2xl rvo-padding-block-end--3xl">
         <Grid
           columns={isDesktop ? 'two' : 'one'}
-          gap="xl"
+          gap="2xl"
           division={isDesktop ? '1fr 3fr' : undefined}
           className="rvo-padding-inline-start--md rvo-padding-inline-end--md"
         >
@@ -238,7 +237,7 @@ const BijenkastWijzigen = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} noValidate>
-                  <LayoutFlow>
+                  <LayoutFlow gap="xl">
                     {hasErrors && (
                       <div ref={errorSummaryRef} tabIndex={-1}>
                         <Alert kind="error" padding="md">
@@ -258,7 +257,7 @@ const BijenkastWijzigen = () => {
                       </div>
                     )}
 
-                    <Fieldset legend="Bijenkastgegevens">
+                    <div className="rvo-layout-column rvo-layout-gap--xl">
                       <FormField
                         id="pand"
                         label="Gebouw"
@@ -287,7 +286,6 @@ const BijenkastWijzigen = () => {
                         />
                       </FormField>
                       <div
-                        className="rvo-margin-block-end--xl"
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                           setTypeBijenkast(
                             e.target.id === 'langstroth'
@@ -318,7 +316,7 @@ const BijenkastWijzigen = () => {
                           />
                         </FormField>
                       </div>
-                    </Fieldset>
+                    </div>
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
