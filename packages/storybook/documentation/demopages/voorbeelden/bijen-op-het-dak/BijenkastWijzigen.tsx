@@ -10,6 +10,7 @@ import {
   Heading,
   LayoutFlow,
   Link,
+  List,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -69,13 +70,6 @@ const BijenkastWijzigen = () => {
   const projectCompleted = !!getProject();
   const pandenCompleted = getPanden().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
@@ -228,7 +222,7 @@ const BijenkastWijzigen = () => {
               <LayoutFlow gap="sm">
                 <div>
                   <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Terug
+                    Vorige stap
                   </Link>
                   <Heading type="h1">Bijenkast wijzigen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -299,6 +293,18 @@ const BijenkastWijzigen = () => {
                         <FormField
                           id="typeBijenkast"
                           label="Type bijenkast"
+                          expandableHelperText={{ title: 'Wat zijn de typen bijenkasten?' }}
+                          helperText={
+                            <List
+                              type="unordered"
+                              bulletType="disc"
+                              items={[
+                                'Langstroth kast: een stapelbare kast met losse, rechthoekige raamkaders waaraan de bijen hun raat bouwen. Dit is wereldwijd het meest gebruikte type.',
+                                'Warré kast: een verticale kast van kleine, vierkante kasten die op elkaar staan. Bijen bouwen hun raat naar beneden en nieuwe kasten voegt u onderaan toe.',
+                                'Top-bar kast: een lage, horizontale kast met losse houten lamellen (top-bars) bovenin. Bijen bouwen hun raat vrij hangend aan deze lamellen.',
+                              ]}
+                            />
+                          }
                           errorText={errors.typeBijenkast?.fieldText}
                         >
                           <FormField.RadioButtonGroup
@@ -320,7 +326,7 @@ const BijenkastWijzigen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Bijenkast opslaan
+                        Volgende stap
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

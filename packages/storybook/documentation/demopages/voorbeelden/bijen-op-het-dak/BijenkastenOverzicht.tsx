@@ -19,6 +19,7 @@ import { useEffect, useState } from 'react';
 import { Bijenkast, getBijenkasten, removeBijenkast, saveEditBijenkastIndex } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDialogFocus } from './useDialogFocus';
 import { useDemoControls } from './useDemoControls';
 
 const URL_VOORBEREIDING =
@@ -40,17 +41,11 @@ const BijenkastenOverzicht = () => {
   useDemoControls();
   const [bijenkasten, setBijenkasten] = useState<Bijenkast[]>([]);
   const [dialogOpenIndex, setDialogOpenIndex] = useState<number | null>(null);
+  useDialogFocus(dialogOpenIndex !== null);
 
   const projectCompleted = !!getProject();
   const pandenCompleted = getPanden().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
@@ -140,7 +135,7 @@ const BijenkastenOverzicht = () => {
             <LayoutFlow gap="xl">
               <div>
                 <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                  Terug
+                  Vorige stap
                 </Link>
                 <Heading type="h1">Bijenkasten</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -180,7 +175,13 @@ const BijenkastenOverzicht = () => {
                         >
                           Wijzig bijenkast
                         </Link>
-                        <Button kind="warning" size="sm" icon="verwijderen" onClick={() => setDialogOpenIndex(index)}>
+                        <Button
+                          kind="warning"
+                          size="sm"
+                          icon="verwijderen"
+                          iconPlacement="left"
+                          onClick={() => setDialogOpenIndex(index)}
+                        >
                           Verwijder bijenkast
                         </Button>
                       </div>
@@ -194,7 +195,7 @@ const BijenkastenOverzicht = () => {
 
               <div className="rvo-action-group">
                 {bijenkasten.length === 0 && (
-                  <Link href={URL_BIJENKAST_TOEVOEGEN} callToAction={true}>
+                  <Link href={URL_BIJENKAST_TOEVOEGEN} callToAction={true} iconPlacement="left" icon="plus">
                     Voeg een bijenkast toe
                   </Link>
                 )}
@@ -230,7 +231,7 @@ const BijenkastenOverzicht = () => {
           onClose={() => setDialogOpenIndex(null)}
           actionGroup={
             <ActionGroup>
-              <Button kind="warning" size="md" onClick={handleDeleteConfirm}>
+              <Button kind="warning" size="md" icon="verwijderen" iconPlacement="left" onClick={handleDeleteConfirm}>
                 Bijenkast verwijderen
               </Button>
               <Button kind="secondary" size="md" onClick={() => setDialogOpenIndex(null)}>

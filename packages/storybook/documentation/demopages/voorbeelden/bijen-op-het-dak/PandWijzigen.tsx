@@ -54,13 +54,6 @@ const PandWijzigen = () => {
   const bijenkastenCompleted = getBijenkasten().length > 0;
   const progressSteps = [
     {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
       link: URL_PROJECTGEGEVENS,
@@ -154,7 +147,7 @@ const PandWijzigen = () => {
               <LayoutFlow gap="sm">
                 <div>
                   <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Terug
+                    Vorige stap
                   </Link>
                   <Heading type="h1">Gebouw wijzigen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -173,7 +166,7 @@ const PandWijzigen = () => {
                       </FormField>
                       <FormField label="Huisnummer">
                         <FormField.Text
-                          sizeInput="xs"
+                          sizeInput="sm"
                           value={huisnummer}
                           onChange={(e) => setHuisnummer(e.target.value)}
                         />
@@ -236,7 +229,7 @@ const PandWijzigen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Gebouw opslaan
+                        Volgende stap
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

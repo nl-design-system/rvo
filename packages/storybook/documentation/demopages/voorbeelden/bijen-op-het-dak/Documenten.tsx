@@ -29,6 +29,7 @@ import {
 } from './documentenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDialogFocus } from './useDialogFocus';
 import { useDemoControls } from './useDemoControls';
 
 const URL_VOORBEREIDING =
@@ -59,18 +60,12 @@ const Documenten = () => {
   const [showOfferteForm, setShowOfferteForm] = useState(true);
   const [showTekeningForm, setShowTekeningForm] = useState(true);
   const [deleteTarget, setDeleteTarget] = useState<DeleteTarget | null>(null);
+  useDialogFocus(deleteTarget !== null);
 
   const projectCompleted = !!getProject();
   const pandenCompleted = getPanden().length > 0;
   const bijenkastenCompleted = getBijenkasten().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
@@ -189,7 +184,7 @@ const Documenten = () => {
             <LayoutFlow gap="xl">
               <div>
                 <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                  Terug
+                  Vorige stap
                 </Link>
                 <Heading type="h1">Documenten</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -219,6 +214,7 @@ const Documenten = () => {
                               kind="warning"
                               size="sm"
                               icon="verwijderen"
+                              iconPlacement="left"
                               onClick={() => setDeleteTarget({ type: 'offerte', index })}
                             >
                               Verwijder bestand
@@ -234,10 +230,10 @@ const Documenten = () => {
                       <FormField
                         id={`offerte-upload-${offertes.length}`}
                         label="Offerte uploaden"
-                        expandableHelperText={{ title: 'Voorwaarden voor de offerte' }}
                         helperText={
                           <List
                             type="unordered"
+                            bulletType="disc"
                             items={[
                               'Het bestand is in PDF-formaat en maximaal 10 MB.',
                               'De offerte is opgesteld door een gecertificeerde installateur.',
@@ -306,6 +302,7 @@ const Documenten = () => {
                               kind="warning"
                               size="sm"
                               icon="verwijderen"
+                              iconPlacement="left"
                               onClick={() => setDeleteTarget({ type: 'tekening', index })}
                             >
                               Verwijder bestand
@@ -321,10 +318,10 @@ const Documenten = () => {
                       <FormField
                         id={`tekening-upload-${tekeningen.length}`}
                         label="Tekening uploaden"
-                        expandableHelperText={{ title: 'Voorwaarden voor de tekening' }}
                         helperText={
                           <List
                             type="unordered"
+                            bulletType="disc"
                             items={[
                               'Het bestand is in PDF-formaat en maximaal 10 MB.',
                               'De tekening toont een bovenaanzicht van het dak.',
@@ -377,7 +374,7 @@ const Documenten = () => {
                     window.location.href = URL_CONTROLEREN;
                   }}
                 >
-                  Documenten opslaan
+                  Volgende stap
                 </Button>
               </ActionGroup>
             </LayoutFlow>
@@ -400,7 +397,7 @@ const Documenten = () => {
           onClose={() => setDeleteTarget(null)}
           actionGroup={
             <ActionGroup>
-              <Button kind="warning" size="md" onClick={handleDeleteConfirm}>
+              <Button kind="warning" size="md" icon="verwijderen" iconPlacement="left" onClick={handleDeleteConfirm}>
                 Bestand verwijderen
               </Button>
               <Button kind="secondary" size="md" onClick={() => setDeleteTarget(null)}>

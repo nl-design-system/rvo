@@ -99,13 +99,6 @@ const ControlerenIndienen = () => {
 
   const progressSteps = [
     {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
       state: (project ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
       link: URL_PROJECTGEGEVENS,
@@ -182,7 +175,7 @@ const ControlerenIndienen = () => {
             <LayoutFlow gap="xl">
               <div>
                 <Link href={URL_DOCUMENTEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                  Terug
+                  Vorige stap
                 </Link>
                 <Heading type="h1">Controleren en versturen</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -226,7 +219,7 @@ const ControlerenIndienen = () => {
                   {project ? (
                     <DataList>
                       <DataList.Item label="Projectnaam" value={project.naam} />
-                      <DataList.Item label="Omschrijving" value={project.omschrijving} />
+                      <DataList.Item label="Omschrijving" value={project.omschrijving || 'Niet ingevuld'} />
                       <DataList.Item label="Beoogde startdatum" value={formatDate(project.startdatum)} />
                     </DataList>
                   ) : (

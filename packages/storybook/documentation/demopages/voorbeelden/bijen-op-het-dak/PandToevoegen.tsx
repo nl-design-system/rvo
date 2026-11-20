@@ -63,13 +63,6 @@ const PandToevoegen = () => {
   const bijenkastenCompleted = getBijenkasten().length > 0;
   const progressSteps = [
     {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
       link: URL_PROJECTGEGEVENS,
@@ -252,7 +245,7 @@ const PandToevoegen = () => {
               <LayoutFlow gap="sm">
                 <div>
                   <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Terug
+                    Vorige stap
                   </Link>
                   <Heading type="h1">Gebouw toevoegen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -294,7 +287,7 @@ const PandToevoegen = () => {
                       </FormField>
                       <FormField id="huisnummer" label="Huisnummer" errorText={errors.huisnummer?.fieldText}>
                         <FormField.Text
-                          sizeInput="xs"
+                          sizeInput="sm"
                           value={huisnummer}
                           onChange={(e) => setHuisnummer(e.target.value)}
                           invalid={!!errors.huisnummer}
@@ -377,9 +370,9 @@ const PandToevoegen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Gebouw opslaan
+                        Volgende stap
                       </Button>
-                      <Button kind="secondary" size="md">
+                      <Button kind="secondary" size="md" icon="plus" iconPlacement="left">
                         Opslaan en nog een gebouw toevoegen
                       </Button>
                     </ActionGroup>
