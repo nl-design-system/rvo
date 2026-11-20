@@ -9,3 +9,8 @@
     overflow: auto;
   }
 }
+
+.componentLinks {
+  margin-block-start: var(--rvo-space-xl);
+  margin-block-end: var(--rvo-space-xl);
+}
