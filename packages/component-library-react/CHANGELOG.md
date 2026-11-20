@@ -1,5 +1,92 @@
 # @nl-rvo/component-library-react
 
+## 8.1.0
+
+### Minor Changes
+
+- 38d8844: feat(form-fieldset): clean up fieldset styling and add border-radius utilities
+
+  Removes background colour, padding, and border radius from `rvo-form-fieldset`.
+  Those visual responsibilities now belong to the wrapping element, composable via
+  existing utilities (`rvo-bg--grijs-100`, `rvo-padding--xl`, `rvo-layout-column`,
+  `rvo-layout-gap--xl`, `rvo-border-start-end-radius--2xl`). Also resets browser
+  defaults (`min-inline-size`, `padding`, `margin`) and adds a `legend-gap` token
+  to control the spacing between the legend and the first field independently of the
+  field-to-field gap.
+
+  Adds `rvo-border-radius--{sm|md|lg|xl|2xl}` for uniform border radius and
+  `rvo-border-{start-start|start-end|end-start|end-end}-radius--{size}` for
+  per-corner logical-property variants to `utility-border`.
+
+  Also fixes a bug where the form-field description element was always rendered as
+  an empty `<div>` even when no `helperText` or `expandableHelperText` was provided.
+
+### Patch Changes
+
+- 5961895: a11y(page-number-navigation): make focused link visible
+
+  It was unclear which item had keyboard focus in the page number navigation, because the links had no focus indicator. Links are now underlined on keyboard focus, like on hover, with the focus thickness of the link component.
+
+- bf30113: [WCAG] Make sure titles in footer are actual headings
+- 837ee8f: fix(link): restore underline on hover and focus for links inside block containers
+
+  Since the architecture refactor `.rvo-link__text` used `display: inline-flex`. An atomic inline box does not inherit `text-decoration` from its parent, so links whose anchor is `display: block` (for example the card title link with `fullCardLink`) lost their underline on hover and focus. The text wrapper is a block-level flex container again, as it was before the refactor.
+
+- b516c70: fix(logo): keep the logo title link in its rest state after a mouse click and show a 2px underline on keyboard focus plus hover
+
+  After a mouse click the title link kept `:focus` and showed the thick black focus underline. It now looks like the rest state again. When the link has keyboard focus and is hovered, the underline stays visible at the hover thickness instead of disappearing.
+
+- 443bf97: Add a proper label to the CheckboxFilter and link it to its CheckboxGroup
+  Properly link label to text input within CheckboxFilter
+  Configure aria-live/aria-controls relations between text input and CheckboxGroup within CheckboxFilter
+- be7d61a: refactor(tabs): use component tokens for sizes and remove var fallbacks
+
+  The tabs SCSS referenced common tokens directly for the sm, md and lg sizes and used invalid fallback values in `var()`. Added the component tokens `--rvo-tabs-sm-*`, `--rvo-tabs-md-*` and `--rvo-tabs-lg-*` for font size and gap, which reference the common tokens, and removed all fallbacks. Visual output is unchanged.
+
+- 8a4ae9a: fix(button, link): reduce icon-text gap from 12px to 8px
+
+  The gap between icon and adjacent text in the button and link components has been reduced from `--rvo-space-sm` (12px) to `--rvo-space-xs` (8px). This applies to all button variants with icons and to link elements using `.rvo-link__text` or `.rvo-link--with-icon`.
+
+- 1400da9: fix(progress-tracker): use the link component states for step links
+
+  The step links of the progress tracker overrode the underline with a custom `text-decoration` rule, which reset the underline thickness on hover and focus. The step links now use the `noUnderline` option of the link component, so hover and focus look the same as the link component: an underline of 2px on hover and 4px on focus. The links still have no underline in the rest state.
+
+- Updated dependencies [5961895]
+- Updated dependencies [bf30113]
+- Updated dependencies [837ee8f]
+- Updated dependencies [38d8844]
+- Updated dependencies [b516c70]
+- Updated dependencies [443bf97]
+- Updated dependencies [be7d61a]
+- Updated dependencies [3c94570]
+- Updated dependencies [8a4ae9a]
+- Updated dependencies [1400da9]
+  - @nl-rvo/component-library-css@5.1.0
+  - @nl-rvo/react-footer@1.0.4
+  - @nl-rvo/react-form-field@1.0.5
+  - @nl-rvo/react-form-fieldset@1.1.0
+  - @nl-rvo/react-checkbox-filter@1.0.5
+  - @nl-rvo/react-form-checkbox-group@1.0.4
+  - @nl-rvo/react-progress-tracker@1.0.4
+  - @nl-rvo/react-page-number-navigation@1.0.4
+  - @nl-rvo/react-link@1.0.4
+  - @nl-rvo/react-logo@1.0.4
+  - @nl-rvo/react-tabs@1.0.3
+  - @nl-rvo/react-button@1.0.4
+  - @nl-rvo/react-accordion@1.0.4
+  - @nl-rvo/react-breadcrumbs@1.0.4
+  - @nl-rvo/react-card-experimental@1.0.4
+  - @nl-rvo/react-card@1.0.4
+  - @nl-rvo/react-form-autocomplete@1.0.5
+  - @nl-rvo/react-menubar@1.0.4
+  - @nl-rvo/react-skip-link@1.0.4
+  - @nl-rvo/react-header@1.0.4
+  - @nl-rvo/react-action-group@1.0.4
+  - @nl-rvo/react-alert@1.0.4
+  - @nl-rvo/react-dialog@1.0.4
+  - @nl-rvo/react-expandable-table@1.0.5
+  - @nl-rvo/react-loader@1.0.4
+
 ## 8.0.4
 
 ### Patch Changes

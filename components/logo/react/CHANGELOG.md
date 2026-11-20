@@ -1,5 +1,13 @@
 # @nl-rvo/react-logo
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [b516c70]
+  - @nl-rvo/css-logo@1.5.3
+  - @nl-rvo/react-link@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

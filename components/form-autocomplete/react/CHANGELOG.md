@@ -1,5 +1,11 @@
 # @nl-rvo/react-form-autocomplete
 
+## 1.0.5
+
+### Patch Changes
+
+- @nl-rvo/react-link@1.0.4
+
 ## 1.0.4
 
 ### Patch Changes
