@@ -8765,8 +8765,8 @@ packages:
     resolution: {integrity: sha512-HqD3yTBfnBxIrbnM1DoD6Pcq8NECnh8d4As1Qgh0z5Gg3jRRIqijury0CL3ghu/edArpUYiYqQiDUQBIs4np3Q==}
     engines: {node: '>=10.0.0'}
 
-  engine.io@6.6.4:
-    resolution: {integrity: sha512-ZCkIjSYNDyGn0R6ewHDtXgns/Zre/NT6Agvq1/WobF7JXgFff4SeDroKiCO3fNJreU9YG429Sc81o4w5ok/W5g==}
+  engine.io@6.6.12:
+    resolution: {integrity: sha512-o6WqrYV9WuxuGxpaPLibbqnvgO7YUpVf2Z6hYJNpizzNYCxQbAEu5w9Cm0aW8u4FIefnWCdGM1uZwor6iDRERg==}
     engines: {node: '>=10.2.0'}
 
   enhanced-resolve@5.12.0:
@@ -9940,6 +9940,7 @@ packages:
   image-size@2.0.2:
     resolution: {integrity: sha512-IRqXKlaXwgSMAMtpNzZa1ZAe8m+Sa1770Dhk8VkSsP9LS+iHD62Zd8FQKs8fbPiagBE7BzoFX23cxFnwshpV6w==}
     engines: {node: '>=16.x'}
+    deprecated: Use latest 2.x please
     hasBin: true
 
   immutable@4.3.7:
@@ -11763,6 +11764,7 @@ packages:
 
   node-abort-controller@3.1.1:
     resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==}
+    deprecated: This package is no longer needed on supported Node.js versions. Node.js 16+ includes AbortController and AbortSignal as built-in globals. All Node.js versions requiring this polyfill are end-of-life. Use the built-in globals instead.
 
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
@@ -15901,6 +15903,18 @@ packages:
 
   ws@8.18.3:
     resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
+  ws@8.21.3:
+    resolution: {integrity: sha512-201TZ/kPWxoPr/OKWjquZR1SWKXcvxdH+e1xrx89b3YbmzLMFCLfnaG1HFIgWzJOEWZ7MvpK++odZufgYR50Rw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -24626,17 +24640,17 @@ snapshots:
 
   engine.io-parser@5.2.3: {}
 
-  engine.io@6.6.4(supports-color@9.4.0):
+  engine.io@6.6.12(supports-color@9.4.0):
     dependencies:
       '@types/cors': 2.8.19
       '@types/node': 24.10.4
+      '@types/ws': 8.18.1
       accepts: 1.3.8
-      base64id: 2.0.0
       cookie: 0.7.2
       cors: 2.8.5
-      debug: 4.3.4(supports-color@9.4.0)
+      debug: 4.4.3(supports-color@9.4.0)
       engine.io-parser: 5.2.3
-      ws: 8.17.1
+      ws: 8.21.3
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -32117,7 +32131,7 @@ snapshots:
       base64id: 2.0.0
       cors: 2.8.5
       debug: 4.3.4(supports-color@9.4.0)
-      engine.io: 6.6.4(supports-color@9.4.0)
+      engine.io: 6.6.12(supports-color@9.4.0)
       socket.io-adapter: 2.5.5(supports-color@9.4.0)
       socket.io-parser: 4.2.4(supports-color@9.4.0)
     transitivePeerDependencies:
@@ -33916,6 +33930,8 @@ snapshots:
   ws@8.17.1: {}
 
   ws@8.18.3: {}
+
+  ws@8.21.3: {}
 
   ws@8.22.0: {}
 
