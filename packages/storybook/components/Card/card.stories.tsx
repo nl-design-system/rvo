@@ -108,7 +108,7 @@ export const ColoredBackground: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
       <Card {...args} background="color" backgroundColor="grijs-100" />
-      <Card {...args} background="color" backgroundColor="hemelblauw" />
+      <Card {...args} background="color" backgroundColor="hemelblauw" invertedColors outline={false} />
       <Card {...args} background="color" backgroundColor="lichtblauw-150" />
       <Card {...args} background="color" backgroundColor="wit" />
     </div>
