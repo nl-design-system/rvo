@@ -1,5 +1,13 @@
 # @nl-rvo/react-page-number-navigation
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [5961895]
+  - @nl-rvo/css-page-number-navigation@1.6.2
+  - @nl-rvo/react-link@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

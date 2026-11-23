@@ -1,5 +1,11 @@
 # @nl-rvo/react-expandable-table
 
+## 1.0.5
+
+### Patch Changes
+
+- @nl-rvo/react-button@1.0.4
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @nl-rvo/react-footer
 
+## 1.0.4
+
+### Patch Changes
+
+- bf30113: [WCAG] Make sure titles in footer are actual headings
+- @nl-rvo/react-link@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes
