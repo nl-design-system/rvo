@@ -29,22 +29,18 @@ import {
 } from './documentenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
+import { useDialogFocus } from './useDialogFocus';
 import { useDemoControls } from './useDemoControls';
 
 const URL_VOORBEREIDING =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-voordat-u-begint-met-aanvragen--default&viewMode=story';
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
+const URL_VOORBEELD_PDF = 'bijen-op-het-dak-voorbeeld.pdf';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
-
-const formatFileSize = (bytes: number): string => {
-  if (bytes >= 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(1).replace('.', ',')} MB`;
-  return `${Math.round(bytes / 1024)} kB`;
-};
 
 interface DeleteTarget {
   type: 'offerte' | 'tekening';
@@ -59,18 +55,11 @@ const Documenten = () => {
   const [showOfferteForm, setShowOfferteForm] = useState(true);
   const [showTekeningForm, setShowTekeningForm] = useState(true);
   const [deleteTarget, setDeleteTarget] = useState<DeleteTarget | null>(null);
+  useDialogFocus(deleteTarget !== null);
 
   const projectCompleted = !!getProject();
-  const pandenCompleted = getPanden().length > 0;
-  const bijenkastenCompleted = getBijenkasten().length > 0;
+  const pandenCompleted = getPanden().length > 0 && getBijenkasten().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
@@ -82,13 +71,6 @@ const Documenten = () => {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Gebouwen',
       link: URL_PANDEN,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
-      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
       size: 'md' as const,
       line: 'straight' as const,
     },
@@ -126,7 +108,7 @@ const Documenten = () => {
   const handleOfferteChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    addOfferte({ bestandsnaam: file.name, grootte: file.size });
+    addOfferte({ bestandsnaam: file.name });
     setOffertes(getOffertes());
     setShowOfferteForm(false);
   };
@@ -134,7 +116,7 @@ const Documenten = () => {
   const handleTekeningChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    addTekening({ bestandsnaam: file.name, grootte: file.size });
+    addTekening({ bestandsnaam: file.name });
     setTekeningen(getTekeningen());
     setShowTekeningForm(false);
   };
@@ -188,8 +170,8 @@ const Documenten = () => {
           <main>
             <LayoutFlow gap="xl">
               <div>
-                <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                  Terug
+                <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
+                  Vorige stap
                 </Link>
                 <Heading type="h1">Documenten</Heading>
                 <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -212,13 +194,23 @@ const Documenten = () => {
                       {offertes.map((doc, index) => (
                         <div key={index}>
                           <p className="rvo-paragraph rvo-paragraph--no-spacing">
-                            <strong>{doc.bestandsnaam}</strong> ({formatFileSize(doc.grootte)})
+                            <Link
+                              href={URL_VOORBEELD_PDF}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              iconPlacement="left"
+                              icon="document-blanco"
+                              noUnderline={true}
+                            >
+                              {doc.bestandsnaam}
+                            </Link>
                           </p>
                           <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--xs">
                             <Button
-                              kind="warning"
+                              kind="warning-subtle"
                               size="sm"
                               icon="verwijderen"
+                              iconPlacement="left"
                               onClick={() => setDeleteTarget({ type: 'offerte', index })}
                             >
                               Verwijder bestand
@@ -234,10 +226,10 @@ const Documenten = () => {
                       <FormField
                         id={`offerte-upload-${offertes.length}`}
                         label="Offerte uploaden"
-                        expandableHelperText={{ title: 'Voorwaarden voor de offerte' }}
                         helperText={
                           <List
                             type="unordered"
+                            bulletType="disc"
                             items={[
                               'Het bestand is in PDF-formaat en maximaal 10 MB.',
                               'De offerte is opgesteld door een gecertificeerde installateur.',
@@ -265,19 +257,17 @@ const Documenten = () => {
                       )}
                     </LayoutFlow>
                   ) : (
-                    <Link
-                      href="#"
-                      color="donkerblauw"
-                      iconPlacement="left"
-                      icon="plus"
-                      noUnderline={true}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowOfferteForm(true);
-                      }}
-                    >
-                      Voeg nog een offerte toe
-                    </Link>
+                    <div>
+                      <Button
+                        kind="secondary"
+                        size="md"
+                        icon="plus"
+                        iconPlacement="left"
+                        onClick={() => setShowOfferteForm(true)}
+                      >
+                        Voeg nog een offerte toe
+                      </Button>
+                    </div>
                   )}
                 </LayoutFlow>
               </div>
@@ -299,13 +289,23 @@ const Documenten = () => {
                       {tekeningen.map((doc, index) => (
                         <div key={index}>
                           <p className="rvo-paragraph rvo-paragraph--no-spacing">
-                            <strong>{doc.bestandsnaam}</strong> ({formatFileSize(doc.grootte)})
+                            <Link
+                              href={URL_VOORBEELD_PDF}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              iconPlacement="left"
+                              icon="document-blanco"
+                              noUnderline={true}
+                            >
+                              {doc.bestandsnaam}
+                            </Link>
                           </p>
                           <div className="rvo-layout-row rvo-layout-gap--md rvo-margin-block-start--xs">
                             <Button
-                              kind="warning"
+                              kind="warning-subtle"
                               size="sm"
                               icon="verwijderen"
+                              iconPlacement="left"
                               onClick={() => setDeleteTarget({ type: 'tekening', index })}
                             >
                               Verwijder bestand
@@ -321,10 +321,10 @@ const Documenten = () => {
                       <FormField
                         id={`tekening-upload-${tekeningen.length}`}
                         label="Tekening uploaden"
-                        expandableHelperText={{ title: 'Voorwaarden voor de tekening' }}
                         helperText={
                           <List
                             type="unordered"
+                            bulletType="disc"
                             items={[
                               'Het bestand is in PDF-formaat en maximaal 10 MB.',
                               'De tekening toont een bovenaanzicht van het dak.',
@@ -352,19 +352,17 @@ const Documenten = () => {
                       )}
                     </LayoutFlow>
                   ) : (
-                    <Link
-                      href="#"
-                      color="donkerblauw"
-                      iconPlacement="left"
-                      icon="plus"
-                      noUnderline={true}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowTekeningForm(true);
-                      }}
-                    >
-                      Voeg nog een tekening toe
-                    </Link>
+                    <div>
+                      <Button
+                        kind="secondary"
+                        size="md"
+                        icon="plus"
+                        iconPlacement="left"
+                        onClick={() => setShowTekeningForm(true)}
+                      >
+                        Voeg nog een tekening toe
+                      </Button>
+                    </div>
                   )}
                 </LayoutFlow>
               </div>
@@ -377,7 +375,7 @@ const Documenten = () => {
                     window.location.href = URL_CONTROLEREN;
                   }}
                 >
-                  Documenten opslaan
+                  Volgende stap
                 </Button>
               </ActionGroup>
             </LayoutFlow>
@@ -400,7 +398,7 @@ const Documenten = () => {
           onClose={() => setDeleteTarget(null)}
           actionGroup={
             <ActionGroup>
-              <Button kind="warning" size="md" onClick={handleDeleteConfirm}>
+              <Button kind="warning" size="md" icon="verwijderen" iconPlacement="left" onClick={handleDeleteConfirm}>
                 Bestand verwijderen
               </Button>
               <Button kind="secondary" size="md" onClick={() => setDeleteTarget(null)}>

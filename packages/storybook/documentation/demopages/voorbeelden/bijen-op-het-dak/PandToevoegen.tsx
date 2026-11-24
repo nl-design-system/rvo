@@ -17,7 +17,6 @@ import {
 } from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
-import { getBijenkasten } from './bijenkastenStorage';
 import { addPand } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { useDemoControls } from './useDemoControls';
@@ -31,7 +30,6 @@ const URL_PAND_TOEVOEGEN =
 
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
@@ -60,15 +58,7 @@ const PandToevoegen = () => {
   const errorSummaryRef = useRef<HTMLDivElement>(null);
 
   const projectCompleted = !!getProject();
-  const bijenkastenCompleted = getBijenkasten().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
@@ -89,13 +79,6 @@ const PandToevoegen = () => {
       link: URL_PAND_TOEVOEGEN,
       size: 'sm' as const,
       line: 'substep-end' as const,
-    },
-    {
-      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
-      size: 'md' as const,
-      line: 'straight' as const,
     },
     {
       state: 'incomplete' as const,
@@ -252,7 +235,7 @@ const PandToevoegen = () => {
               <LayoutFlow gap="sm">
                 <div>
                   <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Terug
+                    Vorige stap
                   </Link>
                   <Heading type="h1">Gebouw toevoegen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -294,7 +277,7 @@ const PandToevoegen = () => {
                       </FormField>
                       <FormField id="huisnummer" label="Huisnummer" errorText={errors.huisnummer?.fieldText}>
                         <FormField.Text
-                          sizeInput="xs"
+                          sizeInput="sm"
                           value={huisnummer}
                           onChange={(e) => setHuisnummer(e.target.value)}
                           invalid={!!errors.huisnummer}
@@ -377,9 +360,9 @@ const PandToevoegen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Gebouw opslaan
+                        Volgende stap
                       </Button>
-                      <Button kind="secondary" size="md">
+                      <Button kind="secondary" size="md" icon="plus" iconPlacement="left">
                         Opslaan en nog een gebouw toevoegen
                       </Button>
                     </ActionGroup>

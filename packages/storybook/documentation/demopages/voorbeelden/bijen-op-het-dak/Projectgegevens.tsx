@@ -3,6 +3,8 @@ import {
   Alert,
   Button,
   Dialog,
+  Feedback,
+  Fieldset,
   Footer,
   FormField,
   Grid,
@@ -27,10 +29,24 @@ const URL_VOORBEREIDING =
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
+
+const isValidDate = (dag: string, maand: string, jaar: string): boolean => {
+  if (!/^\d{1,2}$/.test(dag.trim()) || !/^\d{1,2}$/.test(maand.trim()) || !/^\d{4}$/.test(jaar.trim())) return false;
+  const d = Number(dag);
+  const m = Number(maand);
+  const y = Number(jaar);
+  const date = new Date(y, m - 1, d);
+  return date.getFullYear() === y && date.getMonth() === m - 1 && date.getDate() === d;
+};
+
+// Keeps digits only and ignores input above the maximum, so a day cannot exceed 31 and a month cannot exceed 12.
+const limitNumber = (value: string, previous: string, max: number): string => {
+  const digits = value.replace(/\D/g, '');
+  return digits !== '' && Number(digits) > max ? previous : digits;
+};
 
 interface FieldError {
   before: string;
@@ -47,21 +63,16 @@ const Projectgegevens = () => {
   const stored = getProject();
   const [naam, setNaam] = useState(stored?.naam ?? '');
   const [omschrijving, setOmschrijving] = useState(stored?.omschrijving ?? '');
-  const [startdatum, setStartdatum] = useState(stored?.startdatum ?? '');
+  const [storedJaar, storedMaand, storedDag] = (stored?.startdatum ?? '').split('-');
+  const [dag, setDag] = useState(storedDag ? String(Number(storedDag)) : '');
+  const [maand, setMaand] = useState(storedMaand ? String(Number(storedMaand)) : '');
+  const [jaar, setJaar] = useState(storedJaar ?? '');
   const [errors, setErrors] = useState<Record<string, FieldError>>({});
 
   const errorSummaryRef = useRef<HTMLDivElement>(null);
 
-  const pandenCompleted = getPanden().length > 0;
-  const bijenkastenCompleted = getBijenkasten().length > 0;
+  const pandenCompleted = getPanden().length > 0 && getBijenkasten().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: 'doing' as const,
       label: 'Projectgegevens',
@@ -73,13 +84,6 @@ const Projectgegevens = () => {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Gebouwen',
       link: URL_PANDEN,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
-      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
       size: 'md' as const,
       line: 'straight' as const,
     },
@@ -118,23 +122,21 @@ const Projectgegevens = () => {
       };
     }
 
-    if (!omschrijving.trim()) {
-      newErrors.omschrijving = {
-        before: 'Het veld ',
-        linkLabel: 'Projectomschrijving',
-        after: ' is niet ingevuld, maar wel verplicht. Vul een omschrijving in.',
-        fieldText: 'Het veld Projectomschrijving is niet ingevuld, maar wel verplicht. Vul een omschrijving in.',
-        anchor: 'omschrijving-label',
-      };
-    }
-
-    if (!startdatum.trim()) {
+    if (!dag.trim() && !maand.trim() && !jaar.trim()) {
       newErrors.startdatum = {
         before: 'Het veld ',
-        linkLabel: 'Beoogde startdatum',
-        after: ' is niet ingevuld, maar wel verplicht. Vul een datum in (dd-mm-jjjj).',
-        fieldText: 'Het veld Beoogde startdatum is niet ingevuld, maar wel verplicht. Vul een datum in (dd-mm-jjjj).',
-        anchor: 'startdatum-label',
+        linkLabel: 'Startdatum',
+        after: ' is niet ingevuld, maar wel verplicht. Vul een dag, maand en jaar in.',
+        fieldText: 'Het veld Startdatum is niet ingevuld, maar wel verplicht. Vul een dag, maand en jaar in.',
+        anchor: 'startdatum-dag-label',
+      };
+    } else if (!isValidDate(dag, maand, jaar)) {
+      newErrors.startdatum = {
+        before: '',
+        linkLabel: 'Startdatum',
+        after: ' is geen geldige datum. Vul een bestaande dag, maand en jaar in, bijvoorbeeld 1 3 2026.',
+        fieldText: 'Startdatum is geen geldige datum. Vul een bestaande dag, maand en jaar in, bijvoorbeeld 1 3 2026.',
+        anchor: 'startdatum-dag-label',
       };
     }
 
@@ -149,6 +151,7 @@ const Projectgegevens = () => {
       setTimeout(() => errorSummaryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
       return;
     }
+    const startdatum = `${jaar.trim()}-${maand.trim().padStart(2, '0')}-${dag.trim().padStart(2, '0')}`;
     saveProject({ naam, omschrijving, startdatum });
     window.location.href = URL_PANDEN;
   };
@@ -190,7 +193,7 @@ const Projectgegevens = () => {
               <LayoutFlow gap="sm">
                 <div>
                   <Link href={URL_VOORBEREIDING} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Terug
+                    Vorige stap
                   </Link>
                   <Heading type="h1">Projectgegevens</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -229,34 +232,65 @@ const Projectgegevens = () => {
                       </FormField>
                       <FormField
                         id="omschrijving"
-                        label="Projectomschrijving"
+                        label="Projectomschrijving (niet verplicht)"
                         helperText="Beschrijf kort het doel en de aanpak van uw bijenproject."
-                        errorText={errors.omschrijving?.fieldText}
                       >
-                        <FormField.TextArea
-                          value={omschrijving}
-                          onChange={(e) => setOmschrijving(e.target.value)}
-                          invalid={!!errors.omschrijving}
-                        />
+                        <FormField.TextArea value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)} />
                       </FormField>
-                      <FormField
-                        id="startdatum"
-                        label="Beoogde startdatum"
-                        helperText="De datum waarop u verwacht te beginnen met plaatsen van de bijenkasten."
-                        errorText={errors.startdatum?.fieldText}
-                      >
-                        <FormField.Date
-                          sizeInput="sm"
-                          value={startdatum}
-                          onChange={(e) => setStartdatum(e.target.value)}
-                          invalid={!!errors.startdatum}
-                        />
-                      </FormField>
+                      <Fieldset legend="Startdatum">
+                        <div className="rvo-layout-column rvo-layout-gap--xs">
+                          <div className="utrecht-form-field-description">
+                            De datum waarop u verwacht te beginnen met plaatsen van de bijenkasten.
+                          </div>
+                          {errors.startdatum && <Feedback type="foutmelding">{errors.startdatum.fieldText}</Feedback>}
+                          <div className="rvo-layout-row rvo-layout-gap--xs rvo-layout--wrap rvo-layout-align-items-start">
+                            <FormField id="startdatum-dag" label="Dag">
+                              <FormField.Text
+                                type="text"
+                                inputMode="numeric"
+                                autoComplete="off"
+                                sizeInput="xs"
+                                size={2}
+                                maxLength={2}
+                                value={dag}
+                                onChange={(e) => setDag((prev) => limitNumber(e.target.value, prev, 31))}
+                                invalid={!!errors.startdatum}
+                              />
+                            </FormField>
+                            <FormField id="startdatum-maand" label="Maand">
+                              <FormField.Text
+                                type="text"
+                                inputMode="numeric"
+                                autoComplete="off"
+                                sizeInput="xs"
+                                size={2}
+                                maxLength={2}
+                                value={maand}
+                                onChange={(e) => setMaand((prev) => limitNumber(e.target.value, prev, 12))}
+                                invalid={!!errors.startdatum}
+                              />
+                            </FormField>
+                            <FormField id="startdatum-jaar" label="Jaar">
+                              <FormField.Text
+                                type="text"
+                                inputMode="numeric"
+                                autoComplete="off"
+                                sizeInput="sm"
+                                size={4}
+                                maxLength={4}
+                                value={jaar}
+                                onChange={(e) => setJaar(e.target.value.replace(/\D/g, ''))}
+                                invalid={!!errors.startdatum}
+                              />
+                            </FormField>
+                          </div>
+                        </div>
+                      </Fieldset>
                     </div>
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        {pandenCompleted ? 'Opslaan en naar gebouwen' : 'Opslaan en gebouwen toevoegen'}
+                        Volgende stap
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

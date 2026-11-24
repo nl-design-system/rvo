@@ -1,12 +1,12 @@
 export interface Bijenkast {
   pandIndex: number;
-  pandLabel: string;
   aantalKasten: string;
   typeBijenkast: string;
 }
 
 const STORAGE_KEY = 'bijen-op-het-dak-bijenkasten';
 const EDIT_INDEX_KEY = 'bijen-op-het-dak-edit-bijenkast-index';
+const TARGET_PAND_INDEX_KEY = 'bijen-op-het-dak-target-pand-index';
 
 export const getBijenkasten = (): Bijenkast[] => {
   try {
@@ -35,26 +35,23 @@ export const removeBijenkast = (index: number): void => {
   sessionStorage.setItem(STORAGE_KEY, JSON.stringify(bijenkasten));
 };
 
-export const removeAndReindexForPand = (
-  deletedPandIndex: number,
-  panden: Array<{ straatnaam: string; huisnummer: string; plaatsnaam: string }>,
-): void => {
-  const updated = getBijenkasten().map((b) => {
-    if (b.pandIndex === deletedPandIndex) {
-      return { ...b, pandIndex: -1 };
-    }
-    if (b.pandIndex > deletedPandIndex) {
-      const newIndex = b.pandIndex - 1;
-      const pand = panden[b.pandIndex];
-      return {
-        ...b,
-        pandIndex: newIndex,
-        pandLabel: `${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
-      };
-    }
-    return b;
-  });
+export const removeBijenkastenForPand = (deletedPandIndex: number): void => {
+  const updated = getBijenkasten()
+    .filter((b) => b.pandIndex !== deletedPandIndex)
+    .map((b) => (b.pandIndex > deletedPandIndex ? { ...b, pandIndex: b.pandIndex - 1 } : b));
   sessionStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+};
+
+export const bijenkastTitle = (aantalKasten: string, typeBijenkast: string): string =>
+  `${aantalKasten} ${Number(aantalKasten) === 1 ? typeBijenkast : typeBijenkast.replace(/kast$/, 'kasten')}`;
+
+export const saveTargetPandIndex = (index: number): void => {
+  sessionStorage.setItem(TARGET_PAND_INDEX_KEY, String(index));
+};
+
+export const getTargetPandIndex = (): number | null => {
+  const stored = sessionStorage.getItem(TARGET_PAND_INDEX_KEY);
+  return stored !== null ? Number(stored) : null;
 };
 
 export const saveEditBijenkastIndex = (index: number): void => {

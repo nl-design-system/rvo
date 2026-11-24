@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useDialogFocus } from './useDialogFocus';
 
 export const useFormLeaveGuard = (guardUrl: string) => {
   const [leaveTarget, setLeaveTarget] = useState<string | null>(null);
@@ -16,6 +17,8 @@ export const useFormLeaveGuard = (guardUrl: string) => {
     document.addEventListener('click', handleClick, true);
     return () => document.removeEventListener('click', handleClick, true);
   }, [guardUrl]);
+
+  useDialogFocus(leaveTarget !== null);
 
   return {
     showLeaveDialog: leaveTarget !== null,

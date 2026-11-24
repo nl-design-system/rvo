@@ -16,7 +16,6 @@ import {
 } from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import { getBijenkasten } from './bijenkastenStorage';
 import { clearEditPandIndex, getEditPandIndex, getPanden, updatePand } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { useDemoControls } from './useDemoControls';
@@ -29,7 +28,6 @@ const URL_PAND_WIJZIGEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-
 
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
@@ -51,15 +49,7 @@ const PandWijzigen = () => {
   const [bereikbaar, setBereikbaar] = useState(existingPand?.bereikbaar ?? '');
 
   const projectCompleted = !!getProject();
-  const bijenkastenCompleted = getBijenkasten().length > 0;
   const progressSteps = [
-    {
-      state: 'completed' as const,
-      label: 'Voorbereiding',
-      link: URL_VOORBEREIDING,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Projectgegevens',
@@ -80,13 +70,6 @@ const PandWijzigen = () => {
       link: URL_PAND_WIJZIGEN,
       size: 'sm' as const,
       line: 'substep-end' as const,
-    },
-    {
-      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
-      size: 'md' as const,
-      line: 'straight' as const,
     },
     {
       state: 'incomplete' as const,
@@ -154,7 +137,7 @@ const PandWijzigen = () => {
               <LayoutFlow gap="sm">
                 <div>
                   <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Terug
+                    Vorige stap
                   </Link>
                   <Heading type="h1">Gebouw wijzigen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
@@ -173,7 +156,7 @@ const PandWijzigen = () => {
                       </FormField>
                       <FormField label="Huisnummer">
                         <FormField.Text
-                          sizeInput="xs"
+                          sizeInput="sm"
                           value={huisnummer}
                           onChange={(e) => setHuisnummer(e.target.value)}
                         />
@@ -236,7 +219,7 @@ const PandWijzigen = () => {
 
                     <ActionGroup>
                       <Button kind="primary" size="md" type="submit">
-                        Gebouw opslaan
+                        Volgende stap
                       </Button>
                     </ActionGroup>
                   </LayoutFlow>

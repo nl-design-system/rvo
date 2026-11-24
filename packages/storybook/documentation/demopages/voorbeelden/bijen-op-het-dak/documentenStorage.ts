@@ -3,7 +3,6 @@ const TEKENINGEN_KEY = 'bijen-op-het-dak-tekeningen';
 
 export interface DocumentInfo {
   bestandsnaam: string;
-  grootte: number;
 }
 
 const readList = (key: string): DocumentInfo[] => {
