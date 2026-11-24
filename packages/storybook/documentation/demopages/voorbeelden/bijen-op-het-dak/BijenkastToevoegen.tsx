@@ -17,7 +17,7 @@ import {
 } from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
-import { addBijenkast } from './bijenkastenStorage';
+import { addBijenkast, getTargetPandIndex } from './bijenkastenStorage';
 import { getPanden } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { useDemoControls } from './useDemoControls';
@@ -28,7 +28,6 @@ const URL_VOORBEREIDING =
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_BIJENKAST_TOEVOEGEN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkast-toevoegen--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
@@ -47,16 +46,17 @@ const BijenkastToevoegen = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1020);
   useDemoControls();
   const { showLeaveDialog, leaveTarget, dismissLeaveDialog } = useFormLeaveGuard(URL_VOORBEREIDING);
-  const [pandIndex, setPandIndex] = useState('');
+  const pandIndex = getTargetPandIndex();
+  const panden = getPanden();
+  const pand = pandIndex !== null ? panden[pandIndex] : undefined;
   const [aantalKasten, setAantalKasten] = useState('');
   const [typeBijenkast, setTypeBijenkast] = useState('');
   const [errors, setErrors] = useState<Record<string, FieldError>>({});
 
   const errorSummaryRef = useRef<HTMLDivElement>(null);
-  const submitDestRef = useRef(URL_BIJENKASTEN);
+  const submitDestRef = useRef(URL_PANDEN);
 
   const projectCompleted = !!getProject();
-  const pandenCompleted = getPanden().length > 0;
   const progressSteps = [
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
@@ -66,16 +66,9 @@ const BijenkastToevoegen = () => {
       line: 'straight' as const,
     },
     {
-      state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
+      state: 'doing' as const,
       label: 'Gebouwen',
       link: URL_PANDEN,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
-      state: 'doing' as const,
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
       size: 'md' as const,
       line: 'substep-start' as const,
     },
@@ -102,15 +95,6 @@ const BijenkastToevoegen = () => {
     },
   ];
 
-  const panden = getPanden();
-  const pandOptions = [
-    { value: '', label: 'Selecteer een gebouw' },
-    ...panden.map((pand, index) => ({
-      value: String(index),
-      label: `${pand.straatnaam} ${pand.huisnummer}, ${pand.plaatsnaam}`,
-    })),
-  ];
-
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 1020);
     window.addEventListener('resize', handleResize);
@@ -119,16 +103,6 @@ const BijenkastToevoegen = () => {
 
   const validate = (): Record<string, FieldError> => {
     const newErrors: Record<string, FieldError> = {};
-
-    if (!pandIndex) {
-      newErrors.pand = {
-        before: 'Het veld ',
-        linkLabel: 'Gebouw',
-        after: ' is niet ingevuld, maar wel verplicht. Maak een keuze.',
-        fieldText: 'Het veld Gebouw is niet ingevuld, maar wel verplicht. Maak een keuze.',
-        anchor: 'gebouw-label',
-      };
-    }
 
     if (!aantalKasten.trim()) {
       newErrors.aantalKasten = {
@@ -169,13 +143,8 @@ const BijenkastToevoegen = () => {
       setTimeout(() => errorSummaryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
       return;
     }
-    const selectedPand = panden[Number(pandIndex)];
-    addBijenkast({
-      pandIndex: Number(pandIndex),
-      pandLabel: `${selectedPand.straatnaam} ${selectedPand.huisnummer}, ${selectedPand.plaatsnaam}`,
-      aantalKasten,
-      typeBijenkast,
-    });
+    if (pandIndex === null || !pand) return;
+    addBijenkast({ pandIndex, aantalKasten, typeBijenkast });
     window.location.href = submitDestRef.current;
   };
 
@@ -215,131 +184,136 @@ const BijenkastToevoegen = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_BIJENKASTEN} iconPlacement="left" icon="terug" noUnderline={true}>
+                  <Link href={URL_PANDEN} iconPlacement="left" icon="terug" noUnderline={true}>
                     Vorige stap
                   </Link>
                   <Heading type="h1">Bijenkast toevoegen</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
-                    Voer de gegevens in van de bijenkast die u wilt plaatsen.
+                    {pand ? (
+                      <>
+                        Voer de gegevens in van de bijenkast die u wilt plaatsen op{' '}
+                        <strong>
+                          {pand.straatnaam} {pand.huisnummer}, {pand.plaatsnaam}
+                        </strong>
+                        .
+                      </>
+                    ) : (
+                      'Kies eerst een gebouw.'
+                    )}
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} noValidate>
-                  <LayoutFlow gap="xl">
-                    {hasErrors && (
-                      <div ref={errorSummaryRef} tabIndex={-1}>
-                        <Alert kind="error" padding="md">
-                          <strong>Er zijn velden niet of onjuist ingevuld. Herstel dit om door te gaan.</strong>
-                          <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
-                            {Object.entries(errors).map(([key, err]) => (
-                              <li key={key}>
-                                {err.before}
-                                <a href={`#${err.anchor}`} className="rvo-link rvo-link--donkerblauw">
-                                  {err.linkLabel}
-                                </a>
-                                {err.after}
-                              </li>
-                            ))}
-                          </ul>
-                        </Alert>
-                      </div>
-                    )}
+                {pand ? (
+                  <form onSubmit={handleSubmit} noValidate>
+                    <LayoutFlow gap="xl">
+                      {hasErrors && (
+                        <div ref={errorSummaryRef} tabIndex={-1}>
+                          <Alert kind="error" padding="md">
+                            <strong>Er zijn velden niet of onjuist ingevuld. Herstel dit om door te gaan.</strong>
+                            <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
+                              {Object.entries(errors).map(([key, err]) => (
+                                <li key={key}>
+                                  {err.before}
+                                  <a href={`#${err.anchor}`} className="rvo-link rvo-link--donkerblauw">
+                                    {err.linkLabel}
+                                  </a>
+                                  {err.after}
+                                </li>
+                              ))}
+                            </ul>
+                          </Alert>
+                        </div>
+                      )}
 
-                    <div className="rvo-layout-column rvo-layout-gap--xl">
-                      <FormField
-                        id="pand"
-                        label="Gebouw"
-                        helperText="Selecteer het gebouw waarop u deze bijenkast wilt plaatsen."
-                        errorText={errors.pand?.fieldText}
-                        warningText={panden.length === 0 ? 'Er zijn nog geen gebouwen toegevoegd.' : undefined}
-                      >
-                        <FormField.Select
-                          value={pandIndex}
-                          onChange={(e) => setPandIndex((e.target as HTMLSelectElement).value)}
-                          invalid={!!errors.pand}
-                          options={pandOptions}
-                          disabled={panden.length === 0}
-                        />
-                      </FormField>
-                      <FormField
-                        id="aantalKasten"
-                        label="Aantal bijenkasten"
-                        errorText={errors.aantalKasten?.fieldText}
-                      >
-                        <FormField.Text
-                          sizeInput="xs"
-                          value={aantalKasten}
-                          onChange={(e) => setAantalKasten(e.target.value)}
-                          invalid={!!errors.aantalKasten}
-                        />
-                      </FormField>
-                      <div
-                        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                          setTypeBijenkast(
-                            e.target.id === 'langstroth'
-                              ? 'Langstroth kast'
-                              : e.target.id === 'warre'
-                                ? 'Warré kast'
-                                : 'Top-bar kast',
-                          )
-                        }
-                      >
+                      <div className="rvo-layout-column rvo-layout-gap--xl">
                         <FormField
-                          id="typeBijenkast"
-                          label="Type bijenkast"
-                          expandableHelperText={{ title: 'Wat zijn de typen bijenkasten?' }}
-                          helperText={
-                            <List
-                              type="unordered"
-                              bulletType="disc"
-                              items={[
-                                'Langstroth kast: een stapelbare kast met losse, rechthoekige raamkaders waaraan de bijen hun raat bouwen. Dit is wereldwijd het meest gebruikte type.',
-                                'Warré kast: een verticale kast van kleine, vierkante kasten die op elkaar staan. Bijen bouwen hun raat naar beneden en nieuwe kasten voegt u onderaan toe.',
-                                'Top-bar kast: een lage, horizontale kast met losse houten lamellen (top-bars) bovenin. Bijen bouwen hun raat vrij hangend aan deze lamellen.',
-                              ]}
-                            />
-                          }
-                          errorText={errors.typeBijenkast?.fieldText}
+                          id="aantalKasten"
+                          label="Aantal bijenkasten"
+                          errorText={errors.aantalKasten?.fieldText}
                         >
-                          <FormField.RadioButtonGroup
-                            name="typeBijenkast"
-                            invalid={!!errors.typeBijenkast}
-                            options={[
-                              { id: 'langstroth', label: 'Langstroth kast' },
-                              { id: 'warre', label: 'Warré kast' },
-                              { id: 'topbar', label: 'Top-bar kast' },
-                            ]}
+                          <FormField.Text
+                            sizeInput="xs"
+                            value={aantalKasten}
+                            onChange={(e) => setAantalKasten(e.target.value)}
+                            invalid={!!errors.aantalKasten}
                           />
                         </FormField>
+                        <div
+                          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                            setTypeBijenkast(
+                              e.target.id === 'langstroth'
+                                ? 'Langstroth kast'
+                                : e.target.id === 'warre'
+                                  ? 'Warré kast'
+                                  : 'Top-bar kast',
+                            )
+                          }
+                        >
+                          <FormField
+                            id="typeBijenkast"
+                            label="Type bijenkast"
+                            expandableHelperText={{ title: 'Wat zijn de typen bijenkasten?' }}
+                            helperText={
+                              <List
+                                type="unordered"
+                                bulletType="disc"
+                                items={[
+                                  'Langstroth kast: een stapelbare kast met losse, rechthoekige raamkaders waaraan de bijen hun raat bouwen. Dit is wereldwijd het meest gebruikte type.',
+                                  'Warré kast: een verticale kast van kleine, vierkante kasten die op elkaar staan. Bijen bouwen hun raat naar beneden en nieuwe kasten voegt u onderaan toe.',
+                                  'Top-bar kast: een lage, horizontale kast met losse houten lamellen (top-bars) bovenin. Bijen bouwen hun raat vrij hangend aan deze lamellen.',
+                                ]}
+                              />
+                            }
+                            errorText={errors.typeBijenkast?.fieldText}
+                          >
+                            <FormField.RadioButtonGroup
+                              name="typeBijenkast"
+                              invalid={!!errors.typeBijenkast}
+                              options={[
+                                { id: 'langstroth', label: 'Langstroth kast' },
+                                { id: 'warre', label: 'Warré kast' },
+                                { id: 'topbar', label: 'Top-bar kast' },
+                              ]}
+                            />
+                          </FormField>
+                        </div>
                       </div>
-                    </div>
 
-                    <ActionGroup>
-                      <Button
-                        kind="primary"
-                        size="md"
-                        type="submit"
-                        onClick={() => {
-                          submitDestRef.current = URL_BIJENKASTEN;
-                        }}
-                      >
-                        Volgende stap
-                      </Button>
-                      <Button
-                        kind="secondary"
-                        icon="plus"
-                        iconPlacement="left"
-                        size="md"
-                        type="submit"
-                        onClick={() => {
-                          submitDestRef.current = URL_BIJENKAST_TOEVOEGEN;
-                        }}
-                      >
-                        Opslaan en nog een bijenkast toevoegen
-                      </Button>
-                    </ActionGroup>
-                  </LayoutFlow>
-                </form>
+                      <ActionGroup>
+                        <Button
+                          kind="primary"
+                          size="md"
+                          type="submit"
+                          onClick={() => {
+                            submitDestRef.current = URL_PANDEN;
+                          }}
+                        >
+                          Volgende stap
+                        </Button>
+                        <Button
+                          kind="secondary"
+                          icon="plus"
+                          iconPlacement="left"
+                          size="md"
+                          type="submit"
+                          onClick={() => {
+                            submitDestRef.current = URL_BIJENKAST_TOEVOEGEN;
+                          }}
+                        >
+                          Opslaan en nog een bijenkast toevoegen
+                        </Button>
+                      </ActionGroup>
+                    </LayoutFlow>
+                  </form>
+                ) : (
+                  <Alert kind="warning" padding="md">
+                    Er is geen gebouw gekozen. Ga terug naar{' '}
+                    <a href={URL_PANDEN} className="rvo-link rvo-link--donkerblauw">
+                      Gebouwen
+                    </a>{' '}
+                    en kies het gebouw waaraan u een bijenkast wilt toevoegen of wijzigen.
+                  </Alert>
+                )}
               </LayoutFlow>
             </div>
           </main>

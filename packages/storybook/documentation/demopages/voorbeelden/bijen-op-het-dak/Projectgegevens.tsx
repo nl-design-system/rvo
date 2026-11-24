@@ -29,7 +29,6 @@ const URL_VOORBEREIDING =
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
@@ -72,8 +71,7 @@ const Projectgegevens = () => {
 
   const errorSummaryRef = useRef<HTMLDivElement>(null);
 
-  const pandenCompleted = getPanden().length > 0;
-  const bijenkastenCompleted = getBijenkasten().length > 0;
+  const pandenCompleted = getPanden().length > 0 && getBijenkasten().length > 0;
   const progressSteps = [
     {
       state: 'doing' as const,
@@ -86,13 +84,6 @@ const Projectgegevens = () => {
       state: (pandenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
       label: 'Gebouwen',
       link: URL_PANDEN,
-      size: 'md' as const,
-      line: 'straight' as const,
-    },
-    {
-      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
       size: 'md' as const,
       line: 'straight' as const,
     },
@@ -134,18 +125,17 @@ const Projectgegevens = () => {
     if (!dag.trim() && !maand.trim() && !jaar.trim()) {
       newErrors.startdatum = {
         before: 'Het veld ',
-        linkLabel: 'Beoogde startdatum',
+        linkLabel: 'Startdatum',
         after: ' is niet ingevuld, maar wel verplicht. Vul een dag, maand en jaar in.',
-        fieldText: 'Het veld Beoogde startdatum is niet ingevuld, maar wel verplicht. Vul een dag, maand en jaar in.',
+        fieldText: 'Het veld Startdatum is niet ingevuld, maar wel verplicht. Vul een dag, maand en jaar in.',
         anchor: 'startdatum-dag-label',
       };
     } else if (!isValidDate(dag, maand, jaar)) {
       newErrors.startdatum = {
         before: '',
-        linkLabel: 'Beoogde startdatum',
+        linkLabel: 'Startdatum',
         after: ' is geen geldige datum. Vul een bestaande dag, maand en jaar in, bijvoorbeeld 1 3 2026.',
-        fieldText:
-          'Beoogde startdatum is geen geldige datum. Vul een bestaande dag, maand en jaar in, bijvoorbeeld 1 3 2026.',
+        fieldText: 'Startdatum is geen geldige datum. Vul een bestaande dag, maand en jaar in, bijvoorbeeld 1 3 2026.',
         anchor: 'startdatum-dag-label',
       };
     }
@@ -247,11 +237,10 @@ const Projectgegevens = () => {
                       >
                         <FormField.TextArea value={omschrijving} onChange={(e) => setOmschrijving(e.target.value)} />
                       </FormField>
-                      <Fieldset legend="Beoogde startdatum">
+                      <Fieldset legend="Startdatum">
                         <div className="rvo-layout-column rvo-layout-gap--xs">
                           <div className="utrecht-form-field-description">
-                            De datum waarop u verwacht te beginnen met plaatsen van de bijenkasten. Bijvoorbeeld: 1 3
-                            2026.
+                            De datum waarop u verwacht te beginnen met plaatsen van de bijenkasten.
                           </div>
                           {errors.startdatum && <Feedback type="foutmelding">{errors.startdatum.fieldText}</Feedback>}
                           <div className="rvo-layout-row rvo-layout-gap--xs rvo-layout--wrap rvo-layout-align-items-start">

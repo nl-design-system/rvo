@@ -9,7 +9,6 @@ import { useDemoControls } from './useDemoControls';
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
 const URL_PANDEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-panden--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
@@ -18,7 +17,7 @@ const getLastActiveUrl = (): string => {
   const project = getProject();
   if (!project) return URL_PROJECTGEGEVENS;
   if (getPanden().length === 0) return URL_PANDEN;
-  if (getBijenkasten().length === 0) return URL_BIJENKASTEN;
+  if (getBijenkasten().length === 0) return URL_PANDEN;
   if (getOffertes().length === 0 || getTekeningen().length === 0) return URL_DOCUMENTEN;
   return URL_CONTROLEREN;
 };

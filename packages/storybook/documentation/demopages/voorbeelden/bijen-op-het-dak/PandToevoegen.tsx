@@ -17,7 +17,6 @@ import {
 } from '@nl-rvo/component-library-react';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
-import { getBijenkasten } from './bijenkastenStorage';
 import { addPand } from './pandenStorage';
 import { getProject } from './projectStorage';
 import { useDemoControls } from './useDemoControls';
@@ -31,7 +30,6 @@ const URL_PAND_TOEVOEGEN =
 
 const URL_PROJECTGEGEVENS =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-projectgegevens--default&viewMode=story';
-const URL_BIJENKASTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-bijenkasten--default&viewMode=story';
 const URL_DOCUMENTEN = 'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-documenten--default&viewMode=story';
 const URL_CONTROLEREN =
   'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-controleren-en-versturen--default&viewMode=story';
@@ -60,7 +58,6 @@ const PandToevoegen = () => {
   const errorSummaryRef = useRef<HTMLDivElement>(null);
 
   const projectCompleted = !!getProject();
-  const bijenkastenCompleted = getBijenkasten().length > 0;
   const progressSteps = [
     {
       state: (projectCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
@@ -82,13 +79,6 @@ const PandToevoegen = () => {
       link: URL_PAND_TOEVOEGEN,
       size: 'sm' as const,
       line: 'substep-end' as const,
-    },
-    {
-      state: (bijenkastenCompleted ? 'completed' : 'incomplete') as 'completed' | 'incomplete',
-      label: 'Bijenkasten',
-      link: URL_BIJENKASTEN,
-      size: 'md' as const,
-      line: 'straight' as const,
     },
     {
       state: 'incomplete' as const,
