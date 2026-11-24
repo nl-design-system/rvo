@@ -219,52 +219,36 @@ const PandenOverzicht = () => {
                                 </div>
                               </div>
                             ))}
-                            <Button
-                              kind="secondary"
-                              size="sm"
-                              icon="plus"
-                              iconPlacement="left"
-                              onClick={() => {
-                                saveTargetPandIndex(index);
-                                window.location.href = URL_BIJENKAST_TOEVOEGEN;
-                              }}
-                            >
-                              Voeg een bijenkast toe
-                            </Button>
+                            <div>
+                              <Link
+                                href={URL_BIJENKAST_TOEVOEGEN}
+                                callToAction={true}
+                                outline={true}
+                                iconPlacement="left"
+                                icon="plus"
+                                onClick={() => saveTargetPandIndex(index)}
+                              >
+                                Voeg een bijenkast toe
+                              </Link>
+                            </div>
                           </LayoutFlow>
                         </LayoutFlow>
                       </Card>
                     </LayoutFlow>
                   ))}
                   <div>
-                    <Button
-                      kind="secondary"
-                      size="md"
-                      icon="plus"
-                      iconPlacement="left"
-                      onClick={() => {
-                        window.location.href = URL_PAND_TOEVOEGEN;
-                      }}
-                    >
+                    <Link href={URL_PAND_TOEVOEGEN} callToAction={true} outline={true} iconPlacement="left" icon="plus">
                       Voeg nog een gebouw toe
-                    </Button>
+                    </Link>
                   </div>
                 </LayoutFlow>
               )}
 
               <div className="rvo-action-group">
                 {panden.length === 0 && (
-                  <Button
-                    kind="secondary"
-                    size="md"
-                    icon="plus"
-                    iconPlacement="left"
-                    onClick={() => {
-                      window.location.href = URL_PAND_TOEVOEGEN;
-                    }}
-                  >
+                  <Link href={URL_PAND_TOEVOEGEN} callToAction={true} outline={true} iconPlacement="left" icon="plus">
                     Voeg een gebouw toe
-                  </Button>
+                  </Link>
                 )}
                 {panden.length > 0 && bijenkasten.length > 0 && (
                   <Button
@@ -314,14 +298,16 @@ const PandenOverzicht = () => {
             Weet u zeker dat u <strong>{pandLabel(panden[dialogOpenIndex])}</strong> wilt verwijderen?
           </p>
           {pandBijenkasten(dialogOpenIndex).length > 0 && (
-            <Alert kind="warning" padding="md">
-              <strong>Let op: de bijenkasten van dit gebouw worden ook verwijderd.</strong>
-              <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
-                {pandBijenkasten(dialogOpenIndex).map(({ bijenkast, index }) => (
-                  <li key={index}>{bijenkastTitle(bijenkast.aantalKasten, bijenkast.typeBijenkast)}</li>
-                ))}
-              </ul>
-            </Alert>
+            <div className="rvo-margin-block-end--xl">
+              <Alert kind="warning" padding="md">
+                <strong>Let op: de bijenkasten van dit gebouw worden ook verwijderd.</strong>
+                <ul className="rvo-ul rvo-ul--no-margin rvo-ul--no-padding">
+                  {pandBijenkasten(dialogOpenIndex).map(({ bijenkast, index }) => (
+                    <li key={index}>{bijenkastTitle(bijenkast.aantalKasten, bijenkast.typeBijenkast)}</li>
+                  ))}
+                </ul>
+              </Alert>
+            </div>
           )}
         </Dialog>
       )}
