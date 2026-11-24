@@ -143,7 +143,10 @@
             "value": "{rvo.color.hemelblauw}"
           },
           "border-color": {},
-          "border-width": {}
+          "border-width": {},
+          "background-color": {
+            "value": "{rvo.color.wit}"
+          }
         },
         "disabled": {
           "background-color": {
@@ -285,6 +288,9 @@
         "active": {
           "color": {
             "value": "{rvo.color.donkerblauw}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         },
         "focus": {
@@ -298,21 +304,35 @@
           },
           "text-underline-offset": {
             "value": "{rvo.focus.text-underline-offset}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         },
         "disabled": {
           "color": {
             "value": "{rvo.color.grijs-300}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         },
         "hover": {
           "color": {
             "value": "{rvo.color.zwart}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
+        },
+        "background-color": {
+          "value": "{rvo.color.wit}"
         }
       },
       "warning-subtle": {
-        "background-color": {},
+        "background-color": {
+          "value": "{rvo.color.wit}"
+        },
         "border-color": {},
         "border-width": {
           "value": "0px"
@@ -326,16 +346,25 @@
         "active": {
           "color": {
             "value": "{rvo.color.rood}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         },
         "hover": {
           "color": {
             "value": "{rvo.color.rood}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         },
         "disabled": {
           "color": {
             "value": "{rvo.color.grijs-300}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         },
         "focus": {
@@ -347,6 +376,9 @@
           },
           "text-underline-offset": {
             "value": "{rvo.focus.text-underline-offset}"
+          },
+          "background-color": {
+            "value": "{rvo.color.wit}"
           }
         }
       },
