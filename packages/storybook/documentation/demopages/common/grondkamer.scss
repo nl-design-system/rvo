@@ -1,0 +1,4 @@
+/* Text-only hero without an image: lower than the default hero (200px) */
+.rvo-hero.rvo-hero--text-only {
+  min-block-size: 160px;
+}
