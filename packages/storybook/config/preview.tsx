@@ -2,6 +2,7 @@ import type { Decorator, Preview } from '@storybook/react-webpack5';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import * as ReactDOMServer from 'react-dom/server';
+import { useEffect } from 'react';
 import { useArgs } from 'storybook/preview-api';
 import './preview.scss';
 import theme from './theme';
@@ -158,9 +159,34 @@ const withUpdateArgs: Decorator = (Story, context) => {
   );
 };
 
+/**
+ * A link to `iframe.html?id=...&viewMode=story#section` does not scroll to `#section` when the story opens in a new
+ * page, because the story has not rendered yet when the browser handles the fragment. This decorator scrolls to the
+ * fragment after the story has rendered. Stories without a fragment in the URL are not affected.
+ */
+const withScrollToHash: Decorator = (Story, context) => {
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash.length < 2) {
+      return;
+    }
+
+    const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+
+    if (!target) {
+      return;
+    }
+
+    requestAnimationFrame(() => target.scrollIntoView());
+  }, [context.id]);
+
+  return <Story />;
+};
+
 const preview: Preview = {
   parameters,
-  decorators: [withUpdateArgs],
+  decorators: [withUpdateArgs, withScrollToHash],
 };
 
 export default preview;
