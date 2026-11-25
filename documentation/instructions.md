@@ -33,7 +33,7 @@ Rules for the issue:
 
 - Write the issue in Dutch, unlike the rest of these instructions.
 - Assign the issue to the lead.
-- Leave out focus states. Figma does not show focus states. Do not create an issue when a change only affects focus states.
+- Leave out focus and hover states. Figma does not show them. Do not create an issue when a change only affects focus or hover states.
 - Use short, clear sentences. Keep the issue concise and business-like.
 - Add no other comments or context. The only links are the Figma link and the PR link.
 - Figma link: add one line per component, `Figma <Component>: <url>`. Take the URL from the `figma.com` link in the component's story or docusaurus page. Write the URL as plain text, not as Markdown link, so it stays clickable when copied to Jira. Leave the line out when there is no Figma link.
