@@ -125,6 +125,17 @@ Issue titles describe the problem instead of the solution, so they use `bug` ins
 - Use the available templates for new components, documentation pages, changesets, and test files.
 - Do not design visual solutions on your own initiative. Visual design is the responsibility of the designer, not the developer.
 
+## GitHub issues (`JIRA chore`)
+
+Issues with the label `JIRA chore` are reminders to create a Jira ticket. The issue body is copied to Jira, so write it as a self-contained task. Write these issues in Dutch.
+
+- Title: `Toevoegen aan ROOS JIRA bord: <Component>: <wijziging> in Figma`.
+- Describe what must be changed, not the current state. Write "Pas in Figma het Link-component aan: geef de tekst-onderstreping een offset van 25%", not "Link heeft een offset van 25%". Name the component and the tool where the change is made.
+- Use one bullet per change.
+- Write the Figma, Storybook, and pull request links out in full as plain URLs, one per line: `Figma <Component>: https://…`, `Storybook <Component>: https://…`, `Pull request: https://www.github.com/nl-design-system/rvo/pull/<number>`.
+- Do not use markdown link syntax. Jira does not render it, so the link is not clickable.
+- Write the pull request URL with `www.`. GitHub shortens `https://github.com/…/pull/<number>` to `#<number>` in the rendered issue, and the `www.` form stays fully visible and clickable.
+
 ## Tech stack
 
 | Tool            | Notes                                     |
