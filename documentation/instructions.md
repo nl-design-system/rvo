@@ -57,6 +57,7 @@ Pull request: <link naar de PR>
 - When the PR touches components, add the ROOS core team as reviewer: [@PLassche-dictu](https://github.com/PLassche-dictu), [@joana-dictu](https://github.com/joana-dictu). PRs that only affect patterns or demopages do not require these reviewers.
 - The person who opens the pull request is responsible for all committed code in that PR. A commit or PR can never have a co-author.
 - Keep the PR title and the first line of every commit at 72 characters or fewer. GitHub fills the PR title from the first commit of a single-commit PR and moves anything beyond the limit into the description. Put the reason for the change in the commit body, not in the first line.
+- Do not hard-wrap text in commit bodies, PR descriptions, issues or changesets. GitHub renders every line break, so a wrapped sentence breaks mid-sentence. Write each paragraph on one line.
 - Keep the PR description concise and to the point. Do not describe what changed ("changed", "added", "updated"): the changed files already show that.
 - Always state why the change was made in the PR description, for example: "to align with the overarching Rijkshuisstijl guidelines."
 - Keep the PR description about the change only. Do not justify what is left out, such as why no reviewers, changeset, or tests are needed.
