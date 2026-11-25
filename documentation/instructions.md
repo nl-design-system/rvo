@@ -35,8 +35,9 @@ Rules for the issue:
 - Assign the issue to the lead.
 - Leave out focus and hover states. Figma does not show them. Do not create an issue when a change only affects focus or hover states.
 - Use short, clear sentences. Keep the issue concise and business-like.
-- Add no other comments or context. The only links are the Figma link and the PR link.
+- Add no other comments or context. The only links are the Figma link, the Storybook link and the PR link.
 - Figma link: add one line per component, `Figma <Component>: <url>`. Take the URL from the `figma.com` link in the component's story or docusaurus page. Write the URL as plain text, not as Markdown link, so it stays clickable when copied to Jira. Leave the line out when there is no Figma link.
+- Storybook link: add one line per component, directly below the Figma lines, `Storybook <Component>: <url>`, so the lead can compare Figma with the code. Use the format `https://nl-design-system.github.io/rvo/?path=/docs/componenten-<component>--documentatie`. Write it as plain text too.
 - PR link: last line of the description.
 - Title: a clear description of what must change in Figma, for example `Button Secondary: achtergrondkleur aanpassen in Figma`.
 - Description: use the template below. Add no introductory sentence. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
@@ -46,6 +47,7 @@ Rules for the issue:
 - <Component>: <wat er aangepast moet worden>
 
 Figma <Component>: <url>
+Storybook <Component>: <url>
 
 Pull request: <link naar de PR>
 ```
