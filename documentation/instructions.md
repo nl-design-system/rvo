@@ -23,12 +23,47 @@ Last updated: 2026-11-25
 - [ ] Commit message follows `type(scope): description` and states the problem the change solves
 - [ ] Commit message, code comments, and changeset are in English
 - [ ] If any component was touched: changeset is present and covers all affected packages
+- [ ] If a component changes visually, or is added, removed or deprecated: a Figma issue for the lead is created (see [Figma issues](#figma-issues))
 
 ## Language
 
 - Write changesets, release notes, commit messages, and CSS comments in English.
 - Write documentation pages in Dutch, at B1 language level, in a clear business-like style.
 - Consult the schrijfwijzer in `packages/docusaurus/pages/schrijfwijzer/` for all writing decisions.
+
+## Figma issues
+
+Code is the source of truth. Figma must match the code. Create a GitHub issue for the lead when a PR:
+
+- changes a component visually, for example through the CSS packages or design tokens;
+- adds a component;
+- removes or deprecates a component.
+
+Rules for the issue:
+
+- Write the issue in Dutch, unlike the rest of these instructions.
+- Assign the issue to the lead.
+- Leave out focus and hover states. Figma does not show them. Do not create an issue when a change only affects focus or hover states.
+- Use short, clear sentences. Keep the issue concise and business-like.
+- Add no other comments or context. The only links are the Figma link, the Storybook link and the PR link.
+- Figma link: add one line per component, `Figma <Component>: <url>`. Take the URL from the `figma.com` link in the component's story or docusaurus page. Write the URL as plain text, not as Markdown link, so it stays clickable when copied to Jira. Leave the line out when there is no Figma link.
+- Storybook link: add one line per component, directly below the Figma lines, `Storybook <Component>: <url>`, so the lead can compare Figma with the code. Use the format `https://nl-design-system.github.io/rvo/?path=/docs/componenten-<component>--documentatie`. Write it as plain text too.
+- PR link: last line of the description.
+- Title: `Toevoegen aan ROOS JIRA bord: <original title>`. The original title is a clear description of what must change in Figma, for example `Button Secondary: achtergrondkleur aanpassen in Figma`.
+- Label: add the label `JIRA chore`. The label description says: "Herinnering om een JIRA ticket te maken. Gesloten betekent overgenomen in JIRA, niet afgerond." These issues are only a reminder to create a Jira ticket for changes that also affect Figma. The content is handled further in the Jira ticket. A closed issue with this label only means the issue was taken over as a Jira ticket. It says nothing about the status of the content.
+- Description: use the template below. Start with the original title as the first line, without a label, so it is easy to copy to Jira. Add no introductory sentence. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
+- The lead creates a Jira ticket on the ROOS board for the issue.
+
+```markdown
+<original title>
+
+- <Component>: <wat er aangepast moet worden>
+
+Figma <Component>: <url>
+Storybook <Component>: <url>
+
+Pull request: <link naar de PR>
+```
 
 ## Git workflow
 
@@ -39,6 +74,7 @@ Last updated: 2026-11-25
 - When the PR touches components, add the ROOS Core team developers as reviewers. PRs that only affect patterns or demopages do not require these reviewers.
 - The person who opens the pull request is responsible for all committed code in that PR. A commit or PR can never have a co-author.
 - Keep the PR title and the first line of every commit at 72 characters or fewer. GitHub fills the PR title from the first commit of a single-commit PR and moves anything beyond the limit into the description. Put the reason for the change in the commit body, not in the first line.
+- Do not hard-wrap text in commit bodies, PR descriptions, issues or changesets. GitHub renders every line break, so a wrapped sentence breaks mid-sentence. Write each paragraph on one line.
 - Keep the PR description concise and to the point. Do not describe what changed ("changed", "added", "updated"): the changed files already show that.
 - Always state why the change was made in the PR description, for example: "to align with the overarching Rijkshuisstijl guidelines."
 - Keep the PR description about the change only. Do not justify what is left out, such as why no reviewers, changeset, or tests are needed.
