@@ -39,11 +39,14 @@ Rules for the issue:
 - Figma link: add one line per component, `Figma <Component>: <url>`. Take the URL from the `figma.com` link in the component's story or docusaurus page. Write the URL as plain text, not as Markdown link, so it stays clickable when copied to Jira. Leave the line out when there is no Figma link.
 - Storybook link: add one line per component, directly below the Figma lines, `Storybook <Component>: <url>`, so the lead can compare Figma with the code. Use the format `https://nl-design-system.github.io/rvo/?path=/docs/componenten-<component>--documentatie`. Write it as plain text too.
 - PR link: last line of the description.
-- Title: a clear description of what must change in Figma, for example `Button Secondary: achtergrondkleur aanpassen in Figma`.
-- Description: use the template below. Add no introductory sentence. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
+- Title: `Toevoegen aan ROOS JIRA bord: <original title>`. The original title is a clear description of what must change in Figma, for example `Button Secondary: achtergrondkleur aanpassen in Figma`.
+- Label: add the label `JIRA chore`. The label description says: "Herinnering om een JIRA ticket te maken. Gesloten betekent overgenomen in JIRA, niet afgerond." These issues are only a reminder to create a Jira ticket for changes that also affect Figma. The content is handled further in the Jira ticket. A closed issue with this label only means the issue was taken over as a Jira ticket. It says nothing about the status of the content.
+- Description: use the template below. Start with the original title as the first line, without a label, so it is easy to copy to Jira. Add no introductory sentence. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
 - The lead creates a Jira ticket on the ROOS board for the issue.
 
 ```markdown
+<original title>
+
 - <Component>: <wat er aangepast moet worden>
 
 Figma <Component>: <url>
