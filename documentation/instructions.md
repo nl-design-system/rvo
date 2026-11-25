@@ -34,7 +34,7 @@ Rules for the issue:
 - Write the issue in Dutch, unlike the rest of these instructions.
 - Assign the issue to the lead.
 - Use short, clear sentences. Keep the issue concise and business-like.
-- Add no other comments, context or links.
+- Add no other comments or context. The only link is the link to the PR, as the last line of the description.
 - Title: a clear description of what must change in the design tooling, for example `Button Secondary: achtergrondkleur aanpassen in Figma en Penpot`.
 - Description: use the template below. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
 - The lead creates a Jira ticket on the ROOS board for the issue.
@@ -43,6 +43,8 @@ Rules for the issue:
 Als Lead wil ik dat de design tooling omgeving wordt aangepast zodat deze overeenkomt met de code. De volgende dingen moeten aangepast worden:
 
 - <Component>: <wat er aangepast moet worden>
+
+Pull request: <link naar de PR>
 ```
 
 ## Git workflow
