@@ -35,13 +35,17 @@ Rules for the issue:
 - Assign the issue to the lead.
 - Leave out focus states. Figma does not show focus states. Do not create an issue when a change only affects focus states.
 - Use short, clear sentences. Keep the issue concise and business-like.
-- Add no other comments or context. The only link is the link to the PR, as the last line of the description.
+- Add no other comments or context. The only links are the Figma link and the PR link.
+- Figma link: add one line per component, `Figma <Component>: <url>`. Take the URL from the `figma.com` link in the component's story or docusaurus page. Write the URL as plain text, not as Markdown link, so it stays clickable when copied to Jira. Leave the line out when there is no Figma link.
+- PR link: last line of the description.
 - Title: a clear description of what must change in Figma, for example `Button Secondary: achtergrondkleur aanpassen in Figma`.
 - Description: use the template below. Add no introductory sentence. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
 - The lead creates a Jira ticket on the ROOS board for the issue.
 
 ```markdown
 - <Component>: <wat er aangepast moet worden>
+
+Figma <Component>: <url>
 
 Pull request: <link naar de PR>
 ```
