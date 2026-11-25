@@ -2,20 +2,14 @@
  * @license CC0-1.0
  * Copyright (c) 2022 Community for NL Design System
  */
-import {
-  Fieldset,
-  Footer,
-  Header,
-  Heading,
-  Icon,
-  LayoutFlow,
-  Link,
-  MenuBar,
-  RadioButton,
-} from '@nl-rvo/component-library-react';
+import { Footer, Header, Heading, Icon, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
+import { Beslisboom, Rekentool } from './SubsidieHulpmiddelen';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+
+const URL_VOORBEREIDING =
+  'iframe.html?id=pagina-s-voorbeelden-bijen-op-het-dak-voordat-u-begint-met-aanvragen--default&viewMode=story';
 
 export default function SubsidiepaginaPage(): ReactElement {
   const profielFoto2ImgUrl = 'images/berichtenbox/profiel-foto-2.png';
@@ -90,7 +84,9 @@ export default function SubsidiepaginaPage(): ReactElement {
             ziet er mooier uit en isoleert beter. Vraag net als 10.000 andere dakeigenaren nu subsidie bij ons aan.
           </p>
           <div className="rvo-action-group">
-            <Link callToAction={true}>Aanvragen</Link>
+            <Link callToAction={true} href={URL_VOORBEREIDING}>
+              Direct aanvragen
+            </Link>
             <Link callToAction={true} outline={true}>
               Uw aanvraag bekijken
             </Link>
@@ -192,86 +188,64 @@ export default function SubsidiepaginaPage(): ReactElement {
           <div className="rvo-layout-grid rvo-layout-grid-columns--two rvo-layout-gap--md">
             <div>
               <LayoutFlow gap="2xs">
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#krijgt-u-subsidie" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Krijgt u subsidie?
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#hoeveel-subsidie-krijgt-u" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Hoeveel subsidie krijgt u?
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#voorwaarden" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Voorwaarden
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#subsidieproces-in-4-stappen" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Subsidieproces in 4 stappen
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#uw-aanvraag-voorbereiden" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Uw aanvraag voorbereiden
                 </Link>
               </LayoutFlow>
             </div>
             <div>
               <LayoutFlow gap="2xs">
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#aanvragen" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Aanvragen
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#na-uw-aanvraag" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Na uw aanvraag
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
+                <Link href="#veelgestelde-vragen" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
                   Veelgestelde vragen
                 </Link>
-                <Link icon="pijl-omlaag" showIcon="before" noUnderline={true}>
-                  Meer weten?
+                <Link href="#meer-informatie" icon="pijl-omlaag" iconPlacement="left" noUnderline={true}>
+                  Meer informatie
                 </Link>
               </LayoutFlow>
             </div>
             <div></div>
           </div>
         </div>
-        <div className="rvo-max-width-layout rvo-max-width-layout--sm">
-          <Fieldset legend="Krijgt u subsidie?">
-            <p className="rvo-margin-block-end--lg rvo-margin-block-start--2xs">
-              Beantwoord maximaal 5 vragen en u ziet direct of u kans maakt op deze subsidie.
-            </p>
-            <RadioButton
-              name="subsidie"
-              label="Bent u eigenaar van het gebouw?"
-              options={[
-                { id: 'ja', label: 'Ja', checked: true },
-                { id: 'nee', label: 'Nee' },
-              ]}
-            />
-            <RadioButton
-              name="subsidie"
-              label="Heeft u toestemming van de VvE?"
-              options={[
-                { id: 'toestemming-ja', label: 'Ja', checked: true },
-                { id: 'toestemming-nee', label: 'Nee' },
-              ]}
-            />
-            <Heading type="h3" noMargins={true}>
-              U kunt subsidie aanvragen
-            </Heading>
-            <p className="rvo-paragraph--no-spacing">
-              Op basis van uw antwoorden komt u in aanmerking voor de FSSBD-subsidie.
-            </p>
-            <a href="#" className="rvo-link rvo-link--donkerblauw">
-              Lees hoe u subsidie aanvraagt
-            </a>
-          </Fieldset>
+        <div id="krijgt-u-subsidie" className="rvo-max-width-layout rvo-max-width-layout--sm">
+          <Heading type="h2" noMargins={true}>
+            Krijgt u subsidie?
+          </Heading>
+          <p className="rvo-paragraph">
+            Beantwoord maximaal 4 vragen en u ziet direct of u in aanmerking komt voor deze subsidie.
+          </p>
+          <Beslisboom />
         </div>
 
-        <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="hoeveel-subsidie-krijgt-u"
+          className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2" noMargins={true}>
             Hoeveel subsidie krijgt u?
           </Heading>
           <p className="rvo-paragraph">Bekijk met onze rekentool wat deze subsidie u oplevert. </p>
-          <Link callToAction={true} outline={true}>
-            Bereken uw voordeel
-          </Link>
+          <Rekentool />
         </div>
 
-        <div className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div id="voorwaarden" className="rvo-margin-block-start--2xl rvo-max-width-layout rvo-max-width-layout--sm ">
           <Heading type="h2" noMargins={true}>
             Voorwaarden
           </Heading>
@@ -301,6 +275,11 @@ export default function SubsidiepaginaPage(): ReactElement {
             <a href="#" className="rvo-link">
               Bekijk alle voorwaarden
             </a>
+          </div>
+          <div className="rvo-action-group rvo-margin-block-start--md">
+            <Link callToAction={true} href={URL_VOORBEREIDING}>
+              Direct aanvragen
+            </Link>
           </div>
         </div>
 
@@ -351,7 +330,10 @@ export default function SubsidiepaginaPage(): ReactElement {
           </div>
         </div>
 
-        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--lg ">
+        <div
+          id="subsidieproces-in-4-stappen"
+          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--lg "
+        >
           <Heading type="h2">Subsidieproces in 4 stappen</Heading>
           <img src="https://www.rvo.nl/sites/default/files/2024-10/Fictieve%20infographic%20Bijen%20op%20het%20dak.svg" />
         </div>
@@ -405,8 +387,18 @@ export default function SubsidiepaginaPage(): ReactElement {
             </div>
           </details>
         </div>
+        <div className="rvo-margin-block-start--lg rvo-max-width-layout rvo-max-width-layout--sm">
+          <div className="rvo-action-group">
+            <Link callToAction={true} href={URL_VOORBEREIDING}>
+              Direct aanvragen
+            </Link>
+          </div>
+        </div>
 
-        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="uw-aanvraag-voorbereiden"
+          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2" noMargins={true}>
             Uw aanvraag voorbereiden
           </Heading>
@@ -438,9 +430,17 @@ export default function SubsidiepaginaPage(): ReactElement {
               Format voor projectvoorstel en kostenoverzicht
             </a>
           </div>
+          <div className="rvo-action-group rvo-margin-block-start--md">
+            <Link callToAction={true} href={URL_VOORBEREIDING}>
+              Direct aanvragen
+            </Link>
+          </div>
         </div>
 
-        <div className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl rvo-card--full-colour--grijs-100  rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="aanvragen"
+          className="rvo-card rvo-card--outline rvo-card--padding-lg rvo-margin-block-start--2xl rvo-card--full-colour--grijs-100  rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2" noMargins={true}>
             Aanvragen
           </Heading>
@@ -449,10 +449,15 @@ export default function SubsidiepaginaPage(): ReactElement {
             eHerkenning. Voor uw aanvraag heeft u minimaal nodig: eHerkenning niveau 2+ met machtiging 'RVO diensten op
             niveau 2+ (o.a. mijn.rvo.nl, eLoket, NVWA e-Cert)'.
           </p>
-          <Link callToAction={true}>Aanvragen</Link>
+          <Link callToAction={true} href={URL_VOORBEREIDING}>
+            Direct aanvragen
+          </Link>
         </div>
 
-        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="na-uw-aanvraag"
+          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2" noMargins={true}>
             Na uw aanvraag
           </Heading>
@@ -511,7 +516,10 @@ export default function SubsidiepaginaPage(): ReactElement {
           </ul>
         </div>
 
-        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="veelgestelde-vragen"
+          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2">Veelgestelde vragen</Heading>
 
           <div className="rvo-accordion">
@@ -603,7 +611,10 @@ export default function SubsidiepaginaPage(): ReactElement {
           </p>
         </div>
 
-        <div className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm ">
+        <div
+          id="meer-informatie"
+          className="rvo-margin-block-start--2xl  rvo-max-width-layout rvo-max-width-layout--sm "
+        >
           <Heading type="h2">Meer informatie</Heading>
 
           <div className="rvo-accordion">

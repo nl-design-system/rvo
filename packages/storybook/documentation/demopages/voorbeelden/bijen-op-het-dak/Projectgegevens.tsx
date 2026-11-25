@@ -11,7 +11,6 @@ import {
   Header,
   Heading,
   LayoutFlow,
-  Link,
   MaxWidthLayout,
   MenuBar,
   ProgressTracker,
@@ -192,9 +191,6 @@ const Projectgegevens = () => {
             <div className="rvo-form">
               <LayoutFlow gap="sm">
                 <div>
-                  <Link href={URL_VOORBEREIDING} iconPlacement="left" icon="terug" noUnderline={true}>
-                    Vorige stap
-                  </Link>
                   <Heading type="h1">Projectgegevens</Heading>
                   <p className="rvo-paragraph rvo-paragraph--no-spacing rvo-paragraph--lg">
                     Vul de gegevens in over uw bijenproject.
