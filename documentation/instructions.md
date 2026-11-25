@@ -13,12 +13,37 @@ Monorepo (`@nl-rvo/design-system`) built on [NL Design System](https://nldesigns
 - [ ] Commit message follows `type(scope): description` and states the problem the change solves
 - [ ] Commit message, code comments, and changeset are in English
 - [ ] If any component was touched: changeset is present and covers all affected packages
+- [ ] If a component changes visually, or is added, removed or deprecated: a design tooling issue for the lead is created (see [Design tooling issues](#design-tooling-issues))
 
 ## Language
 
 - Write changesets, release notes, commit messages, and CSS comments in English.
 - Write documentation pages in Dutch, at B1 language level, in a clear business-like style.
 - Consult the schrijfwijzer in `packages/docusaurus/pages/schrijfwijzer/` for all writing decisions.
+
+## Design tooling issues
+
+Code is the source of truth. The design tooling (Figma and/or Penpot) must match the code. Create a GitHub issue for the lead when a PR:
+
+- changes a component visually, for example through the CSS packages or design tokens;
+- adds a component;
+- removes or deprecates a component.
+
+Rules for the issue:
+
+- Write the issue in Dutch, unlike the rest of these instructions.
+- Assign the issue to the lead.
+- Use short, clear sentences. Keep the issue concise and business-like.
+- Add no other comments, context or links.
+- Title: a clear description of what must change in the design tooling, for example `Button Secondary: achtergrondkleur aanpassen in Figma en Penpot`.
+- Description: use the template below. List per component what must change, as bullets, for example `Button Secondary: achtergrondkleur naar wit`.
+- The lead creates a Jira ticket on the ROOS board for the issue.
+
+```markdown
+Als Lead wil ik dat de design tooling omgeving wordt aangepast zodat deze overeenkomt met de code. De volgende dingen moeten aangepast worden:
+
+- <Component>: <wat er aangepast moet worden>
+```
 
 ## Git workflow
 
