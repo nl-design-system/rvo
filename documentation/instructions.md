@@ -33,6 +33,7 @@ Rules for the issue:
 
 - Write the issue in Dutch, unlike the rest of these instructions.
 - Assign the issue to the lead.
+- Leave out focus states. The design tooling does not show focus states. Do not create an issue when a change only affects focus states.
 - Use short, clear sentences. Keep the issue concise and business-like.
 - Add no other comments or context. The only link is the link to the PR, as the last line of the description.
 - Title: a clear description of what must change in the design tooling, for example `Button Secondary: achtergrondkleur aanpassen in Figma en Penpot`.
