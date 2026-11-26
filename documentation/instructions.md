@@ -208,6 +208,16 @@ Docusaurus pages live in `packages/storybook/components/<Name>/<name>.docpage.md
 - BEM naming. Use SCSS nesting for BEM modifiers (`&--modifier`), pseudo-classes (`&:hover`), and child selectors — not for arbitrary descendants.
 - Import `index.scss` inside `template.tsx`.
 
+### Heading structure
+
+Check and keep a correct heading structure (`h1` to `h6`) on every page, component, story, demopage and docs helper, and check the rendered result before finishing.
+
+- Never skip a heading level. Use one `h1` per page, then `h2` for its sections, and `h3` only under an `h2`.
+- A page with an `h1` and no `h2` sections gets `h2` for the next level, not `h3`. Pick the level from the headings on the page, not from the look of the heading.
+- In Docusaurus the page title is the `h1`. Check which headings the page already has before choosing the level of a heading you add, also in React helpers that render headings in a page.
+- Use the heading level for structure and style it with a class or a `Heading` prop, not with a different level.
+- Check the result with `agent-browser`, for example by reading the heading levels from the snapshot or the page.
+
 ### Modern web guidance
 
 For every task that touches HTML, CSS, or client-side JavaScript (focus and hover states, forms, dialogs and popovers, layout, animation, accessibility, performance), always check the [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) skill **before** implementing:
