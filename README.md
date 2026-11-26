@@ -55,7 +55,7 @@ https://unpkg.com/@nl-rvo/design-tokens@^1.0.0/dist/index.css
 
 ### Install prerequisites
 
-You need to have the following tools installed to run Storybook locally:
+You need to have the following tools installed to run Storybook and the documentation locally:
 
 - Git
 - [Node.js and npm](https://nodejs.org/en/)
@@ -90,6 +90,7 @@ We recommend the following extensions that are useful for this project:
 5. `git checkout master` to switch to the main master branch, if you previously worked in this repository.
 6. `git pull` to get to the latest version of the master branch
 7. `pnpm install` to download and install all the dependencies
+8. `pnpm run build` to build all packages. Storybook and Docusaurus need the built packages, such as the design tokens. Run this once after cloning and again after pulling changes in the packages.
 
 ### Run Docusaurus on your computer
 
@@ -99,8 +100,6 @@ We recommend the following extensions that are useful for this project:
 4. Run `pnpm run docs`
 5. The local version of docusaurus will be running on `localhost:3000/rvo`
 6. Press `Control+C` in your terminal to stop Docusaurus
-
-Read the `standalone/docusaurus/README.md` for docusaurus details
 
 ### Run Storybook on your computer
 
