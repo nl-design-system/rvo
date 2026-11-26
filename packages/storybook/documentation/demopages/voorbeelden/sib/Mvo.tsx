@@ -104,7 +104,7 @@ export default function MvoPage(): ReactElement {
                     },
                     {
                       state: 'doing',
-                      label: 'Maatschappelijk verantwoord ondernemen',
+                      label: 'MVO',
                       link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-mvo--default&viewMode=story',
                       size: 'md',
                       line: 'straight',
