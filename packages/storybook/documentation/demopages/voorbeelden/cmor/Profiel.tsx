@@ -89,10 +89,24 @@ export default function ProfielPage(): ReactElement {
                 >
                   Overzicht
                 </Link>
-                <Link href="#" icon="map" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-aanvragen--default&viewMode=story"
+                  icon="map"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Aanvragen
                 </Link>
-                <Link href="#" icon="publicatie" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-documenten--default&viewMode=story"
+                  icon="publicatie"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Mijn documenten
                 </Link>
                 <Link href="#" icon="mail" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
