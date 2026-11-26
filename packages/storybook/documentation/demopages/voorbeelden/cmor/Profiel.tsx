@@ -84,6 +84,7 @@ export default function ProfielPage(): ReactElement {
                   icon="home"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
@@ -94,6 +95,7 @@ export default function ProfielPage(): ReactElement {
                   icon="map"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
@@ -104,15 +106,32 @@ export default function ProfielPage(): ReactElement {
                   icon="publicatie"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Mijn documenten
                 </Link>
-                <Link href="#" icon="mail" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="mail"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Mijn berichten
                 </Link>
-                <Link href="#" icon="user" iconPlacement="left" color="zwart" noUnderline={true} weight="bold">
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
                   Profiel
                 </Link>
               </LayoutFlow>

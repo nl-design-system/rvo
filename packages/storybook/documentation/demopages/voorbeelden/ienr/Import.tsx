@@ -64,12 +64,21 @@ export default function ImportPage(): ReactElement {
                   icon="home"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Dashboard
                 </Link>
-                <Link href="#" icon="user" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Houder en UBN
                 </Link>
                 <Link
@@ -77,12 +86,21 @@ export default function ImportPage(): ReactElement {
                   icon="plus"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="bold"
                 >
                   Melden
                 </Link>
-                <Link href="#" icon="terug" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="terug"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Wijzigen & intrekken
                 </Link>
                 <Link
@@ -90,15 +108,32 @@ export default function ImportPage(): ReactElement {
                   icon="oog"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Bekijken
                 </Link>
-                <Link href="#" icon="refund" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="refund"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Machtigen
                 </Link>
-                <Link href="#" icon="opsomming" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="opsomming"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Overzichten
                 </Link>
               </LayoutFlow>

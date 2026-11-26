@@ -68,12 +68,21 @@ const Gemachtigden = () => {
                   icon="home"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Mijn I&R
                 </Link>
-                <Link href="#" icon="user" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Mijn gegevens
                 </Link>
                 <Link
@@ -81,12 +90,21 @@ const Gemachtigden = () => {
                   icon="envelop"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Meldingen
                 </Link>
-                <Link href="#" icon="terug" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="terug"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Wijzigen & intrekken
                 </Link>
                 <Link
@@ -94,15 +112,32 @@ const Gemachtigden = () => {
                   icon="oog"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Bekijken
                 </Link>
-                <Link href="#" icon="refund" iconPlacement="left" color="zwart" noUnderline={true} weight="bold">
+                <Link
+                  href="#"
+                  icon="refund"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
                   Machtigen
                 </Link>
-                <Link href="#" icon="opsomming" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="opsomming"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Overzichten
                 </Link>
               </LayoutFlow>

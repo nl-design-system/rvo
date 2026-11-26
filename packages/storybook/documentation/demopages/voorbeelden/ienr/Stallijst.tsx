@@ -59,12 +59,21 @@ const Stallijst = () => {
                   icon="home"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Dashboard
                 </Link>
-                <Link href="#" icon="user" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Houder en UBN
                 </Link>
                 <Link
@@ -72,12 +81,21 @@ const Stallijst = () => {
                   icon="plus"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Melden
                 </Link>
-                <Link href="#" icon="terug" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="terug"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Wijzigen & intrekken
                 </Link>
                 <Link
@@ -85,15 +103,32 @@ const Stallijst = () => {
                   icon="oog"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="bold"
                 >
                   Bekijken
                 </Link>
-                <Link href="#" icon="refund" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="refund"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Machtigen
                 </Link>
-                <Link href="#" icon="opsomming" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="opsomming"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Overzichten
                 </Link>
               </LayoutFlow>

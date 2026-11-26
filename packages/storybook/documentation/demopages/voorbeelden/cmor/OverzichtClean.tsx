@@ -61,6 +61,7 @@ const OverzichtClean = () => {
                   icon="home"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="bold"
                 >
@@ -71,6 +72,7 @@ const OverzichtClean = () => {
                   icon="map"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
@@ -81,12 +83,21 @@ const OverzichtClean = () => {
                   icon="publicatie"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Mijn documenten
                 </Link>
-                <Link href="#" icon="mail" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="mail"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Mijn berichten
                 </Link>
                 <Link
@@ -94,6 +105,7 @@ const OverzichtClean = () => {
                   icon="user"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >

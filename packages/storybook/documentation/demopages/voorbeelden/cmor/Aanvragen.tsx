@@ -55,6 +55,7 @@ const Aanvragen = () => {
                   icon="home"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
@@ -65,6 +66,7 @@ const Aanvragen = () => {
                   icon="map"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="bold"
                 >
@@ -75,12 +77,21 @@ const Aanvragen = () => {
                   icon="publicatie"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
                   Mijn documenten
                 </Link>
-                <Link href="#" icon="mail" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                <Link
+                  href="#"
+                  icon="mail"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
                   Mijn berichten
                 </Link>
                 <Link
@@ -88,6 +99,7 @@ const Aanvragen = () => {
                   icon="user"
                   iconPlacement="left"
                   color="zwart"
+                  iconColor="zwart"
                   noUnderline={true}
                   weight="normal"
                 >
