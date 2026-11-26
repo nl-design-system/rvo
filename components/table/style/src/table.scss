@@ -74,6 +74,10 @@
       &--numeric {
         float: inline-end;
       }
+
+      &--static {
+        cursor: auto;
+      }
     }
 
     &__sortable-button {
