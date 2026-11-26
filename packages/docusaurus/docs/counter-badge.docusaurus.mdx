@@ -10,9 +10,9 @@ slug: /counter-badge
 import { CounterBadge, Heading } from "@nl-rvo/component-library-react";
 import ComponentExample from "@site/src/components/ComponentExample";
 
-<Heading type="h2">Display of the count</Heading>
+<Heading type="h2">Weergave van het aantal</Heading>
 
-Below 99:
+Bij een aantal tot en met 99 toont de Counter badge het aantal zelf:
 {(() => {
 const props = { count: 42 };
 return (
@@ -22,7 +22,7 @@ return (
 </ComponentExample>
 ); })()}
 
-Above 99:
+Bij een aantal boven de 99 toont de Counter badge 99+:
 {(() => {
 const props = { count: 120 };
 return (
