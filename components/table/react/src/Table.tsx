@@ -69,7 +69,18 @@ export const Table: React.FC<ITableProps & React.HTMLAttributes<HTMLDivElement>>
         <thead className="rvo-table-head">
           <tr className="rvo-table-row">
             {internalColumns.map((column, index) => {
-              const sortValue = column.sortDirection === 'ASC' ? 'ascending' : 'descending';
+              // Only the currently sorted, sortable column gets aria-sort. Other columns get no aria-sort at all.
+              const ariaSort =
+                column.sortable && column.sortDirection === 'ASC'
+                  ? 'ascending'
+                  : column.sortable && column.sortDirection === 'DESC'
+                    ? 'descending'
+                    : undefined;
+              const labelClassName = clsx(
+                'rvo-table-header__sortable-container',
+                !column.sortable && 'rvo-table-header__sortable-container--static',
+                column.type === 'numeric' && 'rvo-table-header__sortable-container--numeric',
+              );
 
               return (
                 <th
@@ -83,28 +94,29 @@ export const Table: React.FC<ITableProps & React.HTMLAttributes<HTMLDivElement>>
                       'rvo-table-header--active-sort',
                     column.size && `rvo-table-header--${column.size}`,
                   )}
-                  aria-sort={sortValue || 'none'}
+                  aria-sort={ariaSort}
                 >
-                  <button
-                    className={clsx(
-                      'rvo-table-header__sortable-container',
-                      column.type === 'numeric' && 'rvo-table-header__sortable-container--numeric',
-                    )}
-                    type="button"
-                    data-index={index}
-                    onClick={column.sortable ? () => handleSort(index) : undefined}
-                  >
-                    {column.label}
-                    {column.sortable && column.sortDirection === 'ASC' && (
-                      <SortAscendingIcon className="rvo-table-header__sorting-icon" />
-                    )}
-                    {column.sortable && column.sortDirection === 'DESC' && (
-                      <SortDescendingIcon className="rvo-table-header__sorting-icon" />
-                    )}
-                    {column.sortable && column.sortDirection === undefined && (
-                      <SortDefaultIcon className="rvo-table-header__sorting-icon" />
-                    )}
-                  </button>
+                  {column.sortable ? (
+                    <button
+                      className={labelClassName}
+                      type="button"
+                      data-index={index}
+                      onClick={() => handleSort(index)}
+                    >
+                      {column.label}
+                      {column.sortDirection === 'ASC' && (
+                        <SortAscendingIcon aria-hidden="true" className="rvo-table-header__sorting-icon" />
+                      )}
+                      {column.sortDirection === 'DESC' && (
+                        <SortDescendingIcon aria-hidden="true" className="rvo-table-header__sorting-icon" />
+                      )}
+                      {column.sortDirection === undefined && (
+                        <SortDefaultIcon aria-hidden="true" className="rvo-table-header__sorting-icon" />
+                      )}
+                    </button>
+                  ) : (
+                    <span className={labelClassName}>{column.label}</span>
+                  )}
                 </th>
               );
             })}
