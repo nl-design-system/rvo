@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
@@ -14,7 +15,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  Textarea,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -175,7 +175,12 @@ export default function MvoPage(): ReactElement {
                         { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
                       ]}
                     ></Checkbox>
-                    <Textarea label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?" />
+                    <FormField
+                      id="kunt-u-deze-geselecteerde-activiteiten-o"
+                      label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?"
+                    >
+                      <FormField.TextArea />
+                    </FormField>
                   </Fieldset>
 
                   <div>
@@ -200,8 +205,18 @@ export default function MvoPage(): ReactElement {
                     </p>
                   </div>
                   <Fieldset legend="">
-                    <Textarea label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? " />
-                    <Textarea label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?" />
+                    <FormField
+                      id="kunt-u-met-behulp-van-de-mvo-risico-chec"
+                      label="Kunt u met behulp van de MVO risico checker aangeven welke sociale- en milieurisico’s het meest van toepassing zijn op uw bedrijfsactiviteiten (max. 3)? "
+                    >
+                      <FormField.TextArea />
+                    </FormField>
+                    <FormField
+                      id="welke-acties-denkt-u-te-kunnen-onderneme"
+                      label="Welke acties denkt u te kunnen ondernemen om deze risico’s te voorkomen of te verminderen?"
+                    >
+                      <FormField.TextArea />
+                    </FormField>
                   </Fieldset>
                   <div>
                     <Heading type="h2" noMargins={true}>

@@ -3,10 +3,10 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
-  TextInput,
   Fieldset,
   Footer,
   Header,
@@ -15,7 +15,6 @@ import {
   MenuBar,
   ProgressTracker,
   RadioButton,
-  Textarea,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -144,19 +143,33 @@ export default function ZaakgegevensPage(): ReactElement {
                     </p>
                   </div>
                   <Fieldset legend="">
-                    <TextInput label="Geef uw aanvraag een toepasselijke zaaknaam"></TextInput>
-                    <TextInput
+                    <FormField
+                      id="geef-uw-aanvraag-een-toepasselijke-zaakn"
+                      label="Geef uw aanvraag een toepasselijke zaaknaam"
+                    >
+                      <FormField.Text />
+                    </FormField>
+                    <FormField
+                      id="startdatum-van"
                       label="Startdatum (van)"
                       helperText="Geef hier de begindatum van uw coachingstraject op."
-                    ></TextInput>
-                    <TextInput
+                    >
+                      <FormField.Text />
+                    </FormField>
+                    <FormField
+                      id="einddatum-t-m"
                       label="Einddatum (t/m)"
                       helperText="Geef hier de einddatum van uw coachingstraject op."
-                    ></TextInput>
-                    <TextInput
+                    >
+                      <FormField.Text />
+                    </FormField>
+                    <FormField
+                      id="voor-export-naar-welk-land-wilt-u-coachi"
                       label="Voor export naar welk land wilt u coaching ontvangen?"
                       helperText="U kunt hier één land noemen, niet Nederland. Als u meerderde doellanden heeft, maakt u dan een keuze."
-                    ></TextInput>
+                    >
+                      <FormField.Text />
+                    </FormField>
                     <RadioButton
                       name="bedrag"
                       label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
@@ -168,7 +181,9 @@ export default function ZaakgegevensPage(): ReactElement {
                         { id: 'bedrag B', label: 'Nee' },
                       ]}
                     ></RadioButton>
-                    <Textarea label="Welke kansen ziet u in dit land?"></Textarea>
+                    <FormField id="welke-kansen-ziet-u-in-dit-land" label="Welke kansen ziet u in dit land?">
+                      <FormField.TextArea />
+                    </FormField>
                     <RadioButton
                       name="actief"
                       label="Bent u al actief in dit doelland?"

@@ -3,18 +3,17 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
   Fieldset,
-  FileInput,
   Footer,
   Header,
   Heading,
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  TextInput,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -142,7 +141,9 @@ export default function KostenPage(): ReactElement {
                     </p>
                   </div>
                   <Fieldset legend="">
-                    <TextInput label="Totaalkosten" prefix="€"></TextInput>
+                    <FormField id="totaalkosten" label="Totaalkosten">
+                      <FormField.Text prefix="€" />
+                    </FormField>
                     <Heading type="h2" noMargins={true}>
                       Gespecificeerde offerte
                     </Heading>
@@ -151,10 +152,13 @@ export default function KostenPage(): ReactElement {
                       van de coach gespecificeerd te zijn. De offerte mag niet ouder zijn dan 3 maanden op het moment
                       van indiening.
                     </p>
-                    <FileInput
+                    <FormField
+                      id="offertebestand"
                       label="Offertebestand"
                       warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
-                    ></FileInput>
+                    >
+                      <FormField.FileInput />
+                    </FormField>
                   </Fieldset>
                   <ActionGroup>
                     <a

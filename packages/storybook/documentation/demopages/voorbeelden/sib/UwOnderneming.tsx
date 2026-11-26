@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
@@ -14,7 +15,6 @@ import {
   MenuBar,
   ProgressTracker,
   RadioButton,
-  TextInput,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -168,18 +168,22 @@ export default function UwOndernemingPage(): ReactElement {
                         { id: 'middelen B', label: 'Nee' },
                       ]}
                     ></RadioButton>
-                    <TextInput
+                    <FormField
+                      id="hoeveel-medewerkers-heeft-uw-onderneming"
                       label="Hoeveel medewerkers heeft uw onderneming?"
-                      size="sm"
-                      validation="none"
-                    ></TextInput>
-                    <TextInput label="Wat is de website van uw organisatie?"></TextInput>
-                    <TextInput
+                    >
+                      <FormField.Text sizeInput="sm" validation="none" />
+                    </FormField>
+                    <FormField id="wat-is-de-website-van-uw-organisatie" label="Wat is de website van uw organisatie?">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField
+                      id="sbi-code"
                       label="SBI-code"
-                      size="sm"
-                      validation="none"
                       helperText="De SBI-code bestaat uit 4 of 5 cijfers. Kijk voor meer informatie op <a href='#' class='rvo-link rvo-link--donkerblauw'>overzicht SBI-codes</a>"
-                    ></TextInput>
+                    >
+                      <FormField.Text sizeInput="sm" validation="none" />
+                    </FormField>
                   </Fieldset>
                   <ActionGroup>
                     <a

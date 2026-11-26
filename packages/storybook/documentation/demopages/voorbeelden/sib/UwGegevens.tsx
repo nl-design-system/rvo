@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
@@ -15,7 +16,6 @@ import {
   MenuBar,
   ProgressTracker,
   RadioButton,
-  TextInput,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -156,10 +156,12 @@ export default function UwGegevensPage(): ReactElement {
                       className="utrecht-form-field utrecht-form-field--text rvo-form-field"
                     >
                       <div className="rvo-form-field__label">
-                        <label className="rvo-label">Kies een vestiging</label>
+                        <label className="rvo-label" htmlFor="vestiging">
+                          Kies een vestiging
+                        </label>
                       </div>
                       <div className="rvo-select-wrapper">
-                        <select id="field" className="utrecht-select utrecht-select--html-select">
+                        <select id="vestiging" className="utrecht-select utrecht-select--html-select">
                           <option>Albert Heijn, Stadionweg 159, 1076NN AMSTERDAM, 000018364012</option>
                           <option>Albert Heijn B.V., Prinses Margrietplnts 25, 2595AM</option>
                         </select>
@@ -189,11 +191,21 @@ export default function UwGegevensPage(): ReactElement {
                     ></RadioButton>
                   </Fieldset>
                   <Fieldset legend="Contactpersoon aanvrager ">
-                    <TextInput label="Voorletters" size="sm"></TextInput>
-                    <TextInput label="Tussenvoegsels" size="sm"></TextInput>
-                    <TextInput label="Achternaam"></TextInput>
-                    <TextInput label="Telefoonnummer" size="md"></TextInput>
-                    <TextInput label="E-mailadres"></TextInput>
+                    <FormField id="voorletters" label="Voorletters">
+                      <FormField.Text sizeInput="sm" />
+                    </FormField>
+                    <FormField id="tussenvoegsels" label="Tussenvoegsels">
+                      <FormField.Text sizeInput="sm" />
+                    </FormField>
+                    <FormField id="achternaam" label="Achternaam">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField id="telefoonnummer" label="Telefoonnummer">
+                      <FormField.Text sizeInput="md" />
+                    </FormField>
+                    <FormField id="e-mailadres" label="E-mailadres">
+                      <FormField.Text />
+                    </FormField>
                   </Fieldset>
                   <Alert kind="warning">
                     <strong>U ontvangt over deze zaak altijd digitaal bericht van ons</strong>

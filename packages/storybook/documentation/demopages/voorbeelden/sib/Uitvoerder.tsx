@@ -3,11 +3,11 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
   Fieldset,
-  FileInput,
   Footer,
   Header,
   Heading,
@@ -15,8 +15,6 @@ import {
   MenuBar,
   ProgressTracker,
   RadioButton,
-  Textarea,
-  TextInput,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -158,10 +156,12 @@ export default function UitvoerderPage(): ReactElement {
                       className="utrecht-form-field utrecht-form-field--text rvo-form-field"
                     >
                       <div className="rvo-form-field__label">
-                        <label className="rvo-label">Kies een vestiging</label>
+                        <label className="rvo-label" htmlFor="vestiging">
+                          Kies een vestiging
+                        </label>
                       </div>
                       <div className="rvo-select-wrapper">
-                        <select id="field" className="utrecht-select utrecht-select--html-select">
+                        <select id="vestiging" className="utrecht-select utrecht-select--html-select">
                           <option>Albert Heijn, Stadionweg 159, 1076NN AMSTERDAM, 000018364012</option>
                           <option>Albert Heijn B.V., Prinses Margrietplnts 25, 2595AM</option>
                         </select>
@@ -182,13 +182,33 @@ export default function UitvoerderPage(): ReactElement {
                     </div>
                   </Fieldset>
                   <Fieldset legend="Contactpersoon coach">
-                    <TextInput label="Voorletters" size="sm"></TextInput>
-                    <TextInput label="Tussenvoegsels" size="sm"></TextInput>
-                    <TextInput label="Achternaam"></TextInput>
-                    <TextInput label="Telefoonnummer" size="md"></TextInput>
-                    <TextInput label="E-mailadres"></TextInput>
-                    <TextInput label="Wat is de website (URL) van de opgegeven coach?"></TextInput>
-                    <Textarea label="Waarom heeft u voor de opgegeven coach gekozen?"></Textarea>
+                    <FormField id="voorletters" label="Voorletters">
+                      <FormField.Text sizeInput="sm" />
+                    </FormField>
+                    <FormField id="tussenvoegsels" label="Tussenvoegsels">
+                      <FormField.Text sizeInput="sm" />
+                    </FormField>
+                    <FormField id="achternaam" label="Achternaam">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField id="telefoonnummer" label="Telefoonnummer">
+                      <FormField.Text sizeInput="md" />
+                    </FormField>
+                    <FormField id="e-mailadres" label="E-mailadres">
+                      <FormField.Text />
+                    </FormField>
+                    <FormField
+                      id="wat-is-de-website-url-van-de-opgegeven-c"
+                      label="Wat is de website (URL) van de opgegeven coach?"
+                    >
+                      <FormField.Text />
+                    </FormField>
+                    <FormField
+                      id="waarom-heeft-u-voor-de-opgegeven-coach-g"
+                      label="Waarom heeft u voor de opgegeven coach gekozen?"
+                    >
+                      <FormField.TextArea />
+                    </FormField>
                   </Fieldset>
                   <Fieldset legend="Curriculum Vitae (CV) coach">
                     <p className="rvo-text rvo-text--no-margins">
@@ -203,10 +223,13 @@ export default function UitvoerderPage(): ReactElement {
                         in het doelland.
                       </li>
                     </ul>
-                    <FileInput
+                    <FormField
+                      id="cv-bestand-coach"
                       label="CV bestand coach"
                       warningText="Let op: Gebruik in de bestandsnaam alleen cijfers en letters."
-                    ></FileInput>
+                    >
+                      <FormField.FileInput />
+                    </FormField>
                   </Fieldset>
                   <ActionGroup>
                     <a
