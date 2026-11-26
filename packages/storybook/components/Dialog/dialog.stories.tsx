@@ -1,5 +1,13 @@
-import { ActionGroup, Button, Dialog } from '@nl-rvo/component-library-react';
+import { ActionGroup, Button, Dialog, Heading } from '@nl-rvo/component-library-react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+
+// The page behind the dialog stays part of the page flow, so the title of the dialog is an h2.
+const dialogContent = (
+  <>
+    <Heading type="h2">Titel dialog</Heading>
+    Dialog content
+  </>
+);
 
 const defaultArgs = {
   type: 'centered-dialog' as const,
@@ -69,7 +77,7 @@ const Container = ({ children }) => <div style={{ minHeight: '500px' }}>{childre
 export const Base: Story = {
   render: (args) => (
     <Container>
-      <Dialog {...args}>Dialog content</Dialog>
+      <Dialog {...args}>{dialogContent}</Dialog>
     </Container>
   ),
   name: 'Basis Component',
@@ -80,7 +88,7 @@ export const WithActionGroup: Story = {
   args: {
     type: 'centered-dialog',
     backgroundColor: 'grijs-200',
-    children: 'Dialog content',
+    children: dialogContent,
     actionGroup: (
       <ActionGroup>
         <Button kind="primary">Ok</Button>
@@ -97,7 +105,7 @@ export const BackgroundWhite: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} backgroundColor="wit">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -108,7 +116,7 @@ export const BackgroundGrijs200: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} backgroundColor="grijs-200">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -119,7 +127,7 @@ export const SizeSm: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} centeredDialogSize="sm">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -130,7 +138,7 @@ export const SizeMd: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} centeredDialogSize="md">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -141,7 +149,7 @@ export const SizeLg: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} centeredDialogSize="lg">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -152,7 +160,7 @@ export const SizeXl: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} centeredDialogSize="xl">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -164,7 +172,7 @@ export const InsetInlineStart: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} type="inset-inline-start">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
@@ -174,7 +182,7 @@ export const InsetInlineEnd: Story = {
   render: (args) => (
     <Container>
       <Dialog {...args} type="inset-inline-end">
-        Dialog content
+        {dialogContent}
       </Dialog>
     </Container>
   ),
