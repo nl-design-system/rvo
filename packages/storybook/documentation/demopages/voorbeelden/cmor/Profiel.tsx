@@ -6,6 +6,7 @@ import {
   Button,
   Fieldset,
   Footer,
+  FormField,
   Header,
   Heading,
   LayoutFlow,
@@ -187,28 +188,12 @@ export default function ProfielPage(): ReactElement {
                       <TextInput label="E-mailadres" />
                       <Heading type="h4">Telefoonnummer (inclusief landcode)</Heading>
                       <LayoutFlow row={true} alignItems="start">
-                        <div
-                          role="group"
-                          aria-labelledby="fieldId-label"
-                          className="utrecht-form-field utrecht-form-field--text rvo-form-field rvo-margin-block-end--3xs"
-                        >
-                          <div className="rvo-form-field__label">
-                            <label className="rvo-label" id="fieldId-label">
-                              Landcode
-                            </label>
-                          </div>
-                          <div className="rvo-select-wrapper">
-                            <select
-                              id="field"
-                              className="utrecht-select utrecht-select--html-select "
-                              aria-describedby="helperTextId"
-                            >
-                              <option>+31</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <TextInput label="Telefoonnummer" />
+                        <FormField id="landcode" label="Landcode">
+                          <FormField.Select size="sm" options={[{ value: '+31', label: '+31' }]} />
+                        </FormField>
+                        <FormField id="telefoonnummer" label="Telefoonnummer">
+                          <FormField.Text />
+                        </FormField>
                       </LayoutFlow>
                       <div className="rvo-spacer--postadres rvo-margin-block-start--xl">
                         <Heading type="h4" noMargins={true}>
