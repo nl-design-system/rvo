@@ -62,7 +62,14 @@ const Landingspagina = () => {
                   <span className="rvo-hero__subtitle rvo-margin-block-end--xs">
                     Alle overheidsberichten op één plek!
                   </span>
-                  <Button kind="secondary" size="sm">
+                  <Button
+                    kind="secondary"
+                    size="sm"
+                    onClick={() => {
+                      window.location.href =
+                        'iframe.html?id=pagina-s-voorbeelden-inloggen-inloggen-als-bedrijf-of-organisatie--default&viewMode=story';
+                    }}
+                  >
                     Inloggen met e-Herkenning
                   </Button>
                 </Hero>

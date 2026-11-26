@@ -166,6 +166,7 @@ const Evenementen = () => {
           useIcons={true}
           iconPlacement="left"
           maxWidth="lg"
+          horizontalRule={true}
         />
       </div>
 
@@ -286,7 +287,14 @@ const Evenementen = () => {
                             <span>Aanmelden gesloten</span>
                           </LayoutFlow>
                         ) : (
-                          <Button kind="secondary" size="sm">
+                          <Button
+                            kind="secondary"
+                            size="sm"
+                            onClick={() => {
+                              window.location.href =
+                                'iframe.html?id=pagina-s-voorbeelden-www-event--default&viewMode=story';
+                            }}
+                          >
                             Aanmelden
                           </Button>
                         )}

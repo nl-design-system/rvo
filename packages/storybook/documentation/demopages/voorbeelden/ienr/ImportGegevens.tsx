@@ -24,26 +24,6 @@ export default function ImportGegevensPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <MenuBar
-        iconPlacement="before"
-        useIcons={true}
-        isOpen={false}
-        size="md"
-        items={[
-          {
-            label: 'Overzicht',
-            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-            icon: 'home',
-          },
-          {
-            label: 'Mijn dossier',
-            link: '#',
-            icon: 'map',
-          },
-          { label: 'Mijn berichten', link: '#', icon: 'mail' },
-          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-        ]}
-      ></MenuBar>
       <LayoutFlow gap="xl">
         <MenuBar
           items={[
@@ -74,6 +54,7 @@ export default function ImportGegevensPage(): ReactElement {
           useIcons={true}
           iconPlacement="before"
           maxWidth="lg"
+          horizontalRule={true}
         />
 
         <main className="">
@@ -173,7 +154,14 @@ export default function ImportGegevensPage(): ReactElement {
                         </LayoutFlow>
                       </Fieldset>
                       <ActionGroup>
-                        <Button>Opslaan</Button>
+                        <Button
+                          onClick={() => {
+                            window.location.href =
+                              'iframe.html?id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story';
+                          }}
+                        >
+                          Opslaan
+                        </Button>
                         <Button kind="secondary">Opslaan en rij toevoegen</Button>
                       </ActionGroup>
                     </LayoutFlow>

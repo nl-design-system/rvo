@@ -97,7 +97,14 @@ const OverzichtClean = () => {
                         <LayoutFlow gap="sm">
                           Uiterlijk 4 september 2024
                           <ActionGroup>
-                            <Button kind="primary" size="sm">
+                            <Button
+                              kind="primary"
+                              size="sm"
+                              onClick={() => {
+                                window.location.href =
+                                  'iframe.html?id=pagina-s-voorbeelden-www-percelen-registreren--default&viewMode=story';
+                              }}
+                            >
                               Percelen registreren
                             </Button>
                             <Button kind="secondary" size="sm">

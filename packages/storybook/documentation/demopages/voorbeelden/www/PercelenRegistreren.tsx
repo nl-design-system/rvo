@@ -10,58 +10,6 @@ const PercelenRegistreren = () => {
       <div className="rvo-www rvo-rhs-update">
         <Header />
         <div className="rvo-rhs-update-component">
-          <div className="rvo-responsive-menu-wrapper">
-            <details className="rvo-responsive-menu">
-              <summary className="rvo-responsive-menu-toggle">
-                <Icon icon="menu" size="lg" /> Menu
-              </summary>
-              <div className="rvo-sidebar-menu">
-                <MenuBar
-                  items={[
-                    {
-                      label: 'Home',
-                      link: '#',
-                    },
-                    {
-                      label: 'Onderwerpen',
-                      link: '#',
-                    },
-                    {
-                      label: 'Subsidie- en financieringswijzer',
-                      link: '#',
-                    },
-                    {
-                      label: 'Over ons',
-                      link: '#',
-                    },
-                    {
-                      label: 'Contact',
-                      link: '#',
-                    },
-                    {
-                      label: 'Mijn RVO',
-                      link: '#',
-                      icon: 'user',
-                    },
-                    {
-                      label: 'English',
-                      icon: 'wereldbol',
-                      link: '#',
-                    },
-                    {
-                      label: 'Zoeken',
-                      icon: 'zoek',
-                      link: '#',
-                    },
-                  ]}
-                  size="lg"
-                  useIcons={true}
-                  iconPlacement="before"
-                  maxWidth="lg"
-                />
-              </div>
-            </details>
-          </div>
           <div className="rvo-topnav--w-line">
             <MenuBar
               items={[
@@ -108,6 +56,7 @@ const PercelenRegistreren = () => {
               useIcons={true}
               iconPlacement="before"
               maxWidth="lg"
+              horizontalRule={true}
             />
           </div>
         </div>
@@ -131,27 +80,27 @@ const PercelenRegistreren = () => {
                   <Heading type="h2">Op deze pagina</Heading>
                   <ul className="rvo-quick-links-list">
                     <li className="rvo-quick-links-list-item">
-                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                      <Link target="#" noUnderline={true} iconPlacement="left" icon="pijl-omlaag">
                         Waarom percelen registreren?
                       </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                      <Link target="#" noUnderline={true} iconPlacement="left" icon="pijl-omlaag">
                         Wat registreert u en waar doet u dat?
                       </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                      <Link target="#" noUnderline={true} iconPlacement="left" icon="pijl-omlaag">
                         Hoe registreert en wijzigt u uw percelen?
                       </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                      <Link target="#" noUnderline={true} iconPlacement="left" icon="pijl-omlaag">
                         Welke wijzigingen geeft u door?
                       </Link>
                     </li>
                     <li className="rvo-quick-links-list-item">
-                      <Link target="#" noUnderline={true} showIcon="before" icon="pijl-omlaag">
+                      <Link target="#" noUnderline={true} iconPlacement="left" icon="pijl-omlaag">
                         Gebruik van uw registratie
                       </Link>
                     </li>
@@ -184,7 +133,7 @@ const PercelenRegistreren = () => {
               <div className="rvo-rhs-update-component">
                 <a
                   href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
-                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+                  className="rvo-button rvo-button--primary rvo-button--size-md rvo-link--no-underline"
                 >
                   Mijn Percelen registreren
                 </a>

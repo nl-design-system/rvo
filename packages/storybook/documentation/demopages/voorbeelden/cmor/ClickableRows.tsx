@@ -85,10 +85,7 @@ const DocumentenClean = () => {
                           className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
                         >
                           Text
-                          <button
-                            className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
-                            type="button"
-                          >
+                          <button className="rvo-button rvo-button--tertiary rvo-button--size-sm" type="button">
                             <span
                               className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
                               role="img"

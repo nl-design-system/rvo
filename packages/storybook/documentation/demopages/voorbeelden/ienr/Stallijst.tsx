@@ -5,6 +5,7 @@ import {
   Heading,
   Icon,
   LayoutFlow,
+  Link,
   MenuBar,
   PageNumberNavigation,
 } from '@nl-rvo/component-library-react';
@@ -45,45 +46,58 @@ const Stallijst = () => {
         useIcons={true}
         iconPlacement="left"
         maxWidth="lg"
+        horizontalRule={true}
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
-              direction="vertical"
-              linkColor="zwart"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Dashboard',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Houder en UBN',
-                  link: '#',
-                  icon: 'user',
-                },
-                {
-                  label: 'Melden',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
-                  icon: 'plus',
-                },
-                { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
-                {
-                  label: 'Bekijken',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
-                  icon: 'oog',
-                },
-                { label: 'Machtigen', link: '#', icon: 'refund' },
-                { label: 'Overzichten', link: '#', icon: 'opsomming' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="left"
-              maxWidth="md"
-            /> */}
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Dashboard
+                </Link>
+                <Link href="#" icon="user" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Houder en UBN
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"
+                  icon="plus"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Melden
+                </Link>
+                <Link href="#" icon="terug" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Wijzigen & intrekken
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story"
+                  icon="oog"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Bekijken
+                </Link>
+                <Link href="#" icon="refund" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Machtigen
+                </Link>
+                <Link href="#" icon="opsomming" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Overzichten
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -226,10 +240,7 @@ const Stallijst = () => {
                         className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
                       >
                         Levensnummer
-                        <button
-                          className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
-                          type="button"
-                        >
+                        <button className="rvo-button rvo-button--tertiary rvo-button--size-sm" type="button">
                           <span
                             className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
                             role="img"

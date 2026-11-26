@@ -34,6 +34,7 @@ const Project = () => {
             useIcons={true}
             iconPlacement="left"
             maxWidth="md"
+            horizontalRule={true}
           />
 
           <main className="rvo-max-width-layout rvo-max-width-layout--md rvo-max-width-layout-inline-padding--md">

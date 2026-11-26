@@ -33,6 +33,7 @@ export default function SubsidiepaginaPage(): ReactElement {
           useIcons={true}
           iconPlacement="before"
           maxWidth="lg"
+          horizontalRule={true}
         />
       </div>
 

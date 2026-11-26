@@ -25,75 +25,22 @@ export default function OndertekeningPage(): ReactElement {
       <Header />
       <LayoutFlow gap="2xl">
         <LayoutFlow gap="xl">
-          <div className="navigation">
-            <MenuBar
-              iconPlacement="before"
-              useIcons={true}
-              isOpen={false}
-              size="md"
-              items={[
-                {
-                  label: 'Overzicht',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Mijn dossier',
-                  link: '#',
-                  icon: 'map',
-                },
-                { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-              ]}
-            ></MenuBar>
+          <div className="rvo-padding-inline-end--sm rvo-padding-inline-start--sm">
             <MenuBar
               items={[
                 {
-                  label: 'Mijn RVO',
-                  link: '#',
+                  label: 'SIB 2024: Coaching',
+                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-sib-startpagina--default&viewMode=story',
                 },
-                {
-                  align: 'right',
-                  label: 'Hulp & Contact',
-                  link: '#',
-                },
-                {
-                  align: 'right',
-                  label: 'English',
-                  icon: 'wereldbol',
-                  link: '#',
-                },
-                {
-                  align: 'right',
-                  label: 'Boer Overveen B.V',
-                  link: '#',
-
-                  icon: 'user',
-                },
+                { align: 'right', label: 'Hulp & Contact', link: '#' },
+                { align: 'right', label: 'English', icon: 'wereldbol', link: '#' },
+                { align: 'right', label: 'Boer Overveen B.V', link: '#', icon: 'user' },
               ]}
               size="lg"
               useIcons={true}
               iconPlacement="before"
               maxWidth="md"
-            />
-            <MenuBar
-              items={[
-                {
-                  label: 'SIB 2024: Coaching',
-                  link: '#',
-                },
-                {
-                  align: 'right',
-                  label: 'Opslaan en afsluiten',
-                  link: '#',
-
-                  icon: 'save',
-                },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="before"
-              maxWidth="md"
+              horizontalRule={true}
             />
           </div>
 
@@ -263,8 +210,8 @@ export default function OndertekeningPage(): ReactElement {
               </Fieldset>
               <ActionGroup>
                 <a
-                  href="#"
-                  className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+                  href="iframe.html?id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
+                  className="rvo-button rvo-button--primary rvo-button--size-md rvo-link--no-underline"
                 >
                   Opslaan en verzenden
                 </a>

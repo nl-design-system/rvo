@@ -10,6 +10,7 @@ import {
   Header,
   Heading,
   LayoutFlow,
+  Link,
   MenuBar,
   Select,
 } from '@nl-rvo/component-library-react';
@@ -21,26 +22,6 @@ export default function ImportPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <MenuBar
-        iconPlacement="before"
-        useIcons={true}
-        isOpen={false}
-        size="md"
-        items={[
-          {
-            label: 'Overzicht',
-            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-            icon: 'home',
-          },
-          {
-            label: 'Mijn dossier',
-            link: '#',
-            icon: 'map',
-          },
-          { label: 'Mijn berichten', link: '#', icon: 'mail' },
-          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-        ]}
-      ></MenuBar>
       <MenuBar
         items={[
           {
@@ -70,45 +51,58 @@ export default function ImportPage(): ReactElement {
         useIcons={true}
         iconPlacement="before"
         maxWidth="lg"
+        horizontalRule={true}
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            <MenuBar
-              direction="vertical"
-              linkColor="zwart"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Dashboard',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Houder en UBN',
-                  link: '#',
-                  icon: 'user',
-                },
-                {
-                  label: 'Melden',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
-                  icon: 'plus',
-                },
-                { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
-                {
-                  label: 'Bekijken',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
-                  icon: 'oog',
-                },
-                { label: 'Machtigen', link: '#', icon: 'refund' },
-                { label: 'Overzichten', link: '#', icon: 'opsomming' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="before"
-              maxWidth="md"
-            />
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Dashboard
+                </Link>
+                <Link href="#" icon="user" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Houder en UBN
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"
+                  icon="plus"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Melden
+                </Link>
+                <Link href="#" icon="terug" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Wijzigen & intrekken
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story"
+                  icon="oog"
+                  iconPlacement="left"
+                  color="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Bekijken
+                </Link>
+                <Link href="#" icon="refund" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Machtigen
+                </Link>
+                <Link href="#" icon="opsomming" iconPlacement="left" color="zwart" noUnderline={true} weight="normal">
+                  Overzichten
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -143,7 +137,7 @@ export default function ImportPage(): ReactElement {
                     <ActionGroup>
                       <a
                         href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-importgegevens--default&viewMode=story"
-                        className="utrecht-button utrecht-button--primary-action utrecht-button--rvo-md rvo-link--no-underline"
+                        className="rvo-button rvo-button--primary rvo-button--size-md rvo-link--no-underline"
                       >
                         Opslaan en gegevens runderen invoeren
                       </a>

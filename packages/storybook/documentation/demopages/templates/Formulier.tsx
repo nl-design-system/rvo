@@ -230,10 +230,10 @@ export default function FormulierPage(): ReactElement {
                         </Fieldset>
                       </div>
                       <ActionGroup>
-                        <Button kind="primary" size="md" busy={false} disabled={false} showIcon="no">
+                        <Button kind="primary" size="md" busy={false} disabled={false}>
                           Primary action
                         </Button>
-                        <Button kind="secondary" size="md" busy={false} disabled={false} showIcon="no">
+                        <Button kind="secondary" size="md" busy={false} disabled={false}>
                           Secondary action
                         </Button>
                       </ActionGroup>

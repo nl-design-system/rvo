@@ -21,59 +21,6 @@ const Home = () => {
       <div className="rvo-www rvo-rhs-update">
         <Header />
         <div className="rvo-rhs-update-component">
-          <div className="rvo-responsive-menu-wrapper">
-            <details className="rvo-responsive-menu">
-              <summary className="rvo-responsive-menu-toggle">
-                <Icon icon="menu" size="lg" /> Menu
-              </summary>
-              <div className="rvo-sidebar-menu">
-                <MenuBar
-                  items={[
-                    {
-                      label: 'Home',
-                      link: '#',
-                    },
-                    {
-                      label: 'Onderwerpen',
-                      link: '#',
-                    },
-                    {
-                      label: 'Subsidie- en financieringswijzer',
-                      link: '#',
-                    },
-                    {
-                      label: 'Over ons',
-                      link: '#',
-                    },
-                    {
-                      label: 'Contact',
-                      link: '#',
-                    },
-                    {
-                      label: 'Mijn RVO',
-                      link: '#',
-                      icon: 'user',
-                    },
-                    {
-                      label: 'English',
-                      icon: 'wereldbol',
-                      link: '#',
-                    },
-                    {
-                      label: 'Zoeken',
-                      icon: 'zoek',
-                      link: '#',
-                    },
-                  ]}
-                  size="lg"
-                  useIcons={true}
-                  iconPlacement="before"
-                  maxWidth="lg"
-                />
-              </div>
-            </details>
-          </div>
-
           <MenuBar
             items={[
               {
@@ -296,7 +243,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+                  <Link iconPlacement="right" icon="pijl-naar-rechts" target="#" noUnderline={true}>
                     Naar A-Z overzicht
                   </Link>
                 </LayoutFlow>
