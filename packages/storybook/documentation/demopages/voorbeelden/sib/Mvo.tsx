@@ -158,23 +158,26 @@ export default function MvoPage(): ReactElement {
                     </p>
                   </div>
                   <Fieldset legend="">
-                    <Checkbox
+                    <FormField
+                      id="bent-u-actief-op-het-gebied-va"
+                      label="Bent u actief op het gebied van duurzaamheid?"
                       helperText="Kies één of meerdere van de onderstaande antwoorden"
-                      label="Bent u actief op het gebied van duurzaamheid? "
-                      invalid={false}
-                      options={[
-                        {
-                          id: 'optionA-cb',
-                          label: 'Waardige werkomstandigheden en eerlijke beloning',
-                        },
-                        {
-                          id: 'optionB-cb',
-                          label: 'Efficiënter verbouwen voedsel en tegengaan van voedselverspilling ',
-                        },
-                        { id: 'optionC-cb', label: 'Inclusiviteit en vermindering ongelijkheid ' },
-                        { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
-                      ]}
-                    ></Checkbox>
+                    >
+                      <FormField.CheckboxGroup
+                        options={[
+                          {
+                            id: 'optionA-cb',
+                            label: 'Waardige werkomstandigheden en eerlijke beloning',
+                          },
+                          {
+                            id: 'optionB-cb',
+                            label: 'Efficiënter verbouwen voedsel en tegengaan van voedselverspilling ',
+                          },
+                          { id: 'optionC-cb', label: 'Inclusiviteit en vermindering ongelijkheid ' },
+                          { id: 'optionD-cb', label: 'Duurzaam gebruik van water en maritieme hulpbronnen ' },
+                        ]}
+                      />
+                    </FormField>
                     <FormField
                       id="kunt-u-deze-geselecteerde-activiteiten-o"
                       label="Kunt u deze geselecteerde activiteiten (of anders) toelichten?"
@@ -239,16 +242,9 @@ export default function MvoPage(): ReactElement {
                   </div>
                   <Fieldset legend="">
                     <Checkbox
-                      label=" "
-                      invalid={false}
-                      options={[
-                        {
-                          id: 'verklaring',
-                          label:
-                            'Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO). ',
-                        },
-                      ]}
-                    ></Checkbox>
+                      id="verklaring"
+                      label="Ik verklaar dat de activiteiten worden uitgevoerd in overeenstemming met de richtlijnen voor Maatschappelijk Verantwoord Ondernemen (MVO) van de OESO en met de Verklaring Fundamentele Beginselen en Rechten op het werk (ILO)."
+                    />
                   </Fieldset>
                   <ActionGroup>
                     <a

@@ -14,7 +14,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  RadioButton,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -170,54 +169,66 @@ export default function ZaakgegevensPage(): ReactElement {
                     >
                       <FormField.Text />
                     </FormField>
-                    <RadioButton
-                      name="bedrag"
+                    <FormField
+                      id="bedrag"
                       label="Heeft u, de groep of fiscale eenheid reeds het maximale subsidiebedrag van € 6.500 per mkb-onderneming in dit kalenderjaar ontvangen?"
-                      expandableHelperText={true}
-                      expandableHelperTextTitle="Meer uitleg"
+                      expandableHelperText={{ title: 'Meer uitleg' }}
                       helperText="U kunt maximaal € 6.500 SIB subsidie per kalenderjaar ontvangen. Dit betekent dat u in één kalenderjaar verschillende onderdelen van SIB mag aanvragen en de subsidie kunt stapelen tot dit maximum bedrag. Zie voor de voorwaarden en subsidiebedragen <a href='#' class='rvo-link rvo-link--donkerblauw'>Support International Business (SIB) (rvo.nl)</a>"
-                      options={[
-                        { id: 'bedrag A', label: 'Ja' },
-                        { id: 'bedrag B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                    >
+                      <FormField.RadioButtonGroup
+                        name="bedrag"
+                        options={[
+                          { id: 'bedrag-ja', label: 'Ja' },
+                          { id: 'bedrag-nee', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                     <FormField id="welke-kansen-ziet-u-in-dit-land" label="Welke kansen ziet u in dit land?">
                       <FormField.TextArea />
                     </FormField>
-                    <RadioButton
-                      name="actief"
-                      label="Bent u al actief in dit doelland?"
-                      helperText=""
-                      options={[
-                        { id: 'actief A', label: 'Ja' },
-                        { id: 'actief B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="export"
+                    <FormField id="actief" label="Bent u al actief in dit doelland?">
+                      <FormField.RadioButtonGroup
+                        name="actief"
+                        options={[
+                          { id: 'actief-a', label: 'Ja' },
+                          { id: 'actief-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField
+                      id="export"
                       label="Gaat u exporteren met een eigen product of dienst?"
                       helperText="Het gaat om zelfgeproduceerde of zelfontwikkelde goederen en/of diensten en niet om ingekochte goederen en/of diensten die ongewijzigd worden doorverkocht. U komt alleen in aanmerking voor SIB als u wilt gaan exporteren met een eigen product of dienst. "
-                      options={[
-                        { id: 'export A', label: 'Ja' },
-                        { id: 'export B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="capaciteit"
+                    >
+                      <FormField.RadioButtonGroup
+                        name="export"
+                        options={[
+                          { id: 'export-a', label: 'Ja' },
+                          { id: 'export-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField
+                      id="capaciteit"
                       label="Beschikt u over capaciteit/financiële middelen/etc om structureel internationaal actief te worden en verdere stappen te kunnen nemen?"
-                      options={[
-                        { id: 'capaciteit A', label: 'Ja' },
-                        { id: 'capaciteit B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="nlmarkt"
-                      label="Bent u met uw product of dienst al actief op de Nederlandse markt?"
-                      options={[
-                        { id: 'nlmarkt A', label: 'Ja' },
-                        { id: 'nlmarkt B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                    >
+                      <FormField.RadioButtonGroup
+                        name="capaciteit"
+                        options={[
+                          { id: 'capaciteit-a', label: 'Ja' },
+                          { id: 'capaciteit-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField id="nlmarkt" label="Bent u met uw product of dienst al actief op de Nederlandse markt?">
+                      <FormField.RadioButtonGroup
+                        name="nlmarkt"
+                        options={[
+                          { id: 'nlmarkt-a', label: 'Ja' },
+                          { id: 'nlmarkt-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                   </Fieldset>
                   <ActionGroup>
                     <a

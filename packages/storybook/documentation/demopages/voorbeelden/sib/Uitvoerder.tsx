@@ -14,7 +14,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  RadioButton,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -141,15 +140,15 @@ export default function UitvoerderPage(): ReactElement {
                     </Heading>
                   </div>
                   <Fieldset legend="">
-                    <RadioButton
-                      name="uitvoerder"
-                      label="Uitvoerder coachingtraject"
-                      helperText=""
-                      options={[
-                        { id: 'uitvoerderA', label: 'Albert Heijn' },
-                        { id: 'uitvoerderB', label: 'Nieuwe organisatie toevoegen' },
-                      ]}
-                    ></RadioButton>
+                    <FormField id="uitvoerder" label="Uitvoerder coachingtraject">
+                      <FormField.RadioButtonGroup
+                        name="uitvoerder"
+                        options={[
+                          { id: 'uitvoerderA', label: 'Albert Heijn' },
+                          { id: 'uitvoerderB', label: 'Nieuwe organisatie toevoegen' },
+                        ]}
+                      />
+                    </FormField>
                     <div
                       role="group"
                       aria-labelledby="fieldId-label"

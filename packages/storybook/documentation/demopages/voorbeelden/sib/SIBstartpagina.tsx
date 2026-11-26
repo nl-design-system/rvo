@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
@@ -14,7 +15,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  RadioButton,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -133,35 +133,38 @@ export default function SibStartpaginaPage(): ReactElement {
                     </p>
                   </div>
                   <Fieldset legend="Welke rol heeft u? ">
-                    <RadioButton
-                      name="rol"
-                      label="U doet deze aanvraag als"
-                      helperText=""
-                      options={[
-                        { id: 'rolA', label: 'Aanvrager' },
-                        { id: 'rolB', label: 'Intermediar' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="aanmerking"
+                    <FormField id="rol" label="U doet deze aanvraag als">
+                      <FormField.RadioButtonGroup
+                        name="rol"
+                        options={[
+                          { id: 'rolA', label: 'Aanvrager' },
+                          { id: 'rolB', label: 'Intermediar' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField
+                      id="aanmerking"
                       label="Dient u deze aanvraag in namens een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) of maatschap?"
-                      expandableHelperText={true}
-                      expandableHelperTextTitle="Meer uitleg"
                       helperText="Bedrijven zonder rechtspersoonlijkheid, zoals een eenmanszaak, Vennootschap onder firma (VOF), Commanditaire vennootschap (CV) en een maatschap, komen niet voor SIB in aanmerking. "
-                      options={[
-                        { id: 'aanmerkingA', label: 'Ja' },
-                        { id: 'aanmerkingB', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="anders"
-                      label="Klopt het dat u deze aanvraag voor iemand anders doet?"
-                      helperText=""
-                      options={[
-                        { id: 'andersA', label: 'Ja' },
-                        { id: 'andersB', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                      expandableHelperText={{ title: 'Meer uitleg' }}
+                    >
+                      <FormField.RadioButtonGroup
+                        name="aanmerking"
+                        options={[
+                          { id: 'aanmerkingA', label: 'Ja' },
+                          { id: 'aanmerkingB', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField id="anders" label="Klopt het dat u deze aanvraag voor iemand anders doet?">
+                      <FormField.RadioButtonGroup
+                        name="anders"
+                        options={[
+                          { id: 'andersA', label: 'Ja' },
+                          { id: 'andersB', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                   </Fieldset>
 
                   <div>

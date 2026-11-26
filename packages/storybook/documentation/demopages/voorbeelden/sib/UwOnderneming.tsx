@@ -14,7 +14,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  RadioButton,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -141,33 +140,39 @@ export default function UwOndernemingPage(): ReactElement {
                     </Heading>
                   </div>
                   <Fieldset legend="">
-                    <RadioButton
-                      name="schuld"
+                    <FormField
+                      id="schuld"
                       label="Is voor uw organisatie een verzoek tot surseance van betaling, tot faillissement, of tot het van toepassing verklaren van de schuldsaneringsregeling ingediend?"
-                      helperText=""
-                      options={[
-                        { id: 'schuldA', label: 'Ja' },
-                        { id: 'schuldB', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="mkb"
-                      label="Is uw organisatie een mkb-onderneming?"
-                      helperText=""
-                      options={[
-                        { id: 'mkb A', label: 'Ja' },
-                        { id: 'mkb B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="middelen"
+                    >
+                      <FormField.RadioButtonGroup
+                        name="schuld"
+                        options={[
+                          { id: 'schuldA', label: 'Ja' },
+                          { id: 'schuldB', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField id="mkb" label="Is uw organisatie een mkb-onderneming?">
+                      <FormField.RadioButtonGroup
+                        name="mkb"
+                        options={[
+                          { id: 'mkb-a', label: 'Ja' },
+                          { id: 'mkb-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField
+                      id="middelen"
                       label="U beschikt over financiële middelen, potentie en ambitie om structureel internationaal actief te worden en verdere stappen te kunnen nemen. Klopt dit? *"
-                      helperText=""
-                      options={[
-                        { id: 'middelen A', label: 'Ja' },
-                        { id: 'middelen B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                    >
+                      <FormField.RadioButtonGroup
+                        name="middelen"
+                        options={[
+                          { id: 'middelen-a', label: 'Ja' },
+                          { id: 'middelen-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                     <FormField
                       id="hoeveel-medewerkers-heeft-uw-onderneming"
                       label="Hoeveel medewerkers heeft uw onderneming?"

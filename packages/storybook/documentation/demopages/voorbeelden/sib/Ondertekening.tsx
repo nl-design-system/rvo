@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Grid,
   MaxWidthLayout,
   ActionGroup,
@@ -15,7 +16,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  RadioButton,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -150,32 +150,44 @@ export default function OndertekeningPage(): ReactElement {
                     </p>
                   </div>
                   <Fieldset legend="Uw bedrijf en het doel van de steun ">
-                    <RadioButton
-                      name="eerder"
+                    <FormField
+                      id="eerder"
                       label="Is er al eerder steun verleend door een overheidsorganisatie voor dezelfde kosten als waar u nu steun voor aanvraagt?"
-                      options={[
-                        { id: 'eerder A', label: 'Ja' },
-                        { id: 'eerder B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="export"
+                    >
+                      <FormField.RadioButtonGroup
+                        name="eerder"
+                        options={[
+                          { id: 'eerder-a', label: 'Ja' },
+                          { id: 'eerder-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField
+                      id="export"
                       label="Vraagt u om exportsteun?"
                       helperText="Exportsteun is bijvoorbeeld de financiering van exportwerkzaamheden of steun voor de oprichting of exploitatie van een distributienetwerk. Subsidies voor deelname aan handelsbeurzen of voor onderzoek naar nieuwe markten vallen hier niet onder."
-                      options={[
-                        { id: 'export A', label: 'Ja' },
-                        { id: 'export B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
-                    <RadioButton
-                      name="afhank"
+                    >
+                      <FormField.RadioButtonGroup
+                        name="export"
+                        options={[
+                          { id: 'export-a', label: 'Ja' },
+                          { id: 'export-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
+                    <FormField
+                      id="afhank"
                       label="Vraagt u om steun die afhankelijk is van het gebruik van binnenlandse goederen in plaats van ingevoerde goederen?"
                       helperText="De-minimissteun is niet mogelijk als daardoor binnenlandse producten worden bevoordeeld boven ingevoerde producten."
-                      options={[
-                        { id: 'afhank A', label: 'Ja' },
-                        { id: 'afhank B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                    >
+                      <FormField.RadioButtonGroup
+                        name="afhank"
+                        options={[
+                          { id: 'afhank-a', label: 'Ja' },
+                          { id: 'afhank-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                   </Fieldset>
                   <Alert>
                     <strong>U kunt gebeld worden</strong>
@@ -194,34 +206,23 @@ export default function OndertekeningPage(): ReactElement {
                     </dl>
                   </div>
                   <Fieldset legend="Verklaring">
-                    <RadioButton
-                      name="cp"
-                      label="Is de contactpersoon tevens de ondertekenaar?"
-                      options={[
-                        { id: 'cp A', label: 'Ja' },
-                        { id: 'cp B', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                    <FormField id="cp" label="Is de contactpersoon tevens de ondertekenaar?">
+                      <FormField.RadioButtonGroup
+                        name="cp"
+                        options={[
+                          { id: 'cp-a', label: 'Ja' },
+                          { id: 'cp-b', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                     <Checkbox
-                      label=" "
-                      invalid={false}
-                      options={[
-                        {
-                          id: 'verklaring',
-                          label: 'Ik ben bevoegd en/of gemachtigd om deze aanvraag te ondertekenen.',
-                        },
-                      ]}
-                    ></Checkbox>
+                      id="verklaring-bevoegd"
+                      label="Ik ben bevoegd en/of gemachtigd om deze aanvraag te ondertekenen."
+                    />
                     <Checkbox
-                      label=" "
-                      invalid={false}
-                      options={[
-                        {
-                          id: 'verklaring',
-                          label: 'Ik verklaar dat dit formulier en de bijlagen naar waarheid zijn ingevuld. ',
-                        },
-                      ]}
-                    ></Checkbox>
+                      id="verklaring-waarheid"
+                      label="Ik verklaar dat dit formulier en de bijlagen naar waarheid zijn ingevuld."
+                    />
                   </Fieldset>
                   <ActionGroup>
                     <a

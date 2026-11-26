@@ -15,7 +15,6 @@ import {
   LayoutFlow,
   MenuBar,
   ProgressTracker,
-  RadioButton,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { useIsDesktop } from './useIsDesktop';
@@ -180,15 +179,15 @@ export default function UwGegevensPage(): ReactElement {
                         </a>
                       </p>
                     </div>
-                    <RadioButton
-                      name="iban"
-                      label="Voert u een IBAN nummer op?"
-                      helperText=""
-                      options={[
-                        { id: 'ibanA', label: 'Ja' },
-                        { id: 'ibanB', label: 'Nee' },
-                      ]}
-                    ></RadioButton>
+                    <FormField id="iban" label="Voert u een IBAN nummer op?">
+                      <FormField.RadioButtonGroup
+                        name="iban"
+                        options={[
+                          { id: 'ibanA', label: 'Ja' },
+                          { id: 'ibanB', label: 'Nee' },
+                        ]}
+                      />
+                    </FormField>
                   </Fieldset>
                   <Fieldset legend="Contactpersoon aanvrager ">
                     <FormField id="voorletters" label="Voorletters">
