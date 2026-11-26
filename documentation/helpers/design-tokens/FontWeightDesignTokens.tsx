@@ -1,4 +1,5 @@
-import { path2css } from '../helpers';
+import { item2title, path2css } from '../helpers';
+import { TokenBlock } from './TokenBlock';
 
 type FontWeightDesignTokensProps = {
   tokens: any;
@@ -7,14 +8,16 @@ type FontWeightDesignTokensProps = {
 const FontWeightDesignTokens = ({ tokens }: FontWeightDesignTokensProps) => {
   return (
     <div className="rvo-design-tokens__container" style={{ marginBlockEnd: 'var(--rvo-space-3xl)' }}>
-      {tokens.map(({ name, path, value }) => {
+      {tokens.map(({ name, path, attributes, value }) => {
         return (
-          <div className="rvo-design-tokens__row" key={name}>
-            <div className="rvo-design-tokens__column" style={{ fontWeight: path2css(path) }}>
-              {value}
-            </div>
-            <code>{path2css(path)}</code>
-          </div>
+          <TokenBlock
+            key={name}
+            title={item2title(attributes.item)}
+            path={path}
+            visual={<span style={{ fontWeight: path2css(path) }}>Rijksdienst voor Ondernemend Nederland</span>}
+            visualPosition="below"
+            rows={[{ label: 'Waarde', value }]}
+          />
         );
       })}
     </div>

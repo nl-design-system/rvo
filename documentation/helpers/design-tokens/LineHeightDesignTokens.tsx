@@ -1,5 +1,5 @@
-import { path2css } from '../helpers';
-import './styles.scss';
+import { item2title, path2css } from '../helpers';
+import { TokenBlock } from './TokenBlock';
 
 type LineHeightDesignTokensProps = {
   tokens: any;
@@ -8,21 +8,22 @@ type LineHeightDesignTokensProps = {
 const LineHeightDesignTokens = ({ tokens }: LineHeightDesignTokensProps) => {
   return (
     <div className="rvo-design-tokens__container" style={{ marginBlockEnd: 'var(--rvo-space-3xl)' }}>
-      {tokens.map(({ name, path, value }) => {
+      {tokens.map(({ name, path, attributes, value }) => {
         return (
-          <div className="rvo-design-tokens__row" key={name} style={{ marginBlockStart: 'var(--rvo-space-md)' }}>
-            <div
-              className="rvo-design-tokens__column rvo-design-tokens__column--30"
-              style={{ lineHeight: path2css(path) }}
-            >
-              {value}
-              <br />
-              Voor ondernemende Nederlanders.
-              <br />
-              Wij helpen u graag vooruit.
-            </div>
-            <code className="rvo-design-tokens__column">{path2css(path)}</code>
-          </div>
+          <TokenBlock
+            key={name}
+            title={item2title(attributes.item)}
+            path={path}
+            visual={
+              <span style={{ lineHeight: path2css(path) }}>
+                Voor ondernemende Nederlanders.
+                <br />
+                Wij helpen u graag vooruit.
+              </span>
+            }
+            visualPosition="below"
+            rows={[{ label: 'Waarde', value }]}
+          />
         );
       })}
     </div>
