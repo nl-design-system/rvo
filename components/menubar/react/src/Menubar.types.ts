@@ -15,6 +15,7 @@ export interface IMenuBarItem {
   iconPlacement?: 'left' | 'right';
   linkColor?: string;
   maxWidth?: 'sm' | 'md' | 'lg';
+  active?: boolean;
   isSubmenuVisible?: boolean;
   grid?: boolean;
   handleItemClick?: (event: React.MouseEvent) => void;

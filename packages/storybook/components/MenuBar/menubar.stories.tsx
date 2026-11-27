@@ -85,3 +85,16 @@ export default {
 type Story = StoryObj<typeof MenuBar>;
 
 export const Base: Story = { name: 'Basis Component' };
+
+export const ActiveItem: Story = {
+  name: 'Actief item',
+  args: {
+    items: [
+      { label: 'Home', link: '#' },
+      { label: 'Onderwerpen', link: '#', active: true },
+      { label: 'Subsidies en financiering', link: '#' },
+      { label: 'Zoeken', link: '#', align: 'right' as const },
+      { label: 'Uitloggen', link: '#', align: 'right' as const },
+    ],
+  },
+};

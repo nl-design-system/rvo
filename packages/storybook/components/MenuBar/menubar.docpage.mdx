@@ -7,6 +7,12 @@ import * as MenubarStories from "./menubar.stories";
 <Canvas of={MenubarStories.Base} layout="padded" />
 <ArgTypes of={MenubarStories.Base} />
 
+## Actief item
+
+Geef het item van de pagina waar de gebruiker is `active: true`. Het item krijgt een onderstreping van 1px en de link krijgt `aria-current="page"`. Bij hover en focus wordt de streep 2px.
+
+<Canvas of={MenubarStories.ActiveItem} layout="padded" />
+
 ## Dependencies
 
 _@nl-rvo/assets/icons_

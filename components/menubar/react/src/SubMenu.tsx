@@ -19,10 +19,14 @@ export const SubMenu: React.FC<SubMenuProps> = ({
   if (!isSubmenuVisible) return null;
 
   const subMenuMarkup = submenu.map((subItem, index) => (
-    <li key={`${subItem.label}--${index}`} className={clsx('rvo-menubar__item rvo-menubar__submenu-item')}>
+    <li
+      key={`${subItem.label}--${index}`}
+      className={clsx('rvo-menubar__item rvo-menubar__submenu-item', subItem.active && 'rvo-menubar__item--active')}
+    >
       <Link
         className="rvo-menubar__link"
         {...(typeof subItem.link === 'string' ? { href: subItem.link } : {})}
+        aria-current={subItem.active ? 'page' : undefined}
         color={linkColor}
         LinkComponent={LinkComponent}
       >
