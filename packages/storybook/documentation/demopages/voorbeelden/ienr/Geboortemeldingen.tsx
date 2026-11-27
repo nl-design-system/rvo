@@ -1,6 +1,6 @@
 import {
+  FormField,
   Button,
-  TextInput,
   Fieldset,
   Footer,
   Header,
@@ -8,7 +8,6 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  Select,
 } from '@nl-rvo/component-library-react';
 import '../../../../../../utilities/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
@@ -160,30 +159,40 @@ const Geboortemeldingen = () => {
                 Geboortemelding Rund
               </Heading>
               <Fieldset legend="">
-                <TextInput label="Landcode" size="xs"></TextInput>
-                <TextInput label="Levensnummer" size="sm"></TextInput>
-                <TextInput label="Werknummer" size="sm"></TextInput>
-                <TextInput label="Geboortedatum" size="sm"></TextInput>
-                <Select
-                  label="Haarkleur"
-                  options={[
-                    { label: 'Zwart', value: 'zwart' },
-                    { label: 'Wit', value: 'wit' },
-                    { label: 'Rood', value: 'rood' },
-                    { label: 'Bruin', value: 'bruin' },
-                    { label: 'Geel', value: 'geel' },
-                    { label: 'Grijs', value: 'grijs' },
-                    { label: 'Blond', value: 'blond' },
-                    { label: 'Bont', value: 'bont' },
-                  ]}
-                />
-                <Select
-                  label="Geslacht"
-                  options={[
-                    { label: 'Mannelijk', value: 'mannelijk' },
-                    { label: 'Vrouwelijk', value: 'vrouwelijk' },
-                  ]}
-                />
+                <FormField id="landcode" label="Landcode">
+                  <FormField.Text sizeInput="xs" />
+                </FormField>
+                <FormField id="levensnummer" label="Levensnummer">
+                  <FormField.Text sizeInput="sm" />
+                </FormField>
+                <FormField id="werknummer" label="Werknummer">
+                  <FormField.Text sizeInput="sm" />
+                </FormField>
+                <FormField id="geboortedatum" label="Geboortedatum">
+                  <FormField.Text sizeInput="sm" />
+                </FormField>
+                <FormField id="haarkleur" label="Haarkleur">
+                  <FormField.Select
+                    options={[
+                      { label: 'Zwart', value: 'zwart' },
+                      { label: 'Wit', value: 'wit' },
+                      { label: 'Rood', value: 'rood' },
+                      { label: 'Bruin', value: 'bruin' },
+                      { label: 'Geel', value: 'geel' },
+                      { label: 'Grijs', value: 'grijs' },
+                      { label: 'Blond', value: 'blond' },
+                      { label: 'Bont', value: 'bont' },
+                    ]}
+                  />
+                </FormField>
+                <FormField id="geslacht" label="Geslacht">
+                  <FormField.Select
+                    options={[
+                      { label: 'Mannelijk', value: 'mannelijk' },
+                      { label: 'Vrouwelijk', value: 'vrouwelijk' },
+                    ]}
+                  />
+                </FormField>
                 {/* <Select
                   label="Land van geboorte/oorsprong"
                   options={[
@@ -234,9 +243,15 @@ const Geboortemeldingen = () => {
                 /> */}
 
                 <Heading type="h3">Gegevens moeder</Heading>
-                <TextInput label="Landcode" size="xs"></TextInput>
-                <TextInput label="Levensnummer" size="sm"></TextInput>
-                <TextInput label="Werknummer" size="sm"></TextInput>
+                <FormField id="landcode-2" label="Landcode">
+                  <FormField.Text sizeInput="xs" />
+                </FormField>
+                <FormField id="levensnummer-2" label="Levensnummer">
+                  <FormField.Text sizeInput="sm" />
+                </FormField>
+                <FormField id="werknummer-2" label="Werknummer">
+                  <FormField.Text sizeInput="sm" />
+                </FormField>
               </Fieldset>
               <Button kind="secondary" icon="plus" iconPlacement="left">
                 Opslaan en nog een geboortemelding doen

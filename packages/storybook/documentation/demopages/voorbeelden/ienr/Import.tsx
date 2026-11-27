@@ -3,8 +3,8 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   ActionGroup,
-  TextInput,
   Fieldset,
   Footer,
   Header,
@@ -12,11 +12,18 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  Select,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+
+const landOpties = [
+  { value: 'nl', label: 'Nederland' },
+  { value: 'be', label: 'België' },
+  { value: 'de', label: 'Duitsland' },
+  { value: 'fr', label: 'Frankrijk' },
+  { value: 'pl', label: 'Polen' },
+];
 
 export default function ImportPage(): ReactElement {
   return (
@@ -149,24 +156,34 @@ export default function ImportPage(): ReactElement {
                 <LayoutFlow gap="xs">
                   <LayoutFlow gap="md">
                     <Fieldset legend="">
-                      <TextInput
+                      <FormField
+                        id="importdatum"
                         label="Importdatum"
                         helperText="Vul hier de datum in waarop u het dier heeft ge&iuml;mporteerd. Gebruik de kalender om de datum te kiezen of vul de datum zelf in. Gebruik dan het formaat dd-mm-jjjj (bijvoorbeeld 01-09-2020)."
-                      ></TextInput>
-                      <TextInput
+                      >
+                        <FormField.Text />
+                      </FormField>
+                      <FormField
+                        id="nummer-gezondheidscertificaat"
                         label="Nummer gezondheidscertificaat"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
-                        size="sm"
-                      ></TextInput>
-                      <Select
+                      >
+                        <FormField.Text sizeInput="sm" />
+                      </FormField>
+                      <FormField
+                        id="land-van-herkomst"
                         label="Land van herkomst"
                         helperText="Vul hier het nummer van het gezondheidscertificaat in. Het formaat van het certificaatnummer is INTRA(of Intra).EU.landcode.jaartal.7cijfers (bijvoorbeeld Intra.EU.BE.2021.0025455)"
-                      ></Select>
-                      <TextInput
+                      >
+                        <FormField.Select options={landOpties} />
+                      </FormField>
+                      <FormField
+                        id="transport-nummer-optioneel"
                         label="Transport nummer (optioneel)"
                         helperText="Vult u het transportnummer in? Dan heeft u een extra mogelijkheid om meldingen van hetzelfde transport bij elkaar te zoeken. Bij Bekijken van meldingen kunt u dan ook zoeken op transportnummer. Vul alleen cijfers in, geen letters."
-                        size="sm"
-                      ></TextInput>
+                      >
+                        <FormField.Text sizeInput="sm" />
+                      </FormField>
                     </Fieldset>
 
                     <ActionGroup>

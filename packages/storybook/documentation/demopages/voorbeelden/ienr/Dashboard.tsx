@@ -12,7 +12,6 @@ import {
   LayoutFlow,
   Link,
   MenuBar,
-  RadioButton,
   StatusIcon,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
@@ -164,15 +163,6 @@ export default function DashboardPage(): ReactElement {
                       </dl>
                       <div>
                         <LayoutFlow gap="md">
-                          <RadioButton
-                            name="ubn"
-                            label="Selecteer een andere locatie"
-                            helperText=""
-                            options={[
-                              { id: 'locatieA', label: 'UBN 2309458' },
-                              { id: 'locatieB', label: 'UBN 2485594' },
-                            ]}
-                          ></RadioButton>
                           <Button kind="secondary" size="xs">
                             Zoek een andere UBN
                           </Button>
