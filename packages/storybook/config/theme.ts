@@ -6,7 +6,7 @@ import { create } from 'storybook/theming';
 export default create({
   base: 'light',
   colorPrimary: designTokens.rvoColorHemelblauw,
-  colorSecondary: designTokens.rvoColorHemelblauw300,
+  colorSecondary: designTokens.rvoColorHemelblauw,
 
   // UI
   appBg: 'white',
