@@ -35,19 +35,3 @@ export default {
 type Story = StoryObj<typeof Feedback>;
 
 export const Base: Story = { name: 'Basis Component' };
-
-export const MultipleLines: Story = {
-  args: {
-    type: 'foutmelding',
-    children:
-      'Dit is een lange foutmelding die over meerdere regels loopt. Het icoon blijft bovenaan staan, naast de eerste regel.',
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ maxWidth: '20rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
-  name: 'Meerdere regels',
-};
