@@ -37,7 +37,6 @@ const config = (() => {
     stories: [
       '../documentation/pages/**/*.docpage.mdx',
       '../documentation/demopages/**/*.stories.@(jsx|tsx)',
-      '../utilities/docs/*.docpage.mdx',
       '../utilities/stories/*.stories.@(jsx|tsx)',
       '../components/*/*.docpage.mdx',
       '../components/*/*.stories.@(jsx|tsx)',

@@ -3,6 +3,14 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 export default {
   title: 'Utilities/Typografie/Text-types',
+  decorators: [
+    (Story) => (
+      <div className="rvo-layout-container rvo-padding--2xl">
+        <h1>Utility Classes for Text Types</h1>
+        <Story />
+      </div>
+    ),
+  ],
   component: UtilityTextTypes,
   parameters: {
     status: {
