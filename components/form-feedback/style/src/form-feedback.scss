@@ -5,9 +5,13 @@
 .rvo-form-feedback {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--rvo-space-sm);
   line-height: var(--rvo-form-feedback-line-height);
+
+  > .rvo-icon {
+    margin-block-start: var(--rvo-form-feedback-icon-margin-block-start);
+  }
 }
 
 .rvo-form-feedback.rvo-form-feedback--waarschuwing {
