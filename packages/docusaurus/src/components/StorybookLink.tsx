@@ -11,7 +11,7 @@ export default function StorybookLink({ id, children }: StorybookLinkProps) {
   const base = (siteConfig.customFields?.storybookIframeBase as string) ?? '/rvo';
   const href = `${base}/iframe.html?id=${id}&viewMode=story`;
   return (
-    <a href={href} className="rvo-link" target="_blank" rel="noopener noreferrer">
+    <a href={href} className="rvo-link rvo-link--no-underline" target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );

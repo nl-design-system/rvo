@@ -3,10 +3,10 @@
  * Copyright (c) 2022 Community for NL Design System
  */
 import {
+  FormField,
   Accordion,
   ActionGroup,
   Button,
-  TextInput,
   Fieldset,
   Footer,
   Grid,
@@ -14,36 +14,28 @@ import {
   Heading,
   LayoutFlow,
   MenuBar,
-  Select,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
+const geslachtOpties = [
+  { value: 'man', label: 'Man' },
+  { value: 'vrouw', label: 'Vrouw' },
+];
+
+const landOpties = [
+  { value: 'nl', label: 'Nederland' },
+  { value: 'be', label: 'België' },
+  { value: 'de', label: 'Duitsland' },
+  { value: 'fr', label: 'Frankrijk' },
+  { value: 'pl', label: 'Polen' },
+];
+
 export default function ImportGegevensPage(): ReactElement {
   return (
     <body className="rvo-theme rvo-responsive">
       <Header />
-      <MenuBar
-        iconPlacement="before"
-        useIcons={true}
-        isOpen={false}
-        size="md"
-        items={[
-          {
-            label: 'Overzicht',
-            link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-            icon: 'home',
-          },
-          {
-            label: 'Mijn dossier',
-            link: '#',
-            icon: 'map',
-          },
-          { label: 'Mijn berichten', link: '#', icon: 'mail' },
-          { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-        ]}
-      ></MenuBar>
       <LayoutFlow gap="xl">
         <MenuBar
           items={[
@@ -74,6 +66,7 @@ export default function ImportGegevensPage(): ReactElement {
           useIcons={true}
           iconPlacement="before"
           maxWidth="lg"
+          horizontalRule={true}
         />
 
         <main className="">
@@ -113,67 +106,158 @@ export default function ImportGegevensPage(): ReactElement {
                       <Fieldset legend="">
                         <LayoutFlow row={true} alignItems="start">
                           <span>1</span>
-                          <TextInput label="Landcode" size="sm"></TextInput>
-                          <TextInput label="Levensnummer" size="sm"></TextInput>
-                          <TextInput label="Werknummer"></TextInput>
-                          <TextInput label="Geboortedatum"></TextInput>
-                          <Select label="Geslacht"></Select>
-                          <Select label="Land van geboorte/oorsprong"></Select>
-                          <TextInput label="Oorspr. ID, niet EU land"></TextInput>
+                          <FormField id="landcode" label="Landcode">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="levensnummer" label="Levensnummer">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="werknummer" label="Werknummer">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geboortedatum" label="Geboortedatum">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geslacht" label="Geslacht">
+                            <FormField.Select options={geslachtOpties} />
+                          </FormField>
+                          <FormField id="land-van-geboorte-oorsprong" label="Land van geboorte/oorsprong">
+                            <FormField.Select options={landOpties} />
+                          </FormField>
+                          <FormField id="oorspr-id-niet-eu-land" label="Oorspr. ID, niet EU land">
+                            <FormField.Text />
+                          </FormField>
                         </LayoutFlow>
                         <LayoutFlow row={true} alignItems="start">
                           <span>2</span>
-                          <TextInput label="Landcode" size="sm"></TextInput>
-                          <TextInput label="Levensnummer" size="sm"></TextInput>
-                          <TextInput label="Werknummer"></TextInput>
-                          <TextInput label="Geboortedatum"></TextInput>
-                          <Select label="Geslacht"></Select>
-                          <Select label="Land van geboorte/oorsprong"></Select>
-                          <TextInput label="Oorspr. ID, niet EU land"></TextInput>
+                          <FormField id="landcode-2" label="Landcode">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="levensnummer-2" label="Levensnummer">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="werknummer-2" label="Werknummer">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geboortedatum-2" label="Geboortedatum">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geslacht-2" label="Geslacht">
+                            <FormField.Select options={geslachtOpties} />
+                          </FormField>
+                          <FormField id="land-van-geboorte-oorsprong-2" label="Land van geboorte/oorsprong">
+                            <FormField.Select options={landOpties} />
+                          </FormField>
+                          <FormField id="oorspr-id-niet-eu-land-2" label="Oorspr. ID, niet EU land">
+                            <FormField.Text />
+                          </FormField>
                         </LayoutFlow>
                         <LayoutFlow row={true} alignItems="start">
                           <span>3</span>
-                          <TextInput label="Landcode" size="sm"></TextInput>
-                          <TextInput label="Levensnummer" size="sm"></TextInput>
-                          <TextInput label="Werknummer"></TextInput>
-                          <TextInput label="Geboortedatum"></TextInput>
-                          <Select label="Geslacht"></Select>
-                          <Select label="Land van geboorte/oorsprong"></Select>
-                          <TextInput label="Oorspr. ID, niet EU land"></TextInput>
+                          <FormField id="landcode-3" label="Landcode">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="levensnummer-3" label="Levensnummer">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="werknummer-3" label="Werknummer">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geboortedatum-3" label="Geboortedatum">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geslacht-3" label="Geslacht">
+                            <FormField.Select options={geslachtOpties} />
+                          </FormField>
+                          <FormField id="land-van-geboorte-oorsprong-3" label="Land van geboorte/oorsprong">
+                            <FormField.Select options={landOpties} />
+                          </FormField>
+                          <FormField id="oorspr-id-niet-eu-land-3" label="Oorspr. ID, niet EU land">
+                            <FormField.Text />
+                          </FormField>
                         </LayoutFlow>
                         <LayoutFlow row={true} alignItems="start">
                           <span>4</span>
-                          <TextInput label="Landcode" size="sm"></TextInput>
-                          <TextInput label="Levensnummer" size="sm"></TextInput>
-                          <TextInput label="Werknummer"></TextInput>
-                          <TextInput label="Geboortedatum"></TextInput>
-                          <Select label="Geslacht"></Select>
-                          <Select label="Land van geboorte/oorsprong"></Select>
-                          <TextInput label="Oorspr. ID, niet EU land"></TextInput>
+                          <FormField id="landcode-4" label="Landcode">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="levensnummer-4" label="Levensnummer">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="werknummer-4" label="Werknummer">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geboortedatum-4" label="Geboortedatum">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geslacht-4" label="Geslacht">
+                            <FormField.Select options={geslachtOpties} />
+                          </FormField>
+                          <FormField id="land-van-geboorte-oorsprong-4" label="Land van geboorte/oorsprong">
+                            <FormField.Select options={landOpties} />
+                          </FormField>
+                          <FormField id="oorspr-id-niet-eu-land-4" label="Oorspr. ID, niet EU land">
+                            <FormField.Text />
+                          </FormField>
                         </LayoutFlow>
                         <LayoutFlow row={true} alignItems="start">
                           <span>5</span>
-                          <TextInput label="Landcode" size="sm"></TextInput>
-                          <TextInput label="Levensnummer" size="sm"></TextInput>
-                          <TextInput label="Werknummer"></TextInput>
-                          <TextInput label="Geboortedatum"></TextInput>
-                          <Select label="Geslacht"></Select>
-                          <Select label="Land van geboorte/oorsprong"></Select>
-                          <TextInput label="Oorspr. ID, niet EU land"></TextInput>
+                          <FormField id="landcode-5" label="Landcode">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="levensnummer-5" label="Levensnummer">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="werknummer-5" label="Werknummer">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geboortedatum-5" label="Geboortedatum">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geslacht-5" label="Geslacht">
+                            <FormField.Select options={geslachtOpties} />
+                          </FormField>
+                          <FormField id="land-van-geboorte-oorsprong-5" label="Land van geboorte/oorsprong">
+                            <FormField.Select options={landOpties} />
+                          </FormField>
+                          <FormField id="oorspr-id-niet-eu-land-5" label="Oorspr. ID, niet EU land">
+                            <FormField.Text />
+                          </FormField>
                         </LayoutFlow>
                         <LayoutFlow row={true} alignItems="start">
                           <span>6</span>
-                          <TextInput label="Landcode" size="sm"></TextInput>
-                          <TextInput label="Levensnummer" size="sm"></TextInput>
-                          <TextInput label="Werknummer"></TextInput>
-                          <TextInput label="Geboortedatum"></TextInput>
-                          <Select label="Geslacht"></Select>
-                          <Select label="Land van geboorte/oorsprong"></Select>
-                          <TextInput label="Oorspr. ID, niet EU land"></TextInput>
+                          <FormField id="landcode-6" label="Landcode">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="levensnummer-6" label="Levensnummer">
+                            <FormField.Text sizeInput="sm" />
+                          </FormField>
+                          <FormField id="werknummer-6" label="Werknummer">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geboortedatum-6" label="Geboortedatum">
+                            <FormField.Text />
+                          </FormField>
+                          <FormField id="geslacht-6" label="Geslacht">
+                            <FormField.Select options={geslachtOpties} />
+                          </FormField>
+                          <FormField id="land-van-geboorte-oorsprong-6" label="Land van geboorte/oorsprong">
+                            <FormField.Select options={landOpties} />
+                          </FormField>
+                          <FormField id="oorspr-id-niet-eu-land-6" label="Oorspr. ID, niet EU land">
+                            <FormField.Text />
+                          </FormField>
                         </LayoutFlow>
                       </Fieldset>
                       <ActionGroup>
-                        <Button>Opslaan</Button>
+                        <Button
+                          onClick={() => {
+                            window.location.href =
+                              'iframe.html?id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story';
+                          }}
+                        >
+                          Opslaan
+                        </Button>
                         <Button kind="secondary">Opslaan en rij toevoegen</Button>
                       </ActionGroup>
                     </LayoutFlow>

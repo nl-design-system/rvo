@@ -27,7 +27,15 @@ const UitloggenAutomatisch = () => {
                 pagina.
               </p>
 
-              <Button kind="primary">Opnieuw inloggen</Button>
+              <Button
+                kind="primary"
+                onClick={() => {
+                  window.location.href =
+                    'iframe.html?id=pagina-s-voorbeelden-inloggen-inloggen--default&viewMode=story';
+                }}
+              >
+                Opnieuw inloggen
+              </Button>
 
               <List type="unordered" bulletType="icon" bulletIcon="option-1" noMargin noPadding>
                 <Link href="https://www.rvo.nl" noUnderline={true}>

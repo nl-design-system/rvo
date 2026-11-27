@@ -4,6 +4,7 @@ import {
   Heading,
   Icon,
   LayoutFlow,
+  Link,
   MenuBar,
   PageNumberNavigation,
   TabItem,
@@ -47,35 +48,65 @@ const Aanvragen = () => {
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
-              direction="vertical"
-              linkColor="zwart"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Overzicht',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Aanvragen',
-                  link: '#',
-                  icon: 'map',
-                },
-
-                {
-                  label: 'Mijn documenten',
-                  link: '#',
-                  icon: 'publicatie',
-                },
-                { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="left"
-              maxWidth="md"
-            /> */}
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Overzicht
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-aanvragen--default&viewMode=story"
+                  icon="map"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Aanvragen
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-documenten--default&viewMode=story"
+                  icon="publicatie"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn documenten
+                </Link>
+                <Link
+                  href="#"
+                  icon="mail"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn berichten
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-profiel--default&viewMode=story"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Profiel
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">

@@ -22,6 +22,7 @@ const RegisterAlternativepagina = () => {
           useIcons={true}
           iconPlacement="left"
           maxWidth="lg"
+          horizontalRule={true}
         />
         )
       </div>

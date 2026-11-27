@@ -1,4 +1,4 @@
-import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
+import { Footer, Header, Heading, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import '../../../../../../utilities/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -55,45 +55,93 @@ const Gemachtigden = () => {
         useIcons={true}
         iconPlacement="before"
         maxWidth="lg"
+        horizontalRule={true}
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            <MenuBar
-              direction="vertical"
-              linkColor="lintblauw"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Mijn I&R',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Mijn gegevens',
-                  link: '#',
-                  icon: 'user',
-                },
-                {
-                  label: 'Meldingen',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
-                  icon: 'envelop',
-                },
-                { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
-                {
-                  label: 'Bekijken',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
-                  icon: 'oog',
-                },
-                { label: 'Machtigen', link: '#', icon: 'refund' },
-                { label: 'Overzichten', link: '#', icon: 'opsomming' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="before"
-              maxWidth="md"
-            />
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn I&R
+                </Link>
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn gegevens
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"
+                  icon="envelop"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Meldingen
+                </Link>
+                <Link
+                  href="#"
+                  icon="terug"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Wijzigen & intrekken
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story"
+                  icon="oog"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Bekijken
+                </Link>
+                <Link
+                  href="#"
+                  icon="refund"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Machtigen
+                </Link>
+                <Link
+                  href="#"
+                  icon="opsomming"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Overzichten
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">

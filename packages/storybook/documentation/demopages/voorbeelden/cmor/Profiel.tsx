@@ -6,6 +6,7 @@ import {
   Button,
   Fieldset,
   Footer,
+  FormField,
   Header,
   Heading,
   LayoutFlow,
@@ -77,35 +78,65 @@ export default function ProfielPage(): ReactElement {
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--md">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            <MenuBar
-              direction="vertical"
-              linkColor="zwart"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Overzicht',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Aanvragen',
-                  link: '#',
-                  icon: 'map',
-                },
-
-                {
-                  label: 'Mijn documenten',
-                  link: '#',
-                  icon: 'publicatie',
-                },
-                { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel ', link: '#', icon: 'user' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="before"
-              maxWidth="md"
-            />
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Overzicht
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-aanvragen--default&viewMode=story"
+                  icon="map"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Aanvragen
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-documenten--default&viewMode=story"
+                  icon="publicatie"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn documenten
+                </Link>
+                <Link
+                  href="#"
+                  icon="mail"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn berichten
+                </Link>
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Profiel
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -157,28 +188,12 @@ export default function ProfielPage(): ReactElement {
                       <TextInput label="E-mailadres" />
                       <Heading type="h4">Telefoonnummer (inclusief landcode)</Heading>
                       <LayoutFlow row={true} alignItems="start">
-                        <div
-                          role="group"
-                          aria-labelledby="fieldId-label"
-                          className="utrecht-form-field utrecht-form-field--text rvo-form-field rvo-margin-block-end--3xs"
-                        >
-                          <div className="rvo-form-field__label">
-                            <label className="rvo-label" id="fieldId-label">
-                              Landcode
-                            </label>
-                          </div>
-                          <div className="rvo-select-wrapper">
-                            <select
-                              id="field"
-                              className="utrecht-select utrecht-select--html-select "
-                              aria-describedby="helperTextId"
-                            >
-                              <option>+31</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <TextInput label="Telefoonnummer" />
+                        <FormField id="landcode" label="Landcode">
+                          <FormField.Select size="sm" options={[{ value: '+31', label: '+31' }]} />
+                        </FormField>
+                        <FormField id="telefoonnummer" label="Telefoonnummer">
+                          <FormField.Text />
+                        </FormField>
                       </LayoutFlow>
                       <div className="rvo-spacer--postadres rvo-margin-block-start--xl">
                         <Heading type="h4" noMargins={true}>
@@ -217,8 +232,23 @@ export default function ProfielPage(): ReactElement {
                       <TextInput label="Postcode" size="sm" />
                       <TextInput label="Woonplaats" size="lg" />
                       <LayoutFlow row={true}>
-                        <Button kind="primary">Wijzigingen opslaan</Button>
-                        <Button kind="warning-subtle" size="sm">
+                        <Button
+                          kind="primary"
+                          onClick={() => {
+                            window.location.href =
+                              'iframe.html?id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story';
+                          }}
+                        >
+                          Wijzigingen opslaan
+                        </Button>
+                        <Button
+                          kind="warning-subtle"
+                          size="sm"
+                          onClick={() => {
+                            window.location.href =
+                              'iframe.html?id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story';
+                          }}
+                        >
                           Annuleren
                         </Button>
                       </LayoutFlow>
@@ -234,13 +264,13 @@ export default function ProfielPage(): ReactElement {
                   Direct regelen
                 </Heading>
                 <LayoutFlow row={true} wrap={true}>
-                  <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
+                  <Link icon="pijl-naar-rechts" iconPlacement="left" noUnderline={true}>
                     Profiel verwijderen
                   </Link>
-                  <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
+                  <Link icon="pijl-naar-rechts" iconPlacement="left" noUnderline={true}>
                     Overlijden accounteigenaar doorgeven
                   </Link>
-                  <Link icon="pijl-naar-rechts" showIcon="before" noUnderline={true}>
+                  <Link icon="pijl-naar-rechts" iconPlacement="left" noUnderline={true}>
                     Snelkoppeling
                   </Link>
                 </LayoutFlow>

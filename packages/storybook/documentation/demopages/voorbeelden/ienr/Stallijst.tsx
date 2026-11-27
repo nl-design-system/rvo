@@ -5,12 +5,80 @@ import {
   Heading,
   Icon,
   LayoutFlow,
+  Link,
   MenuBar,
   PageNumberNavigation,
 } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
+import '../../common/datalist-card.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
+
+const dieren = [
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+  {
+    landcode: 'NL',
+    levensnummer: '100054151431',
+    werknummer: '51431',
+    geboortedatum: '14-03-2013',
+    geslacht: 'man',
+    aanvoerdatum: '15-02-2021',
+    afvoerdatum: '-',
+  },
+];
 
 const Stallijst = () => {
   return (
@@ -45,45 +113,93 @@ const Stallijst = () => {
         useIcons={true}
         iconPlacement="left"
         maxWidth="lg"
+        horizontalRule={true}
       />
 
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
-              direction="vertical"
-              linkColor="zwart"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Dashboard',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Houder en UBN',
-                  link: '#',
-                  icon: 'user',
-                },
-                {
-                  label: 'Melden',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story',
-                  icon: 'plus',
-                },
-                { label: 'Wijzigen & intrekken', link: '#', icon: 'terug' },
-                {
-                  label: 'Bekijken',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story',
-                  icon: 'oog',
-                },
-                { label: 'Machtigen', link: '#', icon: 'refund' },
-                { label: 'Overzichten', link: '#', icon: 'opsomming' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="left"
-              maxWidth="md"
-            /> */}
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-dashboard--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Dashboard
+                </Link>
+                <Link
+                  href="#"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Houder en UBN
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-import--default&viewMode=story"
+                  icon="plus"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Melden
+                </Link>
+                <Link
+                  href="#"
+                  icon="terug"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Wijzigen & intrekken
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-i-r-stallijst--default&viewMode=story"
+                  icon="oog"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Bekijken
+                </Link>
+                <Link
+                  href="#"
+                  icon="refund"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Machtigen
+                </Link>
+                <Link
+                  href="#"
+                  icon="opsomming"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Overzichten
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -210,279 +326,43 @@ const Stallijst = () => {
                   </div>
                 </details>
               </div>
-              <div className="rvo-table--responsive">
-                <table className="rvo-table">
-                  <thead className="rvo-table-head">
-                    <tr className="rvo-table-row">
-                      <th className="rvo-table-header rvo-layout-row rvo-layout-gap--sm">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </th>
-                      <th className="rvo-table-header"></th>
-                      <th scope="col" className="rvo-table-header">
-                        Landcode
-                      </th>
-                      <th
-                        scope="col"
-                        className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
-                      >
-                        Levensnummer
-                        <button
-                          className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
-                          type="button"
-                        >
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
-                            role="img"
-                            aria-label="Delta omhoog"
-                          ></span>
-                        </button>
-                      </th>
-                      <th scope="col" className="rvo-table-header">
-                        Werknummer
-                      </th>
-                      <th scope="col" className="rvo-table-header">
-                        Geboortedatum
-                      </th>
-                      <th scope="col" className="rvo-table-header">
-                        Geslacht
-                      </th>
-                      <th scope="col" className="rvo-table-header">
-                        Aanvoerdatum
-                      </th>
-                      <th scope="col" className="rvo-table-header">
-                        Afvoerdatum
-                      </th>
-                      <th scope="col" className="rvo-table-header"></th>
-                    </tr>
-                  </thead>
-                  <tbody className="rvo-table-body">
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="rvo-table-row">
-                      <td className="rvo-table-cell">
-                        <input id="field" name="group" className="rvo-checkbox__input" type="checkbox" value="" />
-                      </td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-oog rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Bekijk
-                        </a>
-                      </td>
-                      <td className="rvo-table-cell  rvo-table-cell--title">NL</td>
-                      <td className="rvo-table-cell">100054151431 </td>
-                      <td className="rvo-table-cell ">51431</td>
-                      <td className="rvo-table-cell">14-03-2013</td>
-                      <td className="rvo-table-cell">man</td>
-                      <td className="rvo-table-cell">15-02-2021</td>
-                      <td className="rvo-table-cell"></td>
-                      <td className="rvo-table-cell">
-                        <a className="rvo-link rvo-link--with-icon rvo-link--no-underline rvo-link--normal" href="#">
-                          <span
-                            className="utrecht-icon rvo-icon rvo-icon-meer rvo-icon--md rvo-icon--hemelblauw rvo-link__icon--before"
-                            role="img"
-                            aria-label="Oog"
-                          ></span>
-                          Acties
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <LayoutFlow gap="xl">
+                {dieren.map((dier, index) => (
+                  <div className="rvo-card rvo-card--outline" key={index}>
+                    <h2 className="utrecht-heading-3 rvo-heading rvo-heading--margin-3 rvo-heading--gap-xs rvo-padding-block-start--sm rvo-padding-inline-start--sm rvo-padding-inline-end--sm">
+                      <a href="#" className="rvo-link rvo-link--no-underline rvo-link--full-card-link">
+                        Levensnummer: {dier.levensnummer}
+                      </a>
+                    </h2>
+                    <dl className="rvo-data-list rvo-data-list--horizontal">
+                      <div className="rvo-data-list__group">
+                        <dt>Landcode</dt>
+                        <dd>{dier.landcode}</dd>
+                      </div>
+                      <div className="rvo-data-list__group">
+                        <dt>Werknummer</dt>
+                        <dd>{dier.werknummer}</dd>
+                      </div>
+                      <div className="rvo-data-list__group">
+                        <dt>Geboortedatum</dt>
+                        <dd>{dier.geboortedatum}</dd>
+                      </div>
+                      <div className="rvo-data-list__group">
+                        <dt>Geslacht</dt>
+                        <dd>{dier.geslacht}</dd>
+                      </div>
+                      <div className="rvo-data-list__group">
+                        <dt>Aanvoerdatum</dt>
+                        <dd>{dier.aanvoerdatum}</dd>
+                      </div>
+                      <div className="rvo-data-list__group">
+                        <dt>Afvoerdatum</dt>
+                        <dd>{dier.afvoerdatum}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                ))}
+              </LayoutFlow>
               <PageNumberNavigation numberOfPages={10} activePage={5} />
             </LayoutFlow>
           </div>

@@ -15,27 +15,43 @@ export const TemplateLink = () => (
   </StorybookLink>
 );
 
+export const MeerstappenLink = () => (
+  <StorybookLink id="pagina-s-templates-meerstappenformulier-voordat-u-begint--default">
+    Bekijk de Formulier met meerdere stappen-template op volledig scherm
+  </StorybookLink>
+);
+
 # Formulier
 
 De Formulier template toont een volledig formulier met invoervelden, keuzerondjes, checkboxes en een actiegroep.
 
 <TemplateLink />
 
+<MeerstappenLink />
+
 <div className="rvo-margin-block-start--xl">
 
 ## Opbouw
 
-- Groepeer velden in een Fieldset.
-- Zorg dat elk veld een duidelijk, kort label erboven heeft.
-- Gebruik helper tekst voor aanvullende uitleg en instructies.
+<ul className="rvo-ul rvo-ul--icon rvo-ul--no-margin rvo-ul--no-padding">
+  <li>Groepeer velden in een Fieldset.</li>
+  <li>Zorg dat elk veld een duidelijk, kort label erboven heeft.</li>
+  <li>Gebruik helper tekst voor aanvullende uitleg en instructies.</li>
+</ul>
 
 ## Complexe formulieren
 
-- Gebruik voor complexe formulieren met veel velden meerdere stappen.
-- Probeer het aantal velden per stap te beperken. Begin met één stap per veld en voeg stappen samen als gebruikersonderzoeken uitwijzen dat dit wenselijk is.
-- Geef de gebruiker de mogelijkheid om de voortgang op te slaan wanneer een stap is afgerond.
-- Ga terug naar de laatste actieve stap wanneer een gebruiker een formulier tussentijds afbreekt en daarna terugkeert.
-- Toon een <a href={useBaseUrl("componenten/progress-tracker")} className="rvo-link">Progress tracker</a> zodat de gebruiker weet hoeveel stappen er zijn, welke stappen zijn afgerond en welke stap momenteel actief is.
+<ul className="rvo-ul rvo-ul--icon rvo-ul--no-margin rvo-ul--no-padding">
+  <li>Gebruik voor complexe formulieren met veel velden meerdere stappen.</li>
+  <li>Probeer het aantal velden per stap te beperken. Begin met één stap per veld en voeg stappen samen als gebruikersonderzoeken uitwijzen dat dit wenselijk is.</li>
+  <li>Geef de gebruiker de mogelijkheid om de voortgang op te slaan wanneer een stap is afgerond.</li>
+  <li>Ga terug naar de laatste actieve stap wanneer een gebruiker een formulier tussentijds afbreekt en daarna terugkeert.</li>
+  <li>
+    <span>
+      Toon een <a href={useBaseUrl("componenten/progress-tracker")} className="rvo-link rvo-link--no-underline">Progress tracker</a> zodat de gebruiker weet hoeveel stappen er zijn, welke stappen zijn afgerond en welke stap momenteel actief is.
+    </span>
+  </li>
+</ul>
 
 </div>
 
@@ -43,20 +59,22 @@ De Formulier template toont een volledig formulier met invoervelden, keuzerondje
 
 ## Componenten
 
-- <a href={useBaseUrl("componenten/action-group")} className="rvo-link">Action Group</a>
-- <a href={useBaseUrl("componenten/button")} className="rvo-link">Button</a>
-- <a href={useBaseUrl("componenten/form-field-checkbox")} className="rvo-link">Checkbox Field</a>
-- <a href={useBaseUrl("componenten/form-fieldset")} className="rvo-link">Fieldset</a>
-- <a href={useBaseUrl("componenten/form-field-fileinput")} className="rvo-link">File Input Field</a>
-- <a href={useBaseUrl("componenten/footer")} className="rvo-link">Footer</a>
-- <a href={useBaseUrl("componenten/header")} className="rvo-link">Header</a>
-- <a href={useBaseUrl("componenten/heading")} className="rvo-link">Heading</a>
-- <a href={useBaseUrl("componenten/layout-flow")} className="rvo-link">Layout Flow</a>
-- <a href={useBaseUrl("componenten/link")} className="rvo-link">Link</a>
-- <a href={useBaseUrl("componenten/menubar")} className="rvo-link">MenuBar</a>
-- <a href={useBaseUrl("componenten/form-field-radio-button")} className="rvo-link">Radio Button Field</a>
-- <a href={useBaseUrl("componenten/form-field-select")} className="rvo-link">Select Field</a>
-- <a href={useBaseUrl("componenten/form-field-textinput")} className="rvo-link">Text Input Field</a>
-- <a href={useBaseUrl("componenten/form-field-textarea")} className="rvo-link">Textarea Field</a>
+<ul className="rvo-ul rvo-ul--icon rvo-ul--no-margin rvo-ul--no-padding">
+  <li><a href={useBaseUrl("componenten/action-group")} className="rvo-link rvo-link--no-underline">Action Group</a></li>
+  <li><a href={useBaseUrl("componenten/button")} className="rvo-link rvo-link--no-underline">Button</a></li>
+  <li><a href={useBaseUrl("componenten/form-field-checkbox")} className="rvo-link rvo-link--no-underline">Checkbox Field</a></li>
+  <li><a href={useBaseUrl("componenten/form-fieldset")} className="rvo-link rvo-link--no-underline">Fieldset</a></li>
+  <li><a href={useBaseUrl("componenten/form-field-fileinput")} className="rvo-link rvo-link--no-underline">File Input Field</a></li>
+  <li><a href={useBaseUrl("componenten/footer")} className="rvo-link rvo-link--no-underline">Footer</a></li>
+  <li><a href={useBaseUrl("componenten/header")} className="rvo-link rvo-link--no-underline">Header</a></li>
+  <li><a href={useBaseUrl("componenten/heading")} className="rvo-link rvo-link--no-underline">Heading</a></li>
+  <li><a href={useBaseUrl("componenten/layout-flow")} className="rvo-link rvo-link--no-underline">Layout Flow</a></li>
+  <li><a href={useBaseUrl("componenten/link")} className="rvo-link rvo-link--no-underline">Link</a></li>
+  <li><a href={useBaseUrl("componenten/menubar")} className="rvo-link rvo-link--no-underline">MenuBar</a></li>
+  <li><a href={useBaseUrl("componenten/form-field-radio-button")} className="rvo-link rvo-link--no-underline">Radio Button Field</a></li>
+  <li><a href={useBaseUrl("componenten/form-field-select")} className="rvo-link rvo-link--no-underline">Select Field</a></li>
+  <li><a href={useBaseUrl("componenten/form-field-textinput")} className="rvo-link rvo-link--no-underline">Text Input Field</a></li>
+  <li><a href={useBaseUrl("componenten/form-field-textarea")} className="rvo-link rvo-link--no-underline">Textarea Field</a></li>
+</ul>
 
 </div>

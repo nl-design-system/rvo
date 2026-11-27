@@ -1,4 +1,4 @@
-import { Footer, Header, Heading, LayoutFlow, MenuBar } from '@nl-rvo/component-library-react';
+import { Footer, Header, Heading, LayoutFlow, Link, MenuBar } from '@nl-rvo/component-library-react';
 import '@nl-rvo/utility-text-types/src/index.scss';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
@@ -37,34 +37,65 @@ const DocumentenClean = () => {
       <main className="rvo-sidebar-layout__container">
         <div className="rvo-sidebar-layout rvo-max-width-layout rvo-max-width-layout--lg">
           <div className="rvo-sidebar-layout__sidebar rvo-sidebar-layout__sidebar--bg">
-            {/* <MenuBar
-              direction="vertical"
-              linkColor="zwart"
-              horizontalRule={false}
-              items={[
-                {
-                  label: 'Overzicht',
-                  link: 'iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story',
-                  icon: 'home',
-                },
-                {
-                  label: 'Mijn dossier',
-                  link: '#',
-                  icon: 'map',
-                },
-                {
-                  label: 'Mijn documenten',
-                  link: '#',
-                  icon: 'publicatie',
-                },
-                { label: 'Mijn berichten', link: '#', icon: 'mail' },
-                { label: 'Profiel & voorkeuren', link: '#', icon: 'user' },
-              ]}
-              size="md"
-              useIcons={true}
-              iconPlacement="left"
-              maxWidth="md"
-            /> */}
+            <nav aria-label="Menu">
+              <LayoutFlow gap="sm">
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-overzicht--default&viewMode=story"
+                  icon="home"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Overzicht
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-aanvragen--default&viewMode=story"
+                  icon="map"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="bold"
+                >
+                  Aanvragen
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-documenten--default&viewMode=story"
+                  icon="publicatie"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn documenten
+                </Link>
+                <Link
+                  href="#"
+                  icon="mail"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Mijn berichten
+                </Link>
+                <Link
+                  href="iframe.html?args=&id=pagina-s-voorbeelden-cmor-profiel--default&viewMode=story"
+                  icon="user"
+                  iconPlacement="left"
+                  color="zwart"
+                  iconColor="zwart"
+                  noUnderline={true}
+                  weight="normal"
+                >
+                  Profiel
+                </Link>
+              </LayoutFlow>
+            </nav>
           </div>
           <div className="rvo-sidebar-layout__content">
             <LayoutFlow gap="xl">
@@ -85,10 +116,7 @@ const DocumentenClean = () => {
                           className="rvo-table-header rvo-table-header--sortable rvo-layout-row rvo-layout-gap--sm"
                         >
                           Text
-                          <button
-                            className="utrecht-button utrecht-button--rvo-tertiary-action utrecht-button--rvo-sm"
-                            type="button"
-                          >
+                          <button className="rvo-button rvo-button--tertiary rvo-button--size-sm" type="button">
                             <span
                               className="utrecht-icon rvo-icon rvo-icon-delta-omhoog rvo-icon--sm rvo-icon--hemelblauw"
                               role="img"

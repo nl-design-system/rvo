@@ -229,7 +229,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <Link showIcon="after" icon="pijl-naar-rechts" target="#" noUnderline={true}>
+          <Link iconPlacement="right" icon="pijl-naar-rechts" target="#" noUnderline={true}>
             Naar A-Z overzicht
           </Link>
         </div>

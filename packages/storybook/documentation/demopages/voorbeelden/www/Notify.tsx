@@ -24,61 +24,6 @@ const Notify = () => {
       <Header />
       <div className="rvo-www rvo-rhs-update">
         <div className="rvo-rhs-update-component">
-          <div className="rvo-responsive-menu-wrapper">
-            <details className="rvo-responsive-menu">
-              <summary className="rvo-responsive-menu-toggle">
-                <Icon icon="menu" size="lg" /> Menu
-              </summary>
-              <div className="rvo-sidebar-menu">
-                <MenuBar
-                  items={[
-                    {
-                      label: 'Home',
-
-                      link: '#',
-                    },
-                    {
-                      label: 'Onderwerpen',
-                      link: '#',
-                    },
-                    {
-                      label: 'Subsidie- en financieringswijzer',
-                      link: '#',
-                    },
-                    {
-                      label: 'Over ons',
-                      link: '#',
-                    },
-                    {
-                      label: 'Contact',
-                      link: '#',
-                    },
-                    {
-                      label: 'Mijn RVO',
-                      link: '#',
-                      icon: 'user',
-                    },
-                    {
-                      label: 'English',
-                      icon: 'wereldbol',
-                      link: '#',
-                    },
-                    {
-                      label: 'Zoeken',
-                      icon: 'zoek',
-                      link: '#',
-                    },
-                  ]}
-                  size="lg"
-                  useIcons={true}
-                  iconPlacement="before"
-                  maxWidth="lg"
-                  horizontalRule={false}
-                />
-              </div>
-            </details>
-          </div>
-
           <MenuBar
             items={[
               {
@@ -249,16 +194,16 @@ const Notify = () => {
               </Heading>
             </LayoutFlow>
             <Grid columns="two" gap="xs">
-              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+              <Link iconPlacement="left" icon="pijl-omlaag" target="#" noUnderline={true}>
                 Stand van zaken 2024
               </Link>
-              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+              <Link iconPlacement="left" icon="pijl-omlaag" target="#" noUnderline={true}>
                 ISDE verbreed
               </Link>
-              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+              <Link iconPlacement="left" icon="pijl-omlaag" target="#" noUnderline={true}>
                 Stand van zaken 2024
               </Link>
-              <Link showIcon="before" icon="pijl-omlaag" target="#" noUnderline={true}>
+              <Link iconPlacement="left" icon="pijl-omlaag" target="#" noUnderline={true}>
                 Cijfers per gemeente en provincie
               </Link>
             </Grid>
