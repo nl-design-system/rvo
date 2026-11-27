@@ -1951,6 +1951,11 @@
         "line-height": {
           "$value": "{rvo.line-height.md}"
         },
+        "icon": {
+          "margin-block-start": {
+            "$value": "{rvo.space.2xs}"
+          }
+        },
         "warning": {
           "color": {
             "$value": "{rvo.color.donkergeel}"
