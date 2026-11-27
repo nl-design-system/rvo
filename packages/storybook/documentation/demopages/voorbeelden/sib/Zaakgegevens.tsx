@@ -16,7 +16,7 @@ import {
   ProgressTracker,
 } from '@nl-rvo/component-library-react';
 import type { ReactElement } from 'react';
-import { useIsDesktop } from './useIsDesktop';
+import { useIsDesktop } from '../../common/useIsDesktop';
 import { defaultFooterItems } from '../../common/defaultFooterItems';
 import { defaultSecondaryFooterItems } from '../../common/defaultSecondaryFooterItems';
 
