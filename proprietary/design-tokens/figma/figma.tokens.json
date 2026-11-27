@@ -666,6 +666,11 @@
   "components/alert": {
     "rvo": {
       "alert": {
+        "container": {
+          "max-inline-size": {
+            "$value": "{rvo.layout.max-width.sm}"
+          }
+        },
         "gap": {
           "$value": "calc({rvo.space.2xs} + {rvo.space.xs})"
         },
