@@ -6,3 +6,4 @@ Als na enige tijd het laden nog te lang duurt, kun je een status bericht tonen o
 - Toon altijd een 'loader' bij belangrijke 'verzend'-momenten.
 - Informeer de gebruiker tijdens het tonen van de 'loader' wat er gebeurt.
 - Duurt het laden langer dan 30 seconden laat dan een foutmelding zien en een knop om het opnieuw te proberen.
+- Toon de knoppen alleen als er ook een statusbericht zichtbaar is. Zonder bericht weet de gebruiker niet waarom hij een knop krijgt.
