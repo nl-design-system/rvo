@@ -25,7 +25,8 @@
       "item": {
         "active": {
           "background-color": {},
-          "font-weight": { "value": "{rvo.font-weight.bold}" }
+          "text-decoration": { "value": "{rvo.link.text-decoration}" },
+          "text-decoration-thickness": { "value": "{rvo.link.text-decoration-thickness}" }
         },
         "divider": {
           "border-width": { "value": "1px" },
@@ -43,11 +44,13 @@
           "padding-inline-end": { "value": "{rvo.space.md}" },
           "focus": {
             "text-decoration": { "value": "underline" },
+            "text-decoration-thickness": { "value": "{rvo.link.hover.text-decoration-thickness}" },
             "font-weight": { "value": "{rvo.font-weight.normal}" }
           },
           "hover": {
             "background-color": {},
             "text-decoration": { "value": "underline" },
+            "text-decoration-thickness": { "value": "{rvo.link.hover.text-decoration-thickness}" },
             "font-weight": { "value": "{rvo.font-weight.normal}" }
           }
         }

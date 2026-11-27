@@ -3343,8 +3343,11 @@
         "item": {
           "active": {
             "background-color": {},
-            "font-weight": {
-              "$value": "{rvo.font-weight.bold}"
+            "text-decoration": {
+              "$value": "{rvo.link.text-decoration}"
+            },
+            "text-decoration-thickness": {
+              "$value": "{rvo.link.text-decoration-thickness}"
             }
           },
           "divider": {
@@ -3387,6 +3390,9 @@
               "text-decoration": {
                 "$value": "underline"
               },
+              "text-decoration-thickness": {
+                "$value": "{rvo.link.hover.text-decoration-thickness}"
+              },
               "font-weight": {
                 "$value": "{rvo.font-weight.normal}"
               }
@@ -3395,6 +3401,9 @@
               "background-color": {},
               "text-decoration": {
                 "$value": "underline"
+              },
+              "text-decoration-thickness": {
+                "$value": "{rvo.link.hover.text-decoration-thickness}"
               },
               "font-weight": {
                 "$value": "{rvo.font-weight.normal}"

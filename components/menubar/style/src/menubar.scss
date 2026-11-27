@@ -161,12 +161,27 @@
       &:focus {
         font-weight: var(--rvo-topnav-item-link-font-weight) !important; // Needed until link css has been refactored
         text-decoration-line: var(--rvo-topnav-item-link-hover-text-decoration);
-        text-decoration-thickness: var(--rvo-link-hover-text-decoration-thickness);
+        text-decoration-thickness: var(--rvo-topnav-item-link-focus-text-decoration-thickness);
       }
 
       &:hover {
         font-weight: var(--rvo-topnav-item-link-font-weight) !important; // Needed until link css has been refactored
         text-decoration-line: var(--rvo-topnav-item-link-hover-text-decoration);
+        text-decoration-thickness: var(--rvo-topnav-item-link-hover-text-decoration-thickness);
+      }
+    }
+
+    // The current page: a thin underline that gets thicker on hover and focus
+    &--active .rvo-menubar__link {
+      text-decoration-line: var(--rvo-topnav-item-active-text-decoration);
+      text-decoration-thickness: var(--rvo-topnav-item-active-text-decoration-thickness);
+
+      &:focus {
+        text-decoration-thickness: var(--rvo-topnav-item-link-focus-text-decoration-thickness);
+      }
+
+      &:hover {
+        text-decoration-thickness: var(--rvo-topnav-item-link-hover-text-decoration-thickness);
       }
     }
 
