@@ -5,6 +5,15 @@ import theme from './theme';
 addons.setConfig({
   panelPosition: 'bottom',
   theme,
+  sidebar: {
+    filters: {
+      // Pages, templates and prototypes are shown in the docs site. The stories stay available for the iframe links.
+      patterns: (item) => {
+        const isPage = item.id.startsWith('pagina-s-') || item.id.startsWith('prototypes');
+        return !isPage || item.id.startsWith('pagina-s-over-pagina-s');
+      },
+    },
+  },
 });
 
 function waitForElement(selector) {
