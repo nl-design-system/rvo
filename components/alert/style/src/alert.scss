@@ -6,6 +6,12 @@
 
 $rvo-alert-paddings: xs, sm, md, lg, xl, 2xl;
 
+// Keeps the lines of text readable on wide screens. The icon, text and close button are centred as one group.
+// :where() keeps the specificity at zero, so the rvo-max-width-layout classes can still set a different width.
+:where(.rvo-alert__container) {
+  max-inline-size: var(--rvo-alert-container-max-inline-size);
+}
+
 .rvo-alert {
   padding-block-end: var(--rvo-alert-padding-block-end);
   padding-block-start: var(--rvo-alert-padding-block-start);
@@ -46,6 +52,8 @@ $rvo-alert-paddings: xs, sm, md, lg, xl, 2xl;
     align-items: flex-start;
     display: flex;
     gap: var(--rvo-alert-gap);
+    margin-inline-end: auto;
+    margin-inline-start: auto;
   }
 
   p:first-child {
